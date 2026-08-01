@@ -459,15 +459,6 @@ from the play files in the repo — so what is on this site is exactly what is i
 binder. Built for 11-on-11 8U tackle.</p>
 <p class="sub">Fastest way to find a play: the <a href="calls.html">call sheet</a>.</p>
 
-<div class="callout">
-  <p><strong>Please do not install all {total} plays.</strong> This is a reference book,
-  not a season plan. A team that runs <em>Tight plus one other formation</em> well beats a
-  team that runs six badly.</p>
-  <p>Install <strong>Tight</strong> first — it is a complete offense on its own. Then pick
-  <em>one</em> more based on what your kids actually do well, and leave the rest here for
-  next year.</p>
-</div>
-
 <p class="section-head">Formations, in teaching order</p>
 <div class="cards">
   {chr(10).join('  ' + c for c in cards).strip()}
