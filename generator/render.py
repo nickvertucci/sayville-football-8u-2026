@@ -745,7 +745,8 @@ def write_site(formations: list[dict]) -> str:
   article {{
     background: var(--panel); color: #111318; border-radius: 10px;
     box-shadow: 0 1px 3px rgba(16,20,30,.16); margin: 0 0 18px; padding: 16px;
-    scroll-margin-top: 64px;
+    /* Clears the sticky nav, which wraps to two rows on a phone. */
+    scroll-margin-top: 112px;
   }}
   article header {{
     display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap;
@@ -784,7 +785,7 @@ def write_site(formations: list[dict]) -> str:
 
   /* Phone first — the diagram sits above the words. Side by side once there is room. */
   @media (min-width: 760px) {{
-    article {{ padding: 20px; }}
+    article {{ padding: 20px; scroll-margin-top: 70px; }}
     .grid {{ grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); }}
   }}
 
