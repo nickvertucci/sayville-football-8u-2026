@@ -454,9 +454,9 @@ def write_home(formations: list[dict]) -> str:
             f"<p>{esc(blurb)}</p></a>"
         )
     body = f"""<h1 class="page">The 2026 playbook</h1>
-<p class="lede">{total} plays across {len(formations)} formations, every diagram generated
-from the play files in the repo — so what is on this site is exactly what is in the
-binder. Built for 11-on-11 8U tackle.</p>
+<p class="lede">Two formations, {total} plays, built for 11-on-11 8U tackle. Every
+diagram is generated from the play files in the repo — so what is on this site is
+exactly what is in the binder.</p>
 <p class="sub">Fastest way to find a play: the <a href="calls.html">call sheet</a>.</p>
 
 <p class="section-head">Formations, in teaching order</p>
@@ -473,8 +473,9 @@ kids have to memorize — odd to the left, even to the right, counting outward.<
   {chr(10).join(f'  <div class="row"><dt>{esc(n)}</dt><dd>{esc(d)}</dd></div>'
                 for n, d in HOLES).strip()}
 </dl>
-<p class="lede">So <code>Bone 8 Pitch</code> is the wishbone, outside right, pitch — and a
-kid who knows the system can run it the first time he hears it.</p>
+<p class="lede">So <code>Bone 8 Pitch</code> is the wishbone, outside right, pitch, and
+<code>I 4 Iso</code> is the I-formation, right B gap, isolation — a kid who knows the
+system can run either one the first time he hears it.</p>
 
 <p class="section-head">Before you install anything</p>
 <div class="callout">

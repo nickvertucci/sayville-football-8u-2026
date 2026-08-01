@@ -397,26 +397,34 @@ def wrap(text, width: int) -> list[str]:
     return lines or [""]
 
 
-def render_card(play: dict, defenses: dict) -> str:
+def render_card(play: dict, defenses: dict, frame: tuple[float, float, float]) -> str:
     form = play["_formation"]
     alignment = form["alignment"]
     defense = defenses.get(play.get("defense", ""))
 
-    ordered = [p for p in CARD_ORDER if p in play["assignments"]]
-    ordered += [p for p in play["assignments"] if p not in CARD_ORDER]
+    # Same frame as the web diagrams, so a card and a diagram of the same play are
+    # drawn at the same scale with the formation in the same place.
+    fr_half, fr_top, fr_bot = frame
+    card_w = (2 * fr_half) * SCALE
+    field_h = (fr_top - fr_bot) * SCALE
+    off_x, off_y = -fx(-fr_half), -fy(fr_top)
 
-    entries = [(pos, wrap(play["assignments"][pos]["rule"], 46)) for pos in ordered]
+    # Column text width follows the card width instead of assuming the old canvas.
+    chars = max(24, int(((card_w - 2 * PAD) / 2 - 34) / 6.5))
+
+    ordered = ordered_positions(play)
+    entries = [(pos, wrap(play["assignments"][pos]["rule"], chars)) for pos in ordered]
     half = math.ceil(len(entries) / 2)
     columns = [entries[:half], entries[half:]]
     col_lines = max((sum(len(e[1]) for e in col) for col in columns), default=0)
 
     coach_lines = []
     for c in play.get("coaching_points", []):
-        coach_lines.extend(wrap(c, 100))
+        coach_lines.extend(wrap(c, int(chars * 2.2)))
 
     assign_h = col_lines * LINE_H + 34
     coach_h = (len(coach_lines) * LINE_H + 40) if coach_lines else 0
-    total_h = TITLE_H + FIELD_H + assign_h + coach_h + PAD
+    total_h = TITLE_H + field_h + assign_h + coach_h + PAD
 
     form_label = f"{form['name']} ({form['family']})" if form.get("family") else form["name"]
     meta_bits = [play.get("type", "").upper(), form_label]
@@ -427,23 +435,27 @@ def render_card(play: dict, defenses: dict) -> str:
     meta = "  •  ".join(b for b in meta_bits if b)
 
     svg = [
-        f'<svg xmlns="http://www.w3.org/2000/svg" width="{FIELD_W:.0f}" height="{total_h:.0f}" '
-        f'viewBox="0 0 {FIELD_W:.0f} {total_h:.0f}" '
+        f'<svg xmlns="http://www.w3.org/2000/svg" width="{card_w:.0f}" height="{total_h:.0f}" '
+        f'viewBox="0 0 {card_w:.0f} {total_h:.0f}" '
         f'font-family="Segoe UI, Helvetica, Arial, sans-serif">',
         f'<rect width="100%" height="100%" fill="{COLORS["card"]}"/>',
-        title_band(0, FIELD_W, play["name"], meta, play.get("call", "")),
-        f'<g transform="translate(0,{TITLE_H})">',
+        title_band(0, card_w, play["name"], meta, play.get("call", "")),
+        # Clip so the shared frame crops the field the same way it does on the website.
+        f'<clipPath id="fieldclip"><rect x="0" y="{TITLE_H}" width="{card_w:.0f}" '
+        f'height="{field_h:.0f}"/></clipPath>',
+        f'<g clip-path="url(#fieldclip)">'
+        f'<g transform="translate({off_x:.1f},{TITLE_H + off_y:.1f})">',
         draw_field(),
     ]
     if defense:
         svg.append(draw_defense(defense))
     svg.append(draw_paths(play, alignment))
     svg.append(draw_offense(play, alignment))
-    svg.append("</g>")
+    svg.append("</g></g>")
 
-    y0 = TITLE_H + FIELD_H
+    y0 = TITLE_H + field_h
     svg.append(
-        f'<line x1="{PAD}" y1="{y0+10:.0f}" x2="{FIELD_W-PAD:.0f}" y2="{y0+10:.0f}" '
+        f'<line x1="{PAD}" y1="{y0+10:.0f}" x2="{card_w-PAD:.0f}" y2="{y0+10:.0f}" '
         f'stroke="{COLORS["line"]}" stroke-width="1"/>'
     )
     svg.append(
@@ -452,7 +464,7 @@ def render_card(play: dict, defenses: dict) -> str:
     )
 
     for ci, col in enumerate(columns):
-        x = PAD + ci * (FIELD_W - 2 * PAD) / 2
+        x = PAD + ci * (card_w - 2 * PAD) / 2
         cy = y0 + 48
         for pos, lines in col:
             svg.append(
@@ -469,7 +481,7 @@ def render_card(play: dict, defenses: dict) -> str:
     if coach_lines:
         cy = y0 + assign_h + 18
         svg.append(
-            f'<line x1="{PAD}" y1="{cy-14:.0f}" x2="{FIELD_W-PAD:.0f}" y2="{cy-14:.0f}" '
+            f'<line x1="{PAD}" y1="{cy-14:.0f}" x2="{card_w-PAD:.0f}" y2="{cy-14:.0f}" '
             f'stroke="{COLORS["line"]}" stroke-width="1"/>'
         )
         svg.append(
@@ -486,37 +498,58 @@ def render_card(play: dict, defenses: dict) -> str:
     return "\n".join(svg)
 
 
-def render_diagram(play: dict, defenses: dict) -> str:
+def diagram_frame(formations: list[dict], defenses: dict) -> tuple[float, float, float]:
+    """One frame that fits every play in the book.
+
+    Every diagram is drawn in this same window, so all of them share a scale and the
+    line of scrimmage, the formation and the defense land on the same spot on every
+    card. Cropping each play to its own content made better use of the pixels but
+    made the book look like it had been assembled from different sources — the same
+    play drawn at two sizes reads as two different plays.
+
+    Returned as (half-width, top, bottom) in yards; the frame is symmetric about the
+    middle of the formation so a play and its mirror are framed identically.
+    """
+    xs, ys = [], []
+    for form in formations:
+        alignment = form["alignment"]
+        xs += [x for x, _ in alignment.values()]
+        ys += [y for _, y in alignment.values()]
+        for play in form["_plays"]:
+            defense = defenses.get(play.get("defense", ""))
+            if defense:
+                xs += [x for x, _ in defense["alignment"].values()]
+                ys += [y for _, y in defense["alignment"].values()]
+            for pos, spec in play["assignments"].items():
+                ax, ay = alignment[pos]
+                xs += [ax + p[0] for p in spec.get("path", [])]
+                ys += [ay + p[1] for p in spec.get("path", [])]
+
+    def up(v, step=0.5):
+        return math.ceil(v / step) * step
+
+    margin = 0.8
+    half = min(-X_MIN, up(max(abs(min(xs)), abs(max(xs))) + margin))
+    top = min(Y_MAX, up(max(ys) + margin))
+    bottom = max(Y_MIN, -up(-min(ys) + margin))
+    return half, top, bottom
+
+
+def render_diagram(play: dict, defenses: dict, frame: tuple[float, float, float]) -> str:
     """Diagram only — no assignment text baked in.
 
     The web page pairs this with real HTML so the words reflow on a phone instead of
-    shrinking into an unreadable block. Cropped tighter than the printable card since
-    nothing ever aligns wider than the corners.
+    shrinking into an unreadable block. Drawn in the shared frame from
+    diagram_frame() so every play in the book lines up with every other one.
     """
     form = play["_formation"]
     defense = defenses.get(play.get("defense", ""))
 
     # Crop to what this play actually uses. A front with no deep safety would otherwise
     # leave six yards of blank grass at the top, which on a phone is six yards of nothing.
-    xs = [x for x, _ in form["alignment"].values()]
-    ys = [y for _, y in form["alignment"].values()]
-    if defense:
-        xs += [x for x, _ in defense["alignment"].values()]
-        ys += [y for _, y in defense["alignment"].values()]
-    for pos, spec in play["assignments"].items():
-        ax, ay = form["alignment"][pos]
-        xs += [ax + p[0] for p in spec.get("path", [])]
-        ys += [ay + p[1] for p in spec.get("path", [])]
-
-    y_top = min(Y_MAX, max(ys) + 1.3)
-    y_bot = max(Y_MIN, min(ys) - 1.0)
-    # Floor the half-width so an interior play does not zoom to cartoon size.
-    half = max(8.0, max(abs(min(xs)), abs(max(xs))) + 1.2)
-    x_left = max(X_MIN, -half)
-    x_right = min(X_MAX, half)
-
-    vb_x = fx(x_left)
-    vb_w = fx(x_right) - vb_x
+    half, y_top, y_bot = frame
+    vb_x = fx(-half)
+    vb_w = fx(half) - vb_x
     vb_y = fy(y_top)
     vb_h = fy(y_bot) - vb_y
 
@@ -645,13 +678,17 @@ def main() -> int:
     if args.check:
         return 0
 
+    # One frame for the whole book, so no two diagrams are drawn at different scales.
+    frame = diagram_frame(formations, defenses)
+    print(f"Diagram frame: {frame[0]*2:.1f} yards wide, {frame[2]:.1f} to {frame[1]:.1f} deep")
+
     for form in formations:
         cards_dir = form["_dir"] / "cards"
         cards_dir.mkdir(exist_ok=True)
         for p in form["_plays"]:
-            (cards_dir / f"{p['id']}.svg").write_text(render_card(p, defenses), encoding="utf-8")
+            (cards_dir / f"{p['id']}.svg").write_text(render_card(p, defenses, frame), encoding="utf-8")
             (cards_dir / f"{p['id']}-field.svg").write_text(
-                render_diagram(p, defenses), encoding="utf-8"
+                render_diagram(p, defenses, frame), encoding="utf-8"
             )
         (form["_dir"] / "README.md").write_text(write_formation_readme(form), encoding="utf-8")
 

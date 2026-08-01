@@ -1,6 +1,0 @@
-{
-  "id": "trap-l",
-  "name": "Trap Left",
-  "call": "Tight 1 Trap",
-  "mirror_of": "trap-r"
-}

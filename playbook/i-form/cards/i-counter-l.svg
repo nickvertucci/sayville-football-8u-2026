@@ -1,11 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="702" height="936" viewBox="0 0 702 936" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" width="621" height="960" viewBox="0 0 621 960" font-family="Segoe UI, Helvetica, Arial, sans-serif">
 <rect width="100%" height="100%" fill="#ffffff"/>
-<rect x="0" y="0" width="702" height="58" fill="#14213d"/>
+<rect x="0" y="0" width="621" height="58" fill="#14213d"/>
 <text x="18" y="26" font-size="19" font-weight="700" fill="#ffffff">I Counter Left</text>
 <text x="18" y="45" font-size="11.5" fill="#a9b4c7">RUN  •  I (I-Formation)  •  vs 5-3 (stack)  •  Install wk 3</text>
-<rect x="560.8" y="13" width="123.2" height="31" rx="6" fill="#ffffff" fill-opacity="0.12" stroke="#8593ad" stroke-width="1"/>
-<text x="622.4" y="34" text-anchor="middle" font-size="14.5" font-weight="700" fill="#ffffff" letter-spacing="0.5">I 5 Counter</text>
-<g transform="translate(0,58)">
+<rect x="479.8" y="13" width="123.2" height="31" rx="6" fill="#ffffff" fill-opacity="0.12" stroke="#8593ad" stroke-width="1"/>
+<text x="541.4" y="34" text-anchor="middle" font-size="14.5" font-weight="700" fill="#ffffff" letter-spacing="0.5">I 5 Counter</text>
+<clipPath id="fieldclip"><rect x="0" y="58" width="621" height="418"/></clipPath>
+<g clip-path="url(#fieldclip)"><g transform="translate(-40.5,44.5)">
 <rect x="0" y="0" width="702" height="446" fill="#ffffff"/>
 <line x1="0" y1="391.5" x2="702" y2="391.5" stroke="#c8cdd6" stroke-width="1"/>
 <line x1="0" y1="121.5" x2="702" y2="121.5" stroke="#c8cdd6" stroke-width="1"/>
@@ -77,50 +78,58 @@
 <text x="351.0" y="349.6" text-anchor="middle" font-size="11.5" font-weight="700" fill="#14213d">FB</text>
 <circle cx="351.0" cy="405.0" r="12.4" fill="#ffffff" stroke="#b3001b" stroke-width="2.4"/>
 <text x="351.0" y="409.0" text-anchor="middle" font-size="11.5" font-weight="700" fill="#b3001b">TB</text>
-</g>
-<line x1="18" y1="514" x2="684" y2="514" stroke="#c8cdd6" stroke-width="1"/>
-<text x="18" y="534" font-size="11" font-weight="700" fill="#5b6472" letter-spacing="1">ASSIGNMENTS</text>
-<text x="18" y="552" font-size="12" font-weight="700" fill="#111318">LE</text>
-<text x="52" y="552" font-size="12" fill="#111318">Block down on the first defender inside you.</text>
-<text x="52" y="568" font-size="12" fill="#111318">The man outside you is being kicked out.</text>
-<text x="18" y="586" font-size="12" font-weight="700" fill="#111318">LT</text>
-<text x="52" y="586" font-size="12" fill="#111318">Block down on the first defender inside you.</text>
-<text x="18" y="602" font-size="12" font-weight="700" fill="#111318">LG</text>
-<text x="52" y="602" font-size="12" fill="#111318">Block down on the first defender inside you.</text>
-<text x="18" y="620" font-size="12" font-weight="700" fill="#111318">C</text>
-<text x="52" y="620" font-size="12" fill="#111318">Block the nose. Do not let him cross your face</text>
-<text x="52" y="636" font-size="12" fill="#111318">to the playside.</text>
-<text x="18" y="654" font-size="12" font-weight="700" fill="#111318">RG</text>
-<text x="52" y="654" font-size="12" fill="#111318">PULL LEFT. Stay flat behind the line and kick</text>
-<text x="52" y="670" font-size="12" fill="#111318">out the first defender outside our end.</text>
-<text x="18" y="688" font-size="12" font-weight="700" fill="#111318">RT</text>
-<text x="52" y="688" font-size="12" fill="#111318">Block back. Take the first defender on or</text>
-<text x="52" y="704" font-size="12" fill="#111318">inside you. Nobody crosses your face.</text>
-<text x="351" y="552" font-size="12" font-weight="700" fill="#111318">RE</text>
-<text x="385" y="552" font-size="12" fill="#111318">Block back and cut off pursuit. You are the</text>
-<text x="385" y="568" font-size="12" fill="#111318">last one to the ball.</text>
-<text x="351" y="586" font-size="12" font-weight="700" fill="#111318">Z</text>
-<text x="385" y="586" font-size="12" fill="#111318">Take one hard step upfield like the sweep is</text>
-<text x="385" y="602" font-size="12" fill="#111318">coming, then come back and cut off the</text>
-<text x="385" y="620" font-size="12" fill="#111318">backside.</text>
-<text x="351" y="636" font-size="12" font-weight="700" fill="#111318">QB</text>
-<text x="385" y="636" font-size="12" fill="#111318">Take the snap, fake the sweep the other way</text>
-<text x="385" y="654" font-size="12" fill="#111318">with both hands, then turn back and hand to</text>
-<text x="385" y="670" font-size="12" fill="#111318">the tailback. The fake comes first — the</text>
-<text x="385" y="688" font-size="12" fill="#111318">handoff is late on purpose.</text>
-<text x="351" y="704" font-size="12" font-weight="700" fill="#111318">FB</text>
-<text x="385" y="704" font-size="12" fill="#111318">Run the sweep path to the other side at full</text>
-<text x="385" y="722" font-size="12" fill="#111318">speed and block anything that shows. You are</text>
-<text x="385" y="738" font-size="12" fill="#111318">the lie.</text>
-<text x="351" y="756" font-size="12" font-weight="700" fill="#111318">TB</text>
-<text x="385" y="756" font-size="12" fill="#111318">Take two hard steps toward the sweep, then</text>
-<text x="385" y="772" font-size="12" fill="#111318">plant and come back behind the pulling guard.</text>
-<text x="385" y="790" font-size="12" fill="#111318">Those two steps are the entire play.</text>
-<line x1="18" y1="796" x2="684" y2="796" stroke="#c8cdd6" stroke-width="1"/>
-<text x="18" y="814" font-size="11" font-weight="700" fill="#5b6472" letter-spacing="1">COACHING POINTS</text>
-<text x="18" y="834" font-size="12" fill="#111318">Do not call this until I Sweep Right has gone for real yards. Misdirection off a play they do not</text>
-<text x="18" y="852" font-size="12" fill="#111318">fear is just a slower run.</text>
-<text x="18" y="868" font-size="12" fill="#111318">The tailback's counter steps must be full speed and full length. A shuffle fools nobody.</text>
-<text x="18" y="886" font-size="12" fill="#111318">The fullback selling the sweep matters more than his block. Tell him he is the decoy and mean it.</text>
-<text x="18" y="902" font-size="12" fill="#111318">If their backside linebacker stops chasing the sweep, go back to I Power Left.</text>
+</g></g>
+<line x1="18" y1="486" x2="603" y2="486" stroke="#c8cdd6" stroke-width="1"/>
+<text x="18" y="506" font-size="11" font-weight="700" fill="#5b6472" letter-spacing="1">ASSIGNMENTS</text>
+<text x="18" y="524" font-size="12" font-weight="700" fill="#111318">LE</text>
+<text x="52" y="524" font-size="12" fill="#111318">Block down on the first defender inside</text>
+<text x="52" y="542" font-size="12" fill="#111318">you. The man outside you is being</text>
+<text x="52" y="558" font-size="12" fill="#111318">kicked out.</text>
+<text x="18" y="576" font-size="12" font-weight="700" fill="#111318">LT</text>
+<text x="52" y="576" font-size="12" fill="#111318">Block down on the first defender inside</text>
+<text x="52" y="592" font-size="12" fill="#111318">you.</text>
+<text x="18" y="610" font-size="12" font-weight="700" fill="#111318">LG</text>
+<text x="52" y="610" font-size="12" fill="#111318">Block down on the first defender inside</text>
+<text x="52" y="626" font-size="12" fill="#111318">you.</text>
+<text x="18" y="644" font-size="12" font-weight="700" fill="#111318">C</text>
+<text x="52" y="644" font-size="12" fill="#111318">Block the nose. Do not let him cross</text>
+<text x="52" y="660" font-size="12" fill="#111318">your face to the playside.</text>
+<text x="18" y="678" font-size="12" font-weight="700" fill="#111318">RG</text>
+<text x="52" y="678" font-size="12" fill="#111318">PULL LEFT. Stay flat behind the line</text>
+<text x="52" y="694" font-size="12" fill="#111318">and kick out the first defender outside</text>
+<text x="52" y="712" font-size="12" fill="#111318">our end.</text>
+<text x="18" y="728" font-size="12" font-weight="700" fill="#111318">RT</text>
+<text x="52" y="728" font-size="12" fill="#111318">Block back. Take the first defender on</text>
+<text x="52" y="746" font-size="12" fill="#111318">or inside you. Nobody crosses your</text>
+<text x="52" y="762" font-size="12" fill="#111318">face.</text>
+<text x="310" y="524" font-size="12" font-weight="700" fill="#111318">RE</text>
+<text x="344" y="524" font-size="12" fill="#111318">Block back and cut off pursuit. You are</text>
+<text x="344" y="542" font-size="12" fill="#111318">the last one to the ball.</text>
+<text x="310" y="558" font-size="12" font-weight="700" fill="#111318">Z</text>
+<text x="344" y="558" font-size="12" fill="#111318">Take one hard step upfield like the</text>
+<text x="344" y="576" font-size="12" fill="#111318">sweep is coming, then come back and cut</text>
+<text x="344" y="592" font-size="12" fill="#111318">off the backside.</text>
+<text x="310" y="610" font-size="12" font-weight="700" fill="#111318">QB</text>
+<text x="344" y="610" font-size="12" fill="#111318">Take the snap, fake the sweep the other</text>
+<text x="344" y="626" font-size="12" fill="#111318">way with both hands, then turn back and</text>
+<text x="344" y="644" font-size="12" fill="#111318">hand to the tailback. The fake comes</text>
+<text x="344" y="660" font-size="12" fill="#111318">first — the handoff is late on purpose.</text>
+<text x="310" y="678" font-size="12" font-weight="700" fill="#111318">FB</text>
+<text x="344" y="678" font-size="12" fill="#111318">Run the sweep path to the other side at</text>
+<text x="344" y="694" font-size="12" fill="#111318">full speed and block anything that</text>
+<text x="344" y="712" font-size="12" fill="#111318">shows. You are the lie.</text>
+<text x="310" y="728" font-size="12" font-weight="700" fill="#111318">TB</text>
+<text x="344" y="728" font-size="12" fill="#111318">Take two hard steps toward the sweep,</text>
+<text x="344" y="746" font-size="12" fill="#111318">then plant and come back behind the</text>
+<text x="344" y="762" font-size="12" fill="#111318">pulling guard. Those two steps are the</text>
+<text x="344" y="780" font-size="12" fill="#111318">entire play.</text>
+<line x1="18" y1="786" x2="603" y2="786" stroke="#c8cdd6" stroke-width="1"/>
+<text x="18" y="804" font-size="11" font-weight="700" fill="#5b6472" letter-spacing="1">COACHING POINTS</text>
+<text x="18" y="824" font-size="12" fill="#111318">Do not call this until I Sweep Right has gone for real yards. Misdirection off a play</text>
+<text x="18" y="842" font-size="12" fill="#111318">they do not fear is just a slower run.</text>
+<text x="18" y="858" font-size="12" fill="#111318">The tailback's counter steps must be full speed and full length. A shuffle fools</text>
+<text x="18" y="876" font-size="12" fill="#111318">nobody.</text>
+<text x="18" y="892" font-size="12" fill="#111318">The fullback selling the sweep matters more than his block. Tell him he is the decoy</text>
+<text x="18" y="910" font-size="12" fill="#111318">and mean it.</text>
+<text x="18" y="926" font-size="12" fill="#111318">If their backside linebacker stops chasing the sweep, go back to I Power Left.</text>
 </svg>

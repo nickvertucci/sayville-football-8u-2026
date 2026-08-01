@@ -1,11 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="702" height="918" viewBox="0 0 702 918" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" width="621" height="942" viewBox="0 0 621 942" font-family="Segoe UI, Helvetica, Arial, sans-serif">
 <rect width="100%" height="100%" fill="#ffffff"/>
-<rect x="0" y="0" width="702" height="58" fill="#14213d"/>
+<rect x="0" y="0" width="621" height="58" fill="#14213d"/>
 <text x="18" y="26" font-size="19" font-weight="700" fill="#ffffff">I Iso Left</text>
 <text x="18" y="45" font-size="11.5" fill="#a9b4c7">RUN  •  I (I-Formation)  •  vs 4-4 (stack)  •  Install wk 1</text>
-<rect x="597.6" y="13" width="86.4" height="31" rx="6" fill="#ffffff" fill-opacity="0.12" stroke="#8593ad" stroke-width="1"/>
-<text x="640.8" y="34" text-anchor="middle" font-size="14.5" font-weight="700" fill="#ffffff" letter-spacing="0.5">I 3 Iso</text>
-<g transform="translate(0,58)">
+<rect x="516.6" y="13" width="86.4" height="31" rx="6" fill="#ffffff" fill-opacity="0.12" stroke="#8593ad" stroke-width="1"/>
+<text x="559.8" y="34" text-anchor="middle" font-size="14.5" font-weight="700" fill="#ffffff" letter-spacing="0.5">I 3 Iso</text>
+<clipPath id="fieldclip"><rect x="0" y="58" width="621" height="418"/></clipPath>
+<g clip-path="url(#fieldclip)"><g transform="translate(-40.5,44.5)">
 <rect x="0" y="0" width="702" height="446" fill="#ffffff"/>
 <line x1="0" y1="391.5" x2="702" y2="391.5" stroke="#c8cdd6" stroke-width="1"/>
 <line x1="0" y1="121.5" x2="702" y2="121.5" stroke="#c8cdd6" stroke-width="1"/>
@@ -77,49 +78,56 @@
 <text x="351.0" y="349.6" text-anchor="middle" font-size="11.5" font-weight="700" fill="#14213d">FB</text>
 <circle cx="351.0" cy="405.0" r="12.4" fill="#ffffff" stroke="#b3001b" stroke-width="2.4"/>
 <text x="351.0" y="409.0" text-anchor="middle" font-size="11.5" font-weight="700" fill="#b3001b">TB</text>
-</g>
-<line x1="18" y1="514" x2="684" y2="514" stroke="#c8cdd6" stroke-width="1"/>
-<text x="18" y="534" font-size="11" font-weight="700" fill="#5b6472" letter-spacing="1">ASSIGNMENTS</text>
-<text x="18" y="552" font-size="12" font-weight="700" fill="#111318">LE</text>
-<text x="52" y="552" font-size="12" fill="#111318">Block the man over you and turn him out.</text>
-<text x="18" y="568" font-size="12" font-weight="700" fill="#111318">LT</text>
-<text x="52" y="568" font-size="12" fill="#111318">Block the man over you and drive him to the</text>
-<text x="52" y="586" font-size="12" fill="#111318">outside. You are the outside wall of the hole.</text>
-<text x="18" y="602" font-size="12" font-weight="700" fill="#111318">LG</text>
-<text x="52" y="602" font-size="12" fill="#111318">Block the man over you and drive him to the</text>
-<text x="52" y="620" font-size="12" fill="#111318">inside. You are the inside wall of the hole.</text>
-<text x="18" y="636" font-size="12" font-weight="700" fill="#111318">C</text>
-<text x="52" y="636" font-size="12" fill="#111318">Block the first defender to the backside.</text>
-<text x="18" y="654" font-size="12" font-weight="700" fill="#111318">RG</text>
-<text x="52" y="654" font-size="12" fill="#111318">Block back. Take the first defender on or</text>
-<text x="52" y="670" font-size="12" fill="#111318">inside you. Nobody crosses your face.</text>
-<text x="18" y="688" font-size="12" font-weight="700" fill="#111318">RT</text>
-<text x="52" y="688" font-size="12" fill="#111318">Block back. Take the first defender on or</text>
-<text x="52" y="704" font-size="12" fill="#111318">inside you. Nobody crosses your face.</text>
-<text x="351" y="552" font-size="12" font-weight="700" fill="#111318">RE</text>
-<text x="385" y="552" font-size="12" fill="#111318">Block back and cut off pursuit. You are the</text>
-<text x="385" y="568" font-size="12" fill="#111318">last one to the ball.</text>
-<text x="351" y="586" font-size="12" font-weight="700" fill="#111318">Z</text>
-<text x="385" y="586" font-size="12" fill="#111318">Come across behind the line and cut off</text>
-<text x="385" y="602" font-size="12" fill="#111318">anybody chasing from the backside.</text>
-<text x="351" y="620" font-size="12" font-weight="700" fill="#111318">QB</text>
-<text x="385" y="620" font-size="12" fill="#111318">Reverse pivot and hand the ball to the</text>
-<text x="385" y="636" font-size="12" fill="#111318">tailback at four yards. Then clear out and</text>
-<text x="385" y="654" font-size="12" fill="#111318">fake wide.</text>
-<text x="351" y="670" font-size="12" font-weight="700" fill="#111318">FB</text>
-<text x="385" y="670" font-size="12" fill="#111318">Lead through the hole between the guard and</text>
-<text x="385" y="688" font-size="12" fill="#111318">the tackle. Put your facemask on the</text>
-<text x="385" y="704" font-size="12" fill="#111318">linebacker and move him any direction — just</text>
-<text x="385" y="722" font-size="12" fill="#111318">move him.</text>
-<text x="351" y="738" font-size="12" font-weight="700" fill="#111318">TB</text>
-<text x="385" y="738" font-size="12" fill="#111318">Take the handoff at four yards, get downhill</text>
-<text x="385" y="756" font-size="12" fill="#111318">behind the fullback, and cut off his block.</text>
-<line x1="18" y1="762" x2="684" y2="762" stroke="#c8cdd6" stroke-width="1"/>
-<text x="18" y="780" font-size="11" font-weight="700" fill="#5b6472" letter-spacing="1">COACHING POINTS</text>
-<text x="18" y="800" font-size="12" fill="#111318">Running away from the flanker means one fewer blocker out there, so the tailback has to get north</text>
-<text x="18" y="818" font-size="12" fill="#111318">fast.</text>
-<text x="18" y="834" font-size="12" fill="#111318">Their defense will usually shade toward our flanker. That is the reason this play exists — check it</text>
-<text x="18" y="852" font-size="12" fill="#111318">before you call it.</text>
-<text x="18" y="868" font-size="12" fill="#111318">Same block, same read as I Iso Right. Do not teach it as a new play, teach it as the same play</text>
-<text x="18" y="886" font-size="12" fill="#111318">flipped.</text>
+</g></g>
+<line x1="18" y1="486" x2="603" y2="486" stroke="#c8cdd6" stroke-width="1"/>
+<text x="18" y="506" font-size="11" font-weight="700" fill="#5b6472" letter-spacing="1">ASSIGNMENTS</text>
+<text x="18" y="524" font-size="12" font-weight="700" fill="#111318">LE</text>
+<text x="52" y="524" font-size="12" fill="#111318">Block the man over you and turn him</text>
+<text x="52" y="542" font-size="12" fill="#111318">out.</text>
+<text x="18" y="558" font-size="12" font-weight="700" fill="#111318">LT</text>
+<text x="52" y="558" font-size="12" fill="#111318">Block the man over you and drive him to</text>
+<text x="52" y="576" font-size="12" fill="#111318">the outside. You are the outside wall</text>
+<text x="52" y="592" font-size="12" fill="#111318">of the hole.</text>
+<text x="18" y="610" font-size="12" font-weight="700" fill="#111318">LG</text>
+<text x="52" y="610" font-size="12" fill="#111318">Block the man over you and drive him to</text>
+<text x="52" y="626" font-size="12" fill="#111318">the inside. You are the inside wall of</text>
+<text x="52" y="644" font-size="12" fill="#111318">the hole.</text>
+<text x="18" y="660" font-size="12" font-weight="700" fill="#111318">C</text>
+<text x="52" y="660" font-size="12" fill="#111318">Block the first defender to the</text>
+<text x="52" y="678" font-size="12" fill="#111318">backside.</text>
+<text x="18" y="694" font-size="12" font-weight="700" fill="#111318">RG</text>
+<text x="52" y="694" font-size="12" fill="#111318">Block back. Take the first defender on</text>
+<text x="52" y="712" font-size="12" fill="#111318">or inside you. Nobody crosses your</text>
+<text x="52" y="728" font-size="12" fill="#111318">face.</text>
+<text x="18" y="746" font-size="12" font-weight="700" fill="#111318">RT</text>
+<text x="52" y="746" font-size="12" fill="#111318">Block back. Take the first defender on</text>
+<text x="52" y="762" font-size="12" fill="#111318">or inside you. Nobody crosses your</text>
+<text x="52" y="780" font-size="12" fill="#111318">face.</text>
+<text x="310" y="524" font-size="12" font-weight="700" fill="#111318">RE</text>
+<text x="344" y="524" font-size="12" fill="#111318">Block back and cut off pursuit. You are</text>
+<text x="344" y="542" font-size="12" fill="#111318">the last one to the ball.</text>
+<text x="310" y="558" font-size="12" font-weight="700" fill="#111318">Z</text>
+<text x="344" y="558" font-size="12" fill="#111318">Come across behind the line and cut off</text>
+<text x="344" y="576" font-size="12" fill="#111318">anybody chasing from the backside.</text>
+<text x="310" y="592" font-size="12" font-weight="700" fill="#111318">QB</text>
+<text x="344" y="592" font-size="12" fill="#111318">Reverse pivot and hand the ball to the</text>
+<text x="344" y="610" font-size="12" fill="#111318">tailback at four yards. Then clear out</text>
+<text x="344" y="626" font-size="12" fill="#111318">and fake wide.</text>
+<text x="310" y="644" font-size="12" font-weight="700" fill="#111318">FB</text>
+<text x="344" y="644" font-size="12" fill="#111318">Lead through the hole between the guard</text>
+<text x="344" y="660" font-size="12" fill="#111318">and the tackle. Put your facemask on</text>
+<text x="344" y="678" font-size="12" fill="#111318">the linebacker and move him any</text>
+<text x="344" y="694" font-size="12" fill="#111318">direction — just move him.</text>
+<text x="310" y="712" font-size="12" font-weight="700" fill="#111318">TB</text>
+<text x="344" y="712" font-size="12" fill="#111318">Take the handoff at four yards, get</text>
+<text x="344" y="728" font-size="12" fill="#111318">downhill behind the fullback, and cut</text>
+<text x="344" y="746" font-size="12" fill="#111318">off his block.</text>
+<line x1="18" y1="786" x2="603" y2="786" stroke="#c8cdd6" stroke-width="1"/>
+<text x="18" y="804" font-size="11" font-weight="700" fill="#5b6472" letter-spacing="1">COACHING POINTS</text>
+<text x="18" y="824" font-size="12" fill="#111318">Running away from the flanker means one fewer blocker out there, so the tailback has</text>
+<text x="18" y="842" font-size="12" fill="#111318">to get north fast.</text>
+<text x="18" y="858" font-size="12" fill="#111318">Their defense will usually shade toward our flanker. That is the reason this play</text>
+<text x="18" y="876" font-size="12" fill="#111318">exists — check it before you call it.</text>
+<text x="18" y="892" font-size="12" fill="#111318">Same block, same read as I Iso Right. Do not teach it as a new play, teach it as the</text>
+<text x="18" y="910" font-size="12" fill="#111318">same play flipped.</text>
 </svg>

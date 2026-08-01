@@ -18,6 +18,17 @@ playbook/<formation>/cards/*.svg      generated: full card + diagram-only versio
 generator/defenses/*.json             defensive looks the cards can be drawn against
 ```
 
+## Every diagram shares one frame
+
+`diagram_frame()` in `render.py` computes a single window that fits every play in the
+book, and every diagram and card is drawn in it. That is why the line of scrimmage, the
+formation and the defense land on the same spot on every image.
+
+**Do not crop diagrams to their own content.** It uses the pixels better and it makes the
+book look assembled from different sources — the same play drawn at two sizes reads as
+two different plays. If a new play runs wider or deeper than anything already in the
+book, the frame grows for everything at once, which is the intended behaviour.
+
 ## Coordinates
 
 Field yards. **x is positive to the right, y is positive downfield.** The line of
@@ -78,10 +89,12 @@ words "left" and "right" in every rule, purpose and coaching point.
 
 **Only use `mirror_of` when the formation is symmetric.** A position with no counterpart
 in the `MIRROR` table maps to itself, which is correct for someone aligned on the middle
-(`C`, `QB`, `FB`, `TB`) and wrong for a one-sided back or receiver. The Wing-T wingback,
-the I and Pro flanker, and the Ace slot all sit on one side permanently — plays in those
-formations are authored in both directions by hand. Tight and Wishbone are symmetric and
-do use mirroring.
+(`C`, `QB`, `FB`, `TB`) and wrong for a one-sided back or receiver.
+
+- **Wishbone is symmetric** — it uses `mirror_of`, so a left-handed play is one line.
+- **I is not.** The flanker (`Z`) sits to the right on every snap, so mirroring would
+  flip his path while leaving him aligned on the same side. I-formation plays are
+  authored in both directions by hand.
 
 **This is also why rules never name a specific position.** Write "the playside end", "the
 backside guard", "the center" — never "RE" or "LG". Position abbreviations are not

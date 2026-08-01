@@ -1,11 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="702" height="834" viewBox="0 0 702 834" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" width="621" height="874" viewBox="0 0 621 874" font-family="Segoe UI, Helvetica, Arial, sans-serif">
 <rect width="100%" height="100%" fill="#ffffff"/>
-<rect x="0" y="0" width="702" height="58" fill="#14213d"/>
+<rect x="0" y="0" width="621" height="58" fill="#14213d"/>
 <text x="18" y="26" font-size="19" font-weight="700" fill="#ffffff">Bone Dive</text>
 <text x="18" y="45" font-size="11.5" fill="#a9b4c7">RUN  •  Wishbone (Wishbone)  •  vs 6-3 (max legal front)  •  Install wk 1</text>
-<rect x="560.8" y="13" width="123.2" height="31" rx="6" fill="#ffffff" fill-opacity="0.12" stroke="#8593ad" stroke-width="1"/>
-<text x="622.4" y="34" text-anchor="middle" font-size="14.5" font-weight="700" fill="#ffffff" letter-spacing="0.5">Bone 2 Dive</text>
-<g transform="translate(0,58)">
+<rect x="479.8" y="13" width="123.2" height="31" rx="6" fill="#ffffff" fill-opacity="0.12" stroke="#8593ad" stroke-width="1"/>
+<text x="541.4" y="34" text-anchor="middle" font-size="14.5" font-weight="700" fill="#ffffff" letter-spacing="0.5">Bone 2 Dive</text>
+<clipPath id="fieldclip"><rect x="0" y="58" width="621" height="418"/></clipPath>
+<g clip-path="url(#fieldclip)"><g transform="translate(-40.5,44.5)">
 <rect x="0" y="0" width="702" height="446" fill="#ffffff"/>
 <line x1="0" y1="391.5" x2="702" y2="391.5" stroke="#c8cdd6" stroke-width="1"/>
 <line x1="0" y1="121.5" x2="702" y2="121.5" stroke="#c8cdd6" stroke-width="1"/>
@@ -77,46 +78,50 @@
 <text x="272.7" y="392.8" text-anchor="middle" font-size="11.5" font-weight="700" fill="#14213d">LH</text>
 <circle cx="429.3" cy="388.8" r="12.4" fill="#ffffff" stroke="#14213d" stroke-width="2.4"/>
 <text x="429.3" y="392.8" text-anchor="middle" font-size="11.5" font-weight="700" fill="#14213d">RH</text>
-</g>
-<line x1="18" y1="514" x2="684" y2="514" stroke="#c8cdd6" stroke-width="1"/>
-<text x="18" y="534" font-size="11" font-weight="700" fill="#5b6472" letter-spacing="1">ASSIGNMENTS</text>
-<text x="18" y="552" font-size="12" font-weight="700" fill="#111318">LE</text>
-<text x="52" y="552" font-size="12" fill="#111318">Block back and cut off pursuit. You are the</text>
-<text x="52" y="568" font-size="12" fill="#111318">last one to the ball.</text>
-<text x="18" y="586" font-size="12" font-weight="700" fill="#111318">LT</text>
-<text x="52" y="586" font-size="12" fill="#111318">Block back. Take the first defender on or</text>
-<text x="52" y="602" font-size="12" fill="#111318">inside you. Nobody crosses your face.</text>
-<text x="18" y="620" font-size="12" font-weight="700" fill="#111318">LG</text>
-<text x="52" y="620" font-size="12" fill="#111318">Block the man over you and drive him off the</text>
-<text x="52" y="636" font-size="12" fill="#111318">ball.</text>
-<text x="18" y="654" font-size="12" font-weight="700" fill="#111318">C</text>
-<text x="52" y="654" font-size="12" fill="#111318">Snap and block the man over you. If nobody is</text>
-<text x="52" y="670" font-size="12" fill="#111318">over you, climb to the middle linebacker.</text>
-<text x="18" y="688" font-size="12" font-weight="700" fill="#111318">RG</text>
-<text x="52" y="688" font-size="12" fill="#111318">Block the man over you and drive him off the</text>
-<text x="52" y="704" font-size="12" fill="#111318">ball.</text>
-<text x="18" y="722" font-size="12" font-weight="700" fill="#111318">RT</text>
-<text x="52" y="722" font-size="12" fill="#111318">Block back. Take the first defender on or</text>
-<text x="52" y="738" font-size="12" fill="#111318">inside you. Nobody crosses your face.</text>
-<text x="351" y="552" font-size="12" font-weight="700" fill="#111318">RE</text>
-<text x="385" y="552" font-size="12" fill="#111318">Block back and cut off pursuit. You are the</text>
-<text x="385" y="568" font-size="12" fill="#111318">last one to the ball.</text>
-<text x="351" y="586" font-size="12" font-weight="700" fill="#111318">QB</text>
-<text x="385" y="586" font-size="12" fill="#111318">Take the snap and hand the ball to the</text>
-<text x="385" y="602" font-size="12" fill="#111318">fullback at two yards. Then fake to the</text>
-<text x="385" y="620" font-size="12" fill="#111318">outside.</text>
-<text x="351" y="636" font-size="12" font-weight="700" fill="#111318">FB</text>
-<text x="385" y="636" font-size="12" fill="#111318">Run straight ahead behind the center. Take the</text>
-<text x="385" y="654" font-size="12" fill="#111318">ball and get north — there is no hole to look</text>
-<text x="385" y="670" font-size="12" fill="#111318">for.</text>
-<text x="351" y="688" font-size="12" font-weight="700" fill="#111318">LH</text>
-<text x="385" y="688" font-size="12" fill="#111318">Run the pitch path to your side at full speed</text>
-<text x="385" y="704" font-size="12" fill="#111318">and sell it.</text>
-<text x="351" y="722" font-size="12" font-weight="700" fill="#111318">RH</text>
-<text x="385" y="722" font-size="12" fill="#111318">Run the pitch path to your side at full speed</text>
-<text x="385" y="738" font-size="12" fill="#111318">and sell it.</text>
-<line x1="18" y1="746" x2="684" y2="746" stroke="#c8cdd6" stroke-width="1"/>
-<text x="18" y="764" font-size="11" font-weight="700" fill="#5b6472" letter-spacing="1">COACHING POINTS</text>
-<text x="18" y="784" font-size="12" fill="#111318">Both halfbacks run their fakes every single time. Three threats or none.</text>
-<text x="18" y="800" font-size="12" fill="#111318">The fullback does not read anything. He runs at the center's back and keeps his feet moving.</text>
+</g></g>
+<line x1="18" y1="486" x2="603" y2="486" stroke="#c8cdd6" stroke-width="1"/>
+<text x="18" y="506" font-size="11" font-weight="700" fill="#5b6472" letter-spacing="1">ASSIGNMENTS</text>
+<text x="18" y="524" font-size="12" font-weight="700" fill="#111318">LE</text>
+<text x="52" y="524" font-size="12" fill="#111318">Block back and cut off pursuit. You are</text>
+<text x="52" y="542" font-size="12" fill="#111318">the last one to the ball.</text>
+<text x="18" y="558" font-size="12" font-weight="700" fill="#111318">LT</text>
+<text x="52" y="558" font-size="12" fill="#111318">Block back. Take the first defender on</text>
+<text x="52" y="576" font-size="12" fill="#111318">or inside you. Nobody crosses your</text>
+<text x="52" y="592" font-size="12" fill="#111318">face.</text>
+<text x="18" y="610" font-size="12" font-weight="700" fill="#111318">LG</text>
+<text x="52" y="610" font-size="12" fill="#111318">Block the man over you and drive him</text>
+<text x="52" y="626" font-size="12" fill="#111318">off the ball.</text>
+<text x="18" y="644" font-size="12" font-weight="700" fill="#111318">C</text>
+<text x="52" y="644" font-size="12" fill="#111318">Snap and block the man over you. If</text>
+<text x="52" y="660" font-size="12" fill="#111318">nobody is over you, climb to the middle</text>
+<text x="52" y="678" font-size="12" fill="#111318">linebacker.</text>
+<text x="18" y="694" font-size="12" font-weight="700" fill="#111318">RG</text>
+<text x="52" y="694" font-size="12" fill="#111318">Block the man over you and drive him</text>
+<text x="52" y="712" font-size="12" fill="#111318">off the ball.</text>
+<text x="18" y="728" font-size="12" font-weight="700" fill="#111318">RT</text>
+<text x="52" y="728" font-size="12" fill="#111318">Block back. Take the first defender on</text>
+<text x="52" y="746" font-size="12" fill="#111318">or inside you. Nobody crosses your</text>
+<text x="52" y="762" font-size="12" fill="#111318">face.</text>
+<text x="310" y="524" font-size="12" font-weight="700" fill="#111318">RE</text>
+<text x="344" y="524" font-size="12" fill="#111318">Block back and cut off pursuit. You are</text>
+<text x="344" y="542" font-size="12" fill="#111318">the last one to the ball.</text>
+<text x="310" y="558" font-size="12" font-weight="700" fill="#111318">QB</text>
+<text x="344" y="558" font-size="12" fill="#111318">Take the snap and hand the ball to the</text>
+<text x="344" y="576" font-size="12" fill="#111318">fullback at two yards. Then fake to the</text>
+<text x="344" y="592" font-size="12" fill="#111318">outside.</text>
+<text x="310" y="610" font-size="12" font-weight="700" fill="#111318">FB</text>
+<text x="344" y="610" font-size="12" fill="#111318">Run straight ahead behind the center.</text>
+<text x="344" y="626" font-size="12" fill="#111318">Take the ball and get north — there is</text>
+<text x="344" y="644" font-size="12" fill="#111318">no hole to look for.</text>
+<text x="310" y="660" font-size="12" font-weight="700" fill="#111318">LH</text>
+<text x="344" y="660" font-size="12" fill="#111318">Run the pitch path to your side at full</text>
+<text x="344" y="678" font-size="12" fill="#111318">speed and sell it.</text>
+<text x="310" y="694" font-size="12" font-weight="700" fill="#111318">RH</text>
+<text x="344" y="694" font-size="12" fill="#111318">Run the pitch path to your side at full</text>
+<text x="344" y="712" font-size="12" fill="#111318">speed and sell it.</text>
+<line x1="18" y1="770" x2="603" y2="770" stroke="#c8cdd6" stroke-width="1"/>
+<text x="18" y="788" font-size="11" font-weight="700" fill="#5b6472" letter-spacing="1">COACHING POINTS</text>
+<text x="18" y="808" font-size="12" fill="#111318">Both halfbacks run their fakes every single time. Three threats or none.</text>
+<text x="18" y="824" font-size="12" fill="#111318">The fullback does not read anything. He runs at the center's back and keeps his feet</text>
+<text x="18" y="842" font-size="12" fill="#111318">moving.</text>
 </svg>

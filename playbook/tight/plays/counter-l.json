@@ -1,6 +1,0 @@
-{
-  "id": "counter-l",
-  "name": "Counter Left",
-  "call": "Tight 5 Counter",
-  "mirror_of": "counter-r"
-}

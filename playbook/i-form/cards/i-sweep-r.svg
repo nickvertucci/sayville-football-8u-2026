@@ -1,11 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="702" height="952" viewBox="0 0 702 952" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" width="621" height="976" viewBox="0 0 621 976" font-family="Segoe UI, Helvetica, Arial, sans-serif">
 <rect width="100%" height="100%" fill="#ffffff"/>
-<rect x="0" y="0" width="702" height="58" fill="#14213d"/>
+<rect x="0" y="0" width="621" height="58" fill="#14213d"/>
 <text x="18" y="26" font-size="19" font-weight="700" fill="#ffffff">I Sweep Right</text>
 <text x="18" y="45" font-size="11.5" fill="#a9b4c7">RUN  •  I (I-Formation)  •  vs 4-4 (stack)  •  Install wk 2</text>
-<rect x="579.2" y="13" width="104.8" height="31" rx="6" fill="#ffffff" fill-opacity="0.12" stroke="#8593ad" stroke-width="1"/>
-<text x="631.6" y="34" text-anchor="middle" font-size="14.5" font-weight="700" fill="#ffffff" letter-spacing="0.5">I 8 Sweep</text>
-<g transform="translate(0,58)">
+<rect x="498.2" y="13" width="104.8" height="31" rx="6" fill="#ffffff" fill-opacity="0.12" stroke="#8593ad" stroke-width="1"/>
+<text x="550.6" y="34" text-anchor="middle" font-size="14.5" font-weight="700" fill="#ffffff" letter-spacing="0.5">I 8 Sweep</text>
+<clipPath id="fieldclip"><rect x="0" y="58" width="621" height="418"/></clipPath>
+<g clip-path="url(#fieldclip)"><g transform="translate(-40.5,44.5)">
 <rect x="0" y="0" width="702" height="446" fill="#ffffff"/>
 <line x1="0" y1="391.5" x2="702" y2="391.5" stroke="#c8cdd6" stroke-width="1"/>
 <line x1="0" y1="121.5" x2="702" y2="121.5" stroke="#c8cdd6" stroke-width="1"/>
@@ -77,53 +78,60 @@
 <text x="351.0" y="349.6" text-anchor="middle" font-size="11.5" font-weight="700" fill="#14213d">FB</text>
 <circle cx="351.0" cy="405.0" r="12.4" fill="#ffffff" stroke="#b3001b" stroke-width="2.4"/>
 <text x="351.0" y="409.0" text-anchor="middle" font-size="11.5" font-weight="700" fill="#b3001b">TB</text>
-</g>
-<line x1="18" y1="514" x2="684" y2="514" stroke="#c8cdd6" stroke-width="1"/>
-<text x="18" y="534" font-size="11" font-weight="700" fill="#5b6472" letter-spacing="1">ASSIGNMENTS</text>
-<text x="18" y="552" font-size="12" font-weight="700" fill="#111318">LE</text>
-<text x="52" y="552" font-size="12" fill="#111318">Block back and cut off pursuit. You are the</text>
-<text x="52" y="568" font-size="12" fill="#111318">last one to the ball.</text>
-<text x="18" y="586" font-size="12" font-weight="700" fill="#111318">LT</text>
-<text x="52" y="586" font-size="12" fill="#111318">Block back. Take the first defender on or</text>
-<text x="52" y="602" font-size="12" fill="#111318">inside you. Nobody crosses your face.</text>
-<text x="18" y="620" font-size="12" font-weight="700" fill="#111318">LG</text>
-<text x="52" y="620" font-size="12" fill="#111318">Block back. Take the first defender on or</text>
-<text x="52" y="636" font-size="12" fill="#111318">inside you. Nobody crosses your face.</text>
-<text x="18" y="654" font-size="12" font-weight="700" fill="#111318">C</text>
-<text x="52" y="654" font-size="12" fill="#111318">Reach the man over you. If nobody is over you,</text>
-<text x="52" y="670" font-size="12" fill="#111318">cut off the backside gap.</text>
-<text x="18" y="688" font-size="12" font-weight="700" fill="#111318">RG</text>
-<text x="52" y="688" font-size="12" fill="#111318">Reach the first defender to the playside. Get</text>
-<text x="52" y="704" font-size="12" fill="#111318">your head across his outside shoulder.</text>
-<text x="18" y="722" font-size="12" font-weight="700" fill="#111318">RT</text>
-<text x="52" y="722" font-size="12" fill="#111318">Reach the man on or outside you. If you cannot</text>
-<text x="52" y="738" font-size="12" fill="#111318">reach him, run him past the play.</text>
-<text x="351" y="552" font-size="12" font-weight="700" fill="#111318">RE</text>
-<text x="385" y="552" font-size="12" fill="#111318">Reach the man over you and turn him in. Let</text>
-<text x="385" y="568" font-size="12" fill="#111318">the ball go around you.</text>
-<text x="351" y="586" font-size="12" font-weight="700" fill="#111318">Z</text>
-<text x="385" y="586" font-size="12" fill="#111318">Block the deepest defender on your side. Run</text>
-<text x="385" y="602" font-size="12" fill="#111318">at his outside number and screen him away from</text>
-<text x="385" y="620" font-size="12" fill="#111318">the ball.</text>
-<text x="351" y="636" font-size="12" font-weight="700" fill="#111318">QB</text>
-<text x="385" y="636" font-size="12" fill="#111318">Reverse pivot and hand the ball to the</text>
-<text x="385" y="654" font-size="12" fill="#111318">tailback as deep as you can. Then boot away</text>
-<text x="385" y="670" font-size="12" fill="#111318">and sell it.</text>
-<text x="351" y="688" font-size="12" font-weight="700" fill="#111318">FB</text>
-<text x="385" y="688" font-size="12" fill="#111318">Get to the corner ahead of the tailback and</text>
-<text x="385" y="704" font-size="12" fill="#111318">kick out the first defender who shows. You are</text>
-<text x="385" y="722" font-size="12" fill="#111318">the lead blocker — beat him there.</text>
-<text x="351" y="738" font-size="12" font-weight="700" fill="#111318">TB</text>
-<text x="385" y="738" font-size="12" fill="#111318">Take the handoff going full speed and get to</text>
-<text x="385" y="756" font-size="12" fill="#111318">the corner. Turn up when the fullback blocks</text>
-<text x="385" y="772" font-size="12" fill="#111318">somebody, not before. Never stop your feet.</text>
-<line x1="18" y1="780" x2="684" y2="780" stroke="#c8cdd6" stroke-width="1"/>
-<text x="18" y="798" font-size="11" font-weight="700" fill="#5b6472" letter-spacing="1">COACHING POINTS</text>
-<text x="18" y="818" font-size="12" fill="#111318">The tailback is deeper here than the wing is in Tight, so he has time to get outside — but only if</text>
-<text x="18" y="834" font-size="12" fill="#111318">he is at full speed by the handoff.</text>
-<text x="18" y="852" font-size="12" fill="#111318">The fullback has to beat the tailback to the corner. If he is trailing, the play has no lead</text>
-<text x="18" y="868" font-size="12" fill="#111318">blocker.</text>
-<text x="18" y="886" font-size="12" fill="#111318">One rule for the tailback: turn up off the fullback's block. Running to the sideline is how this</text>
-<text x="18" y="902" font-size="12" fill="#111318">play loses eight yards.</text>
-<text x="18" y="920" font-size="12" fill="#111318">Watch our end reach-blocking. If he cannot reach their end, run I Power to that side instead.</text>
+</g></g>
+<line x1="18" y1="486" x2="603" y2="486" stroke="#c8cdd6" stroke-width="1"/>
+<text x="18" y="506" font-size="11" font-weight="700" fill="#5b6472" letter-spacing="1">ASSIGNMENTS</text>
+<text x="18" y="524" font-size="12" font-weight="700" fill="#111318">LE</text>
+<text x="52" y="524" font-size="12" fill="#111318">Block back and cut off pursuit. You are</text>
+<text x="52" y="542" font-size="12" fill="#111318">the last one to the ball.</text>
+<text x="18" y="558" font-size="12" font-weight="700" fill="#111318">LT</text>
+<text x="52" y="558" font-size="12" fill="#111318">Block back. Take the first defender on</text>
+<text x="52" y="576" font-size="12" fill="#111318">or inside you. Nobody crosses your</text>
+<text x="52" y="592" font-size="12" fill="#111318">face.</text>
+<text x="18" y="610" font-size="12" font-weight="700" fill="#111318">LG</text>
+<text x="52" y="610" font-size="12" fill="#111318">Block back. Take the first defender on</text>
+<text x="52" y="626" font-size="12" fill="#111318">or inside you. Nobody crosses your</text>
+<text x="52" y="644" font-size="12" fill="#111318">face.</text>
+<text x="18" y="660" font-size="12" font-weight="700" fill="#111318">C</text>
+<text x="52" y="660" font-size="12" fill="#111318">Reach the man over you. If nobody is</text>
+<text x="52" y="678" font-size="12" fill="#111318">over you, cut off the backside gap.</text>
+<text x="18" y="694" font-size="12" font-weight="700" fill="#111318">RG</text>
+<text x="52" y="694" font-size="12" fill="#111318">Reach the first defender to the</text>
+<text x="52" y="712" font-size="12" fill="#111318">playside. Get your head across his</text>
+<text x="52" y="728" font-size="12" fill="#111318">outside shoulder.</text>
+<text x="18" y="746" font-size="12" font-weight="700" fill="#111318">RT</text>
+<text x="52" y="746" font-size="12" fill="#111318">Reach the man on or outside you. If you</text>
+<text x="52" y="762" font-size="12" fill="#111318">cannot reach him, run him past the</text>
+<text x="52" y="780" font-size="12" fill="#111318">play.</text>
+<text x="310" y="524" font-size="12" font-weight="700" fill="#111318">RE</text>
+<text x="344" y="524" font-size="12" fill="#111318">Reach the man over you and turn him in.</text>
+<text x="344" y="542" font-size="12" fill="#111318">Let the ball go around you.</text>
+<text x="310" y="558" font-size="12" font-weight="700" fill="#111318">Z</text>
+<text x="344" y="558" font-size="12" fill="#111318">Block the deepest defender on your</text>
+<text x="344" y="576" font-size="12" fill="#111318">side. Run at his outside number and</text>
+<text x="344" y="592" font-size="12" fill="#111318">screen him away from the ball.</text>
+<text x="310" y="610" font-size="12" font-weight="700" fill="#111318">QB</text>
+<text x="344" y="610" font-size="12" fill="#111318">Reverse pivot and hand the ball to the</text>
+<text x="344" y="626" font-size="12" fill="#111318">tailback as deep as you can. Then boot</text>
+<text x="344" y="644" font-size="12" fill="#111318">away and sell it.</text>
+<text x="310" y="660" font-size="12" font-weight="700" fill="#111318">FB</text>
+<text x="344" y="660" font-size="12" fill="#111318">Get to the corner ahead of the tailback</text>
+<text x="344" y="678" font-size="12" fill="#111318">and kick out the first defender who</text>
+<text x="344" y="694" font-size="12" fill="#111318">shows. You are the lead blocker — beat</text>
+<text x="344" y="712" font-size="12" fill="#111318">him there.</text>
+<text x="310" y="728" font-size="12" font-weight="700" fill="#111318">TB</text>
+<text x="344" y="728" font-size="12" fill="#111318">Take the handoff going full speed and</text>
+<text x="344" y="746" font-size="12" fill="#111318">get to the corner. Turn up when the</text>
+<text x="344" y="762" font-size="12" fill="#111318">fullback blocks somebody, not before.</text>
+<text x="344" y="780" font-size="12" fill="#111318">Never stop your feet.</text>
+<line x1="18" y1="786" x2="603" y2="786" stroke="#c8cdd6" stroke-width="1"/>
+<text x="18" y="804" font-size="11" font-weight="700" fill="#5b6472" letter-spacing="1">COACHING POINTS</text>
+<text x="18" y="824" font-size="12" fill="#111318">The tailback is deeper here than the wing is in Tight, so he has time to get outside</text>
+<text x="18" y="842" font-size="12" fill="#111318">— but only if he is at full speed by the handoff.</text>
+<text x="18" y="858" font-size="12" fill="#111318">The fullback has to beat the tailback to the corner. If he is trailing, the play has</text>
+<text x="18" y="876" font-size="12" fill="#111318">no lead blocker.</text>
+<text x="18" y="892" font-size="12" fill="#111318">One rule for the tailback: turn up off the fullback's block. Running to the sideline</text>
+<text x="18" y="910" font-size="12" fill="#111318">is how this play loses eight yards.</text>
+<text x="18" y="926" font-size="12" fill="#111318">Watch our end reach-blocking. If he cannot reach their end, run I Power to that side</text>
+<text x="18" y="944" font-size="12" fill="#111318">instead.</text>
 </svg>

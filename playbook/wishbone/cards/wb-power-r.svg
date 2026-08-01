@@ -1,11 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="702" height="850" viewBox="0 0 702 850" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" width="621" height="858" viewBox="0 0 621 858" font-family="Segoe UI, Helvetica, Arial, sans-serif">
 <rect width="100%" height="100%" fill="#ffffff"/>
-<rect x="0" y="0" width="702" height="58" fill="#14213d"/>
+<rect x="0" y="0" width="621" height="58" fill="#14213d"/>
 <text x="18" y="26" font-size="19" font-weight="700" fill="#ffffff">Bone Power Right</text>
 <text x="18" y="45" font-size="11.5" fill="#a9b4c7">RUN  •  Wishbone (Wishbone)  •  vs 6-3 (max legal front)  •  Install wk 1</text>
-<rect x="551.6" y="13" width="132.4" height="31" rx="6" fill="#ffffff" fill-opacity="0.12" stroke="#8593ad" stroke-width="1"/>
-<text x="617.8" y="34" text-anchor="middle" font-size="14.5" font-weight="700" fill="#ffffff" letter-spacing="0.5">Bone 6 Power</text>
-<g transform="translate(0,58)">
+<rect x="470.6" y="13" width="132.4" height="31" rx="6" fill="#ffffff" fill-opacity="0.12" stroke="#8593ad" stroke-width="1"/>
+<text x="536.8" y="34" text-anchor="middle" font-size="14.5" font-weight="700" fill="#ffffff" letter-spacing="0.5">Bone 6 Power</text>
+<clipPath id="fieldclip"><rect x="0" y="58" width="621" height="418"/></clipPath>
+<g clip-path="url(#fieldclip)"><g transform="translate(-40.5,44.5)">
 <rect x="0" y="0" width="702" height="446" fill="#ffffff"/>
 <line x1="0" y1="391.5" x2="702" y2="391.5" stroke="#c8cdd6" stroke-width="1"/>
 <line x1="0" y1="121.5" x2="702" y2="121.5" stroke="#c8cdd6" stroke-width="1"/>
@@ -77,45 +78,50 @@
 <text x="272.7" y="392.8" text-anchor="middle" font-size="11.5" font-weight="700" fill="#14213d">LH</text>
 <circle cx="429.3" cy="388.8" r="12.4" fill="#ffffff" stroke="#b3001b" stroke-width="2.4"/>
 <text x="429.3" y="392.8" text-anchor="middle" font-size="11.5" font-weight="700" fill="#b3001b">RH</text>
-</g>
-<line x1="18" y1="514" x2="684" y2="514" stroke="#c8cdd6" stroke-width="1"/>
-<text x="18" y="534" font-size="11" font-weight="700" fill="#5b6472" letter-spacing="1">ASSIGNMENTS</text>
-<text x="18" y="552" font-size="12" font-weight="700" fill="#111318">LE</text>
-<text x="52" y="552" font-size="12" fill="#111318">Block back and cut off pursuit. You are the</text>
-<text x="52" y="568" font-size="12" fill="#111318">last one to the ball.</text>
-<text x="18" y="586" font-size="12" font-weight="700" fill="#111318">LT</text>
-<text x="52" y="586" font-size="12" fill="#111318">Block back. Take the first defender on or</text>
-<text x="52" y="602" font-size="12" fill="#111318">inside you. Nobody crosses your face.</text>
-<text x="18" y="620" font-size="12" font-weight="700" fill="#111318">LG</text>
-<text x="52" y="620" font-size="12" fill="#111318">PULL RIGHT. Run flat behind the line and turn</text>
-<text x="52" y="636" font-size="12" fill="#111318">up outside our end. Take the first</text>
-<text x="52" y="654" font-size="12" fill="#111318">wrong-colored jersey.</text>
-<text x="18" y="670" font-size="12" font-weight="700" fill="#111318">C</text>
-<text x="52" y="670" font-size="12" fill="#111318">Block back on the backside gap.</text>
-<text x="18" y="688" font-size="12" font-weight="700" fill="#111318">RG</text>
-<text x="52" y="688" font-size="12" fill="#111318">Block down on the first defender inside you.</text>
-<text x="18" y="704" font-size="12" font-weight="700" fill="#111318">RT</text>
-<text x="52" y="704" font-size="12" fill="#111318">Block down on the first defender inside you.</text>
-<text x="351" y="552" font-size="12" font-weight="700" fill="#111318">RE</text>
-<text x="385" y="552" font-size="12" fill="#111318">Block down inside. The man outside you belongs</text>
-<text x="385" y="568" font-size="12" fill="#111318">to the fullback.</text>
-<text x="351" y="586" font-size="12" font-weight="700" fill="#111318">QB</text>
-<text x="385" y="586" font-size="12" fill="#111318">Reverse pivot and hand the ball to the</text>
-<text x="385" y="602" font-size="12" fill="#111318">playside halfback, then carry out the fake</text>
-<text x="385" y="620" font-size="12" fill="#111318">away from the play.</text>
-<text x="351" y="636" font-size="12" font-weight="700" fill="#111318">FB</text>
-<text x="385" y="636" font-size="12" fill="#111318">Kick out the first defender outside our end.</text>
-<text x="385" y="654" font-size="12" fill="#111318">Aim at his inside hip and run through him.</text>
-<text x="351" y="670" font-size="12" font-weight="700" fill="#111318">LH</text>
-<text x="385" y="670" font-size="12" fill="#111318">Run behind the quarterback and lead through</text>
-<text x="385" y="688" font-size="12" fill="#111318">the hole. Block the first jersey inside the</text>
-<text x="385" y="704" font-size="12" fill="#111318">kick-out.</text>
-<text x="351" y="722" font-size="12" font-weight="700" fill="#111318">RH</text>
-<text x="385" y="722" font-size="12" fill="#111318">Take the handoff, press the outside hip of our</text>
-<text x="385" y="738" font-size="12" fill="#111318">end, then turn up inside the blocks.</text>
-<line x1="18" y1="746" x2="684" y2="746" stroke="#c8cdd6" stroke-width="1"/>
-<text x="18" y="764" font-size="11" font-weight="700" fill="#5b6472" letter-spacing="1">COACHING POINTS</text>
-<text x="18" y="784" font-size="12" fill="#111318">Two lead blockers and a pulling guard all arrive in the same place. Walk it through slowly first or</text>
-<text x="18" y="800" font-size="12" fill="#111318">they will run into each other.</text>
-<text x="18" y="818" font-size="12" fill="#111318">The ball carrier is patient for one step, then goes. Teach the pause.</text>
+</g></g>
+<line x1="18" y1="486" x2="603" y2="486" stroke="#c8cdd6" stroke-width="1"/>
+<text x="18" y="506" font-size="11" font-weight="700" fill="#5b6472" letter-spacing="1">ASSIGNMENTS</text>
+<text x="18" y="524" font-size="12" font-weight="700" fill="#111318">LE</text>
+<text x="52" y="524" font-size="12" fill="#111318">Block back and cut off pursuit. You are</text>
+<text x="52" y="542" font-size="12" fill="#111318">the last one to the ball.</text>
+<text x="18" y="558" font-size="12" font-weight="700" fill="#111318">LT</text>
+<text x="52" y="558" font-size="12" fill="#111318">Block back. Take the first defender on</text>
+<text x="52" y="576" font-size="12" fill="#111318">or inside you. Nobody crosses your</text>
+<text x="52" y="592" font-size="12" fill="#111318">face.</text>
+<text x="18" y="610" font-size="12" font-weight="700" fill="#111318">LG</text>
+<text x="52" y="610" font-size="12" fill="#111318">PULL RIGHT. Run flat behind the line</text>
+<text x="52" y="626" font-size="12" fill="#111318">and turn up outside our end. Take the</text>
+<text x="52" y="644" font-size="12" fill="#111318">first wrong-colored jersey.</text>
+<text x="18" y="660" font-size="12" font-weight="700" fill="#111318">C</text>
+<text x="52" y="660" font-size="12" fill="#111318">Block back on the backside gap.</text>
+<text x="18" y="678" font-size="12" font-weight="700" fill="#111318">RG</text>
+<text x="52" y="678" font-size="12" fill="#111318">Block down on the first defender inside</text>
+<text x="52" y="694" font-size="12" fill="#111318">you.</text>
+<text x="18" y="712" font-size="12" font-weight="700" fill="#111318">RT</text>
+<text x="52" y="712" font-size="12" fill="#111318">Block down on the first defender inside</text>
+<text x="52" y="728" font-size="12" fill="#111318">you.</text>
+<text x="310" y="524" font-size="12" font-weight="700" fill="#111318">RE</text>
+<text x="344" y="524" font-size="12" fill="#111318">Block down inside. The man outside you</text>
+<text x="344" y="542" font-size="12" fill="#111318">belongs to the fullback.</text>
+<text x="310" y="558" font-size="12" font-weight="700" fill="#111318">QB</text>
+<text x="344" y="558" font-size="12" fill="#111318">Reverse pivot and hand the ball to the</text>
+<text x="344" y="576" font-size="12" fill="#111318">playside halfback, then carry out the</text>
+<text x="344" y="592" font-size="12" fill="#111318">fake away from the play.</text>
+<text x="310" y="610" font-size="12" font-weight="700" fill="#111318">FB</text>
+<text x="344" y="610" font-size="12" fill="#111318">Kick out the first defender outside our</text>
+<text x="344" y="626" font-size="12" fill="#111318">end. Aim at his inside hip and run</text>
+<text x="344" y="644" font-size="12" fill="#111318">through him.</text>
+<text x="310" y="660" font-size="12" font-weight="700" fill="#111318">LH</text>
+<text x="344" y="660" font-size="12" fill="#111318">Run behind the quarterback and lead</text>
+<text x="344" y="678" font-size="12" fill="#111318">through the hole. Block the first</text>
+<text x="344" y="694" font-size="12" fill="#111318">jersey inside the kick-out.</text>
+<text x="310" y="712" font-size="12" font-weight="700" fill="#111318">RH</text>
+<text x="344" y="712" font-size="12" fill="#111318">Take the handoff, press the outside hip</text>
+<text x="344" y="728" font-size="12" fill="#111318">of our end, then turn up inside the</text>
+<text x="344" y="746" font-size="12" fill="#111318">blocks.</text>
+<line x1="18" y1="752" x2="603" y2="752" stroke="#c8cdd6" stroke-width="1"/>
+<text x="18" y="770" font-size="11" font-weight="700" fill="#5b6472" letter-spacing="1">COACHING POINTS</text>
+<text x="18" y="790" font-size="12" fill="#111318">Two lead blockers and a pulling guard all arrive in the same place. Walk it through</text>
+<text x="18" y="808" font-size="12" fill="#111318">slowly first or they will run into each other.</text>
+<text x="18" y="824" font-size="12" fill="#111318">The ball carrier is patient for one step, then goes. Teach the pause.</text>
 </svg>
