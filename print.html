@@ -6,39 +6,27 @@
 <meta name="description" content="All 15 plays formatted one per landscape page.">
 <link rel="stylesheet" href="assets/site.css">
 <style>@page { size: landscape; margin: 9mm; }</style>
-<header class="site"><div class="wrap">
-  <a class="brand"
-     href="index.html">Sayville 8U <span>Playbook</span></a>
-  <nav class="primary">
-      <details class="switcher">
-    <summary>Plays</summary>
-    <div class="panel">
-      <div class="grp"><p class="grph">I</p>
-        <a href="p-i-dive.html"><span class="pn">I Dive</span><span class="pc">I 2 Dive</span></a>
-        <a href="p-i-iso-l.html"><span class="pn">I Iso Left</span><span class="pc">I 3 Iso</span></a>
-        <a href="p-i-iso-r.html"><span class="pn">I Iso Right</span><span class="pc">I 4 Iso</span></a>
-        <a href="p-i-power-l.html"><span class="pn">I Power Left</span><span class="pc">I 5 Power</span></a>
-        <a href="p-i-power-r.html"><span class="pn">I Power Right</span><span class="pc">I 6 Power</span></a>
-        <a href="p-i-sweep-r.html"><span class="pn">I Sweep Right</span><span class="pc">I 8 Sweep</span></a>
-        <a href="p-i-boot-r.html"><span class="pn">I Boot Right</span><span class="pc">I 8 Boot</span></a>
-        <a href="p-i-counter-l.html"><span class="pn">I Counter Left</span><span class="pc">I 5 Counter</span></a></div>
-<div class="grp"><p class="grph">Wishbone</p>
-        <a href="p-wb-fb-dive.html"><span class="pn">Bone Dive</span><span class="pc">Bone 2 Dive</span></a>
-        <a href="p-wb-power-l.html"><span class="pn">Bone Power Left</span><span class="pc">Bone 5 Power</span></a>
-        <a href="p-wb-power-r.html"><span class="pn">Bone Power Right</span><span class="pc">Bone 6 Power</span></a>
-        <a href="p-wb-pitch-l.html"><span class="pn">Bone Pitch Left</span><span class="pc">Bone 7 Pitch</span></a>
-        <a href="p-wb-pitch-r.html"><span class="pn">Bone Pitch Right</span><span class="pc">Bone 8 Pitch</span></a>
-        <a href="p-wb-counter-l.html"><span class="pn">Bone Counter Left</span><span class="pc">Bone 5 Counter</span></a>
-        <a href="p-wb-counter-r.html"><span class="pn">Bone Counter Right</span><span class="pc">Bone 6 Counter</span></a></div>
-      <a class="allplays" href="calls.html">Search the full call sheet →</a>
-    </div>
-  </details>
-      <a href="calls.html">Call sheet</a>
-      <a href="print.html" class="active">Print book</a>
-  </nav>
-</div></header>
-
-<main><div class="wrap">
+<a class="skip" href="#main">Skip to content</a>
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="index.html">Sayville 8U <b>Playbook</b></a>
+    <nav class="desk" aria-label="Main"><a class="lnk" href="index.html">Home</a><button type="button" class="lnk drop" id="ddbtn" aria-expanded="false" aria-controls="ddpanel">Plays</button><a class="lnk" href="calls.html">Call sheet</a><a class="lnk active" href="print.html">Print book</a></nav>
+    <button type="button" class="burger" id="burger" aria-expanded="false"
+            aria-controls="drawer" aria-label="Open menu"><span></span></button>
+  </div>
+  <div class="ddpanel" id="ddpanel" hidden>
+    <div class="wrap"><div class="ddinner"><section class="mgrp"><a class="mgh" href="f-i-form.html">I-Formation<span class="mgn">8 plays</span></a><div class="mplays"><a class="mplay" href="p-i-dive.html"><span>I Dive</span><em>I 2 Dive</em></a><a class="mplay" href="p-i-iso-l.html"><span>I Iso Left</span><em>I 3 Iso</em></a><a class="mplay" href="p-i-iso-r.html"><span>I Iso Right</span><em>I 4 Iso</em></a><a class="mplay" href="p-i-power-l.html"><span>I Power Left</span><em>I 5 Power</em></a><a class="mplay" href="p-i-power-r.html"><span>I Power Right</span><em>I 6 Power</em></a><a class="mplay" href="p-i-sweep-r.html"><span>I Sweep Right</span><em>I 8 Sweep</em></a><a class="mplay" href="p-i-boot-r.html"><span>I Boot Right</span><em>I 8 Boot</em></a><a class="mplay" href="p-i-counter-l.html"><span>I Counter Left</span><em>I 5 Counter</em></a></div></section><section class="mgrp"><a class="mgh" href="f-wishbone.html">Wishbone<span class="mgn">7 plays</span></a><div class="mplays"><a class="mplay" href="p-wb-fb-dive.html"><span>Bone Dive</span><em>Bone 2 Dive</em></a><a class="mplay" href="p-wb-power-l.html"><span>Bone Power Left</span><em>Bone 5 Power</em></a><a class="mplay" href="p-wb-power-r.html"><span>Bone Power Right</span><em>Bone 6 Power</em></a><a class="mplay" href="p-wb-pitch-l.html"><span>Bone Pitch Left</span><em>Bone 7 Pitch</em></a><a class="mplay" href="p-wb-pitch-r.html"><span>Bone Pitch Right</span><em>Bone 8 Pitch</em></a><a class="mplay" href="p-wb-counter-l.html"><span>Bone Counter Left</span><em>Bone 5 Counter</em></a><a class="mplay" href="p-wb-counter-r.html"><span>Bone Counter Right</span><em>Bone 6 Counter</em></a></div></section></div></div>
+  </div>
+</header>
+<div class="scrim" id="scrim" hidden></div>
+<aside class="drawer" id="drawer" aria-label="Menu" hidden>
+  <div class="dtop">
+    <span>Menu</span>
+    <button type="button" class="dclose" id="dclose" aria-label="Close menu">&times;</button>
+  </div>
+  <nav class="dnav"><a class="dlnk" href="index.html">Home</a><a class="dlnk" href="calls.html">Call sheet</a><a class="dlnk active" href="print.html">Print book</a><section class="mgrp"><a class="mgh" href="f-i-form.html">I-Formation<span class="mgn">8 plays</span></a><div class="mplays"><a class="mplay" href="p-i-dive.html"><span>I Dive</span><em>I 2 Dive</em></a><a class="mplay" href="p-i-iso-l.html"><span>I Iso Left</span><em>I 3 Iso</em></a><a class="mplay" href="p-i-iso-r.html"><span>I Iso Right</span><em>I 4 Iso</em></a><a class="mplay" href="p-i-power-l.html"><span>I Power Left</span><em>I 5 Power</em></a><a class="mplay" href="p-i-power-r.html"><span>I Power Right</span><em>I 6 Power</em></a><a class="mplay" href="p-i-sweep-r.html"><span>I Sweep Right</span><em>I 8 Sweep</em></a><a class="mplay" href="p-i-boot-r.html"><span>I Boot Right</span><em>I 8 Boot</em></a><a class="mplay" href="p-i-counter-l.html"><span>I Counter Left</span><em>I 5 Counter</em></a></div></section><section class="mgrp"><a class="mgh" href="f-wishbone.html">Wishbone<span class="mgn">7 plays</span></a><div class="mplays"><a class="mplay" href="p-wb-fb-dive.html"><span>Bone Dive</span><em>Bone 2 Dive</em></a><a class="mplay" href="p-wb-power-l.html"><span>Bone Power Left</span><em>Bone 5 Power</em></a><a class="mplay" href="p-wb-power-r.html"><span>Bone Power Right</span><em>Bone 6 Power</em></a><a class="mplay" href="p-wb-pitch-l.html"><span>Bone Pitch Left</span><em>Bone 7 Pitch</em></a><a class="mplay" href="p-wb-pitch-r.html"><span>Bone Pitch Right</span><em>Bone 8 Pitch</em></a><a class="mplay" href="p-wb-counter-l.html"><span>Bone Counter Left</span><em>Bone 5 Counter</em></a><a class="mplay" href="p-wb-counter-r.html"><span>Bone Counter Right</span><em>Bone 6 Counter</em></a></div></section></nav>
+</aside>
+<main id="main"><div class="wrap">
 <div class="print-intro">
   <h1 class="page">Print the whole book</h1>
   <p class="lede">15 plays, one per landscape sheet, diagram first. Hit the button
@@ -514,10 +502,10 @@
   </ul>
 </article>
 </div></main>
-<script src="assets/site.js"></script>
 <footer class="site"><div class="wrap">
   Generated by <code>generator/render.py</code> — edit the JSON under
   <code>playbook/</code>, never these pages.
   <a href="https://github.com/nickvertucci/sayville-football-8u-2026">Source</a>
 </div></footer>
+<script src="assets/site.js"></script>
 </html>

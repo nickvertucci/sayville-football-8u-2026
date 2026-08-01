@@ -46,6 +46,7 @@ SITE_CSS = """
   --bar-2: #1d3059;
   --on-bar: #cdd8ea;
   --on-bar-soft: #9db0d0;
+  --bar-line: rgba(255,255,255,.10);
   --shadow: 0 1px 3px rgba(16,20,30,.14);
   --shadow-lg: 0 10px 30px rgba(8,12,22,.20);
 }
@@ -68,6 +69,7 @@ SITE_CSS = """
     --bar-2: #171c28;
     --on-bar: #c9d3e6;
     --on-bar-soft: #8e9bb5;
+    --bar-line: #232936;
     --shadow: 0 1px 3px rgba(0,0,0,.5);
     --shadow-lg: 0 14px 38px rgba(0,0,0,.6);
   }
@@ -81,95 +83,142 @@ body {
 a { color: inherit; }
 .wrap { max-width: 1040px; margin: 0 auto; padding: 0 16px; }
 
-/* ---------------------------------------------------------------- navigation -- */
-header.site {
-  position: sticky; top: 0; z-index: 20; background: var(--bar); color: #fff;
-  border-bottom: 1px solid rgba(255,255,255,.07);
+/* ---------------------------------------------------------------- navigation --
+   One slim bar. Desktop gets inline links with a Plays dropdown; phones get a
+   hamburger and a slide-in drawer. No stacked rows of pills. */
+.skip {
+  position: absolute; left: -9999px; top: 0; z-index: 100; background: var(--panel);
+  color: var(--ink); padding: 10px 16px; border-radius: 0 0 8px 0;
 }
-header.site .wrap {
-  display: flex; align-items: center; gap: 10px; min-height: 52px; flex-wrap: wrap;
-  padding-top: 8px; padding-bottom: 8px;
+.skip:focus { left: 0; }
+
+header.site {
+  position: sticky; top: 0; z-index: 50; background: var(--bar); color: #fff;
+  border-bottom: 1px solid var(--bar-line);
+}
+header.site > .wrap {
+  display: flex; align-items: center; gap: 16px; height: 58px;
 }
 .brand {
-  font-size: 16.5px; font-weight: 800; letter-spacing: -.3px;
-  color: #fff; text-decoration: none; white-space: nowrap;
+  font-size: 17px; font-weight: 700; letter-spacing: -.2px; color: #fff;
+  text-decoration: none; white-space: nowrap; margin-right: auto;
 }
-.brand span { font-weight: 500; color: var(--on-bar-soft); }
-nav.primary { margin-left: auto; display: flex; gap: 6px; }
-nav.primary a, .switcher summary {
-  font-size: 13.5px; font-weight: 600; color: var(--on-bar); text-decoration: none;
-  padding: 7px 14px; border-radius: 999px; background: rgba(255,255,255,.10);
-}
-nav.primary a:hover, .switcher summary:hover {
-  background: rgba(255,255,255,.2); color: #fff;
-}
-nav.primary a.active { background: #fff; color: #14213d; }
+.brand b { font-weight: 400; color: var(--on-bar-soft); }
 
-/* On a phone the nav gets its own full-width row rather than hugging the right
-   edge and leaving a dead gap under the brand. */
-@media (max-width: 600px) {
-  nav.primary { margin-left: 0; width: 100%; justify-content: space-between; gap: 4px; }
-  nav.primary a, .switcher summary { padding: 7px 12px; }
+nav.desk { display: none; align-items: center; gap: 2px; height: 100%; }
+.lnk {
+  display: inline-flex; align-items: center; height: 100%; padding: 0 14px;
+  font: inherit; font-size: 14.5px; font-weight: 500; color: var(--on-bar);
+  text-decoration: none; background: none; border: 0; cursor: pointer;
+  border-bottom: 2px solid transparent;
+}
+.lnk:hover { color: #fff; }
+.lnk.active { color: #fff; border-bottom-color: var(--on-accent); font-weight: 600; }
+.lnk.drop::after {
+  content: ""; margin-left: 7px; width: 5px; height: 5px; border-right: 1.6px solid;
+  border-bottom: 1.6px solid; transform: rotate(45deg) translate(-2px, -2px);
+  transition: transform .18s;
+}
+.lnk.drop[aria-expanded="true"]::after { transform: rotate(-135deg) translate(-1px, -1px); }
+
+.burger {
+  width: 42px; height: 42px; margin-right: -8px; padding: 0; border: 0; cursor: pointer;
+  background: none; position: relative; border-radius: 8px;
+}
+.burger:hover { background: rgba(255,255,255,.1); }
+.burger span, .burger span::before, .burger span::after {
+  position: absolute; left: 11px; width: 20px; height: 2px; border-radius: 2px;
+  background: #fff; transition: transform .2s, opacity .15s;
+}
+.burger span { top: 20px; }
+.burger span::before { content: ""; top: -6px; left: 0; }
+.burger span::after { content: ""; top: 6px; left: 0; }
+.burger[aria-expanded="true"] span { background: transparent; }
+.burger[aria-expanded="true"] span::before { transform: translateY(6px) rotate(45deg); }
+.burger[aria-expanded="true"] span::after { transform: translateY(-6px) rotate(-45deg); }
+
+@media (min-width: 900px) {
+  nav.desk { display: flex; }
+  .burger { display: none; }
 }
 
-/* ------------------------------------------------------------ play switcher -- */
-.switcher { position: relative; }
-.switcher summary {
-  list-style: none; cursor: pointer; user-select: none; display: inline-block;
+/* Desktop dropdown: a full-width panel under the bar, like a normal site menu. */
+.ddpanel {
+  position: absolute; left: 0; right: 0; top: 100%; background: var(--panel);
+  border-bottom: 1px solid var(--line); box-shadow: var(--shadow-lg);
 }
-.switcher summary::-webkit-details-marker { display: none; }
-.switcher summary::after { content: " ▾"; opacity: .75; }
-.switcher[open] summary { background: #fff; color: #14213d; }
-/* Spans the screen on a phone: anchoring to the button would push it off the right
-   edge and give the whole page a horizontal scrollbar. */
-.switcher .panel {
-  position: fixed; left: 10px; right: 10px; top: 60px; z-index: 40;
-  max-height: min(72vh, 560px); overflow-y: auto;
-  background: var(--panel); color: var(--ink); border: 1px solid var(--line);
-  border-radius: 14px; padding: 8px; box-shadow: var(--shadow-lg);
+.ddpanel[hidden] { display: none; }
+.ddinner {
+  display: grid; grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 26px; padding: 22px 0 26px;
 }
-@media (min-width: 700px) {
-  .switcher .panel {
-    position: absolute; top: calc(100% + 10px); left: 0; right: auto; width: 350px;
-  }
+
+/* Mobile drawer */
+.scrim {
+  position: fixed; inset: 0; z-index: 60; background: rgba(6,9,15,.55);
+  backdrop-filter: blur(2px);
 }
-.switcher .grp + .grp {
-  margin-top: 4px; border-top: 1px solid var(--line); padding-top: 6px;
+.scrim[hidden] { display: none; }
+.drawer {
+  position: fixed; top: 0; right: 0; bottom: 0; z-index: 70;
+  width: min(360px, 88vw); background: var(--panel); color: var(--ink);
+  border-left: 1px solid var(--line); box-shadow: var(--shadow-lg);
+  overflow-y: auto; -webkit-overflow-scrolling: touch;
+  transform: translateX(100%); transition: transform .22s ease;
 }
-.switcher .grph {
-  margin: 4px 8px; font-size: 10.5px; font-weight: 700; letter-spacing: 1.2px;
+.drawer[hidden] { display: block; }
+.drawer.open { transform: translateX(0); }
+@media (prefers-reduced-motion: reduce) { .drawer { transition: none; } }
+.dtop {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 16px 18px 12px; border-bottom: 1px solid var(--line);
+  font-size: 11.5px; font-weight: 700; letter-spacing: 1.4px;
   text-transform: uppercase; color: var(--muted);
 }
-.switcher .panel a {
-  display: flex; align-items: center; gap: 10px; text-decoration: none;
-  padding: 8px 9px; border-radius: 8px; color: var(--ink);
+.dclose {
+  border: 0; background: none; color: var(--ink); font-size: 26px; line-height: 1;
+  cursor: pointer; padding: 0 4px; border-radius: 6px;
 }
-.switcher .panel a:hover { background: var(--panel-2); }
-.switcher .panel a.here { background: var(--accent-solid); }
-.switcher .panel a.here .pn { color: var(--on-accent); }
-.switcher .panel a.here .pc { background: rgba(255,255,255,.2); color: #fff; }
-.switcher .pn { font-size: 14.5px; font-weight: 600; flex: 1 1 auto; }
-.switcher .pc {
-  font-size: 11px; font-weight: 700; color: var(--muted); background: var(--panel-2);
-  border-radius: 4px; padding: 2px 7px; white-space: nowrap;
+.dclose:hover { background: var(--panel-2); }
+.dnav { padding: 8px 10px 34px; }
+.dlnk {
+  display: block; padding: 12px 12px; font-size: 16px; font-weight: 600;
+  color: var(--ink); text-decoration: none; border-radius: 9px;
 }
-.switcher .allplays {
-  display: block; margin-top: 4px; border-top: 1px solid var(--line);
-  padding: 11px 9px 6px; font-size: 13px; font-weight: 600;
-  color: var(--accent-ink); text-decoration: none;
-}
-.switcher .allplays:hover { text-decoration: underline; }
+.dlnk:hover { background: var(--panel-2); }
+.dlnk.active { color: var(--accent-ink); background: var(--panel-2); }
 
-.formbar { background: var(--bar-2); overflow-x: auto; -webkit-overflow-scrolling: touch; }
-.formbar .wrap {
-  display: flex; gap: 6px; padding-top: 8px; padding-bottom: 8px; white-space: nowrap;
+/* Formation + play groups, shared by the dropdown and the drawer */
+.mgrp { margin-top: 14px; }
+.dnav .mgrp { padding: 0 2px; }
+.mgh {
+  display: flex; align-items: baseline; gap: 10px; text-decoration: none;
+  padding: 8px 10px; margin-bottom: 2px; border-radius: 8px;
+  font-size: 12px; font-weight: 700; letter-spacing: 1.3px; text-transform: uppercase;
+  color: var(--muted); border-bottom: 1px solid var(--line);
 }
-.formbar a {
-  font-size: 13px; font-weight: 600; color: var(--on-bar); text-decoration: none;
-  padding: 6px 13px; border-radius: 999px; background: rgba(255,255,255,.08);
+.mgh:hover { color: var(--accent-ink); }
+.mgh.active { color: var(--accent-ink); }
+.mgn {
+  margin-left: auto; font-size: 11px; font-weight: 600; letter-spacing: 0;
+  text-transform: none; color: var(--muted);
 }
-.formbar a:hover { background: rgba(255,255,255,.18); color: #fff; }
-.formbar a.active { background: #fff; color: #14213d; }
+.mplays { display: flex; flex-direction: column; }
+.mplay {
+  display: flex; align-items: center; gap: 10px; text-decoration: none;
+  padding: 9px 10px; border-radius: 8px; color: var(--ink);
+}
+.mplay:hover { background: var(--panel-2); }
+.mplay span { flex: 1 1 auto; font-size: 15px; font-weight: 500; }
+.mplay em {
+  font-style: normal; font-size: 11px; font-weight: 700; color: var(--muted);
+  background: var(--panel-2); border-radius: 4px; padding: 2px 7px; white-space: nowrap;
+}
+.mplay.here { background: var(--accent-solid); }
+.mplay.here span { color: var(--on-accent); font-weight: 600; }
+.mplay.here em { background: rgba(255,255,255,.2); color: #fff; }
+
+body.locked { overflow: hidden; }
 
 /* -------------------------------------------------- play page navigation -- */
 .crumbs {
@@ -397,7 +446,7 @@ footer.site a { color: var(--accent-ink); }
 
 /* -------------------------------------------------------------------- print -- */
 @media print {
-  header.site, .formbar, footer.site, .pager, .play-actions, .searchbar,
+  header.site, .drawer, .scrim, .skip, footer.site, .pager, .play-actions, .searchbar,
   .chips, #count, .section-head, .btn, .print-intro,
   .crumbs, .playbar { display: none !important; }
   :root {
@@ -442,19 +491,62 @@ footer.site a { color: var(--accent-ink); }
 """
 
 SITE_JS = """
-/* Play switcher: close it on an outside click or Escape, the way a menu should. */
+/* Site navigation: hamburger drawer on a phone, dropdown on a desktop. */
 (function () {
-  var sw = document.querySelector('.switcher');
-  if (!sw) return;
+  var burger = document.getElementById('burger');
+  var drawer = document.getElementById('drawer');
+  var scrim = document.getElementById('scrim');
+  var close = document.getElementById('dclose');
+  var ddbtn = document.getElementById('ddbtn');
+  var ddpanel = document.getElementById('ddpanel');
+
+  function openDrawer(on) {
+    if (!drawer) return;
+    if (on) drawer.hidden = false;
+    // Let the element paint before transitioning in, or it jumps instead of sliding.
+    requestAnimationFrame(function () { drawer.classList.toggle('open', on); });
+    scrim.hidden = !on;
+    burger.setAttribute('aria-expanded', on ? 'true' : 'false');
+    document.body.classList.toggle('locked', on);
+    if (!on) setTimeout(function () { if (!drawer.classList.contains('open')) drawer.hidden = true; }, 250);
+  }
+
+  function openDrop(on) {
+    if (!ddpanel) return;
+    ddpanel.hidden = !on;
+    ddbtn.setAttribute('aria-expanded', on ? 'true' : 'false');
+  }
+
+  if (burger) burger.addEventListener('click', function () {
+    openDrawer(burger.getAttribute('aria-expanded') !== 'true');
+  });
+  if (close) close.addEventListener('click', function () { openDrawer(false); burger.focus(); });
+  if (scrim) scrim.addEventListener('click', function () { openDrawer(false); });
+
+  if (ddbtn) ddbtn.addEventListener('click', function (e) {
+    e.stopPropagation();
+    openDrop(ddpanel.hidden);
+  });
   document.addEventListener('click', function (e) {
-    if (sw.open && !sw.contains(e.target)) sw.open = false;
+    if (ddpanel && !ddpanel.hidden && !ddpanel.contains(e.target) && e.target !== ddbtn) {
+      openDrop(false);
+    }
   });
   document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape' && sw.open) { sw.open = false; sw.querySelector('summary').focus(); }
+    if (e.key !== 'Escape') return;
+    if (ddpanel && !ddpanel.hidden) { openDrop(false); ddbtn.focus(); }
+    if (drawer && drawer.classList.contains('open')) { openDrawer(false); burger.focus(); }
   });
-  sw.addEventListener('toggle', function () {
-    if (!sw.open) return;
-    var here = sw.querySelector('a.here');
+  // Crossing the breakpoint with the drawer open would leave the page scroll locked.
+  window.addEventListener('resize', function () {
+    if (window.innerWidth >= 900 && drawer && drawer.classList.contains('open')) openDrawer(false);
+    if (window.innerWidth < 900) openDrop(false);
+  });
+
+  // Bring the current play into view in whichever menu is open.
+  [ddpanel, drawer].forEach(function (root) {
+    if (!root) return;
+    var here = root.querySelector('.mplay.here');
     if (here) here.scrollIntoView({ block: 'nearest' });
   });
 })();
@@ -529,32 +621,30 @@ def card_src(form: dict, play: dict, full: bool = False) -> str:
     return f"playbook/{form['id']}/cards/{play['id']}{suffix}.svg"
 
 
-def play_switcher(formations: list[dict], active_play: str) -> str:
-    """A drop-down of every play in the book, reachable from any page.
-
-    Without this you can only get from one play to another by backing out to the
-    formation page or the call sheet, which is two taps too many when you are stood
-    on a field trying to find the next call.
-    """
-    groups = []
+def menu_groups(formations: list[dict], active_form: str, active_play: str) -> str:
+    """The formations-and-plays part of the menu, shared by the desktop dropdown
+    and the mobile drawer."""
+    out = []
     for form in formations:
-        links = "\n        ".join(
-            f'<a href="{p_href(p)}"'
-            f'{" class=\"here\"" if p["id"] == active_play else ""}>'
-            f'<span class="pn">{esc(p["name"])}</span>'
-            f'<span class="pc">{esc(p.get("call", ""))}</span></a>'
+        plays = "".join(
+            f'<a class="mplay{" here" if p["id"] == active_play else ""}" '
+            f'href="{p_href(p)}"><span>{esc(p["name"])}</span>'
+            f'<em>{esc(p.get("call", ""))}</em></a>'
             for p in form["_plays"]
         )
-        groups.append(
-            f'<div class="grp"><p class="grph">{esc(form["name"])}</p>\n        {links}</div>'
+        out.append(
+            f'<section class="mgrp">'
+            f'<a class="mgh{" active" if form["id"] == active_form else ""}" '
+            f'href="{f_href(form)}">{esc(form_label(form))}'
+            f'<span class="mgn">{len(form["_plays"])} plays</span></a>'
+            f'<div class="mplays">{plays}</div></section>'
         )
-    return f"""<details class="switcher">
-    <summary>Plays</summary>
-    <div class="panel">
-      {chr(10).join(groups)}
-      <a class="allplays" href="calls.html">Search the full call sheet →</a>
-    </div>
-  </details>"""
+    return "".join(out)
+
+
+NAV_LINKS = [("index.html", "Home", "home"),
+             ("calls.html", "Call sheet", "calls"),
+             ("print.html", "Print book", "print")]
 
 
 def page(
@@ -566,24 +656,23 @@ def page(
     active_play: str = "",
     description: str = "",
     landscape: bool = False,
-    show_formbar: bool = True,
     main_attrs: str = "",
 ) -> str:
-    nav_items = [("calls.html", "Call sheet", "calls"),
-                 ("print.html", "Print book", "print")]
-    nav = play_switcher(formations, active_play) + "\n      " + "\n      ".join(
-        f'<a href="{href}"{" class=\"active\"" if key == active_nav else ""}>{esc(label)}</a>'
-        for href, label, key in nav_items
+    def link(href, label, key, cls="lnk"):
+        on = " active" if key == active_nav else ""
+        return f'<a class="{cls}{on}" href="{href}">{esc(label)}</a>'
+
+    groups = menu_groups(formations, active_form, active_play)
+    plays_open = " active" if active_form else ""
+
+    desk = (
+        link(*NAV_LINKS[0])
+        + f'<button type="button" class="lnk drop{plays_open}" id="ddbtn" '
+        f'aria-expanded="false" aria-controls="ddpanel">Plays</button>'
+        + link(*NAV_LINKS[1])
+        + link(*NAV_LINKS[2])
     )
-    formbar = ""
-    if show_formbar:
-        pills = "\n      ".join(
-            f'<a href="{f_href(f)}"'
-            f'{" class=\"active\"" if f["id"] == active_form else ""}>'
-            f'{esc(form_label(f))}</a>'
-            for f in formations
-        )
-        formbar = f'<div class="formbar"><div class="wrap">\n      {pills}\n    </div></div>'
+    drawer_links = "".join(link(h, la, k, "dlnk") for h, la, k in NAV_LINKS)
 
     page_style = (
         '\n<style>@page { size: landscape; margin: 9mm; }</style>' if landscape else ""
@@ -597,23 +686,35 @@ def page(
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{esc(title)}</title>{desc}
 <link rel="stylesheet" href="assets/site.css">{page_style}
-<header class="site"><div class="wrap">
-  <a class="brand{' active' if active_nav == 'home' else ''}"
-     href="index.html">Sayville 8U <span>Playbook</span></a>
-  <nav class="primary">
-      {nav}
-  </nav>
-</div></header>
-{formbar}
-<main{main_attrs}><div class="wrap">
+<a class="skip" href="#main">Skip to content</a>
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="index.html">Sayville 8U <b>Playbook</b></a>
+    <nav class="desk" aria-label="Main">{desk}</nav>
+    <button type="button" class="burger" id="burger" aria-expanded="false"
+            aria-controls="drawer" aria-label="Open menu"><span></span></button>
+  </div>
+  <div class="ddpanel" id="ddpanel" hidden>
+    <div class="wrap"><div class="ddinner">{groups}</div></div>
+  </div>
+</header>
+<div class="scrim" id="scrim" hidden></div>
+<aside class="drawer" id="drawer" aria-label="Menu" hidden>
+  <div class="dtop">
+    <span>Menu</span>
+    <button type="button" class="dclose" id="dclose" aria-label="Close menu">&times;</button>
+  </div>
+  <nav class="dnav">{drawer_links}{groups}</nav>
+</aside>
+<main id="main"{main_attrs}><div class="wrap">
 {body}
 </div></main>
-<script src="assets/site.js"></script>
 <footer class="site"><div class="wrap">
   Generated by <code>generator/render.py</code> — edit the JSON under
   <code>playbook/</code>, never these pages.
   <a href="https://github.com/nickvertucci/sayville-football-8u-2026">Source</a>
 </div></footer>
+<script src="assets/site.js"></script>
 </html>
 """
 
@@ -921,7 +1022,6 @@ def write_print_book(formations: list[dict]) -> str:
         active_nav="print",
         description=f"All {total} plays formatted one per landscape page.",
         landscape=True,
-        show_formbar=False,
     )
 
 

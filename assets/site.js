@@ -1,16 +1,59 @@
-/* Play switcher: close it on an outside click or Escape, the way a menu should. */
+/* Site navigation: hamburger drawer on a phone, dropdown on a desktop. */
 (function () {
-  var sw = document.querySelector('.switcher');
-  if (!sw) return;
+  var burger = document.getElementById('burger');
+  var drawer = document.getElementById('drawer');
+  var scrim = document.getElementById('scrim');
+  var close = document.getElementById('dclose');
+  var ddbtn = document.getElementById('ddbtn');
+  var ddpanel = document.getElementById('ddpanel');
+
+  function openDrawer(on) {
+    if (!drawer) return;
+    if (on) drawer.hidden = false;
+    // Let the element paint before transitioning in, or it jumps instead of sliding.
+    requestAnimationFrame(function () { drawer.classList.toggle('open', on); });
+    scrim.hidden = !on;
+    burger.setAttribute('aria-expanded', on ? 'true' : 'false');
+    document.body.classList.toggle('locked', on);
+    if (!on) setTimeout(function () { if (!drawer.classList.contains('open')) drawer.hidden = true; }, 250);
+  }
+
+  function openDrop(on) {
+    if (!ddpanel) return;
+    ddpanel.hidden = !on;
+    ddbtn.setAttribute('aria-expanded', on ? 'true' : 'false');
+  }
+
+  if (burger) burger.addEventListener('click', function () {
+    openDrawer(burger.getAttribute('aria-expanded') !== 'true');
+  });
+  if (close) close.addEventListener('click', function () { openDrawer(false); burger.focus(); });
+  if (scrim) scrim.addEventListener('click', function () { openDrawer(false); });
+
+  if (ddbtn) ddbtn.addEventListener('click', function (e) {
+    e.stopPropagation();
+    openDrop(ddpanel.hidden);
+  });
   document.addEventListener('click', function (e) {
-    if (sw.open && !sw.contains(e.target)) sw.open = false;
+    if (ddpanel && !ddpanel.hidden && !ddpanel.contains(e.target) && e.target !== ddbtn) {
+      openDrop(false);
+    }
   });
   document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape' && sw.open) { sw.open = false; sw.querySelector('summary').focus(); }
+    if (e.key !== 'Escape') return;
+    if (ddpanel && !ddpanel.hidden) { openDrop(false); ddbtn.focus(); }
+    if (drawer && drawer.classList.contains('open')) { openDrawer(false); burger.focus(); }
   });
-  sw.addEventListener('toggle', function () {
-    if (!sw.open) return;
-    var here = sw.querySelector('a.here');
+  // Crossing the breakpoint with the drawer open would leave the page scroll locked.
+  window.addEventListener('resize', function () {
+    if (window.innerWidth >= 900 && drawer && drawer.classList.contains('open')) openDrawer(false);
+    if (window.innerWidth < 900) openDrop(false);
+  });
+
+  // Bring the current play into view in whichever menu is open.
+  [ddpanel, drawer].forEach(function (root) {
+    if (!root) return;
+    var here = root.querySelector('.mplay.here');
     if (here) here.scrollIntoView({ block: 'nearest' });
   });
 })();
