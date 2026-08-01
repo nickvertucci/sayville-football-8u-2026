@@ -1,0 +1,73 @@
+{
+  "id": "pro-toss-r",
+  "formation": "pro",
+  "name": "Pro Toss Right",
+  "call": "Pro 8 Toss",
+  "type": "run",
+  "defense": "4-4",
+  "install_week": 1,
+  "direction": "right",
+  "ball_carrier": "HB",
+  "purpose": "Get the ball outside fast with the tight end and flanker already out there to block. Against a defense that has widened to cover our receivers this is a foot race we can win.",
+  "assignments": {
+    "X": {
+      "rule": "Run off the defender covering you and take him out of the play.",
+      "type": "pass",
+      "path": [[0.4, 6.0]]
+    },
+    "LT": {
+      "rule": "Block back and cut off pursuit. You are the last one to the ball.",
+      "type": "block",
+      "path": [[1.0, 0.7]]
+    },
+    "LG": {
+      "rule": "Block back. Take the first defender on or inside you. Nobody crosses your face.",
+      "type": "block",
+      "path": [[1.0, 0.7]]
+    },
+    "C": {
+      "rule": "Reach the man over you. If nobody is over you, cut off the backside.",
+      "type": "block",
+      "path": [[0.6, 1.0]]
+    },
+    "RG": {
+      "rule": "Reach the first defender to the playside. Head across his outside shoulder.",
+      "type": "block",
+      "path": [[0.9, 1.0]]
+    },
+    "RT": {
+      "rule": "Reach the man on or outside you. If you cannot reach him, run him past the play.",
+      "type": "block",
+      "path": [[0.9, 1.0]]
+    },
+    "TE": {
+      "rule": "Reach the man over you and turn him in. Let the ball go around you.",
+      "type": "block",
+      "path": [[0.7, 1.0]]
+    },
+    "Z": {
+      "rule": "Block the deepest defender on your side. Run at his outside number.",
+      "type": "block",
+      "path": [[0.6, 2.2], [1.2, 4.2]]
+    },
+    "QB": {
+      "rule": "Reverse pivot and toss the ball out in front of the halfback so he catches it running. Then get out of the way.",
+      "type": "fake",
+      "path": [[-0.8, -0.6], [-2.8, -0.3]]
+    },
+    "FB": {
+      "rule": "Beat the halfback to the corner and kick out the first defender who shows.",
+      "type": "block",
+      "path": [[2.2, 1.6], [4.6, 3.4]]
+    },
+    "HB": {
+      "rule": "Catch the toss on the run and get to the corner. Turn up off the fullback's block, not before.",
+      "type": "run",
+      "path": [[3.0, 1.6], [6.0, 3.0], [7.6, 5.6], [7.6, 8.4]]
+    }
+  },
+  "coaching_points": [
+    "The toss goes out in front. If the halfback has to stop for it the play is dead.",
+    "Best call when they have walked a defender out to cover our flanker — that is one fewer man in the box."
+  ]
+}

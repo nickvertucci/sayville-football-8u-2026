@@ -1,0 +1,75 @@
+{
+  "id": "i-power-r",
+  "formation": "i-form",
+  "name": "I Power Right",
+  "call": "I 6 Power",
+  "type": "run",
+  "defense": "6-3",
+  "install_week": 2,
+  "direction": "right",
+  "ball_carrier": "TB",
+  "purpose": "The power run out of the I. Playside blocks down, the fullback kicks out the end man, the backside guard pulls and wraps. Same picture as Tight with different personnel, which is the whole reason we carry both formations.",
+  "assignments": {
+    "LE": {
+      "rule": "Block back and cut off pursuit. You are the last one to the ball.",
+      "type": "block",
+      "path": [[1.0, 0.7]]
+    },
+    "LT": {
+      "rule": "Block back. Take the first defender on or inside you. Nobody crosses your face.",
+      "type": "block",
+      "path": [[1.0, 0.7]]
+    },
+    "LG": {
+      "rule": "PULL RIGHT. Run flat behind the line and turn up outside our end. Block the first wrong-colored jersey you see.",
+      "type": "block",
+      "path": [[0.5, -1.2], [5.4, -1.0], [6.6, 1.6]]
+    },
+    "C": {
+      "rule": "Block back on the backside gap.",
+      "type": "block",
+      "path": [[-0.9, 0.8]]
+    },
+    "RG": {
+      "rule": "Block down on the first defender inside you.",
+      "type": "block",
+      "path": [[-1.2, 0.9]]
+    },
+    "RT": {
+      "rule": "Block down on the first defender inside you.",
+      "type": "block",
+      "path": [[-1.3, 0.9]]
+    },
+    "RE": {
+      "rule": "Block down on the first defender inside you. The man outside you belongs to the fullback.",
+      "type": "block",
+      "path": [[-1.4, 0.9]]
+    },
+    "Z": {
+      "rule": "Release and screen the deepest defender on your side. Get in his way and stay there.",
+      "type": "block",
+      "path": [[1.2, 2.4], [1.8, 4.2]]
+    },
+    "QB": {
+      "rule": "Reverse pivot, hand the ball to the tailback deep, then carry out the bootleg fake away from the play.",
+      "type": "fake",
+      "path": [[-0.6, -0.6], [-3.0, -0.3]]
+    },
+    "FB": {
+      "rule": "Kick out the first defender outside our end. Aim at his inside hip and run through him.",
+      "type": "block",
+      "path": [[3.0, 1.1], [5.6, 3.6]]
+    },
+    "TB": {
+      "rule": "Take the handoff, press the outside hip of our end, then turn up inside the pulling guard. Be patient for one step, then go.",
+      "type": "run",
+      "path": [[0.8, 2.2], [3.0, 4.6], [4.4, 7.2], [4.6, 9.8]]
+    }
+  },
+  "coaching_points": [
+    "Same down-block-and-kick-out rules as Power from Tight. If the kids know one they know both — say that out loud when you install it.",
+    "The tailback has further to travel than the wing does in Tight, so the kick-out block has to hold a beat longer. Drill it on a count.",
+    "The pulling guard stays flat and tight to the line. Bellying back is what makes this play late.",
+    "If the pulling guard cannot get there in time, run I Iso instead — it needs no pullers."
+  ]
+}

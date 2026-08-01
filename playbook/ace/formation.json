@@ -1,0 +1,35 @@
+{
+  "name": "Ace",
+  "family": "Single Back",
+  "personnel": "11 players, split end, tight end, slot, flanker, quarterback, tailback",
+  "notes": "One back, four receivers spread across the field. This is our spread-them-out formation: it pulls defenders away from the middle and gives us the widest, thinnest box we will see all game. Seven on the line — split end, five interior linemen and the tight end — with the slot and the flanker off it.",
+  "alignment": {
+    "X": [-9.0, -0.5],
+    "LT": [-2.8, -0.5],
+    "LG": [-1.4, -0.5],
+    "C": [0.0, -0.5],
+    "RG": [1.4, -0.5],
+    "RT": [2.8, -0.5],
+    "TE": [4.2, -0.5],
+    "W": [-6.0, -1.3],
+    "Z": [8.4, -1.3],
+    "QB": [0.0, -1.5],
+    "TB": [0.0, -4.8]
+  },
+  "eligible": [
+    "X",
+    "TE",
+    "W",
+    "Z",
+    "TB",
+    "QB"
+  ],
+  "coaching_notes": [
+    "Only run this if the kids can line up correctly without being walked out there. Four receivers is four chances to get an illegal formation flag.",
+    "One back means we cannot out-muscle anybody. Everything here works by making them defend width first.",
+    "The split end is ON the line and the slot is OFF it. Check it every snap.",
+    "Use this late in a game when they have stacked eight men in the box against our other formations."
+  ],
+  "id": "ace",
+  "order": 6
+}

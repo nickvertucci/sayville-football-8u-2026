@@ -1,0 +1,73 @@
+{
+  "id": "pro-counter-l",
+  "formation": "pro",
+  "name": "Pro Counter Left",
+  "call": "Pro 5 Counter",
+  "type": "run",
+  "defense": "5-3",
+  "install_week": 2,
+  "direction": "left",
+  "ball_carrier": "FB",
+  "purpose": "Show them the toss to the tight end side, then hand it the other way to the fullback behind a pulling guard.",
+  "assignments": {
+    "X": {
+      "rule": "Block the defender covering you. He is the one who can make this tackle.",
+      "type": "block",
+      "path": [[0.6, 1.6]]
+    },
+    "LT": {
+      "rule": "Block down on the first defender inside you.",
+      "type": "block",
+      "path": [[1.3, 0.9]]
+    },
+    "LG": {
+      "rule": "Block down on the first defender inside you.",
+      "type": "block",
+      "path": [[1.2, 0.9]]
+    },
+    "C": {
+      "rule": "Block the nose. Do not let him cross your face.",
+      "type": "block",
+      "path": [[-0.3, 1.1]]
+    },
+    "RG": {
+      "rule": "PULL LEFT. Stay flat and kick out the first defender outside our tackle.",
+      "type": "block",
+      "path": [[-0.7, -1.0], [-4.0, -0.8], [-5.0, 0.6]]
+    },
+    "RT": {
+      "rule": "Block back. Take the first defender on or inside you. Nobody crosses your face.",
+      "type": "block",
+      "path": [[-1.0, 0.7]]
+    },
+    "TE": {
+      "rule": "Block back and cut off pursuit. You are the last one to the ball.",
+      "type": "block",
+      "path": [[-1.0, 0.7]]
+    },
+    "Z": {
+      "rule": "Come across behind the line and cut off anybody chasing from the backside.",
+      "type": "block",
+      "path": [[-3.0, 0.4], [-7.0, 1.2]]
+    },
+    "QB": {
+      "rule": "Fake the toss to the halfback going right, then turn back and hand to the fullback. Sell the fake first.",
+      "type": "fake",
+      "path": [[1.0, -0.5], [-0.4, -0.8], [-1.6, -0.6]]
+    },
+    "FB": {
+      "rule": "Take one step toward the fake, then plant and run behind the pulling guard.",
+      "type": "run",
+      "path": [[0.6, 0.8], [-1.6, 2.6], [-3.8, 5.0], [-4.2, 7.6]]
+    },
+    "HB": {
+      "rule": "Run the full toss path at full speed with your arms tucked. You are the decoy.",
+      "type": "fake",
+      "path": [[3.0, 1.6], [6.2, 3.0]]
+    }
+  },
+  "coaching_points": [
+    "Run the toss two or three times first. This play only exists because of that one.",
+    "The fullback's first step is toward the fake. If he leans the wrong way early, their linebacker never moves."
+  ]
+}

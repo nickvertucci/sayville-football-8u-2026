@@ -1,0 +1,34 @@
+{
+  "id": "tight",
+  "order": 1,
+  "name": "Tight",
+  "family": "Double Wing",
+  "personnel": "11 players, 2 tight ends, 2 wings, 1 fullback",
+  "notes": "Base formation. Line splits are foot-to-foot. Ends are on the line of scrimmage. Wings align one yard outside and one yard behind their end in a two-point stance. FB is four yards deep, directly behind the QB. QB is under center.",
+  "alignment": {
+    "LE": [-3.6, -0.5],
+    "LT": [-2.4, -0.5],
+    "LG": [-1.2, -0.5],
+    "C": [0.0, -0.5],
+    "RG": [1.2, -0.5],
+    "RT": [2.4, -0.5],
+    "RE": [3.6, -0.5],
+    "LW": [-5.0, -1.6],
+    "RW": [5.0, -1.6],
+    "QB": [0.0, -1.5],
+    "FB": [0.0, -4.0]
+  },
+  "eligible": [
+    "LE",
+    "RE",
+    "LW",
+    "RW",
+    "FB",
+    "QB"
+  ],
+  "coaching_notes": [
+    "Foot-to-foot splits are the whole point: the defense cannot fit gaps that do not exist.",
+    "Both ends must be ON the line. Both wings must be OFF it. Check this every snap in practice or you will get illegal formation flags.",
+    "The formation is symmetric, so every play has a left version and a right version with identical rules."
+  ]
+}

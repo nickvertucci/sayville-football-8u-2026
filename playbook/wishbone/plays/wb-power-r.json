@@ -1,0 +1,73 @@
+{
+  "id": "wb-power-r",
+  "formation": "wishbone",
+  "name": "Bone Power Right",
+  "call": "Bone 6 Power",
+  "type": "run",
+  "defense": "6-3",
+  "install_week": 1,
+  "direction": "right",
+  "ball_carrier": "RH",
+  "purpose": "Off-tackle power with the fullback kicking out and the backside halfback leading through the hole. Two lead blockers in front of the ball carrier.",
+  "assignments": {
+    "LE": {
+      "rule": "Block back and cut off pursuit. You are the last one to the ball.",
+      "type": "block",
+      "path": [[1.0, 0.7]]
+    },
+    "LT": {
+      "rule": "Block back. Take the first defender on or inside you. Nobody crosses your face.",
+      "type": "block",
+      "path": [[1.0, 0.7]]
+    },
+    "LG": {
+      "rule": "PULL RIGHT. Run flat behind the line and turn up outside our end. Take the first wrong-colored jersey.",
+      "type": "block",
+      "path": [[0.5, -1.2], [5.4, -1.0], [6.6, 1.6]]
+    },
+    "C": {
+      "rule": "Block back on the backside gap.",
+      "type": "block",
+      "path": [[-0.9, 0.8]]
+    },
+    "RG": {
+      "rule": "Block down on the first defender inside you.",
+      "type": "block",
+      "path": [[-1.2, 0.9]]
+    },
+    "RT": {
+      "rule": "Block down on the first defender inside you.",
+      "type": "block",
+      "path": [[-1.3, 0.9]]
+    },
+    "RE": {
+      "rule": "Block down inside. The man outside you belongs to the fullback.",
+      "type": "block",
+      "path": [[-1.4, 0.9]]
+    },
+    "QB": {
+      "rule": "Reverse pivot and hand the ball to the playside halfback, then carry out the fake away from the play.",
+      "type": "fake",
+      "path": [[-0.6, -0.6], [-3.0, -0.3]]
+    },
+    "FB": {
+      "rule": "Kick out the first defender outside our end. Aim at his inside hip and run through him.",
+      "type": "block",
+      "path": [[3.0, 1.0], [5.6, 3.4]]
+    },
+    "LH": {
+      "rule": "Run behind the quarterback and lead through the hole. Block the first jersey inside the kick-out.",
+      "type": "block",
+      "path": [[3.4, 0.6], [7.0, 1.6], [7.6, 3.6]]
+    },
+    "RH": {
+      "rule": "Take the handoff, press the outside hip of our end, then turn up inside the blocks.",
+      "type": "run",
+      "path": [[0.6, 1.8], [1.8, 4.2], [2.4, 6.8], [2.4, 9.4]]
+    }
+  },
+  "coaching_points": [
+    "Two lead blockers and a pulling guard all arrive in the same place. Walk it through slowly first or they will run into each other.",
+    "The ball carrier is patient for one step, then goes. Teach the pause."
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "id": "i-boot-r",
+  "formation": "i-form",
+  "name": "I Boot Right",
+  "call": "I 8 Boot",
+  "type": "pass",
+  "defense": "4-4",
+  "install_week": 3,
+  "direction": "right",
+  "ball_carrier": "Z",
+  "purpose": "Play action off the sweep look. Two receivers to the flanker side and a quarterback with the whole edge to himself. Run first, throw second.",
+  "assignments": {
+    "LE": {
+      "rule": "Block down and sell the run. This has to look exactly like the sweep going the other way.",
+      "type": "block",
+      "path": [[1.2, 0.9]]
+    },
+    "LT": {
+      "rule": "Block down on the first defender inside you.",
+      "type": "block",
+      "path": [[1.3, 0.9]]
+    },
+    "LG": {
+      "rule": "Block the man over you and drive him away from the boot.",
+      "type": "block",
+      "path": [[0.6, 1.0]]
+    },
+    "C": {
+      "rule": "Block back toward the boot side. Nobody chases through the middle.",
+      "type": "block",
+      "path": [[0.9, 0.8]]
+    },
+    "RG": {
+      "rule": "PULL LEFT and run the sweep path to sell the fake. You are a decoy — take their linebacker with you.",
+      "type": "block",
+      "path": [[-0.7, -1.0], [-3.6, -0.8], [-4.6, 0.6]]
+    },
+    "RT": {
+      "rule": "Hinge and protect the boot side. Nobody comes free outside you — the quarterback is alone back there.",
+      "type": "block",
+      "path": [[1.0, 0.7]]
+    },
+    "RE": {
+      "rule": "Engage their end for a count, then release and settle at eight yards on the boot side.",
+      "type": "pass",
+      "path": [[0.8, 4.2], [3.2, 6.4]]
+    },
+    "Z": {
+      "rule": "Run to the flat at four yards and stay in front of the quarterback. You are the easy throw.",
+      "type": "pass",
+      "path": [[-0.6, 0.6], [1.8, 2.0]]
+    },
+    "QB": {
+      "rule": "Fake the sweep with both hands, hide the ball on your back hip, and get to the edge. Run it if it is open. Only throw if a defender comes up to take you.",
+      "type": "run",
+      "path": [[-1.2, -0.6], [1.8, -1.0], [5.2, -0.4], [7.2, 2.4]]
+    },
+    "FB": {
+      "rule": "Run the sweep path away from the boot and block whatever shows. Sell it.",
+      "type": "block",
+      "path": [[-3.2, 1.4], [-5.8, 3.2]]
+    },
+    "TB": {
+      "rule": "Run the full sweep path away from the boot with your arms tucked like you have the ball. Sell it all the way to the sideline.",
+      "type": "fake",
+      "path": [[-1.6, 2.0], [-4.6, 3.4], [-6.4, 5.2]]
+    }
+  },
+  "coaching_points": [
+    "Our ends must engage their end before releasing — sell the run first, then get out.",
+    "Run first. At this age the quarterback usually walks into ten yards before anyone finds him.",
+    "No blitzing is allowed for 8- and 9-year-olds, so the quarterback has time. Teach him to be patient and look up.",
+    "One throw, then tuck it. No scrambling backwards, ever."
+  ]
+}

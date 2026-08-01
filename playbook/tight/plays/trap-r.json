@@ -1,0 +1,75 @@
+{
+  "id": "trap-r",
+  "name": "Trap Right",
+  "call": "Tight 2 Trap",
+  "formation": "tight",
+  "type": "run",
+  "defense": "6-3",
+  "install_week": 2,
+  "direction": "right",
+  "ball_carrier": "FB",
+  "purpose": "The answer when their inside linemen start firing upfield to beat our down blocks. We leave one of them completely unblocked, let him run himself out of the play, and the backside guard pulls across and knocks him out of the hole. The fullback runs inside of that block.",
+  "assignments": {
+    "LE": {
+      "rule": "Block back and cut off pursuit. Nobody chases this from behind.",
+      "type": "block",
+      "path": [[1.0, 0.7]]
+    },
+    "LT": {
+      "rule": "Block back. Take the first defender on or inside you.",
+      "type": "block",
+      "path": [[1.0, 0.7]]
+    },
+    "LG": {
+      "rule": "PULL RIGHT. Stay flat and tight to the line. Trap the first defender past the center — kick him out with your playside shoulder.",
+      "type": "block",
+      "path": [[0.5, -0.9], [2.6, 0.6]]
+    },
+    "C": {
+      "rule": "Block back on the first defender to the backside. If nobody shows, climb to the backside linebacker.",
+      "type": "block",
+      "path": [[-1.0, 0.8]]
+    },
+    "RG": {
+      "rule": "Do not touch the man over you — he is the one we are trapping. Step around him and go get the linebacker.",
+      "type": "block",
+      "path": [[0.4, 4.0]]
+    },
+    "RT": {
+      "rule": "Block down on the first defender inside you.",
+      "type": "block",
+      "path": [[-1.1, 0.9]]
+    },
+    "RE": {
+      "rule": "Block down on the first defender inside you.",
+      "type": "block",
+      "path": [[-1.2, 0.9]]
+    },
+    "LW": {
+      "rule": "Sprint flat behind the line and sell the sweep to the backside.",
+      "type": "fake",
+      "path": [[-1.6, -0.6], [-4.0, 0.2]]
+    },
+    "RW": {
+      "rule": "Release outside and block the deepest defender on your side. Run right at his outside number.",
+      "type": "block",
+      "path": [[2.0, 2.2], [3.6, 4.6]]
+    },
+    "QB": {
+      "rule": "Open to the playside and hand the ball to the fullback at two yards. Keep the fake going wide — do not stand and watch.",
+      "type": "fake",
+      "path": [[0.8, -0.6], [3.4, -0.4]]
+    },
+    "FB": {
+      "rule": "Aim just outside the center. Take the handoff, stay tight, and run inside the trap block. Get downhill — do not dance.",
+      "type": "run",
+      "path": [[0.4, 2.4], [0.8, 4.8], [1.6, 7.2]]
+    }
+  },
+  "coaching_points": [
+    "The trapped defender must be left completely alone. If our guard even brushes him he will not run upfield, and the trap block misses.",
+    "The pulling guard stays flat and low. If he bellies back he arrives late and the fullback runs into his back.",
+    "Call this when their inside linemen are getting up the field fast. If they sit and read, run power instead.",
+    "The fullback goes inside the trap block, never outside it. Walk him through it at half speed until it is automatic."
+  ]
+}

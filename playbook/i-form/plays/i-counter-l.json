@@ -1,0 +1,75 @@
+{
+  "id": "i-counter-l",
+  "formation": "i-form",
+  "name": "I Counter Left",
+  "call": "I 5 Counter",
+  "type": "run",
+  "defense": "5-3",
+  "install_week": 3,
+  "direction": "left",
+  "ball_carrier": "TB",
+  "purpose": "Misdirection off the sweep. We show them the sweep to the flanker side, their linebackers chase, and the tailback plants and comes back weak behind a pulling guard.",
+  "assignments": {
+    "RE": {
+      "rule": "Block back and cut off pursuit. You are the last one to the ball.",
+      "type": "block",
+      "path": [[-1.0, 0.7]]
+    },
+    "RT": {
+      "rule": "Block back. Take the first defender on or inside you. Nobody crosses your face.",
+      "type": "block",
+      "path": [[-1.0, 0.7]]
+    },
+    "RG": {
+      "rule": "PULL LEFT. Stay flat behind the line and kick out the first defender outside our end.",
+      "type": "block",
+      "path": [[-0.7, -1.0], [-3.6, -0.8], [-4.6, 0.6]]
+    },
+    "C": {
+      "rule": "Block the nose. Do not let him cross your face to the playside.",
+      "type": "block",
+      "path": [[-0.3, 1.1]]
+    },
+    "LG": {
+      "rule": "Block down on the first defender inside you.",
+      "type": "block",
+      "path": [[1.2, 0.9]]
+    },
+    "LT": {
+      "rule": "Block down on the first defender inside you.",
+      "type": "block",
+      "path": [[1.3, 0.9]]
+    },
+    "LE": {
+      "rule": "Block down on the first defender inside you. The man outside you is being kicked out.",
+      "type": "block",
+      "path": [[1.4, 0.9]]
+    },
+    "Z": {
+      "rule": "Take one hard step upfield like the sweep is coming, then come back and cut off the backside.",
+      "type": "fake",
+      "path": [[-1.0, 1.2], [-4.4, 1.8]]
+    },
+    "QB": {
+      "rule": "Take the snap, fake the sweep the other way with both hands, then turn back and hand to the tailback. The fake comes first — the handoff is late on purpose.",
+      "type": "fake",
+      "path": [[1.0, -0.5], [-0.4, -0.8], [-1.6, -0.6]]
+    },
+    "FB": {
+      "rule": "Run the sweep path to the other side at full speed and block anything that shows. You are the lie.",
+      "type": "block",
+      "path": [[3.2, 1.4], [5.8, 3.2]]
+    },
+    "TB": {
+      "rule": "Take two hard steps toward the sweep, then plant and come back behind the pulling guard. Those two steps are the entire play.",
+      "type": "run",
+      "path": [[1.0, 0.8], [-1.4, 2.6], [-3.6, 5.0], [-4.0, 7.6]]
+    }
+  },
+  "coaching_points": [
+    "Do not call this until I Sweep Right has gone for real yards. Misdirection off a play they do not fear is just a slower run.",
+    "The tailback's counter steps must be full speed and full length. A shuffle fools nobody.",
+    "The fullback selling the sweep matters more than his block. Tell him he is the decoy and mean it.",
+    "If their backside linebacker stops chasing the sweep, go back to I Power Left."
+  ]
+}

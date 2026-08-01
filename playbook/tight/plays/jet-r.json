@@ -1,0 +1,75 @@
+{
+  "id": "jet-r",
+  "name": "Jet Right",
+  "call": "Tight 8 Jet",
+  "formation": "tight",
+  "type": "run",
+  "defense": "4-4",
+  "install_week": 3,
+  "direction": "right",
+  "ball_carrier": "LW",
+  "purpose": "Full-speed motion sweep. The backside wing is already moving at the snap, takes the ball on the run, and tries to beat everyone to the corner. This is our fastest play and the one that makes their defense widen out — which is what makes the wedge and the trap work.",
+  "assignments": {
+    "LE": {
+      "rule": "Block back, then chase down the line. You are the last one to the ball — never quit on this play.",
+      "type": "block",
+      "path": [[1.0, 0.7]]
+    },
+    "LT": {
+      "rule": "Block back. Take the first defender on or inside you.",
+      "type": "block",
+      "path": [[1.0, 0.7]]
+    },
+    "LG": {
+      "rule": "Block back and cut off the first defender to the backside.",
+      "type": "block",
+      "path": [[1.0, 0.7]]
+    },
+    "C": {
+      "rule": "Reach the man over you. If nobody is over you, cut off the backside gap.",
+      "type": "block",
+      "path": [[0.6, 1.0]]
+    },
+    "RG": {
+      "rule": "Reach the first defender to the playside. Get your head across his outside shoulder.",
+      "type": "block",
+      "path": [[0.8, 1.0]]
+    },
+    "RT": {
+      "rule": "Reach block the man on or outside you. If you cannot reach him, run him past the play and wall him off.",
+      "type": "block",
+      "path": [[0.8, 1.0]]
+    },
+    "RE": {
+      "rule": "Reach the man over you. If you cannot reach him, turn him inside and let the ball go around.",
+      "type": "block",
+      "path": [[0.6, 1.0]]
+    },
+    "LW": {
+      "rule": "Start in full-speed motion on the coach's signal. Take the handoff on the run without slowing down and get to the corner. If it is not there, turn up — never stop your feet.",
+      "type": "run",
+      "path": [[3.0, -0.5], [6.5, -0.4], [10.0, 0.6], [12.0, 3.4]]
+    },
+    "RW": {
+      "rule": "Block the deepest defender on your side. Run right at his outside number and screen him from the ball.",
+      "type": "block",
+      "path": [[2.4, 1.6], [3.8, 3.8]]
+    },
+    "QB": {
+      "rule": "Take the snap and put the ball in the wing's belly as he crosses. Do not reach for him — let him come to you. Then boot away and sell it.",
+      "type": "fake",
+      "path": [[-0.6, -0.5], [-2.6, -0.2]]
+    },
+    "FB": {
+      "rule": "Attack the first defender outside the playside end and kick him out. Get there fast — the ball is coming right now.",
+      "type": "block",
+      "path": [[2.8, 1.2], [5.4, 3.2]]
+    }
+  },
+  "coaching_points": [
+    "Motion timing is the whole play. The wing should be at full speed and just past the quarterback when the ball is snapped — practice the timing separately from the blocking.",
+    "The quarterback never reaches out. He holds the ball still and the wing runs through it.",
+    "If the wing slows down to take the handoff, this play is dead. Better to have a fumble in practice than a jog.",
+    "Watch your league's motion rules — only one player in motion and he must be moving parallel to the line, not forward."
+  ]
+}

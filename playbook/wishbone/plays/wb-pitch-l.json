@@ -1,0 +1,7 @@
+{
+  "id": "wb-pitch-l",
+  "formation": "wishbone",
+  "name": "Bone Pitch Left",
+  "call": "Bone 7 Pitch",
+  "mirror_of": "wb-pitch-r"
+}

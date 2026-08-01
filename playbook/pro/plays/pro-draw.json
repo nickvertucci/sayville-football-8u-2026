@@ -1,0 +1,72 @@
+{
+  "id": "pro-draw",
+  "formation": "pro",
+  "name": "Pro Draw",
+  "call": "Pro 2 Draw",
+  "type": "run",
+  "defense": "5-3",
+  "install_week": 3,
+  "ball_carrier": "HB",
+  "purpose": "Show them a pass, let their linemen run upfield, then hand it up the middle. Best on an obvious passing down after we have actually thrown it a few times.",
+  "assignments": {
+    "X": {
+      "rule": "Run a route straight downfield. Sell the pass.",
+      "type": "pass",
+      "path": [[0.4, 6.4]]
+    },
+    "LT": {
+      "rule": "Set like pass protection for one count, then drive your man wherever he wants to go.",
+      "type": "block",
+      "path": [[-0.4, 1.2]]
+    },
+    "LG": {
+      "rule": "Set like pass protection, then drive your man past the play.",
+      "type": "block",
+      "path": [[-0.3, 1.2]]
+    },
+    "C": {
+      "rule": "Set for one count, then block the nose and turn him. The hole is behind you.",
+      "type": "block",
+      "path": [[0.4, 1.2]]
+    },
+    "RG": {
+      "rule": "Set like pass protection, then drive your man past the play.",
+      "type": "block",
+      "path": [[0.3, 1.2]]
+    },
+    "RT": {
+      "rule": "Set like pass protection, then drive your man past the play.",
+      "type": "block",
+      "path": [[0.4, 1.2]]
+    },
+    "TE": {
+      "rule": "Release like a route for two steps, then block the closest linebacker.",
+      "type": "block",
+      "path": [[0.2, 2.4], [-0.4, 4.0]]
+    },
+    "Z": {
+      "rule": "Run a route straight downfield. Sell the pass.",
+      "type": "pass",
+      "path": [[0.2, 6.4]]
+    },
+    "QB": {
+      "rule": "Drop three steps holding the ball high like you are throwing, then hand it to the halfback on his way past.",
+      "type": "fake",
+      "path": [[-0.4, -1.6], [-0.6, -2.2]]
+    },
+    "FB": {
+      "rule": "Step up and block anybody who comes free. Sell the protection.",
+      "type": "block",
+      "path": [[1.4, 1.6]]
+    },
+    "HB": {
+      "rule": "Wait one full count with your hands ready like you are protecting, then take the handoff and run right up the middle.",
+      "type": "run",
+      "path": [[1.2, 1.2], [1.0, 3.6], [0.8, 6.2], [0.8, 8.6]]
+    }
+  },
+  "coaching_points": [
+    "The halfback waiting that extra count is the entire play. He will want to leave early — do not let him.",
+    "Only call this after we have actually thrown the ball. A draw off a run-only offense fools nobody."
+  ]
+}

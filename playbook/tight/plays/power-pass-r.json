@@ -1,0 +1,75 @@
+{
+  "id": "power-pass-r",
+  "name": "Power Pass Right",
+  "call": "Tight 6 Power Pass",
+  "formation": "tight",
+  "type": "pass",
+  "defense": "6-3",
+  "install_week": 4,
+  "direction": "right",
+  "ball_carrier": "RE",
+  "purpose": "One throw off the power fake. The playside end runs a corner behind a defense that has stopped covering anybody, and the playside wing is the safe throw in the flat. Two receivers, two reads, and if neither is open the quarterback tucks it and runs.",
+  "assignments": {
+    "LE": {
+      "rule": "Block the first defender outside you. Nobody comes free off the backside edge.",
+      "type": "block",
+      "path": [[0.6, 1.0]]
+    },
+    "LT": {
+      "rule": "Fire out at the man over you, then keep him in front of you. Do not let him cross your face.",
+      "type": "block",
+      "path": [[-0.4, 1.0]]
+    },
+    "LG": {
+      "rule": "Fire out at the man over you, then keep him in front of you.",
+      "type": "block",
+      "path": [[-0.2, 1.0]]
+    },
+    "C": {
+      "rule": "Snap and block the man over you. If nobody is over you, help to the backside.",
+      "type": "block",
+      "path": [[0.0, 1.0]]
+    },
+    "RG": {
+      "rule": "Fire out at the man over you and keep him in front. Aggressive — this looks like run blocking.",
+      "type": "block",
+      "path": [[0.2, 1.0]]
+    },
+    "RT": {
+      "rule": "Fire out at the man over you and keep him in front. Aggressive — this looks like run blocking.",
+      "type": "block",
+      "path": [[0.2, 1.0]]
+    },
+    "RE": {
+      "rule": "Release outside, run eight yards, then break for the flag. Look for the ball over your inside shoulder.",
+      "type": "pass",
+      "path": [[0.8, 4.0], [2.8, 6.6]]
+    },
+    "LW": {
+      "rule": "Cross behind the line and settle five yards deep over the middle. You are the check-down — face the quarterback and be ready.",
+      "type": "pass",
+      "path": [[1.6, -0.6], [4.6, 1.6], [6.0, 4.2]]
+    },
+    "RW": {
+      "rule": "Sell the power fake for one step, then release into the flat at three yards. Turn and look for the ball right away.",
+      "type": "pass",
+      "path": [[1.0, -0.6], [2.6, 1.2], [4.4, 1.6]]
+    },
+    "QB": {
+      "rule": "Fake the toss, then roll to the playside. Look for the corner route first, the flat second. If neither is there, tuck it and run — do not throw across your body.",
+      "type": "pass",
+      "path": [[0.8, -0.6], [3.4, -0.8], [5.0, -0.6]]
+    },
+    "FB": {
+      "rule": "Run the kick-out path exactly like power and block the first defender outside our end. Do not release — you are protection.",
+      "type": "block",
+      "path": [[2.6, 1.0], [4.8, 3.4]]
+    }
+  },
+  "coaching_points": [
+    "This is a run play with one throw attached. If the fake is not good enough to fool the coaches on the sideline, it will not fool the safety.",
+    "The linemen block this like a run — fire out low. At this age nobody calls holding on a pass that looks like power.",
+    "Only two reads and then run. Never let the quarterback stand there hunting for a third option.",
+    "Best call on first down after a long power run, not on third and eight."
+  ]
+}

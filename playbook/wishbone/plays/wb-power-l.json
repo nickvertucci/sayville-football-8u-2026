@@ -1,0 +1,7 @@
+{
+  "id": "wb-power-l",
+  "formation": "wishbone",
+  "name": "Bone Power Left",
+  "call": "Bone 5 Power",
+  "mirror_of": "wb-power-r"
+}

@@ -1,0 +1,73 @@
+{
+  "id": "ace-outside-zone-l",
+  "formation": "ace",
+  "name": "Ace Outside Zone Left",
+  "call": "Ace 7 Zone",
+  "type": "run",
+  "defense": "5-3",
+  "install_week": 3,
+  "direction": "left",
+  "ball_carrier": "TB",
+  "purpose": "The same footwork stretched to the sideline. It forces their whole defense to run sideways, and if anybody trips over anybody the back cuts up behind them.",
+  "assignments": {
+    "X": {
+      "rule": "Block the defender covering you and screen him away from the sideline.",
+      "type": "block",
+      "path": [[-0.6, 1.6]]
+    },
+    "LT": {
+      "rule": "Reach the man on or outside you. If you cannot reach him, run him past the play.",
+      "type": "block",
+      "path": [[-1.0, 1.0]]
+    },
+    "LG": {
+      "rule": "Reach the man on or outside you and get your head across.",
+      "type": "block",
+      "path": [[-1.0, 1.0]]
+    },
+    "C": {
+      "rule": "Reach playside. If nobody is there, cut off the backside.",
+      "type": "block",
+      "path": [[-0.8, 1.0]]
+    },
+    "RG": {
+      "rule": "Reach playside and cut off anybody chasing.",
+      "type": "block",
+      "path": [[-1.0, 0.9]]
+    },
+    "RT": {
+      "rule": "Block back and cut off pursuit. You are the last one to the ball.",
+      "type": "block",
+      "path": [[-1.0, 0.7]]
+    },
+    "TE": {
+      "rule": "Block back and cut off pursuit. You are the last one to the ball.",
+      "type": "block",
+      "path": [[-1.0, 0.7]]
+    },
+    "W": {
+      "rule": "Block the defender covering you. Get in his way and stay there.",
+      "type": "block",
+      "path": [[-0.6, 1.6]]
+    },
+    "Z": {
+      "rule": "Chase across behind the line and cut off anybody trailing the play.",
+      "type": "block",
+      "path": [[-3.0, 0.6], [-7.0, 1.4]]
+    },
+    "QB": {
+      "rule": "Open to the playside, hand it deep to the back on the run, then fake the other way.",
+      "type": "fake",
+      "path": [[0.8, -0.5], [2.6, -0.2]]
+    },
+    "TB": {
+      "rule": "Take the ball on the run and stretch it toward the sideline. Look inside as you go — the moment a crease opens, plant and go north.",
+      "type": "run",
+      "path": [[-2.2, 1.6], [-5.0, 3.0], [-5.4, 5.6], [-5.2, 8.2]]
+    }
+  },
+  "coaching_points": [
+    "The back's eyes are inside while his feet go outside. That is the hard part — drill it walking.",
+    "If their end chases hard down the line, the crease is behind him. Tell the back to expect it."
+  ]
+}

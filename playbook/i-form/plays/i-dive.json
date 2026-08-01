@@ -1,0 +1,74 @@
+{
+  "id": "i-dive",
+  "formation": "i-form",
+  "name": "I Dive",
+  "call": "I 2 Dive",
+  "type": "run",
+  "defense": "6-3",
+  "install_week": 1,
+  "ball_carrier": "FB",
+  "purpose": "The quickest handoff in the book. The fullback is through the line before their linebackers have read anything. We run it to remind them the middle is not free, which is what makes the sweep work later.",
+  "assignments": {
+    "LE": {
+      "rule": "Block back and cut off pursuit. You are the last one to the ball.",
+      "type": "block",
+      "path": [[1.0, 0.7]]
+    },
+    "LT": {
+      "rule": "Block back. Take the first defender on or inside you. Nobody crosses your face.",
+      "type": "block",
+      "path": [[1.0, 0.7]]
+    },
+    "LG": {
+      "rule": "Block back. Take the first defender on or inside you. Nobody crosses your face.",
+      "type": "block",
+      "path": [[1.0, 0.7]]
+    },
+    "C": {
+      "rule": "Block the man over you. If nobody is over you, help the playside guard and climb to the middle linebacker.",
+      "type": "block",
+      "path": [[0.4, 1.2], [0.5, 2.9]]
+    },
+    "RG": {
+      "rule": "Block the man over you and turn him out. The hole is off your inside hip.",
+      "type": "block",
+      "path": [[0.3, 1.0]]
+    },
+    "RT": {
+      "rule": "Block the man over you. Do not let him slide inside.",
+      "type": "block",
+      "path": [[0.0, 1.0]]
+    },
+    "RE": {
+      "rule": "Block the first defender on or inside you.",
+      "type": "block",
+      "path": [[-0.4, 1.0]]
+    },
+    "Z": {
+      "rule": "Release and screen the deepest defender on your side. Get in his way and stay there.",
+      "type": "block",
+      "path": [[1.4, 2.6], [2.0, 4.4]]
+    },
+    "QB": {
+      "rule": "Take the snap, open a quarter turn and hand to the fullback at two yards. Then carry out a fake to the outside.",
+      "type": "fake",
+      "path": [[0.8, -0.5], [3.0, -0.3]]
+    },
+    "FB": {
+      "rule": "Aim at the outside hip of the center. Take the ball and get north. This is a straight-ahead run — no reading, no dancing.",
+      "type": "run",
+      "path": [[0.5, 1.9], [0.8, 4.2], [1.2, 6.6]]
+    },
+    "TB": {
+      "rule": "Run the sweep path outside and sell it. You will not get the ball on this play.",
+      "type": "fake",
+      "path": [[1.2, 2.0], [3.6, 3.6]]
+    }
+  },
+  "coaching_points": [
+    "Snap to handoff should be under a second. If the fullback is waiting on the ball, the play is already dead.",
+    "Best call when their linebackers start cheating wide to stop the sweep.",
+    "The fullback runs at a spot, not at a defender. Give him the outside hip of the center and let him go.",
+    "Good short-yardage call out of this formation, but the Wedge from Tight is still the better one."
+  ]
+}

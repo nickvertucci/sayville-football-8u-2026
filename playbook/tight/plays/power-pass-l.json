@@ -1,0 +1,6 @@
+{
+  "id": "power-pass-l",
+  "name": "Power Pass Left",
+  "call": "Tight 5 Power Pass",
+  "mirror_of": "power-pass-r"
+}

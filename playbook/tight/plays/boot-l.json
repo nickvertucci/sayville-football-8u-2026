@@ -1,0 +1,6 @@
+{
+  "id": "boot-l",
+  "name": "Boot Left",
+  "call": "Tight 7 Boot",
+  "mirror_of": "boot-r"
+}

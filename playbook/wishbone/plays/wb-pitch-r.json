@@ -1,0 +1,74 @@
+{
+  "id": "wb-pitch-r",
+  "formation": "wishbone",
+  "name": "Bone Pitch Right",
+  "call": "Bone 8 Pitch",
+  "type": "run",
+  "defense": "4-4",
+  "install_week": 2,
+  "direction": "right",
+  "ball_carrier": "RH",
+  "purpose": "Get outside in a hurry. The fullback dives to hold the middle, the quarterback attacks the edge and pitches. Against a defense that has crowded the box to stop the dive, this is where the yards are.",
+  "assignments": {
+    "LE": {
+      "rule": "Block back and cut off pursuit. You are the last one to the ball.",
+      "type": "block",
+      "path": [[1.0, 0.7]]
+    },
+    "LT": {
+      "rule": "Block back. Take the first defender on or inside you. Nobody crosses your face.",
+      "type": "block",
+      "path": [[1.0, 0.7]]
+    },
+    "LG": {
+      "rule": "Block back. Take the first defender on or inside you. Nobody crosses your face.",
+      "type": "block",
+      "path": [[1.0, 0.7]]
+    },
+    "C": {
+      "rule": "Reach the man over you; if nobody is over you, cut off the backside.",
+      "type": "block",
+      "path": [[0.6, 1.0]]
+    },
+    "RG": {
+      "rule": "Reach the first defender to the playside.",
+      "type": "block",
+      "path": [[0.9, 1.0]]
+    },
+    "RT": {
+      "rule": "Reach the man on or outside you. If you cannot reach him, run him past the play.",
+      "type": "block",
+      "path": [[0.9, 1.0]]
+    },
+    "RE": {
+      "rule": "Release outside and block the deepest defender on your side.",
+      "type": "block",
+      "path": [[2.4, 2.6], [3.8, 4.4]]
+    },
+    "QB": {
+      "rule": "Fake the dive to the fullback, attack the outside, and pitch the ball to the halfback before you get touched. Pitch early, not late.",
+      "type": "fake",
+      "path": [[1.4, -0.5], [4.0, -0.4], [5.6, 0.4]]
+    },
+    "FB": {
+      "rule": "Run the dive path and get tackled. Your fake is what keeps their linebackers inside.",
+      "type": "fake",
+      "path": [[0.4, 2.0], [0.6, 4.2]]
+    },
+    "LH": {
+      "rule": "Run behind the quarterback and get to the corner ahead of the ball. Kick out the first defender who shows.",
+      "type": "block",
+      "path": [[4.0, 0.8], [7.6, 2.6]]
+    },
+    "RH": {
+      "rule": "Stay outside and behind the quarterback, catch the pitch on the run, and get to the corner. Never stop your feet.",
+      "type": "run",
+      "path": [[2.2, 0.6], [5.6, 1.6], [7.8, 4.2], [7.8, 7.0]]
+    }
+  },
+  "coaching_points": [
+    "The pitch goes early. A quarterback who waits to be tackled first will pitch it on the ground.",
+    "This is not a read at this age — tell him before the snap that he is pitching it.",
+    "The halfback must stay behind the quarterback until he has the ball. Getting ahead means the pitch goes forward, which is a fumble waiting to happen."
+  ]
+}

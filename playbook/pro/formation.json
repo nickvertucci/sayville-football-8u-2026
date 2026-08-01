@@ -1,0 +1,34 @@
+{
+  "name": "Pro",
+  "family": "Pro Set",
+  "personnel": "11 players, split end, tight end, flanker, quarterback, halfback, fullback",
+  "notes": "Two backs split behind the quarterback, a tight end to the right, a split end wide left and a flanker outside the tight end. This is the formation that makes a defense cover the whole field instead of stacking the middle. Seven on the line: the split end, five interior linemen and the tight end.",
+  "alignment": {
+    "X": [-9.0, -0.5],
+    "LT": [-2.8, -0.5],
+    "LG": [-1.4, -0.5],
+    "C": [0.0, -0.5],
+    "RG": [1.4, -0.5],
+    "RT": [2.8, -0.5],
+    "TE": [4.2, -0.5],
+    "Z": [8.2, -1.2],
+    "QB": [0.0, -1.5],
+    "HB": [-2.2, -4.2],
+    "FB": [2.2, -4.2]
+  },
+  "eligible": [
+    "X",
+    "TE",
+    "Z",
+    "HB",
+    "FB",
+    "QB"
+  ],
+  "coaching_notes": [
+    "The split end and the flanker may never block anybody all game. That is fine — they are out there to make two defenders leave the box.",
+    "Both backs are the same depth, so neither one tips the play. Do not let them cheat forward on their running plays.",
+    "Count seven on the line every snap. The flanker must be off it and the split end must be on it."
+  ],
+  "id": "pro",
+  "order": 4
+}

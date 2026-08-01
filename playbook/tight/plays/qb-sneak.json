@@ -1,0 +1,74 @@
+{
+  "id": "qb-sneak",
+  "name": "Sneak",
+  "call": "Tight 0 Sneak",
+  "formation": "tight",
+  "type": "run",
+  "defense": "6-3",
+  "install_week": 1,
+  "ball_carrier": "QB",
+  "purpose": "Fourth and inches. No handoff, no backfield action, nothing to mess up — the quarterback keeps it and falls forward behind the center. The whole play is the snap count.",
+  "assignments": {
+    "LE": {
+      "rule": "Fire out into the man over you and drive him off the ball. If nobody is over you, close down inside.",
+      "type": "block",
+      "path": [[0.3, 1.0]]
+    },
+    "LT": {
+      "rule": "Fire out into the man over you and drive him off the ball.",
+      "type": "block",
+      "path": [[0.3, 1.0]]
+    },
+    "LG": {
+      "rule": "Fire out low into the man over you. Do not give one inch of ground.",
+      "type": "block",
+      "path": [[0.2, 1.1]]
+    },
+    "C": {
+      "rule": "Snap and fire out straight ahead, pads under his pads. Everything depends on you.",
+      "type": "block",
+      "path": [[0.0, 1.2]]
+    },
+    "RG": {
+      "rule": "Fire out low into the man over you. Do not give one inch of ground.",
+      "type": "block",
+      "path": [[-0.2, 1.1]]
+    },
+    "RT": {
+      "rule": "Fire out into the man over you and drive him off the ball.",
+      "type": "block",
+      "path": [[-0.3, 1.0]]
+    },
+    "RE": {
+      "rule": "Fire out into the man over you and drive him off the ball. If nobody is over you, close down inside.",
+      "type": "block",
+      "path": [[-0.3, 1.0]]
+    },
+    "LW": {
+      "rule": "Step up behind the end and push the pile. Do not go around.",
+      "type": "block",
+      "path": [[0.9, 1.2]]
+    },
+    "RW": {
+      "rule": "Step up behind the end and push the pile. Do not go around.",
+      "type": "block",
+      "path": [[-0.9, 1.2]]
+    },
+    "QB": {
+      "rule": "Snap count only. Get under the center, keep the ball, and drive forward behind him. Do not stand up and do not bounce it outside.",
+      "type": "run",
+      "path": [[0.0, 1.6], [0.0, 3.4]]
+    },
+    "FB": {
+      "rule": "Lead straight up the middle and push the quarterback forward. You are the second wave.",
+      "type": "block",
+      "path": [[0.35, 2.6], [0.35, 4.0]]
+    }
+  },
+  "coaching_points": [
+    "Vary the snap count all game so this one is not a surprise when you need it.",
+    "The quarterback stays low. Standing up turns a first down into a one-yard loss.",
+    "Never bounce this outside. If it is stuffed, it is stuffed — take the pile forward.",
+    "Run it on second and one occasionally so it is not obvious on fourth and one."
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "id": "i-iso-l",
+  "formation": "i-form",
+  "name": "I Iso Left",
+  "call": "I 3 Iso",
+  "type": "run",
+  "defense": "4-4",
+  "install_week": 1,
+  "direction": "left",
+  "ball_carrier": "TB",
+  "purpose": "The same isolation block the other way. The flanker stays where he is, so this runs away from our strength — which is exactly why it is open.",
+  "assignments": {
+    "RE": {
+      "rule": "Block back and cut off pursuit. You are the last one to the ball.",
+      "type": "block",
+      "path": [[-1.0, 0.7]]
+    },
+    "RT": {
+      "rule": "Block back. Take the first defender on or inside you. Nobody crosses your face.",
+      "type": "block",
+      "path": [[-1.0, 0.7]]
+    },
+    "RG": {
+      "rule": "Block back. Take the first defender on or inside you. Nobody crosses your face.",
+      "type": "block",
+      "path": [[-1.0, 0.7]]
+    },
+    "C": {
+      "rule": "Block the first defender to the backside.",
+      "type": "block",
+      "path": [[0.8, 1.0]]
+    },
+    "LG": {
+      "rule": "Block the man over you and drive him to the inside. You are the inside wall of the hole.",
+      "type": "block",
+      "path": [[0.4, 1.0]]
+    },
+    "LT": {
+      "rule": "Block the man over you and drive him to the outside. You are the outside wall of the hole.",
+      "type": "block",
+      "path": [[-0.4, 1.0]]
+    },
+    "LE": {
+      "rule": "Block the man over you and turn him out.",
+      "type": "block",
+      "path": [[-0.4, 1.0]]
+    },
+    "Z": {
+      "rule": "Come across behind the line and cut off anybody chasing from the backside.",
+      "type": "block",
+      "path": [[-2.6, 0.6], [-6.0, 1.4]]
+    },
+    "QB": {
+      "rule": "Reverse pivot and hand the ball to the tailback at four yards. Then clear out and fake wide.",
+      "type": "fake",
+      "path": [[0.8, -0.5], [2.8, -0.2]]
+    },
+    "FB": {
+      "rule": "Lead through the hole between the guard and the tackle. Put your facemask on the linebacker and move him any direction — just move him.",
+      "type": "block",
+      "path": [[-1.4, 2.3], [-1.6, 6.0]]
+    },
+    "TB": {
+      "rule": "Take the handoff at four yards, get downhill behind the fullback, and cut off his block.",
+      "type": "run",
+      "path": [[-0.4, 2.2], [-1.6, 4.5], [-2.6, 7.0], [-2.8, 9.6]]
+    }
+  },
+  "coaching_points": [
+    "Running away from the flanker means one fewer blocker out there, so the tailback has to get north fast.",
+    "Their defense will usually shade toward our flanker. That is the reason this play exists — check it before you call it.",
+    "Same block, same read as I Iso Right. Do not teach it as a new play, teach it as the same play flipped."
+  ]
+}

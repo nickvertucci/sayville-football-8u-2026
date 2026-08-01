@@ -1,0 +1,74 @@
+{
+  "id": "pro-quick-pass-r",
+  "formation": "pro",
+  "name": "Pro Quick Pass Right",
+  "call": "Pro 6 Quick",
+  "type": "pass",
+  "defense": "4-4",
+  "install_week": 3,
+  "direction": "right",
+  "ball_carrier": "TE",
+  "purpose": "Three-step throw to the tight end sitting down in front of the linebackers, with the flanker clearing him out. The safest pass in the book because the ball is gone before anybody gets home.",
+  "assignments": {
+    "X": {
+      "rule": "Run straight downfield and take the defender covering you with you.",
+      "type": "pass",
+      "path": [[0.4, 6.4]]
+    },
+    "LT": {
+      "rule": "Fire out at the man over you and keep him in front of you.",
+      "type": "block",
+      "path": [[-0.4, 1.0]]
+    },
+    "LG": {
+      "rule": "Fire out at the man over you and keep him in front of you.",
+      "type": "block",
+      "path": [[-0.2, 1.0]]
+    },
+    "C": {
+      "rule": "Snap and block the man over you. If nobody is over you, help to the backside.",
+      "type": "block",
+      "path": [[0.0, 1.0]]
+    },
+    "RG": {
+      "rule": "Fire out at the man over you and keep him in front of you.",
+      "type": "block",
+      "path": [[0.2, 1.0]]
+    },
+    "RT": {
+      "rule": "Fire out at the man over you and keep him in front of you.",
+      "type": "block",
+      "path": [[0.4, 1.0]]
+    },
+    "TE": {
+      "rule": "Release inside, run five yards, then sit down in the open grass and face the quarterback.",
+      "type": "pass",
+      "path": [[-0.6, 3.4], [-1.4, 5.0]]
+    },
+    "Z": {
+      "rule": "Run straight up the field and clear the defenders out of the tight end's window.",
+      "type": "pass",
+      "path": [[0.2, 6.4]]
+    },
+    "QB": {
+      "rule": "Three steps back and throw. If the tight end is covered, throw it at his feet — never hold it.",
+      "type": "pass",
+      "path": [[0.0, -1.6]]
+    },
+    "FB": {
+      "rule": "Block anybody who comes free on your side. Do not release.",
+      "type": "block",
+      "path": [[1.6, 1.6]]
+    },
+    "HB": {
+      "rule": "Block anybody who comes free on your side. Do not release.",
+      "type": "block",
+      "path": [[-1.6, 1.6]]
+    }
+  },
+  "coaching_points": [
+    "Three steps and the ball is out. Count it out loud in practice.",
+    "The flanker's job is to run off the defender over the tight end. He will never touch the ball on this play and that is the point.",
+    "Throwing it at his feet is a good outcome. Teach that early so nobody takes a sack."
+  ]
+}

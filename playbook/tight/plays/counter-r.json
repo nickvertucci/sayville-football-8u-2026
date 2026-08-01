@@ -1,0 +1,75 @@
+{
+  "id": "counter-r",
+  "name": "Counter Right",
+  "call": "Tight 6 Counter",
+  "formation": "tight",
+  "type": "run",
+  "defense": "5-3",
+  "install_week": 3,
+  "direction": "right",
+  "ball_carrier": "FB",
+  "purpose": "Misdirection off the sweep. We show them the sweep going one way, their linebackers chase it, and the fullback plants and comes back the other way behind a pulling guard. This play only works after we have run the sweep enough times that they believe it.",
+  "assignments": {
+    "LE": {
+      "rule": "Block back and cut off pursuit.",
+      "type": "block",
+      "path": [[1.0, 0.7]]
+    },
+    "LT": {
+      "rule": "Block back. Take the first defender on or inside you.",
+      "type": "block",
+      "path": [[1.0, 0.7]]
+    },
+    "LG": {
+      "rule": "Block back on the first defender to the backside. Nobody crosses your face.",
+      "type": "block",
+      "path": [[1.0, 0.7]]
+    },
+    "C": {
+      "rule": "Block the nose. Do not let him cross your face to the playside.",
+      "type": "block",
+      "path": [[0.3, 1.1]]
+    },
+    "RG": {
+      "rule": "PULL RIGHT. Stay flat behind the line and kick out the first defender outside our playside end.",
+      "type": "block",
+      "path": [[0.6, -0.9], [3.2, -0.7], [4.0, 0.6]]
+    },
+    "RT": {
+      "rule": "Block down on the first defender inside you.",
+      "type": "block",
+      "path": [[-1.1, 0.9]]
+    },
+    "RE": {
+      "rule": "Block down on the first defender inside you. The man outside you is being kicked out.",
+      "type": "block",
+      "path": [[-1.2, 0.9]]
+    },
+    "LW": {
+      "rule": "Run the sweep path the other way at full speed with your arms tucked like you have the ball. Sell it all the way to the sideline.",
+      "type": "fake",
+      "path": [[-1.8, -0.4], [-4.4, 0.6]]
+    },
+    "RW": {
+      "rule": "Step down inside and block the playside linebacker. Take the first jersey that shows.",
+      "type": "block",
+      "path": [[-1.0, 2.0], [-1.6, 4.4]]
+    },
+    "QB": {
+      "rule": "Take the snap, fake the toss the other way with both hands, then turn back and hand the ball to the fullback. Sell the fake first — the handoff is late on purpose.",
+      "type": "fake",
+      "path": [[-1.0, -0.5], [0.4, -0.8], [1.6, -0.6]]
+    },
+    "FB": {
+      "rule": "Take one hard step with the fake, then plant and run to daylight off the playside end's outside hip. That first step is what freezes the linebackers.",
+      "type": "run",
+      "path": [[-0.8, 0.6], [1.6, 2.4], [3.4, 4.4], [3.8, 6.8]]
+    }
+  },
+  "coaching_points": [
+    "Do not call this in the first quarter. It needs the sweep on film first — run jet or power three or four times, then counter.",
+    "The fullback's counter step has to be a real step, not a shuffle. If he cheats it, the linebackers never bite.",
+    "The wing running the fake must go all the way. Coaches see the ball; kids see the fastest player. So do linebackers.",
+    "If their linebackers stop chasing the sweep, stop calling the counter and go back to power."
+  ]
+}

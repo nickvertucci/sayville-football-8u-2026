@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="621" height="392" viewBox="40 5 621 392" font-family="Segoe UI, Helvetica, Arial, sans-serif" role="img">
+<title>Waggle Right — Wing 8 Waggle</title>
+<rect x="0" y="0" width="702" height="446" fill="#ffffff"/>
+<line x1="0" y1="391.5" x2="702" y2="391.5" stroke="#c8cdd6" stroke-width="1"/>
+<line x1="0" y1="121.5" x2="702" y2="121.5" stroke="#c8cdd6" stroke-width="1"/>
+<line x1="0" y1="256.5" x2="702" y2="256.5" stroke="#3a4150" stroke-width="2" stroke-dasharray="9 6"/>
+<ellipse cx="351.0" cy="256.5" rx="9" ry="5.5" fill="#6b4a2b" stroke="#3a2716" stroke-width="1.2"/>
+<line x1="241.4" y1="227.9" x2="255.4" y2="241.9" stroke="#9aa2ae" stroke-width="3"/><line x1="255.4" y1="227.9" x2="241.4" y2="241.9" stroke="#9aa2ae" stroke-width="3"/>
+<text x="248.4" y="219.6" text-anchor="middle" font-size="10" fill="#9aa2ae" font-weight="600">E</text>
+<line x1="306.2" y1="227.9" x2="320.2" y2="241.9" stroke="#9aa2ae" stroke-width="3"/><line x1="320.2" y1="227.9" x2="306.2" y2="241.9" stroke="#9aa2ae" stroke-width="3"/>
+<text x="313.2" y="219.6" text-anchor="middle" font-size="10" fill="#9aa2ae" font-weight="600">T</text>
+<line x1="381.8" y1="227.9" x2="395.8" y2="241.9" stroke="#9aa2ae" stroke-width="3"/><line x1="395.8" y1="227.9" x2="381.8" y2="241.9" stroke="#9aa2ae" stroke-width="3"/>
+<text x="388.8" y="219.6" text-anchor="middle" font-size="10" fill="#9aa2ae" font-weight="600">T</text>
+<line x1="446.6" y1="227.9" x2="460.6" y2="241.9" stroke="#9aa2ae" stroke-width="3"/><line x1="460.6" y1="227.9" x2="446.6" y2="241.9" stroke="#9aa2ae" stroke-width="3"/>
+<text x="453.6" y="219.6" text-anchor="middle" font-size="10" fill="#9aa2ae" font-weight="600">E</text>
+<line x1="219.8" y1="146.9" x2="233.8" y2="160.9" stroke="#9aa2ae" stroke-width="3"/><line x1="233.8" y1="146.9" x2="219.8" y2="160.9" stroke="#9aa2ae" stroke-width="3"/>
+<text x="226.8" y="138.6" text-anchor="middle" font-size="10" fill="#9aa2ae" font-weight="600">W</text>
+<line x1="306.2" y1="146.9" x2="320.2" y2="160.9" stroke="#9aa2ae" stroke-width="3"/><line x1="320.2" y1="146.9" x2="306.2" y2="160.9" stroke="#9aa2ae" stroke-width="3"/>
+<text x="313.2" y="138.6" text-anchor="middle" font-size="10" fill="#9aa2ae" font-weight="600">M</text>
+<line x1="381.8" y1="146.9" x2="395.8" y2="160.9" stroke="#9aa2ae" stroke-width="3"/><line x1="395.8" y1="146.9" x2="381.8" y2="160.9" stroke="#9aa2ae" stroke-width="3"/>
+<text x="388.8" y="138.6" text-anchor="middle" font-size="10" fill="#9aa2ae" font-weight="600">S</text>
+<line x1="468.2" y1="146.9" x2="482.2" y2="160.9" stroke="#9aa2ae" stroke-width="3"/><line x1="482.2" y1="146.9" x2="468.2" y2="160.9" stroke="#9aa2ae" stroke-width="3"/>
+<text x="475.2" y="138.6" text-anchor="middle" font-size="10" fill="#9aa2ae" font-weight="600">R</text>
+<line x1="87.5" y1="168.5" x2="101.5" y2="182.5" stroke="#9aa2ae" stroke-width="3"/><line x1="101.5" y1="168.5" x2="87.5" y2="182.5" stroke="#9aa2ae" stroke-width="3"/>
+<text x="94.5" y="160.2" text-anchor="middle" font-size="10" fill="#9aa2ae" font-weight="600">C</text>
+<line x1="600.5" y1="168.5" x2="614.5" y2="182.5" stroke="#9aa2ae" stroke-width="3"/><line x1="614.5" y1="168.5" x2="600.5" y2="182.5" stroke="#9aa2ae" stroke-width="3"/>
+<text x="607.5" y="160.2" text-anchor="middle" font-size="10" fill="#9aa2ae" font-weight="600">C</text>
+<line x1="344.0" y1="33.5" x2="358.0" y2="47.5" stroke="#9aa2ae" stroke-width="3"/><line x1="358.0" y1="33.5" x2="344.0" y2="47.5" stroke="#9aa2ae" stroke-width="3"/>
+<text x="351.0" y="25.2" text-anchor="middle" font-size="10" fill="#9aa2ae" font-weight="600">FS</text>
+<path d="M237.6,270.0 L329.4,145.8 L410.4,102.6" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 5"/>
+<polygon points="410.4,102.6 403.4,111.6 399.1,103.4" fill="#14213d"/>
+<path d="M275.4,270.0 L310.5,245.7" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="305.3" y1="238.2" x2="315.7" y2="253.2" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
+<path d="M313.2,270.0 L329.4,297.0 L437.4,291.6 L459.0,253.8" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="451.0" y1="249.2" x2="467.0" y2="258.4" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
+<path d="M351.0,270.0 L369.9,245.7" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="362.7" y1="240.1" x2="377.1" y2="251.3" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
+<path d="M388.8,270.0 L413.1,248.4" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="407.0" y1="241.5" x2="419.2" y2="255.3" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
+<path d="M426.6,270.0 L453.6,251.1" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="448.3" y1="243.6" x2="458.9" y2="258.6" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
+<path d="M464.4,270.0 L496.8,243.0 L572.4,216.0" fill="none" stroke="#b3001b" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 5"/>
+<polygon points="572.4,216.0 564.2,223.8 561.1,215.1" fill="#b3001b"/>
+<path d="M502.2,294.3 L518.4,180.9 L572.4,121.5" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 5"/>
+<polygon points="572.4,121.5 568.9,132.3 562.0,126.1" fill="#14213d"/>
+<path d="M351.0,297.0 L324.0,313.2 L394.2,324.0 L480.6,313.2 L523.8,270.0" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 5"/>
+<polygon points="523.8,270.0 519.7,280.6 513.2,274.1" fill="#14213d"/>
+<path d="M351.0,353.7 L378.0,294.3 L388.8,234.9" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 5"/>
+<polygon points="388.8,234.9 391.5,245.9 382.4,244.3" fill="#14213d"/>
+<path d="M259.2,369.9 L324.0,337.5 L421.2,305.1 L464.4,245.7" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 5"/>
+<polygon points="464.4,245.7 462.0,256.8 454.6,251.4" fill="#14213d"/>
+<rect x="225.7" y="258.1" width="23.8" height="23.8" rx="3" fill="#ffffff" stroke="#14213d" stroke-width="2.4"/>
+<text x="237.6" y="274.0" text-anchor="middle" font-size="11.5" font-weight="700" fill="#14213d">LE</text>
+<rect x="263.5" y="258.1" width="23.8" height="23.8" rx="3" fill="#ffffff" stroke="#14213d" stroke-width="2.4"/>
+<text x="275.4" y="274.0" text-anchor="middle" font-size="11.5" font-weight="700" fill="#14213d">LT</text>
+<rect x="301.3" y="258.1" width="23.8" height="23.8" rx="3" fill="#ffffff" stroke="#14213d" stroke-width="2.4"/>
+<text x="313.2" y="274.0" text-anchor="middle" font-size="11.5" font-weight="700" fill="#14213d">LG</text>
+<rect x="339.1" y="258.1" width="23.8" height="23.8" rx="3" fill="#ffffff" stroke="#14213d" stroke-width="2.4"/>
+<text x="351.0" y="274.0" text-anchor="middle" font-size="11.5" font-weight="700" fill="#14213d">C</text>
+<rect x="376.9" y="258.1" width="23.8" height="23.8" rx="3" fill="#ffffff" stroke="#14213d" stroke-width="2.4"/>
+<text x="388.8" y="274.0" text-anchor="middle" font-size="11.5" font-weight="700" fill="#14213d">RG</text>
+<rect x="414.7" y="258.1" width="23.8" height="23.8" rx="3" fill="#ffffff" stroke="#14213d" stroke-width="2.4"/>
+<text x="426.6" y="274.0" text-anchor="middle" font-size="11.5" font-weight="700" fill="#14213d">RT</text>
+<rect x="452.5" y="258.1" width="23.8" height="23.8" rx="3" fill="#ffffff" stroke="#b3001b" stroke-width="2.4"/>
+<text x="464.4" y="274.0" text-anchor="middle" font-size="11.5" font-weight="700" fill="#b3001b">RE</text>
+<circle cx="502.2" cy="294.3" r="12.4" fill="#ffffff" stroke="#14213d" stroke-width="2.4"/>
+<text x="502.2" y="298.3" text-anchor="middle" font-size="11.5" font-weight="700" fill="#14213d">WB</text>
+<circle cx="351.0" cy="297.0" r="12.4" fill="#ffffff" stroke="#14213d" stroke-width="2.4"/>
+<text x="351.0" y="301.0" text-anchor="middle" font-size="11.5" font-weight="700" fill="#14213d">QB</text>
+<circle cx="351.0" cy="353.7" r="12.4" fill="#ffffff" stroke="#14213d" stroke-width="2.4"/>
+<text x="351.0" y="357.7" text-anchor="middle" font-size="11.5" font-weight="700" fill="#14213d">FB</text>
+<circle cx="259.2" cy="369.9" r="12.4" fill="#ffffff" stroke="#14213d" stroke-width="2.4"/>
+<text x="259.2" y="373.9" text-anchor="middle" font-size="11.5" font-weight="700" fill="#14213d">HB</text>
+</svg>

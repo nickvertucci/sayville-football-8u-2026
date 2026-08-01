@@ -1,0 +1,73 @@
+{
+  "id": "pro-iso-r",
+  "formation": "pro",
+  "name": "Pro Iso Right",
+  "call": "Pro 4 Iso",
+  "type": "run",
+  "defense": "4-4",
+  "install_week": 1,
+  "direction": "right",
+  "ball_carrier": "HB",
+  "purpose": "The simplest two-back run there is. The fullback leads through the hole and blocks the linebacker, the halfback follows him. With two receivers spread out, there are fewer defenders in there to beat.",
+  "assignments": {
+    "X": {
+      "rule": "Run off the defender covering you. Take him deep and take him with you.",
+      "type": "pass",
+      "path": [[0.4, 6.0]]
+    },
+    "LT": {
+      "rule": "Block back. Take the first defender on or inside you. Nobody crosses your face.",
+      "type": "block",
+      "path": [[1.0, 0.7]]
+    },
+    "LG": {
+      "rule": "Block back. Take the first defender on or inside you. Nobody crosses your face.",
+      "type": "block",
+      "path": [[1.0, 0.7]]
+    },
+    "C": {
+      "rule": "Block the first defender to the backside.",
+      "type": "block",
+      "path": [[-0.8, 1.0]]
+    },
+    "RG": {
+      "rule": "Block the man over you and drive him inside. You are the inside wall of the hole.",
+      "type": "block",
+      "path": [[-0.4, 1.0]]
+    },
+    "RT": {
+      "rule": "Block the man over you and drive him outside. You are the outside wall of the hole.",
+      "type": "block",
+      "path": [[0.4, 1.0]]
+    },
+    "TE": {
+      "rule": "Block the man over you and turn him out.",
+      "type": "block",
+      "path": [[0.4, 1.0]]
+    },
+    "Z": {
+      "rule": "Block the defender covering you. Get in his way and stay between him and the ball.",
+      "type": "block",
+      "path": [[0.4, 2.2]]
+    },
+    "QB": {
+      "rule": "Open to the playside and hand the ball to the halfback at four yards, then get out of the way.",
+      "type": "fake",
+      "path": [[-0.8, -0.5], [-2.6, -0.2]]
+    },
+    "FB": {
+      "rule": "Lead through the hole between the guard and the tackle. Put your facemask on the linebacker and move him.",
+      "type": "block",
+      "path": [[-0.6, 2.6], [-0.4, 5.8]]
+    },
+    "HB": {
+      "rule": "Take the handoff, get downhill behind the fullback, and cut off his block.",
+      "type": "run",
+      "path": [[2.0, 2.4], [3.0, 4.8], [3.4, 7.4], [3.4, 9.8]]
+    }
+  },
+  "coaching_points": [
+    "The fullback has to beat the halfback to the hole. Walk through the timing before you run it live.",
+    "Teach the halfback to cut off the fullback's back, not to pick a hole before he gets there."
+  ]
+}

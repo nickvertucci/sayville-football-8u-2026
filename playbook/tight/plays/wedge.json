@@ -1,0 +1,74 @@
+{
+  "id": "wedge",
+  "name": "Wedge",
+  "call": "Tight 0 Wedge",
+  "formation": "tight",
+  "type": "run",
+  "defense": "6-3",
+  "install_week": 1,
+  "ball_carrier": "FB",
+  "purpose": "The first play we install and the play we run when we need two yards. Every blocker takes the same man — whoever is over the center — and the whole line moves as one body. There is no hole to find and no read to make.",
+  "assignments": {
+    "LE": {
+      "rule": "Close down to the tackle's hip, shoulder to shoulder. No daylight between you.",
+      "type": "block",
+      "path": [[0.7, 0.8]]
+    },
+    "LT": {
+      "rule": "Close down to the guard's hip, shoulder to shoulder.",
+      "type": "block",
+      "path": [[0.6, 0.9]]
+    },
+    "LG": {
+      "rule": "Close down to the center's hip, shoulder to shoulder. Get a hand on the center's back and stay attached.",
+      "type": "block",
+      "path": [[0.5, 1.0]]
+    },
+    "C": {
+      "rule": "Snap it, then fire out low into whoever is closest. You are the point of the wedge — stay low and keep your feet moving.",
+      "type": "block",
+      "path": [[0.0, 1.2]]
+    },
+    "RG": {
+      "rule": "Close down to the center's hip, shoulder to shoulder. Get a hand on the center's back and stay attached.",
+      "type": "block",
+      "path": [[-0.5, 1.0]]
+    },
+    "RT": {
+      "rule": "Close down to the guard's hip, shoulder to shoulder.",
+      "type": "block",
+      "path": [[-0.6, 0.9]]
+    },
+    "RE": {
+      "rule": "Close down to the tackle's hip, shoulder to shoulder. No daylight between you.",
+      "type": "block",
+      "path": [[-0.7, 0.8]]
+    },
+    "LW": {
+      "rule": "Step to the end's hip and push the back of the wedge. Never run around it.",
+      "type": "block",
+      "path": [[0.9, 1.3]]
+    },
+    "RW": {
+      "rule": "Step to the end's hip and push the back of the wedge. Never run around it.",
+      "type": "block",
+      "path": [[-0.9, 1.3]]
+    },
+    "QB": {
+      "rule": "Take the snap, turn and hand the ball to the fullback at two yards, then get on the back of the wedge and push.",
+      "type": "block",
+      "path": [[0.0, -0.6], [0.0, 1.0]]
+    },
+    "FB": {
+      "rule": "Two hands out, take the handoff and put your shoulder into the middle of the wedge. Keep your feet moving until the whistle.",
+      "type": "run",
+      "path": [[0.0, 2.4], [0.0, 5.4]]
+    }
+  },
+  "coaching_points": [
+    "The wedge only works if there are no gaps in it. Practice it standing still first, hip to hip, before anyone runs.",
+    "The fullback does not pick a hole. He runs into the back of the wedge and lets it move him.",
+    "If the wedge stops moving, the play is over. Teach the linemen to keep churning their feet after contact.",
+    "This is our short-yardage and goal-line play. Do not save it for emergencies — run it early so they have to respect it."
+  ]
+}

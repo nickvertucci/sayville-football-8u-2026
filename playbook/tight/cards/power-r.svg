@@ -1,0 +1,135 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="702" height="1020" viewBox="0 0 702 1020" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+<rect width="100%" height="100%" fill="#ffffff"/>
+<rect x="0" y="0" width="702" height="58" fill="#14213d"/>
+<text x="18" y="26" font-size="19" font-weight="700" fill="#ffffff">Power Right</text>
+<text x="18" y="45" font-size="11.5" fill="#a9b4c7">RUN  •  Tight (Double Wing)  •  vs 6-3 (max legal front)  •  Install wk 1</text>
+<rect x="542.4" y="13" width="141.6" height="31" rx="6" fill="#ffffff" fill-opacity="0.12" stroke="#8593ad" stroke-width="1"/>
+<text x="613.2" y="34" text-anchor="middle" font-size="14.5" font-weight="700" fill="#ffffff" letter-spacing="0.5">Tight 6 Power</text>
+<g transform="translate(0,58)">
+<rect x="0" y="0" width="702" height="446" fill="#ffffff"/>
+<line x1="0" y1="391.5" x2="702" y2="391.5" stroke="#c8cdd6" stroke-width="1"/>
+<line x1="0" y1="121.5" x2="702" y2="121.5" stroke="#c8cdd6" stroke-width="1"/>
+<line x1="0" y1="256.5" x2="702" y2="256.5" stroke="#3a4150" stroke-width="2" stroke-dasharray="9 6"/>
+<ellipse cx="351.0" cy="256.5" rx="9" ry="5.5" fill="#6b4a2b" stroke="#3a2716" stroke-width="1.2"/>
+<line x1="225.2" y1="227.9" x2="239.2" y2="241.9" stroke="#9aa2ae" stroke-width="3"/><line x1="239.2" y1="227.9" x2="225.2" y2="241.9" stroke="#9aa2ae" stroke-width="3"/>
+<text x="232.2" y="219.6" text-anchor="middle" font-size="10" fill="#9aa2ae" font-weight="600">E</text>
+<line x1="279.2" y1="227.9" x2="293.2" y2="241.9" stroke="#9aa2ae" stroke-width="3"/><line x1="293.2" y1="227.9" x2="279.2" y2="241.9" stroke="#9aa2ae" stroke-width="3"/>
+<text x="286.2" y="219.6" text-anchor="middle" font-size="10" fill="#9aa2ae" font-weight="600">T</text>
+<line x1="311.6" y1="227.9" x2="325.6" y2="241.9" stroke="#9aa2ae" stroke-width="3"/><line x1="325.6" y1="227.9" x2="311.6" y2="241.9" stroke="#9aa2ae" stroke-width="3"/>
+<text x="318.6" y="219.6" text-anchor="middle" font-size="10" fill="#9aa2ae" font-weight="600">G</text>
+<line x1="376.4" y1="227.9" x2="390.4" y2="241.9" stroke="#9aa2ae" stroke-width="3"/><line x1="390.4" y1="227.9" x2="376.4" y2="241.9" stroke="#9aa2ae" stroke-width="3"/>
+<text x="383.4" y="219.6" text-anchor="middle" font-size="10" fill="#9aa2ae" font-weight="600">G</text>
+<line x1="408.8" y1="227.9" x2="422.8" y2="241.9" stroke="#9aa2ae" stroke-width="3"/><line x1="422.8" y1="227.9" x2="408.8" y2="241.9" stroke="#9aa2ae" stroke-width="3"/>
+<text x="415.8" y="219.6" text-anchor="middle" font-size="10" fill="#9aa2ae" font-weight="600">T</text>
+<line x1="462.8" y1="227.9" x2="476.8" y2="241.9" stroke="#9aa2ae" stroke-width="3"/><line x1="476.8" y1="227.9" x2="462.8" y2="241.9" stroke="#9aa2ae" stroke-width="3"/>
+<text x="469.8" y="219.6" text-anchor="middle" font-size="10" fill="#9aa2ae" font-weight="600">E</text>
+<line x1="273.8" y1="179.3" x2="287.8" y2="193.3" stroke="#9aa2ae" stroke-width="3"/><line x1="287.8" y1="179.3" x2="273.8" y2="193.3" stroke="#9aa2ae" stroke-width="3"/>
+<text x="280.8" y="171.0" text-anchor="middle" font-size="10" fill="#9aa2ae" font-weight="600">W</text>
+<line x1="344.0" y1="179.3" x2="358.0" y2="193.3" stroke="#9aa2ae" stroke-width="3"/><line x1="358.0" y1="179.3" x2="344.0" y2="193.3" stroke="#9aa2ae" stroke-width="3"/>
+<text x="351.0" y="171.0" text-anchor="middle" font-size="10" fill="#9aa2ae" font-weight="600">M</text>
+<line x1="414.2" y1="179.3" x2="428.2" y2="193.3" stroke="#9aa2ae" stroke-width="3"/><line x1="428.2" y1="179.3" x2="414.2" y2="193.3" stroke="#9aa2ae" stroke-width="3"/>
+<text x="421.2" y="171.0" text-anchor="middle" font-size="10" fill="#9aa2ae" font-weight="600">S</text>
+<line x1="101.0" y1="168.5" x2="115.0" y2="182.5" stroke="#9aa2ae" stroke-width="3"/><line x1="115.0" y1="168.5" x2="101.0" y2="182.5" stroke="#9aa2ae" stroke-width="3"/>
+<text x="108.0" y="160.2" text-anchor="middle" font-size="10" fill="#9aa2ae" font-weight="600">C</text>
+<line x1="587.0" y1="168.5" x2="601.0" y2="182.5" stroke="#9aa2ae" stroke-width="3"/><line x1="601.0" y1="168.5" x2="587.0" y2="182.5" stroke="#9aa2ae" stroke-width="3"/>
+<text x="594.0" y="160.2" text-anchor="middle" font-size="10" fill="#9aa2ae" font-weight="600">C</text>
+<path d="M253.8,270.0 L280.8,251.1" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="275.5" y1="243.6" x2="286.1" y2="258.6" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
+<path d="M286.2,270.0 L313.2,251.1" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="307.9" y1="243.6" x2="318.5" y2="258.6" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
+<path d="M318.6,270.0 L329.4,302.4 L453.6,297.0 L486.0,229.5" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="477.7" y1="225.5" x2="494.3" y2="233.5" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
+<path d="M351.0,270.0 L326.7,248.4" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="320.6" y1="255.3" x2="332.8" y2="241.5" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
+<path d="M383.4,270.0 L383.4,243.0" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="374.2" y1="243.0" x2="392.6" y2="243.0" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
+<path d="M415.8,270.0 L386.1,245.7" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="380.3" y1="252.8" x2="391.9" y2="238.6" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
+<path d="M448.2,270.0 L415.8,245.7" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="410.3" y1="253.0" x2="421.3" y2="238.4" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
+<path d="M216.0,299.7 L172.8,315.9 L108.0,294.3" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 5"/>
+<polygon points="108.0,294.3 119.3,293.2 116.4,302.0" fill="#14213d"/>
+<path d="M486.0,299.7 L510.3,318.6 L518.4,261.9 L513.0,186.3 L496.8,121.5" fill="none" stroke="#b3001b" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+<polygon points="496.8,121.5 503.8,130.4 494.8,132.7" fill="#b3001b"/>
+<path d="M351.0,297.0 L337.5,315.9 L275.4,305.1" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 5"/>
+<polygon points="275.4,305.1 286.4,302.3 284.8,311.4" fill="#14213d"/>
+<path d="M351.0,364.5 L421.2,337.5 L491.4,251.1" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="484.3" y1="245.3" x2="498.5" y2="256.9" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
+<rect x="241.9" y="258.1" width="23.8" height="23.8" rx="3" fill="#ffffff" stroke="#14213d" stroke-width="2.4"/>
+<text x="253.8" y="274.0" text-anchor="middle" font-size="11.5" font-weight="700" fill="#14213d">LE</text>
+<rect x="274.3" y="258.1" width="23.8" height="23.8" rx="3" fill="#ffffff" stroke="#14213d" stroke-width="2.4"/>
+<text x="286.2" y="274.0" text-anchor="middle" font-size="11.5" font-weight="700" fill="#14213d">LT</text>
+<rect x="306.7" y="258.1" width="23.8" height="23.8" rx="3" fill="#ffffff" stroke="#14213d" stroke-width="2.4"/>
+<text x="318.6" y="274.0" text-anchor="middle" font-size="11.5" font-weight="700" fill="#14213d">LG</text>
+<rect x="339.1" y="258.1" width="23.8" height="23.8" rx="3" fill="#ffffff" stroke="#14213d" stroke-width="2.4"/>
+<text x="351.0" y="274.0" text-anchor="middle" font-size="11.5" font-weight="700" fill="#14213d">C</text>
+<rect x="371.5" y="258.1" width="23.8" height="23.8" rx="3" fill="#ffffff" stroke="#14213d" stroke-width="2.4"/>
+<text x="383.4" y="274.0" text-anchor="middle" font-size="11.5" font-weight="700" fill="#14213d">RG</text>
+<rect x="403.9" y="258.1" width="23.8" height="23.8" rx="3" fill="#ffffff" stroke="#14213d" stroke-width="2.4"/>
+<text x="415.8" y="274.0" text-anchor="middle" font-size="11.5" font-weight="700" fill="#14213d">RT</text>
+<rect x="436.3" y="258.1" width="23.8" height="23.8" rx="3" fill="#ffffff" stroke="#14213d" stroke-width="2.4"/>
+<text x="448.2" y="274.0" text-anchor="middle" font-size="11.5" font-weight="700" fill="#14213d">RE</text>
+<circle cx="216.0" cy="299.7" r="12.4" fill="#ffffff" stroke="#14213d" stroke-width="2.4"/>
+<text x="216.0" y="303.7" text-anchor="middle" font-size="11.5" font-weight="700" fill="#14213d">LW</text>
+<circle cx="486.0" cy="299.7" r="12.4" fill="#ffffff" stroke="#b3001b" stroke-width="2.4"/>
+<text x="486.0" y="303.7" text-anchor="middle" font-size="11.5" font-weight="700" fill="#b3001b">RW</text>
+<circle cx="351.0" cy="297.0" r="12.4" fill="#ffffff" stroke="#14213d" stroke-width="2.4"/>
+<text x="351.0" y="301.0" text-anchor="middle" font-size="11.5" font-weight="700" fill="#14213d">QB</text>
+<circle cx="351.0" cy="364.5" r="12.4" fill="#ffffff" stroke="#14213d" stroke-width="2.4"/>
+<text x="351.0" y="368.5" text-anchor="middle" font-size="11.5" font-weight="700" fill="#14213d">FB</text>
+</g>
+<line x1="18" y1="514" x2="684" y2="514" stroke="#c8cdd6" stroke-width="1"/>
+<text x="18" y="534" font-size="11" font-weight="700" fill="#5b6472" letter-spacing="1">ASSIGNMENTS</text>
+<text x="18" y="552" font-size="12" font-weight="700" fill="#111318">LE</text>
+<text x="52" y="552" font-size="12" fill="#111318">Block back. Take the first defender on or</text>
+<text x="52" y="568" font-size="12" fill="#111318">inside you and cut off pursuit.</text>
+<text x="18" y="586" font-size="12" font-weight="700" fill="#111318">LT</text>
+<text x="52" y="586" font-size="12" fill="#111318">Block back. Take the first defender on or</text>
+<text x="52" y="602" font-size="12" fill="#111318">inside you. Nobody crosses your face.</text>
+<text x="18" y="620" font-size="12" font-weight="700" fill="#111318">LG</text>
+<text x="52" y="620" font-size="12" fill="#111318">PULL RIGHT. Open with your playside foot, run</text>
+<text x="52" y="636" font-size="12" fill="#111318">flat behind the line, and turn up outside the</text>
+<text x="52" y="654" font-size="12" fill="#111318">end. Block the first wrong-colored jersey you</text>
+<text x="52" y="670" font-size="12" fill="#111318">see.</text>
+<text x="18" y="688" font-size="12" font-weight="700" fill="#111318">C</text>
+<text x="52" y="688" font-size="12" fill="#111318">Block back on the backside gap. If nobody</text>
+<text x="52" y="704" font-size="12" fill="#111318">shows, get on the backside linebacker.</text>
+<text x="18" y="722" font-size="12" font-weight="700" fill="#111318">RG</text>
+<text x="52" y="722" font-size="12" fill="#111318">Block the man over you. If nobody is over you,</text>
+<text x="52" y="738" font-size="12" fill="#111318">help the center and climb to the linebacker.</text>
+<text x="18" y="756" font-size="12" font-weight="700" fill="#111318">RT</text>
+<text x="52" y="756" font-size="12" fill="#111318">Block down on the first defender inside you.</text>
+<text x="52" y="772" font-size="12" fill="#111318">Do not let him cross your face.</text>
+<text x="351" y="552" font-size="12" font-weight="700" fill="#111318">RE</text>
+<text x="385" y="552" font-size="12" fill="#111318">Block down on the first defender inside you.</text>
+<text x="385" y="568" font-size="12" fill="#111318">The man outside you is not yours — the</text>
+<text x="385" y="586" font-size="12" fill="#111318">fullback has him.</text>
+<text x="351" y="602" font-size="12" font-weight="700" fill="#111318">LW</text>
+<text x="385" y="602" font-size="12" fill="#111318">Sprint flat behind the quarterback and sell</text>
+<text x="385" y="620" font-size="12" fill="#111318">the sweep to the backside. You are the reason</text>
+<text x="385" y="636" font-size="12" fill="#111318">their backside linebacker stays home.</text>
+<text x="351" y="654" font-size="12" font-weight="700" fill="#111318">RW</text>
+<text x="385" y="654" font-size="12" fill="#111318">Take the toss on the move. Get outside the</text>
+<text x="385" y="670" font-size="12" fill="#111318">fullback's block, then turn up. Do not bounce</text>
+<text x="385" y="688" font-size="12" fill="#111318">it any wider than that.</text>
+<text x="351" y="704" font-size="12" font-weight="700" fill="#111318">QB</text>
+<text x="385" y="704" font-size="12" fill="#111318">Reverse pivot and toss the ball out in front</text>
+<text x="385" y="722" font-size="12" fill="#111318">of the playside wing so he catches it running.</text>
+<text x="385" y="738" font-size="12" fill="#111318">Then carry out the bootleg fake away from the</text>
+<text x="385" y="756" font-size="12" fill="#111318">play.</text>
+<text x="351" y="772" font-size="12" font-weight="700" fill="#111318">FB</text>
+<text x="385" y="772" font-size="12" fill="#111318">Kick out the first defender outside our end.</text>
+<text x="385" y="790" font-size="12" fill="#111318">Aim at his inside hip and run through him — do</text>
+<text x="385" y="806" font-size="12" fill="#111318">not stop your feet.</text>
+<line x1="18" y1="814" x2="684" y2="814" stroke="#c8cdd6" stroke-width="1"/>
+<text x="18" y="832" font-size="11" font-weight="700" fill="#5b6472" letter-spacing="1">COACHING POINTS</text>
+<text x="18" y="852" font-size="12" fill="#111318">The toss is out in front, not at the wing's chest. He should never have to stop or reach back for</text>
+<text x="18" y="868" font-size="12" fill="#111318">it.</text>
+<text x="18" y="886" font-size="12" fill="#111318">Down blocks first. If the playside end and tackle do not seal inside, the pullers have nowhere to</text>
+<text x="18" y="902" font-size="12" fill="#111318">go.</text>
+<text x="18" y="920" font-size="12" fill="#111318">The fullback's kick-out is the whole play. Drill it every practice against a stand-up dummy.</text>
+<text x="18" y="936" font-size="12" fill="#111318">Teach the wing one rule: get to the outside hip of the kick-out block and turn north. Bouncing it</text>
+<text x="18" y="954" font-size="12" fill="#111318">wide is how this play loses yards.</text>
+<text x="18" y="970" font-size="12" fill="#111318">The backside wing's fake matters. If he jogs, their linebacker chases the ball and the wrap block</text>
+<text x="18" y="988" font-size="12" fill="#111318">never arrives in time.</text>
+</svg>

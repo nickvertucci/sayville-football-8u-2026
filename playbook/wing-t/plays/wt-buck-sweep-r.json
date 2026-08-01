@@ -1,0 +1,74 @@
+{
+  "id": "wt-buck-sweep-r",
+  "formation": "wing-t",
+  "name": "Buck Sweep Right",
+  "call": "Wing 8 Buck",
+  "type": "run",
+  "defense": "5-3",
+  "install_week": 1,
+  "direction": "right",
+  "ball_carrier": "HB",
+  "purpose": "The play the whole offense is built on. Both guards pull, the fullback fakes the trap into the line, and the halfback runs behind the guards around the end. Everything else in this section is a lie told off this picture.",
+  "assignments": {
+    "LE": {
+      "rule": "Block back and cut off pursuit. You are the last one to the ball.",
+      "type": "block",
+      "path": [[1.0, 0.7]]
+    },
+    "LT": {
+      "rule": "Block back. Take the first defender on or inside you. Nobody crosses your face.",
+      "type": "block",
+      "path": [[1.0, 0.7]]
+    },
+    "LG": {
+      "rule": "PULL RIGHT. You are the first guard — turn up outside our end and kick out the first defender who shows.",
+      "type": "block",
+      "path": [[0.6, -1.0], [5.2, -0.8], [6.2, 0.8]]
+    },
+    "C": {
+      "rule": "Reach the man over you and cut off the backside. You are alone in there — get it done.",
+      "type": "block",
+      "path": [[-0.5, 1.1]]
+    },
+    "RG": {
+      "rule": "PULL RIGHT. You are the second guard — run behind the first one and turn up inside his block. Take the linebacker.",
+      "type": "block",
+      "path": [[0.5, -1.4], [4.4, -1.2], [5.2, 1.6]]
+    },
+    "RT": {
+      "rule": "Block down on the first defender inside you. Nobody chases through your gap.",
+      "type": "block",
+      "path": [[-1.3, 0.9]]
+    },
+    "RE": {
+      "rule": "Block down on the first defender inside you.",
+      "type": "block",
+      "path": [[-1.4, 0.9]]
+    },
+    "WB": {
+      "rule": "Block the first defender outside our end and drive him wider. Open the corner.",
+      "type": "block",
+      "path": [[0.9, 1.3], [1.6, 2.8]]
+    },
+    "QB": {
+      "rule": "Reverse pivot, fake to the fullback with both hands, then hand the ball to the halfback going wide. Carry out the bootleg fake.",
+      "type": "fake",
+      "path": [[-0.8, -0.5], [-3.0, -0.2]]
+    },
+    "FB": {
+      "rule": "Run the trap path right at the guard's gap and get tackled. You will not have the ball. That is the job.",
+      "type": "fake",
+      "path": [[1.0, 2.2], [1.4, 4.4]]
+    },
+    "HB": {
+      "rule": "Take the handoff on the run, get behind both guards, and turn up off their blocks. Do not outrun them to the corner.",
+      "type": "run",
+      "path": [[2.4, 1.2], [6.0, 2.4], [8.2, 5.0], [8.4, 7.8]]
+    }
+  },
+  "coaching_points": [
+    "Two pulling guards is the hardest thing we ask anyone to do. Drill it with no defense until they can do it in their sleep.",
+    "The fullback's fake has to draw a hit. If nobody tackles him, their linebackers are already chasing the halfback.",
+    "The halfback stays behind the guards. If he beats them to the corner he has no blockers and it is a five-yard loss."
+  ]
+}
