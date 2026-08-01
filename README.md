@@ -68,9 +68,14 @@ The install weeks on each play are within a formation, not across the whole book
 
 ## Printing
 
-Open the website and hit **Print playbook** — it is already set to landscape, one play
-per page, with the diagram on the left and the assignments and coaching points on the
-right. Print to PDF and it is a binder.
+Two buttons, both on the website:
+
+- **Print playbook** (top bar) — the whole book, 47 landscape pages, one play per sheet.
+- **Print this play** (on every card) — just that one play, one sheet.
+
+Both are already set to landscape with the diagram on the left and the assignments and
+coaching points on the right. No page setup to fiddle with: print to PDF and it is a
+binder, or print the single sheet you need for tonight's practice.
 
 Individual cards are standalone SVGs under `playbook/<formation>/cards/` if you want to
 drop one into a practice plan. Two versions of each:
