@@ -66,16 +66,35 @@ of this repo is:
 
 The install weeks on each play are within a formation, not across the whole book.
 
+## The website
+
+Not one long page — it is a real site, so you can get to a play in two taps and send
+someone a link to exactly the play you mean.
+
+| Page | What it is |
+|---|---|
+| `index.html` | Home: the formations, the install advice, the calling language |
+| `calls.html` | **Call sheet** — every play, filter as you type, filter by formation or run/pass |
+| `f-<formation>.html` | One formation: its notes, and its plays grouped by install week |
+| `p-<play>.html` | One play. Deep-linkable, and prints to a single sheet |
+| `print.html` | The whole book for printing |
+
+On every page the diagram is the main attraction — full width of the card, edge to edge
+on a phone, with the assignments read underneath it rather than squeezed in beside it.
+
 ## Printing
 
-Two buttons, both on the website:
+- **Print book** (top bar) → 47 landscape pages, one play per sheet.
+- **Print** (on any play page) → that one play, one landscape sheet.
 
-- **Print playbook** (top bar) — the whole book, 47 landscape pages, one play per sheet.
-- **Print this play** (on every card) — just that one play, one sheet.
+Both are already set to landscape, so there is no page setup to fiddle with. Print to PDF
+for a binder, or print the single sheet you need for tonight's practice. Page counts are
+verified on every change by rendering to PDF and counting — a play that overflows onto a
+second sheet is a bug.
 
-Both are already set to landscape with the diagram on the left and the assignments and
-coaching points on the right. No page setup to fiddle with: print to PDF and it is a
-binder, or print the single sheet you need for tonight's practice.
+The one thing the printed sheet drops is the play's "purpose" paragraph. That is context
+for planning, not for holding on a sideline, and cutting it is what buys the diagram its
+height. It is still on the website.
 
 Individual cards are standalone SVGs under `playbook/<formation>/cards/` if you want to
 drop one into a practice plan. Two versions of each:
@@ -107,14 +126,19 @@ Full authoring rules, the coordinate system and the house style for writing assi
 
 ```
 playbook/<formation>/formation.json   the 11 alignment spots
-playbook/<formation>/plays/*.json     one file per play
+playbook/<formation>/plays/*.json     one file per play          <- source
 playbook/<formation>/cards/*.svg      generated
-generator/render.py                   the generator
+generator/render.py                   diagrams, cards, PLAYBOOK.md
+generator/site_build.py               the website
+generator/common.py                   shared by both
 generator/defenses/*.json             6-3, 5-3 and 4-4 looks to draw plays against
-index.html                            generated — the GitHub Pages site
+*.html, assets/                       generated — the GitHub Pages site
 PLAYBOOK.md                           generated
 RULES.md                              league rules that constrain the playbook
 ```
+
+Only the JSON under `playbook/` is source. Everything else with a `.html`, `.svg` or
+`PLAYBOOK.md` name is rebuilt from it.
 
 ## A note on the defenses
 

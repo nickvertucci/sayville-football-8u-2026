@@ -3,10 +3,13 @@
 
 Reads the JSON play files under `playbook/<formation>/plays/` and writes:
 
-    playbook/<formation>/cards/<play-id>.svg   one printable card per play
-    playbook/<formation>/README.md             formation index
-    playbook/index.html                        every card, print-to-PDF ready
-    PLAYBOOK.md                                the whole book, in install order
+    playbook/<formation>/cards/<play-id>.svg          full printable card
+    playbook/<formation>/cards/<play-id>-field.svg    diagram only, used by the website
+    playbook/<formation>/README.md                    formation index
+    PLAYBOOK.md                                       the whole book, in install order
+
+and hands off to site_build.py, which writes the multi-page website (home, call
+sheet, a page per formation, a page per play, and the print build).
 
 Usage:
     python generator/render.py            # rebuild everything
@@ -34,6 +37,11 @@ import json
 import math
 import sys
 from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+
+import site_build  # noqa: E402
+from common import CARD_ORDER, esc, ordered_positions, slug  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
 PLAYBOOK_DIR = ROOT / "playbook"
@@ -66,13 +74,6 @@ MIRROR = {
     "LH": "RH", "RH": "LH",
     "C": "C", "QB": "QB", "FB": "FB", "TB": "TB",
 }
-
-# Order assignments are listed on the card: line first, then receivers, then backs.
-CARD_ORDER = [
-    "X", "LE", "LT", "LG", "C", "RG", "RT", "RE", "TE",
-    "LW", "RW", "WB", "W", "Z",
-    "QB", "BB", "FB", "TB", "HB", "LH", "RH",
-]
 
 COLORS = {
     "ink": "#111318",
@@ -179,6 +180,18 @@ def resolve_plays(plays_dir: Path, form: dict) -> list[dict]:
 
 def validate(formations: list[dict], defenses: dict) -> list[str]:
     errors = []
+    # Play ids must be unique across the whole book: each one becomes a flat p-<id>.html
+    # page, so a collision between two formations would silently overwrite a play.
+    seen: dict[str, str] = {}
+    for form in formations:
+        for play in form["_plays"]:
+            pid = play.get("id", "")
+            if pid in seen:
+                errors.append(
+                    f"{pid}: duplicate play id, also used in '{seen[pid]}' — ids must be "
+                    "unique across every formation"
+                )
+            seen[pid] = form.get("id", "?")
     for form in formations:
         for field in ("id", "name", "alignment"):
             if field not in form:
@@ -217,16 +230,6 @@ def validate(formations: list[dict], defenses: dict) -> list[str]:
 
 
 # ------------------------------------------------------------------ drawing --
-
-
-def esc(text) -> str:
-    return (
-        str(text)
-        .replace("&", "&amp;")
-        .replace("<", "&lt;")
-        .replace(">", "&gt;")
-        .replace('"', "&quot;")
-    )
 
 
 def polyline(points, color, width=2.6, dashed=False):
@@ -495,18 +498,25 @@ def render_diagram(play: dict, defenses: dict) -> str:
 
     # Crop to what this play actually uses. A front with no deep safety would otherwise
     # leave six yards of blank grass at the top, which on a phone is six yards of nothing.
+    xs = [x for x, _ in form["alignment"].values()]
     ys = [y for _, y in form["alignment"].values()]
     if defense:
+        xs += [x for x, _ in defense["alignment"].values()]
         ys += [y for _, y in defense["alignment"].values()]
     for pos, spec in play["assignments"].items():
-        ay = form["alignment"][pos][1]
+        ax, ay = form["alignment"][pos]
+        xs += [ax + p[0] for p in spec.get("path", [])]
         ys += [ay + p[1] for p in spec.get("path", [])]
 
     y_top = min(Y_MAX, max(ys) + 1.3)
     y_bot = max(Y_MIN, min(ys) - 1.0)
+    # Floor the half-width so an interior play does not zoom to cartoon size.
+    half = max(8.0, max(abs(min(xs)), abs(max(xs))) + 1.2)
+    x_left = max(X_MIN, -half)
+    x_right = min(X_MAX, half)
 
-    crop = 1.5 * SCALE
-    vb_w = FIELD_W - 2 * crop
+    vb_x = fx(x_left)
+    vb_w = fx(x_right) - vb_x
     vb_y = fy(y_top)
     vb_h = fy(y_bot) - vb_y
 
@@ -514,7 +524,7 @@ def render_diagram(play: dict, defenses: dict) -> str:
     # the diagram, and repeating them inside the image just wastes phone screen.
     svg = [
         f'<svg xmlns="http://www.w3.org/2000/svg" width="{vb_w:.0f}" height="{vb_h:.0f}" '
-        f'viewBox="{crop:.0f} {vb_y:.0f} {vb_w:.0f} {vb_h:.0f}" '
+        f'viewBox="{vb_x:.0f} {vb_y:.0f} {vb_w:.0f} {vb_h:.0f}" '
         f'font-family="Segoe UI, Helvetica, Arial, sans-serif" role="img">',
         f'<title>{esc(play["name"])} — {esc(play.get("call", ""))}</title>',
         draw_field(),
@@ -529,9 +539,6 @@ def render_diagram(play: dict, defenses: dict) -> str:
 
 # ------------------------------------------------------------------ outputs --
 
-
-def slug(text) -> str:
-    return "".join(c for c in str(text).lower().replace(" ", "-") if c.isalnum() or c == "-")
 
 
 def play_section(play: dict, card_rel: str) -> list[str]:
@@ -619,266 +626,6 @@ def write_playbook(formations: list[dict]) -> str:
     return "\n".join(out) + "\n"
 
 
-def write_site(formations: list[dict]) -> str:
-    """The GitHub Pages site: every play, grouped by formation then install week.
-
-    Pairs the diagram-only SVG with real HTML text so it reflows on a phone, and
-    prints landscape with the diagram beside the assignments.
-    """
-    total = sum(len(f["_plays"]) for f in formations)
-
-    nav = "\n".join(
-        f'<a href="#form-{esc(f["id"])}">{esc(f["name"])}</a>' for f in formations
-    )
-
-    sections = []
-    for form in formations:
-        label = f"{form['name']} — {form['family']}" if form.get("family") else form["name"]
-        sections.append(
-            f'<h2 class="formation" id="form-{esc(form["id"])}">{esc(label)}</h2>'
-        )
-        if form.get("notes"):
-            sections.append(f'<p class="formation-note">{esc(form["notes"])}</p>')
-
-        weeks: dict[int, list] = {}
-        for p in form["_plays"]:
-            weeks.setdefault(p.get("install_week", 99), []).append(p)
-
-        for w in sorted(weeks):
-            sections.append(
-                f'<h3 class="week">{esc(f"Week {w}" if w != 99 else "Unscheduled")}</h3>'
-            )
-            for p in weeks[w]:
-                title = p["name"]
-                ordered = [x for x in CARD_ORDER if x in p["assignments"]]
-                ordered += [x for x in p["assignments"] if x not in CARD_ORDER]
-                rows = "\n".join(
-                    f'<tr{" class=ball" if pos == p.get("ball_carrier") else ""}>'
-                    f"<th>{esc(pos)}</th><td>{esc(p['assignments'][pos]['rule'])}</td></tr>"
-                    for pos in ordered
-                )
-                coaching = ""
-                if p.get("coaching_points"):
-                    items = "\n".join(f"<li>{esc(c)}</li>" for c in p["coaching_points"])
-                    coaching = (
-                        f'<div class="coach"><h4>Coaching points</h4><ul>{items}</ul></div>'
-                    )
-                purpose = (
-                    f'<p class="purpose">{esc(p["purpose"])}</p>' if p.get("purpose") else ""
-                )
-                tags = " ".join(
-                    f'<span class="tag">{esc(t)}</span>'
-                    for t in (
-                        p.get("type", "").upper(),
-                        p.get("ball_carrier", ""),
-                        f"vs {p['defense']}" if p.get("defense") else "",
-                    )
-                    if t
-                )
-                if p.get("call"):
-                    tags = f'<span class="call">{esc(p["call"])}</span>' + tags
-                sections.append(
-                    f'<article id="{esc(p["id"])}">'
-                    f"<header><h4>{esc(title)}</h4>"
-                    f'<div class="tags">{tags}</div>'
-                    f'<button type="button" class="printone" '
-                    f"onclick=\"printPlay('{esc(p['id'])}')\" "
-                    f'title="Print just this play">Print this play</button>'
-                    f"</header>"
-                    f'<div class="grid">'
-                    f'<div class="diagram"><img loading="lazy" '
-                    f'src="playbook/{form["id"]}/cards/{p["id"]}-field.svg" '
-                    f'alt="{esc(title)} diagram"></div>'
-                    f'<div class="detail">{purpose}'
-                    f'<table class="assign"><caption>Assignments</caption><tbody>{rows}'
-                    f"</tbody></table></div>"
-                    f"</div>{coaching}"
-                    "</article>"
-                )
-
-    body = "\n".join(sections)
-    return f"""<!doctype html>
-<html lang="en">
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Sayville 8U Tackle Football — 2026 Playbook</title>
-<meta name="description" content="Tight double wing playbook for 8U tackle football: {total} plays with diagrams, assignments and coaching points.">
-<style>
-  :root {{
-    --ink: #111318; --muted: #5b6472; --line: #dde1e8;
-    --navy: #14213d; --red: #b3001b; --bg: #eef1f5; --panel: #fff;
-  }}
-  @media (prefers-color-scheme: dark) {{
-    :root {{ --ink: #e8ecf3; --muted: #98a2b3; --line: #2a3040; --bg: #10131a; }}
-  }}
-  * {{ box-sizing: border-box; }}
-  body {{
-    margin: 0; background: var(--bg); color: var(--ink);
-    font: 16px/1.55 "Segoe UI", Helvetica, Arial, sans-serif;
-  }}
-  .wrap {{ max-width: 940px; margin: 0 auto; padding: 0 20px 64px; }}
-  .hero {{ background: var(--navy); color: #fff; padding: 40px 0 30px; margin-bottom: 8px; }}
-  .hero .wrap {{ padding-bottom: 0; }}
-  .hero h1 {{ margin: 0 0 6px; font-size: clamp(26px, 5vw, 38px); letter-spacing: -.4px; }}
-  .hero p {{ margin: 0; color: #a9b4c7; max-width: 62ch; }}
-  nav {{
-    position: sticky; top: 0; z-index: 5; background: var(--navy);
-    border-top: 1px solid rgba(255,255,255,.12); padding: 10px 0;
-  }}
-  nav .wrap {{ display: flex; gap: 8px; flex-wrap: wrap; padding-bottom: 0; }}
-  nav a {{
-    color: #cdd6e6; text-decoration: none; font-size: 14px; font-weight: 600;
-    padding: 5px 12px; border-radius: 999px; background: rgba(255,255,255,.09);
-  }}
-  nav a:hover {{ background: rgba(255,255,255,.2); color: #fff; }}
-  nav .print {{
-    margin-left: auto; cursor: pointer; font: inherit; font-size: 14px;
-    font-weight: 600; color: var(--navy); background: #fff; border: 0;
-    padding: 5px 14px; border-radius: 999px;
-  }}
-  nav .print:hover {{ background: #dfe6f2; }}
-  h2.formation {{
-    font-size: clamp(20px, 4vw, 26px); color: var(--ink);
-    margin: 40px 0 4px; letter-spacing: -.3px;
-  }}
-  .formation-note {{ margin: 0 0 8px; color: var(--muted); max-width: 68ch; }}
-  h3.week {{
-    font-size: 13px; text-transform: uppercase; letter-spacing: 1.4px;
-    color: var(--muted); margin: 28px 0 12px; padding-bottom: 8px;
-    border-bottom: 1px solid var(--line);
-  }}
-  article {{
-    background: var(--panel); color: #111318; border-radius: 10px;
-    box-shadow: 0 1px 3px rgba(16,20,30,.16); margin: 0 0 18px; padding: 16px;
-    /* Clears the sticky nav, which wraps to two rows on a phone. */
-    scroll-margin-top: 112px;
-  }}
-  article header {{
-    display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap;
-    border-bottom: 2px solid var(--navy); padding-bottom: 9px; margin-bottom: 12px;
-  }}
-  article h4 {{ margin: 0; font-size: clamp(18px, 3.6vw, 21px); color: var(--navy); }}
-  .tags {{ display: flex; gap: 6px; flex-wrap: wrap; }}
-  .tag {{
-    font-size: 11px; font-weight: 700; letter-spacing: .6px; color: #5b6472;
-    background: #eef1f5; border-radius: 4px; padding: 3px 7px;
-  }}
-  .call {{
-    font-size: 12.5px; font-weight: 700; letter-spacing: .5px; color: #fff;
-    background: var(--navy); border-radius: 4px; padding: 3px 9px;
-  }}
-  .printone {{
-    margin-left: auto; cursor: pointer; font: inherit; font-size: 12.5px;
-    font-weight: 600; color: #5b6472; background: #eef1f5; border: 1px solid #dde1e8;
-    border-radius: 999px; padding: 4px 12px; white-space: nowrap;
-  }}
-  .printone:hover {{ background: var(--navy); border-color: var(--navy); color: #fff; }}
-  .grid {{ display: grid; gap: 4px 24px; }}
-  .diagram {{ min-width: 0; }}
-  .purpose {{ margin: 0 0 12px; color: #3d4553; }}
-  article img {{ display: block; width: 100%; height: auto; }}
-  table.assign {{ width: 100%; border-collapse: collapse; }}
-  table.assign caption, .coach h4 {{
-    text-align: left; font-size: 11px; font-weight: 700; letter-spacing: 1.2px;
-    text-transform: uppercase; color: #5b6472; padding: 12px 0 4px; margin: 0;
-  }}
-  table.assign th, table.assign td {{
-    text-align: left; vertical-align: top; padding: 7px 8px 7px 0;
-    border-top: 1px solid #eceff4; font-size: 15px; color: #111318;
-  }}
-  table.assign th {{ width: 42px; font-weight: 700; }}
-  tr.ball th, tr.ball td {{ color: var(--red); font-weight: 600; }}
-  .coach h4 {{ padding-top: 14px; }}
-  .coach ul {{ margin: 0; padding-left: 20px; }}
-  .coach li {{ margin-bottom: 5px; color: #3d4553; }}
-  footer {{ color: var(--muted); font-size: 14px; margin-top: 48px; }}
-  footer code {{ background: rgba(127,127,127,.15); padding: 1px 5px; border-radius: 3px; }}
-
-  /* Phone first — the diagram sits above the words. Side by side once there is room. */
-  @media (min-width: 760px) {{
-    article {{ padding: 20px; scroll-margin-top: 70px; }}
-    .grid {{ grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); }}
-  }}
-
-  /* One play per landscape sheet. Everything below is sized so a card with the longest
-     assignment list and five coaching points still fits on a single page. */
-  @page {{ size: landscape; margin: 9mm; }}
-  @media print {{
-    :root {{ --ink: #111318; --muted: #5b6472; --line: #dde1e8; }}
-    body {{ background: #fff; font-size: 10pt; }}
-    .hero, nav, footer, h2.formation, h3.week, .formation-note,
-    .printone {{ display: none; }}
-    /* "Print this play" sets .print-one on <html> and marks one card, so the same
-       stylesheet prints either the whole book or a single sheet. */
-    html.print-one article {{ display: none; }}
-    html.print-one article.print-target {{
-      display: block; page-break-after: auto; break-after: auto;
-    }}
-    .wrap {{ max-width: none; padding: 0; }}
-    article {{
-      box-shadow: none; border-radius: 0; padding: 0; margin: 0;
-      page-break-after: always; break-after: page; page-break-inside: avoid;
-    }}
-    article:last-child {{ page-break-after: auto; break-after: auto; }}
-    article header {{ padding-bottom: 5px; margin-bottom: 8px; }}
-    article h4 {{ font-size: 16pt; }}
-    .tag, .call {{ font-size: 8.5pt; padding: 2px 6px; }}
-    /* Diagram on the left, everything a coach reads on the right. */
-    .grid {{ grid-template-columns: 1.02fr 1fr; gap: 0 14px; }}
-    .diagram {{ align-self: start; }}
-    article img {{ max-height: 96mm; width: auto; max-width: 100%; }}
-    .purpose {{ font-size: 8.5pt; margin-bottom: 6px; }}
-    table.assign caption, .coach h4 {{ font-size: 8pt; padding: 4px 0 2px; }}
-    table.assign th, table.assign td {{ font-size: 8.5pt; padding: 1.5px 6px 1.5px 0; }}
-    .coach {{ grid-column: 1 / -1; }}
-    .coach ul {{ column-count: 2; column-gap: 16px; }}
-    .coach li {{ font-size: 8pt; margin-bottom: 1px; break-inside: avoid; }}
-    a[href]::after {{ content: ""; }}
-  }}
-</style>
-<div class="hero"><div class="wrap">
-  <h1>Sayville 8U Tackle Football</h1>
-  <p>2026 season playbook — {total} plays, in the order we install them. Every diagram
-     is generated from the play files in this repo, so what is on this page is exactly
-     what is in the binder.</p>
-</div></div>
-<nav><div class="wrap">{nav}
-  <button type="button" class="print" onclick="window.print()">Print playbook</button>
-</div></nav>
-<div class="wrap">
-{body}
-<footer>
-  <p>Generated by <code>generator/render.py</code>. <strong>Print playbook</strong> gives
-  you the whole book in landscape, one play per sheet; <strong>Print this play</strong> on
-  any card gives you just that sheet.</p>
-</footer>
-</div>
-<script>
-function printPlay(id) {{
-  var el = document.getElementById(id);
-  if (!el) return;
-  document.documentElement.classList.add('print-one');
-  el.classList.add('print-target');
-  window.print();
-}}
-function clearPrintOne() {{
-  document.documentElement.classList.remove('print-one');
-  var t = document.querySelector('.print-target');
-  if (t) t.classList.remove('print-target');
-}}
-// afterprint is not reliable everywhere, so undo on the media change too.
-window.addEventListener('afterprint', clearPrintOne);
-if (window.matchMedia) {{
-  var mq = window.matchMedia('print');
-  var onChange = function (e) {{ if (!e.matches) clearPrintOne(); }};
-  if (mq.addEventListener) mq.addEventListener('change', onChange);
-  else if (mq.addListener) mq.addListener(onChange);
-}}
-</script>
-</html>
-"""
-
-
 def main() -> int:
     ap = argparse.ArgumentParser(description="Render Sayville 8U play cards from JSON.")
     ap.add_argument("--check", action="store_true", help="validate only, write nothing")
@@ -908,14 +655,15 @@ def main() -> int:
             )
         (form["_dir"] / "README.md").write_text(write_formation_readme(form), encoding="utf-8")
 
-    # index.html lives at the repo root so GitHub Pages can serve from "/" and reference
-    # the cards in place instead of keeping a second copy of every SVG.
-    (ROOT / "index.html").write_text(write_site(formations), encoding="utf-8")
     (ROOT / "PLAYBOOK.md").write_text(write_playbook(formations), encoding="utf-8")
+
+    # The site is flat files at the repo root so Pages can serve from "/" and every page
+    # can reference the cards in place, with no second copy of any SVG.
+    pages = site_build.write_all(formations, ROOT)
 
     print(
         f"Wrote {total} cards (+{total} diagrams), {len(formations)} formation "
-        "README(s), index.html and PLAYBOOK.md"
+        f"README(s), PLAYBOOK.md and {pages} site pages"
     )
     return 0
 
