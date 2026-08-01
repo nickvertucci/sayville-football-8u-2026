@@ -22,7 +22,7 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 | 14 | [Bone Counter Left](#bone-counter-left) | `Bone 5 Counter` | run | Wishbone | RH | Week 3 |
 | 15 | [Bone Counter Right](#bone-counter-right) | `Bone 6 Counter` | run | Wishbone | LH | Week 3 |
 
-# I (I-Formation)
+# I-Formation
 
 ---
 
@@ -270,7 +270,7 @@ Misdirection off the sweep. We show them the sweep to the flanker side, their li
 - The fullback selling the sweep matters more than his block. Tell him he is the decoy and mean it.
 - If their backside linebacker stops chasing the sweep, go back to I Power Left.
 
-# Wishbone (Wishbone)
+# Wishbone
 
 ---
 

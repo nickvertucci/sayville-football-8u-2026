@@ -41,7 +41,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 import site_build  # noqa: E402
-from common import CARD_ORDER, esc, ordered_positions, slug  # noqa: E402
+from common import CARD_ORDER, esc, form_label, ordered_positions, slug  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
 PLAYBOOK_DIR = ROOT / "playbook"
@@ -426,8 +426,7 @@ def render_card(play: dict, defenses: dict, frame: tuple[float, float, float]) -
     coach_h = (len(coach_lines) * LINE_H + 40) if coach_lines else 0
     total_h = TITLE_H + field_h + assign_h + coach_h + PAD
 
-    form_label = f"{form['name']} ({form['family']})" if form.get("family") else form["name"]
-    meta_bits = [play.get("type", "").upper(), form_label]
+    meta_bits = [play.get("type", "").upper(), form_label(form)]
     if defense:
         meta_bits.append(f"vs {defense['name']}")
     if play.get("install_week"):
@@ -596,7 +595,7 @@ def play_section(play: dict, card_rel: str) -> list[str]:
 
 
 def write_formation_readme(form: dict) -> str:
-    heading = f"{form['name']} — {form['family']}" if form.get("family") else form["name"]
+    heading = form_label(form)
     out = [
         f"# {heading}",
         "",
@@ -652,7 +651,7 @@ def write_playbook(formations: list[dict]) -> str:
             )
     out.append("")
     for form in formations:
-        label = f"{form['name']} ({form['family']})" if form.get("family") else form["name"]
+        label = form_label(form)
         out += [f"# {label}", ""]
         for p in form["_plays"]:
             out += play_section(p, f"playbook/{form['id']}/cards/{p['id']}.svg")
