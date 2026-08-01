@@ -1,3 +1,34 @@
+/* Play switcher: close it on an outside click or Escape, the way a menu should. */
+(function () {
+  var sw = document.querySelector('.switcher');
+  if (!sw) return;
+  document.addEventListener('click', function (e) {
+    if (sw.open && !sw.contains(e.target)) sw.open = false;
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && sw.open) { sw.open = false; sw.querySelector('summary').focus(); }
+  });
+  sw.addEventListener('toggle', function () {
+    if (!sw.open) return;
+    var here = sw.querySelector('a.here');
+    if (here) here.scrollIntoView({ block: 'nearest' });
+  });
+})();
+
+/* Arrow keys walk through the plays in a formation. */
+(function () {
+  var main = document.querySelector('main');
+  if (!main) return;
+  var prev = main.dataset.prev, next = main.dataset.next;
+  if (!prev && !next) return;
+  document.addEventListener('keydown', function (e) {
+    var t = e.target.tagName;
+    if (t === 'INPUT' || t === 'TEXTAREA' || e.metaKey || e.ctrlKey || e.altKey) return;
+    if (e.key === 'ArrowLeft' && prev) location.href = prev;
+    if (e.key === 'ArrowRight' && next) location.href = next;
+  });
+})();
+
 (function () {
   var q = document.getElementById('q');
   if (!q) return;

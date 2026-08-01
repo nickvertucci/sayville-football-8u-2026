@@ -13,61 +13,89 @@
     "LE": {
       "rule": "Block back and cut off pursuit. You are the last one to the ball.",
       "type": "block",
-      "path": [[1.0, 0.7]]
+      "path": [
+        [1.0, 0.7]
+      ]
     },
     "LT": {
       "rule": "Block back. Take the first defender on or inside you. Nobody crosses your face.",
       "type": "block",
-      "path": [[1.0, 0.7]]
+      "path": [
+        [1.0, 0.7]
+      ]
     },
     "LG": {
       "rule": "Block back. Take the first defender on or inside you. Nobody crosses your face.",
       "type": "block",
-      "path": [[1.0, 0.7]]
+      "path": [
+        [1.0, 0.7]
+      ]
     },
     "C": {
       "rule": "Reach the man over you. If nobody is over you, cut off the backside gap.",
       "type": "block",
-      "path": [[0.6, 1.0]]
+      "path": [
+        [0.6, 1.0]
+      ]
     },
     "RG": {
       "rule": "Reach the first defender to the playside. Get your head across his outside shoulder.",
       "type": "block",
-      "path": [[0.9, 1.0]]
+      "path": [
+        [0.9, 1.0]
+      ]
     },
     "RT": {
       "rule": "Reach the man on or outside you. If you cannot reach him, run him past the play.",
       "type": "block",
-      "path": [[0.9, 1.0]]
+      "path": [
+        [0.9, 1.0]
+      ]
     },
     "RE": {
       "rule": "Reach the man over you and turn him in. Let the ball go around you.",
       "type": "block",
-      "path": [[0.7, 1.0]]
+      "path": [
+        [0.7, 1.0]
+      ]
     },
     "Z": {
       "rule": "Block the deepest defender on your side. Run at his outside number and screen him away from the ball.",
       "type": "block",
-      "path": [[1.6, 2.2], [2.4, 4.2]]
+      "path": [
+        [1.6, 2.2],
+        [2.4, 4.2]
+      ]
     },
     "QB": {
       "rule": "Reverse pivot and hand the ball to the tailback as deep as you can. Then boot away and sell it.",
       "type": "fake",
-      "path": [[-0.7, -0.5], [-2.8, -0.2]]
+      "path": [
+        [-0.7, -0.5],
+        [-2.8, -0.2]
+      ]
     },
     "FB": {
       "rule": "Get to the corner ahead of the tailback and kick out the first defender who shows. You are the lead blocker — beat him there.",
       "type": "block",
-      "path": [[3.4, 1.4], [6.0, 3.4]]
+      "path": [
+        [3.4, 1.4],
+        [6.0, 3.4]
+      ]
     },
     "TB": {
       "rule": "Take the handoff going full speed and get to the corner. Turn up when the fullback blocks somebody, not before. Never stop your feet.",
       "type": "run",
-      "path": [[1.6, 2.0], [4.6, 3.4], [6.6, 6.0], [6.6, 8.8]]
+      "path": [
+        [1.6, 2.0],
+        [4.6, 3.4],
+        [6.6, 6.0],
+        [6.6, 8.8]
+      ]
     }
   },
   "coaching_points": [
-    "The tailback is deeper here than the wing is in Tight, so he has time to get outside — but only if he is at full speed by the handoff.",
+    "The tailback is deep enough to get outside — but only if he is at full speed by the time he takes the handoff.",
     "The fullback has to beat the tailback to the corner. If he is trailing, the play has no lead blocker.",
     "One rule for the tailback: turn up off the fullback's block. Running to the sideline is how this play loses eight yards.",
     "Watch our end reach-blocking. If he cannot reach their end, run I Power to that side instead."

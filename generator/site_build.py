@@ -9,7 +9,7 @@ to the card SVGs, and so GitHub Pages can serve from "/" with no build step:
     p-<play>.html       one play, deep-linkable, prints to a single landscape sheet
     print.html          the whole book, one play per landscape sheet
     assets/site.css     one stylesheet for all of it
-    assets/site.js      call sheet filtering
+    assets/site.js      play switcher, arrow-key paging, call sheet filtering
 
 On every page the diagram is the main attraction: full width of its card, with the
 assignments read underneath it rather than squeezed into a column beside it.
@@ -63,6 +63,56 @@ nav.primary a {
 }
 nav.primary a:hover { background: rgba(255,255,255,.2); color: #fff; }
 nav.primary a.active { background: #fff; color: var(--navy); }
+.brand.active span { color: #fff; }
+
+/* ------------------------------------------------------------ play switcher -- */
+.switcher { position: relative; }
+.switcher summary {
+  list-style: none; cursor: pointer; font-size: 13.5px; font-weight: 600;
+  color: #cdd8ea; padding: 6px 13px; border-radius: 999px;
+  background: rgba(255,255,255,.09); user-select: none;
+}
+.switcher summary::-webkit-details-marker { display: none; }
+.switcher summary::after { content: " ▾"; opacity: .75; }
+.switcher summary:hover { background: rgba(255,255,255,.2); color: #fff; }
+.switcher[open] summary { background: #fff; color: var(--navy); }
+/* On a phone the panel spans the screen: anchoring it to the button would push it
+   off the right edge and give the whole page a horizontal scrollbar. */
+.switcher .panel {
+  position: fixed; left: 10px; right: 10px; top: 62px; z-index: 40;
+  max-height: min(72vh, 560px); overflow-y: auto;
+  background: var(--panel); color: #111318; border-radius: 12px; padding: 8px;
+  box-shadow: 0 14px 40px rgba(8,12,22,.38);
+}
+@media (min-width: 700px) {
+  .switcher .panel {
+    position: absolute; top: calc(100% + 10px); left: 0; right: auto; width: 350px;
+  }
+}
+.switcher .grp + .grp { margin-top: 4px; border-top: 1px solid var(--line); padding-top: 6px; }
+.switcher .grph {
+  margin: 4px 8px 4px; font-size: 10.5px; font-weight: 700; letter-spacing: 1.2px;
+  text-transform: uppercase; color: var(--muted);
+}
+.switcher .panel a {
+  display: flex; align-items: center; gap: 10px; text-decoration: none;
+  padding: 7px 9px; border-radius: 7px; color: #111318;
+}
+.switcher .panel a:hover { background: #eef1f5; }
+.switcher .panel a.here { background: var(--navy); }
+.switcher .panel a.here .pn { color: #fff; }
+.switcher .panel a.here .pc { background: rgba(255,255,255,.22); color: #fff; }
+.switcher .pn { font-size: 14.5px; font-weight: 600; flex: 1 1 auto; }
+.switcher .pc {
+  font-size: 11px; font-weight: 700; letter-spacing: .3px; color: #47506a;
+  background: #eef1f5; border-radius: 4px; padding: 2px 7px; white-space: nowrap;
+}
+.switcher .allplays {
+  display: block; margin-top: 4px; border-top: 1px solid var(--line);
+  padding: 10px 9px 6px; font-size: 13px; font-weight: 600;
+  color: var(--navy); text-decoration: none;
+}
+.switcher .allplays:hover { text-decoration: underline; }
 
 .formbar { background: var(--navy-2); overflow-x: auto; -webkit-overflow-scrolling: touch; }
 .formbar .wrap {
@@ -74,6 +124,28 @@ nav.primary a.active { background: #fff; color: var(--navy); }
 }
 .formbar a:hover { background: rgba(255,255,255,.18); color: #fff; }
 .formbar a.active { background: #fff; color: var(--navy); }
+
+/* -------------------------------------------------- play page navigation -- */
+.crumbs {
+  display: flex; gap: 7px; flex-wrap: wrap; align-items: baseline;
+  font-size: 13px; color: var(--muted); margin: 18px 0 10px;
+}
+.crumbs a { color: var(--muted); text-decoration: none; }
+.crumbs a:hover { color: var(--ink); text-decoration: underline; }
+.crumbs b { color: var(--ink); font-weight: 600; }
+.crumbs span { opacity: .5; }
+
+.playbar {
+  display: flex; gap: 6px; overflow-x: auto; -webkit-overflow-scrolling: touch;
+  white-space: nowrap; padding-bottom: 10px; margin-bottom: 4px;
+}
+.playbar a {
+  font-size: 13px; font-weight: 600; text-decoration: none; color: #3d4553;
+  background: var(--panel); border: 1px solid var(--line); border-radius: 999px;
+  padding: 6px 13px;
+}
+.playbar a:hover { border-color: var(--navy); color: var(--navy); }
+.playbar a.active { background: var(--navy); border-color: var(--navy); color: #fff; }
 
 main { padding-bottom: 60px; }
 h1.page { font-size: clamp(24px, 5vw, 34px); letter-spacing: -.5px; margin: 26px 0 6px; }
@@ -188,13 +260,19 @@ ul.coach li { margin-bottom: 6px; color: #333b49; font-size: 15px;
 header.site .btn { margin-left: 0; }
 .play-actions { margin-left: auto; display: flex; gap: 8px; }
 
-.pager { display: flex; gap: 10px; justify-content: space-between; margin: 4px 0 30px; }
-.pager a { font-size: 14px; font-weight: 600; color: var(--navy); text-decoration: none;
-  background: var(--panel); border-radius: 8px; padding: 10px 14px;
-  box-shadow: 0 1px 3px rgba(16,20,30,.12); max-width: 48%; }
+.pager { display: flex; gap: 10px; align-items: stretch; margin: 4px 0 30px; }
+.pager > span { flex: 1 1 0; }
+.pager a { flex: 1 1 0; font-size: 14px; font-weight: 600; color: var(--navy);
+  text-decoration: none; background: var(--panel); border-radius: 9px; padding: 10px 14px;
+  box-shadow: 0 1px 3px rgba(16,20,30,.12); }
 .pager a:hover { box-shadow: 0 4px 12px rgba(16,20,30,.18); }
+.pager a.mid { text-align: center; }
+.pager a.nxt { text-align: right; }
 .pager .dir { display: block; font-size: 11px; text-transform: uppercase;
   letter-spacing: 1px; color: var(--muted); }
+@media (max-width: 620px) {
+  .pager a.mid { display: none; }
+}
 
 /* ------------------------------------------------------------- call sheet -- */
 .searchbar { display: flex; gap: 10px; flex-wrap: wrap; align-items: center;
@@ -235,7 +313,8 @@ footer.site a { color: var(--navy); }
 /* -------------------------------------------------------------------- print -- */
 @media print {
   header.site, .formbar, footer.site, .pager, .play-actions, .searchbar,
-  .chips, #count, .section-head, .btn, .print-intro { display: none !important; }
+  .chips, #count, .section-head, .btn, .print-intro,
+  .crumbs, .playbar { display: none !important; }
   body { background: #fff; color: #000; font-size: 10pt; }
   .wrap { max-width: none; padding: 0; }
   main { padding: 0; }
@@ -273,6 +352,37 @@ footer.site a { color: var(--navy); }
 """
 
 SITE_JS = """
+/* Play switcher: close it on an outside click or Escape, the way a menu should. */
+(function () {
+  var sw = document.querySelector('.switcher');
+  if (!sw) return;
+  document.addEventListener('click', function (e) {
+    if (sw.open && !sw.contains(e.target)) sw.open = false;
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && sw.open) { sw.open = false; sw.querySelector('summary').focus(); }
+  });
+  sw.addEventListener('toggle', function () {
+    if (!sw.open) return;
+    var here = sw.querySelector('a.here');
+    if (here) here.scrollIntoView({ block: 'nearest' });
+  });
+})();
+
+/* Arrow keys walk through the plays in a formation. */
+(function () {
+  var main = document.querySelector('main');
+  if (!main) return;
+  var prev = main.dataset.prev, next = main.dataset.next;
+  if (!prev && !next) return;
+  document.addEventListener('keydown', function (e) {
+    var t = e.target.tagName;
+    if (t === 'INPUT' || t === 'TEXTAREA' || e.metaKey || e.ctrlKey || e.altKey) return;
+    if (e.key === 'ArrowLeft' && prev) location.href = prev;
+    if (e.key === 'ArrowRight' && next) location.href = next;
+  });
+})();
+
 (function () {
   var q = document.getElementById('q');
   if (!q) return;
@@ -329,20 +439,49 @@ def card_src(form: dict, play: dict, full: bool = False) -> str:
     return f"playbook/{form['id']}/cards/{play['id']}{suffix}.svg"
 
 
+def play_switcher(formations: list[dict], active_play: str) -> str:
+    """A drop-down of every play in the book, reachable from any page.
+
+    Without this you can only get from one play to another by backing out to the
+    formation page or the call sheet, which is two taps too many when you are stood
+    on a field trying to find the next call.
+    """
+    groups = []
+    for form in formations:
+        links = "\n        ".join(
+            f'<a href="{p_href(p)}"'
+            f'{" class=\"here\"" if p["id"] == active_play else ""}>'
+            f'<span class="pn">{esc(p["name"])}</span>'
+            f'<span class="pc">{esc(p.get("call", ""))}</span></a>'
+            for p in form["_plays"]
+        )
+        groups.append(
+            f'<div class="grp"><p class="grph">{esc(form["name"])}</p>\n        {links}</div>'
+        )
+    return f"""<details class="switcher">
+    <summary>Plays</summary>
+    <div class="panel">
+      {chr(10).join(groups)}
+      <a class="allplays" href="calls.html">Search the full call sheet →</a>
+    </div>
+  </details>"""
+
+
 def page(
     title: str,
     body: str,
     formations: list[dict],
     active_nav: str = "",
     active_form: str = "",
+    active_play: str = "",
     description: str = "",
     landscape: bool = False,
     show_formbar: bool = True,
+    main_attrs: str = "",
 ) -> str:
-    nav_items = [("index.html", "Home", "home"),
-                 ("calls.html", "Call sheet", "calls"),
+    nav_items = [("calls.html", "Call sheet", "calls"),
                  ("print.html", "Print book", "print")]
-    nav = "\n      ".join(
+    nav = play_switcher(formations, active_play) + "\n      " + "\n      ".join(
         f'<a href="{href}"{" class=\"active\"" if key == active_nav else ""}>{esc(label)}</a>'
         for href, label, key in nav_items
     )
@@ -368,15 +507,17 @@ def page(
 <title>{esc(title)}</title>{desc}
 <link rel="stylesheet" href="assets/site.css">{page_style}
 <header class="site"><div class="wrap">
-  <a class="brand" href="index.html">Sayville 8U <span>Playbook</span></a>
+  <a class="brand{' active' if active_nav == 'home' else ''}"
+     href="index.html">Sayville 8U <span>Playbook</span></a>
   <nav class="primary">
       {nav}
   </nav>
 </div></header>
 {formbar}
-<main><div class="wrap">
+<main{main_attrs}><div class="wrap">
 {body}
 </div></main>
+<script src="assets/site.js"></script>
 <footer class="site"><div class="wrap">
   Generated by <code>generator/render.py</code> — edit the JSON under
   <code>playbook/</code>, never these pages.
@@ -547,8 +688,7 @@ carrier — press <kbd>/</kbd> to jump to the search box.</p>
     </tbody>
   </table>
   <p class="empty" id="empty" hidden>No plays match that search.</p>
-</div>
-<script src="assets/site.js"></script>"""
+</div>"""
     return page(
         f"Call sheet — {SITE_TITLE}",
         body,
@@ -608,35 +748,63 @@ def write_play_page(
 ) -> str:
     actions = (
         '<div class="play-actions">'
-        f'<a class="btn" href="{f_href(form)}">All {esc(form["name"])} plays</a>'
         '<button type="button" class="btn solid" onclick="window.print()">Print</button>'
         "</div>"
     )
+
+    # Every play in this formation, so moving between them is one tap and you can see
+    # where the play you are looking at sits in the install.
+    siblings = "\n    ".join(
+        f'<a href="{p_href(p)}"{" class=\"active\"" if p["id"] == play["id"] else ""}>'
+        f'{esc(p["name"])}</a>'
+        for p in form["_plays"]
+    )
+    crumbs = (
+        f'<nav class="crumbs"><a href="index.html">Home</a><span>/</span>'
+        f'<a href="{f_href(form)}">{esc(form["name"])}</a><span>/</span>'
+        f'<b>{esc(play["name"])}</b></nav>'
+    )
+    playbar = f'<div class="playbar">\n    {siblings}\n  </div>'
+
     pager = ['<div class="pager">']
     if prev:
         pager.append(
-            f'<a href="{p_href(prev)}"><span class="dir">Previous</span>'
+            f'<a href="{p_href(prev)}"><span class="dir">← Previous</span>'
             f'{esc(prev["name"])}</a>'
         )
     else:
         pager.append("<span></span>")
+    pager.append(
+        f'<a class="mid" href="{f_href(form)}"><span class="dir">Formation</span>'
+        f'All {esc(form["name"])} plays</a>'
+    )
     if nxt:
         pager.append(
-            f'<a href="{p_href(nxt)}" style="text-align:right">'
-            f'<span class="dir">Next</span>{esc(nxt["name"])}</a>'
+            f'<a class="nxt" href="{p_href(nxt)}">'
+            f'<span class="dir">Next →</span>{esc(nxt["name"])}</a>'
         )
     else:
         pager.append("<span></span>")
     pager.append("</div>")
 
-    body = play_article(form, play, actions=actions) + "\n" + "\n".join(pager)
+    body = (
+        crumbs + "\n" + playbar + "\n"
+        + play_article(form, play, actions=actions) + "\n" + "\n".join(pager)
+    )
+    attrs = ""
+    if prev:
+        attrs += f' data-prev="{p_href(prev)}"'
+    if nxt:
+        attrs += f' data-next="{p_href(nxt)}"'
     return page(
         f"{play['name']} ({play.get('call', '')}) — {SITE_TITLE}",
         body,
         formations,
         active_form=form["id"],
+        active_play=play["id"],
         description=play.get("purpose", "")[:160],
         landscape=True,
+        main_attrs=attrs,
     )
 
 

@@ -53,7 +53,7 @@ The quickest handoff in the book. The fullback is through the line before their 
 - Snap to handoff should be under a second. If the fullback is waiting on the ball, the play is already dead.
 - Best call when their linebackers start cheating wide to stop the sweep.
 - The fullback runs at a spot, not at a defender. Give him the outside hip of the center and let him go.
-- Good short-yardage call out of this formation, but the Wedge from Tight is still the better one.
+- Best short-yardage call in the book. Nobody has to read anything and the ball is over the line before the defense moves.
 
 ---
 
@@ -154,7 +154,7 @@ Power to the weak side. The flanker is not out there to help, so the kick-out an
 
 ![I Power Right](playbook/i-form/cards/i-power-r.svg)
 
-The power run out of the I. Playside blocks down, the fullback kicks out the end man, the backside guard pulls and wraps. Same picture as Tight with different personnel, which is the whole reason we carry both formations.
+The power run out of the I. Playside blocks down, the fullback kicks out the end man, and the backside guard pulls and wraps. Same down-block-and-kick-out rules the Wishbone power uses, so the two halves of the book teach each other.
 
 | Position | Assignment |
 |---|---|
@@ -172,8 +172,8 @@ The power run out of the I. Playside blocks down, the fullback kicks out the end
 
 **Coaching points**
 
-- Same down-block-and-kick-out rules as Power from Tight. If the kids know one they know both — say that out loud when you install it.
-- The tailback has further to travel than the wing does in Tight, so the kick-out block has to hold a beat longer. Drill it on a count.
+- Same down-block-and-kick-out rules as Bone Power. If the kids know one they know both — say that out loud when you install it.
+- The tailback starts deeper than the wishbone halfback does, so the kick-out block has to hold a beat longer. Drill it on a count.
 - The pulling guard stays flat and tight to the line. Bellying back is what makes this play late.
 - If the pulling guard cannot get there in time, run I Iso instead — it needs no pullers.
 
@@ -203,7 +203,7 @@ Get outside. The fullback and the flanker are both out in front and the tailback
 
 **Coaching points**
 
-- The tailback is deeper here than the wing is in Tight, so he has time to get outside — but only if he is at full speed by the handoff.
+- The tailback is deep enough to get outside — but only if he is at full speed by the time he takes the handoff.
 - The fullback has to beat the tailback to the corner. If he is trailing, the play has no lead blocker.
 - One rule for the tailback: turn up off the fullback's block. Running to the sideline is how this play loses eight yards.
 - Watch our end reach-blocking. If he cannot reach their end, run I Power to that side instead.
