@@ -1,9 +1,9 @@
 {
   "id": "wb-pitch-r",
-  "order": 4,
+  "order": 5,
   "formation": "wishbone",
   "name": "Bone Pitch Right",
-  "call": "Bone 8 Pitch",
+  "call": "Bone 38 Pitch",
   "type": "run",
   "defense": "5-3",
   "direction": "right",

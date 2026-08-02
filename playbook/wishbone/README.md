@@ -31,48 +31,82 @@ Three backs in a Y behind the quarterback: fullback close at three yards, then t
 
 | Play | Call | Type | Ball |
 |---|---|---|---|
-| [Bone Dive](#bone-dive) | `Bone 2 Dive` | run | FB |
-| [Bone Power Right](#bone-power-right) | `Bone 6 Power` | run | LH |
-| [Bone Power Left](#bone-power-left) | `Bone 5 Power` | run | RH |
-| [Bone Pitch Right](#bone-pitch-right) | `Bone 8 Pitch` | run | RH |
-| [Bone Pitch Left](#bone-pitch-left) | `Bone 7 Pitch` | run | LH |
-| [Bone Counter Right](#bone-counter-right) | `Bone 6 Counter` | run | LH |
-| [Bone Counter Left](#bone-counter-left) | `Bone 5 Counter` | run | RH |
+| [Bone Dive Right](#bone-dive-right) | `Bone 22 Dive` | run | FB |
+| [Bone Dive Left](#bone-dive-left) | `Bone 21 Dive` | run | FB |
+| [Bone Power Right](#bone-power-right) | `Bone 44 Power` | run | LH |
+| [Bone Power Left](#bone-power-left) | `Bone 33 Power` | run | RH |
+| [Bone Pitch Right](#bone-pitch-right) | `Bone 38 Pitch` | run | RH |
+| [Bone Pitch Left](#bone-pitch-left) | `Bone 47 Pitch` | run | LH |
+| [Bone Counter Right](#bone-counter-right) | `Bone 44 Counter` | run | LH |
+| [Bone Counter Left](#bone-counter-left) | `Bone 33 Counter` | run | RH |
 
 ---
 
-## Bone Dive
+## Bone Dive Right
 
-**Call it:** `Bone 2 Dive`
+**Call it:** `Bone 22 Dive`
 
-![Bone Dive](cards/wb-fb-dive.svg)
+![Bone Dive Right](cards/wb-dive-r.svg)
 
-The fullback straight up the middle, right now. This is the play that has to work before anything else in the formation does — it is what holds their linebackers inside.
+The fullback right now, off a double team on the nose. This is the play that has to work before anything else in the formation does — it is what holds their linebackers inside and makes the pitch go.
 
 | Position | Assignment |
 |---|---|
-| **LE** | The end is head up on you. Drive him out and away from the ball. |
-| **LT** | Climb straight to the linebacker on your side. The tackle inside you belongs to the guard. |
-| **LG** | Nobody is over you. Block out on the tackle in the gap outside you and open the hole. |
-| **C** | You have the nose alone, head up. Drive him straight back off the ball. Everything on this play depends on it. |
-| **RG** | Nobody is over you. Block out on the tackle in the gap outside you and open the hole. |
-| **RT** | Climb straight to the linebacker on your side. The tackle inside you belongs to the guard. |
+| **LE** | Cut off pursuit from behind. You are the last one to the ball, so never quit on the play. |
+| **LT** | The tackle is on your inside shoulder. Get your head across him and wall him off so he cannot chase. |
+| **LG** | Nobody is over you. Step back inside and cut off anyone chasing through the middle. |
+| **C** | You and the playside guard double the nose. Drive him off the spot — the hole is right off his back. |
+| **RG** | Nobody is over you. Double the nose with the center, and come off onto the middle linebacker when he shows. |
+| **RT** | The tackle is on your inside shoulder. Block him down and seal him inside — that is what opens the hole. |
 | **RE** | The end is head up on you. Drive him out and away from the ball. |
 | **QB** | Take the snap and hand the ball to the fullback at two yards. Then fake to the outside. |
-| **FB** **(ball)** | Run straight ahead behind the center. Take the ball and get north — there is no hole to look for. |
+| **FB** **(ball)** | Aim at the outside hip of the center, right off the double team. Take the ball and get north — there is no hole to look for. |
 | **LH** | Run the pitch path to your side at full speed and sell it. |
 | **RH** | Run the pitch path to your side at full speed and sell it. |
 
 **Coaching points**
 
+- Snap to handoff should be under a second. If the fullback is waiting on the ball, the play is already dead.
 - Both halfbacks run their fakes every single time. Three threats or none.
-- The fullback does not read anything. He runs at the center's back and keeps his feet moving.
+- The fullback runs at a spot, not at a defender. Give him the outside hip of the center and let him go.
+- Run it to both sides. Once their middle linebacker knows which A gap the dive hits, it stops being quick.
+
+---
+
+## Bone Dive Left
+
+**Call it:** `Bone 21 Dive`
+
+![Bone Dive Left](cards/wb-dive-l.svg)
+
+The fullback left now, off a double team on the nose. This is the play that has to work before anything else in the formation does — it is what holds their linebackers inside and makes the pitch go.
+
+| Position | Assignment |
+|---|---|
+| **LE** | The end is head up on you. Drive him out and away from the ball. |
+| **LT** | The tackle is on your inside shoulder. Block him down and seal him inside — that is what opens the hole. |
+| **LG** | Nobody is over you. Double the nose with the center, and come off onto the middle linebacker when he shows. |
+| **C** | You and the playside guard double the nose. Drive him off the spot — the hole is left off his back. |
+| **RG** | Nobody is over you. Step back inside and cut off anyone chasing through the middle. |
+| **RT** | The tackle is on your inside shoulder. Get your head across him and wall him off so he cannot chase. |
+| **RE** | Cut off pursuit from behind. You are the last one to the ball, so never quit on the play. |
+| **QB** | Take the snap and hand the ball to the fullback at two yards. Then fake to the outside. |
+| **FB** **(ball)** | Aim at the outside hip of the center, left off the double team. Take the ball and get north — there is no hole to look for. |
+| **LH** | Run the pitch path to your side at full speed and sell it. |
+| **RH** | Run the pitch path to your side at full speed and sell it. |
+
+**Coaching points**
+
+- Snap to handoff should be under a second. If the fullback is waiting on the ball, the play is already dead.
+- Both halfbacks run their fakes every single time. Three threats or none.
+- The fullback runs at a spot, not at a defender. Give him the outside hip of the center and let him go.
+- Run it to both sides. Once their middle linebacker knows which A gap the dive hits, it stops being quick.
 
 ---
 
 ## Bone Power Right
 
-**Call it:** `Bone 6 Power`
+**Call it:** `Bone 44 Power`
 
 ![Bone Power Right](cards/wb-power-r.svg)
 
@@ -102,7 +136,7 @@ Off-tackle power, but the ball goes to the far halfback. He crosses behind the f
 
 ## Bone Power Left
 
-**Call it:** `Bone 5 Power`
+**Call it:** `Bone 33 Power`
 
 ![Bone Power Left](cards/wb-power-l.svg)
 
@@ -132,7 +166,7 @@ Off-tackle power, but the ball goes to the far halfback. He crosses behind the f
 
 ## Bone Pitch Right
 
-**Call it:** `Bone 8 Pitch`
+**Call it:** `Bone 38 Pitch`
 
 ![Bone Pitch Right](cards/wb-pitch-r.svg)
 
@@ -162,7 +196,7 @@ Get outside in a hurry. The fullback dives to hold the middle, the quarterback a
 
 ## Bone Pitch Left
 
-**Call it:** `Bone 7 Pitch`
+**Call it:** `Bone 47 Pitch`
 
 ![Bone Pitch Left](cards/wb-pitch-l.svg)
 
@@ -192,7 +226,7 @@ Get outside in a hurry. The fullback dives to hold the middle, the quarterback a
 
 ## Bone Counter Right
 
-**Call it:** `Bone 6 Counter`
+**Call it:** `Bone 44 Counter`
 
 ![Bone Counter Right](cards/wb-counter-r.svg)
 
@@ -221,7 +255,7 @@ Everything goes one way and the backside halfback comes back the other. With thr
 
 ## Bone Counter Left
 
-**Call it:** `Bone 5 Counter`
+**Call it:** `Bone 33 Counter`
 
 ![Bone Counter Left](cards/wb-counter-l.svg)
 

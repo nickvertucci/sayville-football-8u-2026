@@ -1,9 +1,9 @@
 {
   "id": "wb-counter-r",
-  "order": 6,
+  "order": 7,
   "formation": "wishbone",
   "name": "Bone Counter Right",
-  "call": "Bone 6 Counter",
+  "call": "Bone 44 Counter",
   "type": "run",
   "defense": "5-3",
   "direction": "right",
@@ -82,10 +82,10 @@
       "rule": "Take two hard steps toward the fake, then plant and come all the way back behind the pulling guard.",
       "type": "run",
       "path": [
-        [-1.4, 0.6],
-        [1.4, 2.2],
-        [4.0, 4.6],
-        [4.4, 7.2]
+        [-1.2, 0.5],
+        [1.8, 1.9],
+        [5.8, 4.3],
+        [6.2, 6.9]
       ]
     },
     "RH": {

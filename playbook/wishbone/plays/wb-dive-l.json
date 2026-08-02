@@ -1,0 +1,7 @@
+{
+  "id": "wb-dive-l",
+  "order": 2,
+  "name": "Bone Dive Left",
+  "call": "Bone 21 Dive",
+  "mirror_of": "wb-dive-r"
+}

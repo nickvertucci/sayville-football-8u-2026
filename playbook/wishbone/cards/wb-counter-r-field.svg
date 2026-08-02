@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="621" height="472" viewBox="40 27 621 472" font-family="Segoe UI, Helvetica, Arial, sans-serif" role="img">
-<title>Bone Counter Right — Bone 6 Counter</title>
+<title>Bone Counter Right — Bone 44 Counter</title>
 <rect x="0" y="0" width="702" height="513" fill="#ffffff"/>
 <line x1="0" y1="459.0" x2="702" y2="459.0" stroke="#c8cdd6" stroke-width="1"/>
 <line x1="0" y1="189.0" x2="702" y2="189.0" stroke="#c8cdd6" stroke-width="1"/>
@@ -45,8 +45,8 @@
 <polygon points="388.8,380.7 379.6,387.3 377.7,378.2" fill="#14213d"/>
 <path d="M351.0,410.4 L361.8,356.4 L367.2,297.0" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 5"/>
 <polygon points="367.2,297.0 370.9,307.7 361.7,306.9" fill="#14213d"/>
-<path d="M272.7,456.3 L234.9,440.1 L310.5,396.9 L380.7,332.1 L391.5,261.9" fill="none" stroke="#b3001b" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
-<polygon points="391.5,261.9 394.5,272.8 385.4,271.4" fill="#b3001b"/>
+<path d="M272.7,456.3 L240.3,442.8 L321.3,405.0 L429.3,340.2 L440.1,270.0" fill="none" stroke="#b3001b" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+<polygon points="440.1,270.0 443.1,280.9 434.0,279.5" fill="#b3001b"/>
 <path d="M429.3,456.3 L359.1,423.9 L267.3,391.5" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 5"/>
 <polygon points="267.3,391.5 278.6,390.6 275.5,399.3" fill="#14213d"/>
 <rect x="225.7" y="325.6" width="23.8" height="23.8" rx="3" fill="#ffffff" stroke="#14213d" stroke-width="2.4"/>

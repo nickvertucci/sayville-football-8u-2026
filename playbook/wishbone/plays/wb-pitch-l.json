@@ -1,8 +1,8 @@
 {
   "id": "wb-pitch-l",
-  "order": 5,
+  "order": 6,
   "formation": "wishbone",
   "name": "Bone Pitch Left",
-  "call": "Bone 7 Pitch",
+  "call": "Bone 47 Pitch",
   "mirror_of": "wb-pitch-r"
 }

@@ -826,9 +826,10 @@ def play_article(form: dict, play: dict, heading: str = "h2", actions: str = "")
 # --------------------------------------------------------------------- pages --
 
 BACKS = [
-    ("1", "Quarterback"),
-    ("2", "Fullback"),
-    ("3", "Tailback"),
+    ("1", "Quarterback — both formations"),
+    ("2", "Fullback — both formations"),
+    ("3", "Tailback in the I &nbsp;·&nbsp; right halfback in the Wishbone"),
+    ("4", "Left halfback — Wishbone only"),
 ]
 
 HOLES = [
@@ -899,8 +900,8 @@ and <code>I Z Right 36 Power</code> is flanker right, tailback, off tackle right
 who knows the two numbers can run a play the first time he hears it.</p>
 <p class="sub">Every play in the book is <code>Z Right</code> today. It is in the call
 anyway so a <code>Z Left</code> look can be added later without changing the language.</p>
-<p class="sub">The Wishbone still uses a single hole number
-(<code>Bone 6 Power</code>) because it carries three backs rather than one.</p>
+<p class="sub">The Wishbone uses the same two digits — <code>Bone 22 Dive</code>,
+<code>Bone 44 Power</code> — it just has two more backs to number.</p>
 
 <p class="section-head">Before you install anything</p>
 <div class="callout">

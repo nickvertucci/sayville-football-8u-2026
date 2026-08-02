@@ -1,9 +1,9 @@
 {
   "id": "wb-power-r",
-  "order": 2,
+  "order": 3,
   "formation": "wishbone",
   "name": "Bone Power Right",
-  "call": "Bone 6 Power",
+  "call": "Bone 44 Power",
   "type": "run",
   "defense": "5-3",
   "direction": "right",

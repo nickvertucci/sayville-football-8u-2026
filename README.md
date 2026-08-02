@@ -28,9 +28,10 @@ single play is called.
 
 | Back | Who |
 |---|---|
-| **1** | Quarterback |
-| **2** | Fullback |
-| **3** | Tailback |
+| **1** | Quarterback — both formations |
+| **2** | Fullback — both formations |
+| **3** | Tailback in the I · right halfback in the Wishbone |
+| **4** | Left halfback — Wishbone only |
 
 | Hole | Where |
 |---|---|
@@ -57,10 +58,19 @@ tackle to the right.
 with the same back. The play word is what separates them, which is exactly what it is
 there for.
 
-### Wishbone: formation + hole + play word
+### Wishbone: formation + back + hole + play word
 
-The Wishbone carries three backs rather than one, so a single back digit does not
-identify anybody. Its calls stay one number: `Bone 6 Power`, `Bone 8 Pitch`.
+Same two digits, two more backs to number. No flanker, so nothing to declare there.
+
+| Call | Play | Reads as |
+|---|---|---|
+| `Bone 21 Dive` / `Bone 22 Dive` | Bone Dive Left / Right | fullback, A gap |
+| `Bone 33 Power` / `Bone 44 Power` | Bone Power Left / Right | the far halfback, off tackle |
+| `Bone 38 Pitch` / `Bone 47 Pitch` | Bone Pitch Right / Left | the near halfback, outside |
+| `Bone 33 Counter` / `Bone 44 Counter` | Bone Counter Left / Right | the far halfback, off tackle |
+
+The back digit follows whoever actually carries it, which is why Power and Counter to the
+right are `4` — the *left* halfback takes those handoffs — while Pitch right is a `3`.
 
 **Play word** — `Dive`, `Iso`, `Power`, `Counter`, `Slant`, `Pitch`, `Boot`.
 

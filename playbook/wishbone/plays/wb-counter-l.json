@@ -1,8 +1,8 @@
 {
   "id": "wb-counter-l",
-  "order": 7,
+  "order": 8,
   "formation": "wishbone",
   "name": "Bone Counter Left",
-  "call": "Bone 5 Counter",
+  "call": "Bone 33 Counter",
   "mirror_of": "wb-counter-r"
 }
