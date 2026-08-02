@@ -1,12 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="621" height="1048" viewBox="0 0 621 1048" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" width="594" height="1064" viewBox="0 0 594 1064" font-family="Segoe UI, Helvetica, Arial, sans-serif">
 <rect width="100%" height="100%" fill="#ffffff"/>
-<rect x="0" y="0" width="621" height="58" fill="#14213d"/>
+<rect x="0" y="0" width="594" height="58" fill="#14213d"/>
 <text x="18" y="26" font-size="19" font-weight="700" fill="#ffffff">I Counter Left</text>
 <text x="18" y="45" font-size="11.5" fill="#a9b4c7">RUN  •  I-Formation  •  vs 5-3</text>
-<rect x="397.0" y="13" width="206.0" height="31" rx="6" fill="#ffffff" fill-opacity="0.12" stroke="#8593ad" stroke-width="1"/>
-<text x="500.0" y="34" text-anchor="middle" font-size="14.5" font-weight="700" fill="#ffffff" letter-spacing="0.5">I Z Right 35 Counter</text>
-<clipPath id="fieldclip"><rect x="0" y="58" width="621" height="472"/></clipPath>
-<g clip-path="url(#fieldclip)"><g transform="translate(-40.5,31.0)">
+<rect x="370.0" y="13" width="206.0" height="31" rx="6" fill="#ffffff" fill-opacity="0.12" stroke="#8593ad" stroke-width="1"/>
+<text x="473.0" y="34" text-anchor="middle" font-size="14.5" font-weight="700" fill="#ffffff" letter-spacing="0.5">I Z Right 35 Counter</text>
+<clipPath id="fieldclip"><rect x="0" y="58" width="594" height="472"/></clipPath>
+<g clip-path="url(#fieldclip)"><g transform="translate(-54.0,31.0)">
 <rect x="0" y="0" width="702" height="513" fill="#ffffff"/>
 <line x1="0" y1="459.0" x2="702" y2="459.0" stroke="#c8cdd6" stroke-width="1"/>
 <line x1="0" y1="189.0" x2="702" y2="189.0" stroke="#c8cdd6" stroke-width="1"/>
@@ -79,17 +79,17 @@
 <circle cx="351.0" cy="472.5" r="12.4" fill="#ffffff" stroke="#b3001b" stroke-width="2.4"/>
 <text x="351.0" y="476.5" text-anchor="middle" font-size="11.5" font-weight="700" fill="#b3001b">TB</text>
 </g></g>
-<line x1="18" y1="540" x2="603" y2="540" stroke="#c8cdd6" stroke-width="1"/>
+<line x1="18" y1="540" x2="576" y2="540" stroke="#c8cdd6" stroke-width="1"/>
 <text x="18" y="560" font-size="11" font-weight="700" fill="#5b6472" letter-spacing="1">ASSIGNMENTS</text>
 <text x="18" y="578" font-size="12" font-weight="700" fill="#111318">LE</text>
-<text x="52" y="578" font-size="12" fill="#111318">Release inside off his outside shoulder</text>
-<text x="52" y="596" font-size="12" fill="#111318">and take the playside linebacker. The</text>
-<text x="52" y="612" font-size="12" fill="#111318">end over you is being kicked out —</text>
-<text x="52" y="630" font-size="12" fill="#111318">leave him alone.</text>
+<text x="52" y="578" font-size="12" fill="#111318">Release inside off his outside</text>
+<text x="52" y="596" font-size="12" fill="#111318">shoulder and take the playside</text>
+<text x="52" y="612" font-size="12" fill="#111318">linebacker. The end over you is being</text>
+<text x="52" y="630" font-size="12" fill="#111318">kicked out — leave him alone.</text>
 <text x="18" y="646" font-size="12" font-weight="700" fill="#111318">LT</text>
-<text x="52" y="646" font-size="12" fill="#111318">The tackle is on your inside shoulder.</text>
-<text x="52" y="664" font-size="12" fill="#111318">Block him down and seal him inside —</text>
-<text x="52" y="680" font-size="12" fill="#111318">that is what opens the hole.</text>
+<text x="52" y="646" font-size="12" fill="#111318">The tackle is on your inside</text>
+<text x="52" y="664" font-size="12" fill="#111318">shoulder. Block him down and seal him</text>
+<text x="52" y="680" font-size="12" fill="#111318">inside — that is what opens the hole.</text>
 <text x="18" y="698" font-size="12" font-weight="700" fill="#111318">LG</text>
 <text x="52" y="698" font-size="12" fill="#111318">Nobody is over you. Help the center</text>
 <text x="52" y="714" font-size="12" fill="#111318">drive the nose for one count, then</text>
@@ -100,40 +100,42 @@
 <text x="52" y="782" font-size="12" fill="#111318">your face to the playside.</text>
 <text x="18" y="800" font-size="12" font-weight="700" fill="#111318">RG</text>
 <text x="52" y="800" font-size="12" fill="#111318">PULL LEFT. Stay flat behind the line</text>
-<text x="52" y="816" font-size="12" fill="#111318">and kick out the end on the other side.</text>
-<text x="18" y="834" font-size="12" font-weight="700" fill="#111318">RT</text>
-<text x="52" y="834" font-size="12" fill="#111318">Block back. Take the first defender on</text>
-<text x="52" y="850" font-size="12" fill="#111318">or inside you — nobody crosses your</text>
-<text x="52" y="868" font-size="12" fill="#111318">face.</text>
-<text x="310" y="578" font-size="12" font-weight="700" fill="#111318">RE</text>
-<text x="344" y="578" font-size="12" fill="#111318">Cut off pursuit from behind. You are</text>
-<text x="344" y="596" font-size="12" fill="#111318">the last one to the ball, so never quit</text>
-<text x="344" y="612" font-size="12" fill="#111318">on the play.</text>
-<text x="310" y="630" font-size="12" font-weight="700" fill="#111318">Z</text>
-<text x="344" y="630" font-size="12" fill="#111318">Take one hard step upfield like the</text>
-<text x="344" y="646" font-size="12" fill="#111318">slant is coming, then come back and cut</text>
-<text x="344" y="664" font-size="12" fill="#111318">off the backside.</text>
-<text x="310" y="680" font-size="12" font-weight="700" fill="#111318">QB</text>
-<text x="344" y="680" font-size="12" fill="#111318">Take the snap, fake the slant the other</text>
-<text x="344" y="698" font-size="12" fill="#111318">way with both hands, then turn back and</text>
-<text x="344" y="714" font-size="12" fill="#111318">hand to the tailback. The fake comes</text>
-<text x="344" y="732" font-size="12" fill="#111318">first — the handoff is late on purpose.</text>
-<text x="310" y="748" font-size="12" font-weight="700" fill="#111318">FB</text>
-<text x="344" y="748" font-size="12" fill="#111318">Run the slant path to the other side at</text>
-<text x="344" y="766" font-size="12" fill="#111318">full speed and block anything that</text>
-<text x="344" y="782" font-size="12" fill="#111318">shows. You are the lie.</text>
-<text x="310" y="800" font-size="12" font-weight="700" fill="#111318">TB</text>
-<text x="344" y="800" font-size="12" fill="#111318">Take two hard steps toward the slant,</text>
-<text x="344" y="816" font-size="12" fill="#111318">then plant and come back behind the</text>
-<text x="344" y="834" font-size="12" fill="#111318">pulling guard. Those two steps are the</text>
-<text x="344" y="850" font-size="12" fill="#111318">entire play.</text>
-<line x1="18" y1="874" x2="603" y2="874" stroke="#c8cdd6" stroke-width="1"/>
-<text x="18" y="892" font-size="11" font-weight="700" fill="#5b6472" letter-spacing="1">COACHING POINTS</text>
-<text x="18" y="912" font-size="12" fill="#111318">Do not call this until I Slant Right has gone for real yards. Misdirection off a play</text>
-<text x="18" y="930" font-size="12" fill="#111318">they do not fear is just a slower run.</text>
-<text x="18" y="946" font-size="12" fill="#111318">The tailback's counter steps must be full speed and full length. A shuffle fools</text>
-<text x="18" y="964" font-size="12" fill="#111318">nobody.</text>
-<text x="18" y="980" font-size="12" fill="#111318">The fullback selling the slant matters more than his block. Tell him he is the decoy</text>
-<text x="18" y="998" font-size="12" fill="#111318">and mean it.</text>
-<text x="18" y="1014" font-size="12" fill="#111318">If their backside linebacker stops chasing the slant, go back to I Power Left.</text>
+<text x="52" y="816" font-size="12" fill="#111318">and kick out the end on the other</text>
+<text x="52" y="834" font-size="12" fill="#111318">side.</text>
+<text x="18" y="850" font-size="12" font-weight="700" fill="#111318">RT</text>
+<text x="52" y="850" font-size="12" fill="#111318">Block back. Take the first defender</text>
+<text x="52" y="868" font-size="12" fill="#111318">on or inside you — nobody crosses</text>
+<text x="52" y="884" font-size="12" fill="#111318">your face.</text>
+<text x="297" y="578" font-size="12" font-weight="700" fill="#111318">RE</text>
+<text x="331" y="578" font-size="12" fill="#111318">Cut off pursuit from behind. You are</text>
+<text x="331" y="596" font-size="12" fill="#111318">the last one to the ball, so never</text>
+<text x="331" y="612" font-size="12" fill="#111318">quit on the play.</text>
+<text x="297" y="630" font-size="12" font-weight="700" fill="#111318">Z</text>
+<text x="331" y="630" font-size="12" fill="#111318">Take one hard step upfield like the</text>
+<text x="331" y="646" font-size="12" fill="#111318">slant is coming, then come back and</text>
+<text x="331" y="664" font-size="12" fill="#111318">cut off the backside.</text>
+<text x="297" y="680" font-size="12" font-weight="700" fill="#111318">QB</text>
+<text x="331" y="680" font-size="12" fill="#111318">Take the snap, fake the slant the</text>
+<text x="331" y="698" font-size="12" fill="#111318">other way with both hands, then turn</text>
+<text x="331" y="714" font-size="12" fill="#111318">back and hand to the tailback. The</text>
+<text x="331" y="732" font-size="12" fill="#111318">fake comes first — the handoff is</text>
+<text x="331" y="748" font-size="12" fill="#111318">late on purpose.</text>
+<text x="297" y="766" font-size="12" font-weight="700" fill="#111318">FB</text>
+<text x="331" y="766" font-size="12" fill="#111318">Run the slant path to the other side</text>
+<text x="331" y="782" font-size="12" fill="#111318">at full speed and block anything that</text>
+<text x="331" y="800" font-size="12" fill="#111318">shows. You are the lie.</text>
+<text x="297" y="816" font-size="12" font-weight="700" fill="#111318">TB</text>
+<text x="331" y="816" font-size="12" fill="#111318">Take two hard steps toward the slant,</text>
+<text x="331" y="834" font-size="12" fill="#111318">then plant and come back behind the</text>
+<text x="331" y="850" font-size="12" fill="#111318">pulling guard. Those two steps are</text>
+<text x="331" y="868" font-size="12" fill="#111318">the entire play.</text>
+<line x1="18" y1="892" x2="576" y2="892" stroke="#c8cdd6" stroke-width="1"/>
+<text x="18" y="910" font-size="11" font-weight="700" fill="#5b6472" letter-spacing="1">COACHING POINTS</text>
+<text x="18" y="930" font-size="12" fill="#111318">Do not call this until I Slant Right has gone for real yards. Misdirection off a</text>
+<text x="18" y="946" font-size="12" fill="#111318">play they do not fear is just a slower run.</text>
+<text x="18" y="964" font-size="12" fill="#111318">The tailback's counter steps must be full speed and full length. A shuffle fools</text>
+<text x="18" y="980" font-size="12" fill="#111318">nobody.</text>
+<text x="18" y="998" font-size="12" fill="#111318">The fullback selling the slant matters more than his block. Tell him he is the</text>
+<text x="18" y="1014" font-size="12" fill="#111318">decoy and mean it.</text>
+<text x="18" y="1032" font-size="12" fill="#111318">If their backside linebacker stops chasing the slant, go back to I Power Left.</text>
 </svg>

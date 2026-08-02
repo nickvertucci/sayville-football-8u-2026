@@ -1,12 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="621" height="1048" viewBox="0 0 621 1048" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" width="594" height="1048" viewBox="0 0 594 1048" font-family="Segoe UI, Helvetica, Arial, sans-serif">
 <rect width="100%" height="100%" fill="#ffffff"/>
-<rect x="0" y="0" width="621" height="58" fill="#14213d"/>
+<rect x="0" y="0" width="594" height="58" fill="#14213d"/>
 <text x="18" y="26" font-size="19" font-weight="700" fill="#ffffff">I Dive Left</text>
 <text x="18" y="45" font-size="11.5" fill="#a9b4c7">RUN  •  I-Formation  •  vs 5-3</text>
-<rect x="424.6" y="13" width="178.4" height="31" rx="6" fill="#ffffff" fill-opacity="0.12" stroke="#8593ad" stroke-width="1"/>
-<text x="513.8" y="34" text-anchor="middle" font-size="14.5" font-weight="700" fill="#ffffff" letter-spacing="0.5">I Z Right 21 Dive</text>
-<clipPath id="fieldclip"><rect x="0" y="58" width="621" height="472"/></clipPath>
-<g clip-path="url(#fieldclip)"><g transform="translate(-40.5,31.0)">
+<rect x="397.6" y="13" width="178.4" height="31" rx="6" fill="#ffffff" fill-opacity="0.12" stroke="#8593ad" stroke-width="1"/>
+<text x="486.8" y="34" text-anchor="middle" font-size="14.5" font-weight="700" fill="#ffffff" letter-spacing="0.5">I Z Right 21 Dive</text>
+<clipPath id="fieldclip"><rect x="0" y="58" width="594" height="472"/></clipPath>
+<g clip-path="url(#fieldclip)"><g transform="translate(-54.0,31.0)">
 <rect x="0" y="0" width="702" height="513" fill="#ffffff"/>
 <line x1="0" y1="459.0" x2="702" y2="459.0" stroke="#c8cdd6" stroke-width="1"/>
 <line x1="0" y1="189.0" x2="702" y2="189.0" stroke="#c8cdd6" stroke-width="1"/>
@@ -79,58 +79,61 @@
 <circle cx="351.0" cy="472.5" r="12.4" fill="#ffffff" stroke="#14213d" stroke-width="2.4"/>
 <text x="351.0" y="476.5" text-anchor="middle" font-size="11.5" font-weight="700" fill="#14213d">TB</text>
 </g></g>
-<line x1="18" y1="540" x2="603" y2="540" stroke="#c8cdd6" stroke-width="1"/>
+<line x1="18" y1="540" x2="576" y2="540" stroke="#c8cdd6" stroke-width="1"/>
 <text x="18" y="560" font-size="11" font-weight="700" fill="#5b6472" letter-spacing="1">ASSIGNMENTS</text>
 <text x="18" y="578" font-size="12" font-weight="700" fill="#111318">LE</text>
 <text x="52" y="578" font-size="12" fill="#111318">The end is head up on you. Drive him</text>
 <text x="52" y="596" font-size="12" fill="#111318">out and away from the ball.</text>
 <text x="18" y="612" font-size="12" font-weight="700" fill="#111318">LT</text>
-<text x="52" y="612" font-size="12" fill="#111318">The tackle is on your inside shoulder.</text>
-<text x="52" y="630" font-size="12" fill="#111318">Block him down and seal him inside —</text>
-<text x="52" y="646" font-size="12" fill="#111318">that is what opens the hole.</text>
+<text x="52" y="612" font-size="12" fill="#111318">The tackle is on your inside</text>
+<text x="52" y="630" font-size="12" fill="#111318">shoulder. Block him down and seal him</text>
+<text x="52" y="646" font-size="12" fill="#111318">inside — that is what opens the hole.</text>
 <text x="18" y="664" font-size="12" font-weight="700" fill="#111318">LG</text>
 <text x="52" y="664" font-size="12" fill="#111318">Nobody is over you. Double the nose</text>
-<text x="52" y="680" font-size="12" fill="#111318">with the center, and come off onto the</text>
-<text x="52" y="698" font-size="12" fill="#111318">middle linebacker when he shows.</text>
+<text x="52" y="680" font-size="12" fill="#111318">with the center, and come off onto</text>
+<text x="52" y="698" font-size="12" fill="#111318">the middle linebacker when he shows.</text>
 <text x="18" y="714" font-size="12" font-weight="700" fill="#111318">C</text>
 <text x="52" y="714" font-size="12" fill="#111318">You and the playside guard double the</text>
-<text x="52" y="732" font-size="12" fill="#111318">nose. Drive him off the spot — the hole</text>
-<text x="52" y="748" font-size="12" fill="#111318">is right off his back.</text>
+<text x="52" y="732" font-size="12" fill="#111318">nose. Drive him off the spot — the</text>
+<text x="52" y="748" font-size="12" fill="#111318">hole is right off his back.</text>
 <text x="18" y="766" font-size="12" font-weight="700" fill="#111318">RG</text>
 <text x="52" y="766" font-size="12" fill="#111318">Nobody is over you. Step back inside</text>
-<text x="52" y="782" font-size="12" fill="#111318">and cut off anyone chasing through the</text>
-<text x="52" y="800" font-size="12" fill="#111318">middle.</text>
+<text x="52" y="782" font-size="12" fill="#111318">and cut off anyone chasing through</text>
+<text x="52" y="800" font-size="12" fill="#111318">the middle.</text>
 <text x="18" y="816" font-size="12" font-weight="700" fill="#111318">RT</text>
-<text x="52" y="816" font-size="12" fill="#111318">The tackle is on your inside shoulder.</text>
-<text x="52" y="834" font-size="12" fill="#111318">Get your head across him and wall him</text>
-<text x="52" y="850" font-size="12" fill="#111318">off so he cannot chase.</text>
-<text x="310" y="578" font-size="12" font-weight="700" fill="#111318">RE</text>
-<text x="344" y="578" font-size="12" fill="#111318">Cut off pursuit from behind. You are</text>
-<text x="344" y="596" font-size="12" fill="#111318">the last one to the ball, so never quit</text>
-<text x="344" y="612" font-size="12" fill="#111318">on the play.</text>
-<text x="310" y="630" font-size="12" font-weight="700" fill="#111318">Z</text>
-<text x="344" y="630" font-size="12" fill="#111318">Come across behind the line and cut off</text>
-<text x="344" y="646" font-size="12" fill="#111318">the corner chasing from the backside.</text>
-<text x="310" y="664" font-size="12" font-weight="700" fill="#111318">QB</text>
-<text x="344" y="664" font-size="12" fill="#111318">Take the snap, open a quarter turn and</text>
-<text x="344" y="680" font-size="12" fill="#111318">hand to the fullback at two yards. Then</text>
-<text x="344" y="698" font-size="12" fill="#111318">carry out a fake to the outside.</text>
-<text x="310" y="714" font-size="12" font-weight="700" fill="#111318">FB</text>
-<text x="344" y="714" font-size="12" fill="#111318">Aim at the outside hip of the center,</text>
-<text x="344" y="732" font-size="12" fill="#111318">right off the double team. Take the</text>
-<text x="344" y="748" font-size="12" fill="#111318">ball and get north — no reading, no</text>
-<text x="344" y="766" font-size="12" fill="#111318">dancing.</text>
-<text x="310" y="782" font-size="12" font-weight="700" fill="#111318">TB</text>
-<text x="344" y="782" font-size="12" fill="#111318">Run the slant path outside and sell it.</text>
-<text x="344" y="800" font-size="12" fill="#111318">You will not get the ball on this play.</text>
-<line x1="18" y1="858" x2="603" y2="858" stroke="#c8cdd6" stroke-width="1"/>
+<text x="52" y="816" font-size="12" fill="#111318">The tackle is on your inside</text>
+<text x="52" y="834" font-size="12" fill="#111318">shoulder. Get your head across him</text>
+<text x="52" y="850" font-size="12" fill="#111318">and wall him off so he cannot chase.</text>
+<text x="297" y="578" font-size="12" font-weight="700" fill="#111318">RE</text>
+<text x="331" y="578" font-size="12" fill="#111318">Cut off pursuit from behind. You are</text>
+<text x="331" y="596" font-size="12" fill="#111318">the last one to the ball, so never</text>
+<text x="331" y="612" font-size="12" fill="#111318">quit on the play.</text>
+<text x="297" y="630" font-size="12" font-weight="700" fill="#111318">Z</text>
+<text x="331" y="630" font-size="12" fill="#111318">Come across behind the line and cut</text>
+<text x="331" y="646" font-size="12" fill="#111318">off the corner chasing from the</text>
+<text x="331" y="664" font-size="12" fill="#111318">backside.</text>
+<text x="297" y="680" font-size="12" font-weight="700" fill="#111318">QB</text>
+<text x="331" y="680" font-size="12" fill="#111318">Take the snap, open a quarter turn</text>
+<text x="331" y="698" font-size="12" fill="#111318">and hand to the fullback at two</text>
+<text x="331" y="714" font-size="12" fill="#111318">yards. Then carry out a fake to the</text>
+<text x="331" y="732" font-size="12" fill="#111318">outside.</text>
+<text x="297" y="748" font-size="12" font-weight="700" fill="#111318">FB</text>
+<text x="331" y="748" font-size="12" fill="#111318">Aim at the outside hip of the center,</text>
+<text x="331" y="766" font-size="12" fill="#111318">right off the double team. Take the</text>
+<text x="331" y="782" font-size="12" fill="#111318">ball and get north — no reading, no</text>
+<text x="331" y="800" font-size="12" fill="#111318">dancing.</text>
+<text x="297" y="816" font-size="12" font-weight="700" fill="#111318">TB</text>
+<text x="331" y="816" font-size="12" fill="#111318">Run the slant path outside and sell</text>
+<text x="331" y="834" font-size="12" fill="#111318">it. You will not get the ball on this</text>
+<text x="331" y="850" font-size="12" fill="#111318">play.</text>
+<line x1="18" y1="858" x2="576" y2="858" stroke="#c8cdd6" stroke-width="1"/>
 <text x="18" y="876" font-size="11" font-weight="700" fill="#5b6472" letter-spacing="1">COACHING POINTS</text>
-<text x="18" y="896" font-size="12" fill="#111318">Snap to handoff should be under a second. If the fullback is waiting on the ball, the</text>
-<text x="18" y="912" font-size="12" fill="#111318">play is already dead.</text>
-<text x="18" y="930" font-size="12" fill="#111318">Run it the same week you install the right-hand one. The whole value of having both</text>
-<text x="18" y="946" font-size="12" fill="#111318">is that their middle linebacker cannot lean.</text>
+<text x="18" y="896" font-size="12" fill="#111318">Snap to handoff should be under a second. If the fullback is waiting on the ball,</text>
+<text x="18" y="912" font-size="12" fill="#111318">the play is already dead.</text>
+<text x="18" y="930" font-size="12" fill="#111318">Run it the same week you install the right-hand one. The whole value of having</text>
+<text x="18" y="946" font-size="12" fill="#111318">both is that their middle linebacker cannot lean.</text>
 <text x="18" y="964" font-size="12" fill="#111318">The fullback runs at a spot, not at a defender. Give him the outside hip of the</text>
 <text x="18" y="980" font-size="12" fill="#111318">center and let him go.</text>
-<text x="18" y="998" font-size="12" fill="#111318">The flanker is away from the play here, so he has further to travel to cut off the</text>
-<text x="18" y="1014" font-size="12" fill="#111318">backside. He leaves on the snap.</text>
+<text x="18" y="998" font-size="12" fill="#111318">The flanker is away from the play here, so he has further to travel to cut off</text>
+<text x="18" y="1014" font-size="12" fill="#111318">the backside. He leaves on the snap.</text>
 </svg>

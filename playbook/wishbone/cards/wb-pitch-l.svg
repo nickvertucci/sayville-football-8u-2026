@@ -1,12 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="621" height="1252" viewBox="0 0 621 1252" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" width="594" height="1116" viewBox="0 0 594 1116" font-family="Segoe UI, Helvetica, Arial, sans-serif">
 <rect width="100%" height="100%" fill="#ffffff"/>
-<rect x="0" y="0" width="621" height="58" fill="#14213d"/>
+<rect x="0" y="0" width="594" height="58" fill="#14213d"/>
 <text x="18" y="26" font-size="19" font-weight="700" fill="#ffffff">Bone Pitch Left</text>
 <text x="18" y="45" font-size="11.5" fill="#a9b4c7">RUN  •  Wishbone  •  vs 5-3</text>
-<rect x="461.4" y="13" width="141.6" height="31" rx="6" fill="#ffffff" fill-opacity="0.12" stroke="#8593ad" stroke-width="1"/>
-<text x="532.2" y="34" text-anchor="middle" font-size="14.5" font-weight="700" fill="#ffffff" letter-spacing="0.5">Bone 37 Pitch</text>
-<clipPath id="fieldclip"><rect x="0" y="58" width="621" height="472"/></clipPath>
-<g clip-path="url(#fieldclip)"><g transform="translate(-40.5,31.0)">
+<rect x="434.4" y="13" width="141.6" height="31" rx="6" fill="#ffffff" fill-opacity="0.12" stroke="#8593ad" stroke-width="1"/>
+<text x="505.2" y="34" text-anchor="middle" font-size="14.5" font-weight="700" fill="#ffffff" letter-spacing="0.5">Bone 37 Pitch</text>
+<clipPath id="fieldclip"><rect x="0" y="58" width="594" height="472"/></clipPath>
+<g clip-path="url(#fieldclip)"><g transform="translate(-54.0,31.0)">
 <rect x="0" y="0" width="702" height="513" fill="#ffffff"/>
 <line x1="0" y1="459.0" x2="702" y2="459.0" stroke="#c8cdd6" stroke-width="1"/>
 <line x1="0" y1="189.0" x2="702" y2="189.0" stroke="#c8cdd6" stroke-width="1"/>
@@ -44,18 +44,18 @@
 <line x1="326.9" y1="315.2" x2="342.7" y2="305.8" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 <path d="M313.2,337.5 L302.4,305.1 L329.4,245.7" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
 <line x1="321.0" y1="241.9" x2="337.8" y2="249.5" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
-<path d="M275.4,337.5 L251.1,310.5" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-<line x1="244.3" y1="316.6" x2="257.9" y2="304.4" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
-<path d="M237.6,337.5 L172.8,267.3 L135.0,218.7" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-<line x1="127.8" y1="224.3" x2="142.2" y2="213.1" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
+<path d="M275.4,337.5 L283.5,302.4" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="274.6" y1="300.3" x2="292.4" y2="304.5" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
+<path d="M237.6,337.5 L243.0,302.4" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="233.9" y1="301.0" x2="252.1" y2="303.8" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 <path d="M351.0,364.5 L313.2,378.0 L243.0,375.3 L199.8,353.7" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 5"/>
 <polygon points="199.8,353.7 211.1,354.2 207.0,362.5" fill="#14213d"/>
-<path d="M351.0,410.4 L340.2,356.4 L334.8,297.0" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 5"/>
-<polygon points="334.8,297.0 340.3,306.9 331.1,307.7" fill="#14213d"/>
-<path d="M429.3,456.3 L337.5,469.8 L213.3,464.4 L113.4,415.8 L102.6,345.6 L102.6,264.6" fill="none" stroke="#b3001b" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
-<polygon points="102.6,264.6 107.2,275.0 98.0,275.0" fill="#b3001b"/>
-<path d="M272.7,456.3 L178.2,415.8 L64.8,361.8" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-<line x1="60.9" y1="370.1" x2="68.7" y2="353.5" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
+<path d="M351.0,410.4 L307.8,340.2 L280.8,297.0 L264.6,243.0" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="255.8" y1="245.6" x2="273.4" y2="240.4" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
+<path d="M429.3,456.3 L337.5,469.8 L213.3,464.4 L151.2,415.8 L145.8,345.6 L145.8,264.6" fill="none" stroke="#b3001b" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+<polygon points="145.8,264.6 150.4,275.0 141.2,275.0" fill="#b3001b"/>
+<path d="M272.7,456.3 L191.7,402.3 L121.5,305.1 L108.0,248.4" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="99.1" y1="250.5" x2="116.9" y2="246.3" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 <rect x="225.7" y="325.6" width="23.8" height="23.8" rx="3" fill="#ffffff" stroke="#14213d" stroke-width="2.4"/>
 <text x="237.6" y="341.5" text-anchor="middle" font-size="11.5" font-weight="700" fill="#14213d">LE</text>
 <rect x="263.5" y="325.6" width="23.8" height="23.8" rx="3" fill="#ffffff" stroke="#14213d" stroke-width="2.4"/>
@@ -79,72 +79,67 @@
 <circle cx="429.3" cy="456.3" r="12.4" fill="#ffffff" stroke="#b3001b" stroke-width="2.4"/>
 <text x="429.3" y="460.3" text-anchor="middle" font-size="11.5" font-weight="700" fill="#b3001b">RH</text>
 </g></g>
-<line x1="18" y1="540" x2="603" y2="540" stroke="#c8cdd6" stroke-width="1"/>
+<line x1="18" y1="540" x2="576" y2="540" stroke="#c8cdd6" stroke-width="1"/>
 <text x="18" y="560" font-size="11" font-weight="700" fill="#5b6472" letter-spacing="1">ASSIGNMENTS</text>
 <text x="18" y="578" font-size="12" font-weight="700" fill="#111318">LE</text>
-<text x="52" y="578" font-size="12" fill="#111318">Release outside and block the deepest</text>
-<text x="52" y="596" font-size="12" fill="#111318">defender on your side.</text>
-<text x="18" y="612" font-size="12" font-weight="700" fill="#111318">LT</text>
-<text x="52" y="612" font-size="12" fill="#111318">The tackle is on your inside shoulder.</text>
-<text x="52" y="630" font-size="12" fill="#111318">Get your head across him and wall him</text>
-<text x="52" y="646" font-size="12" fill="#111318">off so he cannot chase.</text>
-<text x="18" y="664" font-size="12" font-weight="700" fill="#111318">LG</text>
-<text x="52" y="664" font-size="12" fill="#111318">Nobody is over you. Climb to the middle</text>
-<text x="52" y="680" font-size="12" fill="#111318">linebacker and cut him off from the</text>
-<text x="52" y="698" font-size="12" fill="#111318">sideline.</text>
-<text x="18" y="714" font-size="12" font-weight="700" fill="#111318">C</text>
-<text x="52" y="714" font-size="12" fill="#111318">Reach the nose. Get your head across</text>
-<text x="52" y="732" font-size="12" fill="#111318">his playside shoulder.</text>
-<text x="18" y="748" font-size="12" font-weight="700" fill="#111318">RG</text>
-<text x="52" y="748" font-size="12" fill="#111318">Nobody is over you. Cut off the</text>
-<text x="52" y="766" font-size="12" fill="#111318">backside — nothing chases this from</text>
-<text x="52" y="782" font-size="12" fill="#111318">behind.</text>
-<text x="18" y="800" font-size="12" font-weight="700" fill="#111318">RT</text>
-<text x="52" y="800" font-size="12" fill="#111318">Block back. Take the first defender on</text>
-<text x="52" y="816" font-size="12" fill="#111318">or inside you — nobody crosses your</text>
-<text x="52" y="834" font-size="12" fill="#111318">face.</text>
-<text x="310" y="578" font-size="12" font-weight="700" fill="#111318">RE</text>
-<text x="344" y="578" font-size="12" fill="#111318">Cut off pursuit from behind. You are</text>
-<text x="344" y="596" font-size="12" fill="#111318">the last one to the ball, so never quit</text>
-<text x="344" y="612" font-size="12" fill="#111318">on the play.</text>
-<text x="310" y="630" font-size="12" font-weight="700" fill="#111318">QB</text>
-<text x="344" y="630" font-size="12" fill="#111318">Fake the dive to the fullback, attack</text>
-<text x="344" y="646" font-size="12" fill="#111318">the outside, and pitch the ball to the</text>
-<text x="344" y="664" font-size="12" fill="#111318">trailing halfback before you get</text>
-<text x="344" y="680" font-size="12" fill="#111318">touched. Pitch early, not late.</text>
-<text x="310" y="698" font-size="12" font-weight="700" fill="#111318">FB</text>
-<text x="344" y="698" font-size="12" fill="#111318">Run the dive path and get tackled. Your</text>
-<text x="344" y="714" font-size="12" fill="#111318">fake is what keeps their linebackers</text>
-<text x="344" y="732" font-size="12" fill="#111318">inside.</text>
-<text x="310" y="748" font-size="12" font-weight="700" fill="#111318">LH</text>
-<text x="344" y="748" font-size="12" fill="#111318">Beat the ball to the edge and kick out</text>
-<text x="344" y="766" font-size="12" fill="#111318">the first defender outside. Drive him</text>
-<text x="344" y="782" font-size="12" fill="#111318">toward the sideline — the ball is</text>
-<text x="344" y="800" font-size="12" fill="#111318">cutting up inside your block, so never</text>
-<text x="344" y="816" font-size="12" fill="#111318">let him fall back in.</text>
-<text x="310" y="834" font-size="12" font-weight="700" fill="#111318">RH</text>
-<text x="344" y="834" font-size="12" fill="#111318">Run flat behind everybody, stay outside</text>
-<text x="344" y="850" font-size="12" fill="#111318">and behind the quarterback, and catch</text>
-<text x="344" y="868" font-size="12" fill="#111318">the pitch on the run. Never get ahead</text>
-<text x="344" y="884" font-size="12" fill="#111318">of him — a pitch that goes forward is a</text>
-<text x="344" y="902" font-size="12" fill="#111318">fumble.</text>
-<line x1="18" y1="908" x2="603" y2="908" stroke="#c8cdd6" stroke-width="1"/>
-<text x="18" y="926" font-size="11" font-weight="700" fill="#5b6472" letter-spacing="1">COACHING POINTS</text>
-<text x="18" y="946" font-size="12" fill="#111318">The pitch goes early. A quarterback who waits to be tackled first will pitch it on</text>
-<text x="18" y="964" font-size="12" fill="#111318">the ground.</text>
-<text x="18" y="980" font-size="12" fill="#111318">This is not a read at this age — tell him before the snap that he is pitching it.</text>
-<text x="18" y="998" font-size="12" fill="#111318">The halfback must stay behind the quarterback until he has the ball. Getting ahead</text>
-<text x="18" y="1014" font-size="12" fill="#111318">means the pitch goes forward, which is a fumble waiting to happen.</text>
-<text x="18" y="1032" font-size="12" fill="#111318">The pitch man is the backside halfback, not the playside one. He has the whole</text>
-<text x="18" y="1048" font-size="12" fill="#111318">formation to cross, so he leaves on the snap and runs flat — if he bellies back he</text>
-<text x="18" y="1066" font-size="12" fill="#111318">never catches up to the corner.</text>
-<text x="18" y="1082" font-size="12" fill="#111318">The playside halfback is the reason this play works. He gets to the edge before the</text>
-<text x="18" y="1100" font-size="12" fill="#111318">ball and kicks the contain defender out; without him the quarterback is pitching into</text>
-<text x="18" y="1116" font-size="12" fill="#111318">an unblocked man.</text>
-<text x="18" y="1134" font-size="12" fill="#111318">Teach the carrier to run up inside the kick-out, not around it. Eight-year-olds want</text>
-<text x="18" y="1150" font-size="12" fill="#111318">to keep bouncing toward the sideline, and that is how a six-yard gain turns into a</text>
-<text x="18" y="1168" font-size="12" fill="#111318">loss.</text>
-<text x="18" y="1184" font-size="12" fill="#111318">Drill the two backs together before you drill the pitch. If they leave at the same</text>
-<text x="18" y="1202" font-size="12" fill="#111318">speed the blocker never gets in front, and the carrier catches the ball with nobody</text>
-<text x="18" y="1218" font-size="12" fill="#111318">to run behind.</text>
+<text x="52" y="578" font-size="12" fill="#111318">Seal the edge. Block the end over you</text>
+<text x="52" y="596" font-size="12" fill="#111318">and turn him inside — the ball is</text>
+<text x="52" y="612" font-size="12" fill="#111318">going around behind you, so he cannot</text>
+<text x="52" y="630" font-size="12" fill="#111318">be allowed to follow it out.</text>
+<text x="18" y="646" font-size="12" font-weight="700" fill="#111318">LT</text>
+<text x="52" y="646" font-size="12" fill="#111318">Reach the tackle on your inside</text>
+<text x="52" y="664" font-size="12" fill="#111318">shoulder. The fullback helps you —</text>
+<text x="52" y="680" font-size="12" fill="#111318">once you have the man, he comes off</text>
+<text x="52" y="698" font-size="12" fill="#111318">onto the linebacker.</text>
+<text x="18" y="714" font-size="12" font-weight="700" fill="#111318">LG</text>
+<text x="52" y="714" font-size="12" fill="#111318">Nobody is over you. Climb to the</text>
+<text x="52" y="732" font-size="12" fill="#111318">middle linebacker and cut him off</text>
+<text x="52" y="748" font-size="12" fill="#111318">from the sideline.</text>
+<text x="18" y="766" font-size="12" font-weight="700" fill="#111318">C</text>
+<text x="52" y="766" font-size="12" fill="#111318">Reach the nose. Get your head across</text>
+<text x="52" y="782" font-size="12" fill="#111318">his playside shoulder.</text>
+<text x="18" y="800" font-size="12" font-weight="700" fill="#111318">RG</text>
+<text x="52" y="800" font-size="12" fill="#111318">Nobody is over you. Cut off the</text>
+<text x="52" y="816" font-size="12" fill="#111318">backside — nothing chases this from</text>
+<text x="52" y="834" font-size="12" fill="#111318">behind.</text>
+<text x="18" y="850" font-size="12" font-weight="700" fill="#111318">RT</text>
+<text x="52" y="850" font-size="12" fill="#111318">Block back. Take the first defender</text>
+<text x="52" y="868" font-size="12" fill="#111318">on or inside you — nobody crosses</text>
+<text x="52" y="884" font-size="12" fill="#111318">your face.</text>
+<text x="297" y="578" font-size="12" font-weight="700" fill="#111318">RE</text>
+<text x="331" y="578" font-size="12" fill="#111318">Cut off pursuit from behind. You are</text>
+<text x="331" y="596" font-size="12" fill="#111318">the last one to the ball, so never</text>
+<text x="331" y="612" font-size="12" fill="#111318">quit on the play.</text>
+<text x="297" y="630" font-size="12" font-weight="700" fill="#111318">QB</text>
+<text x="331" y="630" font-size="12" fill="#111318">Fake the dive to the fullback, attack</text>
+<text x="331" y="646" font-size="12" fill="#111318">the outside, and pitch the ball to</text>
+<text x="331" y="664" font-size="12" fill="#111318">the trailing halfback before you get</text>
+<text x="331" y="680" font-size="12" fill="#111318">touched. Pitch early, not late.</text>
+<text x="297" y="698" font-size="12" font-weight="700" fill="#111318">FB</text>
+<text x="331" y="698" font-size="12" fill="#111318">Step at the dive to hold their</text>
+<text x="331" y="714" font-size="12" fill="#111318">linebackers, help our tackle with the</text>
+<text x="331" y="732" font-size="12" fill="#111318">down lineman, then come off onto the</text>
+<text x="331" y="748" font-size="12" fill="#111318">playside linebacker.</text>
+<text x="297" y="766" font-size="12" font-weight="700" fill="#111318">LH</text>
+<text x="331" y="766" font-size="12" fill="#111318">Beat the ball to the corner and block</text>
+<text x="331" y="782" font-size="12" fill="#111318">him. Drive him toward the sideline so</text>
+<text x="331" y="800" font-size="12" fill="#111318">the ball can turn up inside you. He</text>
+<text x="331" y="816" font-size="12" fill="#111318">is the only man out there who can</text>
+<text x="331" y="834" font-size="12" fill="#111318">catch it.</text>
+<text x="297" y="850" font-size="12" font-weight="700" fill="#111318">RH</text>
+<text x="331" y="850" font-size="12" fill="#111318">Run flat behind everybody, stay</text>
+<text x="331" y="868" font-size="12" fill="#111318">outside and behind the quarterback,</text>
+<text x="331" y="884" font-size="12" fill="#111318">and catch the pitch on the run. Never</text>
+<text x="331" y="902" font-size="12" fill="#111318">get ahead of him — a pitch that goes</text>
+<text x="331" y="918" font-size="12" fill="#111318">forward is a fumble.</text>
+<line x1="18" y1="926" x2="576" y2="926" stroke="#c8cdd6" stroke-width="1"/>
+<text x="18" y="944" font-size="11" font-weight="700" fill="#5b6472" letter-spacing="1">COACHING POINTS</text>
+<text x="18" y="964" font-size="12" fill="#111318">The pitch goes early. A quarterback who waits to be tackled first will pitch it</text>
+<text x="18" y="980" font-size="12" fill="#111318">on the ground.</text>
+<text x="18" y="998" font-size="12" fill="#111318">This is not a read at this age — tell him before the snap that he is pitching it.</text>
+<text x="18" y="1014" font-size="12" fill="#111318">The halfback taking the pitch must stay behind the quarterback until he has the</text>
+<text x="18" y="1032" font-size="12" fill="#111318">ball. Getting ahead means the pitch goes forward, which is a fumble waiting to</text>
+<text x="18" y="1048" font-size="12" fill="#111318">happen.</text>
+<text x="18" y="1066" font-size="12" fill="#111318">Everything depends on the corner being blocked. If our halfback cannot get out</text>
+<text x="18" y="1082" font-size="12" fill="#111318">there in time, run Power instead.</text>
 </svg>
