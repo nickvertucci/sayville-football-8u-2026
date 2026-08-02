@@ -7,8 +7,8 @@
   "type": "run",
   "defense": "5-3",
   "direction": "right",
-  "ball_carrier": "RH",
-  "purpose": "Off-tackle power with the fullback kicking out and the backside halfback leading through the hole. Two lead blockers in front of the ball carrier.",
+  "ball_carrier": "LH",
+  "purpose": "Off-tackle power, but the ball goes to the far halfback. He crosses behind the fullback and takes a deep handoff, which puts him behind the pulling guard with a full head of steam and gives their linebackers an extra beat of doubt about who has it. The near halfback leads and the fullback kicks out.",
   "assignments": {
     "LE": {
       "rule": "Cut off pursuit from behind. You are the last one to the ball, so never quit on the play.",
@@ -63,11 +63,12 @@
       ]
     },
     "QB": {
-      "rule": "Reverse pivot and hand the ball to the playside halfback, then carry out the fake away from the play.",
+      "rule": "Open to the playside and hand deep to the halfback crossing from the backside. Let him come to you, then fake away.",
       "type": "fake",
       "path": [
-        [-0.6, -0.6],
-        [-3.0, -0.3]
+        [0.5, -0.5],
+        [-0.9, -0.9],
+        [-3.0, -0.6]
       ]
     },
     "FB": {
@@ -79,27 +80,28 @@
       ]
     },
     "LH": {
-      "rule": "Run behind the quarterback and lead through the hole. Block the first jersey inside the kick-out.",
-      "type": "block",
+      "rule": "You carry it. Cross behind the fullback, take the handoff deep, then press the outside hip of our tackle and turn up inside the blocks.",
+      "type": "run",
       "path": [
-        [3.4, 0.6],
-        [7.0, 1.6],
-        [7.6, 3.6]
+        [1.4, 0.8],
+        [3.8, 2.2],
+        [5.9, 4.6],
+        [6.2, 7.2]
       ]
     },
     "RH": {
-      "rule": "Take the handoff, press the outside hip of our tackle, then turn up inside the blocks.",
-      "type": "run",
+      "rule": "Lead through the hole ahead of the ball. Take the first jersey inside the kick-out.",
+      "type": "block",
       "path": [
-        [0.6, 1.8],
-        [1.8, 4.2],
-        [2.4, 6.8],
-        [2.4, 9.4]
+        [0.5, 1.0],
+        [1.0, 3.2],
+        [1.1, 5.6]
       ]
     }
   },
   "coaching_points": [
-    "Two lead blockers and a pulling guard all arrive in the same place. Walk it through slowly first or they will run into each other.",
-    "The ball carrier is patient for one step, then goes. Teach the pause."
+    "The far halfback travels further than the near one, and that is the point — he arrives behind the pulling guard instead of beating him to the hole.",
+    "Two lead blockers and a pulling guard arrive in the same place. Walk it through slowly first or they will run into each other.",
+    "If the handoff is late, the quarterback is reaching. He holds the ball still and lets the back run through it."
   ]
 }

@@ -32,8 +32,8 @@ Three backs in a Y behind the quarterback: fullback close at three yards, then t
 | Play | Call | Type | Ball |
 |---|---|---|---|
 | [Bone Dive](#bone-dive) | `Bone 2 Dive` | run | FB |
-| [Bone Power Right](#bone-power-right) | `Bone 6 Power` | run | RH |
-| [Bone Power Left](#bone-power-left) | `Bone 5 Power` | run | LH |
+| [Bone Power Right](#bone-power-right) | `Bone 6 Power` | run | LH |
+| [Bone Power Left](#bone-power-left) | `Bone 5 Power` | run | RH |
 | [Bone Pitch Right](#bone-pitch-right) | `Bone 8 Pitch` | run | RH |
 | [Bone Pitch Left](#bone-pitch-left) | `Bone 7 Pitch` | run | LH |
 | [Bone Counter Right](#bone-counter-right) | `Bone 6 Counter` | run | LH |
@@ -76,7 +76,7 @@ The fullback straight up the middle, right now. This is the play that has to wor
 
 ![Bone Power Right](cards/wb-power-r.svg)
 
-Off-tackle power with the fullback kicking out and the backside halfback leading through the hole. Two lead blockers in front of the ball carrier.
+Off-tackle power, but the ball goes to the far halfback. He crosses behind the fullback and takes a deep handoff, which puts him behind the pulling guard with a full head of steam and gives their linebackers an extra beat of doubt about who has it. The near halfback leads and the fullback kicks out.
 
 | Position | Assignment |
 |---|---|
@@ -87,15 +87,16 @@ Off-tackle power with the fullback kicking out and the backside halfback leading
 | **RG** | Nobody is over you. Help the center drive the nose for one count, then climb to the middle linebacker. |
 | **RT** | The tackle is on your inside shoulder. Block him down and seal him inside — that is what opens the hole. |
 | **RE** | Release inside off his outside shoulder and take the playside linebacker. The end over you is being kicked out — leave him alone. |
-| **QB** | Reverse pivot and hand the ball to the playside halfback, then carry out the fake away from the play. |
+| **QB** | Open to the playside and hand deep to the halfback crossing from the backside. Let him come to you, then fake away. |
 | **FB** | Kick out the end. Aim at his inside hip and run through him. |
-| **LH** | Run behind the quarterback and lead through the hole. Block the first jersey inside the kick-out. |
-| **RH** **(ball)** | Take the handoff, press the outside hip of our tackle, then turn up inside the blocks. |
+| **LH** **(ball)** | You carry it. Cross behind the fullback, take the handoff deep, then press the outside hip of our tackle and turn up inside the blocks. |
+| **RH** | Lead through the hole ahead of the ball. Take the first jersey inside the kick-out. |
 
 **Coaching points**
 
-- Two lead blockers and a pulling guard all arrive in the same place. Walk it through slowly first or they will run into each other.
-- The ball carrier is patient for one step, then goes. Teach the pause.
+- The far halfback travels further than the near one, and that is the point — he arrives behind the pulling guard instead of beating him to the hole.
+- Two lead blockers and a pulling guard arrive in the same place. Walk it through slowly first or they will run into each other.
+- If the handoff is late, the quarterback is reaching. He holds the ball still and lets the back run through it.
 
 ---
 
@@ -105,7 +106,7 @@ Off-tackle power with the fullback kicking out and the backside halfback leading
 
 ![Bone Power Left](cards/wb-power-l.svg)
 
-Off-tackle power with the fullback kicking out and the backside halfback leading through the hole. Two lead blockers in front of the ball carrier.
+Off-tackle power, but the ball goes to the far halfback. He crosses behind the fullback and takes a deep handoff, which puts him behind the pulling guard with a full head of steam and gives their linebackers an extra beat of doubt about who has it. The near halfback leads and the fullback kicks out.
 
 | Position | Assignment |
 |---|---|
@@ -116,15 +117,16 @@ Off-tackle power with the fullback kicking out and the backside halfback leading
 | **RG** | PULL LEFT. Run flat behind the line and turn up in the open gap between our tackle and our end. Take the first wrong-colored jersey. |
 | **RT** | Block back. Take the first defender on or inside you — nobody crosses your face. |
 | **RE** | Cut off pursuit from behind. You are the last one to the ball, so never quit on the play. |
-| **QB** | Reverse pivot and hand the ball to the playside halfback, then carry out the fake away from the play. |
+| **QB** | Open to the playside and hand deep to the halfback crossing from the backside. Let him come to you, then fake away. |
 | **FB** | Kick out the end. Aim at his inside hip and run through him. |
-| **LH** **(ball)** | Take the handoff, press the outside hip of our tackle, then turn up inside the blocks. |
-| **RH** | Run behind the quarterback and lead through the hole. Block the first jersey inside the kick-out. |
+| **LH** | Lead through the hole ahead of the ball. Take the first jersey inside the kick-out. |
+| **RH** **(ball)** | You carry it. Cross behind the fullback, take the handoff deep, then press the outside hip of our tackle and turn up inside the blocks. |
 
 **Coaching points**
 
-- Two lead blockers and a pulling guard all arrive in the same place. Walk it through slowly first or they will run into each other.
-- The ball carrier is patient for one step, then goes. Teach the pause.
+- The far halfback travels further than the near one, and that is the point — he arrives behind the pulling guard instead of beating him to the hole.
+- Two lead blockers and a pulling guard arrive in the same place. Walk it through slowly first or they will run into each other.
+- If the handoff is late, the quarterback is reaching. He holds the ball still and lets the back run through it.
 
 ---
 
