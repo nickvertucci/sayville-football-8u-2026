@@ -1,4 +1,4 @@
-# The league rulebook
+# The league rulebook — source of record
 
 The league's own document, and a verbatim text copy of it.
 
@@ -8,10 +8,21 @@ The league's own document, and a verbatim text copy of it.
 | `2025-PAL-RULE-BOOK.txt` | Every word of it as plain text. Generated — do not hand-edit. |
 | `media/` | The 18 images embedded in the document, so nothing is left behind in the `.docx`. |
 
-The document's own cover says **ONLY VERSION ACCEPTED**. Its title says revision date
-August 1, 2023; the file the league distributed is named *updated 10/5/2025*. Both
-statements are reproduced as written — sorting out which is authoritative is a question
+**Provenance.** Distributed by PAL leadership in October 2025 as the "Revised Rule Book",
+attached as `2025 PAL RULE BOOK updated 10:5:2025.docx` — renamed here because a colon
+cannot appear in a Windows filename. **Still the current book for 2026:** the league sent
+it out again ahead of the season with the note *"Rule book — it is attached. Yes, it's the
+2025 rule book. Make sure you are familiar with it."*
+
+The document's own cover says **ONLY VERSION ACCEPTED**, and its title block says revision
+date August 1, 2023, while the file the league distributed is named *updated 10/5/2025*.
+All of that is reproduced as written — sorting out which is authoritative is a question
 for the league, not something to fix here.
+
+Related: our summary of the rules that actually shaped the playbook is in
+[`../RULES.md`](../RULES.md), and the defensive-legality analysis is in
+[`../defense/3rd-grade-legal-defense.md`](../defense/3rd-grade-legal-defense.md).
+**Always check the current season's official book before relying on any summary.**
 
 ## Rebuilding the text
 
