@@ -3,7 +3,7 @@
   "order": 1,
   "formation": "wishbone",
   "name": "Bone Dive Right",
-  "call": "Bone 22 Dive",
+  "call": "Bone 20 Dive",
   "type": "run",
   "defense": "5-3",
   "direction": "right",

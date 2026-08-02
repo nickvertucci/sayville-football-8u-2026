@@ -6,24 +6,24 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 | # | Play | Call | Type | Formation | Ball |
 |---|---|---|---|---|---|
-| 1 | [I Dive Right](#i-dive-right) | `I Z Right 22 Dive` | run | I | FB |
+| 1 | [I Dive Right](#i-dive-right) | `I Z Right 20 Dive` | run | I | FB |
 | 2 | [I Dive Left](#i-dive-left) | `I Z Right 21 Dive` | run | I | FB |
-| 3 | [I Iso Right](#i-iso-right) | `I Z Right 34 Iso` | run | I | TB |
+| 3 | [I Iso Right](#i-iso-right) | `I Z Right 32 Iso` | run | I | TB |
 | 4 | [I Iso Left](#i-iso-left) | `I Z Right 33 Iso` | run | I | TB |
 | 5 | [I Slant Right](#i-slant-right) | `I Z Right 36 Slant` | run | I | TB |
-| 6 | [I Slant Left](#i-slant-left) | `I Z Right 35 Slant` | run | I | TB |
+| 6 | [I Slant Left](#i-slant-left) | `I Z Right 37 Slant` | run | I | TB |
 | 7 | [I Toss Right](#i-toss-right) | `I Z Right 38 Toss` | run | I | TB |
-| 8 | [I Toss Left](#i-toss-left) | `I Z Right 37 Toss` | run | I | TB |
+| 8 | [I Toss Left](#i-toss-left) | `I Z Right 39 Toss` | run | I | TB |
 | 9 | [I Counter Left](#i-counter-left) | `I Z Right 35 Counter` | run | I | TB |
-| 10 | [I Boot Right](#i-boot-right) | `I Z Right 18 Boot` | pass | I | Z |
-| 11 | [Bone Dive Right](#bone-dive-right) | `Bone 22 Dive` | run | Wishbone | FB |
+| 10 | [I Boot Right](#i-boot-right) | `I Z Right 16 Boot` | pass | I | Z |
+| 11 | [Bone Dive Right](#bone-dive-right) | `Bone 20 Dive` | run | Wishbone | FB |
 | 12 | [Bone Dive Left](#bone-dive-left) | `Bone 21 Dive` | run | Wishbone | FB |
 | 13 | [Bone Power Right](#bone-power-right) | `Bone 44 Power` | run | Wishbone | LH |
-| 14 | [Bone Power Left](#bone-power-left) | `Bone 33 Power` | run | Wishbone | RH |
+| 14 | [Bone Power Left](#bone-power-left) | `Bone 35 Power` | run | Wishbone | RH |
 | 15 | [Bone Pitch Right](#bone-pitch-right) | `Bone 48 Pitch` | run | Wishbone | LH |
-| 16 | [Bone Pitch Left](#bone-pitch-left) | `Bone 37 Pitch` | run | Wishbone | RH |
+| 16 | [Bone Pitch Left](#bone-pitch-left) | `Bone 39 Pitch` | run | Wishbone | RH |
 | 17 | [Bone Counter Right](#bone-counter-right) | `Bone 44 Counter` | run | Wishbone | LH |
-| 18 | [Bone Counter Left](#bone-counter-left) | `Bone 33 Counter` | run | Wishbone | RH |
+| 18 | [Bone Counter Left](#bone-counter-left) | `Bone 35 Counter` | run | Wishbone | RH |
 
 # I-Formation
 
@@ -31,7 +31,7 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ## I Dive Right
 
-**Call it:** `I Z Right 22 Dive`
+**Call it:** `I Z Right 20 Dive`
 
 ![I Dive Right](playbook/i-form/cards/i-dive-r.svg)
 
@@ -93,7 +93,7 @@ The same quick handoff through the other A gap. Worth having both so the fullbac
 
 ## I Iso Right
 
-**Call it:** `I Z Right 34 Iso`
+**Call it:** `I Z Right 32 Iso`
 
 ![I Iso Right](playbook/i-form/cards/i-iso-r.svg)
 
@@ -158,21 +158,21 @@ The same isolation block the other way. The flanker stays where he is, so this r
 
 ![I Slant Right](playbook/i-form/cards/i-slant-r.svg)
 
-The power run out of the I. Playside blocks down, the fullback kicks out the end man, and the backside guard pulls and wraps. Same down-block-and-kick-out rules the Wishbone power uses, so the two halves of the book teach each other.
+Off the tight end. Our end seals their end inside, the guard pulls and turns up outside him, and the fullback leads through the hole. The tailback presses outside our end and turns up — this is the run that hits just wide of the formation, not between the tackle and the end.
 
 | Position | Assignment |
 |---|---|
 | **LE** | Cut off pursuit from behind. You are the last one to the ball, so never quit on the play. |
 | **LT** | Block back. Take the first defender on or inside you — nobody crosses your face. |
-| **LG** | PULL RIGHT. Run flat behind the line and turn up in the open gap between our tackle and our end. Block the first wrong-colored jersey you see. |
+| **LG** | PULL RIGHT. Run flat behind the line and turn up outside our end. Block the first wrong-colored jersey you see. |
 | **C** | You have the nose, head up on you. Hands inside and do not let him cross your face to the playside. |
 | **RG** | Nobody is over you. Help the center drive the nose for one count, then climb to the middle linebacker. |
 | **RT** | The tackle is on your inside shoulder. Block him down and seal him inside — that is what opens the hole. |
-| **RE** | Release inside off his outside shoulder and take the playside linebacker. The end over you is being kicked out — leave him alone. |
+| **RE** | Seal the end inside. Get your head across him and turn him in — the ball is going outside you. |
 | **Z** | Release and screen the corner on your side. Get in his way and stay there. |
 | **QB** | Reverse pivot, hand the ball to the tailback deep, then carry out the bootleg fake away from the play. |
-| **FB** | Kick out the end. Aim at his inside hip and run through him — do not stop your feet. |
-| **TB** **(ball)** | Take the handoff, press the outside hip of our tackle, then turn up inside the pulling guard. Be patient for one step, then go. |
+| **FB** | Lead through the hole outside our end and block the first defender who shows. |
+| **TB** **(ball)** | Take the handoff and press outside our end. Turn up off the fullback's block — this hits outside the tight end, not inside him. |
 
 **Coaching points**
 
@@ -185,25 +185,25 @@ The power run out of the I. Playside blocks down, the fullback kicks out the end
 
 ## I Slant Left
 
-**Call it:** `I Z Right 35 Slant`
+**Call it:** `I Z Right 37 Slant`
 
 ![I Slant Left](playbook/i-form/cards/i-slant-l.svg)
 
-Power to the weak side. The flanker is not out there to help, so the kick-out and the wrap have to be clean — but their defense is usually leaning the other way.
+Off the tight end. Our end seals their end inside, the guard pulls and turns up outside him, and the fullback leads through the hole. The tailback presses outside our end and turns up — this is the run that hits just wide of the formation, not between the tackle and the end.
 
 | Position | Assignment |
 |---|---|
-| **LE** | Release inside off his outside shoulder and take the playside linebacker. The end over you is being kicked out — leave him alone. |
+| **LE** | Seal the end inside. Get your head across him and turn him in — the ball is going outside you. |
 | **LT** | The tackle is on your inside shoulder. Block him down and seal him inside — that is what opens the hole. |
 | **LG** | Nobody is over you. Help the center drive the nose for one count, then climb to the middle linebacker. |
 | **C** | You have the nose, head up on you. Hands inside and do not let him cross your face to the playside. |
-| **RG** | PULL LEFT. Run flat behind the line and turn up in the open gap between our tackle and our end. Block the first wrong-colored jersey you see. |
+| **RG** | PULL LEFT. Run flat behind the line and turn up outside our end. Block the first wrong-colored jersey you see. |
 | **RT** | Block back. Take the first defender on or inside you — nobody crosses your face. |
 | **RE** | Cut off pursuit from behind. You are the last one to the ball, so never quit on the play. |
 | **Z** | Come across behind the line and cut off anybody chasing from the backside. |
 | **QB** | Reverse pivot, hand the ball to the tailback deep, then carry out the bootleg fake away from the play. |
-| **FB** | Kick out the end. Aim at his inside hip and run through him — do not stop your feet. |
-| **TB** **(ball)** | Take the handoff, press the outside hip of our tackle, then turn up inside the pulling guard. |
+| **FB** | Lead through the hole outside our end and block the first defender who shows. |
+| **TB** **(ball)** | Take the handoff and press outside our end. Turn up off the fullback's block — this hits outside the tight end, not inside him. |
 
 **Coaching points**
 
@@ -219,7 +219,7 @@ Power to the weak side. The flanker is not out there to help, so the kick-out an
 
 ![I Toss Right](playbook/i-form/cards/i-toss-r.svg)
 
-Get outside. The fullback and the flanker are both out in front and the tailback has room to run. This is the play that makes them widen out, which is what opens the dive and the iso.
+Get all the way outside. Wider than the Slant — the tailback takes the handoff at full speed and runs past the tight end's block to the corner, with the fullback out in front of him.
 
 | Position | Assignment |
 |---|---|
@@ -246,11 +246,11 @@ Get outside. The fullback and the flanker are both out in front and the tailback
 
 ## I Toss Left
 
-**Call it:** `I Z Right 37 Toss`
+**Call it:** `I Z Right 39 Toss`
 
 ![I Toss Left](playbook/i-form/cards/i-toss-l.svg)
 
-The same run away from the flanker. There is one fewer blocker out there, so the fullback has to be perfect getting to the corner — but their defense is usually leaning toward our flanker, which is exactly why it is open.
+Get all the way outside. Wider than the Slant — the tailback takes the handoff at full speed and runs past the tight end's block to the corner, with the fullback out in front of him.
 
 | Position | Assignment |
 |---|---|
@@ -308,7 +308,7 @@ Misdirection off the toss. We show them the toss to the flanker side, their line
 
 ## I Boot Right
 
-**Call it:** `I Z Right 18 Boot`
+**Call it:** `I Z Right 16 Boot`
 
 ![I Boot Right](playbook/i-form/cards/i-boot-r.svg)
 
@@ -341,7 +341,7 @@ Play action off the toss look. Two receivers to the flanker side and a quarterba
 
 ## Bone Dive Right
 
-**Call it:** `Bone 22 Dive`
+**Call it:** `Bone 20 Dive`
 
 ![Bone Dive Right](playbook/wishbone/cards/wb-dive-r.svg)
 
@@ -434,7 +434,7 @@ Off-tackle power to the far halfback, who crosses behind the fullback and takes 
 
 ## Bone Power Left
 
-**Call it:** `Bone 33 Power`
+**Call it:** `Bone 35 Power`
 
 ![Bone Power Left](playbook/wishbone/cards/wb-power-l.svg)
 
@@ -496,7 +496,7 @@ Get outside in a hurry. The fullback holds the middle and then blocks, our end s
 
 ## Bone Pitch Left
 
-**Call it:** `Bone 37 Pitch`
+**Call it:** `Bone 39 Pitch`
 
 ![Bone Pitch Left](playbook/wishbone/cards/wb-pitch-l.svg)
 
@@ -558,7 +558,7 @@ Misdirection off the pitch. The near halfback and the quarterback sell the pitch
 
 ## Bone Counter Left
 
-**Call it:** `Bone 33 Counter`
+**Call it:** `Bone 35 Counter`
 
 ![Bone Counter Left](playbook/wishbone/cards/wb-counter-l.svg)
 

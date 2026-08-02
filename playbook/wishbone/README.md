@@ -31,20 +31,20 @@ Three backs in a Y behind the quarterback: fullback close at three yards, then t
 
 | Play | Call | Type | Ball |
 |---|---|---|---|
-| [Bone Dive Right](#bone-dive-right) | `Bone 22 Dive` | run | FB |
+| [Bone Dive Right](#bone-dive-right) | `Bone 20 Dive` | run | FB |
 | [Bone Dive Left](#bone-dive-left) | `Bone 21 Dive` | run | FB |
 | [Bone Power Right](#bone-power-right) | `Bone 44 Power` | run | LH |
-| [Bone Power Left](#bone-power-left) | `Bone 33 Power` | run | RH |
+| [Bone Power Left](#bone-power-left) | `Bone 35 Power` | run | RH |
 | [Bone Pitch Right](#bone-pitch-right) | `Bone 48 Pitch` | run | LH |
-| [Bone Pitch Left](#bone-pitch-left) | `Bone 37 Pitch` | run | RH |
+| [Bone Pitch Left](#bone-pitch-left) | `Bone 39 Pitch` | run | RH |
 | [Bone Counter Right](#bone-counter-right) | `Bone 44 Counter` | run | LH |
-| [Bone Counter Left](#bone-counter-left) | `Bone 33 Counter` | run | RH |
+| [Bone Counter Left](#bone-counter-left) | `Bone 35 Counter` | run | RH |
 
 ---
 
 ## Bone Dive Right
 
-**Call it:** `Bone 22 Dive`
+**Call it:** `Bone 20 Dive`
 
 ![Bone Dive Right](cards/wb-dive-r.svg)
 
@@ -137,7 +137,7 @@ Off-tackle power to the far halfback, who crosses behind the fullback and takes 
 
 ## Bone Power Left
 
-**Call it:** `Bone 33 Power`
+**Call it:** `Bone 35 Power`
 
 ![Bone Power Left](cards/wb-power-l.svg)
 
@@ -199,7 +199,7 @@ Get outside in a hurry. The fullback holds the middle and then blocks, our end s
 
 ## Bone Pitch Left
 
-**Call it:** `Bone 37 Pitch`
+**Call it:** `Bone 39 Pitch`
 
 ![Bone Pitch Left](cards/wb-pitch-l.svg)
 
@@ -261,7 +261,7 @@ Misdirection off the pitch. The near halfback and the quarterback sell the pitch
 
 ## Bone Counter Left
 
-**Call it:** `Bone 33 Counter`
+**Call it:** `Bone 35 Counter`
 
 ![Bone Counter Left](cards/wb-counter-l.svg)
 

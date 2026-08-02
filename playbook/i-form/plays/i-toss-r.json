@@ -8,7 +8,7 @@
   "defense": "5-3",
   "direction": "right",
   "ball_carrier": "TB",
-  "purpose": "Get outside. The fullback and the flanker are both out in front and the tailback has room to run. This is the play that makes them widen out, which is what opens the dive and the iso.",
+  "purpose": "Get all the way outside. Wider than the Slant — the tailback takes the handoff at full speed and runs past the tight end's block to the corner, with the fullback out in front of him.",
   "assignments": {
     "LE": {
       "rule": "Cut off pursuit from behind. You are the last one to the ball, so never quit on the play.",
@@ -80,18 +80,18 @@
       "rule": "Beat the tailback to the corner and kick out the first defender who shows. You are the lead blocker — get there first.",
       "type": "block",
       "path": [
-        [3.4, 1.4],
-        [6.0, 3.4]
+        [4.0, 1.4],
+        [7.4, 3.2]
       ]
     },
     "TB": {
       "rule": "Take the handoff at full speed and get to the corner. Turn up when the fullback blocks somebody, not before.",
       "type": "run",
       "path": [
-        [1.6, 2.0],
-        [4.6, 3.4],
-        [6.6, 6.0],
-        [6.6, 8.8]
+        [2.2, 2.0],
+        [6.0, 3.4],
+        [8.8, 6.0],
+        [8.8, 8.8]
       ]
     }
   },

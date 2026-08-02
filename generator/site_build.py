@@ -979,10 +979,11 @@ BACKS = [
 ]
 
 HOLES = [
-    ("1 / 2", "A gap — left / right of the center"),
-    ("3 / 4", "B gap — between guard and tackle"),
-    ("5 / 6", "Off tackle — outside the tackle"),
-    ("7 / 8", "Outside — around the end"),
+    ("0 / 1", "Between the center and the guard"),
+    ("2 / 3", "Between the guard and the tackle"),
+    ("4 / 5", "Between the tackle and the end"),
+    ("6 / 7", "Outside the tight end"),
+    ("8 / 9", "Wider still — all the way outside"),
 ]
 
 
@@ -1034,15 +1035,15 @@ carries it and the second says where it goes.</p>
   {chr(10).join(f'  <div class="row"><dt>{esc(n)}</dt><dd>{esc(d)}</dd></div>'
                 for n, d in BACKS).strip()}
 </dl>
-<p class="lede"><strong>Where it goes</strong> — odd numbers to the left, even to the
-right, counting outward from the center. This is the only part the kids have to
-memorize.</p>
+<p class="lede"><strong>Where it goes</strong> — even numbers to the right (0, 2, 4, 6, 8), odd to
+the left (1, 3, 5, 7, 9), counting outward from the center. This is the only part the
+kids have to memorize.</p>
 <dl class="assign holes">
   {chr(10).join(f'  <div class="row"><dt>{esc(n)}</dt><dd>{esc(d)}</dd></div>'
                 for n, d in HOLES).strip()}
 </dl>
-<p class="lede">So <code>I Z Right 22 Dive</code> is flanker right, fullback, 2 hole,
-and <code>I Z Right 36 Slant</code> is flanker right, tailback, off tackle right. A kid
+<p class="lede">So <code>I Z Right 20 Dive</code> is flanker right, fullback, 0 hole,
+and <code>I Z Right 36 Slant</code> is flanker right, tailback, outside the tight end. A kid
 who knows the two numbers can run a play the first time he hears it.</p>
 <p class="sub">Every play in the book is <code>Z Right</code> today. It is in the call
 anyway so a <code>Z Left</code> look can be added later without changing the language.</p>

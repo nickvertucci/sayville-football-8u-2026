@@ -36,28 +36,32 @@ single play is called.
 
 | Hole | Where |
 |---|---|
-| **1 / 2** | A gap — left / right of the center |
-| **3 / 4** | B gap — between guard and tackle |
-| **5 / 6** | Off tackle — outside the tackle |
-| **7 / 8** | Outside — around the end |
+| **0 / 1** | Between the center and the guard |
+| **2 / 3** | Between the guard and the tackle |
+| **4 / 5** | Between the tackle and the end |
+| **6 / 7** | Outside the tight end |
+| **8 / 9** | Wider still — all the way outside |
 
-Odd numbers go left, even numbers go right, counting outward from the center. So
-`I Z Right 22 Dive` is flanker right, fullback, 2 hole; `I Z Right 21 Dive` is the
-same handoff through the 1 hole; and `I Z Right 36 Slant` is the tailback off
-tackle to the right.
+Even numbers go right (0, 2, 4, 6, 8), odd numbers go left (1, 3, 5, 7, 9), counting
+outward from the center.
 
-| Call | Play |
-|---|---|
-| `I Z Right 21 Dive` / `I Z Right 22 Dive` | I Dive Left / Right |
-| `I Z Right 33 Iso` / `I Z Right 34 Iso` | I Iso Left / Right |
-| `I Z Right 35 Slant` / `I Z Right 36 Slant` | I Slant Left / Right |
-| `I Z Right 37 Toss` / `I Z Right 38 Toss` | I Toss Left / Right |
-| `I Z Right 35 Counter` | I Counter Left |
-| `I Z Right 18 Boot` | I Boot Right |
+The holes are anchored to the linemen, not to abstract gaps, so a call tells you which
+two blockers the ball is going between. Every play in the book is checked against this:
+the generator measures where the ball carrier actually crosses the line of scrimmage and
+it has to fall inside the hole its call names.
 
-`35` appears twice — as Slant and as Counter — because both finish in the same hole
-with the same back. The play word is what separates them, which is exactly what it is
-there for.
+So `I Z Right 20 Dive` is flanker right, fullback, 0 hole; `I Z Right 21 Dive` is the
+same handoff through the 1 hole; and `I Z Right 36 Slant` is the tailback outside the
+tight end.
+
+| Call | Play | Where it hits |
+|---|---|---|
+| `I Z Right 21 Dive` / `I Z Right 20 Dive` | I Dive Left / Right | center–guard |
+| `I Z Right 33 Iso` / `I Z Right 32 Iso` | I Iso Left / Right | guard–tackle |
+| `I Z Right 37 Slant` / `I Z Right 36 Slant` | I Slant Left / Right | outside the tight end |
+| `I Z Right 39 Toss` / `I Z Right 38 Toss` | I Toss Left / Right | all the way outside |
+| `I Z Right 35 Counter` | I Counter Left | tackle–end |
+| `I Z Right 16 Boot` | I Boot Right | outside the tight end |
 
 ### Wishbone: formation + back + hole + play word
 
@@ -65,26 +69,27 @@ Same two digits, two more backs to number. No flanker, so nothing to declare the
 
 | Call | Play | Reads as |
 |---|---|---|
-| `Bone 21 Dive` / `Bone 22 Dive` | Bone Dive Left / Right | fullback, A gap |
-| `Bone 33 Power` / `Bone 44 Power` | Bone Power Left / Right | the far halfback, off tackle |
-| `Bone 48 Pitch` / `Bone 37 Pitch` | Bone Pitch Right / Left | the far halfback, outside |
-| `Bone 33 Counter` / `Bone 44 Counter` | Bone Counter Left / Right | the far halfback, off tackle |
+| `Bone 21 Dive` / `Bone 20 Dive` | Bone Dive Left / Right | fullback, center–guard |
+| `Bone 35 Power` / `Bone 44 Power` | Bone Power Left / Right | the far halfback, tackle–end |
+| `Bone 39 Pitch` / `Bone 48 Pitch` | Bone Pitch Left / Right | the far halfback, all the way outside |
+| `Bone 35 Counter` / `Bone 44 Counter` | Bone Counter Left / Right | the far halfback, tackle–end |
 
 The back digit follows whoever actually carries it, which is why everything to the right is
 a `4` — the *left* halfback takes the handoff on Power and Counter, and on Pitch he is the
 trailing back who catches the ball. The near halfback is not idle on Pitch; he leads and
 kicks out the edge, which is why the carrier is the far one.
 
-**Play word** — `Dive`, `Iso`, `Power`, `Counter`, `Slant`, `Pitch`, `Boot`.
+**Play word** — `Dive`, `Iso`, `Slant`, `Toss`, `Counter`, `Boot` in the I;
+`Dive`, `Power`, `Pitch`, `Counter` in the Wishbone.
 
 ## Formations
 
-Two formations, 15 plays, in teaching order:
+Two formations, 18 plays, in teaching order:
 
 | # | Formation | Family | Plays | What it is for |
 |---|---|---|---|---|
-| 1 | **I** | I-Formation | 8 | Base offense. Fullback and tailback stacked, so the same look threatens the middle and both edges. Teaches a back to read a block. |
-| 2 | **Wishbone** | Wishbone | 7 | Three backs, three threats every snap. Symmetric, so every play works both directions off identical rules. |
+| 1 | **I** | I-Formation | 10 | Base offense. Fullback and tailback stacked, so the same look threatens the middle and both edges. Teaches a back to read a block. |
+| 2 | **Wishbone** | Wishbone | 8 | Three backs, three threats every snap. Symmetric, so every play works both directions off identical rules. |
 
 Both are two-tight-end, downhill running formations, so the blocking language carries
 over: "block down on the first defender inside you" means the same thing in either one.
@@ -92,13 +97,14 @@ That is the reason to carry these two rather than two unrelated offenses.
 
 ## Defense
 
-Three fronts, in `defense/`:
+Four fronts, in `defense/`:
 
 | Call | Front | When |
 |---|---|---|
 | **Base** | 5-3 | Most downs. Five down, three linebackers, a free safety behind. |
 | **Goal Line** | 6-3 | Short yardage and inside the five. The heaviest front the league allows. |
 | **Wide** | 4-4 | When they keep getting outside us. Trades a lineman for a fourth linebacker. |
+| **Prevent** | 6-2-3 | Required by rule at an 18-point lead. Not a choice. |
 
 **The generator refuses to publish an illegal front.** `render.py` checks every defense
 against the league limits for 8- and 9-year-olds — at most six down linemen, at least
@@ -117,7 +123,8 @@ someone a link to exactly the play you mean.
 |---|---|
 | `index.html` | Home: the formations, the install advice, the calling language |
 | `calls.html` | **Call sheet** — every play, filter as you type, filter by formation or run/pass |
-| `f-<formation>.html` | One formation: its notes, and its plays grouped by install week |
+| `f-<formation>.html` | One formation: its notes and its plays |
+| `rules.html` | The league rules, generated from `RULES.md` |
 | `p-<play>.html` | One play. Deep-linkable, and prints to a single sheet |
 | `defense.html` | The defensive playbook index |
 | `d-<front>.html` | One defensive front, with every assignment |
@@ -128,7 +135,7 @@ on a phone, with the assignments read underneath it rather than squeezed in besi
 
 ## Printing
 
-- **Print book** (top bar) → 18 landscape pages: 15 plays then 3 defensive fronts,
+- **Print book** (top bar) → 22 landscape pages: 18 plays then 4 defensive fronts,
   one per sheet.
 - **Print** (on any play or front page) → that one card, one landscape sheet.
 

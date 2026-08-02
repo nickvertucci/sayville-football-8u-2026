@@ -3,6 +3,6 @@
   "order": 8,
   "formation": "wishbone",
   "name": "Bone Counter Left",
-  "call": "Bone 33 Counter",
+  "call": "Bone 35 Counter",
   "mirror_of": "wb-counter-r"
 }
