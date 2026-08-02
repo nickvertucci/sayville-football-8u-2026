@@ -86,7 +86,7 @@
       ]
     },
     "TB": {
-      "rule": "Run the slant path outside and sell it. You will not get the ball on this play.",
+      "rule": "Run the toss path outside and sell it. You will not get the ball on this play.",
       "type": "fake",
       "path": [
         [-1.2, 2.0],

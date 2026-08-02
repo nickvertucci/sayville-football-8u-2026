@@ -8,10 +8,10 @@
   "defense": "5-3",
   "direction": "right",
   "ball_carrier": "Z",
-  "purpose": "Play action off the slant look. Two receivers to the flanker side and a quarterback with the whole edge to himself. Run first, throw second.",
+  "purpose": "Play action off the toss look. Two receivers to the flanker side and a quarterback with the whole edge to himself. Run first, throw second.",
   "assignments": {
     "LE": {
-      "rule": "Block down inside and sell the run. This has to look exactly like the slant going the other way.",
+      "rule": "Block down inside and sell the run. This has to look exactly like the toss going the other way.",
       "type": "block",
       "path": [
         [1.2, 0.9]
@@ -39,7 +39,7 @@
       ]
     },
     "RG": {
-      "rule": "PULL LEFT and run the slant path to sell the fake. You are a decoy — take a linebacker with you.",
+      "rule": "PULL LEFT and run the toss path to sell the fake. You are a decoy — take a linebacker with you.",
       "type": "block",
       "path": [
         [-0.7, -1.0],
@@ -71,7 +71,7 @@
       ]
     },
     "QB": {
-      "rule": "Fake the slant with both hands, hide the ball on your back hip, and get to the edge. Run it if it is open. Only throw if a defender comes up to take you.",
+      "rule": "Fake the toss with both hands, hide the ball on your back hip, and get to the edge. Run it if it is open. Only throw if a defender comes up to take you.",
       "type": "run",
       "path": [
         [-1.2, -0.6],
@@ -81,7 +81,7 @@
       ]
     },
     "FB": {
-      "rule": "Run the slant path away from the boot and block whatever shows. Sell it.",
+      "rule": "Run the toss path away from the boot and block whatever shows. Sell it.",
       "type": "block",
       "path": [
         [-3.2, 1.4],
@@ -89,7 +89,7 @@
       ]
     },
     "TB": {
-      "rule": "Run the full slant path away from the boot with your arms tucked like you have the ball. Sell it all the way to the sideline.",
+      "rule": "Run the full toss path away from the boot with your arms tucked like you have the ball. Sell it all the way to the sideline.",
       "type": "fake",
       "path": [
         [-1.6, 2.0],

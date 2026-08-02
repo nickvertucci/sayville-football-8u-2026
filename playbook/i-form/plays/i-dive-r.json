@@ -7,7 +7,7 @@
   "type": "run",
   "defense": "5-3",
   "ball_carrier": "FB",
-  "purpose": "The quickest handoff in the book. The fullback is through the line before their linebackers have read anything. We run it to remind them the middle is not free, which is what makes the slant work later.",
+  "purpose": "The quickest handoff in the book. The fullback is through the line before their linebackers have read anything. We run it to remind them the middle is not free, which is what makes the toss work later.",
   "assignments": {
     "LE": {
       "rule": "Cut off pursuit from behind. You are the last one to the ball, so never quit on the play.",
@@ -85,7 +85,7 @@
       ]
     },
     "TB": {
-      "rule": "Run the slant path outside and sell it. You will not get the ball on this play.",
+      "rule": "Run the toss path outside and sell it. You will not get the ball on this play.",
       "type": "fake",
       "path": [
         [1.2, 2.0],
@@ -95,7 +95,7 @@
   },
   "coaching_points": [
     "Snap to handoff should be under a second. If the fullback is waiting on the ball, the play is already dead.",
-    "Best call when their linebackers start cheating wide to stop the slant.",
+    "Best call when their linebackers start cheating wide to stop the toss.",
     "The fullback runs at a spot, not at a defender. Give him the outside hip of the center and let him go.",
     "Best short-yardage call in the book. Nobody has to read anything and the ball is over the line before the defense moves."
   ],

@@ -35,10 +35,10 @@ Normal line splits, about one foot. Both ends are ON the line. The flanker is OF
 | [I Dive Left](#i-dive-left) | `I Z Right 21 Dive` | run | FB |
 | [I Iso Right](#i-iso-right) | `I Z Right 34 Iso` | run | TB |
 | [I Iso Left](#i-iso-left) | `I Z Right 33 Iso` | run | TB |
-| [I Power Right](#i-power-right) | `I Z Right 36 Power` | run | TB |
-| [I Power Left](#i-power-left) | `I Z Right 35 Power` | run | TB |
-| [I Slant Right](#i-slant-right) | `I Z Right 38 Slant` | run | TB |
-| [I Slant Left](#i-slant-left) | `I Z Right 37 Slant` | run | TB |
+| [I Slant Right](#i-slant-right) | `I Z Right 36 Slant` | run | TB |
+| [I Slant Left](#i-slant-left) | `I Z Right 35 Slant` | run | TB |
+| [I Toss Right](#i-toss-right) | `I Z Right 38 Toss` | run | TB |
+| [I Toss Left](#i-toss-left) | `I Z Right 37 Toss` | run | TB |
 | [I Counter Left](#i-counter-left) | `I Z Right 35 Counter` | run | TB |
 | [I Boot Right](#i-boot-right) | `I Z Right 18 Boot` | pass | Z |
 
@@ -50,7 +50,7 @@ Normal line splits, about one foot. Both ends are ON the line. The flanker is OF
 
 ![I Dive Right](cards/i-dive-r.svg)
 
-The quickest handoff in the book. The fullback is through the line before their linebackers have read anything. We run it to remind them the middle is not free, which is what makes the slant work later.
+The quickest handoff in the book. The fullback is through the line before their linebackers have read anything. We run it to remind them the middle is not free, which is what makes the toss work later.
 
 | Position | Assignment |
 |---|---|
@@ -64,12 +64,12 @@ The quickest handoff in the book. The fullback is through the line before their 
 | **Z** | Release and screen the corner on your side. Get in his way and stay there. |
 | **QB** | Take the snap, open a quarter turn and hand to the fullback at two yards. Then carry out a fake to the outside. |
 | **FB** **(ball)** | Aim at the outside hip of the center, right off the double team. Take the ball and get north — no reading, no dancing. |
-| **TB** | Run the slant path outside and sell it. You will not get the ball on this play. |
+| **TB** | Run the toss path outside and sell it. You will not get the ball on this play. |
 
 **Coaching points**
 
 - Snap to handoff should be under a second. If the fullback is waiting on the ball, the play is already dead.
-- Best call when their linebackers start cheating wide to stop the slant.
+- Best call when their linebackers start cheating wide to stop the toss.
 - The fullback runs at a spot, not at a defender. Give him the outside hip of the center and let him go.
 - Best short-yardage call in the book. Nobody has to read anything and the ball is over the line before the defense moves.
 
@@ -95,7 +95,7 @@ The same quick handoff through the other A gap. Worth having both so the fullbac
 | **Z** | Come across behind the line and cut off the corner chasing from the backside. |
 | **QB** | Take the snap, open a quarter turn and hand to the fullback at two yards. Then carry out a fake to the outside. |
 | **FB** **(ball)** | Aim at the outside hip of the center, right off the double team. Take the ball and get north — no reading, no dancing. |
-| **TB** | Run the slant path outside and sell it. You will not get the ball on this play. |
+| **TB** | Run the toss path outside and sell it. You will not get the ball on this play. |
 
 **Coaching points**
 
@@ -132,7 +132,7 @@ The whole play is one block: the fullback isolates their linebacker in the hole 
 
 - Drill the fullback's block by itself with a bag. He does not have to win — he has to make the linebacker pick a side.
 - Teach the tailback one rule: cut off the fullback's back. Do not let him decide before he gets there.
-- If their linebacker is faster than our fullback, stop calling this and run I Power instead.
+- If their linebacker is faster than our fullback, stop calling this and run I Slant instead.
 - The tailback should be running downhill at the hole, not sideways looking for one.
 
 ---
@@ -167,11 +167,11 @@ The same isolation block the other way. The flanker stays where he is, so this r
 
 ---
 
-## I Power Right
+## I Slant Right
 
-**Call it:** `I Z Right 36 Power`
+**Call it:** `I Z Right 36 Slant`
 
-![I Power Right](cards/i-power-r.svg)
+![I Slant Right](cards/i-slant-r.svg)
 
 The power run out of the I. Playside blocks down, the fullback kicks out the end man, and the backside guard pulls and wraps. Same down-block-and-kick-out rules the Wishbone power uses, so the two halves of the book teach each other.
 
@@ -198,11 +198,11 @@ The power run out of the I. Playside blocks down, the fullback kicks out the end
 
 ---
 
-## I Power Left
+## I Slant Left
 
-**Call it:** `I Z Right 35 Power`
+**Call it:** `I Z Right 35 Slant`
 
-![I Power Left](cards/i-power-l.svg)
+![I Slant Left](cards/i-slant-l.svg)
 
 Power to the weak side. The flanker is not out there to help, so the kick-out and the wrap have to be clean — but their defense is usually leaning the other way.
 
@@ -224,15 +224,15 @@ Power to the weak side. The flanker is not out there to help, so the kick-out an
 
 - Check their alignment first. If they have shaded toward our flanker, this is the call.
 - The flanker chases from behind. Tell him he is not decoration — he cuts off the corner who would otherwise run this down.
-- Everything else is I Power Right in a mirror. Teach the pair together.
+- Everything else is I Slant Right in a mirror. Teach the pair together.
 
 ---
 
-## I Slant Right
+## I Toss Right
 
-**Call it:** `I Z Right 38 Slant`
+**Call it:** `I Z Right 38 Toss`
 
-![I Slant Right](cards/i-slant-r.svg)
+![I Toss Right](cards/i-toss-r.svg)
 
 Get outside. The fullback and the flanker are both out in front and the tailback has room to run. This is the play that makes them widen out, which is what opens the dive and the iso.
 
@@ -255,15 +255,15 @@ Get outside. The fullback and the flanker are both out in front and the tailback
 - The tailback is deep enough to get outside — but only if he is at full speed by the time he takes the handoff.
 - The fullback has to beat the tailback to the corner. If he is trailing, the play has no lead blocker.
 - One rule for the tailback: turn up off the fullback's block. Running to the sideline is how this play loses eight yards.
-- Watch our end reach-blocking. If he cannot reach their end, run I Power to that side instead.
+- Watch our end reach-blocking. If he cannot reach their end, run I Slant to that side instead.
 
 ---
 
-## I Slant Left
+## I Toss Left
 
-**Call it:** `I Z Right 37 Slant`
+**Call it:** `I Z Right 37 Toss`
 
-![I Slant Left](cards/i-slant-l.svg)
+![I Toss Left](cards/i-toss-l.svg)
 
 The same run away from the flanker. There is one fewer blocker out there, so the fullback has to be perfect getting to the corner — but their defense is usually leaning toward our flanker, which is exactly why it is open.
 
@@ -296,7 +296,7 @@ The same run away from the flanker. There is one fewer blocker out there, so the
 
 ![I Counter Left](cards/i-counter-l.svg)
 
-Misdirection off the slant. We show them the slant to the flanker side, their linebackers chase, and the tailback plants and comes back weak behind a pulling guard.
+Misdirection off the toss. We show them the toss to the flanker side, their linebackers chase, and the tailback plants and comes back weak behind a pulling guard.
 
 | Position | Assignment |
 |---|---|
@@ -307,17 +307,17 @@ Misdirection off the slant. We show them the slant to the flanker side, their li
 | **RG** | PULL LEFT. Stay flat behind the line and kick out the end on the other side. |
 | **RT** | Block back. Take the first defender on or inside you — nobody crosses your face. |
 | **RE** | Cut off pursuit from behind. You are the last one to the ball, so never quit on the play. |
-| **Z** | Take one hard step upfield like the slant is coming, then come back and cut off the backside. |
-| **QB** | Take the snap, fake the slant the other way with both hands, then turn back and hand to the tailback. The fake comes first — the handoff is late on purpose. |
-| **FB** | Run the slant path to the other side at full speed and block anything that shows. You are the lie. |
-| **TB** **(ball)** | Take two hard steps toward the slant, then plant and come back behind the pulling guard. Those two steps are the entire play. |
+| **Z** | Take one hard step upfield like the toss is coming, then come back and cut off the backside. |
+| **QB** | Take the snap, fake the toss the other way with both hands, then turn back and hand to the tailback. The fake comes first — the handoff is late on purpose. |
+| **FB** | Run the toss path to the other side at full speed and block anything that shows. You are the lie. |
+| **TB** **(ball)** | Take two hard steps toward the toss, then plant and come back behind the pulling guard. Those two steps are the entire play. |
 
 **Coaching points**
 
-- Do not call this until I Slant Right has gone for real yards. Misdirection off a play they do not fear is just a slower run.
+- Do not call this until I Toss Right has gone for real yards. Misdirection off a play they do not fear is just a slower run.
 - The tailback's counter steps must be full speed and full length. A shuffle fools nobody.
-- The fullback selling the slant matters more than his block. Tell him he is the decoy and mean it.
-- If their backside linebacker stops chasing the slant, go back to I Power Left.
+- The fullback selling the toss matters more than his block. Tell him he is the decoy and mean it.
+- If their backside linebacker stops chasing the toss, go back to I Slant Left.
 
 ---
 
@@ -327,21 +327,21 @@ Misdirection off the slant. We show them the slant to the flanker side, their li
 
 ![I Boot Right](cards/i-boot-r.svg)
 
-Play action off the slant look. Two receivers to the flanker side and a quarterback with the whole edge to himself. Run first, throw second.
+Play action off the toss look. Two receivers to the flanker side and a quarterback with the whole edge to himself. Run first, throw second.
 
 | Position | Assignment |
 |---|---|
-| **LE** | Block down inside and sell the run. This has to look exactly like the slant going the other way. |
+| **LE** | Block down inside and sell the run. This has to look exactly like the toss going the other way. |
 | **LT** | The tackle is on your inside shoulder. Block him down and seal him inside — that is what opens the hole. |
 | **LG** | Nobody is over you. Help the center on the nose and drive him away from the boot. |
 | **C** | Block the nose back toward the boot side. Nobody chases through the middle. |
-| **RG** | PULL LEFT and run the slant path to sell the fake. You are a decoy — take a linebacker with you. |
+| **RG** | PULL LEFT and run the toss path to sell the fake. You are a decoy — take a linebacker with you. |
 | **RT** | Hinge and protect the boot side. Nobody comes free outside you — the quarterback is alone back there. |
 | **RE** | Engage the end over you for a count, then release and settle at eight yards on the boot side. |
 | **Z** **(ball)** | Run to the flat at four yards and stay in front of the quarterback. You are the easy throw. |
-| **QB** | Fake the slant with both hands, hide the ball on your back hip, and get to the edge. Run it if it is open. Only throw if a defender comes up to take you. |
-| **FB** | Run the slant path away from the boot and block whatever shows. Sell it. |
-| **TB** | Run the full slant path away from the boot with your arms tucked like you have the ball. Sell it all the way to the sideline. |
+| **QB** | Fake the toss with both hands, hide the ball on your back hip, and get to the edge. Run it if it is open. Only throw if a defender comes up to take you. |
+| **FB** | Run the toss path away from the boot and block whatever shows. Sell it. |
+| **TB** | Run the full toss path away from the boot with your arms tucked like you have the ball. Sell it all the way to the sideline. |
 
 **Coaching points**
 

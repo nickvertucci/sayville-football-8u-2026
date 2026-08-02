@@ -1,0 +1,105 @@
+{
+  "id": "i-toss-r",
+  "order": 7,
+  "formation": "i-form",
+  "name": "I Toss Right",
+  "call": "I Z Right 38 Toss",
+  "type": "run",
+  "defense": "5-3",
+  "direction": "right",
+  "ball_carrier": "TB",
+  "purpose": "Get outside. The fullback and the flanker are both out in front and the tailback has room to run. This is the play that makes them widen out, which is what opens the dive and the iso.",
+  "assignments": {
+    "LE": {
+      "rule": "Cut off pursuit from behind. You are the last one to the ball, so never quit on the play.",
+      "type": "block",
+      "path": [
+        [1.0, 0.7]
+      ]
+    },
+    "LT": {
+      "rule": "Block back. Take the first defender on or inside you — nobody crosses your face.",
+      "type": "block",
+      "path": [
+        [1.0, 0.7]
+      ]
+    },
+    "LG": {
+      "rule": "Nobody is over you. Cut off the backside — nothing chases this from behind.",
+      "type": "block",
+      "path": [
+        [1.0, 0.7]
+      ]
+    },
+    "C": {
+      "rule": "Reach the nose. Get your head across his playside shoulder so he cannot run down the line.",
+      "type": "block",
+      "path": [
+        [0.6, 1.0]
+      ]
+    },
+    "RG": {
+      "rule": "Nobody is over you. Climb straight to the middle linebacker and cut him off from the sideline.",
+      "type": "block",
+      "path": [
+        [0.4, 1.2],
+        [-0.6, 3.4]
+      ]
+    },
+    "RT": {
+      "rule": "The tackle is on your inside shoulder. Get your head across him and wall him off so he cannot chase.",
+      "type": "block",
+      "path": [
+        [0.9, 1.0]
+      ]
+    },
+    "RE": {
+      "rule": "Reach the end over you. If you cannot reach him, turn him inside and let the ball go around.",
+      "type": "block",
+      "path": [
+        [0.7, 1.0]
+      ]
+    },
+    "Z": {
+      "rule": "Block the corner on your side. Run at his outside number and screen him away from the ball.",
+      "type": "block",
+      "path": [
+        [1.6, 2.2],
+        [2.4, 4.2]
+      ]
+    },
+    "QB": {
+      "rule": "Reverse pivot and hand the ball to the tailback as deep as you can. Then boot away and sell it.",
+      "type": "fake",
+      "path": [
+        [-0.7, -0.5],
+        [-2.8, -0.2]
+      ]
+    },
+    "FB": {
+      "rule": "Beat the tailback to the corner and kick out the first defender who shows. You are the lead blocker — get there first.",
+      "type": "block",
+      "path": [
+        [3.4, 1.4],
+        [6.0, 3.4]
+      ]
+    },
+    "TB": {
+      "rule": "Take the handoff at full speed and get to the corner. Turn up when the fullback blocks somebody, not before.",
+      "type": "run",
+      "path": [
+        [1.6, 2.0],
+        [4.6, 3.4],
+        [6.6, 6.0],
+        [6.6, 8.8]
+      ]
+    }
+  },
+  "coaching_points": [
+    "The tailback is deep enough to get outside — but only if he is at full speed by the time he takes the handoff.",
+    "The fullback has to beat the tailback to the corner. If he is trailing, the play has no lead blocker.",
+    "One rule for the tailback: turn up off the fullback's block. Running to the sideline is how this play loses eight yards.",
+    "Watch our end reach-blocking. If he cannot reach their end, run I Slant to that side instead."
+  ],
+  "z": "right"
+}

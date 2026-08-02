@@ -8,7 +8,7 @@
   "defense": "5-3",
   "direction": "left",
   "ball_carrier": "TB",
-  "purpose": "Misdirection off the slant. We show them the slant to the flanker side, their linebackers chase, and the tailback plants and comes back weak behind a pulling guard.",
+  "purpose": "Misdirection off the toss. We show them the toss to the flanker side, their linebackers chase, and the tailback plants and comes back weak behind a pulling guard.",
   "assignments": {
     "RE": {
       "rule": "Cut off pursuit from behind. You are the last one to the ball, so never quit on the play.",
@@ -63,7 +63,7 @@
       ]
     },
     "Z": {
-      "rule": "Take one hard step upfield like the slant is coming, then come back and cut off the backside.",
+      "rule": "Take one hard step upfield like the toss is coming, then come back and cut off the backside.",
       "type": "fake",
       "path": [
         [-1.0, 1.2],
@@ -71,7 +71,7 @@
       ]
     },
     "QB": {
-      "rule": "Take the snap, fake the slant the other way with both hands, then turn back and hand to the tailback. The fake comes first — the handoff is late on purpose.",
+      "rule": "Take the snap, fake the toss the other way with both hands, then turn back and hand to the tailback. The fake comes first — the handoff is late on purpose.",
       "type": "fake",
       "path": [
         [1.0, -0.5],
@@ -80,7 +80,7 @@
       ]
     },
     "FB": {
-      "rule": "Run the slant path to the other side at full speed and block anything that shows. You are the lie.",
+      "rule": "Run the toss path to the other side at full speed and block anything that shows. You are the lie.",
       "type": "block",
       "path": [
         [3.2, 1.4],
@@ -88,7 +88,7 @@
       ]
     },
     "TB": {
-      "rule": "Take two hard steps toward the slant, then plant and come back behind the pulling guard. Those two steps are the entire play.",
+      "rule": "Take two hard steps toward the toss, then plant and come back behind the pulling guard. Those two steps are the entire play.",
       "type": "run",
       "path": [
         [1.0, 0.8],
@@ -99,10 +99,10 @@
     }
   },
   "coaching_points": [
-    "Do not call this until I Slant Right has gone for real yards. Misdirection off a play they do not fear is just a slower run.",
+    "Do not call this until I Toss Right has gone for real yards. Misdirection off a play they do not fear is just a slower run.",
     "The tailback's counter steps must be full speed and full length. A shuffle fools nobody.",
-    "The fullback selling the slant matters more than his block. Tell him he is the decoy and mean it.",
-    "If their backside linebacker stops chasing the slant, go back to I Power Left."
+    "The fullback selling the toss matters more than his block. Tell him he is the decoy and mean it.",
+    "If their backside linebacker stops chasing the toss, go back to I Slant Left."
   ],
   "z": "right"
 }

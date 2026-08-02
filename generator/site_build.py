@@ -1025,8 +1025,8 @@ front for when they keep getting outside us.</p>
 <div class="cards">{defcards}</div>
 
 <p class="section-head">How we call plays</p>
-<p class="lede">Every play has a teaching name (<em>I Power Right</em>) and a huddle call
-(<code>I Z Right 36 Power</code>). Both are printed on every card. In the I-formation
+<p class="lede">Every play has a teaching name (<em>I Slant Right</em>) and a huddle call
+(<code>I Z Right 36 Slant</code>). Both are printed on every card. In the I-formation
 the call is <strong>formation + flanker + back + hole + play word</strong>. <code>Z Right</code> is where the flanker lines up, then the first number says who
 carries it and the second says where it goes.</p>
 <p class="lede"><strong>Who carries it</strong></p>
@@ -1042,7 +1042,7 @@ memorize.</p>
                 for n, d in HOLES).strip()}
 </dl>
 <p class="lede">So <code>I Z Right 22 Dive</code> is flanker right, fullback, 2 hole,
-and <code>I Z Right 36 Power</code> is flanker right, tailback, off tackle right. A kid
+and <code>I Z Right 36 Slant</code> is flanker right, tailback, off tackle right. A kid
 who knows the two numbers can run a play the first time he hears it.</p>
 <p class="sub">Every play in the book is <code>Z Right</code> today. It is in the call
 anyway so a <code>Z Left</code> look can be added later without changing the language.</p>

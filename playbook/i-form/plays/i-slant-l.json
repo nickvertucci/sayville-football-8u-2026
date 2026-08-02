@@ -1,14 +1,14 @@
 {
   "id": "i-slant-l",
-  "order": 8,
+  "order": 6,
   "formation": "i-form",
   "name": "I Slant Left",
-  "call": "I Z Right 37 Slant",
+  "call": "I Z Right 35 Slant",
   "type": "run",
   "defense": "5-3",
   "direction": "left",
   "ball_carrier": "TB",
-  "purpose": "The same run away from the flanker. There is one fewer blocker out there, so the fullback has to be perfect getting to the corner — but their defense is usually leaning toward our flanker, which is exactly why it is open.",
+  "purpose": "Power to the weak side. The flanker is not out there to help, so the kick-out and the wrap have to be clean — but their defense is usually leaning the other way.",
   "assignments": {
     "RE": {
       "rule": "Cut off pursuit from behind. You are the last one to the ball, so never quit on the play.",
@@ -25,81 +25,82 @@
       ]
     },
     "RG": {
-      "rule": "Nobody is over you. Cut off the backside — nothing chases this from behind.",
+      "rule": "PULL LEFT. Run flat behind the line and turn up in the open gap between our tackle and our end. Block the first wrong-colored jersey you see.",
       "type": "block",
       "path": [
-        [-1.0, 0.7]
+        [-0.5, -1.2],
+        [-5.4, -1.0],
+        [-6.6, 1.6]
       ]
     },
     "C": {
-      "rule": "Reach the nose. Get your head across his playside shoulder so he cannot run down the line.",
+      "rule": "You have the nose, head up on you. Hands inside and do not let him cross your face to the playside.",
       "type": "block",
       "path": [
-        [-0.6, 1.0]
+        [0.9, 0.8]
       ]
     },
     "LG": {
-      "rule": "Nobody is over you. Climb straight to the middle linebacker and cut him off from the sideline.",
+      "rule": "Nobody is over you. Help the center drive the nose for one count, then climb to the middle linebacker.",
       "type": "block",
       "path": [
-        [-0.4, 1.2],
-        [0.6, 3.4]
+        [0.6, 1.1],
+        [1.2, 3.4]
       ]
     },
     "LT": {
-      "rule": "The tackle is on your inside shoulder. Get your head across him and wall him off so he cannot chase.",
+      "rule": "The tackle is on your inside shoulder. Block him down and seal him inside — that is what opens the hole.",
       "type": "block",
       "path": [
-        [-0.9, 1.0]
+        [0.4, 1.3]
       ]
     },
     "LE": {
-      "rule": "Reach the end over you. If you cannot reach him, turn him inside and let the ball go around.",
+      "rule": "Release inside off his outside shoulder and take the playside linebacker. The end over you is being kicked out — leave him alone.",
       "type": "block",
       "path": [
-        [-0.7, 1.0]
+        [1.0, 3.5]
       ]
     },
     "Z": {
-      "rule": "Come across behind the line and cut off the corner chasing from the backside. You are not decoration on this one.",
+      "rule": "Come across behind the line and cut off anybody chasing from the backside.",
       "type": "block",
       "path": [
-        [-3.0, 0.6],
-        [-7.4, 1.6]
+        [-2.6, 0.6],
+        [-6.0, 1.4]
       ]
     },
     "QB": {
-      "rule": "Reverse pivot and hand the ball to the tailback as deep as you can. Then boot away and sell it.",
+      "rule": "Reverse pivot, hand the ball to the tailback deep, then carry out the bootleg fake away from the play.",
       "type": "fake",
       "path": [
-        [0.7, -0.5],
-        [2.8, -0.2]
+        [0.6, -0.6],
+        [3.0, -0.3]
       ]
     },
     "FB": {
-      "rule": "Beat the tailback to the corner and kick out the first defender who shows. You are the lead blocker — get there first.",
+      "rule": "Kick out the end. Aim at his inside hip and run through him — do not stop your feet.",
       "type": "block",
       "path": [
-        [-3.4, 1.4],
-        [-6.0, 3.4]
+        [-3.0, 1.1],
+        [-5.6, 3.6]
       ]
     },
     "TB": {
-      "rule": "Take the handoff at full speed and get to the corner. Turn up when the fullback blocks somebody, not before.",
+      "rule": "Take the handoff, press the outside hip of our tackle, then turn up inside the pulling guard.",
       "type": "run",
       "path": [
-        [-1.6, 2.0],
-        [-4.6, 3.4],
-        [-6.6, 6.0],
-        [-6.6, 8.8]
+        [-0.8, 2.2],
+        [-3.0, 4.6],
+        [-4.4, 7.2],
+        [-4.6, 9.8]
       ]
     }
   },
   "coaching_points": [
-    "Check their alignment first. If they have shifted toward our flanker, this is the call.",
-    "The fullback has further to travel here than he does going right, so he has to leave on the snap. If he trails the tailback the play has no lead blocker.",
-    "One rule for the tailback: turn up off the fullback's block. Running to the sideline is how this play loses eight yards.",
-    "The flanker chases from behind. Tell him he is the reason a fast corner does not run this down from the backside."
+    "Check their alignment first. If they have shaded toward our flanker, this is the call.",
+    "The flanker chases from behind. Tell him he is not decoration — he cuts off the corner who would otherwise run this down.",
+    "Everything else is I Slant Right in a mirror. Teach the pair together."
   ],
   "z": "right"
 }

@@ -15,8 +15,8 @@ It is also published as a page on the site under **Rules**.
 
 Every play has two names, and both are printed on every card.
 
-- The **name** is what you say while teaching it: *I Power Right*.
-- The **call** is what you yell on Saturday: `I Z Right 36 Power`.
+- The **name** is what you say while teaching it: *I Slant Right*.
+- The **call** is what you yell on Saturday: `I Z Right 36 Slant`.
 
 ### I-Formation: formation + flanker + back + hole + play word
 
@@ -43,19 +43,19 @@ single play is called.
 
 Odd numbers go left, even numbers go right, counting outward from the center. So
 `I Z Right 22 Dive` is flanker right, fullback, 2 hole; `I Z Right 21 Dive` is the
-same handoff through the 1 hole; and `I Z Right 36 Power` is the tailback off
+same handoff through the 1 hole; and `I Z Right 36 Slant` is the tailback off
 tackle to the right.
 
 | Call | Play |
 |---|---|
 | `I Z Right 21 Dive` / `I Z Right 22 Dive` | I Dive Left / Right |
 | `I Z Right 33 Iso` / `I Z Right 34 Iso` | I Iso Left / Right |
-| `I Z Right 35 Power` / `I Z Right 36 Power` | I Power Left / Right |
-| `I Z Right 37 Slant` / `I Z Right 38 Slant` | I Slant Left / Right |
+| `I Z Right 35 Slant` / `I Z Right 36 Slant` | I Slant Left / Right |
+| `I Z Right 37 Toss` / `I Z Right 38 Toss` | I Toss Left / Right |
 | `I Z Right 35 Counter` | I Counter Left |
 | `I Z Right 18 Boot` | I Boot Right |
 
-`35` appears twice — as Power and as Counter — because both finish in the same hole
+`35` appears twice — as Slant and as Counter — because both finish in the same hole
 with the same back. The play word is what separates them, which is exactly what it is
 there for.
 
