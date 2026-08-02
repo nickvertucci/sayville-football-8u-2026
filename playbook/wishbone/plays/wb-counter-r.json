@@ -8,7 +8,7 @@
   "defense": "5-3",
   "direction": "right",
   "ball_carrier": "LH",
-  "purpose": "Everything goes one way and the backside halfback comes back the other. With three backs moving, this is the hardest play in the book for an eight-year-old defense to sort out.",
+  "purpose": "Misdirection off the pitch. The near halfback and the quarterback sell the pitch one way, the far halfback plants and comes all the way back. The fullback blows out the end and the playside guard pulls and wraps, so the ball turns up behind two blockers with their linebackers running the wrong way.",
   "assignments": {
     "LE": {
       "rule": "Cut off pursuit from behind. You are the last one to the ball, so never quit on the play.",
@@ -39,12 +39,13 @@
       ]
     },
     "RG": {
-      "rule": "PULL RIGHT. Stay flat and kick out the end on the playside.",
+      "rule": "PULL RIGHT. Run flat behind the line, turn up inside the fullback's block and keep climbing. Take the first wrong-colored jersey that shows in the hole.",
       "type": "block",
       "path": [
-        [0.7, -1.0],
-        [3.8, -0.8],
-        [4.8, 0.6]
+        [0.6, -1.0],
+        [2.2, -0.8],
+        [2.0, 3.0],
+        [1.4, 5.1]
       ]
     },
     "RT": {
@@ -55,7 +56,7 @@
       ]
     },
     "RE": {
-      "rule": "Release inside off his outside shoulder and take the playside linebacker. The end over you is being kicked out — leave him alone.",
+      "rule": "Release inside off his outside shoulder and take the playside linebacker. The end over you belongs to the fullback — leave him alone.",
       "type": "block",
       "path": [
         [-1.0, 3.5]
@@ -71,11 +72,11 @@
       ]
     },
     "FB": {
-      "rule": "Run the dive path and get hit. Same as every other play.",
-      "type": "fake",
+      "rule": "Step at the dive, then get out and blow out the end. Aim at his inside hip and drive him toward the sideline — the ball comes right off your block.",
+      "type": "block",
       "path": [
-        [0.4, 2.0],
-        [0.6, 4.2]
+        [2.8, 1.0],
+        [5.2, 3.8]
       ]
     },
     "LH": {
@@ -99,6 +100,8 @@
   },
   "coaching_points": [
     "Do not call this until the pitch has been working. It is the counter-punch.",
-    "The ball carrier crosses behind the fullback, so the timing is slow on purpose. The line has to hold blocks an extra count."
+    "The fullback's block is the play. If the end is not blown out, the ball carrier is tackled for a loss before he has turned upfield.",
+    "The ball carrier crosses behind the fullback, so the timing is slow on purpose. The line has to hold its blocks an extra count.",
+    "Two hard steps toward the fake before he comes back. A shuffle fools nobody."
   ]
 }

@@ -232,7 +232,7 @@ Get outside in a hurry. The fullback holds the middle and then blocks, our end s
 
 ![Bone Counter Right](cards/wb-counter-r.svg)
 
-Everything goes one way and the backside halfback comes back the other. With three backs moving, this is the hardest play in the book for an eight-year-old defense to sort out.
+Misdirection off the pitch. The near halfback and the quarterback sell the pitch one way, the far halfback plants and comes all the way back. The fullback blows out the end and the playside guard pulls and wraps, so the ball turns up behind two blockers with their linebackers running the wrong way.
 
 | Position | Assignment |
 |---|---|
@@ -240,18 +240,20 @@ Everything goes one way and the backside halfback comes back the other. With thr
 | **LT** | Block back. Take the first defender on or inside you — nobody crosses your face. |
 | **LG** | Nobody is over you. Cut off the backside. |
 | **C** | You have the nose, head up on you. Hands inside and do not let him cross your face to the playside. |
-| **RG** | PULL RIGHT. Stay flat and kick out the end on the playside. |
+| **RG** | PULL RIGHT. Run flat behind the line, turn up inside the fullback's block and keep climbing. Take the first wrong-colored jersey that shows in the hole. |
 | **RT** | The tackle is on your inside shoulder. Block him down and seal him inside — that is what opens the hole. |
-| **RE** | Release inside off his outside shoulder and take the playside linebacker. The end over you is being kicked out — leave him alone. |
+| **RE** | Release inside off his outside shoulder and take the playside linebacker. The end over you belongs to the fullback — leave him alone. |
 | **QB** | Fake the pitch to the left, then turn back and hand the ball to the other halfback coming across. The fake comes first. |
-| **FB** | Run the dive path and get hit. Same as every other play. |
+| **FB** | Step at the dive, then get out and blow out the end. Aim at his inside hip and drive him toward the sideline — the ball comes right off your block. |
 | **LH** **(ball)** | Take two hard steps toward the fake, then plant and come all the way back behind the pulling guard. |
 | **RH** | Run the full pitch path away at full speed with your arms tucked. You are the lie. |
 
 **Coaching points**
 
 - Do not call this until the pitch has been working. It is the counter-punch.
-- The ball carrier crosses behind the fullback, so the timing is slow on purpose. The line has to hold blocks an extra count.
+- The fullback's block is the play. If the end is not blown out, the ball carrier is tackled for a loss before he has turned upfield.
+- The ball carrier crosses behind the fullback, so the timing is slow on purpose. The line has to hold its blocks an extra count.
+- Two hard steps toward the fake before he comes back. A shuffle fools nobody.
 
 ---
 
@@ -261,24 +263,26 @@ Everything goes one way and the backside halfback comes back the other. With thr
 
 ![Bone Counter Left](cards/wb-counter-l.svg)
 
-Everything goes one way and the backside halfback comes back the other. With three backs moving, this is the hardest play in the book for an eight-year-old defense to sort out.
+Misdirection off the pitch. The near halfback and the quarterback sell the pitch one way, the far halfback plants and comes all the way back. The fullback blows out the end and the playside guard pulls and wraps, so the ball turns up behind two blockers with their linebackers running the wrong way.
 
 | Position | Assignment |
 |---|---|
-| **LE** | Release inside off his outside shoulder and take the playside linebacker. The end over you is being kicked out — leave him alone. |
+| **LE** | Release inside off his outside shoulder and take the playside linebacker. The end over you belongs to the fullback — leave him alone. |
 | **LT** | The tackle is on your inside shoulder. Block him down and seal him inside — that is what opens the hole. |
-| **LG** | PULL LEFT. Stay flat and kick out the end on the playside. |
+| **LG** | PULL LEFT. Run flat behind the line, turn up inside the fullback's block and keep climbing. Take the first wrong-colored jersey that shows in the hole. |
 | **C** | You have the nose, head up on you. Hands inside and do not let him cross your face to the playside. |
 | **RG** | Nobody is over you. Cut off the backside. |
 | **RT** | Block back. Take the first defender on or inside you — nobody crosses your face. |
 | **RE** | Cut off pursuit from behind. You are the last one to the ball, so never quit on the play. |
 | **QB** | Fake the pitch to the right, then turn back and hand the ball to the other halfback coming across. The fake comes first. |
-| **FB** | Run the dive path and get hit. Same as every other play. |
+| **FB** | Step at the dive, then get out and blow out the end. Aim at his inside hip and drive him toward the sideline — the ball comes left off your block. |
 | **LH** | Run the full pitch path away at full speed with your arms tucked. You are the lie. |
 | **RH** **(ball)** | Take two hard steps toward the fake, then plant and come all the way back behind the pulling guard. |
 
 **Coaching points**
 
 - Do not call this until the pitch has been working. It is the counter-punch.
-- The ball carrier crosses behind the fullback, so the timing is slow on purpose. The line has to hold blocks an extra count.
+- The fullback's block is the play. If the end is not blown out, the ball carrier is tackled for a loss before he has turned upfield.
+- The ball carrier crosses behind the fullback, so the timing is slow on purpose. The line has to hold its blocks an extra count.
+- Two hard steps toward the fake before he comes back. A shuffle fools nobody.
 
