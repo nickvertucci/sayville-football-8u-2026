@@ -1,4 +1,4 @@
-/* Every colour goes through a token so dark mode is one block of overrides rather
+/* Every color goes through a token so dark mode is one block of overrides rather
    than forty hardcoded values that quietly stay light. */
 :root {
   --bg: #eceff4;
@@ -446,7 +446,7 @@ footer.site a { color: var(--accent-ink); }
   article.play > header { padding-bottom: 5px; margin-bottom: 8px; }
   article.play h2 { font-size: 16pt; }
   .call, .tag { font-size: 8.5pt; padding: 2px 6px; }
-  /* Picture leads. The figure is pinned to a fixed height with the diagram centred
+  /* Picture leads. The figure is pinned to a fixed height with the diagram centerd
      inside it, so pagination is identical for a wide play and a deep one and every
      card lands on exactly one sheet. The height below is the largest that still
      leaves room for eleven assignments and the coaching points — measured, not

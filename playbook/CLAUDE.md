@@ -64,7 +64,10 @@ key. On pass plays, set it to the primary receiver.
 eleven** positions in the formation. `--check` fails the build if one is missing.
 
 Optional: `call`, `type`, `defense` (must match a file in `defense/`),
-`install_week`, `direction`, `purpose`, `coaching_points`.
+`order`, `direction`, `purpose`, `coaching_points`.
+
+`order` is the position in the formation's teaching sequence. There are no
+install weeks — plays are simply listed in the order we teach them.
 
 ### `name` and `call` are different on purpose
 
@@ -74,8 +77,16 @@ formation, hole number, play word). The numbering system is documented in the to
 [README](../README.md). When you add a play, give it a call that fits the system —
 inventing a nickname defeats the point of having a language.
 
-Formations carry an `order` field, which is teaching order, not the alphabet. It controls
-the sequence on the site and in `PLAYBOOK.md`.
+Formations carry an `order` field too, which is teaching order, not the alphabet.
+Both control the sequence on the site and in `PLAYBOOK.md`.
+
+### Write assignments for the 5-3
+
+Every offensive play is drawn against the 5-3, so write the rules for that front:
+the center has the nose head up, **both guards are uncovered**, each tackle has a
+tackle on his inside shoulder, each end has an end head up, and the gap between our
+tackle and our end is open. A rule that tells a guard to block the man over him is
+wrong against this front.
 
 ## Mirroring
 

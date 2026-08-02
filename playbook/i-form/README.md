@@ -29,16 +29,16 @@ Normal line splits, about one foot. Both ends are ON the line. The flanker is OF
 
 ## Plays
 
-| Play | Call | Type | Ball | Install |
-|---|---|---|---|---|
-| [I Dive](#i-dive) | `I 2 Dive` | run | FB | Week 1 |
-| [I Iso Left](#i-iso-left) | `I 3 Iso` | run | TB | Week 1 |
-| [I Iso Right](#i-iso-right) | `I 4 Iso` | run | TB | Week 1 |
-| [I Power Left](#i-power-left) | `I 5 Power` | run | TB | Week 2 |
-| [I Power Right](#i-power-right) | `I 6 Power` | run | TB | Week 2 |
-| [I Sweep Right](#i-sweep-right) | `I 8 Sweep` | run | TB | Week 2 |
-| [I Boot Right](#i-boot-right) | `I 8 Boot` | pass | Z | Week 3 |
-| [I Counter Left](#i-counter-left) | `I 5 Counter` | run | TB | Week 3 |
+| Play | Call | Type | Ball |
+|---|---|---|---|
+| [I Dive](#i-dive) | `I 2 Dive` | run | FB |
+| [I Iso Right](#i-iso-right) | `I 4 Iso` | run | TB |
+| [I Iso Left](#i-iso-left) | `I 3 Iso` | run | TB |
+| [I Power Right](#i-power-right) | `I 6 Power` | run | TB |
+| [I Power Left](#i-power-left) | `I 5 Power` | run | TB |
+| [I Sweep Right](#i-sweep-right) | `I 8 Sweep` | run | TB |
+| [I Counter Left](#i-counter-left) | `I 5 Counter` | run | TB |
+| [I Boot Right](#i-boot-right) | `I 8 Boot` | pass | Z |
 
 ---
 
@@ -52,16 +52,16 @@ The quickest handoff in the book. The fullback is through the line before their 
 
 | Position | Assignment |
 |---|---|
-| **LE** | Block back and cut off pursuit. You are the last one to the ball. |
-| **LT** | Block back. Take the first defender on or inside you. Nobody crosses your face. |
-| **LG** | Block back. Take the first defender on or inside you. Nobody crosses your face. |
-| **C** | Block the man over you. If nobody is over you, help the playside guard and climb to the middle linebacker. |
-| **RG** | Block the man over you and turn him out. The hole is off your inside hip. |
-| **RT** | Block the man over you. Do not let him slide inside. |
-| **RE** | Block the first defender on or inside you. |
-| **Z** | Release and screen the deepest defender on your side. Get in his way and stay there. |
+| **LE** | Cut off pursuit from behind. You are the last one to the ball, so never quit on the play. |
+| **LT** | The tackle is on your inside shoulder. Get your head across him and wall him off so he cannot chase. |
+| **LG** | Nobody is over you. Step back inside and cut off anyone chasing through the middle. |
+| **C** | You and the playside guard double the nose. Drive him off the spot — the hole is right off his back. |
+| **RG** | Nobody is over you. Double the nose with the center, and come off onto the middle linebacker when he shows. |
+| **RT** | The tackle is on your inside shoulder. Block him down and seal him inside — that is what opens the hole. |
+| **RE** | The end is head up on you. Drive him out and away from the ball. |
+| **Z** | Release and screen the corner on your side. Get in his way and stay there. |
 | **QB** | Take the snap, open a quarter turn and hand to the fullback at two yards. Then carry out a fake to the outside. |
-| **FB** **(ball)** | Aim at the outside hip of the center. Take the ball and get north. This is a straight-ahead run — no reading, no dancing. |
+| **FB** **(ball)** | Aim at the outside hip of the center, right off the double team. Take the ball and get north — no reading, no dancing. |
 | **TB** | Run the sweep path outside and sell it. You will not get the ball on this play. |
 
 **Coaching points**
@@ -70,36 +70,6 @@ The quickest handoff in the book. The fullback is through the line before their 
 - Best call when their linebackers start cheating wide to stop the sweep.
 - The fullback runs at a spot, not at a defender. Give him the outside hip of the center and let him go.
 - Best short-yardage call in the book. Nobody has to read anything and the ball is over the line before the defense moves.
-
----
-
-## I Iso Left
-
-**Call it:** `I 3 Iso`
-
-![I Iso Left](cards/i-iso-l.svg)
-
-The same isolation block the other way. The flanker stays where he is, so this runs away from our strength — which is exactly why it is open.
-
-| Position | Assignment |
-|---|---|
-| **LE** | Block the man over you and turn him out. |
-| **LT** | Block the man over you and drive him to the outside. You are the outside wall of the hole. |
-| **LG** | Block the man over you and drive him to the inside. You are the inside wall of the hole. |
-| **C** | Block the first defender to the backside. |
-| **RG** | Block back. Take the first defender on or inside you. Nobody crosses your face. |
-| **RT** | Block back. Take the first defender on or inside you. Nobody crosses your face. |
-| **RE** | Block back and cut off pursuit. You are the last one to the ball. |
-| **Z** | Come across behind the line and cut off anybody chasing from the backside. |
-| **QB** | Reverse pivot and hand the ball to the tailback at four yards. Then clear out and fake wide. |
-| **FB** | Lead through the hole between the guard and the tackle. Put your facemask on the linebacker and move him any direction — just move him. |
-| **TB** **(ball)** | Take the handoff at four yards, get downhill behind the fullback, and cut off his block. |
-
-**Coaching points**
-
-- Running away from the flanker means one fewer blocker out there, so the tailback has to get north fast.
-- Their defense will usually shade toward our flanker. That is the reason this play exists — check it before you call it.
-- Same block, same read as I Iso Right. Do not teach it as a new play, teach it as the same play flipped.
 
 ---
 
@@ -113,16 +83,16 @@ The whole play is one block: the fullback isolates their linebacker in the hole 
 
 | Position | Assignment |
 |---|---|
-| **LE** | Block back and cut off pursuit. You are the last one to the ball. |
-| **LT** | Block back. Take the first defender on or inside you. Nobody crosses your face. |
-| **LG** | Block back. Take the first defender on or inside you. Nobody crosses your face. |
-| **C** | Block the first defender to the backside. |
-| **RG** | Block the man over you and drive him to the inside. You are the inside wall of the hole. |
-| **RT** | Block the man over you and drive him to the outside. You are the outside wall of the hole. |
-| **RE** | Block the man over you and turn him out. |
-| **Z** | Release and screen the deepest defender on your side. Get in his way and stay there. |
+| **LE** | Cut off pursuit from behind. You are the last one to the ball, so never quit on the play. |
+| **LT** | The tackle is on your inside shoulder. Get your head across him and wall him off so he cannot chase. |
+| **LG** | Nobody is over you. Step back inside and cut off anyone chasing through the middle. |
+| **C** | You have the nose, head up on you. Hands inside and do not let him cross your face to the playside. |
+| **RG** | The tackle sits in the gap outside you. You and our tackle double him — hands inside, drive him backwards. |
+| **RT** | Double the tackle on your inside shoulder with the guard. Drive him back, and if the middle linebacker runs through, the guard comes off onto him. |
+| **RE** | The end is head up on you. Drive him out and widen the hole. |
+| **Z** | Release and screen the corner on your side. Get in his way and stay there. |
 | **QB** | Reverse pivot and hand the ball to the tailback at four yards. Then clear out and fake wide. |
-| **FB** | Lead through the hole between the guard and the tackle. Put your facemask on the linebacker and move him any direction — just move him. |
+| **FB** | Lead through the hole and put your facemask on the linebacker sitting over the double team. Move him any direction — just move him. |
 | **TB** **(ball)** | Take the handoff at four yards, get downhill behind the fullback, and cut off his block. If he takes the linebacker outside, you go inside. |
 
 **Coaching points**
@@ -134,33 +104,33 @@ The whole play is one block: the fullback isolates their linebacker in the hole 
 
 ---
 
-## I Power Left
+## I Iso Left
 
-**Call it:** `I 5 Power`
+**Call it:** `I 3 Iso`
 
-![I Power Left](cards/i-power-l.svg)
+![I Iso Left](cards/i-iso-l.svg)
 
-Power to the weak side. The flanker is not out there to help, so the kick-out and the wrap have to be clean — but their defense is usually leaning the other way.
+The same isolation block the other way. The flanker stays where he is, so this runs away from our strength — which is exactly why it is open.
 
 | Position | Assignment |
 |---|---|
-| **LE** | Block down on the first defender inside you. The man outside you belongs to the fullback. |
-| **LT** | Block down on the first defender inside you. |
-| **LG** | Block down on the first defender inside you. |
-| **C** | Block back on the backside gap. |
-| **RG** | PULL LEFT. Run flat behind the line and turn up outside our end. Block the first wrong-colored jersey you see. |
-| **RT** | Block back. Take the first defender on or inside you. Nobody crosses your face. |
-| **RE** | Block back and cut off pursuit. You are the last one to the ball. |
+| **LE** | The end is head up on you. Drive him out and widen the hole. |
+| **LT** | Double the tackle on your inside shoulder with the guard. Drive him back, and if the middle linebacker runs through, the guard comes off onto him. |
+| **LG** | The tackle sits in the gap outside you. You and our tackle double him — hands inside, drive him backwards. |
+| **C** | You have the nose, head up on you. Hands inside and do not let him cross your face to the playside. |
+| **RG** | Nobody is over you. Step back inside and cut off anyone chasing through the middle. |
+| **RT** | The tackle is on your inside shoulder. Get your head across him and wall him off so he cannot chase. |
+| **RE** | Cut off pursuit from behind. You are the last one to the ball, so never quit on the play. |
 | **Z** | Come across behind the line and cut off anybody chasing from the backside. |
-| **QB** | Reverse pivot, hand the ball to the tailback deep, then carry out the bootleg fake away from the play. |
-| **FB** | Kick out the first defender outside our end. Aim at his inside hip and run through him. |
-| **TB** **(ball)** | Take the handoff, press the outside hip of our end, then turn up inside the pulling guard. |
+| **QB** | Reverse pivot and hand the ball to the tailback at four yards. Then clear out and fake wide. |
+| **FB** | Lead through the hole and put your facemask on the linebacker sitting over the double team. Move him any direction — just move him. |
+| **TB** **(ball)** | Take the handoff at four yards, get downhill behind the fullback, and cut off his block. |
 
 **Coaching points**
 
-- Check their alignment first. If they have shaded toward our flanker, this is the call.
-- The flanker chases from behind. Tell him he is not decoration — he cuts off the corner who would otherwise run this down.
-- Everything else is I Power Right in a mirror. Teach the pair together.
+- Running away from the flanker means one fewer blocker out there, so the tailback has to get north fast.
+- Their defense will usually shade toward our flanker. That is the reason this play exists — check it before you call it.
+- Same block, same read as I Iso Right. Do not teach it as a new play, teach it as the same play flipped.
 
 ---
 
@@ -174,17 +144,17 @@ The power run out of the I. Playside blocks down, the fullback kicks out the end
 
 | Position | Assignment |
 |---|---|
-| **LE** | Block back and cut off pursuit. You are the last one to the ball. |
-| **LT** | Block back. Take the first defender on or inside you. Nobody crosses your face. |
-| **LG** | PULL RIGHT. Run flat behind the line and turn up outside our end. Block the first wrong-colored jersey you see. |
-| **C** | Block back on the backside gap. |
-| **RG** | Block down on the first defender inside you. |
-| **RT** | Block down on the first defender inside you. |
-| **RE** | Block down on the first defender inside you. The man outside you belongs to the fullback. |
-| **Z** | Release and screen the deepest defender on your side. Get in his way and stay there. |
+| **LE** | Cut off pursuit from behind. You are the last one to the ball, so never quit on the play. |
+| **LT** | Block back. Take the first defender on or inside you — nobody crosses your face. |
+| **LG** | PULL RIGHT. Run flat behind the line and turn up in the open gap between our tackle and our end. Block the first wrong-colored jersey you see. |
+| **C** | You have the nose, head up on you. Hands inside and do not let him cross your face to the playside. |
+| **RG** | Nobody is over you. Help the center drive the nose for one count, then climb to the middle linebacker. |
+| **RT** | The tackle is on your inside shoulder. Block him down and seal him inside — that is what opens the hole. |
+| **RE** | Release inside off his outside shoulder and take the playside linebacker. The end over you is being kicked out — leave him alone. |
+| **Z** | Release and screen the corner on your side. Get in his way and stay there. |
 | **QB** | Reverse pivot, hand the ball to the tailback deep, then carry out the bootleg fake away from the play. |
-| **FB** | Kick out the first defender outside our end. Aim at his inside hip and run through him. |
-| **TB** **(ball)** | Take the handoff, press the outside hip of our end, then turn up inside the pulling guard. Be patient for one step, then go. |
+| **FB** | Kick out the end. Aim at his inside hip and run through him — do not stop your feet. |
+| **TB** **(ball)** | Take the handoff, press the outside hip of our tackle, then turn up inside the pulling guard. Be patient for one step, then go. |
 
 **Coaching points**
 
@@ -192,6 +162,36 @@ The power run out of the I. Playside blocks down, the fullback kicks out the end
 - The tailback starts deeper than the wishbone halfback does, so the kick-out block has to hold a beat longer. Drill it on a count.
 - The pulling guard stays flat and tight to the line. Bellying back is what makes this play late.
 - If the pulling guard cannot get there in time, run I Iso instead — it needs no pullers.
+
+---
+
+## I Power Left
+
+**Call it:** `I 5 Power`
+
+![I Power Left](cards/i-power-l.svg)
+
+Power to the weak side. The flanker is not out there to help, so the kick-out and the wrap have to be clean — but their defense is usually leaning the other way.
+
+| Position | Assignment |
+|---|---|
+| **LE** | Release inside off his outside shoulder and take the playside linebacker. The end over you is being kicked out — leave him alone. |
+| **LT** | The tackle is on your inside shoulder. Block him down and seal him inside — that is what opens the hole. |
+| **LG** | Nobody is over you. Help the center drive the nose for one count, then climb to the middle linebacker. |
+| **C** | You have the nose, head up on you. Hands inside and do not let him cross your face to the playside. |
+| **RG** | PULL LEFT. Run flat behind the line and turn up in the open gap between our tackle and our end. Block the first wrong-colored jersey you see. |
+| **RT** | Block back. Take the first defender on or inside you — nobody crosses your face. |
+| **RE** | Cut off pursuit from behind. You are the last one to the ball, so never quit on the play. |
+| **Z** | Come across behind the line and cut off anybody chasing from the backside. |
+| **QB** | Reverse pivot, hand the ball to the tailback deep, then carry out the bootleg fake away from the play. |
+| **FB** | Kick out the end. Aim at his inside hip and run through him — do not stop your feet. |
+| **TB** **(ball)** | Take the handoff, press the outside hip of our tackle, then turn up inside the pulling guard. |
+
+**Coaching points**
+
+- Check their alignment first. If they have shaded toward our flanker, this is the call.
+- The flanker chases from behind. Tell him he is not decoration — he cuts off the corner who would otherwise run this down.
+- Everything else is I Power Right in a mirror. Teach the pair together.
 
 ---
 
@@ -205,17 +205,17 @@ Get outside. The fullback and the flanker are both out in front and the tailback
 
 | Position | Assignment |
 |---|---|
-| **LE** | Block back and cut off pursuit. You are the last one to the ball. |
-| **LT** | Block back. Take the first defender on or inside you. Nobody crosses your face. |
-| **LG** | Block back. Take the first defender on or inside you. Nobody crosses your face. |
-| **C** | Reach the man over you. If nobody is over you, cut off the backside gap. |
-| **RG** | Reach the first defender to the playside. Get your head across his outside shoulder. |
-| **RT** | Reach the man on or outside you. If you cannot reach him, run him past the play. |
-| **RE** | Reach the man over you and turn him in. Let the ball go around you. |
-| **Z** | Block the deepest defender on your side. Run at his outside number and screen him away from the ball. |
+| **LE** | Cut off pursuit from behind. You are the last one to the ball, so never quit on the play. |
+| **LT** | Block back. Take the first defender on or inside you — nobody crosses your face. |
+| **LG** | Nobody is over you. Cut off the backside — nothing chases this from behind. |
+| **C** | Reach the nose. Get your head across his playside shoulder so he cannot run down the line. |
+| **RG** | Nobody is over you. Climb straight to the middle linebacker and cut him off from the sideline. |
+| **RT** | The tackle is on your inside shoulder. Get your head across him and wall him off so he cannot chase. |
+| **RE** | Reach the end over you. If you cannot reach him, turn him inside and let the ball go around. |
+| **Z** | Block the corner on your side. Run at his outside number and screen him away from the ball. |
 | **QB** | Reverse pivot and hand the ball to the tailback as deep as you can. Then boot away and sell it. |
-| **FB** | Get to the corner ahead of the tailback and kick out the first defender who shows. You are the lead blocker — beat him there. |
-| **TB** **(ball)** | Take the handoff going full speed and get to the corner. Turn up when the fullback blocks somebody, not before. Never stop your feet. |
+| **FB** | Beat the tailback to the corner and kick out the first defender who shows. You are the lead blocker — get there first. |
+| **TB** **(ball)** | Take the handoff at full speed and get to the corner. Turn up when the fullback blocks somebody, not before. |
 
 **Coaching points**
 
@@ -223,37 +223,6 @@ Get outside. The fullback and the flanker are both out in front and the tailback
 - The fullback has to beat the tailback to the corner. If he is trailing, the play has no lead blocker.
 - One rule for the tailback: turn up off the fullback's block. Running to the sideline is how this play loses eight yards.
 - Watch our end reach-blocking. If he cannot reach their end, run I Power to that side instead.
-
----
-
-## I Boot Right
-
-**Call it:** `I 8 Boot`
-
-![I Boot Right](cards/i-boot-r.svg)
-
-Play action off the sweep look. Two receivers to the flanker side and a quarterback with the whole edge to himself. Run first, throw second.
-
-| Position | Assignment |
-|---|---|
-| **LE** | Block down and sell the run. This has to look exactly like the sweep going the other way. |
-| **LT** | Block down on the first defender inside you. |
-| **LG** | Block the man over you and drive him away from the boot. |
-| **C** | Block back toward the boot side. Nobody chases through the middle. |
-| **RG** | PULL LEFT and run the sweep path to sell the fake. You are a decoy — take their linebacker with you. |
-| **RT** | Hinge and protect the boot side. Nobody comes free outside you — the quarterback is alone back there. |
-| **RE** | Engage their end for a count, then release and settle at eight yards on the boot side. |
-| **Z** **(ball)** | Run to the flat at four yards and stay in front of the quarterback. You are the easy throw. |
-| **QB** | Fake the sweep with both hands, hide the ball on your back hip, and get to the edge. Run it if it is open. Only throw if a defender comes up to take you. |
-| **FB** | Run the sweep path away from the boot and block whatever shows. Sell it. |
-| **TB** | Run the full sweep path away from the boot with your arms tucked like you have the ball. Sell it all the way to the sideline. |
-
-**Coaching points**
-
-- Our ends must engage their end before releasing — sell the run first, then get out.
-- Run first. At this age the quarterback usually walks into ten yards before anyone finds him.
-- No blitzing is allowed for 8- and 9-year-olds, so the quarterback has time. Teach him to be patient and look up.
-- One throw, then tuck it. No scrambling backwards, ever.
 
 ---
 
@@ -267,13 +236,13 @@ Misdirection off the sweep. We show them the sweep to the flanker side, their li
 
 | Position | Assignment |
 |---|---|
-| **LE** | Block down on the first defender inside you. The man outside you is being kicked out. |
-| **LT** | Block down on the first defender inside you. |
-| **LG** | Block down on the first defender inside you. |
-| **C** | Block the nose. Do not let him cross your face to the playside. |
-| **RG** | PULL LEFT. Stay flat behind the line and kick out the first defender outside our end. |
-| **RT** | Block back. Take the first defender on or inside you. Nobody crosses your face. |
-| **RE** | Block back and cut off pursuit. You are the last one to the ball. |
+| **LE** | Release inside off his outside shoulder and take the playside linebacker. The end over you is being kicked out — leave him alone. |
+| **LT** | The tackle is on your inside shoulder. Block him down and seal him inside — that is what opens the hole. |
+| **LG** | Nobody is over you. Help the center drive the nose for one count, then climb to the middle linebacker. |
+| **C** | You have the nose, head up on you. Hands inside and do not let him cross your face to the playside. |
+| **RG** | PULL LEFT. Stay flat behind the line and kick out the end on the other side. |
+| **RT** | Block back. Take the first defender on or inside you — nobody crosses your face. |
+| **RE** | Cut off pursuit from behind. You are the last one to the ball, so never quit on the play. |
 | **Z** | Take one hard step upfield like the sweep is coming, then come back and cut off the backside. |
 | **QB** | Take the snap, fake the sweep the other way with both hands, then turn back and hand to the tailback. The fake comes first — the handoff is late on purpose. |
 | **FB** | Run the sweep path to the other side at full speed and block anything that shows. You are the lie. |
@@ -285,4 +254,35 @@ Misdirection off the sweep. We show them the sweep to the flanker side, their li
 - The tailback's counter steps must be full speed and full length. A shuffle fools nobody.
 - The fullback selling the sweep matters more than his block. Tell him he is the decoy and mean it.
 - If their backside linebacker stops chasing the sweep, go back to I Power Left.
+
+---
+
+## I Boot Right
+
+**Call it:** `I 8 Boot`
+
+![I Boot Right](cards/i-boot-r.svg)
+
+Play action off the sweep look. Two receivers to the flanker side and a quarterback with the whole edge to himself. Run first, throw second.
+
+| Position | Assignment |
+|---|---|
+| **LE** | Block down inside and sell the run. This has to look exactly like the sweep going the other way. |
+| **LT** | The tackle is on your inside shoulder. Block him down and seal him inside — that is what opens the hole. |
+| **LG** | Nobody is over you. Help the center on the nose and drive him away from the boot. |
+| **C** | Block the nose back toward the boot side. Nobody chases through the middle. |
+| **RG** | PULL LEFT and run the sweep path to sell the fake. You are a decoy — take a linebacker with you. |
+| **RT** | Hinge and protect the boot side. Nobody comes free outside you — the quarterback is alone back there. |
+| **RE** | Engage the end over you for a count, then release and settle at eight yards on the boot side. |
+| **Z** **(ball)** | Run to the flat at four yards and stay in front of the quarterback. You are the easy throw. |
+| **QB** | Fake the sweep with both hands, hide the ball on your back hip, and get to the edge. Run it if it is open. Only throw if a defender comes up to take you. |
+| **FB** | Run the sweep path away from the boot and block whatever shows. Sell it. |
+| **TB** | Run the full sweep path away from the boot with your arms tucked like you have the ball. Sell it all the way to the sideline. |
+
+**Coaching points**
+
+- Our ends must engage their end before releasing — sell the run first, then get out.
+- Run first. At this age the quarterback usually walks into ten yards before anyone finds him.
+- No blitzing is allowed for 8- and 9-year-olds, so the quarterback has time. Teach him to be patient and look up.
+- One throw, then tuck it. No scrambling backwards, ever.
 

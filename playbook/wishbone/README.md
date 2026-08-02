@@ -29,15 +29,15 @@ Three backs in a Y behind the quarterback: fullback close at three yards, then t
 
 ## Plays
 
-| Play | Call | Type | Ball | Install |
-|---|---|---|---|---|
-| [Bone Dive](#bone-dive) | `Bone 2 Dive` | run | FB | Week 1 |
-| [Bone Power Left](#bone-power-left) | `Bone 5 Power` | run | LH | Week 1 |
-| [Bone Power Right](#bone-power-right) | `Bone 6 Power` | run | RH | Week 1 |
-| [Bone Pitch Left](#bone-pitch-left) | `Bone 7 Pitch` | run | LH | Week 2 |
-| [Bone Pitch Right](#bone-pitch-right) | `Bone 8 Pitch` | run | RH | Week 2 |
-| [Bone Counter Left](#bone-counter-left) | `Bone 5 Counter` | run | RH | Week 3 |
-| [Bone Counter Right](#bone-counter-right) | `Bone 6 Counter` | run | LH | Week 3 |
+| Play | Call | Type | Ball |
+|---|---|---|---|
+| [Bone Dive](#bone-dive) | `Bone 2 Dive` | run | FB |
+| [Bone Power Right](#bone-power-right) | `Bone 6 Power` | run | RH |
+| [Bone Power Left](#bone-power-left) | `Bone 5 Power` | run | LH |
+| [Bone Pitch Right](#bone-pitch-right) | `Bone 8 Pitch` | run | RH |
+| [Bone Pitch Left](#bone-pitch-left) | `Bone 7 Pitch` | run | LH |
+| [Bone Counter Right](#bone-counter-right) | `Bone 6 Counter` | run | LH |
+| [Bone Counter Left](#bone-counter-left) | `Bone 5 Counter` | run | RH |
 
 ---
 
@@ -51,13 +51,13 @@ The fullback straight up the middle, right now. This is the play that has to wor
 
 | Position | Assignment |
 |---|---|
-| **LE** | Block back and cut off pursuit. You are the last one to the ball. |
-| **LT** | Block back. Take the first defender on or inside you. Nobody crosses your face. |
-| **LG** | Block the man over you and drive him off the ball. |
-| **C** | Snap and block the man over you. If nobody is over you, climb to the middle linebacker. |
-| **RG** | Block the man over you and drive him off the ball. |
-| **RT** | Block back. Take the first defender on or inside you. Nobody crosses your face. |
-| **RE** | Block back and cut off pursuit. You are the last one to the ball. |
+| **LE** | The end is head up on you. Drive him out and away from the ball. |
+| **LT** | Climb straight to the linebacker on your side. The tackle inside you belongs to the guard. |
+| **LG** | Nobody is over you. Block out on the tackle in the gap outside you and open the hole. |
+| **C** | You have the nose alone, head up. Drive him straight back off the ball. Everything on this play depends on it. |
+| **RG** | Nobody is over you. Block out on the tackle in the gap outside you and open the hole. |
+| **RT** | Climb straight to the linebacker on your side. The tackle inside you belongs to the guard. |
+| **RE** | The end is head up on you. Drive him out and away from the ball. |
 | **QB** | Take the snap and hand the ball to the fullback at two yards. Then fake to the outside. |
 | **FB** **(ball)** | Run straight ahead behind the center. Take the ball and get north — there is no hole to look for. |
 | **LH** | Run the pitch path to your side at full speed and sell it. |
@@ -67,35 +67,6 @@ The fullback straight up the middle, right now. This is the play that has to wor
 
 - Both halfbacks run their fakes every single time. Three threats or none.
 - The fullback does not read anything. He runs at the center's back and keeps his feet moving.
-
----
-
-## Bone Power Left
-
-**Call it:** `Bone 5 Power`
-
-![Bone Power Left](cards/wb-power-l.svg)
-
-Off-tackle power with the fullback kicking out and the backside halfback leading through the hole. Two lead blockers in front of the ball carrier.
-
-| Position | Assignment |
-|---|---|
-| **LE** | Block down inside. The man outside you belongs to the fullback. |
-| **LT** | Block down on the first defender inside you. |
-| **LG** | Block down on the first defender inside you. |
-| **C** | Block back on the backside gap. |
-| **RG** | PULL LEFT. Run flat behind the line and turn up outside our end. Take the first wrong-colored jersey. |
-| **RT** | Block back. Take the first defender on or inside you. Nobody crosses your face. |
-| **RE** | Block back and cut off pursuit. You are the last one to the ball. |
-| **QB** | Reverse pivot and hand the ball to the playside halfback, then carry out the fake away from the play. |
-| **FB** | Kick out the first defender outside our end. Aim at his inside hip and run through him. |
-| **LH** **(ball)** | Take the handoff, press the outside hip of our end, then turn up inside the blocks. |
-| **RH** | Run behind the quarterback and lead through the hole. Block the first jersey inside the kick-out. |
-
-**Coaching points**
-
-- Two lead blockers and a pulling guard all arrive in the same place. Walk it through slowly first or they will run into each other.
-- The ball carrier is patient for one step, then goes. Teach the pause.
 
 ---
 
@@ -109,17 +80,17 @@ Off-tackle power with the fullback kicking out and the backside halfback leading
 
 | Position | Assignment |
 |---|---|
-| **LE** | Block back and cut off pursuit. You are the last one to the ball. |
-| **LT** | Block back. Take the first defender on or inside you. Nobody crosses your face. |
-| **LG** | PULL RIGHT. Run flat behind the line and turn up outside our end. Take the first wrong-colored jersey. |
-| **C** | Block back on the backside gap. |
-| **RG** | Block down on the first defender inside you. |
-| **RT** | Block down on the first defender inside you. |
-| **RE** | Block down inside. The man outside you belongs to the fullback. |
+| **LE** | Cut off pursuit from behind. You are the last one to the ball, so never quit on the play. |
+| **LT** | Block back. Take the first defender on or inside you — nobody crosses your face. |
+| **LG** | PULL RIGHT. Run flat behind the line and turn up in the open gap between our tackle and our end. Take the first wrong-colored jersey. |
+| **C** | You have the nose, head up on you. Hands inside and do not let him cross your face to the playside. |
+| **RG** | Nobody is over you. Help the center drive the nose for one count, then climb to the middle linebacker. |
+| **RT** | The tackle is on your inside shoulder. Block him down and seal him inside — that is what opens the hole. |
+| **RE** | Release inside off his outside shoulder and take the playside linebacker. The end over you is being kicked out — leave him alone. |
 | **QB** | Reverse pivot and hand the ball to the playside halfback, then carry out the fake away from the play. |
-| **FB** | Kick out the first defender outside our end. Aim at his inside hip and run through him. |
+| **FB** | Kick out the end. Aim at his inside hip and run through him. |
 | **LH** | Run behind the quarterback and lead through the hole. Block the first jersey inside the kick-out. |
-| **RH** **(ball)** | Take the handoff, press the outside hip of our end, then turn up inside the blocks. |
+| **RH** **(ball)** | Take the handoff, press the outside hip of our tackle, then turn up inside the blocks. |
 
 **Coaching points**
 
@@ -128,33 +99,32 @@ Off-tackle power with the fullback kicking out and the backside halfback leading
 
 ---
 
-## Bone Pitch Left
+## Bone Power Left
 
-**Call it:** `Bone 7 Pitch`
+**Call it:** `Bone 5 Power`
 
-![Bone Pitch Left](cards/wb-pitch-l.svg)
+![Bone Power Left](cards/wb-power-l.svg)
 
-Get outside in a hurry. The fullback dives to hold the middle, the quarterback attacks the edge and pitches. Against a defense that has crowded the box to stop the dive, this is where the yards are.
+Off-tackle power with the fullback kicking out and the backside halfback leading through the hole. Two lead blockers in front of the ball carrier.
 
 | Position | Assignment |
 |---|---|
-| **LE** | Release outside and block the deepest defender on your side. |
-| **LT** | Reach the man on or outside you. If you cannot reach him, run him past the play. |
-| **LG** | Reach the first defender to the playside. |
-| **C** | Reach the man over you; if nobody is over you, cut off the backside. |
-| **RG** | Block back. Take the first defender on or inside you. Nobody crosses your face. |
-| **RT** | Block back. Take the first defender on or inside you. Nobody crosses your face. |
-| **RE** | Block back and cut off pursuit. You are the last one to the ball. |
-| **QB** | Fake the dive to the fullback, attack the outside, and pitch the ball to the halfback before you get touched. Pitch early, not late. |
-| **FB** | Run the dive path and get tackled. Your fake is what keeps their linebackers inside. |
-| **LH** **(ball)** | Stay outside and behind the quarterback, catch the pitch on the run, and get to the corner. Never stop your feet. |
-| **RH** | Run behind the quarterback and get to the corner ahead of the ball. Kick out the first defender who shows. |
+| **LE** | Release inside off his outside shoulder and take the playside linebacker. The end over you is being kicked out — leave him alone. |
+| **LT** | The tackle is on your inside shoulder. Block him down and seal him inside — that is what opens the hole. |
+| **LG** | Nobody is over you. Help the center drive the nose for one count, then climb to the middle linebacker. |
+| **C** | You have the nose, head up on you. Hands inside and do not let him cross your face to the playside. |
+| **RG** | PULL LEFT. Run flat behind the line and turn up in the open gap between our tackle and our end. Take the first wrong-colored jersey. |
+| **RT** | Block back. Take the first defender on or inside you — nobody crosses your face. |
+| **RE** | Cut off pursuit from behind. You are the last one to the ball, so never quit on the play. |
+| **QB** | Reverse pivot and hand the ball to the playside halfback, then carry out the fake away from the play. |
+| **FB** | Kick out the end. Aim at his inside hip and run through him. |
+| **LH** **(ball)** | Take the handoff, press the outside hip of our tackle, then turn up inside the blocks. |
+| **RH** | Run behind the quarterback and lead through the hole. Block the first jersey inside the kick-out. |
 
 **Coaching points**
 
-- The pitch goes early. A quarterback who waits to be tackled first will pitch it on the ground.
-- This is not a read at this age — tell him before the snap that he is pitching it.
-- The halfback must stay behind the quarterback until he has the ball. Getting ahead means the pitch goes forward, which is a fumble waiting to happen.
+- Two lead blockers and a pulling guard all arrive in the same place. Walk it through slowly first or they will run into each other.
+- The ball carrier is patient for one step, then goes. Teach the pause.
 
 ---
 
@@ -168,12 +138,12 @@ Get outside in a hurry. The fullback dives to hold the middle, the quarterback a
 
 | Position | Assignment |
 |---|---|
-| **LE** | Block back and cut off pursuit. You are the last one to the ball. |
-| **LT** | Block back. Take the first defender on or inside you. Nobody crosses your face. |
-| **LG** | Block back. Take the first defender on or inside you. Nobody crosses your face. |
-| **C** | Reach the man over you; if nobody is over you, cut off the backside. |
-| **RG** | Reach the first defender to the playside. |
-| **RT** | Reach the man on or outside you. If you cannot reach him, run him past the play. |
+| **LE** | Cut off pursuit from behind. You are the last one to the ball, so never quit on the play. |
+| **LT** | Block back. Take the first defender on or inside you — nobody crosses your face. |
+| **LG** | Nobody is over you. Cut off the backside — nothing chases this from behind. |
+| **C** | Reach the nose. Get your head across his playside shoulder. |
+| **RG** | Nobody is over you. Climb to the middle linebacker and cut him off from the sideline. |
+| **RT** | The tackle is on your inside shoulder. Get your head across him and wall him off so he cannot chase. |
 | **RE** | Release outside and block the deepest defender on your side. |
 | **QB** | Fake the dive to the fullback, attack the outside, and pitch the ball to the halfback before you get touched. Pitch early, not late. |
 | **FB** | Run the dive path and get tackled. Your fake is what keeps their linebackers inside. |
@@ -188,32 +158,33 @@ Get outside in a hurry. The fullback dives to hold the middle, the quarterback a
 
 ---
 
-## Bone Counter Left
+## Bone Pitch Left
 
-**Call it:** `Bone 5 Counter`
+**Call it:** `Bone 7 Pitch`
 
-![Bone Counter Left](cards/wb-counter-l.svg)
+![Bone Pitch Left](cards/wb-pitch-l.svg)
 
-Everything goes one way and the backside halfback comes back the other. With three backs moving, this is the hardest play in the book for an eight-year-old defense to sort out.
+Get outside in a hurry. The fullback dives to hold the middle, the quarterback attacks the edge and pitches. Against a defense that has crowded the box to stop the dive, this is where the yards are.
 
 | Position | Assignment |
 |---|---|
-| **LE** | Block down inside. The man outside you is being kicked out. |
-| **LT** | Block down on the first defender inside you. |
-| **LG** | PULL LEFT. Stay flat and kick out the first defender outside our end. |
-| **C** | Block the nose. Do not let him cross your face to the playside. |
-| **RG** | Block back. Take the first defender on or inside you. Nobody crosses your face. |
-| **RT** | Block back. Take the first defender on or inside you. Nobody crosses your face. |
-| **RE** | Block back and cut off pursuit. You are the last one to the ball. |
-| **QB** | Fake the pitch to the right, then turn back and hand the ball to the other halfback coming across. The fake comes first. |
-| **FB** | Run the dive path and get hit. Same as every other play. |
-| **LH** | Run the full pitch path away at full speed with your arms tucked. You are the lie. |
-| **RH** **(ball)** | Take two hard steps toward the fake, then plant and come all the way back behind the pulling guard. |
+| **LE** | Release outside and block the deepest defender on your side. |
+| **LT** | The tackle is on your inside shoulder. Get your head across him and wall him off so he cannot chase. |
+| **LG** | Nobody is over you. Climb to the middle linebacker and cut him off from the sideline. |
+| **C** | Reach the nose. Get your head across his playside shoulder. |
+| **RG** | Nobody is over you. Cut off the backside — nothing chases this from behind. |
+| **RT** | Block back. Take the first defender on or inside you — nobody crosses your face. |
+| **RE** | Cut off pursuit from behind. You are the last one to the ball, so never quit on the play. |
+| **QB** | Fake the dive to the fullback, attack the outside, and pitch the ball to the halfback before you get touched. Pitch early, not late. |
+| **FB** | Run the dive path and get tackled. Your fake is what keeps their linebackers inside. |
+| **LH** **(ball)** | Stay outside and behind the quarterback, catch the pitch on the run, and get to the corner. Never stop your feet. |
+| **RH** | Run behind the quarterback and get to the corner ahead of the ball. Kick out the first defender who shows. |
 
 **Coaching points**
 
-- Do not call this until the pitch has been working. It is the counter-punch.
-- The ball carrier crosses behind the fullback, so the timing is slow on purpose. The line has to hold blocks an extra count.
+- The pitch goes early. A quarterback who waits to be tackled first will pitch it on the ground.
+- This is not a read at this age — tell him before the snap that he is pitching it.
+- The halfback must stay behind the quarterback until he has the ball. Getting ahead means the pitch goes forward, which is a fumble waiting to happen.
 
 ---
 
@@ -227,17 +198,46 @@ Everything goes one way and the backside halfback comes back the other. With thr
 
 | Position | Assignment |
 |---|---|
-| **LE** | Block back and cut off pursuit. You are the last one to the ball. |
-| **LT** | Block back. Take the first defender on or inside you. Nobody crosses your face. |
-| **LG** | Block back. Take the first defender on or inside you. Nobody crosses your face. |
-| **C** | Block the nose. Do not let him cross your face to the playside. |
-| **RG** | PULL RIGHT. Stay flat and kick out the first defender outside our end. |
-| **RT** | Block down on the first defender inside you. |
-| **RE** | Block down inside. The man outside you is being kicked out. |
+| **LE** | Cut off pursuit from behind. You are the last one to the ball, so never quit on the play. |
+| **LT** | Block back. Take the first defender on or inside you — nobody crosses your face. |
+| **LG** | Nobody is over you. Cut off the backside. |
+| **C** | You have the nose, head up on you. Hands inside and do not let him cross your face to the playside. |
+| **RG** | PULL RIGHT. Stay flat and kick out the end on the playside. |
+| **RT** | The tackle is on your inside shoulder. Block him down and seal him inside — that is what opens the hole. |
+| **RE** | Release inside off his outside shoulder and take the playside linebacker. The end over you is being kicked out — leave him alone. |
 | **QB** | Fake the pitch to the left, then turn back and hand the ball to the other halfback coming across. The fake comes first. |
 | **FB** | Run the dive path and get hit. Same as every other play. |
 | **LH** **(ball)** | Take two hard steps toward the fake, then plant and come all the way back behind the pulling guard. |
 | **RH** | Run the full pitch path away at full speed with your arms tucked. You are the lie. |
+
+**Coaching points**
+
+- Do not call this until the pitch has been working. It is the counter-punch.
+- The ball carrier crosses behind the fullback, so the timing is slow on purpose. The line has to hold blocks an extra count.
+
+---
+
+## Bone Counter Left
+
+**Call it:** `Bone 5 Counter`
+
+![Bone Counter Left](cards/wb-counter-l.svg)
+
+Everything goes one way and the backside halfback comes back the other. With three backs moving, this is the hardest play in the book for an eight-year-old defense to sort out.
+
+| Position | Assignment |
+|---|---|
+| **LE** | Release inside off his outside shoulder and take the playside linebacker. The end over you is being kicked out — leave him alone. |
+| **LT** | The tackle is on your inside shoulder. Block him down and seal him inside — that is what opens the hole. |
+| **LG** | PULL LEFT. Stay flat and kick out the end on the playside. |
+| **C** | You have the nose, head up on you. Hands inside and do not let him cross your face to the playside. |
+| **RG** | Nobody is over you. Cut off the backside. |
+| **RT** | Block back. Take the first defender on or inside you — nobody crosses your face. |
+| **RE** | Cut off pursuit from behind. You are the last one to the ball, so never quit on the play. |
+| **QB** | Fake the pitch to the right, then turn back and hand the ball to the other halfback coming across. The fake comes first. |
+| **FB** | Run the dive path and get hit. Same as every other play. |
+| **LH** | Run the full pitch path away at full speed with your arms tucked. You are the lie. |
+| **RH** **(ball)** | Take two hard steps toward the fake, then plant and come all the way back behind the pulling guard. |
 
 **Coaching points**
 

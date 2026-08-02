@@ -69,7 +69,6 @@ with an explicit error if one is violated. That check exists because getting it 
 not cosmetic: an illegal formation is a 15-yard unsportsmanlike penalty on the head coach
 and a second one gets him ejected.
 
-The install weeks on each play are within a formation, not across the whole book.
 
 ## The website
 
@@ -149,13 +148,28 @@ RULES.md                              league rules that constrain the playbook
 Only the JSON under `playbook/` and `defense/` is source. Everything else with a `.html`, `.svg` or
 `PLAYBOOK.md` name is rebuilt from it.
 
-## A note on the defenses
+## Every offensive play is drawn and blocked against the 5-3
 
-Cards are drawn against whichever legal front is most useful for teaching that play. The
-alignment on a card is a teaching aid, not a prediction — blocking rules are written by
-leverage ("first defender inside you", "the man over you"), so they hold up against
-whatever actually lines up across from us.
+All fifteen plays are drawn against the **5-3**, and their assignments are written for
+that front specifically rather than in general terms. Against a 5-3 our line is covered
+like this:
 
-The 6-2, which is the most common front in youth football everywhere else, is **not legal
-in this league** — it has only two linebackers. The generator rejects it. See
+| Us | Them |
+|---|---|
+| Center | nose, head up |
+| **Both guards** | **uncovered** |
+| Tackles | tackle on the inside shoulder |
+| Ends | end, head up |
+
+Two things follow, and they are why the assignments read the way they do:
+
+- **"Block the man over you" is meaningless for a guard here.** Both guards are free, so
+  they either help the center on the nose and climb to the middle linebacker, or they
+  pull, or they cut off the backside.
+- **The open gap is between our tackle and our end.** There is no down lineman in it,
+  which is why every off-tackle play in the book — Power, Counter — aims there, and why
+  the playside end releases inside to the linebacker instead of blocking down.
+
+The 6-2, the most common front in youth football everywhere else, is **not legal in this
+league** — it has only two linebackers, and the generator rejects it. See
 [RULES.md](RULES.md).

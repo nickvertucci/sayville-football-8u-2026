@@ -35,12 +35,12 @@
 <line x1="257.1" y1="326.6" x2="272.1" y2="316.0" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 <path d="M351.0,337.5 L342.9,307.8" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
 <line x1="334.0" y1="310.2" x2="351.8" y2="305.4" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
-<path d="M313.2,337.5 L345.6,313.2" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-<line x1="340.1" y1="305.9" x2="351.1" y2="320.5" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
-<path d="M275.4,337.5 L310.5,313.2" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-<line x1="305.3" y1="305.7" x2="315.7" y2="320.7" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
-<path d="M237.6,337.5 L275.4,313.2" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-<line x1="270.4" y1="305.5" x2="280.4" y2="320.9" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
+<path d="M313.2,337.5 L329.4,307.8 L345.6,245.7" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="336.7" y1="243.4" x2="354.5" y2="248.0" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
+<path d="M275.4,337.5 L286.2,302.4" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="277.4" y1="299.7" x2="295.0" y2="305.1" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
+<path d="M237.6,337.5 L264.6,243.0" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="255.8" y1="240.5" x2="273.4" y2="245.5" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 <path d="M540.0,356.4 L513.0,324.0 L421.2,307.8" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 5"/>
 <polygon points="421.2,307.8 432.2,305.0 430.6,314.2" fill="#14213d"/>
 <path d="M351.0,364.5 L378.0,378.0 L340.2,386.1 L307.8,380.7" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 5"/>

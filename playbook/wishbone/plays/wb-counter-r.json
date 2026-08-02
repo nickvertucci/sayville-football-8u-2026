@@ -1,69 +1,100 @@
 {
   "id": "wb-counter-r",
+  "order": 6,
   "formation": "wishbone",
   "name": "Bone Counter Right",
   "call": "Bone 6 Counter",
   "type": "run",
   "defense": "5-3",
-  "install_week": 3,
   "direction": "right",
   "ball_carrier": "LH",
   "purpose": "Everything goes one way and the backside halfback comes back the other. With three backs moving, this is the hardest play in the book for an eight-year-old defense to sort out.",
   "assignments": {
     "LE": {
-      "rule": "Block back and cut off pursuit. You are the last one to the ball.",
+      "rule": "Cut off pursuit from behind. You are the last one to the ball, so never quit on the play.",
       "type": "block",
-      "path": [[1.0, 0.7]]
+      "path": [
+        [1.0, 0.7]
+      ]
     },
     "LT": {
-      "rule": "Block back. Take the first defender on or inside you. Nobody crosses your face.",
+      "rule": "Block back. Take the first defender on or inside you — nobody crosses your face.",
       "type": "block",
-      "path": [[1.0, 0.7]]
+      "path": [
+        [1.0, 0.7]
+      ]
     },
     "LG": {
-      "rule": "Block back. Take the first defender on or inside you. Nobody crosses your face.",
+      "rule": "Nobody is over you. Cut off the backside.",
       "type": "block",
-      "path": [[1.0, 0.7]]
+      "path": [
+        [1.0, 0.7]
+      ]
     },
     "C": {
-      "rule": "Block the nose. Do not let him cross your face to the playside.",
+      "rule": "You have the nose, head up on you. Hands inside and do not let him cross your face to the playside.",
       "type": "block",
-      "path": [[0.3, 1.1]]
+      "path": [
+        [0.3, 1.1]
+      ]
     },
     "RG": {
-      "rule": "PULL RIGHT. Stay flat and kick out the first defender outside our end.",
+      "rule": "PULL RIGHT. Stay flat and kick out the end on the playside.",
       "type": "block",
-      "path": [[0.7, -1.0], [3.8, -0.8], [4.8, 0.6]]
+      "path": [
+        [0.7, -1.0],
+        [3.8, -0.8],
+        [4.8, 0.6]
+      ]
     },
     "RT": {
-      "rule": "Block down on the first defender inside you.",
+      "rule": "The tackle is on your inside shoulder. Block him down and seal him inside — that is what opens the hole.",
       "type": "block",
-      "path": [[-1.3, 0.9]]
+      "path": [
+        [-0.4, 1.3]
+      ]
     },
     "RE": {
-      "rule": "Block down inside. The man outside you is being kicked out.",
+      "rule": "Release inside off his outside shoulder and take the playside linebacker. The end over you is being kicked out — leave him alone.",
       "type": "block",
-      "path": [[-1.4, 0.9]]
+      "path": [
+        [-1.0, 3.5]
+      ]
     },
     "QB": {
       "rule": "Fake the pitch to the left, then turn back and hand the ball to the other halfback coming across. The fake comes first.",
       "type": "fake",
-      "path": [[-1.2, -0.5], [0.4, -0.8], [1.4, -0.6]]
+      "path": [
+        [-1.2, -0.5],
+        [0.4, -0.8],
+        [1.4, -0.6]
+      ]
     },
     "FB": {
       "rule": "Run the dive path and get hit. Same as every other play.",
       "type": "fake",
-      "path": [[0.4, 2.0], [0.6, 4.2]]
+      "path": [
+        [0.4, 2.0],
+        [0.6, 4.2]
+      ]
     },
     "LH": {
       "rule": "Take two hard steps toward the fake, then plant and come all the way back behind the pulling guard.",
       "type": "run",
-      "path": [[-1.4, 0.6], [1.4, 2.2], [4.0, 4.6], [4.4, 7.2]]
+      "path": [
+        [-1.4, 0.6],
+        [1.4, 2.2],
+        [4.0, 4.6],
+        [4.4, 7.2]
+      ]
     },
     "RH": {
       "rule": "Run the full pitch path away at full speed with your arms tucked. You are the lie.",
       "type": "fake",
-      "path": [[-2.6, 1.2], [-6.0, 2.4]]
+      "path": [
+        [-2.6, 1.2],
+        [-6.0, 2.4]
+      ]
     }
   },
   "coaching_points": [

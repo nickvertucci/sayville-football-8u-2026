@@ -252,7 +252,7 @@ def resolve_plays(plays_dir: Path, form: dict) -> list[dict]:
     plays = list(resolved.values())
     for p in plays:
         p["_formation"] = form
-    plays.sort(key=lambda p: (p.get("install_week", 99), p.get("name", ""), p.get("id", "")))
+    plays.sort(key=lambda p: (p.get("order", 99), p.get("name", ""), p.get("id", "")))
     return plays
 
 
@@ -507,8 +507,6 @@ def render_card(play: dict, defenses: dict, frame: tuple[float, float, float]) -
     meta_bits = [play.get("type", "").upper(), form_label(form)]
     if defense:
         meta_bits.append(f"vs {defense['name']}")
-    if play.get("install_week"):
-        meta_bits.append(f"Install wk {play['install_week']}")
     meta = "  •  ".join(b for b in meta_bits if b)
 
     svg = [
@@ -575,7 +573,7 @@ def render_card(play: dict, defenses: dict, frame: tuple[float, float, float]) -
     return "\n".join(svg)
 
 
-# The offence a defensive card is drawn against: a balanced two-tight-end set, so the
+# The offense a defensive card is drawn against: a balanced two-tight-end set, so the
 # picture does not imply we only ever face one formation.
 GENERIC_OFFENSE = {
     "LE": [-4.2, -0.5], "LT": [-2.8, -0.5], "LG": [-1.4, -0.5], "C": [0.0, -0.5],
@@ -612,16 +610,16 @@ def draw_defenders(front: dict) -> str:
     for pos, (x, y) in front["alignment"].items():
         cx, cy = fx(x), fy(y)
         a = r * 0.66
-        colour = COLORS["offense"]
+        color = COLORS["offense"]
         out.append(
             f'<line x1="{cx-a:.1f}" y1="{cy-a:.1f}" x2="{cx+a:.1f}" y2="{cy+a:.1f}" '
-            f'stroke="{colour}" stroke-width="3.4" stroke-linecap="round"/>'
+            f'stroke="{color}" stroke-width="3.4" stroke-linecap="round"/>'
             f'<line x1="{cx+a:.1f}" y1="{cy-a:.1f}" x2="{cx-a:.1f}" y2="{cy+a:.1f}" '
-            f'stroke="{colour}" stroke-width="3.4" stroke-linecap="round"/>'
+            f'stroke="{color}" stroke-width="3.4" stroke-linecap="round"/>'
         )
         out.append(
             f'<text x="{cx:.1f}" y="{cy - r - 5:.1f}" text-anchor="middle" font-size="11.5" '
-            f'font-weight="700" fill="{colour}">{esc(pos)}</text>'
+            f'font-weight="700" fill="{color}">{esc(pos)}</text>'
         )
     return "\n".join(out)
 
@@ -636,9 +634,9 @@ def draw_defense_paths(front: dict) -> str:
         ax, ay = front["alignment"][pos]
         pts = [[ax, ay]] + [[ax + p[0], ay + p[1]] for p in path]
         dashed = spec.get("type") != "attack"
-        colour = COLORS["carrier"] if spec.get("type") == "attack" else COLORS["offense"]
-        out.append(polyline(pts, colour, width=2.4, dashed=dashed))
-        out.append(arrow_head(pts[-2], pts[-1], colour))
+        color = COLORS["carrier"] if spec.get("type") == "attack" else COLORS["offense"]
+        out.append(polyline(pts, color, width=2.4, dashed=dashed))
+        out.append(arrow_head(pts[-2], pts[-1], color))
     return "\n".join(out)
 
 
@@ -785,12 +783,12 @@ def write_formation_readme(form: dict) -> str:
         out += ["**Formation coaching notes**", ""]
         out += [f"- {c}" for c in form["coaching_notes"]]
         out.append("")
-    out += ["## Plays", "", "| Play | Call | Type | Ball | Install |", "|---|---|---|---|---|"]
+    out += ["## Plays", "", "| Play | Call | Type | Ball |", "|---|---|---|---|"]
     for p in form["_plays"]:
         title = p["name"]
         out.append(
             f"| [{title}](#{slug(title)}) | `{p.get('call', '')}` | {p.get('type', '')} "
-            f"| {p.get('ball_carrier', '—')} | Week {p.get('install_week', '-')} |"
+f"| {p.get('ball_carrier', '—')} |"
         )
     out.append("")
     for p in form["_plays"]:
@@ -806,8 +804,8 @@ def write_playbook(formations: list[dict]) -> str:
         "",
         "Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)",
         "",
-        "| # | Play | Call | Type | Formation | Ball | Install |",
-        "|---|---|---|---|---|---|---|",
+        "| # | Play | Call | Type | Formation | Ball |",
+        "|---|---|---|---|---|---|",
     ]
     n = 0
     for form in formations:
@@ -817,7 +815,7 @@ def write_playbook(formations: list[dict]) -> str:
             out.append(
                 f"| {n} | [{title}](#{slug(title)}) | `{p.get('call', '')}` "
                 f"| {p.get('type', '')} | {form['name']} "
-                f"| {p.get('ball_carrier', '—')} | Week {p.get('install_week', '-')} |"
+                f"| {p.get('ball_carrier', '—')} |"
             )
     out.append("")
     for form in formations:

@@ -26,7 +26,7 @@ SITE_TITLE = "Sayville 8U Tackle Football"
 # --------------------------------------------------------------------------- css --
 
 SITE_CSS = """
-/* Every colour goes through a token so dark mode is one block of overrides rather
+/* Every color goes through a token so dark mode is one block of overrides rather
    than forty hardcoded values that quietly stay light. */
 :root {
   --bg: #eceff4;
@@ -474,7 +474,7 @@ footer.site a { color: var(--accent-ink); }
   article.play > header { padding-bottom: 5px; margin-bottom: 8px; }
   article.play h2 { font-size: 16pt; }
   .call, .tag { font-size: 8.5pt; padding: 2px 6px; }
-  /* Picture leads. The figure is pinned to a fixed height with the diagram centred
+  /* Picture leads. The figure is pinned to a fixed height with the diagram centerd
      inside it, so pagination is identical for a wide play and a deep one and every
      card lands on exactly one sheet. The height below is the largest that still
      leaves room for eleven assignments and the coaching points — measured, not
@@ -922,8 +922,7 @@ def write_calls(formations: list[dict], defenses: dict) -> str:
                 f'<td><a href="{p_href(p)}">{esc(p["name"])}</a></td>'
                 f'<td>{esc(form_label(f))}</td>'
                 f'<td class="c">{esc(p.get("type", ""))}</td>'
-                f'<td class="c">{esc(p.get("ball_carrier", "—"))}</td>'
-                f'<td class="c">{esc(p.get("install_week", "—"))}</td></tr>'
+                f'<td class="c">{esc(p.get("ball_carrier", "—"))}</td></tr>'
             )
     chips = ['<button class="chip" data-filter="all" aria-pressed="true">All</button>']
     for f in formations:
@@ -949,7 +948,7 @@ carrier — press <kbd>/</kbd> to jump to the search box.</p>
 <div class="tablewrap">
   <table class="calls" id="calls">
     <thead><tr>
-      <th>Call</th><th>Play</th><th>Formation</th><th>Type</th><th>Ball</th><th>Wk</th>
+      <th>Call</th><th>Play</th><th>Formation</th><th>Type</th><th>Ball</th>
     </tr></thead>
     <tbody>
       {chr(10).join('      ' + r for r in rows).strip()}
@@ -968,26 +967,17 @@ carrier — press <kbd>/</kbd> to jump to the search box.</p>
 
 
 def write_formation_page(form: dict, formations: list[dict], defenses: dict) -> str:
-    weeks: dict[int, list] = {}
+    cards = []
     for p in form["_plays"]:
-        weeks.setdefault(p.get("install_week", 99), []).append(p)
-
-    blocks = []
-    for w in sorted(weeks):
-        label = f"Week {w}" if w != 99 else "Unscheduled"
-        cards = []
-        for p in weeks[w]:
-            cards.append(
-                f'<a class="pcard" href="{p_href(p)}">'
-                f'<div class="thumb"><img loading="lazy" src="{card_src(form, p)}" '
-                f'alt="{esc(p["name"])} diagram"></div>'
-                f'<div class="body"><h4>{esc(p["name"])}</h4>'
-                f'<span class="call">{esc(p.get("call", ""))}</span></div></a>'
-            )
-        blocks.append(
-            f'<p class="section-head">{esc(label)}</p>\n'
-            f'<div class="plist">\n  {chr(10).join("  " + c for c in cards).strip()}\n</div>'
+        cards.append(
+            f'<a class="pcard" href="{p_href(p)}">'
+            f'<div class="thumb"><img loading="lazy" src="{card_src(form, p)}" '
+            f'alt="{esc(p["name"])} diagram"></div>'
+            f'<div class="body"><h4>{esc(p["name"])}</h4>'
+            f'<span class="call">{esc(p.get("call", ""))}</span></div></a>'
         )
+    blocks = ['<p class="section-head">The plays</p>'
+              f'<div class="plist">{"".join(cards)}</div>']
 
     notes = ""
     if form.get("coaching_notes"):
@@ -1153,7 +1143,7 @@ the league rulebook by the generator &mdash; an illegal front fails the build.</
   <p><strong>Blitzing is illegal at all times.</strong> No defender may move forward
   before the snap. Gap penetration after the snap is fine &mdash; that is not a blitz.</p>
   <p>Circumventing this is a 15-yard unsportsmanlike penalty on the head coach, and a
-  second offence gets him ejected. Full detail in
+  second offense gets him ejected. Full detail in
   <a href="https://github.com/nickvertucci/sayville-football-8u-2026/blob/main/RULES.md">RULES.md</a>.</p>
 </div>"""
     return page(

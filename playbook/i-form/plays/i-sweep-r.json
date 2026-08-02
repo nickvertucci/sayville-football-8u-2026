@@ -1,66 +1,67 @@
 {
   "id": "i-sweep-r",
+  "order": 6,
   "formation": "i-form",
   "name": "I Sweep Right",
   "call": "I 8 Sweep",
   "type": "run",
-  "defense": "4-4",
-  "install_week": 2,
+  "defense": "5-3",
   "direction": "right",
   "ball_carrier": "TB",
   "purpose": "Get outside. The fullback and the flanker are both out in front and the tailback has room to run. This is the play that makes them widen out, which is what opens the dive and the iso.",
   "assignments": {
     "LE": {
-      "rule": "Block back and cut off pursuit. You are the last one to the ball.",
+      "rule": "Cut off pursuit from behind. You are the last one to the ball, so never quit on the play.",
       "type": "block",
       "path": [
         [1.0, 0.7]
       ]
     },
     "LT": {
-      "rule": "Block back. Take the first defender on or inside you. Nobody crosses your face.",
+      "rule": "Block back. Take the first defender on or inside you — nobody crosses your face.",
       "type": "block",
       "path": [
         [1.0, 0.7]
       ]
     },
     "LG": {
-      "rule": "Block back. Take the first defender on or inside you. Nobody crosses your face.",
+      "rule": "Nobody is over you. Cut off the backside — nothing chases this from behind.",
       "type": "block",
       "path": [
         [1.0, 0.7]
       ]
     },
     "C": {
-      "rule": "Reach the man over you. If nobody is over you, cut off the backside gap.",
+      "rule": "Reach the nose. Get your head across his playside shoulder so he cannot run down the line.",
       "type": "block",
       "path": [
         [0.6, 1.0]
       ]
     },
     "RG": {
-      "rule": "Reach the first defender to the playside. Get your head across his outside shoulder.",
+      "rule": "Nobody is over you. Climb straight to the middle linebacker and cut him off from the sideline.",
       "type": "block",
       "path": [
-        [0.9, 1.0]
+        [0.4, 1.2],
+        [-0.6, 3.4]
       ]
     },
     "RT": {
-      "rule": "Reach the man on or outside you. If you cannot reach him, run him past the play.",
+      "rule": "The tackle is on your inside shoulder. Get your head across him and wall him off so he cannot chase.",
       "type": "block",
       "path": [
         [0.9, 1.0]
       ]
     },
     "RE": {
-      "rule": "Reach the man over you and turn him in. Let the ball go around you.",
+      "rule": "Reach the end over you. If you cannot reach him, turn him inside and let the ball go around.",
       "type": "block",
       "path": [
         [0.7, 1.0]
       ]
     },
     "Z": {
-      "rule": "Block the deepest defender on your side. Run at his outside number and screen him away from the ball.",
+      "rule": "Block the corner on your side. Run at his outside number and screen him away from the ball.",
       "type": "block",
       "path": [
         [1.6, 2.2],
@@ -76,7 +77,7 @@
       ]
     },
     "FB": {
-      "rule": "Get to the corner ahead of the tailback and kick out the first defender who shows. You are the lead blocker — beat him there.",
+      "rule": "Beat the tailback to the corner and kick out the first defender who shows. You are the lead blocker — get there first.",
       "type": "block",
       "path": [
         [3.4, 1.4],
@@ -84,7 +85,7 @@
       ]
     },
     "TB": {
-      "rule": "Take the handoff going full speed and get to the corner. Turn up when the fullback blocks somebody, not before. Never stop your feet.",
+      "rule": "Take the handoff at full speed and get to the corner. Turn up when the fullback blocks somebody, not before.",
       "type": "run",
       "path": [
         [1.6, 2.0],

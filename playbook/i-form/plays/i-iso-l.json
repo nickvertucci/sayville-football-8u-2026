@@ -1,69 +1,97 @@
 {
   "id": "i-iso-l",
+  "order": 3,
   "formation": "i-form",
   "name": "I Iso Left",
   "call": "I 3 Iso",
   "type": "run",
-  "defense": "4-4",
-  "install_week": 1,
+  "defense": "5-3",
   "direction": "left",
   "ball_carrier": "TB",
   "purpose": "The same isolation block the other way. The flanker stays where he is, so this runs away from our strength — which is exactly why it is open.",
   "assignments": {
     "RE": {
-      "rule": "Block back and cut off pursuit. You are the last one to the ball.",
+      "rule": "Cut off pursuit from behind. You are the last one to the ball, so never quit on the play.",
       "type": "block",
-      "path": [[-1.0, 0.7]]
+      "path": [
+        [-1.0, 0.7]
+      ]
     },
     "RT": {
-      "rule": "Block back. Take the first defender on or inside you. Nobody crosses your face.",
+      "rule": "The tackle is on your inside shoulder. Get your head across him and wall him off so he cannot chase.",
       "type": "block",
-      "path": [[-1.0, 0.7]]
+      "path": [
+        [-1.0, 0.7]
+      ]
     },
     "RG": {
-      "rule": "Block back. Take the first defender on or inside you. Nobody crosses your face.",
+      "rule": "Nobody is over you. Step back inside and cut off anyone chasing through the middle.",
       "type": "block",
-      "path": [[-1.0, 0.7]]
+      "path": [
+        [-1.0, 0.7]
+      ]
     },
     "C": {
-      "rule": "Block the first defender to the backside.",
+      "rule": "You have the nose, head up on you. Hands inside and do not let him cross your face to the playside.",
       "type": "block",
-      "path": [[0.8, 1.0]]
+      "path": [
+        [0.8, 1.0]
+      ]
     },
     "LG": {
-      "rule": "Block the man over you and drive him to the inside. You are the inside wall of the hole.",
+      "rule": "The tackle sits in the gap outside you. You and our tackle double him — hands inside, drive him backwards.",
       "type": "block",
-      "path": [[0.4, 1.0]]
+      "path": [
+        [-0.6, 1.2]
+      ]
     },
     "LT": {
-      "rule": "Block the man over you and drive him to the outside. You are the outside wall of the hole.",
+      "rule": "Double the tackle on your inside shoulder with the guard. Drive him back, and if the middle linebacker runs through, the guard comes off onto him.",
       "type": "block",
-      "path": [[-0.4, 1.0]]
+      "path": [
+        [0.4, 1.2]
+      ]
     },
     "LE": {
-      "rule": "Block the man over you and turn him out.",
+      "rule": "The end is head up on you. Drive him out and widen the hole.",
       "type": "block",
-      "path": [[-0.4, 1.0]]
+      "path": [
+        [-0.4, 1.0]
+      ]
     },
     "Z": {
       "rule": "Come across behind the line and cut off anybody chasing from the backside.",
       "type": "block",
-      "path": [[-2.6, 0.6], [-6.0, 1.4]]
+      "path": [
+        [-2.6, 0.6],
+        [-6.0, 1.4]
+      ]
     },
     "QB": {
       "rule": "Reverse pivot and hand the ball to the tailback at four yards. Then clear out and fake wide.",
       "type": "fake",
-      "path": [[0.8, -0.5], [2.8, -0.2]]
+      "path": [
+        [0.8, -0.5],
+        [2.8, -0.2]
+      ]
     },
     "FB": {
-      "rule": "Lead through the hole between the guard and the tackle. Put your facemask on the linebacker and move him any direction — just move him.",
+      "rule": "Lead through the hole and put your facemask on the linebacker sitting over the double team. Move him any direction — just move him.",
       "type": "block",
-      "path": [[-1.4, 2.3], [-1.6, 6.0]]
+      "path": [
+        [-1.4, 2.3],
+        [-1.6, 6.0]
+      ]
     },
     "TB": {
       "rule": "Take the handoff at four yards, get downhill behind the fullback, and cut off his block.",
       "type": "run",
-      "path": [[-0.4, 2.2], [-1.6, 4.5], [-2.6, 7.0], [-2.8, 9.6]]
+      "path": [
+        [-0.4, 2.2],
+        [-1.6, 4.5],
+        [-2.6, 7.0],
+        [-2.8, 9.6]
+      ]
     }
   },
   "coaching_points": [

@@ -1,5 +1,6 @@
 {
   "id": "wb-power-l",
+  "order": 3,
   "formation": "wishbone",
   "name": "Bone Power Left",
   "call": "Bone 5 Power",

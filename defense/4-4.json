@@ -41,14 +41,14 @@
       ]
     },
     "LT": {
-      "rule": "Attack the inside shoulder of the guard and squeeze the middle. You and the other tackle keep the centre from climbing to a linebacker.",
+      "rule": "Attack the inside shoulder of the guard and squeeze the middle. You and the other tackle keep the center from climbing to a linebacker.",
       "type": "attack",
       "path": [
         [0.4, -1.4]
       ]
     },
     "RT": {
-      "rule": "Attack the inside shoulder of the guard and squeeze the middle. You and the other tackle keep the centre from climbing to a linebacker.",
+      "rule": "Attack the inside shoulder of the guard and squeeze the middle. You and the other tackle keep the center from climbing to a linebacker.",
       "type": "attack",
       "path": [
         [-0.4, -1.4]
@@ -116,7 +116,7 @@
   "coaching_points": [
     "Call this when they keep getting outside us. Two extra defenders who can run beats two extra defenders who can only push.",
     "The two outside linebackers are the reason this front works. They force everything back inside — if either one gets hooked and the ball gets outside him, it is a long run every time.",
-    "We give up a body inside to get it, so an offence that runs straight at the middle will find room. If they start hammering the A gaps, go back to the 5-3.",
+    "We give up a body inside to get it, so an offense that runs straight at the middle will find room. If they start hammering the A gaps, go back to the 5-3.",
     "Nobody crosses the line before the snap. The linebackers read one step, then go."
   ],
   "legal": "Four down linemen, four linebackers at three yards, and three defensive backs no closer than three yards. Comfortably inside every limit. No blitzing."

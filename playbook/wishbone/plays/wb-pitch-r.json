@@ -1,69 +1,100 @@
 {
   "id": "wb-pitch-r",
+  "order": 4,
   "formation": "wishbone",
   "name": "Bone Pitch Right",
   "call": "Bone 8 Pitch",
   "type": "run",
-  "defense": "4-4",
-  "install_week": 2,
+  "defense": "5-3",
   "direction": "right",
   "ball_carrier": "RH",
   "purpose": "Get outside in a hurry. The fullback dives to hold the middle, the quarterback attacks the edge and pitches. Against a defense that has crowded the box to stop the dive, this is where the yards are.",
   "assignments": {
     "LE": {
-      "rule": "Block back and cut off pursuit. You are the last one to the ball.",
+      "rule": "Cut off pursuit from behind. You are the last one to the ball, so never quit on the play.",
       "type": "block",
-      "path": [[1.0, 0.7]]
+      "path": [
+        [1.0, 0.7]
+      ]
     },
     "LT": {
-      "rule": "Block back. Take the first defender on or inside you. Nobody crosses your face.",
+      "rule": "Block back. Take the first defender on or inside you — nobody crosses your face.",
       "type": "block",
-      "path": [[1.0, 0.7]]
+      "path": [
+        [1.0, 0.7]
+      ]
     },
     "LG": {
-      "rule": "Block back. Take the first defender on or inside you. Nobody crosses your face.",
+      "rule": "Nobody is over you. Cut off the backside — nothing chases this from behind.",
       "type": "block",
-      "path": [[1.0, 0.7]]
+      "path": [
+        [1.0, 0.7]
+      ]
     },
     "C": {
-      "rule": "Reach the man over you; if nobody is over you, cut off the backside.",
+      "rule": "Reach the nose. Get your head across his playside shoulder.",
       "type": "block",
-      "path": [[0.6, 1.0]]
+      "path": [
+        [0.6, 1.0]
+      ]
     },
     "RG": {
-      "rule": "Reach the first defender to the playside.",
+      "rule": "Nobody is over you. Climb to the middle linebacker and cut him off from the sideline.",
       "type": "block",
-      "path": [[0.9, 1.0]]
+      "path": [
+        [0.4, 1.2],
+        [-0.6, 3.4]
+      ]
     },
     "RT": {
-      "rule": "Reach the man on or outside you. If you cannot reach him, run him past the play.",
+      "rule": "The tackle is on your inside shoulder. Get your head across him and wall him off so he cannot chase.",
       "type": "block",
-      "path": [[0.9, 1.0]]
+      "path": [
+        [0.9, 1.0]
+      ]
     },
     "RE": {
       "rule": "Release outside and block the deepest defender on your side.",
       "type": "block",
-      "path": [[2.4, 2.6], [3.8, 4.4]]
+      "path": [
+        [2.4, 2.6],
+        [3.8, 4.4]
+      ]
     },
     "QB": {
       "rule": "Fake the dive to the fullback, attack the outside, and pitch the ball to the halfback before you get touched. Pitch early, not late.",
       "type": "fake",
-      "path": [[1.4, -0.5], [4.0, -0.4], [5.6, 0.4]]
+      "path": [
+        [1.4, -0.5],
+        [4.0, -0.4],
+        [5.6, 0.4]
+      ]
     },
     "FB": {
       "rule": "Run the dive path and get tackled. Your fake is what keeps their linebackers inside.",
       "type": "fake",
-      "path": [[0.4, 2.0], [0.6, 4.2]]
+      "path": [
+        [0.4, 2.0],
+        [0.6, 4.2]
+      ]
     },
     "LH": {
       "rule": "Run behind the quarterback and get to the corner ahead of the ball. Kick out the first defender who shows.",
       "type": "block",
-      "path": [[4.0, 0.8], [7.6, 2.6]]
+      "path": [
+        [4.0, 0.8],
+        [7.6, 2.6]
+      ]
     },
     "RH": {
       "rule": "Stay outside and behind the quarterback, catch the pitch on the run, and get to the corner. Never stop your feet.",
       "type": "run",
-      "path": [[2.2, 0.6], [5.6, 1.6], [7.8, 4.2], [7.8, 7.0]]
+      "path": [
+        [2.2, 0.6],
+        [5.6, 1.6],
+        [7.8, 4.2],
+        [7.8, 7.0]
+      ]
     }
   },
   "coaching_points": [

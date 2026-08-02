@@ -5,7 +5,7 @@
   "call": "Base",
   "family": "Base defense",
   "summary": "Our everyday front. Five down linemen cover the offensive line, three linebackers fill, and a free safety cleans up anything that gets through.",
-  "notes": "Five down linemen head up on the centre, both guards' outside shoulders and both ends. Three linebackers at three yards. Two corners and a free safety. This is the front we play unless there is a reason not to.",
+  "notes": "Five down linemen head up on the center, both guards' outside shoulders and both ends. Three linebackers at three yards. Two corners and a free safety. This is the front we play unless there is a reason not to.",
   "roles": {
     "LE": "DL",
     "LT": "DL",
@@ -48,7 +48,7 @@
       ]
     },
     "NG": {
-      "rule": "Head up on the centre. Two hands on his chest, get your pads under his, then work to whichever side the ball goes.",
+      "rule": "Head up on the center. Two hands on his chest, get your pads under his, then work to whichever side the ball goes.",
       "type": "attack",
       "path": [
         [0.0, -1.5]
@@ -77,7 +77,7 @@
       ]
     },
     "M": {
-      "rule": "Three yards deep over the centre. You make the call and you fill the first open gap. Step downhill — do not drift sideways.",
+      "rule": "Three yards deep over the center. You make the call and you fill the first open gap. Step downhill — do not drift sideways.",
       "type": "read",
       "path": [
         [0.0, -0.6],
