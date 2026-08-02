@@ -143,7 +143,8 @@ def build_mirror(play: dict, source: dict) -> dict:
     return out
 
 
-# The rulebook limits for 8- and 9-year-olds (PAL 9.02). See RULES.md.
+# The rulebook limits for 8- and 9-year-olds (PAL 9.02). The league's own wording is in
+# rulebook/2025-PAL-RULE-BOOK.txt; what it did to this playbook is in RULES.md.
 MAX_DOWN_LINEMEN = 6
 MIN_LINEBACKERS = 3
 MIN_LB_DEPTH = 2.0

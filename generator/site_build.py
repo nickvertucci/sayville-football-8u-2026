@@ -912,6 +912,14 @@ def _inline(s: str) -> str:
     return out
 
 
+def md_slug(text: str) -> str:
+    """GitHub's heading-anchor slug, so the same link works in both places."""
+    text = re.sub(r"[*`_]", "", text)
+    text = re.sub(r"\[([^\]]+)\]\([^)]+\)", r"\1", text)  # link text only
+    text = re.sub(r"[^\w\- ]", "", text.lower())
+    return text.strip().replace(" ", "-")
+
+
 def md_to_html(md: str) -> str:
     """Render the subset of Markdown RULES.md actually uses.
 
@@ -929,16 +937,23 @@ def md_to_html(md: str) -> str:
 
         if line.startswith("#"):
             level = len(line) - len(line.lstrip("#"))
-            text = _inline(line.lstrip("#").strip())
+            raw = line.lstrip("#").strip()
+            text = _inline(raw)
+            # Same slug GitHub generates, so a "[link](#heading)" in the markdown
+            # resolves both on GitHub and here.
+            anchor = f' id="{md_slug(raw)}"'
             # The page supplies its own h1, so demote the document title.
-            out.append(f"<h2>{text}</h2>" if level == 1 else f"<h{level}>{text}</h{level}>")
+            out.append(f"<h2{anchor}>{text}</h2>" if level == 1
+                       else f"<h{level}{anchor}>{text}</h{level}>")
             i += 1
             continue
 
-        if line.startswith(">"):
+        # Indented too: a quote nested under a bullet is still a quote, and letting
+        # it fall through to the paragraph branch renders a literal "&gt;".
+        if line.lstrip().startswith(">"):
             quote = []
-            while i < len(lines) and lines[i].startswith(">"):
-                quote.append(lines[i].lstrip(">").strip())
+            while i < len(lines) and lines[i].lstrip().startswith(">"):
+                quote.append(lines[i].lstrip().lstrip(">").strip())
                 i += 1
             out.append("<blockquote>"
                        + "<br>".join(_inline(q) for q in quote if q)
@@ -977,8 +992,8 @@ def md_to_html(md: str) -> str:
 
         para = []
         while (i < len(lines) and lines[i].strip()
-               and not lines[i].startswith(("#", ">", "|"))
-               and not lines[i].lstrip().startswith(("- ", "* "))):
+               and not lines[i].startswith(("#", "|"))
+               and not lines[i].lstrip().startswith(("- ", "* ", ">"))):
             para.append(lines[i].strip())
             i += 1
         out.append("<p>" + _inline(" ".join(para)) + "</p>")
