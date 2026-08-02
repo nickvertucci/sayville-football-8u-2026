@@ -66,11 +66,13 @@ Same two digits, two more backs to number. No flanker, so nothing to declare the
 |---|---|---|
 | `Bone 21 Dive` / `Bone 22 Dive` | Bone Dive Left / Right | fullback, A gap |
 | `Bone 33 Power` / `Bone 44 Power` | Bone Power Left / Right | the far halfback, off tackle |
-| `Bone 38 Pitch` / `Bone 47 Pitch` | Bone Pitch Right / Left | the near halfback, outside |
+| `Bone 48 Pitch` / `Bone 37 Pitch` | Bone Pitch Right / Left | the far halfback, outside |
 | `Bone 33 Counter` / `Bone 44 Counter` | Bone Counter Left / Right | the far halfback, off tackle |
 
-The back digit follows whoever actually carries it, which is why Power and Counter to the
-right are `4` — the *left* halfback takes those handoffs — while Pitch right is a `3`.
+The back digit follows whoever actually carries it, which is why everything to the right is
+a `4` — the *left* halfback takes the handoff on Power and Counter, and on Pitch he is the
+trailing back who catches the ball. The near halfback is not idle on Pitch; he leads and
+kicks out the edge, which is why the carrier is the far one.
 
 **Play word** — `Dive`, `Iso`, `Power`, `Counter`, `Slant`, `Pitch`, `Boot`.
 

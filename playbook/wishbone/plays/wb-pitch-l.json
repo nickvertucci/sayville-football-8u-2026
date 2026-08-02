@@ -3,6 +3,6 @@
   "order": 6,
   "formation": "wishbone",
   "name": "Bone Pitch Left",
-  "call": "Bone 47 Pitch",
+  "call": "Bone 37 Pitch",
   "mirror_of": "wb-pitch-r"
 }
