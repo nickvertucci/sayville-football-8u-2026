@@ -60,8 +60,9 @@ key. On pass plays, set it to the primary receiver.
 
 ## Required fields
 
-`id` (must equal the filename), `name`, and `assignments` with an entry for **all
-eleven** positions in the formation. `--check` fails the build if one is missing.
+**A play** needs `id` (must equal the filename, and be unique across every formation),
+`name`, and `assignments` with an entry for **all eleven** positions in the formation.
+`--check` fails the build if one is missing.
 
 Optional: `call`, `type`, `defense` (must match a file in `defense/`),
 `order`, `direction`, `purpose`, `coaching_points`.
@@ -69,13 +70,39 @@ Optional: `call`, `type`, `defense` (must match a file in `defense/`),
 `order` is the position in the formation's teaching sequence. There are no
 install weeks — plays are simply listed in the order we teach them.
 
+**A formation** needs `id` (must equal the folder name), `name`, an `alignment` of
+exactly eleven players, and `backs` — the digit-to-position map its calls are numbered
+from:
+
+```json
+"backs": { "1": "QB", "2": "FB", "3": "RH", "4": "LH" }
+```
+
+`backs` is not documentation. It is what the generator resolves the first digit of every
+call against, and it is what the calling-language table on the home page is built from,
+so there is one copy of the numbering rather than three that can disagree.
+
 ### `name` and `call` are different on purpose
 
-Both are printed at the top of every card. `name` is the teaching name (*Power Right*);
-`call` is the huddle call in the team's play-calling language (`Tight 6 Power` —
-formation, hole number, play word). The numbering system is documented in the top-level
-[README](../README.md). When you add a play, give it a call that fits the system —
-inventing a nickname defeats the point of having a language.
+Both are printed at the top of every card. `name` is the teaching name (*Bone Power
+Right*); `call` is the huddle call in the team's play-calling language (`Bone 44 Power` —
+formation, then **two digits: who carries it and where it goes**, then the play word).
+The numbering system is documented in the top-level [README](../README.md).
+
+**The build checks the call against the diagram**, so a call is not free text:
+
+- The first digit is a back number from the formation's `backs` map, so it has to be one
+  the formation actually defines.
+- The second digit is the hole. Even is right, odd is left, counting outward from the
+  center. The generator measures where that back's path crosses the line of scrimmage and
+  fails the build if it does not land in the hole the call names.
+
+That means the digits describe **the back the first digit names**, not the ball carrier.
+On `I Z Right 16 Boot` the `1` is the quarterback going through the 6 hole; `ball_carrier`
+is the flanker he throws to, which is a different thing.
+
+Inventing a nickname instead of a call defeats the point of having a language, and now
+also fails `--check`.
 
 Formations carry an `order` field too, which is teaching order, not the alphabet.
 Both control the sequence on the site and in `PLAYBOOK.md`.
@@ -93,11 +120,16 @@ wrong against this front.
 For a **symmetric** formation, left-handed plays are one file:
 
 ```json
-{ "id": "power-l", "name": "Power Left", "call": "Tight 5 Power", "mirror_of": "power-r" }
+{ "id": "wb-power-l", "name": "Bone Power Left", "call": "Bone 35 Power", "mirror_of": "wb-power-r" }
 ```
 
 The generator flips every path across the middle, swaps the position keys, and swaps the
 words "left" and "right" in every rule, purpose and coaching point.
+
+**The call is not mirrored — you write it.** Mirroring swaps `LH` and `RH`, so the back
+digit changes too: `Bone 44 Power` is the left halfback through the 4 hole, and its mirror
+is `Bone 35 Power` — the *right* halfback, back 3, through the 5 hole. Get that wrong and
+the call check catches it, because the digits no longer match the flipped path.
 
 **Only use `mirror_of` when the formation is symmetric.** A position with no counterpart
 in the `MIRROR` table maps to itself, which is correct for someone aligned on the middle

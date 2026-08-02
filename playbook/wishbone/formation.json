@@ -25,6 +25,12 @@
     "RH",
     "QB"
   ],
+  "backs": {
+    "1": "QB",
+    "2": "FB",
+    "3": "RH",
+    "4": "LH"
+  },
   "coaching_notes": [
     "Three backs means three threats on every snap, and the defense has to be right about all three. That is the whole idea.",
     "The fullback is the hammer. If they ever stop respecting him up the middle, everything else stops working.",
