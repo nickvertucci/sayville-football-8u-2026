@@ -51,7 +51,7 @@ DEFENSE_DIR = ROOT / "defense"
 
 SCALE = 27.0            # px per yard
 X_MIN, X_MAX = -13.0, 13.0
-Y_MIN, Y_MAX = -7.0, 9.5
+Y_MIN, Y_MAX = -7.0, 12.0
 
 FIELD_W = (X_MAX - X_MIN) * SCALE
 FIELD_H = (Y_MAX - Y_MIN) * SCALE
@@ -192,7 +192,13 @@ def validate_defenses(defenses: dict) -> list[str]:
                 f"defense {fid}: {len(dl)} down linemen, the league allows at most "
                 f"{MAX_DOWN_LINEMEN}"
             )
-        if len(lb) < MIN_LINEBACKERS:
+        exempt = set(front.get("exempt", []))
+        if exempt and not front.get("exempt_reason"):
+            errors.append(
+                f"defense {fid}: claims an exemption without an exempt_reason citing the "
+                "rule that grants it"
+            )
+        if len(lb) < MIN_LINEBACKERS and "MIN_LINEBACKERS" not in exempt:
             errors.append(
                 f"defense {fid}: {len(lb)} linebackers, the league requires at least "
                 f"{MIN_LINEBACKERS}"

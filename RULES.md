@@ -53,6 +53,46 @@ all — at this age they are close to free yards, and the coaching points say so
 Gap penetration *is* allowed, so down blocks still have to be fast. Do not read
 "no blitzing" as "nobody is coming."
 
+## The 18-point rule changes the defense (15.04, 15.05)
+
+> 15.04 — The team ahead on defense shall switch to a 6-2-3 defense, two linebackers
+> shall drop back 5 yards off the ball, and three safeties shall line up 5-yards behind
+> the linebackers. They may line up anywhere across the field if they stay in a 6-2-3.
+> 15.05 — Defensive ends are to line up 7 yards outside the offensive tackles.
+
+This is not optional and it is not a coaching choice. The moment the margin reaches 18,
+after the extra point, this exact front with these exact depths is required until the
+margin drops back under 18 (15.09). It is in the book as **Prevent**.
+
+Note that it **contradicts the minimum of three linebackers in 9.02** — a 6-2-3 has two by
+definition. The 18-point rule is the more specific one and wins in that situation, so the
+generator's legality check carries an explicit, documented exemption for this front and
+for nothing else.
+
+Two more from the same section that catch coaches out:
+
+- **15.03** — the team ahead must also replace its **entire starting backfield including
+  the quarterback**, at the same moment.
+- **15.07** — there are no mandatory substitutions on defense under this rule.
+
+## An ambiguity we have not resolved
+
+Rule 9.02 reads:
+
+> NO BLITZING PERMITTED 8- & 9-YEAR OLDS IN ALL DIVISIONS.
+> **IN ASSOCIATION WITH THIS NEW RULE IN DIVISIONS 1 & 2**, THE FOLLOWING DEFENSIVE
+> FORMATIONS ARE REQUIRED.
+
+The no-blitz rule plainly covers us — it says all divisions. But the defensive formation
+requirements that follow are qualified by "in Divisions 1 & 2", and divisions in this
+league are competitive tiers assigned from the previous year's record (14.02), not age
+groups. So it is genuinely unclear whether the six-lineman cap and the three-linebacker
+minimum bind a team in Division 3 or lower.
+
+**This playbook assumes they bind us**, because complying with the stricter reading costs
+nothing and the penalty for guessing wrong is 15 yards on the head coach and ejection on a
+second offence. Worth one question to the league to confirm.
+
 ## Other things worth knowing
 
 - **9.03 — punts are dead, no return.** No punt plays in this book by design.

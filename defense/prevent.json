@@ -1,0 +1,42 @@
+{
+  "id": "prevent",
+  "order": 4,
+  "name": "6-2-3",
+  "call": "Prevent",
+  "family": "Required at an 18-point lead",
+  "summary": "Not a choice. The moment we lead by 18 the rulebook requires this exact front, with these exact depths, until the margin drops back under 18.",
+  "notes": "Six down linemen with the ends seven yards outside their tackles, two linebackers five yards off the ball, and three safeties five yards behind the linebackers. The league specifies all of it. The safeties may line up anywhere across the field as long as the front stays a 6-2-3.",
+  "roles": {
+    "LE": "DL", "LT": "DL", "LG": "DL", "RG": "DL", "RT": "DL", "RE": "DL",
+    "W": "LB", "S": "LB",
+    "LS": "DB", "MS": "DB", "RS": "DB"
+  },
+  "alignment": {
+    "LE": [-9.8, 0.8], "LT": [-2.4, 0.8], "LG": [-1.2, 0.8],
+    "RG": [1.2, 0.8], "RT": [2.4, 0.8], "RE": [9.8, 0.8],
+    "W": [-2.5, 5.0], "S": [2.5, 5.0],
+    "LS": [-7.0, 10.0], "MS": [0.0, 10.0], "RS": [7.0, 10.0]
+  },
+  "assignments": {
+    "LE": {"rule": "Seven yards outside their tackle, as the rule requires. You are not rushing — keep everything inside you and make the tackle.", "type": "read", "path": [[1.4, -0.9]]},
+    "LT": {"rule": "Head up on the man in front of you. Two hands on his chest and hold your ground. Do not shoot a gap.", "type": "read", "path": [[0.0, -0.8]]},
+    "LG": {"rule": "Head up on the man in front of you. Two hands on his chest and hold your ground. Do not shoot a gap.", "type": "read", "path": [[0.0, -0.8]]},
+    "RG": {"rule": "Head up on the man in front of you. Two hands on his chest and hold your ground. Do not shoot a gap.", "type": "read", "path": [[0.0, -0.8]]},
+    "RT": {"rule": "Head up on the man in front of you. Two hands on his chest and hold your ground. Do not shoot a gap.", "type": "read", "path": [[0.0, -0.8]]},
+    "RE": {"rule": "Seven yards outside their tackle, as the rule requires. You are not rushing — keep everything inside you and make the tackle.", "type": "read", "path": [[-1.4, -0.9]]},
+    "W": {"rule": "Five yards off the ball. Read it, then come up and make the tackle. Never move forward before the snap.", "type": "read", "path": [[-0.3, -1.6]]},
+    "S": {"rule": "Five yards off the ball. Read it, then come up and make the tackle. Never move forward before the snap.", "type": "read", "path": [[0.3, -1.6]]},
+    "LS": {"rule": "Ten yards deep. Nothing gets behind you. Tackle what comes to you and let the clock run.", "type": "read", "path": [[0.4, -1.8]]},
+    "MS": {"rule": "Ten yards deep. Nothing gets behind you. Tackle what comes to you and let the clock run.", "type": "read", "path": [[0.0, -1.8]]},
+    "RS": {"rule": "Ten yards deep. Nothing gets behind you. Tackle what comes to you and let the clock run.", "type": "read", "path": [[-0.4, -1.8]]}
+  },
+  "coaching_points": [
+    "This is not a call, it is a requirement. Rule 15.04 — the moment we go up by 18, after the extra point, this is the defense until the margin drops back under 18.",
+    "Our starting backfield also has to come out on offense at the same time (15.03), and the board asks that we run it up the middle and not throw. Know all of that before it happens, not while an official is explaining it to you.",
+    "There are no mandatory substitutions on defense under this rule (15.07), so you can keep whoever is in.",
+    "Teach the kids why. We are up by three touchdowns against eight-year-olds — the job now is to be gracious, tackle cleanly and let the clock run."
+  ],
+  "legal": "Mandated by rule 15.04, which overrides the usual minimum of three linebackers — this front is required to have exactly two, five yards off, with three safeties ten yards deep. Ends are seven yards outside the offensive tackles per 15.05.",
+  "exempt": ["MIN_LINEBACKERS"],
+  "exempt_reason": "Rule 15.04 requires a 6-2-3 at an 18-point lead, which has two linebackers by definition."
+}
