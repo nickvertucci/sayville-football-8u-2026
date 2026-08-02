@@ -3,7 +3,7 @@
   "order": 5,
   "formation": "i-form",
   "name": "I Power Left",
-  "call": "I 5 Power",
+  "call": "I 35 Power",
   "type": "run",
   "defense": "5-3",
   "direction": "left",

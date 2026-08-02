@@ -31,21 +31,21 @@ Normal line splits, about one foot. Both ends are ON the line. The flanker is OF
 
 | Play | Call | Type | Ball |
 |---|---|---|---|
-| [I Dive](#i-dive) | `I 2 Dive` | run | FB |
-| [I Iso Right](#i-iso-right) | `I 4 Iso` | run | TB |
-| [I Iso Left](#i-iso-left) | `I 3 Iso` | run | TB |
-| [I Power Right](#i-power-right) | `I 6 Power` | run | TB |
-| [I Power Left](#i-power-left) | `I 5 Power` | run | TB |
-| [I Slant Right](#i-slant-right) | `I 8 Slant` | run | TB |
-| [I Slant Left](#i-slant-left) | `I 7 Slant` | run | TB |
-| [I Counter Left](#i-counter-left) | `I 5 Counter` | run | TB |
-| [I Boot Right](#i-boot-right) | `I 8 Boot` | pass | Z |
+| [I Dive](#i-dive) | `I 22 Dive` | run | FB |
+| [I Iso Right](#i-iso-right) | `I 34 Iso` | run | TB |
+| [I Iso Left](#i-iso-left) | `I 33 Iso` | run | TB |
+| [I Power Right](#i-power-right) | `I 36 Power` | run | TB |
+| [I Power Left](#i-power-left) | `I 35 Power` | run | TB |
+| [I Slant Right](#i-slant-right) | `I 38 Slant` | run | TB |
+| [I Slant Left](#i-slant-left) | `I 37 Slant` | run | TB |
+| [I Counter Left](#i-counter-left) | `I 35 Counter` | run | TB |
+| [I Boot Right](#i-boot-right) | `I 18 Boot` | pass | Z |
 
 ---
 
 ## I Dive
 
-**Call it:** `I 2 Dive`
+**Call it:** `I 22 Dive`
 
 ![I Dive](cards/i-dive.svg)
 
@@ -76,7 +76,7 @@ The quickest handoff in the book. The fullback is through the line before their 
 
 ## I Iso Right
 
-**Call it:** `I 4 Iso`
+**Call it:** `I 34 Iso`
 
 ![I Iso Right](cards/i-iso-r.svg)
 
@@ -107,7 +107,7 @@ The whole play is one block: the fullback isolates their linebacker in the hole 
 
 ## I Iso Left
 
-**Call it:** `I 3 Iso`
+**Call it:** `I 33 Iso`
 
 ![I Iso Left](cards/i-iso-l.svg)
 
@@ -137,7 +137,7 @@ The same isolation block the other way. The flanker stays where he is, so this r
 
 ## I Power Right
 
-**Call it:** `I 6 Power`
+**Call it:** `I 36 Power`
 
 ![I Power Right](cards/i-power-r.svg)
 
@@ -168,7 +168,7 @@ The power run out of the I. Playside blocks down, the fullback kicks out the end
 
 ## I Power Left
 
-**Call it:** `I 5 Power`
+**Call it:** `I 35 Power`
 
 ![I Power Left](cards/i-power-l.svg)
 
@@ -198,7 +198,7 @@ Power to the weak side. The flanker is not out there to help, so the kick-out an
 
 ## I Slant Right
 
-**Call it:** `I 8 Slant`
+**Call it:** `I 38 Slant`
 
 ![I Slant Right](cards/i-slant-r.svg)
 
@@ -229,7 +229,7 @@ Get outside. The fullback and the flanker are both out in front and the tailback
 
 ## I Slant Left
 
-**Call it:** `I 7 Slant`
+**Call it:** `I 37 Slant`
 
 ![I Slant Left](cards/i-slant-l.svg)
 
@@ -260,7 +260,7 @@ The same run away from the flanker. There is one fewer blocker out there, so the
 
 ## I Counter Left
 
-**Call it:** `I 5 Counter`
+**Call it:** `I 35 Counter`
 
 ![I Counter Left](cards/i-counter-l.svg)
 
@@ -291,7 +291,7 @@ Misdirection off the slant. We show them the slant to the flanker side, their li
 
 ## I Boot Right
 
-**Call it:** `I 8 Boot`
+**Call it:** `I 18 Boot`
 
 ![I Boot Right](cards/i-boot-r.svg)
 

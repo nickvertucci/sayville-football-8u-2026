@@ -825,8 +825,13 @@ def play_article(form: dict, play: dict, heading: str = "h2", actions: str = "")
 
 # --------------------------------------------------------------------- pages --
 
+BACKS = [
+    ("1", "Quarterback"),
+    ("2", "Fullback"),
+    ("3", "Tailback"),
+]
+
 HOLES = [
-    ("0", "Straight up the middle"),
     ("1 / 2", "A gap — left / right of the center"),
     ("3 / 4", "B gap — between guard and tackle"),
     ("5 / 6", "Off tackle — outside the tackle"),
@@ -873,17 +878,27 @@ front for when they keep getting outside us.</p>
 <div class="cards">{defcards}</div>
 
 <p class="section-head">How we call plays</p>
-<p class="lede">Every play has a teaching name (<em>Power Right</em>) and a huddle call
-(<code>I 6 Power</code>). Both are printed on every card. The call is always
-<strong>formation + hole + play word</strong>, and the hole numbers are the only thing the
-kids have to memorize — odd to the left, even to the right, counting outward.</p>
+<p class="lede">Every play has a teaching name (<em>I Power Right</em>) and a huddle call
+(<code>I 36 Power</code>). Both are printed on every card. In the I-formation the call is
+<strong>formation + back + hole + play word</strong>: the first number says who carries
+it, the second says where it goes.</p>
+<p class="lede"><strong>Who carries it</strong></p>
+<dl class="assign holes">
+  {chr(10).join(f'  <div class="row"><dt>{esc(n)}</dt><dd>{esc(d)}</dd></div>'
+                for n, d in BACKS).strip()}
+</dl>
+<p class="lede"><strong>Where it goes</strong> — odd numbers to the left, even to the
+right, counting outward from the center. This is the only part the kids have to
+memorize.</p>
 <dl class="assign holes">
   {chr(10).join(f'  <div class="row"><dt>{esc(n)}</dt><dd>{esc(d)}</dd></div>'
                 for n, d in HOLES).strip()}
 </dl>
-<p class="lede">So <code>Bone 8 Pitch</code> is the wishbone, outside right, pitch, and
-<code>I 4 Iso</code> is the I-formation, right B gap, isolation — a kid who knows the
-system can run either one the first time he hears it.</p>
+<p class="lede">So <code>I 22 Dive</code> is the fullback through the 2 hole, and
+<code>I 36 Power</code> is the tailback off tackle to the right. A kid who knows the two
+numbers can run a play the first time he hears it.</p>
+<p class="sub">The Wishbone still uses a single hole number
+(<code>Bone 6 Power</code>) because it carries three backs rather than one.</p>
 
 <p class="section-head">Before you install anything</p>
 <div class="callout">

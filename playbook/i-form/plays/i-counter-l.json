@@ -3,7 +3,7 @@
   "order": 8,
   "formation": "i-form",
   "name": "I Counter Left",
-  "call": "I 5 Counter",
+  "call": "I 35 Counter",
   "type": "run",
   "defense": "5-3",
   "direction": "left",

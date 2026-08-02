@@ -14,30 +14,49 @@ and the Print button gives you the whole book in landscape, one play per sheet.
 
 Every play has two names, and both are printed on every card.
 
-- The **name** is what you say while teaching it: *Power Right*.
-- The **call** is what you yell on Saturday: `I 6 Power`.
+- The **name** is what you say while teaching it: *I Power Right*.
+- The **call** is what you yell on Saturday: `I 36 Power`.
 
-The call is always **formation + hole + play word**.
+### I-Formation: formation + back + hole + play word
 
-**Formation** — `I` for the I-formation, `Bone` for the wishbone.
+Two digits. The first says **who carries it**, the second says **where it goes**.
 
-**Hole** — odd numbers go left, even numbers go right, counting outward from the center.
-This is the only thing the kids have to memorize:
+| Back | Who |
+|---|---|
+| **1** | Quarterback |
+| **2** | Fullback |
+| **3** | Tailback |
 
-```
-        7   5   3   1   0   2   4   6   8
-          E   T   G   C   G   T   E
-   outside  off-  B   A     A   B  off-  outside
-             tackle  gap   gap    tackle
-```
+| Hole | Where |
+|---|---|
+| **1 / 2** | A gap — left / right of the center |
+| **3 / 4** | B gap — between guard and tackle |
+| **5 / 6** | Off tackle — outside the tackle |
+| **7 / 8** | Outside — around the end |
 
-**Play word** — `Dive`, `Iso`, `Power`, `Counter`, `Slant`, `Pitch`, `Boot`. Seven words
-covering fifteen plays, because the same word means the same thing in both formations.
+Odd numbers go left, even numbers go right, counting outward from the center. So
+`I 22 Dive` is the fullback through the 2 hole, and `I 36 Power` is the tailback off
+tackle to the right.
 
-So `Bone 8 Pitch` is the wishbone, outside right, pitch, and `I 4 Iso` is the
-I-formation, right B gap, isolation — a kid who knows the system can line up and run
-either one the first time he hears it. That is the whole point of having a language
-instead of a list of nicknames.
+| Call | Play |
+|---|---|
+| `I 22 Dive` | I Dive |
+| `I 33 Iso` / `I 34 Iso` | I Iso Left / Right |
+| `I 35 Power` / `I 36 Power` | I Power Left / Right |
+| `I 37 Slant` / `I 38 Slant` | I Slant Left / Right |
+| `I 35 Counter` | I Counter Left |
+| `I 18 Boot` | I Boot Right |
+
+`I 35` appears twice — as Power and as Counter — because both finish in the same hole
+with the same back. The play word is what separates them, which is exactly what it is
+there for.
+
+### Wishbone: formation + hole + play word
+
+The Wishbone carries three backs rather than one, so a single back digit does not
+identify anybody. Its calls stay one number: `Bone 6 Power`, `Bone 8 Pitch`.
+
+**Play word** — `Dive`, `Iso`, `Power`, `Counter`, `Slant`, `Pitch`, `Boot`.
 
 ## Formations
 
