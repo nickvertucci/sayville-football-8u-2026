@@ -1,9 +1,12 @@
 # League rules that shaped this playbook
 
 Notes taken from the 2025 Suffolk County PAL rulebook (updated 10/5/2025) while building
-this book. **This is a working summary, not the rulebook.** Check the current season's
-rulebook before you rely on any of it — these are the points that actually changed plays
-in here, not a complete list.
+this book. **This is a working summary, not the rulebook.** These are the points that
+actually changed plays in here, not a complete list.
+
+The rulebook itself is in [rulebook/](rulebook/), reproduced word for word from the
+league's document — quote that one, not this one. Check the league's current release
+before relying on either.
 
 ## We are an 11-man team
 

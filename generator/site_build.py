@@ -7,6 +7,8 @@ to the card SVGs, and so GitHub Pages can serve from "/" with no build step:
     calls.html          the call sheet — every play, searchable, the fastest way in
     f-<formation>.html  one formation: its notes and its plays
     p-<play>.html       one play, deep-linkable, prints to a single landscape sheet
+    rules.html          the league rulebook, verbatim, from rulebook/*.txt
+    rules-notes.html    our notes on what those rules did to the playbook, from RULES.md
     print.html          the whole book, one play per landscape sheet
     assets/site.css     one stylesheet for all of it
     assets/site.js      play switcher, arrow-key paging, call sheet filtering
@@ -23,6 +25,11 @@ from pathlib import Path
 from common import call_prefix, esc, form_label, ordered_positions
 
 SITE_TITLE = "Sayville 8U Tackle Football"
+
+# The league's own document, and the verbatim text pulled out of it by
+# generator/extract_rulebook.py. Both live in rulebook/.
+RULEBOOK_DOCX = "2025-PAL-RULE-BOOK-updated-2025-10-05.docx"
+RULEBOOK_TXT = "2025-PAL-RULE-BOOK.txt"
 
 # --------------------------------------------------------------------------- css --
 
@@ -479,6 +486,40 @@ table.rules th {
   background: var(--panel-2);
 }
 
+/* ------------------------------------------------------------------ rulebook -- */
+/* The league's document, reproduced. Their line breaks, their indents and their
+   runs of spaces are all meaningful on a page people read out loud at a game, so
+   the text keeps its own whitespace (pre-wrap) and still wraps on a phone. */
+.rb-toc {
+  display: grid; gap: 2px 14px; grid-template-columns: 1fr; margin: 18px 0 26px;
+  background: var(--panel); border: 1px solid var(--line); border-radius: 12px;
+  padding: 12px 14px; box-shadow: var(--shadow);
+}
+@media (min-width: 620px) { .rb-toc { grid-template-columns: repeat(2, minmax(0,1fr)); } }
+@media (min-width: 960px) { .rb-toc { grid-template-columns: repeat(3, minmax(0,1fr)); } }
+.rb-toc a {
+  display: flex; gap: 9px; align-items: baseline; text-decoration: none;
+  color: var(--ink-2); font-size: 13.5px; padding: 4px 6px; border-radius: 6px;
+}
+.rb-toc a:hover { background: var(--panel-2); color: var(--accent-ink); }
+.rb-toc b {
+  color: var(--muted); font-size: 11px; min-width: 1.6em; text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+.rb-toc span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+.rulebook { max-width: 86ch; }
+.rulebook .rb-l {
+  margin: 0 0 7px; color: var(--ink-2); font-size: 15px; line-height: 1.55;
+  white-space: pre-wrap; tab-size: 4; overflow-wrap: break-word;
+}
+.rulebook .rb-h {
+  font-size: clamp(18px, 3.4vw, 22px); letter-spacing: -.3px; color: var(--ink);
+  margin: 40px 0 12px; padding-bottom: 8px; border-bottom: 2px solid var(--accent-solid);
+  scroll-margin-top: 74px; white-space: pre-wrap;
+}
+.rulebook .rb-h:first-child { margin-top: 0; }
+
 footer.site {
   color: var(--muted); font-size: 13.5px; border-top: 1px solid var(--line);
   margin-top: 36px; padding: 18px 0 40px;
@@ -729,6 +770,7 @@ def menu_groups(formations: list[dict], active_form: str, active_play: str) -> s
 NAV_LINKS = [("index.html", "Home", "home"),
              ("calls.html", "Call sheet", "calls"),
              ("rules.html", "Rules", "rules"),
+             ("rules-notes.html", "Notes", "notes"),
              ("print.html", "Print book", "print")]
 
 
@@ -760,9 +802,7 @@ def page(
         f'aria-expanded="false" aria-controls="ddpanel">Offensive Playbook</button>'
         + f'<button type="button" class="lnk drop{def_open}" id="dfbtn" '
         f'aria-expanded="false" aria-controls="dfpanel">Defensive Playbook</button>'
-        + link(*NAV_LINKS[1])
-        + link(*NAV_LINKS[2])
-        + link(*NAV_LINKS[3])
+        + "".join(link(*nav) for nav in NAV_LINKS[1:])
     )
     drawer_links = "".join(link(h, la, k, "dlnk") for h, la, k in NAV_LINKS)
 
@@ -946,17 +986,101 @@ def md_to_html(md: str) -> str:
     return "\n".join(out)
 
 
-def write_rules(formations: list[dict], defenses: dict, root: Path) -> str:
+def write_rules_notes(formations: list[dict], defenses: dict, root: Path) -> str:
     src = (root / "RULES.md").read_text(encoding="utf-8")
     # The page supplies its own title, so drop the document's leading H1.
     if src.lstrip().startswith("# "):
         src = src.split(chr(10), 1)[1]
-    body = f"""<h1 class="page">League rules</h1>
-<p class="lede">What the league allows, what it forbids, and the two questions we have not
-been able to answer from the document. Generated from <code>RULES.md</code> in the repo,
-so the page and the source cannot drift apart.</p>
+    body = f"""<h1 class="page">How the rules shaped this playbook</h1>
+<p class="lede">Our working notes on the rulebook — what it allows, what it forbids, and the
+two questions we have not been able to answer from the document. This is a summary and it
+is ours; where it matters, read <a href="rules.html">the rulebook itself</a>. Generated
+from <code>RULES.md</code> in the repo, so the page and the source cannot drift apart.</p>
 <div class="prose">
 {md_to_html(src)}
+</div>"""
+    return page(
+        f"How the rules shaped this playbook — {SITE_TITLE}",
+        body,
+        formations,
+        defenses=defenses,
+        active_nav="notes",
+        description="Our notes on the league rules that constrain this playbook, and the "
+                    "two questions we have not resolved.",
+    )
+
+
+# ------------------------------------------------------------------ rulebook --
+
+# A heading in the body reads "SECTION 9: PLAY OF THE GAME"; the same words in the
+# table of contents are spaced out to the far side of the page. The gap is what
+# tells them apart, so only the body ones become linkable headings.
+SECTION_RE = re.compile(r"^SECTION\s*:?\s*(\d+)([\s:]*)(\S.*)$")
+
+
+def rulebook_html(text: str) -> str:
+    """Render the rulebook's own words, unaltered.
+
+    Every line of the document becomes one line on the page, escaped and left
+    exactly as the league wrote it — their spacing, their capitals, their typos.
+    The only liberties taken are presentational: whitespace-only lines are
+    dropped (the paragraphs already carry the spacing), and section headings are
+    marked up as headings so they can be linked to.
+    """
+    out, seen = [], set()
+    for raw in text.split("\n"):
+        if not raw.strip():
+            continue
+        m = SECTION_RE.match(raw.strip())
+        gap = m.group(2) if m else ""
+        if m and "\t" not in gap and len(gap) <= 2:
+            n = m.group(1)
+            anchor = f"section-{n}" if n not in seen else f"section-{n}-{len(seen)}"
+            seen.add(n)
+            out.append(f'<h2 id="{anchor}" class="rb-h">{esc(raw.strip())}</h2>')
+        else:
+            out.append(f'<p class="rb-l">{esc(raw)}</p>')
+    return "\n".join(out)
+
+
+def rulebook_toc(text: str) -> str:
+    """Jump links to each section — ours, not the document's."""
+    items, seen = [], set()
+    for raw in text.split("\n"):
+        m = SECTION_RE.match(raw.strip())
+        if not m:
+            continue
+        gap = m.group(2)
+        if "\t" in gap or len(gap) > 2 or m.group(1) in seen:
+            continue
+        seen.add(m.group(1))
+        items.append(
+            f'<a href="#section-{m.group(1)}"><b>{esc(m.group(1))}</b>'
+            f'<span>{esc(m.group(3))}</span></a>'
+        )
+    return f'<nav class="rb-toc" aria-label="Sections">{"".join(items)}</nav>'
+
+
+def write_rulebook(formations: list[dict], defenses: dict, root: Path) -> str:
+    src = root / "rulebook" / RULEBOOK_TXT
+    text = src.read_text(encoding="utf-8")
+    body = f"""<h1 class="page">League rules</h1>
+<p class="lede">The Suffolk County P.A.L. Junior Football rulebook, reproduced word for
+word from the league's own document. Nothing here is paraphrased and nothing is corrected
+&mdash; the league's spelling and spacing stand as written, so anything on this page can be
+quoted at a game.</p>
+<div class="callout">
+  <p><strong>Source:</strong> <code>{esc(RULEBOOK_DOCX)}</code>, the version the league
+  marks <em>ONLY VERSION ACCEPTED</em>. Both it and the extracted text are in the repo
+  under <code>rulebook/</code>. Check the league's current release before relying on
+  any of it.</p>
+  <p>For what these rules did to our playbook &mdash; why the 6-2 is gone, why Prevent
+  exists, and the division question we have not resolved &mdash; see
+  <a href="rules-notes.html">our notes</a>.</p>
+</div>
+{rulebook_toc(text)}
+<div class="rulebook">
+{rulebook_html(text)}
 </div>"""
     return page(
         f"League rules — {SITE_TITLE}",
@@ -964,8 +1088,7 @@ so the page and the source cannot drift apart.</p>
         formations,
         defenses=defenses,
         active_nav="rules",
-        description="The league rules that constrain this playbook, and the two questions "
-                    "we have not resolved.",
+        description="The Suffolk County PAL Junior Football rulebook, reproduced verbatim.",
     )
 
 
@@ -1056,9 +1179,8 @@ anyway so a <code>Z Left</code> look can be added later without changing the lan
   face a <strong>minimum of three linebackers and no blitzing</strong>, which makes the
   6-2 illegal, and 8-year-olds may be placed in an <strong>8-man</strong> division where
   none of this is legal at all.</p>
-  <p>Read
-  <a href="rules.html">the rules page</a>
-  first.</p>
+  <p>Read <a href="rules-notes.html">what the rules did to this playbook</a> first, and
+  <a href="rules.html">the rulebook itself</a> when it matters.</p>
 </div>"""
     return page(
         f"{SITE_TITLE} — 2026 Playbook",
@@ -1308,8 +1430,8 @@ the league rulebook by the generator &mdash; an illegal front fails the build.</
   <p><strong>Blitzing is illegal at all times.</strong> No defender may move forward
   before the snap. Gap penetration after the snap is fine &mdash; that is not a blitz.</p>
   <p>Circumventing this is a 15-yard unsportsmanlike penalty on the head coach, and a
-  second offense gets him ejected. Full detail in
-  <a href="rules.html">the rules page</a>.</p>
+  second offense gets him ejected. The league's own wording is
+  <a href="rules.html#section-9">rule 9.02</a>.</p>
 </div>"""
     return page(
         f"Defensive playbook — {SITE_TITLE}",
@@ -1408,8 +1530,10 @@ def write_all(formations: list[dict], defenses: dict, root: Path) -> int:
     (root / "defense.html").write_text(
         write_defense_index(formations, defenses), encoding="utf-8")
     (root / "rules.html").write_text(
-        write_rules(formations, defenses, root), encoding="utf-8")
-    written += 5
+        write_rulebook(formations, defenses, root), encoding="utf-8")
+    (root / "rules-notes.html").write_text(
+        write_rules_notes(formations, defenses, root), encoding="utf-8")
+    written += 6
 
     for front in defenses.values():
         (root / d_href(front)).write_text(
