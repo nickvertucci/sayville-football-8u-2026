@@ -35,12 +35,12 @@ Two digits. The first says **who carries it**, the second says **where it goes**
 | **7 / 8** | Outside — around the end |
 
 Odd numbers go left, even numbers go right, counting outward from the center. So
-`I 22 Dive` is the fullback through the 2 hole, and `I 36 Power` is the tailback off
+`I 22 Dive` is the fullback through the 2 hole, `I 21 Dive` is the same handoff through the 1 hole, and `I 36 Power` is the tailback off
 tackle to the right.
 
 | Call | Play |
 |---|---|
-| `I 22 Dive` | I Dive |
+| `I 21 Dive` / `I 22 Dive` | I Dive Left / Right |
 | `I 33 Iso` / `I 34 Iso` | I Iso Left / Right |
 | `I 35 Power` / `I 36 Power` | I Power Left / Right |
 | `I 37 Slant` / `I 38 Slant` | I Slant Left / Right |

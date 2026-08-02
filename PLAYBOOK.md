@@ -6,32 +6,33 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 | # | Play | Call | Type | Formation | Ball |
 |---|---|---|---|---|---|
-| 1 | [I Dive](#i-dive) | `I 22 Dive` | run | I | FB |
-| 2 | [I Iso Right](#i-iso-right) | `I 34 Iso` | run | I | TB |
-| 3 | [I Iso Left](#i-iso-left) | `I 33 Iso` | run | I | TB |
-| 4 | [I Power Right](#i-power-right) | `I 36 Power` | run | I | TB |
-| 5 | [I Power Left](#i-power-left) | `I 35 Power` | run | I | TB |
-| 6 | [I Slant Right](#i-slant-right) | `I 38 Slant` | run | I | TB |
-| 7 | [I Slant Left](#i-slant-left) | `I 37 Slant` | run | I | TB |
-| 8 | [I Counter Left](#i-counter-left) | `I 35 Counter` | run | I | TB |
-| 9 | [I Boot Right](#i-boot-right) | `I 18 Boot` | pass | I | Z |
-| 10 | [Bone Dive](#bone-dive) | `Bone 2 Dive` | run | Wishbone | FB |
-| 11 | [Bone Power Right](#bone-power-right) | `Bone 6 Power` | run | Wishbone | LH |
-| 12 | [Bone Power Left](#bone-power-left) | `Bone 5 Power` | run | Wishbone | RH |
-| 13 | [Bone Pitch Right](#bone-pitch-right) | `Bone 8 Pitch` | run | Wishbone | RH |
-| 14 | [Bone Pitch Left](#bone-pitch-left) | `Bone 7 Pitch` | run | Wishbone | LH |
-| 15 | [Bone Counter Right](#bone-counter-right) | `Bone 6 Counter` | run | Wishbone | LH |
-| 16 | [Bone Counter Left](#bone-counter-left) | `Bone 5 Counter` | run | Wishbone | RH |
+| 1 | [I Dive Right](#i-dive-right) | `I 22 Dive` | run | I | FB |
+| 2 | [I Dive Left](#i-dive-left) | `I 21 Dive` | run | I | FB |
+| 3 | [I Iso Right](#i-iso-right) | `I 34 Iso` | run | I | TB |
+| 4 | [I Iso Left](#i-iso-left) | `I 33 Iso` | run | I | TB |
+| 5 | [I Power Right](#i-power-right) | `I 36 Power` | run | I | TB |
+| 6 | [I Power Left](#i-power-left) | `I 35 Power` | run | I | TB |
+| 7 | [I Slant Right](#i-slant-right) | `I 38 Slant` | run | I | TB |
+| 8 | [I Slant Left](#i-slant-left) | `I 37 Slant` | run | I | TB |
+| 9 | [I Counter Left](#i-counter-left) | `I 35 Counter` | run | I | TB |
+| 10 | [I Boot Right](#i-boot-right) | `I 18 Boot` | pass | I | Z |
+| 11 | [Bone Dive](#bone-dive) | `Bone 2 Dive` | run | Wishbone | FB |
+| 12 | [Bone Power Right](#bone-power-right) | `Bone 6 Power` | run | Wishbone | LH |
+| 13 | [Bone Power Left](#bone-power-left) | `Bone 5 Power` | run | Wishbone | RH |
+| 14 | [Bone Pitch Right](#bone-pitch-right) | `Bone 8 Pitch` | run | Wishbone | RH |
+| 15 | [Bone Pitch Left](#bone-pitch-left) | `Bone 7 Pitch` | run | Wishbone | LH |
+| 16 | [Bone Counter Right](#bone-counter-right) | `Bone 6 Counter` | run | Wishbone | LH |
+| 17 | [Bone Counter Left](#bone-counter-left) | `Bone 5 Counter` | run | Wishbone | RH |
 
 # I-Formation
 
 ---
 
-## I Dive
+## I Dive Right
 
 **Call it:** `I 22 Dive`
 
-![I Dive](playbook/i-form/cards/i-dive.svg)
+![I Dive Right](playbook/i-form/cards/i-dive-r.svg)
 
 The quickest handoff in the book. The fullback is through the line before their linebackers have read anything. We run it to remind them the middle is not free, which is what makes the slant work later.
 
@@ -55,6 +56,37 @@ The quickest handoff in the book. The fullback is through the line before their 
 - Best call when their linebackers start cheating wide to stop the slant.
 - The fullback runs at a spot, not at a defender. Give him the outside hip of the center and let him go.
 - Best short-yardage call in the book. Nobody has to read anything and the ball is over the line before the defense moves.
+
+---
+
+## I Dive Left
+
+**Call it:** `I 21 Dive`
+
+![I Dive Left](playbook/i-form/cards/i-dive-l.svg)
+
+The same quick handoff through the other A gap. Worth having both so the fullback is not always going to the same side of the center — once their middle linebacker knows which way the dive hits, it stops being quick.
+
+| Position | Assignment |
+|---|---|
+| **LE** | The end is head up on you. Drive him out and away from the ball. |
+| **LT** | The tackle is on your inside shoulder. Block him down and seal him inside — that is what opens the hole. |
+| **LG** | Nobody is over you. Double the nose with the center, and come off onto the middle linebacker when he shows. |
+| **C** | You and the playside guard double the nose. Drive him off the spot — the hole is right off his back. |
+| **RG** | Nobody is over you. Step back inside and cut off anyone chasing through the middle. |
+| **RT** | The tackle is on your inside shoulder. Get your head across him and wall him off so he cannot chase. |
+| **RE** | Cut off pursuit from behind. You are the last one to the ball, so never quit on the play. |
+| **Z** | Come across behind the line and cut off the corner chasing from the backside. |
+| **QB** | Take the snap, open a quarter turn and hand to the fullback at two yards. Then carry out a fake to the outside. |
+| **FB** **(ball)** | Aim at the outside hip of the center, right off the double team. Take the ball and get north — no reading, no dancing. |
+| **TB** | Run the slant path outside and sell it. You will not get the ball on this play. |
+
+**Coaching points**
+
+- Snap to handoff should be under a second. If the fullback is waiting on the ball, the play is already dead.
+- Run it the same week you install the right-hand one. The whole value of having both is that their middle linebacker cannot lean.
+- The fullback runs at a spot, not at a defender. Give him the outside hip of the center and let him go.
+- The flanker is away from the play here, so he has further to travel to cut off the backside. He leaves on the snap.
 
 ---
 
