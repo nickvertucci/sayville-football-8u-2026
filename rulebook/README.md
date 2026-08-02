@@ -3,12 +3,11 @@
 The rules in this repo are derived from the **Suffolk County PAL rulebook**:
 
 - **File:** `2025 PAL RULE BOOK updated 10:5:2025.docx`
-- **Status for 2026:** still the current book. On **July 29, 2026** the league
-  (Sayville Youth Football, sayvilleyouthfootball11782@gmail.com) sent it out for the
-  season with the note: *"Rule book — it is attached. Yes, it's the 2025 rule book. Make
-  sure you are familiar with it."*
-- **Author of record:** Vince, President of PAL (originally distributed Oct 6, 2025 as
-  the "Revised Rule Book").
+- **Status for 2026:** still the current book. The league distributed it again ahead of
+  the 2026 season with the note: *"Rule book — it is attached. Yes, it's the 2025 rule
+  book. Make sure you are familiar with it."*
+- **Author of record:** PAL leadership (originally distributed in October 2025 as the
+  "Revised Rule Book").
 
 ## Where is the .docx?
 
