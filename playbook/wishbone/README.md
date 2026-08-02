@@ -110,26 +110,27 @@ The fullback left now, off a double team on the nose. This is the play that has 
 
 ![Bone Power Right](cards/wb-power-r.svg)
 
-Off-tackle power, but the ball goes to the far halfback. He crosses behind the fullback and takes a deep handoff, which puts him behind the pulling guard with a full head of steam and gives their linebackers an extra beat of doubt about who has it. The near halfback leads and the fullback kicks out.
+Off-tackle power to the far halfback, who crosses behind the fullback and takes a deep handoff. Blocked exactly like Counter — our end drives their end out, the guard climbs to the middle linebacker, the fullback leads through the hole onto the playside linebacker — with the near halfback arcing to the corner in case the ball bounces.
 
 | Position | Assignment |
 |---|---|
 | **LE** | Cut off pursuit from behind. You are the last one to the ball, so never quit on the play. |
 | **LT** | Block back. Take the first defender on or inside you — nobody crosses your face. |
-| **LG** | PULL RIGHT. Run flat behind the line and turn up in the open gap between our tackle and our end. Take the first wrong-colored jersey. |
+| **LG** | Nobody is over you. Cut off the backside. |
 | **C** | You have the nose, head up on you. Hands inside and do not let him cross your face to the playside. |
-| **RG** | Nobody is over you. Help the center drive the nose for one count, then climb to the middle linebacker. |
+| **RG** | Nobody is over you. Climb straight to the middle linebacker and take him wherever he goes. |
 | **RT** | The tackle is on your inside shoulder. Block him down and seal him inside — that is what opens the hole. |
-| **RE** | Release inside off his outside shoulder and take the playside linebacker. The end over you is being kicked out — leave him alone. |
+| **RE** | Block the end over you and drive him out, away from the hole. Nobody is kicking him out for you — he is yours. |
 | **QB** | Open to the playside and hand deep to the halfback crossing from the backside. Let him come to you, then fake away. |
-| **FB** | Kick out the end. Aim at his inside hip and run through him. |
+| **FB** | Lead up through the hole and block the playside linebacker. You are the lead blocker — the ball is right behind you. |
 | **LH** **(ball)** | You carry it. Cross behind the fullback, take the handoff deep, then press the outside hip of our tackle and turn up inside the blocks. |
-| **RH** | Lead through the hole ahead of the ball. Take the first jersey inside the kick-out. |
+| **RH** | Arc outside and block the corner on your side. If the ball bounces, you are the reason it can. |
 
 **Coaching points**
 
-- The far halfback travels further than the near one, and that is the point — he arrives behind the pulling guard instead of beating him to the hole.
-- Two lead blockers and a pulling guard arrive in the same place. Walk it through slowly first or they will run into each other.
+- Identical blocking to Bone Counter. The line learns one set of rules and gets two plays out of it — say that out loud when you install the second one.
+- The fullback's block on the playside linebacker is the play. Drill it on its own.
+- The far halfback travels further than the near one, and that is the point — he arrives behind the fullback rather than beating him to the hole.
 - If the handoff is late, the quarterback is reaching. He holds the ball still and lets the back run through it.
 
 ---
@@ -140,26 +141,27 @@ Off-tackle power, but the ball goes to the far halfback. He crosses behind the f
 
 ![Bone Power Left](cards/wb-power-l.svg)
 
-Off-tackle power, but the ball goes to the far halfback. He crosses behind the fullback and takes a deep handoff, which puts him behind the pulling guard with a full head of steam and gives their linebackers an extra beat of doubt about who has it. The near halfback leads and the fullback kicks out.
+Off-tackle power to the far halfback, who crosses behind the fullback and takes a deep handoff. Blocked exactly like Counter — our end drives their end out, the guard climbs to the middle linebacker, the fullback leads through the hole onto the playside linebacker — with the near halfback arcing to the corner in case the ball bounces.
 
 | Position | Assignment |
 |---|---|
-| **LE** | Release inside off his outside shoulder and take the playside linebacker. The end over you is being kicked out — leave him alone. |
+| **LE** | Block the end over you and drive him out, away from the hole. Nobody is kicking him out for you — he is yours. |
 | **LT** | The tackle is on your inside shoulder. Block him down and seal him inside — that is what opens the hole. |
-| **LG** | Nobody is over you. Help the center drive the nose for one count, then climb to the middle linebacker. |
+| **LG** | Nobody is over you. Climb straight to the middle linebacker and take him wherever he goes. |
 | **C** | You have the nose, head up on you. Hands inside and do not let him cross your face to the playside. |
-| **RG** | PULL LEFT. Run flat behind the line and turn up in the open gap between our tackle and our end. Take the first wrong-colored jersey. |
+| **RG** | Nobody is over you. Cut off the backside. |
 | **RT** | Block back. Take the first defender on or inside you — nobody crosses your face. |
 | **RE** | Cut off pursuit from behind. You are the last one to the ball, so never quit on the play. |
 | **QB** | Open to the playside and hand deep to the halfback crossing from the backside. Let him come to you, then fake away. |
-| **FB** | Kick out the end. Aim at his inside hip and run through him. |
-| **LH** | Lead through the hole ahead of the ball. Take the first jersey inside the kick-out. |
+| **FB** | Lead up through the hole and block the playside linebacker. You are the lead blocker — the ball is left behind you. |
+| **LH** | Arc outside and block the corner on your side. If the ball bounces, you are the reason it can. |
 | **RH** **(ball)** | You carry it. Cross behind the fullback, take the handoff deep, then press the outside hip of our tackle and turn up inside the blocks. |
 
 **Coaching points**
 
-- The far halfback travels further than the near one, and that is the point — he arrives behind the pulling guard instead of beating him to the hole.
-- Two lead blockers and a pulling guard arrive in the same place. Walk it through slowly first or they will run into each other.
+- Identical blocking to Bone Counter. The line learns one set of rules and gets two plays out of it — say that out loud when you install the second one.
+- The fullback's block on the playside linebacker is the play. Drill it on its own.
+- The far halfback travels further than the near one, and that is the point — he arrives behind the fullback rather than beating him to the hole.
 - If the handoff is late, the quarterback is reaching. He holds the ball still and lets the back run through it.
 
 ---
