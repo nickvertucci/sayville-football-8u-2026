@@ -42,16 +42,16 @@
 <line x1="334.9" y1="311.1" x2="345.5" y2="326.1" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 <path d="M351.0,337.5 L359.1,307.8" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
 <line x1="350.2" y1="305.4" x2="368.0" y2="310.2" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
-<path d="M388.8,337.5 L405.0,364.5 L448.2,359.1 L442.8,256.5 L426.6,199.8" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-<line x1="417.8" y1="202.3" x2="435.4" y2="197.3" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
+<path d="M388.8,337.5 L394.2,305.1 L351.0,243.0" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="343.5" y1="248.2" x2="358.5" y2="237.8" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 <path d="M426.6,337.5 L415.8,302.4" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
 <line x1="407.0" y1="305.1" x2="424.6" y2="299.7" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
-<path d="M464.4,337.5 L437.4,243.0" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-<line x1="428.6" y1="245.5" x2="446.2" y2="240.5" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
+<path d="M464.4,337.5 L472.5,302.4" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="463.6" y1="300.3" x2="481.4" y2="304.5" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 <path d="M351.0,364.5 L318.6,378.0 L361.8,386.1 L388.8,380.7" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 5"/>
 <polygon points="388.8,380.7 379.6,387.3 377.7,378.2" fill="#14213d"/>
-<path d="M351.0,410.4 L426.6,383.4 L491.4,307.8" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-<line x1="484.4" y1="301.8" x2="498.4" y2="313.8" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
+<path d="M351.0,410.4 L394.2,356.4 L432.0,286.2 L437.4,243.0" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="428.3" y1="241.9" x2="446.5" y2="244.1" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 <path d="M272.7,456.3 L240.3,442.8 L321.3,405.0 L429.3,340.2 L440.1,270.0" fill="none" stroke="#b3001b" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
 <polygon points="440.1,270.0 443.1,280.9 434.0,279.5" fill="#b3001b"/>
 <path d="M429.3,456.3 L359.1,423.9 L267.3,391.5" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 5"/>
@@ -97,31 +97,29 @@
 <text x="52" y="732" font-size="12" fill="#111318">Hands inside and do not let him cross</text>
 <text x="52" y="748" font-size="12" fill="#111318">your face to the playside.</text>
 <text x="18" y="766" font-size="12" font-weight="700" fill="#111318">RG</text>
-<text x="52" y="766" font-size="12" fill="#111318">PULL RIGHT. Run flat behind the line,</text>
-<text x="52" y="782" font-size="12" fill="#111318">turn up inside the fullback's block</text>
-<text x="52" y="800" font-size="12" fill="#111318">and keep climbing. Take the first</text>
-<text x="52" y="816" font-size="12" fill="#111318">wrong-colored jersey that shows in</text>
-<text x="52" y="834" font-size="12" fill="#111318">the hole.</text>
-<text x="18" y="850" font-size="12" font-weight="700" fill="#111318">RT</text>
-<text x="52" y="850" font-size="12" fill="#111318">The tackle is on your inside</text>
-<text x="52" y="868" font-size="12" fill="#111318">shoulder. Block him down and seal him</text>
-<text x="52" y="884" font-size="12" fill="#111318">inside — that is what opens the hole.</text>
+<text x="52" y="766" font-size="12" fill="#111318">Nobody is over you. Climb straight to</text>
+<text x="52" y="782" font-size="12" fill="#111318">the middle linebacker and take him</text>
+<text x="52" y="800" font-size="12" fill="#111318">wherever he goes.</text>
+<text x="18" y="816" font-size="12" font-weight="700" fill="#111318">RT</text>
+<text x="52" y="816" font-size="12" fill="#111318">The tackle is on your inside</text>
+<text x="52" y="834" font-size="12" fill="#111318">shoulder. Block him down and seal him</text>
+<text x="52" y="850" font-size="12" fill="#111318">inside — that is what opens the hole.</text>
 <text x="297" y="578" font-size="12" font-weight="700" fill="#111318">RE</text>
-<text x="331" y="578" font-size="12" fill="#111318">Release inside off his outside</text>
-<text x="331" y="596" font-size="12" fill="#111318">shoulder and take the playside</text>
-<text x="331" y="612" font-size="12" fill="#111318">linebacker. The end over you belongs</text>
-<text x="331" y="630" font-size="12" fill="#111318">to the fullback — leave him alone.</text>
+<text x="331" y="578" font-size="12" fill="#111318">Block the end over you and drive him</text>
+<text x="331" y="596" font-size="12" fill="#111318">out, away from the hole. Nobody is</text>
+<text x="331" y="612" font-size="12" fill="#111318">kicking him out for you — he is</text>
+<text x="331" y="630" font-size="12" fill="#111318">yours.</text>
 <text x="297" y="646" font-size="12" font-weight="700" fill="#111318">QB</text>
 <text x="331" y="646" font-size="12" fill="#111318">Fake the pitch to the left, then turn</text>
 <text x="331" y="664" font-size="12" fill="#111318">back and hand the ball to the other</text>
 <text x="331" y="680" font-size="12" fill="#111318">halfback coming across. The fake</text>
 <text x="331" y="698" font-size="12" fill="#111318">comes first.</text>
 <text x="297" y="714" font-size="12" font-weight="700" fill="#111318">FB</text>
-<text x="331" y="714" font-size="12" fill="#111318">Step at the dive, then get out and</text>
-<text x="331" y="732" font-size="12" fill="#111318">blow out the end. Aim at his inside</text>
-<text x="331" y="748" font-size="12" fill="#111318">hip and drive him toward the sideline</text>
-<text x="331" y="766" font-size="12" fill="#111318">— the ball comes right off your</text>
-<text x="331" y="782" font-size="12" fill="#111318">block.</text>
+<text x="331" y="714" font-size="12" fill="#111318">Step at the dive to hold them, then</text>
+<text x="331" y="732" font-size="12" fill="#111318">go up through the hole and block the</text>
+<text x="331" y="748" font-size="12" fill="#111318">playside linebacker. You are the lead</text>
+<text x="331" y="766" font-size="12" fill="#111318">blocker — the ball is right behind</text>
+<text x="331" y="782" font-size="12" fill="#111318">you.</text>
 <text x="297" y="800" font-size="12" font-weight="700" fill="#111318">LH</text>
 <text x="331" y="800" font-size="12" fill="#111318">Take two hard steps toward the fake,</text>
 <text x="331" y="816" font-size="12" fill="#111318">then plant and come all the way back</text>
@@ -133,9 +131,9 @@
 <line x1="18" y1="892" x2="576" y2="892" stroke="#c8cdd6" stroke-width="1"/>
 <text x="18" y="910" font-size="11" font-weight="700" fill="#5b6472" letter-spacing="1">COACHING POINTS</text>
 <text x="18" y="930" font-size="12" fill="#111318">Do not call this until the pitch has been working. It is the counter-punch.</text>
-<text x="18" y="946" font-size="12" fill="#111318">The fullback's block is the play. If the end is not blown out, the ball carrier</text>
-<text x="18" y="964" font-size="12" fill="#111318">is tackled for a loss before he has turned upfield.</text>
-<text x="18" y="980" font-size="12" fill="#111318">The ball carrier crosses behind the fullback, so the timing is slow on purpose.</text>
-<text x="18" y="998" font-size="12" fill="#111318">The line has to hold its blocks an extra count.</text>
+<text x="18" y="946" font-size="12" fill="#111318">No pullers, so this hits faster than Power. The line has to hold its blocks while</text>
+<text x="18" y="964" font-size="12" fill="#111318">the ball carrier crosses, but nobody is waiting on a guard to get there.</text>
+<text x="18" y="980" font-size="12" fill="#111318">The fullback's block on the playside linebacker is what springs it. Drill that</text>
+<text x="18" y="998" font-size="12" fill="#111318">block on its own.</text>
 <text x="18" y="1014" font-size="12" fill="#111318">Two hard steps toward the fake before he comes back. A shuffle fools nobody.</text>
 </svg>

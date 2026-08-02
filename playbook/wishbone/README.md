@@ -232,7 +232,7 @@ Get outside in a hurry. The fullback holds the middle and then blocks, our end s
 
 ![Bone Counter Right](cards/wb-counter-r.svg)
 
-Misdirection off the pitch. The near halfback and the quarterback sell the pitch one way, the far halfback plants and comes all the way back. The fullback blows out the end and the playside guard pulls and wraps, so the ball turns up behind two blockers with their linebackers running the wrong way.
+Misdirection off the pitch. The near halfback and the quarterback sell the pitch one way and the far halfback plants and comes all the way back. Nobody pulls: our end drives their end out, the guard climbs to the middle linebacker and the fullback leads up through the hole onto the playside linebacker, so the ball hits fast behind a lead blocker.
 
 | Position | Assignment |
 |---|---|
@@ -240,19 +240,19 @@ Misdirection off the pitch. The near halfback and the quarterback sell the pitch
 | **LT** | Block back. Take the first defender on or inside you — nobody crosses your face. |
 | **LG** | Nobody is over you. Cut off the backside. |
 | **C** | You have the nose, head up on you. Hands inside and do not let him cross your face to the playside. |
-| **RG** | PULL RIGHT. Run flat behind the line, turn up inside the fullback's block and keep climbing. Take the first wrong-colored jersey that shows in the hole. |
+| **RG** | Nobody is over you. Climb straight to the middle linebacker and take him wherever he goes. |
 | **RT** | The tackle is on your inside shoulder. Block him down and seal him inside — that is what opens the hole. |
-| **RE** | Release inside off his outside shoulder and take the playside linebacker. The end over you belongs to the fullback — leave him alone. |
+| **RE** | Block the end over you and drive him out, away from the hole. Nobody is kicking him out for you — he is yours. |
 | **QB** | Fake the pitch to the left, then turn back and hand the ball to the other halfback coming across. The fake comes first. |
-| **FB** | Step at the dive, then get out and blow out the end. Aim at his inside hip and drive him toward the sideline — the ball comes right off your block. |
+| **FB** | Step at the dive to hold them, then go up through the hole and block the playside linebacker. You are the lead blocker — the ball is right behind you. |
 | **LH** **(ball)** | Take two hard steps toward the fake, then plant and come all the way back behind the pulling guard. |
 | **RH** | Run the full pitch path away at full speed with your arms tucked. You are the lie. |
 
 **Coaching points**
 
 - Do not call this until the pitch has been working. It is the counter-punch.
-- The fullback's block is the play. If the end is not blown out, the ball carrier is tackled for a loss before he has turned upfield.
-- The ball carrier crosses behind the fullback, so the timing is slow on purpose. The line has to hold its blocks an extra count.
+- No pullers, so this hits faster than Power. The line has to hold its blocks while the ball carrier crosses, but nobody is waiting on a guard to get there.
+- The fullback's block on the playside linebacker is what springs it. Drill that block on its own.
 - Two hard steps toward the fake before he comes back. A shuffle fools nobody.
 
 ---
@@ -263,26 +263,26 @@ Misdirection off the pitch. The near halfback and the quarterback sell the pitch
 
 ![Bone Counter Left](cards/wb-counter-l.svg)
 
-Misdirection off the pitch. The near halfback and the quarterback sell the pitch one way, the far halfback plants and comes all the way back. The fullback blows out the end and the playside guard pulls and wraps, so the ball turns up behind two blockers with their linebackers running the wrong way.
+Misdirection off the pitch. The near halfback and the quarterback sell the pitch one way and the far halfback plants and comes all the way back. Nobody pulls: our end drives their end out, the guard climbs to the middle linebacker and the fullback leads up through the hole onto the playside linebacker, so the ball hits fast behind a lead blocker.
 
 | Position | Assignment |
 |---|---|
-| **LE** | Release inside off his outside shoulder and take the playside linebacker. The end over you belongs to the fullback — leave him alone. |
+| **LE** | Block the end over you and drive him out, away from the hole. Nobody is kicking him out for you — he is yours. |
 | **LT** | The tackle is on your inside shoulder. Block him down and seal him inside — that is what opens the hole. |
-| **LG** | PULL LEFT. Run flat behind the line, turn up inside the fullback's block and keep climbing. Take the first wrong-colored jersey that shows in the hole. |
+| **LG** | Nobody is over you. Climb straight to the middle linebacker and take him wherever he goes. |
 | **C** | You have the nose, head up on you. Hands inside and do not let him cross your face to the playside. |
 | **RG** | Nobody is over you. Cut off the backside. |
 | **RT** | Block back. Take the first defender on or inside you — nobody crosses your face. |
 | **RE** | Cut off pursuit from behind. You are the last one to the ball, so never quit on the play. |
 | **QB** | Fake the pitch to the right, then turn back and hand the ball to the other halfback coming across. The fake comes first. |
-| **FB** | Step at the dive, then get out and blow out the end. Aim at his inside hip and drive him toward the sideline — the ball comes left off your block. |
+| **FB** | Step at the dive to hold them, then go up through the hole and block the playside linebacker. You are the lead blocker — the ball is left behind you. |
 | **LH** | Run the full pitch path away at full speed with your arms tucked. You are the lie. |
 | **RH** **(ball)** | Take two hard steps toward the fake, then plant and come all the way back behind the pulling guard. |
 
 **Coaching points**
 
 - Do not call this until the pitch has been working. It is the counter-punch.
-- The fullback's block is the play. If the end is not blown out, the ball carrier is tackled for a loss before he has turned upfield.
-- The ball carrier crosses behind the fullback, so the timing is slow on purpose. The line has to hold its blocks an extra count.
+- No pullers, so this hits faster than Power. The line has to hold its blocks while the ball carrier crosses, but nobody is waiting on a guard to get there.
+- The fullback's block on the playside linebacker is what springs it. Drill that block on its own.
 - Two hard steps toward the fake before he comes back. A shuffle fools nobody.
 
