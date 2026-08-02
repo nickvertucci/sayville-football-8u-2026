@@ -3,7 +3,7 @@
   "order": 1,
   "formation": "i-form",
   "name": "I Dive Right",
-  "call": "I 22 Dive",
+  "call": "I Z Right 22 Dive",
   "type": "run",
   "defense": "5-3",
   "ball_carrier": "FB",
@@ -99,5 +99,6 @@
     "The fullback runs at a spot, not at a defender. Give him the outside hip of the center and let him go.",
     "Best short-yardage call in the book. Nobody has to read anything and the ball is over the line before the defense moves."
   ],
-  "direction": "right"
+  "direction": "right",
+  "z": "right"
 }

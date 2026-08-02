@@ -879,9 +879,9 @@ front for when they keep getting outside us.</p>
 
 <p class="section-head">How we call plays</p>
 <p class="lede">Every play has a teaching name (<em>I Power Right</em>) and a huddle call
-(<code>I 36 Power</code>). Both are printed on every card. In the I-formation the call is
-<strong>formation + back + hole + play word</strong>: the first number says who carries
-it, the second says where it goes.</p>
+(<code>I Z Right 36 Power</code>). Both are printed on every card. In the I-formation
+the call is <strong>formation + flanker + back + hole + play word</strong>. <code>Z Right</code> is where the flanker lines up, then the first number says who
+carries it and the second says where it goes.</p>
 <p class="lede"><strong>Who carries it</strong></p>
 <dl class="assign holes">
   {chr(10).join(f'  <div class="row"><dt>{esc(n)}</dt><dd>{esc(d)}</dd></div>'
@@ -894,9 +894,11 @@ memorize.</p>
   {chr(10).join(f'  <div class="row"><dt>{esc(n)}</dt><dd>{esc(d)}</dd></div>'
                 for n, d in HOLES).strip()}
 </dl>
-<p class="lede">So <code>I 22 Dive</code> is the fullback through the 2 hole, and
-<code>I 36 Power</code> is the tailback off tackle to the right. A kid who knows the two
-numbers can run a play the first time he hears it.</p>
+<p class="lede">So <code>I Z Right 22 Dive</code> is flanker right, fullback, 2 hole,
+and <code>I Z Right 36 Power</code> is flanker right, tailback, off tackle right. A kid
+who knows the two numbers can run a play the first time he hears it.</p>
+<p class="sub">Every play in the book is <code>Z Right</code> today. It is in the call
+anyway so a <code>Z Left</code> look can be added later without changing the language.</p>
 <p class="sub">The Wishbone still uses a single hole number
 (<code>Bone 6 Power</code>) because it carries three backs rather than one.</p>
 

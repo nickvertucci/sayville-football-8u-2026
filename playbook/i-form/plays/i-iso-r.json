@@ -3,7 +3,7 @@
   "order": 3,
   "formation": "i-form",
   "name": "I Iso Right",
-  "call": "I 34 Iso",
+  "call": "I Z Right 34 Iso",
   "type": "run",
   "defense": "5-3",
   "direction": "right",
@@ -99,5 +99,6 @@
     "Teach the tailback one rule: cut off the fullback's back. Do not let him decide before he gets there.",
     "If their linebacker is faster than our fullback, stop calling this and run I Power instead.",
     "The tailback should be running downhill at the hole, not sideways looking for one."
-  ]
+  ],
+  "z": "right"
 }

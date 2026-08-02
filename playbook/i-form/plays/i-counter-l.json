@@ -3,7 +3,7 @@
   "order": 9,
   "formation": "i-form",
   "name": "I Counter Left",
-  "call": "I 35 Counter",
+  "call": "I Z Right 35 Counter",
   "type": "run",
   "defense": "5-3",
   "direction": "left",
@@ -103,5 +103,6 @@
     "The tailback's counter steps must be full speed and full length. A shuffle fools nobody.",
     "The fullback selling the slant matters more than his block. Tell him he is the decoy and mean it.",
     "If their backside linebacker stops chasing the slant, go back to I Power Left."
-  ]
+  ],
+  "z": "right"
 }

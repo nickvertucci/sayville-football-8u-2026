@@ -3,7 +3,7 @@
   "order": 2,
   "formation": "i-form",
   "name": "I Dive Left",
-  "call": "I 21 Dive",
+  "call": "I Z Right 21 Dive",
   "type": "run",
   "defense": "5-3",
   "direction": "left",
@@ -99,5 +99,6 @@
     "Run it the same week you install the right-hand one. The whole value of having both is that their middle linebacker cannot lean.",
     "The fullback runs at a spot, not at a defender. Give him the outside hip of the center and let him go.",
     "The flanker is away from the play here, so he has further to travel to cut off the backside. He leaves on the snap."
-  ]
+  ],
+  "z": "right"
 }

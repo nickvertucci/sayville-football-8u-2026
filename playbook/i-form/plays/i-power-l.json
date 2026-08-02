@@ -3,7 +3,7 @@
   "order": 6,
   "formation": "i-form",
   "name": "I Power Left",
-  "call": "I 35 Power",
+  "call": "I Z Right 35 Power",
   "type": "run",
   "defense": "5-3",
   "direction": "left",
@@ -101,5 +101,6 @@
     "Check their alignment first. If they have shaded toward our flanker, this is the call.",
     "The flanker chases from behind. Tell him he is not decoration — he cuts off the corner who would otherwise run this down.",
     "Everything else is I Power Right in a mirror. Teach the pair together."
-  ]
+  ],
+  "z": "right"
 }

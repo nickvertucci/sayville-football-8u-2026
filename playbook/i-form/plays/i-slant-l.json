@@ -3,7 +3,7 @@
   "order": 8,
   "formation": "i-form",
   "name": "I Slant Left",
-  "call": "I 37 Slant",
+  "call": "I Z Right 37 Slant",
   "type": "run",
   "defense": "5-3",
   "direction": "left",
@@ -100,5 +100,6 @@
     "The fullback has further to travel here than he does going right, so he has to leave on the snap. If he trails the tailback the play has no lead blocker.",
     "One rule for the tailback: turn up off the fullback's block. Running to the sideline is how this play loses eight yards.",
     "The flanker chases from behind. Tell him he is the reason a fast corner does not run this down from the backside."
-  ]
+  ],
+  "z": "right"
 }

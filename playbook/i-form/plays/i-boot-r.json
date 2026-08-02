@@ -3,7 +3,7 @@
   "order": 10,
   "formation": "i-form",
   "name": "I Boot Right",
-  "call": "I 18 Boot",
+  "call": "I Z Right 18 Boot",
   "type": "pass",
   "defense": "5-3",
   "direction": "right",
@@ -103,5 +103,6 @@
     "Run first. At this age the quarterback usually walks into ten yards before anyone finds him.",
     "No blitzing is allowed for 8- and 9-year-olds, so the quarterback has time. Teach him to be patient and look up.",
     "One throw, then tuck it. No scrambling backwards, ever."
-  ]
+  ],
+  "z": "right"
 }

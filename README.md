@@ -15,11 +15,16 @@ and the Print button gives you the whole book in landscape, one play per sheet.
 Every play has two names, and both are printed on every card.
 
 - The **name** is what you say while teaching it: *I Power Right*.
-- The **call** is what you yell on Saturday: `I 36 Power`.
+- The **call** is what you yell on Saturday: `I Z Right 36 Power`.
 
-### I-Formation: formation + back + hole + play word
+### I-Formation: formation + flanker + back + hole + play word
 
-Two digits. The first says **who carries it**, the second says **where it goes**.
+`Z Right` says where the flanker lines up. Then two digits: the first says
+**who carries it**, the second says **where it goes**.
+
+Every play in the book is `Z Right` today — the flanker never moves. It is named
+in the call anyway so a `Z Left` look can be added later without changing how a
+single play is called.
 
 | Back | Who |
 |---|---|
@@ -35,19 +40,20 @@ Two digits. The first says **who carries it**, the second says **where it goes**
 | **7 / 8** | Outside — around the end |
 
 Odd numbers go left, even numbers go right, counting outward from the center. So
-`I 22 Dive` is the fullback through the 2 hole, `I 21 Dive` is the same handoff through the 1 hole, and `I 36 Power` is the tailback off
+`I Z Right 22 Dive` is flanker right, fullback, 2 hole; `I Z Right 21 Dive` is the
+same handoff through the 1 hole; and `I Z Right 36 Power` is the tailback off
 tackle to the right.
 
 | Call | Play |
 |---|---|
-| `I 21 Dive` / `I 22 Dive` | I Dive Left / Right |
-| `I 33 Iso` / `I 34 Iso` | I Iso Left / Right |
-| `I 35 Power` / `I 36 Power` | I Power Left / Right |
-| `I 37 Slant` / `I 38 Slant` | I Slant Left / Right |
-| `I 35 Counter` | I Counter Left |
-| `I 18 Boot` | I Boot Right |
+| `I Z Right 21 Dive` / `I Z Right 22 Dive` | I Dive Left / Right |
+| `I Z Right 33 Iso` / `I Z Right 34 Iso` | I Iso Left / Right |
+| `I Z Right 35 Power` / `I Z Right 36 Power` | I Power Left / Right |
+| `I Z Right 37 Slant` / `I Z Right 38 Slant` | I Slant Left / Right |
+| `I Z Right 35 Counter` | I Counter Left |
+| `I Z Right 18 Boot` | I Boot Right |
 
-`I 35` appears twice — as Power and as Counter — because both finish in the same hole
+`35` appears twice — as Power and as Counter — because both finish in the same hole
 with the same back. The play word is what separates them, which is exactly what it is
 there for.
 

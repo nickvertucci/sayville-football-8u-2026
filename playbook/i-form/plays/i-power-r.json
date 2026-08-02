@@ -3,7 +3,7 @@
   "order": 5,
   "formation": "i-form",
   "name": "I Power Right",
-  "call": "I 36 Power",
+  "call": "I Z Right 36 Power",
   "type": "run",
   "defense": "5-3",
   "direction": "right",
@@ -102,5 +102,6 @@
     "The tailback starts deeper than the wishbone halfback does, so the kick-out block has to hold a beat longer. Drill it on a count.",
     "The pulling guard stays flat and tight to the line. Bellying back is what makes this play late.",
     "If the pulling guard cannot get there in time, run I Iso instead — it needs no pullers."
-  ]
+  ],
+  "z": "right"
 }

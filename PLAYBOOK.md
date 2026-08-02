@@ -6,16 +6,16 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 | # | Play | Call | Type | Formation | Ball |
 |---|---|---|---|---|---|
-| 1 | [I Dive Right](#i-dive-right) | `I 22 Dive` | run | I | FB |
-| 2 | [I Dive Left](#i-dive-left) | `I 21 Dive` | run | I | FB |
-| 3 | [I Iso Right](#i-iso-right) | `I 34 Iso` | run | I | TB |
-| 4 | [I Iso Left](#i-iso-left) | `I 33 Iso` | run | I | TB |
-| 5 | [I Power Right](#i-power-right) | `I 36 Power` | run | I | TB |
-| 6 | [I Power Left](#i-power-left) | `I 35 Power` | run | I | TB |
-| 7 | [I Slant Right](#i-slant-right) | `I 38 Slant` | run | I | TB |
-| 8 | [I Slant Left](#i-slant-left) | `I 37 Slant` | run | I | TB |
-| 9 | [I Counter Left](#i-counter-left) | `I 35 Counter` | run | I | TB |
-| 10 | [I Boot Right](#i-boot-right) | `I 18 Boot` | pass | I | Z |
+| 1 | [I Dive Right](#i-dive-right) | `I Z Right 22 Dive` | run | I | FB |
+| 2 | [I Dive Left](#i-dive-left) | `I Z Right 21 Dive` | run | I | FB |
+| 3 | [I Iso Right](#i-iso-right) | `I Z Right 34 Iso` | run | I | TB |
+| 4 | [I Iso Left](#i-iso-left) | `I Z Right 33 Iso` | run | I | TB |
+| 5 | [I Power Right](#i-power-right) | `I Z Right 36 Power` | run | I | TB |
+| 6 | [I Power Left](#i-power-left) | `I Z Right 35 Power` | run | I | TB |
+| 7 | [I Slant Right](#i-slant-right) | `I Z Right 38 Slant` | run | I | TB |
+| 8 | [I Slant Left](#i-slant-left) | `I Z Right 37 Slant` | run | I | TB |
+| 9 | [I Counter Left](#i-counter-left) | `I Z Right 35 Counter` | run | I | TB |
+| 10 | [I Boot Right](#i-boot-right) | `I Z Right 18 Boot` | pass | I | Z |
 | 11 | [Bone Dive](#bone-dive) | `Bone 2 Dive` | run | Wishbone | FB |
 | 12 | [Bone Power Right](#bone-power-right) | `Bone 6 Power` | run | Wishbone | LH |
 | 13 | [Bone Power Left](#bone-power-left) | `Bone 5 Power` | run | Wishbone | RH |
@@ -30,7 +30,7 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ## I Dive Right
 
-**Call it:** `I 22 Dive`
+**Call it:** `I Z Right 22 Dive`
 
 ![I Dive Right](playbook/i-form/cards/i-dive-r.svg)
 
@@ -61,7 +61,7 @@ The quickest handoff in the book. The fullback is through the line before their 
 
 ## I Dive Left
 
-**Call it:** `I 21 Dive`
+**Call it:** `I Z Right 21 Dive`
 
 ![I Dive Left](playbook/i-form/cards/i-dive-l.svg)
 
@@ -92,7 +92,7 @@ The same quick handoff through the other A gap. Worth having both so the fullbac
 
 ## I Iso Right
 
-**Call it:** `I 34 Iso`
+**Call it:** `I Z Right 34 Iso`
 
 ![I Iso Right](playbook/i-form/cards/i-iso-r.svg)
 
@@ -123,7 +123,7 @@ The whole play is one block: the fullback isolates their linebacker in the hole 
 
 ## I Iso Left
 
-**Call it:** `I 33 Iso`
+**Call it:** `I Z Right 33 Iso`
 
 ![I Iso Left](playbook/i-form/cards/i-iso-l.svg)
 
@@ -153,7 +153,7 @@ The same isolation block the other way. The flanker stays where he is, so this r
 
 ## I Power Right
 
-**Call it:** `I 36 Power`
+**Call it:** `I Z Right 36 Power`
 
 ![I Power Right](playbook/i-form/cards/i-power-r.svg)
 
@@ -184,7 +184,7 @@ The power run out of the I. Playside blocks down, the fullback kicks out the end
 
 ## I Power Left
 
-**Call it:** `I 35 Power`
+**Call it:** `I Z Right 35 Power`
 
 ![I Power Left](playbook/i-form/cards/i-power-l.svg)
 
@@ -214,7 +214,7 @@ Power to the weak side. The flanker is not out there to help, so the kick-out an
 
 ## I Slant Right
 
-**Call it:** `I 38 Slant`
+**Call it:** `I Z Right 38 Slant`
 
 ![I Slant Right](playbook/i-form/cards/i-slant-r.svg)
 
@@ -245,7 +245,7 @@ Get outside. The fullback and the flanker are both out in front and the tailback
 
 ## I Slant Left
 
-**Call it:** `I 37 Slant`
+**Call it:** `I Z Right 37 Slant`
 
 ![I Slant Left](playbook/i-form/cards/i-slant-l.svg)
 
@@ -276,7 +276,7 @@ The same run away from the flanker. There is one fewer blocker out there, so the
 
 ## I Counter Left
 
-**Call it:** `I 35 Counter`
+**Call it:** `I Z Right 35 Counter`
 
 ![I Counter Left](playbook/i-form/cards/i-counter-l.svg)
 
@@ -307,7 +307,7 @@ Misdirection off the slant. We show them the slant to the flanker side, their li
 
 ## I Boot Right
 
-**Call it:** `I 18 Boot`
+**Call it:** `I Z Right 18 Boot`
 
 ![I Boot Right](playbook/i-form/cards/i-boot-r.svg)
 

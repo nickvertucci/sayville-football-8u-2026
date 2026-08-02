@@ -23,7 +23,7 @@ Normal line splits, about one foot. Both ends are ON the line. The flanker is OF
 **Formation coaching notes**
 
 - This formation exists so the tailback can pick a hole. In the Wishbone the play decides where the ball goes; here the back reads the block in front of him and cuts off it. That is the harder skill of the two, which is why this is the formation we spend the most practice time on.
-- The flanker is always to the right. That makes us strong right, which is fine — we would rather have one look the kids never line up wrong than two they do.
+- The flanker lines up to the right on every play in the book, and the call says so — I Z Right. Naming it means we can add a Z Left look later without changing a single thing about how the plays are called, and it means nobody has to guess where he goes.
 - Count seven on the line every single snap. The flanker creeping up to the line is the most common illegal formation flag you will get out of this look.
 - Fullback and tailback must be stacked. If the tailback drifts he tips which way the play is going before the snap.
 
@@ -31,22 +31,22 @@ Normal line splits, about one foot. Both ends are ON the line. The flanker is OF
 
 | Play | Call | Type | Ball |
 |---|---|---|---|
-| [I Dive Right](#i-dive-right) | `I 22 Dive` | run | FB |
-| [I Dive Left](#i-dive-left) | `I 21 Dive` | run | FB |
-| [I Iso Right](#i-iso-right) | `I 34 Iso` | run | TB |
-| [I Iso Left](#i-iso-left) | `I 33 Iso` | run | TB |
-| [I Power Right](#i-power-right) | `I 36 Power` | run | TB |
-| [I Power Left](#i-power-left) | `I 35 Power` | run | TB |
-| [I Slant Right](#i-slant-right) | `I 38 Slant` | run | TB |
-| [I Slant Left](#i-slant-left) | `I 37 Slant` | run | TB |
-| [I Counter Left](#i-counter-left) | `I 35 Counter` | run | TB |
-| [I Boot Right](#i-boot-right) | `I 18 Boot` | pass | Z |
+| [I Dive Right](#i-dive-right) | `I Z Right 22 Dive` | run | FB |
+| [I Dive Left](#i-dive-left) | `I Z Right 21 Dive` | run | FB |
+| [I Iso Right](#i-iso-right) | `I Z Right 34 Iso` | run | TB |
+| [I Iso Left](#i-iso-left) | `I Z Right 33 Iso` | run | TB |
+| [I Power Right](#i-power-right) | `I Z Right 36 Power` | run | TB |
+| [I Power Left](#i-power-left) | `I Z Right 35 Power` | run | TB |
+| [I Slant Right](#i-slant-right) | `I Z Right 38 Slant` | run | TB |
+| [I Slant Left](#i-slant-left) | `I Z Right 37 Slant` | run | TB |
+| [I Counter Left](#i-counter-left) | `I Z Right 35 Counter` | run | TB |
+| [I Boot Right](#i-boot-right) | `I Z Right 18 Boot` | pass | Z |
 
 ---
 
 ## I Dive Right
 
-**Call it:** `I 22 Dive`
+**Call it:** `I Z Right 22 Dive`
 
 ![I Dive Right](cards/i-dive-r.svg)
 
@@ -77,7 +77,7 @@ The quickest handoff in the book. The fullback is through the line before their 
 
 ## I Dive Left
 
-**Call it:** `I 21 Dive`
+**Call it:** `I Z Right 21 Dive`
 
 ![I Dive Left](cards/i-dive-l.svg)
 
@@ -108,7 +108,7 @@ The same quick handoff through the other A gap. Worth having both so the fullbac
 
 ## I Iso Right
 
-**Call it:** `I 34 Iso`
+**Call it:** `I Z Right 34 Iso`
 
 ![I Iso Right](cards/i-iso-r.svg)
 
@@ -139,7 +139,7 @@ The whole play is one block: the fullback isolates their linebacker in the hole 
 
 ## I Iso Left
 
-**Call it:** `I 33 Iso`
+**Call it:** `I Z Right 33 Iso`
 
 ![I Iso Left](cards/i-iso-l.svg)
 
@@ -169,7 +169,7 @@ The same isolation block the other way. The flanker stays where he is, so this r
 
 ## I Power Right
 
-**Call it:** `I 36 Power`
+**Call it:** `I Z Right 36 Power`
 
 ![I Power Right](cards/i-power-r.svg)
 
@@ -200,7 +200,7 @@ The power run out of the I. Playside blocks down, the fullback kicks out the end
 
 ## I Power Left
 
-**Call it:** `I 35 Power`
+**Call it:** `I Z Right 35 Power`
 
 ![I Power Left](cards/i-power-l.svg)
 
@@ -230,7 +230,7 @@ Power to the weak side. The flanker is not out there to help, so the kick-out an
 
 ## I Slant Right
 
-**Call it:** `I 38 Slant`
+**Call it:** `I Z Right 38 Slant`
 
 ![I Slant Right](cards/i-slant-r.svg)
 
@@ -261,7 +261,7 @@ Get outside. The fullback and the flanker are both out in front and the tailback
 
 ## I Slant Left
 
-**Call it:** `I 37 Slant`
+**Call it:** `I Z Right 37 Slant`
 
 ![I Slant Left](cards/i-slant-l.svg)
 
@@ -292,7 +292,7 @@ The same run away from the flanker. There is one fewer blocker out there, so the
 
 ## I Counter Left
 
-**Call it:** `I 35 Counter`
+**Call it:** `I Z Right 35 Counter`
 
 ![I Counter Left](cards/i-counter-l.svg)
 
@@ -323,7 +323,7 @@ Misdirection off the slant. We show them the slant to the flanker side, their li
 
 ## I Boot Right
 
-**Call it:** `I 18 Boot`
+**Call it:** `I Z Right 18 Boot`
 
 ![I Boot Right](cards/i-boot-r.svg)
 

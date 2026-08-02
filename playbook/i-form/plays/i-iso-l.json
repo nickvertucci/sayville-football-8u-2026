@@ -3,7 +3,7 @@
   "order": 4,
   "formation": "i-form",
   "name": "I Iso Left",
-  "call": "I 33 Iso",
+  "call": "I Z Right 33 Iso",
   "type": "run",
   "defense": "5-3",
   "direction": "left",
@@ -98,5 +98,6 @@
     "Running away from the flanker means one fewer blocker out there, so the tailback has to get north fast.",
     "Their defense will usually shade toward our flanker. That is the reason this play exists — check it before you call it.",
     "Same block, same read as I Iso Right. Do not teach it as a new play, teach it as the same play flipped."
-  ]
+  ],
+  "z": "right"
 }

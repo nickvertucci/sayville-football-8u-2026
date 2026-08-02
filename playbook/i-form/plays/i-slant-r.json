@@ -3,7 +3,7 @@
   "order": 7,
   "formation": "i-form",
   "name": "I Slant Right",
-  "call": "I 38 Slant",
+  "call": "I Z Right 38 Slant",
   "type": "run",
   "defense": "5-3",
   "direction": "right",
@@ -100,5 +100,6 @@
     "The fullback has to beat the tailback to the corner. If he is trailing, the play has no lead blocker.",
     "One rule for the tailback: turn up off the fullback's block. Running to the sideline is how this play loses eight yards.",
     "Watch our end reach-blocking. If he cannot reach their end, run I Power to that side instead."
-  ]
+  ],
+  "z": "right"
 }
