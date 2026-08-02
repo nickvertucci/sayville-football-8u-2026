@@ -15,7 +15,8 @@ python generator/render.py --check    # validate the JSON only, write nothing
 playbook/<formation>/formation.json   the 11 alignment spots
 playbook/<formation>/plays/*.json     one file per play, filename = play id
 playbook/<formation>/cards/*.svg      generated: full card + diagram-only version
-generator/defenses/*.json             defensive looks the cards can be drawn against
+defense/<front>.json                  the defensive playbook; also the fronts
+                                      offensive cards are drawn against
 ```
 
 ## Every diagram shares one frame
@@ -62,7 +63,7 @@ key. On pass plays, set it to the primary receiver.
 `id` (must equal the filename), `name`, and `assignments` with an entry for **all
 eleven** positions in the formation. `--check` fails the build if one is missing.
 
-Optional: `call`, `type`, `defense` (must match a file in `generator/defenses/`),
+Optional: `call`, `type`, `defense` (must match a file in `defense/`),
 `install_week`, `direction`, `purpose`, `coaching_points`.
 
 ### `name` and `call` are different on purpose

@@ -1,0 +1,121 @@
+{
+  "id": "6-3",
+  "order": 2,
+  "name": "6-3",
+  "call": "Goal Line",
+  "family": "Short yardage and goal line",
+  "summary": "The heaviest front the rulebook allows. Six down linemen shoulder to shoulder and three linebackers right behind them, for third-and-one and inside the five.",
+  "notes": "Six down linemen is the legal maximum. Linebackers sit at two yards, the closest they are allowed to be, and both corners come up to two yards. There is no safety in this front — everybody is in the box, which is the point.",
+  "roles": {
+    "LE": "DL",
+    "LT": "DL",
+    "LG": "DL",
+    "RG": "DL",
+    "RT": "DL",
+    "RE": "DL",
+    "W": "LB",
+    "M": "LB",
+    "S": "LB",
+    "LC": "DB",
+    "RC": "DB"
+  },
+  "alignment": {
+    "LE": [-4.4, 0.8],
+    "LT": [-2.4, 0.8],
+    "LG": [-1.2, 0.8],
+    "RG": [1.2, 0.8],
+    "RT": [2.4, 0.8],
+    "RE": [4.4, 0.8],
+    "W": [-2.6, 2.0],
+    "M": [0.0, 2.0],
+    "S": [2.6, 2.0],
+    "LC": [-8.0, 2.0],
+    "RC": [8.0, 2.0]
+  },
+  "assignments": {
+    "LE": {
+      "rule": "Contain. Rush his outside shoulder, keep your outside arm free. Nothing gets outside you.",
+      "type": "attack",
+      "path": [
+        [-0.4, -1.3]
+      ]
+    },
+    "LT": {
+      "rule": "Fire low into the man over you and hold your ground. Pads under his pads. Do not get driven back one inch.",
+      "type": "attack",
+      "path": [
+        [0.0, -1.3]
+      ]
+    },
+    "LG": {
+      "rule": "Fire low into the gap on your inside. Get skinny and get penetration — a pile in the backfield is a stop.",
+      "type": "attack",
+      "path": [
+        [0.4, -1.4]
+      ]
+    },
+    "RG": {
+      "rule": "Fire low into the gap on your inside. Get skinny and get penetration — a pile in the backfield is a stop.",
+      "type": "attack",
+      "path": [
+        [-0.4, -1.4]
+      ]
+    },
+    "RT": {
+      "rule": "Fire low into the man over you and hold your ground. Pads under his pads. Do not get driven back one inch.",
+      "type": "attack",
+      "path": [
+        [0.0, -1.3]
+      ]
+    },
+    "RE": {
+      "rule": "Contain. Rush his outside shoulder, keep your outside arm free. Nothing gets outside you.",
+      "type": "attack",
+      "path": [
+        [0.4, -1.3]
+      ]
+    },
+    "W": {
+      "rule": "Two yards deep. Fill the first crack that shows on your side. Do not wait and read on the goal line — go.",
+      "type": "read",
+      "path": [
+        [-0.2, -1.2]
+      ]
+    },
+    "M": {
+      "rule": "Two yards deep over the centre. Anything up the middle is yours. Meet the wedge low and stop its feet.",
+      "type": "read",
+      "path": [
+        [0.0, -1.2]
+      ]
+    },
+    "S": {
+      "rule": "Two yards deep. Fill the first crack that shows on your side. Do not wait and read on the goal line — go.",
+      "type": "read",
+      "path": [
+        [0.2, -1.2]
+      ]
+    },
+    "LC": {
+      "rule": "Two yards off. Force everything back inside and tackle low. You are the edge — nothing gets around you.",
+      "type": "read",
+      "path": [
+        [0.9, -0.5]
+      ]
+    },
+    "RC": {
+      "rule": "Two yards off. Force everything back inside and tackle low. You are the edge — nothing gets around you.",
+      "type": "read",
+      "path": [
+        [-0.9, -0.5]
+      ]
+    }
+  },
+  "coaching_points": [
+    "Everybody plays low. Whoever gets under the other team's pads wins the down, and at this age that is nearly the whole game on the goal line.",
+    "This front has no safety. If they get past the linebackers there is nobody left, so do not call it outside the five unless it is short yardage.",
+    "Against a wedge, the middle linebacker meets it low and the two guards get penetration to break it up. A wedge that keeps moving forward scores.",
+    "Two yards is the closest the linebackers may legally line up. Do not let them creep, and do not let anyone lean forward before the snap — that is a blitz and it is a penalty on the head coach."
+  ],
+  "legal": "Six down linemen, which is the cap. Three linebackers at two yards and both corners at two yards, which is the minimum depth. No blitzing."
+}

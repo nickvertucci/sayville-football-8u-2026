@@ -124,6 +124,7 @@ nav.desk { display: none; align-items: center; gap: 2px; height: 100%; }
   display: grid; grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 26px; padding: 22px 0 26px;
 }
+.ddinner.one { grid-template-columns: minmax(0, 460px); }
 
 /* Mobile drawer */
 .scrim {
@@ -153,6 +154,10 @@ nav.desk { display: none; align-items: center; gap: 2px; height: 100%; }
 }
 .dclose:hover { background: var(--panel-2); }
 .dnav { padding: 8px 10px 34px; }
+.dsec {
+  margin: 18px 12px 2px; font-size: 11px; font-weight: 700; letter-spacing: 1.4px;
+  text-transform: uppercase; color: var(--accent-ink);
+}
 .dlnk {
   display: block; padding: 12px 12px; font-size: 16px; font-weight: 600;
   color: var(--ink); text-decoration: none; border-radius: 9px;
@@ -333,6 +338,10 @@ dl.assign.holes {
   padding: 4px 16px; box-shadow: var(--shadow); columns: 1; max-width: 520px;
 }
 dl.assign.holes dt { color: var(--accent-ink); }
+p.legal {
+  margin: 6px 0 0; font-size: 14px; color: var(--muted); max-width: 78ch;
+  border-left: 3px solid var(--line); padding-left: 12px;
+}
 ul.coach { margin: 6px 0 0; padding-left: 20px; }
 ul.coach li {
   margin-bottom: 6px; color: var(--ink-2); font-size: 15px;
@@ -449,7 +458,10 @@ footer.site a { color: var(--accent-ink); }
   figure.diagram img { width: auto; height: auto; max-width: 100%; max-height: 100%; }
   /* The purpose is why you'd call the play — useful when planning, not when holding
      the card on a sideline. Dropping it is what buys the diagram its height. */
-  .purpose { display: none; }
+  .purpose, .legalblock { display: none; }
+  /* Defensive rules run longer than offensive ones, so their card gives
+     the assignments a little more room and the diagram a little less. */
+  article.play.def figure.diagram { height: 104mm; }
   .block-title { font-size: 8pt; margin: 5px 0 0; padding-top: 4px; }
   dl.assign { columns: 3; column-gap: 16px; }
   dl.assign .row {

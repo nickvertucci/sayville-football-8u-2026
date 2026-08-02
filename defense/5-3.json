@@ -1,0 +1,124 @@
+{
+  "id": "5-3",
+  "order": 1,
+  "name": "5-3",
+  "call": "Base",
+  "family": "Base defense",
+  "summary": "Our everyday front. Five down linemen cover the offensive line, three linebackers fill, and a free safety cleans up anything that gets through.",
+  "notes": "Five down linemen head up on the centre, both guards' outside shoulders and both ends. Three linebackers at three yards. Two corners and a free safety. This is the front we play unless there is a reason not to.",
+  "roles": {
+    "LE": "DL",
+    "LT": "DL",
+    "NG": "DL",
+    "RT": "DL",
+    "RE": "DL",
+    "W": "LB",
+    "M": "LB",
+    "S": "LB",
+    "LC": "DB",
+    "RC": "DB",
+    "FS": "DB"
+  },
+  "alignment": {
+    "LE": [-4.2, 0.8],
+    "LT": [-2.4, 0.8],
+    "NG": [0.0, 0.8],
+    "RT": [2.4, 0.8],
+    "RE": [4.2, 0.8],
+    "W": [-3.2, 3.0],
+    "M": [0.0, 3.0],
+    "S": [3.2, 3.0],
+    "LC": [-9.0, 3.0],
+    "RC": [9.0, 3.0],
+    "FS": [0.0, 8.0]
+  },
+  "assignments": {
+    "LE": {
+      "rule": "Contain. Rush his outside shoulder, keep your outside arm free. Nothing gets outside you.",
+      "type": "attack",
+      "path": [
+        [-0.5, -1.4]
+      ]
+    },
+    "LT": {
+      "rule": "Attack the inside shoulder of the man over you and squeeze the gap to your inside. Do not run around him.",
+      "type": "attack",
+      "path": [
+        [0.4, -1.4]
+      ]
+    },
+    "NG": {
+      "rule": "Head up on the centre. Two hands on his chest, get your pads under his, then work to whichever side the ball goes.",
+      "type": "attack",
+      "path": [
+        [0.0, -1.5]
+      ]
+    },
+    "RT": {
+      "rule": "Attack the inside shoulder of the man over you and squeeze the gap to your inside. Do not run around him.",
+      "type": "attack",
+      "path": [
+        [-0.4, -1.4]
+      ]
+    },
+    "RE": {
+      "rule": "Contain. Rush his outside shoulder, keep your outside arm free. Nothing gets outside you.",
+      "type": "attack",
+      "path": [
+        [0.5, -1.4]
+      ]
+    },
+    "W": {
+      "rule": "Three yards deep. Read the back on your side. Ball to you, fill the first open gap inside. Ball away, chase flat down the line and never quit.",
+      "type": "read",
+      "path": [
+        [-0.3, -0.6],
+        [-0.6, -2.0]
+      ]
+    },
+    "M": {
+      "rule": "Three yards deep over the centre. You make the call and you fill the first open gap. Step downhill — do not drift sideways.",
+      "type": "read",
+      "path": [
+        [0.0, -0.6],
+        [0.0, -2.0]
+      ]
+    },
+    "S": {
+      "rule": "Three yards deep. Read the back on your side. Ball to you, fill the first open gap inside. Ball away, chase flat down the line and never quit.",
+      "type": "read",
+      "path": [
+        [0.3, -0.6],
+        [0.6, -2.0]
+      ]
+    },
+    "LC": {
+      "rule": "Three yards off, outside the end. Nothing outside you and nothing behind you. Force it back in.",
+      "type": "read",
+      "path": [
+        [0.8, -0.8]
+      ]
+    },
+    "RC": {
+      "rule": "Three yards off, outside the end. Nothing outside you and nothing behind you. Force it back in.",
+      "type": "read",
+      "path": [
+        [-0.8, -0.8]
+      ]
+    },
+    "FS": {
+      "rule": "Eight yards deep. You are the last man — nobody gets behind you. Take the cut-off angle, not the chase.",
+      "type": "read",
+      "path": [
+        [0.0, -1.6]
+      ]
+    }
+  },
+  "coaching_points": [
+    "Every down lineman has a gap and nothing else. The moment one of them chases the ball instead of holding his gap, we give up the play we were built to stop.",
+    "Contain is the whole job for the ends. A back who gets outside our end at this age usually scores — teach them to keep the outside arm free and squeeze everything in.",
+    "Linebackers read the back closest to them, not the ball. The ball lies to them; the blocking does not.",
+    "Nobody may cross the line before the snap. Blitzing is illegal at this age, so the linebackers wait, read one step, then attack downhill."
+  ],
+  "legal": "Five down linemen (cap is six), three linebackers at three yards (minimum is three at two yards), and all three defensive backs at three yards or deeper (minimum is two). No blitzing."
+}

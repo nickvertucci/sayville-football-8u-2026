@@ -38,7 +38,7 @@ This is the rule with the biggest effect on the playbook, and it cuts two ways.
 football and it is *not legal here* — it has only two linebackers. Every card in this
 book that used to be drawn against a 6-2 is now drawn against a **6-3**, which is the
 heaviest front they are allowed to show us: six down linemen is the cap, three
-linebackers is the floor. The three fronts in `generator/defenses/` are all legal:
+linebackers is the floor. The three fronts in `defense/` are all legal, and the generator fails the build if a new one is not:
 
 | Front | Down linemen | Linebackers | Legal |
 |---|---|---|---|

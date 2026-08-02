@@ -152,6 +152,7 @@ nav.desk { display: none; align-items: center; gap: 2px; height: 100%; }
   display: grid; grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 26px; padding: 22px 0 26px;
 }
+.ddinner.one { grid-template-columns: minmax(0, 460px); }
 
 /* Mobile drawer */
 .scrim {
@@ -181,6 +182,10 @@ nav.desk { display: none; align-items: center; gap: 2px; height: 100%; }
 }
 .dclose:hover { background: var(--panel-2); }
 .dnav { padding: 8px 10px 34px; }
+.dsec {
+  margin: 18px 12px 2px; font-size: 11px; font-weight: 700; letter-spacing: 1.4px;
+  text-transform: uppercase; color: var(--accent-ink);
+}
 .dlnk {
   display: block; padding: 12px 12px; font-size: 16px; font-weight: 600;
   color: var(--ink); text-decoration: none; border-radius: 9px;
@@ -361,6 +366,10 @@ dl.assign.holes {
   padding: 4px 16px; box-shadow: var(--shadow); columns: 1; max-width: 520px;
 }
 dl.assign.holes dt { color: var(--accent-ink); }
+p.legal {
+  margin: 6px 0 0; font-size: 14px; color: var(--muted); max-width: 78ch;
+  border-left: 3px solid var(--line); padding-left: 12px;
+}
 ul.coach { margin: 6px 0 0; padding-left: 20px; }
 ul.coach li {
   margin-bottom: 6px; color: var(--ink-2); font-size: 15px;
@@ -477,7 +486,10 @@ footer.site a { color: var(--accent-ink); }
   figure.diagram img { width: auto; height: auto; max-width: 100%; max-height: 100%; }
   /* The purpose is why you'd call the play — useful when planning, not when holding
      the card on a sideline. Dropping it is what buys the diagram its height. */
-  .purpose { display: none; }
+  .purpose, .legalblock { display: none; }
+  /* Defensive rules run longer than offensive ones, so their card gives
+     the assignments a little more room and the diagram a little less. */
+  article.play.def figure.diagram { height: 104mm; }
   .block-title { font-size: 8pt; margin: 5px 0 0; padding-top: 4px; }
   dl.assign { columns: 3; column-gap: 16px; }
   dl.assign .row {
@@ -497,8 +509,10 @@ SITE_JS = """
   var drawer = document.getElementById('drawer');
   var scrim = document.getElementById('scrim');
   var close = document.getElementById('dclose');
-  var ddbtn = document.getElementById('ddbtn');
-  var ddpanel = document.getElementById('ddpanel');
+  var drops = [
+    [document.getElementById('ddbtn'), document.getElementById('ddpanel')],
+    [document.getElementById('dfbtn'), document.getElementById('dfpanel')]
+  ].filter(function (d) { return d[0] && d[1]; });
 
   function openDrawer(on) {
     if (!drawer) return;
@@ -508,13 +522,21 @@ SITE_JS = """
     scrim.hidden = !on;
     burger.setAttribute('aria-expanded', on ? 'true' : 'false');
     document.body.classList.toggle('locked', on);
-    if (!on) setTimeout(function () { if (!drawer.classList.contains('open')) drawer.hidden = true; }, 250);
+    if (!on) setTimeout(function () {
+      if (!drawer.classList.contains('open')) drawer.hidden = true;
+    }, 250);
   }
 
-  function openDrop(on) {
-    if (!ddpanel) return;
-    ddpanel.hidden = !on;
-    ddbtn.setAttribute('aria-expanded', on ? 'true' : 'false');
+  function openDrop(which, on) {
+    drops.forEach(function (d) {
+      var show = on && d === which;
+      d[1].hidden = !show;
+      d[0].setAttribute('aria-expanded', show ? 'true' : 'false');
+    });
+  }
+
+  function anyDropOpen() {
+    return drops.some(function (d) { return !d[1].hidden; });
   }
 
   if (burger) burger.addEventListener('click', function () {
@@ -523,28 +545,35 @@ SITE_JS = """
   if (close) close.addEventListener('click', function () { openDrawer(false); burger.focus(); });
   if (scrim) scrim.addEventListener('click', function () { openDrawer(false); });
 
-  if (ddbtn) ddbtn.addEventListener('click', function (e) {
-    e.stopPropagation();
-    openDrop(ddpanel.hidden);
+  drops.forEach(function (d) {
+    d[0].addEventListener('click', function (e) {
+      e.stopPropagation();
+      openDrop(d, d[1].hidden);
+    });
   });
   document.addEventListener('click', function (e) {
-    if (ddpanel && !ddpanel.hidden && !ddpanel.contains(e.target) && e.target !== ddbtn) {
-      openDrop(false);
-    }
+    if (!anyDropOpen()) return;
+    var inside = drops.some(function (d) {
+      return d[1].contains(e.target) || e.target === d[0];
+    });
+    if (!inside) openDrop(null, false);
   });
   document.addEventListener('keydown', function (e) {
     if (e.key !== 'Escape') return;
-    if (ddpanel && !ddpanel.hidden) { openDrop(false); ddbtn.focus(); }
+    if (anyDropOpen()) openDrop(null, false);
     if (drawer && drawer.classList.contains('open')) { openDrawer(false); burger.focus(); }
   });
   // Crossing the breakpoint with the drawer open would leave the page scroll locked.
   window.addEventListener('resize', function () {
-    if (window.innerWidth >= 900 && drawer && drawer.classList.contains('open')) openDrawer(false);
-    if (window.innerWidth < 900) openDrop(false);
+    if (window.innerWidth >= 900 && drawer && drawer.classList.contains('open')) {
+      openDrawer(false);
+    }
+    if (window.innerWidth < 900) openDrop(null, false);
   });
 
   // Bring the current play into view in whichever menu is open.
-  [ddpanel, drawer].forEach(function (root) {
+  [document.getElementById('ddpanel'), document.getElementById('dfpanel'),
+   drawer].forEach(function (root) {
     if (!root) return;
     var here = root.querySelector('.mplay.here');
     if (here) here.scrollIntoView({ block: 'nearest' });
@@ -616,9 +645,31 @@ def p_href(play: dict) -> str:
     return f"p-{play['id']}.html"
 
 
+def d_href(front: dict) -> str:
+    return f"d-{front['id']}.html"
+
+
+def def_src(front: dict) -> str:
+    return f"defense/cards/{front['id']}-field.svg"
+
+
 def card_src(form: dict, play: dict, full: bool = False) -> str:
     suffix = "" if full else "-field"
     return f"playbook/{form['id']}/cards/{play['id']}{suffix}.svg"
+
+
+def defense_menu(defenses: dict, active_def: str) -> str:
+    rows = "".join(
+        f'<a class="mplay{" here" if fid == active_def else ""}" href="{d_href(f)}">'
+        f'<span>{esc(f["call"])}</span><em>{esc(f["name"])}</em></a>'
+        for fid, f in defenses.items()
+    )
+    return (
+        f'<section class="mgrp">'
+        f'<a class="mgh" href="defense.html">Fronts'
+        f'<span class="mgn">{len(defenses)} legal</span></a>'
+        f'<div class="mplays">{rows}</div></section>'
+    )
 
 
 def menu_groups(formations: list[dict], active_form: str, active_play: str) -> str:
@@ -654,6 +705,8 @@ def page(
     active_nav: str = "",
     active_form: str = "",
     active_play: str = "",
+    active_def: str = "",
+    defenses: dict | None = None,
     description: str = "",
     landscape: bool = False,
     main_attrs: str = "",
@@ -663,12 +716,16 @@ def page(
         return f'<a class="{cls}{on}" href="{href}">{esc(label)}</a>'
 
     groups = menu_groups(formations, active_form, active_play)
-    plays_open = " active" if active_form else ""
+    dgroups = defense_menu(defenses or {}, active_def)
+    off_open = " active" if active_form else ""
+    def_open = " active" if active_def or active_nav == "defense" else ""
 
     desk = (
         link(*NAV_LINKS[0])
-        + f'<button type="button" class="lnk drop{plays_open}" id="ddbtn" '
-        f'aria-expanded="false" aria-controls="ddpanel">Plays</button>'
+        + f'<button type="button" class="lnk drop{off_open}" id="ddbtn" '
+        f'aria-expanded="false" aria-controls="ddpanel">Offensive Playbook</button>'
+        + f'<button type="button" class="lnk drop{def_open}" id="dfbtn" '
+        f'aria-expanded="false" aria-controls="dfpanel">Defensive Playbook</button>'
         + link(*NAV_LINKS[1])
         + link(*NAV_LINKS[2])
     )
@@ -697,6 +754,9 @@ def page(
   <div class="ddpanel" id="ddpanel" hidden>
     <div class="wrap"><div class="ddinner">{groups}</div></div>
   </div>
+  <div class="ddpanel" id="dfpanel" hidden>
+    <div class="wrap"><div class="ddinner one">{dgroups}</div></div>
+  </div>
 </header>
 <div class="scrim" id="scrim" hidden></div>
 <aside class="drawer" id="drawer" aria-label="Menu" hidden>
@@ -704,7 +764,7 @@ def page(
     <span>Menu</span>
     <button type="button" class="dclose" id="dclose" aria-label="Close menu">&times;</button>
   </div>
-  <nav class="dnav">{drawer_links}{groups}</nav>
+  <nav class="dnav">{drawer_links}<p class="dsec">Offensive Playbook</p>{groups}<p class="dsec">Defensive Playbook</p>{dgroups}</nav>
 </aside>
 <main id="main"{main_attrs}><div class="wrap">
 {body}
@@ -774,7 +834,7 @@ HOLES = [
 ]
 
 
-def write_home(formations: list[dict]) -> str:
+def write_home(formations: list[dict], defenses: dict) -> str:
     total = sum(len(f["_plays"]) for f in formations)
     cards = []
     for f in formations:
@@ -787,8 +847,16 @@ def write_home(formations: list[dict]) -> str:
             f'<span class="fcall">Calls start with '
             f'<code>{esc(call_prefix(f))}</code></span></a>'
         )
+    defcards = "".join(
+        f'<a class="fcard" href="{d_href(f)}">'
+        f'<div class="ftop"><h3>{esc(f["call"])}</h3>'
+        f'<span class="n">{esc(f["name"])}</span></div>'
+        f'<p>{esc(f.get("summary", ""))}</p></a>'
+        for f in defenses.values()
+    )
     body = f"""<h1 class="page">The 2026 playbook</h1>
-<p class="lede">Two formations, {total} plays, built for 11-on-11 8U tackle. Every
+<p class="lede">Two offensive formations, {total} plays, three defensive fronts, built for
+11-on-11 8U tackle. Every
 diagram is generated from the play files in the repo — so what is on this site is
 exactly what is in the binder.</p>
 <p class="sub">Fastest way to find a play: the <a href="calls.html">call sheet</a>.</p>
@@ -797,6 +865,12 @@ exactly what is in the binder.</p>
 <div class="cards">
   {chr(10).join('  ' + c for c in cards).strip()}
 </div>
+
+<p class="section-head">Defensive playbook</p>
+<p class="lede">Three fronts, each checked against the league rulebook by the generator:
+a base for most downs, a goal-line front for when they have to have a yard, and a wider
+front for when they keep getting outside us.</p>
+<div class="cards">{defcards}</div>
 
 <p class="section-head">How we call plays</p>
 <p class="lede">Every play has a teaching name (<em>Power Right</em>) and a huddle call
@@ -825,13 +899,14 @@ system can run either one the first time he hears it.</p>
         f"{SITE_TITLE} — 2026 Playbook",
         body,
         formations,
+        defenses=defenses,
         active_nav="home",
         description=f"{total} plays across {len(formations)} formations for 11-on-11 8U "
         "tackle football, with diagrams, assignments and coaching points.",
     )
 
 
-def write_calls(formations: list[dict]) -> str:
+def write_calls(formations: list[dict], defenses: dict) -> str:
     rows = []
     for f in formations:
         for p in f["_plays"]:
@@ -886,12 +961,13 @@ carrier — press <kbd>/</kbd> to jump to the search box.</p>
         f"Call sheet — {SITE_TITLE}",
         body,
         formations,
+        defenses=defenses,
         active_nav="calls",
         description="Searchable list of every play and its huddle call.",
     )
 
 
-def write_formation_page(form: dict, formations: list[dict]) -> str:
+def write_formation_page(form: dict, formations: list[dict], defenses: dict) -> str:
     weeks: dict[int, list] = {}
     for p in form["_plays"]:
         weeks.setdefault(p.get("install_week", 99), []).append(p)
@@ -931,13 +1007,15 @@ def write_formation_page(form: dict, formations: list[dict]) -> str:
         f"{form_label(form)} — {SITE_TITLE}",
         body,
         formations,
+        defenses=defenses,
         active_form=form["id"],
         description=form.get("notes", "")[:160],
     )
 
 
 def write_play_page(
-    form: dict, play: dict, prev: dict | None, nxt: dict | None, formations: list[dict]
+    form: dict, play: dict, prev: dict | None, nxt: dict | None,
+    formations: list[dict], defenses: dict,
 ) -> str:
     actions = (
         '<div class="play-actions">'
@@ -993,6 +1071,7 @@ def write_play_page(
         f"{play['name']} ({play.get('call', '')}) — {SITE_TITLE}",
         body,
         formations,
+        defenses=defenses,
         active_form=form["id"],
         active_play=play["id"],
         description=play.get("purpose", "")[:160],
@@ -1001,11 +1080,142 @@ def write_play_page(
     )
 
 
-def write_print_book(formations: list[dict]) -> str:
-    total = sum(len(f["_plays"]) for f in formations)
-    arts = [
-        play_article(f, p) for f in formations for p in f["_plays"]
-    ]
+def defense_article(front: dict, heading: str = "h2", actions: str = "") -> str:
+    rows = "".join(
+        f'<div class="row"><dt>{esc(pos)}</dt>'
+        f'<dd>{esc(front["assignments"][pos]["rule"])}</dd></div>'
+        for pos in front["alignment"]
+        if pos in front.get("assignments", {})
+    )
+    coach = ""
+    if front.get("coaching_points"):
+        items = "".join(f"<li>{esc(c)}</li>" for c in front["coaching_points"])
+        coach = f'<p class="block-title">Coaching points</p><ul class="coach">{items}</ul>'
+    legal = ""
+    if front.get("legal"):
+        legal = (
+            f'<div class="legalblock">'
+            f'<p class="block-title">Why it is legal</p>'
+            f'<p class="legal">{esc(front["legal"])}</p></div>'
+        )
+    counts = {}
+    for r in front.get("roles", {}).values():
+        counts[r] = counts.get(r, 0) + 1
+    tags = "".join(
+        f'<span class="tag">{counts.get(k, 0)} {label}</span>'
+        for k, label in (("DL", "down"), ("LB", "LB"), ("DB", "DB"))
+    )
+    return f"""<article class="play def" id="{esc(front['id'])}">
+  <header>
+    <{heading}>{esc(front['name'])}</{heading}>
+    <div class="tags"><span class="call">{esc(front['call'])}</span>{tags}</div>
+    {actions}
+  </header>
+  <figure class="diagram">
+    <img src="{def_src(front)}" alt="{esc(front['name'])} alignment">
+  </figure>
+  <p class="purpose">{esc(front.get('notes', ''))}</p>
+  <p class="block-title">Assignments</p>
+  <dl class="assign">{rows}</dl>
+  {coach}
+  {legal}
+</article>"""
+
+
+def write_defense_index(formations: list[dict], defenses: dict) -> str:
+    cards = []
+    for fid, f in defenses.items():
+        counts = {}
+        for r in f.get("roles", {}).values():
+            counts[r] = counts.get(r, 0) + 1
+        cards.append(
+            f'<a class="fcard" href="{d_href(f)}">'
+            f'<div class="ftop"><h3>{esc(f["call"])}</h3>'
+            f'<span class="n">{esc(f["name"])}</span></div>'
+            f'<p>{esc(f.get("summary", ""))}</p>'
+            f'<span class="fcall">{counts.get("DL", 0)} down &nbsp;&middot;&nbsp; '
+            f'{counts.get("LB", 0)} linebackers &nbsp;&middot;&nbsp; '
+            f'{counts.get("DB", 0)} defensive backs</span></a>'
+        )
+    body = f"""<h1 class="page">Defensive playbook</h1>
+<p class="lede">Three fronts. One for most downs, one for when they have to have a yard,
+and one for when they keep getting outside us. Every alignment here is checked against
+the league rulebook by the generator &mdash; an illegal front fails the build.</p>
+
+<p class="section-head">The fronts</p>
+<div class="cards">{''.join(cards)}</div>
+
+<p class="section-head">What the rulebook allows</p>
+<div class="callout">
+  <p>For 8- and 9-year-olds the league caps the defensive line at <strong>six</strong>,
+  requires at least <strong>three linebackers</strong> no closer than <strong>two
+  yards</strong>, and keeps defensive backs at <strong>two yards</strong> or deeper.</p>
+  <p><strong>Blitzing is illegal at all times.</strong> No defender may move forward
+  before the snap. Gap penetration after the snap is fine &mdash; that is not a blitz.</p>
+  <p>Circumventing this is a 15-yard unsportsmanlike penalty on the head coach, and a
+  second offence gets him ejected. Full detail in
+  <a href="https://github.com/nickvertucci/sayville-football-8u-2026/blob/main/RULES.md">RULES.md</a>.</p>
+</div>"""
+    return page(
+        f"Defensive playbook — {SITE_TITLE}",
+        body,
+        formations,
+        defenses=defenses,
+        active_nav="defense",
+        description="Three legal defensive fronts for 8U tackle, with assignments.",
+    )
+
+
+def write_defense_page(front: dict, formations: list[dict], defenses: dict) -> str:
+    ids = list(defenses)
+    i = ids.index(front["id"])
+    prev = defenses[ids[i - 1]] if i else None
+    nxt = defenses[ids[i + 1]] if i + 1 < len(ids) else None
+
+    actions = ('<div class="play-actions">'
+               '<button type="button" class="btn solid" onclick="window.print()">Print</button>'
+               "</div>")
+    siblings = "".join(
+        f'<a href="{d_href(f)}"{' class=\"active\"' if fid == front["id"] else ""}>{esc(f["call"])}</a>'
+        for fid, f in defenses.items()
+    )
+    crumbs = (f'<nav class="crumbs"><a href="index.html">Home</a><span>/</span>'
+              f'<a href="defense.html">Defense</a><span>/</span>'
+              f'<b>{esc(front["call"])}</b></nav>')
+    pager = ['<div class="pager">']
+    pager.append(
+        f'<a href="{d_href(prev)}"><span class="dir">&larr; Previous</span>'
+        f'{esc(prev["call"])}</a>' if prev else "<span></span>")
+    pager.append('<a class="mid" href="defense.html">'
+                 '<span class="dir">Defense</span>All fronts</a>')
+    pager.append(
+        f'<a class="nxt" href="{d_href(nxt)}"><span class="dir">Next &rarr;</span>'
+        f'{esc(nxt["call"])}</a>' if nxt else "<span></span>")
+    pager.append("</div>")
+
+    body = (crumbs + f'<div class="playbar">{siblings}</div>'
+            + defense_article(front, actions=actions) + "".join(pager))
+    attrs = ""
+    if prev:
+        attrs += f' data-prev="{d_href(prev)}"'
+    if nxt:
+        attrs += f' data-next="{d_href(nxt)}"'
+    return page(
+        f"{front['call']} ({front['name']}) — {SITE_TITLE}",
+        body,
+        formations,
+        defenses=defenses,
+        active_def=front["id"],
+        description=front.get("summary", "")[:160],
+        landscape=True,
+        main_attrs=attrs,
+    )
+
+
+def write_print_book(formations: list[dict], defenses: dict) -> str:
+    total = sum(len(f["_plays"]) for f in formations) + len(defenses)
+    arts = [play_article(f, p) for f in formations for p in f["_plays"]]
+    arts += [defense_article(d) for d in defenses.values()]
     body = f"""<div class="print-intro">
   <h1 class="page">Print the whole book</h1>
   <p class="lede">{total} plays, one per landscape sheet, diagram first. Hit the button
@@ -1019,6 +1229,7 @@ def write_print_book(formations: list[dict]) -> str:
         f"Print book — {SITE_TITLE}",
         body,
         formations,
+        defenses=defenses,
         active_nav="print",
         description=f"All {total} plays formatted one per landscape page.",
         landscape=True,
@@ -1028,21 +1239,29 @@ def write_print_book(formations: list[dict]) -> str:
 # ---------------------------------------------------------------------- entry --
 
 
-def write_all(formations: list[dict], root: Path) -> int:
+def write_all(formations: list[dict], defenses: dict, root: Path) -> int:
     assets = root / "assets"
     assets.mkdir(exist_ok=True)
     (assets / "site.css").write_text(SITE_CSS.strip() + "\n", encoding="utf-8")
     (assets / "site.js").write_text(SITE_JS.strip() + "\n", encoding="utf-8")
 
     written = 0
-    (root / "index.html").write_text(write_home(formations), encoding="utf-8")
-    (root / "calls.html").write_text(write_calls(formations), encoding="utf-8")
-    (root / "print.html").write_text(write_print_book(formations), encoding="utf-8")
-    written += 3
+    (root / "index.html").write_text(write_home(formations, defenses), encoding="utf-8")
+    (root / "calls.html").write_text(write_calls(formations, defenses), encoding="utf-8")
+    (root / "print.html").write_text(
+        write_print_book(formations, defenses), encoding="utf-8")
+    (root / "defense.html").write_text(
+        write_defense_index(formations, defenses), encoding="utf-8")
+    written += 4
+
+    for front in defenses.values():
+        (root / d_href(front)).write_text(
+            write_defense_page(front, formations, defenses), encoding="utf-8")
+        written += 1
 
     for form in formations:
         (root / f_href(form)).write_text(
-            write_formation_page(form, formations), encoding="utf-8"
+            write_formation_page(form, formations, defenses), encoding="utf-8"
         )
         written += 1
         plays = form["_plays"]
@@ -1050,7 +1269,8 @@ def write_all(formations: list[dict], root: Path) -> int:
             prev = plays[i - 1] if i else None
             nxt = plays[i + 1] if i + 1 < len(plays) else None
             (root / p_href(play)).write_text(
-                write_play_page(form, play, prev, nxt, formations), encoding="utf-8"
+                write_play_page(form, play, prev, nxt, formations, defenses),
+                encoding="utf-8",
             )
             written += 1
     return written

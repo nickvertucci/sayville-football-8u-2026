@@ -45,7 +45,7 @@ from common import CARD_ORDER, esc, form_label, ordered_positions, slug  # noqa:
 
 ROOT = Path(__file__).resolve().parent.parent
 PLAYBOOK_DIR = ROOT / "playbook"
-DEFENSES_DIR = ROOT / "generator" / "defenses"
+DEFENSE_DIR = ROOT / "defense"
 
 # ---------------------------------------------------------------- geometry --
 
@@ -85,6 +85,7 @@ COLORS = {
     "los": "#3a4150",
     "card": "#ffffff",
     "band": "#14213d",
+    "ghost": "#c2c8d2",
 }
 
 
@@ -140,6 +141,77 @@ def build_mirror(play: dict, source: dict) -> dict:
         out["purpose"] = swap_hands(source["purpose"])
     out["direction"] = "left" if source.get("direction") == "right" else "right"
     return out
+
+
+# The rulebook limits for 8- and 9-year-olds (PAL 9.02). See RULES.md.
+MAX_DOWN_LINEMEN = 6
+MIN_LINEBACKERS = 3
+MIN_LB_DEPTH = 2.0
+MIN_DB_DEPTH = 2.0
+
+
+def load_defenses() -> dict:
+    """Each defense/<id>.json is a defensive front and a page of the defensive book."""
+    fronts = {}
+    for f in sorted(DEFENSE_DIR.glob("*.json")):
+        front = load_json(f)
+        fronts[f.stem] = front
+    return dict(sorted(fronts.items(), key=lambda kv: (kv[1].get("order", 99), kv[0])))
+
+
+def validate_defenses(defenses: dict) -> list[str]:
+    """Refuse to publish a front the league would flag.
+
+    Getting this wrong is not a cosmetic bug — an illegal front is a 15-yard
+    unsportsmanlike penalty on the head coach, and a second one gets him ejected. So
+    the generator checks it rather than trusting whoever authored the JSON.
+    """
+    errors = []
+    for fid, front in defenses.items():
+        alignment = front.get("alignment", {})
+        roles = front.get("roles", {})
+        if len(alignment) != 11:
+            errors.append(f"defense {fid}: {len(alignment)} players aligned, must be 11")
+        missing = set(alignment) - set(roles)
+        if missing:
+            errors.append(
+                f"defense {fid}: no role (DL/LB/DB) for {', '.join(sorted(missing))}"
+            )
+        if front.get("assignments") is not None:
+            unassigned = set(alignment) - set(front["assignments"])
+            if unassigned:
+                errors.append(
+                    f"defense {fid}: no assignment for {', '.join(sorted(unassigned))}"
+                )
+
+        dl = [p for p, r in roles.items() if r == "DL"]
+        lb = [p for p, r in roles.items() if r == "LB"]
+        db = [p for p, r in roles.items() if r == "DB"]
+        if len(dl) > MAX_DOWN_LINEMEN:
+            errors.append(
+                f"defense {fid}: {len(dl)} down linemen, the league allows at most "
+                f"{MAX_DOWN_LINEMEN}"
+            )
+        if len(lb) < MIN_LINEBACKERS:
+            errors.append(
+                f"defense {fid}: {len(lb)} linebackers, the league requires at least "
+                f"{MIN_LINEBACKERS}"
+            )
+        for pos in lb:
+            depth = alignment.get(pos, [0, 0])[1]
+            if depth < MIN_LB_DEPTH:
+                errors.append(
+                    f"defense {fid}: linebacker {pos} is {depth} yards off, the minimum "
+                    f"is {MIN_LB_DEPTH}"
+                )
+        for pos in db:
+            depth = alignment.get(pos, [0, 0])[1]
+            if depth < MIN_DB_DEPTH:
+                errors.append(
+                    f"defense {fid}: defensive back {pos} is {depth} yards off, the "
+                    f"minimum is {MIN_DB_DEPTH}"
+                )
+    return errors
 
 
 def load_formations() -> list[dict]:
@@ -497,6 +569,90 @@ def render_card(play: dict, defenses: dict, frame: tuple[float, float, float]) -
     return "\n".join(svg)
 
 
+# The offence a defensive card is drawn against: a balanced two-tight-end set, so the
+# picture does not imply we only ever face one formation.
+GENERIC_OFFENSE = {
+    "LE": [-4.2, -0.5], "LT": [-2.8, -0.5], "LG": [-1.4, -0.5], "C": [0.0, -0.5],
+    "RG": [1.4, -0.5], "RT": [2.8, -0.5], "RE": [4.2, -0.5],
+    "QB": [0.0, -1.5], "FB": [0.0, -3.3], "LH": [-2.9, -4.9], "RH": [2.9, -4.9],
+}
+
+DEF_LINEMEN = {"LE", "LT", "LG", "NG", "RG", "RT", "RE"}
+
+
+def draw_ghost_offense() -> str:
+    """The opposition, drawn faintly — on a defensive card they are scenery."""
+    out = []
+    for pos, (x, y) in GENERIC_OFFENSE.items():
+        cx, cy = fx(x), fy(y)
+        if pos in LINEMEN:
+            s = 0.42 * SCALE
+            out.append(
+                f'<rect x="{cx-s:.1f}" y="{cy-s:.1f}" width="{2*s:.1f}" height="{2*s:.1f}" '
+                f'rx="3" fill="#ffffff" stroke="{COLORS["ghost"]}" stroke-width="2"/>'
+            )
+        else:
+            out.append(
+                f'<circle cx="{cx:.1f}" cy="{cy:.1f}" r="{0.44*SCALE:.1f}" '
+                f'fill="#ffffff" stroke="{COLORS["ghost"]}" stroke-width="2"/>'
+            )
+    return "\n".join(out)
+
+
+def draw_defenders(front: dict) -> str:
+    """Our defenders: the subject of the card, so they are drawn solid and labelled."""
+    out = []
+    r = 0.44 * SCALE
+    for pos, (x, y) in front["alignment"].items():
+        cx, cy = fx(x), fy(y)
+        a = r * 0.66
+        colour = COLORS["offense"]
+        out.append(
+            f'<line x1="{cx-a:.1f}" y1="{cy-a:.1f}" x2="{cx+a:.1f}" y2="{cy+a:.1f}" '
+            f'stroke="{colour}" stroke-width="3.4" stroke-linecap="round"/>'
+            f'<line x1="{cx+a:.1f}" y1="{cy-a:.1f}" x2="{cx-a:.1f}" y2="{cy+a:.1f}" '
+            f'stroke="{colour}" stroke-width="3.4" stroke-linecap="round"/>'
+        )
+        out.append(
+            f'<text x="{cx:.1f}" y="{cy - r - 5:.1f}" text-anchor="middle" font-size="11.5" '
+            f'font-weight="700" fill="{colour}">{esc(pos)}</text>'
+        )
+    return "\n".join(out)
+
+
+def draw_defense_paths(front: dict) -> str:
+    """Charges are solid, reads and drops are dashed."""
+    out = []
+    for pos, spec in front.get("assignments", {}).items():
+        path = spec.get("path")
+        if not path:
+            continue
+        ax, ay = front["alignment"][pos]
+        pts = [[ax, ay]] + [[ax + p[0], ay + p[1]] for p in path]
+        dashed = spec.get("type") != "attack"
+        colour = COLORS["carrier"] if spec.get("type") == "attack" else COLORS["offense"]
+        out.append(polyline(pts, colour, width=2.4, dashed=dashed))
+        out.append(arrow_head(pts[-2], pts[-1], colour))
+    return "\n".join(out)
+
+
+def render_defense_diagram(front: dict, frame: tuple[float, float, float]) -> str:
+    half, y_top, y_bot = frame
+    vb_x, vb_y = fx(-half), fy(y_top)
+    vb_w, vb_h = fx(half) - vb_x, fy(y_bot) - vb_y
+    return "\n".join([
+        f'<svg xmlns="http://www.w3.org/2000/svg" width="{vb_w:.0f}" height="{vb_h:.0f}" '
+        f'viewBox="{vb_x:.0f} {vb_y:.0f} {vb_w:.0f} {vb_h:.0f}" '
+        f'font-family="Segoe UI, Helvetica, Arial, sans-serif" role="img">',
+        f'<title>{esc(front["name"])} — {esc(front.get("call", ""))}</title>',
+        draw_field(),
+        draw_ghost_offense(),
+        draw_defense_paths(front),
+        draw_defenders(front),
+        "</svg>",
+    ])
+
+
 def diagram_frame(formations: list[dict], defenses: dict) -> tuple[float, float, float]:
     """One frame that fits every play in the book.
 
@@ -509,7 +665,15 @@ def diagram_frame(formations: list[dict], defenses: dict) -> tuple[float, float,
     Returned as (half-width, top, bottom) in yards; the frame is symmetric about the
     middle of the formation so a play and its mirror are framed identically.
     """
-    xs, ys = [], []
+    xs = [x for x, _ in GENERIC_OFFENSE.values()]
+    ys = [y for _, y in GENERIC_OFFENSE.values()]
+    for front in defenses.values():
+        xs += [x for x, _ in front["alignment"].values()]
+        ys += [y for _, y in front["alignment"].values()]
+        for pos, spec in front.get("assignments", {}).items():
+            ax, ay = front["alignment"][pos]
+            xs += [ax + p[0] for p in spec.get("path", [])]
+            ys += [ay + p[1] for p in spec.get("path", [])]
     for form in formations:
         alignment = form["alignment"]
         xs += [x for x, _ in alignment.values()]
@@ -663,10 +827,10 @@ def main() -> int:
     ap.add_argument("--check", action="store_true", help="validate only, write nothing")
     args = ap.parse_args()
 
-    defenses = {p.stem: load_json(p) for p in sorted(DEFENSES_DIR.glob("*.json"))}
+    defenses = load_defenses()
     formations = load_formations()
 
-    errors = validate(formations, defenses)
+    errors = validate_defenses(defenses) + validate(formations, defenses)
     if errors:
         for e in errors:
             print(f"ERROR  {e}", file=sys.stderr)
@@ -691,15 +855,22 @@ def main() -> int:
             )
         (form["_dir"] / "README.md").write_text(write_formation_readme(form), encoding="utf-8")
 
+    cards = DEFENSE_DIR / "cards"
+    cards.mkdir(exist_ok=True)
+    for fid, front in defenses.items():
+        (cards / f"{fid}-field.svg").write_text(
+            render_defense_diagram(front, frame), encoding="utf-8"
+        )
+
     (ROOT / "PLAYBOOK.md").write_text(write_playbook(formations), encoding="utf-8")
 
     # The site is flat files at the repo root so Pages can serve from "/" and every page
     # can reference the cards in place, with no second copy of any SVG.
-    pages = site_build.write_all(formations, ROOT)
+    pages = site_build.write_all(formations, defenses, ROOT)
 
     print(
-        f"Wrote {total} cards (+{total} diagrams), {len(formations)} formation "
-        f"README(s), PLAYBOOK.md and {pages} site pages"
+        f"Wrote {total} cards (+{total} diagrams), {len(defenses)} defensive fronts, "
+        f"{len(formations)} formation README(s), PLAYBOOK.md and {pages} site pages"
     )
     return 0
 

@@ -52,6 +52,23 @@ Both are two-tight-end, downhill running formations, so the blocking language ca
 over: "block down on the first defender inside you" means the same thing in either one.
 That is the reason to carry these two rather than two unrelated offenses.
 
+## Defense
+
+Three fronts, in `defense/`:
+
+| Call | Front | When |
+|---|---|---|
+| **Base** | 5-3 | Most downs. Five down, three linebackers, a free safety behind. |
+| **Goal Line** | 6-3 | Short yardage and inside the five. The heaviest front the league allows. |
+| **Wide** | 4-4 | When they keep getting outside us. Trades a lineman for a fourth linebacker. |
+
+**The generator refuses to publish an illegal front.** `render.py` checks every defense
+against the league limits for 8- and 9-year-olds — at most six down linemen, at least
+three linebackers, nobody in the second level closer than two yards — and fails the build
+with an explicit error if one is violated. That check exists because getting it wrong is
+not cosmetic: an illegal formation is a 15-yard unsportsmanlike penalty on the head coach
+and a second one gets him ejected.
+
 The install weeks on each play are within a formation, not across the whole book.
 
 ## The website
@@ -65,6 +82,8 @@ someone a link to exactly the play you mean.
 | `calls.html` | **Call sheet** — every play, filter as you type, filter by formation or run/pass |
 | `f-<formation>.html` | One formation: its notes, and its plays grouped by install week |
 | `p-<play>.html` | One play. Deep-linkable, and prints to a single sheet |
+| `defense.html` | The defensive playbook index |
+| `d-<front>.html` | One defensive front, with every assignment |
 | `print.html` | The whole book for printing |
 
 On every page the diagram is the main attraction — full width of the card, edge to edge
@@ -72,8 +91,9 @@ on a phone, with the assignments read underneath it rather than squeezed in besi
 
 ## Printing
 
-- **Print book** (top bar) → 15 landscape pages, one play per sheet.
-- **Print** (on any play page) → that one play, one landscape sheet.
+- **Print book** (top bar) → 18 landscape pages: 15 plays then 3 defensive fronts,
+  one per sheet.
+- **Print** (on any play or front page) → that one card, one landscape sheet.
 
 Both are already set to landscape, so there is no page setup to fiddle with. Print to PDF
 for a binder, or print the single sheet you need for tonight's practice. Page counts are
@@ -116,16 +136,17 @@ Full authoring rules, the coordinate system and the house style for writing assi
 playbook/<formation>/formation.json   the 11 alignment spots
 playbook/<formation>/plays/*.json     one file per play          <- source
 playbook/<formation>/cards/*.svg      generated
+defense/<front>.json                  one file per defensive front   <- source
+defense/cards/*.svg                   generated
 generator/render.py                   diagrams, cards, PLAYBOOK.md
 generator/site_build.py               the website
 generator/common.py                   shared by both
-generator/defenses/*.json             6-3, 5-3 and 4-4 looks to draw plays against
 *.html, assets/                       generated — the GitHub Pages site
 PLAYBOOK.md                           generated
 RULES.md                              league rules that constrain the playbook
 ```
 
-Only the JSON under `playbook/` is source. Everything else with a `.html`, `.svg` or
+Only the JSON under `playbook/` and `defense/` is source. Everything else with a `.html`, `.svg` or
 `PLAYBOOK.md` name is rebuilt from it.
 
 ## A note on the defenses
@@ -136,4 +157,5 @@ leverage ("first defender inside you", "the man over you"), so they hold up agai
 whatever actually lines up across from us.
 
 The 6-2, which is the most common front in youth football everywhere else, is **not legal
-in this league** — it has only two linebackers. See [RULES.md](RULES.md).
+in this league** — it has only two linebackers. The generator rejects it. See
+[RULES.md](RULES.md).

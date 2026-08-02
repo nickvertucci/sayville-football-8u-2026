@@ -4,8 +4,10 @@
   var drawer = document.getElementById('drawer');
   var scrim = document.getElementById('scrim');
   var close = document.getElementById('dclose');
-  var ddbtn = document.getElementById('ddbtn');
-  var ddpanel = document.getElementById('ddpanel');
+  var drops = [
+    [document.getElementById('ddbtn'), document.getElementById('ddpanel')],
+    [document.getElementById('dfbtn'), document.getElementById('dfpanel')]
+  ].filter(function (d) { return d[0] && d[1]; });
 
   function openDrawer(on) {
     if (!drawer) return;
@@ -15,13 +17,21 @@
     scrim.hidden = !on;
     burger.setAttribute('aria-expanded', on ? 'true' : 'false');
     document.body.classList.toggle('locked', on);
-    if (!on) setTimeout(function () { if (!drawer.classList.contains('open')) drawer.hidden = true; }, 250);
+    if (!on) setTimeout(function () {
+      if (!drawer.classList.contains('open')) drawer.hidden = true;
+    }, 250);
   }
 
-  function openDrop(on) {
-    if (!ddpanel) return;
-    ddpanel.hidden = !on;
-    ddbtn.setAttribute('aria-expanded', on ? 'true' : 'false');
+  function openDrop(which, on) {
+    drops.forEach(function (d) {
+      var show = on && d === which;
+      d[1].hidden = !show;
+      d[0].setAttribute('aria-expanded', show ? 'true' : 'false');
+    });
+  }
+
+  function anyDropOpen() {
+    return drops.some(function (d) { return !d[1].hidden; });
   }
 
   if (burger) burger.addEventListener('click', function () {
@@ -30,28 +40,35 @@
   if (close) close.addEventListener('click', function () { openDrawer(false); burger.focus(); });
   if (scrim) scrim.addEventListener('click', function () { openDrawer(false); });
 
-  if (ddbtn) ddbtn.addEventListener('click', function (e) {
-    e.stopPropagation();
-    openDrop(ddpanel.hidden);
+  drops.forEach(function (d) {
+    d[0].addEventListener('click', function (e) {
+      e.stopPropagation();
+      openDrop(d, d[1].hidden);
+    });
   });
   document.addEventListener('click', function (e) {
-    if (ddpanel && !ddpanel.hidden && !ddpanel.contains(e.target) && e.target !== ddbtn) {
-      openDrop(false);
-    }
+    if (!anyDropOpen()) return;
+    var inside = drops.some(function (d) {
+      return d[1].contains(e.target) || e.target === d[0];
+    });
+    if (!inside) openDrop(null, false);
   });
   document.addEventListener('keydown', function (e) {
     if (e.key !== 'Escape') return;
-    if (ddpanel && !ddpanel.hidden) { openDrop(false); ddbtn.focus(); }
+    if (anyDropOpen()) openDrop(null, false);
     if (drawer && drawer.classList.contains('open')) { openDrawer(false); burger.focus(); }
   });
   // Crossing the breakpoint with the drawer open would leave the page scroll locked.
   window.addEventListener('resize', function () {
-    if (window.innerWidth >= 900 && drawer && drawer.classList.contains('open')) openDrawer(false);
-    if (window.innerWidth < 900) openDrop(false);
+    if (window.innerWidth >= 900 && drawer && drawer.classList.contains('open')) {
+      openDrawer(false);
+    }
+    if (window.innerWidth < 900) openDrop(null, false);
   });
 
   // Bring the current play into view in whichever menu is open.
-  [ddpanel, drawer].forEach(function (root) {
+  [document.getElementById('ddpanel'), document.getElementById('dfpanel'),
+   drawer].forEach(function (root) {
     if (!root) return;
     var here = root.querySelector('.mplay.here');
     if (here) here.scrollIntoView({ block: 'nearest' });
