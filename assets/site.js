@@ -60,10 +60,10 @@
   });
   // Crossing the breakpoint with the drawer open would leave the page scroll locked.
   window.addEventListener('resize', function () {
-    if (window.innerWidth >= 900 && drawer && drawer.classList.contains('open')) {
+    if (window.innerWidth >= 1000 && drawer && drawer.classList.contains('open')) {
       openDrawer(false);
     }
-    if (window.innerWidth < 900) openDrop(null, false);
+    if (window.innerWidth < 1000) openDrop(null, false);
   });
 
   // Bring the current play into view in whichever menu is open.

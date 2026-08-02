@@ -9,6 +9,7 @@ and the Print button gives you the whole book in landscape, one play per sheet.
 
 **In this repo:** [PLAYBOOK.md](PLAYBOOK.md) is the same book as markdown.
 [RULES.md](RULES.md) is the league rules that shaped it — read that one first.
+It is also published as a page on the site under **Rules**.
 
 ## Play calling language
 

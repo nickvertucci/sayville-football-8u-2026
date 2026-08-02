@@ -17,6 +17,7 @@ assignments read underneath it rather than squeezed into a column beside it.
 
 from __future__ import annotations
 
+import re
 from pathlib import Path
 
 from common import call_prefix, esc, form_label, ordered_positions
@@ -137,7 +138,7 @@ nav.desk { display: none; align-items: center; gap: 2px; height: 100%; }
 .burger[aria-expanded="true"] span::before { transform: translateY(6px) rotate(45deg); }
 .burger[aria-expanded="true"] span::after { transform: translateY(-6px) rotate(-45deg); }
 
-@media (min-width: 900px) {
+@media (min-width: 1000px) {
   nav.desk { display: flex; }
   .burger { display: none; }
 }
@@ -446,6 +447,38 @@ table.calls a:hover { text-decoration: underline; }
 table.calls td.c { white-space: nowrap; }
 .empty { padding: 26px 16px; color: var(--muted); }
 
+/* ------------------------------------------------------------------- prose -- */
+.prose { max-width: 76ch; }
+.prose h2 {
+  font-size: clamp(19px, 3.6vw, 24px); letter-spacing: -.3px; color: var(--ink);
+  margin: 38px 0 10px; padding-bottom: 8px; border-bottom: 1px solid var(--line);
+}
+.prose h3 { font-size: 17px; color: var(--accent-ink); margin: 26px 0 8px; }
+.prose p { margin: 0 0 13px; color: var(--ink-2); }
+.prose ul { margin: 0 0 15px; padding-left: 20px; }
+.prose li { margin-bottom: 7px; color: var(--ink-2); }
+.prose a { color: var(--accent-ink); }
+.prose code {
+  font-size: .92em; background: var(--panel-2); border-radius: 4px; padding: 1px 6px;
+}
+.prose strong { color: var(--ink); }
+/* Quoted rulebook text — the actual wording, set apart from our summary of it. */
+.prose blockquote {
+  margin: 0 0 16px; padding: 12px 16px; background: var(--panel);
+  border-left: 4px solid var(--accent-solid); border-radius: 0 8px 8px 0;
+  color: var(--ink); font-size: 15px; box-shadow: var(--shadow);
+}
+.prose .tablewrap { margin: 0 0 18px; }
+table.rules { width: 100%; border-collapse: collapse; min-width: 380px; }
+table.rules th, table.rules td {
+  text-align: left; padding: 9px 14px; border-bottom: 1px solid var(--line-soft);
+  font-size: 14.5px; color: var(--ink);
+}
+table.rules th {
+  font-size: 11px; text-transform: uppercase; letter-spacing: 1.1px; color: var(--muted);
+  background: var(--panel-2);
+}
+
 footer.site {
   color: var(--muted); font-size: 13.5px; border-top: 1px solid var(--line);
   margin-top: 36px; padding: 18px 0 40px;
@@ -565,10 +598,10 @@ SITE_JS = """
   });
   // Crossing the breakpoint with the drawer open would leave the page scroll locked.
   window.addEventListener('resize', function () {
-    if (window.innerWidth >= 900 && drawer && drawer.classList.contains('open')) {
+    if (window.innerWidth >= 1000 && drawer && drawer.classList.contains('open')) {
       openDrawer(false);
     }
-    if (window.innerWidth < 900) openDrop(null, false);
+    if (window.innerWidth < 1000) openDrop(null, false);
   });
 
   // Bring the current play into view in whichever menu is open.
@@ -695,6 +728,7 @@ def menu_groups(formations: list[dict], active_form: str, active_play: str) -> s
 
 NAV_LINKS = [("index.html", "Home", "home"),
              ("calls.html", "Call sheet", "calls"),
+             ("rules.html", "Rules", "rules"),
              ("print.html", "Print book", "print")]
 
 
@@ -728,6 +762,7 @@ def page(
         f'aria-expanded="false" aria-controls="dfpanel">Defensive Playbook</button>'
         + link(*NAV_LINKS[1])
         + link(*NAV_LINKS[2])
+        + link(*NAV_LINKS[3])
     )
     drawer_links = "".join(link(h, la, k, "dlnk") for h, la, k in NAV_LINKS)
 
@@ -823,6 +858,117 @@ def play_article(form: dict, play: dict, heading: str = "h2", actions: str = "")
 </article>"""
 
 
+# ------------------------------------------------------------------ markdown --
+
+
+def _inline(s: str) -> str:
+    """Bold, inline code and links — the only inline markup RULES.md uses."""
+    out = esc(s)
+    out = re.sub(r"\*\*(.+?)\*\*", r"<strong>\1</strong>", out)
+    # Singles only — the bold pass above has already consumed every double.
+    out = re.sub(r"(?<!\*)\*([^*\n]+)\*(?!\*)", r"<em>\1</em>", out)
+    out = re.sub(r"`([^`]+)`", r"<code>\1</code>", out)
+    out = re.sub(r"\[([^\]]+)\]\(([^)]+)\)", r'<a href="\2">\1</a>', out)
+    return out
+
+
+def md_to_html(md: str) -> str:
+    """Render the subset of Markdown RULES.md actually uses.
+
+    RULES.md stays the single source — this page is generated from it the same way
+    every other page is generated from the play files, so the two cannot drift.
+    """
+    lines = md.split("\n")
+    out, i = [], 0
+    while i < len(lines):
+        line = lines[i]
+
+        if not line.strip():
+            i += 1
+            continue
+
+        if line.startswith("#"):
+            level = len(line) - len(line.lstrip("#"))
+            text = _inline(line.lstrip("#").strip())
+            # The page supplies its own h1, so demote the document title.
+            out.append(f"<h2>{text}</h2>" if level == 1 else f"<h{level}>{text}</h{level}>")
+            i += 1
+            continue
+
+        if line.startswith(">"):
+            quote = []
+            while i < len(lines) and lines[i].startswith(">"):
+                quote.append(lines[i].lstrip(">").strip())
+                i += 1
+            out.append("<blockquote>"
+                       + "<br>".join(_inline(q) for q in quote if q)
+                       + "</blockquote>")
+            continue
+
+        if line.lstrip().startswith(("- ", "* ")):
+            items = []
+            while i < len(lines) and lines[i].lstrip().startswith(("- ", "* ")):
+                item = lines[i].lstrip()[2:]
+                i += 1
+                # A wrapped bullet continues on the next indented, non-bullet line.
+                while (i < len(lines) and lines[i].strip()
+                       and not lines[i].lstrip().startswith(("- ", "* ", "#", ">", "|"))):
+                    item += " " + lines[i].strip()
+                    i += 1
+                items.append(f"<li>{_inline(item)}</li>")
+            out.append("<ul>" + "".join(items) + "</ul>")
+            continue
+
+        if line.startswith("|"):
+            rows = []
+            while i < len(lines) and lines[i].startswith("|"):
+                rows.append([c.strip() for c in lines[i].strip().strip("|").split("|")])
+                i += 1
+            body = ""
+            if len(rows) >= 2 and set("".join(rows[1])) <= set("-: "):
+                body += "<thead><tr>" + "".join(
+                    f"<th>{_inline(c)}</th>" for c in rows[0]) + "</tr></thead>"
+                rows = rows[2:]
+            body += "<tbody>" + "".join(
+                "<tr>" + "".join(f"<td>{_inline(c)}</td>" for c in r) + "</tr>"
+                for r in rows) + "</tbody>"
+            out.append(f'<div class="tablewrap"><table class="rules">{body}</table></div>')
+            continue
+
+        para = []
+        while (i < len(lines) and lines[i].strip()
+               and not lines[i].startswith(("#", ">", "|"))
+               and not lines[i].lstrip().startswith(("- ", "* "))):
+            para.append(lines[i].strip())
+            i += 1
+        out.append("<p>" + _inline(" ".join(para)) + "</p>")
+
+    return "\n".join(out)
+
+
+def write_rules(formations: list[dict], defenses: dict, root: Path) -> str:
+    src = (root / "RULES.md").read_text(encoding="utf-8")
+    # The page supplies its own title, so drop the document's leading H1.
+    if src.lstrip().startswith("# "):
+        src = src.split(chr(10), 1)[1]
+    body = f"""<h1 class="page">League rules</h1>
+<p class="lede">What the league allows, what it forbids, and the two questions we have not
+been able to answer from the document. Generated from <code>RULES.md</code> in the repo,
+so the page and the source cannot drift apart.</p>
+<div class="prose">
+{md_to_html(src)}
+</div>"""
+    return page(
+        f"League rules — {SITE_TITLE}",
+        body,
+        formations,
+        defenses=defenses,
+        active_nav="rules",
+        description="The league rules that constrain this playbook, and the two questions "
+                    "we have not resolved.",
+    )
+
+
 # --------------------------------------------------------------------- pages --
 
 BACKS = [
@@ -910,7 +1056,7 @@ anyway so a <code>Z Left</code> look can be added later without changing the lan
   6-2 illegal, and 8-year-olds may be placed in an <strong>8-man</strong> division where
   none of this is legal at all.</p>
   <p>Read
-  <a href="https://github.com/nickvertucci/sayville-football-8u-2026/blob/main/RULES.md">RULES.md</a>
+  <a href="rules.html">the rules page</a>
   first.</p>
 </div>"""
     return page(
@@ -1162,7 +1308,7 @@ the league rulebook by the generator &mdash; an illegal front fails the build.</
   before the snap. Gap penetration after the snap is fine &mdash; that is not a blitz.</p>
   <p>Circumventing this is a 15-yard unsportsmanlike penalty on the head coach, and a
   second offense gets him ejected. Full detail in
-  <a href="https://github.com/nickvertucci/sayville-football-8u-2026/blob/main/RULES.md">RULES.md</a>.</p>
+  <a href="rules.html">the rules page</a>.</p>
 </div>"""
     return page(
         f"Defensive playbook — {SITE_TITLE}",
@@ -1260,7 +1406,9 @@ def write_all(formations: list[dict], defenses: dict, root: Path) -> int:
         write_print_book(formations, defenses), encoding="utf-8")
     (root / "defense.html").write_text(
         write_defense_index(formations, defenses), encoding="utf-8")
-    written += 4
+    (root / "rules.html").write_text(
+        write_rules(formations, defenses, root), encoding="utf-8")
+    written += 5
 
     for front in defenses.values():
         (root / d_href(front)).write_text(
