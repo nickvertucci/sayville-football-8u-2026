@@ -24,12 +24,19 @@ Rule **5.03** — 3rd grade / 8-year-olds may play **either 8-man OR 11-man** ta
 
 ## The rule that governs defense: PAL 9.02
 
-For **8- and 9-year-olds, all divisions**, verbatim:
+Verbatim, in full:
 
+> 9.02 – SPECIALIZED GAME MODIFICATIONS FOR INCREASED SAFETY
+>
 > NO BLITZING PERMITTED 8- & 9-YEAR OLDS IN ALL DIVISIONS.
-> A MAXIMUM OF A 6 MAN DEFENSIVE LINE. GAP PENETRATION IS ALLOWED.
-> A MINIMUM OF 3 LINEBACKERS AT A DISTANCE OF 2 YARDS BEHIND THE LINE OF SCRIMMAGE.
-> DEFENSIVE BACKS ... MUST BE AT A MINIMUM DISTANCE OF 2 YARDS BEHIND THE LINE OF SCRIMMAGE.
+> IN ASSOCIATION WITH THIS NEW RULE IN DIVISIONS 1 & 2, THE FOLLOWING DEFENSIVE FORMATIONS ARE REQUIRED.
+> 1. A MAXIMUM OF A 6 MAN DEFENSIVE LINE. GAP PENETRATION IS ALLOWED.
+> 2. A MINIMUM OF 3 LINEBACKERS AT A DISTANCE OF 2 YARDS BEHIND THE LINE OF SCRIMMAGE.
+> 3. DEFENSIVE BACKS MAY COVER THE WIDE OUTS BUT MUST BE AT A MINIMUM DISTANCE OF 2 YARDS BENIND THE LINE OF SCRIMMAGE.
+
+`BENIND` is the rulebook's spelling. The second line is what makes the scope a genuine
+question — see [the open question](#one-open-question-worth-a-call-to-the-league) at the
+bottom. Full text: [`../rulebook/2025-PAL-RULE-BOOK.txt`](../rulebook/2025-PAL-RULE-BOOK.txt).
 
 Boiled down to a checklist any legal front must pass:
 
@@ -43,9 +50,11 @@ Boiled down to a checklist any legal front must pass:
 | 6 | Gap penetration | **Allowed** (after the snap — that is not a blitz) |
 | 7 | On the line (NFHS, 9.01) | offense needs 7; defense is not capped, just the 6-DL rule above |
 
-> ⚠️ **The 6-2 is illegal here.** It's the most common youth front in the country, but it
-> has only two linebackers and fails requirement #2. Do not line up in a 6-2, and expect
-> that no legal opponent will show you one either.
+⚠️ **The 6-2 is illegal here.** It's the most common youth front in the country, but it
+has only two linebackers and fails requirement #2. Do not line up in a 6-2, and expect
+that no legal opponent will show you one either.
+
+*(Block quotes in this file are the league's words. Everything else is ours.)*
 
 ---
 
@@ -80,8 +89,11 @@ outside the 5-yard line).
 2. **The 18-point rule is mandatory, not a choice (15.04–15.09).** The moment you lead by
    18 (after the extra point) you **must** switch to the 6-2-3 Prevent: two LBs 5 yards
    off, three safeties 5 yards behind them, ends 7 yards outside the tackles — and you
-   must also **replace your entire starting backfield including the QB** on offense
-   (15.03). Know this cold *before* it happens on the field. It's in the book as the
+   must also **replace your starting backfield, including quarterback**, on offense
+   (15.03). On a roster of 15 or more those players *leave the game* on offense; only a
+   roster of 14 or less may keep them in, and then only on the offensive line tackle to
+   tackle, never carrying the ball. Ours starts the season at 17 to 32 (7.01), so they
+   come off. Know this cold *before* it happens on the field. It's in the book as the
    **Prevent** front.
 
 ---
