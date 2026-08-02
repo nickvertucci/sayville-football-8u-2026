@@ -1,9 +1,9 @@
 {
-  "id": "i-sweep-r",
+  "id": "i-slant-r",
   "order": 6,
   "formation": "i-form",
-  "name": "I Sweep Right",
-  "call": "I 8 Sweep",
+  "name": "I Slant Right",
+  "call": "I 8 Slant",
   "type": "run",
   "defense": "5-3",
   "direction": "right",

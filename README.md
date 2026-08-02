@@ -31,7 +31,7 @@ This is the only thing the kids have to memorize:
              tackle  gap   gap    tackle
 ```
 
-**Play word** — `Dive`, `Iso`, `Power`, `Counter`, `Sweep`, `Pitch`, `Boot`. Seven words
+**Play word** — `Dive`, `Iso`, `Power`, `Counter`, `Slant`, `Pitch`, `Boot`. Seven words
 covering fifteen plays, because the same word means the same thing in both formations.
 
 So `Bone 8 Pitch` is the wishbone, outside right, pitch, and `I 4 Iso` is the
