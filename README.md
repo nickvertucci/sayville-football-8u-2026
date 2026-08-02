@@ -47,9 +47,15 @@ Even numbers go right (0, 2, 4, 6, 8), odd numbers go left (1, 3, 5, 7, 9), coun
 outward from the center.
 
 The holes are anchored to the linemen, not to abstract gaps, so a call tells you which
-two blockers the ball is going between. Every play in the book is checked against this:
-the generator measures where the ball carrier actually crosses the line of scrimmage and
-it has to fall inside the hole its call names.
+two blockers the ball is going between. **Every play in the book is checked against
+this.** The generator resolves the first digit to a back the formation actually defines,
+measures where that back's path crosses the line of scrimmage, and fails the build if he
+does not cross on the named side inside the hole the call names. A call sheet that lies is
+worse than no call sheet, so the build will not publish one.
+
+The digits describe the back the first digit names, not the ball carrier. On
+`I Z Right 16 Boot` the `1` is the quarterback going through the 6 hole; the ball carrier
+is the flanker he throws to.
 
 So `I Z Right 20 Dive` is flanker right, fullback, 0 hole; `I Z Right 21 Dive` is the
 same handoff through the 1 hole; and `I Z Right 36 Slant` is the tailback outside the
@@ -161,6 +167,7 @@ drop one into a practice plan. Two versions of each:
 ```
 python generator/render.py            # rebuild cards, site, READMEs, PLAYBOOK.md
 python generator/render.py --check    # validate the JSON only, write nothing
+python generator/test_calls.py        # prove the call check still rejects a wrong call
 ```
 
 No dependencies beyond Python 3. `--check` fails if any play is missing an assignment for

@@ -27,6 +27,11 @@
     "TB",
     "QB"
   ],
+  "backs": {
+    "1": "QB",
+    "2": "FB",
+    "3": "TB"
+  },
   "coaching_notes": [
     "This formation exists so the tailback can pick a hole. In the Wishbone the play decides where the ball goes; here the back reads the block in front of him and cuts off it. That is the harder skill of the two, which is why this is the formation we spend the most practice time on.",
     "The flanker lines up to the right on every play in the book, and the call says so — I Z Right. Naming it means we can add a Z Left look later without changing a single thing about how the plays are called, and it means nobody has to guess where he goes.",

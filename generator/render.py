@@ -35,6 +35,7 @@ from __future__ import annotations
 import argparse
 import json
 import math
+import re
 import sys
 from pathlib import Path
 
@@ -257,6 +258,114 @@ def resolve_plays(plays_dir: Path, form: dict) -> list[dict]:
     return plays
 
 
+# --------------------------------------------------------- the calling language --
+#
+# A call carries two digits: who runs it and where he goes. The point of numbering the
+# holes off the linemen rather than off abstract gaps is that a call names the two
+# blockers the ball goes between — which is only true if somebody checks it. Nothing
+# stops an author from writing "36" on a play drawn up the middle, and a call sheet that
+# lies is worse than no call sheet, so the build checks every call against its own
+# diagram.
+#
+# The digits describe the player the FIRST digit names, not the ball carrier. On a pass
+# they are the same only by accident: I Z Right 16 Boot is the quarterback at the 6 hole,
+# while `ball_carrier` is the flanker he throws to.
+
+CALL_DIGITS = re.compile(r"\b(\d)(\d)\b")
+
+# Holes 0/1 sit between the center and the guard, 2/3 guard to tackle, 4/5 tackle to end,
+# 6/7 outside the end and 8/9 wider still. The first three zones are the real gaps in the
+# line, so they are measured off the formation's own alignment and follow its splits.
+HOLE_INTERIOR = [("C", "G"), ("G", "T"), ("T", "E")]
+
+# How far off his aiming point a carrier may cross and still count as hitting the hole.
+# Half a line split — enough that a back bending to daylight passes, tight enough that a
+# call naming the wrong gap fails.
+HOLE_TOLERANCE = 0.4
+
+
+def hole_bounds(alignment: dict, side: str, pair: int) -> tuple[float, float]:
+    """The |x| window a carrier must cross in to have hit this hole.
+
+    `pair` is the hole number halved: 0 is the center-guard gap, 3 is outside the end,
+    4 is everything wider than that.
+    """
+    edges = [abs(alignment["C"][0])]
+    for key in (side + "G", side + "T", side + "E"):
+        edges.append(abs(alignment[key][0]))
+    split = (edges[3] - edges[0]) / 3.0
+    if pair < len(HOLE_INTERIOR):
+        return edges[pair] - HOLE_TOLERANCE, edges[pair + 1] + HOLE_TOLERANCE
+    # Outside the end there is no next lineman to measure against, so the two outer
+    # zones are one and two line splits wide.
+    outside = edges[3] + 2 * split
+    if pair == 3:
+        return edges[3] - HOLE_TOLERANCE, outside + HOLE_TOLERANCE
+    return outside - HOLE_TOLERANCE, float("inf")
+
+
+def los_crossing(alignment: dict, pos: str, spec: dict) -> float | None:
+    """Where this player crosses the line of scrimmage, in field x. None if he never does."""
+    start = alignment[pos]
+    points = [(start[0], start[1])]
+    points += [(start[0] + dx, start[1] + dy) for dx, dy in (spec.get("path") or [])]
+    for (x1, y1), (x2, y2) in zip(points, points[1:]):
+        if (y1 < 0 <= y2) or (y1 <= 0 < y2):
+            t = 0.0 if y2 == y1 else (0 - y1) / (y2 - y1)
+            return x1 + t * (x2 - x1)
+    return None
+
+
+def validate_call(play: dict, form: dict) -> list[str]:
+    """Check a play's call against the play's own diagram."""
+    call = play.get("call")
+    if not call:
+        return []
+    pid = play.get("id", "<no id>")
+    backs = form.get("backs") or {}
+    if not backs:
+        return [f"formation {form.get('id')}: has plays with calls but no 'backs' map, so "
+                "the numbering in those calls cannot be checked"]
+
+    m = CALL_DIGITS.search(call)
+    if not m:
+        return [f"{pid}: call '{call}' has no two-digit back-and-hole number"]
+    back_digit, hole_digit = m.group(1), m.group(2)
+
+    pos = backs.get(back_digit)
+    if not pos:
+        return [f"{pid}: call '{call}' names back {back_digit}, which this formation does "
+                f"not define (it has {', '.join(sorted(backs))})"]
+    alignment = form.get("alignment", {})
+    if pos not in alignment:
+        return [f"{pid}: call '{call}' names back {back_digit} = {pos}, who is not in the "
+                "formation"]
+
+    spec = play.get("assignments", {}).get(pos, {})
+    crossing = los_crossing(alignment, pos, spec)
+    if crossing is None:
+        return [f"{pid}: call '{call}' says {pos} runs the {hole_digit} hole, but his path "
+                "never crosses the line of scrimmage"]
+
+    hole = int(hole_digit)
+    side = "R" if hole % 2 == 0 else "L"
+    going_right = hole % 2 == 0
+    if (crossing > 0) != going_right:
+        where = "right" if crossing > 0 else "left"
+        return [f"{pid}: call '{call}' says the {hole_digit} hole, which is to the "
+                f"{'right' if going_right else 'left'}, but {pos} crosses to the {where} "
+                f"(x = {crossing:+.1f})"]
+
+    low, high = hole_bounds(alignment, side, hole // 2)
+    if not (low <= abs(crossing) <= high):
+        window = (f"anything wider than {low:.2f} yards" if high == float("inf")
+                  else f"{low:.2f} to {high:.2f} yards")
+        return [f"{pid}: call '{call}' says the {hole_digit} hole, which is {window} "
+                f"out from the middle, but {pos} crosses the line at "
+                f"{abs(crossing):.2f}"]
+    return []
+
+
 def validate(formations: list[dict], defenses: dict) -> list[str]:
     errors = []
     # Play ids must be unique across the whole book: each one becomes a flat p-<id>.html
@@ -305,6 +414,8 @@ def validate(formations: list[dict], defenses: dict) -> list[str]:
             carrier = play.get("ball_carrier")
             if carrier and carrier not in form.get("alignment", {}):
                 errors.append(f"{pid}: ball_carrier '{carrier}' is not in the formation")
+            if not missing and not extra:
+                errors.extend(validate_call(play, form))
     return errors
 
 

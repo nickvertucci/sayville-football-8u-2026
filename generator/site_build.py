@@ -22,7 +22,7 @@ from __future__ import annotations
 import re
 from pathlib import Path
 
-from common import call_prefix, esc, form_label, ordered_positions
+from common import call_prefix, esc, form_label, ordered_positions, position_name
 
 SITE_TITLE = "Sayville 8U Tackle Football"
 
@@ -1109,12 +1109,44 @@ quoted at a game.</p>
 
 # --------------------------------------------------------------------- pages --
 
-BACKS = [
-    ("1", "Quarterback — both formations"),
-    ("2", "Fullback — both formations"),
-    ("3", "Tailback in the I &nbsp;·&nbsp; right halfback in the Wishbone"),
-    ("4", "Left halfback — Wishbone only"),
-]
+def _count(n: int) -> str:
+    """Small counts read better as words, and they must not be written by hand —
+    the home page claimed "three defensive fronts" for a while after the fourth
+    one was added."""
+    return {1: "one", 2: "two", 3: "three", 4: "four", 5: "five",
+            6: "six", 7: "seven", 8: "eight"}.get(n, str(n))
+
+
+def backs_table(formations: list[dict]) -> list[tuple[str, str]]:
+    """The back digits, read out of the formations that define them.
+
+    The mapping lives in each formation.json because the generator validates calls
+    against it — so this table is the same data the build checks, not a second copy
+    of it that can quietly disagree.
+    """
+    by_digit: dict[str, dict[str, list[str]]] = {}
+    for form in formations:
+        for digit, pos in (form.get("backs") or {}).items():
+            by_digit.setdefault(digit, {}).setdefault(pos, []).append(form_label(form))
+
+    rows = []
+    for digit in sorted(by_digit):
+        spots = by_digit[digit]
+        covered = sum(len(v) for v in spots.values())
+        if len(spots) == 1:
+            pos, forms_with = next(iter(spots.items()))
+            if covered == len(formations):
+                where = "every formation" if len(formations) > 2 else "both formations"
+            else:
+                where = f"{forms_with[0]} only" if len(forms_with) == 1 \
+                    else ", ".join(forms_with) + " only"
+            rows.append((digit, f"{esc(position_name(pos))} &mdash; {esc(where)}"))
+        else:
+            parts = [f"{esc(position_name(pos).lower())} in the {esc(f[0])}"
+                     for pos, f in spots.items()]
+            text = " &nbsp;·&nbsp; ".join(parts)
+            rows.append((digit, text[0].upper() + text[1:]))
+    return rows
 
 HOLES = [
     ("0 / 1", "Between the center and the guard"),
@@ -1146,8 +1178,8 @@ def write_home(formations: list[dict], defenses: dict) -> str:
         for f in defenses.values()
     )
     body = f"""<h1 class="page">The 2026 playbook</h1>
-<p class="lede">Two offensive formations, {total} plays, three defensive fronts, built for
-11-on-11 8U tackle. Every
+<p class="lede">{_count(len(formations)).capitalize()} offensive formations, {total} plays,
+{_count(len(defenses))} defensive fronts, built for 11-on-11 8U tackle. Every
 diagram is generated from the play files in the repo — so what is on this site is
 exactly what is in the binder.</p>
 <p class="sub">Fastest way to find a play: the <a href="calls.html">call sheet</a>.</p>
@@ -1158,9 +1190,10 @@ exactly what is in the binder.</p>
 </div>
 
 <p class="section-head">Defensive playbook</p>
-<p class="lede">Three fronts, each checked against the league rulebook by the generator:
-a base for most downs, a goal-line front for when they have to have a yard, and a wider
-front for when they keep getting outside us.</p>
+<p class="lede">{_count(len(defenses)).capitalize()} fronts, every one of them checked against the
+league rulebook by the generator: a base for most downs, a goal-line front for when they
+have to have a yard, a wider front for when they keep getting outside us, and the prevent
+the league requires at an 18-point lead.</p>
 <div class="cards">{defcards}</div>
 
 <p class="section-head">How we call plays</p>
@@ -1170,8 +1203,8 @@ the call is <strong>formation + flanker + back + hole + play word</strong>. <cod
 carries it and the second says where it goes.</p>
 <p class="lede"><strong>Who carries it</strong></p>
 <dl class="assign holes">
-  {chr(10).join(f'  <div class="row"><dt>{esc(n)}</dt><dd>{esc(d)}</dd></div>'
-                for n, d in BACKS).strip()}
+  {chr(10).join(f'  <div class="row"><dt>{esc(n)}</dt><dd>{d}</dd></div>'
+                for n, d in backs_table(formations)).strip()}
 </dl>
 <p class="lede"><strong>Where it goes</strong> — even numbers to the right (0, 2, 4, 6, 8), odd to
 the left (1, 3, 5, 7, 9), counting outward from the center. This is the only part the
@@ -1185,8 +1218,8 @@ and <code>I Z Right 36 Slant</code> is flanker right, tailback, outside the tigh
 who knows the two numbers can run a play the first time he hears it.</p>
 <p class="sub">Every play in the book is <code>Z Right</code> today. It is in the call
 anyway so a <code>Z Left</code> look can be added later without changing the language.</p>
-<p class="sub">The Wishbone uses the same two digits — <code>Bone 22 Dive</code>,
-<code>Bone 44 Power</code> — it just has two more backs to number.</p>
+<p class="sub">The Wishbone uses the same two digits — <code>Bone 20 Dive</code>,
+<code>Bone 44 Power</code> — it just has one more back to number.</p>
 
 <p class="section-head">Before you install anything</p>
 <div class="callout">

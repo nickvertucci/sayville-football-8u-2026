@@ -13,6 +13,23 @@ CARD_ORDER = [
     "QB", "BB", "FB", "TB", "HB", "LH", "RH",
 ]
 
+# What a position key is called in prose. Only used for headings and the calling-
+# language table — assignment text never names a position, see playbook/CLAUDE.md.
+POSITION_NAMES = {
+    "X": "Split end", "TE": "Tight end", "Z": "Flanker",
+    "LE": "Left end", "RE": "Right end",
+    "LT": "Left tackle", "RT": "Right tackle",
+    "LG": "Left guard", "RG": "Right guard", "C": "Center",
+    "LW": "Left wing", "RW": "Right wing", "WB": "Wingback", "W": "Wingback",
+    "QB": "Quarterback", "BB": "Blocking back", "FB": "Fullback",
+    "TB": "Tailback", "HB": "Halfback",
+    "LH": "Left halfback", "RH": "Right halfback",
+}
+
+
+def position_name(key: str) -> str:
+    return POSITION_NAMES.get(key, key)
+
 
 def esc(text) -> str:
     return (
