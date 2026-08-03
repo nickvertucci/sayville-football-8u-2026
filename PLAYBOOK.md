@@ -6,19 +6,19 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 | # | Play | Call | Type | Formation | Ball |
 |---|---|---|---|---|---|
-| 1 | [I Dive Right](#i-dive-right) | `I Z Right 20 Dive` | run | I | FB |
-| 2 | [I Dive Left](#i-dive-left) | `I Z Right 21 Dive` | run | I | FB |
-| 3 | [I Iso Right](#i-iso-right) | `I Z Right 32 Iso` | run | I | TB |
-| 4 | [I Iso Left](#i-iso-left) | `I Z Right 33 Iso` | run | I | TB |
-| 5 | [I Slant Right](#i-slant-right) | `I Z Right 36 Slant` | run | I | TB |
-| 6 | [I Slant Left](#i-slant-left) | `I Z Right 37 Slant` | run | I | TB |
-| 7 | [I Toss Right](#i-toss-right) | `I Z Right 38 Toss` | run | I | TB |
-| 8 | [I Toss Left](#i-toss-left) | `I Z Right 39 Toss` | run | I | TB |
-| 9 | [I Counter Left](#i-counter-left) | `I Z Right 35 Counter` | run | I | TB |
-| 10 | [I Counter Right](#i-counter-right) | `I Z Right 34 Counter` | run | I | TB |
-| 11 | [I Sneak](#i-sneak) | `I Z Right 10 Sneak` | run | I | QB |
-| 12 | [I Boot Right](#i-boot-right) | `I Z Right 16 Boot` | pass | I | Z |
-| 13 | [I Waggle Left](#i-waggle-left) | `I Z Right 17 Waggle` | pass | I | LE |
+| 1 | [I Dive Right](#i-dive-right) | `I Z Right 20 Dive` | run | Regular I | FB |
+| 2 | [I Dive Left](#i-dive-left) | `I Z Right 21 Dive` | run | Regular I | FB |
+| 3 | [I Iso Right](#i-iso-right) | `I Z Right 32 Iso` | run | Regular I | TB |
+| 4 | [I Iso Left](#i-iso-left) | `I Z Right 33 Iso` | run | Regular I | TB |
+| 5 | [I Slant Right](#i-slant-right) | `I Z Right 36 Slant` | run | Regular I | TB |
+| 6 | [I Slant Left](#i-slant-left) | `I Z Right 37 Slant` | run | Regular I | TB |
+| 7 | [I Toss Right](#i-toss-right) | `I Z Right 38 Toss` | run | Regular I | TB |
+| 8 | [I Toss Left](#i-toss-left) | `I Z Right 39 Toss` | run | Regular I | TB |
+| 9 | [I Counter Left](#i-counter-left) | `I Z Right 35 Counter` | run | Regular I | TB |
+| 10 | [I Counter Right](#i-counter-right) | `I Z Right 34 Counter` | run | Regular I | TB |
+| 11 | [I Sneak](#i-sneak) | `I Z Right 10 Sneak` | run | Regular I | QB |
+| 12 | [I Boot Right](#i-boot-right) | `I Z Right 16 Boot` | pass | Regular I | Z |
+| 13 | [I Waggle Left](#i-waggle-left) | `I Z Right 17 Waggle` | pass | Regular I | LE |
 | 14 | [Power I Power Right](#power-i-power-right) | `Power I 34 Power` | run | Power I | TB |
 | 15 | [Power I Power Left](#power-i-power-left) | `Power I 35 Power` | run | Power I | TB |
 | 16 | [Power I Wedge](#power-i-wedge) | `Power I 30 Wedge` | run | Power I | TB |
@@ -41,7 +41,7 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 | 33 | [House Sweep Left](#house-sweep-left) | `House 39 Sweep` | run | Full House | RH |
 | 34 | [House Boot Left](#house-boot-left) | `House 17 Boot` | pass | Full House | LE |
 
-# I-Formation
+# Regular I
 
 ---
 

@@ -137,7 +137,7 @@ in the `MIRROR` table maps to itself, which is correct for someone aligned on th
 
 - **Wishbone and Full House are symmetric** — they use `mirror_of`, so a left-handed play
   is a four-line file.
-- **I and Power I are not.** The flanker (`Z`) and the wing (`WB`) sit to the right on
+- **Regular I and Power I are not.** The flanker (`Z`) and the wing (`WB`) sit right on
   every snap, so mirroring would flip the path while leaving the player aligned on the
   same side. Their left-handed plays are authored by hand.
 

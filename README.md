@@ -19,7 +19,7 @@ Every play has two names, and both are printed on every card.
 - The **name** is what you say while teaching it: *I Slant Right*.
 - The **call** is what you yell on Saturday: `I Z Right 36 Slant`.
 
-### I-Formation: formation + flanker + back + hole + play word
+### Regular I: formation + flanker + back + hole + play word
 
 `Z Right` says where the flanker lines up. Then two digits: the first says
 **who carries it**, the second says **where it goes**.
@@ -32,8 +32,8 @@ single play is called.
 |---|---|
 | **1** | Quarterback — both formations |
 | **2** | Fullback — both formations |
-| **3** | Tailback in the I · right halfback in the Wishbone |
-| **4** | Left halfback — Wishbone only |
+| **3** | Tailback in the Regular I and the Power I · right halfback in the Wishbone and the Full House |
+| **4** | Wingback in the Power I · left halfback in the Wishbone and the Full House |
 
 | Hole | Where |
 |---|---|
@@ -118,7 +118,7 @@ Same rule as the Wishbone: the far halfback carries, because the near one is bus
 out the edge.
 
 **Play word** — `Dive`, `Iso`, `Slant`, `Toss`, `Counter`, `Sneak`, `Boot`, `Waggle` in
-the I; `Power`, `Wedge`, `Jet` in the Power I; `Dive`, `Power`, `Pitch`, `Counter` in the
+the Regular I; `Power`, `Wedge`, `Jet` in the Power I; `Dive`, `Power`, `Pitch`, `Counter` in the
 Wishbone; `Dive`, `Power`, `Sweep` in the Full House. Every formation also carries exactly
 one play-action pass, on the play word `Boot` or `Waggle`.
 
@@ -128,7 +128,7 @@ Four formations, 34 plays, in teaching order:
 
 | # | Formation | Family | Plays | What it is for |
 |---|---|---|---|---|
-| 1 | **I** | I-Formation | 13 | Base offense. Fullback and tailback stacked, so the same look threatens the middle and both edges. Teaches a back to read a block. |
+| 1 | **Regular I** | Regular I | 13 | Base offense. Fullback and tailback stacked, so the same look threatens the middle and both edges. Teaches a back to read a block. |
 | 2 | **Power I** | Power I | 5 | The I with the flanker tightened to a wing. An extra blocker on the edge for Power, a man in motion for Jet, and the short-yardage Wedge. |
 | 3 | **Wishbone** | Wishbone | 9 | Three backs, three threats every snap. Symmetric, so every play works both directions off identical rules. |
 | 4 | **Full House** | Full House | 7 | Three backs in a straight line at the same depth. The alignment gives nothing away, and every run splits the same three jobs — carry, kick out, lead. |
@@ -138,7 +138,7 @@ over: "block down on the first defender inside you" means the same thing in any 
 That is the reason to carry these four rather than four unrelated offenses.
 
 **One pass per formation, and one is the right number.** Every formation carries exactly
-one play-action pass (the I has two because Boot and Waggle are a matched pair). Each one
+one play-action pass (the Regular I has two because Boot and Waggle are a matched pair). Each one
 fakes that formation's best run and boots the quarterback the other way, so it is the same
 first three steps the defense has already been punished for respecting. They exist so
 nobody can put nine in the box and forget the edge — not to throw the ball. Every one of
