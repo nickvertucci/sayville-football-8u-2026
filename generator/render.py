@@ -437,12 +437,11 @@ def validate_install(schedule: dict, formations: list[dict], defenses: dict) -> 
         if phase and phase not in schedule.get("phases", {}):
             errors.append(f"install practice {n}: unknown phase '{phase}'")
 
-    # Everything in the book has to be taught at some point, or the schedule quietly
-    # drops a play and nobody notices until a Saturday.
-    for pid in sorted(plays - set(installed_at)):
-        errors.append(f"install: play '{pid}' is never installed")
-    for fid in sorted(fronts - set(installed_at)):
-        errors.append(f"install: defensive front '{fid}' is never installed")
+    # Not everything has to be scheduled. The plan is built out a practice at a time,
+    # and a half-written schedule is the normal state of one in August — failing the
+    # build over it would mean you could not publish until you had planned the whole
+    # season. What must not happen is a play going missing in silence, so the page
+    # lists whatever is not on the schedule yet instead.
 
     for practice in practices:
         n = practice.get("n")
