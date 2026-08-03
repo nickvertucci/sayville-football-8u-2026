@@ -10,7 +10,7 @@
   "ball_carrier": "LH",
   "purpose": "The same first three steps as Power, taken all the way outside. The near halfback and the pulling guard get around the corner in front of the carrier, and a defense that has been fighting the kick-out inside is a step late getting there.",
   "assignments": {
-    "LE": {
+    "LTE": {
       "rule": "Cut off pursuit from behind. Everything is running away from you — chase flat down the line and never quit.",
       "type": "block",
       "path": [
@@ -55,7 +55,7 @@
         [-0.5, 1.2]
       ]
     },
-    "RE": {
+    "RTE": {
       "rule": "Block the end over you out toward the sideline. Stay on him — the ball is going around you and he cannot be the one to make the tackle.",
       "type": "block",
       "path": [

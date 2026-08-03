@@ -13,7 +13,7 @@
   },
   "purpose": "Two lead blockers around the corner. The offset back and the pulling guard get outside in front of the tailback, and a defense that has been squeezing the off-tackle hole all game has nobody left on the edge.",
   "assignments": {
-    "LE": {
+    "LTE": {
       "rule": "Cut off pursuit from behind. Everything is running away from you, so chase flat down the line and never quit.",
       "type": "block",
       "path": [
@@ -58,7 +58,7 @@
         [-0.5, 1.2]
       ]
     },
-    "RE": {
+    "RTE": {
       "rule": "Block the end over you out toward the sideline. Stay on him — the ball is going around you and he cannot be the one to make the tackle.",
       "type": "block",
       "path": [

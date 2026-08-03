@@ -10,7 +10,7 @@
   "ball_carrier": "TB",
   "purpose": "The same isolation block the other way. The flanker stays where he is, so this runs away from our strength — which is exactly why it is open.",
   "assignments": {
-    "RE": {
+    "RTE": {
       "rule": "Cut off pursuit from behind. You are the last one to the ball, so never quit on the play.",
       "type": "block",
       "path": [
@@ -52,7 +52,7 @@
         [0.4, 1.2]
       ]
     },
-    "LE": {
+    "LTE": {
       "rule": "The end is head up on you. Drive him out and widen the hole.",
       "type": "block",
       "path": [

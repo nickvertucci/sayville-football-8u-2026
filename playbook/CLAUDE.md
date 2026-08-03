@@ -166,7 +166,7 @@ in the `MIRROR` table maps to itself, which is correct for someone aligned on th
   same side. Their left-handed plays are authored by hand.
 
 **This is also why rules never name a specific position.** Write "the playside end", "the
-backside guard", "the center" — never "RE" or "LG". Position abbreviations are not
+backside guard", "the center" — never "RTE" or "LG". Position abbreviations are not
 mirrored and end up pointing at the wrong player. For the same reason, avoid words that
 merely contain "left" or "right" as a substring.
 

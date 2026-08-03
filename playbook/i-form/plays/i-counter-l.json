@@ -10,7 +10,7 @@
   "ball_carrier": "TB",
   "purpose": "Misdirection off the toss. We show them the toss to the flanker side, their linebackers chase, and the tailback plants and comes back weak behind a pulling guard.",
   "assignments": {
-    "RE": {
+    "RTE": {
       "rule": "Cut off pursuit from behind. You are the last one to the ball, so never quit on the play.",
       "type": "block",
       "path": [
@@ -55,7 +55,7 @@
         [0.4, 1.3]
       ]
     },
-    "LE": {
+    "LTE": {
       "rule": "Release inside off his outside shoulder and take the playside linebacker. The end over you is being kicked out — leave him alone.",
       "type": "block",
       "path": [

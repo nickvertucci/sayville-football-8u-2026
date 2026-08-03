@@ -7,10 +7,10 @@
   "type": "pass",
   "defense": "5-3",
   "direction": "left",
-  "ball_carrier": "LE",
+  "ball_carrier": "LTE",
   "purpose": "Boot Right the other way. The quarterback fakes the dive and gets to the weak edge with the end in the flat in front of him and the flanker coming all the way across behind. Run first, throw second.",
   "assignments": {
-    "RE": {
+    "RTE": {
       "rule": "Block down inside and sell the run. This has to look exactly like a run to your side.",
       "type": "block",
       "path": [
@@ -54,7 +54,7 @@
         [-1.0, 0.7]
       ]
     },
-    "LE": {
+    "LTE": {
       "rule": "Engage the end over you for a count, then release to the flat at four yards and stay in front of the quarterback. You are the easy throw.",
       "type": "pass",
       "path": [

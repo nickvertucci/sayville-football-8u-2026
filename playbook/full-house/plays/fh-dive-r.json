@@ -10,7 +10,7 @@
   "ball_carrier": "FB",
   "purpose": "The fastest handoff in the book. The fullback is going before the defense has read anything, and both halfbacks leave on sweep paths so the linebackers have three things to look at and about half a second to pick.",
   "assignments": {
-    "LE": {
+    "LTE": {
       "rule": "Cut off pursuit from behind. Nobody chases this down from the backside.",
       "type": "block",
       "path": [
@@ -53,7 +53,7 @@
         [1.0, 1.1]
       ]
     },
-    "RE": {
+    "RTE": {
       "rule": "Block the end over you out. He is the man who closes this down if you let him step inside.",
       "type": "block",
       "path": [

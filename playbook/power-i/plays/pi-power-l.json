@@ -10,7 +10,7 @@
   "ball_carrier": "TB",
   "purpose": "The same play away from the wing. We give up the wing's kick-out and the fullback does that job instead, which is why it is the second one we teach, not the first.",
   "assignments": {
-    "RE": {
+    "RTE": {
       "rule": "Cut off pursuit from behind. You are the last one to the ball, so never quit on the play.",
       "type": "block",
       "path": [
@@ -56,7 +56,7 @@
         [0.4, 1.3]
       ]
     },
-    "LE": {
+    "LTE": {
       "rule": "Release inside off his outside shoulder and take the playside linebacker. The end over you is getting kicked out — leave him alone.",
       "type": "block",
       "path": [

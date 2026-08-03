@@ -62,13 +62,13 @@ PAD = 18
 LINE_H = 17
 
 # Which alignment keys are linemen (drawn as squares) vs backs and receivers (circles).
-LINEMEN = {"LE", "LT", "LG", "C", "RG", "RT", "RE", "TE"}
+LINEMEN = {"LTE", "LT", "LG", "C", "RG", "RT", "RTE", "TE"}
 
 # Only used by plays that declare `mirror_of`. A position with no counterpart maps to
 # itself, which is only correct when it aligns on the middle of the formation — so
 # formations with a one-sided back or receiver author both directions by hand instead.
 MIRROR = {
-    "LE": "RE", "RE": "LE",
+    "LTE": "RTE", "RTE": "LTE",
     "LT": "RT", "RT": "LT",
     "LG": "RG", "RG": "LG",
     "LW": "RW", "RW": "LW",
@@ -296,7 +296,12 @@ def play_alignment(form: dict, play: dict) -> dict:
 # Holes 0/1 sit between the center and the guard, 2/3 guard to tackle, 4/5 tackle to end,
 # 6/7 outside the end and 8/9 wider still. The first three zones are the real gaps in the
 # line, so they are measured off the formation's own alignment and follow its splits.
-HOLE_INTERIOR = [("C", "G"), ("G", "T"), ("T", "E")]
+HOLE_INTERIOR = [("C", "G"), ("G", "T"), ("T", "TE")]
+
+# The line from the middle out, as position-key suffixes after the side letter. Spelled
+# out rather than built from the hole names, because the tight end's key is LTE/RTE while
+# the defensive end's is LE/RE and a suffix of "E" would silently pick the wrong one.
+LINE_OUT = ("G", "T", "TE")
 
 # How far off his aiming point a carrier may cross and still count as hitting the hole.
 # Half a line split — enough that a back bending to daylight passes, tight enough that a
@@ -311,8 +316,8 @@ def hole_bounds(alignment: dict, side: str, pair: int) -> tuple[float, float]:
     4 is everything wider than that.
     """
     edges = [abs(alignment["C"][0])]
-    for key in (side + "G", side + "T", side + "E"):
-        edges.append(abs(alignment[key][0]))
+    for suffix in LINE_OUT:
+        edges.append(abs(alignment[side + suffix][0]))
     split = (edges[3] - edges[0]) / 3.0
     if pair < len(HOLE_INTERIOR):
         return edges[pair] - HOLE_TOLERANCE, edges[pair + 1] + HOLE_TOLERANCE
@@ -744,8 +749,8 @@ def render_card(play: dict, defenses: dict, frame: tuple[float, float, float]) -
 # The offense a defensive card is drawn against: a balanced two-tight-end set, so the
 # picture does not imply we only ever face one formation.
 GENERIC_OFFENSE = {
-    "LE": [-4.2, -0.5], "LT": [-2.8, -0.5], "LG": [-1.4, -0.5], "C": [0.0, -0.5],
-    "RG": [1.4, -0.5], "RT": [2.8, -0.5], "RE": [4.2, -0.5],
+    "LTE": [-4.2, -0.5], "LT": [-2.8, -0.5], "LG": [-1.4, -0.5], "C": [0.0, -0.5],
+    "RG": [1.4, -0.5], "RT": [2.8, -0.5], "RTE": [4.2, -0.5],
     "QB": [0.0, -1.5], "FB": [0.0, -3.3], "LH": [-2.9, -4.9], "RH": [2.9, -4.9],
 }
 

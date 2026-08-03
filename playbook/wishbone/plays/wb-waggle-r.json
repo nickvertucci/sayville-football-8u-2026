@@ -7,10 +7,10 @@
   "type": "pass",
   "defense": "5-3",
   "direction": "right",
-  "ball_carrier": "RE",
+  "ball_carrier": "RTE",
   "purpose": "The only pass in the Wishbone, and it comes off the play they have seen most. Fake the dive, let both halfbacks run their power paths, and the quarterback walks out onto an edge everybody has left.",
   "assignments": {
-    "LE": {
+    "LTE": {
       "rule": "Engage the end over you for a count, then release and get across the field to eight yards. You are the second look and you arrive late on purpose.",
       "type": "pass",
       "path": [
@@ -54,7 +54,7 @@
         [1.0, 0.7]
       ]
     },
-    "RE": {
+    "RTE": {
       "rule": "Engage the end over you for a count, then release to the flat at four yards and stay in front of the quarterback. You are the easy throw.",
       "type": "pass",
       "path": [

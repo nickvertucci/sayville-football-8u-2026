@@ -10,7 +10,7 @@
   "ball_carrier": "Z",
   "purpose": "Play action off the toss look. Two receivers to the flanker side and a quarterback with the whole edge to himself. Run first, throw second.",
   "assignments": {
-    "LE": {
+    "LTE": {
       "rule": "Block down inside and sell the run. This has to look exactly like the toss going the other way.",
       "type": "block",
       "path": [
@@ -54,7 +54,7 @@
         [1.0, 0.7]
       ]
     },
-    "RE": {
+    "RTE": {
       "rule": "Engage the end over you for a count, then release and settle at eight yards on the boot side.",
       "type": "pass",
       "path": [

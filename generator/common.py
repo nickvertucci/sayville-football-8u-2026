@@ -8,7 +8,7 @@ from __future__ import annotations
 
 # Order assignments are listed: line first, then receivers, then backs.
 CARD_ORDER = [
-    "X", "LE", "LT", "LG", "C", "RG", "RT", "RE", "TE",
+    "X", "LTE", "LT", "LG", "C", "RG", "RT", "RTE", "TE",
     "LW", "RW", "WB", "W", "Z",
     "QB", "BB", "FB", "TB", "HB", "LH", "RH",
 ]
@@ -17,6 +17,8 @@ CARD_ORDER = [
 # language table — assignment text never names a position, see playbook/CLAUDE.md.
 POSITION_NAMES = {
     "X": "Split end", "TE": "Tight end", "Z": "Flanker",
+    "LTE": "Left tight end", "RTE": "Right tight end",
+    # LE and RE stay: on a defensive front they are the defensive ends.
     "LE": "Left end", "RE": "Right end",
     "LT": "Left tackle", "RT": "Right tackle",
     "LG": "Left guard", "RG": "Right guard", "C": "Center",
