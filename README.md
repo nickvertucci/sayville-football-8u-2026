@@ -183,7 +183,7 @@ someone a link to exactly the play you mean.
 | Page | What it is |
 |---|---|
 | `index.html` | Home: the formations, the install advice, the calling language |
-| `calls.html` | **Call sheet** — every play, filter as you type, filter by formation or run/pass |
+| `calls.html` | **Call sheet** — every play, searchable, filterable by formation, run/pass, where it hits, direction and who touches it |
 | `f-<formation>.html` | One formation: its notes and its plays |
 | `rules.html` | **The league rulebook, verbatim**, generated from `rulebook/*.txt` |
 | `rules-notes.html` | What those rules did to this playbook, generated from `RULES.md` |
