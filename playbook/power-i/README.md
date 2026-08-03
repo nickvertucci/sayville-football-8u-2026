@@ -35,6 +35,7 @@ Everything is the base I except the flanker, who tightens down to a wingback one
 | [Power I Power Left](#power-i-power-left) | `Power I 35 Power` | run | TB |
 | [Power I Wedge](#power-i-wedge) | `Power I 30 Wedge` | run | TB |
 | [Power I Jet Left](#power-i-jet-left) | `Power I 49 Jet` | run | WB |
+| [Power I Boot Right](#power-i-boot-right) | `Power I 16 Boot` | pass | RE |
 
 ---
 
@@ -161,4 +162,36 @@ The wing goes in motion across the formation and takes the handoff at full speed
 - Call the motion the same way every single time so the snap count and his start never drift apart.
 - Do not install this until Power Right is real. Jet works because they have already been punished for not honouring the wing side.
 - If their end chases the wing flat down the line, come back to Power Right the very next play — he has left the edge.
+
+---
+
+## Power I Boot Right
+
+**Call it:** `Power I 16 Boot`
+
+![Power I Boot Right](cards/pi-boot-r.svg)
+
+Jet motion pulls the whole defense one way and the quarterback keeps it the other. This is the play Jet Left is really setting up, and at this age the edge is usually empty.
+
+| Position | Assignment |
+|---|---|
+| **LE** | Engage the end over you for a count, then release and get across the field to eight yards. You are the second look and you arrive late on purpose. |
+| **LT** | Block down inside and sell the run. Nobody comes through your gap chasing the motion. |
+| **LG** | Nobody is over you. Pull flat to the left and run the Jet path — you are the lie, take a linebacker with you. |
+| **C** | Block the nose away from the boot. Nobody chases through the middle. |
+| **RG** | Nobody is over you. Help the center on the nose and drive him away from the boot. |
+| **RT** | Hinge and protect the boot side. Nobody comes free outside you — the quarterback is alone back there. |
+| **RE** **(ball)** | Engage the end over you for a count, then release to the flat at four yards and stay in front of the quarterback. You are the easy throw. |
+| **WB** | Run the Jet motion exactly the way you run it for real — start on the same call, full speed, flat across. Keep going after the fake. You are the reason this play is open. |
+| **QB** | Fake the jet handoff with both hands, hide the ball on your back hip, and get to the edge the other way. Run it if it is open. Only throw if a defender comes up to take you. |
+| **FB** | Fill straight ahead like Wedge is coming, then block anyone chasing the quarterback from the inside. |
+| **TB** | Run the Power path to the right and then keep going to protect the outside. Anybody chasing the quarterback from behind is yours. |
+
+**Coaching points**
+
+- Do not call this until Jet Left has been run for real and hurt them. The motion is only a lie if it has been the truth.
+- Both ends must engage before releasing. If they run straight into their routes the fake dies and the flat defender is already waiting.
+- No blitzing is allowed for 8- and 9-year-olds, so the quarterback has time. Teach him to be patient and look up.
+- Run first. At this age the quarterback usually walks into ten yards before anyone finds him — the throw is the second choice, not the plan.
+- One throw, then tuck it. No scrambling backwards, ever.
 
