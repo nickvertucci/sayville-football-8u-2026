@@ -24,22 +24,25 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 | 16 | [Power I Wedge](#power-i-wedge) | `Power I 30 Wedge` | run | Power I | TB |
 | 17 | [Power I Jet Left](#power-i-jet-left) | `Power I 49 Jet` | run | Power I | WB |
 | 18 | [Power I Boot Right](#power-i-boot-right) | `Power I 16 Boot` | pass | Power I | RE |
-| 19 | [Bone Dive Right](#bone-dive-right) | `Bone 20 Dive` | run | Wishbone | FB |
-| 20 | [Bone Dive Left](#bone-dive-left) | `Bone 21 Dive` | run | Wishbone | FB |
-| 21 | [Bone Power Right](#bone-power-right) | `Bone 44 Power` | run | Wishbone | LH |
-| 22 | [Bone Power Left](#bone-power-left) | `Bone 35 Power` | run | Wishbone | RH |
-| 23 | [Bone Pitch Right](#bone-pitch-right) | `Bone 48 Pitch` | run | Wishbone | LH |
-| 24 | [Bone Pitch Left](#bone-pitch-left) | `Bone 39 Pitch` | run | Wishbone | RH |
-| 25 | [Bone Counter Right](#bone-counter-right) | `Bone 44 Counter` | run | Wishbone | LH |
-| 26 | [Bone Counter Left](#bone-counter-left) | `Bone 35 Counter` | run | Wishbone | RH |
-| 27 | [Bone Waggle Right](#bone-waggle-right) | `Bone 16 Waggle` | pass | Wishbone | RE |
-| 28 | [House Dive Right](#house-dive-right) | `House 20 Dive` | run | Full House | FB |
-| 29 | [House Dive Left](#house-dive-left) | `House 21 Dive` | run | Full House | FB |
-| 30 | [House Power Right](#house-power-right) | `House 44 Power` | run | Full House | LH |
-| 31 | [House Power Left](#house-power-left) | `House 35 Power` | run | Full House | RH |
-| 32 | [House Sweep Right](#house-sweep-right) | `House 48 Sweep` | run | Full House | LH |
-| 33 | [House Sweep Left](#house-sweep-left) | `House 39 Sweep` | run | Full House | RH |
-| 34 | [House Boot Left](#house-boot-left) | `House 17 Boot` | pass | Full House | LE |
+| 19 | [Power I Offset Power Right](#power-i-offset-power-right) | `Power I Offset Right 34 Power` | run | Power I | TB |
+| 20 | [Power I Offset Counter Left](#power-i-offset-counter-left) | `Power I Offset Right 35 Counter` | run | Power I | TB |
+| 21 | [Power I Offset Toss Right](#power-i-offset-toss-right) | `Power I Offset Right 38 Toss` | run | Power I | TB |
+| 22 | [Bone Dive Right](#bone-dive-right) | `Bone 20 Dive` | run | Wishbone | FB |
+| 23 | [Bone Dive Left](#bone-dive-left) | `Bone 21 Dive` | run | Wishbone | FB |
+| 24 | [Bone Power Right](#bone-power-right) | `Bone 44 Power` | run | Wishbone | LH |
+| 25 | [Bone Power Left](#bone-power-left) | `Bone 35 Power` | run | Wishbone | RH |
+| 26 | [Bone Pitch Right](#bone-pitch-right) | `Bone 48 Pitch` | run | Wishbone | LH |
+| 27 | [Bone Pitch Left](#bone-pitch-left) | `Bone 39 Pitch` | run | Wishbone | RH |
+| 28 | [Bone Counter Right](#bone-counter-right) | `Bone 44 Counter` | run | Wishbone | LH |
+| 29 | [Bone Counter Left](#bone-counter-left) | `Bone 35 Counter` | run | Wishbone | RH |
+| 30 | [Bone Waggle Right](#bone-waggle-right) | `Bone 16 Waggle` | pass | Wishbone | RE |
+| 31 | [House Dive Right](#house-dive-right) | `House 20 Dive` | run | Full House | FB |
+| 32 | [House Dive Left](#house-dive-left) | `House 21 Dive` | run | Full House | FB |
+| 33 | [House Power Right](#house-power-right) | `House 44 Power` | run | Full House | LH |
+| 34 | [House Power Left](#house-power-left) | `House 35 Power` | run | Full House | RH |
+| 35 | [House Sweep Right](#house-sweep-right) | `House 48 Sweep` | run | Full House | LH |
+| 36 | [House Sweep Left](#house-sweep-left) | `House 39 Sweep` | run | Full House | RH |
+| 37 | [House Boot Left](#house-boot-left) | `House 17 Boot` | pass | Full House | LE |
 
 # Regular I
 
@@ -605,6 +608,99 @@ Jet motion pulls the whole defense one way and the quarterback keeps it the othe
 - No blitzing is allowed for 8- and 9-year-olds, so the quarterback has time. Teach him to be patient and look up.
 - Run first. At this age the quarterback usually walks into ten yards before anyone finds him — the throw is the second choice, not the plan.
 - One throw, then tuck it. No scrambling backwards, ever.
+
+---
+
+## Power I Offset Power Right
+
+**Call it:** `Power I Offset Right 34 Power`
+
+![Power I Offset Power Right](playbook/power-i/cards/pi-off-power-r.svg)
+
+Power Right with the wing moved off the edge and into the backfield beside the fullback. Same three jobs, same hole, but now the defense cannot see which side the extra blocker is going to until the ball is snapped.
+
+| Position | Assignment |
+|---|---|
+| **LE** | Cut off pursuit from behind. You are the last one to the ball, so never quit on the play. |
+| **LT** | Block back. Take the first defender on or inside you — nobody crosses your face. |
+| **LG** | PULL RIGHT. Stay flat behind the line, turn up through the hole and block the first wrong shirt you see. Do not go around the pile — go through it. |
+| **C** | You have the nose, head up on you. Hands inside and do not let him cross your face to the playside. |
+| **RG** | Nobody is over you. Help the center drive the nose for one count, then climb to the middle linebacker. |
+| **RT** | The tackle is on your inside shoulder. Block him down and seal him inside — that is what opens the hole. |
+| **RE** | Release inside off his outside shoulder and take the playside linebacker. The end over you is getting kicked out — leave him alone. |
+| **WB** | Kick the end out. You are starting three yards deeper than usual, so leave on the snap and get there — aim at his outside hip and drive him toward the sideline. |
+| **QB** | Open to the right, hand it deep to the tailback, then carry out the boot fake to the edge. The fake is what keeps the backside end honest. |
+| **FB** | Lead through the hole outside our tackle and block the first defender who shows in it. Get your head across him — do not wait for him to come to you. |
+| **TB** **(ball)** | Take the handoff going downhill and aim at the outside hip of our tackle. Follow the fullback, then the guard. Stay tight to the blocks and do not bounce it outside. |
+
+**Coaching points**
+
+- This is the same play as Power Right off the wing. The only thing that changes is where the kick-out block starts, and that is the entire reason it exists — at the wing he is a tell, in the backfield he is not.
+- The trade is honest: from the backfield he arrives faster but with a worse angle, so he must leave on the snap. From the wing he has leverage but the defense has already counted him.
+- Teach both looks in the same session with the same words. Every line rule is identical and the backs' jobs are identical — only one man has moved.
+- If they walk a linebacker over to the offset side, run Offset Counter Left the very next play.
+
+---
+
+## Power I Offset Counter Left
+
+**Call it:** `Power I Offset Right 35 Counter`
+
+![Power I Offset Counter Left](playbook/power-i/cards/pi-off-counter-l.svg)
+
+The offset back is lined up right and runs right, which is exactly what they have been punished for respecting. The tailback takes two steps that way and comes back off tackle to the weak side behind a pulling guard.
+
+| Position | Assignment |
+|---|---|
+| **LE** | Release inside off his outside shoulder and take the playside linebacker. The end over you is being kicked out — leave him alone. |
+| **LT** | The tackle is on your inside shoulder. Block him down and seal him inside — that is what opens the hole. |
+| **LG** | Nobody is over you. Help the center drive the nose for one count, then climb to the middle linebacker. |
+| **C** | You have the nose, head up on you. Hands inside and do not let him cross your face to the playside. |
+| **RG** | PULL LEFT. Stay flat behind the line and kick out the end on the other side. Aim at his outside hip. |
+| **RT** | Block back. Take the first defender on or inside you — nobody crosses your face. |
+| **RE** | Cut off pursuit from behind. You are the last one to the ball, so never quit on the play. |
+| **WB** | Run your Power path to the right at full speed and block whatever shows. You never get the ball on this play and you are the reason it works. |
+| **QB** | Take the snap, fake the handoff to the right with both hands, then turn back and hand to the tailback. The fake comes first — the handoff is late on purpose. |
+| **FB** | False step right, then lead through the hole to the left and block the first defender who fills it. One step of the lie, then do your job. |
+| **TB** **(ball)** | Take two hard steps toward the offset back, then plant and come back behind the pulling guard. Those two steps are the entire play. |
+
+**Coaching points**
+
+- Do not call this until Offset Power Right has gone for real yards. Misdirection off a play they do not fear is just a slower run.
+- The offset back is the whole lie. He must run the Power path at Power speed and block somebody at the end of it — if he coasts, their backside linebacker never leaves.
+- The tailback's counter steps must be full speed and full length. A shuffle fools nobody.
+- The fullback's false step is one step, not two. Any more and he is late to the hole and the pulling guard is running alone.
+
+---
+
+## Power I Offset Toss Right
+
+**Call it:** `Power I Offset Right 38 Toss`
+
+![Power I Offset Toss Right](playbook/power-i/cards/pi-off-toss-r.svg)
+
+Two lead blockers around the corner. The offset back and the pulling guard get outside in front of the tailback, and a defense that has been squeezing the off-tackle hole all game has nobody left on the edge.
+
+| Position | Assignment |
+|---|---|
+| **LE** | Cut off pursuit from behind. Everything is running away from you, so chase flat down the line and never quit. |
+| **LT** | Block back. Take the first defender on or inside you — nobody crosses your face. |
+| **LG** | Nobody is over you. Help the center on the nose for a count, then chase flat behind the play. |
+| **C** | You have the nose. Get your body between him and the ball and drive him away from where we are going. |
+| **RG** | PULL RIGHT. Stay flat, get outside our end, and turn up. Block the first defender who shows outside — usually the corner. You are the last blocker the carrier has. |
+| **RT** | The tackle is on your inside shoulder. Block him down and seal him inside. He must not run down the line with the play. |
+| **RE** | Block the end over you out toward the sideline. Stay on him — the ball is going around you and he cannot be the one to make the tackle. |
+| **WB** | Get width on the snap and lead the tailback around the corner. Block the first man outside our end, and if nobody shows, keep running and find the safety. |
+| **QB** | Open right and get the ball to the tailback deep and early, then carry out a fake up the middle. Do not float it — put it in his hands while he is still gaining width. |
+| **FB** | Seal the inside. Anybody crossing the line between our tackle and the ball is yours — the carrier is running outside of you and cannot see them. |
+| **TB** **(ball)** | Take the ball and get width first. Stay behind the offset back until you are outside our end, then turn up hard. Turning up too early is the only way this play loses yards. |
+
+**Coaching points**
+
+- Best call on the hash going to the wide side of the field. Do not call it into the boundary.
+- The offset back has a real head start on this compared to running it from the wing — he is already behind the line and moving before anybody can widen with him.
+- The carrier must not turn up until he is outside our end. Eight-year-olds cut upfield the moment they see grass and run straight into the tackle the play was designed to beat.
+- If their corner is flying up to meet the pull every time, come back inside with Offset Power Right — same first two steps from the backfield.
 
 # Wishbone
 

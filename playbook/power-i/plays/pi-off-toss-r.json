@@ -1,0 +1,111 @@
+{
+  "id": "pi-off-toss-r",
+  "order": 8,
+  "formation": "power-i",
+  "name": "Power I Offset Toss Right",
+  "call": "Power I Offset Right 38 Toss",
+  "type": "run",
+  "defense": "5-3",
+  "direction": "right",
+  "ball_carrier": "TB",
+  "alignment": {
+    "WB": [2.6, -3.3]
+  },
+  "purpose": "Two lead blockers around the corner. The offset back and the pulling guard get outside in front of the tailback, and a defense that has been squeezing the off-tackle hole all game has nobody left on the edge.",
+  "assignments": {
+    "LE": {
+      "rule": "Cut off pursuit from behind. Everything is running away from you, so chase flat down the line and never quit.",
+      "type": "block",
+      "path": [
+        [1.2, 0.8]
+      ]
+    },
+    "LT": {
+      "rule": "Block back. Take the first defender on or inside you — nobody crosses your face.",
+      "type": "block",
+      "path": [
+        [1.0, 0.7]
+      ]
+    },
+    "LG": {
+      "rule": "Nobody is over you. Help the center on the nose for a count, then chase flat behind the play.",
+      "type": "block",
+      "path": [
+        [0.8, 1.0],
+        [2.6, 1.4]
+      ]
+    },
+    "C": {
+      "rule": "You have the nose. Get your body between him and the ball and drive him away from where we are going.",
+      "type": "block",
+      "path": [
+        [-0.5, 1.1]
+      ]
+    },
+    "RG": {
+      "rule": "PULL RIGHT. Stay flat, get outside our end, and turn up. Block the first defender who shows outside — usually the corner. You are the last blocker the carrier has.",
+      "type": "block",
+      "path": [
+        [1.2, -0.8],
+        [4.4, 0.2],
+        [6.4, 2.0]
+      ]
+    },
+    "RT": {
+      "rule": "The tackle is on your inside shoulder. Block him down and seal him inside. He must not run down the line with the play.",
+      "type": "block",
+      "path": [
+        [-0.5, 1.2]
+      ]
+    },
+    "RE": {
+      "rule": "Block the end over you out toward the sideline. Stay on him — the ball is going around you and he cannot be the one to make the tackle.",
+      "type": "block",
+      "path": [
+        [1.2, 1.2]
+      ]
+    },
+    "WB": {
+      "rule": "Get width on the snap and lead the tailback around the corner. Block the first man outside our end, and if nobody shows, keep running and find the safety.",
+      "type": "block",
+      "path": [
+        [2.4, 1.0],
+        [5.4, 2.2],
+        [6.6, 3.4]
+      ]
+    },
+    "QB": {
+      "rule": "Open right and get the ball to the tailback deep and early, then carry out a fake up the middle. Do not float it — put it in his hands while he is still gaining width.",
+      "type": "fake",
+      "path": [
+        [1.0, -0.6],
+        [2.4, -1.0]
+      ]
+    },
+    "FB": {
+      "rule": "Seal the inside. Anybody crossing the line between our tackle and the ball is yours — the carrier is running outside of you and cannot see them.",
+      "type": "block",
+      "path": [
+        [2.0, 1.6],
+        [3.2, 2.8]
+      ]
+    },
+    "TB": {
+      "rule": "Take the ball and get width first. Stay behind the offset back until you are outside our end, then turn up hard. Turning up too early is the only way this play loses yards.",
+      "type": "run",
+      "path": [
+        [1.8, 0.2],
+        [5.0, 0.8],
+        [7.6, 2.6],
+        [8.4, 5.2],
+        [8.8, 7.6]
+      ]
+    }
+  },
+  "coaching_points": [
+    "Best call on the hash going to the wide side of the field. Do not call it into the boundary.",
+    "The offset back has a real head start on this compared to running it from the wing — he is already behind the line and moving before anybody can widen with him.",
+    "The carrier must not turn up until he is outside our end. Eight-year-olds cut upfield the moment they see grass and run straight into the tackle the play was designed to beat.",
+    "If their corner is flying up to meet the pull every time, come back inside with Offset Power Right — same first two steps from the backfield."
+  ]
+}

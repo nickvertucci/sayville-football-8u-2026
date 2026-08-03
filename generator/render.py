@@ -273,6 +273,26 @@ def resolve_plays(plays_dir: Path, form: dict) -> list[dict]:
 
 CALL_DIGITS = re.compile(r"\b(\d)(\d)\b")
 
+
+def play_alignment(form: dict, play: dict) -> dict:
+    """Where the eleven actually line up for this play.
+
+    A formation has one alignment, but a formation is not always one picture. The
+    Power I's wingback has two legal spots in the same eleven-man look: tight to the
+    end where he is a blocker on the edge, or offset in the backfield where he is a
+    lead back. A play may say which, and the call says it out loud —
+    `Power I Offset Right 34 Power` — the same way the I's call names the flanker's
+    side.
+
+    An override may only move somebody the formation already has. It cannot add a
+    twelfth player or invent a position, and validate() rejects both.
+    """
+    alignment = {pos: list(spot) for pos, spot in form.get("alignment", {}).items()}
+    for pos, spot in (play.get("alignment") or {}).items():
+        if pos in alignment:
+            alignment[pos] = list(spot)
+    return alignment
+
 # Holes 0/1 sit between the center and the guard, 2/3 guard to tackle, 4/5 tackle to end,
 # 6/7 outside the end and 8/9 wider still. The first three zones are the real gaps in the
 # line, so they are measured off the formation's own alignment and follow its splits.
@@ -336,7 +356,7 @@ def validate_call(play: dict, form: dict) -> list[str]:
     if not pos:
         return [f"{pid}: call '{call}' names back {back_digit}, which this formation does "
                 f"not define (it has {', '.join(sorted(backs))})"]
-    alignment = form.get("alignment", {})
+    alignment = play_alignment(form, play)
     if pos not in alignment:
         return [f"{pid}: call '{call}' names back {back_digit} = {pos}, who is not in the "
                 "formation"]
@@ -437,6 +457,19 @@ def validate(formations: list[dict], defenses: dict) -> list[str]:
             carrier = play.get("ball_carrier")
             if carrier and carrier not in form.get("alignment", {}):
                 errors.append(f"{pid}: ball_carrier '{carrier}' is not in the formation")
+            # An alignment override moves somebody the formation already has. It may
+            # not add a twelfth player, and a typo'd key would otherwise be ignored
+            # in silence — the play would render at the unmoved spot and look fine.
+            for pos in play.get("alignment", {}):
+                if pos not in form.get("alignment", {}):
+                    errors.append(
+                        f"{pid}: alignment moves '{pos}', who is not in this formation"
+                    )
+            for pos, spot in play.get("alignment", {}).items():
+                if not (isinstance(spot, list) and len(spot) == 2):
+                    errors.append(
+                        f"{pid}: alignment for '{pos}' must be [x, y] in field yards"
+                    )
             if not missing and not extra:
                 errors.extend(validate_call(play, form))
     return errors
@@ -612,7 +645,7 @@ def wrap(text, width: int) -> list[str]:
 
 def render_card(play: dict, defenses: dict, frame: tuple[float, float, float]) -> str:
     form = play["_formation"]
-    alignment = form["alignment"]
+    alignment = play_alignment(form, play)
     defense = defenses.get(play.get("defense", ""))
 
     # Same frame as the web diagrams, so a card and a diagram of the same play are
@@ -822,8 +855,11 @@ def diagram_frame(formations: list[dict], defenses: dict) -> tuple[float, float,
             if defense:
                 xs += [x for x, _ in defense["alignment"].values()]
                 ys += [y for _, y in defense["alignment"].values()]
+            spots = play_alignment(form, play)
+            xs += [x for x, _ in spots.values()]
+            ys += [y for _, y in spots.values()]
             for pos, spec in play["assignments"].items():
-                ax, ay = alignment[pos]
+                ax, ay = spots[pos]
                 xs += [ax + p[0] for p in spec.get("path", [])]
                 ys += [ay + p[1] for p in spec.get("path", [])]
 
@@ -866,8 +902,9 @@ def render_diagram(play: dict, defenses: dict, frame: tuple[float, float, float]
     ]
     if defense:
         svg.append(draw_defense(defense))
-    svg.append(draw_paths(play, form["alignment"]))
-    svg.append(draw_offense(play, form["alignment"]))
+    alignment = play_alignment(form, play)
+    svg.append(draw_paths(play, alignment))
+    svg.append(draw_offense(play, alignment))
     svg.append("</svg>")
     return "\n".join(svg)
 
