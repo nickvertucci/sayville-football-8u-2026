@@ -10,7 +10,7 @@
   "ball_carrier": "LH",
   "purpose": "Misdirection off the pitch. The near halfback and the quarterback sell the pitch one way and the far halfback plants and comes all the way back. Nobody pulls: our end drives their end out, the guard climbs to the middle linebacker and the fullback leads up through the hole onto the playside linebacker, so the ball hits fast behind a lead blocker.",
   "assignments": {
-    "LE": {
+    "LTE": {
       "rule": "Cut off pursuit from behind. You are the last one to the ball, so never quit on the play.",
       "type": "block",
       "path": [
@@ -53,7 +53,7 @@
         [-0.4, 1.3]
       ]
     },
-    "RE": {
+    "RTE": {
       "rule": "Block the end over you and drive him out, away from the hole. Nobody is kicking him out for you — he is yours.",
       "type": "block",
       "path": [

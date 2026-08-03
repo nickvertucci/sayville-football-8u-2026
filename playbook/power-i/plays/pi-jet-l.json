@@ -10,7 +10,7 @@
   "ball_carrier": "WB",
   "purpose": "The wing goes in motion across the formation and takes the handoff at full speed going the other way. The defense has spent all day watching Power go to the wing side, and this is the same look leaving in the opposite direction.",
   "assignments": {
-    "RE": {
+    "RTE": {
       "rule": "Cut off pursuit from behind. Everything is running away from you, so chase flat down the line and never quit.",
       "type": "block",
       "path": [
@@ -55,7 +55,7 @@
         [0.5, 1.2]
       ]
     },
-    "LE": {
+    "LTE": {
       "rule": "Block the end over you out toward the sideline. Stay on him — the ball is going around you and he cannot be the one to make the tackle.",
       "type": "block",
       "path": [

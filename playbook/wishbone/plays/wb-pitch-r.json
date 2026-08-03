@@ -10,7 +10,7 @@
   "ball_carrier": "LH",
   "purpose": "Get outside in a hurry. The fullback holds the middle and then blocks, our end seals their end inside, and the near halfback gets to the corner and kicks him toward the sideline. The far halfback trails the quarterback, takes the pitch on the run and turns up inside that block.",
   "assignments": {
-    "LE": {
+    "LTE": {
       "rule": "Cut off pursuit from behind. You are the last one to the ball, so never quit on the play.",
       "type": "block",
       "path": [
@@ -53,7 +53,7 @@
         [-0.3, 1.3]
       ]
     },
-    "RE": {
+    "RTE": {
       "rule": "Seal the edge. Block the end over you and turn him inside — the ball is going around behind you, so he cannot be allowed to follow it out.",
       "type": "block",
       "path": [

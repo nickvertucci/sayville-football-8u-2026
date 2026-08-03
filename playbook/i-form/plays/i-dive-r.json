@@ -9,7 +9,7 @@
   "ball_carrier": "FB",
   "purpose": "The quickest handoff in the book. The fullback is through the line before their linebackers have read anything. We run it to remind them the middle is not free, which is what makes the toss work later.",
   "assignments": {
-    "LE": {
+    "LTE": {
       "rule": "Cut off pursuit from behind. You are the last one to the ball, so never quit on the play.",
       "type": "block",
       "path": [
@@ -52,7 +52,7 @@
         [0.0, 1.0]
       ]
     },
-    "RE": {
+    "RTE": {
       "rule": "The end is head up on you. Drive him out and away from the ball.",
       "type": "block",
       "path": [

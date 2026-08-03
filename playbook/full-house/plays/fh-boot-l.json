@@ -7,10 +7,10 @@
   "type": "pass",
   "defense": "5-3",
   "direction": "left",
-  "ball_carrier": "LE",
+  "ball_carrier": "LTE",
   "purpose": "All three backs run their Power paths to the right and the quarterback keeps it left on his own. Three backs going one way is the hardest thing in this book to ignore, which is exactly why nobody is left on the other side.",
   "assignments": {
-    "RE": {
+    "RTE": {
       "rule": "Engage the end over you for a count, then release and get across the field to eight yards. You are the second look and you arrive late on purpose.",
       "type": "pass",
       "path": [
@@ -55,7 +55,7 @@
         [-1.0, 0.7]
       ]
     },
-    "LE": {
+    "LTE": {
       "rule": "Engage the end over you for a count, then release to the flat at four yards and stay in front of the quarterback. You are the easy throw.",
       "type": "pass",
       "path": [

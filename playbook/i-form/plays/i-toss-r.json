@@ -10,7 +10,7 @@
   "ball_carrier": "TB",
   "purpose": "Get all the way outside. Wider than the Slant — the tailback takes the handoff at full speed and runs past the tight end's block to the corner, with the fullback out in front of him.",
   "assignments": {
-    "LE": {
+    "LTE": {
       "rule": "Cut off pursuit from behind. You are the last one to the ball, so never quit on the play.",
       "type": "block",
       "path": [
@@ -53,7 +53,7 @@
         [0.9, 1.0]
       ]
     },
-    "RE": {
+    "RTE": {
       "rule": "Reach the end over you. If you cannot reach him, turn him inside and let the ball go around.",
       "type": "block",
       "path": [

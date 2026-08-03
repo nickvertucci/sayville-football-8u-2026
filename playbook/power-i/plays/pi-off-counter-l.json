@@ -13,7 +13,7 @@
   },
   "purpose": "The offset back is lined up right and runs right, which is exactly what they have been punished for respecting. The tailback takes two steps that way and comes back off tackle to the weak side behind a pulling guard.",
   "assignments": {
-    "RE": {
+    "RTE": {
       "rule": "Cut off pursuit from behind. You are the last one to the ball, so never quit on the play.",
       "type": "block",
       "path": [
@@ -58,7 +58,7 @@
         [0.4, 1.3]
       ]
     },
-    "LE": {
+    "LTE": {
       "rule": "Release inside off his outside shoulder and take the playside linebacker. The end over you is being kicked out — leave him alone.",
       "type": "block",
       "path": [

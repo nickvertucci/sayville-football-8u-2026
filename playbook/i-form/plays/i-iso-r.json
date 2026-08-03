@@ -10,7 +10,7 @@
   "ball_carrier": "TB",
   "purpose": "The whole play is one block: the fullback isolates their linebacker in the hole and the tailback runs off whichever way that block goes. It teaches a back to read a block, which is the skill this formation is here to build.",
   "assignments": {
-    "LE": {
+    "LTE": {
       "rule": "Cut off pursuit from behind. You are the last one to the ball, so never quit on the play.",
       "type": "block",
       "path": [
@@ -52,7 +52,7 @@
         [-0.4, 1.2]
       ]
     },
-    "RE": {
+    "RTE": {
       "rule": "The end is head up on you. Drive him out and widen the hole.",
       "type": "block",
       "path": [

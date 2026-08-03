@@ -10,7 +10,7 @@
   "ball_carrier": "TB",
   "purpose": "Short yardage and the goal line. Nobody blocks a man — the whole line squeezes shoulder to shoulder on the center and pushes. The tailback puts a hand on the center's back and goes wherever the pile goes.",
   "assignments": {
-    "LE": {
+    "LTE": {
       "rule": "Close down hard to the man beside you until your shoulder touches his. Push straight ahead. Never look for someone to block.",
       "type": "block",
       "path": [
@@ -52,7 +52,7 @@
         [-0.8, 1.3]
       ]
     },
-    "RE": {
+    "RTE": {
       "rule": "Close down hard to the man beside you until your shoulder touches his. Push straight ahead. Never look for someone to block.",
       "type": "block",
       "path": [
