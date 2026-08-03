@@ -38,7 +38,7 @@
       "rule": "You have the nose, head up on you. Hands inside and do not let him cross your face to the playside.",
       "type": "block",
       "path": [
-        [0.4, 1.1]
+        [-0.4, 1.1]
       ]
     },
     "LG": {
@@ -84,8 +84,8 @@
       "rule": "Kick the end out. Aim at his outside hip and drive him toward the sideline. The tailback is running inside of you, so never let him come underneath.",
       "type": "block",
       "path": [
-        [-2.2, 1.5],
-        [-3.4, 2.4]
+        [-2.2, 2.0],
+        [-3.6, 4.0]
       ]
     },
     "TB": {

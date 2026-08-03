@@ -33,8 +33,8 @@
 <line x1="297.1" y1="311.1" x2="307.7" y2="326.1" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 <path d="M313.2,337.5 L340.2,318.6" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
 <line x1="334.9" y1="311.1" x2="345.5" y2="326.1" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
-<path d="M351.0,337.5 L329.4,310.5" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-<line x1="322.2" y1="316.2" x2="336.6" y2="304.8" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
+<path d="M351.0,337.5 L372.6,310.5" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="365.4" y1="304.8" x2="379.8" y2="316.2" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 <path d="M388.8,337.5 L405.0,305.1" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
 <line x1="396.8" y1="301.0" x2="413.2" y2="309.2" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 <path d="M426.6,337.5 L415.8,305.1" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
