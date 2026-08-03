@@ -391,6 +391,73 @@ def validate_call(play: dict, form: dict) -> list[str]:
     return []
 
 
+def load_install() -> dict:
+    """The practice-by-practice install schedule, if there is one."""
+    path = ROOT / "install.json"
+    return load_json(path) if path.is_file() else {}
+
+
+def validate_install(schedule: dict, formations: list[dict], defenses: dict) -> list[str]:
+    """A schedule that teaches a play before the thing it is built on is worse than no
+    schedule: it sends a coach to practice to install misdirection off a play the team
+    has never run. The dependencies are written in the plays' own coaching points, so
+    they are declared here and checked rather than left to whoever reads carefully.
+    """
+    if not schedule:
+        return []
+    errors = []
+    plays = {p["id"] for f in formations for p in f["_plays"]}
+    fronts = set(defenses)
+    practices = schedule.get("practices", [])
+
+    numbers = [p.get("n") for p in practices]
+    if numbers != sorted(numbers) or len(set(numbers)) != len(numbers):
+        errors.append("install: practice numbers must be unique and in order")
+
+    installed_at: dict[str, int] = {}
+    for practice in practices:
+        n = practice.get("n")
+        for pid in practice.get("plays", []):
+            if pid not in plays:
+                errors.append(f"install practice {n}: no such play '{pid}'")
+            elif pid in installed_at:
+                errors.append(f"install: '{pid}' is installed twice, at practices "
+                              f"{installed_at[pid]} and {n}")
+            else:
+                installed_at[pid] = n
+        for fid in practice.get("fronts", []):
+            if fid not in fronts:
+                errors.append(f"install practice {n}: no such defensive front '{fid}'")
+            elif fid in installed_at:
+                errors.append(f"install: front '{fid}' is installed twice, at practices "
+                              f"{installed_at[fid]} and {n}")
+            else:
+                installed_at[fid] = n
+        phase = practice.get("phase")
+        if phase and phase not in schedule.get("phases", {}):
+            errors.append(f"install practice {n}: unknown phase '{phase}'")
+
+    # Everything in the book has to be taught at some point, or the schedule quietly
+    # drops a play and nobody notices until a Saturday.
+    for pid in sorted(plays - set(installed_at)):
+        errors.append(f"install: play '{pid}' is never installed")
+    for fid in sorted(fronts - set(installed_at)):
+        errors.append(f"install: defensive front '{fid}' is never installed")
+
+    for practice in practices:
+        n = practice.get("n")
+        for need in practice.get("requires", []):
+            if need not in installed_at:
+                errors.append(f"install practice {n}: requires '{need}', which is "
+                              "never installed")
+            elif installed_at[need] >= n:
+                errors.append(
+                    f"install practice {n}: requires '{need}', but that is not "
+                    f"installed until practice {installed_at[need]}"
+                )
+    return errors
+
+
 def validate(formations: list[dict], defenses: dict) -> list[str]:
     errors = []
     # Play ids must be unique across the whole book: each one becomes a flat p-<id>.html
@@ -1011,7 +1078,9 @@ def main() -> int:
     defenses = load_defenses()
     formations = load_formations()
 
-    errors = validate_defenses(defenses) + validate(formations, defenses)
+    schedule = load_install()
+    errors = (validate_defenses(defenses) + validate(formations, defenses)
+              + validate_install(schedule, formations, defenses))
     if errors:
         for e in errors:
             print(f"ERROR  {e}", file=sys.stderr)
