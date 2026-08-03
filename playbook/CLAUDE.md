@@ -94,10 +94,18 @@ line changes, that is a new `formation.json`.
 `order` is the position in the formation's teaching sequence — it decides the order
 plays appear on the site and in `PLAYBOOK.md`, nothing more.
 
-**When you add a play, add it to [`install.json`](../install.json) too.** That is the
-practice-by-practice schedule behind the Install page, and the build fails if a play is
-never installed, is installed twice, or is taught before something its `requires` list
-says it depends on. A play nobody has scheduled is a play nobody teaches.
+**[`install.json`](../install.json) is the practice-by-practice schedule** behind the
+Install page. It is built out a practice at a time, so a play does not have to be on it
+— a half-written schedule is the normal state of one in August, and failing the build
+over it would mean you could not publish until the whole season was planned. Anything
+not scheduled is listed at the bottom of the Install page instead, so it cannot go
+missing quietly.
+
+What the build *does* reject: a play scheduled twice, an id that does not exist, practice
+numbers out of order, and a practice whose `requires` list names something installed
+later. That last one is the point of the file — the dependencies are already written in
+the plays' own coaching points ("do not install this until Power Right is real"), and
+`requires` makes them checkable instead of hoping somebody read carefully.
 
 **A formation** needs `id` (must equal the folder name), `name`, an `alignment` of
 exactly eleven players, and `backs` — the digit-to-position map its calls are numbered

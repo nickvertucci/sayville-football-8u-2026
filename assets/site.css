@@ -539,6 +539,26 @@ table.calls td.c { white-space: nowrap; }
   padding-left: 11px; border-left: 2px solid var(--line);
 }
 
+/* What is in the book but not yet on the schedule. Deliberately quieter than the
+   practices above it — it is a backlog, not a plan. */
+.ins-todo {
+  margin: 34px 0 0; padding: 18px 18px 14px; border: 1px dashed var(--line);
+  border-radius: 12px; background: var(--panel-2);
+}
+.ins-todo h2 { margin: 0 0 6px; font-size: 17px; color: var(--ink); }
+.ins-todo > p { margin: 0 0 14px; font-size: 14px; color: var(--muted); max-width: 66ch; }
+.ins-todo code { font-size: .92em; background: var(--panel); border-radius: 4px; padding: 1px 5px; }
+.ins-todo-grp { margin-bottom: 12px; }
+.ins-todo-grp h4 {
+  margin: 0 0 6px; font-size: 11px; text-transform: uppercase; letter-spacing: 1.2px;
+  color: var(--muted); display: flex; align-items: center; gap: 7px;
+}
+.ins-todo-grp h4 span {
+  background: var(--line); color: var(--ink-2); border-radius: 999px;
+  padding: 0 7px; font-size: 10.5px; letter-spacing: 0;
+}
+.ins-todo .ins-play { background: var(--panel); }
+
 /* ------------------------------------------------------------------ rulebook -- */
 /* The league's document, reproduced. Their line breaks, indents and runs of spaces are
    meaningful on a page people read out loud at a game, so the text keeps its own

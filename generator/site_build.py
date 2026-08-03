@@ -576,6 +576,26 @@ table.calls td.c { white-space: nowrap; }
   padding-left: 11px; border-left: 2px solid var(--line);
 }
 
+/* What is in the book but not yet on the schedule. Deliberately quieter than the
+   practices above it — it is a backlog, not a plan. */
+.ins-todo {
+  margin: 34px 0 0; padding: 18px 18px 14px; border: 1px dashed var(--line);
+  border-radius: 12px; background: var(--panel-2);
+}
+.ins-todo h2 { margin: 0 0 6px; font-size: 17px; color: var(--ink); }
+.ins-todo > p { margin: 0 0 14px; font-size: 14px; color: var(--muted); max-width: 66ch; }
+.ins-todo code { font-size: .92em; background: var(--panel); border-radius: 4px; padding: 1px 5px; }
+.ins-todo-grp { margin-bottom: 12px; }
+.ins-todo-grp h4 {
+  margin: 0 0 6px; font-size: 11px; text-transform: uppercase; letter-spacing: 1.2px;
+  color: var(--muted); display: flex; align-items: center; gap: 7px;
+}
+.ins-todo-grp h4 span {
+  background: var(--line); color: var(--ink-2); border-radius: 999px;
+  padding: 0 7px; font-size: 10.5px; letter-spacing: 0;
+}
+.ins-todo .ins-play { background: var(--panel); }
+
 /* ------------------------------------------------------------------ rulebook -- */
 /* The league's document, reproduced. Their line breaks, indents and runs of spaces are
    meaningful on a page people read out loud at a game, so the text keeps its own
@@ -1798,16 +1818,52 @@ def write_install(formations: list[dict], defenses: dict, root: Path) -> str:
             f'<p class="ins-em">{esc(pr.get("emphasis", ""))}</p>{needs}</div></article>'
         )
 
+    # Anything not on the schedule yet, so a play cannot go missing quietly.
+    scheduled = {pid for pr in schedule["practices"] for pid in pr.get("plays", [])}
+    todo = []
+    for form in formations:
+        rest = [p for p in form["_plays"] if p["id"] not in scheduled]
+        if rest:
+            links = "".join(
+                f'<a class="ins-play" href="{p_href(p)}">'
+                f'<span class="ins-call">{esc(p.get("call", ""))}</span>'
+                f'<span class="ins-name">{esc(p["name"])}</span></a>' for p in rest)
+            todo.append(f'<div class="ins-todo-grp"><h4>{esc(form_label(form))} '
+                        f'<span>{len(rest)}</span></h4>'
+                        f'<div class="ins-list">{links}</div></div>')
+    scheduled_fronts = {fid for pr in schedule["practices"] for fid in pr.get("fronts", [])}
+    rest_fronts = [f for fid, f in defenses.items() if fid not in scheduled_fronts]
+    if rest_fronts:
+        links = "".join(
+            f'<a class="ins-play def" href="{d_href(f)}">'
+            f'<span class="ins-call">{esc(f["call"])}</span>'
+            f'<span class="ins-name">{esc(f["name"])} defence</span></a>' for f in rest_fronts)
+        todo.append(f'<div class="ins-todo-grp"><h4>Defence '
+                    f'<span>{len(rest_fronts)}</span></h4>'
+                    f'<div class="ins-list">{links}</div></div>')
+
+    todo_block = ""
+    if todo:
+        left = sum(1 for f in formations for p in f["_plays"] if p["id"] not in scheduled)
+        todo_block = (
+            '<div class="ins-todo"><h2>Not scheduled yet</h2>'
+            f'<p>{left} plays and {len(rest_fronts)} defensive front'
+            f'{"" if len(rest_fronts) == 1 else "s"} are in the book but not on the '
+            "schedule. Add them to <code>install.json</code> as you decide where they "
+            "go &mdash; the build will tell you if one lands before something it needs.</p>"
+            f'{"".join(todo)}</div>'
+        )
+
     body = f"""<h1 class="page">Install schedule</h1>
 <p class="lede">{esc(schedule.get("intro", ""))}</p>
 <dl class="rb-facts">
-  <div><dt>Practices</dt><dd>{len(schedule["practices"])}</dd></div>
-  <div><dt>Game ready by</dt><dd>Practice {preseason[-1]["n"] if preseason else "&mdash;"}</dd></div>
-  <div><dt>Plays</dt><dd>{total_plays}</dd></div>
-  <div><dt>Fronts</dt><dd>{total_fronts}</dd></div>
+  <div><dt>Practices planned</dt><dd>{len(schedule["practices"])}</dd></div>
+  <div><dt>Plays scheduled</dt><dd>{total_plays} of {sum(len(f["_plays"]) for f in formations)}</dd></div>
+  <div><dt>Fronts scheduled</dt><dd>{total_fronts} of {len(defenses)}</dd></div>
 </dl>
 <div class="ins-wrap">
 {chr(10).join(blocks)}
+{todo_block}
 </div>"""
     return page(
         f"Install schedule — {SITE_TITLE}",
