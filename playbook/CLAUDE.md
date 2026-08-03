@@ -65,7 +65,31 @@ key. On pass plays, set it to the primary receiver.
 `--check` fails the build if one is missing.
 
 Optional: `call`, `type`, `defense` (must match a file in `defense/`),
-`order`, `direction`, `purpose`, `coaching_points`.
+`order`, `direction`, `purpose`, `coaching_points`, `alignment`.
+
+### `alignment` — moving somebody for one play
+
+A formation has one alignment, but a formation is not always one picture. A play may
+move a player who has more than one legal spot in the same eleven-man look:
+
+```json
+"alignment": { "WB": [2.6, -3.3] }
+```
+
+That is the Power I's wingback leaving the wing for the backfield. Everything else — the
+line rules, the other ten spots — is unchanged, and the player's `path` is still relative
+to wherever he ends up, so the assignment does not have to know which look it is in.
+
+**Say it in the call.** `Power I Offset Right 34 Power` tells the huddle where he is, the
+same way `I Z Right 20 Dive` names the flanker's side. A play that moves somebody
+silently is a play nobody can call.
+
+An override may only move a player the formation already has, and the coordinates must be
+`[x, y]`. `--check` rejects both mistakes — a typo'd key would otherwise be ignored in
+silence and the play would render at the unmoved spot looking perfectly fine.
+
+Do not reach for this to build a different formation. If most of the eleven move, or the
+line changes, that is a new `formation.json`.
 
 `order` is the position in the formation's teaching sequence. There are no
 install weeks — plays are simply listed in the order we teach them.

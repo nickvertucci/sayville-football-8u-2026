@@ -1,0 +1,111 @@
+{
+  "id": "pi-off-power-r",
+  "order": 6,
+  "formation": "power-i",
+  "name": "Power I Offset Power Right",
+  "call": "Power I Offset Right 34 Power",
+  "type": "run",
+  "defense": "5-3",
+  "direction": "right",
+  "ball_carrier": "TB",
+  "alignment": {
+    "WB": [2.6, -3.3]
+  },
+  "purpose": "Power Right with the wing moved off the edge and into the backfield beside the fullback. Same three jobs, same hole, but now the defense cannot see which side the extra blocker is going to until the ball is snapped.",
+  "assignments": {
+    "LE": {
+      "rule": "Cut off pursuit from behind. You are the last one to the ball, so never quit on the play.",
+      "type": "block",
+      "path": [
+        [1.0, 0.7]
+      ]
+    },
+    "LT": {
+      "rule": "Block back. Take the first defender on or inside you — nobody crosses your face.",
+      "type": "block",
+      "path": [
+        [1.0, 0.7]
+      ]
+    },
+    "LG": {
+      "rule": "PULL RIGHT. Stay flat behind the line, turn up through the hole and block the first wrong shirt you see. Do not go around the pile — go through it.",
+      "type": "block",
+      "path": [
+        [0.8, -0.9],
+        [3.6, -0.7],
+        [4.8, 1.6],
+        [5.2, 3.6]
+      ]
+    },
+    "C": {
+      "rule": "You have the nose, head up on you. Hands inside and do not let him cross your face to the playside.",
+      "type": "block",
+      "path": [
+        [-0.4, 1.1]
+      ]
+    },
+    "RG": {
+      "rule": "Nobody is over you. Help the center drive the nose for one count, then climb to the middle linebacker.",
+      "type": "block",
+      "path": [
+        [-0.6, 1.1],
+        [-1.0, 3.4]
+      ]
+    },
+    "RT": {
+      "rule": "The tackle is on your inside shoulder. Block him down and seal him inside — that is what opens the hole.",
+      "type": "block",
+      "path": [
+        [-0.4, 1.3]
+      ]
+    },
+    "RE": {
+      "rule": "Release inside off his outside shoulder and take the playside linebacker. The end over you is getting kicked out — leave him alone.",
+      "type": "block",
+      "path": [
+        [-1.0, 3.5]
+      ]
+    },
+    "WB": {
+      "rule": "Kick the end out. You are starting three yards deeper than usual, so leave on the snap and get there — aim at his outside hip and drive him toward the sideline.",
+      "type": "block",
+      "path": [
+        [1.4, 2.2],
+        [2.2, 3.0]
+      ]
+    },
+    "QB": {
+      "rule": "Open to the right, hand it deep to the tailback, then carry out the boot fake to the edge. The fake is what keeps the backside end honest.",
+      "type": "fake",
+      "path": [
+        [1.2, -0.5],
+        [3.0, -1.2],
+        [4.6, -1.6]
+      ]
+    },
+    "FB": {
+      "rule": "Lead through the hole outside our tackle and block the first defender who shows in it. Get your head across him — do not wait for him to come to you.",
+      "type": "block",
+      "path": [
+        [1.6, 1.4],
+        [3.0, 3.2]
+      ]
+    },
+    "TB": {
+      "rule": "Take the handoff going downhill and aim at the outside hip of our tackle. Follow the fullback, then the guard. Stay tight to the blocks and do not bounce it outside.",
+      "type": "run",
+      "path": [
+        [1.2, 1.5],
+        [2.6, 3.6],
+        [3.4, 5.6],
+        [3.6, 8.0]
+      ]
+    }
+  },
+  "coaching_points": [
+    "This is the same play as Power Right off the wing. The only thing that changes is where the kick-out block starts, and that is the entire reason it exists — at the wing he is a tell, in the backfield he is not.",
+    "The trade is honest: from the backfield he arrives faster but with a worse angle, so he must leave on the snap. From the wing he has leverage but the defense has already counted him.",
+    "Teach both looks in the same session with the same words. Every line rule is identical and the backs' jobs are identical — only one man has moved.",
+    "If they walk a linebacker over to the offset side, run Offset Counter Left the very next play."
+  ]
+}

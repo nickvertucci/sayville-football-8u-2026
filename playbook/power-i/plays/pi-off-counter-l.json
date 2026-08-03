@@ -1,0 +1,112 @@
+{
+  "id": "pi-off-counter-l",
+  "order": 7,
+  "formation": "power-i",
+  "name": "Power I Offset Counter Left",
+  "call": "Power I Offset Right 35 Counter",
+  "type": "run",
+  "defense": "5-3",
+  "direction": "left",
+  "ball_carrier": "TB",
+  "alignment": {
+    "WB": [2.6, -3.3]
+  },
+  "purpose": "The offset back is lined up right and runs right, which is exactly what they have been punished for respecting. The tailback takes two steps that way and comes back off tackle to the weak side behind a pulling guard.",
+  "assignments": {
+    "RE": {
+      "rule": "Cut off pursuit from behind. You are the last one to the ball, so never quit on the play.",
+      "type": "block",
+      "path": [
+        [-1.0, 0.7]
+      ]
+    },
+    "RT": {
+      "rule": "Block back. Take the first defender on or inside you — nobody crosses your face.",
+      "type": "block",
+      "path": [
+        [-1.0, 0.7]
+      ]
+    },
+    "RG": {
+      "rule": "PULL LEFT. Stay flat behind the line and kick out the end on the other side. Aim at his outside hip.",
+      "type": "block",
+      "path": [
+        [-0.7, -1.0],
+        [-3.6, -0.8],
+        [-4.6, 0.6]
+      ]
+    },
+    "C": {
+      "rule": "You have the nose, head up on you. Hands inside and do not let him cross your face to the playside.",
+      "type": "block",
+      "path": [
+        [0.4, 1.1]
+      ]
+    },
+    "LG": {
+      "rule": "Nobody is over you. Help the center drive the nose for one count, then climb to the middle linebacker.",
+      "type": "block",
+      "path": [
+        [0.6, 1.1],
+        [1.2, 3.4]
+      ]
+    },
+    "LT": {
+      "rule": "The tackle is on your inside shoulder. Block him down and seal him inside — that is what opens the hole.",
+      "type": "block",
+      "path": [
+        [0.4, 1.3]
+      ]
+    },
+    "LE": {
+      "rule": "Release inside off his outside shoulder and take the playside linebacker. The end over you is being kicked out — leave him alone.",
+      "type": "block",
+      "path": [
+        [1.0, 3.5]
+      ]
+    },
+    "WB": {
+      "rule": "Run your Power path to the right at full speed and block whatever shows. You never get the ball on this play and you are the reason it works.",
+      "type": "fake",
+      "path": [
+        [1.4, 2.2],
+        [2.4, 3.4],
+        [3.0, 4.6]
+      ]
+    },
+    "QB": {
+      "rule": "Take the snap, fake the handoff to the right with both hands, then turn back and hand to the tailback. The fake comes first — the handoff is late on purpose.",
+      "type": "fake",
+      "path": [
+        [1.0, -0.5],
+        [-0.4, -0.8],
+        [-1.6, -0.6]
+      ]
+    },
+    "FB": {
+      "rule": "False step right, then lead through the hole to the left and block the first defender who fills it. One step of the lie, then do your job.",
+      "type": "block",
+      "path": [
+        [0.6, 0.6],
+        [-1.6, 2.2],
+        [-2.8, 3.6]
+      ]
+    },
+    "TB": {
+      "rule": "Take two hard steps toward the offset back, then plant and come back behind the pulling guard. Those two steps are the entire play.",
+      "type": "run",
+      "path": [
+        [1.0, 0.8],
+        [-1.4, 2.6],
+        [-3.6, 5.0],
+        [-4.0, 7.6]
+      ]
+    }
+  },
+  "coaching_points": [
+    "Do not call this until Offset Power Right has gone for real yards. Misdirection off a play they do not fear is just a slower run.",
+    "The offset back is the whole lie. He must run the Power path at Power speed and block somebody at the end of it — if he coasts, their backside linebacker never leaves.",
+    "The tailback's counter steps must be full speed and full length. A shuffle fools nobody.",
+    "The fullback's false step is one step, not two. Any more and he is late to the hole and the pulling guard is running alone."
+  ]
+}

@@ -74,8 +74,12 @@ tight end.
 
 ### Power I: formation + back + hole + play word
 
-The same I with the flanker tightened down to a wingback, so there is no `Z Right` to
-declare — the wing's spot is what the formation name says. He is back **4**.
+The same I with the flanker tightened down to a wingback. He is back **4**.
+
+The wing has two spots in this formation, and the call says which. No tag means he is
+at the wing, tight outside the right end. **`Offset Right`** means he has moved into the
+backfield beside the fullback, where the defense cannot tell before the snap which way he
+is going. Every line rule is identical in both — only one man moves.
 
 | Call | Play | Reads as |
 |---|---|---|
@@ -83,6 +87,9 @@ declare — the wing's spot is what the formation name says. He is back **4**.
 | `Power I 30 Wedge` | Power I Wedge | tailback, straight up the middle |
 | `Power I 49 Jet` | Power I Jet Left | the wing in motion, all the way outside |
 | `Power I 16 Boot` | Power I Boot Right | quarterback, off the Jet fake |
+| `Power I Offset Right 34 Power` | Power I Offset Power Right | tailback, tackle–end |
+| `Power I Offset Right 35 Counter` | Power I Offset Counter Left | tailback, back the other way |
+| `Power I Offset Right 38 Toss` | Power I Offset Toss Right | tailback, all the way outside |
 
 ### Wishbone: formation + back + hole + play word
 
@@ -124,12 +131,12 @@ one play-action pass, on the play word `Boot` or `Waggle`.
 
 ## Formations
 
-Four formations, 34 plays, in teaching order:
+Four formations, 37 plays, in teaching order:
 
 | # | Formation | Family | Plays | What it is for |
 |---|---|---|---|---|
 | 1 | **Regular I** | Regular I | 13 | Base offense. Fullback and tailback stacked, so the same look threatens the middle and both edges. Teaches a back to read a block. |
-| 2 | **Power I** | Power I | 5 | The I with the flanker tightened to a wing. An extra blocker on the edge for Power, a man in motion for Jet, and the short-yardage Wedge. |
+| 2 | **Power I** | Power I | 8 | The I with the flanker tightened to a wing — or moved into the backfield. An extra blocker on the edge for Power, a man in motion for Jet, the short-yardage Wedge, and a three-play Offset package off the same eleven. |
 | 3 | **Wishbone** | Wishbone | 9 | Three backs, three threats every snap. Symmetric, so every play works both directions off identical rules. |
 | 4 | **Full House** | Full House | 7 | Three backs in a straight line at the same depth. The alignment gives nothing away, and every run splits the same three jobs — carry, kick out, lead. |
 
@@ -197,7 +204,7 @@ on a phone, with the assignments read underneath it rather than squeezed in besi
 
 ## Printing
 
-- **Print book** (top bar) → 38 landscape pages: 34 plays then 4 defensive fronts,
+- **Print book** (top bar) → 41 landscape pages: 37 plays then 4 defensive fronts,
   one per sheet.
 - **Print** (on any play or front page) → that one card, one landscape sheet.
 
@@ -262,7 +269,7 @@ Only the JSON under `playbook/` and `defense/` is source. Everything else with a
 
 ## Every offensive play is drawn and blocked against the 5-3
 
-Thirty-two of the 34 plays are drawn against the **5-3**, and their assignments are
+Thirty-five of the 37 plays are drawn against the **5-3**, and their assignments are
 written for that front specifically rather than in general terms. The two exceptions are
 the short-yardage plays, **I Sneak** and **Power I Wedge**, which are drawn against the
 **6-3** because that is the heaviest front the league allows and it is what you actually
