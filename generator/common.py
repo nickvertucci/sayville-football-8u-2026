@@ -48,9 +48,10 @@ def slug(text) -> str:
 def form_label(form: dict) -> str:
     """What a formation is called in the UI.
 
-    `name` is the short internal handle and is a poor heading on its own — the
-    I-formation's is the single letter "I", which renders as a stray tick. The family
-    ("I-Formation", "Wishbone") is what a human should read.
+    `family` is the heading a human reads ("Regular I", "Power I"); `name` is the
+    handle. They are the same string on every formation we carry today, and the split
+    is kept because a one-word `name` is what a call would ever shorten to if the
+    heading grew longer than a huddle call should be.
     """
     return form.get("family") or form["name"]
 

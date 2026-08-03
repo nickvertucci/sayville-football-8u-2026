@@ -1345,7 +1345,7 @@ the league requires at an 18-point lead.</p>
 
 <p class="section-head">How we call plays</p>
 <p class="lede">Every play has a teaching name (<em>I Slant Right</em>) and a huddle call
-(<code>I Z Right 36 Slant</code>). Both are printed on every card. In the I-formation
+(<code>I Z Right 36 Slant</code>). Both are printed on every card. In the Regular I
 the call is <strong>formation + flanker + back + hole + play word</strong>. <code>Z Right</code> is where the flanker lines up, then the first number says who
 carries it and the second says where it goes.</p>
 <p class="lede"><strong>Who carries it</strong></p>
