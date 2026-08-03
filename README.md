@@ -240,6 +240,7 @@ python generator/test_calls.py        # prove the call check still rejects a wro
 python generator/test_call_sheet.py   # prove the call sheet filters show the right plays
 python generator/test_print_pages.py  # prove every card still prints on one sheet
 python generator/test_rulebook.py     # prove the rules page still quotes the rulebook exactly
+python generator/test_blocking.py     # prove every block is drawn to the right side of its man
 ```
 
 No dependencies beyond Python 3. `--check` fails if any play is missing an assignment for

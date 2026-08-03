@@ -35,7 +35,7 @@
       "rule": "You have the nose, head up on you. Hands inside and do not let him cross your face to the playside.",
       "type": "block",
       "path": [
-        [-0.8, 1.0]
+        [0.8, 1.0]
       ]
     },
     "RG": {

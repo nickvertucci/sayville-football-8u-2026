@@ -33,14 +33,14 @@
       "path": [
         [-0.7, -1.0],
         [-3.6, -0.8],
-        [-4.6, 0.6]
+        [-5.0, 1.2]
       ]
     },
     "C": {
       "rule": "You have the nose, head up on you. Hands inside and do not let him cross your face to the playside.",
       "type": "block",
       "path": [
-        [0.4, 1.1]
+        [-0.4, 1.1]
       ]
     },
     "LG": {

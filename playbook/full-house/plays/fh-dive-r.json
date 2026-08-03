@@ -35,7 +35,7 @@
       "rule": "You have the nose, head up on you. Drive him to the backside — the hole is on the other side of your body, so he cannot cross your face.",
       "type": "block",
       "path": [
-        [-0.5, 1.2]
+        [0.5, 1.2]
       ]
     },
     "RG": {
