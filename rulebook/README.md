@@ -35,7 +35,28 @@ python generator/extract_rulebook.py \
 That also re-writes `media/`. `rules.html` on the website is generated from the `.txt`,
 so the page cannot say anything the league did not.
 
-## It is verbatim, including the mistakes
+## One redaction, and one thing still to decide
+
+The cover page lists the league's officers by name against their roles. **Those eight
+names are removed** from `2025-PAL-RULE-BOOK.txt` and therefore from the website. Their
+roles are kept — "SCPAL Football President" is who you ask, and that is the part a coach
+needs. Everything else is untouched.
+
+The reason is the difference in kind between a PDF passed around a league and a public,
+indexable web page. `generator/extract_rulebook.py` holds the list and applies it on
+extraction, so it survives a re-extract; `generator/test_rulebook.py` fails the build if
+a name reappears in either the text or the page.
+
+"Tommy Tough" is deliberately not redacted. It is the published name of the league's
+helmet-safety standard and the title of Section 25, not a person being identified.
+
+> **Still outstanding:** `2025-PAL-RULE-BOOK-updated-2025-10-05.docx` is the unmodified
+> file the league sent, so it still contains the names, and this repository is public.
+> Keeping it is what makes the extraction reproducible and auditable; removing it makes
+> the redaction complete. That is a call worth making deliberately rather than by
+> default.
+
+## The rest is verbatim, including the mistakes
 
 The text is not cleaned up. The rulebook contains `safetyoriented`, `BENIND`, `ATTEMP`,
 `PRIVILIGE` and `REFERED`, and they are all still there, because the point of this file
@@ -55,8 +76,10 @@ reproduced, because Word draws them and coaches read them as part of the rule:
 The extractor was checked against Microsoft Word's own object model — Word opened the
 document and reported the text of all 1,338 paragraphs, including the list markers it
 generates. With all whitespace removed, Word's rendering and `2025-PAL-RULE-BOOK.txt`
-are **the same 52,885 characters**, and `rules.html` reproduces those same 52,885
-characters.
+were **the same 52,885 characters**. After the officer names are removed, 52,786
+remain, and `rules.html` reproduces every one of them — checked by
+`generator/test_rulebook.py`, which strips all markup out of the rendered page and
+compares what is left to the text file.
 
 The comparison had exactly three differences, all explained and none of them text:
 Word emits a `/` placeholder where a floating shape is anchored. Each of those three

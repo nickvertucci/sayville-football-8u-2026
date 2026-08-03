@@ -239,6 +239,7 @@ python generator/render.py --check    # validate the JSON only, write nothing
 python generator/test_calls.py        # prove the call check still rejects a wrong call
 python generator/test_call_sheet.py   # prove the call sheet filters show the right plays
 python generator/test_print_pages.py  # prove every card still prints on one sheet
+python generator/test_rulebook.py     # prove the rules page still quotes the rulebook exactly
 ```
 
 No dependencies beyond Python 3. `--check` fails if any play is missing an assignment for

@@ -529,38 +529,105 @@ table.calls td.c { white-space: nowrap; }
 
 /* ------------------------------------------------------------------- prose -- */
 /* ------------------------------------------------------------------ rulebook -- */
-/* The league's document, reproduced. Their line breaks, their indents and their
-   runs of spaces are all meaningful on a page people read out loud at a game, so
-   the text keeps its own whitespace (pre-wrap) and still wraps on a phone. */
-.rb-toc {
-  display: grid; gap: 2px 14px; grid-template-columns: 1fr; margin: 18px 0 26px;
-  background: var(--panel); border: 1px solid var(--line); border-radius: 12px;
-  padding: 12px 14px; box-shadow: var(--shadow);
+/* The league's document, reproduced. Their line breaks, indents and runs of spaces are
+   meaningful on a page people read out loud at a game, so the text keeps its own
+   whitespace (pre-wrap) and still wraps on a phone. Everything below is markup around
+   that text — none of it changes a character. */
+
+.rb-hero { margin: 0 0 4px; }
+.rb-eyebrow {
+  font-size: 11.5px; text-transform: uppercase; letter-spacing: 1.6px;
+  color: var(--muted); margin: 0 0 6px; font-weight: 600;
 }
-@media (min-width: 620px) { .rb-toc { grid-template-columns: repeat(2, minmax(0,1fr)); } }
-@media (min-width: 960px) { .rb-toc { grid-template-columns: repeat(3, minmax(0,1fr)); } }
+.rb-hero h1.page { margin-bottom: 10px; }
+.rb-facts {
+  display: flex; flex-wrap: wrap; gap: 10px; margin: 16px 0 0; padding: 0;
+}
+.rb-facts > div {
+  background: var(--panel); border: 1px solid var(--line); border-radius: 10px;
+  padding: 8px 14px; box-shadow: var(--shadow);
+}
+.rb-facts dt {
+  font-size: 10.5px; text-transform: uppercase; letter-spacing: 1.2px;
+  color: var(--muted); font-weight: 600;
+}
+.rb-facts dd { margin: 2px 0 0; font-size: 14.5px; font-weight: 700; color: var(--ink); }
+
+.rb-toc {
+  margin: 20px 0 30px; background: var(--panel); border: 1px solid var(--line);
+  border-radius: 12px; padding: 14px 16px 12px; box-shadow: var(--shadow);
+}
+.rb-toc-h {
+  font-size: 11px; text-transform: uppercase; letter-spacing: 1.3px; color: var(--muted);
+  margin: 0 0 10px; font-weight: 700;
+}
+.rb-toc-grid { display: grid; gap: 1px 14px; grid-template-columns: 1fr; }
+@media (min-width: 620px) { .rb-toc-grid { grid-template-columns: repeat(2, minmax(0,1fr)); } }
+@media (min-width: 980px) { .rb-toc-grid { grid-template-columns: repeat(3, minmax(0,1fr)); } }
 .rb-toc a {
-  display: flex; gap: 9px; align-items: baseline; text-decoration: none;
-  color: var(--ink-2); font-size: 13.5px; padding: 4px 6px; border-radius: 6px;
+  display: flex; gap: 10px; align-items: baseline; text-decoration: none;
+  color: var(--ink-2); font-size: 13.5px; padding: 5px 7px; border-radius: 7px;
 }
 .rb-toc a:hover { background: var(--panel-2); color: var(--accent-ink); }
 .rb-toc b {
-  color: var(--muted); font-size: 11px; min-width: 1.6em; text-align: right;
+  color: var(--on-accent); background: var(--accent-solid); font-size: 10.5px;
+  min-width: 20px; height: 20px; border-radius: 5px; display: inline-flex;
+  align-items: center; justify-content: center; flex-shrink: 0;
   font-variant-numeric: tabular-nums;
 }
 .rb-toc span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 
-.rulebook { max-width: 86ch; }
-.rulebook .rb-l {
-  margin: 0 0 7px; color: var(--ink-2); font-size: 15px; line-height: 1.55;
-  white-space: pre-wrap; tab-size: 4; overflow-wrap: break-word;
-}
+.rulebook { max-width: 82ch; }
+
+/* Section heading: the number as an eyebrow, the title as the headline. Both are the
+   document's own words — only the styling separates them. */
 .rulebook .rb-h {
-  font-size: clamp(18px, 3.4vw, 22px); letter-spacing: -.3px; color: var(--ink);
-  margin: 40px 0 12px; padding-bottom: 8px; border-bottom: 2px solid var(--accent-solid);
-  scroll-margin-top: 74px; white-space: pre-wrap;
+  margin: 46px 0 14px; padding: 0 0 10px; border-bottom: 2px solid var(--accent-solid);
+  scroll-margin-top: 74px; position: relative;
+  display: flex; flex-wrap: wrap; align-items: baseline; gap: 0;
+  font-size: clamp(17px, 3vw, 21px); letter-spacing: -.2px; color: var(--ink);
 }
 .rulebook .rb-h:first-child { margin-top: 0; }
+.rb-sn {
+  font-size: 11px; letter-spacing: 1.5px; color: var(--accent-ink); font-weight: 800;
+  text-transform: uppercase; width: 100%; margin-bottom: 4px;
+}
+.rb-st { font-weight: 700; }
+.rb-top {
+  margin-left: auto; align-self: center; text-decoration: none; font-size: 13px;
+  color: var(--muted); border: 1px solid var(--line); border-radius: 6px;
+  padding: 1px 7px; line-height: 1.5;
+}
+.rb-top:hover { color: var(--accent-ink); border-color: var(--accent); }
+
+/* Body text. Every line is one paragraph, whitespace preserved. */
+.rulebook p {
+  margin: 0 0 8px; color: var(--ink-2); font-size: 15px; line-height: 1.6;
+  white-space: pre-wrap; tab-size: 4; overflow-wrap: break-word;
+}
+/* Whole paragraphs are typed in capitals. Same words, but a wall of caps is read
+   letter by letter, so give it a little tracking and stop it shouting. */
+.rulebook .caps { letter-spacing: .3px; color: var(--ink); }
+
+/* A numbered rule. The number is a chip you can scan down the page and link to. */
+.rulebook .rb-rule { margin-top: 14px; padding-left: 0; }
+.rb-num {
+  display: inline-block; font-weight: 800; color: var(--accent-ink);
+  font-variant-numeric: tabular-nums; letter-spacing: 0;
+  background: var(--panel-2); border-radius: 5px; padding: 0 6px; margin-right: 2px;
+}
+.rb-sep2 { color: var(--muted); }
+
+/* List items keep their marker and hang the wrapped lines under the text, not the mark. */
+/* The marker sits at the column edge and the wrapped lines hang under the text, not
+   under the mark. The literal tab after the marker is kept in the text but given no
+   width, or it stacks with the indent and opens a canyon. */
+.rulebook .rb-li {
+  margin: 0 0 5px 22px; padding-left: 24px; text-indent: -24px; tab-size: 0;
+}
+.rb-mark {
+  display: inline-block; min-width: 20px; font-weight: 700; color: var(--accent-ink);
+}
 
 footer.site {
   color: var(--muted); font-size: 13.5px; border-top: 1px solid var(--line);
@@ -1072,28 +1139,84 @@ def play_article(form: dict, play: dict, heading: str = "h2", actions: str = "")
 SECTION_RE = re.compile(r"^SECTION\s*:?\s*(\d+)([\s:]*)(\S.*)$")
 
 
+# A numbered rule opening a line: "9.02 – SPECIALIZED GAME MODIFICATIONS", "15.03 - Upon
+# reaching". The number becomes its own anchor so a rule can be linked to directly.
+RULE_RE = re.compile(r"^(\d{1,2}\.\d{2,3})(\s*[-–—:]?\s*)(.*)$")
+
+# A list marker the league typed or Word drew, always followed by a tab.
+MARKER_RE = re.compile(r"^([•▪➢✔]|\(?[a-z]\)|\(?[ivx]+\)|\d{1,2}\.)\t(.*)$", re.I)
+
+
+def mostly_capitals(s: str) -> bool:
+    """Whole paragraphs of this rulebook are typed in capitals. They are the same
+    words either way, but a wall of caps is read letter by letter, so give those
+    lines a little tracking instead of leaving them shouting."""
+    letters = [c for c in s if c.isalpha()]
+    if len(letters) < 12:
+        return False
+    return sum(c.islower() for c in letters) / len(letters) < 0.12
+
+
 def rulebook_html(text: str) -> str:
     """Render the rulebook's own words, unaltered.
 
-    Every line of the document becomes one line on the page, escaped and left
-    exactly as the league wrote it — their spacing, their capitals, their typos.
-    The only liberties taken are presentational: whitespace-only lines are
-    dropped (the paragraphs already carry the spacing), and section headings are
-    marked up as headings so they can be linked to.
+    Every character the league wrote survives — their spacing, their capitals, their
+    typos. Everything done here is markup around that text, never a change to it:
+    a section heading splits into its number and its title so the two can be styled
+    apart, a rule number becomes a linkable chip, and a list marker gets a hanging
+    indent. Extract the text content of this block and you get the file back.
     """
-    out, seen = [], set()
+    out, seen, rules = [], set(), set()
     for raw in text.split("\n"):
         if not raw.strip():
             continue
-        m = SECTION_RE.match(raw.strip())
+        line = raw.strip()
+
+        m = SECTION_RE.match(line)
         gap = m.group(2) if m else ""
         if m and "\t" not in gap and len(gap) <= 2:
             n = m.group(1)
             anchor = f"section-{n}" if n not in seen else f"section-{n}-{len(seen)}"
             seen.add(n)
-            out.append(f'<h2 id="{anchor}" class="rb-h">{esc(raw.strip())}</h2>')
-        else:
-            out.append(f'<p class="rb-l">{esc(raw)}</p>')
+            # "SECTION 9" / ": " / "PLAY OF THE GAME" — all three kept, styled apart.
+            head = line[: m.start(2)] if m.start(2) > 0 else line
+            out.append(
+                f'<h2 id="{anchor}" class="rb-h">'
+                f'<span class="rb-sn">{esc(head + m.group(2))}</span>'
+                f'<span class="rb-st">{esc(m.group(3))}</span>'
+                f'<a class="rb-top" href="#top" aria-label="Back to the top">&uarr;</a>'
+                "</h2>"
+            )
+            continue
+
+        r = RULE_RE.match(line)
+        if r:
+            num = r.group(1)
+            anchor = ""
+            if num not in rules:
+                rules.add(num)
+                anchor = f' id="rule-{num.replace(".", "-")}"'
+            caps = " caps" if mostly_capitals(r.group(3)) else ""
+            out.append(
+                f'<p class="rb-rule{caps}"{anchor}>'
+                f'<span class="rb-num">{esc(num)}</span>'
+                f'<span class="rb-sep2">{esc(r.group(2))}</span>'
+                f'{esc(r.group(3))}</p>'
+            )
+            continue
+
+        mk = MARKER_RE.match(line)
+        if mk:
+            caps = " caps" if mostly_capitals(mk.group(2)) else ""
+            out.append(
+                f'<p class="rb-li{caps}">'
+                f'<span class="rb-mark">{esc(mk.group(1))}</span>\t'
+                f'{esc(mk.group(2))}</p>'
+            )
+            continue
+
+        caps = " caps" if mostly_capitals(raw) else ""
+        out.append(f'<p class="rb-l{caps}">{esc(raw)}</p>')
     return "\n".join(out)
 
 
@@ -1110,24 +1233,38 @@ def rulebook_toc(text: str) -> str:
         seen.add(m.group(1))
         items.append(
             f'<a href="#section-{m.group(1)}"><b>{esc(m.group(1))}</b>'
-            f'<span>{esc(m.group(3))}</span></a>'
+            f'<span>{esc(m.group(3).title())}</span></a>'
         )
-    return f'<nav class="rb-toc" aria-label="Sections">{"".join(items)}</nav>'
+    return (
+        '<nav class="rb-toc" aria-label="Sections">'
+        f'<p class="rb-toc-h">The {len(items)} sections</p>'
+        f'<div class="rb-toc-grid">{"".join(items)}</div></nav>'
+    )
 
 
 def write_rulebook(formations: list[dict], defenses: dict, root: Path) -> str:
     src = root / "rulebook" / RULEBOOK_TXT
     text = src.read_text(encoding="utf-8")
-    body = f"""<h1 class="page">League rules</h1>
-<p class="lede">The Suffolk County P.A.L. Junior Football rulebook, reproduced word for
-word from the league's own document. Nothing here is paraphrased and nothing is corrected
-&mdash; the league's spelling and spacing stand as written, so anything on this page can be
-quoted at a game.</p>
+    sections = len(re.findall(r'id="section-\d+"', rulebook_html(text)))
+    body = f"""<header class="rb-hero" id="top">
+  <p class="rb-eyebrow">Suffolk County P.A.L. &middot; Junior Football</p>
+  <h1 class="page">The rulebook</h1>
+  <p class="lede">Reproduced word for word from the league's own document. Nothing is
+  paraphrased and nothing is corrected &mdash; their spelling and their spacing stand as
+  written, so anything on this page can be read aloud to an official.</p>
+  <dl class="rb-facts">
+    <div><dt>Sections</dt><dd>{sections}</dd></div>
+    <div><dt>Revision</dt><dd>10 / 5 / 2025</dd></div>
+    <div><dt>Status</dt><dd>Only version accepted</dd></div>
+  </dl>
+</header>
 <div class="callout">
   <p><strong>Source:</strong> <code>{esc(RULEBOOK_DOCX)}</code>, the version the league
-  marks <em>ONLY VERSION ACCEPTED</em>. Both it and the extracted text are in the repo
-  under <code>rulebook/</code>. Check the league's current release before relying on
-  any of it.</p>
+  marks <em>ONLY VERSION ACCEPTED</em>. Check the league's current release before relying
+  on any of it.</p>
+  <p><strong>One thing is not verbatim:</strong> the league's officers were listed on the
+  cover page by name. Those names are removed here &mdash; their roles are kept, because
+  the role is the part a coach needs. Everything else is exactly as written.</p>
 </div>
 {rulebook_toc(text)}
 <div class="rulebook">
