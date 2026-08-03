@@ -491,37 +491,6 @@ table.calls td.c { white-space: nowrap; }
 .empty { padding: 26px 16px; color: var(--muted); }
 
 /* ------------------------------------------------------------------- prose -- */
-.prose { max-width: 76ch; }
-.prose h2 {
-  font-size: clamp(19px, 3.6vw, 24px); letter-spacing: -.3px; color: var(--ink);
-  margin: 38px 0 10px; padding-bottom: 8px; border-bottom: 1px solid var(--line);
-}
-.prose h3 { font-size: 17px; color: var(--accent-ink); margin: 26px 0 8px; }
-.prose p { margin: 0 0 13px; color: var(--ink-2); }
-.prose ul { margin: 0 0 15px; padding-left: 20px; }
-.prose li { margin-bottom: 7px; color: var(--ink-2); }
-.prose a { color: var(--accent-ink); }
-.prose code {
-  font-size: .92em; background: var(--panel-2); border-radius: 4px; padding: 1px 6px;
-}
-.prose strong { color: var(--ink); }
-/* Quoted rulebook text — the actual wording, set apart from our summary of it. */
-.prose blockquote {
-  margin: 0 0 16px; padding: 12px 16px; background: var(--panel);
-  border-left: 4px solid var(--accent-solid); border-radius: 0 8px 8px 0;
-  color: var(--ink); font-size: 15px; box-shadow: var(--shadow);
-}
-.prose .tablewrap { margin: 0 0 18px; }
-table.rules { width: 100%; border-collapse: collapse; min-width: 380px; }
-table.rules th, table.rules td {
-  text-align: left; padding: 9px 14px; border-bottom: 1px solid var(--line-soft);
-  font-size: 14.5px; color: var(--ink);
-}
-table.rules th {
-  font-size: 11px; text-transform: uppercase; letter-spacing: 1.1px; color: var(--muted);
-  background: var(--panel-2);
-}
-
 /* ------------------------------------------------------------------ rulebook -- */
 /* The league's document, reproduced. Their line breaks, their indents and their
    runs of spaces are all meaningful on a page people read out loud at a game, so
