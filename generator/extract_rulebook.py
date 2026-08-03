@@ -33,6 +33,37 @@ from pathlib import Path
 
 W = "{http://schemas.openxmlformats.org/wordprocessingml/2006/main}"
 
+# The one deliberate departure from "verbatim".
+#
+# The cover page lists the league's officers by name against their roles. Everything
+# else in this document is a rule; those are eight private individuals, and putting
+# them on a public, indexable web page is a different act from printing them in a PDF
+# passed around a league. The roles stay — "SCPAL Football President" is who you ask,
+# and that is the part a coach needs. The names go.
+#
+# "Tommy Tough" is not covered by this: it is the published name of the league's
+# helmet-safety standard and the title of Section 25, not a person being identified.
+REDACTED_NAMES = [
+    "Vince Cesarino",
+    "Marc Negrin Sr.",
+    "Bruce Morrison",
+    "Adrian Montalvo",
+    "Vito Depalo",
+    "Carla Pitocco",
+    "Brett Engmann",
+    "Jessica Binks",
+]
+
+
+def redact(text: str) -> tuple[str, int]:
+    """Strip the officers' names, leaving their roles. Returns (text, names removed)."""
+    removed = 0
+    for name in REDACTED_NAMES:
+        if name in text:
+            removed += 1
+            text = text.replace(name, "")
+    return text, removed
+
 # Symbol/Wingdings code points used as list bullets, and the character each one
 # actually draws on the page.
 SYMBOL_BULLETS = {
@@ -236,9 +267,11 @@ def main(argv: list[str]) -> int:
         return 2
     docx, out = Path(argv[1]), Path(argv[2])
     text = extract(docx)
+    text, removed = redact(text)
     out.write_text(text, encoding="utf-8", newline="\n")
     media = extract_media(docx, out.parent / "media")
     print(f"{out}: {len(text.splitlines())} lines, {len(text)} characters")
+    print(f"redacted {removed} of {len(REDACTED_NAMES)} officer names")
     if media:
         print(f"{out.parent / 'media'}: {len(media)} images")
     return 0
