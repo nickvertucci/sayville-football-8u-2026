@@ -5,3 +5,9 @@ venv/
 .DS_Store
 Thumbs.db
 *.pdf
+
+# The league's rulebook as they sent it. Kept locally so the extraction stays
+# reproducible, never committed: the cover page names the league's officers and this
+# repository is public. The extracted text in rulebook/*.txt has those names removed —
+# see rulebook/README.md.
+rulebook/*.docx

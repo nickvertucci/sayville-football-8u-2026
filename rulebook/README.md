@@ -4,7 +4,7 @@ The league's own document, and a verbatim text copy of it.
 
 | File | What it is |
 |---|---|
-| `2025-PAL-RULE-BOOK-updated-2025-10-05.docx` | The league's file, byte for byte as they published it. Never edit this. |
+| `2025-PAL-RULE-BOOK-updated-2025-10-05.docx` | The league's file, byte for byte as they published it. **Local only — gitignored.** Never edit it. |
 | `2025-PAL-RULE-BOOK.txt` | Every word of it as plain text. Generated — do not hand-edit. |
 | `media/` | The 18 images embedded in the document, so nothing is left behind in the `.docx`. |
 
@@ -50,11 +50,17 @@ a name reappears in either the text or the page.
 "Tommy Tough" is deliberately not redacted. It is the published name of the league's
 helmet-safety standard and the title of Section 25, not a person being identified.
 
-> **Still outstanding:** `2025-PAL-RULE-BOOK-updated-2025-10-05.docx` is the unmodified
-> file the league sent, so it still contains the names, and this repository is public.
-> Keeping it is what makes the extraction reproducible and auditable; removing it makes
-> the redaction complete. That is a call worth making deliberately rather than by
-> default.
+The `.docx` itself is **not committed**. It is the unmodified file the league sent, so
+it still has the names on its cover page, and this repository is public. It is gitignored
+and kept locally instead: that keeps the extraction reproducible for anyone who has the
+file, without publishing the names again. Ask the league — or another coach — for the
+current release if you need to re-run the extractor.
+
+> **Already-published history.** Gitignoring stops it going forward, it does not undo
+> what is already pushed. The `.docx` was committed in `4206c19` and that blob is still
+> on GitHub, so the names remain recoverable from history by anyone who looks. Actually
+> removing them means rewriting history and force-pushing, which is a deliberate and
+> disruptive act — not something to do as a side effect of a `.gitignore` edit.
 
 ## The rest is verbatim, including the mistakes
 
