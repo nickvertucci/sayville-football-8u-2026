@@ -107,6 +107,7 @@
   var moreBtn = document.getElementById('morebtn');
   var more = document.getElementById('morefilters');
   var badge = document.getElementById('morebadge');
+  var summary = document.getElementById('activefilters');
   var total = rows.length;
   var active = {};
 
@@ -148,6 +149,34 @@
     HIDDEN_GROUPS.forEach(function (g) { hiddenCount += chosen(g).length; });
     badge.hidden = hiddenCount === 0;
     badge.textContent = hiddenCount;
+
+    drawSummary();
+  }
+
+  /* Every filter currently applied, spelled out and individually removable.
+
+     Multi-select means a second click on a different formation ADDS it rather than
+     switching to it — pick Regular I then Power I and you are looking at eighteen
+     plays, not five. That is correct behaviour and it is also the easiest thing in
+     the world to do by accident, so what is applied has to be readable in one glance
+     rather than inferred from which chips look dark. */
+  function drawSummary() {
+    summary.innerHTML = '';
+    var any = false;
+    chips.forEach(function (c) {
+      if (chosen(c.dataset.group).indexOf(c.dataset.value) === -1) return;
+      any = true;
+      var pill = document.createElement('button');
+      pill.type = 'button';
+      pill.className = 'pill';
+      pill.innerHTML = '<span class="pg">' + c.dataset.glabel + '</span> '
+        + c.dataset.label + '<span class="px">\u00d7</span>';
+      pill.setAttribute('aria-label', 'Remove filter ' + c.dataset.glabel + ' '
+        + c.dataset.label);
+      pill.addEventListener('click', function () { c.click(); });
+      summary.appendChild(pill);
+    });
+    summary.hidden = !any;
   }
 
   q.addEventListener('input', apply);

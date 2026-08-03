@@ -458,6 +458,19 @@ ul.coach li {
 }
 #morefilters { margin-top: 10px; padding-top: 12px; border-top: 1px solid var(--line-soft); }
 
+/* What is applied right now, spelled out. Multi-select accumulates quietly otherwise. */
+.activefilters { display: flex; gap: 6px; flex-wrap: wrap; margin: 12px 0 0; }
+.pill {
+  cursor: pointer; font: inherit; font-size: 12.5px; font-weight: 600;
+  color: var(--on-accent); background: var(--accent-solid);
+  border: 1px solid var(--accent-solid); border-radius: 999px; padding: 5px 8px 5px 10px;
+  display: inline-flex; align-items: center; gap: 6px;
+}
+.pill .pg { font-weight: 500; opacity: .7; font-size: 11px; text-transform: uppercase;
+  letter-spacing: .8px; }
+.pill .px { font-size: 15px; line-height: 1; opacity: .8; }
+.pill:hover .px { opacity: 1; }
+
 .countline { display: flex; align-items: center; gap: 12px; margin: 12px 0 10px; }
 .clearbtn {
   cursor: pointer; font: inherit; font-size: 13px; font-weight: 600;
@@ -591,7 +604,7 @@ footer.site a { color: var(--accent-ink); }
 /* -------------------------------------------------------------------- print -- */
 @media print {
   header.site, .drawer, .scrim, .skip, footer.site, .pager, .play-actions, .searchbar,
-  .chips, .fgroup, .morebtn, #morefilters, .countline, #count, .clearbtn,
+  .chips, .fgroup, .morebtn, #morefilters, .countline, #count, .clearbtn, .activefilters,
   .section-head, .btn, .print-intro,
   .crumbs, .playbar { display: none !important; }
   :root {
@@ -748,6 +761,7 @@ SITE_JS = """
   var moreBtn = document.getElementById('morebtn');
   var more = document.getElementById('morefilters');
   var badge = document.getElementById('morebadge');
+  var summary = document.getElementById('activefilters');
   var total = rows.length;
   var active = {};
 
@@ -789,6 +803,34 @@ SITE_JS = """
     HIDDEN_GROUPS.forEach(function (g) { hiddenCount += chosen(g).length; });
     badge.hidden = hiddenCount === 0;
     badge.textContent = hiddenCount;
+
+    drawSummary();
+  }
+
+  /* Every filter currently applied, spelled out and individually removable.
+
+     Multi-select means a second click on a different formation ADDS it rather than
+     switching to it — pick Regular I then Power I and you are looking at eighteen
+     plays, not five. That is correct behaviour and it is also the easiest thing in
+     the world to do by accident, so what is applied has to be readable in one glance
+     rather than inferred from which chips look dark. */
+  function drawSummary() {
+    summary.innerHTML = '';
+    var any = false;
+    chips.forEach(function (c) {
+      if (chosen(c.dataset.group).indexOf(c.dataset.value) === -1) return;
+      any = true;
+      var pill = document.createElement('button');
+      pill.type = 'button';
+      pill.className = 'pill';
+      pill.innerHTML = '<span class="pg">' + c.dataset.glabel + '</span> '
+        + c.dataset.label + '<span class="px">\\u00d7</span>';
+      pill.setAttribute('aria-label', 'Remove filter ' + c.dataset.glabel + ' '
+        + c.dataset.label);
+      pill.addEventListener('click', function () { c.click(); });
+      summary.appendChild(pill);
+    });
+    summary.hidden = !any;
   }
 
   q.addEventListener('input', apply);
@@ -1411,9 +1453,12 @@ def call_digits(call: str) -> tuple[str, str]:
     return ZONE_KEYS[hole // 2], ("right" if hole % 2 == 0 else "left")
 
 
-def chip(group: str, value: str, label: str, title: str = "") -> str:
+def chip(group: str, value: str, label: str, glabel: str, title: str = "") -> str:
+    """One filter chip. `glabel` rides along so the active-filter summary can say
+    "Direction: Right" rather than a bare "Right" that could be three things."""
     t = f' title="{esc(title)}"' if title else ""
     return (f'<button class="chip" data-group="{esc(group)}" data-value="{esc(value)}" '
+            f'data-label="{esc(label)}" data-glabel="{esc(glabel)}" '
             f'aria-pressed="false"{t}>{esc(label)}</button>')
 
 
@@ -1451,16 +1496,19 @@ def write_calls(formations: list[dict], defenses: dict) -> str:
 
     primary = (
         filter_group("Formation",
-                     [chip("form", f["id"], form_label(f)) for f in formations])
-        + filter_group("Type", [chip("type", t, t.capitalize()) for t in ("run", "pass")])
+                     [chip("form", f["id"], form_label(f), "Formation")
+                      for f in formations])
+        + filter_group("Type", [chip("type", t, t.capitalize(), "Type")
+                                for t in ("run", "pass")])
     )
     more = (
         filter_group("Where it hits",
-                     [chip("zone", key, label) for key, label in HOLE_ZONES])
+                     [chip("zone", key, label, "Where") for key, label in HOLE_ZONES])
         + filter_group("Direction",
-                       [chip("dir", d, d.capitalize()) for d in ("right", "left")])
+                       [chip("dir", d, d.capitalize(), "Direction")
+                        for d in ("right", "left")])
         + filter_group("Who touches it",
-                       [chip("carrier", c, c, position_name(c))
+                       [chip("carrier", c, c, "Ball", position_name(c))
                         for c in sorted(carriers, key=lambda k: (
                             CARD_ORDER.index(k) if k in CARD_ORDER else 99, k))])
     )
@@ -1478,6 +1526,7 @@ search box.</p>
         aria-controls="morefilters">More filters<span class="badge" id="morebadge"
         hidden></span></button>
 <div id="morefilters" hidden>{more}</div>
+<div class="activefilters" id="activefilters" hidden></div>
 <p class="countline"><span id="count"></span>
   <button type="button" class="clearbtn" id="clear" hidden>Clear filters</button></p>
 <div class="tablewrap">

@@ -420,6 +420,19 @@ ul.coach li {
 }
 #morefilters { margin-top: 10px; padding-top: 12px; border-top: 1px solid var(--line-soft); }
 
+/* What is applied right now, spelled out. Multi-select accumulates quietly otherwise. */
+.activefilters { display: flex; gap: 6px; flex-wrap: wrap; margin: 12px 0 0; }
+.pill {
+  cursor: pointer; font: inherit; font-size: 12.5px; font-weight: 600;
+  color: var(--on-accent); background: var(--accent-solid);
+  border: 1px solid var(--accent-solid); border-radius: 999px; padding: 5px 8px 5px 10px;
+  display: inline-flex; align-items: center; gap: 6px;
+}
+.pill .pg { font-weight: 500; opacity: .7; font-size: 11px; text-transform: uppercase;
+  letter-spacing: .8px; }
+.pill .px { font-size: 15px; line-height: 1; opacity: .8; }
+.pill:hover .px { opacity: 1; }
+
 .countline { display: flex; align-items: center; gap: 12px; margin: 12px 0 10px; }
 .clearbtn {
   cursor: pointer; font: inherit; font-size: 13px; font-weight: 600;
@@ -553,7 +566,7 @@ footer.site a { color: var(--accent-ink); }
 /* -------------------------------------------------------------------- print -- */
 @media print {
   header.site, .drawer, .scrim, .skip, footer.site, .pager, .play-actions, .searchbar,
-  .chips, .fgroup, .morebtn, #morefilters, .countline, #count, .clearbtn,
+  .chips, .fgroup, .morebtn, #morefilters, .countline, #count, .clearbtn, .activefilters,
   .section-head, .btn, .print-intro,
   .crumbs, .playbar { display: none !important; }
   :root {
