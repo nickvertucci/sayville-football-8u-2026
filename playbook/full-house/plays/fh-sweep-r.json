@@ -1,0 +1,109 @@
+{
+  "id": "fh-sweep-r",
+  "order": 5,
+  "formation": "full-house",
+  "name": "House Sweep Right",
+  "call": "House 48 Sweep",
+  "type": "run",
+  "defense": "5-3",
+  "direction": "right",
+  "ball_carrier": "LH",
+  "purpose": "The same first three steps as Power, taken all the way outside. The near halfback and the pulling guard get around the corner in front of the carrier, and a defense that has been fighting the kick-out inside is a step late getting there.",
+  "assignments": {
+    "LE": {
+      "rule": "Cut off pursuit from behind. Everything is running away from you — chase flat down the line and never quit.",
+      "type": "block",
+      "path": [
+        [1.2, 0.8]
+      ]
+    },
+    "LT": {
+      "rule": "Block back. Take the first defender on or inside you — nobody crosses your face.",
+      "type": "block",
+      "path": [
+        [1.0, 0.7]
+      ]
+    },
+    "LG": {
+      "rule": "Nobody is over you. Help the center on the nose for a count, then chase flat behind the play.",
+      "type": "block",
+      "path": [
+        [0.8, 1.0],
+        [2.6, 1.4]
+      ]
+    },
+    "C": {
+      "rule": "You have the nose. Get your body between him and the ball and drive him away from where we are going.",
+      "type": "block",
+      "path": [
+        [-0.5, 1.1]
+      ]
+    },
+    "RG": {
+      "rule": "PULL RIGHT. Stay flat, get outside our end, and turn up. Block the first defender who shows outside — usually the corner. You are the last blocker the carrier has.",
+      "type": "block",
+      "path": [
+        [1.4, -0.7],
+        [4.8, 0.4],
+        [6.8, 2.4]
+      ]
+    },
+    "RT": {
+      "rule": "The tackle is on your inside shoulder. Block him down and seal him inside. He must not run down the line with the play.",
+      "type": "block",
+      "path": [
+        [-0.5, 1.2]
+      ]
+    },
+    "RE": {
+      "rule": "Block the end over you out toward the sideline. Stay on him — the ball is going around you and he cannot be the one to make the tackle.",
+      "type": "block",
+      "path": [
+        [1.2, 1.2]
+      ]
+    },
+    "QB": {
+      "rule": "Open right, let the near back go, and hand it deep to the far halfback as he crosses. Then carry out a fake up the middle.",
+      "type": "fake",
+      "path": [
+        [1.0, -0.6],
+        [2.6, -1.2]
+      ]
+    },
+    "LH": {
+      "rule": "Take the handoff and get width first. Stay behind your blockers until you are outside our end, then turn up hard. Turning up too early is the only way this play loses yards.",
+      "type": "run",
+      "path": [
+        [1.6, 0.4],
+        [5.6, 1.0],
+        [9.4, 2.4],
+        [11.0, 4.8],
+        [11.4, 7.2]
+      ]
+    },
+    "FB": {
+      "rule": "Fill hard through the middle like Dive is coming, then block anyone chasing from the inside. You buy the corner half a second.",
+      "type": "block",
+      "path": [
+        [0.8, 2.0],
+        [1.4, 3.6]
+      ]
+    },
+    "RH": {
+      "rule": "Get outside fast and lead the carrier around the corner. Block the first man who shows up outside our end, and keep running — if nobody shows, go find the safety.",
+      "type": "block",
+      "path": [
+        [2.6, 1.2],
+        [5.4, 2.8],
+        [6.6, 4.6]
+      ]
+    }
+  },
+  "coaching_points": [
+    "The first three steps are identical to Power Right. That is the point — do not let the backs give it away by leaning wider on this one.",
+    "The carrier must not turn up until he is outside our end. Eight-year-olds cut upfield the moment they see grass and run straight into the tackle that Power was designed to beat.",
+    "The pulling guard has the longest trip on the play. If he cannot get there, block it with the near back alone and leave the guard in — a slow pull is worse than no pull.",
+    "Best call on the hash going to the wide side of the field. Do not call it into the boundary.",
+    "If their corner is flying up to meet the pull every time, come back inside with Power Right or Dive Right."
+  ]
+}

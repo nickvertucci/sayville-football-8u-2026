@@ -1,0 +1,106 @@
+{
+  "id": "fh-power-r",
+  "order": 3,
+  "formation": "full-house",
+  "name": "House Power Right",
+  "call": "House 44 Power",
+  "type": "run",
+  "defense": "5-3",
+  "direction": "right",
+  "ball_carrier": "LH",
+  "purpose": "All three backs get a job. The near halfback kicks the end out, the fullback leads through the hole, and the far halfback carries it in behind them both. Two lead blockers arrive in the same gap before the linebackers can fit.",
+  "assignments": {
+    "LE": {
+      "rule": "Cut off pursuit from behind. You are the last one to the ball, so never quit on the play.",
+      "type": "block",
+      "path": [
+        [1.0, 0.7]
+      ]
+    },
+    "LT": {
+      "rule": "Block back. Take the first defender on or inside you — nobody crosses your face.",
+      "type": "block",
+      "path": [
+        [1.0, 0.7]
+      ]
+    },
+    "LG": {
+      "rule": "Nobody is over you. Help the center drive the nose away from the play, then stay on him.",
+      "type": "block",
+      "path": [
+        [0.6, 1.1]
+      ]
+    },
+    "C": {
+      "rule": "You have the nose, head up on you. Hands inside and do not let him cross your face to the playside.",
+      "type": "block",
+      "path": [
+        [-0.4, 1.1]
+      ]
+    },
+    "RG": {
+      "rule": "Nobody is over you. Climb to the middle linebacker and get your head across him.",
+      "type": "block",
+      "path": [
+        [-0.4, 1.4],
+        [-0.8, 3.6]
+      ]
+    },
+    "RT": {
+      "rule": "The tackle is on your inside shoulder. Block him down and seal him inside — that is what opens the hole.",
+      "type": "block",
+      "path": [
+        [-0.4, 1.3]
+      ]
+    },
+    "RE": {
+      "rule": "Release inside off his outside shoulder and take the playside linebacker. The end over you is getting kicked out — leave him alone.",
+      "type": "block",
+      "path": [
+        [-1.0, 3.5]
+      ]
+    },
+    "QB": {
+      "rule": "Open right, let the near back and the fullback clear, then hand it deep to the far halfback. Carry out a fake to the edge afterwards.",
+      "type": "fake",
+      "path": [
+        [1.0, -0.6],
+        [2.8, -1.2],
+        [4.4, -1.6]
+      ]
+    },
+    "LH": {
+      "rule": "Take the handoff and aim at the outside hip of our tackle. Follow the fullback in and stay tight to his back. Do not bounce it outside — the yards are inside the kick-out.",
+      "type": "run",
+      "path": [
+        [1.4, 0.8],
+        [4.2, 2.4],
+        [6.2, 4.6],
+        [6.6, 7.0]
+      ]
+    },
+    "FB": {
+      "rule": "Lead through the hole outside our tackle and block the first defender who shows in it. Get your head across him — do not wait for him to come to you.",
+      "type": "block",
+      "path": [
+        [2.2, 1.8],
+        [3.4, 3.4]
+      ]
+    },
+    "RH": {
+      "rule": "Kick the end out. Aim at his outside hip and drive him toward the sideline. Everything runs inside of you, so never let him come underneath.",
+      "type": "block",
+      "path": [
+        [1.2, 2.0],
+        [1.8, 3.0]
+      ]
+    }
+  },
+  "coaching_points": [
+    "This is Power without a pulling guard. The near halfback does the job the wing does in the Power I, and he does it from four yards deep with a running start — which is easier, not harder.",
+    "Three backs, three jobs: kick out, lead, carry. Teach the jobs and both directions come free.",
+    "Drill the near back's kick-out on its own. If he blocks the end with square shoulders the end slides underneath and makes the tackle in the backfield — he has to attack the outside hip.",
+    "The carrier is the far back so that he has time to see the two blocks develop in front of him. Do not swap the jobs to get your best runner the ball sooner.",
+    "If they start jumping the kick-out, House Sweep Right is the same first three steps."
+  ]
+}

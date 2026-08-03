@@ -99,25 +99,50 @@ a `4` — the *left* halfback takes the handoff on Power and Counter, and on Pit
 trailing back who catches the ball. The near halfback is not idle on Pitch; he leads and
 kicks out the edge, which is why the carrier is the far one.
 
+### Full House: formation + back + hole + play word
+
+Three backs in a straight line, so the digits are the Wishbone's digits — `2` fullback,
+`3` right halfback, `4` left halfback. A kid who knows `Bone` calls already knows `House`
+calls.
+
+| Call | Play | Reads as |
+|---|---|---|
+| `House 21 Dive` / `House 20 Dive` | House Dive Left / Right | fullback, center–guard |
+| `House 35 Power` / `House 44 Power` | House Power Left / Right | the far halfback, tackle–end |
+| `House 39 Sweep` / `House 48 Sweep` | House Sweep Left / Right | the far halfback, all the way outside |
+
+Same rule as the Wishbone: the far halfback carries, because the near one is busy kicking
+out the edge.
+
 **Play word** — `Dive`, `Iso`, `Slant`, `Toss`, `Counter`, `Sneak`, `Boot`, `Waggle` in
 the I; `Power`, `Wedge`, `Jet` in the Power I; `Dive`, `Power`, `Pitch`, `Counter` in the
-Wishbone.
+Wishbone; `Dive`, `Power`, `Sweep` in the Full House.
 
 ## Formations
 
-Three formations, 25 plays, in teaching order:
+Four formations, 31 plays, in teaching order:
 
 | # | Formation | Family | Plays | What it is for |
 |---|---|---|---|---|
 | 1 | **I** | I-Formation | 13 | Base offense. Fullback and tailback stacked, so the same look threatens the middle and both edges. Teaches a back to read a block. |
 | 2 | **Power I** | Power I | 4 | The I with the flanker tightened to a wing. An extra blocker on the edge for Power, a man in motion for Jet, and the short-yardage Wedge. |
 | 3 | **Wishbone** | Wishbone | 8 | Three backs, three threats every snap. Symmetric, so every play works both directions off identical rules. |
+| 4 | **Full House** | Full House | 6 | Three backs in a straight line at the same depth. The alignment gives nothing away, and every run splits the same three jobs — carry, kick out, lead. |
 
-All three are two-tight-end, downhill running formations, so the blocking language carries
+All four are two-tight-end, downhill running formations, so the blocking language carries
 over: "block down on the first defender inside you" means the same thing in any of them.
-That is the reason to carry these three rather than three unrelated offenses. The Power I
-is the cheapest of the three to install — it is the base I with one player moved a yard
-and a half, so the line rules do not change at all.
+That is the reason to carry these four rather than four unrelated offenses.
+
+Two of them are nearly free to install. The **Power I** is the base I with one player moved
+a yard and a half, so no line rule changes at all. The **Full House** shares the Wishbone's
+back numbering and the same carry/kick-out/lead division of labour, so a team that knows
+`Bone` calls already knows `House` calls.
+
+**Symmetric formations author left-handed plays in one line.** The Wishbone and the Full
+House are mirror-symmetric, so `House 35 Power` is a four-line file that says
+`"mirror_of": "fh-power-r"` — the generator flips every path, swaps the position keys and
+swaps the left/right wording. The I and the Power I are *not* symmetric (the flanker and
+the wing sit right on every snap), so their left-handed plays are written by hand.
 
 ## Defense
 
@@ -160,7 +185,7 @@ on a phone, with the assignments read underneath it rather than squeezed in besi
 
 ## Printing
 
-- **Print book** (top bar) → 29 landscape pages: 25 plays then 4 defensive fronts,
+- **Print book** (top bar) → 35 landscape pages: 31 plays then 4 defensive fronts,
   one per sheet.
 - **Print** (on any play or front page) → that one card, one landscape sheet.
 
@@ -224,7 +249,7 @@ Only the JSON under `playbook/` and `defense/` is source. Everything else with a
 
 ## Every offensive play is drawn and blocked against the 5-3
 
-Twenty-three of the 25 plays are drawn against the **5-3**, and their assignments are
+Twenty-nine of the 31 plays are drawn against the **5-3**, and their assignments are
 written for that front specifically rather than in general terms. The two exceptions are
 the short-yardage plays, **I Sneak** and **Power I Wedge**, which are drawn against the
 **6-3** because that is the heaviest front the league allows and it is what you actually
