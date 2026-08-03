@@ -135,10 +135,11 @@ the call check catches it, because the digits no longer match the flipped path.
 in the `MIRROR` table maps to itself, which is correct for someone aligned on the middle
 (`C`, `QB`, `FB`, `TB`) and wrong for a one-sided back or receiver.
 
-- **Wishbone is symmetric** — it uses `mirror_of`, so a left-handed play is one line.
-- **I is not.** The flanker (`Z`) sits to the right on every snap, so mirroring would
-  flip his path while leaving him aligned on the same side. I-formation plays are
-  authored in both directions by hand.
+- **Wishbone and Full House are symmetric** — they use `mirror_of`, so a left-handed play
+  is a four-line file.
+- **I and Power I are not.** The flanker (`Z`) and the wing (`WB`) sit to the right on
+  every snap, so mirroring would flip the path while leaving the player aligned on the
+  same side. Their left-handed plays are authored by hand.
 
 **This is also why rules never name a specific position.** Write "the playside end", "the
 backside guard", "the center" — never "RE" or "LG". Position abbreviations are not

@@ -1,0 +1,8 @@
+{
+  "id": "fh-power-l",
+  "order": 4,
+  "formation": "full-house",
+  "name": "House Power Left",
+  "call": "House 35 Power",
+  "mirror_of": "fh-power-r"
+}

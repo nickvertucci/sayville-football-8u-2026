@@ -1,0 +1,8 @@
+{
+  "id": "fh-dive-l",
+  "order": 2,
+  "formation": "full-house",
+  "name": "House Dive Left",
+  "call": "House 21 Dive",
+  "mirror_of": "fh-dive-r"
+}
