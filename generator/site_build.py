@@ -1142,8 +1142,13 @@ def backs_table(formations: list[dict]) -> list[tuple[str, str]]:
                     else ", ".join(forms_with) + " only"
             rows.append((digit, f"{esc(position_name(pos))} &mdash; {esc(where)}"))
         else:
-            parts = [f"{esc(position_name(pos).lower())} in the {esc(f[0])}"
-                     for pos, f in spots.items()]
+            # A digit can mean the same spot in several formations and a different one
+            # elsewhere — 3 is the tailback in both I looks and the right halfback in the
+            # Wishbone. Name every formation, or the table quietly drops one.
+            parts = []
+            for pos, forms_with in spots.items():
+                where = " and the ".join(esc(f) for f in forms_with)
+                parts.append(f"{esc(position_name(pos).lower())} in the {where}")
             text = " &nbsp;·&nbsp; ".join(parts)
             rows.append((digit, text[0].upper() + text[1:]))
     return rows
@@ -1218,8 +1223,9 @@ and <code>I Z Right 36 Slant</code> is flanker right, tailback, outside the tigh
 who knows the two numbers can run a play the first time he hears it.</p>
 <p class="sub">Every play in the book is <code>Z Right</code> today. It is in the call
 anyway so a <code>Z Left</code> look can be added later without changing the language.</p>
-<p class="sub">The Wishbone uses the same two digits — <code>Bone 20 Dive</code>,
-<code>Bone 44 Power</code> — it just has one more back to number.</p>
+<p class="sub">Every formation uses the same two digits — <code>Power I 34 Power</code>,
+<code>Bone 20 Dive</code>. Only the first word and the backs change, so a kid who learns
+the numbers once can call a play in any of them.</p>
 
 <p class="section-head">Before you install anything</p>
 <div class="callout">

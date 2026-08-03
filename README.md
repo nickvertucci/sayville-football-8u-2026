@@ -67,8 +67,21 @@ tight end.
 | `I Z Right 33 Iso` / `I Z Right 32 Iso` | I Iso Left / Right | guard–tackle |
 | `I Z Right 37 Slant` / `I Z Right 36 Slant` | I Slant Left / Right | outside the tight end |
 | `I Z Right 39 Toss` / `I Z Right 38 Toss` | I Toss Left / Right | all the way outside |
-| `I Z Right 35 Counter` | I Counter Left | tackle–end |
+| `I Z Right 35 Counter` / `I Z Right 34 Counter` | I Counter Left / Right | tackle–end |
+| `I Z Right 10 Sneak` | I Sneak | quarterback, center–guard |
 | `I Z Right 16 Boot` | I Boot Right | outside the tight end |
+| `I Z Right 17 Waggle` | I Waggle Left | outside the tight end |
+
+### Power I: formation + back + hole + play word
+
+The same I with the flanker tightened down to a wingback, so there is no `Z Right` to
+declare — the wing's spot is what the formation name says. He is back **4**.
+
+| Call | Play | Reads as |
+|---|---|---|
+| `Power I 34 Power` / `Power I 35 Power` | Power I Power Right / Left | tailback, tackle–end |
+| `Power I 30 Wedge` | Power I Wedge | tailback, straight up the middle |
+| `Power I 49 Jet` | Power I Jet Left | the wing in motion, all the way outside |
 
 ### Wishbone: formation + back + hole + play word
 
@@ -86,21 +99,25 @@ a `4` — the *left* halfback takes the handoff on Power and Counter, and on Pit
 trailing back who catches the ball. The near halfback is not idle on Pitch; he leads and
 kicks out the edge, which is why the carrier is the far one.
 
-**Play word** — `Dive`, `Iso`, `Slant`, `Toss`, `Counter`, `Boot` in the I;
-`Dive`, `Power`, `Pitch`, `Counter` in the Wishbone.
+**Play word** — `Dive`, `Iso`, `Slant`, `Toss`, `Counter`, `Sneak`, `Boot`, `Waggle` in
+the I; `Power`, `Wedge`, `Jet` in the Power I; `Dive`, `Power`, `Pitch`, `Counter` in the
+Wishbone.
 
 ## Formations
 
-Two formations, 18 plays, in teaching order:
+Three formations, 25 plays, in teaching order:
 
 | # | Formation | Family | Plays | What it is for |
 |---|---|---|---|---|
-| 1 | **I** | I-Formation | 10 | Base offense. Fullback and tailback stacked, so the same look threatens the middle and both edges. Teaches a back to read a block. |
-| 2 | **Wishbone** | Wishbone | 8 | Three backs, three threats every snap. Symmetric, so every play works both directions off identical rules. |
+| 1 | **I** | I-Formation | 13 | Base offense. Fullback and tailback stacked, so the same look threatens the middle and both edges. Teaches a back to read a block. |
+| 2 | **Power I** | Power I | 4 | The I with the flanker tightened to a wing. An extra blocker on the edge for Power, a man in motion for Jet, and the short-yardage Wedge. |
+| 3 | **Wishbone** | Wishbone | 8 | Three backs, three threats every snap. Symmetric, so every play works both directions off identical rules. |
 
-Both are two-tight-end, downhill running formations, so the blocking language carries
-over: "block down on the first defender inside you" means the same thing in either one.
-That is the reason to carry these two rather than two unrelated offenses.
+All three are two-tight-end, downhill running formations, so the blocking language carries
+over: "block down on the first defender inside you" means the same thing in any of them.
+That is the reason to carry these three rather than three unrelated offenses. The Power I
+is the cheapest of the three to install — it is the base I with one player moved a yard
+and a half, so the line rules do not change at all.
 
 ## Defense
 
@@ -143,7 +160,7 @@ on a phone, with the assignments read underneath it rather than squeezed in besi
 
 ## Printing
 
-- **Print book** (top bar) → 22 landscape pages: 18 plays then 4 defensive fronts,
+- **Print book** (top bar) → 29 landscape pages: 25 plays then 4 defensive fronts,
   one per sheet.
 - **Print** (on any play or front page) → that one card, one landscape sheet.
 
@@ -207,9 +224,13 @@ Only the JSON under `playbook/` and `defense/` is source. Everything else with a
 
 ## Every offensive play is drawn and blocked against the 5-3
 
-All fifteen plays are drawn against the **5-3**, and their assignments are written for
-that front specifically rather than in general terms. Against a 5-3 our line is covered
-like this:
+Twenty-three of the 25 plays are drawn against the **5-3**, and their assignments are
+written for that front specifically rather than in general terms. The two exceptions are
+the short-yardage plays, **I Sneak** and **Power I Wedge**, which are drawn against the
+**6-3** because that is the heaviest front the league allows and it is what you actually
+see on fourth and one.
+
+Against a 5-3 our line is covered like this:
 
 | Us | Them |
 |---|---|

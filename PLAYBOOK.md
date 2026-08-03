@@ -15,15 +15,22 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 | 7 | [I Toss Right](#i-toss-right) | `I Z Right 38 Toss` | run | I | TB |
 | 8 | [I Toss Left](#i-toss-left) | `I Z Right 39 Toss` | run | I | TB |
 | 9 | [I Counter Left](#i-counter-left) | `I Z Right 35 Counter` | run | I | TB |
-| 10 | [I Boot Right](#i-boot-right) | `I Z Right 16 Boot` | pass | I | Z |
-| 11 | [Bone Dive Right](#bone-dive-right) | `Bone 20 Dive` | run | Wishbone | FB |
-| 12 | [Bone Dive Left](#bone-dive-left) | `Bone 21 Dive` | run | Wishbone | FB |
-| 13 | [Bone Power Right](#bone-power-right) | `Bone 44 Power` | run | Wishbone | LH |
-| 14 | [Bone Power Left](#bone-power-left) | `Bone 35 Power` | run | Wishbone | RH |
-| 15 | [Bone Pitch Right](#bone-pitch-right) | `Bone 48 Pitch` | run | Wishbone | LH |
-| 16 | [Bone Pitch Left](#bone-pitch-left) | `Bone 39 Pitch` | run | Wishbone | RH |
-| 17 | [Bone Counter Right](#bone-counter-right) | `Bone 44 Counter` | run | Wishbone | LH |
-| 18 | [Bone Counter Left](#bone-counter-left) | `Bone 35 Counter` | run | Wishbone | RH |
+| 10 | [I Counter Right](#i-counter-right) | `I Z Right 34 Counter` | run | I | TB |
+| 11 | [I Sneak](#i-sneak) | `I Z Right 10 Sneak` | run | I | QB |
+| 12 | [I Boot Right](#i-boot-right) | `I Z Right 16 Boot` | pass | I | Z |
+| 13 | [I Waggle Left](#i-waggle-left) | `I Z Right 17 Waggle` | pass | I | LE |
+| 14 | [Power I Power Right](#power-i-power-right) | `Power I 34 Power` | run | Power I | TB |
+| 15 | [Power I Power Left](#power-i-power-left) | `Power I 35 Power` | run | Power I | TB |
+| 16 | [Power I Wedge](#power-i-wedge) | `Power I 30 Wedge` | run | Power I | TB |
+| 17 | [Power I Jet Left](#power-i-jet-left) | `Power I 49 Jet` | run | Power I | WB |
+| 18 | [Bone Dive Right](#bone-dive-right) | `Bone 20 Dive` | run | Wishbone | FB |
+| 19 | [Bone Dive Left](#bone-dive-left) | `Bone 21 Dive` | run | Wishbone | FB |
+| 20 | [Bone Power Right](#bone-power-right) | `Bone 44 Power` | run | Wishbone | LH |
+| 21 | [Bone Power Left](#bone-power-left) | `Bone 35 Power` | run | Wishbone | RH |
+| 22 | [Bone Pitch Right](#bone-pitch-right) | `Bone 48 Pitch` | run | Wishbone | LH |
+| 23 | [Bone Pitch Left](#bone-pitch-left) | `Bone 39 Pitch` | run | Wishbone | RH |
+| 24 | [Bone Counter Right](#bone-counter-right) | `Bone 44 Counter` | run | Wishbone | LH |
+| 25 | [Bone Counter Left](#bone-counter-left) | `Bone 35 Counter` | run | Wishbone | RH |
 
 # I-Formation
 
@@ -306,6 +313,69 @@ Misdirection off the toss. We show them the toss to the flanker side, their line
 
 ---
 
+## I Counter Right
+
+**Call it:** `I Z Right 34 Counter`
+
+![I Counter Right](playbook/i-form/cards/i-counter-r.svg)
+
+Counter Left the other way. We show them the toss to the weak side, their linebackers chase it, and the tailback plants and comes back to the flanker side behind a pulling guard.
+
+| Position | Assignment |
+|---|---|
+| **LE** | Cut off pursuit from behind. You are the last one to the ball, so never quit on the play. |
+| **LT** | Block back. Take the first defender on or inside you — nobody crosses your face. |
+| **LG** | PULL RIGHT. Stay flat behind the line and kick out the end on the other side. |
+| **C** | You have the nose, head up on you. Hands inside and do not let him cross your face to the playside. |
+| **RG** | Nobody is over you. Help the center drive the nose for one count, then climb to the middle linebacker. |
+| **RT** | The tackle is on your inside shoulder. Block him down and seal him inside — that is what opens the hole. |
+| **RE** | Release inside off his outside shoulder and take the playside linebacker. The end over you is being kicked out — leave him alone. |
+| **Z** | Take one hard step inside like the toss is going away from you, then come back and block the first defender outside our end. He is the only man who can beat this to the corner. |
+| **QB** | Take the snap, fake the toss the other way with both hands, then turn back and hand to the tailback. The fake comes first — the handoff is late on purpose. |
+| **FB** | Run the toss path to the other side at full speed and block anything that shows. You are the lie. |
+| **TB** **(ball)** | Take two hard steps toward the toss, then plant and come back behind the pulling guard. Those two steps are the entire play. |
+
+**Coaching points**
+
+- Do not call this until I Toss Left has gone for real yards. Misdirection off a play they do not fear is just a slower run.
+- This one has the flanker on the playside, which Counter Left does not. That is a blocker Counter Left never had, so this is the better of the pair against a team that flows hard.
+- The tailback's counter steps must be full speed and full length. A shuffle fools nobody.
+- Teach it the same day as Counter Left. The line rules are identical and the kids only have to learn which guard pulls.
+
+---
+
+## I Sneak
+
+**Call it:** `I Z Right 10 Sneak`
+
+![I Sneak](playbook/i-form/cards/i-sneak.svg)
+
+Fourth and inches. The quarterback keeps it behind the center's playside hip before the defense has come out of its stance. No handoff to go wrong and no back to get tackled in the backfield.
+
+| Position | Assignment |
+|---|---|
+| **LE** | Close down inside and push. Nobody gets penetration through your gap. |
+| **LT** | Close down inside and push. Nobody gets penetration through your gap. |
+| **LG** | Squeeze down on the center and drive. Your shoulder does not leave his. |
+| **C** | Snap it and come straight off the ball into the nose with your pads under his. Get movement — one yard is all we need and it comes from you. |
+| **RG** | Squeeze down on the center and drive. Your shoulder does not leave his — the quarterback is coming right behind it. |
+| **RT** | Close down inside and push. Nobody gets penetration through your gap. |
+| **RE** | Close down inside and push. Nobody gets penetration through your gap. |
+| **Z** | Release straight downfield and run the corner off. You will not get the ball — take his eyes with you so he never looks in. |
+| **QB** **(ball)** | Snap it and go now, right behind the outside hip of the guard on the flanker side. Low pads, ball in both arms, fall forward. Do not stand up and do not look for a hole. |
+| **FB** | Fire straight ahead into the back of the pile and push. Both hands on whoever is in front of you. |
+| **TB** | Come downhill behind the fullback and push the pile. If the ball comes loose you are the closest man to it. |
+
+**Coaching points**
+
+- This is a one-yard play. Do not call it needing two.
+- The snap count is the whole play. If they know it is coming they still cannot stop it, but only if we go on the first sound and they do not.
+- Drawn against the 6-3 because that is the heaviest front the league allows and it is exactly what you will see on fourth and one.
+- Teach the quarterback to fall forward the moment he feels contact. Eight-year-olds try to spin and lose the yard they already had.
+- It is legal for us in 11-man play. It is specifically prohibited in the 8-man Rookie division, so if we ever end up there this play comes straight out of the book.
+
+---
+
 ## I Boot Right
 
 **Call it:** `I Z Right 16 Boot`
@@ -334,6 +404,166 @@ Play action off the toss look. Two receivers to the flanker side and a quarterba
 - Run first. At this age the quarterback usually walks into ten yards before anyone finds him.
 - No blitzing is allowed for 8- and 9-year-olds, so the quarterback has time. Teach him to be patient and look up.
 - One throw, then tuck it. No scrambling backwards, ever.
+
+---
+
+## I Waggle Left
+
+**Call it:** `I Z Right 17 Waggle`
+
+![I Waggle Left](playbook/i-form/cards/i-waggle-l.svg)
+
+Boot Right the other way. The quarterback fakes the dive and gets to the weak edge with the end in the flat in front of him and the flanker coming all the way across behind. Run first, throw second.
+
+| Position | Assignment |
+|---|---|
+| **LE** **(ball)** | Engage the end over you for a count, then release to the flat at four yards and stay in front of the quarterback. You are the easy throw. |
+| **LT** | Hinge and protect the waggle side. Nobody comes free outside you — the quarterback is alone back there. |
+| **LG** | PULL RIGHT and run the dive path to sell the fake. You are a decoy — take a linebacker with you. |
+| **C** | Block the nose back toward the waggle side. Nobody chases through the middle. |
+| **RG** | Nobody is over you. Help the center on the nose and drive him away from the waggle. |
+| **RT** | The tackle is on your inside shoulder. Block him down and seal him inside. |
+| **RE** | Block down inside and sell the run. This has to look exactly like a run to your side. |
+| **Z** | Come all the way across the field behind the line and get to eight yards on the far side. You are the second look and you arrive late on purpose. |
+| **QB** | Fake the dive to the fullback with both hands, hide the ball on your back hip, and get to the edge. Run it if it is open. Only throw if a defender comes up to take you. |
+| **FB** | Run the dive path full speed with your arms tucked like you have it, and block the first defender who meets you. You are the lie. |
+| **TB** | Come around behind the quarterback and protect the outside. Anybody chasing him from behind is yours. |
+
+**Coaching points**
+
+- This is the partner to Boot Right, not a replacement for it. Call the one that goes away from wherever their outside linebacker has started cheating.
+- The end must engage before he releases. If he runs straight into the flat the whole fake dies and the flat defender is waiting for him.
+- No blitzing is allowed for 8- and 9-year-olds, so the quarterback has time. Teach him to be patient and look up.
+- The flanker coming all the way across is a long trip. He is the second read and he is late by design — the quarterback must not stand there waiting for him.
+- One throw, then tuck it. No scrambling backwards, ever.
+
+# Power I
+
+---
+
+## Power I Power Right
+
+**Call it:** `Power I 34 Power`
+
+![Power I Power Right](playbook/power-i/cards/pi-power-r.svg)
+
+Our best downhill run. Everybody blocks down to the inside, the wing kicks the end out, and the backside guard pulls through the hole in front of the tailback. Two blockers arrive in the same gap before the linebackers do.
+
+| Position | Assignment |
+|---|---|
+| **LE** | Cut off pursuit from behind. You are the last one to the ball, so never quit on the play. |
+| **LT** | Block back. Take the first defender on or inside you — nobody crosses your face. |
+| **LG** | PULL RIGHT. Stay flat behind the line, turn up through the hole and block the first wrong shirt you see. Do not go around the pile — go through it. |
+| **C** | You have the nose, head up on you. Hands inside and do not let him cross your face to the playside. |
+| **RG** | Nobody is over you. Help the center drive the nose for one count, then climb to the middle linebacker. |
+| **RT** | The tackle is on your inside shoulder. Block him down and seal him inside — that is what opens the hole. |
+| **RE** | Release inside off his outside shoulder and take the playside linebacker. The end over you is getting kicked out — leave him alone. |
+| **WB** | Kick the end out. Aim at his outside hip and drive him toward the sideline. Everything runs inside of you, so never let him come underneath. |
+| **QB** | Open to the right, hand it deep to the tailback, then carry out the boot fake to the edge. The fake is what keeps the backside end honest. |
+| **FB** | Lead through the hole outside our tackle and block the first defender who shows in it. Get your head across him — do not wait for him to come to you. |
+| **TB** **(ball)** | Take the handoff going downhill and aim at the outside hip of our tackle. Follow the fullback, then the guard. Stay tight to the blocks and do not bounce it outside. |
+
+**Coaching points**
+
+- This is the play the whole formation exists for. If it works you can run it fifteen times, and at this age you often can.
+- Drill the wing's kick-out on its own. If he blocks the end with his shoulders square, the end slides underneath and makes the tackle for a loss — he has to attack the outside hip.
+- The pulling guard is late by design. Tell him his man is the one who shows up in the hole, not a man he picks before the snap.
+- The tailback's most common mistake is bouncing it wide looking for green grass. The yards are inside the wing's block. Make him run it tight in practice until it is automatic.
+
+---
+
+## Power I Power Left
+
+**Call it:** `Power I 35 Power`
+
+![Power I Power Left](playbook/power-i/cards/pi-power-l.svg)
+
+The same play away from the wing. We give up the wing's kick-out and the fullback does that job instead, which is why it is the second one we teach, not the first.
+
+| Position | Assignment |
+|---|---|
+| **LE** | Release inside off his outside shoulder and take the playside linebacker. The end over you is getting kicked out — leave him alone. |
+| **LT** | The tackle is on your inside shoulder. Block him down and seal him inside — that is what opens the hole. |
+| **LG** | Nobody is over you. Help the center drive the nose for one count, then climb to the middle linebacker. |
+| **C** | You have the nose, head up on you. Hands inside and do not let him cross your face to the playside. |
+| **RG** | PULL LEFT. Stay flat behind the line, turn up through the hole and block the first wrong shirt you see. Do not go around the pile — go through it. |
+| **RT** | Block back. Take the first defender on or inside you — nobody crosses your face. |
+| **RE** | Cut off pursuit from behind. You are the last one to the ball, so never quit on the play. |
+| **WB** | Come flat across behind the line and cut off the backside. You are chasing the play, so take the first defender who crosses your path. |
+| **QB** | Open to the left, hand it deep to the tailback, then carry out the boot fake to the edge. The fake is what keeps the backside end honest. |
+| **FB** | Kick the end out. Aim at his outside hip and drive him toward the sideline. The tailback is running inside of you, so never let him come underneath. |
+| **TB** **(ball)** | Take the handoff going downhill and aim at the outside hip of our tackle. Follow the guard through the hole. Stay tight to the blocks and do not bounce it outside. |
+
+**Coaching points**
+
+- Run this the moment they start cheating a linebacker over to the wing. That is the only reason it is in the book.
+- The fullback is doing the wing's job here, and he is doing it from further away with less angle. Give him extra reps on the kick-out alone.
+- Everything else is Power Right in a mirror, so teach the pair together. The line rules do not change at all.
+- If the backside end is chasing the tailback down from behind, the quarterback's boot fake is not being carried out. Fix the fake, not the blocking.
+
+---
+
+## Power I Wedge
+
+**Call it:** `Power I 30 Wedge`
+
+![Power I Wedge](playbook/power-i/cards/pi-wedge.svg)
+
+Short yardage and the goal line. Nobody blocks a man — the whole line squeezes shoulder to shoulder on the center and pushes. The tailback puts a hand on the center's back and goes wherever the pile goes.
+
+| Position | Assignment |
+|---|---|
+| **LE** | Close down hard to the man beside you until your shoulder touches his. Push straight ahead. Never look for someone to block. |
+| **LT** | Close down hard to the man beside you until your shoulder touches his. Push straight ahead. Never look for someone to block. |
+| **LG** | Close down hard on the center until your shoulder touches his. Low pads, short steps, push. |
+| **C** | Snap it and fire straight into the nose with your pads under his. You are the tip of the wedge — everybody else comes to you. |
+| **RG** | Close down hard on the center until your shoulder touches his. Low pads, short steps, push. |
+| **RT** | Close down hard to the man beside you until your shoulder touches his. Push straight ahead. Never look for someone to block. |
+| **RE** | Close down hard to the man beside you until your shoulder touches his. Push straight ahead. Never look for someone to block. |
+| **WB** | Tuck in tight behind the right end and seal the edge. Nobody comes around the outside and into the back of the wedge. |
+| **QB** | Snap, hand it to the tailback right now, and stay out of his way. Do not ride the handoff — he is already moving. |
+| **FB** | Get in behind the wedge and push the tailback. Both hands on his back, legs driving. |
+| **TB** **(ball)** | Put a hand on the center's back, get your pads low, and follow the wedge. Do not cut, do not bounce, do not look for a hole — the hole moves with you. |
+
+**Coaching points**
+
+- Two yards is a good wedge. Do not call it needing four.
+- It is drawn against the 6-3 because that is the heaviest front the league allows and it is what you will see inside the five.
+- Nothing in the league rulebook prohibits wedge blocking for 11-man play, but it is the first thing leagues take away. Re-check it every season before you install it.
+- Coach the shoulders, not the feet. If there is daylight between two linemen the wedge is a line of five men getting pushed backwards instead of one thing moving forward.
+- Low pads win this and nothing else does. The team that stands up loses.
+
+---
+
+## Power I Jet Left
+
+**Call it:** `Power I 49 Jet`
+
+![Power I Jet Left](playbook/power-i/cards/pi-jet-l.svg)
+
+The wing goes in motion across the formation and takes the handoff at full speed going the other way. The defense has spent all day watching Power go to the wing side, and this is the same look leaving in the opposite direction.
+
+| Position | Assignment |
+|---|---|
+| **LE** | Block the end over you out toward the sideline. Stay on him — the ball is going around you and he cannot be the one to make the tackle. |
+| **LT** | The tackle is on your inside shoulder. Block him down and seal him inside. He must not run down the line with the play. |
+| **LG** | Nobody is over you. Pull flat and get outside — you are the lead blocker on the edge. Take the first defender who shows outside our end. |
+| **C** | You have the nose. Get your body between him and the ball and drive him away from where we are going. |
+| **RG** | Nobody is over you. Help the center on the nose for a count, then chase flat behind the play. |
+| **RT** | Block back. Take the first defender on or inside you — nobody crosses your face. |
+| **RE** | Cut off pursuit from behind. Everything is running away from you, so chase flat down the line and never quit. |
+| **WB** **(ball)** | Start moving on the coach's motion call and be at full speed when you pass the quarterback. Take the ball and get around the corner — do not turn upfield until you are outside our end. |
+| **QB** | Turn and hand it back to the wing as he crosses, then keep going the other way with your hands on your belly like you kept it. |
+| **FB** | Fill straight ahead like Wedge is coming. You are the reason their linebackers step up for one count. |
+| **TB** | Run the Power path to the right with your arms tucked like you have the ball. Sell it all the way — you are the reason nobody chases the wing. |
+
+**Coaching points**
+
+- Motion is legal in 11-man play, but only one man may be moving at the snap and he cannot be moving toward the line of scrimmage. Teach the wing to run flat across, never forward.
+- The handoff timing is the whole play. If the wing is slowing down to catch it the play is dead — snap it when he is a stride from the quarterback and let him run through it.
+- Call the motion the same way every single time so the snap count and his start never drift apart.
+- Do not install this until Power Right is real. Jet works because they have already been punished for not honouring the wing side.
+- If their end chases the wing flat down the line, come back to Power Right the very next play — he has left the edge.
 
 # Wishbone
 

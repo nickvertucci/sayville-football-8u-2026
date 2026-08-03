@@ -1,0 +1,42 @@
+{
+  "id": "power-i",
+  "order": 2,
+  "name": "Power I",
+  "family": "Power I",
+  "summary": "The I with the flanker tightened down to a wing. One more blocker at the point of attack, and a man who can go in motion.",
+  "personnel": "11 players, 2 tight ends, 1 wingback, quarterback, fullback, tailback",
+  "notes": "Everything is the base I except the flanker, who tightens down to a wingback one yard outside the right end and one yard back. He is OFF the line, so we still have exactly seven on it. That one step in is worth a blocker on the edge, and it is what makes Jet possible.",
+  "alignment": {
+    "LE": [-4.2, -0.5],
+    "LT": [-2.8, -0.5],
+    "LG": [-1.4, -0.5],
+    "C": [0.0, -0.5],
+    "RG": [1.4, -0.5],
+    "RT": [2.8, -0.5],
+    "RE": [4.2, -0.5],
+    "WB": [5.8, -1.4],
+    "QB": [0.0, -1.5],
+    "FB": [0.0, -3.3],
+    "TB": [0.0, -5.5]
+  },
+  "eligible": [
+    "LE",
+    "RE",
+    "WB",
+    "FB",
+    "TB",
+    "QB"
+  ],
+  "backs": {
+    "1": "QB",
+    "2": "FB",
+    "3": "TB",
+    "4": "WB"
+  },
+  "coaching_notes": [
+    "This is the same eleven kids in the same spots as the I, with one man moved a yard and a half. Install it the week after the I is solid and you get four plays almost free — they already know the line rules.",
+    "The wing is the whole point. To his side he is an extra blocker on the edge, which is why Power goes that way; away from his side he is the man in motion, which is why Jet goes the other way.",
+    "Count seven on the line every snap. The wing standing up on the line is the flag you will actually get out of this look, exactly like the flanker in the I.",
+    "The wing is a blocker first. If he starts drifting wide before the snap to get a better angle, he has told the defense the play and given up his leverage."
+  ]
+}

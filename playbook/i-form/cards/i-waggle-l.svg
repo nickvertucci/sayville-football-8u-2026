@@ -1,0 +1,145 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="594" height="1116" viewBox="0 0 594 1116" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+<rect width="100%" height="100%" fill="#ffffff"/>
+<rect x="0" y="0" width="594" height="58" fill="#14213d"/>
+<text x="18" y="26" font-size="19" font-weight="700" fill="#ffffff">I Waggle Left</text>
+<text x="18" y="45" font-size="11.5" fill="#a9b4c7">PASS  •  I-Formation  •  vs 5-3</text>
+<rect x="379.2" y="13" width="196.8" height="31" rx="6" fill="#ffffff" fill-opacity="0.12" stroke="#8593ad" stroke-width="1"/>
+<text x="477.6" y="34" text-anchor="middle" font-size="14.5" font-weight="700" fill="#ffffff" letter-spacing="0.5">I Z Right 17 Waggle</text>
+<clipPath id="fieldclip"><rect x="0" y="58" width="594" height="472"/></clipPath>
+<g clip-path="url(#fieldclip)"><g transform="translate(-54.0,31.0)">
+<rect x="0" y="0" width="702" height="513" fill="#ffffff"/>
+<line x1="0" y1="459.0" x2="702" y2="459.0" stroke="#c8cdd6" stroke-width="1"/>
+<line x1="0" y1="189.0" x2="702" y2="189.0" stroke="#c8cdd6" stroke-width="1"/>
+<line x1="0" y1="324.0" x2="702" y2="324.0" stroke="#3a4150" stroke-width="2" stroke-dasharray="9 6"/>
+<ellipse cx="351.0" cy="324.0" rx="9" ry="5.5" fill="#6b4a2b" stroke="#3a2716" stroke-width="1.2"/>
+<line x1="230.6" y1="295.4" x2="244.6" y2="309.4" stroke="#9aa2ae" stroke-width="3"/><line x1="244.6" y1="295.4" x2="230.6" y2="309.4" stroke="#9aa2ae" stroke-width="3"/>
+<text x="237.6" y="287.1" text-anchor="middle" font-size="10" fill="#9aa2ae" font-weight="600">LE</text>
+<line x1="279.2" y1="295.4" x2="293.2" y2="309.4" stroke="#9aa2ae" stroke-width="3"/><line x1="293.2" y1="295.4" x2="279.2" y2="309.4" stroke="#9aa2ae" stroke-width="3"/>
+<text x="286.2" y="287.1" text-anchor="middle" font-size="10" fill="#9aa2ae" font-weight="600">LT</text>
+<line x1="344.0" y1="295.4" x2="358.0" y2="309.4" stroke="#9aa2ae" stroke-width="3"/><line x1="358.0" y1="295.4" x2="344.0" y2="309.4" stroke="#9aa2ae" stroke-width="3"/>
+<text x="351.0" y="287.1" text-anchor="middle" font-size="10" fill="#9aa2ae" font-weight="600">NG</text>
+<line x1="408.8" y1="295.4" x2="422.8" y2="309.4" stroke="#9aa2ae" stroke-width="3"/><line x1="422.8" y1="295.4" x2="408.8" y2="309.4" stroke="#9aa2ae" stroke-width="3"/>
+<text x="415.8" y="287.1" text-anchor="middle" font-size="10" fill="#9aa2ae" font-weight="600">RT</text>
+<line x1="457.4" y1="295.4" x2="471.4" y2="309.4" stroke="#9aa2ae" stroke-width="3"/><line x1="471.4" y1="295.4" x2="457.4" y2="309.4" stroke="#9aa2ae" stroke-width="3"/>
+<text x="464.4" y="287.1" text-anchor="middle" font-size="10" fill="#9aa2ae" font-weight="600">RE</text>
+<line x1="257.6" y1="236.0" x2="271.6" y2="250.0" stroke="#9aa2ae" stroke-width="3"/><line x1="271.6" y1="236.0" x2="257.6" y2="250.0" stroke="#9aa2ae" stroke-width="3"/>
+<text x="264.6" y="227.7" text-anchor="middle" font-size="10" fill="#9aa2ae" font-weight="600">W</text>
+<line x1="344.0" y1="236.0" x2="358.0" y2="250.0" stroke="#9aa2ae" stroke-width="3"/><line x1="358.0" y1="236.0" x2="344.0" y2="250.0" stroke="#9aa2ae" stroke-width="3"/>
+<text x="351.0" y="227.7" text-anchor="middle" font-size="10" fill="#9aa2ae" font-weight="600">M</text>
+<line x1="430.4" y1="236.0" x2="444.4" y2="250.0" stroke="#9aa2ae" stroke-width="3"/><line x1="444.4" y1="236.0" x2="430.4" y2="250.0" stroke="#9aa2ae" stroke-width="3"/>
+<text x="437.4" y="227.7" text-anchor="middle" font-size="10" fill="#9aa2ae" font-weight="600">S</text>
+<line x1="101.0" y1="236.0" x2="115.0" y2="250.0" stroke="#9aa2ae" stroke-width="3"/><line x1="115.0" y1="236.0" x2="101.0" y2="250.0" stroke="#9aa2ae" stroke-width="3"/>
+<text x="108.0" y="227.7" text-anchor="middle" font-size="10" fill="#9aa2ae" font-weight="600">LC</text>
+<line x1="587.0" y1="236.0" x2="601.0" y2="250.0" stroke="#9aa2ae" stroke-width="3"/><line x1="601.0" y1="236.0" x2="587.0" y2="250.0" stroke="#9aa2ae" stroke-width="3"/>
+<text x="594.0" y="227.7" text-anchor="middle" font-size="10" fill="#9aa2ae" font-weight="600">RC</text>
+<line x1="344.0" y1="101.0" x2="358.0" y2="115.0" stroke="#9aa2ae" stroke-width="3"/><line x1="358.0" y1="101.0" x2="344.0" y2="115.0" stroke="#9aa2ae" stroke-width="3"/>
+<text x="351.0" y="92.7" text-anchor="middle" font-size="10" fill="#9aa2ae" font-weight="600">FS</text>
+<path d="M464.4,337.5 L432.0,313.2" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="426.5" y1="320.5" x2="437.5" y2="305.9" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
+<path d="M426.6,337.5 L415.8,302.4" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="407.0" y1="305.1" x2="424.6" y2="299.7" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
+<path d="M388.8,337.5 L372.6,310.5" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="364.7" y1="315.2" x2="380.5" y2="305.8" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
+<path d="M351.0,337.5 L326.7,315.9" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="320.6" y1="322.8" x2="332.8" y2="309.0" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
+<path d="M313.2,337.5 L332.1,364.5 L410.4,359.1 L437.4,321.3" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="429.9" y1="316.0" x2="444.9" y2="326.6" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
+<path d="M275.4,337.5 L248.4,318.6" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="243.1" y1="326.1" x2="253.7" y2="311.1" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
+<path d="M237.6,337.5 L216.0,299.7 L156.6,267.3" fill="none" stroke="#b3001b" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 5"/>
+<polygon points="156.6,267.3 167.9,268.2 163.5,276.3" fill="#b3001b"/>
+<path d="M540.0,356.4 L432.0,324.0 L324.0,232.2 L270.0,167.4" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 5"/>
+<polygon points="270.0,167.4 280.2,172.4 273.1,178.3" fill="#14213d"/>
+<path d="M351.0,364.5 L383.4,380.7 L302.4,391.5 L210.6,375.3 L172.8,315.9" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<polygon points="172.8,315.9 182.3,322.2 174.5,327.1" fill="#14213d"/>
+<path d="M351.0,413.1 L388.8,359.1 L415.8,315.9" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 5"/>
+<polygon points="415.8,315.9 414.2,327.1 406.4,322.2" fill="#14213d"/>
+<path d="M351.0,472.5 L297.0,450.9 L226.8,429.3" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="224.1" y1="438.1" x2="229.5" y2="420.5" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
+<rect x="225.7" y="325.6" width="23.8" height="23.8" rx="3" fill="#ffffff" stroke="#b3001b" stroke-width="2.4"/>
+<text x="237.6" y="341.5" text-anchor="middle" font-size="11.5" font-weight="700" fill="#b3001b">LE</text>
+<rect x="263.5" y="325.6" width="23.8" height="23.8" rx="3" fill="#ffffff" stroke="#14213d" stroke-width="2.4"/>
+<text x="275.4" y="341.5" text-anchor="middle" font-size="11.5" font-weight="700" fill="#14213d">LT</text>
+<rect x="301.3" y="325.6" width="23.8" height="23.8" rx="3" fill="#ffffff" stroke="#14213d" stroke-width="2.4"/>
+<text x="313.2" y="341.5" text-anchor="middle" font-size="11.5" font-weight="700" fill="#14213d">LG</text>
+<rect x="339.1" y="325.6" width="23.8" height="23.8" rx="3" fill="#ffffff" stroke="#14213d" stroke-width="2.4"/>
+<text x="351.0" y="341.5" text-anchor="middle" font-size="11.5" font-weight="700" fill="#14213d">C</text>
+<rect x="376.9" y="325.6" width="23.8" height="23.8" rx="3" fill="#ffffff" stroke="#14213d" stroke-width="2.4"/>
+<text x="388.8" y="341.5" text-anchor="middle" font-size="11.5" font-weight="700" fill="#14213d">RG</text>
+<rect x="414.7" y="325.6" width="23.8" height="23.8" rx="3" fill="#ffffff" stroke="#14213d" stroke-width="2.4"/>
+<text x="426.6" y="341.5" text-anchor="middle" font-size="11.5" font-weight="700" fill="#14213d">RT</text>
+<rect x="452.5" y="325.6" width="23.8" height="23.8" rx="3" fill="#ffffff" stroke="#14213d" stroke-width="2.4"/>
+<text x="464.4" y="341.5" text-anchor="middle" font-size="11.5" font-weight="700" fill="#14213d">RE</text>
+<circle cx="540.0" cy="356.4" r="12.4" fill="#ffffff" stroke="#14213d" stroke-width="2.4"/>
+<text x="540.0" y="360.4" text-anchor="middle" font-size="11.5" font-weight="700" fill="#14213d">Z</text>
+<circle cx="351.0" cy="364.5" r="12.4" fill="#ffffff" stroke="#14213d" stroke-width="2.4"/>
+<text x="351.0" y="368.5" text-anchor="middle" font-size="11.5" font-weight="700" fill="#14213d">QB</text>
+<circle cx="351.0" cy="413.1" r="12.4" fill="#ffffff" stroke="#14213d" stroke-width="2.4"/>
+<text x="351.0" y="417.1" text-anchor="middle" font-size="11.5" font-weight="700" fill="#14213d">FB</text>
+<circle cx="351.0" cy="472.5" r="12.4" fill="#ffffff" stroke="#14213d" stroke-width="2.4"/>
+<text x="351.0" y="476.5" text-anchor="middle" font-size="11.5" font-weight="700" fill="#14213d">TB</text>
+</g></g>
+<line x1="18" y1="540" x2="576" y2="540" stroke="#c8cdd6" stroke-width="1"/>
+<text x="18" y="560" font-size="11" font-weight="700" fill="#5b6472" letter-spacing="1">ASSIGNMENTS</text>
+<text x="18" y="578" font-size="12" font-weight="700" fill="#111318">LE</text>
+<text x="52" y="578" font-size="12" fill="#111318">Engage the end over you for a count,</text>
+<text x="52" y="596" font-size="12" fill="#111318">then release to the flat at four</text>
+<text x="52" y="612" font-size="12" fill="#111318">yards and stay in front of the</text>
+<text x="52" y="630" font-size="12" fill="#111318">quarterback. You are the easy throw.</text>
+<text x="18" y="646" font-size="12" font-weight="700" fill="#111318">LT</text>
+<text x="52" y="646" font-size="12" fill="#111318">Hinge and protect the waggle side.</text>
+<text x="52" y="664" font-size="12" fill="#111318">Nobody comes free outside you — the</text>
+<text x="52" y="680" font-size="12" fill="#111318">quarterback is alone back there.</text>
+<text x="18" y="698" font-size="12" font-weight="700" fill="#111318">LG</text>
+<text x="52" y="698" font-size="12" fill="#111318">PULL RIGHT and run the dive path to</text>
+<text x="52" y="714" font-size="12" fill="#111318">sell the fake. You are a decoy — take</text>
+<text x="52" y="732" font-size="12" fill="#111318">a linebacker with you.</text>
+<text x="18" y="748" font-size="12" font-weight="700" fill="#111318">C</text>
+<text x="52" y="748" font-size="12" fill="#111318">Block the nose back toward the waggle</text>
+<text x="52" y="766" font-size="12" fill="#111318">side. Nobody chases through the</text>
+<text x="52" y="782" font-size="12" fill="#111318">middle.</text>
+<text x="18" y="800" font-size="12" font-weight="700" fill="#111318">RG</text>
+<text x="52" y="800" font-size="12" fill="#111318">Nobody is over you. Help the center</text>
+<text x="52" y="816" font-size="12" fill="#111318">on the nose and drive him away from</text>
+<text x="52" y="834" font-size="12" fill="#111318">the waggle.</text>
+<text x="18" y="850" font-size="12" font-weight="700" fill="#111318">RT</text>
+<text x="52" y="850" font-size="12" fill="#111318">The tackle is on your inside</text>
+<text x="52" y="868" font-size="12" fill="#111318">shoulder. Block him down and seal him</text>
+<text x="52" y="884" font-size="12" fill="#111318">inside.</text>
+<text x="297" y="578" font-size="12" font-weight="700" fill="#111318">RE</text>
+<text x="331" y="578" font-size="12" fill="#111318">Block down inside and sell the run.</text>
+<text x="331" y="596" font-size="12" fill="#111318">This has to look exactly like a run</text>
+<text x="331" y="612" font-size="12" fill="#111318">to your side.</text>
+<text x="297" y="630" font-size="12" font-weight="700" fill="#111318">Z</text>
+<text x="331" y="630" font-size="12" fill="#111318">Come all the way across the field</text>
+<text x="331" y="646" font-size="12" fill="#111318">behind the line and get to eight</text>
+<text x="331" y="664" font-size="12" fill="#111318">yards on the far side. You are the</text>
+<text x="331" y="680" font-size="12" fill="#111318">second look and you arrive late on</text>
+<text x="331" y="698" font-size="12" fill="#111318">purpose.</text>
+<text x="297" y="714" font-size="12" font-weight="700" fill="#111318">QB</text>
+<text x="331" y="714" font-size="12" fill="#111318">Fake the dive to the fullback with</text>
+<text x="331" y="732" font-size="12" fill="#111318">both hands, hide the ball on your</text>
+<text x="331" y="748" font-size="12" fill="#111318">back hip, and get to the edge. Run it</text>
+<text x="331" y="766" font-size="12" fill="#111318">if it is open. Only throw if a</text>
+<text x="331" y="782" font-size="12" fill="#111318">defender comes up to take you.</text>
+<text x="297" y="800" font-size="12" font-weight="700" fill="#111318">FB</text>
+<text x="331" y="800" font-size="12" fill="#111318">Run the dive path full speed with</text>
+<text x="331" y="816" font-size="12" fill="#111318">your arms tucked like you have it,</text>
+<text x="331" y="834" font-size="12" fill="#111318">and block the first defender who</text>
+<text x="331" y="850" font-size="12" fill="#111318">meets you. You are the lie.</text>
+<text x="297" y="868" font-size="12" font-weight="700" fill="#111318">TB</text>
+<text x="331" y="868" font-size="12" fill="#111318">Come around behind the quarterback</text>
+<text x="331" y="884" font-size="12" fill="#111318">and protect the outside. Anybody</text>
+<text x="331" y="902" font-size="12" fill="#111318">chasing him from behind is yours.</text>
+<line x1="18" y1="908" x2="576" y2="908" stroke="#c8cdd6" stroke-width="1"/>
+<text x="18" y="926" font-size="11" font-weight="700" fill="#5b6472" letter-spacing="1">COACHING POINTS</text>
+<text x="18" y="946" font-size="12" fill="#111318">This is the partner to Boot Right, not a replacement for it. Call the one that</text>
+<text x="18" y="964" font-size="12" fill="#111318">goes away from wherever their outside linebacker has started cheating.</text>
+<text x="18" y="980" font-size="12" fill="#111318">The end must engage before he releases. If he runs straight into the flat the</text>
+<text x="18" y="998" font-size="12" fill="#111318">whole fake dies and the flat defender is waiting for him.</text>
+<text x="18" y="1014" font-size="12" fill="#111318">No blitzing is allowed for 8- and 9-year-olds, so the quarterback has time. Teach</text>
+<text x="18" y="1032" font-size="12" fill="#111318">him to be patient and look up.</text>
+<text x="18" y="1048" font-size="12" fill="#111318">The flanker coming all the way across is a long trip. He is the second read and</text>
+<text x="18" y="1066" font-size="12" fill="#111318">he is late by design — the quarterback must not stand there waiting for him.</text>
+<text x="18" y="1082" font-size="12" fill="#111318">One throw, then tuck it. No scrambling backwards, ever.</text>
+</svg>

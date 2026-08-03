@@ -1,0 +1,110 @@
+{
+  "id": "pi-jet-l",
+  "order": 4,
+  "formation": "power-i",
+  "name": "Power I Jet Left",
+  "call": "Power I 49 Jet",
+  "type": "run",
+  "defense": "5-3",
+  "direction": "left",
+  "ball_carrier": "WB",
+  "purpose": "The wing goes in motion across the formation and takes the handoff at full speed going the other way. The defense has spent all day watching Power go to the wing side, and this is the same look leaving in the opposite direction.",
+  "assignments": {
+    "RE": {
+      "rule": "Cut off pursuit from behind. Everything is running away from you, so chase flat down the line and never quit.",
+      "type": "block",
+      "path": [
+        [-1.2, 0.8]
+      ]
+    },
+    "RT": {
+      "rule": "Block back. Take the first defender on or inside you — nobody crosses your face.",
+      "type": "block",
+      "path": [
+        [-1.0, 0.7]
+      ]
+    },
+    "RG": {
+      "rule": "Nobody is over you. Help the center on the nose for a count, then chase flat behind the play.",
+      "type": "block",
+      "path": [
+        [-0.8, 1.0],
+        [-2.6, 1.4]
+      ]
+    },
+    "C": {
+      "rule": "You have the nose. Get your body between him and the ball and drive him away from where we are going.",
+      "type": "block",
+      "path": [
+        [0.5, 1.1]
+      ]
+    },
+    "LG": {
+      "rule": "Nobody is over you. Pull flat and get outside — you are the lead blocker on the edge. Take the first defender who shows outside our end.",
+      "type": "block",
+      "path": [
+        [-1.4, -0.7],
+        [-4.6, 0.4],
+        [-6.4, 2.2]
+      ]
+    },
+    "LT": {
+      "rule": "The tackle is on your inside shoulder. Block him down and seal him inside. He must not run down the line with the play.",
+      "type": "block",
+      "path": [
+        [0.5, 1.2]
+      ]
+    },
+    "LE": {
+      "rule": "Block the end over you out toward the sideline. Stay on him — the ball is going around you and he cannot be the one to make the tackle.",
+      "type": "block",
+      "path": [
+        [-1.2, 1.2]
+      ]
+    },
+    "WB": {
+      "rule": "Start moving on the coach's motion call and be at full speed when you pass the quarterback. Take the ball and get around the corner — do not turn upfield until you are outside our end.",
+      "type": "run",
+      "path": [
+        [-4.0, -0.5],
+        [-8.0, -0.6],
+        [-12.0, 0.4],
+        [-14.0, 2.0],
+        [-15.0, 4.5]
+      ]
+    },
+    "QB": {
+      "rule": "Turn and hand it back to the wing as he crosses, then keep going the other way with your hands on your belly like you kept it.",
+      "type": "fake",
+      "path": [
+        [0.6, -0.6],
+        [2.6, -1.0],
+        [4.2, -0.6]
+      ]
+    },
+    "FB": {
+      "rule": "Fill straight ahead like Wedge is coming. You are the reason their linebackers step up for one count.",
+      "type": "fake",
+      "path": [
+        [0.2, 1.8],
+        [0.3, 3.2]
+      ]
+    },
+    "TB": {
+      "rule": "Run the Power path to the right with your arms tucked like you have the ball. Sell it all the way — you are the reason nobody chases the wing.",
+      "type": "fake",
+      "path": [
+        [1.2, 1.5],
+        [2.6, 3.6],
+        [3.4, 5.6]
+      ]
+    }
+  },
+  "coaching_points": [
+    "Motion is legal in 11-man play, but only one man may be moving at the snap and he cannot be moving toward the line of scrimmage. Teach the wing to run flat across, never forward.",
+    "The handoff timing is the whole play. If the wing is slowing down to catch it the play is dead — snap it when he is a stride from the quarterback and let him run through it.",
+    "Call the motion the same way every single time so the snap count and his start never drift apart.",
+    "Do not install this until Power Right is real. Jet works because they have already been punished for not honouring the wing side.",
+    "If their end chases the wing flat down the line, come back to Power Right the very next play — he has left the edge."
+  ]
+}
