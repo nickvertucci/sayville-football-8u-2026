@@ -1,0 +1,157 @@
+#!/usr/bin/env python3
+"""Check every play prints on exactly one sheet.
+
+A card that spills onto a second page is not a cosmetic problem: it is a coach at
+practice holding page one and looking for the coaching points on page two. The print
+CSS pins the diagram to a fixed height so that pagination is the same for a wide play
+and a deep one, but that height was measured once by hand and the book has grown a lot
+since. So measure it every time instead of trusting the comment.
+
+    python generator/test_print_pages.py            # every play page and the print book
+    python generator/test_print_pages.py --quick    # the print book only
+
+Renders with headless Chrome and counts the pages in the PDF it produces. Chrome is
+the only dependency and it is the thing that actually prints the book, so nothing else
+would be a real answer.
+"""
+
+import argparse
+import os
+import re
+import shutil
+import subprocess
+import sys
+import tempfile
+import time
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parent.parent
+
+CHROME_CANDIDATES = [
+    Path(os.environ.get("CHROME", "")),
+    Path(r"C:\Program Files\Google\Chrome\Application\chrome.exe"),
+    Path(r"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe"),
+    Path.home() / "AppData/Local/Google/Chrome/Application/chrome.exe",
+    Path("/usr/bin/google-chrome"),
+    Path("/usr/bin/chromium"),
+    Path("/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"),
+]
+
+
+def find_chrome() -> Path | None:
+    for c in CHROME_CANDIDATES:
+        if c and c.is_file():
+            return c
+    found = shutil.which("google-chrome") or shutil.which("chromium")
+    return Path(found) if found else None
+
+
+def page_count(pdf: Path) -> int:
+    """Pages in a Chrome-produced PDF.
+
+    Chrome writes an uncompressed page tree, so the /Type /Page entries can simply be
+    counted. /Count on the root Pages node is the cross-check.
+    """
+    blob = pdf.read_bytes()
+    pages = len(re.findall(rb"/Type\s*/Page[^s]", blob))
+    counts = [int(n) for n in re.findall(rb"/Count\s+(\d+)", blob)]
+    if counts and max(counts) != pages:
+        return max(counts)
+    return pages
+
+
+def render_once(chrome: Path, page: Path, out: Path, profile: Path,
+                wait: float = 40.0) -> bool:
+    subprocess.run(
+        [
+            str(chrome), "--headless", "--disable-gpu", "--no-sandbox",
+            f"--user-data-dir={profile}",
+            "--no-pdf-header-footer",
+            "--virtual-time-budget=8000",
+            f"--print-to-pdf={out}",
+            page.as_uri(),
+        ],
+        check=False, capture_output=True, timeout=180,
+    )
+    # Chrome's parent process exits before the child has finished writing the file, so
+    # a plain subprocess.run() returns to an empty directory. Wait for the PDF to show
+    # up and for its size to stop moving.
+    deadline = time.time() + wait
+    size = -1
+    while time.time() < deadline:
+        if out.exists():
+            now = out.stat().st_size
+            if now > 0 and now == size:
+                return True
+            size = now
+        time.sleep(0.25)
+    return out.exists() and out.stat().st_size > 0
+
+
+def render(chrome: Path, page: Path, out: Path, profile_root: Path) -> int:
+    """Page count for one document. Each render gets its own profile — sharing one
+    across sequential runs races on the lock file and silently produces nothing."""
+    attempts = 4
+    for attempt in range(attempts):
+        profile = profile_root / f"{page.stem}-{attempt}"
+        if out.exists():
+            out.unlink()
+        if render_once(chrome, page, out, profile):
+            return page_count(out)
+        # A busy machine — a browser already open, or the previous render still
+        # shutting down — makes Chrome give up without writing anything. Back off
+        # rather than hammering it, which just fails four times in a row instead of one.
+        time.sleep(2.0 * (attempt + 1))
+    raise RuntimeError(
+        f"Chrome produced no PDF for {page.name} after {attempts} attempts. "
+        "Close other Chrome windows and try again."
+    )
+
+
+def main(argv=None) -> int:
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--quick", action="store_true",
+                    help="only render print.html, not every play page")
+    args = ap.parse_args(argv)
+
+    chrome = find_chrome()
+    if not chrome:
+        print("Chrome not found — set CHROME=/path/to/chrome. Skipping.", file=sys.stderr)
+        return 0
+
+    plays = sorted(ROOT.glob("p-*.html"))
+    fronts = sorted(ROOT.glob("d-*.html"))
+    expected_book = len(plays) + len(fronts)
+
+    failures = []
+    with tempfile.TemporaryDirectory() as tmp:
+        tmp = Path(tmp)
+        profile = tmp
+
+        book = render(chrome, ROOT / "print.html", tmp / "book.pdf", profile)
+        print(f"print.html: {book} pages (expected {expected_book})")
+        if book != expected_book:
+            failures.append(
+                f"print.html renders {book} pages, expected {expected_book} — "
+                f"{book - expected_book} card(s) spilling onto a second sheet"
+            )
+
+        if not args.quick:
+            for page in plays + fronts:
+                n = render(chrome, page, tmp / f"{page.stem}.pdf", profile)
+                flag = "" if n == 1 else f"  <-- {n} PAGES"
+                print(f"  {page.name:<26} {n}{flag}")
+                if n != 1:
+                    failures.append(f"{page.name} prints on {n} pages, must be 1")
+
+    if failures:
+        print(f"\n{len(failures)} failure(s):")
+        for f in failures:
+            print(f"  {f}")
+        return 1
+    print("\nEvery card prints on exactly one sheet.")
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

@@ -209,9 +209,18 @@ on a phone, with the assignments read underneath it rather than squeezed in besi
 - **Print** (on any play or front page) → that one card, one landscape sheet.
 
 Both are already set to landscape, so there is no page setup to fiddle with. Print to PDF
-for a binder, or print the single sheet you need for tonight's practice. Page counts are
-verified on every change by rendering to PDF and counting — a play that overflows onto a
-second sheet is a bug.
+for a binder, or print the single sheet you need for tonight's practice.
+
+**A card that spills onto a second sheet is a bug**, and it is checked rather than
+assumed — `generator/test_print_pages.py` renders the book and every play page with
+headless Chrome and counts the pages in the PDF. Run it after anything that changes the
+print layout or adds text to a card.
+
+Each card is exactly one page box tall and lays itself out as a column: the header,
+assignments and coaching points take the room they need and the diagram takes whatever is
+left. A play with four coaching points therefore gets a bigger picture than one with five,
+and no card can push past the page, because the only thing on it that can stretch is the
+part that can afford to shrink.
 
 The one thing the printed sheet drops is the play's "purpose" paragraph. That is context
 for planning, not for holding on a sideline, and cutting it is what buys the diagram its
@@ -230,6 +239,7 @@ python generator/render.py            # rebuild cards, site, READMEs, PLAYBOOK.m
 python generator/render.py --check    # validate the JSON only, write nothing
 python generator/test_calls.py        # prove the call check still rejects a wrong call
 python generator/test_call_sheet.py   # prove the call sheet filters show the right plays
+python generator/test_print_pages.py  # prove every card still prints on one sheet
 ```
 
 No dependencies beyond Python 3. `--check` fails if any play is missing an assignment for

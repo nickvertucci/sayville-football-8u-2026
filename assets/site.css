@@ -577,9 +577,23 @@ footer.site a { color: var(--accent-ink); }
   body { background: #fff; color: #000; font-size: 10pt; }
   .wrap { max-width: none; padding: 0; }
   main { padding: 0; }
+  /* One card, one sheet — by construction rather than by tuning.
+
+     This used to pin the diagram to a fixed height and trust that whatever came
+     underneath would fit. It did, for the book that existed when the number was
+     measured. Nineteen plays later, eighteen of forty-one cards were spilling onto a
+     second sheet — the ones with five coaching points instead of four.
+
+     So the card is now exactly one page box tall and lays itself out as a column: the
+     header, assignments and coaching points take the room they need, and the diagram
+     takes everything that is left. A simple play gets a bigger picture than a wordy
+     one, which is the right way round, and no card can push past the page because the
+     only flexible thing on it is the part that can afford to shrink. */
   article.play {
     box-shadow: none; border: 0; border-radius: 0; padding: 0; margin: 0;
     page-break-after: always; break-after: page;
+    height: 100vh;
+    display: flex; flex-direction: column;
   }
   article.play:last-of-type { page-break-after: auto; break-after: auto; }
   article.play > header { padding-bottom: 5px; margin-bottom: 8px; }
@@ -591,23 +605,24 @@ footer.site a { color: var(--accent-ink); }
      leaves room for eleven assignments and the coaching points — measured, not
      guessed, by rendering the book to PDF and counting pages. */
   figure.diagram {
-    border: 0; margin: 0 0 4px; height: 116mm;
+    border: 0; margin: 0 0 4px;
+    flex: 1 1 auto; min-height: 0;
     display: flex; align-items: center; justify-content: center;
   }
   figure.diagram img { width: auto; height: auto; max-width: 100%; max-height: 100%; }
   /* The purpose is why you'd call the play — useful when planning, not when holding
      the card on a sideline. Dropping it is what buys the diagram its height. */
   .purpose, .legalblock { display: none; }
-  /* Defensive rules run longer than offensive ones, so their card gives
-     the assignments a little more room and the diagram a little less. */
-  article.play.def figure.diagram { height: 104mm; }
+  /* Defensive rules run longer than offensive ones. Nothing to special-case any
+     more: their assignments simply claim more of the column and the diagram keeps
+     the rest. */
   .block-title { font-size: 8pt; margin: 5px 0 0; padding-top: 4px; }
   dl.assign { columns: 3; column-gap: 16px; }
   dl.assign .row {
     padding: 1px 0; grid-template-columns: 28px minmax(0,1fr); gap: 5px; border: 0;
   }
   dl.assign dd, dl.assign dt { font-size: 8pt; line-height: 1.32; }
-  ul.coach { columns: 2; column-gap: 18px; margin-top: 3px; }
+  ul.coach { columns: 3; column-gap: 18px; margin-top: 3px; }
   ul.coach li { font-size: 8pt; line-height: 1.32; margin-bottom: 2px; }
   a[href]::after { content: ""; }
 }
