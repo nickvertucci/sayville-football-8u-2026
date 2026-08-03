@@ -380,6 +380,29 @@ def validate(formations: list[dict], defenses: dict) -> list[str]:
                     "unique across every formation"
                 )
             seen[pid] = form.get("id", "?")
+    # Teaching order has to be a sequence, not a tie. Two formations sharing an `order`
+    # sort by name, which is the alphabet wearing a teaching order's clothes.
+    by_order: dict[int, list[str]] = {}
+    for form in formations:
+        by_order.setdefault(form.get("order", 99), []).append(form.get("id", "?"))
+    for order, ids in sorted(by_order.items()):
+        if len(ids) > 1:
+            errors.append(
+                f"formations {', '.join(sorted(ids))} all claim order {order} — teaching "
+                "order must be unambiguous"
+            )
+    for form in formations:
+        seen_play_order: dict[int, list[str]] = {}
+        for play in form["_plays"]:
+            seen_play_order.setdefault(play.get("order", 99), []).append(
+                play.get("id", "?"))
+        for order, ids in sorted(seen_play_order.items()):
+            if len(ids) > 1:
+                errors.append(
+                    f"formation {form.get('id')}: plays {', '.join(sorted(ids))} all claim "
+                    f"order {order} — teaching order must be unambiguous"
+                )
+
     for form in formations:
         for field in ("id", "name", "alignment"):
             if field not in form:
