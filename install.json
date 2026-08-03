@@ -1,0 +1,207 @@
+{
+  "intro": "Numbered practices, not dates. Rule 14.02 puts the first practice no earlier than July 15, and after that the calendar is yours — a rained-out session moves everything down one, it does not skip anything. Nothing here is installed before the thing it depends on, and the build refuses to publish a schedule that breaks that.",
+  "phases": {
+    "preseason": {
+      "label": "Before the first game",
+      "note": "Thirteen plays and all four fronts. This is the whole package you can actually run in September — the Regular I both directions, a short-yardage answer, one play-action each way, and every defence the league lets us show. Do not add a formation until this is real."
+    },
+    "season": {
+      "label": "Once the season starts",
+      "note": "One new look at a time, and only when the last one has hurt somebody. Each of these exists because a defence has started cheating something — none of it is worth installing before that happens."
+    }
+  },
+  "practices": [
+    {
+      "n": 1,
+      "phase": "preseason",
+      "focus": "Stance, snap, and the first run",
+      "plays": ["i-dive-r", "i-dive-l"],
+      "fronts": ["5-3"],
+      "emphasis": "Alignment before anything. Count seven on the line every single snap, both sides of the ball, until it is boring."
+    },
+    {
+      "n": 2,
+      "phase": "preseason",
+      "focus": "Downhill between the tackles",
+      "plays": ["i-iso-r", "i-iso-l"],
+      "fronts": [],
+      "emphasis": "The tailback reads the fullback's block. That is the skill this whole formation exists to teach — give it the time."
+    },
+    {
+      "n": 3,
+      "phase": "preseason",
+      "focus": "Off tackle",
+      "plays": ["i-slant-r", "i-slant-l"],
+      "fronts": [],
+      "requires": ["i-iso-r"],
+      "emphasis": "Down block and kick out. Say out loud that these are the same rules as Iso, one gap wider."
+    },
+    {
+      "n": 4,
+      "phase": "preseason",
+      "focus": "Getting outside",
+      "plays": ["i-toss-r", "i-toss-l"],
+      "fronts": [],
+      "emphasis": "The carrier does not turn up until he is outside our end. Drill nothing else this session."
+    },
+    {
+      "n": 5,
+      "phase": "preseason",
+      "focus": "Making them pay for chasing",
+      "plays": ["i-counter-l", "i-counter-r"],
+      "fronts": [],
+      "requires": ["i-toss-r", "i-toss-l"],
+      "emphasis": "Counter is worthless until Toss has gone for real yards. If it has not yet, run Toss again and come back to this."
+    },
+    {
+      "n": 6,
+      "phase": "preseason",
+      "focus": "Short yardage",
+      "plays": ["i-sneak"],
+      "fronts": ["6-3"],
+      "emphasis": "Fourth and inches, both sides of it. Install the goal-line front the same day so they see what a six-man line feels like."
+    },
+    {
+      "n": 7,
+      "phase": "preseason",
+      "focus": "When they get outside us",
+      "plays": [],
+      "fronts": ["4-4"],
+      "emphasis": "No new offence. Spend it on the fourth linebacker and on reviewing everything from practices 1 to 6 against a front they have not seen."
+    },
+    {
+      "n": 8,
+      "phase": "preseason",
+      "focus": "First throw",
+      "plays": ["i-boot-r"],
+      "fronts": [],
+      "requires": ["i-toss-r"],
+      "emphasis": "Run first, throw second. No blitzing is allowed at this age, so the quarterback has time — teach him to be patient and look up."
+    },
+    {
+      "n": 9,
+      "phase": "preseason",
+      "focus": "The same throw the other way",
+      "plays": ["i-waggle-l"],
+      "fronts": [],
+      "requires": ["i-boot-r"],
+      "emphasis": "Boot and Waggle are a matched pair. Call whichever one goes away from where their outside linebacker has started cheating."
+    },
+    {
+      "n": 10,
+      "phase": "preseason",
+      "focus": "The rules that are not optional",
+      "plays": [],
+      "fronts": ["prevent"],
+      "emphasis": "The 18-point rule is mandatory, not a coaching choice. Prevent, and the whole starting backfield coming out on offence, both have to be automatic before the first game — an official will not wait while you work it out."
+    },
+    {
+      "n": 11,
+      "phase": "season",
+      "focus": "Power I: one man moves",
+      "plays": ["pi-power-r", "pi-power-l"],
+      "fronts": [],
+      "requires": ["i-slant-r", "i-toss-r"],
+      "emphasis": "Same eleven kids, same spots, flanker tightened to a wing. No line rule changes at all — say that first and they will believe it."
+    },
+    {
+      "n": 12,
+      "phase": "season",
+      "focus": "The goal-line answer",
+      "plays": ["pi-wedge"],
+      "fronts": [],
+      "requires": ["pi-power-r"],
+      "emphasis": "Two yards is a good wedge. Do not call it needing four. Re-check with the league that wedge blocking is still permitted this season."
+    },
+    {
+      "n": 13,
+      "phase": "season",
+      "focus": "Motion",
+      "plays": ["pi-jet-l"],
+      "fronts": [],
+      "requires": ["pi-power-r"],
+      "emphasis": "Only one man may be moving at the snap and he cannot be moving toward the line. Teach the wing to run flat across, never forward."
+    },
+    {
+      "n": 14,
+      "phase": "season",
+      "focus": "Off the motion",
+      "plays": ["pi-boot-r"],
+      "fronts": [],
+      "requires": ["pi-jet-l"],
+      "emphasis": "The motion is only a lie if it has been the truth. Jet has to have hurt them before this is worth a down."
+    },
+    {
+      "n": 15,
+      "phase": "season",
+      "focus": "The wing hides in the backfield",
+      "plays": ["pi-off-power-r"],
+      "fronts": [],
+      "requires": ["pi-power-r"],
+      "emphasis": "Same play, same hole, same three jobs. At the wing he is a tell; in the backfield he is not, and the trade is a worse angle so he leaves on the snap."
+    },
+    {
+      "n": 16,
+      "phase": "season",
+      "focus": "Off the offset look",
+      "plays": ["pi-off-counter-l", "pi-off-toss-r"],
+      "fronts": [],
+      "requires": ["pi-off-power-r"],
+      "emphasis": "Both of these are lies about Offset Power. Neither is worth a down until Offset Power has been run for real yards."
+    },
+    {
+      "n": 17,
+      "phase": "season",
+      "focus": "Wishbone: three backs",
+      "plays": ["wb-dive-r", "wb-dive-l"],
+      "fronts": [],
+      "requires": ["i-dive-r"],
+      "emphasis": "Three threats every snap. The fullback is the hammer — if they stop respecting him up the middle, nothing else in this formation works."
+    },
+    {
+      "n": 18,
+      "phase": "season",
+      "focus": "Wishbone off tackle",
+      "plays": ["wb-power-r", "wb-power-l"],
+      "fronts": [],
+      "requires": ["wb-dive-r"],
+      "emphasis": "Symmetric formation, symmetric rules. They learn one play and get two — make that the whole pitch."
+    },
+    {
+      "n": 19,
+      "phase": "season",
+      "focus": "Wishbone outside and back",
+      "plays": ["wb-pitch-r", "wb-pitch-l", "wb-counter-r", "wb-counter-l"],
+      "fronts": [],
+      "requires": ["wb-power-r"],
+      "emphasis": "Four plays in one session only works because the rules are identical to Power. If they are not solid on Power, split this over two."
+    },
+    {
+      "n": 20,
+      "phase": "season",
+      "focus": "The Wishbone throw",
+      "plays": ["wb-waggle-r"],
+      "fronts": [],
+      "requires": ["wb-dive-r"],
+      "emphasis": "One pass in this formation is the right number. It exists so nobody can put nine in the box and forget the edge."
+    },
+    {
+      "n": 21,
+      "phase": "season",
+      "focus": "Full House: nothing given away",
+      "plays": ["fh-dive-r", "fh-dive-l", "fh-power-r", "fh-power-l"],
+      "fronts": [],
+      "requires": ["wb-power-r"],
+      "emphasis": "Same back numbers as the Wishbone and the same three jobs — carry, kick out, lead. A team that knows Bone calls already knows House calls."
+    },
+    {
+      "n": 22,
+      "phase": "season",
+      "focus": "Full House on the edge",
+      "plays": ["fh-sweep-r", "fh-sweep-l", "fh-boot-l"],
+      "fronts": [],
+      "requires": ["fh-power-r"],
+      "emphasis": "Sweep is the same first three steps as Power taken all the way outside, and Boot is the lie about both. Install them in that order inside the session."
+    }
+  ]
+}

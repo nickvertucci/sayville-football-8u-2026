@@ -528,6 +528,54 @@ table.calls td.c { white-space: nowrap; }
 .empty { padding: 26px 16px; color: var(--muted); }
 
 /* ------------------------------------------------------------------- prose -- */
+/* ------------------------------------------------------------------- install -- */
+/* A practice schedule is read standing up with a whistle in your mouth, so the number
+   is the thing you find first and everything else hangs off it. */
+.ins-wrap { max-width: 82ch; }
+.ph { margin: 34px 0 14px; padding-bottom: 10px; border-bottom: 2px solid var(--accent-solid); }
+.ph:first-child { margin-top: 20px; }
+.ph h2 {
+  font-size: clamp(17px, 3vw, 21px); color: var(--ink); margin: 0 0 6px; letter-spacing: -.2px;
+}
+.ph p { margin: 0; color: var(--muted); font-size: 14px; max-width: 68ch; }
+
+.ins {
+  display: grid; grid-template-columns: 78px minmax(0, 1fr); gap: 16px;
+  background: var(--panel); border: 1px solid var(--line); border-radius: 12px;
+  padding: 14px 16px; margin: 0 0 10px; box-shadow: var(--shadow);
+}
+@media (max-width: 560px) { .ins { grid-template-columns: 1fr; gap: 8px; } }
+.ins-n {
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  background: var(--accent-solid); color: var(--on-accent); border-radius: 10px;
+  padding: 8px 4px; align-self: start;
+}
+@media (max-width: 560px) { .ins-n { flex-direction: row; gap: 8px; padding: 5px 10px; } }
+.ins-n span { font-size: 9.5px; text-transform: uppercase; letter-spacing: 1.2px; opacity: .75; }
+.ins-n b { font-size: 26px; line-height: 1.1; font-variant-numeric: tabular-nums; }
+@media (max-width: 560px) { .ins-n b { font-size: 18px; } }
+
+.ins-body h3 { margin: 0 0 9px; font-size: 16.5px; color: var(--ink); }
+.ins-list { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 9px; }
+.ins-play {
+  display: inline-flex; flex-direction: column; gap: 1px; text-decoration: none;
+  background: var(--panel-2); border: 1px solid var(--line); border-radius: 8px;
+  padding: 5px 10px; min-width: 0;
+}
+.ins-play:hover { border-color: var(--accent); background: var(--panel); }
+.ins-play.def { border-left: 3px solid var(--red); }
+.ins-call {
+  font-size: 12.5px; font-weight: 700; color: var(--accent-ink);
+  font-variant-numeric: tabular-nums;
+}
+.ins-name { font-size: 11.5px; color: var(--muted); }
+.ins-none { font-size: 13px; color: var(--muted); font-style: italic; }
+.ins-em { margin: 0; font-size: 14px; color: var(--ink-2); line-height: 1.55; }
+.ins-req {
+  margin: 7px 0 0; font-size: 12.5px; color: var(--muted);
+  padding-left: 11px; border-left: 2px solid var(--line);
+}
+
 /* ------------------------------------------------------------------ rulebook -- */
 /* The league's document, reproduced. Their line breaks, indents and runs of spaces are
    meaningful on a page people read out loud at a game, so the text keeps its own
@@ -1002,6 +1050,7 @@ def menu_groups(formations: list[dict], active_form: str, active_play: str) -> s
 
 
 NAV_LINKS = [("index.html", "Home", "home"),
+             ("install.html", "Install", "install"),
              ("calls.html", "Call sheet", "calls"),
              ("rules.html", "Rules", "rules"),
              ("print.html", "Print book", "print")]
@@ -1684,6 +1733,92 @@ def defense_article(front: dict, heading: str = "h2", actions: str = "") -> str:
 </article>"""
 
 
+def write_install(formations: list[dict], defenses: dict, root: Path) -> str:
+    """The practice-by-practice install schedule.
+
+    Numbered practices rather than dates: a rained-out session moves everything down
+    one instead of skipping something. Built from install.json, whose ordering the
+    generator has already checked — nothing here is taught before the play it is
+    built on.
+    """
+    import json as _json
+    path = root / "install.json"
+    if not path.is_file():
+        schedule = {"practices": []}
+    else:
+        schedule = _json.loads(path.read_text(encoding="utf-8"))
+
+    plays = {p["id"]: (p, f) for f in formations for p in f["_plays"]}
+    phases = schedule.get("phases", {})
+
+    total_plays = sum(len(pr.get("plays", [])) for pr in schedule["practices"])
+    total_fronts = sum(len(pr.get("fronts", [])) for pr in schedule["practices"])
+    preseason = [pr for pr in schedule["practices"] if pr.get("phase") == "preseason"]
+
+    blocks, seen_phase = [], None
+    for pr in schedule["practices"]:
+        phase = pr.get("phase")
+        if phase != seen_phase:
+            seen_phase = phase
+            meta = phases.get(phase, {})
+            blocks.append(
+                f'<div class="ph"><h2>{esc(meta.get("label", phase or ""))}</h2>'
+                f'<p>{esc(meta.get("note", ""))}</p></div>'
+            )
+        items = []
+        for pid in pr.get("plays", []):
+            play, form = plays[pid]
+            items.append(
+                f'<a class="ins-play" href="{p_href(play)}">'
+                f'<span class="ins-call">{esc(play.get("call", ""))}</span>'
+                f'<span class="ins-name">{esc(play["name"])}</span></a>'
+            )
+        for fid in pr.get("fronts", []):
+            front = defenses[fid]
+            items.append(
+                f'<a class="ins-play def" href="{d_href(front)}">'
+                f'<span class="ins-call">{esc(front["call"])}</span>'
+                f'<span class="ins-name">{esc(front["name"])} defence</span></a>'
+            )
+        if not items:
+            items.append('<span class="ins-none">No new install &mdash; review</span>')
+
+        need = pr.get("requires", [])
+        needs = ""
+        if need:
+            names = ", ".join(esc(plays[n][0]["name"]) if n in plays
+                              else esc(defenses[n]["call"]) for n in need)
+            needs = f'<p class="ins-req">Needs {names} working first</p>'
+
+        blocks.append(
+            f'<article class="ins">'
+            f'<div class="ins-n"><span>Practice</span><b>{pr["n"]}</b></div>'
+            f'<div class="ins-body"><h3>{esc(pr.get("focus", ""))}</h3>'
+            f'<div class="ins-list">{"".join(items)}</div>'
+            f'<p class="ins-em">{esc(pr.get("emphasis", ""))}</p>{needs}</div></article>'
+        )
+
+    body = f"""<h1 class="page">Install schedule</h1>
+<p class="lede">{esc(schedule.get("intro", ""))}</p>
+<dl class="rb-facts">
+  <div><dt>Practices</dt><dd>{len(schedule["practices"])}</dd></div>
+  <div><dt>Game ready by</dt><dd>Practice {preseason[-1]["n"] if preseason else "&mdash;"}</dd></div>
+  <div><dt>Plays</dt><dd>{total_plays}</dd></div>
+  <div><dt>Fronts</dt><dd>{total_fronts}</dd></div>
+</dl>
+<div class="ins-wrap">
+{chr(10).join(blocks)}
+</div>"""
+    return page(
+        f"Install schedule — {SITE_TITLE}",
+        body,
+        formations,
+        defenses=defenses,
+        active_nav="install",
+        description="Practice-by-practice install schedule for the playbook.",
+    )
+
+
 def write_defense_index(formations: list[dict], defenses: dict) -> str:
     cards = []
     for fid, f in defenses.items():
@@ -1816,7 +1951,9 @@ def write_all(formations: list[dict], defenses: dict, root: Path) -> int:
         write_defense_index(formations, defenses), encoding="utf-8")
     (root / "rules.html").write_text(
         write_rulebook(formations, defenses, root), encoding="utf-8")
-    written += 5
+    (root / "install.html").write_text(
+        write_install(formations, defenses, root), encoding="utf-8")
+    written += 6
 
     for front in defenses.values():
         (root / d_href(front)).write_text(

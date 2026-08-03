@@ -91,8 +91,13 @@ silence and the play would render at the unmoved spot looking perfectly fine.
 Do not reach for this to build a different formation. If most of the eleven move, or the
 line changes, that is a new `formation.json`.
 
-`order` is the position in the formation's teaching sequence. There are no
-install weeks — plays are simply listed in the order we teach them.
+`order` is the position in the formation's teaching sequence — it decides the order
+plays appear on the site and in `PLAYBOOK.md`, nothing more.
+
+**When you add a play, add it to [`install.json`](../install.json) too.** That is the
+practice-by-practice schedule behind the Install page, and the build fails if a play is
+never installed, is installed twice, or is taught before something its `requires` list
+says it depends on. A play nobody has scheduled is a play nobody teaches.
 
 **A formation** needs `id` (must equal the folder name), `name`, an `alignment` of
 exactly eleven players, and `backs` — the digit-to-position map its calls are numbered
