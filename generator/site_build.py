@@ -19,6 +19,7 @@ assignments read underneath it rather than squeezed into a column beside it.
 
 from __future__ import annotations
 
+import hashlib
 import re
 from pathlib import Path
 
@@ -827,6 +828,30 @@ SITE_JS = """
 
 # ------------------------------------------------------------------- helpers --
 
+# GitHub Pages serves the stylesheet and the script with `cache-control: max-age=600`
+# and no fingerprint in the URL. For ten minutes after a deploy a returning visitor can
+# therefore hold a cached OLD site.js while fetching a NEW page — and the two halves are
+# not independent. When the call sheet's chips changed from `data-filter` to
+# `data-group`/`data-value`, that pairing stopped filtering entirely: the old script
+# looked for an attribute the new markup no longer had.
+#
+# Stamping the content hash into the URL makes a changed asset a different URL, so the
+# browser cannot pair new markup with a stale script. The old file stays cached and
+# simply stops being asked for.
+
+
+def asset_url(name: str, content: str) -> str:
+    digest = hashlib.sha256(content.encode("utf-8")).hexdigest()[:10]
+    return f"assets/{name}?v={digest}"
+
+
+def css_url() -> str:
+    return asset_url("site.css", SITE_CSS.strip() + "\n")
+
+
+def js_url() -> str:
+    return asset_url("site.js", SITE_JS.strip() + "\n")
+
 
 def f_href(form: dict) -> str:
     return f"f-{form['id']}.html"
@@ -934,7 +959,7 @@ def page(
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{esc(title)}</title>{desc}
-<link rel="stylesheet" href="assets/site.css">{page_style}
+<link rel="stylesheet" href="{css_url()}">{page_style}
 <a class="skip" href="#main">Skip to content</a>
 <header class="site">
   <div class="wrap">
@@ -966,7 +991,7 @@ def page(
   <code>playbook/</code>, never these pages.
   <a href="https://github.com/nickvertucci/sayville-football-8u-2026">Source</a>
 </div></footer>
-<script src="assets/site.js"></script>
+<script src="{js_url()}"></script>
 </html>
 """
 
