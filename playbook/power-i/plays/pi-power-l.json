@@ -1,0 +1,108 @@
+{
+  "id": "pi-power-l",
+  "order": 2,
+  "formation": "power-i",
+  "name": "Power I Power Left",
+  "call": "Power I 35 Power",
+  "type": "run",
+  "defense": "5-3",
+  "direction": "left",
+  "ball_carrier": "TB",
+  "purpose": "The same play away from the wing. We give up the wing's kick-out and the fullback does that job instead, which is why it is the second one we teach, not the first.",
+  "assignments": {
+    "RE": {
+      "rule": "Cut off pursuit from behind. You are the last one to the ball, so never quit on the play.",
+      "type": "block",
+      "path": [
+        [-1.0, 0.7]
+      ]
+    },
+    "RT": {
+      "rule": "Block back. Take the first defender on or inside you — nobody crosses your face.",
+      "type": "block",
+      "path": [
+        [-1.0, 0.7]
+      ]
+    },
+    "RG": {
+      "rule": "PULL LEFT. Stay flat behind the line, turn up through the hole and block the first wrong shirt you see. Do not go around the pile — go through it.",
+      "type": "block",
+      "path": [
+        [-0.8, -0.9],
+        [-3.6, -0.7],
+        [-4.8, 1.6],
+        [-5.2, 3.6]
+      ]
+    },
+    "C": {
+      "rule": "You have the nose, head up on you. Hands inside and do not let him cross your face to the playside.",
+      "type": "block",
+      "path": [
+        [0.4, 1.1]
+      ]
+    },
+    "LG": {
+      "rule": "Nobody is over you. Help the center drive the nose for one count, then climb to the middle linebacker.",
+      "type": "block",
+      "path": [
+        [0.6, 1.1],
+        [1.0, 3.4]
+      ]
+    },
+    "LT": {
+      "rule": "The tackle is on your inside shoulder. Block him down and seal him inside — that is what opens the hole.",
+      "type": "block",
+      "path": [
+        [0.4, 1.3]
+      ]
+    },
+    "LE": {
+      "rule": "Release inside off his outside shoulder and take the playside linebacker. The end over you is getting kicked out — leave him alone.",
+      "type": "block",
+      "path": [
+        [1.0, 3.5]
+      ]
+    },
+    "WB": {
+      "rule": "Come flat across behind the line and cut off the backside. You are chasing the play, so take the first defender who crosses your path.",
+      "type": "block",
+      "path": [
+        [-3.0, 0.6],
+        [-6.0, 1.4]
+      ]
+    },
+    "QB": {
+      "rule": "Open to the left, hand it deep to the tailback, then carry out the boot fake to the edge. The fake is what keeps the backside end honest.",
+      "type": "fake",
+      "path": [
+        [-1.2, -0.5],
+        [-3.0, -1.2],
+        [-4.6, -1.6]
+      ]
+    },
+    "FB": {
+      "rule": "Kick the end out. Aim at his outside hip and drive him toward the sideline. The tailback is running inside of you, so never let him come underneath.",
+      "type": "block",
+      "path": [
+        [-2.2, 1.5],
+        [-3.4, 2.4]
+      ]
+    },
+    "TB": {
+      "rule": "Take the handoff going downhill and aim at the outside hip of our tackle. Follow the guard through the hole. Stay tight to the blocks and do not bounce it outside.",
+      "type": "run",
+      "path": [
+        [-1.2, 1.5],
+        [-2.6, 3.6],
+        [-3.4, 5.6],
+        [-3.6, 8.0]
+      ]
+    }
+  },
+  "coaching_points": [
+    "Run this the moment they start cheating a linebacker over to the wing. That is the only reason it is in the book.",
+    "The fullback is doing the wing's job here, and he is doing it from further away with less angle. Give him extra reps on the kick-out alone.",
+    "Everything else is Power Right in a mirror, so teach the pair together. The line rules do not change at all.",
+    "If the backside end is chasing the tailback down from behind, the quarterback's boot fake is not being carried out. Fix the fake, not the blocking."
+  ]
+}
