@@ -9,8 +9,8 @@ and the Print button gives you the whole book in landscape, one play per sheet.
 
 **In this repo:** [PLAYBOOK.md](PLAYBOOK.md) is the same book as markdown.
 [RULES.md](RULES.md) is our summary of the league rules that shaped it — read that one
-first; it is on the site under **Notes**. The league's actual rulebook is in
-[rulebook/](rulebook/), reproduced word for word, and it is the site's **Rules** page.
+first. It lives in the repo only; the site carries the league's actual rulebook, which is
+in [rulebook/](rulebook/), reproduced word for word, as the **Rules** page.
 
 ## Play calling language
 
@@ -193,7 +193,6 @@ someone a link to exactly the play you mean.
 | `calls.html` | **Call sheet** — every play, searchable, filterable by formation, run/pass, where it hits, direction and who touches it |
 | `f-<formation>.html` | One formation: its notes and its plays |
 | `rules.html` | **The league rulebook, verbatim**, generated from `rulebook/*.txt` |
-| `rules-notes.html` | What those rules did to this playbook, generated from `RULES.md` |
 | `p-<play>.html` | One play. Deep-linkable, and prints to a single sheet |
 | `defense.html` | The defensive playbook index |
 | `d-<front>.html` | One defensive front, with every assignment |
