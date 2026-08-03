@@ -23,20 +23,23 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 | 15 | [Power I Power Left](#power-i-power-left) | `Power I 35 Power` | run | Power I | TB |
 | 16 | [Power I Wedge](#power-i-wedge) | `Power I 30 Wedge` | run | Power I | TB |
 | 17 | [Power I Jet Left](#power-i-jet-left) | `Power I 49 Jet` | run | Power I | WB |
-| 18 | [Bone Dive Right](#bone-dive-right) | `Bone 20 Dive` | run | Wishbone | FB |
-| 19 | [Bone Dive Left](#bone-dive-left) | `Bone 21 Dive` | run | Wishbone | FB |
-| 20 | [Bone Power Right](#bone-power-right) | `Bone 44 Power` | run | Wishbone | LH |
-| 21 | [Bone Power Left](#bone-power-left) | `Bone 35 Power` | run | Wishbone | RH |
-| 22 | [Bone Pitch Right](#bone-pitch-right) | `Bone 48 Pitch` | run | Wishbone | LH |
-| 23 | [Bone Pitch Left](#bone-pitch-left) | `Bone 39 Pitch` | run | Wishbone | RH |
-| 24 | [Bone Counter Right](#bone-counter-right) | `Bone 44 Counter` | run | Wishbone | LH |
-| 25 | [Bone Counter Left](#bone-counter-left) | `Bone 35 Counter` | run | Wishbone | RH |
-| 26 | [House Dive Right](#house-dive-right) | `House 20 Dive` | run | Full House | FB |
-| 27 | [House Dive Left](#house-dive-left) | `House 21 Dive` | run | Full House | FB |
-| 28 | [House Power Right](#house-power-right) | `House 44 Power` | run | Full House | LH |
-| 29 | [House Power Left](#house-power-left) | `House 35 Power` | run | Full House | RH |
-| 30 | [House Sweep Right](#house-sweep-right) | `House 48 Sweep` | run | Full House | LH |
-| 31 | [House Sweep Left](#house-sweep-left) | `House 39 Sweep` | run | Full House | RH |
+| 18 | [Power I Boot Right](#power-i-boot-right) | `Power I 16 Boot` | pass | Power I | RE |
+| 19 | [Bone Dive Right](#bone-dive-right) | `Bone 20 Dive` | run | Wishbone | FB |
+| 20 | [Bone Dive Left](#bone-dive-left) | `Bone 21 Dive` | run | Wishbone | FB |
+| 21 | [Bone Power Right](#bone-power-right) | `Bone 44 Power` | run | Wishbone | LH |
+| 22 | [Bone Power Left](#bone-power-left) | `Bone 35 Power` | run | Wishbone | RH |
+| 23 | [Bone Pitch Right](#bone-pitch-right) | `Bone 48 Pitch` | run | Wishbone | LH |
+| 24 | [Bone Pitch Left](#bone-pitch-left) | `Bone 39 Pitch` | run | Wishbone | RH |
+| 25 | [Bone Counter Right](#bone-counter-right) | `Bone 44 Counter` | run | Wishbone | LH |
+| 26 | [Bone Counter Left](#bone-counter-left) | `Bone 35 Counter` | run | Wishbone | RH |
+| 27 | [Bone Waggle Right](#bone-waggle-right) | `Bone 16 Waggle` | pass | Wishbone | RE |
+| 28 | [House Dive Right](#house-dive-right) | `House 20 Dive` | run | Full House | FB |
+| 29 | [House Dive Left](#house-dive-left) | `House 21 Dive` | run | Full House | FB |
+| 30 | [House Power Right](#house-power-right) | `House 44 Power` | run | Full House | LH |
+| 31 | [House Power Left](#house-power-left) | `House 35 Power` | run | Full House | RH |
+| 32 | [House Sweep Right](#house-sweep-right) | `House 48 Sweep` | run | Full House | LH |
+| 33 | [House Sweep Left](#house-sweep-left) | `House 39 Sweep` | run | Full House | RH |
+| 34 | [House Boot Left](#house-boot-left) | `House 17 Boot` | pass | Full House | LE |
 
 # I-Formation
 
@@ -571,6 +574,38 @@ The wing goes in motion across the formation and takes the handoff at full speed
 - Do not install this until Power Right is real. Jet works because they have already been punished for not honouring the wing side.
 - If their end chases the wing flat down the line, come back to Power Right the very next play — he has left the edge.
 
+---
+
+## Power I Boot Right
+
+**Call it:** `Power I 16 Boot`
+
+![Power I Boot Right](playbook/power-i/cards/pi-boot-r.svg)
+
+Jet motion pulls the whole defense one way and the quarterback keeps it the other. This is the play Jet Left is really setting up, and at this age the edge is usually empty.
+
+| Position | Assignment |
+|---|---|
+| **LE** | Engage the end over you for a count, then release and get across the field to eight yards. You are the second look and you arrive late on purpose. |
+| **LT** | Block down inside and sell the run. Nobody comes through your gap chasing the motion. |
+| **LG** | Nobody is over you. Pull flat to the left and run the Jet path — you are the lie, take a linebacker with you. |
+| **C** | Block the nose away from the boot. Nobody chases through the middle. |
+| **RG** | Nobody is over you. Help the center on the nose and drive him away from the boot. |
+| **RT** | Hinge and protect the boot side. Nobody comes free outside you — the quarterback is alone back there. |
+| **RE** **(ball)** | Engage the end over you for a count, then release to the flat at four yards and stay in front of the quarterback. You are the easy throw. |
+| **WB** | Run the Jet motion exactly the way you run it for real — start on the same call, full speed, flat across. Keep going after the fake. You are the reason this play is open. |
+| **QB** | Fake the jet handoff with both hands, hide the ball on your back hip, and get to the edge the other way. Run it if it is open. Only throw if a defender comes up to take you. |
+| **FB** | Fill straight ahead like Wedge is coming, then block anyone chasing the quarterback from the inside. |
+| **TB** | Run the Power path to the right and then keep going to protect the outside. Anybody chasing the quarterback from behind is yours. |
+
+**Coaching points**
+
+- Do not call this until Jet Left has been run for real and hurt them. The motion is only a lie if it has been the truth.
+- Both ends must engage before releasing. If they run straight into their routes the fake dies and the flat defender is already waiting.
+- No blitzing is allowed for 8- and 9-year-olds, so the quarterback has time. Teach him to be patient and look up.
+- Run first. At this age the quarterback usually walks into ten yards before anyone finds him — the throw is the second choice, not the plan.
+- One throw, then tuck it. No scrambling backwards, ever.
+
 # Wishbone
 
 ---
@@ -821,6 +856,38 @@ Misdirection off the pitch. The near halfback and the quarterback sell the pitch
 - The fullback's block on the playside linebacker is what springs it. Drill that block on its own.
 - Two hard steps toward the fake before he comes back. A shuffle fools nobody.
 
+---
+
+## Bone Waggle Right
+
+**Call it:** `Bone 16 Waggle`
+
+![Bone Waggle Right](playbook/wishbone/cards/wb-waggle-r.svg)
+
+The only pass in the Wishbone, and it comes off the play they have seen most. Fake the dive, let both halfbacks run their power paths, and the quarterback walks out onto an edge everybody has left.
+
+| Position | Assignment |
+|---|---|
+| **LE** | Engage the end over you for a count, then release and get across the field to eight yards. You are the second look and you arrive late on purpose. |
+| **LT** | Block down inside and sell the run. Nobody comes through your gap. |
+| **LG** | Nobody is over you. Help the center on the nose and drive him away from the waggle. |
+| **C** | Block the nose away from the waggle. Nobody chases through the middle. |
+| **RG** | Nobody is over you. Help the center on the nose for a count, then stay on him. |
+| **RT** | Hinge and protect the waggle side. Nobody comes free outside you — the quarterback is alone back there. |
+| **RE** **(ball)** | Engage the end over you for a count, then release to the flat at four yards and stay in front of the quarterback. You are the easy throw. |
+| **QB** | Fake the dive to the fullback with both hands, hide the ball on your back hip, and get to the edge. Run it if it is open. Only throw if a defender comes up to take you. |
+| **FB** | Run the dive path full speed with your arms tucked like you have it, and block the first defender who meets you. You are the lie. |
+| **LH** | Run your Power path to the right at full speed, then keep going and protect the outside. Anybody chasing the quarterback from behind is yours. |
+| **RH** | Run your kick-out path at the end like Power is coming, then stay on him. He is the one man who can ruin this. |
+
+**Coaching points**
+
+- One pass in this formation is the right number. The Wishbone is a running offence and this exists so the defence cannot put nine men in the box and forget about the edge.
+- Both ends must engage before releasing. If they run straight into their routes the fake dies.
+- The fullback's dive fake is the whole play. If he does not get hit by somebody, he did not sell it.
+- No blitzing is allowed for 8- and 9-year-olds, so the quarterback has time. Teach him to be patient and look up.
+- Run first, throw second. One throw, then tuck it — no scrambling backwards, ever.
+
 # Full House
 
 ---
@@ -1012,4 +1079,36 @@ The same first three steps as Power, taken all the way outside. The near halfbac
 - The pulling guard has the longest trip on the play. If he cannot get there, block it with the near back alone and leave the guard in — a slow pull is worse than no pull.
 - Best call on the hash going to the wide side of the field. Do not call it into the boundary.
 - If their corner is flying up to meet the pull every time, come back inside with Power Left or Dive Left.
+
+---
+
+## House Boot Left
+
+**Call it:** `House 17 Boot`
+
+![House Boot Left](playbook/full-house/cards/fh-boot-l.svg)
+
+All three backs run their Power paths to the right and the quarterback keeps it left on his own. Three backs going one way is the hardest thing in this book to ignore, which is exactly why nobody is left on the other side.
+
+| Position | Assignment |
+|---|---|
+| **LE** **(ball)** | Engage the end over you for a count, then release to the flat at four yards and stay in front of the quarterback. You are the easy throw. |
+| **LT** | Hinge and protect the boot side. Nobody comes free outside you — the quarterback is alone back there. |
+| **LG** | Nobody is over you. Help the center on the nose and drive him away from the boot. |
+| **C** | Block the nose away from the boot. Nobody chases through the middle. |
+| **RG** | Nobody is over you. Climb like you are going to the middle linebacker on Power — take him with you. |
+| **RT** | Block down inside and sell the run. This has to look exactly like Power going to your side. |
+| **RE** | Engage the end over you for a count, then release and get across the field to eight yards. You are the second look and you arrive late on purpose. |
+| **QB** | Fake the handoff to the far halfback with both hands, hide the ball on your back hip, and get to the edge the other way. Run it if it is open. Only throw if a defender comes up to take you. |
+| **FB** | Run your Power lead path to the right and block whoever shows. Sell it, then look back for anyone chasing the quarterback. |
+| **LH** | Run your Power path to the right at full speed with your arms tucked like you have the ball. Sell it all the way — you are the reason nobody stays home. |
+| **RH** | Run your kick-out path at the end like Power is coming, then peel back and protect the quarterback's outside shoulder. |
+
+**Coaching points**
+
+- Do not call this until House Power Right has hurt them. Every part of it is a lie about Power, so Power has to be worth lying about.
+- The three backs have to run their real Power paths at real speed. A jogged fake with three backs is three times as obvious as a jogged fake with one.
+- Both ends must engage before releasing. If they run straight into their routes the fake dies and the flat defender is waiting.
+- No blitzing is allowed for 8- and 9-year-olds, so the quarterback has time. Teach him to be patient and look up.
+- Run first. One throw, then tuck it — no scrambling backwards, ever.
 

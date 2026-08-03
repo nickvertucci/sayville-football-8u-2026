@@ -82,6 +82,7 @@ declare — the wing's spot is what the formation name says. He is back **4**.
 | `Power I 34 Power` / `Power I 35 Power` | Power I Power Right / Left | tailback, tackle–end |
 | `Power I 30 Wedge` | Power I Wedge | tailback, straight up the middle |
 | `Power I 49 Jet` | Power I Jet Left | the wing in motion, all the way outside |
+| `Power I 16 Boot` | Power I Boot Right | quarterback, off the Jet fake |
 
 ### Wishbone: formation + back + hole + play word
 
@@ -93,6 +94,7 @@ Same two digits, two more backs to number. No flanker, so nothing to declare the
 | `Bone 35 Power` / `Bone 44 Power` | Bone Power Left / Right | the far halfback, tackle–end |
 | `Bone 39 Pitch` / `Bone 48 Pitch` | Bone Pitch Left / Right | the far halfback, all the way outside |
 | `Bone 35 Counter` / `Bone 44 Counter` | Bone Counter Left / Right | the far halfback, tackle–end |
+| `Bone 16 Waggle` | Bone Waggle Right | quarterback, off the dive fake |
 
 The back digit follows whoever actually carries it, which is why everything to the right is
 a `4` — the *left* halfback takes the handoff on Power and Counter, and on Pitch he is the
@@ -110,28 +112,38 @@ calls.
 | `House 21 Dive` / `House 20 Dive` | House Dive Left / Right | fullback, center–guard |
 | `House 35 Power` / `House 44 Power` | House Power Left / Right | the far halfback, tackle–end |
 | `House 39 Sweep` / `House 48 Sweep` | House Sweep Left / Right | the far halfback, all the way outside |
+| `House 17 Boot` | House Boot Left | quarterback, off the Power fake |
 
 Same rule as the Wishbone: the far halfback carries, because the near one is busy kicking
 out the edge.
 
 **Play word** — `Dive`, `Iso`, `Slant`, `Toss`, `Counter`, `Sneak`, `Boot`, `Waggle` in
 the I; `Power`, `Wedge`, `Jet` in the Power I; `Dive`, `Power`, `Pitch`, `Counter` in the
-Wishbone; `Dive`, `Power`, `Sweep` in the Full House.
+Wishbone; `Dive`, `Power`, `Sweep` in the Full House. Every formation also carries exactly
+one play-action pass, on the play word `Boot` or `Waggle`.
 
 ## Formations
 
-Four formations, 31 plays, in teaching order:
+Four formations, 34 plays, in teaching order:
 
 | # | Formation | Family | Plays | What it is for |
 |---|---|---|---|---|
 | 1 | **I** | I-Formation | 13 | Base offense. Fullback and tailback stacked, so the same look threatens the middle and both edges. Teaches a back to read a block. |
-| 2 | **Power I** | Power I | 4 | The I with the flanker tightened to a wing. An extra blocker on the edge for Power, a man in motion for Jet, and the short-yardage Wedge. |
-| 3 | **Wishbone** | Wishbone | 8 | Three backs, three threats every snap. Symmetric, so every play works both directions off identical rules. |
-| 4 | **Full House** | Full House | 6 | Three backs in a straight line at the same depth. The alignment gives nothing away, and every run splits the same three jobs — carry, kick out, lead. |
+| 2 | **Power I** | Power I | 5 | The I with the flanker tightened to a wing. An extra blocker on the edge for Power, a man in motion for Jet, and the short-yardage Wedge. |
+| 3 | **Wishbone** | Wishbone | 9 | Three backs, three threats every snap. Symmetric, so every play works both directions off identical rules. |
+| 4 | **Full House** | Full House | 7 | Three backs in a straight line at the same depth. The alignment gives nothing away, and every run splits the same three jobs — carry, kick out, lead. |
 
 All four are two-tight-end, downhill running formations, so the blocking language carries
 over: "block down on the first defender inside you" means the same thing in any of them.
 That is the reason to carry these four rather than four unrelated offenses.
+
+**One pass per formation, and one is the right number.** Every formation carries exactly
+one play-action pass (the I has two because Boot and Waggle are a matched pair). Each one
+fakes that formation's best run and boots the quarterback the other way, so it is the same
+first three steps the defense has already been punished for respecting. They exist so
+nobody can put nine in the box and forget the edge — not to throw the ball. Every one of
+them says *run first, throw second*, because no blitzing is allowed at this age (9.02) and
+the quarterback usually walks into ten yards before anybody finds him.
 
 Two of them are nearly free to install. The **Power I** is the base I with one player moved
 a yard and a half, so no line rule changes at all. The **Full House** shares the Wishbone's
@@ -185,7 +197,7 @@ on a phone, with the assignments read underneath it rather than squeezed in besi
 
 ## Printing
 
-- **Print book** (top bar) → 35 landscape pages: 31 plays then 4 defensive fronts,
+- **Print book** (top bar) → 38 landscape pages: 34 plays then 4 defensive fronts,
   one per sheet.
 - **Print** (on any play or front page) → that one card, one landscape sheet.
 
@@ -249,7 +261,7 @@ Only the JSON under `playbook/` and `defense/` is source. Everything else with a
 
 ## Every offensive play is drawn and blocked against the 5-3
 
-Twenty-nine of the 31 plays are drawn against the **5-3**, and their assignments are
+Thirty-two of the 34 plays are drawn against the **5-3**, and their assignments are
 written for that front specifically rather than in general terms. The two exceptions are
 the short-yardage plays, **I Sneak** and **Power I Wedge**, which are drawn against the
 **6-3** because that is the heaviest front the league allows and it is what you actually

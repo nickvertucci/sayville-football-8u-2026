@@ -39,6 +39,7 @@ Three backs in a Y behind the quarterback: fullback close at three yards, then t
 | [Bone Pitch Left](#bone-pitch-left) | `Bone 39 Pitch` | run | RH |
 | [Bone Counter Right](#bone-counter-right) | `Bone 44 Counter` | run | LH |
 | [Bone Counter Left](#bone-counter-left) | `Bone 35 Counter` | run | RH |
+| [Bone Waggle Right](#bone-waggle-right) | `Bone 16 Waggle` | pass | RE |
 
 ---
 
@@ -287,4 +288,36 @@ Misdirection off the pitch. The near halfback and the quarterback sell the pitch
 - No pullers, so this hits faster than Power. The line has to hold its blocks while the ball carrier crosses, but nobody is waiting on a guard to get there.
 - The fullback's block on the playside linebacker is what springs it. Drill that block on its own.
 - Two hard steps toward the fake before he comes back. A shuffle fools nobody.
+
+---
+
+## Bone Waggle Right
+
+**Call it:** `Bone 16 Waggle`
+
+![Bone Waggle Right](cards/wb-waggle-r.svg)
+
+The only pass in the Wishbone, and it comes off the play they have seen most. Fake the dive, let both halfbacks run their power paths, and the quarterback walks out onto an edge everybody has left.
+
+| Position | Assignment |
+|---|---|
+| **LE** | Engage the end over you for a count, then release and get across the field to eight yards. You are the second look and you arrive late on purpose. |
+| **LT** | Block down inside and sell the run. Nobody comes through your gap. |
+| **LG** | Nobody is over you. Help the center on the nose and drive him away from the waggle. |
+| **C** | Block the nose away from the waggle. Nobody chases through the middle. |
+| **RG** | Nobody is over you. Help the center on the nose for a count, then stay on him. |
+| **RT** | Hinge and protect the waggle side. Nobody comes free outside you — the quarterback is alone back there. |
+| **RE** **(ball)** | Engage the end over you for a count, then release to the flat at four yards and stay in front of the quarterback. You are the easy throw. |
+| **QB** | Fake the dive to the fullback with both hands, hide the ball on your back hip, and get to the edge. Run it if it is open. Only throw if a defender comes up to take you. |
+| **FB** | Run the dive path full speed with your arms tucked like you have it, and block the first defender who meets you. You are the lie. |
+| **LH** | Run your Power path to the right at full speed, then keep going and protect the outside. Anybody chasing the quarterback from behind is yours. |
+| **RH** | Run your kick-out path at the end like Power is coming, then stay on him. He is the one man who can ruin this. |
+
+**Coaching points**
+
+- One pass in this formation is the right number. The Wishbone is a running offence and this exists so the defence cannot put nine men in the box and forget about the edge.
+- Both ends must engage before releasing. If they run straight into their routes the fake dies.
+- The fullback's dive fake is the whole play. If he does not get hit by somebody, he did not sell it.
+- No blitzing is allowed for 8- and 9-year-olds, so the quarterback has time. Teach him to be patient and look up.
+- Run first, throw second. One throw, then tuck it — no scrambling backwards, ever.
 
