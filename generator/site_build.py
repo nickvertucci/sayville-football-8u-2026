@@ -22,7 +22,8 @@ from __future__ import annotations
 import re
 from pathlib import Path
 
-from common import call_prefix, esc, form_label, ordered_positions, position_name
+from common import (CARD_ORDER, call_prefix, esc, form_label, ordered_positions,
+                    position_name)
 
 SITE_TITLE = "Sayville 8U Tackle Football"
 
@@ -434,7 +435,35 @@ ul.coach li {
 .chip[aria-pressed="true"] {
   background: var(--accent-solid); border-color: var(--accent-solid); color: var(--on-accent);
 }
-#count { color: var(--muted); font-size: 14px; margin: 12px 0 10px; }
+/* Filters are grouped and labelled: within a group the choices widen the list, across
+   groups they narrow it, and a label on each group is what makes that legible. */
+.fgroup { display: flex; align-items: baseline; gap: 10px; margin: 0 0 8px; flex-wrap: wrap; }
+.flabel {
+  font-size: 11px; text-transform: uppercase; letter-spacing: 1.1px; color: var(--muted);
+  min-width: 96px; flex-shrink: 0;
+}
+@media (max-width: 620px) { .flabel { min-width: 0; width: 100%; } }
+
+.morebtn {
+  display: inline-flex; align-items: center; gap: 7px; cursor: pointer; font: inherit;
+  font-size: 13px; font-weight: 600; color: var(--accent-ink); background: none;
+  border: 0; padding: 6px 0; margin: 2px 0 0;
+}
+.morebtn::after { content: "▾"; font-size: 11px; }
+.morebtn[aria-expanded="true"]::after { content: "▴"; }
+.morebtn .badge {
+  background: var(--accent-solid); color: var(--on-accent); border-radius: 999px;
+  font-size: 11px; padding: 1px 7px; line-height: 1.6;
+}
+#morefilters { margin-top: 10px; padding-top: 12px; border-top: 1px solid var(--line-soft); }
+
+.countline { display: flex; align-items: center; gap: 12px; margin: 12px 0 10px; }
+.clearbtn {
+  cursor: pointer; font: inherit; font-size: 13px; font-weight: 600;
+  color: var(--accent-ink); background: none; border: 0; padding: 0;
+  text-decoration: underline;
+}
+#count { color: var(--muted); font-size: 14px; }
 .tablewrap {
   overflow-x: auto; background: var(--panel); border: 1px solid var(--line);
   border-radius: 12px; box-shadow: var(--shadow);
@@ -444,6 +473,37 @@ table.calls th, table.calls td {
   text-align: left; padding: 11px 14px; border-bottom: 1px solid var(--line-soft);
   font-size: 14.5px; color: var(--ink);
 }
+/* On a phone the five-column table needed 540px and scrolled sideways — on the one page
+   you actually hold on a sideline. Below 620px each row becomes a card instead: the call
+   big at the top, the play name under it, then a labelled meta line. Nothing scrolls. */
+@media (max-width: 620px) {
+  .tablewrap { overflow-x: visible; }
+  table.calls { min-width: 0; }
+  table.calls thead { display: none; }
+  table.calls, table.calls tbody, table.calls tr, table.calls td { display: block; width: 100%; }
+  table.calls tr {
+    padding: 12px 14px; border-bottom: 1px solid var(--line);
+  }
+  table.calls tr:last-child { border-bottom: 0; }
+  table.calls td { border: 0; padding: 0; text-align: left; }
+  table.calls td[data-label="Call"] { margin-bottom: 2px; }
+  table.calls td[data-label="Call"] .call { font-size: 16px; }
+  table.calls td[data-label="Play"] { font-size: 15px; margin-bottom: 6px; }
+  /* Formation, type and ball read as one line, each behind its own small label. */
+  table.calls td[data-label="Formation"],
+  table.calls td[data-label="Type"],
+  table.calls td[data-label="Ball"] {
+    display: inline-block; width: auto; font-size: 13px; color: var(--muted);
+    margin-right: 14px;
+  }
+  table.calls td[data-label="Formation"]::before,
+  table.calls td[data-label="Type"]::before,
+  table.calls td[data-label="Ball"]::before {
+    content: attr(data-label) " "; font-size: 10px; text-transform: uppercase;
+    letter-spacing: 1px; color: var(--muted); opacity: .75;
+  }
+}
+
 table.calls th {
   font-size: 11px; text-transform: uppercase; letter-spacing: 1.1px; color: var(--muted);
   background: var(--panel-2); position: sticky; top: 0;
@@ -530,7 +590,8 @@ footer.site a { color: var(--accent-ink); }
 /* -------------------------------------------------------------------- print -- */
 @media print {
   header.site, .drawer, .scrim, .skip, footer.site, .pager, .play-actions, .searchbar,
-  .chips, #count, .section-head, .btn, .print-intro,
+  .chips, .fgroup, .morebtn, #morefilters, .countline, #count, .clearbtn,
+  .section-head, .btn, .print-intro,
   .crumbs, .playbar { display: none !important; }
   :root {
     --ink: #111318; --ink-2: #333b49; --muted: #5b6472;
@@ -668,6 +729,13 @@ SITE_JS = """
   });
 })();
 
+/* Call sheet filtering.
+
+   Every chip belongs to a group (formation, type, zone, direction, carrier). Picking
+   two chips in the SAME group widens the list — Wishbone or Full House. Picking chips
+   in DIFFERENT groups narrows it — Wishbone AND runs. The old single-string filter
+   could not express that at all: formation and type shared one exclusive group, so
+   "Wishbone runs" quietly turned into "all runs". */
 (function () {
   var q = document.getElementById('q');
   if (!q) return;
@@ -675,31 +743,80 @@ SITE_JS = """
   var chips = Array.prototype.slice.call(document.querySelectorAll('.chip'));
   var count = document.getElementById('count');
   var empty = document.getElementById('empty');
-  var filter = 'all';
+  var clear = document.getElementById('clear');
+  var moreBtn = document.getElementById('morebtn');
+  var more = document.getElementById('morefilters');
+  var badge = document.getElementById('morebadge');
+  var total = rows.length;
+  var active = {};
+
+  // Groups whose chips live in the collapsed panel, so an active filter there can be
+  // reported on the toggle instead of being hidden.
+  var HIDDEN_GROUPS = ['zone', 'dir', 'carrier'];
+
+  function chosen(group) { return active[group] || []; }
+
+  function activeTotal() {
+    var n = 0;
+    for (var g in active) n += active[g].length;
+    return n;
+  }
 
   function apply() {
     var term = q.value.trim().toLowerCase();
     var n = 0;
     rows.forEach(function (r) {
-      var okGroup = filter === 'all' || r.dataset.form === filter || r.dataset.type === filter;
-      var okTerm = !term || r.dataset.search.indexOf(term) !== -1;
-      var show = okGroup && okTerm;
+      var show = true;
+      for (var g in active) {
+        var picked = active[g];
+        // An empty group is not a filter — it means "any".
+        if (picked.length && picked.indexOf(r.dataset[g]) === -1) { show = false; break; }
+      }
+      if (show && term && r.dataset.search.indexOf(term) === -1) show = false;
       r.hidden = !show;
       if (show) n++;
     });
-    count.textContent = n + (n === 1 ? ' play' : ' plays');
+
+    var filtered = activeTotal() > 0 || term;
+    count.textContent = filtered
+      ? n + ' of ' + total + (total === 1 ? ' play' : ' plays')
+      : total + (total === 1 ? ' play' : ' plays');
     empty.hidden = n !== 0;
+    clear.hidden = !filtered;
+
+    var hiddenCount = 0;
+    HIDDEN_GROUPS.forEach(function (g) { hiddenCount += chosen(g).length; });
+    badge.hidden = hiddenCount === 0;
+    badge.textContent = hiddenCount;
   }
 
   q.addEventListener('input', apply);
+
   chips.forEach(function (c) {
     c.addEventListener('click', function () {
-      chips.forEach(function (o) { o.setAttribute('aria-pressed', 'false'); });
-      c.setAttribute('aria-pressed', 'true');
-      filter = c.dataset.filter;
+      var g = c.dataset.group, v = c.dataset.value;
+      var picked = active[g] || (active[g] = []);
+      var at = picked.indexOf(v);
+      if (at === -1) picked.push(v); else picked.splice(at, 1);
+      c.setAttribute('aria-pressed', at === -1 ? 'true' : 'false');
       apply();
     });
   });
+
+  clear.addEventListener('click', function () {
+    active = {};
+    chips.forEach(function (c) { c.setAttribute('aria-pressed', 'false'); });
+    q.value = '';
+    apply();
+    q.focus();
+  });
+
+  if (moreBtn && more) moreBtn.addEventListener('click', function () {
+    var open = moreBtn.getAttribute('aria-expanded') === 'true';
+    moreBtn.setAttribute('aria-expanded', open ? 'false' : 'true');
+    more.hidden = open;
+  });
+
   document.addEventListener('keydown', function (e) {
     if (e.key === '/' && document.activeElement !== q) { e.preventDefault(); q.focus(); }
     if (e.key === 'Escape' && document.activeElement === q) { q.value = ''; apply(); }
@@ -1247,45 +1364,97 @@ the numbers once can call a play in any of them.</p>
     )
 
 
+# Where a play hits, in the same five bands the calling language uses. The zone comes
+# out of the hole digit, which render.py has already checked against the play's own
+# diagram — so filtering by "off-tackle" cannot disagree with the card.
+HOLE_ZONES = [
+    ("inside", "Inside 0/1"),
+    ("guard-tackle", "Guard–tackle 2/3"),
+    ("off-tackle", "Off-tackle 4/5"),
+    ("outside", "Outside 6/7"),
+    ("wide", "Wide 8/9"),
+]
+ZONE_KEYS = [key for key, _ in HOLE_ZONES]
+
+
+def call_digits(call: str) -> tuple[str, str]:
+    """(zone, direction) for a call, or ("", "") if it has no two-digit number."""
+    m = re.search(r"\b(\d)(\d)\b", call or "")
+    if not m:
+        return "", ""
+    hole = int(m.group(2))
+    return ZONE_KEYS[hole // 2], ("right" if hole % 2 == 0 else "left")
+
+
+def chip(group: str, value: str, label: str, title: str = "") -> str:
+    t = f' title="{esc(title)}"' if title else ""
+    return (f'<button class="chip" data-group="{esc(group)}" data-value="{esc(value)}" '
+            f'aria-pressed="false"{t}>{esc(label)}</button>')
+
+
+def filter_group(label: str, chips: list[str]) -> str:
+    return (f'<div class="fgroup"><span class="flabel">{esc(label)}</span>'
+            f'<div class="chips">{"".join(chips)}</div></div>')
+
+
 def write_calls(formations: list[dict], defenses: dict) -> str:
-    rows = []
+    rows, carriers = [], []
     for f in formations:
         for p in f["_plays"]:
+            zone, direction = call_digits(p.get("call", ""))
+            carrier = p.get("ball_carrier", "")
+            if carrier and carrier not in carriers:
+                carriers.append(carrier)
             search = " ".join(
                 str(x).lower()
                 for x in (p["name"], p.get("call", ""), f["name"], f.get("family", ""),
-                          p.get("type", ""), p.get("ball_carrier", ""))
+                          p.get("type", ""), carrier, position_name(carrier), zone,
+                          direction)
             )
             rows.append(
                 f'<tr data-form="{esc(f["id"])}" data-type="{esc(p.get("type", ""))}" '
-                f'data-search="{esc(search)}">'
-                f'<td class="c"><span class="call">{esc(p.get("call", ""))}</span></td>'
-                f'<td><a href="{p_href(p)}">{esc(p["name"])}</a></td>'
-                f'<td>{esc(form_label(f))}</td>'
-                f'<td class="c">{esc(p.get("type", ""))}</td>'
-                f'<td class="c">{esc(p.get("ball_carrier", "—"))}</td></tr>'
+                f'data-zone="{esc(zone)}" data-dir="{esc(direction)}" '
+                f'data-carrier="{esc(carrier)}" data-search="{esc(search)}">'
+                f'<td class="c" data-label="Call">'
+                f'<span class="call">{esc(p.get("call", ""))}</span></td>'
+                f'<td data-label="Play"><a href="{p_href(p)}">{esc(p["name"])}</a></td>'
+                f'<td data-label="Formation">{esc(form_label(f))}</td>'
+                f'<td class="c" data-label="Type">{esc(p.get("type", ""))}</td>'
+                f'<td class="c" data-label="Ball" '
+                f'title="{esc(position_name(carrier))}">{esc(carrier or "—")}</td></tr>'
             )
-    chips = ['<button class="chip" data-filter="all" aria-pressed="true">All</button>']
-    for f in formations:
-        chips.append(
-            f'<button class="chip" data-filter="{esc(f["id"])}" '
-            f'aria-pressed="false">{esc(form_label(f))}</button>'
-        )
-    for t in ("run", "pass"):
-        chips.append(
-            f'<button class="chip" data-filter="{t}" aria-pressed="false">'
-            f"{t.capitalize()}</button>"
-        )
+
+    primary = (
+        filter_group("Formation",
+                     [chip("form", f["id"], form_label(f)) for f in formations])
+        + filter_group("Type", [chip("type", t, t.capitalize()) for t in ("run", "pass")])
+    )
+    more = (
+        filter_group("Where it hits",
+                     [chip("zone", key, label) for key, label in HOLE_ZONES])
+        + filter_group("Direction",
+                       [chip("dir", d, d.capitalize()) for d in ("right", "left")])
+        + filter_group("Who touches it",
+                       [chip("carrier", c, c, position_name(c))
+                        for c in sorted(carriers, key=lambda k: (
+                            CARD_ORDER.index(k) if k in CARD_ORDER else 99, k))])
+    )
 
     body = f"""<h1 class="page">Call sheet</h1>
-<p class="lede">Every play in the book. Type to filter by name, call, formation or ball
-carrier — press <kbd>/</kbd> to jump to the search box.</p>
+<p class="lede">Every play in the book. Pick as many filters as you like — choices inside a
+group widen the list, choices across groups narrow it. Press <kbd>/</kbd> to jump to the
+search box.</p>
 <div class="searchbar">
   <input id="q" type="search" placeholder="Search plays, calls, formations…"
          autocomplete="off" aria-label="Search plays">
 </div>
-<div class="chips">{''.join(chips)}</div>
-<p id="count"></p>
+{primary}
+<button type="button" class="morebtn" id="morebtn" aria-expanded="false"
+        aria-controls="morefilters">More filters<span class="badge" id="morebadge"
+        hidden></span></button>
+<div id="morefilters" hidden>{more}</div>
+<p class="countline"><span id="count"></span>
+  <button type="button" class="clearbtn" id="clear" hidden>Clear filters</button></p>
 <div class="tablewrap">
   <table class="calls" id="calls">
     <thead><tr>
@@ -1295,7 +1464,7 @@ carrier — press <kbd>/</kbd> to jump to the search box.</p>
       {chr(10).join('      ' + r for r in rows).strip()}
     </tbody>
   </table>
-  <p class="empty" id="empty" hidden>No plays match that search.</p>
+  <p class="empty" id="empty" hidden>No plays match those filters.</p>
 </div>"""
     return page(
         f"Call sheet — {SITE_TITLE}",

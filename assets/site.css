@@ -398,7 +398,35 @@ ul.coach li {
 .chip[aria-pressed="true"] {
   background: var(--accent-solid); border-color: var(--accent-solid); color: var(--on-accent);
 }
-#count { color: var(--muted); font-size: 14px; margin: 12px 0 10px; }
+/* Filters are grouped and labelled: within a group the choices widen the list, across
+   groups they narrow it, and a label on each group is what makes that legible. */
+.fgroup { display: flex; align-items: baseline; gap: 10px; margin: 0 0 8px; flex-wrap: wrap; }
+.flabel {
+  font-size: 11px; text-transform: uppercase; letter-spacing: 1.1px; color: var(--muted);
+  min-width: 96px; flex-shrink: 0;
+}
+@media (max-width: 620px) { .flabel { min-width: 0; width: 100%; } }
+
+.morebtn {
+  display: inline-flex; align-items: center; gap: 7px; cursor: pointer; font: inherit;
+  font-size: 13px; font-weight: 600; color: var(--accent-ink); background: none;
+  border: 0; padding: 6px 0; margin: 2px 0 0;
+}
+.morebtn::after { content: "▾"; font-size: 11px; }
+.morebtn[aria-expanded="true"]::after { content: "▴"; }
+.morebtn .badge {
+  background: var(--accent-solid); color: var(--on-accent); border-radius: 999px;
+  font-size: 11px; padding: 1px 7px; line-height: 1.6;
+}
+#morefilters { margin-top: 10px; padding-top: 12px; border-top: 1px solid var(--line-soft); }
+
+.countline { display: flex; align-items: center; gap: 12px; margin: 12px 0 10px; }
+.clearbtn {
+  cursor: pointer; font: inherit; font-size: 13px; font-weight: 600;
+  color: var(--accent-ink); background: none; border: 0; padding: 0;
+  text-decoration: underline;
+}
+#count { color: var(--muted); font-size: 14px; }
 .tablewrap {
   overflow-x: auto; background: var(--panel); border: 1px solid var(--line);
   border-radius: 12px; box-shadow: var(--shadow);
@@ -408,6 +436,37 @@ table.calls th, table.calls td {
   text-align: left; padding: 11px 14px; border-bottom: 1px solid var(--line-soft);
   font-size: 14.5px; color: var(--ink);
 }
+/* On a phone the five-column table needed 540px and scrolled sideways — on the one page
+   you actually hold on a sideline. Below 620px each row becomes a card instead: the call
+   big at the top, the play name under it, then a labelled meta line. Nothing scrolls. */
+@media (max-width: 620px) {
+  .tablewrap { overflow-x: visible; }
+  table.calls { min-width: 0; }
+  table.calls thead { display: none; }
+  table.calls, table.calls tbody, table.calls tr, table.calls td { display: block; width: 100%; }
+  table.calls tr {
+    padding: 12px 14px; border-bottom: 1px solid var(--line);
+  }
+  table.calls tr:last-child { border-bottom: 0; }
+  table.calls td { border: 0; padding: 0; text-align: left; }
+  table.calls td[data-label="Call"] { margin-bottom: 2px; }
+  table.calls td[data-label="Call"] .call { font-size: 16px; }
+  table.calls td[data-label="Play"] { font-size: 15px; margin-bottom: 6px; }
+  /* Formation, type and ball read as one line, each behind its own small label. */
+  table.calls td[data-label="Formation"],
+  table.calls td[data-label="Type"],
+  table.calls td[data-label="Ball"] {
+    display: inline-block; width: auto; font-size: 13px; color: var(--muted);
+    margin-right: 14px;
+  }
+  table.calls td[data-label="Formation"]::before,
+  table.calls td[data-label="Type"]::before,
+  table.calls td[data-label="Ball"]::before {
+    content: attr(data-label) " "; font-size: 10px; text-transform: uppercase;
+    letter-spacing: 1px; color: var(--muted); opacity: .75;
+  }
+}
+
 table.calls th {
   font-size: 11px; text-transform: uppercase; letter-spacing: 1.1px; color: var(--muted);
   background: var(--panel-2); position: sticky; top: 0;
@@ -494,7 +553,8 @@ footer.site a { color: var(--accent-ink); }
 /* -------------------------------------------------------------------- print -- */
 @media print {
   header.site, .drawer, .scrim, .skip, footer.site, .pager, .play-actions, .searchbar,
-  .chips, #count, .section-head, .btn, .print-intro,
+  .chips, .fgroup, .morebtn, #morefilters, .countline, #count, .clearbtn,
+  .section-head, .btn, .print-intro,
   .crumbs, .playbar { display: none !important; }
   :root {
     --ink: #111318; --ink-2: #333b49; --muted: #5b6472;
