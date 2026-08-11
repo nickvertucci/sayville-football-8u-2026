@@ -27,6 +27,11 @@ from common import (CARD_ORDER, call_prefix, esc, form_label, ordered_positions,
 
 SITE_TITLE = "Sayville 8U Tackle Football"
 
+# The attribute that marks the current page in a nav strip. Kept as a constant so the
+# f-strings that build those strips need no escaped quotes inside the {…} — Python only
+# allowed backslashes there from 3.12, and this generator should run on 3.11 too.
+ACTIVE_ATTR = ' class="active"'
+
 # The league's own document, and the verbatim text pulled out of it by
 # generator/extract_rulebook.py. Both live in rulebook/.
 RULEBOOK_DOCX = "2025-PAL-RULE-BOOK-updated-2025-10-05.docx"
@@ -1657,7 +1662,7 @@ def write_play_page(
     # Every play in this formation, so moving between them is one tap and you can see
     # where the play you are looking at sits in the install.
     siblings = "\n    ".join(
-        f'<a href="{p_href(p)}"{" class=\"active\"" if p["id"] == play["id"] else ""}>'
+        f'<a href="{p_href(p)}"{ACTIVE_ATTR if p["id"] == play["id"] else ""}>'
         f'{esc(p["name"])}</a>'
         for p in form["_plays"]
     )
@@ -1929,7 +1934,7 @@ def write_defense_page(front: dict, formations: list[dict], defenses: dict) -> s
                '<button type="button" class="btn solid" onclick="window.print()">Print</button>'
                "</div>")
     siblings = "".join(
-        f'<a href="{d_href(f)}"{' class=\"active\"' if fid == front["id"] else ""}>{esc(f["call"])}</a>'
+        f'<a href="{d_href(f)}"{ACTIVE_ATTR if fid == front["id"] else ""}>{esc(f["call"])}</a>'
         for fid, f in defenses.items()
     )
     crumbs = (f'<nav class="crumbs"><a href="index.html">Home</a><span>/</span>'
