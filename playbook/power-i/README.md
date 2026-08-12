@@ -35,6 +35,8 @@ The base I with the Z brought off the line and into the backfield, offset beside
 | [Power I Power Left](#power-i-power-left) | `Power I Left 35 Power` | run | TB |
 | [Power I Counter Right](#power-i-counter-right) | `Power I Left 34 Counter` | run | TB |
 | [Power I Counter Left](#power-i-counter-left) | `Power I Right 35 Counter` | run | TB |
+| [Power I Z Power Right](#power-i-z-power-right) | `Power I Left 46 Power` | run | Z |
+| [Power I Z Power Left](#power-i-z-power-left) | `Power I Right 45 Power` | run | Z |
 | [Power I Toss Right](#power-i-toss-right) | `Power I Right 38 Toss` | run | TB |
 | [Power I Toss Left](#power-i-toss-left) | `Power I Left 39 Toss` | run | TB |
 
@@ -162,6 +164,68 @@ The Z is set to the strong side and runs his lead path that way, which is exactl
 - The Z is the whole lie. He must run his Power lead path at Power speed and block somebody at the end of it — if he coasts, their backside linebacker never leaves.
 - The tailback's counter steps must be full speed and full length. A shuffle fools nobody.
 - The fullback's false step is one step, not two. Any more and he is late to the hole and the pulling guard is running alone.
+
+---
+
+## Power I Z Power Right
+
+**Call it:** `Power I Left 46 Power`
+
+![Power I Z Power Right](cards/pi-z-power-r.svg)
+
+The wider mirror of Z Power Left. The Z is set to the left, and he takes it all the way around the right end behind two lead blockers while the tailback sells Power back to the Z's side.
+
+| Position | Assignment |
+|---|---|
+| **LTE** | Cut off pursuit from behind. Everything runs away from you — chase flat down the line and never quit. |
+| **LT** | Block back. Take the first man on or inside you — nobody crosses your face. |
+| **LG** | Nobody is over you. Help the center on the nose for a count, then chase flat behind the play. |
+| **C** | You have the nose. Get your body between him and the ball and drive him away from where we are going. |
+| **RG** | PULL RIGHT. Get outside our end and turn up. Block the first man outside — usually the corner. You are the Z's last blocker. |
+| **RT** | Block down inside. Take the first man on or inside you and seal him — nobody crosses your face. |
+| **RTE** | Block the end over you out toward the sideline. The ball is going around you — do not let him make the tackle. |
+| **Z** **(ball)** | Take the handoff and get width. Stay behind the fullback until you are outside our end, then turn up hard. Turning up too early is the only way this loses yards. |
+| **QB** | Open right and get the ball to the Z deep and early, then carry out a fake up the middle. |
+| **FB** | Lead the Z around the right end. Block the first man outside our end, and if nobody shows, keep running and find the safety. |
+| **TB** | False step to the left and run the Power path that way with your arms tucked, selling the strong-side power. You are the reason the backside stays honest. |
+
+**Coaching points**
+
+- Do not call this until they are flying to the Z's side. His alignment is what makes it — if they are not honouring Power to him, run that first.
+- Two blockers lead it: the fullback and the pulling guard get outside in front of the Z. He stays behind them until he is past our end.
+- The tailback's fake to the strong side is the whole misdirection. He runs it full speed with his arms tucked or nobody chases it.
+- The Z must not turn up until he is outside our end. Coming all the way from the far side, the temptation to cut it up early is strong — the yards are around the corner.
+
+---
+
+## Power I Z Power Left
+
+**Call it:** `Power I Right 45 Power`
+
+![Power I Z Power Left](cards/pi-z-power-l.svg)
+
+The Z's alignment says Power to his side; this goes the other way. He takes the ball back across behind the fullback's kick-out and the pulling guard, while the tailback runs the strong-side Power to hold everybody who honored the Z.
+
+| Position | Assignment |
+|---|---|
+| **LTE** | Release inside off the end and take the playside linebacker. The end over you is getting kicked out — leave him alone. |
+| **LT** | Block down. Take the tackle on your inside shoulder and seal him inside — that is what opens the hole. |
+| **LG** | Nobody is over you. Help the center drive the nose for a count, then climb to the middle linebacker. |
+| **C** | You have the nose head up. Hands inside and do not let him cross your face to the playside. |
+| **RG** | PULL LEFT. Stay flat behind the line, turn up through the hole and block the first wrong shirt you see. Do not go around the pile — go through it. |
+| **RT** | Block back. Take the first man on or inside you — nobody crosses your face. |
+| **RTE** | Cut off pursuit from behind. You are the last one to the ball, so never quit on the play. |
+| **Z** **(ball)** | Take the handoff going left and aim at the outside hip of our left tackle. Follow the fullback's kick-out, then the guard. Stay tight to the blocks — do not bounce it outside. |
+| **QB** | Open left and hand the ball deep to the Z as he crosses, then carry out a fake to the right edge. |
+| **FB** | Kick the end out. Leave on the snap, aim at his outside hip and drive him toward the sideline — the Z runs inside your block. |
+| **TB** | False step to the right and run the Power path that way with your arms tucked, selling the strong-side power. You are the reason the backside stays honest. |
+
+**Coaching points**
+
+- Do not call this until they are flying to the Z's side. His alignment is what makes it — if they are not honouring Power to him, run that first.
+- Two blockers lead it: the fullback kicks the end and the backside guard pulls up through the hole. The Z stays tight behind them and does not bounce.
+- The tailback's fake to the strong side is the whole misdirection. He runs it full speed with his arms tucked or nobody chases it.
+- This is a patient run for the Z — he is coming from the far side, so the hole is a half-count later than it looks. Trust the blocks.
 
 ---
 
