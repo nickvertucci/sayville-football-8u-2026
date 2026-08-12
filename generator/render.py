@@ -5,6 +5,8 @@ Reads the JSON play files under `playbook/<formation>/plays/` and writes:
 
     playbook/<formation>/cards/<play-id>.svg          full printable card
     playbook/<formation>/cards/<play-id>-field.svg    diagram only, used by the website
+    playbook/<formation>/cards/<formation-id>-icon.svg  alignment only, no play — the
+                                                       formation icon used on cards
     playbook/<formation>/README.md                    formation index
     PLAYBOOK.md                                       the whole book, in install order
 
@@ -903,6 +905,32 @@ def render_defense_diagram(front: dict, frame: tuple[float, float, float]) -> st
     ])
 
 
+def render_formation_diagram(form: dict) -> str:
+    """Eleven spots, no play, no routes — the icon used on formation cards.
+
+    Deliberately not drawn in the shared book frame: that frame fits the deepest
+    route in the whole playbook, which would leave an alignment icon mostly blank
+    grass. This crops tight to the formation's own eleven spots instead, since there
+    is exactly one of these per formation and nothing to keep in scale against.
+    """
+    xs = [x for x, _ in form["alignment"].values()]
+    ys = [y for _, y in form["alignment"].values()]
+    margin = 1.15
+    left, right = min(xs) - margin, max(xs) + margin
+    top, bottom = max(ys) + margin, min(ys) - margin
+    vb_x, vb_y = fx(left), fy(top)
+    vb_w, vb_h = fx(right) - vb_x, fy(bottom) - vb_y
+    return "\n".join([
+        f'<svg xmlns="http://www.w3.org/2000/svg" width="{vb_w:.0f}" height="{vb_h:.0f}" '
+        f'viewBox="{vb_x:.0f} {vb_y:.0f} {vb_w:.0f} {vb_h:.0f}" '
+        f'font-family="Segoe UI, Helvetica, Arial, sans-serif" role="img">',
+        f'<title>{esc(form["name"])} — alignment</title>',
+        draw_field(),
+        draw_offense({}, form["alignment"]),
+        "</svg>",
+    ])
+
+
 def diagram_frame(formations: list[dict], defenses: dict) -> tuple[float, float, float]:
     """One frame that fits every play in the book.
 
@@ -1109,6 +1137,9 @@ def main() -> int:
             (cards_dir / f"{p['id']}-field.svg").write_text(
                 render_diagram(p, defenses, frame), encoding="utf-8"
             )
+        (cards_dir / f"{form['id']}-icon.svg").write_text(
+            render_formation_diagram(form), encoding="utf-8"
+        )
         (form["_dir"] / "README.md").write_text(write_formation_readme(form), encoding="utf-8")
 
     cards = DEFENSE_DIR / "cards"
