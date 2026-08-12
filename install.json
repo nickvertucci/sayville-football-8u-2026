@@ -1,9 +1,9 @@
 {
-  "intro": "Numbered practices, not dates. Rule 14.02 puts the first practice no earlier than July 15, and after that the calendar is yours — a rained-out session moves everything down one, it does not skip anything. The schedule is built out a practice at a time; everything not on it yet is listed at the bottom. Nothing is installed before the thing it depends on, and the build refuses to publish a schedule that breaks that.",
+  "intro": "Numbered practices, and the date we ran each one. The number is what matters — a rained-out session moves everything down one rather than skipping it. Rule 14.02 puts the first practice no earlier than July 15. The schedule is built out a practice at a time; every play not on it yet is listed at the bottom, and the build refuses to publish a practice that teaches something before the thing it depends on.",
   "phases": {
     "preseason": {
       "label": "Before the first game",
-      "note": "Start with the base run both directions and the front we line up in most downs. Do not add anything until these are real — alignment and one play they can run without thinking are worth more in September than six plays they half know."
+      "note": "Alignment first, plays second. We install the formation itself — every kid knowing his spot and seven on the line every snap — before we hand anybody the ball. A formation they can line up in without thinking is worth more in September than six plays they half know."
     },
     "season": {
       "label": "Once the season starts",
@@ -13,27 +13,26 @@
   "practices": [
     {
       "n": 1,
+      "date": "Mon, Aug 11",
       "phase": "preseason",
-      "focus": "Stance, snap, and the first run",
-      "plays": [
-        "i-dive-r",
-        "i-dive-l"
+      "focus": "Line up in the Regular I",
+      "warmup": "Three agility stations, fifteen minutes each, rotating through all three.",
+      "formations": [
+        "i-form"
       ],
-      "fronts": [
-        "5-3"
-      ],
-      "emphasis": "Alignment before anything. Count seven on the line every single snap, both sides of the ball, until it is boring."
+      "emphasis": "Install the formation itself — alignment only, no plays. Every kid knows his spot, and we count seven on the line every single snap until it is boring.",
+      "finisher": "Gold vs. Purple sprint relay race."
     },
     {
       "n": 2,
+      "date": "Thu, Aug 13",
       "phase": "preseason",
-      "focus": "Downhill between the tackles",
-      "plays": [
-        "i-iso-r",
-        "i-iso-l"
+      "focus": "Line up in the Regular I again",
+      "warmup": "Agility stations again — same three, rotating.",
+      "formations": [
+        "i-form"
       ],
-      "fronts": [],
-      "emphasis": "The tailback reads the fullback's block. That is the skill this whole formation exists to teach — give it the time."
+      "emphasis": "The same formation install. Reps on alignment and the seven-on-the-line count until they can do it without thinking — then we are ready to hand somebody the ball."
     }
   ]
 }

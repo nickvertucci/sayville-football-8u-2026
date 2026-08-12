@@ -408,6 +408,7 @@ def validate_install(schedule: dict, formations: list[dict], defenses: dict) -> 
     errors = []
     plays = {p["id"] for f in formations for p in f["_plays"]}
     fronts = set(defenses)
+    form_ids = {f["id"] for f in formations}
     practices = schedule.get("practices", [])
 
     numbers = [p.get("n") for p in practices]
@@ -433,6 +434,9 @@ def validate_install(schedule: dict, formations: list[dict], defenses: dict) -> 
                               f"{installed_at[fid]} and {n}")
             else:
                 installed_at[fid] = n
+        for fmid in practice.get("formations", []):
+            if fmid not in form_ids:
+                errors.append(f"install practice {n}: no such formation '{fmid}'")
         phase = practice.get("phase")
         if phase and phase not in schedule.get("phases", {}):
             errors.append(f"install practice {n}: unknown phase '{phase}'")
