@@ -34,8 +34,8 @@ is called.
 |---|---|
 | **1** | Quarterback — both formations |
 | **2** | Fullback — both formations |
-| **3** | Tailback in the Regular I and the Power I · right halfback in the Wishbone and the Full House |
-| **4** | The Z in the Regular I and the Power I · left halfback in the Wishbone and the Full House |
+| **3** | The tailback (TB) — behind the fullback in the I, the right-side back in the Wishbone and Full House |
+| **4** | The Z — the flanker in the I, the left-side back in the Wishbone and Full House |
 
 | Hole | Where |
 |---|---|
@@ -108,30 +108,30 @@ Same two digits, two more backs to number. No Z out wide, so nothing to declare 
 | Call | Play | Reads as |
 |---|---|---|
 | `Bone 21 Dive` / `Bone 20 Dive` | Bone Dive Left / Right | fullback, center–guard |
-| `Bone 35 Power` / `Bone 44 Power` | Bone Power Left / Right | the far halfback, tackle–end |
-| `Bone 39 Pitch` / `Bone 48 Pitch` | Bone Pitch Left / Right | the far halfback, all the way outside |
-| `Bone 35 Counter` / `Bone 44 Counter` | Bone Counter Left / Right | the far halfback, tackle–end |
+| `Bone 35 Power` / `Bone 44 Power` | Bone Power Left / Right | the far back, tackle–end |
+| `Bone 39 Pitch` / `Bone 48 Pitch` | Bone Pitch Left / Right | the far back, all the way outside |
+| `Bone 35 Counter` / `Bone 44 Counter` | Bone Counter Left / Right | the far back, tackle–end |
 | `Bone 16 Waggle` | Bone Waggle Right | quarterback, off the dive fake |
 
 The back digit follows whoever actually carries it, which is why everything to the right is
-a `4` — the *left* halfback takes the handoff on Power and Counter, and on Pitch he is the
-trailing back who catches the ball. The near halfback is not idle on Pitch; he leads and
+a `4` — the Z, the far back on the left, takes the handoff on Power and Counter, and on
+Pitch he is the trailing back who catches the ball. The near back (TB) is not idle on Pitch; he leads and
 kicks out the edge, which is why the carrier is the far one.
 
 ### Full House: formation + back + hole + play word
 
 Three backs in a straight line, so the digits are the Wishbone's digits — `2` fullback,
-`3` right halfback, `4` left halfback. A kid who knows `Bone` calls already knows `House`
+`3` the right back (TB), `4` the left back (Z). A kid who knows `Bone` calls already knows `House`
 calls.
 
 | Call | Play | Reads as |
 |---|---|---|
 | `House 21 Dive` / `House 20 Dive` | House Dive Left / Right | fullback, center–guard |
-| `House 35 Power` / `House 44 Power` | House Power Left / Right | the far halfback, tackle–end |
-| `House 39 Sweep` / `House 48 Sweep` | House Sweep Left / Right | the far halfback, all the way outside |
+| `House 35 Power` / `House 44 Power` | House Power Left / Right | the far back, tackle–end |
+| `House 39 Sweep` / `House 48 Sweep` | House Sweep Left / Right | the far back, all the way outside |
 | `House 17 Boot` | House Boot Left | quarterback, off the Power fake |
 
-Same rule as the Wishbone: the far halfback carries, because the near one is busy kicking
+Same rule as the Wishbone: the far back carries, because the near one is busy kicking
 out the edge.
 
 **Play word** — the Regular I carries `Dive`, `Iso`, `Slant`, `Toss`, `Counter`, `Sneak`,

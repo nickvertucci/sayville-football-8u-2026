@@ -2,34 +2,67 @@
   "name": "Wishbone",
   "family": "Wishbone",
   "summary": "Three backs in a Y. Three threats every snap and a symmetric formation, so every play works both directions.",
-  "personnel": "11 players, 2 tight ends, quarterback, fullback, 2 halfbacks",
-  "notes": "Three backs in a Y behind the quarterback: fullback close at three yards, then two halfbacks split wider and deeper. Both ends are tight and on the line. The formation is perfectly symmetric, so every play has a left and a right version with identical rules.",
+  "personnel": "11 players, 2 tight ends, quarterback, fullback, 2 backs",
+  "notes": "Three backs in a Y behind the quarterback: fullback close at three yards, then two backs split wider and deeper. Both ends are tight and on the line. The formation is perfectly symmetric, so every play has a left and a right version with identical rules.",
   "alignment": {
-    "LTE": [-4.2, -0.5],
-    "LT": [-2.8, -0.5],
-    "LG": [-1.4, -0.5],
-    "C": [0.0, -0.5],
-    "RG": [1.4, -0.5],
-    "RT": [2.8, -0.5],
-    "RTE": [4.2, -0.5],
-    "QB": [0.0, -1.5],
-    "FB": [0.0, -3.2],
-    "LH": [-2.9, -4.9],
-    "RH": [2.9, -4.9]
+    "LTE": [
+      -4.2,
+      -0.5
+    ],
+    "LT": [
+      -2.8,
+      -0.5
+    ],
+    "LG": [
+      -1.4,
+      -0.5
+    ],
+    "C": [
+      0.0,
+      -0.5
+    ],
+    "RG": [
+      1.4,
+      -0.5
+    ],
+    "RT": [
+      2.8,
+      -0.5
+    ],
+    "RTE": [
+      4.2,
+      -0.5
+    ],
+    "QB": [
+      0.0,
+      -1.5
+    ],
+    "FB": [
+      0.0,
+      -3.2
+    ],
+    "Z": [
+      -2.9,
+      -4.9
+    ],
+    "TB": [
+      2.9,
+      -4.9
+    ]
   },
   "eligible": [
     "LTE",
     "RTE",
     "FB",
-    "LH",
-    "RH",
+    "Z",
+    "TB",
     "QB"
   ],
   "backs": {
     "1": "QB",
     "2": "FB",
-    "3": "RH",
-    "4": "LH"
+    "3": "TB",
+    "4": "Z"
   },
   "coaching_notes": [
     "Three backs means three threats on every snap, and the defense has to be right about all three. That is the whole idea.",

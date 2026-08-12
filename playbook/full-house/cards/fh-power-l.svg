@@ -73,11 +73,11 @@
 <circle cx="351.0" cy="364.5" r="12.4" fill="#ffffff" stroke="#14213d" stroke-width="2.4"/>
 <text x="351.0" y="368.5" text-anchor="middle" font-size="11.5" font-weight="700" fill="#14213d">QB</text>
 <circle cx="275.4" cy="437.4" r="12.4" fill="#ffffff" stroke="#14213d" stroke-width="2.4"/>
-<text x="275.4" y="441.4" text-anchor="middle" font-size="11.5" font-weight="700" fill="#14213d">LH</text>
+<text x="275.4" y="441.4" text-anchor="middle" font-size="11.5" font-weight="700" fill="#14213d">Z</text>
 <circle cx="351.0" cy="437.4" r="12.4" fill="#ffffff" stroke="#14213d" stroke-width="2.4"/>
 <text x="351.0" y="441.4" text-anchor="middle" font-size="11.5" font-weight="700" fill="#14213d">FB</text>
 <circle cx="426.6" cy="437.4" r="12.4" fill="#ffffff" stroke="#b3001b" stroke-width="2.4"/>
-<text x="426.6" y="441.4" text-anchor="middle" font-size="11.5" font-weight="700" fill="#b3001b">RH</text>
+<text x="426.6" y="441.4" text-anchor="middle" font-size="11.5" font-weight="700" fill="#b3001b">TB</text>
 </g></g>
 <line x1="18" y1="540" x2="576" y2="540" stroke="#c8cdd6" stroke-width="1"/>
 <text x="18" y="560" font-size="11" font-weight="700" fill="#5b6472" letter-spacing="1">ASSIGNMENTS</text>
@@ -110,24 +110,24 @@
 <text x="331" y="578" font-size="12" fill="#111318">Cut off pursuit from behind. You are</text>
 <text x="331" y="596" font-size="12" fill="#111318">the last one to the ball, so never</text>
 <text x="331" y="612" font-size="12" fill="#111318">quit on the play.</text>
-<text x="297" y="630" font-size="12" font-weight="700" fill="#111318">QB</text>
-<text x="331" y="630" font-size="12" fill="#111318">Open left, let the near back and the</text>
-<text x="331" y="646" font-size="12" fill="#111318">fullback clear, then hand it deep to</text>
-<text x="331" y="664" font-size="12" fill="#111318">the far halfback. Carry out a fake to</text>
-<text x="331" y="680" font-size="12" fill="#111318">the edge afterwards.</text>
-<text x="297" y="698" font-size="12" font-weight="700" fill="#111318">FB</text>
-<text x="331" y="698" font-size="12" fill="#111318">Lead through the hole outside our</text>
-<text x="331" y="714" font-size="12" fill="#111318">tackle and block the first defender</text>
-<text x="331" y="732" font-size="12" fill="#111318">who shows in it. Get your head across</text>
-<text x="331" y="748" font-size="12" fill="#111318">him — do not wait for him to come to</text>
-<text x="331" y="766" font-size="12" fill="#111318">you.</text>
-<text x="297" y="782" font-size="12" font-weight="700" fill="#111318">LH</text>
-<text x="331" y="782" font-size="12" fill="#111318">Kick the end out. Aim at his outside</text>
-<text x="331" y="800" font-size="12" fill="#111318">hip and drive him toward the</text>
-<text x="331" y="816" font-size="12" fill="#111318">sideline. Everything runs inside of</text>
-<text x="331" y="834" font-size="12" fill="#111318">you, so never let him come</text>
-<text x="331" y="850" font-size="12" fill="#111318">underneath.</text>
-<text x="297" y="868" font-size="12" font-weight="700" fill="#111318">RH</text>
+<text x="297" y="630" font-size="12" font-weight="700" fill="#111318">Z</text>
+<text x="331" y="630" font-size="12" fill="#111318">Kick the end out. Aim at his outside</text>
+<text x="331" y="646" font-size="12" fill="#111318">hip and drive him toward the</text>
+<text x="331" y="664" font-size="12" fill="#111318">sideline. Everything runs inside of</text>
+<text x="331" y="680" font-size="12" fill="#111318">you, so never let him come</text>
+<text x="331" y="698" font-size="12" fill="#111318">underneath.</text>
+<text x="297" y="714" font-size="12" font-weight="700" fill="#111318">QB</text>
+<text x="331" y="714" font-size="12" fill="#111318">Open left, let the near back and the</text>
+<text x="331" y="732" font-size="12" fill="#111318">fullback clear, then hand it deep to</text>
+<text x="331" y="748" font-size="12" fill="#111318">the far back. Carry out a fake to the</text>
+<text x="331" y="766" font-size="12" fill="#111318">edge afterwards.</text>
+<text x="297" y="782" font-size="12" font-weight="700" fill="#111318">FB</text>
+<text x="331" y="782" font-size="12" fill="#111318">Lead through the hole outside our</text>
+<text x="331" y="800" font-size="12" fill="#111318">tackle and block the first defender</text>
+<text x="331" y="816" font-size="12" fill="#111318">who shows in it. Get your head across</text>
+<text x="331" y="834" font-size="12" fill="#111318">him — do not wait for him to come to</text>
+<text x="331" y="850" font-size="12" fill="#111318">you.</text>
+<text x="297" y="868" font-size="12" font-weight="700" fill="#111318">TB</text>
 <text x="331" y="868" font-size="12" fill="#111318">Take the handoff and aim at the</text>
 <text x="331" y="884" font-size="12" fill="#111318">outside hip of our tackle. Follow the</text>
 <text x="331" y="902" font-size="12" fill="#111318">fullback in and stay tight to his</text>
@@ -135,9 +135,9 @@
 <text x="331" y="936" font-size="12" fill="#111318">yards are inside the kick-out.</text>
 <line x1="18" y1="942" x2="576" y2="942" stroke="#c8cdd6" stroke-width="1"/>
 <text x="18" y="960" font-size="11" font-weight="700" fill="#5b6472" letter-spacing="1">COACHING POINTS</text>
-<text x="18" y="980" font-size="12" fill="#111318">This is Power without a pulling guard. The near halfback does the job the Z does</text>
-<text x="18" y="998" font-size="12" fill="#111318">in the Power I, and he does it from four yards deep with a running start — which</text>
-<text x="18" y="1014" font-size="12" fill="#111318">is easier, not harder.</text>
+<text x="18" y="980" font-size="12" fill="#111318">This is Power without a pulling guard. The near back does the job the Z does in</text>
+<text x="18" y="998" font-size="12" fill="#111318">the Power I, and he does it from four yards deep with a running start — which is</text>
+<text x="18" y="1014" font-size="12" fill="#111318">easier, not harder.</text>
 <text x="18" y="1032" font-size="12" fill="#111318">Three backs, three jobs: kick out, lead, carry. Teach the jobs and both</text>
 <text x="18" y="1048" font-size="12" fill="#111318">directions come free.</text>
 <text x="18" y="1066" font-size="12" fill="#111318">Drill the near back's kick-out on its own. If he blocks the end with square</text>

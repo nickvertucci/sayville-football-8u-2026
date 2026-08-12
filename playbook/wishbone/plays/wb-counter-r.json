@@ -7,8 +7,8 @@
   "type": "run",
   "defense": "5-3",
   "direction": "right",
-  "ball_carrier": "LH",
-  "purpose": "Misdirection off the pitch. The near halfback and the quarterback sell the pitch one way and the far halfback plants and comes all the way back. Nobody pulls: our end drives their end out, the guard climbs to the middle linebacker and the fullback leads up through the hole onto the playside linebacker, so the ball hits fast behind a lead blocker.",
+  "ball_carrier": "Z",
+  "purpose": "Misdirection off the pitch. The near back and the quarterback sell the pitch one way and the far back plants and comes all the way back. Nobody pulls: our end drives their end out, the guard climbs to the middle linebacker and the fullback leads up through the hole onto the playside linebacker, so the ball hits fast behind a lead blocker.",
   "assignments": {
     "LTE": {
       "rule": "Cut off pursuit from behind. You are the last one to the ball, so never quit on the play.",
@@ -61,7 +61,7 @@
       ]
     },
     "QB": {
-      "rule": "Fake the pitch to the left, then turn back and hand the ball to the other halfback coming across. The fake comes first.",
+      "rule": "Fake the pitch to the left, then turn back and hand the ball to the other back coming across. The fake comes first.",
       "type": "fake",
       "path": [
         [-1.2, -0.5],
@@ -78,7 +78,7 @@
         [3.2, 6.2]
       ]
     },
-    "LH": {
+    "Z": {
       "rule": "Take two hard steps toward the fake, then plant and come all the way back behind the pulling guard.",
       "type": "run",
       "path": [
@@ -88,7 +88,7 @@
         [6.2, 6.9]
       ]
     },
-    "RH": {
+    "TB": {
       "rule": "Run the full pitch path away at full speed with your arms tucked. You are the lie.",
       "type": "fake",
       "path": [

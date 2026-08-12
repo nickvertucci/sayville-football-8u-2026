@@ -7,8 +7,8 @@
   "type": "run",
   "defense": "5-3",
   "direction": "right",
-  "ball_carrier": "LH",
-  "purpose": "All three backs get a job. The near halfback kicks the end out, the fullback leads through the hole, and the far halfback carries it in behind them both. Two lead blockers arrive in the same gap before the linebackers can fit.",
+  "ball_carrier": "Z",
+  "purpose": "All three backs get a job. The near back kicks the end out, the fullback leads through the hole, and the far back carries it in behind them both. Two lead blockers arrive in the same gap before the linebackers can fit.",
   "assignments": {
     "LTE": {
       "rule": "Cut off pursuit from behind. You are the last one to the ball, so never quit on the play.",
@@ -61,7 +61,7 @@
       ]
     },
     "QB": {
-      "rule": "Open right, let the near back and the fullback clear, then hand it deep to the far halfback. Carry out a fake to the edge afterwards.",
+      "rule": "Open right, let the near back and the fullback clear, then hand it deep to the far back. Carry out a fake to the edge afterwards.",
       "type": "fake",
       "path": [
         [1.0, -0.6],
@@ -69,7 +69,7 @@
         [4.4, -1.6]
       ]
     },
-    "LH": {
+    "Z": {
       "rule": "Take the handoff and aim at the outside hip of our tackle. Follow the fullback in and stay tight to his back. Do not bounce it outside — the yards are inside the kick-out.",
       "type": "run",
       "path": [
@@ -87,7 +87,7 @@
         [3.4, 3.4]
       ]
     },
-    "RH": {
+    "TB": {
       "rule": "Kick the end out. Aim at his outside hip and drive him toward the sideline. Everything runs inside of you, so never let him come underneath.",
       "type": "block",
       "path": [
@@ -97,7 +97,7 @@
     }
   },
   "coaching_points": [
-    "This is Power without a pulling guard. The near halfback does the job the Z does in the Power I, and he does it from four yards deep with a running start — which is easier, not harder.",
+    "This is Power without a pulling guard. The near back does the job the Z does in the Power I, and he does it from four yards deep with a running start — which is easier, not harder.",
     "Three backs, three jobs: kick out, lead, carry. Teach the jobs and both directions come free.",
     "Drill the near back's kick-out on its own. If he blocks the end with square shoulders the end slides underneath and makes the tackle in the backfield — he has to attack the outside hip.",
     "The carrier is the far back so that he has time to see the two blocks develop in front of him. Do not swap the jobs to get your best runner the ball sooner.",

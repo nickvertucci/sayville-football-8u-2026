@@ -7,8 +7,8 @@
   "type": "run",
   "defense": "5-3",
   "direction": "right",
-  "ball_carrier": "LH",
-  "purpose": "Get outside in a hurry. The fullback holds the middle and then blocks, our end seals their end inside, and the near halfback gets to the corner and kicks him toward the sideline. The far halfback trails the quarterback, takes the pitch on the run and turns up inside that block.",
+  "ball_carrier": "Z",
+  "purpose": "Get outside in a hurry. The fullback holds the middle and then blocks, our end seals their end inside, and the near back gets to the corner and kicks him toward the sideline. The far back trails the quarterback, takes the pitch on the run and turns up inside that block.",
   "assignments": {
     "LTE": {
       "rule": "Cut off pursuit from behind. You are the last one to the ball, so never quit on the play.",
@@ -61,7 +61,7 @@
       ]
     },
     "QB": {
-      "rule": "Fake the dive to the fullback, attack the outside, and pitch the ball to the trailing halfback before you get touched. Pitch early, not late.",
+      "rule": "Fake the dive to the fullback, attack the outside, and pitch the ball to the trailing back before you get touched. Pitch early, not late.",
       "type": "fake",
       "path": [
         [1.4, -0.5],
@@ -78,7 +78,7 @@
         [3.2, 6.2]
       ]
     },
-    "LH": {
+    "Z": {
       "rule": "Run flat behind everybody, stay outside and behind the quarterback, and catch the pitch on the run. Never get ahead of him — a pitch that goes forward is a fumble.",
       "type": "run",
       "path": [
@@ -89,7 +89,7 @@
         [10.5, 7.1]
       ]
     },
-    "RH": {
+    "TB": {
       "rule": "Beat the ball to the corner and block him. Drive him toward the sideline so the ball can turn up inside you. He is the only man out there who can catch it.",
       "type": "block",
       "path": [
@@ -102,7 +102,7 @@
   "coaching_points": [
     "The pitch goes early. A quarterback who waits to be tackled first will pitch it on the ground.",
     "This is not a read at this age — tell him before the snap that he is pitching it.",
-    "The halfback taking the pitch must stay behind the quarterback until he has the ball. Getting ahead means the pitch goes forward, which is a fumble waiting to happen.",
-    "Everything depends on the corner being blocked. If our halfback cannot get out there in time, run Power instead."
+    "The back taking the pitch must stay behind the quarterback until he has the ball. Getting ahead means the pitch goes forward, which is a fumble waiting to happen.",
+    "Everything depends on the corner being blocked. If our back cannot get out there in time, run Power instead."
   ]
 }

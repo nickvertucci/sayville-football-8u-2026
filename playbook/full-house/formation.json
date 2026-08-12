@@ -4,38 +4,71 @@
   "name": "Full House",
   "family": "Full House",
   "summary": "Three backs in a straight line across, all at the same depth. Perfectly balanced, perfectly symmetric, and the defense cannot tell from the alignment which of the three is getting it.",
-  "personnel": "11 players, 2 tight ends, quarterback, fullback, 2 halfbacks",
-  "notes": "The full house T. Both ends are tight and on the line, and the three backs sit shoulder to shoulder four yards deep — left halfback, fullback, right halfback, evenly spaced. Nobody is offset and nobody is deeper, so the alignment gives away nothing. The formation is perfectly symmetric, so every play has a left and a right version off identical rules.",
+  "personnel": "11 players, 2 tight ends, quarterback, fullback, 2 backs",
+  "notes": "The full house T. Both ends are tight and on the line, and the three backs sit shoulder to shoulder four yards deep — left back, fullback, right back, evenly spaced. Nobody is offset and nobody is deeper, so the alignment gives away nothing. The formation is perfectly symmetric, so every play has a left and a right version off identical rules.",
   "alignment": {
-    "LTE": [-4.2, -0.5],
-    "LT": [-2.8, -0.5],
-    "LG": [-1.4, -0.5],
-    "C": [0.0, -0.5],
-    "RG": [1.4, -0.5],
-    "RT": [2.8, -0.5],
-    "RTE": [4.2, -0.5],
-    "QB": [0.0, -1.5],
-    "LH": [-2.8, -4.2],
-    "FB": [0.0, -4.2],
-    "RH": [2.8, -4.2]
+    "LTE": [
+      -4.2,
+      -0.5
+    ],
+    "LT": [
+      -2.8,
+      -0.5
+    ],
+    "LG": [
+      -1.4,
+      -0.5
+    ],
+    "C": [
+      0.0,
+      -0.5
+    ],
+    "RG": [
+      1.4,
+      -0.5
+    ],
+    "RT": [
+      2.8,
+      -0.5
+    ],
+    "RTE": [
+      4.2,
+      -0.5
+    ],
+    "QB": [
+      0.0,
+      -1.5
+    ],
+    "Z": [
+      -2.8,
+      -4.2
+    ],
+    "FB": [
+      0.0,
+      -4.2
+    ],
+    "TB": [
+      2.8,
+      -4.2
+    ]
   },
   "eligible": [
     "LTE",
     "RTE",
-    "LH",
+    "Z",
     "FB",
-    "RH",
+    "TB",
     "QB"
   ],
   "backs": {
     "1": "QB",
     "2": "FB",
-    "3": "RH",
-    "4": "LH"
+    "3": "TB",
+    "4": "Z"
   },
   "coaching_notes": [
-    "The back digits are the same as the Wishbone on purpose — 2 is the fullback, 3 is the right halfback, 4 is the left halfback. A kid who has learned Bone calls already knows House calls.",
-    "Three backs at the same depth is the whole idea. In the Wishbone the fullback is closer than the halfbacks and a smart defense reads it. Here all three leave the same spot at the same time.",
+    "The back digits are the same as the Wishbone on purpose — 2 is the fullback, 3 is the right back, 4 is the left back. A kid who has learned Bone calls already knows House calls.",
+    "Three backs at the same depth is the whole idea. In the Wishbone the fullback is closer than the backs and a smart defense reads it. Here all three leave the same spot at the same time.",
     "Every run uses all three backs: one carries, one kicks out, one leads through. Teach the three jobs, not the three plays — then the same three jobs work in both directions.",
     "Count seven on the line every snap. There is no Z to creep up here, so this is the formation least likely to get you an illegal formation flag.",
     "Symmetric formation, symmetric rules — the kids learn one play and get two."

@@ -64,7 +64,7 @@
       ]
     },
     "QB": {
-      "rule": "Fake the handoff to the far halfback with both hands, hide the ball on your back hip, and get to the edge the other way. Run it if it is open. Only throw if a defender comes up to take you.",
+      "rule": "Fake the handoff to the far back with both hands, hide the ball on your back hip, and get to the edge the other way. Run it if it is open. Only throw if a defender comes up to take you.",
       "type": "run",
       "path": [
         [1.0, -0.6],
@@ -73,7 +73,7 @@
         [-6.6, 1.8]
       ]
     },
-    "LH": {
+    "Z": {
       "rule": "Run your Power path to the right at full speed with your arms tucked like you have the ball. Sell it all the way — you are the reason nobody stays home.",
       "type": "fake",
       "path": [
@@ -90,7 +90,7 @@
         [3.4, 3.4]
       ]
     },
-    "RH": {
+    "TB": {
       "rule": "Run your kick-out path at the end like Power is coming, then peel back and protect the quarterback's outside shoulder.",
       "type": "block",
       "path": [

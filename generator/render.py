@@ -71,9 +71,12 @@ MIRROR = {
     "LTE": "RTE", "RTE": "LTE",
     "LT": "RT", "RT": "LT",
     "LG": "RG", "RG": "LG",
-    "LW": "RW", "RW": "LW",
-    "LH": "RH", "RH": "LH",
-    "C": "C", "QB": "QB", "FB": "FB", "TB": "TB",
+    "C": "C", "QB": "QB", "FB": "FB",
+    # The two halfbacks of a symmetric formation are named TB (right) and Z (left),
+    # so mirroring a right-handed play swaps them. Only the symmetric Wishbone and Full
+    # House use mirror_of; the Regular I and Power I keep TB and Z on fixed sides and
+    # author their left-handed plays by hand, so this swap never touches them.
+    "TB": "Z", "Z": "TB",
 }
 
 COLORS = {

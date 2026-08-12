@@ -73,11 +73,11 @@
 <circle cx="351.0" cy="364.5" r="12.4" fill="#ffffff" stroke="#14213d" stroke-width="2.4"/>
 <text x="351.0" y="368.5" text-anchor="middle" font-size="11.5" font-weight="700" fill="#14213d">QB</text>
 <circle cx="275.4" cy="437.4" r="12.4" fill="#ffffff" stroke="#b3001b" stroke-width="2.4"/>
-<text x="275.4" y="441.4" text-anchor="middle" font-size="11.5" font-weight="700" fill="#b3001b">LH</text>
+<text x="275.4" y="441.4" text-anchor="middle" font-size="11.5" font-weight="700" fill="#b3001b">Z</text>
 <circle cx="351.0" cy="437.4" r="12.4" fill="#ffffff" stroke="#14213d" stroke-width="2.4"/>
 <text x="351.0" y="441.4" text-anchor="middle" font-size="11.5" font-weight="700" fill="#14213d">FB</text>
 <circle cx="426.6" cy="437.4" r="12.4" fill="#ffffff" stroke="#14213d" stroke-width="2.4"/>
-<text x="426.6" y="441.4" text-anchor="middle" font-size="11.5" font-weight="700" fill="#14213d">RH</text>
+<text x="426.6" y="441.4" text-anchor="middle" font-size="11.5" font-weight="700" fill="#14213d">TB</text>
 </g></g>
 <line x1="18" y1="540" x2="576" y2="540" stroke="#c8cdd6" stroke-width="1"/>
 <text x="18" y="560" font-size="11" font-weight="700" fill="#5b6472" letter-spacing="1">ASSIGNMENTS</text>
@@ -114,23 +114,23 @@
 <text x="331" y="596" font-size="12" fill="#111318">sideline. Stay on him — the ball is</text>
 <text x="331" y="612" font-size="12" fill="#111318">going around you and he cannot be the</text>
 <text x="331" y="630" font-size="12" fill="#111318">one to make the tackle.</text>
-<text x="297" y="646" font-size="12" font-weight="700" fill="#111318">QB</text>
-<text x="331" y="646" font-size="12" fill="#111318">Open right, let the near back go, and</text>
-<text x="331" y="664" font-size="12" fill="#111318">hand it deep to the far halfback as</text>
-<text x="331" y="680" font-size="12" fill="#111318">he crosses. Then carry out a fake up</text>
-<text x="331" y="698" font-size="12" fill="#111318">the middle.</text>
-<text x="297" y="714" font-size="12" font-weight="700" fill="#111318">FB</text>
-<text x="331" y="714" font-size="12" fill="#111318">Fill hard through the middle like</text>
-<text x="331" y="732" font-size="12" fill="#111318">Dive is coming, then block anyone</text>
-<text x="331" y="748" font-size="12" fill="#111318">chasing from the inside. You buy the</text>
-<text x="331" y="766" font-size="12" fill="#111318">corner half a second.</text>
-<text x="297" y="782" font-size="12" font-weight="700" fill="#111318">LH</text>
-<text x="331" y="782" font-size="12" fill="#111318">Take the handoff and get width first.</text>
-<text x="331" y="800" font-size="12" fill="#111318">Stay behind your blockers until you</text>
-<text x="331" y="816" font-size="12" fill="#111318">are outside our end, then turn up</text>
-<text x="331" y="834" font-size="12" fill="#111318">hard. Turning up too early is the</text>
-<text x="331" y="850" font-size="12" fill="#111318">only way this play loses yards.</text>
-<text x="297" y="868" font-size="12" font-weight="700" fill="#111318">RH</text>
+<text x="297" y="646" font-size="12" font-weight="700" fill="#111318">Z</text>
+<text x="331" y="646" font-size="12" fill="#111318">Take the handoff and get width first.</text>
+<text x="331" y="664" font-size="12" fill="#111318">Stay behind your blockers until you</text>
+<text x="331" y="680" font-size="12" fill="#111318">are outside our end, then turn up</text>
+<text x="331" y="698" font-size="12" fill="#111318">hard. Turning up too early is the</text>
+<text x="331" y="714" font-size="12" fill="#111318">only way this play loses yards.</text>
+<text x="297" y="732" font-size="12" font-weight="700" fill="#111318">QB</text>
+<text x="331" y="732" font-size="12" fill="#111318">Open right, let the near back go, and</text>
+<text x="331" y="748" font-size="12" fill="#111318">hand it deep to the far back as he</text>
+<text x="331" y="766" font-size="12" fill="#111318">crosses. Then carry out a fake up the</text>
+<text x="331" y="782" font-size="12" fill="#111318">middle.</text>
+<text x="297" y="800" font-size="12" font-weight="700" fill="#111318">FB</text>
+<text x="331" y="800" font-size="12" fill="#111318">Fill hard through the middle like</text>
+<text x="331" y="816" font-size="12" fill="#111318">Dive is coming, then block anyone</text>
+<text x="331" y="834" font-size="12" fill="#111318">chasing from the inside. You buy the</text>
+<text x="331" y="850" font-size="12" fill="#111318">corner half a second.</text>
+<text x="297" y="868" font-size="12" font-weight="700" fill="#111318">TB</text>
 <text x="331" y="868" font-size="12" fill="#111318">Get outside fast and lead the carrier</text>
 <text x="331" y="884" font-size="12" fill="#111318">around the corner. Block the first</text>
 <text x="331" y="902" font-size="12" fill="#111318">man who shows up outside our end, and</text>
