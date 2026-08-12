@@ -1,0 +1,110 @@
+{
+  "id": "pi-z-power-r",
+  "order": 5,
+  "formation": "power-i",
+  "name": "Power I Z Power Right",
+  "call": "Power I Left 46 Power",
+  "type": "run",
+  "defense": "5-3",
+  "direction": "right",
+  "ball_carrier": "Z",
+  "alignment": {
+    "Z": [-2.6, -3.3]
+  },
+  "purpose": "The wider mirror of Z Power Left. The Z is set to the left, and he takes it all the way around the right end behind two lead blockers while the tailback sells Power back to the Z's side.",
+  "assignments": {
+    "LTE": {
+      "rule": "Cut off pursuit from behind. Everything runs away from you — chase flat down the line and never quit.",
+      "type": "block",
+      "path": [
+        [1.2, 0.8]
+      ]
+    },
+    "LT": {
+      "rule": "Block back. Take the first man on or inside you — nobody crosses your face.",
+      "type": "block",
+      "path": [
+        [-1.0, 0.7]
+      ]
+    },
+    "LG": {
+      "rule": "Nobody is over you. Help the center on the nose for a count, then chase flat behind the play.",
+      "type": "block",
+      "path": [
+        [0.8, 1.0],
+        [2.6, 1.4]
+      ]
+    },
+    "C": {
+      "rule": "You have the nose. Get your body between him and the ball and drive him away from where we are going.",
+      "type": "block",
+      "path": [
+        [-0.5, 1.1]
+      ]
+    },
+    "RG": {
+      "rule": "PULL RIGHT. Get outside our end and turn up. Block the first man outside — usually the corner. You are the Z's last blocker.",
+      "type": "block",
+      "path": [
+        [1.2, -0.8],
+        [4.4, 0.2],
+        [6.4, 2.0]
+      ]
+    },
+    "RT": {
+      "rule": "Block down inside. Take the first man on or inside you and seal him — nobody crosses your face.",
+      "type": "block",
+      "path": [
+        [-0.5, 1.2]
+      ]
+    },
+    "RTE": {
+      "rule": "Block the end over you out toward the sideline. The ball is going around you — do not let him make the tackle.",
+      "type": "block",
+      "path": [
+        [1.2, 1.2]
+      ]
+    },
+    "Z": {
+      "rule": "Take the handoff and get width. Stay behind the fullback until you are outside our end, then turn up hard. Turning up too early is the only way this loses yards.",
+      "type": "run",
+      "path": [
+        [2.5, 0.8],
+        [6.0, 2.0],
+        [8.0, 4.0],
+        [8.5, 6.5]
+      ]
+    },
+    "QB": {
+      "rule": "Open right and get the ball to the Z deep and early, then carry out a fake up the middle.",
+      "type": "fake",
+      "path": [
+        [0.8, -0.5],
+        [2.0, -1.0]
+      ]
+    },
+    "FB": {
+      "rule": "Lead the Z around the right end. Block the first man outside our end, and if nobody shows, keep running and find the safety.",
+      "type": "block",
+      "path": [
+        [2.0, 1.2],
+        [5.0, 2.4],
+        [6.4, 3.6]
+      ]
+    },
+    "TB": {
+      "rule": "False step to the left and run the Power path that way with your arms tucked, selling the strong-side power. You are the reason the backside stays honest.",
+      "type": "fake",
+      "path": [
+        [-1.2, 1.5],
+        [-2.6, 3.6]
+      ]
+    }
+  },
+  "coaching_points": [
+    "Do not call this until they are flying to the Z's side. His alignment is what makes it — if they are not honouring Power to him, run that first.",
+    "Two blockers lead it: the fullback and the pulling guard get outside in front of the Z. He stays behind them until he is past our end.",
+    "The tailback's fake to the strong side is the whole misdirection. He runs it full speed with his arms tucked or nobody chases it.",
+    "The Z must not turn up until he is outside our end. Coming all the way from the far side, the temptation to cut it up early is strong — the yards are around the corner."
+  ]
+}

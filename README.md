@@ -98,6 +98,7 @@ the other way.
 |---|---|---|
 | `Power I Right 34 Power` / `Power I Left 35 Power` | Power I Power Right / Left | tailback, tackle–end |
 | `Power I Right 35 Counter` / `Power I Left 34 Counter` | Power I Counter Left / Right | tailback, back the other way |
+| `Power I Left 46 Power` / `Power I Right 45 Power` | Power I Z Power Right / Left | the Z, away from his side behind two leads |
 | `Power I Right 38 Toss` / `Power I Left 39 Toss` | Power I Toss Right / Left | tailback, all the way outside |
 
 ### Wishbone: formation + back + hole + play word
@@ -141,12 +142,12 @@ least one play-action pass, on the play word `Boot` or `Waggle`.
 
 ## Formations
 
-Four formations, 50 plays, in teaching order:
+Four formations, 52 plays, in teaching order:
 
 | # | Formation | Family | Plays | What it is for |
 |---|---|---|---|---|
 | 1 | **Regular I** | Regular I | 26 | Base offense. Fullback and tailback stacked, so the same look threatens the middle and both edges. Teaches a back to read a block, and carries the Power, Wedge and Jet package built around the Z. |
-| 2 | **Power I** | Power I | 6 | The base I with the Z dropped into the backfield as a third back — an extra runner and blocker at the point of attack. Power, Counter and Toss, each way. |
+| 2 | **Power I** | Power I | 8 | The base I with the Z dropped into the backfield as a third back — an extra runner and blocker at the point of attack. Power, Counter and Toss each way, plus a Z Power that hands the third back the ball and leads him the other way. |
 | 3 | **Wishbone** | Wishbone | 10 | Three backs, three threats every snap. Symmetric, so every play works both directions off identical rules. |
 | 4 | **Full House** | Full House | 8 | Three backs in a straight line at the same depth. The alignment gives nothing away, and every run splits the same three jobs — carry, kick out, lead. |
 
@@ -215,7 +216,7 @@ on a phone, with the assignments read underneath it rather than squeezed in besi
 
 ## Printing
 
-- **Print book** (top bar) → 54 landscape pages: 50 plays then 4 defensive fronts,
+- **Print book** (top bar) → 56 landscape pages: 52 plays then 4 defensive fronts,
   one per sheet.
 - **Print** (on any play or front page) → that one card, one landscape sheet.
 
@@ -293,7 +294,7 @@ Only the JSON under `playbook/` and `defense/` is source. Everything else with a
 
 ## Every offensive play is drawn and blocked against the 5-3
 
-Forty-six of the 50 plays are drawn against the **5-3**, and their assignments are
+Forty-eight of the 52 plays are drawn against the **5-3**, and their assignments are
 written for that front specifically rather than in general terms. The four exceptions are
 the short-yardage plays — **Regular I Sneak** and **Regular I Wedge**, each way — drawn
 against the **6-3** because that is the heaviest front the league allows and it is what
