@@ -266,6 +266,39 @@ h1.page { font-size: clamp(23px, 5vw, 33px); letter-spacing: -.5px; margin: 22px
   border-radius: 4px; padding: 2px 7px; font-family: inherit;
 }
 
+/* Formation and defense cards on the home page carry an image, so the padding
+   moves off the anchor and onto .body — plain .fcard (no thumb, e.g. defense.html)
+   is untouched. */
+.fcard.imgcard { padding: 0; overflow: hidden; }
+.fcard.imgcard .thumb {
+  display: flex; align-items: center; justify-content: center; height: 130px;
+  background: #fff; border-bottom: 1px solid var(--line); padding: 10px 14px;
+}
+.fcard.imgcard .thumb img {
+  display: block; width: auto; height: auto; max-width: 100%; max-height: 100%;
+}
+.fcard.imgcard .body { padding: 14px 17px 16px; }
+
+.icon { width: 20px; height: 20px; flex: none; }
+.quicklinks { display: flex; flex-wrap: wrap; gap: 10px; margin: 4px 0 8px; }
+.qlink {
+  display: flex; align-items: center; gap: 8px; text-decoration: none; color: var(--ink);
+  background: var(--panel); border: 1px solid var(--line); border-radius: 10px;
+  padding: 10px 16px; font-size: 14px; font-weight: 600; box-shadow: var(--shadow);
+  transition: box-shadow .15s, transform .15s, border-color .15s;
+}
+.qlink:hover {
+  border-color: var(--accent); transform: translateY(-1px); box-shadow: var(--shadow-lg);
+}
+.qlink .icon { color: var(--accent-ink); }
+
+.numgrid { display: grid; gap: 16px; grid-template-columns: 1fr; margin-bottom: 8px; }
+@media (min-width: 680px) { .numgrid { grid-template-columns: repeat(2, minmax(0,1fr)); } }
+.numcap {
+  margin: 0 0 8px; font-size: 12.5px; font-weight: 700; color: var(--muted);
+  text-transform: uppercase; letter-spacing: .4px;
+}
+
 .plist { display: grid; gap: 12px; grid-template-columns: 1fr; }
 @media (min-width: 620px) { .plist { grid-template-columns: repeat(2, minmax(0,1fr)); } }
 @media (min-width: 900px) { .plist { grid-template-columns: repeat(3, minmax(0,1fr)); } }

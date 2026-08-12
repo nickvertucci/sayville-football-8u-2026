@@ -308,6 +308,39 @@ h1.page { font-size: clamp(23px, 5vw, 33px); letter-spacing: -.5px; margin: 22px
   border-radius: 4px; padding: 2px 7px; font-family: inherit;
 }
 
+/* Formation and defense cards on the home page carry an image, so the padding
+   moves off the anchor and onto .body — plain .fcard (no thumb, e.g. defense.html)
+   is untouched. */
+.fcard.imgcard { padding: 0; overflow: hidden; }
+.fcard.imgcard .thumb {
+  display: flex; align-items: center; justify-content: center; height: 130px;
+  background: #fff; border-bottom: 1px solid var(--line); padding: 10px 14px;
+}
+.fcard.imgcard .thumb img {
+  display: block; width: auto; height: auto; max-width: 100%; max-height: 100%;
+}
+.fcard.imgcard .body { padding: 14px 17px 16px; }
+
+.icon { width: 20px; height: 20px; flex: none; }
+.quicklinks { display: flex; flex-wrap: wrap; gap: 10px; margin: 4px 0 8px; }
+.qlink {
+  display: flex; align-items: center; gap: 8px; text-decoration: none; color: var(--ink);
+  background: var(--panel); border: 1px solid var(--line); border-radius: 10px;
+  padding: 10px 16px; font-size: 14px; font-weight: 600; box-shadow: var(--shadow);
+  transition: box-shadow .15s, transform .15s, border-color .15s;
+}
+.qlink:hover {
+  border-color: var(--accent); transform: translateY(-1px); box-shadow: var(--shadow-lg);
+}
+.qlink .icon { color: var(--accent-ink); }
+
+.numgrid { display: grid; gap: 16px; grid-template-columns: 1fr; margin-bottom: 8px; }
+@media (min-width: 680px) { .numgrid { grid-template-columns: repeat(2, minmax(0,1fr)); } }
+.numcap {
+  margin: 0 0 8px; font-size: 12.5px; font-weight: 700; color: var(--muted);
+  text-transform: uppercase; letter-spacing: .4px;
+}
+
 .plist { display: grid; gap: 12px; grid-template-columns: 1fr; }
 @media (min-width: 620px) { .plist { grid-template-columns: repeat(2, minmax(0,1fr)); } }
 @media (min-width: 900px) { .plist { grid-template-columns: repeat(3, minmax(0,1fr)); } }
@@ -1021,6 +1054,25 @@ def js_url() -> str:
     return asset_url("site.js", SITE_JS.strip() + "\n")
 
 
+# Small inline icons — no external asset, no network request, and they inherit
+# `currentColor` so they follow the surrounding text through light and dark mode.
+_ICON_PATHS = {
+    "search": '<circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>',
+    "calendar": ('<rect x="3" y="4" width="18" height="17" rx="2"/>'
+                 '<line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/>'
+                 '<line x1="3" y1="10" x2="21" y2="10"/>'),
+    "shield": '<path d="M12 2 L20 6 V11 C20 16.5 16.5 20.5 12 22 C7.5 20.5 4 16.5 4 11 V6 Z"/>',
+    "printer": ('<path d="M6 9V3h12v6"/><rect x="5" y="9" width="14" height="7" rx="1"/>'
+                '<path d="M8 14h8v7H8z"/>'),
+}
+
+
+def icon(name: str, cls: str = "icon") -> str:
+    return (f'<svg class="{cls}" viewBox="0 0 24 24" fill="none" stroke="currentColor" '
+            f'stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" '
+            f'aria-hidden="true">{_ICON_PATHS[name]}</svg>')
+
+
 def f_href(form: dict) -> str:
     return f"f-{form['id']}.html"
 
@@ -1040,6 +1092,10 @@ def def_src(front: dict) -> str:
 def card_src(form: dict, play: dict, full: bool = False) -> str:
     suffix = "" if full else "-field"
     return f"playbook/{form['id']}/cards/{play['id']}{suffix}.svg"
+
+
+def formation_icon_src(form: dict) -> str:
+    return f"playbook/{form['id']}/cards/{form['id']}-icon.svg"
 
 
 def defense_menu(defenses: dict, active_def: str) -> str:
@@ -1367,6 +1423,13 @@ def _count(n: int) -> str:
             6: "six", 7: "seven", 8: "eight"}.get(n, str(n))
 
 
+def first_sentence(text: str) -> str:
+    """The homepage cards show one line, not the formation's full writeup — the rest
+    is one tap away on the formation's own page."""
+    m = re.search(r"(.+?[.!?])(\s|$)", text)
+    return m.group(1) if m else text
+
+
 def backs_table(formations: list[dict]) -> list[tuple[str, str]]:
     """The back digits, read out of the formations that define them.
 
@@ -1416,74 +1479,66 @@ def write_home(formations: list[dict], defenses: dict) -> str:
     total = sum(len(f["_plays"]) for f in formations)
     cards = []
     for f in formations:
-        blurb = f.get("summary") or f.get("notes", "")
+        blurb = first_sentence(f.get("summary") or f.get("notes", ""))
         cards.append(
-            f'<a class="fcard" href="{f_href(f)}">'
-            f'<div class="ftop"><h3>{esc(form_label(f))}</h3>'
+            f'<a class="fcard imgcard" href="{f_href(f)}">'
+            f'<div class="thumb"><img loading="lazy" src="{formation_icon_src(f)}" '
+            f'alt="{esc(form_label(f))} alignment"></div>'
+            f'<div class="body"><div class="ftop"><h3>{esc(form_label(f))}</h3>'
             f'<span class="n">{len(f["_plays"])} plays</span></div>'
             f"<p>{esc(blurb)}</p>"
-            f'<span class="fcall">Calls start with '
-            f'<code>{esc(call_prefix(f))}</code></span></a>'
+            f'<span class="fcall"><code>{esc(call_prefix(f))}</code></span></div></a>'
         )
     defcards = "".join(
-        f'<a class="fcard" href="{d_href(f)}">'
-        f'<div class="ftop"><h3>{esc(f["call"])}</h3>'
+        f'<a class="fcard imgcard" href="{d_href(f)}">'
+        f'<div class="thumb"><img loading="lazy" src="{def_src(f)}" '
+        f'alt="{esc(f["name"])} front"></div>'
+        f'<div class="body"><div class="ftop"><h3>{esc(f["call"])}</h3>'
         f'<span class="n">{esc(f["name"])}</span></div>'
-        f'<p>{esc(f.get("summary", ""))}</p></a>'
+        f'<p>{esc(first_sentence(f.get("summary", "")))}</p></div></a>'
         for f in defenses.values()
     )
-    body = f"""<h1 class="page">The 2026 playbook</h1>
-<p class="lede">{_count(len(formations)).capitalize()} offensive formations, {total} plays,
-{_count(len(defenses))} defensive fronts, built for 11-on-11 8U tackle. Every
-diagram is generated from the play files in the repo — so what is on this site is
-exactly what is in the binder.</p>
-<p class="sub">Fastest way to find a play: the <a href="calls.html">call sheet</a>.</p>
+    body = f"""<h1 class="page">The 2026 Playbook</h1>
+<p class="lede">{_count(len(formations)).capitalize()} formations &middot; {total} plays
+&middot; {_count(len(defenses))} fronts.</p>
 
-<p class="section-head">Formations, in teaching order</p>
-<div class="cards">
+<div class="quicklinks">
+  <a class="qlink" href="calls.html">{icon('search')}<span>Call sheet</span></a>
+  <a class="qlink" href="install.html">{icon('calendar')}<span>Install</span></a>
+  <a class="qlink" href="rules.html">{icon('shield')}<span>Rules</span></a>
+  <a class="qlink" href="print.html">{icon('printer')}<span>Print</span></a>
+</div>
+
+<p class="section-head">Formations</p>
+<div class="cards imgcards">
   {chr(10).join('  ' + c for c in cards).strip()}
 </div>
 
-<p class="section-head">Defensive playbook</p>
-<p class="lede">{_count(len(defenses)).capitalize()} fronts, every one of them checked against the
-league rulebook by the generator: a base for most downs, a goal-line front for when they
-have to have a yard, a wider front for when they keep getting outside us, and the prevent
-the league requires at an 18-point lead.</p>
-<div class="cards">{defcards}</div>
+<p class="section-head">Defense</p>
+<div class="cards imgcards">{defcards}</div>
 
-<p class="section-head">How we call plays</p>
-<p class="lede">Every play has a teaching name (<em>I Slant Right</em>) and a huddle call
-(<code>I Z Right 36 Slant</code>). Both are printed on every card. In the Regular I
-the call is <strong>formation + flanker + back + hole + play word</strong>. <code>Z Right</code> is where the flanker lines up, then the first number says who
-carries it and the second says where it goes.</p>
-<p class="lede"><strong>Who carries it</strong></p>
-<dl class="assign holes">
-  {chr(10).join(f'  <div class="row"><dt>{esc(n)}</dt><dd>{d}</dd></div>'
-                for n, d in backs_table(formations)).strip()}
-</dl>
-<p class="lede"><strong>Where it goes</strong> — even numbers to the right (0, 2, 4, 6, 8), odd to
-the left (1, 3, 5, 7, 9), counting outward from the center. This is the only part the
-kids have to memorize.</p>
-<dl class="assign holes">
-  {chr(10).join(f'  <div class="row"><dt>{esc(n)}</dt><dd>{esc(d)}</dd></div>'
-                for n, d in HOLES).strip()}
-</dl>
-<p class="lede">So <code>I Z Right 20 Dive</code> is flanker right, fullback, 0 hole,
-and <code>I Z Right 36 Slant</code> is flanker right, tailback, outside the tight end. A kid
-who knows the two numbers can run a play the first time he hears it.</p>
-<p class="sub">Every play in the book is <code>Z Right</code> today. It is in the call
-anyway so a <code>Z Left</code> look can be added later without changing the language.</p>
-<p class="sub">Every formation uses the same two digits — <code>Power I 34 Power</code>,
-<code>Bone 20 Dive</code>. Only the first word and the backs change, so a kid who learns
-the numbers once can call a play in any of them.</p>
+<p class="section-head">How to call a play</p>
+<div class="numgrid">
+  <div>
+    <p class="numcap">Who carries it</p>
+    <dl class="assign holes">
+      {chr(10).join(f'      <div class="row"><dt>{esc(n)}</dt><dd>{d}</dd></div>'
+                    for n, d in backs_table(formations)).strip()}
+    </dl>
+  </div>
+  <div>
+    <p class="numcap">Where it goes &mdash; even right, odd left</p>
+    <dl class="assign holes">
+      {chr(10).join(f'      <div class="row"><dt>{esc(n)}</dt><dd>{esc(d)}</dd></div>'
+                    for n, d in HOLES).strip()}
+    </dl>
+  </div>
+</div>
 
-<p class="section-head">Before you install anything</p>
 <div class="callout">
-  <p>The league rulebook constrains this playbook in ways that matter: 8- and 9-year-olds
-  face a <strong>minimum of three linebackers and no blitzing</strong>, which makes the
-  6-2 illegal, and 8-year-olds may be placed in an <strong>8-man</strong> division where
-  none of this is legal at all.</p>
-  <p>Read <a href="rules.html">the rulebook</a> before you install anything.</p>
+  <p><strong>Read the rules before you install anything.</strong> Minimum three
+  linebackers, no blitzing &mdash; the 6-2 is illegal.
+  <a href="rules.html">Full rulebook &rarr;</a></p>
 </div>"""
     return page(
         f"{SITE_TITLE} — 2026 Playbook",
