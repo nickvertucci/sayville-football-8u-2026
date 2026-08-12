@@ -42,8 +42,11 @@ Normal line splits, about one foot. Both ends are ON the line. The flanker is OF
 | [I Counter Left](#i-counter-left) | `I Z Right 35 Counter` | run | TB |
 | [I Counter Right](#i-counter-right) | `I Z Right 34 Counter` | run | TB |
 | [I Sneak](#i-sneak) | `I Z Right 10 Sneak` | run | QB |
+| [I Sneak Left](#i-sneak-left) | `I Z Right 11 Sneak` | run | QB |
 | [I Boot Right](#i-boot-right) | `I Z Right 16 Boot` | pass | Z |
+| [I Boot Left](#i-boot-left) | `I Z Right 17 Boot` | pass | LTE |
 | [I Waggle Left](#i-waggle-left) | `I Z Right 17 Waggle` | pass | LTE |
+| [I Waggle Right](#i-waggle-right) | `I Z Right 16 Waggle` | pass | RTE |
 
 ---
 
@@ -387,6 +390,38 @@ Fourth and inches. The quarterback keeps it behind the center's playside hip bef
 
 ---
 
+## I Sneak Left
+
+**Call it:** `I Z Right 11 Sneak`
+
+![I Sneak Left](cards/i-sneak-l.svg)
+
+Fourth and inches. The quarterback keeps it behind the center's playside hip before the defense has come out of its stance. No handoff to go wrong and no back to get tackled in the backfield.
+
+| Position | Assignment |
+|---|---|
+| **LTE** | Close down inside and push. Nobody gets penetration through your gap. |
+| **LT** | Close down inside and push. Nobody gets penetration through your gap. |
+| **LG** | Squeeze down on the center and drive. Your shoulder does not leave his — the quarterback is coming left behind it. |
+| **C** | Snap it and come straight off the ball into the nose with your pads under his. Get movement — one yard is all we need and it comes from you. |
+| **RG** | Squeeze down on the center and drive. Your shoulder does not leave his. |
+| **RT** | Close down inside and push. Nobody gets penetration through your gap. |
+| **RTE** | Close down inside and push. Nobody gets penetration through your gap. |
+| **Z** | Release straight downfield and run the corner off. You will not get the ball — take his eyes with you so he never looks in. |
+| **QB** **(ball)** | Snap it and go now, right behind the outside hip of the guard away from the flanker. Low pads, ball in both arms, fall forward. Do not stand up and do not look for a hole. |
+| **FB** | Fire straight ahead into the back of the pile and push. Both hands on whoever is in front of you. |
+| **TB** | Come downhill behind the fullback and push the pile. If the ball comes loose you are the closest man to it. |
+
+**Coaching points**
+
+- This is a one-yard play. Do not call it needing two.
+- The snap count is the whole play. If they know it is coming they still cannot stop it, but only if we go on the first sound and they do not.
+- Drawn against the 6-3 because that is the heaviest front the league allows and it is exactly what you will see on fourth and one.
+- Teach the quarterback to fall forward the moment he feels contact. Eight-year-olds try to spin and lose the yard they already had.
+- It is legal for us in 11-man play. It is specifically prohibited in the 8-man Rookie division, so if we ever end up there this play comes straight out of the book.
+
+---
+
 ## I Boot Right
 
 **Call it:** `I Z Right 16 Boot`
@@ -405,6 +440,37 @@ Play action off the toss look. Two receivers to the flanker side and a quarterba
 | **RT** | Hinge and protect the boot side. Nobody comes free outside you — the quarterback is alone back there. |
 | **RTE** | Engage the end over you for a count, then release and settle at eight yards on the boot side. |
 | **Z** **(ball)** | Run to the flat at four yards and stay in front of the quarterback. You are the easy throw. |
+| **QB** | Fake the toss with both hands, hide the ball on your back hip, and get to the edge. Run it if it is open. Only throw if a defender comes up to take you. |
+| **FB** | Run the toss path away from the boot and block whatever shows. Sell it. |
+| **TB** | Run the full toss path away from the boot with your arms tucked like you have the ball. Sell it all the way to the sideline. |
+
+**Coaching points**
+
+- Our ends must engage their end before releasing — sell the run first, then get out.
+- Run first. At this age the quarterback usually walks into ten yards before anyone finds him.
+- No blitzing is allowed for 8- and 9-year-olds, so the quarterback has time. Teach him to be patient and look up.
+- One throw, then tuck it. No scrambling backwards, ever.
+
+---
+
+## I Boot Left
+
+**Call it:** `I Z Right 17 Boot`
+
+![I Boot Left](cards/i-boot-l.svg)
+
+Boot Left off the toss action. The line and both backs sell the toss going right, and the quarterback keeps it and gets to the left edge alone — the tight end in the flat in front of him and the flanker coming all the way across behind. Run first, throw second.
+
+| Position | Assignment |
+|---|---|
+| **LTE** **(ball)** | Engage the end over you for a count, then release to the flat at four yards and stay in front of the quarterback. You are the easy throw. |
+| **LT** | Hinge and protect the boot side. Nobody comes free outside you — the quarterback is alone back there. |
+| **LG** | PULL RIGHT and run the toss path to sell the fake. You are a decoy — take a linebacker with you. |
+| **C** | Block the nose back toward the boot side. Nobody chases through the middle. |
+| **RG** | Nobody is over you. Help the center on the nose and drive him away from the boot. |
+| **RT** | The tackle is on your inside shoulder. Block him down and seal him inside — that is what opens the hole. |
+| **RTE** | Block down inside and sell the run. This has to look exactly like the toss going the other way. |
+| **Z** | Come all the way across the field behind the line and get to eight yards on the far side. You are the second look and you arrive late on purpose. |
 | **QB** | Fake the toss with both hands, hide the ball on your back hip, and get to the edge. Run it if it is open. Only throw if a defender comes up to take you. |
 | **FB** | Run the toss path away from the boot and block whatever shows. Sell it. |
 | **TB** | Run the full toss path away from the boot with your arms tucked like you have the ball. Sell it all the way to the sideline. |
@@ -446,5 +512,37 @@ Boot Right the other way. The quarterback fakes the dive and gets to the weak ed
 - The end must engage before he releases. If he runs straight into the flat the whole fake dies and the flat defender is waiting for him.
 - No blitzing is allowed for 8- and 9-year-olds, so the quarterback has time. Teach him to be patient and look up.
 - The flanker coming all the way across is a long trip. He is the second read and he is late by design — the quarterback must not stand there waiting for him.
+- One throw, then tuck it. No scrambling backwards, ever.
+
+---
+
+## I Waggle Right
+
+**Call it:** `I Z Right 16 Waggle`
+
+![I Waggle Right](cards/i-waggle-r.svg)
+
+Waggle Right off the dive fake. The quarterback fakes the dive and boots to the right edge, with the tight end in the flat in front of him and the flanker clearing the corner over the top. Run first, throw second.
+
+| Position | Assignment |
+|---|---|
+| **LTE** | Block down inside and sell the run. This has to look exactly like a run to your side. |
+| **LT** | The tackle is on your inside shoulder. Block him down and seal him inside. |
+| **LG** | Nobody is over you. Help the center on the nose and drive him away from the waggle. |
+| **C** | Block the nose back toward the waggle side. Nobody chases through the middle. |
+| **RG** | PULL LEFT and run the dive path to sell the fake. You are a decoy — take a linebacker with you. |
+| **RT** | Hinge and protect the waggle side. Nobody comes free outside you — the quarterback is alone back there. |
+| **RTE** **(ball)** | Engage the end over you for a count, then release to the flat at four yards and stay in front of the quarterback. You are the easy throw. |
+| **Z** | Release outside the end and get down the right sideline to ten yards. You are the second look — clear the corner so the flat stays open, then work back to the quarterback. |
+| **QB** | Fake the dive to the fullback with both hands, hide the ball on your back hip, and get to the edge. Run it if it is open. Only throw if a defender comes up to take you. |
+| **FB** | Run the dive path full speed with your arms tucked like you have it, and block the first defender who meets you. You are the lie. |
+| **TB** | Come around behind the quarterback and protect the outside. Anybody chasing him from behind is yours. |
+
+**Coaching points**
+
+- This is the partner to I Waggle Left — call the one that boots away from wherever their outside linebacker has started cheating.
+- The end must engage before he releases. If he runs straight into the flat the whole fake dies and the flat defender is waiting for him.
+- No blitzing is allowed for 8- and 9-year-olds, so the quarterback has time. Teach him to be patient and look up.
+- The flanker clears the corner first so the flat opens underneath — the quarterback throws the tight end, not the flanker.
 - One throw, then tuck it. No scrambling backwards, ever.
 

@@ -1,0 +1,109 @@
+{
+  "id": "i-waggle-r",
+  "order": 13.5,
+  "formation": "i-form",
+  "name": "I Waggle Right",
+  "call": "I Z Right 16 Waggle",
+  "type": "pass",
+  "defense": "5-3",
+  "direction": "right",
+  "ball_carrier": "RTE",
+  "purpose": "Waggle Right off the dive fake. The quarterback fakes the dive and boots to the right edge, with the tight end in the flat in front of him and the flanker clearing the corner over the top. Run first, throw second.",
+  "assignments": {
+    "LTE": {
+      "rule": "Block down inside and sell the run. This has to look exactly like a run to your side.",
+      "type": "block",
+      "path": [
+        [1.2, 0.9]
+      ]
+    },
+    "LT": {
+      "rule": "The tackle is on your inside shoulder. Block him down and seal him inside.",
+      "type": "block",
+      "path": [
+        [0.4, 1.3]
+      ]
+    },
+    "LG": {
+      "rule": "Nobody is over you. Help the center on the nose and drive him away from the waggle.",
+      "type": "block",
+      "path": [
+        [0.6, 1.0]
+      ]
+    },
+    "C": {
+      "rule": "Block the nose back toward the waggle side. Nobody chases through the middle.",
+      "type": "block",
+      "path": [
+        [0.9, 0.8]
+      ]
+    },
+    "RG": {
+      "rule": "PULL LEFT and run the dive path to sell the fake. You are a decoy — take a linebacker with you.",
+      "type": "block",
+      "path": [
+        [-0.7, -1.0],
+        [-3.6, -0.8],
+        [-4.6, 0.6]
+      ]
+    },
+    "RT": {
+      "rule": "Hinge and protect the waggle side. Nobody comes free outside you — the quarterback is alone back there.",
+      "type": "block",
+      "path": [
+        [1.0, 0.7]
+      ]
+    },
+    "RTE": {
+      "rule": "Engage the end over you for a count, then release to the flat at four yards and stay in front of the quarterback. You are the easy throw.",
+      "type": "pass",
+      "path": [
+        [0.8, 1.4],
+        [3.0, 2.6]
+      ]
+    },
+    "Z": {
+      "rule": "Release outside the end and get down the right sideline to ten yards. You are the second look — clear the corner so the flat stays open, then work back to the quarterback.",
+      "type": "pass",
+      "path": [
+        [0.6, 4.0],
+        [1.2, 8.0],
+        [1.4, 10.0]
+      ]
+    },
+    "QB": {
+      "rule": "Fake the dive to the fullback with both hands, hide the ball on your back hip, and get to the edge. Run it if it is open. Only throw if a defender comes up to take you.",
+      "type": "run",
+      "path": [
+        [-1.2, -0.6],
+        [1.8, -1.0],
+        [5.2, -0.4],
+        [6.6, 1.8]
+      ]
+    },
+    "FB": {
+      "rule": "Run the dive path full speed with your arms tucked like you have it, and block the first defender who meets you. You are the lie.",
+      "type": "fake",
+      "path": [
+        [-1.4, 2.0],
+        [-2.4, 3.6]
+      ]
+    },
+    "TB": {
+      "rule": "Come around behind the quarterback and protect the outside. Anybody chasing him from behind is yours.",
+      "type": "block",
+      "path": [
+        [2.0, 0.8],
+        [4.6, 1.6]
+      ]
+    }
+  },
+  "coaching_points": [
+    "This is the partner to I Waggle Left — call the one that boots away from wherever their outside linebacker has started cheating.",
+    "The end must engage before he releases. If he runs straight into the flat the whole fake dies and the flat defender is waiting for him.",
+    "No blitzing is allowed for 8- and 9-year-olds, so the quarterback has time. Teach him to be patient and look up.",
+    "The flanker clears the corner first so the flat opens underneath — the quarterback throws the tight end, not the flanker.",
+    "One throw, then tuck it. No scrambling backwards, ever."
+  ],
+  "z": "right"
+}

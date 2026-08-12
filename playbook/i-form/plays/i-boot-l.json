@@ -1,0 +1,109 @@
+{
+  "id": "i-boot-l",
+  "order": 12.5,
+  "formation": "i-form",
+  "name": "I Boot Left",
+  "call": "I Z Right 17 Boot",
+  "type": "pass",
+  "defense": "5-3",
+  "direction": "left",
+  "ball_carrier": "LTE",
+  "purpose": "Boot Left off the toss action. The line and both backs sell the toss going right, and the quarterback keeps it and gets to the left edge alone — the tight end in the flat in front of him and the flanker coming all the way across behind. Run first, throw second.",
+  "assignments": {
+    "LTE": {
+      "rule": "Engage the end over you for a count, then release to the flat at four yards and stay in front of the quarterback. You are the easy throw.",
+      "type": "pass",
+      "path": [
+        [-0.8, 1.4],
+        [-3.0, 2.6]
+      ]
+    },
+    "LT": {
+      "rule": "Hinge and protect the boot side. Nobody comes free outside you — the quarterback is alone back there.",
+      "type": "block",
+      "path": [
+        [-1.0, 0.7]
+      ]
+    },
+    "LG": {
+      "rule": "PULL RIGHT and run the toss path to sell the fake. You are a decoy — take a linebacker with you.",
+      "type": "block",
+      "path": [
+        [0.7, -1.0],
+        [3.6, -0.8],
+        [4.6, 0.6]
+      ]
+    },
+    "C": {
+      "rule": "Block the nose back toward the boot side. Nobody chases through the middle.",
+      "type": "block",
+      "path": [
+        [-0.9, 0.8]
+      ]
+    },
+    "RG": {
+      "rule": "Nobody is over you. Help the center on the nose and drive him away from the boot.",
+      "type": "block",
+      "path": [
+        [-0.6, 1.0]
+      ]
+    },
+    "RT": {
+      "rule": "The tackle is on your inside shoulder. Block him down and seal him inside — that is what opens the hole.",
+      "type": "block",
+      "path": [
+        [-0.4, 1.3]
+      ]
+    },
+    "RTE": {
+      "rule": "Block down inside and sell the run. This has to look exactly like the toss going the other way.",
+      "type": "block",
+      "path": [
+        [-1.2, 0.9]
+      ]
+    },
+    "Z": {
+      "rule": "Come all the way across the field behind the line and get to eight yards on the far side. You are the second look and you arrive late on purpose.",
+      "type": "pass",
+      "path": [
+        [-4.0, 1.2],
+        [-8.0, 4.6],
+        [-10.0, 7.0]
+      ]
+    },
+    "QB": {
+      "rule": "Fake the toss with both hands, hide the ball on your back hip, and get to the edge. Run it if it is open. Only throw if a defender comes up to take you.",
+      "type": "run",
+      "path": [
+        [1.2, -0.6],
+        [-1.8, -1.0],
+        [-5.2, -0.4],
+        [-7.2, 2.4]
+      ]
+    },
+    "FB": {
+      "rule": "Run the toss path away from the boot and block whatever shows. Sell it.",
+      "type": "block",
+      "path": [
+        [3.2, 1.4],
+        [5.8, 3.2]
+      ]
+    },
+    "TB": {
+      "rule": "Run the full toss path away from the boot with your arms tucked like you have the ball. Sell it all the way to the sideline.",
+      "type": "fake",
+      "path": [
+        [1.6, 2.0],
+        [4.6, 3.4],
+        [6.4, 5.2]
+      ]
+    }
+  },
+  "coaching_points": [
+    "Our ends must engage their end before releasing — sell the run first, then get out.",
+    "Run first. At this age the quarterback usually walks into ten yards before anyone finds him.",
+    "No blitzing is allowed for 8- and 9-year-olds, so the quarterback has time. Teach him to be patient and look up.",
+    "One throw, then tuck it. No scrambling backwards, ever."
+  ],
+  "z": "right"
+}
