@@ -1,27 +1,42 @@
 {
   "id": "i-counter-l",
-  "order": 9,
+  "order": 12,
   "formation": "i-form",
-  "name": "I Counter Left",
-  "call": "I Z Right 35 Counter",
+  "name": "Regular I Counter Left",
+  "call": "Regular I Z Right 35 Counter",
   "type": "run",
   "defense": "5-3",
   "direction": "left",
   "ball_carrier": "TB",
-  "purpose": "Misdirection off the toss. We show them the toss to the flanker side, their linebackers chase, and the tailback plants and comes back weak behind a pulling guard.",
+  "purpose": "Misdirection off the toss. We show them the toss to the Z side, their linebackers chase, and the tailback plants and comes back weak behind a pulling guard.",
   "assignments": {
-    "RTE": {
-      "rule": "Cut off pursuit from behind. You are the last one to the ball, so never quit on the play.",
+    "LTE": {
+      "rule": "Release inside off his outside shoulder and take the playside linebacker. The end over you is being kicked out — leave him alone.",
       "type": "block",
       "path": [
-        [-1.0, 0.7]
+        [1.0, 3.5]
       ]
     },
-    "RT": {
-      "rule": "Block back. Take the first defender on or inside you — nobody crosses your face.",
+    "LT": {
+      "rule": "The tackle is on your inside shoulder. Block him down and seal him inside — that is what opens the hole.",
       "type": "block",
       "path": [
-        [-1.0, 0.7]
+        [0.4, 1.3]
+      ]
+    },
+    "LG": {
+      "rule": "Nobody is over you. Help the center drive the nose for one count, then climb to the middle linebacker.",
+      "type": "block",
+      "path": [
+        [0.6, 1.1],
+        [1.2, 3.4]
+      ]
+    },
+    "C": {
+      "rule": "You have the nose, head up on you. Hands inside and do not let him cross your face to the playside.",
+      "type": "block",
+      "path": [
+        [-0.3, 1.1]
       ]
     },
     "RG": {
@@ -33,33 +48,18 @@
         [-5.0, 1.2]
       ]
     },
-    "C": {
-      "rule": "You have the nose, head up on you. Hands inside and do not let him cross your face to the playside.",
+    "RT": {
+      "rule": "Block back. Take the first defender on or inside you — nobody crosses your face.",
       "type": "block",
       "path": [
-        [-0.3, 1.1]
+        [-1.0, 0.7]
       ]
     },
-    "LG": {
-      "rule": "Nobody is over you. Help the center drive the nose for one count, then climb to the middle linebacker.",
+    "RTE": {
+      "rule": "Cut off pursuit from behind. You are the last one to the ball, so never quit on the play.",
       "type": "block",
       "path": [
-        [0.6, 1.1],
-        [1.2, 3.4]
-      ]
-    },
-    "LT": {
-      "rule": "The tackle is on your inside shoulder. Block him down and seal him inside — that is what opens the hole.",
-      "type": "block",
-      "path": [
-        [0.4, 1.3]
-      ]
-    },
-    "LTE": {
-      "rule": "Release inside off his outside shoulder and take the playside linebacker. The end over you is being kicked out — leave him alone.",
-      "type": "block",
-      "path": [
-        [1.0, 3.5]
+        [-1.0, 0.7]
       ]
     },
     "Z": {

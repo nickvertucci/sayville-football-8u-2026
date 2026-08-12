@@ -1,6 +1,6 @@
 {
   "id": "pi-off-counter-r",
-  "order": 4,
+  "order": 3,
   "formation": "power-i",
   "name": "Power I Counter Right",
   "call": "Power I Left 34 Counter",
@@ -9,9 +9,9 @@
   "direction": "right",
   "ball_carrier": "TB",
   "alignment": {
-    "WB": [-2.6, -3.3]
+    "Z": [-2.6, -3.3]
   },
-  "purpose": "The wing is set to the strong side and runs his lead path that way, which is exactly what the defense has been punished for respecting. The tailback takes two hard steps toward him and comes back off-tackle to the weak side behind a pulling guard.",
+  "purpose": "The Z is set to the strong side and runs his lead path that way, which is exactly what the defense has been punished for respecting. The tailback takes two hard steps toward him and comes back off-tackle to the weak side behind a pulling guard.",
   "assignments": {
     "LTE": {
       "rule": "Cut off pursuit from behind. You are the last one to the ball, so never quit on the play.",
@@ -65,7 +65,7 @@
         [-1.0, 3.5]
       ]
     },
-    "WB": {
+    "Z": {
       "rule": "Run your Power path to the left at full speed and block whatever shows. You never get the ball on this play and you are the reason it works.",
       "type": "fake",
       "path": [
@@ -105,7 +105,7 @@
   },
   "coaching_points": [
     "Do not call this until Power Left has gone for real yards. Misdirection off a play they do not fear is just a slower run.",
-    "The wing is the whole lie. He must run his Power lead path at Power speed and block somebody at the end of it — if he coasts, their backside linebacker never leaves.",
+    "The Z is the whole lie. He must run his Power lead path at Power speed and block somebody at the end of it — if he coasts, their backside linebacker never leaves.",
     "The tailback's counter steps must be full speed and full length. A shuffle fools nobody.",
     "The fullback's false step is one step, not two. Any more and he is late to the hole."
   ]

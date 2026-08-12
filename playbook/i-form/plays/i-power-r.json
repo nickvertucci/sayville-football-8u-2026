@@ -1,14 +1,14 @@
 {
   "id": "i-power-r",
-  "order": 20,
+  "order": 9,
   "formation": "i-form",
-  "name": "I Power Right",
-  "call": "I Z Right 34 Power",
+  "name": "Regular I Power Right",
+  "call": "Regular I Z Right 34 Power",
   "type": "run",
   "defense": "5-3",
   "direction": "right",
   "ball_carrier": "TB",
-  "purpose": "Our best downhill run. Everybody blocks down to the inside, the flanker kicks the end out, and the backside guard pulls through the hole in front of the tailback. Two blockers arrive in the same gap before the linebackers do.",
+  "purpose": "Our best downhill run. Everybody blocks down to the inside, the Z kicks the end out, and the backside guard pulls through the hole in front of the tailback. Two blockers arrive in the same gap before the linebackers do.",
   "assignments": {
     "LTE": {
       "rule": "Cut off pursuit from behind. You are the last one to the ball, so never quit on the play.",
@@ -101,9 +101,9 @@
   },
   "coaching_points": [
     "This is the most physical run in the book. If it works you can run it fifteen times, and at this age you often can.",
-    "Drill the flanker's kick-out on its own. If he blocks the end with his shoulders square, the end slides underneath and makes the tackle for a loss — he has to attack the outside hip.",
+    "Drill the Z's kick-out on its own. If he blocks the end with his shoulders square, the end slides underneath and makes the tackle for a loss — he has to attack the outside hip.",
     "The pulling guard is late by design. Tell him his man is the one who shows up in the hole, not a man he picks before the snap.",
-    "The tailback's most common mistake is bouncing it wide looking for green grass. The yards are inside the flanker's block. Make him run it tight in practice until it is automatic."
+    "The tailback's most common mistake is bouncing it wide looking for green grass. The yards are inside the Z's block. Make him run it tight in practice until it is automatic."
   ],
   "z": "right"
 }

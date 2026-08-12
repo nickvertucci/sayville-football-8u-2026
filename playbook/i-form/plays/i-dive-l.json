@@ -1,17 +1,46 @@
 {
   "id": "i-dive-l",
-  "order": 2,
+  "order": 4,
   "formation": "i-form",
-  "name": "I Dive Left",
-  "call": "I Z Right 21 Dive",
+  "name": "Regular I Dive Left",
+  "call": "Regular I Z Right 21 Dive",
   "type": "run",
   "defense": "5-3",
   "direction": "left",
   "ball_carrier": "FB",
   "purpose": "The same quick handoff through the other A gap. Worth having both so the fullback is not always going to the same side of the center — once their middle linebacker knows which way the dive hits, it stops being quick.",
   "assignments": {
-    "RTE": {
-      "rule": "Cut off pursuit from behind. You are the last one to the ball, so never quit on the play.",
+    "LTE": {
+      "rule": "The end is head up on you. Drive him out and away from the ball.",
+      "type": "block",
+      "path": [
+        [0.4, 1.0]
+      ]
+    },
+    "LT": {
+      "rule": "The tackle is on your inside shoulder. Block him down and seal him inside — that is what opens the hole.",
+      "type": "block",
+      "path": [
+        [0.0, 1.0]
+      ]
+    },
+    "LG": {
+      "rule": "Nobody is over you. Double the nose with the center, and come off onto the middle linebacker when he shows.",
+      "type": "block",
+      "path": [
+        [0.5, 1.2],
+        [0.7, 3.4]
+      ]
+    },
+    "C": {
+      "rule": "You and the playside guard double the nose. Drive him off the spot — the hole is right off his back.",
+      "type": "block",
+      "path": [
+        [-0.3, 1.3]
+      ]
+    },
+    "RG": {
+      "rule": "Nobody is over you. Step back inside and cut off anyone chasing through the middle.",
       "type": "block",
       "path": [
         [-1.0, 0.7]
@@ -24,40 +53,11 @@
         [-1.0, 0.7]
       ]
     },
-    "RG": {
-      "rule": "Nobody is over you. Step back inside and cut off anyone chasing through the middle.",
+    "RTE": {
+      "rule": "Cut off pursuit from behind. You are the last one to the ball, so never quit on the play.",
       "type": "block",
       "path": [
         [-1.0, 0.7]
-      ]
-    },
-    "C": {
-      "rule": "You and the playside guard double the nose. Drive him off the spot — the hole is right off his back.",
-      "type": "block",
-      "path": [
-        [-0.3, 1.3]
-      ]
-    },
-    "LG": {
-      "rule": "Nobody is over you. Double the nose with the center, and come off onto the middle linebacker when he shows.",
-      "type": "block",
-      "path": [
-        [0.5, 1.2],
-        [0.7, 3.4]
-      ]
-    },
-    "LT": {
-      "rule": "The tackle is on your inside shoulder. Block him down and seal him inside — that is what opens the hole.",
-      "type": "block",
-      "path": [
-        [0.0, 1.0]
-      ]
-    },
-    "LTE": {
-      "rule": "The end is head up on you. Drive him out and away from the ball.",
-      "type": "block",
-      "path": [
-        [0.4, 1.0]
       ]
     },
     "Z": {
@@ -98,7 +98,7 @@
     "Snap to handoff should be under a second. If the fullback is waiting on the ball, the play is already dead.",
     "Run it the same week you install the right-hand one. The whole value of having both is that their middle linebacker cannot lean.",
     "The fullback runs at a spot, not at a defender. Give him the outside hip of the center and let him go.",
-    "The flanker is away from the play here, so he has further to travel to cut off the backside. He leaves on the snap."
+    "The Z is away from the play here, so he has further to travel to cut off the backside. He leaves on the snap."
   ],
   "z": "right"
 }

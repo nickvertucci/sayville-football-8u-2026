@@ -1,14 +1,14 @@
 {
   "id": "i-boot-l",
-  "order": 12.5,
+  "order": 14,
   "formation": "i-form",
-  "name": "I Boot Left",
-  "call": "I Z Right 17 Boot",
+  "name": "Regular I Boot Left",
+  "call": "Regular I Z Right 17 Boot",
   "type": "pass",
   "defense": "5-3",
   "direction": "left",
   "ball_carrier": "LTE",
-  "purpose": "Boot Left off the toss action. The line and both backs sell the toss going right, and the quarterback keeps it and gets to the left edge alone — the tight end in the flat in front of him and the flanker coming all the way across behind. Run first, throw second.",
+  "purpose": "Boot Left off the toss action. The line and both backs sell the toss going right, and the quarterback keeps it and gets to the left edge alone — the tight end in the flat in front of him and the Z coming all the way across behind. Run first, throw second.",
   "assignments": {
     "LTE": {
       "rule": "Engage the end over you for a count, then release to the flat at four yards and stay in front of the quarterback. You are the easy throw.",

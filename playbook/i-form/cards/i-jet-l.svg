@@ -1,10 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="594" height="1184" viewBox="0 0 594 1184" font-family="Segoe UI, Helvetica, Arial, sans-serif">
 <rect width="100%" height="100%" fill="#ffffff"/>
 <rect x="0" y="0" width="594" height="58" fill="#14213d"/>
-<text x="18" y="26" font-size="19" font-weight="700" fill="#ffffff">I Jet Left</text>
+<text x="18" y="26" font-size="19" font-weight="700" fill="#ffffff">Regular I Jet Left</text>
 <text x="18" y="45" font-size="11.5" fill="#a9b4c7">RUN  •  Regular I  •  vs 5-3</text>
-<rect x="406.8" y="13" width="169.2" height="31" rx="6" fill="#ffffff" fill-opacity="0.12" stroke="#8593ad" stroke-width="1"/>
-<text x="491.4" y="34" text-anchor="middle" font-size="14.5" font-weight="700" fill="#ffffff" letter-spacing="0.5">I Z Right 49 Jet</text>
+<rect x="333.2" y="13" width="242.8" height="31" rx="6" fill="#ffffff" fill-opacity="0.12" stroke="#8593ad" stroke-width="1"/>
+<text x="454.6" y="34" text-anchor="middle" font-size="14.5" font-weight="700" fill="#ffffff" letter-spacing="0.5">Regular I Z Right 49 Jet</text>
 <clipPath id="fieldclip"><rect x="0" y="58" width="594" height="472"/></clipPath>
 <g clip-path="url(#fieldclip)"><g transform="translate(-54.0,31.0)">
 <rect x="0" y="0" width="702" height="513" fill="#ffffff"/>
@@ -121,10 +121,10 @@
 <text x="331" y="714" font-size="12" fill="#111318">turn upfield until you are outside</text>
 <text x="331" y="732" font-size="12" fill="#111318">our end.</text>
 <text x="297" y="748" font-size="12" font-weight="700" fill="#111318">QB</text>
-<text x="331" y="748" font-size="12" fill="#111318">Turn and hand it back to the flanker</text>
-<text x="331" y="766" font-size="12" fill="#111318">as he crosses, then keep going the</text>
-<text x="331" y="782" font-size="12" fill="#111318">other way with your hands on your</text>
-<text x="331" y="800" font-size="12" fill="#111318">belly like you kept it.</text>
+<text x="331" y="748" font-size="12" fill="#111318">Turn and hand it back to the Z as he</text>
+<text x="331" y="766" font-size="12" fill="#111318">crosses, then keep going the other</text>
+<text x="331" y="782" font-size="12" fill="#111318">way with your hands on your belly</text>
+<text x="331" y="800" font-size="12" fill="#111318">like you kept it.</text>
 <text x="297" y="816" font-size="12" font-weight="700" fill="#111318">FB</text>
 <text x="331" y="816" font-size="12" fill="#111318">Fill straight ahead like Wedge is</text>
 <text x="331" y="834" font-size="12" fill="#111318">coming. You are the reason their</text>
@@ -133,19 +133,19 @@
 <text x="331" y="868" font-size="12" fill="#111318">Run the Power path to the right with</text>
 <text x="331" y="884" font-size="12" fill="#111318">your arms tucked like you have the</text>
 <text x="331" y="902" font-size="12" fill="#111318">ball. Sell it all the way — you are</text>
-<text x="331" y="918" font-size="12" fill="#111318">the reason nobody chases the flanker.</text>
+<text x="331" y="918" font-size="12" fill="#111318">the reason nobody chases the Z.</text>
 <line x1="18" y1="926" x2="576" y2="926" stroke="#c8cdd6" stroke-width="1"/>
 <text x="18" y="944" font-size="11" font-weight="700" fill="#5b6472" letter-spacing="1">COACHING POINTS</text>
 <text x="18" y="964" font-size="12" fill="#111318">Motion is legal in 11-man play, but only one man may be moving at the snap and he</text>
-<text x="18" y="980" font-size="12" fill="#111318">cannot be moving toward the line of scrimmage. Teach the flanker to run flat</text>
-<text x="18" y="998" font-size="12" fill="#111318">across, never forward.</text>
-<text x="18" y="1014" font-size="12" fill="#111318">The handoff timing is the whole play. If the flanker is slowing down to catch it</text>
-<text x="18" y="1032" font-size="12" fill="#111318">the play is dead — snap it when he is a stride from the quarterback and let him</text>
-<text x="18" y="1048" font-size="12" fill="#111318">run through it.</text>
+<text x="18" y="980" font-size="12" fill="#111318">cannot be moving toward the line of scrimmage. Teach the Z to run flat across,</text>
+<text x="18" y="998" font-size="12" fill="#111318">never forward.</text>
+<text x="18" y="1014" font-size="12" fill="#111318">The handoff timing is the whole play. If the Z is slowing down to catch it the</text>
+<text x="18" y="1032" font-size="12" fill="#111318">play is dead — snap it when he is a stride from the quarterback and let him run</text>
+<text x="18" y="1048" font-size="12" fill="#111318">through it.</text>
 <text x="18" y="1066" font-size="12" fill="#111318">Call the motion the same way every single time so the snap count and his start</text>
 <text x="18" y="1082" font-size="12" fill="#111318">never drift apart.</text>
 <text x="18" y="1100" font-size="12" fill="#111318">Do not install this until Power Right is real. Jet works because they have</text>
-<text x="18" y="1116" font-size="12" fill="#111318">already been punished for not honouring the flanker side.</text>
-<text x="18" y="1134" font-size="12" fill="#111318">If their end chases the flanker flat down the line, come back to Power Right the</text>
-<text x="18" y="1150" font-size="12" fill="#111318">very next play — he has left the edge.</text>
+<text x="18" y="1116" font-size="12" fill="#111318">already been punished for not honouring the Z side.</text>
+<text x="18" y="1134" font-size="12" fill="#111318">If their end chases the Z flat down the line, come back to Power Right the very</text>
+<text x="18" y="1150" font-size="12" fill="#111318">next play — he has left the edge.</text>
 </svg>

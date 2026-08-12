@@ -8,7 +8,7 @@
   "defense": "5-3",
   "direction": "right",
   "ball_carrier": "TB",
-  "purpose": "Our best downhill run. The line blocks down inside, the wing leads out of the backfield to kick the playside end, and the backside guard pulls through the hole in front of the tailback — two blockers in the same gap before the linebackers read it.",
+  "purpose": "Our best downhill run. The line blocks down inside, the Z leads out of the backfield to kick the playside end, and the backside guard pulls through the hole in front of the tailback — two blockers in the same gap before the linebackers read it.",
   "assignments": {
     "LTE": {
       "rule": "Cut off pursuit from behind. You are the last one to the ball, so never quit on the play.",
@@ -63,7 +63,7 @@
         [-1.0, 3.5]
       ]
     },
-    "WB": {
+    "Z": {
       "rule": "Kick the end out. You are starting three yards deeper than usual, so leave on the snap and get there — aim at his outside hip and drive him toward the sideline.",
       "type": "block",
       "path": [
@@ -101,9 +101,9 @@
   },
   "coaching_points": [
     "This is the play the Power I is built for. If it works you can run it a dozen times, and at this age you often can.",
-    "The wing leads from the backfield, so he arrives fast but with a tight angle. He must leave on the snap and attack the end's outside hip, or the end slides under him and makes the tackle for a loss.",
+    "The Z leads from the backfield, so he arrives fast but with a tight angle. He must leave on the snap and attack the end's outside hip, or the end slides under him and makes the tackle for a loss.",
     "The pulling guard is late by design. His man is whoever shows in the hole, not a man he picks before the snap.",
-    "The tailback's worst habit is bouncing it wide for green grass. The yards are inside the wing's kick-out — drill it tight until it is automatic.",
-    "If they walk a linebacker over to the wing side, come back with Counter the next play."
+    "The tailback's worst habit is bouncing it wide for green grass. The yards are inside the Z's kick-out — drill it tight until it is automatic.",
+    "If they walk a linebacker over to the Z side, come back with Counter the next play."
   ]
 }

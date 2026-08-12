@@ -1,9 +1,9 @@
 {
   "id": "i-iso-r",
-  "order": 3,
+  "order": 7,
   "formation": "i-form",
-  "name": "I Iso Right",
-  "call": "I Z Right 32 Iso",
+  "name": "Regular I Iso Right",
+  "call": "Regular I Z Right 32 Iso",
   "type": "run",
   "defense": "5-3",
   "direction": "right",

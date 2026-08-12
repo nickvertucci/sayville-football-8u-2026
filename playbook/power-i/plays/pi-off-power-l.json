@@ -9,9 +9,9 @@
   "direction": "left",
   "ball_carrier": "TB",
   "alignment": {
-    "WB": [-2.6, -3.3]
+    "Z": [-2.6, -3.3]
   },
-  "purpose": "Power the other way. The line blocks down inside, the wing leads out of the backfield to kick the playside end, and the backside guard pulls through the hole in front of the tailback — two blockers in the same gap before the linebackers read it.",
+  "purpose": "Power the other way. The line blocks down inside, the Z leads out of the backfield to kick the playside end, and the backside guard pulls through the hole in front of the tailback — two blockers in the same gap before the linebackers read it.",
   "assignments": {
     "LTE": {
       "rule": "Release inside off his outside shoulder and take the playside linebacker. The end over you is getting kicked out — leave him alone.",
@@ -66,7 +66,7 @@
         [-1.0, 0.7]
       ]
     },
-    "WB": {
+    "Z": {
       "rule": "Kick the end out. You are starting three yards deeper than usual, so leave on the snap and get there — aim at his outside hip and drive him toward the sideline.",
       "type": "block",
       "path": [
@@ -103,9 +103,9 @@
     }
   },
   "coaching_points": [
-    "The mirror of Power Right — run it the same week so the defense cannot lean to the wing side.",
-    "The wing leads from the backfield, so he arrives fast but with a tight angle. He must leave on the snap and attack the end's outside hip, or the end slides under him.",
+    "The mirror of Power Right — run it the same week so the defense cannot lean to the Z side.",
+    "The Z leads from the backfield, so he arrives fast but with a tight angle. He must leave on the snap and attack the end's outside hip, or the end slides under him.",
     "The pulling guard is late by design. His man is whoever shows in the hole, not a man he picks before the snap.",
-    "The tailback's worst habit is bouncing it wide for green grass. The yards are inside the wing's kick-out — drill it tight until it is automatic."
+    "The tailback's worst habit is bouncing it wide for green grass. The yards are inside the Z's kick-out — drill it tight until it is automatic."
   ]
 }

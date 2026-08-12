@@ -1,9 +1,9 @@
 {
   "id": "i-jet-boot-r",
-  "order": 26,
+  "order": 17,
   "formation": "i-form",
-  "name": "I Jet Boot Right",
-  "call": "I Z Right 16 Jet Boot",
+  "name": "Regular I Jet Boot Right",
+  "call": "Regular I Z Right 16 Jet Boot",
   "type": "pass",
   "defense": "5-3",
   "direction": "right",

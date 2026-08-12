@@ -1,9 +1,9 @@
 {
   "id": "i-sneak-l",
-  "order": 11.5,
+  "order": 2,
   "formation": "i-form",
-  "name": "I Sneak Left",
-  "call": "I Z Right 11 Sneak",
+  "name": "Regular I Sneak Left",
+  "call": "Regular I Z Right 11 Sneak",
   "type": "run",
   "defense": "6-3",
   "direction": "left",
@@ -68,7 +68,7 @@
       ]
     },
     "QB": {
-      "rule": "Snap it and go now, right behind the outside hip of the guard away from the flanker. Low pads, ball in both arms, fall forward. Do not stand up and do not look for a hole.",
+      "rule": "Snap it and go now, right behind the outside hip of the guard away from the Z. Low pads, ball in both arms, fall forward. Do not stand up and do not look for a hole.",
       "type": "run",
       "path": [
         [-0.3, 1.0],

@@ -1,9 +1,9 @@
 {
   "id": "i-power-boot-l",
-  "order": 27,
+  "order": 20,
   "formation": "i-form",
-  "name": "I Power Boot Left",
-  "call": "I Z Right 17 Power Boot",
+  "name": "Regular I Power Boot Left",
+  "call": "Regular I Z Right 17 Power Boot",
   "type": "pass",
   "defense": "5-3",
   "direction": "left",

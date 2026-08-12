@@ -1,10 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="594" height="1098" viewBox="0 0 594 1098" font-family="Segoe UI, Helvetica, Arial, sans-serif">
 <rect width="100%" height="100%" fill="#ffffff"/>
 <rect x="0" y="0" width="594" height="58" fill="#14213d"/>
-<text x="18" y="26" font-size="19" font-weight="700" fill="#ffffff">I Iso Right</text>
+<text x="18" y="26" font-size="19" font-weight="700" fill="#ffffff">Regular I Iso Right</text>
 <text x="18" y="45" font-size="11.5" fill="#a9b4c7">RUN  •  Regular I  •  vs 5-3</text>
-<rect x="406.8" y="13" width="169.2" height="31" rx="6" fill="#ffffff" fill-opacity="0.12" stroke="#8593ad" stroke-width="1"/>
-<text x="491.4" y="34" text-anchor="middle" font-size="14.5" font-weight="700" fill="#ffffff" letter-spacing="0.5">I Z Right 32 Iso</text>
+<rect x="333.2" y="13" width="242.8" height="31" rx="6" fill="#ffffff" fill-opacity="0.12" stroke="#8593ad" stroke-width="1"/>
+<text x="454.6" y="34" text-anchor="middle" font-size="14.5" font-weight="700" fill="#ffffff" letter-spacing="0.5">Regular I Z Right 32 Iso</text>
 <clipPath id="fieldclip"><rect x="0" y="58" width="594" height="472"/></clipPath>
 <g clip-path="url(#fieldclip)"><g transform="translate(-54.0,31.0)">
 <rect x="0" y="0" width="702" height="513" fill="#ffffff"/>

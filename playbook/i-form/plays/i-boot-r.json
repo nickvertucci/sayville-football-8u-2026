@@ -1,14 +1,14 @@
 {
   "id": "i-boot-r",
-  "order": 12,
+  "order": 13,
   "formation": "i-form",
-  "name": "I Boot Right",
-  "call": "I Z Right 16 Boot",
+  "name": "Regular I Boot Right",
+  "call": "Regular I Z Right 16 Boot",
   "type": "pass",
   "defense": "5-3",
   "direction": "right",
   "ball_carrier": "Z",
-  "purpose": "Play action off the toss look. Two receivers to the flanker side and a quarterback with the whole edge to himself. Run first, throw second.",
+  "purpose": "Play action off the toss look. Two receivers to the Z side and a quarterback with the whole edge to himself. Run first, throw second.",
   "assignments": {
     "LTE": {
       "rule": "Block down inside and sell the run. This has to look exactly like the toss going the other way.",

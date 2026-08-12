@@ -2,13 +2,13 @@
   "id": "i-jet-r",
   "order": 25,
   "formation": "i-form",
-  "name": "I Jet Right",
-  "call": "I Z Right 48 Jet",
+  "name": "Regular I Jet Right",
+  "call": "Regular I Z Right 48 Jet",
   "type": "run",
   "defense": "5-3",
   "direction": "right",
   "ball_carrier": "Z",
-  "purpose": "The flanker keeps it to his own side. Jet Left has been taking the ball away from the flanker all game; here he takes the quick pitch right back around his own end, where the defense has stopped honouring him.",
+  "purpose": "The Z keeps it to his own side. Jet Left has been taking the ball away from the Z all game; here he takes the quick pitch right back around his own end, where the defense has stopped honouring him.",
   "assignments": {
     "LTE": {
       "rule": "Cut off pursuit from behind. Everything is running away from you, so chase flat down the line and never quit.",
@@ -73,7 +73,7 @@
       ]
     },
     "QB": {
-      "rule": "Turn and pitch it out to the flanker as he crosses, then carry out a boot fake back to the left with your hands on your belly.",
+      "rule": "Turn and pitch it out to the Z as he crosses, then carry out a boot fake back to the left with your hands on your belly.",
       "type": "fake",
       "path": [
         [-0.6, -0.6],
@@ -82,7 +82,7 @@
       ]
     },
     "FB": {
-      "rule": "Fill straight ahead like Wedge is coming, then look for anyone chasing the flanker from the inside.",
+      "rule": "Fill straight ahead like Wedge is coming, then look for anyone chasing the Z from the inside.",
       "type": "block",
       "path": [
         [0.4, 1.8],
@@ -100,9 +100,9 @@
     }
   },
   "coaching_points": [
-    "This is the answer when their end starts chasing Jet Left flat down the line — the flanker pitches off his own edge before the end can recover.",
-    "Motion is legal in 11-man play, but only one man may be moving at the snap and he cannot be moving toward the line. Keep the flanker flat.",
-    "The pitch has to beat the flanker to the corner. Get it to him deep and early so he never breaks stride.",
+    "This is the answer when their end starts chasing Jet Left flat down the line — the Z pitches off his own edge before the end can recover.",
+    "Motion is legal in 11-man play, but only one man may be moving at the snap and he cannot be moving toward the line. Keep the Z flat.",
+    "The pitch has to beat the Z to the corner. Get it to him deep and early so he never breaks stride.",
     "The pulling guard is the carrier's last blocker. If the corner beats him outside, the play dies — drill the block on air.",
     "Do not install this until Jet Left is real. It only works because they have been punished for leaving with the motion."
   ],

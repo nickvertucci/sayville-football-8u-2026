@@ -1,11 +1,12 @@
 {
   "id": "i-dive-r",
-  "order": 1,
+  "order": 3,
   "formation": "i-form",
-  "name": "I Dive Right",
-  "call": "I Z Right 20 Dive",
+  "name": "Regular I Dive Right",
+  "call": "Regular I Z Right 20 Dive",
   "type": "run",
   "defense": "5-3",
+  "direction": "right",
   "ball_carrier": "FB",
   "purpose": "The quickest handoff in the book. The fullback is through the line before their linebackers have read anything. We run it to remind them the middle is not free, which is what makes the toss work later.",
   "assignments": {
@@ -99,6 +100,5 @@
     "The fullback runs at a spot, not at a defender. Give him the outside hip of the center and let him go.",
     "Best short-yardage call in the book. Nobody has to read anything and the ball is over the line before the defense moves."
   ],
-  "direction": "right",
   "z": "right"
 }

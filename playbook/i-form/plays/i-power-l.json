@@ -1,14 +1,14 @@
 {
   "id": "i-power-l",
-  "order": 21,
+  "order": 10,
   "formation": "i-form",
-  "name": "I Power Left",
-  "call": "I Z Right 35 Power",
+  "name": "Regular I Power Left",
+  "call": "Regular I Z Right 35 Power",
   "type": "run",
   "defense": "5-3",
   "direction": "left",
   "ball_carrier": "TB",
-  "purpose": "The same play away from the flanker. We give up the flanker's kick-out and the fullback does that job instead, which is why it is the second one we teach, not the first.",
+  "purpose": "The same play away from the Z. We give up the Z's kick-out and the fullback does that job instead, which is why it is the second one we teach, not the first.",
   "assignments": {
     "LTE": {
       "rule": "Release inside off his outside shoulder and take the playside linebacker. The end over you is getting kicked out — leave him alone.",
@@ -100,8 +100,8 @@
     }
   },
   "coaching_points": [
-    "Run this the moment they start cheating a linebacker over to the flanker. That is the only reason it is in the book.",
-    "The fullback is doing the flanker's job here, and he is doing it from further away with less angle. Give him extra reps on the kick-out alone.",
+    "Run this the moment they start cheating a linebacker over to the Z. That is the only reason it is in the book.",
+    "The fullback is doing the Z's job here, and he is doing it from further away with less angle. Give him extra reps on the kick-out alone.",
     "Everything else is Power Right in a mirror, so teach the pair together. The line rules do not change at all.",
     "If the backside end is chasing the tailback down from behind, the quarterback's boot fake is not being carried out. Fix the fake, not the blocking."
   ],

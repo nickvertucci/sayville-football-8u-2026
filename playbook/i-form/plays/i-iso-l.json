@@ -1,17 +1,45 @@
 {
   "id": "i-iso-l",
-  "order": 4,
+  "order": 8,
   "formation": "i-form",
-  "name": "I Iso Left",
-  "call": "I Z Right 33 Iso",
+  "name": "Regular I Iso Left",
+  "call": "Regular I Z Right 33 Iso",
   "type": "run",
   "defense": "5-3",
   "direction": "left",
   "ball_carrier": "TB",
-  "purpose": "The same isolation block the other way. The flanker stays where he is, so this runs away from our strength — which is exactly why it is open.",
+  "purpose": "The same isolation block the other way. The Z stays where he is, so this runs away from our strength — which is exactly why it is open.",
   "assignments": {
-    "RTE": {
-      "rule": "Cut off pursuit from behind. You are the last one to the ball, so never quit on the play.",
+    "LTE": {
+      "rule": "The end is head up on you. Drive him out and widen the hole.",
+      "type": "block",
+      "path": [
+        [-0.4, 1.0]
+      ]
+    },
+    "LT": {
+      "rule": "Double the tackle on your inside shoulder with the guard. Drive him back, and if the middle linebacker runs through, the guard comes off onto him.",
+      "type": "block",
+      "path": [
+        [0.4, 1.2]
+      ]
+    },
+    "LG": {
+      "rule": "The tackle sits in the gap outside you. You and our tackle double him — hands inside, drive him backwards.",
+      "type": "block",
+      "path": [
+        [-0.6, 1.2]
+      ]
+    },
+    "C": {
+      "rule": "You have the nose, head up on you. Hands inside and do not let him cross your face to the playside.",
+      "type": "block",
+      "path": [
+        [-0.8, 1.0]
+      ]
+    },
+    "RG": {
+      "rule": "Nobody is over you. Step back inside and cut off anyone chasing through the middle.",
       "type": "block",
       "path": [
         [-1.0, 0.7]
@@ -24,39 +52,11 @@
         [-1.0, 0.7]
       ]
     },
-    "RG": {
-      "rule": "Nobody is over you. Step back inside and cut off anyone chasing through the middle.",
+    "RTE": {
+      "rule": "Cut off pursuit from behind. You are the last one to the ball, so never quit on the play.",
       "type": "block",
       "path": [
         [-1.0, 0.7]
-      ]
-    },
-    "C": {
-      "rule": "You have the nose, head up on you. Hands inside and do not let him cross your face to the playside.",
-      "type": "block",
-      "path": [
-        [-0.8, 1.0]
-      ]
-    },
-    "LG": {
-      "rule": "The tackle sits in the gap outside you. You and our tackle double him — hands inside, drive him backwards.",
-      "type": "block",
-      "path": [
-        [-0.6, 1.2]
-      ]
-    },
-    "LT": {
-      "rule": "Double the tackle on your inside shoulder with the guard. Drive him back, and if the middle linebacker runs through, the guard comes off onto him.",
-      "type": "block",
-      "path": [
-        [0.4, 1.2]
-      ]
-    },
-    "LTE": {
-      "rule": "The end is head up on you. Drive him out and widen the hole.",
-      "type": "block",
-      "path": [
-        [-0.4, 1.0]
       ]
     },
     "Z": {
@@ -95,8 +95,8 @@
     }
   },
   "coaching_points": [
-    "Running away from the flanker means one fewer blocker out there, so the tailback has to get north fast.",
-    "Their defense will usually shade toward our flanker. That is the reason this play exists — check it before you call it.",
+    "Running away from the Z means one fewer blocker out there, so the tailback has to get north fast.",
+    "Their defense will usually shade toward our Z. That is the reason this play exists — check it before you call it.",
     "Same block, same read as I Iso Right. Do not teach it as a new play, teach it as the same play flipped."
   ],
   "z": "right"

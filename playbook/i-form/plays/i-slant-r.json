@@ -1,9 +1,9 @@
 {
   "id": "i-slant-r",
-  "order": 5,
+  "order": 21,
   "formation": "i-form",
-  "name": "I Slant Right",
-  "call": "I Z Right 36 Slant",
+  "name": "Regular I Slant Right",
+  "call": "Regular I Z Right 36 Slant",
   "type": "run",
   "defense": "5-3",
   "direction": "right",
