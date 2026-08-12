@@ -1,9 +1,9 @@
 {
   "id": "i-wedge",
-  "order": 22,
+  "order": 5,
   "formation": "i-form",
-  "name": "I Wedge",
-  "call": "I Z Right 30 Wedge",
+  "name": "Regular I Wedge Right",
+  "call": "Regular I Z Right 30 Wedge",
   "type": "run",
   "defense": "6-3",
   "direction": "right",

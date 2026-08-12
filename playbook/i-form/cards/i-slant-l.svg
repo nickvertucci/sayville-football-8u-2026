@@ -1,10 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="594" height="1030" viewBox="0 0 594 1030" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" width="594" height="1014" viewBox="0 0 594 1014" font-family="Segoe UI, Helvetica, Arial, sans-serif">
 <rect width="100%" height="100%" fill="#ffffff"/>
 <rect x="0" y="0" width="594" height="58" fill="#14213d"/>
-<text x="18" y="26" font-size="19" font-weight="700" fill="#ffffff">I Slant Left</text>
+<text x="18" y="26" font-size="19" font-weight="700" fill="#ffffff">Regular I Slant Left</text>
 <text x="18" y="45" font-size="11.5" fill="#a9b4c7">RUN  •  Regular I  •  vs 5-3</text>
-<rect x="388.4" y="13" width="187.6" height="31" rx="6" fill="#ffffff" fill-opacity="0.12" stroke="#8593ad" stroke-width="1"/>
-<text x="482.2" y="34" text-anchor="middle" font-size="14.5" font-weight="700" fill="#ffffff" letter-spacing="0.5">I Z Right 37 Slant</text>
+<rect x="314.8" y="13" width="261.2" height="31" rx="6" fill="#ffffff" fill-opacity="0.12" stroke="#8593ad" stroke-width="1"/>
+<text x="445.4" y="34" text-anchor="middle" font-size="14.5" font-weight="700" fill="#ffffff" letter-spacing="0.5">Regular I Z Right 37 Slant</text>
 <clipPath id="fieldclip"><rect x="0" y="58" width="594" height="472"/></clipPath>
 <g clip-path="url(#fieldclip)"><g transform="translate(-54.0,31.0)">
 <rect x="0" y="0" width="702" height="513" fill="#ffffff"/>
@@ -34,20 +34,20 @@
 <text x="594.0" y="227.7" text-anchor="middle" font-size="10" fill="#9aa2ae" font-weight="600">RC</text>
 <line x1="344.0" y1="101.0" x2="358.0" y2="115.0" stroke="#9aa2ae" stroke-width="3"/><line x1="358.0" y1="101.0" x2="344.0" y2="115.0" stroke="#9aa2ae" stroke-width="3"/>
 <text x="351.0" y="92.7" text-anchor="middle" font-size="10" fill="#9aa2ae" font-weight="600">FS</text>
-<path d="M464.4,337.5 L437.4,318.6" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-<line x1="432.1" y1="326.1" x2="442.7" y2="311.1" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
-<path d="M426.6,337.5 L399.6,318.6" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-<line x1="394.3" y1="326.1" x2="404.9" y2="311.1" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
-<path d="M388.8,337.5 L375.3,369.9 L226.8,364.5 L199.8,291.6" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-<line x1="191.2" y1="294.8" x2="208.4" y2="288.4" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
-<path d="M351.0,337.5 L326.7,315.9" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-<line x1="320.6" y1="322.8" x2="332.8" y2="309.0" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
-<path d="M313.2,337.5 L329.4,307.8 L345.6,245.7" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-<line x1="336.7" y1="243.4" x2="354.5" y2="248.0" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
-<path d="M275.4,337.5 L286.2,302.4" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-<line x1="277.4" y1="299.7" x2="295.0" y2="305.1" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 <path d="M237.6,337.5 L226.8,302.4" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
 <line x1="218.0" y1="305.1" x2="235.6" y2="299.7" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
+<path d="M275.4,337.5 L286.2,302.4" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="277.4" y1="299.7" x2="295.0" y2="305.1" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
+<path d="M313.2,337.5 L329.4,307.8 L345.6,245.7" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="336.7" y1="243.4" x2="354.5" y2="248.0" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
+<path d="M351.0,337.5 L326.7,315.9" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="320.6" y1="322.8" x2="332.8" y2="309.0" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
+<path d="M388.8,337.5 L375.3,369.9 L226.8,364.5 L199.8,291.6" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="191.2" y1="294.8" x2="208.4" y2="288.4" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
+<path d="M426.6,337.5 L399.6,318.6" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="394.3" y1="326.1" x2="404.9" y2="311.1" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
+<path d="M464.4,337.5 L437.4,318.6" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="432.1" y1="326.1" x2="442.7" y2="311.1" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 <path d="M540.0,356.4 L469.8,340.2 L378.0,318.6" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
 <line x1="375.9" y1="327.5" x2="380.1" y2="309.7" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 <path d="M351.0,364.5 L367.2,380.7 L432.0,372.6" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 5"/>
@@ -129,9 +129,8 @@
 <text x="331" y="834" font-size="12" fill="#111318">end, not inside him.</text>
 <line x1="18" y1="892" x2="576" y2="892" stroke="#c8cdd6" stroke-width="1"/>
 <text x="18" y="910" font-size="11" font-weight="700" fill="#5b6472" letter-spacing="1">COACHING POINTS</text>
-<text x="18" y="930" font-size="12" fill="#111318">Check their alignment first. If they have shaded toward our flanker, this is the</text>
-<text x="18" y="946" font-size="12" fill="#111318">call.</text>
-<text x="18" y="964" font-size="12" fill="#111318">The flanker chases from behind. Tell him he is not decoration — he cuts off the</text>
-<text x="18" y="980" font-size="12" fill="#111318">corner who would otherwise run this down.</text>
-<text x="18" y="998" font-size="12" fill="#111318">Everything else is I Slant Right in a mirror. Teach the pair together.</text>
+<text x="18" y="930" font-size="12" fill="#111318">Check their alignment first. If they have shaded toward our Z, this is the call.</text>
+<text x="18" y="946" font-size="12" fill="#111318">The Z chases from behind. Tell him he is not decoration — he cuts off the corner</text>
+<text x="18" y="964" font-size="12" fill="#111318">who would otherwise run this down.</text>
+<text x="18" y="980" font-size="12" fill="#111318">Everything else is I Slant Right in a mirror. Teach the pair together.</text>
 </svg>

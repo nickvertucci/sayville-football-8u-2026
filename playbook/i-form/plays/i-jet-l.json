@@ -1,14 +1,14 @@
 {
   "id": "i-jet-l",
-  "order": 24,
+  "order": 26,
   "formation": "i-form",
-  "name": "I Jet Left",
-  "call": "I Z Right 49 Jet",
+  "name": "Regular I Jet Left",
+  "call": "Regular I Z Right 49 Jet",
   "type": "run",
   "defense": "5-3",
   "direction": "left",
   "ball_carrier": "Z",
-  "purpose": "The flanker goes in motion across the formation and takes the handoff at full speed going the other way. The defense has spent all day watching Power go to the flanker side, and this is the same look leaving in the opposite direction.",
+  "purpose": "The Z goes in motion across the formation and takes the handoff at full speed going the other way. The defense has spent all day watching Power go to the Z side, and this is the same look leaving in the opposite direction.",
   "assignments": {
     "LTE": {
       "rule": "Block the end over you out toward the sideline. Stay on him — the ball is going around you and he cannot be the one to make the tackle.",
@@ -74,7 +74,7 @@
       ]
     },
     "QB": {
-      "rule": "Turn and hand it back to the flanker as he crosses, then keep going the other way with your hands on your belly like you kept it.",
+      "rule": "Turn and hand it back to the Z as he crosses, then keep going the other way with your hands on your belly like you kept it.",
       "type": "fake",
       "path": [
         [0.6, -0.6],
@@ -91,7 +91,7 @@
       ]
     },
     "TB": {
-      "rule": "Run the Power path to the right with your arms tucked like you have the ball. Sell it all the way — you are the reason nobody chases the flanker.",
+      "rule": "Run the Power path to the right with your arms tucked like you have the ball. Sell it all the way — you are the reason nobody chases the Z.",
       "type": "fake",
       "path": [
         [1.2, 1.5],
@@ -101,11 +101,11 @@
     }
   },
   "coaching_points": [
-    "Motion is legal in 11-man play, but only one man may be moving at the snap and he cannot be moving toward the line of scrimmage. Teach the flanker to run flat across, never forward.",
-    "The handoff timing is the whole play. If the flanker is slowing down to catch it the play is dead — snap it when he is a stride from the quarterback and let him run through it.",
+    "Motion is legal in 11-man play, but only one man may be moving at the snap and he cannot be moving toward the line of scrimmage. Teach the Z to run flat across, never forward.",
+    "The handoff timing is the whole play. If the Z is slowing down to catch it the play is dead — snap it when he is a stride from the quarterback and let him run through it.",
     "Call the motion the same way every single time so the snap count and his start never drift apart.",
-    "Do not install this until Power Right is real. Jet works because they have already been punished for not honouring the flanker side.",
-    "If their end chases the flanker flat down the line, come back to Power Right the very next play — he has left the edge."
+    "Do not install this until Power Right is real. Jet works because they have already been punished for not honouring the Z side.",
+    "If their end chases the Z flat down the line, come back to Power Right the very next play — he has left the edge."
   ],
   "z": "right"
 }

@@ -1,10 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="594" height="1184" viewBox="0 0 594 1184" font-family="Segoe UI, Helvetica, Arial, sans-serif">
 <rect width="100%" height="100%" fill="#ffffff"/>
 <rect x="0" y="0" width="594" height="58" fill="#14213d"/>
-<text x="18" y="26" font-size="19" font-weight="700" fill="#ffffff">I Power Right</text>
+<text x="18" y="26" font-size="19" font-weight="700" fill="#ffffff">Regular I Power Right</text>
 <text x="18" y="45" font-size="11.5" fill="#a9b4c7">RUN  •  Regular I  •  vs 5-3</text>
-<rect x="388.4" y="13" width="187.6" height="31" rx="6" fill="#ffffff" fill-opacity="0.12" stroke="#8593ad" stroke-width="1"/>
-<text x="482.2" y="34" text-anchor="middle" font-size="14.5" font-weight="700" fill="#ffffff" letter-spacing="0.5">I Z Right 34 Power</text>
+<rect x="314.8" y="13" width="261.2" height="31" rx="6" fill="#ffffff" fill-opacity="0.12" stroke="#8593ad" stroke-width="1"/>
+<text x="445.4" y="34" text-anchor="middle" font-size="14.5" font-weight="700" fill="#ffffff" letter-spacing="0.5">Regular I Z Right 34 Power</text>
 <clipPath id="fieldclip"><rect x="0" y="58" width="594" height="472"/></clipPath>
 <g clip-path="url(#fieldclip)"><g transform="translate(-54.0,31.0)">
 <rect x="0" y="0" width="702" height="513" fill="#ffffff"/>
@@ -139,12 +139,12 @@
 <text x="18" y="978" font-size="11" font-weight="700" fill="#5b6472" letter-spacing="1">COACHING POINTS</text>
 <text x="18" y="998" font-size="12" fill="#111318">This is the most physical run in the book. If it works you can run it fifteen</text>
 <text x="18" y="1014" font-size="12" fill="#111318">times, and at this age you often can.</text>
-<text x="18" y="1032" font-size="12" fill="#111318">Drill the flanker's kick-out on its own. If he blocks the end with his shoulders</text>
+<text x="18" y="1032" font-size="12" fill="#111318">Drill the Z's kick-out on its own. If he blocks the end with his shoulders</text>
 <text x="18" y="1048" font-size="12" fill="#111318">square, the end slides underneath and makes the tackle for a loss — he has to</text>
 <text x="18" y="1066" font-size="12" fill="#111318">attack the outside hip.</text>
 <text x="18" y="1082" font-size="12" fill="#111318">The pulling guard is late by design. Tell him his man is the one who shows up in</text>
 <text x="18" y="1100" font-size="12" fill="#111318">the hole, not a man he picks before the snap.</text>
 <text x="18" y="1116" font-size="12" fill="#111318">The tailback's most common mistake is bouncing it wide looking for green grass.</text>
-<text x="18" y="1134" font-size="12" fill="#111318">The yards are inside the flanker's block. Make him run it tight in practice until</text>
-<text x="18" y="1150" font-size="12" fill="#111318">it is automatic.</text>
+<text x="18" y="1134" font-size="12" fill="#111318">The yards are inside the Z's block. Make him run it tight in practice until it is</text>
+<text x="18" y="1150" font-size="12" fill="#111318">automatic.</text>
 </svg>

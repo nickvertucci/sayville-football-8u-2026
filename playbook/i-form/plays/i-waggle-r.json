@@ -1,14 +1,14 @@
 {
   "id": "i-waggle-r",
-  "order": 13.5,
+  "order": 15,
   "formation": "i-form",
-  "name": "I Waggle Right",
-  "call": "I Z Right 16 Waggle",
+  "name": "Regular I Waggle Right",
+  "call": "Regular I Z Right 16 Waggle",
   "type": "pass",
   "defense": "5-3",
   "direction": "right",
   "ball_carrier": "RTE",
-  "purpose": "Waggle Right off the dive fake. The quarterback fakes the dive and boots to the right edge, with the tight end in the flat in front of him and the flanker clearing the corner over the top. Run first, throw second.",
+  "purpose": "Waggle Right off the dive fake. The quarterback fakes the dive and boots to the right edge, with the tight end in the flat in front of him and the Z clearing the corner over the top. Run first, throw second.",
   "assignments": {
     "LTE": {
       "rule": "Block down inside and sell the run. This has to look exactly like a run to your side.",
@@ -102,7 +102,7 @@
     "This is the partner to I Waggle Left — call the one that boots away from wherever their outside linebacker has started cheating.",
     "The end must engage before he releases. If he runs straight into the flat the whole fake dies and the flat defender is waiting for him.",
     "No blitzing is allowed for 8- and 9-year-olds, so the quarterback has time. Teach him to be patient and look up.",
-    "The flanker clears the corner first so the flat opens underneath — the quarterback throws the tight end, not the flanker.",
+    "The Z clears the corner first so the flat opens underneath — the quarterback throws the tight end, not the Z.",
     "One throw, then tuck it. No scrambling backwards, ever."
   ],
   "z": "right"

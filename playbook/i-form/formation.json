@@ -4,8 +4,8 @@
   "name": "Regular I",
   "family": "Regular I",
   "summary": "Fullback and tailback stacked behind the quarterback. Teaches a back to read a block instead of running to a spot.",
-  "personnel": "11 players, 2 tight ends, 1 flanker, quarterback, fullback, tailback",
-  "notes": "Normal line splits, about one foot. Both ends are ON the line. The flanker is OFF the line, one yard outside the end and one yard back, so we always have exactly seven on the line. Fullback at three yards, tailback stacked directly behind him at five and a half.",
+  "personnel": "11 players, 2 tight ends, 1 Z, quarterback, fullback, tailback",
+  "notes": "Normal line splits, about one foot. Both ends are ON the line. The Z is OFF the line, one yard outside the end and one yard back, so we always have exactly seven on the line. Fullback at three yards, tailback stacked directly behind him at five and a half.",
   "alignment": {
     "LTE": [-4.2, -0.5],
     "LT": [-2.8, -0.5],
@@ -35,9 +35,9 @@
   },
   "coaching_notes": [
     "This formation exists so the tailback can pick a hole. In the Wishbone the play decides where the ball goes; here the back reads the block in front of him and cuts off it. That is the harder skill of the two, which is why this is the formation we spend the most practice time on.",
-    "The flanker lines up to the right on every play in the book, and the call says so — I Z Right. Naming it means we can add a Z Left look later without changing a single thing about how the plays are called, and it means nobody has to guess where he goes.",
-    "Count seven on the line every single snap. The flanker creeping up to the line is the most common illegal formation flag you will get out of this look.",
+    "The Z lines up to the right on every play in the book, and the call says so — I Z Right. Naming it means we can add a Z Left look later without changing a single thing about how the plays are called, and it means nobody has to guess where he goes.",
+    "Count seven on the line every single snap. The Z creeping up to the line is the most common illegal formation flag you will get out of this look.",
     "Fullback and tailback must be stacked. If the tailback drifts he tips which way the play is going before the snap.",
-    "The flanker is back 4 in the calls. He is a receiver on most snaps, but he is also the man in jet motion on the Jet sweep and the fake on the boot off it, which is why he carries a back number the same way the wing does in the Power I."
+    "The Z is back 4 in the calls. He is a receiver on most snaps, but he is also the man in jet motion on the Jet sweep and the fake on the boot off it, which is why he carries back number 4, the same as he does lined up in the backfield in the Power I."
   ]
 }

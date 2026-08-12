@@ -73,16 +73,17 @@ A formation has one alignment, but a formation is not always one picture. A play
 move a player who has more than one legal spot in the same eleven-man look:
 
 ```json
-"alignment": { "WB": [2.6, -3.3] }
+"alignment": { "Z": [-2.6, -3.3] }
 ```
 
-That is the Power I's wingback leaving the wing for the backfield. Everything else — the
-line rules, the other ten spots — is unchanged, and the player's `path` is still relative
-to wherever he ends up, so the assignment does not have to know which look it is in.
+That is a Power I play offsetting the Z to the weak side instead of its default
+strong-side backfield spot. Everything else — the line rules, the other ten spots — is
+unchanged, and the player's `path` is still relative to wherever he ends up, so the
+assignment does not have to know which look it is in.
 
-**Say it in the call.** `Power I Offset Right 34 Power` tells the huddle where he is, the
-same way `I Z Right 20 Dive` names the flanker's side. A play that moves somebody
-silently is a play nobody can call.
+**Say it in the call.** `Power I Left 35 Power` tells the huddle which side the Z is
+offset to, the same way `Regular I Z Right 20 Dive` names the Z's side. A play that moves
+somebody silently is a play nobody can call.
 
 An override may only move a player the formation already has, and the coordinates must be
 `[x, y]`. `--check` rejects both mistakes — a typo'd key would otherwise be ignored in
@@ -136,7 +137,7 @@ The numbering system is documented in the top-level [README](../README.md).
 
 That means the digits describe **the back the first digit names**, not the ball carrier.
 On `I Z Right 16 Boot` the `1` is the quarterback going through the 6 hole; `ball_carrier`
-is the flanker he throws to, which is a different thing.
+is the Z he throws to, which is a different thing.
 
 Inventing a nickname instead of a call defeats the point of having a language, and now
 also fails `--check`.
@@ -174,9 +175,9 @@ in the `MIRROR` table maps to itself, which is correct for someone aligned on th
 
 - **Wishbone and Full House are symmetric** — they use `mirror_of`, so a left-handed play
   is a four-line file.
-- **Regular I and Power I are not.** The flanker (`Z`) and the wing (`WB`) sit right on
-  every snap, so mirroring would flip the path while leaving the player aligned on the
-  same side. Their left-handed plays are authored by hand.
+- **Regular I and Power I are not.** The `Z` sits on the right on every snap — out wide
+  in the Regular I, in the backfield in the Power I — so mirroring would flip its path
+  while leaving it aligned on the same side. Their left-handed plays are authored by hand.
 
 **This is also why rules never name a specific position.** Write "the playside end", "the
 backside guard", "the center" — never "RTE" or "LG". Position abbreviations are not

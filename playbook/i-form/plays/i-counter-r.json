@@ -1,14 +1,14 @@
 {
   "id": "i-counter-r",
-  "order": 10,
+  "order": 11,
   "formation": "i-form",
-  "name": "I Counter Right",
-  "call": "I Z Right 34 Counter",
+  "name": "Regular I Counter Right",
+  "call": "Regular I Z Right 34 Counter",
   "type": "run",
   "defense": "5-3",
   "direction": "right",
   "ball_carrier": "TB",
-  "purpose": "Counter Left the other way. We show them the toss to the weak side, their linebackers chase it, and the tailback plants and comes back to the flanker side behind a pulling guard.",
+  "purpose": "Counter Left the other way. We show them the toss to the weak side, their linebackers chase it, and the tailback plants and comes back to the Z side behind a pulling guard.",
   "assignments": {
     "LTE": {
       "rule": "Cut off pursuit from behind. You are the last one to the ball, so never quit on the play.",
@@ -100,7 +100,7 @@
   },
   "coaching_points": [
     "Do not call this until I Toss Left has gone for real yards. Misdirection off a play they do not fear is just a slower run.",
-    "This one has the flanker on the playside, which Counter Left does not. That is a blocker Counter Left never had, so this is the better of the pair against a team that flows hard.",
+    "This one has the Z on the playside, which Counter Left does not. That is a blocker Counter Left never had, so this is the better of the pair against a team that flows hard.",
     "The tailback's counter steps must be full speed and full length. A shuffle fools nobody.",
     "Teach it the same day as Counter Left. The line rules are identical and the kids only have to learn which guard pulls."
   ],

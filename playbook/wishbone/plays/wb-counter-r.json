@@ -1,6 +1,6 @@
 {
   "id": "wb-counter-r",
-  "order": 7,
+  "order": 5,
   "formation": "wishbone",
   "name": "Bone Counter Right",
   "call": "Bone 44 Counter",

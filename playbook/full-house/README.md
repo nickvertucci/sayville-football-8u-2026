@@ -25,7 +25,7 @@ The full house T. Both ends are tight and on the line, and the three backs sit s
 - The back digits are the same as the Wishbone on purpose — 2 is the fullback, 3 is the right halfback, 4 is the left halfback. A kid who has learned Bone calls already knows House calls.
 - Three backs at the same depth is the whole idea. In the Wishbone the fullback is closer than the halfbacks and a smart defense reads it. Here all three leave the same spot at the same time.
 - Every run uses all three backs: one carries, one kicks out, one leads through. Teach the three jobs, not the three plays — then the same three jobs work in both directions.
-- Count seven on the line every snap. There is no flanker or wing to creep up here, so this is the formation least likely to get you an illegal formation flag.
+- Count seven on the line every snap. There is no Z to creep up here, so this is the formation least likely to get you an illegal formation flag.
 - Symmetric formation, symmetric rules — the kids learn one play and get two.
 
 ## Plays
@@ -36,10 +36,10 @@ The full house T. Both ends are tight and on the line, and the three backs sit s
 | [House Dive Left](#house-dive-left) | `House 21 Dive` | run | FB |
 | [House Power Right](#house-power-right) | `House 44 Power` | run | LH |
 | [House Power Left](#house-power-left) | `House 35 Power` | run | RH |
+| [House Boot Right](#house-boot-right) | `House 16 Boot` | pass | RTE |
+| [House Boot Left](#house-boot-left) | `House 17 Boot` | pass | LTE |
 | [House Sweep Right](#house-sweep-right) | `House 48 Sweep` | run | LH |
 | [House Sweep Left](#house-sweep-left) | `House 39 Sweep` | run | RH |
-| [House Boot Left](#house-boot-left) | `House 17 Boot` | pass | LTE |
-| [House Boot Right](#house-boot-right) | `House 16 Boot` | pass | RTE |
 
 ---
 
@@ -129,7 +129,7 @@ All three backs get a job. The near halfback kicks the end out, the fullback lea
 
 **Coaching points**
 
-- This is Power without a pulling guard. The near halfback does the job the wing does in the Power I, and he does it from four yards deep with a running start — which is easier, not harder.
+- This is Power without a pulling guard. The near halfback does the job the Z does in the Power I, and he does it from four yards deep with a running start — which is easier, not harder.
 - Three backs, three jobs: kick out, lead, carry. Teach the jobs and both directions come free.
 - Drill the near back's kick-out on its own. If he blocks the end with square shoulders the end slides underneath and makes the tackle in the backfield — he has to attack the outside hip.
 - The carrier is the far back so that he has time to see the two blocks develop in front of him. Do not swap the jobs to get your best runner the ball sooner.
@@ -161,11 +161,75 @@ All three backs get a job. The near halfback kicks the end out, the fullback lea
 
 **Coaching points**
 
-- This is Power without a pulling guard. The near halfback does the job the wing does in the Power I, and he does it from four yards deep with a running start — which is easier, not harder.
+- This is Power without a pulling guard. The near halfback does the job the Z does in the Power I, and he does it from four yards deep with a running start — which is easier, not harder.
 - Three backs, three jobs: kick out, lead, carry. Teach the jobs and both directions come free.
 - Drill the near back's kick-out on its own. If he blocks the end with square shoulders the end slides underneath and makes the tackle in the backfield — he has to attack the outside hip.
 - The carrier is the far back so that he has time to see the two blocks develop in front of him. Do not swap the jobs to get your best runner the ball sooner.
 - If they start jumping the kick-out, House Sweep Left is the same first three steps.
+
+---
+
+## House Boot Right
+
+**Call it:** `House 16 Boot`
+
+![House Boot Right](cards/fh-boot-r.svg)
+
+All three backs run their Power paths to the left and the quarterback keeps it right on his own. Three backs going one way is the hardest thing in this book to ignore, which is exactly why nobody is right on the other side.
+
+| Position | Assignment |
+|---|---|
+| **LTE** | Engage the end over you for a count, then release and get across the field to eight yards. You are the second look and you arrive late on purpose. |
+| **LT** | Block down inside and sell the run. This has to look exactly like Power going to your side. |
+| **LG** | Nobody is over you. Climb like you are going to the middle linebacker on Power — take him with you. |
+| **C** | Block the nose away from the boot. Nobody chases through the middle. |
+| **RG** | Nobody is over you. Help the center on the nose and drive him away from the boot. |
+| **RT** | Hinge and protect the boot side. Nobody comes free outside you — the quarterback is alone back there. |
+| **RTE** **(ball)** | Engage the end over you for a count, then release to the flat at four yards and stay in front of the quarterback. You are the easy throw. |
+| **QB** | Fake the handoff to the far halfback with both hands, hide the ball on your back hip, and get to the edge the other way. Run it if it is open. Only throw if a defender comes up to take you. |
+| **FB** | Run your Power lead path to the left and block whoever shows. Sell it, then look back for anyone chasing the quarterback. |
+| **LH** | Run your kick-out path at the end like Power is coming, then peel back and protect the quarterback's outside shoulder. |
+| **RH** | Run your Power path to the left at full speed with your arms tucked like you have the ball. Sell it all the way — you are the reason nobody stays home. |
+
+**Coaching points**
+
+- Do not call this until House Power Left has hurt them. Every part of it is a lie about Power, so Power has to be worth lying about.
+- The three backs have to run their real Power paths at real speed. A jogged fake with three backs is three times as obvious as a jogged fake with one.
+- Both ends must engage before releasing. If they run straight into their routes the fake dies and the flat defender is waiting.
+- No blitzing is allowed for 8- and 9-year-olds, so the quarterback has time. Teach him to be patient and look up.
+- Run first. One throw, then tuck it — no scrambling backwards, ever.
+
+---
+
+## House Boot Left
+
+**Call it:** `House 17 Boot`
+
+![House Boot Left](cards/fh-boot-l.svg)
+
+All three backs run their Power paths to the right and the quarterback keeps it left on his own. Three backs going one way is the hardest thing in this book to ignore, which is exactly why nobody is left on the other side.
+
+| Position | Assignment |
+|---|---|
+| **LTE** **(ball)** | Engage the end over you for a count, then release to the flat at four yards and stay in front of the quarterback. You are the easy throw. |
+| **LT** | Hinge and protect the boot side. Nobody comes free outside you — the quarterback is alone back there. |
+| **LG** | Nobody is over you. Help the center on the nose and drive him away from the boot. |
+| **C** | Block the nose away from the boot. Nobody chases through the middle. |
+| **RG** | Nobody is over you. Climb like you are going to the middle linebacker on Power — take him with you. |
+| **RT** | Block down inside and sell the run. This has to look exactly like Power going to your side. |
+| **RTE** | Engage the end over you for a count, then release and get across the field to eight yards. You are the second look and you arrive late on purpose. |
+| **QB** | Fake the handoff to the far halfback with both hands, hide the ball on your back hip, and get to the edge the other way. Run it if it is open. Only throw if a defender comes up to take you. |
+| **FB** | Run your Power lead path to the right and block whoever shows. Sell it, then look back for anyone chasing the quarterback. |
+| **LH** | Run your Power path to the right at full speed with your arms tucked like you have the ball. Sell it all the way — you are the reason nobody stays home. |
+| **RH** | Run your kick-out path at the end like Power is coming, then peel back and protect the quarterback's outside shoulder. |
+
+**Coaching points**
+
+- Do not call this until House Power Right has hurt them. Every part of it is a lie about Power, so Power has to be worth lying about.
+- The three backs have to run their real Power paths at real speed. A jogged fake with three backs is three times as obvious as a jogged fake with one.
+- Both ends must engage before releasing. If they run straight into their routes the fake dies and the flat defender is waiting.
+- No blitzing is allowed for 8- and 9-year-olds, so the quarterback has time. Teach him to be patient and look up.
+- Run first. One throw, then tuck it — no scrambling backwards, ever.
 
 ---
 
@@ -230,68 +294,4 @@ The same first three steps as Power, taken all the way outside. The near halfbac
 - The pulling guard has the longest trip on the play. If he cannot get there, block it with the near back alone and leave the guard in — a slow pull is worse than no pull.
 - Best call on the hash going to the wide side of the field. Do not call it into the boundary.
 - If their corner is flying up to meet the pull every time, come back inside with Power Left or Dive Left.
-
----
-
-## House Boot Left
-
-**Call it:** `House 17 Boot`
-
-![House Boot Left](cards/fh-boot-l.svg)
-
-All three backs run their Power paths to the right and the quarterback keeps it left on his own. Three backs going one way is the hardest thing in this book to ignore, which is exactly why nobody is left on the other side.
-
-| Position | Assignment |
-|---|---|
-| **LTE** **(ball)** | Engage the end over you for a count, then release to the flat at four yards and stay in front of the quarterback. You are the easy throw. |
-| **LT** | Hinge and protect the boot side. Nobody comes free outside you — the quarterback is alone back there. |
-| **LG** | Nobody is over you. Help the center on the nose and drive him away from the boot. |
-| **C** | Block the nose away from the boot. Nobody chases through the middle. |
-| **RG** | Nobody is over you. Climb like you are going to the middle linebacker on Power — take him with you. |
-| **RT** | Block down inside and sell the run. This has to look exactly like Power going to your side. |
-| **RTE** | Engage the end over you for a count, then release and get across the field to eight yards. You are the second look and you arrive late on purpose. |
-| **QB** | Fake the handoff to the far halfback with both hands, hide the ball on your back hip, and get to the edge the other way. Run it if it is open. Only throw if a defender comes up to take you. |
-| **FB** | Run your Power lead path to the right and block whoever shows. Sell it, then look back for anyone chasing the quarterback. |
-| **LH** | Run your Power path to the right at full speed with your arms tucked like you have the ball. Sell it all the way — you are the reason nobody stays home. |
-| **RH** | Run your kick-out path at the end like Power is coming, then peel back and protect the quarterback's outside shoulder. |
-
-**Coaching points**
-
-- Do not call this until House Power Right has hurt them. Every part of it is a lie about Power, so Power has to be worth lying about.
-- The three backs have to run their real Power paths at real speed. A jogged fake with three backs is three times as obvious as a jogged fake with one.
-- Both ends must engage before releasing. If they run straight into their routes the fake dies and the flat defender is waiting.
-- No blitzing is allowed for 8- and 9-year-olds, so the quarterback has time. Teach him to be patient and look up.
-- Run first. One throw, then tuck it — no scrambling backwards, ever.
-
----
-
-## House Boot Right
-
-**Call it:** `House 16 Boot`
-
-![House Boot Right](cards/fh-boot-r.svg)
-
-All three backs run their Power paths to the left and the quarterback keeps it right on his own. Three backs going one way is the hardest thing in this book to ignore, which is exactly why nobody is right on the other side.
-
-| Position | Assignment |
-|---|---|
-| **LTE** | Engage the end over you for a count, then release and get across the field to eight yards. You are the second look and you arrive late on purpose. |
-| **LT** | Block down inside and sell the run. This has to look exactly like Power going to your side. |
-| **LG** | Nobody is over you. Climb like you are going to the middle linebacker on Power — take him with you. |
-| **C** | Block the nose away from the boot. Nobody chases through the middle. |
-| **RG** | Nobody is over you. Help the center on the nose and drive him away from the boot. |
-| **RT** | Hinge and protect the boot side. Nobody comes free outside you — the quarterback is alone back there. |
-| **RTE** **(ball)** | Engage the end over you for a count, then release to the flat at four yards and stay in front of the quarterback. You are the easy throw. |
-| **QB** | Fake the handoff to the far halfback with both hands, hide the ball on your back hip, and get to the edge the other way. Run it if it is open. Only throw if a defender comes up to take you. |
-| **FB** | Run your Power lead path to the left and block whoever shows. Sell it, then look back for anyone chasing the quarterback. |
-| **LH** | Run your kick-out path at the end like Power is coming, then peel back and protect the quarterback's outside shoulder. |
-| **RH** | Run your Power path to the left at full speed with your arms tucked like you have the ball. Sell it all the way — you are the reason nobody stays home. |
-
-**Coaching points**
-
-- Do not call this until House Power Left has hurt them. Every part of it is a lie about Power, so Power has to be worth lying about.
-- The three backs have to run their real Power paths at real speed. A jogged fake with three backs is three times as obvious as a jogged fake with one.
-- Both ends must engage before releasing. If they run straight into their routes the fake dies and the flat defender is waiting.
-- No blitzing is allowed for 8- and 9-year-olds, so the quarterback has time. Teach him to be patient and look up.
-- Run first. One throw, then tuck it — no scrambling backwards, ever.
 

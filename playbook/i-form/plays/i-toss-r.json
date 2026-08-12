@@ -1,9 +1,9 @@
 {
   "id": "i-toss-r",
-  "order": 7,
+  "order": 23,
   "formation": "i-form",
-  "name": "I Toss Right",
-  "call": "I Z Right 38 Toss",
+  "name": "Regular I Toss Right",
+  "call": "Regular I Z Right 38 Toss",
   "type": "run",
   "defense": "5-3",
   "direction": "right",

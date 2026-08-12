@@ -1,10 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="594" height="1082" viewBox="0 0 594 1082" font-family="Segoe UI, Helvetica, Arial, sans-serif">
 <rect width="100%" height="100%" fill="#ffffff"/>
 <rect x="0" y="0" width="594" height="58" fill="#14213d"/>
-<text x="18" y="26" font-size="19" font-weight="700" fill="#ffffff">I Sneak Left</text>
+<text x="18" y="26" font-size="19" font-weight="700" fill="#ffffff">Regular I Sneak Left</text>
 <text x="18" y="45" font-size="11.5" fill="#a9b4c7">RUN  •  Regular I  •  vs 6-3</text>
-<rect x="388.4" y="13" width="187.6" height="31" rx="6" fill="#ffffff" fill-opacity="0.12" stroke="#8593ad" stroke-width="1"/>
-<text x="482.2" y="34" text-anchor="middle" font-size="14.5" font-weight="700" fill="#ffffff" letter-spacing="0.5">I Z Right 11 Sneak</text>
+<rect x="314.8" y="13" width="261.2" height="31" rx="6" fill="#ffffff" fill-opacity="0.12" stroke="#8593ad" stroke-width="1"/>
+<text x="445.4" y="34" text-anchor="middle" font-size="14.5" font-weight="700" fill="#ffffff" letter-spacing="0.5">Regular I Z Right 11 Sneak</text>
 <clipPath id="fieldclip"><rect x="0" y="58" width="594" height="472"/></clipPath>
 <g clip-path="url(#fieldclip)"><g transform="translate(-54.0,31.0)">
 <rect x="0" y="0" width="702" height="513" fill="#ffffff"/>
@@ -114,9 +114,9 @@
 <text x="297" y="680" font-size="12" font-weight="700" fill="#111318">QB</text>
 <text x="331" y="680" font-size="12" fill="#111318">Snap it and go now, right behind the</text>
 <text x="331" y="698" font-size="12" fill="#111318">outside hip of the guard away from</text>
-<text x="331" y="714" font-size="12" fill="#111318">the flanker. Low pads, ball in both</text>
-<text x="331" y="732" font-size="12" fill="#111318">arms, fall forward. Do not stand up</text>
-<text x="331" y="748" font-size="12" fill="#111318">and do not look for a hole.</text>
+<text x="331" y="714" font-size="12" fill="#111318">the Z. Low pads, ball in both arms,</text>
+<text x="331" y="732" font-size="12" fill="#111318">fall forward. Do not stand up and do</text>
+<text x="331" y="748" font-size="12" fill="#111318">not look for a hole.</text>
 <text x="297" y="766" font-size="12" font-weight="700" fill="#111318">FB</text>
 <text x="331" y="766" font-size="12" fill="#111318">Fire straight ahead into the back of</text>
 <text x="331" y="782" font-size="12" fill="#111318">the pile and push. Both hands on</text>

@@ -19,21 +19,23 @@ Every play has two names, and both are printed on every card.
 - The **name** is what you say while teaching it: *I Slant Right*.
 - The **call** is what you yell on Saturday: `I Z Right 36 Slant`.
 
-### Regular I: formation + flanker + back + hole + play word
+### Regular I: formation + Z + back + hole + play word
 
-`Z Right` says where the flanker lines up. Then two digits: the first says
-**who carries it**, the second says **where it goes**.
+The call names the formation, then `Z Right` — where the Z lines up — then two
+digits: the first says **who carries it**, the second says **where it goes**. So
+`Regular I Z Right 20 Dive` is the Regular I, Z on the right, the fullback through
+the 0 hole.
 
-Every play in the book is `Z Right` today — the flanker never moves. It is named
-in the call anyway so a `Z Left` look can be added later without changing how a
-single play is called.
+Every play in the book is `Z Right` today — the Z never moves. It is named in the
+call anyway so a `Z Left` look can be added later without changing how a single play
+is called.
 
 | Back | Who |
 |---|---|
 | **1** | Quarterback — both formations |
 | **2** | Fullback — both formations |
 | **3** | Tailback in the Regular I and the Power I · right halfback in the Wishbone and the Full House |
-| **4** | Wingback in the Power I · left halfback in the Wishbone and the Full House |
+| **4** | The Z in the Regular I and the Power I · left halfback in the Wishbone and the Full House |
 
 | Hole | Where |
 |---|---|
@@ -54,46 +56,53 @@ does not cross on the named side inside the hole the call names. A call sheet th
 worse than no call sheet, so the build will not publish one.
 
 The digits describe the back the first digit names, not the ball carrier. On
-`I Z Right 16 Boot` the `1` is the quarterback going through the 6 hole; the ball carrier
-is the flanker he throws to.
+`Regular I Z Right 16 Boot` the `1` is the quarterback going through the 6 hole; the
+ball carrier is the Z he throws to.
 
-So `I Z Right 20 Dive` is flanker right, fullback, 0 hole; `I Z Right 21 Dive` is the
-same handoff through the 1 hole; and `I Z Right 36 Slant` is the tailback outside the
+So `Regular I Z Right 20 Dive` is the fullback through the 0 hole; `21 Dive` is the same
+handoff through the 1 hole; and `Regular I Z Right 36 Slant` is the tailback outside the
 tight end.
 
 | Call | Play | Where it hits |
 |---|---|---|
-| `I Z Right 21 Dive` / `I Z Right 20 Dive` | I Dive Left / Right | center–guard |
-| `I Z Right 33 Iso` / `I Z Right 32 Iso` | I Iso Left / Right | guard–tackle |
-| `I Z Right 37 Slant` / `I Z Right 36 Slant` | I Slant Left / Right | outside the tight end |
-| `I Z Right 39 Toss` / `I Z Right 38 Toss` | I Toss Left / Right | all the way outside |
-| `I Z Right 35 Counter` / `I Z Right 34 Counter` | I Counter Left / Right | tackle–end |
-| `I Z Right 10 Sneak` | I Sneak | quarterback, center–guard |
-| `I Z Right 16 Boot` | I Boot Right | outside the tight end |
-| `I Z Right 17 Waggle` | I Waggle Left | outside the tight end |
+| `Regular I Z Right 10 Sneak` / `11 Sneak` | Regular I Sneak Right / Left | quarterback, center–guard |
+| `Regular I Z Right 20 Dive` / `21 Dive` | Regular I Dive Right / Left | fullback, center–guard |
+| `Regular I Z Right 30 Wedge` / `31 Wedge` | Regular I Wedge Right / Left | tailback, up the middle |
+| `Regular I Z Right 32 Iso` / `33 Iso` | Regular I Iso Right / Left | guard–tackle |
+| `Regular I Z Right 34 Power` / `35 Power` | Regular I Power Right / Left | tailback, tackle–end |
+| `Regular I Z Right 34 Counter` / `35 Counter` | Regular I Counter Right / Left | tailback, tackle–end |
+| `Regular I Z Right 16 Boot` / `17 Boot` | Regular I Boot Right / Left | quarterback, outside the tight end |
+| `Regular I Z Right 16 Waggle` / `17 Waggle` | Regular I Waggle Right / Left | quarterback, outside the tight end |
+| `Regular I Z Right 16 Jet Boot` / `17 Jet Boot` | Regular I Jet Boot Right / Left | quarterback, off the Jet fake |
+| `Regular I Z Right 16 Power Boot` / `17 Power Boot` | Regular I Power Boot Right / Left | quarterback, off the Power fake |
+| `Regular I Z Right 36 Slant` / `37 Slant` | Regular I Slant Right / Left | outside the tight end |
+| `Regular I Z Right 38 Toss` / `39 Toss` | Regular I Toss Right / Left | all the way outside |
+| `Regular I Z Right 48 Jet` / `49 Jet` | Regular I Jet Right / Left | the Z in motion, all the way outside |
 
-### Power I: formation + back + hole + play word
+The plays are taught in that order on purpose — inside first and working out, and within
+each gap the quarterback (back 1), then the fullback (2), then the tailback (3), then the
+Z (4). Every play has a left and a right.
 
-The same I with the flanker tightened down to a wingback. He is back **4**.
+### Power I: formation + strength + back + hole + play word
 
-The wing has two spots in this formation, and the call says which. No tag means he is
-at the wing, tight outside the right end. **`Offset Right`** means he has moved into the
-backfield beside the fullback, where the defense cannot tell before the snap which way he
-is going. Every line rule is identical in both — only one man moves.
+The base I with the Z dropped off the line into the backfield, offset beside the
+fullback as a third back. He is back **4**, though every Power I play today hands to the
+tailback and uses the Z to lead or to fake.
+
+**`Right`** or **`Left`** in the call is the strength — which side the Z is offset to —
+the same way `Z Right` names his side in the base I. He leads that way on Power and Toss;
+on Counter he sets to the strength and runs his lead path there while the ball goes back
+the other way.
 
 | Call | Play | Reads as |
 |---|---|---|
-| `Power I 34 Power` / `Power I 35 Power` | Power I Power Right / Left | tailback, tackle–end |
-| `Power I 30 Wedge` | Power I Wedge | tailback, straight up the middle |
-| `Power I 49 Jet` | Power I Jet Left | the wing in motion, all the way outside |
-| `Power I 16 Boot` | Power I Boot Right | quarterback, off the Jet fake |
-| `Power I Offset Right 34 Power` | Power I Offset Power Right | tailback, tackle–end |
-| `Power I Offset Right 35 Counter` | Power I Offset Counter Left | tailback, back the other way |
-| `Power I Offset Right 38 Toss` | Power I Offset Toss Right | tailback, all the way outside |
+| `Power I Right 34 Power` / `Power I Left 35 Power` | Power I Power Right / Left | tailback, tackle–end |
+| `Power I Right 35 Counter` / `Power I Left 34 Counter` | Power I Counter Left / Right | tailback, back the other way |
+| `Power I Right 38 Toss` / `Power I Left 39 Toss` | Power I Toss Right / Left | tailback, all the way outside |
 
 ### Wishbone: formation + back + hole + play word
 
-Same two digits, two more backs to number. No flanker, so nothing to declare there.
+Same two digits, two more backs to number. No Z out wide, so nothing to declare there.
 
 | Call | Play | Reads as |
 |---|---|---|
@@ -124,44 +133,46 @@ calls.
 Same rule as the Wishbone: the far halfback carries, because the near one is busy kicking
 out the edge.
 
-**Play word** — `Dive`, `Iso`, `Slant`, `Toss`, `Counter`, `Sneak`, `Boot`, `Waggle` in
-the Regular I; `Power`, `Wedge`, `Jet` in the Power I; `Dive`, `Power`, `Pitch`, `Counter` in the
-Wishbone; `Dive`, `Power`, `Sweep` in the Full House. Every formation also carries exactly
-one play-action pass, on the play word `Boot` or `Waggle`.
+**Play word** — the Regular I carries `Dive`, `Iso`, `Slant`, `Toss`, `Counter`, `Sneak`,
+`Power`, `Wedge` and `Jet`, plus the play-action `Boot`, `Waggle`, `Jet Boot` and
+`Power Boot`; the Power I runs `Power`, `Counter` and `Toss`; the Wishbone `Dive`, `Power`,
+`Pitch`, `Counter`; the Full House `Dive`, `Power`, `Sweep`. Every formation carries at
+least one play-action pass, on the play word `Boot` or `Waggle`.
 
 ## Formations
 
-Four formations, 37 plays, in teaching order:
+Four formations, 50 plays, in teaching order:
 
 | # | Formation | Family | Plays | What it is for |
 |---|---|---|---|---|
-| 1 | **Regular I** | Regular I | 13 | Base offense. Fullback and tailback stacked, so the same look threatens the middle and both edges. Teaches a back to read a block. |
-| 2 | **Power I** | Power I | 8 | The I with the flanker tightened to a wing — or moved into the backfield. An extra blocker on the edge for Power, a man in motion for Jet, the short-yardage Wedge, and a three-play Offset package off the same eleven. |
-| 3 | **Wishbone** | Wishbone | 9 | Three backs, three threats every snap. Symmetric, so every play works both directions off identical rules. |
-| 4 | **Full House** | Full House | 7 | Three backs in a straight line at the same depth. The alignment gives nothing away, and every run splits the same three jobs — carry, kick out, lead. |
+| 1 | **Regular I** | Regular I | 26 | Base offense. Fullback and tailback stacked, so the same look threatens the middle and both edges. Teaches a back to read a block, and carries the Power, Wedge and Jet package built around the Z. |
+| 2 | **Power I** | Power I | 6 | The base I with the Z dropped into the backfield as a third back — an extra runner and blocker at the point of attack. Power, Counter and Toss, each way. |
+| 3 | **Wishbone** | Wishbone | 10 | Three backs, three threats every snap. Symmetric, so every play works both directions off identical rules. |
+| 4 | **Full House** | Full House | 8 | Three backs in a straight line at the same depth. The alignment gives nothing away, and every run splits the same three jobs — carry, kick out, lead. |
 
 All four are two-tight-end, downhill running formations, so the blocking language carries
 over: "block down on the first defender inside you" means the same thing in any of them.
 That is the reason to carry these four rather than four unrelated offenses.
 
-**One pass per formation, and one is the right number.** Every formation carries exactly
-one play-action pass (the Regular I has two because Boot and Waggle are a matched pair). Each one
-fakes that formation's best run and boots the quarterback the other way, so it is the same
-first three steps the defense has already been punished for respecting. They exist so
-nobody can put nine in the box and forget the edge — not to throw the ball. Every one of
-them says *run first, throw second*, because no blitzing is allowed at this age (9.02) and
-the quarterback usually walks into ten yards before anybody finds him.
+**Every pass is play-action, and run-first.** Each fakes one of that formation's best
+runs and boots the quarterback the other way, so it is the same first three steps the
+defense has already been punished for respecting. They exist so nobody can put nine in the
+box and forget the edge — not to throw the ball. Every one says *run first, throw second*,
+because no blitzing is allowed at this age (9.02) and the quarterback usually walks into
+ten yards before anybody finds him. The Wishbone and Full House keep one each; the Regular
+I, holding the most plays, carries several off the toss, the dive, the jet and the power.
 
-Two of them are nearly free to install. The **Power I** is the base I with one player moved
-a yard and a half, so no line rule changes at all. The **Full House** shares the Wishbone's
+Two of them are nearly free to install. The **Power I** is the base I with the Z dropped into the backfield, so no line rule
+changes at all. The **Full House** shares the Wishbone's
 back numbering and the same carry/kick-out/lead division of labour, so a team that knows
 `Bone` calls already knows `House` calls.
 
 **Symmetric formations author left-handed plays in one line.** The Wishbone and the Full
 House are mirror-symmetric, so `House 35 Power` is a four-line file that says
 `"mirror_of": "fh-power-r"` — the generator flips every path, swaps the position keys and
-swaps the left/right wording. The I and the Power I are *not* symmetric (the flanker and
-the wing sit right on every snap), so their left-handed plays are written by hand.
+swaps the left/right wording. The Regular I and the Power I are *not* symmetric (the Z sits right on every snap —
+out wide in the Regular I, in the backfield in the Power I), so their left-handed plays
+are written by hand.
 
 ## Defense
 
@@ -204,7 +215,7 @@ on a phone, with the assignments read underneath it rather than squeezed in besi
 
 ## Printing
 
-- **Print book** (top bar) → 41 landscape pages: 37 plays then 4 defensive fronts,
+- **Print book** (top bar) → 54 landscape pages: 50 plays then 4 defensive fronts,
   one per sheet.
 - **Print** (on any play or front page) → that one card, one landscape sheet.
 
@@ -282,11 +293,11 @@ Only the JSON under `playbook/` and `defense/` is source. Everything else with a
 
 ## Every offensive play is drawn and blocked against the 5-3
 
-Thirty-five of the 37 plays are drawn against the **5-3**, and their assignments are
-written for that front specifically rather than in general terms. The two exceptions are
-the short-yardage plays, **I Sneak** and **Power I Wedge**, which are drawn against the
-**6-3** because that is the heaviest front the league allows and it is what you actually
-see on fourth and one.
+Forty-six of the 50 plays are drawn against the **5-3**, and their assignments are
+written for that front specifically rather than in general terms. The four exceptions are
+the short-yardage plays — **Regular I Sneak** and **Regular I Wedge**, each way — drawn
+against the **6-3** because that is the heaviest front the league allows and it is what
+you actually see on fourth and one.
 
 Against a 5-3 our line is covered like this:
 

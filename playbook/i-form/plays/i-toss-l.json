@@ -1,17 +1,46 @@
 {
   "id": "i-toss-l",
-  "order": 8,
+  "order": 24,
   "formation": "i-form",
-  "name": "I Toss Left",
-  "call": "I Z Right 39 Toss",
+  "name": "Regular I Toss Left",
+  "call": "Regular I Z Right 39 Toss",
   "type": "run",
   "defense": "5-3",
   "direction": "left",
   "ball_carrier": "TB",
   "purpose": "Get all the way outside. Wider than the Slant — the tailback takes the handoff at full speed and runs past the tight end's block to the corner, with the fullback out in front of him.",
   "assignments": {
-    "RTE": {
-      "rule": "Cut off pursuit from behind. You are the last one to the ball, so never quit on the play.",
+    "LTE": {
+      "rule": "Reach the end over you. If you cannot reach him, turn him inside and let the ball go around.",
+      "type": "block",
+      "path": [
+        [-0.7, 1.0]
+      ]
+    },
+    "LT": {
+      "rule": "The tackle is on your inside shoulder. Get your head across him and wall him off so he cannot chase.",
+      "type": "block",
+      "path": [
+        [-0.9, 1.0]
+      ]
+    },
+    "LG": {
+      "rule": "Nobody is over you. Climb straight to the middle linebacker and cut him off from the sideline.",
+      "type": "block",
+      "path": [
+        [-0.4, 1.2],
+        [0.6, 3.4]
+      ]
+    },
+    "C": {
+      "rule": "Reach the nose. Get your head across his playside shoulder so he cannot run down the line.",
+      "type": "block",
+      "path": [
+        [-0.6, 1.0]
+      ]
+    },
+    "RG": {
+      "rule": "Nobody is over you. Cut off the backside — nothing chases this from behind.",
       "type": "block",
       "path": [
         [-1.0, 0.7]
@@ -24,40 +53,11 @@
         [-1.0, 0.7]
       ]
     },
-    "RG": {
-      "rule": "Nobody is over you. Cut off the backside — nothing chases this from behind.",
+    "RTE": {
+      "rule": "Cut off pursuit from behind. You are the last one to the ball, so never quit on the play.",
       "type": "block",
       "path": [
         [-1.0, 0.7]
-      ]
-    },
-    "C": {
-      "rule": "Reach the nose. Get your head across his playside shoulder so he cannot run down the line.",
-      "type": "block",
-      "path": [
-        [-0.6, 1.0]
-      ]
-    },
-    "LG": {
-      "rule": "Nobody is over you. Climb straight to the middle linebacker and cut him off from the sideline.",
-      "type": "block",
-      "path": [
-        [-0.4, 1.2],
-        [0.6, 3.4]
-      ]
-    },
-    "LT": {
-      "rule": "The tackle is on your inside shoulder. Get your head across him and wall him off so he cannot chase.",
-      "type": "block",
-      "path": [
-        [-0.9, 1.0]
-      ]
-    },
-    "LTE": {
-      "rule": "Reach the end over you. If you cannot reach him, turn him inside and let the ball go around.",
-      "type": "block",
-      "path": [
-        [-0.7, 1.0]
       ]
     },
     "Z": {
@@ -96,10 +96,10 @@
     }
   },
   "coaching_points": [
-    "Check their alignment first. If they have shifted toward our flanker, this is the call.",
+    "Check their alignment first. If they have shifted toward our Z, this is the call.",
     "The fullback has further to travel here than he does going right, so he has to leave on the snap. If he trails the tailback the play has no lead blocker.",
     "One rule for the tailback: turn up off the fullback's block. Running to the sideline is how this play loses eight yards.",
-    "The flanker chases from behind. Tell him he is the reason a fast corner does not run this down from the backside."
+    "The Z chases from behind. Tell him he is the reason a fast corner does not run this down from the backside."
   ],
   "z": "right"
 }

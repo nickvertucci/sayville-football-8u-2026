@@ -35,12 +35,12 @@ Three backs in a Y behind the quarterback: fullback close at three yards, then t
 | [Bone Dive Left](#bone-dive-left) | `Bone 21 Dive` | run | FB |
 | [Bone Power Right](#bone-power-right) | `Bone 44 Power` | run | LH |
 | [Bone Power Left](#bone-power-left) | `Bone 35 Power` | run | RH |
-| [Bone Pitch Right](#bone-pitch-right) | `Bone 48 Pitch` | run | LH |
-| [Bone Pitch Left](#bone-pitch-left) | `Bone 39 Pitch` | run | RH |
 | [Bone Counter Right](#bone-counter-right) | `Bone 44 Counter` | run | LH |
 | [Bone Counter Left](#bone-counter-left) | `Bone 35 Counter` | run | RH |
 | [Bone Waggle Right](#bone-waggle-right) | `Bone 16 Waggle` | pass | RTE |
 | [Bone Waggle Left](#bone-waggle-left) | `Bone 17 Waggle` | pass | LTE |
+| [Bone Pitch Right](#bone-pitch-right) | `Bone 48 Pitch` | run | LH |
+| [Bone Pitch Left](#bone-pitch-left) | `Bone 39 Pitch` | run | RH |
 
 ---
 
@@ -168,68 +168,6 @@ Off-tackle power to the far halfback, who crosses behind the fullback and takes 
 
 ---
 
-## Bone Pitch Right
-
-**Call it:** `Bone 48 Pitch`
-
-![Bone Pitch Right](cards/wb-pitch-r.svg)
-
-Get outside in a hurry. The fullback holds the middle and then blocks, our end seals their end inside, and the near halfback gets to the corner and kicks him toward the sideline. The far halfback trails the quarterback, takes the pitch on the run and turns up inside that block.
-
-| Position | Assignment |
-|---|---|
-| **LTE** | Cut off pursuit from behind. You are the last one to the ball, so never quit on the play. |
-| **LT** | Block back. Take the first defender on or inside you — nobody crosses your face. |
-| **LG** | Nobody is over you. Cut off the backside — nothing chases this from behind. |
-| **C** | Reach the nose. Get your head across his playside shoulder. |
-| **RG** | Nobody is over you. Climb to the middle linebacker and cut him off from the sideline. |
-| **RT** | Reach the tackle on your inside shoulder. The fullback helps you — once you have the man, he comes off onto the linebacker. |
-| **RTE** | Seal the edge. Block the end over you and turn him inside — the ball is going around behind you, so he cannot be allowed to follow it out. |
-| **QB** | Fake the dive to the fullback, attack the outside, and pitch the ball to the trailing halfback before you get touched. Pitch early, not late. |
-| **FB** | Step at the dive to hold their linebackers, help our tackle with the down lineman, then come off onto the playside linebacker. |
-| **LH** **(ball)** | Run flat behind everybody, stay outside and behind the quarterback, and catch the pitch on the run. Never get ahead of him — a pitch that goes forward is a fumble. |
-| **RH** | Beat the ball to the corner and block him. Drive him toward the sideline so the ball can turn up inside you. He is the only man out there who can catch it. |
-
-**Coaching points**
-
-- The pitch goes early. A quarterback who waits to be tackled first will pitch it on the ground.
-- This is not a read at this age — tell him before the snap that he is pitching it.
-- The halfback taking the pitch must stay behind the quarterback until he has the ball. Getting ahead means the pitch goes forward, which is a fumble waiting to happen.
-- Everything depends on the corner being blocked. If our halfback cannot get out there in time, run Power instead.
-
----
-
-## Bone Pitch Left
-
-**Call it:** `Bone 39 Pitch`
-
-![Bone Pitch Left](cards/wb-pitch-l.svg)
-
-Get outside in a hurry. The fullback holds the middle and then blocks, our end seals their end inside, and the near halfback gets to the corner and kicks him toward the sideline. The far halfback trails the quarterback, takes the pitch on the run and turns up inside that block.
-
-| Position | Assignment |
-|---|---|
-| **LTE** | Seal the edge. Block the end over you and turn him inside — the ball is going around behind you, so he cannot be allowed to follow it out. |
-| **LT** | Reach the tackle on your inside shoulder. The fullback helps you — once you have the man, he comes off onto the linebacker. |
-| **LG** | Nobody is over you. Climb to the middle linebacker and cut him off from the sideline. |
-| **C** | Reach the nose. Get your head across his playside shoulder. |
-| **RG** | Nobody is over you. Cut off the backside — nothing chases this from behind. |
-| **RT** | Block back. Take the first defender on or inside you — nobody crosses your face. |
-| **RTE** | Cut off pursuit from behind. You are the last one to the ball, so never quit on the play. |
-| **QB** | Fake the dive to the fullback, attack the outside, and pitch the ball to the trailing halfback before you get touched. Pitch early, not late. |
-| **FB** | Step at the dive to hold their linebackers, help our tackle with the down lineman, then come off onto the playside linebacker. |
-| **LH** | Beat the ball to the corner and block him. Drive him toward the sideline so the ball can turn up inside you. He is the only man out there who can catch it. |
-| **RH** **(ball)** | Run flat behind everybody, stay outside and behind the quarterback, and catch the pitch on the run. Never get ahead of him — a pitch that goes forward is a fumble. |
-
-**Coaching points**
-
-- The pitch goes early. A quarterback who waits to be tackled first will pitch it on the ground.
-- This is not a read at this age — tell him before the snap that he is pitching it.
-- The halfback taking the pitch must stay behind the quarterback until he has the ball. Getting ahead means the pitch goes forward, which is a fumble waiting to happen.
-- Everything depends on the corner being blocked. If our halfback cannot get out there in time, run Power instead.
-
----
-
 ## Bone Counter Right
 
 **Call it:** `Bone 44 Counter`
@@ -353,4 +291,66 @@ The only pass in the Wishbone, and it comes off the play they have seen most. Fa
 - The fullback's dive fake is the whole play. If he does not get hit by somebody, he did not sell it.
 - No blitzing is allowed for 8- and 9-year-olds, so the quarterback has time. Teach him to be patient and look up.
 - Run first, throw second. One throw, then tuck it — no scrambling backwards, ever.
+
+---
+
+## Bone Pitch Right
+
+**Call it:** `Bone 48 Pitch`
+
+![Bone Pitch Right](cards/wb-pitch-r.svg)
+
+Get outside in a hurry. The fullback holds the middle and then blocks, our end seals their end inside, and the near halfback gets to the corner and kicks him toward the sideline. The far halfback trails the quarterback, takes the pitch on the run and turns up inside that block.
+
+| Position | Assignment |
+|---|---|
+| **LTE** | Cut off pursuit from behind. You are the last one to the ball, so never quit on the play. |
+| **LT** | Block back. Take the first defender on or inside you — nobody crosses your face. |
+| **LG** | Nobody is over you. Cut off the backside — nothing chases this from behind. |
+| **C** | Reach the nose. Get your head across his playside shoulder. |
+| **RG** | Nobody is over you. Climb to the middle linebacker and cut him off from the sideline. |
+| **RT** | Reach the tackle on your inside shoulder. The fullback helps you — once you have the man, he comes off onto the linebacker. |
+| **RTE** | Seal the edge. Block the end over you and turn him inside — the ball is going around behind you, so he cannot be allowed to follow it out. |
+| **QB** | Fake the dive to the fullback, attack the outside, and pitch the ball to the trailing halfback before you get touched. Pitch early, not late. |
+| **FB** | Step at the dive to hold their linebackers, help our tackle with the down lineman, then come off onto the playside linebacker. |
+| **LH** **(ball)** | Run flat behind everybody, stay outside and behind the quarterback, and catch the pitch on the run. Never get ahead of him — a pitch that goes forward is a fumble. |
+| **RH** | Beat the ball to the corner and block him. Drive him toward the sideline so the ball can turn up inside you. He is the only man out there who can catch it. |
+
+**Coaching points**
+
+- The pitch goes early. A quarterback who waits to be tackled first will pitch it on the ground.
+- This is not a read at this age — tell him before the snap that he is pitching it.
+- The halfback taking the pitch must stay behind the quarterback until he has the ball. Getting ahead means the pitch goes forward, which is a fumble waiting to happen.
+- Everything depends on the corner being blocked. If our halfback cannot get out there in time, run Power instead.
+
+---
+
+## Bone Pitch Left
+
+**Call it:** `Bone 39 Pitch`
+
+![Bone Pitch Left](cards/wb-pitch-l.svg)
+
+Get outside in a hurry. The fullback holds the middle and then blocks, our end seals their end inside, and the near halfback gets to the corner and kicks him toward the sideline. The far halfback trails the quarterback, takes the pitch on the run and turns up inside that block.
+
+| Position | Assignment |
+|---|---|
+| **LTE** | Seal the edge. Block the end over you and turn him inside — the ball is going around behind you, so he cannot be allowed to follow it out. |
+| **LT** | Reach the tackle on your inside shoulder. The fullback helps you — once you have the man, he comes off onto the linebacker. |
+| **LG** | Nobody is over you. Climb to the middle linebacker and cut him off from the sideline. |
+| **C** | Reach the nose. Get your head across his playside shoulder. |
+| **RG** | Nobody is over you. Cut off the backside — nothing chases this from behind. |
+| **RT** | Block back. Take the first defender on or inside you — nobody crosses your face. |
+| **RTE** | Cut off pursuit from behind. You are the last one to the ball, so never quit on the play. |
+| **QB** | Fake the dive to the fullback, attack the outside, and pitch the ball to the trailing halfback before you get touched. Pitch early, not late. |
+| **FB** | Step at the dive to hold their linebackers, help our tackle with the down lineman, then come off onto the playside linebacker. |
+| **LH** | Beat the ball to the corner and block him. Drive him toward the sideline so the ball can turn up inside you. He is the only man out there who can catch it. |
+| **RH** **(ball)** | Run flat behind everybody, stay outside and behind the quarterback, and catch the pitch on the run. Never get ahead of him — a pitch that goes forward is a fumble. |
+
+**Coaching points**
+
+- The pitch goes early. A quarterback who waits to be tackled first will pitch it on the ground.
+- This is not a read at this age — tell him before the snap that he is pitching it.
+- The halfback taking the pitch must stay behind the quarterback until he has the ball. Getting ahead means the pitch goes forward, which is a fumble waiting to happen.
+- Everything depends on the corner being blocked. If our halfback cannot get out there in time, run Power instead.
 

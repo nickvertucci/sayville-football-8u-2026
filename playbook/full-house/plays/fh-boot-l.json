@@ -1,6 +1,6 @@
 {
   "id": "fh-boot-l",
-  "order": 7,
+  "order": 6,
   "formation": "full-house",
   "name": "House Boot Left",
   "call": "House 17 Boot",
@@ -10,20 +10,33 @@
   "ball_carrier": "LTE",
   "purpose": "All three backs run their Power paths to the right and the quarterback keeps it left on his own. Three backs going one way is the hardest thing in this book to ignore, which is exactly why nobody is left on the other side.",
   "assignments": {
-    "RTE": {
-      "rule": "Engage the end over you for a count, then release and get across the field to eight yards. You are the second look and you arrive late on purpose.",
+    "LTE": {
+      "rule": "Engage the end over you for a count, then release to the flat at four yards and stay in front of the quarterback. You are the easy throw.",
       "type": "pass",
       "path": [
-        [-1.4, 2.6],
-        [-5.2, 5.6],
-        [-7.6, 7.4]
+        [-0.8, 1.4],
+        [-3.0, 2.6]
       ]
     },
-    "RT": {
-      "rule": "Block down inside and sell the run. This has to look exactly like Power going to your side.",
+    "LT": {
+      "rule": "Hinge and protect the boot side. Nobody comes free outside you — the quarterback is alone back there.",
       "type": "block",
       "path": [
-        [-0.5, 1.2]
+        [-1.0, 0.7]
+      ]
+    },
+    "LG": {
+      "rule": "Nobody is over you. Help the center on the nose and drive him away from the boot.",
+      "type": "block",
+      "path": [
+        [0.6, 1.0]
+      ]
+    },
+    "C": {
+      "rule": "Block the nose away from the boot. Nobody chases through the middle.",
+      "type": "block",
+      "path": [
+        [0.9, 0.8]
       ]
     },
     "RG": {
@@ -34,33 +47,20 @@
         [-0.8, 3.2]
       ]
     },
-    "C": {
-      "rule": "Block the nose away from the boot. Nobody chases through the middle.",
+    "RT": {
+      "rule": "Block down inside and sell the run. This has to look exactly like Power going to your side.",
       "type": "block",
       "path": [
-        [0.9, 0.8]
+        [-0.5, 1.2]
       ]
     },
-    "LG": {
-      "rule": "Nobody is over you. Help the center on the nose and drive him away from the boot.",
-      "type": "block",
-      "path": [
-        [0.6, 1.0]
-      ]
-    },
-    "LT": {
-      "rule": "Hinge and protect the boot side. Nobody comes free outside you — the quarterback is alone back there.",
-      "type": "block",
-      "path": [
-        [-1.0, 0.7]
-      ]
-    },
-    "LTE": {
-      "rule": "Engage the end over you for a count, then release to the flat at four yards and stay in front of the quarterback. You are the easy throw.",
+    "RTE": {
+      "rule": "Engage the end over you for a count, then release and get across the field to eight yards. You are the second look and you arrive late on purpose.",
       "type": "pass",
       "path": [
-        [-0.8, 1.4],
-        [-3.0, 2.6]
+        [-1.4, 2.6],
+        [-5.2, 5.6],
+        [-7.6, 7.4]
       ]
     },
     "QB": {

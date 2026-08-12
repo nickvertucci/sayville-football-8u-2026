@@ -8,7 +8,7 @@
   "defense": "5-3",
   "direction": "right",
   "ball_carrier": "TB",
-  "purpose": "Two lead blockers around the corner. The wing and the pulling guard get outside in front of the tailback, and a defense that has been squeezing the off-tackle hole all game has nobody left on the edge.",
+  "purpose": "Two lead blockers around the corner. The Z and the pulling guard get outside in front of the tailback, and a defense that has been squeezing the off-tackle hole all game has nobody left on the edge.",
   "assignments": {
     "LTE": {
       "rule": "Cut off pursuit from behind. Everything is running away from you, so chase flat down the line and never quit.",
@@ -62,7 +62,7 @@
         [1.2, 1.2]
       ]
     },
-    "WB": {
+    "Z": {
       "rule": "Get width on the snap and lead the tailback around the corner. Block the first man outside our end, and if nobody shows, keep running and find the safety.",
       "type": "block",
       "path": [
@@ -101,7 +101,7 @@
   },
   "coaching_points": [
     "Best call on the hash going to the wide side of the field. Do not call it into the boundary.",
-    "The wing is already behind the line and moving, so he beats a tight-wing sweep to the corner — that head start is the whole point of running it from the backfield.",
+    "The Z is already behind the line and moving, so he gets to the corner faster than he would from a tight alignment on the edge — that head start is the whole point of running it from the backfield.",
     "The carrier must not turn up until he is outside our end. Eight-year-olds cut upfield the moment they see grass and run into the tackle the play was built to beat.",
     "If their corner flies up to meet the pull every time, come back inside with Power Right."
   ]
