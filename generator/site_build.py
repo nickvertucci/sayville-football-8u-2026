@@ -327,11 +327,12 @@ h1.page { font-size: clamp(23px, 5vw, 33px); letter-spacing: -.5px; margin: 22px
 .fcard.imgcard .body { padding: 14px 17px 16px; }
 
 .icon { width: 20px; height: 20px; flex: none; }
-.quicklinks { display: flex; flex-wrap: wrap; gap: 10px; margin: 4px 0 8px; }
+.quicklinks { display: flex; gap: 10px; margin: 4px 0 8px; }
 .qlink {
-  display: flex; align-items: center; gap: 8px; text-decoration: none; color: var(--ink);
+  display: flex; align-items: center; justify-content: center; gap: 8px; flex: 1 1 0;
+  text-decoration: none; color: var(--ink);
   background: var(--panel); border: 1px solid var(--line); border-radius: 10px;
-  padding: 10px 16px; font-size: 14px; font-weight: 600; box-shadow: var(--shadow);
+  padding: 12px 16px; font-size: 15px; font-weight: 600; box-shadow: var(--shadow);
   transition: box-shadow .15s, transform .15s, border-color .15s;
 }
 .qlink:hover {
@@ -1531,8 +1532,6 @@ def write_home(formations: list[dict], defenses: dict) -> str:
 <div class="quicklinks">
   <a class="qlink" href="calls.html">{icon('search')}<span>Call sheet</span></a>
   <a class="qlink" href="install.html">{icon('calendar')}<span>Install</span></a>
-  <a class="qlink" href="rules.html">{icon('shield')}<span>Rules</span></a>
-  <a class="qlink" href="print.html">{icon('printer')}<span>Print</span></a>
 </div>
 
 <p class="hero-head">Formations</p>
