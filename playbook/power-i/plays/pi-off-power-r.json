@@ -1,17 +1,14 @@
 {
   "id": "pi-off-power-r",
-  "order": 6,
+  "order": 1,
   "formation": "power-i",
-  "name": "Power I Offset Power Right",
-  "call": "Power I Offset Right 34 Power",
+  "name": "Power I Power Right",
+  "call": "Power I Right 34 Power",
   "type": "run",
   "defense": "5-3",
   "direction": "right",
   "ball_carrier": "TB",
-  "alignment": {
-    "WB": [2.6, -3.3]
-  },
-  "purpose": "Power Right with the wing moved off the edge and into the backfield beside the fullback. Same three jobs, same hole, but now the defense cannot see which side the extra blocker is going to until the ball is snapped.",
+  "purpose": "Our best downhill run. The line blocks down inside, the wing leads out of the backfield to kick the playside end, and the backside guard pulls through the hole in front of the tailback — two blockers in the same gap before the linebackers read it.",
   "assignments": {
     "LTE": {
       "rule": "Cut off pursuit from behind. You are the last one to the ball, so never quit on the play.",
@@ -103,9 +100,10 @@
     }
   },
   "coaching_points": [
-    "This is the same play as Power Right off the wing. The only thing that changes is where the kick-out block starts, and that is the entire reason it exists — at the wing he is a tell, in the backfield he is not.",
-    "The trade is honest: from the backfield he arrives faster but with a worse angle, so he must leave on the snap. From the wing he has leverage but the defense has already counted him.",
-    "Teach both looks in the same session with the same words. Every line rule is identical and the backs' jobs are identical — only one man has moved.",
-    "If they walk a linebacker over to the offset side, run Offset Counter Left the very next play."
+    "This is the play the Power I is built for. If it works you can run it a dozen times, and at this age you often can.",
+    "The wing leads from the backfield, so he arrives fast but with a tight angle. He must leave on the snap and attack the end's outside hip, or the end slides under him and makes the tackle for a loss.",
+    "The pulling guard is late by design. His man is whoever shows in the hole, not a man he picks before the snap.",
+    "The tailback's worst habit is bouncing it wide for green grass. The yards are inside the wing's kick-out — drill it tight until it is automatic.",
+    "If they walk a linebacker over to the wing side, come back with Counter the next play."
   ]
 }

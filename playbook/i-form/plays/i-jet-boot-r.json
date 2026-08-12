@@ -1,0 +1,111 @@
+{
+  "id": "i-jet-boot-r",
+  "order": 26,
+  "formation": "i-form",
+  "name": "I Jet Boot Right",
+  "call": "I Z Right 16 Jet Boot",
+  "type": "pass",
+  "defense": "5-3",
+  "direction": "right",
+  "ball_carrier": "RTE",
+  "purpose": "Jet motion pulls the whole defense one way and the quarterback keeps it the other. This is the play Jet Left is really setting up, and at this age the edge is usually empty.",
+  "assignments": {
+    "LTE": {
+      "rule": "Engage the end over you for a count, then release and get across the field to eight yards. You are the second look and you arrive late on purpose.",
+      "type": "pass",
+      "path": [
+        [1.4, 2.6],
+        [5.0, 5.6],
+        [7.4, 7.4]
+      ]
+    },
+    "LT": {
+      "rule": "Block down inside and sell the run. Nobody comes through your gap chasing the motion.",
+      "type": "block",
+      "path": [
+        [0.5, 1.2]
+      ]
+    },
+    "LG": {
+      "rule": "Nobody is over you. Pull flat to the left and run the Jet path — you are the lie, take a linebacker with you.",
+      "type": "block",
+      "path": [
+        [-1.4, -0.7],
+        [-4.6, 0.4]
+      ]
+    },
+    "C": {
+      "rule": "Block the nose away from the boot. Nobody chases through the middle.",
+      "type": "block",
+      "path": [
+        [-0.9, 0.8]
+      ]
+    },
+    "RG": {
+      "rule": "Nobody is over you. Help the center on the nose and drive him away from the boot.",
+      "type": "block",
+      "path": [
+        [-0.6, 1.0]
+      ]
+    },
+    "RT": {
+      "rule": "Hinge and protect the boot side. Nobody comes free outside you — the quarterback is alone back there.",
+      "type": "block",
+      "path": [
+        [1.0, 0.7]
+      ]
+    },
+    "RTE": {
+      "rule": "Engage the end over you for a count, then release to the flat at four yards and stay in front of the quarterback. You are the easy throw.",
+      "type": "pass",
+      "path": [
+        [0.8, 1.4],
+        [3.0, 2.6]
+      ]
+    },
+    "Z": {
+      "rule": "Run the Jet motion exactly the way you run it for real — start on the same call, full speed, flat across. Keep going after the fake. You are the reason this play is open.",
+      "type": "motion",
+      "path": [
+        [-5.2, -0.7],
+        [-9.2, -0.8],
+        [-13.2, 0.0]
+      ]
+    },
+    "QB": {
+      "rule": "Fake the jet handoff with both hands, hide the ball on your back hip, and get to the edge the other way. Run it if it is open. Only throw if a defender comes up to take you.",
+      "type": "run",
+      "path": [
+        [-1.0, -0.6],
+        [1.6, -1.1],
+        [4.8, -0.6],
+        [6.8, 2.0]
+      ]
+    },
+    "FB": {
+      "rule": "Fill straight ahead like Wedge is coming, then block anyone chasing the quarterback from the inside.",
+      "type": "block",
+      "path": [
+        [0.4, 1.8],
+        [1.2, 3.0]
+      ]
+    },
+    "TB": {
+      "rule": "Run the Power path to the right and then keep going to protect the outside. Anybody chasing the quarterback from behind is yours.",
+      "type": "block",
+      "path": [
+        [1.4, 1.4],
+        [3.4, 1.0],
+        [5.4, 1.4]
+      ]
+    }
+  },
+  "coaching_points": [
+    "Do not call this until Jet Left has been run for real and hurt them. The motion is only a lie if it has been the truth.",
+    "Both ends must engage before releasing. If they run straight into their routes the fake dies and the flat defender is already waiting.",
+    "No blitzing is allowed for 8- and 9-year-olds, so the quarterback has time. Teach him to be patient and look up.",
+    "Run first. At this age the quarterback usually walks into ten yards before anyone finds him — the throw is the second choice, not the plan.",
+    "One throw, then tuck it. No scrambling backwards, ever."
+  ],
+  "z": "right"
+}

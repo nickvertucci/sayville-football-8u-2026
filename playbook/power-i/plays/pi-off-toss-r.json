@@ -1,17 +1,14 @@
 {
   "id": "pi-off-toss-r",
-  "order": 8,
+  "order": 5,
   "formation": "power-i",
-  "name": "Power I Offset Toss Right",
-  "call": "Power I Offset Right 38 Toss",
+  "name": "Power I Toss Right",
+  "call": "Power I Right 38 Toss",
   "type": "run",
   "defense": "5-3",
   "direction": "right",
   "ball_carrier": "TB",
-  "alignment": {
-    "WB": [2.6, -3.3]
-  },
-  "purpose": "Two lead blockers around the corner. The offset back and the pulling guard get outside in front of the tailback, and a defense that has been squeezing the off-tackle hole all game has nobody left on the edge.",
+  "purpose": "Two lead blockers around the corner. The wing and the pulling guard get outside in front of the tailback, and a defense that has been squeezing the off-tackle hole all game has nobody left on the edge.",
   "assignments": {
     "LTE": {
       "rule": "Cut off pursuit from behind. Everything is running away from you, so chase flat down the line and never quit.",
@@ -104,8 +101,8 @@
   },
   "coaching_points": [
     "Best call on the hash going to the wide side of the field. Do not call it into the boundary.",
-    "The offset back has a real head start on this compared to running it from the wing — he is already behind the line and moving before anybody can widen with him.",
-    "The carrier must not turn up until he is outside our end. Eight-year-olds cut upfield the moment they see grass and run straight into the tackle the play was designed to beat.",
-    "If their corner is flying up to meet the pull every time, come back inside with Offset Power Right — same first two steps from the backfield."
+    "The wing is already behind the line and moving, so he beats a tight-wing sweep to the corner — that head start is the whole point of running it from the backfield.",
+    "The carrier must not turn up until he is outside our end. Eight-year-olds cut upfield the moment they see grass and run into the tackle the play was built to beat.",
+    "If their corner flies up to meet the pull every time, come back inside with Power Right."
   ]
 }

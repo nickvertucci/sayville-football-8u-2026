@@ -1,9 +1,9 @@
 {
   "id": "pi-off-power-l",
-  "order": 6.5,
+  "order": 2,
   "formation": "power-i",
-  "name": "Power I Offset Power Left",
-  "call": "Power I Offset Left 35 Power",
+  "name": "Power I Power Left",
+  "call": "Power I Left 35 Power",
   "type": "run",
   "defense": "5-3",
   "direction": "left",
@@ -11,7 +11,7 @@
   "alignment": {
     "WB": [-2.6, -3.3]
   },
-  "purpose": "Power Left with the wing moved off the edge and into the backfield beside the fullback. Same three jobs, same hole, but now the defense cannot see which side the extra blocker is going to until the ball is snapped.",
+  "purpose": "Power the other way. The line blocks down inside, the wing leads out of the backfield to kick the playside end, and the backside guard pulls through the hole in front of the tailback — two blockers in the same gap before the linebackers read it.",
   "assignments": {
     "LTE": {
       "rule": "Release inside off his outside shoulder and take the playside linebacker. The end over you is getting kicked out — leave him alone.",
@@ -103,9 +103,9 @@
     }
   },
   "coaching_points": [
-    "This is the same play as Power Left off the wing. The only thing that changes is where the kick-out block starts, and that is the entire reason it exists — at the wing he is a tell, in the backfield he is not.",
-    "The trade is honest: from the backfield he arrives faster but with a worse angle, so he must leave on the snap. From the wing he has leverage but the defense has already counted him.",
-    "Teach both looks in the same session with the same words. Every line rule is identical and the backs' jobs are identical — only one man has moved.",
-    "If they walk a linebacker over to the offset side, run Offset Counter Right the very next play."
+    "The mirror of Power Right — run it the same week so the defense cannot lean to the wing side.",
+    "The wing leads from the backfield, so he arrives fast but with a tight angle. He must leave on the snap and attack the end's outside hip, or the end slides under him.",
+    "The pulling guard is late by design. His man is whoever shows in the hole, not a man he picks before the snap.",
+    "The tailback's worst habit is bouncing it wide for green grass. The yards are inside the wing's kick-out — drill it tight until it is automatic."
   ]
 }
