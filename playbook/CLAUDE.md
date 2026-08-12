@@ -113,7 +113,7 @@ exactly eleven players, and `backs` — the digit-to-position map its calls are 
 from:
 
 ```json
-"backs": { "1": "QB", "2": "FB", "3": "RH", "4": "LH" }
+"backs": { "1": "QB", "2": "FB", "3": "TB", "4": "Z" }
 ```
 
 `backs` is not documentation. It is what the generator resolves the first digit of every
@@ -164,14 +164,15 @@ For a **symmetric** formation, left-handed plays are one file:
 The generator flips every path across the middle, swaps the position keys, and swaps the
 words "left" and "right" in every rule, purpose and coaching point.
 
-**The call is not mirrored — you write it.** Mirroring swaps `LH` and `RH`, so the back
-digit changes too: `Bone 44 Power` is the left halfback through the 4 hole, and its mirror
-is `Bone 35 Power` — the *right* halfback, back 3, through the 5 hole. Get that wrong and
+**The call is not mirrored — you write it.** Mirroring swaps `TB` and `Z`, so the back
+digit changes too: `Bone 44 Power` is the `Z` (the left back) through the 4 hole, and its
+mirror is `Bone 35 Power` — the `TB`, back 3, through the 5 hole. Get that wrong and
 the call check catches it, because the digits no longer match the flipped path.
 
 **Only use `mirror_of` when the formation is symmetric.** A position with no counterpart
 in the `MIRROR` table maps to itself, which is correct for someone aligned on the middle
-(`C`, `QB`, `FB`, `TB`) and wrong for a one-sided back or receiver.
+(`C`, `QB`, `FB`) and wrong for a one-sided back or receiver; the two side backs are
+named `TB` and `Z` and the table swaps them.
 
 - **Wishbone and Full House are symmetric** — they use `mirror_of`, so a left-handed play
   is a four-line file.

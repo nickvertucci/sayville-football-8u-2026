@@ -569,6 +569,9 @@ table.calls td.c { white-space: nowrap; }
 }
 .ins-play:hover { border-color: var(--accent); background: var(--panel); }
 .ins-play.def { border-left: 3px solid var(--red); }
+.ins-play.form { border-left: 3px solid var(--accent-solid); }
+.ins-n time { display: block; font-size: 11px; line-height: 1.2; margin-top: 3px;
+  font-style: normal; opacity: .85; }
 .ins-call {
   font-size: 12.5px; font-weight: 700; color: var(--accent-ink);
   font-variant-numeric: tabular-nums;
@@ -1774,6 +1777,7 @@ def write_install(formations: list[dict], defenses: dict, root: Path) -> str:
         schedule = _json.loads(path.read_text(encoding="utf-8"))
 
     plays = {p["id"]: (p, f) for f in formations for p in f["_plays"]}
+    forms_by_id = {f["id"]: f for f in formations}
     phases = schedule.get("phases", {})
 
     total_plays = sum(len(pr.get("plays", [])) for pr in schedule["practices"])
@@ -1805,6 +1809,13 @@ def write_install(formations: list[dict], defenses: dict, root: Path) -> str:
                 f'<span class="ins-call">{esc(front["call"])}</span>'
                 f'<span class="ins-name">{esc(front["name"])} defence</span></a>'
             )
+        for fmid in pr.get("formations", []):
+            form = forms_by_id[fmid]
+            items.append(
+                f'<a class="ins-play form" href="{f_href(form)}">'
+                f'<span class="ins-call">{esc(form_label(form))}</span>'
+                f'<span class="ins-name">formation &mdash; alignment only</span></a>'
+            )
         if not items:
             items.append('<span class="ins-none">No new install &mdash; review</span>')
 
@@ -1815,12 +1826,20 @@ def write_install(formations: list[dict], defenses: dict, root: Path) -> str:
                               else esc(defenses[n]["call"]) for n in need)
             needs = f'<p class="ins-req">Needs {names} working first</p>'
 
+        date = pr.get("date", "")
+        date_html = f"<time>{esc(date)}</time>" if date else ""
+        warm = pr.get("warmup", "")
+        warm_html = f'<p class="ins-em"><b>Warm-up.</b> {esc(warm)}</p>' if warm else ""
+        fin = pr.get("finisher", "")
+        fin_html = f'<p class="ins-em"><b>Finisher.</b> {esc(fin)}</p>' if fin else ""
         blocks.append(
             f'<article class="ins">'
-            f'<div class="ins-n"><span>Practice</span><b>{pr["n"]}</b></div>'
+            f'<div class="ins-n"><span>Practice</span><b>{pr["n"]}</b>{date_html}</div>'
             f'<div class="ins-body"><h3>{esc(pr.get("focus", ""))}</h3>'
+            f'{warm_html}'
             f'<div class="ins-list">{"".join(items)}</div>'
-            f'<p class="ins-em">{esc(pr.get("emphasis", ""))}</p>{needs}</div></article>'
+            f'<p class="ins-em">{esc(pr.get("emphasis", ""))}</p>'
+            f'{fin_html}{needs}</div></article>'
         )
 
     # Anything not on the schedule yet, so a play cannot go missing quietly.

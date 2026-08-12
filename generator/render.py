@@ -71,9 +71,12 @@ MIRROR = {
     "LTE": "RTE", "RTE": "LTE",
     "LT": "RT", "RT": "LT",
     "LG": "RG", "RG": "LG",
-    "LW": "RW", "RW": "LW",
-    "LH": "RH", "RH": "LH",
-    "C": "C", "QB": "QB", "FB": "FB", "TB": "TB",
+    "C": "C", "QB": "QB", "FB": "FB",
+    # The two halfbacks of a symmetric formation are named TB (right) and Z (left),
+    # so mirroring a right-handed play swaps them. Only the symmetric Wishbone and Full
+    # House use mirror_of; the Regular I and Power I keep TB and Z on fixed sides and
+    # author their left-handed plays by hand, so this swap never touches them.
+    "TB": "Z", "Z": "TB",
 }
 
 COLORS = {
@@ -408,6 +411,7 @@ def validate_install(schedule: dict, formations: list[dict], defenses: dict) -> 
     errors = []
     plays = {p["id"] for f in formations for p in f["_plays"]}
     fronts = set(defenses)
+    form_ids = {f["id"] for f in formations}
     practices = schedule.get("practices", [])
 
     numbers = [p.get("n") for p in practices]
@@ -433,6 +437,9 @@ def validate_install(schedule: dict, formations: list[dict], defenses: dict) -> 
                               f"{installed_at[fid]} and {n}")
             else:
                 installed_at[fid] = n
+        for fmid in practice.get("formations", []):
+            if fmid not in form_ids:
+                errors.append(f"install practice {n}: no such formation '{fmid}'")
         phase = practice.get("phase")
         if phase and phase not in schedule.get("phases", {}):
             errors.append(f"install practice {n}: unknown phase '{phase}'")

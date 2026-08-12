@@ -8,7 +8,7 @@
   "defense": "5-3",
   "direction": "right",
   "ball_carrier": "RTE",
-  "purpose": "The only pass in the Wishbone, and it comes off the play they have seen most. Fake the dive, let both halfbacks run their power paths, and the quarterback walks out onto an edge everybody has left.",
+  "purpose": "The only pass in the Wishbone, and it comes off the play they have seen most. Fake the dive, let both backs run their power paths, and the quarterback walks out onto an edge everybody has left.",
   "assignments": {
     "LTE": {
       "rule": "Engage the end over you for a count, then release and get across the field to eight yards. You are the second look and you arrive late on purpose.",
@@ -80,7 +80,7 @@
         [0.8, 3.6]
       ]
     },
-    "LH": {
+    "Z": {
       "rule": "Run your Power path to the right at full speed, then keep going and protect the outside. Anybody chasing the quarterback from behind is yours.",
       "type": "block",
       "path": [
@@ -89,7 +89,7 @@
         [7.0, 1.6]
       ]
     },
-    "RH": {
+    "TB": {
       "rule": "Run your kick-out path at the end like Power is coming, then stay on him. He is the one man who can ruin this.",
       "type": "block",
       "path": [

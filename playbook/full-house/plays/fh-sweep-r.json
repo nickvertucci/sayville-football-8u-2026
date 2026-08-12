@@ -7,8 +7,8 @@
   "type": "run",
   "defense": "5-3",
   "direction": "right",
-  "ball_carrier": "LH",
-  "purpose": "The same first three steps as Power, taken all the way outside. The near halfback and the pulling guard get around the corner in front of the carrier, and a defense that has been fighting the kick-out inside is a step late getting there.",
+  "ball_carrier": "Z",
+  "purpose": "The same first three steps as Power, taken all the way outside. The near back and the pulling guard get around the corner in front of the carrier, and a defense that has been fighting the kick-out inside is a step late getting there.",
   "assignments": {
     "LTE": {
       "rule": "Cut off pursuit from behind. Everything is running away from you — chase flat down the line and never quit.",
@@ -63,14 +63,14 @@
       ]
     },
     "QB": {
-      "rule": "Open right, let the near back go, and hand it deep to the far halfback as he crosses. Then carry out a fake up the middle.",
+      "rule": "Open right, let the near back go, and hand it deep to the far back as he crosses. Then carry out a fake up the middle.",
       "type": "fake",
       "path": [
         [1.0, -0.6],
         [2.6, -1.2]
       ]
     },
-    "LH": {
+    "Z": {
       "rule": "Take the handoff and get width first. Stay behind your blockers until you are outside our end, then turn up hard. Turning up too early is the only way this play loses yards.",
       "type": "run",
       "path": [
@@ -89,7 +89,7 @@
         [1.4, 3.6]
       ]
     },
-    "RH": {
+    "TB": {
       "rule": "Get outside fast and lead the carrier around the corner. Block the first man who shows up outside our end, and keep running — if nobody shows, go find the safety.",
       "type": "block",
       "path": [

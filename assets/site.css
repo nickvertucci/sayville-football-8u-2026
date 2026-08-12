@@ -527,6 +527,9 @@ table.calls td.c { white-space: nowrap; }
 }
 .ins-play:hover { border-color: var(--accent); background: var(--panel); }
 .ins-play.def { border-left: 3px solid var(--red); }
+.ins-play.form { border-left: 3px solid var(--accent-solid); }
+.ins-n time { display: block; font-size: 11px; line-height: 1.2; margin-top: 3px;
+  font-style: normal; opacity: .85; }
 .ins-call {
   font-size: 12.5px; font-weight: 700; color: var(--accent-ink);
   font-variant-numeric: tabular-nums;

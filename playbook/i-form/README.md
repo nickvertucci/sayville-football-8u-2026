@@ -715,7 +715,7 @@ Off the tight end. Our end seals their end inside, the guard pulls and turns up 
 **Coaching points**
 
 - Same down-block-and-kick-out rules as Bone Power. If the kids know one they know both — say that out loud when you install it.
-- The tailback starts deeper than the wishbone halfback does, so the kick-out block has to hold a beat longer. Drill it on a count.
+- The tailback starts deeper than a wishbone back does, so the kick-out block has to hold a beat longer. Drill it on a count.
 - The pulling guard stays flat and tight to the line. Bellying back is what makes this play late.
 - If the pulling guard cannot get there in time, run I Iso instead — it needs no pullers.
 

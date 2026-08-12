@@ -7,8 +7,8 @@
   "type": "run",
   "defense": "5-3",
   "direction": "right",
-  "ball_carrier": "LH",
-  "purpose": "Off-tackle power to the far halfback, who crosses behind the fullback and takes a deep handoff. Blocked exactly like Counter — our end drives their end out, the guard climbs to the middle linebacker, the fullback leads through the hole onto the playside linebacker — with the near halfback arcing to the corner in case the ball bounces.",
+  "ball_carrier": "Z",
+  "purpose": "Off-tackle power to the far back, who crosses behind the fullback and takes a deep handoff. Blocked exactly like Counter — our end drives their end out, the guard climbs to the middle linebacker, the fullback leads through the hole onto the playside linebacker — with the near back arcing to the corner in case the ball bounces.",
   "assignments": {
     "LTE": {
       "rule": "Cut off pursuit from behind. You are the last one to the ball, so never quit on the play.",
@@ -61,7 +61,7 @@
       ]
     },
     "QB": {
-      "rule": "Open to the playside and hand deep to the halfback crossing from the backside. Let him come to you, then fake away.",
+      "rule": "Open to the playside and hand deep to the back crossing from the backside. Let him come to you, then fake away.",
       "type": "fake",
       "path": [
         [0.5, -0.5],
@@ -78,7 +78,7 @@
         [3.2, 6.2]
       ]
     },
-    "LH": {
+    "Z": {
       "rule": "You carry it. Cross behind the fullback, take the handoff deep, then press the outside hip of our tackle and turn up inside the blocks.",
       "type": "run",
       "path": [
@@ -88,7 +88,7 @@
         [6.2, 7.2]
       ]
     },
-    "RH": {
+    "TB": {
       "rule": "Arc outside and block the corner on your side. If the ball bounces, you are the reason it can.",
       "type": "block",
       "path": [
@@ -101,7 +101,7 @@
   "coaching_points": [
     "Identical blocking to Bone Counter. The line learns one set of rules and gets two plays out of it — say that out loud when you install the second one.",
     "The fullback's block on the playside linebacker is the play. Drill it on its own.",
-    "The far halfback travels further than the near one, and that is the point — he arrives behind the fullback rather than beating him to the hole.",
+    "The far back travels further than the near one, and that is the point — he arrives behind the fullback rather than beating him to the hole.",
     "If the handoff is late, the quarterback is reaching. He holds the ball still and lets the back run through it."
   ]
 }
