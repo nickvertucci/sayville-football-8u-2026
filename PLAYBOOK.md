@@ -1012,7 +1012,7 @@ The Z is set to the strong side and runs his lead path that way, which is exactl
 
 ![Power I Z Power Right](playbook/power-i/cards/pi-z-power-r.svg)
 
-The wider mirror of Z Power Left. The Z is set to the left, and he takes it all the way around the right end behind two lead blockers while the tailback sells Power back to the Z's side.
+The wider mirror of Z Power Left. The Z is set to the left, and he takes it all the way around the right end behind three lead blockers — fullback, tailback and the pulling guard.
 
 | Position | Assignment |
 |---|---|
@@ -1026,13 +1026,13 @@ The wider mirror of Z Power Left. The Z is set to the left, and he takes it all 
 | **Z** **(ball)** | Take the handoff and get width. Stay behind the fullback until you are outside our end, then turn up hard. Turning up too early is the only way this loses yards. |
 | **QB** | Open right and get the ball to the Z deep and early, then carry out a fake up the middle. |
 | **FB** | Lead the Z around the right end. Block the first man outside our end, and if nobody shows, keep running and find the safety. |
-| **TB** | False step to the left and run the Power path that way with your arms tucked, selling the strong-side power. You are the reason the backside stays honest. |
+| **TB** | Lead through the convoy to the second level. Block the last man between the Z and the open field — usually a linebacker or the safety. |
 
 **Coaching points**
 
 - Do not call this until they are flying to the Z's side. His alignment is what makes it — if they are not honouring Power to him, run that first.
-- Two blockers lead it: the fullback and the pulling guard get outside in front of the Z. He stays behind them until he is past our end.
-- The tailback's fake to the strong side is the whole misdirection. He runs it full speed with his arms tucked or nobody chases it.
+- Three blockers lead it: the fullback, the tailback and the pulling guard all get outside in front of the Z. He stays behind them until he is past our end.
+- The tailback does not need a particular man — find one and finish the block. One more hat at the point of attack is the whole idea.
 - The Z must not turn up until he is outside our end. Coming all the way from the far side, the temptation to cut it up early is strong — the yards are around the corner.
 
 ---
@@ -1043,7 +1043,7 @@ The wider mirror of Z Power Left. The Z is set to the left, and he takes it all 
 
 ![Power I Z Power Left](playbook/power-i/cards/pi-z-power-l.svg)
 
-The Z's alignment says Power to his side; this goes the other way. He takes the ball back across behind the fullback's kick-out and the pulling guard, while the tailback runs the strong-side Power to hold everybody who honored the Z.
+The Z's alignment says Power to his side; this goes the other way. He takes the ball back across behind the fullback's kick-out, the pulling guard and the tailback — three blockers clearing the way instead of one selling a fake.
 
 | Position | Assignment |
 |---|---|
@@ -1057,13 +1057,13 @@ The Z's alignment says Power to his side; this goes the other way. He takes the 
 | **Z** **(ball)** | Take the handoff going left and aim at the outside hip of our left tackle. Follow the fullback's kick-out, then the guard. Stay tight to the blocks — do not bounce it outside. |
 | **QB** | Open left and hand the ball deep to the Z as he crosses, then carry out a fake to the right edge. |
 | **FB** | Kick the end out. Leave on the snap, aim at his outside hip and drive him toward the sideline — the Z runs inside your block. |
-| **TB** | False step to the right and run the Power path that way with your arms tucked, selling the strong-side power. You are the reason the backside stays honest. |
+| **TB** | Follow the pulling guard through, then keep going to the second level. Block the last man between the Z and the open field — usually the safety. |
 
 **Coaching points**
 
 - Do not call this until they are flying to the Z's side. His alignment is what makes it — if they are not honouring Power to him, run that first.
-- Two blockers lead it: the fullback kicks the end and the backside guard pulls up through the hole. The Z stays tight behind them and does not bounce.
-- The tailback's fake to the strong side is the whole misdirection. He runs it full speed with his arms tucked or nobody chases it.
+- Three blockers lead it: the fullback kicks the end, the backside guard pulls up through the hole, and the tailback follows in behind them. The Z stays tight and does not bounce.
+- The tailback does not need a particular man — find the safety if he shows, or just find work. One more blocker at the point of attack is the whole idea.
 - This is a patient run for the Z — he is coming from the far side, so the hole is a half-count later than it looks. Trust the blocks.
 
 ---

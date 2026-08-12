@@ -402,6 +402,27 @@ def load_install() -> dict:
     return load_json(path) if path.is_file() else {}
 
 
+def load_favorites() -> dict:
+    """The bread-and-butter plays pinned to the top of the call sheet, if any."""
+    path = ROOT / "favorites.json"
+    return load_json(path) if path.is_file() else {}
+
+
+def validate_favorites(favorites: dict, formations: list[dict]) -> list[str]:
+    if not favorites:
+        return []
+    errors = []
+    plays = {p["id"] for f in formations for p in f["_plays"]}
+    for i, entry in enumerate(favorites.get("plays", [])):
+        for side in ("right", "left"):
+            pid = entry.get(side)
+            if not pid:
+                errors.append(f"favorites[{i}]: missing '{side}'")
+            elif pid not in plays:
+                errors.append(f"favorites[{i}]: no such play '{pid}' ({side})")
+    return errors
+
+
 def validate_install(schedule: dict, formations: list[dict], defenses: dict) -> list[str]:
     """A schedule that teaches a play before the thing it is built on is worse than no
     schedule: it sends a coach to practice to install misdirection off a play the team
@@ -1113,8 +1134,10 @@ def main() -> int:
     formations = load_formations()
 
     schedule = load_install()
+    favorites = load_favorites()
     errors = (validate_defenses(defenses) + validate(formations, defenses)
-              + validate_install(schedule, formations, defenses))
+              + validate_install(schedule, formations, defenses)
+              + validate_favorites(favorites, formations))
     if errors:
         for e in errors:
             print(f"ERROR  {e}", file=sys.stderr)

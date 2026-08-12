@@ -11,7 +11,7 @@
   "alignment": {
     "Z": [-2.6, -3.3]
   },
-  "purpose": "The wider mirror of Z Power Left. The Z is set to the left, and he takes it all the way around the right end behind two lead blockers while the tailback sells Power back to the Z's side.",
+  "purpose": "The wider mirror of Z Power Left. The Z is set to the left, and he takes it all the way around the right end behind three lead blockers — fullback, tailback and the pulling guard.",
   "assignments": {
     "LTE": {
       "rule": "Cut off pursuit from behind. Everything runs away from you — chase flat down the line and never quit.",
@@ -93,18 +93,19 @@
       ]
     },
     "TB": {
-      "rule": "False step to the left and run the Power path that way with your arms tucked, selling the strong-side power. You are the reason the backside stays honest.",
-      "type": "fake",
+      "rule": "Lead through the convoy to the second level. Block the last man between the Z and the open field — usually a linebacker or the safety.",
+      "type": "block",
       "path": [
-        [-1.2, 1.5],
-        [-2.6, 3.6]
+        [2.2, 3.0],
+        [4.8, 6.0],
+        [7.2, 8.1]
       ]
     }
   },
   "coaching_points": [
     "Do not call this until they are flying to the Z's side. His alignment is what makes it — if they are not honouring Power to him, run that first.",
-    "Two blockers lead it: the fullback and the pulling guard get outside in front of the Z. He stays behind them until he is past our end.",
-    "The tailback's fake to the strong side is the whole misdirection. He runs it full speed with his arms tucked or nobody chases it.",
+    "Three blockers lead it: the fullback, the tailback and the pulling guard all get outside in front of the Z. He stays behind them until he is past our end.",
+    "The tailback does not need a particular man — find one and finish the block. One more hat at the point of attack is the whole idea.",
     "The Z must not turn up until he is outside our end. Coming all the way from the far side, the temptation to cut it up early is strong — the yards are around the corner."
   ]
 }
