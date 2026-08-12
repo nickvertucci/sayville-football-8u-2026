@@ -8,7 +8,7 @@
   "defense": "5-3",
   "direction": "left",
   "ball_carrier": "Z",
-  "purpose": "The Z's alignment says Power to his side; this goes the other way. He takes the ball back across behind the fullback's kick-out and the pulling guard, while the tailback runs the strong-side Power to hold everybody who honored the Z.",
+  "purpose": "The Z's alignment says Power to his side; this goes the other way. He takes the ball back across behind the fullback's kick-out, the pulling guard and the tailback — three blockers clearing the way instead of one selling a fake.",
   "assignments": {
     "LTE": {
       "rule": "Release inside off the end and take the playside linebacker. The end over you is getting kicked out — leave him alone.",
@@ -91,18 +91,19 @@
       ]
     },
     "TB": {
-      "rule": "False step to the right and run the Power path that way with your arms tucked, selling the strong-side power. You are the reason the backside stays honest.",
-      "type": "fake",
+      "rule": "Follow the pulling guard through, then keep going to the second level. Block the last man between the Z and the open field — usually the safety.",
+      "type": "block",
       "path": [
-        [1.2, 1.5],
-        [2.6, 3.6]
+        [-0.5, 3.5],
+        [-1.0, 7.5],
+        [-1.5, 11.5]
       ]
     }
   },
   "coaching_points": [
     "Do not call this until they are flying to the Z's side. His alignment is what makes it — if they are not honouring Power to him, run that first.",
-    "Two blockers lead it: the fullback kicks the end and the backside guard pulls up through the hole. The Z stays tight behind them and does not bounce.",
-    "The tailback's fake to the strong side is the whole misdirection. He runs it full speed with his arms tucked or nobody chases it.",
+    "Three blockers lead it: the fullback kicks the end, the backside guard pulls up through the hole, and the tailback follows in behind them. The Z stays tight and does not bounce.",
+    "The tailback does not need a particular man — find the safety if he shows, or just find work. One more blocker at the point of attack is the whole idea.",
     "This is a patient run for the Z — he is coming from the far side, so the hole is a half-count later than it looks. Trust the blocks."
   ]
 }

@@ -98,7 +98,7 @@ the other way.
 |---|---|---|
 | `Power I Right 34 Power` / `Power I Left 35 Power` | Power I Power Right / Left | tailback, tackle–end |
 | `Power I Right 35 Counter` / `Power I Left 34 Counter` | Power I Counter Left / Right | tailback, back the other way |
-| `Power I Left 46 Power` / `Power I Right 45 Power` | Power I Z Power Right / Left | the Z, away from his side behind two leads |
+| `Power I Left 46 Power` / `Power I Right 45 Power` | Power I Z Power Right / Left | the Z, away from his side behind three leads |
 | `Power I Right 38 Toss` / `Power I Left 39 Toss` | Power I Toss Right / Left | tailback, all the way outside |
 
 ### Wishbone: formation + back + hole + play word

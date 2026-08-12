@@ -271,6 +271,11 @@ h1.page { font-size: clamp(23px, 5vw, 33px); letter-spacing: -.5px; margin: 22px
   font-size: 11.5px; text-transform: uppercase; letter-spacing: 1.4px; color: var(--muted);
   margin: 30px 0 12px; padding-bottom: 7px; border-bottom: 1px solid var(--line);
 }
+.hero-head {
+  display: inline-block; font-size: clamp(22px, 4.6vw, 32px); font-weight: 800;
+  letter-spacing: -.4px; color: var(--on-accent); background: var(--accent-solid);
+  padding: 9px 22px; border-radius: 10px; margin: 34px 0 16px;
+}
 
 /* -------------------------------------------------------------------- pieces -- */
 .callout {
@@ -357,6 +362,27 @@ h1.page { font-size: clamp(23px, 5vw, 33px); letter-spacing: -.5px; margin: 22px
 .pcard .thumb img { display: block; width: 100%; height: auto; }
 .pcard .body { padding: 11px 13px 13px; }
 .pcard h4 { margin: 0 0 7px; font-size: 16px; color: var(--accent-ink); }
+
+.favgrid { display: grid; gap: 12px; grid-template-columns: repeat(2, minmax(0,1fr)); margin-bottom: 6px; }
+@media (min-width: 560px) { .favgrid { grid-template-columns: repeat(3, minmax(0,1fr)); } }
+.favcard {
+  background: var(--panel); border: 1px solid var(--line); border-radius: 12px;
+  overflow: hidden; box-shadow: var(--shadow);
+}
+.favcard .thumb { display: block; background: #fff; border-bottom: 1px solid var(--line); }
+.favcard .thumb img { display: block; width: 100%; height: auto; }
+.favcard .body { padding: 11px 12px 12px; }
+.favcard h4 { margin: 0 0 3px; font-size: 15px; line-height: 1.25; }
+.favcard h4 a { text-decoration: none; color: var(--accent-ink); }
+.favcard h4 a:hover { text-decoration: underline; }
+.favcard .fmeta { display: block; font-size: 11.5px; color: var(--muted); margin-bottom: 10px; }
+.favcard .sides { display: flex; gap: 8px; }
+.favcard .side {
+  flex: 1 1 0; text-align: center; text-decoration: none; font-size: 12.5px;
+  font-weight: 700; color: var(--on-accent); background: var(--accent-solid);
+  border-radius: 6px; padding: 7px 0;
+}
+.favcard .side:hover { filter: brightness(1.15); }
 
 .call {
   display: inline-block; font-size: 12.5px; font-weight: 700; letter-spacing: .4px;
@@ -1509,12 +1535,12 @@ def write_home(formations: list[dict], defenses: dict) -> str:
   <a class="qlink" href="print.html">{icon('printer')}<span>Print</span></a>
 </div>
 
-<p class="section-head">Formations</p>
+<p class="hero-head">Formations</p>
 <div class="cards imgcards">
   {chr(10).join('  ' + c for c in cards).strip()}
 </div>
 
-<p class="section-head">Defense</p>
+<p class="hero-head">Defense</p>
 <div class="cards imgcards">{defcards}</div>
 
 <p class="section-head">How to call a play</p>
@@ -1587,7 +1613,49 @@ def filter_group(label: str, chips: list[str]) -> str:
             f'<div class="chips">{"".join(chips)}</div></div>')
 
 
-def write_calls(formations: list[dict], defenses: dict) -> str:
+def strip_direction(name: str) -> str:
+    """The favorites cards show one image for both sides of a play, so the caption
+    should not claim to be just the right (or just the left) — "Slant", not "Slant
+    Right"."""
+    return re.sub(r"\s+(Right|Left)$", "", name)
+
+
+def write_calls(formations: list[dict], defenses: dict, root: Path) -> str:
+    plays_by_id = {p["id"]: (p, f) for f in formations for p in f["_plays"]}
+    favorites = {}
+    fav_path = root / "favorites.json"
+    if fav_path.is_file():
+        import json as _json
+        favorites = _json.loads(fav_path.read_text(encoding="utf-8"))
+
+    fav_cards = []
+    for entry in favorites.get("plays", []):
+        rp, rf = plays_by_id[entry["right"]]
+        lp, _lf = plays_by_id[entry["left"]]
+        fav_cards.append(
+            f'<div class="favcard">'
+            f'<a class="thumb" href="{p_href(rp)}" tabindex="-1">'
+            f'<img loading="lazy" src="{card_src(rf, rp)}" '
+            f'alt="{esc(strip_direction(rp["name"]))} diagram"></a>'
+            f'<div class="body">'
+            f'<h4><a href="{p_href(rp)}">{esc(strip_direction(rp["name"]))}</a></h4>'
+            f'<span class="fmeta">{esc(form_label(rf))}</span>'
+            f'<div class="sides">'
+            f'<a class="side" href="{p_href(rp)}">Right</a>'
+            f'<a class="side" href="{p_href(lp)}">Left</a>'
+            f'</div></div></div>'
+        )
+    fav_section = ""
+    if fav_cards:
+        intro = esc(favorites.get("intro", ""))
+        fav_section = f"""<p class="section-head">Favorite Plays</p>
+<p class="lede">{intro}</p>
+<div class="favgrid">
+  {chr(10).join('  ' + c for c in fav_cards).strip()}
+</div>
+
+"""
+
     rows, carriers = [], []
     for f in formations:
         for p in f["_plays"]:
@@ -1634,6 +1702,7 @@ def write_calls(formations: list[dict], defenses: dict) -> str:
     )
 
     body = f"""<h1 class="page">Call sheet</h1>
+{fav_section}<p class="section-head">All Plays</p>
 <p class="lede">Every play in the book. Pick as many filters as you like — choices inside a
 group widen the list, choices across groups narrow it. Press <kbd>/</kbd> to jump to the
 search box.</p>
@@ -2079,7 +2148,7 @@ def write_all(formations: list[dict], defenses: dict, root: Path) -> int:
 
     written = 0
     (root / "index.html").write_text(write_home(formations, defenses), encoding="utf-8")
-    (root / "calls.html").write_text(write_calls(formations, defenses), encoding="utf-8")
+    (root / "calls.html").write_text(write_calls(formations, defenses, root), encoding="utf-8")
     (root / "print.html").write_text(
         write_print_book(formations, defenses), encoding="utf-8")
     (root / "defense.html").write_text(

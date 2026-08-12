@@ -1,0 +1,11 @@
+{
+  "intro": "Six plays. If practice time is short, these are the ones that cannot slip — every other play in the book exists to set one of these up or keep a defense from selling out against it.",
+  "plays": [
+    {"right": "i-slant-r", "left": "i-slant-l"},
+    {"right": "i-power-r", "left": "i-power-l"},
+    {"right": "i-wedge", "left": "i-wedge-l"},
+    {"right": "i-boot-r", "left": "i-boot-l"},
+    {"right": "pi-off-power-r", "left": "pi-off-power-l"},
+    {"right": "pi-off-toss-r", "left": "pi-off-toss-l"}
+  ]
+}
