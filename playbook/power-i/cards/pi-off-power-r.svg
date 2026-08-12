@@ -1,10 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="594" height="1184" viewBox="0 0 594 1184" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" width="594" height="1200" viewBox="0 0 594 1200" font-family="Segoe UI, Helvetica, Arial, sans-serif">
 <rect width="100%" height="100%" fill="#ffffff"/>
 <rect x="0" y="0" width="594" height="58" fill="#14213d"/>
-<text x="18" y="26" font-size="19" font-weight="700" fill="#ffffff">Power I Offset Power Right</text>
+<text x="18" y="26" font-size="19" font-weight="700" fill="#ffffff">Power I Power Right</text>
 <text x="18" y="45" font-size="11.5" fill="#a9b4c7">RUN  •  Power I  •  vs 5-3</text>
-<rect x="287.2" y="13" width="288.8" height="31" rx="6" fill="#ffffff" fill-opacity="0.12" stroke="#8593ad" stroke-width="1"/>
-<text x="431.6" y="34" text-anchor="middle" font-size="14.5" font-weight="700" fill="#ffffff" letter-spacing="0.5">Power I Offset Right 34 Power</text>
+<rect x="351.6" y="13" width="224.4" height="31" rx="6" fill="#ffffff" fill-opacity="0.12" stroke="#8593ad" stroke-width="1"/>
+<text x="463.8" y="34" text-anchor="middle" font-size="14.5" font-weight="700" fill="#ffffff" letter-spacing="0.5">Power I Right 34 Power</text>
 <clipPath id="fieldclip"><rect x="0" y="58" width="594" height="472"/></clipPath>
 <g clip-path="url(#fieldclip)"><g transform="translate(-54.0,31.0)">
 <rect x="0" y="0" width="702" height="513" fill="#ffffff"/>
@@ -137,14 +137,15 @@
 <text x="331" y="952" font-size="12" fill="#111318">bounce it outside.</text>
 <line x1="18" y1="960" x2="576" y2="960" stroke="#c8cdd6" stroke-width="1"/>
 <text x="18" y="978" font-size="11" font-weight="700" fill="#5b6472" letter-spacing="1">COACHING POINTS</text>
-<text x="18" y="998" font-size="12" fill="#111318">This is the same play as Power Right off the wing. The only thing that changes is</text>
-<text x="18" y="1014" font-size="12" fill="#111318">where the kick-out block starts, and that is the entire reason it exists — at the</text>
-<text x="18" y="1032" font-size="12" fill="#111318">wing he is a tell, in the backfield he is not.</text>
-<text x="18" y="1048" font-size="12" fill="#111318">The trade is honest: from the backfield he arrives faster but with a worse angle,</text>
-<text x="18" y="1066" font-size="12" fill="#111318">so he must leave on the snap. From the wing he has leverage but the defense has</text>
-<text x="18" y="1082" font-size="12" fill="#111318">already counted him.</text>
-<text x="18" y="1100" font-size="12" fill="#111318">Teach both looks in the same session with the same words. Every line rule is</text>
-<text x="18" y="1116" font-size="12" fill="#111318">identical and the backs' jobs are identical — only one man has moved.</text>
-<text x="18" y="1134" font-size="12" fill="#111318">If they walk a linebacker over to the offset side, run Offset Counter Left the</text>
-<text x="18" y="1150" font-size="12" fill="#111318">very next play.</text>
+<text x="18" y="998" font-size="12" fill="#111318">This is the play the Power I is built for. If it works you can run it a dozen</text>
+<text x="18" y="1014" font-size="12" fill="#111318">times, and at this age you often can.</text>
+<text x="18" y="1032" font-size="12" fill="#111318">The wing leads from the backfield, so he arrives fast but with a tight angle. He</text>
+<text x="18" y="1048" font-size="12" fill="#111318">must leave on the snap and attack the end's outside hip, or the end slides under</text>
+<text x="18" y="1066" font-size="12" fill="#111318">him and makes the tackle for a loss.</text>
+<text x="18" y="1082" font-size="12" fill="#111318">The pulling guard is late by design. His man is whoever shows in the hole, not a</text>
+<text x="18" y="1100" font-size="12" fill="#111318">man he picks before the snap.</text>
+<text x="18" y="1116" font-size="12" fill="#111318">The tailback's worst habit is bouncing it wide for green grass. The yards are</text>
+<text x="18" y="1134" font-size="12" fill="#111318">inside the wing's kick-out — drill it tight until it is automatic.</text>
+<text x="18" y="1150" font-size="12" fill="#111318">If they walk a linebacker over to the wing side, come back with Counter the next</text>
+<text x="18" y="1168" font-size="12" fill="#111318">play.</text>
 </svg>

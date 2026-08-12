@@ -1,0 +1,110 @@
+{
+  "id": "i-power-boot-l",
+  "order": 27,
+  "formation": "i-form",
+  "name": "I Power Boot Left",
+  "call": "I Z Right 17 Power Boot",
+  "type": "pass",
+  "defense": "5-3",
+  "direction": "left",
+  "ball_carrier": "LTE",
+  "purpose": "Boot Left off the Power look. Everybody flows right selling Power, and the quarterback keeps it and gets to the left edge on his own, with the tight end in the flat in front of him and the backside end coming across behind. Run first, throw second.",
+  "assignments": {
+    "LTE": {
+      "rule": "Engage the end over you for a count, then release to the flat at four yards and stay in front of the quarterback. You are the easy throw.",
+      "type": "pass",
+      "path": [
+        [-0.8, 1.4],
+        [-3.0, 2.6]
+      ]
+    },
+    "LT": {
+      "rule": "Hinge and protect the boot side. Nobody comes free outside you — the quarterback is alone back there.",
+      "type": "block",
+      "path": [
+        [-1.0, 0.7]
+      ]
+    },
+    "LG": {
+      "rule": "Nobody is over you. Help the center on the nose and drive him away from the boot.",
+      "type": "block",
+      "path": [
+        [0.6, 1.0]
+      ]
+    },
+    "C": {
+      "rule": "Block the nose away from the boot. Nobody chases through the middle.",
+      "type": "block",
+      "path": [
+        [0.9, 0.8]
+      ]
+    },
+    "RG": {
+      "rule": "Nobody is over you. Pull flat to the right and run the Power path — you are the lie, take a linebacker with you.",
+      "type": "block",
+      "path": [
+        [1.4, -0.7],
+        [4.6, 0.4]
+      ]
+    },
+    "RT": {
+      "rule": "Block down inside and sell the run. Nobody comes through your gap chasing the power fake.",
+      "type": "block",
+      "path": [
+        [-0.5, 1.2]
+      ]
+    },
+    "RTE": {
+      "rule": "Engage the end over you for a count, then release and get across the field to eight yards on the boot side. You are the second look and you arrive late on purpose.",
+      "type": "pass",
+      "path": [
+        [-1.4, 2.6],
+        [-5.0, 5.6],
+        [-7.4, 7.4]
+      ]
+    },
+    "Z": {
+      "rule": "Show the power block a step to the right, then hinge back and protect the backside — nobody chases the quarterback from your side.",
+      "type": "block",
+      "path": [
+        [-2.0, 0.8],
+        [-3.2, 1.4]
+      ]
+    },
+    "QB": {
+      "rule": "Fake the handoff to the tailback going right, hide the ball on your back hip, and get to the left edge. Run it if it is open. Only throw if a defender comes up to take you.",
+      "type": "run",
+      "path": [
+        [1.0, -0.6],
+        [-1.6, -1.1],
+        [-4.8, -0.6],
+        [-6.8, 2.0]
+      ]
+    },
+    "FB": {
+      "rule": "Run your Power lead path to the right and block whoever shows. Sell it, then look back for anyone chasing the quarterback.",
+      "type": "block",
+      "path": [
+        [1.6, 1.4],
+        [3.0, 3.2]
+      ]
+    },
+    "TB": {
+      "rule": "Run the Power path to the right with your arms tucked like you have the ball. Sell it all the way — you are the reason nobody stays home on the boot.",
+      "type": "fake",
+      "path": [
+        [1.2, 1.5],
+        [2.6, 3.6],
+        [3.4, 5.6]
+      ]
+    }
+  },
+  "coaching_points": [
+    "Do not call this until Power Right has hurt them. The whole play is a lie about Power, so Power has to be worth lying about.",
+    "Both ends must engage before releasing. If they run straight into their routes the fake dies and the flat defender is waiting.",
+    "No blitzing is allowed for 8- and 9-year-olds, so the quarterback has time. Teach him to be patient and look up.",
+    "Run first. At this age the quarterback usually walks into ten yards before anyone finds him.",
+    "One throw, then tuck it. No scrambling backwards, ever."
+  ],
+  "z": "right"
+}

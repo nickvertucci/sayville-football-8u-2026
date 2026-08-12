@@ -1,9 +1,9 @@
 {
   "id": "pi-off-counter-r",
-  "order": 7.5,
+  "order": 4,
   "formation": "power-i",
-  "name": "Power I Offset Counter Right",
-  "call": "Power I Offset Left 34 Counter",
+  "name": "Power I Counter Right",
+  "call": "Power I Left 34 Counter",
   "type": "run",
   "defense": "5-3",
   "direction": "right",
@@ -11,7 +11,7 @@
   "alignment": {
     "WB": [-2.6, -3.3]
   },
-  "purpose": "The offset back is lined up left and runs left, which is exactly what they have been punished for respecting. The tailback takes two steps that way and comes back off tackle to the weak side behind a pulling guard.",
+  "purpose": "The wing is set to the strong side and runs his lead path that way, which is exactly what the defense has been punished for respecting. The tailback takes two hard steps toward him and comes back off-tackle to the weak side behind a pulling guard.",
   "assignments": {
     "LTE": {
       "rule": "Cut off pursuit from behind. You are the last one to the ball, so never quit on the play.",
@@ -104,9 +104,9 @@
     }
   },
   "coaching_points": [
-    "Do not call this until Offset Power Left has gone for real yards. Misdirection off a play they do not fear is just a slower run.",
-    "The offset back is the whole lie. He must run the Power path at Power speed and block somebody at the end of it — if he coasts, their backside linebacker never leaves.",
+    "Do not call this until Power Left has gone for real yards. Misdirection off a play they do not fear is just a slower run.",
+    "The wing is the whole lie. He must run his Power lead path at Power speed and block somebody at the end of it — if he coasts, their backside linebacker never leaves.",
     "The tailback's counter steps must be full speed and full length. A shuffle fools nobody.",
-    "The fullback's false step is one step, not two. Any more and he is late to the hole and the pulling guard is running alone."
+    "The fullback's false step is one step, not two. Any more and he is late to the hole."
   ]
 }

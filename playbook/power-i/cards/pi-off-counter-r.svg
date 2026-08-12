@@ -1,10 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="594" height="1132" viewBox="0 0 594 1132" font-family="Segoe UI, Helvetica, Arial, sans-serif">
 <rect width="100%" height="100%" fill="#ffffff"/>
 <rect x="0" y="0" width="594" height="58" fill="#14213d"/>
-<text x="18" y="26" font-size="19" font-weight="700" fill="#ffffff">Power I Offset Counter Right</text>
+<text x="18" y="26" font-size="19" font-weight="700" fill="#ffffff">Power I Counter Right</text>
 <text x="18" y="45" font-size="11.5" fill="#a9b4c7">RUN  •  Power I  •  vs 5-3</text>
-<rect x="278.0" y="13" width="298.0" height="31" rx="6" fill="#ffffff" fill-opacity="0.12" stroke="#8593ad" stroke-width="1"/>
-<text x="427.0" y="34" text-anchor="middle" font-size="14.5" font-weight="700" fill="#ffffff" letter-spacing="0.5">Power I Offset Left 34 Counter</text>
+<rect x="342.4" y="13" width="233.6" height="31" rx="6" fill="#ffffff" fill-opacity="0.12" stroke="#8593ad" stroke-width="1"/>
+<text x="459.2" y="34" text-anchor="middle" font-size="14.5" font-weight="700" fill="#ffffff" letter-spacing="0.5">Power I Left 34 Counter</text>
 <clipPath id="fieldclip"><rect x="0" y="58" width="594" height="472"/></clipPath>
 <g clip-path="url(#fieldclip)"><g transform="translate(-54.0,31.0)">
 <rect x="0" y="0" width="702" height="513" fill="#ffffff"/>
@@ -133,13 +133,13 @@
 <text x="331" y="918" font-size="12" fill="#111318">are the entire play.</text>
 <line x1="18" y1="926" x2="576" y2="926" stroke="#c8cdd6" stroke-width="1"/>
 <text x="18" y="944" font-size="11" font-weight="700" fill="#5b6472" letter-spacing="1">COACHING POINTS</text>
-<text x="18" y="964" font-size="12" fill="#111318">Do not call this until Offset Power Left has gone for real yards. Misdirection</text>
-<text x="18" y="980" font-size="12" fill="#111318">off a play they do not fear is just a slower run.</text>
-<text x="18" y="998" font-size="12" fill="#111318">The offset back is the whole lie. He must run the Power path at Power speed and</text>
+<text x="18" y="964" font-size="12" fill="#111318">Do not call this until Power Left has gone for real yards. Misdirection off a</text>
+<text x="18" y="980" font-size="12" fill="#111318">play they do not fear is just a slower run.</text>
+<text x="18" y="998" font-size="12" fill="#111318">The wing is the whole lie. He must run his Power lead path at Power speed and</text>
 <text x="18" y="1014" font-size="12" fill="#111318">block somebody at the end of it — if he coasts, their backside linebacker never</text>
 <text x="18" y="1032" font-size="12" fill="#111318">leaves.</text>
 <text x="18" y="1048" font-size="12" fill="#111318">The tailback's counter steps must be full speed and full length. A shuffle fools</text>
 <text x="18" y="1066" font-size="12" fill="#111318">nobody.</text>
 <text x="18" y="1082" font-size="12" fill="#111318">The fullback's false step is one step, not two. Any more and he is late to the</text>
-<text x="18" y="1100" font-size="12" fill="#111318">hole and the pulling guard is running alone.</text>
+<text x="18" y="1100" font-size="12" fill="#111318">hole.</text>
 </svg>

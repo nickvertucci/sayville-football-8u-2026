@@ -1,0 +1,102 @@
+{
+  "id": "i-wedge-l",
+  "order": 23,
+  "formation": "i-form",
+  "name": "I Wedge Left",
+  "call": "I Z Right 31 Wedge",
+  "type": "run",
+  "defense": "6-3",
+  "direction": "left",
+  "ball_carrier": "TB",
+  "purpose": "Short yardage and the goal line. Nobody blocks a man — the whole line squeezes shoulder to shoulder on the center and pushes. The tailback puts a hand on the center's back and goes wherever the pile goes.",
+  "assignments": {
+    "LTE": {
+      "rule": "Close down hard to the man beside you until your shoulder touches his. Push straight ahead. Never look for someone to block.",
+      "type": "block",
+      "path": [
+        [0.9, 1.2]
+      ]
+    },
+    "LT": {
+      "rule": "Close down hard to the man beside you until your shoulder touches his. Push straight ahead. Never look for someone to block.",
+      "type": "block",
+      "path": [
+        [0.8, 1.3]
+      ]
+    },
+    "LG": {
+      "rule": "Close down hard on the center until your shoulder touches his. Low pads, short steps, push.",
+      "type": "block",
+      "path": [
+        [0.6, 1.4]
+      ]
+    },
+    "C": {
+      "rule": "Snap it and fire straight into the nose with your pads under his. You are the tip of the wedge — everybody else comes to you.",
+      "type": "block",
+      "path": [
+        [0.0, 1.5]
+      ]
+    },
+    "RG": {
+      "rule": "Close down hard on the center until your shoulder touches his. Low pads, short steps, push.",
+      "type": "block",
+      "path": [
+        [-0.6, 1.4]
+      ]
+    },
+    "RT": {
+      "rule": "Close down hard to the man beside you until your shoulder touches his. Push straight ahead. Never look for someone to block.",
+      "type": "block",
+      "path": [
+        [-0.8, 1.3]
+      ]
+    },
+    "RTE": {
+      "rule": "Close down hard to the man beside you until your shoulder touches his. Push straight ahead. Never look for someone to block.",
+      "type": "block",
+      "path": [
+        [-0.9, 1.2]
+      ]
+    },
+    "Z": {
+      "rule": "Tuck in tight behind the right end and seal the edge. Nobody comes around the outside and into the back of the wedge.",
+      "type": "block",
+      "path": [
+        [-2.6, 0.8]
+      ]
+    },
+    "QB": {
+      "rule": "Snap, hand it to the tailback left now, and stay out of his way. Do not ride the handoff — he is already moving.",
+      "type": "fake",
+      "path": [
+        [-0.5, -0.7]
+      ]
+    },
+    "FB": {
+      "rule": "Get in behind the wedge and push the tailback. Both hands on his back, legs driving.",
+      "type": "block",
+      "path": [
+        [-0.3, 1.6],
+        [-0.4, 3.0]
+      ]
+    },
+    "TB": {
+      "rule": "Put a hand on the center's back, get your pads low, and follow the wedge. Do not cut, do not bounce, do not look for a hole — the hole moves with you.",
+      "type": "run",
+      "path": [
+        [-0.2, 2.0],
+        [-0.4, 4.5],
+        [-0.5, 6.5]
+      ]
+    }
+  },
+  "coaching_points": [
+    "Two yards is a good wedge. Do not call it needing four.",
+    "It is drawn against the 6-3 because that is the heaviest front the league allows and it is what you will see inside the five.",
+    "Nothing in the league rulebook prohibits wedge blocking for 11-man play, but it is the first thing leagues take away. Re-check it every season before you install it.",
+    "Coach the shoulders, not the feet. If there is daylight between two linemen the wedge is a line of five men getting pushed backwards instead of one thing moving forward.",
+    "Low pads win this and nothing else does. The team that stands up loses."
+  ],
+  "z": "right"
+}
