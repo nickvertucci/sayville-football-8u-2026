@@ -1,0 +1,103 @@
+{
+  "id": "i-sneak-l",
+  "order": 11.5,
+  "formation": "i-form",
+  "name": "I Sneak Left",
+  "call": "I Z Right 11 Sneak",
+  "type": "run",
+  "defense": "6-3",
+  "direction": "left",
+  "ball_carrier": "QB",
+  "purpose": "Fourth and inches. The quarterback keeps it behind the center's playside hip before the defense has come out of its stance. No handoff to go wrong and no back to get tackled in the backfield.",
+  "assignments": {
+    "LTE": {
+      "rule": "Close down inside and push. Nobody gets penetration through your gap.",
+      "type": "block",
+      "path": [
+        [0.8, 1.1]
+      ]
+    },
+    "LT": {
+      "rule": "Close down inside and push. Nobody gets penetration through your gap.",
+      "type": "block",
+      "path": [
+        [0.7, 1.2]
+      ]
+    },
+    "LG": {
+      "rule": "Squeeze down on the center and drive. Your shoulder does not leave his — the quarterback is coming left behind it.",
+      "type": "block",
+      "path": [
+        [0.5, 1.4]
+      ]
+    },
+    "C": {
+      "rule": "Snap it and come straight off the ball into the nose with your pads under his. Get movement — one yard is all we need and it comes from you.",
+      "type": "block",
+      "path": [
+        [-0.2, 1.5]
+      ]
+    },
+    "RG": {
+      "rule": "Squeeze down on the center and drive. Your shoulder does not leave his.",
+      "type": "block",
+      "path": [
+        [-0.5, 1.3]
+      ]
+    },
+    "RT": {
+      "rule": "Close down inside and push. Nobody gets penetration through your gap.",
+      "type": "block",
+      "path": [
+        [-0.7, 1.2]
+      ]
+    },
+    "RTE": {
+      "rule": "Close down inside and push. Nobody gets penetration through your gap.",
+      "type": "block",
+      "path": [
+        [-0.8, 1.1]
+      ]
+    },
+    "Z": {
+      "rule": "Release straight downfield and run the corner off. You will not get the ball — take his eyes with you so he never looks in.",
+      "type": "pass",
+      "path": [
+        [0.4, 4.0],
+        [0.8, 8.0]
+      ]
+    },
+    "QB": {
+      "rule": "Snap it and go now, right behind the outside hip of the guard away from the flanker. Low pads, ball in both arms, fall forward. Do not stand up and do not look for a hole.",
+      "type": "run",
+      "path": [
+        [-0.3, 1.0],
+        [-0.5, 2.6]
+      ]
+    },
+    "FB": {
+      "rule": "Fire straight ahead into the back of the pile and push. Both hands on whoever is in front of you.",
+      "type": "block",
+      "path": [
+        [-0.3, 1.8],
+        [-0.4, 3.0]
+      ]
+    },
+    "TB": {
+      "rule": "Come downhill behind the fullback and push the pile. If the ball comes loose you are the closest man to it.",
+      "type": "block",
+      "path": [
+        [-0.4, 2.2],
+        [-0.5, 4.0]
+      ]
+    }
+  },
+  "coaching_points": [
+    "This is a one-yard play. Do not call it needing two.",
+    "The snap count is the whole play. If they know it is coming they still cannot stop it, but only if we go on the first sound and they do not.",
+    "Drawn against the 6-3 because that is the heaviest front the league allows and it is exactly what you will see on fourth and one.",
+    "Teach the quarterback to fall forward the moment he feels contact. Eight-year-olds try to spin and lose the yard they already had.",
+    "It is legal for us in 11-man play. It is specifically prohibited in the 8-man Rookie division, so if we ever end up there this play comes straight out of the book."
+  ],
+  "z": "right"
+}

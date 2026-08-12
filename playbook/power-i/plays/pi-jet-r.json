@@ -1,0 +1,109 @@
+{
+  "id": "pi-jet-r",
+  "order": 4.5,
+  "formation": "power-i",
+  "name": "Power I Jet Right",
+  "call": "Power I 48 Jet",
+  "type": "run",
+  "defense": "5-3",
+  "direction": "right",
+  "ball_carrier": "WB",
+  "purpose": "The wing keeps it to his own side. Jet Left has been taking the ball away from the wing all game; here he takes the quick pitch right back around his own end, where the defense has stopped honouring him.",
+  "assignments": {
+    "LTE": {
+      "rule": "Cut off pursuit from behind. Everything is running away from you, so chase flat down the line and never quit.",
+      "type": "block",
+      "path": [
+        [1.2, 0.8]
+      ]
+    },
+    "LT": {
+      "rule": "Block back. Take the first defender on or inside you — nobody crosses your face.",
+      "type": "block",
+      "path": [
+        [1.0, 0.7]
+      ]
+    },
+    "LG": {
+      "rule": "Nobody is over you. Help the center on the nose for a count, then chase flat behind the play.",
+      "type": "block",
+      "path": [
+        [0.8, 1.0],
+        [2.6, 1.4]
+      ]
+    },
+    "C": {
+      "rule": "You have the nose. Get your body between him and the ball and drive him away from where we are going.",
+      "type": "block",
+      "path": [
+        [-0.5, 1.1]
+      ]
+    },
+    "RG": {
+      "rule": "PULL RIGHT. Stay flat, get outside our end, and turn up. Block the first defender who shows outside — usually the corner. You are the last blocker the carrier has.",
+      "type": "block",
+      "path": [
+        [1.2, -0.8],
+        [4.4, 0.2],
+        [6.4, 2.0]
+      ]
+    },
+    "RT": {
+      "rule": "The tackle is on your inside shoulder. Block him down and seal him inside. He must not run down the line with the play.",
+      "type": "block",
+      "path": [
+        [-0.5, 1.2]
+      ]
+    },
+    "RTE": {
+      "rule": "Block the end over you out toward the sideline. Stay on him — the ball is going around you and he cannot be the one to make the tackle.",
+      "type": "block",
+      "path": [
+        [1.2, 1.2]
+      ]
+    },
+    "WB": {
+      "rule": "Jet in motion to the right on the coach's call, full speed, and take the pitch behind the pulling guard. Get around our end before you turn up — do not cut it inside.",
+      "type": "run",
+      "path": [
+        [1.6, 0.3],
+        [3.6, 1.0],
+        [4.4, 2.8],
+        [4.4, 5.4]
+      ]
+    },
+    "QB": {
+      "rule": "Turn and pitch it out to the wing as he crosses, then carry out a boot fake back to the left with your hands on your belly.",
+      "type": "fake",
+      "path": [
+        [-0.6, -0.6],
+        [-2.6, -1.0],
+        [-4.2, -0.6]
+      ]
+    },
+    "FB": {
+      "rule": "Fill straight ahead like Wedge is coming, then look for anyone chasing the wing from the inside.",
+      "type": "block",
+      "path": [
+        [0.4, 1.8],
+        [1.2, 3.0]
+      ]
+    },
+    "TB": {
+      "rule": "Run the Power path to the right and get out in front — block the first man to show inside the pulling guard.",
+      "type": "block",
+      "path": [
+        [1.4, 1.4],
+        [3.4, 1.0],
+        [5.4, 1.4]
+      ]
+    }
+  },
+  "coaching_points": [
+    "This is the answer when their end starts chasing Jet Left flat down the line — the wing pitches off his own edge before the end can recover.",
+    "Motion is legal in 11-man play, but only one man may be moving at the snap and he cannot be moving toward the line. Keep the wing flat.",
+    "The pitch has to beat the wing to the corner. Get it to him deep and early so he never breaks stride.",
+    "The pulling guard is the carrier's last blocker. If the corner beats him outside, the play dies — drill the block on air.",
+    "Do not install this until Jet Left is real. It only works because they have been punished for leaving with the motion."
+  ]
+}
