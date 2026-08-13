@@ -1,0 +1,29 @@
+{
+  "note": "Placeholder roster — 22 made-up names, not real players. Replace with the real roster; every kid here plays both ways, one offensive spot and one defensive spot, which is normal at this age with a 22-man squad.",
+  "offense": {
+    "LTE": ["Ethan M.", "Mason R."],
+    "LT": ["Liam K.", "Noah P."],
+    "LG": ["Lucas B.", "Jackson T."],
+    "C": ["Aiden C.", "Caleb H."],
+    "RG": ["Owen S.", "Wyatt D."],
+    "RT": ["Grayson L.", "Carter W."],
+    "RTE": ["Hunter J.", "Blake N."],
+    "Z": ["Cooper V.", "Tucker G."],
+    "QB": ["Dawson F.", "Bryce A."],
+    "FB": ["Colton E.", "Maddox Y."],
+    "TB": ["Ryder I.", "Beckett O."]
+  },
+  "defense": {
+    "LE": ["Beckett O.", "Ryder I."],
+    "LT": ["Maddox Y.", "Colton E."],
+    "NG": ["Bryce A.", "Dawson F."],
+    "RT": ["Tucker G.", "Cooper V."],
+    "RE": ["Blake N.", "Hunter J."],
+    "W": ["Carter W.", "Grayson L."],
+    "M": ["Wyatt D.", "Owen S."],
+    "S": ["Caleb H.", "Aiden C."],
+    "LC": ["Jackson T.", "Lucas B."],
+    "RC": ["Noah P.", "Liam K."],
+    "FS": ["Mason R.", "Ethan M."]
+  }
+}
