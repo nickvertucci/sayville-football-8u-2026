@@ -13,6 +13,17 @@
     "FB": ["Colton E.", "Maddox Y."],
     "TB": ["Ryder I.", "Beckett O."]
   },
+  "offense_packages": [
+    {
+      "name": "Jumbo",
+      "note": "Short yardage and goal line — size over speed at the three backfield spots. The line does not change.",
+      "positions": {
+        "Z": ["Marcus P."],
+        "FB": ["Deacon T."],
+        "TB": ["Reid S."]
+      }
+    }
+  ],
   "defense": {
     "LE": ["Beckett O.", "Ryder I."],
     "LT": ["Maddox Y.", "Colton E."],

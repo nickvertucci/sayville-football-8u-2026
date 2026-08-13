@@ -374,6 +374,18 @@ h1.page { font-size: clamp(23px, 5vw, 33px); letter-spacing: -.5px; margin: 22px
 .dc-slot.dc-open { color: var(--muted); font-style: italic; font-weight: 500; }
 .dc-slot.dc-open b { background: var(--line); color: var(--muted); }
 
+.pkg {
+  margin: 14px 0 8px; padding: 14px 16px 4px; background: var(--panel);
+  border: 1px solid var(--line); border-left: 4px solid var(--accent-solid);
+  border-radius: 10px; box-shadow: var(--shadow);
+}
+.pkg-name {
+  margin: 0 0 4px; font-weight: 800; font-size: 12.5px; letter-spacing: .4px;
+  text-transform: uppercase; color: var(--accent-ink);
+}
+.pkg-note { margin: 0 0 12px; font-size: 13.5px; color: var(--ink-2); }
+.pkg .dc-list { margin-bottom: 10px; }
+
 .plist { display: grid; gap: 12px; grid-template-columns: 1fr; }
 @media (min-width: 620px) { .plist { grid-template-columns: repeat(2, minmax(0,1fr)); } }
 @media (min-width: 900px) { .plist { grid-template-columns: repeat(3, minmax(0,1fr)); } }
@@ -2104,6 +2116,21 @@ def write_depth_chart(formations: list[dict], defenses: dict, root: Path) -> str
     def_head = (f'<div class="dc-head"><img loading="lazy" src="{def_src(front)}" '
                 f'alt="5-3 defensive front"></div>' if front else "")
 
+    # A package only lists the spots that change for it. The line is the same seven
+    # kids no matter what the backfield is doing, so repeating them here would just
+    # be the base chart again with extra steps.
+    pkg_blocks = []
+    for pkg in roster.get("offense_packages", []):
+        positions = pkg.get("positions", {})
+        pkg_order = [p for p in off_order if p in positions]
+        pkg_note = (f'<p class="pkg-note">{esc(pkg["note"])}</p>' if pkg.get("note") else "")
+        pkg_blocks.append(
+            f'<div class="pkg"><p class="pkg-name">{esc(pkg.get("name", ""))} package</p>'
+            f'{pkg_note}<div class="dc-list">'
+            f'{depth_rows(pkg_order, positions, position_name)}</div></div>'
+        )
+    packages_html = "".join(pkg_blocks)
+
     note = roster.get("note") or "Who plays where, one and two deep."
     body = f"""<h1 class="page">Depth Chart</h1>
 <p class="lede">{esc(note)}</p>
@@ -2111,6 +2138,7 @@ def write_depth_chart(formations: list[dict], defenses: dict, root: Path) -> str
 <p class="hero-head">Offense</p>
 {off_head}
 <div class="dc-list">{off_rows}</div>
+{packages_html}
 
 <p class="hero-head">Defense</p>
 {def_head}

@@ -444,6 +444,19 @@ def validate_roster(roster: dict, formations: list[dict], defenses: dict) -> lis
                 errors.append(f"roster.{side}: no such position '{pos}'")
             elif not isinstance(names, list):
                 errors.append(f"roster.{side}.{pos}: must be a list of names")
+
+    # A package only overrides the spots that actually change for it — the line
+    # doesn't move for Jumbo, so it has no business appearing here at all.
+    for i, pkg in enumerate(roster.get("offense_packages", [])):
+        if not pkg.get("name"):
+            errors.append(f"offense_packages[{i}]: missing 'name'")
+        for pos, names in pkg.get("positions", {}).items():
+            if pos not in offense_keys:
+                errors.append(f"offense_packages[{i}] '{pkg.get('name')}': "
+                              f"no such position '{pos}'")
+            elif not isinstance(names, list):
+                errors.append(f"offense_packages[{i}] '{pkg.get('name')}'.{pos}: "
+                              "must be a list of names")
     return errors
 
 
