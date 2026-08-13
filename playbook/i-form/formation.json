@@ -5,7 +5,7 @@
   "family": "Regular I",
   "summary": "Fullback and tailback stacked behind the quarterback. Teaches a back to read a block instead of running to a spot.",
   "personnel": "11 players, 2 tight ends, 1 Z, quarterback, fullback, tailback",
-  "notes": "Normal line splits, about one foot. Both ends are ON the line. The Z is OFF the line, one yard outside the end and one yard back, so we always have exactly seven on the line. Fullback at three yards, tailback stacked directly behind him at five and a half.",
+  "notes": "Normal line splits, about a foot. Both ends are on the line; the Z is off it, a yard outside and a yard back — seven on the line every snap. Fullback at three yards, tailback stacked behind him at five and a half.",
   "alignment": {
     "LTE": [-4.2, -0.5],
     "LT": [-2.8, -0.5],
@@ -34,10 +34,10 @@
     "4": "Z"
   },
   "coaching_notes": [
-    "This formation exists so the tailback can pick a hole. In the Wishbone the play decides where the ball goes; here the back reads the block in front of him and cuts off it. That is the harder skill of the two, which is why this is the formation we spend the most practice time on.",
-    "The Z lines up to the right on every play in the book, and the call says so — I Z Right. Naming it means we can add a Z Left look later without changing a single thing about how the plays are called, and it means nobody has to guess where he goes.",
-    "Count seven on the line every single snap. The Z creeping up to the line is the most common illegal formation flag you will get out of this look.",
-    "Fullback and tailback must be stacked. If the tailback drifts he tips which way the play is going before the snap.",
-    "The Z is back 4 in the calls. He is a receiver on most snaps, but he is also the man in jet motion on the Jet sweep and the fake on the boot off it, which is why he carries back number 4, the same as he does lined up in the backfield in the Power I."
+    "The tailback picks his own hole here — reads the block and cuts off it, instead of the play deciding for him like the Wishbone. The harder skill, which is why this formation gets the most practice time.",
+    "The Z lines up right every play, and the call says so — Z Right. Naming it now means a Z Left look can be added later without changing how plays are called.",
+    "Count seven on the line every snap — the Z creeping up onto it is the most common illegal-formation flag from this look.",
+    "Fullback and tailback must stay stacked. A drifting tailback tips the play before the snap.",
+    "The Z is back 4 — a receiver most snaps, but also the jet-motion man on Jet sweep and the fake on its boot. Same number he carries in the Power I backfield."
   ]
 }
