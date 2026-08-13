@@ -332,6 +332,18 @@ h1.page { font-size: clamp(23px, 5vw, 33px); letter-spacing: -.5px; margin: 22px
 .dc-slot.dc-open { color: var(--muted); font-style: italic; font-weight: 500; }
 .dc-slot.dc-open b { background: var(--line); color: var(--muted); }
 
+.pkg {
+  margin: 14px 0 8px; padding: 14px 16px 4px; background: var(--panel);
+  border: 1px solid var(--line); border-left: 4px solid var(--accent-solid);
+  border-radius: 10px; box-shadow: var(--shadow);
+}
+.pkg-name {
+  margin: 0 0 4px; font-weight: 800; font-size: 12.5px; letter-spacing: .4px;
+  text-transform: uppercase; color: var(--accent-ink);
+}
+.pkg-note { margin: 0 0 12px; font-size: 13.5px; color: var(--ink-2); }
+.pkg .dc-list { margin-bottom: 10px; }
+
 .plist { display: grid; gap: 12px; grid-template-columns: 1fr; }
 @media (min-width: 620px) { .plist { grid-template-columns: repeat(2, minmax(0,1fr)); } }
 @media (min-width: 900px) { .plist { grid-template-columns: repeat(3, minmax(0,1fr)); } }
