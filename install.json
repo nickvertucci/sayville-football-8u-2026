@@ -1,13 +1,13 @@
 {
-  "intro": "Numbered practices, and the date we ran each one. The number is what matters — a rained-out session moves everything down one rather than skipping it. Rule 14.02 puts the first practice no earlier than July 15. The schedule is built out a practice at a time; every play not on it yet is listed at the bottom, and the build refuses to publish a practice that teaches something before the thing it depends on.",
+  "intro": "Numbered practices, not dates — a rained-out session moves everything down one instead of skipping it. Rule 14.02 sets July 15 as the earliest start. Built out one practice at a time: anything not scheduled yet is listed at the bottom, and the build blocks a practice that teaches something before its prerequisite.",
   "phases": {
     "preseason": {
       "label": "Before the first game",
-      "note": "Alignment first, plays second. We install the formation itself — every kid knowing his spot and seven on the line every snap — before we hand anybody the ball. A formation they can line up in without thinking is worth more in September than six plays they half know."
+      "note": "Alignment first, plays second — every kid knows his spot and we count seven on the line before anybody touches the ball. A formation run without thinking beats six plays half known."
     },
     "season": {
       "label": "Once the season starts",
-      "note": "One new look at a time, and only when the last one has hurt somebody. Each of these exists because a defence has started cheating something — none of it is worth installing before that happens."
+      "note": "One new look at a time, and only once the last one has hurt somebody. Each exists because a defence started cheating something — not worth installing before that happens."
     }
   },
   "practices": [
