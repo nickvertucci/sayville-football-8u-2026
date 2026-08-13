@@ -2029,32 +2029,26 @@ def write_defense_index(formations: list[dict], defenses: dict) -> str:
         for r in f.get("roles", {}).values():
             counts[r] = counts.get(r, 0) + 1
         cards.append(
-            f'<a class="fcard" href="{d_href(f)}">'
-            f'<div class="ftop"><h3>{esc(f["call"])}</h3>'
+            f'<a class="fcard imgcard" href="{d_href(f)}">'
+            f'<div class="thumb"><img loading="lazy" src="{def_src(f)}" '
+            f'alt="{esc(f["name"])} front"></div>'
+            f'<div class="body"><div class="ftop"><h3>{esc(f["call"])}</h3>'
             f'<span class="n">{esc(f["name"])}</span></div>'
-            f'<p>{esc(f.get("summary", ""))}</p>'
+            f'<p>{esc(first_sentence(f.get("summary", "")))}</p>'
             f'<span class="fcall">{counts.get("DL", 0)} down &nbsp;&middot;&nbsp; '
             f'{counts.get("LB", 0)} linebackers &nbsp;&middot;&nbsp; '
-            f'{counts.get("DB", 0)} defensive backs</span></a>'
+            f'{counts.get("DB", 0)} defensive backs</span></div></a>'
         )
     body = f"""<h1 class="page">Defensive playbook</h1>
-<p class="lede">Three fronts. One for most downs, one for when they have to have a yard,
-and one for when they keep getting outside us. Every alignment here is checked against
-the league rulebook by the generator &mdash; an illegal front fails the build.</p>
+<p class="lede">{_count(len(defenses)).capitalize()} fronts, each checked against the
+league rulebook by the generator &mdash; an illegal front fails the build.</p>
 
-<p class="section-head">The fronts</p>
-<div class="cards">{''.join(cards)}</div>
+<div class="cards imgcards">{''.join(cards)}</div>
 
-<p class="section-head">What the rulebook allows</p>
 <div class="callout">
-  <p>For 8- and 9-year-olds the league caps the defensive line at <strong>six</strong>,
-  requires at least <strong>three linebackers</strong> no closer than <strong>two
-  yards</strong>, and keeps defensive backs at <strong>two yards</strong> or deeper.</p>
-  <p><strong>Blitzing is illegal at all times.</strong> No defender may move forward
-  before the snap. Gap penetration after the snap is fine &mdash; that is not a blitz.</p>
-  <p>Circumventing this is a 15-yard unsportsmanlike penalty on the head coach, and a
-  second offense gets him ejected. The league's own wording is
-  <a href="rules.html#section-9">rule 9.02</a>.</p>
+  <p><strong>Read the rules before you install a front.</strong> Cap six down linemen,
+  minimum three linebackers at two yards, defensive backs at two yards or deeper &mdash;
+  no blitzing, ever. <a href="rules.html#section-9">Rule 9.02</a> covers the penalty.</p>
 </div>"""
     return page(
         f"Defensive playbook — {SITE_TITLE}",
@@ -2062,7 +2056,8 @@ the league rulebook by the generator &mdash; an illegal front fails the build.</
         formations,
         defenses=defenses,
         active_nav="defense",
-        description="Three legal defensive fronts for 8U tackle, with assignments.",
+        description=f"{_count(len(defenses)).capitalize()} legal defensive fronts for "
+        "8U tackle, with assignments.",
     )
 
 
