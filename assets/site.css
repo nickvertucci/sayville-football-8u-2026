@@ -305,6 +305,33 @@ h1.page { font-size: clamp(23px, 5vw, 33px); letter-spacing: -.5px; margin: 22px
   text-transform: uppercase; letter-spacing: .4px;
 }
 
+.dc-head {
+  display: flex; justify-content: center; background: #fff; border: 1px solid var(--line);
+  border-radius: 12px; padding: 12px; margin: 14px 0 16px; box-shadow: var(--shadow);
+}
+.dc-head img { display: block; max-width: 100%; height: auto; max-height: 220px; }
+.dc-list { display: flex; flex-direction: column; gap: 8px; margin-bottom: 8px; }
+.dc-row {
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  flex-wrap: wrap; background: var(--panel); border: 1px solid var(--line);
+  border-radius: 10px; padding: 10px 14px; box-shadow: var(--shadow);
+}
+.dc-pos { display: flex; align-items: baseline; gap: 9px; min-width: 170px; }
+.dc-abbr { font-weight: 800; color: var(--accent-ink); font-size: 15px; }
+.dc-label { color: var(--muted); font-size: 12.5px; }
+.dc-slots { display: flex; gap: 8px; flex-wrap: wrap; }
+.dc-slot {
+  display: flex; align-items: center; gap: 7px; font-size: 13px; font-weight: 600;
+  background: var(--panel-2); border-radius: 999px; padding: 5px 12px 5px 5px;
+}
+.dc-slot b {
+  display: inline-flex; align-items: center; justify-content: center; width: 18px;
+  height: 18px; border-radius: 999px; font-size: 10.5px; color: var(--on-accent);
+  background: var(--accent-solid);
+}
+.dc-slot.dc-open { color: var(--muted); font-style: italic; font-weight: 500; }
+.dc-slot.dc-open b { background: var(--line); color: var(--muted); }
+
 .plist { display: grid; gap: 12px; grid-template-columns: 1fr; }
 @media (min-width: 620px) { .plist { grid-template-columns: repeat(2, minmax(0,1fr)); } }
 @media (min-width: 900px) { .plist { grid-template-columns: repeat(3, minmax(0,1fr)); } }

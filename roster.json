@@ -1,0 +1,12 @@
+{
+  "note": "Coach-editable. Add names as the roster firms up — every slot open is the normal state of this file in August. The offense side is one list because all four formations share the same eleven spots; the defense side is the 5-3, our everyday front.",
+  "offense": {
+    "LTE": [], "LT": [], "LG": [], "C": [], "RG": [], "RT": [], "RTE": [],
+    "Z": [], "QB": [], "FB": [], "TB": []
+  },
+  "defense": {
+    "LE": [], "LT": [], "NG": [], "RT": [], "RE": [],
+    "W": [], "M": [], "S": [],
+    "LC": [], "RC": [], "FS": []
+  }
+}

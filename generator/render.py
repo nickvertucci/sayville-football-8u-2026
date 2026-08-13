@@ -423,6 +423,30 @@ def validate_favorites(favorites: dict, formations: list[dict]) -> list[str]:
     return errors
 
 
+def load_roster() -> dict:
+    """The depth chart, if the coach has started one."""
+    path = ROOT / "roster.json"
+    return load_json(path) if path.is_file() else {}
+
+
+def validate_roster(roster: dict, formations: list[dict], defenses: dict) -> list[str]:
+    """Positions only — never a headcount. A depth chart is never fully cast in
+    August, and a build that refused to publish an open slot would mean you could
+    not publish at all."""
+    if not roster:
+        return []
+    errors = []
+    offense_keys = {pos for f in formations for pos in f["alignment"]}
+    defense_keys = set(defenses["5-3"]["alignment"]) if "5-3" in defenses else set()
+    for side, valid in (("offense", offense_keys), ("defense", defense_keys)):
+        for pos, names in roster.get(side, {}).items():
+            if pos not in valid:
+                errors.append(f"roster.{side}: no such position '{pos}'")
+            elif not isinstance(names, list):
+                errors.append(f"roster.{side}.{pos}: must be a list of names")
+    return errors
+
+
 def validate_install(schedule: dict, formations: list[dict], defenses: dict) -> list[str]:
     """A schedule that teaches a play before the thing it is built on is worse than no
     schedule: it sends a coach to practice to install misdirection off a play the team
@@ -1135,9 +1159,11 @@ def main() -> int:
 
     schedule = load_install()
     favorites = load_favorites()
+    roster = load_roster()
     errors = (validate_defenses(defenses) + validate(formations, defenses)
               + validate_install(schedule, formations, defenses)
-              + validate_favorites(favorites, formations))
+              + validate_favorites(favorites, formations)
+              + validate_roster(roster, formations, defenses))
     if errors:
         for e in errors:
             print(f"ERROR  {e}", file=sys.stderr)
