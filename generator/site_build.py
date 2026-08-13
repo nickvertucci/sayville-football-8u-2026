@@ -1995,9 +1995,9 @@ def write_install(formations: list[dict], defenses: dict, root: Path) -> str:
         todo_block = (
             '<div class="ins-todo"><h2>Not scheduled yet</h2>'
             f'<p>{left} plays and {len(rest_fronts)} defensive front'
-            f'{"" if len(rest_fronts) == 1 else "s"} are in the book but not on the '
-            "schedule. Add them to <code>install.json</code> as you decide where they "
-            "go &mdash; the build will tell you if one lands before something it needs.</p>"
+            f'{"" if len(rest_fronts) == 1 else "s"} are not yet on the schedule. Add '
+            "them to <code>install.json</code> as you go &mdash; the build catches bad "
+            "ordering.</p>"
             f'{"".join(todo)}</div>'
         )
 
