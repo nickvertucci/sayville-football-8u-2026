@@ -709,6 +709,26 @@ table.calls td.c { white-space: nowrap; }
 @media (max-width: 560px) { .ins-n b { font-size: 18px; } }
 
 .ins-body h3 { margin: 0 0 9px; font-size: 16.5px; color: var(--ink); }
+.ins-blk {
+  padding: 11px 13px; background: var(--panel-2); border-radius: 10px; margin: 0 0 10px;
+}
+.ins-blk:last-child { margin-bottom: 0; }
+.ins-blk-h {
+  display: flex; align-items: baseline; gap: 8px; margin: 0 0 8px; font-size: 13.5px;
+  font-weight: 700; color: var(--ink);
+}
+.ins-blk-tag {
+  background: var(--accent-solid); color: var(--on-accent); font-size: 10px;
+  font-weight: 800; text-transform: uppercase; letter-spacing: .6px; border-radius: 999px;
+  padding: 2px 9px; white-space: nowrap;
+}
+.ins-blk-time {
+  margin-left: auto; font-size: 12px; font-weight: 600; color: var(--muted);
+  font-variant-numeric: tabular-nums; white-space: nowrap;
+}
+.ins-drills { margin: 0; padding-left: 18px; font-size: 13.5px; color: var(--ink-2); line-height: 1.6; }
+.ins-drills li { margin-bottom: 2px; }
+.ins-blk .ins-em:first-of-type { margin-top: 0; }
 .ins-list { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 9px; }
 .ins-play {
   display: inline-flex; flex-direction: column; gap: 1px; text-decoration: none;
@@ -2045,18 +2065,36 @@ def write_install(formations: list[dict], defenses: dict, root: Path) -> str:
 
         date = pr.get("date", "")
         date_html = f"<time>{esc(date)}</time>" if date else ""
-        warm = pr.get("warmup", "")
-        warm_html = f'<p class="ins-em"><b>Warm-up.</b> {esc(warm)}</p>' if warm else ""
+
+        drills = pr.get("agility_drills", [])
+        block_a_html = ""
+        if drills:
+            a_time = pr.get("agility_time", "")
+            a_time_html = f'<span class="ins-blk-time">{esc(a_time)}</span>' if a_time else ""
+            drill_items = "".join(f"<li>{esc(d)}</li>" for d in drills)
+            block_a_html = (
+                '<div class="ins-blk"><p class="ins-blk-h">'
+                f'<span class="ins-blk-tag">Block A</span> Agility training{a_time_html}</p>'
+                f'<ul class="ins-drills">{drill_items}</ul></div>'
+            )
+
+        b_time = pr.get("install_time", "")
+        b_time_html = f'<span class="ins-blk-time">{esc(b_time)}</span>' if b_time else ""
         fin = pr.get("finisher", "")
         fin_html = f'<p class="ins-em"><b>Finisher.</b> {esc(fin)}</p>' if fin else ""
+        block_b_html = (
+            '<div class="ins-blk"><p class="ins-blk-h">'
+            f'<span class="ins-blk-tag">Block B</span> Install{b_time_html}</p>'
+            f'<div class="ins-list">{"".join(items)}</div>'
+            f'<p class="ins-em">{esc(pr.get("emphasis", ""))}</p>'
+            f'{fin_html}{needs}</div>'
+        )
+
         blocks.append(
             f'<article class="ins">'
             f'<div class="ins-n"><span>Practice</span><b>{pr["n"]}</b>{date_html}</div>'
             f'<div class="ins-body"><h3>{esc(pr.get("focus", ""))}</h3>'
-            f'{warm_html}'
-            f'<div class="ins-list">{"".join(items)}</div>'
-            f'<p class="ins-em">{esc(pr.get("emphasis", ""))}</p>'
-            f'{fin_html}{needs}</div></article>'
+            f'{block_a_html}{block_b_html}</div></article>'
         )
 
     # Anything not on the schedule yet, so a play cannot go missing quietly.
