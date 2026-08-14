@@ -1,8 +1,17 @@
 {
-  "note": "Coach-editable. Add names as the roster firms up — every slot open is the normal state of this file in August. The offense side is one list because all four formations share the same eleven spots; the defense side is the 5-3, our everyday front.",
+  "note": "Coach-editable. The offense side is one list because all four formations share the same eleven spots; the defense side is the 5-3, our everyday front.",
   "offense": {
-    "LTE": [], "LT": [], "LG": [], "C": [], "RG": [], "RT": [], "RTE": [],
-    "Z": [], "QB": [], "FB": [], "TB": []
+    "LTE": ["Camden G.", "Joseph P."],
+    "LT": ["Brooks A."],
+    "LG": ["Gavin P.", "Finn S."],
+    "C": ["Jaxon E.", "Brayden S."],
+    "RG": ["Ace A.", "Brayden H."],
+    "RT": ["Mason A."],
+    "RTE": ["Jake G.", "Michael M."],
+    "Z": ["Ryan S.", "Thomas D.", "Kilian F.", "Liam M.", "Clark J."],
+    "QB": ["Brogan A."],
+    "FB": ["Elias F.", "Luca D."],
+    "TB": ["Philip A.", "Nico V."]
   },
   "offense_packages": [
     {
@@ -16,8 +25,16 @@
     }
   ],
   "defense": {
-    "LE": [], "LT": [], "NG": [], "RT": [], "RE": [],
-    "W": [], "M": [], "S": [],
-    "LC": [], "RC": [], "FS": []
+    "LE": ["Brogan A.", "Brayden S."],
+    "LT": ["Gavin P.", "Brooks A."],
+    "NG": ["Elias F.", "Brayden H."],
+    "RT": ["Ace A.", "Mason A."],
+    "RE": ["Jaxon E.", "Finn S."],
+    "W": ["Luca D.", "Clark J."],
+    "M": ["Jake G."],
+    "S": ["Camden G.", "Michael M."],
+    "LC": ["Philip A.", "Joseph P."],
+    "RC": ["Nico V.", "Liam M."],
+    "FS": ["Ryan S.", "Thomas D.", "Kilian F."]
   }
 }
