@@ -306,10 +306,11 @@ h1.page { font-size: clamp(23px, 5vw, 33px); letter-spacing: -.5px; margin: 22px
 }
 
 .dc-head {
-  display: flex; justify-content: center; background: #fff; border: 1px solid var(--line);
+  background: #fff; border: 1px solid var(--line);
   border-radius: 12px; padding: 12px; margin: 14px 0 16px; box-shadow: var(--shadow);
 }
-.dc-head img { display: block; max-width: 100%; height: auto; max-height: 220px; }
+.dc-field { display: flex; justify-content: center; }
+.dc-field svg { display: block; max-width: 100%; height: auto; }
 .dc-list { display: flex; flex-direction: column; gap: 8px; margin-bottom: 8px; }
 .dc-row {
   display: flex; align-items: center; justify-content: space-between; gap: 12px;
@@ -647,8 +648,13 @@ table.calls td.c { white-space: nowrap; }
   margin: 34px 0 0; padding: 18px 18px 14px; border: 1px dashed var(--line);
   border-radius: 12px; background: var(--panel-2);
 }
-.ins-todo h2 { margin: 0 0 6px; font-size: 17px; color: var(--ink); }
-.ins-todo > p { margin: 0 0 14px; font-size: 14px; color: var(--muted); max-width: 66ch; }
+.ins-todo summary {
+  font-size: 17px; font-weight: 700; color: var(--ink); cursor: pointer;
+}
+.ins-todo summary::marker { color: var(--muted); }
+.ins-todo[open] summary { margin-bottom: 6px; }
+.ins-todo-count { margin-left: 8px; font-size: 12px; font-weight: 600; color: var(--muted); }
+.ins-todo > p { margin: 10px 0 14px; font-size: 14px; color: var(--muted); max-width: 66ch; }
 .ins-todo code { font-size: .92em; background: var(--panel); border-radius: 4px; padding: 1px 5px; }
 .ins-todo-grp { margin-bottom: 12px; }
 .ins-todo-grp h4 {

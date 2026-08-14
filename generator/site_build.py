@@ -348,10 +348,11 @@ h1.page { font-size: clamp(23px, 5vw, 33px); letter-spacing: -.5px; margin: 22px
 }
 
 .dc-head {
-  display: flex; justify-content: center; background: #fff; border: 1px solid var(--line);
+  background: #fff; border: 1px solid var(--line);
   border-radius: 12px; padding: 12px; margin: 14px 0 16px; box-shadow: var(--shadow);
 }
-.dc-head img { display: block; max-width: 100%; height: auto; max-height: 220px; }
+.dc-field { display: flex; justify-content: center; }
+.dc-field svg { display: block; max-width: 100%; height: auto; }
 .dc-list { display: flex; flex-direction: column; gap: 8px; margin-bottom: 8px; }
 .dc-row {
   display: flex; align-items: center; justify-content: space-between; gap: 12px;
@@ -689,8 +690,13 @@ table.calls td.c { white-space: nowrap; }
   margin: 34px 0 0; padding: 18px 18px 14px; border: 1px dashed var(--line);
   border-radius: 12px; background: var(--panel-2);
 }
-.ins-todo h2 { margin: 0 0 6px; font-size: 17px; color: var(--ink); }
-.ins-todo > p { margin: 0 0 14px; font-size: 14px; color: var(--muted); max-width: 66ch; }
+.ins-todo summary {
+  font-size: 17px; font-weight: 700; color: var(--ink); cursor: pointer;
+}
+.ins-todo summary::marker { color: var(--muted); }
+.ins-todo[open] summary { margin-bottom: 6px; }
+.ins-todo-count { margin-left: 8px; font-size: 12px; font-weight: 600; color: var(--muted); }
+.ins-todo > p { margin: 10px 0 14px; font-size: 14px; color: var(--muted); max-width: 66ch; }
 .ins-todo code { font-size: .92em; background: var(--panel); border-radius: 4px; padding: 1px 5px; }
 .ins-todo-grp { margin-bottom: 12px; }
 .ins-todo-grp h4 {
@@ -2032,13 +2038,14 @@ def write_install(formations: list[dict], defenses: dict, root: Path) -> str:
     todo_block = ""
     if todo:
         left = sum(1 for f in formations for p in f["_plays"] if p["id"] not in scheduled)
+        front_word = "front" if len(rest_fronts) == 1 else "fronts"
         todo_block = (
-            '<div class="ins-todo"><h2>Not scheduled yet</h2>'
-            f'<p>{left} plays and {len(rest_fronts)} defensive front'
-            f'{"" if len(rest_fronts) == 1 else "s"} are not yet on the schedule. Add '
-            "them to <code>install.json</code> as you go &mdash; the build catches bad "
-            "ordering.</p>"
-            f'{"".join(todo)}</div>'
+            '<details class="ins-todo"><summary>Not scheduled yet'
+            f'<span class="ins-todo-count">{left} plays &middot; {len(rest_fronts)} '
+            f"{front_word}</span></summary>"
+            "<p>Add them to <code>install.json</code> as you go &mdash; the build "
+            "catches bad ordering.</p>"
+            f'{"".join(todo)}</details>'
         )
 
     body = f"""<h1 class="page">Install schedule</h1>
@@ -2094,6 +2101,67 @@ def depth_rows(order: list[str], names_by_pos: dict, label_fn) -> str:
     return "".join(rows)
 
 
+def depth_field_svg(alignment: dict, starters: dict, title: str, target_width: float = 960.0) -> str:
+    """A field diagram with each starter's name under their spot — a depth chart
+    board, not the small shared-scale icon used on formation cards. Scaled to fit
+    target_width regardless of how wide the formation is in yards (defense's corners
+    sit twice as far apart as the offensive line): a fixed per-yard scale would make
+    the 5-3 front alone wider than the page. The page still wraps it in a scrollable
+    strip as a fallback on narrow phones.
+    """
+    xs = [x for x, _ in alignment.values()]
+    ys = [y for _, y in alignment.values()]
+    margin_x, margin_top = 1.2, 1.0
+    x_span = (max(xs) - min(xs)) + 2 * margin_x
+    scale = target_width / x_span
+    r = 5.5
+    label_reach = (r + 28) / scale  # yards of clearance a name label needs below a dot
+    left, right = min(xs) - margin_x, max(xs) + margin_x
+    top, bottom = max(ys) + margin_top, min(ys) - label_reach - 0.3
+
+    def gx(x):
+        return (x - left) * scale
+
+    def gy(y):
+        return (top - y) * scale
+
+    w, h = gx(right), gy(bottom)
+    parts = [
+        f'<svg xmlns="http://www.w3.org/2000/svg" width="{w:.0f}" height="{h:.0f}" '
+        f'viewBox="0 0 {w:.0f} {h:.0f}" '
+        f'font-family="Segoe UI, Helvetica, Arial, sans-serif" role="img">',
+        f'<title>{esc(title)}</title>',
+        f'<rect x="0" y="0" width="{w:.0f}" height="{h:.0f}" fill="#ffffff"/>',
+    ]
+    if bottom <= 0 <= top:
+        y0 = gy(0)
+        parts.append(
+            f'<line x1="0" y1="{y0:.1f}" x2="{w:.0f}" y2="{y0:.1f}" '
+            f'stroke="#3a4150" stroke-width="1.6" stroke-dasharray="8 5"/>'
+        )
+    for pos, (x, y) in alignment.items():
+        cx, cy = gx(x), gy(y)
+        parts.append(f'<circle cx="{cx:.1f}" cy="{cy:.1f}" r="{r:.1f}" fill="#14213d"/>')
+        parts.append(
+            f'<text x="{cx:.1f}" y="{cy + r + 12:.1f}" text-anchor="middle" font-size="8" '
+            f'font-weight="700" letter-spacing=".3" fill="#5b6472">{esc(pos)}</text>'
+        )
+        name = starters.get(pos)
+        if name:
+            parts.append(
+                f'<text x="{cx:.1f}" y="{cy + r + 24:.1f}" text-anchor="middle" '
+                f'font-size="11.5" font-weight="700" fill="#111318">{esc(name)}</text>'
+            )
+        else:
+            parts.append(
+                f'<text x="{cx:.1f}" y="{cy + r + 24:.1f}" text-anchor="middle" '
+                f'font-size="10.5" font-style="italic" font-weight="600" '
+                f'fill="#8a94a3">Open</text>'
+            )
+    parts.append("</svg>")
+    return "\n".join(parts)
+
+
 def write_depth_chart(formations: list[dict], defenses: dict, root: Path) -> str:
     roster = {}
     path = root / "roster.json"
@@ -2110,11 +2178,15 @@ def write_depth_chart(formations: list[dict], defenses: dict, root: Path) -> str
     def_rows = depth_rows(def_order, roster.get("defense", {}),
                            lambda p: DEFENSE_POSITION_NAMES.get(p, p))
 
-    off_head = (f'<div class="dc-head"><img loading="lazy" '
-                f'src="{formation_icon_src(off_form)}" alt="Offensive alignment"></div>'
-                if off_form else "")
-    def_head = (f'<div class="dc-head"><img loading="lazy" src="{def_src(front)}" '
-                f'alt="5-3 defensive front"></div>' if front else "")
+    off_starters = {pos: names[0] for pos, names in roster.get("offense", {}).items() if names}
+    def_starters = {pos: names[0] for pos, names in roster.get("defense", {}).items() if names}
+
+    off_head = (f'<div class="dc-head"><div class="dc-field">'
+                f'{depth_field_svg(off_form["alignment"], off_starters, "Offensive alignment")}'
+                f'</div></div>' if off_form else "")
+    def_head = (f'<div class="dc-head"><div class="dc-field">'
+                f'{depth_field_svg(front["alignment"], def_starters, "5-3 defensive front")}'
+                f'</div></div>' if front else "")
 
     # A package only lists the spots that change for it. The line is the same seven
     # kids no matter what the backfield is doing, so repeating them here would just
