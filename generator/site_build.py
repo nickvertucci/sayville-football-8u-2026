@@ -347,12 +347,60 @@ h1.page { font-size: clamp(23px, 5vw, 33px); letter-spacing: -.5px; margin: 22px
   text-transform: uppercase; letter-spacing: .4px;
 }
 
-.dc-head {
-  background: #fff; border: 1px solid var(--line);
-  border-radius: 12px; padding: 12px; margin: 14px 0 16px; box-shadow: var(--shadow);
+/* The board itself: positions down the left, string depth across the top, the
+   shape of an NFL team's depth chart. A real <table> so it reads as a grid, not
+   a stack of cards — collapsed to cards only below 620px, the one place a grid
+   this wide stops working. */
+.tablewrap.dc-board-wrap {
+  margin: 14px 0 20px; overflow-x: auto; background: var(--panel);
+  border: 1px solid var(--line); border-radius: 12px; box-shadow: var(--shadow);
 }
-.dc-field { display: flex; justify-content: center; }
-.dc-field svg { display: block; max-width: 100%; height: auto; }
+table.dc-board { width: 100%; border-collapse: collapse; min-width: 480px; }
+table.dc-board th, table.dc-board td {
+  border-bottom: 1px solid var(--line-soft); border-right: 1px solid var(--line-soft);
+  padding: 12px 16px;
+}
+table.dc-board th:last-child, table.dc-board td:last-child { border-right: 0; }
+table.dc-board tbody tr:last-child td { border-bottom: 0; }
+table.dc-board thead th {
+  background: var(--accent-solid); color: var(--on-accent); text-align: center;
+  font-size: 12px; text-transform: uppercase; letter-spacing: 1.4px; font-weight: 800;
+  padding: 13px 16px;
+}
+table.dc-board thead th:first-child { text-align: left; }
+table.dc-board .dc-poscell { background: var(--panel-2); white-space: nowrap; }
+table.dc-board .dc-poscell .dc-abbr { display: block; font-size: 18px; }
+table.dc-board .dc-poscell .dc-label { display: block; font-size: 12px; }
+table.dc-board td:not(.dc-poscell) { text-align: center; }
+table.dc-board td b { font-size: 16px; font-weight: 800; color: var(--ink); }
+table.dc-board tbody tr:nth-child(even) td:not(.dc-poscell) { background: var(--panel-2); }
+table.dc-board .dc-empty { color: var(--line); font-weight: 700; }
+table.dc-board .dc-open {
+  color: var(--muted); font-style: italic; font-weight: 600; text-align: center;
+}
+@media (max-width: 620px) {
+  .tablewrap.dc-board-wrap { overflow-x: visible; }
+  table.dc-board { min-width: 0; }
+  table.dc-board thead { display: none; }
+  table.dc-board, table.dc-board tbody, table.dc-board tr, table.dc-board td {
+    display: block; width: 100%;
+  }
+  table.dc-board tr { padding: 12px 14px; border-bottom: 1px solid var(--line); }
+  table.dc-board tr:last-child { border-bottom: 0; }
+  table.dc-board td {
+    border: 0; padding: 2px 0; text-align: left !important; background: none !important;
+  }
+  table.dc-board .dc-poscell { padding: 0 0 8px; margin-bottom: 6px; border-bottom: 1px dashed var(--line); }
+  table.dc-board .dc-poscell .dc-abbr, table.dc-board .dc-poscell .dc-label { display: inline; }
+  table.dc-board .dc-poscell .dc-label { margin-left: 8px; }
+  table.dc-board td:not(.dc-poscell)::before {
+    content: attr(data-label) " "; display: inline-block; min-width: 42px;
+    font-size: 10px; text-transform: uppercase; letter-spacing: 1px; color: var(--muted);
+  }
+  table.dc-board .dc-empty { display: none; }
+  table.dc-board .dc-open { padding: 4px 0; }
+}
+
 .dc-list { display: flex; flex-direction: column; gap: 8px; margin-bottom: 8px; }
 .dc-row {
   display: flex; align-items: center; justify-content: space-between; gap: 12px;
@@ -2101,65 +2149,45 @@ def depth_rows(order: list[str], names_by_pos: dict, label_fn) -> str:
     return "".join(rows)
 
 
-def depth_field_svg(alignment: dict, starters: dict, title: str, target_width: float = 960.0) -> str:
-    """A field diagram with each starter's name under their spot — a depth chart
-    board, not the small shared-scale icon used on formation cards. Scaled to fit
-    target_width regardless of how wide the formation is in yards (defense's corners
-    sit twice as far apart as the offensive line): a fixed per-yard scale would make
-    the 5-3 front alone wider than the page. The page still wraps it in a scrollable
-    strip as a fallback on narrow phones.
+ORDINALS = ["1st", "2nd", "3rd", "4th", "5th", "6th", "7th", "8th"]
+
+
+def ordinal(i: int) -> str:
+    return ORDINALS[i] if i < len(ORDINALS) else f"{i + 1}th"
+
+
+def depth_board(order: list[str], names_by_pos: dict, label_fn) -> str:
+    """The depth chart as a real board — positions down the left, string depth
+    across the top — the shape of an NFL team's depth chart, not a row of pill
+    chips. Columned out to whatever the deepest position on this side actually
+    runs (never fewer than three, the standard 1st/2nd/3rd), so a position five
+    deep doesn't lose its 4th and 5th string off the edge of the table.
     """
-    xs = [x for x, _ in alignment.values()]
-    ys = [y for _, y in alignment.values()]
-    margin_x, margin_top = 1.2, 1.0
-    x_span = (max(xs) - min(xs)) + 2 * margin_x
-    scale = target_width / x_span
-    r = 5.5
-    label_reach = (r + 28) / scale  # yards of clearance a name label needs below a dot
-    left, right = min(xs) - margin_x, max(xs) + margin_x
-    top, bottom = max(ys) + margin_top, min(ys) - label_reach - 0.3
-
-    def gx(x):
-        return (x - left) * scale
-
-    def gy(y):
-        return (top - y) * scale
-
-    w, h = gx(right), gy(bottom)
-    parts = [
-        f'<svg xmlns="http://www.w3.org/2000/svg" width="{w:.0f}" height="{h:.0f}" '
-        f'viewBox="0 0 {w:.0f} {h:.0f}" '
-        f'font-family="Segoe UI, Helvetica, Arial, sans-serif" role="img">',
-        f'<title>{esc(title)}</title>',
-        f'<rect x="0" y="0" width="{w:.0f}" height="{h:.0f}" fill="#ffffff"/>',
-    ]
-    if bottom <= 0 <= top:
-        y0 = gy(0)
-        parts.append(
-            f'<line x1="0" y1="{y0:.1f}" x2="{w:.0f}" y2="{y0:.1f}" '
-            f'stroke="#3a4150" stroke-width="1.6" stroke-dasharray="8 5"/>'
+    depth = max([len(names_by_pos.get(pos) or []) for pos in order] + [3])
+    headers = "".join(f"<th>{ordinal(i)}</th>" for i in range(depth))
+    rows = []
+    for pos in order:
+        names = names_by_pos.get(pos) or []
+        pos_cell = (
+            f'<td data-label="Position" class="dc-poscell">'
+            f'<span class="dc-abbr">{esc(pos)}</span>'
+            f'<span class="dc-label">{esc(label_fn(pos))}</span></td>'
         )
-    for pos, (x, y) in alignment.items():
-        cx, cy = gx(x), gy(y)
-        parts.append(f'<circle cx="{cx:.1f}" cy="{cy:.1f}" r="{r:.1f}" fill="#14213d"/>')
-        parts.append(
-            f'<text x="{cx:.1f}" y="{cy + r + 12:.1f}" text-anchor="middle" font-size="8" '
-            f'font-weight="700" letter-spacing=".3" fill="#5b6472">{esc(pos)}</text>'
-        )
-        name = starters.get(pos)
-        if name:
-            parts.append(
-                f'<text x="{cx:.1f}" y="{cy + r + 24:.1f}" text-anchor="middle" '
-                f'font-size="11.5" font-weight="700" fill="#111318">{esc(name)}</text>'
-            )
-        else:
-            parts.append(
-                f'<text x="{cx:.1f}" y="{cy + r + 24:.1f}" text-anchor="middle" '
-                f'font-size="10.5" font-style="italic" font-weight="600" '
-                f'fill="#8a94a3">Open</text>'
-            )
-    parts.append("</svg>")
-    return "\n".join(parts)
+        if not names:
+            rows.append(f'<tr>{pos_cell}<td class="dc-open" colspan="{depth}">Open</td></tr>')
+            continue
+        cells = []
+        for i in range(depth):
+            if i < len(names):
+                cells.append(f'<td data-label="{ordinal(i)}"><b>{esc(names[i])}</b></td>')
+            else:
+                cells.append(f'<td data-label="{ordinal(i)}" class="dc-empty">&mdash;</td>')
+        rows.append(f"<tr>{pos_cell}{''.join(cells)}</tr>")
+    return (
+        f'<div class="tablewrap dc-board-wrap"><table class="dc-board">'
+        f'<thead><tr><th>Position</th>{headers}</tr></thead>'
+        f'<tbody>{"".join(rows)}</tbody></table></div>'
+    )
 
 
 def write_depth_chart(formations: list[dict], defenses: dict, root: Path) -> str:
@@ -2174,19 +2202,9 @@ def write_depth_chart(formations: list[dict], defenses: dict, root: Path) -> str
     off_order = [p for p in CARD_ORDER if off_form and p in off_form["alignment"]]
     def_order = list(front["alignment"]) if front else []
 
-    off_rows = depth_rows(off_order, roster.get("offense", {}), position_name)
-    def_rows = depth_rows(def_order, roster.get("defense", {}),
-                           lambda p: DEFENSE_POSITION_NAMES.get(p, p))
-
-    off_starters = {pos: names[0] for pos, names in roster.get("offense", {}).items() if names}
-    def_starters = {pos: names[0] for pos, names in roster.get("defense", {}).items() if names}
-
-    off_head = (f'<div class="dc-head"><div class="dc-field">'
-                f'{depth_field_svg(off_form["alignment"], off_starters, "Offensive alignment")}'
-                f'</div></div>' if off_form else "")
-    def_head = (f'<div class="dc-head"><div class="dc-field">'
-                f'{depth_field_svg(front["alignment"], def_starters, "5-3 defensive front")}'
-                f'</div></div>' if front else "")
+    off_board = depth_board(off_order, roster.get("offense", {}), position_name)
+    def_board = depth_board(def_order, roster.get("defense", {}),
+                             lambda p: DEFENSE_POSITION_NAMES.get(p, p))
 
     # A package only lists the spots that change for it. The line is the same seven
     # kids no matter what the backfield is doing, so repeating them here would just
@@ -2208,13 +2226,11 @@ def write_depth_chart(formations: list[dict], defenses: dict, root: Path) -> str
 <p class="lede">{esc(note)}</p>
 
 <p class="hero-head">Offense</p>
-{off_head}
-<div class="dc-list">{off_rows}</div>
+{off_board}
 {packages_html}
 
 <p class="hero-head">Defense</p>
-{def_head}
-<div class="dc-list">{def_rows}</div>"""
+{def_board}"""
     return page(
         f"Depth Chart — {SITE_TITLE}",
         body,
