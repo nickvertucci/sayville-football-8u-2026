@@ -305,12 +305,60 @@ h1.page { font-size: clamp(23px, 5vw, 33px); letter-spacing: -.5px; margin: 22px
   text-transform: uppercase; letter-spacing: .4px;
 }
 
-.dc-head {
-  background: #fff; border: 1px solid var(--line);
-  border-radius: 12px; padding: 12px; margin: 14px 0 16px; box-shadow: var(--shadow);
+/* The board itself: positions down the left, string depth across the top, the
+   shape of an NFL team's depth chart. A real <table> so it reads as a grid, not
+   a stack of cards — collapsed to cards only below 620px, the one place a grid
+   this wide stops working. */
+.tablewrap.dc-board-wrap {
+  margin: 14px 0 20px; overflow-x: auto; background: var(--panel);
+  border: 1px solid var(--line); border-radius: 12px; box-shadow: var(--shadow);
 }
-.dc-field { display: flex; justify-content: center; }
-.dc-field svg { display: block; max-width: 100%; height: auto; }
+table.dc-board { width: 100%; border-collapse: collapse; min-width: 480px; }
+table.dc-board th, table.dc-board td {
+  border-bottom: 1px solid var(--line-soft); border-right: 1px solid var(--line-soft);
+  padding: 12px 16px;
+}
+table.dc-board th:last-child, table.dc-board td:last-child { border-right: 0; }
+table.dc-board tbody tr:last-child td { border-bottom: 0; }
+table.dc-board thead th {
+  background: var(--accent-solid); color: var(--on-accent); text-align: center;
+  font-size: 12px; text-transform: uppercase; letter-spacing: 1.4px; font-weight: 800;
+  padding: 13px 16px;
+}
+table.dc-board thead th:first-child { text-align: left; }
+table.dc-board .dc-poscell { background: var(--panel-2); white-space: nowrap; }
+table.dc-board .dc-poscell .dc-abbr { display: block; font-size: 18px; }
+table.dc-board .dc-poscell .dc-label { display: block; font-size: 12px; }
+table.dc-board td:not(.dc-poscell) { text-align: center; }
+table.dc-board td b { font-size: 16px; font-weight: 800; color: var(--ink); }
+table.dc-board tbody tr:nth-child(even) td:not(.dc-poscell) { background: var(--panel-2); }
+table.dc-board .dc-empty { color: var(--line); font-weight: 700; }
+table.dc-board .dc-open {
+  color: var(--muted); font-style: italic; font-weight: 600; text-align: center;
+}
+@media (max-width: 620px) {
+  .tablewrap.dc-board-wrap { overflow-x: visible; }
+  table.dc-board { min-width: 0; }
+  table.dc-board thead { display: none; }
+  table.dc-board, table.dc-board tbody, table.dc-board tr, table.dc-board td {
+    display: block; width: 100%;
+  }
+  table.dc-board tr { padding: 12px 14px; border-bottom: 1px solid var(--line); }
+  table.dc-board tr:last-child { border-bottom: 0; }
+  table.dc-board td {
+    border: 0; padding: 2px 0; text-align: left !important; background: none !important;
+  }
+  table.dc-board .dc-poscell { padding: 0 0 8px; margin-bottom: 6px; border-bottom: 1px dashed var(--line); }
+  table.dc-board .dc-poscell .dc-abbr, table.dc-board .dc-poscell .dc-label { display: inline; }
+  table.dc-board .dc-poscell .dc-label { margin-left: 8px; }
+  table.dc-board td:not(.dc-poscell)::before {
+    content: attr(data-label) " "; display: inline-block; min-width: 42px;
+    font-size: 10px; text-transform: uppercase; letter-spacing: 1px; color: var(--muted);
+  }
+  table.dc-board .dc-empty { display: none; }
+  table.dc-board .dc-open { padding: 4px 0; }
+}
+
 .dc-list { display: flex; flex-direction: column; gap: 8px; margin-bottom: 8px; }
 .dc-row {
   display: flex; align-items: center; justify-content: space-between; gap: 12px;
