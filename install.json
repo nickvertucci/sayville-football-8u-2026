@@ -52,6 +52,30 @@
       "finisher_time": "6:45–6:55",
       "huddle": "Review the practice.",
       "huddle_time": "6:55–7:00"
+    },
+    {
+      "n": 3,
+      "date": "Tue, Aug 18",
+      "phase": "preseason",
+      "focus": "First plays: Dive and Wedge",
+      "agility_time": "5:30–6:15",
+      "agility_drills": [
+        "Passing routes (15 min)",
+        "Zig-zag sprint and tackle (15 min)",
+        "Agility hurdles (15 min)"
+      ],
+      "install_time": "6:15–6:45",
+      "plays": [
+        "i-dive-r",
+        "i-dive-l",
+        "i-wedge",
+        "i-wedge-l"
+      ],
+      "emphasis": "Two runs, two different jobs. Dive hits fast off the double team before the linebackers can read it — snap to handoff under a second. Wedge is short yardage: nobody blocks a man, the whole line squeezes to the center's back and pushes. Same formation, same snap count — first time somebody besides the coach is naming who gets the ball.",
+      "finisher": "Gold vs. Purple sprint relay race.",
+      "finisher_time": "6:45–6:55",
+      "huddle": "Review the practice.",
+      "huddle_time": "6:55–7:00"
     }
   ]
 }
