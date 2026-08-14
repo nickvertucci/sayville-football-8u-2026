@@ -22,12 +22,15 @@
         "Zig-zag sprint and tackle (15 min)",
         "Agility hurdles (15 min)"
       ],
-      "install_time": "6:15–6:30",
+      "install_time": "6:15–6:45",
       "formations": [
         "i-form"
       ],
       "emphasis": "Install the formation itself — alignment only, no plays. Every kid knows his spot, and we count seven on the line every single snap until it is boring.",
-      "finisher": "Gold vs. Purple sprint relay race."
+      "finisher": "Gold vs. Purple sprint relay race.",
+      "finisher_time": "6:45–6:55",
+      "huddle": "Review the practice.",
+      "huddle_time": "6:55–7:00"
     },
     {
       "n": 2,
@@ -40,11 +43,15 @@
         "Zig-zag sprint and tackle (15 min)",
         "Agility hurdles (15 min)"
       ],
-      "install_time": "6:15–6:30",
+      "install_time": "6:15–6:45",
       "formations": [
         "i-form"
       ],
-      "emphasis": "The same formation install. Reps on alignment and the seven-on-the-line count until they can do it without thinking — then we are ready to hand somebody the ball."
+      "emphasis": "The same formation install. Reps on alignment and the seven-on-the-line count until they can do it without thinking — then we are ready to hand somebody the ball.",
+      "finisher": "Gold vs. Purple sprint relay race.",
+      "finisher_time": "6:45–6:55",
+      "huddle": "Review the practice.",
+      "huddle_time": "6:55–7:00"
     }
   ]
 }
