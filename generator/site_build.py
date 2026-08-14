@@ -751,6 +751,13 @@ table.calls td.c { white-space: nowrap; }
   margin: 7px 0 0; font-size: 12.5px; color: var(--muted);
   padding-left: 11px; border-left: 2px solid var(--line);
 }
+.ins-huddle {
+  margin: 10px 0 0; padding-top: 10px; border-top: 1px dashed var(--line);
+  font-size: 13px; color: var(--muted);
+}
+.ins-huddle-time {
+  float: right; font-weight: 600; font-variant-numeric: tabular-nums;
+}
 
 /* What is in the book but not yet on the schedule. Deliberately quieter than the
    practices above it — it is a backlog, not a plan. */
@@ -2080,21 +2087,39 @@ def write_install(formations: list[dict], defenses: dict, root: Path) -> str:
 
         b_time = pr.get("install_time", "")
         b_time_html = f'<span class="ins-blk-time">{esc(b_time)}</span>' if b_time else ""
-        fin = pr.get("finisher", "")
-        fin_html = f'<p class="ins-em"><b>Finisher.</b> {esc(fin)}</p>' if fin else ""
         block_b_html = (
             '<div class="ins-blk"><p class="ins-blk-h">'
             f'<span class="ins-blk-tag">Block B</span> Install{b_time_html}</p>'
             f'<div class="ins-list">{"".join(items)}</div>'
             f'<p class="ins-em">{esc(pr.get("emphasis", ""))}</p>'
-            f'{fin_html}{needs}</div>'
+            f'{needs}</div>'
         )
+
+        fin = pr.get("finisher", "")
+        block_c_html = ""
+        if fin:
+            c_time = pr.get("finisher_time", "")
+            c_time_html = f'<span class="ins-blk-time">{esc(c_time)}</span>' if c_time else ""
+            block_c_html = (
+                '<div class="ins-blk"><p class="ins-blk-h">'
+                f'<span class="ins-blk-tag">Block C</span> Finisher{c_time_html}</p>'
+                f'<p class="ins-em">{esc(fin)}</p></div>'
+            )
+
+        huddle = pr.get("huddle", "")
+        huddle_html = ""
+        if huddle:
+            h_time = pr.get("huddle_time", "")
+            h_time_html = f'<span class="ins-huddle-time">{esc(h_time)}</span>' if h_time else ""
+            huddle_html = (
+                f'<p class="ins-huddle"><b>Team huddle.</b> {esc(huddle)}{h_time_html}</p>'
+            )
 
         blocks.append(
             f'<article class="ins">'
             f'<div class="ins-n"><span>Practice</span><b>{pr["n"]}</b>{date_html}</div>'
             f'<div class="ins-body"><h3>{esc(pr.get("focus", ""))}</h3>'
-            f'{block_a_html}{block_b_html}</div></article>'
+            f'{block_a_html}{block_b_html}{block_c_html}{huddle_html}</div></article>'
         )
 
     # Anything not on the schedule yet, so a play cannot go missing quietly.
