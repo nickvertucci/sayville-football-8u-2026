@@ -16,7 +16,13 @@
       "date": "Mon, Aug 11",
       "phase": "preseason",
       "focus": "Line up in the Regular I",
-      "warmup": "Three agility stations, fifteen minutes each, rotating through all three.",
+      "agility_time": "5:30–6:15",
+      "agility_drills": [
+        "Passing routes (15 min)",
+        "Zig-zag sprint and tackle (15 min)",
+        "Agility hurdles (15 min)"
+      ],
+      "install_time": "6:15–6:30",
       "formations": [
         "i-form"
       ],
@@ -28,7 +34,13 @@
       "date": "Thu, Aug 13",
       "phase": "preseason",
       "focus": "Line up in the Regular I again",
-      "warmup": "Agility stations again — same three, rotating.",
+      "agility_time": "5:30–6:15",
+      "agility_drills": [
+        "Passing routes (15 min)",
+        "Zig-zag sprint and tackle (15 min)",
+        "Agility hurdles (15 min)"
+      ],
+      "install_time": "6:15–6:30",
       "formations": [
         "i-form"
       ],
