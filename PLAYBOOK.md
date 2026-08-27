@@ -52,14 +52,16 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 | 44 | [Split Pitch Left](#split-pitch-left) | `Split Z Right 39 Pitch` | run | Split Backs | RH |
 | 45 | [Split QB Keep Right](#split-qb-keep-right) | `Split Z Right 16 Keep` | run | Split Backs | QB |
 | 46 | [Split QB Keep Left](#split-qb-keep-left) | `Split Z Left 17 Keep` | run | Split Backs | QB |
-| 47 | [House Dive Right](#house-dive-right) | `House 20 Dive` | run | Full House | FB |
-| 48 | [House Dive Left](#house-dive-left) | `House 21 Dive` | run | Full House | FB |
-| 49 | [House Power Right](#house-power-right) | `House 44 Power` | run | Full House | Z |
-| 50 | [House Power Left](#house-power-left) | `House 35 Power` | run | Full House | TB |
-| 51 | [House Boot Right](#house-boot-right) | `House 16 Boot` | pass | Full House | RTE |
-| 52 | [House Boot Left](#house-boot-left) | `House 17 Boot` | pass | Full House | LTE |
-| 53 | [House Sweep Right](#house-sweep-right) | `House 48 Sweep` | run | Full House | Z |
-| 54 | [House Sweep Left](#house-sweep-left) | `House 39 Sweep` | run | Full House | TB |
+| 47 | [Split Reverse Right](#split-reverse-right) | `Split Z Left 46 Reverse` | run | Split Backs | Z |
+| 48 | [Split Reverse Left](#split-reverse-left) | `Split Z Right 47 Reverse` | run | Split Backs | Z |
+| 49 | [House Dive Right](#house-dive-right) | `House 20 Dive` | run | Full House | FB |
+| 50 | [House Dive Left](#house-dive-left) | `House 21 Dive` | run | Full House | FB |
+| 51 | [House Power Right](#house-power-right) | `House 44 Power` | run | Full House | Z |
+| 52 | [House Power Left](#house-power-left) | `House 35 Power` | run | Full House | TB |
+| 53 | [House Boot Right](#house-boot-right) | `House 16 Boot` | pass | Full House | RTE |
+| 54 | [House Boot Left](#house-boot-left) | `House 17 Boot` | pass | Full House | LTE |
+| 55 | [House Sweep Right](#house-sweep-right) | `House 48 Sweep` | run | Full House | Z |
+| 56 | [House Sweep Left](#house-sweep-left) | `House 39 Sweep` | run | Full House | TB |
 
 # Regular I
 
@@ -1509,6 +1511,70 @@ The quarterback keeps it himself, and he runs to the side the split man is lined
 - The fake is the play. If nobody looks at the back going the other way, the quarterback is running straight into a linebacker who never left.
 - The quarterback is a runner here and nothing else. Tuck it on the first step, get to the edge, and turn up — a quarterback who drifts sideways looking for more gets caught from behind.
 - Do not call it until Pitch has been working. Their corner has to believe the ball is going wide before a keep inside him is worth anything.
+
+---
+
+## Split Reverse Right
+
+**Call it:** `Split Z Left 46 Reverse`
+
+![Split Reverse Right](playbook/split-backs/cards/sb-reverse-r.svg)
+
+The Keep Left, until it is not. The quarterback and the near back start the Keep left and never stop selling it; the split man comes back underneath, takes a lateral going the other way and runs right behind the far back. The line blocks the side the ball actually ends up on, so the only thing the defense gets to see is the Keep.
+
+| Position | Assignment |
+|---|---|
+| **LTE** | Block the end over you and drive him out, exactly like the Keep. He is the one man quick enough to catch this from behind, and he only stays put if your block looks the same as it always does. |
+| **LT** | Block back. Take the first defender on or inside you — nobody crosses your face. |
+| **LG** | Nobody is over you. Cut off behind you. This play takes a long time and everything that catches it comes from here. |
+| **C** | Reach the nose to your right. Get your head across that shoulder — the ball finishes on that side, whatever the backfield is doing. |
+| **RG** | Nobody is over you. Climb to the middle linebacker and cut him off from the sideline the ball is going to. |
+| **RT** | Reach the tackle on your inside shoulder and get your head across him. The ball is coming back to your side, so he cannot run down the line after it. |
+| **RTE** | Seal the edge. Block the end over you and turn him inside — the ball comes back around behind you, so he cannot be allowed to follow it out. |
+| **Z** **(ball)** | Come back behind the line the moment the ball is snapped, take the pitch going the other way, and get outside our end. Stay behind the quarterback until you have it — a pitch that goes forward is a fumble. |
+| **QB** | Start the Keep left — same first three steps, same ball on the hip — then pitch it back underneath to the split man crossing your face. Pitch it back, never forward, then keep running the Keep as if you still have it. |
+| **LH** | Run your Keep block exactly the way you always run it. You are blocking for a quarterback who does not have the ball, and the moment you do that at half speed this play stops working forever. |
+| **RH** | Get outside our end ahead of the ball and block the first man outside. Everybody else on this play is telling a lie — you are the only blocker out here, so you cannot miss. |
+
+**Coaching points**
+
+- This is the Keep Left for the first second and a half, and that is the whole play. Install it the week after the Keep has hurt somebody, never before.
+- The far back leaves on the same track he leaves on for the Keep — the difference is that this time somebody is following him. The defense cannot tell those two apart, which is the point.
+- The pitch goes backward. Teach it as a flip to a man running past behind you, not a throw to a man ahead of you.
+- The near back blocks for a quarterback with no ball. Tell him that out loud, then tell him it is the reason the play scores.
+- The split man is the slowest-developing ball carrier in the book. If the line cannot hold its blocks for a three count, run Pitch instead.
+
+---
+
+## Split Reverse Left
+
+**Call it:** `Split Z Right 47 Reverse`
+
+![Split Reverse Left](playbook/split-backs/cards/sb-reverse-l.svg)
+
+The Keep Right, until it is not. The quarterback and the near back start the Keep right and never stop selling it; the split man comes back underneath, takes a lateral going the other way and runs left behind the far back. The line blocks the side the ball actually ends up on, so the only thing the defense gets to see is the Keep.
+
+| Position | Assignment |
+|---|---|
+| **LTE** | Seal the edge. Block the end over you and turn him inside — the ball comes back around behind you, so he cannot be allowed to follow it out. |
+| **LT** | Reach the tackle on your inside shoulder and get your head across him. The ball is coming back to your side, so he cannot run down the line after it. |
+| **LG** | Nobody is over you. Climb to the middle linebacker and cut him off from the sideline the ball is going to. |
+| **C** | Reach the nose to your left. Get your head across that shoulder — the ball finishes on that side, whatever the backfield is doing. |
+| **RG** | Nobody is over you. Cut off behind you. This play takes a long time and everything that catches it comes from here. |
+| **RT** | Block back. Take the first defender on or inside you — nobody crosses your face. |
+| **RTE** | Block the end over you and drive him out, exactly like the Keep. He is the one man quick enough to catch this from behind, and he only stays put if your block looks the same as it always does. |
+| **Z** **(ball)** | Come back behind the line the moment the ball is snapped, take the pitch going the other way, and get outside our end. Stay behind the quarterback until you have it — a pitch that goes forward is a fumble. |
+| **QB** | Start the Keep right — same first three steps, same ball on the hip — then pitch it back underneath to the split man crossing your face. Pitch it back, never forward, then keep running the Keep as if you still have it. |
+| **LH** | Get outside our end ahead of the ball and block the first man outside. Everybody else on this play is telling a lie — you are the only blocker out here, so you cannot miss. |
+| **RH** | Run your Keep block exactly the way you always run it. You are blocking for a quarterback who does not have the ball, and the moment you do that at half speed this play stops working forever. |
+
+**Coaching points**
+
+- This is the Keep Right for the first second and a half, and that is the whole play. Install it the week after the Keep has hurt somebody, never before.
+- The far back leaves on the same track he leaves on for the Keep — the difference is that this time somebody is following him. The defense cannot tell those two apart, which is the point.
+- The pitch goes backward. Teach it as a flip to a man running past behind you, not a throw to a man ahead of you.
+- The near back blocks for a quarterback with no ball. Tell him that out loud, then tell him it is the reason the play scores.
+- The split man is the slowest-developing ball carrier in the book. If the line cannot hold its blocks for a three count, run Pitch instead.
 
 # Full House
 

@@ -1,5 +1,5 @@
 {
-  "intro": "Three plays. If practice time is short, these are the ones that cannot slip — Power out of the base formation, and Pitch and the quarterback Keep out of the Split Backs, each of them both ways off the same rules. Every other play in the book exists to set one of these up or to keep a defense from selling out against it.",
+  "intro": "Four plays. If practice time is short, these are the ones that cannot slip — Power out of the base formation, and Pitch, the quarterback Keep and the Reverse off that Keep out of the Split Backs, each of them both ways off the same rules. Every other play in the book exists to set one of these up or to keep a defense from selling out against it.",
   "plays": [
     {
       "right": "i-power-r",
@@ -12,6 +12,10 @@
     {
       "right": "sb-keep-r",
       "left": "sb-keep-l"
+    },
+    {
+      "right": "sb-reverse-r",
+      "left": "sb-reverse-l"
     }
   ]
 }

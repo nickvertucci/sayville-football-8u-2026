@@ -1,0 +1,185 @@
+{
+  "id": "sb-reverse-r",
+  "order": 13,
+  "formation": "split-backs",
+  "name": "Split Reverse Right",
+  "call": "Split Z Left 46 Reverse",
+  "type": "run",
+  "defense": "5-3",
+  "direction": "right",
+  "ball_carrier": "Z",
+  "purpose": "The Keep Left, until it is not. The quarterback and the near back start the Keep left and never stop selling it; the split man comes back underneath, takes a lateral going the other way and runs right behind the far back. The line blocks the side the ball actually ends up on, so the only thing the defense gets to see is the Keep.",
+  "assignments": {
+    "RTE": {
+      "rule": "Seal the edge. Block the end over you and turn him inside — the ball comes back around behind you, so he cannot be allowed to follow it out.",
+      "type": "block",
+      "path": [
+        [
+          -0.2,
+          1.3
+        ]
+      ]
+    },
+    "RT": {
+      "rule": "Reach the tackle on your inside shoulder and get your head across him. The ball is coming back to your side, so he cannot run down the line after it.",
+      "type": "block",
+      "path": [
+        [
+          -0.3,
+          1.3
+        ]
+      ]
+    },
+    "RG": {
+      "rule": "Nobody is over you. Climb to the middle linebacker and cut him off from the sideline the ball is going to.",
+      "type": "block",
+      "path": [
+        [
+          0.4,
+          1.2
+        ],
+        [
+          -0.6,
+          3.4
+        ]
+      ]
+    },
+    "C": {
+      "rule": "Reach the nose to your right. Get your head across that shoulder — the ball finishes on that side, whatever the backfield is doing.",
+      "type": "block",
+      "path": [
+        [
+          0.6,
+          1.0
+        ]
+      ]
+    },
+    "LG": {
+      "rule": "Nobody is over you. Cut off behind you. This play takes a long time and everything that catches it comes from here.",
+      "type": "block",
+      "path": [
+        [
+          1.0,
+          0.7
+        ]
+      ]
+    },
+    "LT": {
+      "rule": "Block back. Take the first defender on or inside you — nobody crosses your face.",
+      "type": "block",
+      "path": [
+        [
+          1.0,
+          0.7
+        ]
+      ]
+    },
+    "LTE": {
+      "rule": "Block the end over you and drive him out, exactly like the Keep. He is the one man quick enough to catch this from behind, and he only stays put if your block looks the same as it always does.",
+      "type": "block",
+      "path": [
+        [
+          0.3,
+          1.3
+        ]
+      ]
+    },
+    "QB": {
+      "rule": "Start the Keep left — same first three steps, same ball on the hip — then pitch it back underneath to the split man crossing your face. Pitch it back, never forward, then keep running the Keep as if you still have it.",
+      "type": "fake",
+      "path": [
+        [
+          0.6,
+          -0.4
+        ],
+        [
+          -1.8,
+          -0.8
+        ],
+        [
+          -4.4,
+          -0.4
+        ],
+        [
+          -5.6,
+          1.0
+        ]
+      ]
+    },
+    "RH": {
+      "rule": "Get outside our end ahead of the ball and block the first man outside. Everybody else on this play is telling a lie — you are the only blocker out here, so you cannot miss.",
+      "type": "block",
+      "path": [
+        [
+          1.6,
+          2.2
+        ],
+        [
+          3.2,
+          4.8
+        ],
+        [
+          3.6,
+          6.6
+        ]
+      ]
+    },
+    "LH": {
+      "rule": "Run your Keep block exactly the way you always run it. You are blocking for a quarterback who does not have the ball, and the moment you do that at half speed this play stops working forever.",
+      "type": "block",
+      "path": [
+        [
+          -1.6,
+          2.2
+        ],
+        [
+          -3.2,
+          4.8
+        ],
+        [
+          -3.6,
+          6.6
+        ]
+      ]
+    },
+    "Z": {
+      "rule": "Come back behind the line the moment the ball is snapped, take the pitch going the other way, and get outside our end. Stay behind the quarterback until you have it — a pitch that goes forward is a fumble.",
+      "type": "run",
+      "path": [
+        [
+          3.0,
+          -1.6
+        ],
+        [
+          9.0,
+          -2.0
+        ],
+        [
+          12.6,
+          -1.2
+        ],
+        [
+          13.6,
+          1.0
+        ],
+        [
+          13.8,
+          3.6
+        ]
+      ]
+    }
+  },
+  "coaching_points": [
+    "This is the Keep Left for the first second and a half, and that is the whole play. Install it the week after the Keep has hurt somebody, never before.",
+    "The far back leaves on the same track he leaves on for the Keep — the difference is that this time somebody is following him. The defense cannot tell those two apart, which is the point.",
+    "The pitch goes backward. Teach it as a flip to a man running past behind you, not a throw to a man ahead of you.",
+    "The near back blocks for a quarterback with no ball. Tell him that out loud, then tell him it is the reason the play scores.",
+    "The split man is the slowest-developing ball carrier in the book. If the line cannot hold its blocks for a three count, run Pitch instead."
+  ],
+  "alignment": {
+    "Z": [
+      -8.0,
+      -1.2
+    ]
+  }
+}
