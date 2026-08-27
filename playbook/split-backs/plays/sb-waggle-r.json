@@ -1,0 +1,172 @@
+{
+  "id": "sb-waggle-r",
+  "order": 7,
+  "formation": "split-backs",
+  "name": "Split Waggle Right",
+  "call": "Split Z Right 16 Waggle",
+  "type": "pass",
+  "defense": "5-3",
+  "direction": "right",
+  "ball_carrier": "RTE",
+  "purpose": "The only pass in this formation, and it comes off the play they have seen most. Fake the dive, send the split man deep to carry the corner off, and the quarterback walks out onto an edge everybody has left.",
+  "assignments": {
+    "LTE": {
+      "rule": "Engage the end over you for a count, then release and get across the field to eight yards. You are the second look and you arrive late on purpose.",
+      "type": "pass",
+      "path": [
+        [
+          1.4,
+          2.6
+        ],
+        [
+          5.2,
+          5.6
+        ],
+        [
+          7.6,
+          7.4
+        ]
+      ]
+    },
+    "LT": {
+      "rule": "Block down inside and sell the run. Nobody comes through your gap.",
+      "type": "block",
+      "path": [
+        [
+          0.5,
+          1.2
+        ]
+      ]
+    },
+    "LG": {
+      "rule": "Nobody is over you. Help the center on the nose and drive him away from the waggle.",
+      "type": "block",
+      "path": [
+        [
+          0.6,
+          1.0
+        ]
+      ]
+    },
+    "C": {
+      "rule": "Block the nose away from the waggle. Nobody chases through the middle.",
+      "type": "block",
+      "path": [
+        [
+          -0.9,
+          0.8
+        ]
+      ]
+    },
+    "RG": {
+      "rule": "Nobody is over you. Help the center on the nose for a count, then stay on him.",
+      "type": "block",
+      "path": [
+        [
+          -0.6,
+          1.0
+        ]
+      ]
+    },
+    "RT": {
+      "rule": "Hinge and protect the waggle side. Nobody comes free outside you — the quarterback is alone back there.",
+      "type": "block",
+      "path": [
+        [
+          1.0,
+          0.7
+        ]
+      ]
+    },
+    "RTE": {
+      "rule": "Engage the end over you for a count, then release to the flat at four yards and stay in front of the quarterback. You are the easy throw.",
+      "type": "pass",
+      "path": [
+        [
+          0.8,
+          1.4
+        ],
+        [
+          3.0,
+          2.6
+        ]
+      ]
+    },
+    "Z": {
+      "rule": "Run straight down the field and take the corner with you. Nobody is throwing you the ball — you are the reason the flat is empty.",
+      "type": "pass",
+      "path": [
+        [
+          0.4,
+          3.6
+        ],
+        [
+          0.8,
+          6.6
+        ]
+      ]
+    },
+    "QB": {
+      "rule": "Fake the dive to the near back with both hands, hide the ball on your back hip, and get to the edge. Run it if it is open. Only throw if a defender comes up to take you.",
+      "type": "run",
+      "path": [
+        [
+          -0.8,
+          -0.5
+        ],
+        [
+          1.6,
+          -1.0
+        ],
+        [
+          4.6,
+          -0.5
+        ],
+        [
+          6.4,
+          1.9
+        ]
+      ]
+    },
+    "RH": {
+      "rule": "Run the dive path full speed with your arms tucked like you have it, and block the first defender who meets you. You are the lie.",
+      "type": "fake",
+      "path": [
+        [
+          -1.0,
+          2.0
+        ],
+        [
+          -1.2,
+          3.6
+        ]
+      ]
+    },
+    "LH": {
+      "rule": "Cross behind the line to the waggle side and protect the outside. Anybody chasing the quarterback from behind is yours.",
+      "type": "block",
+      "path": [
+        [
+          3.4,
+          0.6
+        ],
+        [
+          6.6,
+          0.4
+        ],
+        [
+          8.2,
+          1.0
+        ]
+      ]
+    }
+  },
+  "coaching_points": [
+    "One pass in this formation is the right number. This is a running offence and the pass exists so the defence cannot put nine men in the box and forget about the edge.",
+    "Both ends must engage before releasing. If they run straight into their routes the fake dies.",
+    "The dive fake is the whole play. If that back does not get hit by somebody, he did not sell it.",
+    "The Z running off the corner is what empties the flat. He never gets the ball on this one and he sprints anyway — the day he jogs is the day the corner sits on the tight end.",
+    "No blitzing is allowed for 8- and 9-year-olds, so the quarterback has time. Teach him to be patient and look up.",
+    "Run first, throw second. One throw, then tuck it — no scrambling backwards, ever."
+  ]
+}

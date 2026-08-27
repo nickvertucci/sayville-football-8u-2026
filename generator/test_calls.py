@@ -36,13 +36,21 @@ CASES = [
     # describe the quarterback, while the ball carrier is the flanker he throws to.
     ("boot, quarterback at the 6",    "i-form",   "i-boot-r",   "I Z Right 16 Boot",  False),
     ("boot, called too wide",         "i-form",   "i-boot-r",   "I Z Right 18 Boot",  True),
-    ("bone power right",              "wishbone", "wb-power-r", "Bone 44 Power",      False),
-    ("bone power, called a pitch",    "wishbone", "wb-power-r", "Bone 48 Power",      True),
-    ("bone power, wrong halfback",    "wishbone", "wb-power-r", "Bone 34 Power",      True),
-    ("bone pitch, called off tackle", "wishbone", "wb-pitch-r", "Bone 44 Pitch",      True),
-    # Mirrored plays swap LH and RH, so the back digit swaps with them.
-    ("bone power left, mirrored",     "wishbone", "wb-power-l", "Bone 35 Power",      False),
-    ("bone power left, unmirrored",   "wishbone", "wb-power-l", "Bone 44 Power",      True),
+    ("split power right",             "split-backs", "sb-power-r", "Split Z Right 24 Power",  False),
+    ("split power, called a pitch",   "split-backs", "sb-power-r", "Split Z Right 28 Power",  True),
+    ("split power, credited to the Z", "split-backs", "sb-power-r", "Split Z Right 44 Power", True),
+    ("split pitch, called off tackle", "split-backs", "sb-pitch-r", "Split Z Right 24 Pitch", True),
+    ("split dive right, numbered left", "split-backs", "sb-dive-r", "Split Z Right 31 Dive",  True),
+    ("split waggle, quarterback at 6", "split-backs", "sb-waggle-r", "Split Z Right 16 Waggle", False),
+    ("split waggle, called too wide",  "split-backs", "sb-waggle-r", "Split Z Right 18 Waggle", True),
+    # Counter Left hands to the right back; the left one runs the pitch fake and never
+    # crosses the line at all, so crediting him cannot be checked against a hole.
+    ("split counter left",            "split-backs", "sb-counter-l", "Split Z Right 35 Counter", False),
+    ("split counter left, wrong back", "split-backs", "sb-counter-l", "Split Z Right 24 Counter", True),
+    # The Full House is symmetric, so its left-handed plays are mirrored — which swaps TB
+    # and Z, and the back digit swaps with them.
+    ("house power left, mirrored",    "full-house", "fh-power-l", "House 35 Power",       False),
+    ("house power left, unmirrored",  "full-house", "fh-power-l", "House 44 Power",       True),
 ]
 
 

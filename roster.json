@@ -1,5 +1,5 @@
 {
-  "note": "Coach-editable. The offense side is one list because all four formations share the same eleven spots; the defense side is the 5-3, our everyday front.",
+  "note": "Coach-editable. The offense side is one list covering every spot the four formations use — the same seven linemen and quarterback throughout, with FB and TB in the I looks and the Full House and LH and RH in the Split Backs. The defense side is the 5-3, our everyday front.",
   "offense": {
     "LTE": ["Camden G.", "Joseph P."],
     "LT": ["Brooks A."],
@@ -11,7 +11,9 @@
     "Z": ["Ryan S.", "Clark J.", "Thomas D.", "Kilian F.", "Liam M."],
     "QB": ["Brogan A."],
     "FB": ["Elias F.", "Luca D."],
-    "TB": ["Philip A.", "Nico V."]
+    "TB": ["Philip A.", "Nico V."],
+    "LH": [],
+    "RH": []
   },
   "offense_packages": [
     {

@@ -1052,10 +1052,10 @@ SITE_JS = """
 /* Call sheet filtering.
 
    Every chip belongs to a group (formation, type, zone, direction, carrier). Picking
-   two chips in the SAME group widens the list — Wishbone or Full House. Picking chips
-   in DIFFERENT groups narrows it — Wishbone AND runs. The old single-string filter
-   could not express that at all: formation and type shared one exclusive group, so
-   "Wishbone runs" quietly turned into "all runs". */
+   two chips in the SAME group widens the list — Split Backs or Full House. Picking
+   chips in DIFFERENT groups narrows it — Split Backs AND runs. The old single-string
+   filter could not express that at all: formation and type shared one exclusive group,
+   so "Split Backs runs" quietly turned into "all runs". */
 (function () {
   var q = document.getElementById('q');
   if (!q) return;
@@ -1605,10 +1605,15 @@ def backs_table(formations: list[dict]) -> list[tuple[str, str]]:
         else:
             # A digit can mean the same spot in several formations and a different one
             # elsewhere — 3 is the tailback in both I looks and the right halfback in the
-            # Wishbone. Name every formation, or the table quietly drops one.
+            # Split Backs. Name every formation, or the table quietly drops one.
             parts = []
             for pos, forms_with in spots.items():
-                where = " and the ".join(esc(f) for f in forms_with)
+                names = [esc(f) for f in forms_with]
+                # "the A, the B and the C" — a chain of "and"s reads like a list nobody
+                # proofread, and this row is three formations long the moment a digit
+                # means two different things.
+                where = names[0] if len(names) == 1 else \
+                    " and the ".join([", the ".join(names[:-1]), names[-1]])
                 parts.append(f"{esc(position_name(pos).lower())} in the {where}")
             text = " &nbsp;·&nbsp; ".join(parts)
             rows.append((digit, text[0].upper() + text[1:]))
@@ -2260,9 +2265,12 @@ def write_depth_chart(formations: list[dict], defenses: dict, root: Path) -> str
         import json as _json
         roster = _json.loads(path.read_text(encoding="utf-8"))
 
-    off_form = formations[0] if formations else None
     front = defenses.get("5-3")
-    off_order = [p for p in CARD_ORDER if off_form and p in off_form["alignment"]]
+    # Every spot any formation aligns, not just the base one's: the Split Backs backfield
+    # is LH and RH where the I looks have FB and TB, and a spot missing from this list is
+    # a spot with nobody's name against it that nobody notices is missing.
+    off_order = [p for p in CARD_ORDER
+                 if any(p in form["alignment"] for form in formations)]
     def_order = list(front["alignment"]) if front else []
 
     off_board = depth_board(off_order, roster.get("offense", {}), position_name)

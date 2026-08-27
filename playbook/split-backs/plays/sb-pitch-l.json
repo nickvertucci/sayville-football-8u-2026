@@ -1,0 +1,170 @@
+{
+  "id": "sb-pitch-l",
+  "order": 10,
+  "formation": "split-backs",
+  "name": "Split Pitch Left",
+  "call": "Split Z Right 39 Pitch",
+  "type": "run",
+  "defense": "5-3",
+  "direction": "left",
+  "ball_carrier": "RH",
+  "purpose": "Get outside in a hurry. Our end seals their end inside, the playside guard cuts the middle linebacker off from the sideline, and the far back trails the quarterback, takes the pitch on the run and turns up inside the block on the corner. Away from the split man there is nobody out there, so the near back has to go block the corner himself — which is why this side has no dive fake.",
+  "assignments": {
+    "RTE": {
+      "rule": "Cut off pursuit from behind. You are the last one to the ball, so never quit on the play.",
+      "type": "block",
+      "path": [
+        [
+          -1.0,
+          0.7
+        ]
+      ]
+    },
+    "RT": {
+      "rule": "Block back. Take the first defender on or inside you — nobody crosses your face.",
+      "type": "block",
+      "path": [
+        [
+          -1.0,
+          0.7
+        ]
+      ]
+    },
+    "RG": {
+      "rule": "Nobody is over you. Cut off the backside — nothing chases this from behind.",
+      "type": "block",
+      "path": [
+        [
+          -1.0,
+          0.7
+        ]
+      ]
+    },
+    "C": {
+      "rule": "Reach the nose. Get your head across his playside shoulder.",
+      "type": "block",
+      "path": [
+        [
+          -0.6,
+          1.0
+        ]
+      ]
+    },
+    "LG": {
+      "rule": "Nobody is over you. Climb to the middle linebacker and cut him off from the sideline.",
+      "type": "block",
+      "path": [
+        [
+          -0.4,
+          1.2
+        ],
+        [
+          0.6,
+          3.4
+        ]
+      ]
+    },
+    "LT": {
+      "rule": "Reach the tackle on your inside shoulder. Get your head across him — he cannot be allowed to run down the line after this.",
+      "type": "block",
+      "path": [
+        [
+          0.3,
+          1.3
+        ]
+      ]
+    },
+    "LTE": {
+      "rule": "Seal the edge. Block the end over you and turn him inside — the ball is going around behind you, so he cannot be allowed to follow it out.",
+      "type": "block",
+      "path": [
+        [
+          0.2,
+          1.3
+        ]
+      ]
+    },
+    "Z": {
+      "rule": "Release inside and chase the play across the field. You are the only one fast enough to catch a defender running it down from behind.",
+      "type": "block",
+      "path": [
+        [
+          -2.0,
+          3.4
+        ],
+        [
+          -5.0,
+          5.2
+        ]
+      ]
+    },
+    "QB": {
+      "rule": "Open left, get to the edge, and pitch the ball to the trailing back before you get touched. There is no dive fake on this one — sell it with your eyes and get out there.",
+      "type": "fake",
+      "path": [
+        [
+          -1.4,
+          -0.5
+        ],
+        [
+          -4.0,
+          -0.4
+        ],
+        [
+          -5.6,
+          0.4
+        ]
+      ]
+    },
+    "LH": {
+      "rule": "Beat the ball to the corner and block him. Drive him toward the sideline so the ball can turn up inside you — there is no receiver out here to do it for you.",
+      "type": "block",
+      "path": [
+        [
+          -3.4,
+          2.0
+        ],
+        [
+          -6.0,
+          5.6
+        ],
+        [
+          -6.5,
+          7.0
+        ]
+      ]
+    },
+    "RH": {
+      "rule": "Run flat behind everybody, stay outside and behind the quarterback, and catch the pitch on the run. Never get ahead of him — a pitch that goes forward is a fumble.",
+      "type": "run",
+      "path": [
+        [
+          -3.4,
+          -0.4
+        ],
+        [
+          -8.6,
+          -0.2
+        ],
+        [
+          -11.4,
+          1.6
+        ],
+        [
+          -11.6,
+          4.2
+        ],
+        [
+          -11.6,
+          6.6
+        ]
+      ]
+    }
+  },
+  "coaching_points": [
+    "The pitch goes early. A quarterback who waits to be tackled first will pitch it on the ground.",
+    "This is not a read at this age — tell him before the snap that he is pitching it.",
+    "The back taking the pitch must stay behind the quarterback until he has the ball. Getting ahead means the pitch goes forward, which is a fumble waiting to happen.",
+    "Everything depends on the corner being blocked and there is no receiver on this side to do it, so the near back leaves early and there is no fake to hold anybody. If their corner is quick, call it to the other side instead."
+  ]
+}

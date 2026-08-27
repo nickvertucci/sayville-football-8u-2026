@@ -1,0 +1,162 @@
+{
+  "id": "sb-counter-l",
+  "order": 6,
+  "formation": "split-backs",
+  "name": "Split Counter Left",
+  "call": "Split Z Right 35 Counter",
+  "type": "run",
+  "defense": "5-3",
+  "direction": "left",
+  "ball_carrier": "RH",
+  "purpose": "Misdirection off the pitch. The near back and the quarterback sell the pitch one way and the far back plants and comes all the way back. Nobody pulls and nobody leads, so it hits faster than Power off the same blocks.",
+  "assignments": {
+    "RTE": {
+      "rule": "Cut off pursuit from behind. You are the last one to the ball, so never quit on the play.",
+      "type": "block",
+      "path": [
+        [
+          -1.0,
+          0.7
+        ]
+      ]
+    },
+    "RT": {
+      "rule": "Block back. Take the first defender on or inside you — nobody crosses your face.",
+      "type": "block",
+      "path": [
+        [
+          -1.0,
+          0.7
+        ]
+      ]
+    },
+    "RG": {
+      "rule": "Nobody is over you. Cut off the backside.",
+      "type": "block",
+      "path": [
+        [
+          -1.0,
+          0.7
+        ]
+      ]
+    },
+    "C": {
+      "rule": "You have the nose, head up on you. Hands inside and do not let him cross your face to the playside.",
+      "type": "block",
+      "path": [
+        [
+          -0.3,
+          1.1
+        ]
+      ]
+    },
+    "LG": {
+      "rule": "Nobody is over you. Climb straight to the middle linebacker and take him wherever he goes.",
+      "type": "block",
+      "path": [
+        [
+          -0.2,
+          1.2
+        ],
+        [
+          1.4,
+          3.5
+        ]
+      ]
+    },
+    "LT": {
+      "rule": "The tackle is on your inside shoulder. Block him down and seal him inside — that is what opens the hole.",
+      "type": "block",
+      "path": [
+        [
+          0.4,
+          1.3
+        ]
+      ]
+    },
+    "LTE": {
+      "rule": "Block the end over you and drive him out, away from the hole. Nobody is kicking him out for you — he is yours.",
+      "type": "block",
+      "path": [
+        [
+          -0.3,
+          1.3
+        ]
+      ]
+    },
+    "Z": {
+      "rule": "Take three hard steps upfield at the man over you and hold him there, then work back inside behind the play.",
+      "type": "block",
+      "path": [
+        [
+          -0.6,
+          3.0
+        ],
+        [
+          -3.4,
+          4.6
+        ]
+      ]
+    },
+    "QB": {
+      "rule": "Fake the pitch to the right, then turn back and hand the ball to the other back coming across. The fake comes first.",
+      "type": "fake",
+      "path": [
+        [
+          1.2,
+          -0.5
+        ],
+        [
+          -0.4,
+          -0.8
+        ],
+        [
+          -1.4,
+          -0.6
+        ]
+      ]
+    },
+    "LH": {
+      "rule": "Run the full pitch path away at full speed with your arms tucked. You are the lie.",
+      "type": "fake",
+      "path": [
+        [
+          2.6,
+          1.0
+        ],
+        [
+          6.0,
+          2.2
+        ]
+      ]
+    },
+    "RH": {
+      "rule": "Take two hard steps toward the fake, then plant and come all the way back behind the down blocks.",
+      "type": "run",
+      "path": [
+        [
+          1.2,
+          0.5
+        ],
+        [
+          -1.8,
+          1.6
+        ],
+        [
+          -5.4,
+          3.4
+        ],
+        [
+          -6.0,
+          6.0
+        ]
+      ]
+    }
+  },
+  "coaching_points": [
+    "Do not call this until the pitch has been working. It is the counter-punch.",
+    "No pullers and no lead blocker, so this hits faster than Power off exactly the same line rules. The line has to hold its blocks while the ball carrier crosses.",
+    "There is no crack block on this side — the Z is on the other end of the formation. The playside guard's climb to the middle linebacker has to be on time or there is nobody else for him.",
+    "Two hard steps toward the fake before he comes back. A shuffle fools nobody."
+  ]
+}

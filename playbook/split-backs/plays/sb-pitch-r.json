@@ -1,0 +1,170 @@
+{
+  "id": "sb-pitch-r",
+  "order": 9,
+  "formation": "split-backs",
+  "name": "Split Pitch Right",
+  "call": "Split Z Right 28 Pitch",
+  "type": "run",
+  "defense": "5-3",
+  "direction": "right",
+  "ball_carrier": "LH",
+  "purpose": "Get outside in a hurry. Our end seals their end inside, the playside guard cuts the middle linebacker off from the sideline, and the far back trails the quarterback, takes the pitch on the run and turns up inside the block on the corner. The split man out wide is the one who makes that block, so both backs stay in the backfield where the fake lives.",
+  "assignments": {
+    "LTE": {
+      "rule": "Cut off pursuit from behind. You are the last one to the ball, so never quit on the play.",
+      "type": "block",
+      "path": [
+        [
+          1.0,
+          0.7
+        ]
+      ]
+    },
+    "LT": {
+      "rule": "Block back. Take the first defender on or inside you — nobody crosses your face.",
+      "type": "block",
+      "path": [
+        [
+          1.0,
+          0.7
+        ]
+      ]
+    },
+    "LG": {
+      "rule": "Nobody is over you. Cut off the backside — nothing chases this from behind.",
+      "type": "block",
+      "path": [
+        [
+          1.0,
+          0.7
+        ]
+      ]
+    },
+    "C": {
+      "rule": "Reach the nose. Get your head across his playside shoulder.",
+      "type": "block",
+      "path": [
+        [
+          0.6,
+          1.0
+        ]
+      ]
+    },
+    "RG": {
+      "rule": "Nobody is over you. Climb to the middle linebacker and cut him off from the sideline.",
+      "type": "block",
+      "path": [
+        [
+          0.4,
+          1.2
+        ],
+        [
+          -0.6,
+          3.4
+        ]
+      ]
+    },
+    "RT": {
+      "rule": "Reach the tackle on your inside shoulder. Get your head across him — he cannot be allowed to run down the line after this.",
+      "type": "block",
+      "path": [
+        [
+          -0.3,
+          1.3
+        ]
+      ]
+    },
+    "RTE": {
+      "rule": "Seal the edge. Block the end over you and turn him inside — the ball is going around behind you, so he cannot be allowed to follow it out.",
+      "type": "block",
+      "path": [
+        [
+          -0.2,
+          1.3
+        ]
+      ]
+    },
+    "Z": {
+      "rule": "Beat everybody to the corner and drive him toward the sideline. He is the only man out there who can catch this, and he is yours.",
+      "type": "block",
+      "path": [
+        [
+          0.8,
+          3.0
+        ],
+        [
+          1.4,
+          4.4
+        ]
+      ]
+    },
+    "QB": {
+      "rule": "Fake the dive to the near back, attack the outside, and pitch the ball to the trailing back before you get touched. Pitch early, not late.",
+      "type": "fake",
+      "path": [
+        [
+          1.4,
+          -0.5
+        ],
+        [
+          4.0,
+          -0.4
+        ],
+        [
+          5.6,
+          0.4
+        ]
+      ]
+    },
+    "RH": {
+      "rule": "Step at the dive to hold their linebackers, then get up on the playside linebacker and wall him off from the sideline.",
+      "type": "block",
+      "path": [
+        [
+          0.8,
+          2.4
+        ],
+        [
+          1.6,
+          4.2
+        ],
+        [
+          1.8,
+          6.0
+        ]
+      ]
+    },
+    "LH": {
+      "rule": "Run flat behind everybody, stay outside and behind the quarterback, and catch the pitch on the run. Never get ahead of him — a pitch that goes forward is a fumble.",
+      "type": "run",
+      "path": [
+        [
+          3.4,
+          -0.4
+        ],
+        [
+          8.6,
+          -0.2
+        ],
+        [
+          11.4,
+          1.6
+        ],
+        [
+          11.6,
+          4.2
+        ],
+        [
+          11.6,
+          6.6
+        ]
+      ]
+    }
+  },
+  "coaching_points": [
+    "The pitch goes early. A quarterback who waits to be tackled first will pitch it on the ground.",
+    "This is not a read at this age — tell him before the snap that he is pitching it.",
+    "The back taking the pitch must stay behind the quarterback until he has the ball. Getting ahead means the pitch goes forward, which is a fumble waiting to happen.",
+    "Everything depends on the corner being blocked, and out here the split man does it — which is what frees both backs to fake and lead. Drill him on beating the corner to the spot without holding."
+  ]
+}

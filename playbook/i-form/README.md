@@ -22,7 +22,7 @@ Normal line splits, about a foot. Both ends are on the line; the Z is off it, a 
 
 **Formation coaching notes**
 
-- The tailback picks his own hole here — reads the block and cuts off it, instead of the play deciding for him like the Wishbone. The harder skill, which is why this formation gets the most practice time.
+- The tailback picks his own hole here — reads the block and cuts off it, instead of the play deciding for him the way Dive does. The harder skill, which is why this formation gets the most practice time.
 - The Z lines up right every play, and the call says so — Z Right. Naming it now means a Z Left look can be added later without changing how plays are called.
 - Count seven on the line every snap — the Z creeping up onto it is the most common illegal-formation flag from this look.
 - Fullback and tailback must stay stacked. A drifting tailback tips the play before the snap.
@@ -714,8 +714,8 @@ Off the tight end. Our end seals their end inside, the guard pulls and turns up 
 
 **Coaching points**
 
-- Same down-block-and-kick-out rules as Bone Power. If the kids know one they know both — say that out loud when you install it.
-- The tailback starts deeper than a wishbone back does, so the kick-out block has to hold a beat longer. Drill it on a count.
+- Same down-block-and-kick-out rules as Split Power. If the kids know one they know both — say that out loud when you install it.
+- The tailback starts deeper than a split back does, so the kick-out block has to hold a beat longer. Drill it on a count.
 - The pulling guard stays flat and tight to the line. Bellying back is what makes this play late.
 - If the pulling guard cannot get there in time, run I Iso instead — it needs no pullers.
 

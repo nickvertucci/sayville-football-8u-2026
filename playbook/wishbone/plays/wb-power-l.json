@@ -1,8 +1,0 @@
-{
-  "id": "wb-power-l",
-  "order": 4,
-  "formation": "wishbone",
-  "name": "Bone Power Left",
-  "call": "Bone 35 Power",
-  "mirror_of": "wb-power-r"
-}
