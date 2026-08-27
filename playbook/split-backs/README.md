@@ -45,8 +45,8 @@ Both ends are tight on the line. The two backs sit four yards deep and just over
 | [Split Pitch Left](#split-pitch-left) | `Split Z Right 39 Pitch` | run | RH |
 | [Split QB Keep Right](#split-qb-keep-right) | `Split Z Right 16 Keep` | run | QB |
 | [Split QB Keep Left](#split-qb-keep-left) | `Split Z Left 17 Keep` | run | QB |
-| [Split Reverse Right](#split-reverse-right) | `Split Z Left 46 Reverse` | run | Z |
-| [Split Reverse Left](#split-reverse-left) | `Split Z Right 47 Reverse` | run | Z |
+| [Split Z Left Z Reverse Right](#split-z-left-z-reverse-right) | `Split Z Left 46 Z Reverse Right` | run | Z |
+| [Split Z Right Z Reverse Left](#split-z-right-z-reverse-left) | `Split Z Right 47 Z Reverse Left` | run | Z |
 
 ---
 
@@ -428,11 +428,11 @@ The quarterback keeps it himself, and he runs to the side the split man is lined
 
 ---
 
-## Split Reverse Right
+## Split Z Left Z Reverse Right
 
-**Call it:** `Split Z Left 46 Reverse`
+**Call it:** `Split Z Left 46 Z Reverse Right`
 
-![Split Reverse Right](cards/sb-reverse-r.svg)
+![Split Z Left Z Reverse Right](cards/sb-reverse-r.svg)
 
 The Keep Left, until it is not. The quarterback and the near back start the Keep left and never stop selling it; the split man comes back underneath, takes a lateral going the other way and runs right behind the far back. The line blocks the side the ball actually ends up on, so the only thing the defense gets to see is the Keep.
 
@@ -460,11 +460,11 @@ The Keep Left, until it is not. The quarterback and the near back start the Keep
 
 ---
 
-## Split Reverse Left
+## Split Z Right Z Reverse Left
 
-**Call it:** `Split Z Right 47 Reverse`
+**Call it:** `Split Z Right 47 Z Reverse Left`
 
-![Split Reverse Left](cards/sb-reverse-l.svg)
+![Split Z Right Z Reverse Left](cards/sb-reverse-l.svg)
 
 The Keep Right, until it is not. The quarterback and the near back start the Keep right and never stop selling it; the split man comes back underneath, takes a lateral going the other way and runs left behind the far back. The line blocks the side the ball actually ends up on, so the only thing the defense gets to see is the Keep.
 

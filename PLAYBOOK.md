@@ -52,8 +52,8 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 | 44 | [Split Pitch Left](#split-pitch-left) | `Split Z Right 39 Pitch` | run | Split Backs | RH |
 | 45 | [Split QB Keep Right](#split-qb-keep-right) | `Split Z Right 16 Keep` | run | Split Backs | QB |
 | 46 | [Split QB Keep Left](#split-qb-keep-left) | `Split Z Left 17 Keep` | run | Split Backs | QB |
-| 47 | [Split Reverse Right](#split-reverse-right) | `Split Z Left 46 Reverse` | run | Split Backs | Z |
-| 48 | [Split Reverse Left](#split-reverse-left) | `Split Z Right 47 Reverse` | run | Split Backs | Z |
+| 47 | [Split Z Left Z Reverse Right](#split-z-left-z-reverse-right) | `Split Z Left 46 Z Reverse Right` | run | Split Backs | Z |
+| 48 | [Split Z Right Z Reverse Left](#split-z-right-z-reverse-left) | `Split Z Right 47 Z Reverse Left` | run | Split Backs | Z |
 | 49 | [House Dive Right](#house-dive-right) | `House 20 Dive` | run | Full House | FB |
 | 50 | [House Dive Left](#house-dive-left) | `House 21 Dive` | run | Full House | FB |
 | 51 | [House Power Right](#house-power-right) | `House 44 Power` | run | Full House | Z |
@@ -1514,11 +1514,11 @@ The quarterback keeps it himself, and he runs to the side the split man is lined
 
 ---
 
-## Split Reverse Right
+## Split Z Left Z Reverse Right
 
-**Call it:** `Split Z Left 46 Reverse`
+**Call it:** `Split Z Left 46 Z Reverse Right`
 
-![Split Reverse Right](playbook/split-backs/cards/sb-reverse-r.svg)
+![Split Z Left Z Reverse Right](playbook/split-backs/cards/sb-reverse-r.svg)
 
 The Keep Left, until it is not. The quarterback and the near back start the Keep left and never stop selling it; the split man comes back underneath, takes a lateral going the other way and runs right behind the far back. The line blocks the side the ball actually ends up on, so the only thing the defense gets to see is the Keep.
 
@@ -1546,11 +1546,11 @@ The Keep Left, until it is not. The quarterback and the near back start the Keep
 
 ---
 
-## Split Reverse Left
+## Split Z Right Z Reverse Left
 
-**Call it:** `Split Z Right 47 Reverse`
+**Call it:** `Split Z Right 47 Z Reverse Left`
 
-![Split Reverse Left](playbook/split-backs/cards/sb-reverse-l.svg)
+![Split Z Right Z Reverse Left](playbook/split-backs/cards/sb-reverse-l.svg)
 
 The Keep Right, until it is not. The quarterback and the near back start the Keep right and never stop selling it; the split man comes back underneath, takes a lateral going the other way and runs left behind the far back. The line blocks the side the ball actually ends up on, so the only thing the defense gets to see is the Keep.
 
