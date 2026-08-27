@@ -60,6 +60,10 @@ FIELD_W = (X_MAX - X_MIN) * SCALE
 FIELD_H = (Y_MAX - Y_MIN) * SCALE
 
 TITLE_H = 58
+# Width of one character of the band's bold title, per point of font size, measured off
+# a rendered card. Only ever used to decide whether the title still fits beside the call.
+NAME_CHAR_W = 0.47
+BAND_GAP = 14
 PAD = 18
 LINE_H = 17
 
@@ -660,16 +664,28 @@ def title_band(x0: float, width: float, name: str, meta: str, call: str) -> str:
     Both go on every card on purpose — the name is what a coach says while teaching it,
     the call is what he yells on Saturday, and the card is where the two get connected.
     """
+    # Nothing measures text in an SVG we write by hand, so both halves of the band
+    # estimate their width from the character count — the badge always has, and the name
+    # has to as well. Without it the longest name and the longest call meet in the middle
+    # with no gap between them, which is a layout bug you only find by rendering the one
+    # card that has both. The name gives way rather than the call: the call is what gets
+    # yelled on Saturday, and it is the half that must stay legible across a field.
+    bw = 9.2 * len(call) + 22 if call else 0.0
+    name_fs = 19.0
+    if call and name:
+        room = width - 2 * PAD - bw - BAND_GAP
+        if NAME_CHAR_W * name_fs * len(name) > room:
+            name_fs = max(13.0, room / (NAME_CHAR_W * len(name)))
+
     out = [
         f'<rect x="{x0:.0f}" y="0" width="{width:.0f}" height="{TITLE_H}" '
         f'fill="{COLORS["band"]}"/>',
-        f'<text x="{x0 + PAD:.0f}" y="26" font-size="19" font-weight="700" '
+        f'<text x="{x0 + PAD:.0f}" y="26" font-size="{name_fs:.1f}" font-weight="700" '
         f'fill="#ffffff">{esc(name)}</text>',
         f'<text x="{x0 + PAD:.0f}" y="45" font-size="11.5" '
         f'fill="#a9b4c7">{esc(meta)}</text>',
     ]
     if call:
-        bw = 9.2 * len(call) + 22
         bx = x0 + width - PAD - bw
         out.append(
             f'<rect x="{bx:.1f}" y="13" width="{bw:.1f}" height="31" rx="6" '

@@ -117,15 +117,16 @@ both I looks.
 | `Split Z Right 17 Waggle` / `16 Waggle` | Split Waggle Left / Right | quarterback, off the dive fake |
 | `Split Z Right 39 Pitch` / `28 Pitch` | Split Pitch Left / Right | the far back, all the way outside |
 | `Split Z Left 17 Keep` / `Split Z Right 16 Keep` | Split QB Keep Left / Right | quarterback, outside the tight end |
-| `Split Z Right 47 Reverse` / `Split Z Left 46 Reverse` | Split Reverse Left / Right | the Z, back the other way |
+| `Split Z Left 46 Z Reverse Right` | Split Z Left Z Reverse Right | the Z, back the other way |
+| `Split Z Right 47 Z Reverse Left` | Split Z Right Z Reverse Left | the Z, back the other way |
 
 **The Keep and the Reverse are the plays that move the Z.** The Keep runs to whichever
-side he is on, so `Split Z Left 17 Keep` really does line him up on the left; the Reverse
-starts as that same Keep and hands the ball back the other way, so the Z starts on the
-Keep's side and finishes on the opposite one. That is why `Split Z Right 47 Reverse` is
-named *Reverse Left* — the alignment word is where the Z starts, the play name is where
-the ball ends up, the same way `Power I Right 35 Counter` is *Counter Left*. Everything
-else in the formation is `Z Right`.
+side he is on, so `Split Z Left 17 Keep` really does line him up on the left. The Reverse
+starts as that same Keep and hands the ball back the other way, which means the Z starts
+on one side and finishes on the other — so its call names both, and that is the only
+reason it is longer than everything else in the book. `Split Z Left 46 Z Reverse Right`
+is the Z lined up left, carrying it back to the right. Every other play in the formation
+is `Z Right` and finishes on the side its name says, so nothing else needs two.
 
 The back digit follows whoever actually carries it. On Dive it is the back on the play
 side, going straight ahead off the double team; on Power, Counter and Pitch it is the far

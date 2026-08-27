@@ -1748,7 +1748,14 @@ def filter_group(label: str, chips: list[str]) -> str:
 def strip_direction(name: str) -> str:
     """The favorites cards show one image for both sides of a play, so the caption
     should not claim to be just the right (or just the left) — "Slant", not "Slant
-    Right"."""
+    Right".
+
+    The Z's alignment goes the same way. A reverse starts him on the side its own
+    direction comes back from, so the two halves of that pair disagree about where he
+    lines up and one card cannot claim either — "Split Z Reverse", not "Split Z Left
+    Z Reverse". Both sides are a click away on the card itself, named in full.
+    """
+    name = re.sub(r"\bZ (?:Right|Left)\s+", "", name)
     return re.sub(r"\s+(Right|Left)$", "", name)
 
 
