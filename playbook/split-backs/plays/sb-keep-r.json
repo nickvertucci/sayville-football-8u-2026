@@ -1,0 +1,167 @@
+{
+  "id": "sb-keep-r",
+  "order": 11,
+  "formation": "split-backs",
+  "name": "Split QB Keep Right",
+  "call": "Split Z Right 16 Keep",
+  "type": "run",
+  "defense": "5-3",
+  "direction": "right",
+  "ball_carrier": "QB",
+  "purpose": "The quarterback keeps it himself, and he runs to the side the split man is lined up on — so the Z moves to the right for this one and the call says so. Fake to the back going left, seal their end inside, and get outside our own end behind two blockers: the near back on the linebacker and the split man on the corner. Blocked exactly like Pitch.",
+  "assignments": {
+    "LTE": {
+      "rule": "Cut off pursuit from behind. You are the last one to the ball, so never quit on the play.",
+      "type": "block",
+      "path": [
+        [
+          1.0,
+          0.7
+        ]
+      ]
+    },
+    "LT": {
+      "rule": "Block back. Take the first defender on or inside you — nobody crosses your face.",
+      "type": "block",
+      "path": [
+        [
+          1.0,
+          0.7
+        ]
+      ]
+    },
+    "LG": {
+      "rule": "Nobody is over you. Cut off the backside — nothing chases this from behind.",
+      "type": "block",
+      "path": [
+        [
+          1.0,
+          0.7
+        ]
+      ]
+    },
+    "C": {
+      "rule": "Reach the nose. Get your head across his playside shoulder.",
+      "type": "block",
+      "path": [
+        [
+          0.6,
+          1.0
+        ]
+      ]
+    },
+    "RG": {
+      "rule": "Nobody is over you. Climb to the middle linebacker and cut him off from the sideline.",
+      "type": "block",
+      "path": [
+        [
+          0.4,
+          1.2
+        ],
+        [
+          -0.6,
+          3.4
+        ]
+      ]
+    },
+    "RT": {
+      "rule": "Reach the tackle on your inside shoulder. Get your head across him — he cannot be allowed to run down the line after this.",
+      "type": "block",
+      "path": [
+        [
+          -0.3,
+          1.3
+        ]
+      ]
+    },
+    "RTE": {
+      "rule": "Seal the edge. Block the end over you and turn him inside — the quarterback is going around behind you, so he cannot be allowed to follow him out.",
+      "type": "block",
+      "path": [
+        [
+          -0.2,
+          1.3
+        ]
+      ]
+    },
+    "Z": {
+      "rule": "Block the corner over you and drive him toward the sideline. You moved over here for this block — he is the only man out there who can catch the quarterback.",
+      "type": "block",
+      "path": [
+        [
+          0.6,
+          3.0
+        ],
+        [
+          1.0,
+          4.4
+        ]
+      ]
+    },
+    "QB": {
+      "rule": "Show the ball to the back going left, pull it in on your back hip, and get outside our end. Tuck it on the first step and go north the moment the edge is sealed — do not drift sideways looking for more.",
+      "type": "run",
+      "path": [
+        [
+          -0.6,
+          -0.4
+        ],
+        [
+          1.8,
+          -0.8
+        ],
+        [
+          4.4,
+          -0.4
+        ],
+        [
+          5.6,
+          1.6
+        ],
+        [
+          5.9,
+          4.2
+        ]
+      ]
+    },
+    "RH": {
+      "rule": "Get outside our end ahead of the quarterback and block the first man outside. He is running off your shoulder, so do not let that man cross your face to the inside.",
+      "type": "block",
+      "path": [
+        [
+          1.6,
+          2.2
+        ],
+        [
+          3.2,
+          4.8
+        ],
+        [
+          3.6,
+          6.6
+        ]
+      ]
+    },
+    "LH": {
+      "rule": "Run the sweep path away at full speed with your arms tucked. You are the lie, and the linebackers only leave if you are worth watching.",
+      "type": "fake",
+      "path": [
+        [
+          -2.6,
+          1.0
+        ],
+        [
+          -6.0,
+          2.2
+        ]
+      ]
+    }
+  },
+  "coaching_points": [
+    "Blocked exactly like Pitch — the line does not learn a new rule, only a new name. Say that out loud when you install it.",
+    "This is the one play that moves the split man, so the huddle hears which side he is on: Z Right or Z Left. Count seven on the line before the snap like always.",
+    "The fake is the play. If nobody looks at the back going the other way, the quarterback is running straight into a linebacker who never left.",
+    "The quarterback is a runner here and nothing else. Tuck it on the first step, get to the edge, and turn up — a quarterback who drifts sideways looking for more gets caught from behind.",
+    "Do not call it until Pitch has been working. Their corner has to believe the ball is going wide before a keep inside him is worth anything."
+  ]
+}

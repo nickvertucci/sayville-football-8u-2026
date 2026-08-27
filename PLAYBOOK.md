@@ -50,14 +50,16 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 | 42 | [Split Waggle Left](#split-waggle-left) | `Split Z Right 17 Waggle` | pass | Split Backs | LTE |
 | 43 | [Split Pitch Right](#split-pitch-right) | `Split Z Right 28 Pitch` | run | Split Backs | LH |
 | 44 | [Split Pitch Left](#split-pitch-left) | `Split Z Right 39 Pitch` | run | Split Backs | RH |
-| 45 | [House Dive Right](#house-dive-right) | `House 20 Dive` | run | Full House | FB |
-| 46 | [House Dive Left](#house-dive-left) | `House 21 Dive` | run | Full House | FB |
-| 47 | [House Power Right](#house-power-right) | `House 44 Power` | run | Full House | Z |
-| 48 | [House Power Left](#house-power-left) | `House 35 Power` | run | Full House | TB |
-| 49 | [House Boot Right](#house-boot-right) | `House 16 Boot` | pass | Full House | RTE |
-| 50 | [House Boot Left](#house-boot-left) | `House 17 Boot` | pass | Full House | LTE |
-| 51 | [House Sweep Right](#house-sweep-right) | `House 48 Sweep` | run | Full House | Z |
-| 52 | [House Sweep Left](#house-sweep-left) | `House 39 Sweep` | run | Full House | TB |
+| 45 | [Split QB Keep Right](#split-qb-keep-right) | `Split Z Right 16 Keep` | run | Split Backs | QB |
+| 46 | [Split QB Keep Left](#split-qb-keep-left) | `Split Z Left 17 Keep` | run | Split Backs | QB |
+| 47 | [House Dive Right](#house-dive-right) | `House 20 Dive` | run | Full House | FB |
+| 48 | [House Dive Left](#house-dive-left) | `House 21 Dive` | run | Full House | FB |
+| 49 | [House Power Right](#house-power-right) | `House 44 Power` | run | Full House | Z |
+| 50 | [House Power Left](#house-power-left) | `House 35 Power` | run | Full House | TB |
+| 51 | [House Boot Right](#house-boot-right) | `House 16 Boot` | pass | Full House | RTE |
+| 52 | [House Boot Left](#house-boot-left) | `House 17 Boot` | pass | Full House | LTE |
+| 53 | [House Sweep Right](#house-sweep-right) | `House 48 Sweep` | run | Full House | Z |
+| 54 | [House Sweep Left](#house-sweep-left) | `House 39 Sweep` | run | Full House | TB |
 
 # Regular I
 
@@ -1443,6 +1445,70 @@ Get outside in a hurry. Our end seals their end inside, the playside guard cuts 
 - This is not a read at this age — tell him before the snap that he is pitching it.
 - The back taking the pitch must stay behind the quarterback until he has the ball. Getting ahead means the pitch goes forward, which is a fumble waiting to happen.
 - Everything depends on the corner being blocked and there is no receiver on this side to do it, so the near back leaves early and there is no fake to hold anybody. If their corner is quick, call it to the other side instead.
+
+---
+
+## Split QB Keep Right
+
+**Call it:** `Split Z Right 16 Keep`
+
+![Split QB Keep Right](playbook/split-backs/cards/sb-keep-r.svg)
+
+The quarterback keeps it himself, and he runs to the side the split man is lined up on — so the Z moves to the right for this one and the call says so. Fake to the back going left, seal their end inside, and get outside our own end behind two blockers: the near back on the linebacker and the split man on the corner. Blocked exactly like Pitch.
+
+| Position | Assignment |
+|---|---|
+| **LTE** | Cut off pursuit from behind. You are the last one to the ball, so never quit on the play. |
+| **LT** | Block back. Take the first defender on or inside you — nobody crosses your face. |
+| **LG** | Nobody is over you. Cut off the backside — nothing chases this from behind. |
+| **C** | Reach the nose. Get your head across his playside shoulder. |
+| **RG** | Nobody is over you. Climb to the middle linebacker and cut him off from the sideline. |
+| **RT** | Reach the tackle on your inside shoulder. Get your head across him — he cannot be allowed to run down the line after this. |
+| **RTE** | Seal the edge. Block the end over you and turn him inside — the quarterback is going around behind you, so he cannot be allowed to follow him out. |
+| **Z** | Block the corner over you and drive him toward the sideline. You moved over here for this block — he is the only man out there who can catch the quarterback. |
+| **QB** **(ball)** | Show the ball to the back going left, pull it in on your back hip, and get outside our end. Tuck it on the first step and go north the moment the edge is sealed — do not drift sideways looking for more. |
+| **LH** | Run the sweep path away at full speed with your arms tucked. You are the lie, and the linebackers only leave if you are worth watching. |
+| **RH** | Get outside our end ahead of the quarterback and block the first man outside. He is running off your shoulder, so do not let that man cross your face to the inside. |
+
+**Coaching points**
+
+- Blocked exactly like Pitch — the line does not learn a new rule, only a new name. Say that out loud when you install it.
+- This is the one play that moves the split man, so the huddle hears which side he is on: Z Right or Z Left. Count seven on the line before the snap like always.
+- The fake is the play. If nobody looks at the back going the other way, the quarterback is running straight into a linebacker who never left.
+- The quarterback is a runner here and nothing else. Tuck it on the first step, get to the edge, and turn up — a quarterback who drifts sideways looking for more gets caught from behind.
+- Do not call it until Pitch has been working. Their corner has to believe the ball is going wide before a keep inside him is worth anything.
+
+---
+
+## Split QB Keep Left
+
+**Call it:** `Split Z Left 17 Keep`
+
+![Split QB Keep Left](playbook/split-backs/cards/sb-keep-l.svg)
+
+The quarterback keeps it himself, and he runs to the side the split man is lined up on — so the Z moves to the left for this one and the call says so. Fake to the back going right, seal their end inside, and get outside our own end behind two blockers: the near back on the linebacker and the split man on the corner. Blocked exactly like Pitch.
+
+| Position | Assignment |
+|---|---|
+| **LTE** | Seal the edge. Block the end over you and turn him inside — the quarterback is going around behind you, so he cannot be allowed to follow him out. |
+| **LT** | Reach the tackle on your inside shoulder. Get your head across him — he cannot be allowed to run down the line after this. |
+| **LG** | Nobody is over you. Climb to the middle linebacker and cut him off from the sideline. |
+| **C** | Reach the nose. Get your head across his playside shoulder. |
+| **RG** | Nobody is over you. Cut off the backside — nothing chases this from behind. |
+| **RT** | Block back. Take the first defender on or inside you — nobody crosses your face. |
+| **RTE** | Cut off pursuit from behind. You are the last one to the ball, so never quit on the play. |
+| **Z** | Block the corner over you and drive him toward the sideline. You moved over here for this block — he is the only man out there who can catch the quarterback. |
+| **QB** **(ball)** | Show the ball to the back going right, pull it in on your back hip, and get outside our end. Tuck it on the first step and go north the moment the edge is sealed — do not drift sideways looking for more. |
+| **LH** | Get outside our end ahead of the quarterback and block the first man outside. He is running off your shoulder, so do not let that man cross your face to the inside. |
+| **RH** | Run the sweep path away at full speed with your arms tucked. You are the lie, and the linebackers only leave if you are worth watching. |
+
+**Coaching points**
+
+- Blocked exactly like Pitch — the line does not learn a new rule, only a new name. Say that out loud when you install it.
+- This is the one play that moves the split man, so the huddle hears which side he is on: Z Right or Z Left. Count seven on the line before the snap like always.
+- The fake is the play. If nobody looks at the back going the other way, the quarterback is running straight into a linebacker who never left.
+- The quarterback is a runner here and nothing else. Tuck it on the first step, get to the edge, and turn up — a quarterback who drifts sideways looking for more gets caught from behind.
+- Do not call it until Pitch has been working. Their corner has to believe the ball is going wide before a keep inside him is worth anything.
 
 # Full House
 
