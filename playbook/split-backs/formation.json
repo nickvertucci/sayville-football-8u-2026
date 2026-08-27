@@ -5,7 +5,7 @@
   "family": "Split Backs",
   "summary": "Two backs split behind the quarterback and the Z out wide. One fewer back than a three-back look, and the receiver out there blocks the corner the pitch has to get around.",
   "personnel": "11 players, 2 tight ends, quarterback, 2 halfbacks, 1 Z split out",
-  "notes": "Both ends are tight on the line. The two backs sit four yards deep and just over two yards either side of the quarterback, one behind each guard–tackle gap — same depth, same split, so the alignment gives nothing away. The Z is off the line and split out wide, which keeps seven on the line. He is on the right on every play but the Keep, which takes him to the side it runs to, and the call names his side every time — Z Right or Z Left.",
+  "notes": "Both ends are tight on the line. The two backs sit four yards deep and just over two yards either side of the quarterback, one behind each guard–tackle gap — same depth, same split, so the alignment gives nothing away. The Z is off the line and split out wide, which keeps seven on the line. He is on the right on twelve of the fourteen; the Keep takes him to the side it runs to and the Reverse starts him on that same side, and the call names where he is every time — Z Right or Z Left.",
   "alignment": {
     "LTE": [
       -4.2,
@@ -70,8 +70,8 @@
     "Two backs, not three. There is no spare man in this backfield — on every snap one carries and the other one blocks or lies, so a back who coasts on a fake gives the whole play away.",
     "The man split out wide is the point of this formation. He blocks the corner on Pitch Right and cracks the linebacker on Counter Right — jobs a three-back backfield has to spend a back on.",
     "Both backs leave from the same depth and the same split, so nothing in the alignment says which one is getting it.",
-    "The Z lines up right on ten of the twelve, and the call says so — Z Right. The Keep is the exception: it runs to his side, so it flips him and calls itself Z Left. Naming his side on every play from the start is why that cost no new call language, only the other word.",
+    "The Z lines up right on twelve of the fourteen, and the call says so — Z Right. The two that put him on the left are the Keep Left and the Reverse Right, and they are the same picture: the Keep runs to the side he is on, and the Reverse is that Keep with the ball coming back the other way. Naming his side on every play from the start is why neither one cost any new call language, only the other word.",
     "Count seven on the line every snap. The Z creeping up onto the line is the illegal-formation flag this look draws — he is off it and split out, and he stays there.",
-    "Everything right gets the Z's block and everything left does not — except the Keep, which takes him with it. Run left when they start overplaying him, and know before you call it that the corner out there is not blocked."
+    "Everything right gets the Z's block and everything left does not — except the Keep and the Reverse, which take him with them. Run left when they start overplaying him, and know before you call it that the corner out there is not blocked."
   ]
 }

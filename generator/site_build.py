@@ -459,6 +459,8 @@ table.dc-board .dc-open {
    card and does not become a poster, and gets the full width of a phone instead of half. */
 .favgrid[data-count="1"] { grid-template-columns: minmax(0, 340px); }
 .favgrid[data-count="2"] { grid-template-columns: repeat(2, minmax(0, 340px)); }
+/* Four in a three-wide grid is three and a straggler. Two rows of two instead. */
+.favgrid[data-count="4"] { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .favcard {
   background: var(--panel); border: 1px solid var(--line); border-radius: 12px;
   overflow: hidden; box-shadow: var(--shadow);
