@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Prove the call check actually rejects a call that does not match its diagram.
 
-`render.py --check` passing tells you the 18 calls in the book are right. It does not
+`render.py --check` passing tells you every call in the book is right. It does not
 tell you the check would notice if one were wrong — a check that accepts everything
 passes just as quietly. This runs the real validator against deliberately broken calls
 and fails if any of them slips through.
