@@ -1,6 +1,7 @@
 {
-  "intro": "One play. If practice time is short, this is the one that cannot slip — Power out of the base formation, both ways off the same rules. Every other play in the book exists to set it up or to keep a defense from selling out against it.",
+  "intro": "Two plays. If practice time is short, these are the ones that cannot slip — Power out of the base formation and Pitch out of the Split Backs, each of them both ways off the same rules. Every other play in the book exists to set one of these up or to keep a defense from selling out against it.",
   "plays": [
-    {"right": "i-power-r", "left": "i-power-l"}
+    {"right": "i-power-r", "left": "i-power-l"},
+    {"right": "sb-pitch-r", "left": "sb-pitch-l"}
   ]
 }

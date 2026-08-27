@@ -1832,7 +1832,7 @@ def write_calls(formations: list[dict], defenses: dict, root: Path) -> str:
     )
 
     body = f"""<h1 class="page">Call sheet</h1>
-{fav_section}<p class="section-head">All Plays</p>
+{fav_section}<p class="hero-head">All Plays</p>
 <p class="lede">Every play in the book. Pick as many filters as you like — choices inside a
 group widen the list, choices across groups narrow it. Press <kbd>/</kbd> to jump to the
 search box.</p>
