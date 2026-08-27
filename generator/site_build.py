@@ -454,6 +454,11 @@ table.dc-board .dc-open {
 
 .favgrid { display: grid; gap: 12px; grid-template-columns: repeat(2, minmax(0,1fr)); margin-bottom: 6px; }
 @media (min-width: 560px) { .favgrid { grid-template-columns: repeat(3, minmax(0,1fr)); } }
+/* A short list is not a row with gaps in it. One or two favorites get their own columns
+   rather than a third of the row each — capped, so the diagram on a lone card stays a
+   card and does not become a poster, and gets the full width of a phone instead of half. */
+.favgrid[data-count="1"] { grid-template-columns: minmax(0, 340px); }
+.favgrid[data-count="2"] { grid-template-columns: repeat(2, minmax(0, 340px)); }
 .favcard {
   background: var(--panel); border: 1px solid var(--line); border-radius: 12px;
   overflow: hidden; box-shadow: var(--shadow);
@@ -1773,9 +1778,9 @@ def write_calls(formations: list[dict], defenses: dict, root: Path) -> str:
     fav_section = ""
     if fav_cards:
         intro = esc(favorites.get("intro", ""))
-        fav_section = f"""<p class="section-head">Favorite Plays</p>
+        fav_section = f"""<p class="hero-head">Favorite Plays</p>
 <p class="lede">{intro}</p>
-<div class="favgrid">
+<div class="favgrid" data-count="{len(fav_cards)}">
   {chr(10).join('  ' + c for c in fav_cards).strip()}
 </div>
 
