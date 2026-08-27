@@ -34,6 +34,11 @@ CHROME_CANDIDATES = [
     Path.home() / "AppData/Local/Google/Chrome/Application/chrome.exe",
     Path("/usr/bin/google-chrome"),
     Path("/usr/bin/chromium"),
+    # Debian and Ubuntu have shipped the binary as chromium-browser for years, and the
+    # snap puts it somewhere else again. Without these the test tells a contributor on
+    # the most common Linux desktop that Chrome is not installed when it is.
+    Path("/usr/bin/chromium-browser"),
+    Path("/snap/bin/chromium"),
     Path("/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"),
 ]
 
@@ -42,8 +47,11 @@ def find_chrome() -> Path | None:
     for c in CHROME_CANDIDATES:
         if c and c.is_file():
             return c
-    found = shutil.which("google-chrome") or shutil.which("chromium")
-    return Path(found) if found else None
+    for name in ("google-chrome", "chromium", "chromium-browser"):
+        found = shutil.which(name)
+        if found:
+            return Path(found)
+    return None
 
 
 def page_count(pdf: Path) -> int:
