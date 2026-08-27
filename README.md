@@ -26,9 +26,9 @@ digits: the first says **who carries it**, the second says **where it goes**. So
 `Regular I Z Right 20 Dive` is the Regular I, Z on the right, the fullback through
 the 0 hole.
 
-Every play in the book is `Z Right` today — the Z never moves. It is named in the
-call anyway so a `Z Left` look can be added later without changing how a single play
-is called.
+Every Regular I play is `Z Right` — the Z does not move in this formation. Naming his
+side in the call anyway is what let the Split Backs add a `Z Left` look later without
+changing how a single play is called.
 
 | Back | Who |
 |---|---|
@@ -116,6 +116,11 @@ both I looks.
 | `Split Z Right 35 Counter` / `24 Counter` | Split Counter Left / Right | the far back, tackle–end |
 | `Split Z Right 17 Waggle` / `16 Waggle` | Split Waggle Left / Right | quarterback, off the dive fake |
 | `Split Z Right 39 Pitch` / `28 Pitch` | Split Pitch Left / Right | the far back, all the way outside |
+| `Split Z Left 17 Keep` / `Split Z Right 16 Keep` | Split QB Keep Left / Right | quarterback, outside the tight end |
+
+**The Keep is the one play that moves the Z**, because it runs to whichever side he is
+on — so `Split Z Left 17 Keep` really does line him up on the left, and the huddle already
+had the words for it. Everything else in the formation is `Z Right`.
 
 The back digit follows whoever actually carries it. On Dive it is the back on the play
 side, going straight ahead off the double team; on Power, Counter and Pitch it is the far
@@ -141,18 +146,18 @@ out the edge.
 **Play word** — the Regular I carries `Dive`, `Iso`, `Slant`, `Toss`, `Counter`, `Sneak`,
 `Power`, `Wedge` and `Jet`, plus the play-action `Boot`, `Waggle`, `Jet Boot` and
 `Power Boot`; the Power I runs `Power`, `Counter` and `Toss`; the Split Backs `Dive`,
-`Power`, `Counter`, `Pitch`; the Full House `Dive`, `Power`, `Sweep`. Every formation carries at
+`Power`, `Counter`, `Pitch` and `Keep`; the Full House `Dive`, `Power`, `Sweep`. Every formation carries at
 least one play-action pass, on the play word `Boot` or `Waggle`.
 
 ## Formations
 
-Four formations, 52 plays, in teaching order:
+Four formations, 54 plays, in teaching order:
 
 | # | Formation | Family | Plays | What it is for |
 |---|---|---|---|---|
 | 1 | **Regular I** | Regular I | 26 | Base offense. Fullback and tailback stacked, so the same look threatens the middle and both edges. Teaches a back to read a block, and carries the Power, Wedge and Jet package built around the Z. |
 | 2 | **Power I** | Power I | 8 | The base I with the Z dropped into the backfield as a third back — an extra runner and blocker at the point of attack. Power, Counter and Toss each way, plus a Z Power that hands the third back the ball and leads him the other way. |
-| 3 | **Split Backs** | Split Backs | 10 | Two backs at even depth and a Z split out wide. One fewer back than a three-back look, and the receiver out there blocks the corner the pitch has to get around. |
+| 3 | **Split Backs** | Split Backs | 12 | Two backs at even depth and a Z split out wide. One fewer back than a three-back look, and the receiver out there blocks the corner the pitch and the quarterback keep have to get around. |
 | 4 | **Full House** | Full House | 8 | Three backs in a straight line at the same depth. The alignment gives nothing away, and every run splits the same three jobs — carry, kick out, lead. |
 
 All four are two-tight-end, downhill running formations, so the blocking language carries
@@ -223,7 +228,7 @@ on a phone, with the assignments read underneath it rather than squeezed in besi
 
 ## Printing
 
-- **Print book** (top bar) → 56 landscape pages: 52 plays then 4 defensive fronts,
+- **Print book** (top bar) → 58 landscape pages: 54 plays then 4 defensive fronts,
   one per sheet.
 - **Print** (on any play or front page) → that one card, one landscape sheet.
 
@@ -301,7 +306,7 @@ Only the JSON under `playbook/` and `defense/` is source. Everything else with a
 
 ## Every offensive play is drawn and blocked against the 5-3
 
-Forty-eight of the 52 plays are drawn against the **5-3**, and their assignments are
+Fifty of the 54 plays are drawn against the **5-3**, and their assignments are
 written for that front specifically rather than in general terms. The four exceptions are
 the short-yardage plays — **Regular I Sneak** and **Regular I Wedge**, each way — drawn
 against the **6-3** because that is the heaviest front the league allows and it is what
