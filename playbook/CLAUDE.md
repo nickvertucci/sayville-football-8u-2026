@@ -122,8 +122,8 @@ so there is one copy of the numbering rather than three that can disagree.
 
 ### `name` and `call` are different on purpose
 
-Both are printed at the top of every card. `name` is the teaching name (*Bone Power
-Right*); `call` is the huddle call in the team's play-calling language (`Bone 44 Power` —
+Both are printed at the top of every card. `name` is the teaching name (*House Power
+Right*); `call` is the huddle call in the team's play-calling language (`House 44 Power` —
 formation, then **two digits: who carries it and where it goes**, then the play word).
 The numbering system is documented in the top-level [README](../README.md).
 
@@ -158,15 +158,15 @@ wrong against this front.
 For a **symmetric** formation, left-handed plays are one file:
 
 ```json
-{ "id": "wb-power-l", "name": "Bone Power Left", "call": "Bone 35 Power", "mirror_of": "wb-power-r" }
+{ "id": "fh-power-l", "name": "House Power Left", "call": "House 35 Power", "mirror_of": "fh-power-r" }
 ```
 
 The generator flips every path across the middle, swaps the position keys, and swaps the
 words "left" and "right" in every rule, purpose and coaching point.
 
 **The call is not mirrored — you write it.** Mirroring swaps `TB` and `Z`, so the back
-digit changes too: `Bone 44 Power` is the `Z` (the left back) through the 4 hole, and its
-mirror is `Bone 35 Power` — the `TB`, back 3, through the 5 hole. Get that wrong and
+digit changes too: `House 44 Power` is the `Z` (the left back) through the 4 hole, and its
+mirror is `House 35 Power` — the `TB`, back 3, through the 5 hole. Get that wrong and
 the call check catches it, because the digits no longer match the flipped path.
 
 **Only use `mirror_of` when the formation is symmetric.** A position with no counterpart
@@ -174,11 +174,13 @@ in the `MIRROR` table maps to itself, which is correct for someone aligned on th
 (`C`, `QB`, `FB`) and wrong for a one-sided back or receiver; the two side backs are
 named `TB` and `Z` and the table swaps them.
 
-- **Wishbone and Full House are symmetric** — they use `mirror_of`, so a left-handed play
-  is a four-line file.
-- **Regular I and Power I are not.** The `Z` sits on the right on every snap — out wide
-  in the Regular I, in the backfield in the Power I — so mirroring would flip its path
-  while leaving it aligned on the same side. Their left-handed plays are authored by hand.
+- **Full House is symmetric** — it uses `mirror_of`, so a left-handed play is a
+  four-line file.
+- **Regular I, Power I and Split Backs are not.** The `Z` sits on the right on every
+  snap — out wide in the Regular I and the Split Backs, in the backfield in the Power
+  I — so mirroring would flip its path while leaving it aligned on the same side. Their
+  left-handed plays are authored by hand, and their two side backs carry keys the
+  `MIRROR` table would not swap anyway (`LH` and `RH` in the Split Backs).
 
 **This is also why rules never name a specific position.** Write "the playside end", "the
 backside guard", "the center" — never "RTE" or "LG". Position abbreviations are not

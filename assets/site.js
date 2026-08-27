@@ -92,10 +92,10 @@
 /* Call sheet filtering.
 
    Every chip belongs to a group (formation, type, zone, direction, carrier). Picking
-   two chips in the SAME group widens the list — Wishbone or Full House. Picking chips
-   in DIFFERENT groups narrows it — Wishbone AND runs. The old single-string filter
-   could not express that at all: formation and type shared one exclusive group, so
-   "Wishbone runs" quietly turned into "all runs". */
+   two chips in the SAME group widens the list — Split Backs or Full House. Picking
+   chips in DIFFERENT groups narrows it — Split Backs AND runs. The old single-string
+   filter could not express that at all: formation and type shared one exclusive group,
+   so "Split Backs runs" quietly turned into "all runs". */
 (function () {
   var q = document.getElementById('q');
   if (!q) return;

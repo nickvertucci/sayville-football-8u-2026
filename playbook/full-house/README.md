@@ -22,8 +22,8 @@ The full house T. Both ends are tight on the line; the three backs sit shoulder 
 
 **Formation coaching notes**
 
-- The back digits match the Wishbone on purpose — 2 fullback, 3 right back, 4 left back. A kid who knows Bone calls already knows House calls.
-- Same depth for all three backs is the whole idea — in the Wishbone a smart defense reads the closer fullback; here all three leave at the same time.
+- The back digits are the book's digits — 2 fullback, 3 the right-side back, 4 the left one. A kid who knows the I's numbers already knows these.
+- Same depth for all three backs is the whole idea — put one closer than the others and a smart defense reads him; here all three leave at the same time.
 - Every run uses all three backs: one carries, one kicks out, one leads through. Teach the three jobs, not the plays — they work both directions.
 - Count seven on the line every snap. No Z to creep up here, so this formation draws the fewest illegal-formation flags.
 - Symmetric formation, symmetric rules — the kids learn one play and get two.

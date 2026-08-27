@@ -1,0 +1,162 @@
+{
+  "id": "sb-power-r",
+  "order": 3,
+  "formation": "split-backs",
+  "name": "Split Power Right",
+  "call": "Split Z Right 24 Power",
+  "type": "run",
+  "defense": "5-3",
+  "direction": "right",
+  "ball_carrier": "LH",
+  "purpose": "Off-tackle power to the far back, who crosses behind the quarterback and takes a deep handoff. Nobody pulls: our end drives their end out, the playside guard climbs to the middle linebacker and the near back leads up through the hole onto the playside linebacker.",
+  "assignments": {
+    "LTE": {
+      "rule": "Cut off pursuit from behind. You are the last one to the ball, so never quit on the play.",
+      "type": "block",
+      "path": [
+        [
+          1.0,
+          0.7
+        ]
+      ]
+    },
+    "LT": {
+      "rule": "Block back. Take the first defender on or inside you — nobody crosses your face.",
+      "type": "block",
+      "path": [
+        [
+          1.0,
+          0.7
+        ]
+      ]
+    },
+    "LG": {
+      "rule": "Nobody is over you. Cut off the backside.",
+      "type": "block",
+      "path": [
+        [
+          1.0,
+          0.7
+        ]
+      ]
+    },
+    "C": {
+      "rule": "You have the nose, head up on you. Hands inside and do not let him cross your face to the playside.",
+      "type": "block",
+      "path": [
+        [
+          0.3,
+          1.1
+        ]
+      ]
+    },
+    "RG": {
+      "rule": "Nobody is over you. Climb straight to the middle linebacker and take him wherever he goes.",
+      "type": "block",
+      "path": [
+        [
+          0.2,
+          1.2
+        ],
+        [
+          -1.4,
+          3.5
+        ]
+      ]
+    },
+    "RT": {
+      "rule": "The tackle is on your inside shoulder. Block him down and seal him inside — that is what opens the hole.",
+      "type": "block",
+      "path": [
+        [
+          -0.4,
+          1.3
+        ]
+      ]
+    },
+    "RTE": {
+      "rule": "Block the end over you and drive him out, away from the hole. Nobody is kicking him out for you — he is yours.",
+      "type": "block",
+      "path": [
+        [
+          0.3,
+          1.3
+        ]
+      ]
+    },
+    "Z": {
+      "rule": "Stalk the corner over you and stay in front of him. If the ball bounces outside, you are the reason it can.",
+      "type": "block",
+      "path": [
+        [
+          0.4,
+          3.0
+        ]
+      ]
+    },
+    "QB": {
+      "rule": "Open to the playside and hand deep to the back crossing from the backside. Let him come to you, then fake away.",
+      "type": "fake",
+      "path": [
+        [
+          0.5,
+          -0.5
+        ],
+        [
+          -0.9,
+          -0.9
+        ],
+        [
+          -3.0,
+          -0.6
+        ]
+      ]
+    },
+    "RH": {
+      "rule": "Lead up through the hole and block the playside linebacker. You are the lead blocker — the ball is right behind you.",
+      "type": "block",
+      "path": [
+        [
+          0.6,
+          2.2
+        ],
+        [
+          1.4,
+          4.6
+        ],
+        [
+          1.6,
+          6.4
+        ]
+      ]
+    },
+    "LH": {
+      "rule": "You carry it. Cross behind the quarterback, take the handoff deep, then press the outside hip of our tackle and turn up inside the blocks.",
+      "type": "run",
+      "path": [
+        [
+          1.4,
+          0.6
+        ],
+        [
+          3.8,
+          1.8
+        ],
+        [
+          5.6,
+          4.4
+        ],
+        [
+          6.0,
+          7.0
+        ]
+      ]
+    }
+  },
+  "coaching_points": [
+    "Identical blocking to Split Counter. The line learns one set of rules and gets two plays out of it — say that out loud when you install the second one.",
+    "The near back's block on the playside linebacker is the play. Drill it on its own.",
+    "The carrier travels further than the blocker, and that is the point — he arrives behind the lead, not beside it.",
+    "If the handoff is late, the quarterback is reaching. He holds the ball still and lets the back run through it."
+  ]
+}

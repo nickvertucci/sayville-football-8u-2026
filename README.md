@@ -32,10 +32,10 @@ is called.
 
 | Back | Who |
 |---|---|
-| **1** | Quarterback — both formations |
-| **2** | Fullback — both formations |
-| **3** | The tailback (TB) — behind the fullback in the I, the right-side back in the Wishbone and Full House |
-| **4** | The Z — the flanker in the I, the left-side back in the Wishbone and Full House |
+| **1** | Quarterback — every formation |
+| **2** | The fullback in the I looks and the Full House; the left back (LH) in the Split Backs |
+| **3** | The tailback (TB) — behind the fullback in the I, the right-side back in the Full House; the right back (RH) in the Split Backs |
+| **4** | The Z — the flanker in the I and the Split Backs, in the backfield in the Power I, the left-side back in the Full House |
 
 | Hole | Where |
 |---|---|
@@ -101,28 +101,32 @@ the other way.
 | `Power I Left 46 Power` / `Power I Right 45 Power` | Power I Z Power Right / Left | the Z, away from his side behind three leads |
 | `Power I Right 38 Toss` / `Power I Left 39 Toss` | Power I Toss Right / Left | tailback, all the way outside |
 
-### Wishbone: formation + back + hole + play word
+### Split Backs: formation + Z + back + hole + play word
 
-Same two digits, two more backs to number. No Z out wide, so nothing to declare there.
+Two backs to number instead of three, and a Z out wide to declare — so the call reads
+like the Regular I's. `Split Z Right 24 Power` is the Split Backs, Z on the right, the
+left back through the 4 hole. The two halfbacks are back **2** (LH, the left one) and
+back **3** (RH, the right one); the Z out wide keeps **4**, the number he carries in
+both I looks.
 
 | Call | Play | Reads as |
 |---|---|---|
-| `Bone 21 Dive` / `Bone 20 Dive` | Bone Dive Left / Right | fullback, center–guard |
-| `Bone 35 Power` / `Bone 44 Power` | Bone Power Left / Right | the far back, tackle–end |
-| `Bone 39 Pitch` / `Bone 48 Pitch` | Bone Pitch Left / Right | the far back, all the way outside |
-| `Bone 35 Counter` / `Bone 44 Counter` | Bone Counter Left / Right | the far back, tackle–end |
-| `Bone 16 Waggle` | Bone Waggle Right | quarterback, off the dive fake |
+| `Split Z Right 21 Dive` / `30 Dive` | Split Dive Left / Right | the near back, center–guard |
+| `Split Z Right 35 Power` / `24 Power` | Split Power Left / Right | the far back, tackle–end |
+| `Split Z Right 35 Counter` / `24 Counter` | Split Counter Left / Right | the far back, tackle–end |
+| `Split Z Right 17 Waggle` / `16 Waggle` | Split Waggle Left / Right | quarterback, off the dive fake |
+| `Split Z Right 39 Pitch` / `28 Pitch` | Split Pitch Left / Right | the far back, all the way outside |
 
-The back digit follows whoever actually carries it, which is why everything to the right is
-a `4` — the Z, the far back on the left, takes the handoff on Power and Counter, and on
-Pitch he is the trailing back who catches the ball. The near back (TB) is not idle on Pitch; he leads and
-kicks out the edge, which is why the carrier is the far one.
+The back digit follows whoever actually carries it. On Dive it is the back on the play
+side, going straight ahead off the double team; on Power, Counter and Pitch it is the far
+back, because the near one is busy leading through the hole or holding the linebackers
+with a fake.
 
 ### Full House: formation + back + hole + play word
 
-Three backs in a straight line, so the digits are the Wishbone's digits — `2` fullback,
-`3` the right back (TB), `4` the left back (Z). A kid who knows `Bone` calls already knows `House`
-calls.
+Three backs in a straight line, numbered the way the rest of the book numbers backs —
+`2` fullback, `3` the right back (TB), `4` the left back (Z). A kid who knows the I's
+numbers already knows `House` calls.
 
 | Call | Play | Reads as |
 |---|---|---|
@@ -131,13 +135,13 @@ calls.
 | `House 39 Sweep` / `House 48 Sweep` | House Sweep Left / Right | the far back, all the way outside |
 | `House 17 Boot` | House Boot Left | quarterback, off the Power fake |
 
-Same rule as the Wishbone: the far back carries, because the near one is busy kicking
+Same rule as the Split Backs: the far back carries, because the near one is busy kicking
 out the edge.
 
 **Play word** — the Regular I carries `Dive`, `Iso`, `Slant`, `Toss`, `Counter`, `Sneak`,
 `Power`, `Wedge` and `Jet`, plus the play-action `Boot`, `Waggle`, `Jet Boot` and
-`Power Boot`; the Power I runs `Power`, `Counter` and `Toss`; the Wishbone `Dive`, `Power`,
-`Pitch`, `Counter`; the Full House `Dive`, `Power`, `Sweep`. Every formation carries at
+`Power Boot`; the Power I runs `Power`, `Counter` and `Toss`; the Split Backs `Dive`,
+`Power`, `Counter`, `Pitch`; the Full House `Dive`, `Power`, `Sweep`. Every formation carries at
 least one play-action pass, on the play word `Boot` or `Waggle`.
 
 ## Formations
@@ -148,7 +152,7 @@ Four formations, 52 plays, in teaching order:
 |---|---|---|---|---|
 | 1 | **Regular I** | Regular I | 26 | Base offense. Fullback and tailback stacked, so the same look threatens the middle and both edges. Teaches a back to read a block, and carries the Power, Wedge and Jet package built around the Z. |
 | 2 | **Power I** | Power I | 8 | The base I with the Z dropped into the backfield as a third back — an extra runner and blocker at the point of attack. Power, Counter and Toss each way, plus a Z Power that hands the third back the ball and leads him the other way. |
-| 3 | **Wishbone** | Wishbone | 10 | Three backs, three threats every snap. Symmetric, so every play works both directions off identical rules. |
+| 3 | **Split Backs** | Split Backs | 10 | Two backs at even depth and a Z split out wide. One fewer back than a three-back look, and the receiver out there blocks the corner the pitch has to get around. |
 | 4 | **Full House** | Full House | 8 | Three backs in a straight line at the same depth. The alignment gives nothing away, and every run splits the same three jobs — carry, kick out, lead. |
 
 All four are two-tight-end, downhill running formations, so the blocking language carries
@@ -160,20 +164,23 @@ runs and boots the quarterback the other way, so it is the same first three step
 defense has already been punished for respecting. They exist so nobody can put nine in the
 box and forget the edge — not to throw the ball. Every one says *run first, throw second*,
 because no blitzing is allowed at this age (9.02) and the quarterback usually walks into
-ten yards before anybody finds him. The Wishbone and Full House keep one each; the Regular
-I, holding the most plays, carries several off the toss, the dive, the jet and the power.
+ten yards before anybody finds him. The Split Backs and Full House keep one each; the
+Regular I, holding the most plays, carries several off the toss, the dive, the jet and the
+power.
 
 Two of them are nearly free to install. The **Power I** is the base I with the Z dropped into the backfield, so no line rule
-changes at all. The **Full House** shares the Wishbone's
-back numbering and the same carry/kick-out/lead division of labour, so a team that knows
-`Bone` calls already knows `House` calls.
+changes at all. The **Full House** shares the Split Backs' carry/kick-out/lead division of
+labour and adds a third back to it, so a team that knows `Split` calls is most of the way
+to `House` calls.
 
-**Symmetric formations author left-handed plays in one line.** The Wishbone and the Full
-House are mirror-symmetric, so `House 35 Power` is a four-line file that says
+**Symmetric formations author left-handed plays in one line.** The Full House is
+mirror-symmetric, so `House 35 Power` is a four-line file that says
 `"mirror_of": "fh-power-r"` — the generator flips every path, swaps the position keys and
-swaps the left/right wording. The Regular I and the Power I are *not* symmetric (the Z sits right on every snap —
-out wide in the Regular I, in the backfield in the Power I), so their left-handed plays
-are written by hand.
+swaps the left/right wording. The Regular I, the Power I and the Split Backs are *not*
+symmetric (the Z sits right on every snap — out wide in the Regular I and the Split Backs,
+in the backfield in the Power I), so their left-handed plays are written by hand. In the
+Split Backs that is not busywork: the two sides are genuinely different plays, because
+only the right one has a receiver out there to crack the linebacker or block the corner.
 
 ## Defense
 

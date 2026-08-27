@@ -1,8 +1,0 @@
-{
-  "id": "wb-waggle-l",
-  "order": 8,
-  "formation": "wishbone",
-  "name": "Bone Waggle Left",
-  "call": "Bone 17 Waggle",
-  "mirror_of": "wb-waggle-r"
-}

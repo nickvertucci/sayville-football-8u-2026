@@ -1,0 +1,162 @@
+{
+  "id": "sb-counter-r",
+  "order": 5,
+  "formation": "split-backs",
+  "name": "Split Counter Right",
+  "call": "Split Z Right 24 Counter",
+  "type": "run",
+  "defense": "5-3",
+  "direction": "right",
+  "ball_carrier": "LH",
+  "purpose": "Misdirection off the pitch. The near back and the quarterback sell the pitch one way and the far back plants and comes all the way back. Nobody pulls and nobody leads, so it hits faster than Power off the same blocks.",
+  "assignments": {
+    "LTE": {
+      "rule": "Cut off pursuit from behind. You are the last one to the ball, so never quit on the play.",
+      "type": "block",
+      "path": [
+        [
+          1.0,
+          0.7
+        ]
+      ]
+    },
+    "LT": {
+      "rule": "Block back. Take the first defender on or inside you — nobody crosses your face.",
+      "type": "block",
+      "path": [
+        [
+          1.0,
+          0.7
+        ]
+      ]
+    },
+    "LG": {
+      "rule": "Nobody is over you. Cut off the backside.",
+      "type": "block",
+      "path": [
+        [
+          1.0,
+          0.7
+        ]
+      ]
+    },
+    "C": {
+      "rule": "You have the nose, head up on you. Hands inside and do not let him cross your face to the playside.",
+      "type": "block",
+      "path": [
+        [
+          0.3,
+          1.1
+        ]
+      ]
+    },
+    "RG": {
+      "rule": "Nobody is over you. Climb straight to the middle linebacker and take him wherever he goes.",
+      "type": "block",
+      "path": [
+        [
+          0.2,
+          1.2
+        ],
+        [
+          -1.4,
+          3.5
+        ]
+      ]
+    },
+    "RT": {
+      "rule": "The tackle is on your inside shoulder. Block him down and seal him inside — that is what opens the hole.",
+      "type": "block",
+      "path": [
+        [
+          -0.4,
+          1.3
+        ]
+      ]
+    },
+    "RTE": {
+      "rule": "Block the end over you and drive him out, away from the hole. Nobody is kicking him out for you — he is yours.",
+      "type": "block",
+      "path": [
+        [
+          0.3,
+          1.3
+        ]
+      ]
+    },
+    "Z": {
+      "rule": "Crack down inside on the playside linebacker. Leave like you are running a route so he never sees you coming, and do not go low.",
+      "type": "block",
+      "path": [
+        [
+          -4.0,
+          3.6
+        ],
+        [
+          -4.6,
+          4.4
+        ]
+      ]
+    },
+    "QB": {
+      "rule": "Fake the pitch to the left, then turn back and hand the ball to the other back coming across. The fake comes first.",
+      "type": "fake",
+      "path": [
+        [
+          -1.2,
+          -0.5
+        ],
+        [
+          0.4,
+          -0.8
+        ],
+        [
+          1.4,
+          -0.6
+        ]
+      ]
+    },
+    "RH": {
+      "rule": "Run the full pitch path away at full speed with your arms tucked. You are the lie.",
+      "type": "fake",
+      "path": [
+        [
+          -2.6,
+          1.0
+        ],
+        [
+          -6.0,
+          2.2
+        ]
+      ]
+    },
+    "LH": {
+      "rule": "Take two hard steps toward the fake, then plant and come all the way back behind the down blocks.",
+      "type": "run",
+      "path": [
+        [
+          -1.2,
+          0.5
+        ],
+        [
+          1.8,
+          1.6
+        ],
+        [
+          5.4,
+          3.4
+        ],
+        [
+          6.0,
+          6.0
+        ]
+      ]
+    }
+  },
+  "coaching_points": [
+    "Do not call this until the pitch has been working. It is the counter-punch.",
+    "No pullers and no lead blocker, so this hits faster than Power off exactly the same line rules. The line has to hold its blocks while the ball carrier crosses.",
+    "The Z's crack on the playside linebacker is what springs this one. Drill it on its own, and drill leaving flat and low-shouldered so it looks like a route until it is too late.",
+    "Two hard steps toward the fake before he comes back. A shuffle fools nobody."
+  ]
+}

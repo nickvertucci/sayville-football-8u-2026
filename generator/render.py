@@ -75,9 +75,9 @@ MIRROR = {
     "LG": "RG", "RG": "LG",
     "C": "C", "QB": "QB", "FB": "FB",
     # The two halfbacks of a symmetric formation are named TB (right) and Z (left),
-    # so mirroring a right-handed play swaps them. Only the symmetric Wishbone and Full
-    # House use mirror_of; the Regular I and Power I keep TB and Z on fixed sides and
-    # author their left-handed plays by hand, so this swap never touches them.
+    # so mirroring a right-handed play swaps them. Only the symmetric Full House uses
+    # mirror_of; the Regular I, the Power I and the Split Backs keep the Z on a fixed
+    # side and author their left-handed plays by hand, so this swap never touches them.
     "TB": "Z", "Z": "TB",
 }
 
