@@ -381,6 +381,33 @@ table.dc-board .dc-open {
 .dc-slot.dc-open { color: var(--muted); font-style: italic; font-weight: 500; }
 .dc-slot.dc-open b { background: var(--line); color: var(--muted); }
 
+/* ------------------------------------------------------------------ rotations -- */
+/* Purple and Gold are the two units, and they are the top split on this page: a
+   rotation is what actually runs onto the field, so it is the thing you hand
+   somebody, and offense and defense sit side by side inside it rather than being
+   two separate pages you have to hold at once. */
+.rot { border-left: 6px solid var(--rot); padding-left: 16px; margin: 34px 0 0; }
+.rot[data-rot="purple"] { --rot: #5b2d8e; }
+.rot[data-rot="gold"] { --rot: #8a6508; }
+.rot .hero-head { background: var(--rot); margin: 0 0 4px; }
+.rot-sub {
+  display: inline-block; margin-left: 10px; font-size: 13px; font-weight: 700;
+  letter-spacing: .6px; text-transform: uppercase; opacity: .82;
+}
+.rot-grid { display: grid; gap: 20px; grid-template-columns: 1fr; margin-top: 14px; }
+@media (min-width: 900px) { .rot-grid { grid-template-columns: 1fr 1fr; } }
+.rot-h {
+  margin: 0 0 8px; font-size: 12px; font-weight: 800; letter-spacing: 1.4px;
+  text-transform: uppercase; color: var(--muted);
+}
+/* A unit short of eleven is a hole somebody has to fill, so say so next to the
+   heading instead of making the coach count Open rows. */
+.rot-gap {
+  margin-left: 6px; color: var(--red); font-weight: 800; letter-spacing: 0;
+}
+.rot-spare { margin: 16px 0 4px; }
+.rot-spare .dc-slots { display: flex; flex-wrap: wrap; gap: 8px; }
+
 .pkg {
   margin: 14px 0 8px; padding: 14px 16px 4px; background: var(--panel);
   border: 1px solid var(--line); border-left: 4px solid var(--accent-solid);
@@ -920,17 +947,34 @@ footer.site a { color: var(--accent-ink); }
   ul.coach li { font-size: 8pt; line-height: 1.32; margin-bottom: 2px; }
   a[href]::after { content: ""; }
 
-  /* Depth chart: offense on one sheet, defense on the next. The two sides go on
-     a clipboard separately — the coach running the defense should not have to be
-     handed the offense's page to read his own.
+  /* Depth chart: one rotation per sheet, offense and defense side by side on it.
+     Hand the Purple sheet to the group that is on the field and the Gold sheet to
+     the group that is coming on, and neither is holding the other's paper.
 
-     Break *before* each side after the first rather than after every side. A
+     Break *before* each rotation after the first rather than after every one. A
      trailing break-after emits a blank final sheet, and :last-of-type does not
      save you from it: the sections are not the only element type under main, so
-     the selector misses and you print three pages for two boards. Measured with
-     test_print_pages.py, which is why this is a + selector and not a comment
+     the selector misses and you print three pages for two rotations. Measured
+     with test_print_pages.py, which is why this is a + selector and not a comment
      apologising for the extra page. */
   .dc-side + .dc-side { page-break-before: always; break-before: page; }
+  /* The two units stay side by side on paper. A rotation is one name per spot, so
+     the pair fits a portrait sheet across — stacking them would spill. */
+  .rot-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 8px;
+  }
+  .rot-col { break-inside: avoid; page-break-inside: avoid; }
+  .rot { border-left: 4px solid #000; padding-left: 10px; margin: 0; }
+  /* Background fills are a print-settings gamble; the rotation name is already
+     spelled out, so print it as plain text with a rule under it and let the left
+     border carry the rest. */
+  .rot .hero-head {
+    background: none; color: #000; padding: 0 0 3px; margin: 0;
+    border-bottom: 2px solid #000; border-radius: 0; display: block;
+  }
+  .rot-sub { font-size: 9pt; opacity: 1; }
+  .rot-h { font-size: 8pt; margin: 0 0 4px; }
+  .rot-spare { margin: 8px 0 0; }
   /* Screen scrolls the wide board sideways; paper has nowhere to scroll to, and
      a clipped overflow box silently drops the last string. */
   .tablewrap.dc-board-wrap {
@@ -957,8 +1001,18 @@ footer.site a { color: var(--accent-ink); }
   .pkg { margin: 10px 0 0; padding: 8px 10px 2px; box-shadow: none; border-radius: 0; }
   .pkg-name { font-size: 9pt; margin: 0 0 2px; }
   .pkg-note { font-size: 7.5pt; margin: 0 0 5px; }
-  .pkg .dc-list, .dc-list { gap: 3px; margin-bottom: 4px; }
-  .dc-row {
-    padding: 3px 8px; border-radius: 0; box-shadow: none; gap: 8px;
+  /* The package is three spots, not a third unit. Stacked rows cost it the whole
+     bottom of the Purple sheet and push the rotation onto a second page, so on
+     paper it lays out across instead of down. */
+  .pkg .dc-list, .dc-list {
+    display: flex; flex-direction: row; flex-wrap: wrap;
+    gap: 4px 10px; margin-bottom: 2px;
   }
+  .dc-row {
+    padding: 2px 6px; border-radius: 0; box-shadow: none; gap: 6px;
+    flex: 0 0 auto; justify-content: flex-start;
+  }
+  .dc-row .dc-label { display: none; }
+  .dc-row .dc-abbr { font-size: 8pt; }
+  .dc-slot { font-size: 8pt; }
 }
