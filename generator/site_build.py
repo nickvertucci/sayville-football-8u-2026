@@ -961,6 +961,48 @@ footer.site a { color: var(--accent-ink); }
   ul.coach { columns: 3; column-gap: 18px; margin-top: 3px; }
   ul.coach li { font-size: 8pt; line-height: 1.32; margin-bottom: 2px; }
   a[href]::after { content: ""; }
+
+  /* Depth chart: offense on one sheet, defense on the next. The two sides go on
+     a clipboard separately — the coach running the defense should not have to be
+     handed the offense's page to read his own.
+
+     Break *before* each side after the first rather than after every side. A
+     trailing break-after emits a blank final sheet, and :last-of-type does not
+     save you from it: the sections are not the only element type under main, so
+     the selector misses and you print three pages for two boards. Measured with
+     test_print_pages.py, which is why this is a + selector and not a comment
+     apologising for the extra page. */
+  .dc-side + .dc-side { page-break-before: always; break-before: page; }
+  /* Screen scrolls the wide board sideways; paper has nowhere to scroll to, and
+     a clipped overflow box silently drops the last string. */
+  .tablewrap.dc-board-wrap {
+    overflow: visible; box-shadow: none; border-radius: 0;
+  }
+  table.dc-board { min-width: 0; }
+  table.dc-board th, table.dc-board td { padding: 5px 8px; }
+  table.dc-board .dc-poscell .dc-abbr { font-size: 11pt; }
+  table.dc-board .dc-poscell .dc-label { font-size: 7.5pt; }
+  table.dc-board td b { font-size: 10pt; }
+  table.dc-board thead th { padding: 6px 8px; font-size: 8pt; }
+  .dc-side .hero-head { margin: 0 0 10px; font-size: 17pt; padding: 5px 14px; }
+  /* The title block is the price of the first sheet and it is paid in rows: at
+     web sizes the h1, the lede and the Jumbo cards together cost more vertical
+     room than the four backfield spots underneath them, and the offense lands on
+     a second sheet by a single row.
+
+     The lede goes rather than the Jumbo package or the title. It is the note out
+     of roster.json, which explains how the file is structured to whoever edits
+     it — that is a reader sitting at a keyboard, not a coach holding the paper,
+     and the paper is the thing with a page limit. */
+  h1.page { font-size: 18pt; margin: 0 0 3px; }
+  .dc-note { display: none; }
+  .pkg { margin: 10px 0 0; padding: 8px 10px 2px; box-shadow: none; border-radius: 0; }
+  .pkg-name { font-size: 9pt; margin: 0 0 2px; }
+  .pkg-note { font-size: 7.5pt; margin: 0 0 5px; }
+  .pkg .dc-list, .dc-list { gap: 3px; margin-bottom: 4px; }
+  .dc-row {
+    padding: 3px 8px; border-radius: 0; box-shadow: none; gap: 8px;
+  }
 }
 """
 
@@ -2307,15 +2349,23 @@ def write_depth_chart(formations: list[dict], defenses: dict, root: Path) -> str
     packages_html = "".join(pkg_blocks)
 
     note = roster.get("note") or "Who plays where, one and two deep."
+    # Two sides, two sheets — see the .dc-side rules in the print stylesheet.
     body = f"""<h1 class="page">Depth Chart</h1>
-<p class="lede">{esc(note)}</p>
+<p class="lede dc-note">{esc(note)}</p>
+<div class="play-actions">
+  <button type="button" class="btn solid" onclick="window.print()">Print</button>
+</div>
 
+<section class="dc-side">
 <p class="hero-head">Offense</p>
 {off_board}
 {packages_html}
+</section>
 
+<section class="dc-side">
 <p class="hero-head">Defense</p>
-{def_board}"""
+{def_board}
+</section>"""
     return page(
         f"Depth Chart — {SITE_TITLE}",
         body,

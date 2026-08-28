@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Check every play prints on exactly one sheet.
+"""Check every play prints on exactly one sheet, and the depth chart on exactly two.
 
 A card that spills onto a second page is not a cosmetic problem: it is a coach at
 practice holding page one and looking for the coaching points on page two. The print
@@ -142,6 +142,19 @@ def main(argv=None) -> int:
             failures.append(
                 f"print.html renders {book} pages, expected {expected_book} — "
                 f"{book - expected_book} card(s) spilling onto a second sheet"
+            )
+
+        # The depth chart is two sheets by design: offense on one, defense on the
+        # other, so the coach running one side is not holding the other side's
+        # paper. It is also the page most likely to drift back to three — it grows
+        # a row every time a position is added, and it went over by a single row
+        # the first time it was built.
+        depth = render(chrome, ROOT / "depth-chart.html", tmp / "depth.pdf", profile)
+        print(f"depth-chart.html: {depth} pages (expected 2)")
+        if depth != 2:
+            failures.append(
+                f"depth-chart.html renders {depth} pages, expected 2 — offense and "
+                "defense must be one sheet each"
             )
 
         if not args.quick:
