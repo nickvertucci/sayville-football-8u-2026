@@ -76,6 +76,27 @@
       "finisher_time": "6:45–6:55",
       "huddle": "Review the practice.",
       "huddle_time": "6:55–7:00"
+    },
+    {
+      "n": 4,
+      "date": "Fri, Aug 28",
+      "phase": "preseason",
+      "focus": "Go live and set the first team",
+      "agility_time": "5:30–6:10",
+      "agility_drills": [
+        "Warm-ups — lap, dynamic stretch, form running (10 min)",
+        "Station 1 — tackling: approach, break down, wrap and drive (15 min)",
+        "Station 2 — blocking: fit, hands inside, drive the feet (15 min)",
+        "Two groups, swap on the whistle — every kid does both stations"
+      ],
+      "install_time": "6:10–6:50",
+      "emphasis": "No new install. Everything we already have — Dive and Wedge, both ways out of the Regular I — goes live for the rest of practice, and the point is personnel, not plays. Run the same handful over and over against a real look and watch who moves people, who finds the hole without being told and who tackles in space. Nobody gets a spot on reputation: the kid who does it live is the kid who starts.",
+      "requires": [
+        "i-dive-r",
+        "i-wedge"
+      ],
+      "huddle": "Name the first team out loud, and the first sub at every spot.",
+      "huddle_time": "6:50–7:00"
     }
   ]
 }
