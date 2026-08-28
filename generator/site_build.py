@@ -423,6 +423,33 @@ table.dc-board .dc-open {
 .dc-slot.dc-open { color: var(--muted); font-style: italic; font-weight: 500; }
 .dc-slot.dc-open b { background: var(--line); color: var(--muted); }
 
+/* ------------------------------------------------------------------ rotations -- */
+/* Purple and Gold are the two units, and they are the top split on this page: a
+   rotation is what actually runs onto the field, so it is the thing you hand
+   somebody, and offense and defense sit side by side inside it rather than being
+   two separate pages you have to hold at once. */
+.rot { border-left: 6px solid var(--rot); padding-left: 16px; margin: 34px 0 0; }
+.rot[data-rot="purple"] { --rot: #5b2d8e; }
+.rot[data-rot="gold"] { --rot: #8a6508; }
+.rot .hero-head { background: var(--rot); margin: 0 0 4px; }
+.rot-sub {
+  display: inline-block; margin-left: 10px; font-size: 13px; font-weight: 700;
+  letter-spacing: .6px; text-transform: uppercase; opacity: .82;
+}
+.rot-grid { display: grid; gap: 20px; grid-template-columns: 1fr; margin-top: 14px; }
+@media (min-width: 900px) { .rot-grid { grid-template-columns: 1fr 1fr; } }
+.rot-h {
+  margin: 0 0 8px; font-size: 12px; font-weight: 800; letter-spacing: 1.4px;
+  text-transform: uppercase; color: var(--muted);
+}
+/* A unit short of eleven is a hole somebody has to fill, so say so next to the
+   heading instead of making the coach count Open rows. */
+.rot-gap {
+  margin-left: 6px; color: var(--red); font-weight: 800; letter-spacing: 0;
+}
+.rot-spare { margin: 16px 0 4px; }
+.rot-spare .dc-slots { display: flex; flex-wrap: wrap; gap: 8px; }
+
 .pkg {
   margin: 14px 0 8px; padding: 14px 16px 4px; background: var(--panel);
   border: 1px solid var(--line); border-left: 4px solid var(--accent-solid);
@@ -962,17 +989,34 @@ footer.site a { color: var(--accent-ink); }
   ul.coach li { font-size: 8pt; line-height: 1.32; margin-bottom: 2px; }
   a[href]::after { content: ""; }
 
-  /* Depth chart: offense on one sheet, defense on the next. The two sides go on
-     a clipboard separately — the coach running the defense should not have to be
-     handed the offense's page to read his own.
+  /* Depth chart: one rotation per sheet, offense and defense side by side on it.
+     Hand the Purple sheet to the group that is on the field and the Gold sheet to
+     the group that is coming on, and neither is holding the other's paper.
 
-     Break *before* each side after the first rather than after every side. A
+     Break *before* each rotation after the first rather than after every one. A
      trailing break-after emits a blank final sheet, and :last-of-type does not
      save you from it: the sections are not the only element type under main, so
-     the selector misses and you print three pages for two boards. Measured with
-     test_print_pages.py, which is why this is a + selector and not a comment
+     the selector misses and you print three pages for two rotations. Measured
+     with test_print_pages.py, which is why this is a + selector and not a comment
      apologising for the extra page. */
   .dc-side + .dc-side { page-break-before: always; break-before: page; }
+  /* The two units stay side by side on paper. A rotation is one name per spot, so
+     the pair fits a portrait sheet across — stacking them would spill. */
+  .rot-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 8px;
+  }
+  .rot-col { break-inside: avoid; page-break-inside: avoid; }
+  .rot { border-left: 4px solid #000; padding-left: 10px; margin: 0; }
+  /* Background fills are a print-settings gamble; the rotation name is already
+     spelled out, so print it as plain text with a rule under it and let the left
+     border carry the rest. */
+  .rot .hero-head {
+    background: none; color: #000; padding: 0 0 3px; margin: 0;
+    border-bottom: 2px solid #000; border-radius: 0; display: block;
+  }
+  .rot-sub { font-size: 9pt; opacity: 1; }
+  .rot-h { font-size: 8pt; margin: 0 0 4px; }
+  .rot-spare { margin: 8px 0 0; }
   /* Screen scrolls the wide board sideways; paper has nowhere to scroll to, and
      a clipped overflow box silently drops the last string. */
   .tablewrap.dc-board-wrap {
@@ -999,10 +1043,20 @@ footer.site a { color: var(--accent-ink); }
   .pkg { margin: 10px 0 0; padding: 8px 10px 2px; box-shadow: none; border-radius: 0; }
   .pkg-name { font-size: 9pt; margin: 0 0 2px; }
   .pkg-note { font-size: 7.5pt; margin: 0 0 5px; }
-  .pkg .dc-list, .dc-list { gap: 3px; margin-bottom: 4px; }
-  .dc-row {
-    padding: 3px 8px; border-radius: 0; box-shadow: none; gap: 8px;
+  /* The package is three spots, not a third unit. Stacked rows cost it the whole
+     bottom of the Purple sheet and push the rotation onto a second page, so on
+     paper it lays out across instead of down. */
+  .pkg .dc-list, .dc-list {
+    display: flex; flex-direction: row; flex-wrap: wrap;
+    gap: 4px 10px; margin-bottom: 2px;
   }
+  .dc-row {
+    padding: 2px 6px; border-radius: 0; box-shadow: none; gap: 6px;
+    flex: 0 0 auto; justify-content: flex-start;
+  }
+  .dc-row .dc-label { display: none; }
+  .dc-row .dc-abbr { font-size: 8pt; }
+  .dc-slot { font-size: 8pt; }
 }
 """
 
@@ -2273,44 +2327,46 @@ def depth_rows(order: list[str], names_by_pos: dict, label_fn) -> str:
     return "".join(rows)
 
 
-ORDINALS = ["1st", "2nd", "3rd", "4th", "5th", "6th", "7th", "8th"]
+# The two rotations, in the order they take the field. Depth in roster.json *is*
+# the rotation: the first name at a position is Purple, the second is Gold. One
+# ordered list per position stays the thing a coach edits, and nobody has to keep
+# two copies of the same roster agreeing with each other.
+ROTATIONS = [
+    ("Purple", "starters", "purple"),
+    ("Gold", "second", "gold"),
+]
 
 
-def ordinal(i: int) -> str:
-    return ORDINALS[i] if i < len(ORDINALS) else f"{i + 1}th"
+def rotation_board(order: list[str], names_by_pos: dict, label_fn,
+                   idx: int, heading: str) -> str:
+    """One rotation's unit on one side of the ball: a single name at every spot.
 
-
-def depth_board(order: list[str], names_by_pos: dict, label_fn) -> str:
-    """The depth chart as a real board — positions down the left, string depth
-    across the top — the shape of an NFL team's depth chart, not a row of pill
-    chips. Columned out to whatever the deepest position on this side actually
-    runs (never fewer than three, the standard 1st/2nd/3rd), so a position five
-    deep doesn't lose its 4th and 5th string off the edge of the table.
+    A rotation is eleven kids who run onto the field together, so it reads as a
+    list of eleven and not as a column of a wider grid — the coach making a
+    substitution wants the whole unit in one glance, not one cell out of five.
+    A spot this rotation has nobody for says Open, loudly, because that is a hole
+    somebody has to fill before Saturday.
     """
-    depth = max([len(names_by_pos.get(pos) or []) for pos in order] + [3])
-    headers = "".join(f"<th>{ordinal(i)}</th>" for i in range(depth))
-    rows = []
+    rows, filled = [], 0
     for pos in order:
         names = names_by_pos.get(pos) or []
-        pos_cell = (
-            f'<td data-label="Position" class="dc-poscell">'
+        name = names[idx] if idx < len(names) else ""
+        if name:
+            filled += 1
+            cell = f'<td data-label="Player"><b>{esc(name)}</b></td>'
+        else:
+            cell = '<td data-label="Player" class="dc-open">Open</td>'
+        rows.append(
+            f'<tr><td data-label="Position" class="dc-poscell">'
             f'<span class="dc-abbr">{esc(pos)}</span>'
-            f'<span class="dc-label">{esc(label_fn(pos))}</span></td>'
+            f'<span class="dc-label">{esc(label_fn(pos))}</span></td>{cell}</tr>'
         )
-        if not names:
-            rows.append(f'<tr>{pos_cell}<td class="dc-open" colspan="{depth}">Open</td></tr>')
-            continue
-        cells = []
-        for i in range(depth):
-            if i < len(names):
-                cells.append(f'<td data-label="{ordinal(i)}"><b>{esc(names[i])}</b></td>')
-            else:
-                cells.append(f'<td data-label="{ordinal(i)}" class="dc-empty">&mdash;</td>')
-        rows.append(f"<tr>{pos_cell}{''.join(cells)}</tr>")
+    short = "" if filled == len(order) else f' <span class="rot-gap">{filled}/{len(order)}</span>'
     return (
+        f'<div class="rot-col"><p class="rot-h">{esc(heading)}{short}</p>'
         f'<div class="tablewrap dc-board-wrap"><table class="dc-board">'
-        f'<thead><tr><th>Position</th>{headers}</tr></thead>'
-        f'<tbody>{"".join(rows)}</tbody></table></div>'
+        f'<thead><tr><th>Position</th><th>Player</th></tr></thead>'
+        f'<tbody>{"".join(rows)}</tbody></table></div></div>'
     )
 
 
@@ -2329,13 +2385,12 @@ def write_depth_chart(formations: list[dict], defenses: dict, root: Path) -> str
                  if any(p in form["alignment"] for form in formations)]
     def_order = list(front["alignment"]) if front else []
 
-    off_board = depth_board(off_order, roster.get("offense", {}), position_name)
-    def_board = depth_board(def_order, roster.get("defense", {}),
-                             lambda p: DEFENSE_POSITION_NAMES.get(p, p))
+    def_label = lambda p: DEFENSE_POSITION_NAMES.get(p, p)  # noqa: E731
 
     # A package only lists the spots that change for it. The line is the same seven
     # kids no matter what the backfield is doing, so repeating them here would just
-    # be the base chart again with extra steps.
+    # be the base chart again with extra steps. It rides with Purple: a package is
+    # a situational swap on the starting unit, not a third rotation.
     pkg_blocks = []
     for pkg in roster.get("offense_packages", []):
         positions = pkg.get("positions", {})
@@ -2348,31 +2403,52 @@ def write_depth_chart(formations: list[dict], defenses: dict, root: Path) -> str
         )
     packages_html = "".join(pkg_blocks)
 
+    # Anybody sitting third or deeper is in neither rotation. That is a fact about
+    # the squad worth printing rather than hiding: these are the kids available to
+    # fill the Open spots on the Gold sheet, and the two lists are read together.
+    spare = []
+    for side, order, label in (("offense", off_order, position_name),
+                               ("defense", def_order, def_label)):
+        for pos in order:
+            for name in (roster.get(side, {}).get(pos) or [])[len(ROTATIONS):]:
+                spare.append(f'<span class="dc-slot"><b>{esc(pos)}</b>{esc(name)}</span>')
+    spare_html = (
+        f'<div class="rot-spare"><p class="rot-h">Not in a rotation</p>'
+        f'<div class="dc-slots">{"".join(spare)}</div></div>' if spare else ""
+    )
+
+    sides = (("offense", off_order, position_name), ("defense", def_order, def_label))
+    sections = []
+    for idx, (rot_name, rot_note, rot_key) in enumerate(ROTATIONS):
+        cols = "".join(
+            rotation_board(order, roster.get(side, {}), label, idx, side.title())
+            for side, order, label in sides
+        )
+        # Purple carries the packages, Gold carries whoever is not in a rotation yet.
+        tail = packages_html if idx == 0 else spare_html
+        sections.append(
+            f'<section class="dc-side rot" data-rot="{rot_key}">'
+            f'<p class="hero-head">{esc(rot_name)}'
+            f'<span class="rot-sub">{esc(rot_note)}</span></p>'
+            f'<div class="rot-grid">{cols}</div>{tail}</section>'
+        )
+
     note = roster.get("note") or "Who plays where, one and two deep."
-    # Two sides, two sheets — see the .dc-side rules in the print stylesheet.
+    # One rotation per sheet — see the .dc-side rules in the print stylesheet.
     body = f"""<h1 class="page">Depth Chart</h1>
 <p class="lede dc-note">{esc(note)}</p>
 <div class="play-actions">
   <button type="button" class="btn solid" onclick="window.print()">Print</button>
 </div>
 
-<section class="dc-side">
-<p class="hero-head">Offense</p>
-{off_board}
-{packages_html}
-</section>
-
-<section class="dc-side">
-<p class="hero-head">Defense</p>
-{def_board}
-</section>"""
+{"".join(sections)}"""
     return page(
         f"Depth Chart — {SITE_TITLE}",
         body,
         formations,
         defenses=defenses,
         active_nav="depth",
-        description="Offense and defense depth chart — who plays where, one and two deep.",
+        description="Purple and Gold rotations — offense and defense, who plays where.",
     )
 
 
