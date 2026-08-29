@@ -490,8 +490,6 @@ td.dc-cell.over, .dc-pool.over { background: var(--accent-soft) !important; }
 .dc-tally b { color: var(--ink); }
 .dc-tally .warn { color: var(--red); font-weight: 800; }
 .dc-tools { display: flex; gap: 8px; flex-wrap: wrap; }
-.dc-hint { margin: 0 0 10px; font-size: 13px; color: var(--muted); max-width: 62ch; }
-.dc-hint b { color: var(--ink-2); }
 .dc-edited {
   margin: 0 0 14px; padding: 8px 12px; border-radius: 8px; font-size: 13px;
   font-weight: 700; color: var(--ink); background: var(--accent-soft);
@@ -506,27 +504,8 @@ td.dc-cell.over, .dc-pool.over { background: var(--accent-soft) !important; }
   border-radius: 8px;
 }
 
-.dc-list { display: flex; flex-direction: column; gap: 8px; margin-bottom: 8px; }
-.dc-row {
-  display: flex; align-items: center; justify-content: space-between; gap: 12px;
-  flex-wrap: wrap; background: var(--panel); border: 1px solid var(--line);
-  border-radius: 10px; padding: 10px 14px; box-shadow: var(--shadow);
-}
-.dc-pos { display: flex; align-items: baseline; gap: 9px; min-width: 170px; }
 .dc-abbr { font-weight: 800; color: var(--accent-ink); font-size: 15px; }
 .dc-label { color: var(--muted); font-size: 12.5px; }
-.dc-slots { display: flex; gap: 8px; flex-wrap: wrap; }
-.dc-slot {
-  display: flex; align-items: center; gap: 7px; font-size: 13px; font-weight: 600;
-  background: var(--panel-2); border-radius: 999px; padding: 5px 12px 5px 5px;
-}
-.dc-slot b {
-  display: inline-flex; align-items: center; justify-content: center; width: 18px;
-  height: 18px; border-radius: 999px; font-size: 10.5px; color: var(--on-accent);
-  background: var(--accent-solid);
-}
-.dc-slot.dc-open { color: var(--muted); font-style: italic; font-weight: 500; }
-.dc-slot.dc-open b { background: var(--line); color: var(--muted); }
 
 /* ----------------------------------------------------------------- both sides -- */
 /* Offense and defense are the top split, and the rotations are columns inside
@@ -560,17 +539,6 @@ thead .rot-count { margin-left: 7px; font-size: 11px; }
 thead .rot-count.warn { color: #ffd2d8; }
 thead th.rot-th[data-rot="white"] .rot-count.warn { color: #a3001a; }
 
-.pkg {
-  margin: 14px 0 8px; padding: 14px 16px 4px; background: var(--panel);
-  border: 1px solid var(--line); border-left: 4px solid var(--accent-solid);
-  border-radius: 10px; box-shadow: var(--shadow);
-}
-.pkg-name {
-  margin: 0 0 4px; font-weight: 800; font-size: 12.5px; letter-spacing: .4px;
-  text-transform: uppercase; color: var(--accent-ink);
-}
-.pkg-note { margin: 0 0 12px; font-size: 13.5px; color: var(--ink-2); }
-.pkg .dc-list { margin-bottom: 10px; }
 
 .plist { display: grid; gap: 12px; grid-template-columns: 1fr; }
 @media (min-width: 620px) { .plist { grid-template-columns: repeat(2, minmax(0,1fr)); } }
@@ -1167,37 +1135,15 @@ footer.site a { color: var(--accent-ink); }
   .dc-bench { margin: 6px 0 0; }
   /* Buttons, hints and the local-edits banner are screen furniture. The tally is
      not: how many spots are open is the first thing a coach checks on the sheet. */
-  .dc-tools, .dc-hint, .dc-edited { display: none; }
+  .dc-tools, .dc-edited { display: none; }
   .dc-bar { margin: 0 0 6px; display: block; }
   .dc-tally { font-size: 8.5pt; }
-  /* The title block is the price of the first sheet and it is paid in rows: at
-     web sizes the h1, the lede and the Jumbo cards together cost more vertical
-     room than the four backfield spots underneath them, and the offense lands on
-     a second sheet by a single row.
-
-     The lede goes rather than the Jumbo package or the title. It is the note out
-     of roster.json, which explains how the file is structured to whoever edits
-     it — that is a reader sitting at a keyboard, not a coach holding the paper,
-     and the paper is the thing with a page limit. */
+  /* The title block is the price of the first sheet and it is paid in rows, so the
+     lede goes. It is the note out of roster.json, which explains how the file is
+     structured to whoever edits it — that is a reader sitting at a keyboard, not a
+     coach holding the paper, and the paper is the thing with a page limit. */
   h1.page { font-size: 18pt; margin: 0 0 3px; }
   .dc-note { display: none; }
-  .pkg { margin: 10px 0 0; padding: 8px 10px 2px; box-shadow: none; border-radius: 0; }
-  .pkg-name { font-size: 9pt; margin: 0 0 2px; }
-  .pkg-note { font-size: 7.5pt; margin: 0 0 5px; }
-  /* The package is three spots, not a third unit. Stacked rows cost it the whole
-     bottom of the Purple sheet and push the rotation onto a second page, so on
-     paper it lays out across instead of down. */
-  .pkg .dc-list, .dc-list {
-    display: flex; flex-direction: row; flex-wrap: wrap;
-    gap: 4px 10px; margin-bottom: 2px;
-  }
-  .dc-row {
-    padding: 2px 6px; border-radius: 0; box-shadow: none; gap: 6px;
-    flex: 0 0 auto; justify-content: flex-start;
-  }
-  .dc-row .dc-label { display: none; }
-  .dc-row .dc-abbr { font-size: 8pt; }
-  .dc-slot { font-size: 8pt; }
 }
 """
 
@@ -2919,32 +2865,6 @@ DEFENSE_POSITION_NAMES = {
 }
 
 
-def depth_rows(order: list[str], names_by_pos: dict, label_fn) -> str:
-    """A flat position/name list. The package block, and nothing else.
-
-    The rotations outgrew this shape — see side_board — but a package is three
-    spots that ride on the starting unit, and giving it a column per rotation
-    would claim it is a unit of its own.
-    """
-    rows = []
-    for pos in order:
-        names = names_by_pos.get(pos) or []
-        if names:
-            slots = "".join(
-                f'<span class="dc-slot"><b>{i + 1}</b>{esc(n)}</span>'
-                for i, n in enumerate(names)
-            )
-        else:
-            slots = '<span class="dc-slot dc-open"><b>&mdash;</b>Open</span>'
-        rows.append(
-            f'<div class="dc-row"><div class="dc-pos">'
-            f'<span class="dc-abbr">{esc(pos)}</span>'
-            f'<span class="dc-label">{esc(label_fn(pos))}</span></div>'
-            f'<div class="dc-slots">{slots}</div></div>'
-        )
-    return "".join(rows)
-
-
 # The two rotations, in the order they take the field. Depth in roster.json *is*
 # the rotation: the first name at a position is Purple, the second is Gold. One
 # ordered list per position stays the thing a coach edits, and nobody has to keep
@@ -3073,22 +2993,6 @@ def write_depth_chart(formations: list[dict], defenses: dict, root: Path) -> str
 
     def_label = lambda p: DEFENSE_POSITION_NAMES.get(p, p)  # noqa: E731
 
-    # A package only lists the spots that change for it. The line is the same seven
-    # kids no matter what the backfield is doing, so repeating them here would just
-    # be the base chart again with extra steps. It rides with Purple: a package is
-    # a situational swap on the starting unit, not a third rotation.
-    pkg_blocks = []
-    for pkg in roster.get("offense_packages", []):
-        positions = pkg.get("positions", {})
-        pkg_order = [p for p in off_order if p in positions]
-        pkg_note = (f'<p class="pkg-note">{esc(pkg["note"])}</p>' if pkg.get("note") else "")
-        pkg_blocks.append(
-            f'<div class="pkg"><p class="pkg-name">{esc(pkg.get("name", ""))} package</p>'
-            f'{pkg_note}<div class="dc-list">'
-            f'{depth_rows(pkg_order, positions, position_name)}</div></div>'
-        )
-    packages_html = "".join(pkg_blocks)
-
     # One section per side of the ball, each carrying both rotations as columns. The
     # split used to be Purple sheet / Gold sheet with offense and defense side by
     # side inside; it is now offense sheet / defense sheet with the rotations side by
@@ -3096,17 +3000,17 @@ def write_depth_chart(formations: list[dict], defenses: dict, root: Path) -> str
     # looks at one side of the ball is handed exactly his page.
     sides = (
         ("offense", "Offense", off_order, alt_order, position_name,
-         "The base formation's eleven.", packages_html),
+         "The base formation's eleven."),
         ("defense", "Defense", def_order, [], def_label,
-         "The 5–3, our everyday front.", ""),
+         "The 5–3, our everyday front."),
     )
     sections = []
-    for side, heading, order, alts, label, sub, tail in sides:
+    for side, heading, order, alts, label, sub in sides:
         sections.append(
             f'<section class="dc-side" data-side="{side}">'
             f'<p class="hero-head">{esc(heading)}'
             f'<span class="rot-sub">{esc(sub)}</span></p>'
-            f'{side_board(side, order, alts, roster.get(side, {}), label)}{tail}</section>'
+            f'{side_board(side, order, alts, roster.get(side, {}), label)}</section>'
         )
 
     # What the page knows that the board alone cannot say. The squad is every name
@@ -3138,11 +3042,6 @@ def write_depth_chart(formations: list[dict], defenses: dict, root: Path) -> str
     <button type="button" class="btn solid" onclick="window.print()">Print</button>
   </div>
 </div>
-<p class="dc-hint" id="dc-hint">Drag a name from the squad onto a spot, or tap the name
-and then tap the spot. A name stays in the squad after you place it, so the same kid
-goes on Purple, Gold and White — tap him once, then tap all three. Drag him off the
-board to take him out. Edits are kept in this browser only, and <b>Copy roster.json</b>
-hands back a file to paste into the repo.</p>
 <div class="dc-edited" id="dc-edited" hidden>Showing your local edits, not the roster
 in the repo.</div>
 
