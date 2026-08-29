@@ -26,9 +26,11 @@ digits: the first says **who carries it**, the second says **where it goes**. So
 `Regular I Z Right 20 Dive` is the Regular I, Z on the right, the fullback through
 the 0 hole.
 
-Every Regular I play is `Z Right` — the Z does not move in this formation. Naming his
-side in the call anyway is what let the Split Backs add a `Z Left` look later without
-changing how a single play is called.
+Every Regular I play is `Z Right` except one. The Z does not move in this formation —
+naming his side in the call anyway is what let the Split Backs add a `Z Left` look
+later without changing how a single play is called. Power is the exception: it depends
+on the Z's kick-out block to work, so `Regular I Z Left 35 Power` is the one call in the
+book where he actually lines up on the other side, and the call says so.
 
 | Back | Who |
 |---|---|
@@ -69,7 +71,7 @@ tight end.
 | `Regular I Z Right 20 Dive` / `21 Dive` | Regular I Dive Right / Left | fullback, center–guard |
 | `Regular I Z Right 30 Wedge` / `31 Wedge` | Regular I Wedge Right / Left | tailback, up the middle |
 | `Regular I Z Right 32 Iso` / `33 Iso` | Regular I Iso Right / Left | guard–tackle |
-| `Regular I Z Right 34 Power` / `35 Power` | Regular I Power Right / Left | tailback, tackle–end |
+| `Regular I Z Right 34 Power` / `Z Left 35 Power` | Regular I Power Right / Left | tailback, tackle–end |
 | `Regular I Z Right 34 Counter` / `35 Counter` | Regular I Counter Right / Left | tailback, tackle–end |
 | `Regular I Z Right 16 Boot` / `17 Boot` | Regular I Boot Right / Left | quarterback, outside the tight end |
 | `Regular I Z Right 16 Waggle` / `17 Waggle` | Regular I Waggle Right / Left | quarterback, outside the tight end |
