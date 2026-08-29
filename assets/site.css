@@ -793,7 +793,12 @@ table.calls td.c { white-space: nowrap; }
 /* ------------------------------------------------------------------- install -- */
 /* A practice schedule is read standing up with a whistle in your mouth, so the number
    is the thing you find first and everything else hangs off it. */
-.ins-wrap { max-width: 82ch; }
+/* Full width, like every other page. This was capped at 82ch, which is a measure for
+   prose and this page is not prose — it is a stack of practice cards with drill lists
+   and play chips in them, and the cap left it a fifth narrower than the call sheet or
+   the depth chart sitting one nav item away. The paragraphs inside the cards keep
+   their own measure below; that is where the reading actually happens. */
+.ins-wrap { max-width: none; }
 .ph { margin: 34px 0 14px; padding-bottom: 10px; border-bottom: 2px solid var(--accent-solid); }
 .ph:first-child { margin-top: 20px; }
 .ph h2 {
@@ -855,7 +860,10 @@ table.calls td.c { white-space: nowrap; }
 }
 .ins-name { font-size: 11.5px; color: var(--muted); }
 .ins-none { font-size: 13px; color: var(--muted); font-style: italic; }
-.ins-em { margin: 0; font-size: 14px; color: var(--ink-2); line-height: 1.55; }
+/* The one long-form sentence per block. It is the reason the whole page used to be
+   capped; capping the paragraph instead lets the drills and the chips have the room
+   and still stops the coaching note running to a hundred characters a line. */
+.ins-em { margin: 0; font-size: 14px; color: var(--ink-2); line-height: 1.55; max-width: 84ch; }
 .ins-req {
   margin: 7px 0 0; font-size: 12.5px; color: var(--muted);
   padding-left: 11px; border-left: 2px solid var(--line);
