@@ -276,19 +276,20 @@ not the board in the repo. Two things close the loop:
 
 - **Reset** puts the shipped roster back. It only appears once you have changed something,
   and takes two taps.
-- **Copy roster.json** hands back the whole file with your board written into it — note,
-  packages and all — to paste into the repo when a halftime rearrangement turns out to be
-  the real answer.
+- **Copy roster.json** hands back the whole file with your board written into it, to paste
+  into the repo when a halftime rearrangement turns out to be the real answer. It rewrites
+  only `offense` and `defense`; the note and `offense_packages` are carried through
+  untouched, which is the only thing keeping the packages in the file now that the page
+  does not draw them.
 
 Two things the page works out that the JSON does not say. A name on both sides of the same
-rotation gets a dot: that kid never leaves the field while that unit is out, and on the
-Purple unit today nine of the eleven starters are in that position. And every column carries
-a live filled-of-eleven count, so a hole is a number at the top rather than something you
-find by counting *Open*.
+rotation gets a dot: that kid never leaves the field while that unit is out, and on Purple
+today ten of the eleven are in that position. And every column carries a live
+filled-of-eleven count, so a hole is a number at the top rather than something you find by
+counting *Open*.
 
-White ships nearly empty, because the file has a third name at only two spots. That is the
-honest state of a third unit nobody has picked yet, and filling it is what the squad rail
-is for.
+All three units are currently full, both sides — sixty-six spots, nobody left out, and a
+snap load between two and four of the six units for every kid on the squad.
 
 ## Printing
 
