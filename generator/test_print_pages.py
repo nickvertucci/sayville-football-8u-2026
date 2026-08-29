@@ -144,17 +144,23 @@ def main(argv=None) -> int:
                 f"{book - expected_book} card(s) spilling onto a second sheet"
             )
 
-        # The depth chart is two sheets by design, one per rotation: hand the
-        # Purple sheet to the group on the field and the Gold sheet to the group
-        # coming on. It is also the page most likely to drift back to three — it
-        # grows a row every time a position is added, and both rotations have gone
-        # over by a single row already.
+        # The depth chart is two sheets by design, one per side of the ball, each
+        # carrying both rotations as columns: the offense sheet goes in one pocket
+        # and the defense sheet in the other, and neither coordinator is holding a
+        # page that is half somebody else's. It used to split the other way, one
+        # sheet per rotation — same two sheets, and the count below did not move,
+        # but a Purple sheet answered "who is on the field" while leaving "who
+        # replaces him" on the other one.
+        #
+        # It is also the page most likely to drift to three. It grows a row every
+        # time a position is added, and each side has gone over by a single row
+        # already.
         depth = render(chrome, ROOT / "depth-chart.html", tmp / "depth.pdf", profile)
         print(f"depth-chart.html: {depth} pages (expected 2)")
         if depth != 2:
             failures.append(
-                f"depth-chart.html renders {depth} pages, expected 2 — Purple and "
-                "Gold must be one sheet each"
+                f"depth-chart.html renders {depth} pages, expected 2 — offense and "
+                "defense must be one sheet each"
             )
 
         if not args.quick:
