@@ -2378,11 +2378,19 @@ def write_depth_chart(formations: list[dict], defenses: dict, root: Path) -> str
         roster = _json.loads(path.read_text(encoding="utf-8"))
 
     front = defenses.get("5-3")
-    # Every spot any formation aligns, not just the base one's: the Split Backs backfield
-    # is LH and RH where the I looks have FB and TB, and a spot missing from this list is
-    # a spot with nobody's name against it that nobody notices is missing.
-    off_order = [p for p in CARD_ORDER
-                 if any(p in form["alignment"] for form in formations)]
+    # The board is the base formation's eleven — Z, FB and TB in the backfield. It
+    # used to be every spot any formation aligns, which meant the Split Backs LH and
+    # RH sat on both rotations reading Open and made a complete unit look two short
+    # of a full sheet. A depth chart answers "who is on the field", and what is on
+    # the field is the base offense.
+    base = min(formations, key=lambda f: f.get("order", 99))
+    off_order = [p for p in CARD_ORDER if p in base["alignment"]]
+    # The spots the other formations use and this board does not. Nobody is on them
+    # today, but a name put against one must not disappear just because the base
+    # offense has no room for it — so they surface underneath, and only if used.
+    alt_order = [p for p in CARD_ORDER
+                 if p not in base["alignment"]
+                 and any(p in form["alignment"] for form in formations)]
     def_order = list(front["alignment"]) if front else []
 
     def_label = lambda p: DEFENSE_POSITION_NAMES.get(p, p)  # noqa: E731
@@ -2424,8 +2432,18 @@ def write_depth_chart(formations: list[dict], defenses: dict, root: Path) -> str
             rotation_board(order, roster.get(side, {}), label, idx, side.title())
             for side, order, label in sides
         )
+        # A spot off the base board that this rotation has somebody for. Empty in the
+        # ordinary case, which is the point: it costs nothing until it matters.
+        alt = [f'<span class="dc-slot"><b>{esc(pos)}</b>{esc(names[idx])}</span>'
+               for pos in alt_order
+               for names in [roster.get("offense", {}).get(pos) or []]
+               if idx < len(names)]
+        alt_html = (
+            f'<div class="rot-spare"><p class="rot-h">Other formations</p>'
+            f'<div class="dc-slots">{"".join(alt)}</div></div>' if alt else ""
+        )
         # Purple carries the packages, Gold carries whoever is not in a rotation yet.
-        tail = packages_html if idx == 0 else spare_html
+        tail = alt_html + (packages_html if idx == 0 else spare_html)
         sections.append(
             f'<section class="dc-side rot" data-rot="{rot_key}">'
             f'<p class="hero-head">{esc(rot_name)}'
