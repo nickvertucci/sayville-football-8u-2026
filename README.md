@@ -228,7 +228,7 @@ someone a link to exactly the play you mean.
 | `p-<play>.html` | One play. Deep-linkable, and prints to a single sheet |
 | `defense.html` | The defensive playbook index |
 | `d-<front>.html` | One defensive front, with every assignment |
-| `depth-chart.html` | **Depth chart** — Purple, Gold and White, offense and defense, drag-and-drop |
+| `depth-chart.html` | **Depth chart** — Purple, Gold, White and Jumbo, offense and defense, drag-and-drop |
 | `print.html` | The whole book for printing |
 
 On every page the diagram is the main attraction — full width of the card, edge to edge
@@ -236,15 +236,23 @@ on a phone, with the assignments read underneath it rather than squeezed in besi
 
 ## The depth chart
 
-Two boards, offense and defense, each with Purple, Gold and White as columns. Rotation is
-on the across axis because the question the page exists to answer is *"the left tackle just
-came off — who goes in"*, and the answer should be the next cell over rather than a scroll
-away.
+Two boards, offense and defense. Defense has Purple, Gold and White as columns; offense
+has those three and **Jumbo**. Rotation is on the across axis because the question the page
+exists to answer is *"the left tackle just came off — who goes in"*, and the answer should
+be the next cell over rather than a scroll away.
 
-`roster.json` is the chart. Depth in it **is** the rotation — first name at a position is
-Purple, second is Gold, third is White, and anybody after that is on the squad but in no
-rotation. One ordered list per position stays the thing a coach edits, and nothing has to
-be kept agreeing with anything else.
+`roster.json` is the chart. Depth in it **is** the column — first name at a position is
+Purple, second Gold, third White, fourth Jumbo, and anybody past that is on the squad but
+in nothing. One ordered list per position stays the thing a coach edits, and nothing has to
+be kept agreeing with anything else. Defense stops at three, so a defensive list is never
+four long.
+
+**Jumbo is a package, not a jersey** — short yardage and goal line, size over speed. It was
+once a separate block under the board listing only the three backfield spots that change,
+which made it the one thing on this page you could not drag a name into. As a column it
+costs the same eleven rows the others cost and behaves like everything else, which is worth
+more than the honesty of showing only what differs. It ships empty; the squad rail is how
+you fill it.
 
 **A name may repeat.** The same left tackle on all three rotations is that name three
 times in the list. That is the normal case for a kid you never take off, and it round-trips
@@ -278,18 +286,12 @@ not the board in the repo. Two things close the loop:
   and takes two taps.
 - **Copy roster.json** hands back the whole file with your board written into it, to paste
   into the repo when a halftime rearrangement turns out to be the real answer. It rewrites
-  only `offense` and `defense`; the note and `offense_packages` are carried through
-  untouched, which is the only thing keeping the packages in the file now that the page
-  does not draw them.
+  only `offense` and `defense` and carries the note through untouched, and it writes each
+  side to its own depth — four slots for offense, three for defense.
 
-Two things the page works out that the JSON does not say. A name on both sides of the same
-rotation gets a dot: that kid never leaves the field while that unit is out, and on Purple
-today ten of the eleven are in that position. And every column carries a live
-filled-of-eleven count, so a hole is a number at the top rather than something you find by
-counting *Open*.
-
-All three units are currently full, both sides — sixty-six spots, nobody left out, and a
-snap load between two and four of the six units for every kid on the squad.
+Every column carries a live filled-of-eleven count, so a hole is a number at the top rather
+than something you find by counting *Open*. Purple, Gold and White are currently full on
+both sides — sixty-six spots, nobody left out. Jumbo is empty.
 
 ## Printing
 
@@ -297,7 +299,7 @@ snap load between two and four of the six units for every kid on the squad.
   one per sheet.
 - **Print** (on any play or front page) → that one card, one landscape sheet.
 - **Print** (on the depth chart) → two portrait sheets, offense then defense, each with
-  all three rotations on it. One goes in each coordinator's pocket. Whatever the board
+  every column on it. One goes in each coordinator's pocket. Whatever the board
   says when you print is what comes out, local edits included.
 
 Both are already set to landscape, so there is no page setup to fiddle with. Print to PDF

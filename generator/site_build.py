@@ -381,6 +381,9 @@ table.dc-board thead th {
 table.dc-board thead th.rot-th[data-rot="purple"] { background: #5b2d8e; }
 table.dc-board thead th.rot-th[data-rot="gold"] { background: #8a6508; }
 table.dc-board thead th.rot-th[data-rot="white"] { background: #dfe3ea; color: #14213d; }
+/* Jumbo is a package, not a jersey, so it gets a colour none of the units would wear
+   — far enough from the navy of the Position header to still read as its own column. */
+table.dc-board thead th.rot-th[data-rot="jumbo"] { background: #1c5560; }
 table.dc-board .dc-poscell { background: var(--panel-2); white-space: nowrap; width: 1%; }
 table.dc-board .dc-poscell .dc-abbr { font-size: 14px; }
 table.dc-board .dc-poscell .dc-label { font-size: 11.5px; margin-left: 7px; }
@@ -424,6 +427,7 @@ table.dc-board td.dc-cell { min-width: 130px; }
   table.dc-board td.dc-cell[data-rot="purple"]::before { color: #a882d8; }
   table.dc-board td.dc-cell[data-rot="gold"]::before { color: #d0a63a; }
   table.dc-board td.dc-cell[data-rot="white"]::before { color: #8b95a6; }
+  table.dc-board td.dc-cell[data-rot="jumbo"]::before { color: #5aa7b3; }
   table.dc-board .dc-open { padding: 3px 0; }
 }
 
@@ -455,12 +459,6 @@ table.dc-board td.dc-cell { min-width: 130px; }
 }
 .dc-chip.ghost { opacity: .3; }
 td.dc-cell.over, .dc-pool.over { background: var(--accent-soft) !important; }
-/* A kid on both sides of the same rotation is playing every snap. That is the fact
-   this page was hiding: nine of the eleven Purple starters never leave the field. */
-.dc-chip.two-way::before {
-  content: ""; width: 6px; height: 6px; border-radius: 999px; flex: 0 0 auto;
-  background: var(--red);
-}
 
 /* ---------------------------------------------------------------------- squad -- */
 /* The whole squad for this side of the ball, and a source rather than a container:
@@ -486,9 +484,6 @@ td.dc-cell.over, .dc-pool.over { background: var(--accent-soft) !important; }
   display: flex; align-items: center; justify-content: space-between; gap: 14px;
   flex-wrap: wrap; margin: 14px 0 6px;
 }
-.dc-tally { margin: 0; font-size: 13px; color: var(--ink-2); }
-.dc-tally b { color: var(--ink); }
-.dc-tally .warn { color: var(--red); font-weight: 800; }
 .dc-tools { display: flex; gap: 8px; flex-wrap: wrap; }
 .dc-edited {
   margin: 0 0 14px; padding: 8px 12px; border-radius: 8px; font-size: 13px;
@@ -1125,19 +1120,14 @@ footer.site a { color: var(--accent-ink); }
     background: none; border: 0; padding: 0; font-size: 10pt; font-weight: 800;
     color: #000; border-radius: 0;
   }
-  .dc-chip.two-way::before {
-    width: auto; height: auto; background: none; content: "\\2022 "; font-weight: 800;
-  }
   .dc-pool {
     display: flex; flex-wrap: wrap; gap: 2px 12px; border: 0; padding: 0;
     min-height: 0; background: none;
   }
   .dc-bench { margin: 6px 0 0; }
-  /* Buttons, hints and the local-edits banner are screen furniture. The tally is
-     not: how many spots are open is the first thing a coach checks on the sheet. */
+  /* Buttons and the local-edits banner are screen furniture. */
   .dc-tools, .dc-edited { display: none; }
   .dc-bar { margin: 0 0 6px; display: block; }
-  .dc-tally { font-size: 8.5pt; }
   /* The title block is the price of the first sheet and it is paid in rows, so the
      lede goes. It is the note out of roster.json, which explains how the file is
      structured to whoever edits it — that is a reader sitting at a keyboard, not a
@@ -1380,7 +1370,6 @@ SITE_JS = """
   if (!board || !blob) return;
   var data = JSON.parse(blob.textContent);
   var KEY = 'sayville-depth-chart-v1';
-  var tally = document.getElementById('dc-tally');
   var edited = document.getElementById('dc-edited');
   var resetBtn = document.getElementById('dc-reset');
   var copyBtn = document.getElementById('dc-copy');
@@ -1530,7 +1519,7 @@ SITE_JS = """
   }
 
   function refresh() {
-    var counts = {}, seen = {};
+    var counts = {};
     // Alt rows are off the count. They are spots no formation on this board aligns,
     // carried only because somebody is standing on one, and counting them would make
     // a complete eleven read as twelve.
@@ -1540,22 +1529,8 @@ SITE_JS = """
         var k = sideOf(td) + '-' + td.dataset.rot;
         var c = counts[k] || (counts[k] = { on: 0, of: 0 });
         c.of++;
-        var chip = chipIn(td);
-        if (!chip) return;
-        c.on++;
-        var rot = seen[td.dataset.rot] || (seen[td.dataset.rot] = {});
-        rot[chip.dataset.name] = (rot[chip.dataset.name] || 0) + 1;
+        if (chipIn(td)) c.on++;
       });
-    });
-
-    // A name on both sides of one rotation is a kid who never leaves the field while
-    // that unit is out. It is the most consequential thing this page knows and the
-    // old layout said none of it.
-    all('td.dc-cell .dc-chip').forEach(function (c) {
-      var rot = seen[c.parentNode.dataset.rot];
-      var two = !!(rot && rot[c.dataset.name] > 1);
-      c.classList.toggle('two-way', two);
-      c.title = two ? c.dataset.name + ' plays both ways in this rotation' : '';
     });
 
     Object.keys(counts).forEach(function (k) {
@@ -1595,19 +1570,8 @@ SITE_JS = """
       }
     });
 
-    if (tally) {
-      var both = data.rotations.map(function (r) {
-        var n = 0, m = seen[r] || {};
-        Object.keys(m).forEach(function (name) { if (m[name] > 1) n++; });
-        return label(r) + ' ' + n;
-      }).join(', ');
-      tally.innerHTML = '<b>' + data.squad.length + '</b> on the squad &middot; '
-        + 'playing both ways: ' + both;
-    }
     persist();
   }
-
-  function label(rot) { return rot.charAt(0).toUpperCase() + rot.slice(1); }
 
   /* ------------------------------------------------------------ tap to place -- */
   var picked = null, suppress = false;
@@ -1747,9 +1711,12 @@ SITE_JS = """
       Object.keys(lists).forEach(function (pos) { lists[pos] = []; });
       var sec = board.querySelector('.dc-side[data-side="' + side + '"]');
       if (!sec) return;
+      // This side's columns, in depth order. Offense has a fourth; defense does not,
+      // and padding a defense list to four would invent a slot nothing reads back.
+      var cols = data.rotations[side] || [];
       var playing = {};
       all('td.dc-cell', sec).forEach(function (td) {
-        var at = data.rotations.indexOf(td.dataset.rot);
+        var at = cols.indexOf(td.dataset.rot);
         if (at < 0) return;
         var list = lists[td.dataset.pos] || (lists[td.dataset.pos] = []);
         while (list.length < at) list.push('');
@@ -1768,7 +1735,7 @@ SITE_JS = """
       all('.dc-pool .dc-chip', sec).forEach(function (chip) {
         if (playing[chip.dataset.name]) return;
         var list = lists[chip.dataset.home] || (lists[chip.dataset.home] = []);
-        while (list.length < data.rotations.length) list.push('');
+        while (list.length < cols.length) list.push('');
         list.push(chip.dataset.name);
       });
       // Trailing blanks say nothing, and a list of nothing but blanks is a spot with
@@ -2865,15 +2832,33 @@ DEFENSE_POSITION_NAMES = {
 }
 
 
-# The two rotations, in the order they take the field. Depth in roster.json *is*
-# the rotation: the first name at a position is Purple, the second is Gold. One
-# ordered list per position stays the thing a coach edits, and nobody has to keep
-# two copies of the same roster agreeing with each other.
+# The columns, in the order they take the field. Depth in roster.json *is* the
+# column: the first name at a position is Purple, the second Gold, the third White,
+# the fourth Jumbo. One ordered list per position stays the thing a coach edits, and
+# nobody has to keep two copies of the same roster agreeing with each other.
+#
+# Jumbo is offense only, and it is a package rather than a jersey — short yardage and
+# goal line, size over speed. It used to be a separate block under the board listing
+# only the three spots that change, which meant it was the one thing on this page you
+# could not drag a name into. A column costs the same eleven rows the other three cost
+# and behaves like everything else, which is worth more than the honesty of showing
+# only what differs. Each entry names the sides it appears on.
 ROTATIONS = [
-    ("Purple", "starters", "purple"),
-    ("Gold", "second", "gold"),
-    ("White", "third", "white"),
+    ("Purple", "purple", ("offense", "defense"), ""),
+    ("Gold", "gold", ("offense", "defense"), ""),
+    ("White", "white", ("offense", "defense"), ""),
+    # The hint that used to be the package block's note, kept because it is the one
+    # thing a coach cannot work out from the column itself. It lives here rather than
+    # in roster.json for the same reason the other three names do: what a column *is*
+    # belongs with the column, and roster.json says who is in it.
+    ("Jumbo", "jumbo", ("offense",),
+     "Short yardage and goal line — size over speed."),
 ]
+
+
+def rotations_for(side: str) -> list[tuple[str, str, str]]:
+    """The columns this side of the ball has, in depth order."""
+    return [(name, key, hint) for name, key, sides, hint in ROTATIONS if side in sides]
 
 
 def dc_chip(name: str, home: str) -> str:
@@ -2891,6 +2876,11 @@ def dc_chip(name: str, home: str) -> str:
     """
     return (f'<button type="button" class="dc-chip" draggable="false" '
             f'data-name="{esc(name)}" data-home="{esc(home)}">{esc(name)}</button>')
+
+
+def title(hint: str) -> str:
+    """A title attribute, or nothing at all. Only Jumbo carries one."""
+    return f' title="{esc(hint)}"' if hint else ""
 
 
 def side_squad(order: list[str], names_by_pos: dict) -> list[tuple[str, str]]:
@@ -2926,7 +2916,7 @@ def side_board(side: str, order: list[str], alt_order: list[str],
         # standing on it. Off the count, so it cannot make a full unit read as twelve.
         alt = ' class="dc-alt"' if pos in alt_order else ""
         cells = ""
-        for idx, (rot_name, _note, rot_key) in enumerate(ROTATIONS):
+        for idx, (rot_name, rot_key, _hint) in enumerate(rotations_for(side)):
             name = names[idx] if idx < len(names) else ""
             # Open is a button so an empty spot can be tabbed to and chosen from a
             # keyboard exactly like a name can — the whole board is reachable without
@@ -2942,9 +2932,9 @@ def side_board(side: str, order: list[str], alt_order: list[str],
             f'<span class="dc-label">{esc(label_fn(pos))}</span></td>{cells}</tr>'
         )
     head = "".join(
-        f'<th class="rot-th" data-rot="{rot_key}">{esc(rot_name)}'
+        f'<th class="rot-th" data-rot="{rot_key}"{title(hint)}>{esc(rot_name)}'
         f'<span class="rot-count" data-count="{side}-{rot_key}"></span></th>'
-        for rot_name, _note, rot_key in ROTATIONS
+        for rot_name, rot_key, hint in rotations_for(side)
     )
     # The whole squad, not just whoever is left over. This rail used to be the bench —
     # the kids in no rotation — and a chip lived in exactly one place, so putting a kid
@@ -3013,21 +3003,24 @@ def write_depth_chart(formations: list[dict], defenses: dict, root: Path) -> str
             f'{side_board(side, order, alts, roster.get(side, {}), label)}</section>'
         )
 
-    # What the page knows that the board alone cannot say. The squad is every name
-    # anywhere in the roster, so a kid benched on both sides is still countable; the
-    # roster goes along whole so Copy can hand back a file with the note and the
-    # package still in it rather than a board-shaped fragment of one.
-    squad = sorted({name
-                    for side in ("offense", "defense")
-                    for names in roster.get(side, {}).values()
-                    for name in (names or [])})
+    # What the script needs that the board does not already carry. The roster goes
+    # along whole so Copy can hand back a file with the note still in it rather than a
+    # board-shaped fragment of one.
+    #
+    # The columns go per side, not as one list. Offense has a fourth and defense does
+    # not, and every depth index the script works out — which slot of the list a cell
+    # writes to, how far to pad before the kids in no column — is counted against the
+    # side it is on. One shared list would write defense names into a Jumbo slot that
+    # does not exist.
     import json as _json
     # A literal "</script>" inside the blob would close the tag early. Every "<" in
     # JSON is inside a string, so escaping it is lossless and the parser never sees
     # the difference — cheaper than trusting that no kid is ever nicknamed "<3".
-    data = _json.dumps({"squad": squad, "roster": roster,
-                        "rotations": [k for _n, _t, k in ROTATIONS]},
-                       ensure_ascii=False).replace("<", "\\u003c")
+    data = _json.dumps(
+        {"roster": roster,
+         "rotations": {side: [k for _n, k, _h in rotations_for(side)]
+                       for side in ("offense", "defense")}},
+        ensure_ascii=False).replace("<", "\\u003c")
 
     note = roster.get("note") or "Who plays where, one and two deep."
     # One side per sheet — see the .dc-side rules in the print stylesheet.
@@ -3035,7 +3028,6 @@ def write_depth_chart(formations: list[dict], defenses: dict, root: Path) -> str
 <p class="lede dc-note">{esc(note)}</p>
 <script type="application/json" id="dc-data">{data}</script>
 <div class="dc-bar" id="dc-bar">
-  <p class="dc-tally" id="dc-tally"></p>
   <div class="dc-tools">
     <button type="button" class="btn" id="dc-reset" hidden>Reset</button>
     <button type="button" class="btn" id="dc-copy">Copy roster.json</button>

@@ -1,5 +1,5 @@
 {
-  "note": "Coach-editable. Depth is the rotation — Purple, then Gold, then White, and anybody after that is on the squad but in no rotation. A name may repeat: the same left tackle on all three is that name three times. Offense covers every spot the four formations use; defense is the 5-3, our everyday front.",
+  "note": "Coach-editable. Depth is the column — Purple, then Gold, then White, then Jumbo on offense only; anybody past that is on the squad but in nothing. A name may repeat: the same left tackle on all three units is that name three times. Offense covers every spot the four formations use; defense is the 5-3, our everyday front.",
   "offense": {
     "LTE": [
       "Camden G.",
@@ -59,17 +59,6 @@
     "LH": [],
     "RH": []
   },
-  "offense_packages": [
-    {
-      "name": "Jumbo",
-      "note": "Short yardage and goal line — size over speed at the three backfield spots. The line does not change.",
-      "positions": {
-        "Z": [],
-        "FB": [],
-        "TB": []
-      }
-    }
-  ],
   "defense": {
     "LE": [
       "Brogan A.",

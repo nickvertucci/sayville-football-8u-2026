@@ -339,6 +339,9 @@ table.dc-board thead th {
 table.dc-board thead th.rot-th[data-rot="purple"] { background: #5b2d8e; }
 table.dc-board thead th.rot-th[data-rot="gold"] { background: #8a6508; }
 table.dc-board thead th.rot-th[data-rot="white"] { background: #dfe3ea; color: #14213d; }
+/* Jumbo is a package, not a jersey, so it gets a colour none of the units would wear
+   — far enough from the navy of the Position header to still read as its own column. */
+table.dc-board thead th.rot-th[data-rot="jumbo"] { background: #1c5560; }
 table.dc-board .dc-poscell { background: var(--panel-2); white-space: nowrap; width: 1%; }
 table.dc-board .dc-poscell .dc-abbr { font-size: 14px; }
 table.dc-board .dc-poscell .dc-label { font-size: 11.5px; margin-left: 7px; }
@@ -382,6 +385,7 @@ table.dc-board td.dc-cell { min-width: 130px; }
   table.dc-board td.dc-cell[data-rot="purple"]::before { color: #a882d8; }
   table.dc-board td.dc-cell[data-rot="gold"]::before { color: #d0a63a; }
   table.dc-board td.dc-cell[data-rot="white"]::before { color: #8b95a6; }
+  table.dc-board td.dc-cell[data-rot="jumbo"]::before { color: #5aa7b3; }
   table.dc-board .dc-open { padding: 3px 0; }
 }
 
@@ -413,12 +417,6 @@ table.dc-board td.dc-cell { min-width: 130px; }
 }
 .dc-chip.ghost { opacity: .3; }
 td.dc-cell.over, .dc-pool.over { background: var(--accent-soft) !important; }
-/* A kid on both sides of the same rotation is playing every snap. That is the fact
-   this page was hiding: nine of the eleven Purple starters never leave the field. */
-.dc-chip.two-way::before {
-  content: ""; width: 6px; height: 6px; border-radius: 999px; flex: 0 0 auto;
-  background: var(--red);
-}
 
 /* ---------------------------------------------------------------------- squad -- */
 /* The whole squad for this side of the ball, and a source rather than a container:
@@ -444,9 +442,6 @@ td.dc-cell.over, .dc-pool.over { background: var(--accent-soft) !important; }
   display: flex; align-items: center; justify-content: space-between; gap: 14px;
   flex-wrap: wrap; margin: 14px 0 6px;
 }
-.dc-tally { margin: 0; font-size: 13px; color: var(--ink-2); }
-.dc-tally b { color: var(--ink); }
-.dc-tally .warn { color: var(--red); font-weight: 800; }
 .dc-tools { display: flex; gap: 8px; flex-wrap: wrap; }
 .dc-edited {
   margin: 0 0 14px; padding: 8px 12px; border-radius: 8px; font-size: 13px;
@@ -1083,19 +1078,14 @@ footer.site a { color: var(--accent-ink); }
     background: none; border: 0; padding: 0; font-size: 10pt; font-weight: 800;
     color: #000; border-radius: 0;
   }
-  .dc-chip.two-way::before {
-    width: auto; height: auto; background: none; content: "\2022 "; font-weight: 800;
-  }
   .dc-pool {
     display: flex; flex-wrap: wrap; gap: 2px 12px; border: 0; padding: 0;
     min-height: 0; background: none;
   }
   .dc-bench { margin: 6px 0 0; }
-  /* Buttons, hints and the local-edits banner are screen furniture. The tally is
-     not: how many spots are open is the first thing a coach checks on the sheet. */
+  /* Buttons and the local-edits banner are screen furniture. */
   .dc-tools, .dc-edited { display: none; }
   .dc-bar { margin: 0 0 6px; display: block; }
-  .dc-tally { font-size: 8.5pt; }
   /* The title block is the price of the first sheet and it is paid in rows, so the
      lede goes. It is the note out of roster.json, which explains how the file is
      structured to whoever edits it — that is a reader sitting at a keyboard, not a
