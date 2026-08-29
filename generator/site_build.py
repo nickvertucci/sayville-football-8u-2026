@@ -54,6 +54,7 @@ SITE_CSS = """
   --accent: #14213d;
   --accent-ink: #14213d;
   --accent-solid: #14213d;
+  --accent-soft: #dde5f5;
   --on-accent: #ffffff;
   --red: #b3001b;
   --bar: #14213d;
@@ -77,6 +78,7 @@ SITE_CSS = """
     --accent: #9db6e8;
     --accent-ink: #b9cbf1;
     --accent-solid: #2f4372;
+    --accent-soft: #26314a;
     --on-accent: #ffffff;
     --red: #ff7183;
     --bar: #10141d;
@@ -347,37 +349,58 @@ h1.page { font-size: clamp(23px, 5vw, 33px); letter-spacing: -.5px; margin: 22px
   text-transform: uppercase; letter-spacing: .4px;
 }
 
-/* The board itself: positions down the left, string depth across the top, the
-   shape of an NFL team's depth chart. A real <table> so it reads as a grid, not
-   a stack of cards — collapsed to cards only below 620px, the one place a grid
-   this wide stops working. */
+/* The board itself: positions down the left, the two rotations across the top, the
+   shape of an NFL team's depth chart. A real <table> so it reads as a grid, not a
+   stack of cards — collapsed to cards only below 620px, the one place a grid this
+   wide stops working.
+
+   Rows are deliberately tight. Every row here is one name, and a name needs a chip,
+   not a cell with sixteen pixels of padding round it — the old spacing made eleven
+   positions three thousand pixels tall and put the answer to "who backs up the left
+   tackle" below the fold. */
 .tablewrap.dc-board-wrap {
-  margin: 14px 0 20px; overflow-x: auto; background: var(--panel);
+  margin: 10px 0 4px; overflow-x: auto; background: var(--panel);
   border: 1px solid var(--line); border-radius: 12px; box-shadow: var(--shadow);
 }
-table.dc-board { width: 100%; border-collapse: collapse; min-width: 480px; }
+table.dc-board { width: 100%; border-collapse: collapse; min-width: 460px; }
 table.dc-board th, table.dc-board td {
   border-bottom: 1px solid var(--line-soft); border-right: 1px solid var(--line-soft);
-  padding: 12px 16px;
+  padding: 5px 10px;
 }
 table.dc-board th:last-child, table.dc-board td:last-child { border-right: 0; }
 table.dc-board tbody tr:last-child td { border-bottom: 0; }
 table.dc-board thead th {
-  background: var(--accent-solid); color: var(--on-accent); text-align: center;
-  font-size: 12px; text-transform: uppercase; letter-spacing: 1.4px; font-weight: 800;
-  padding: 13px 16px;
+  background: var(--accent-solid); color: var(--on-accent); text-align: left;
+  font-size: 11px; text-transform: uppercase; letter-spacing: 1.3px; font-weight: 800;
+  padding: 9px 12px;
 }
-table.dc-board thead th:first-child { text-align: left; }
-table.dc-board .dc-poscell { background: var(--panel-2); white-space: nowrap; }
-table.dc-board .dc-poscell .dc-abbr { display: block; font-size: 18px; }
-table.dc-board .dc-poscell .dc-label { display: block; font-size: 12px; }
-table.dc-board td:not(.dc-poscell) { text-align: center; }
-table.dc-board td b { font-size: 16px; font-weight: 800; color: var(--ink); }
-table.dc-board tbody tr:nth-child(even) td:not(.dc-poscell) { background: var(--panel-2); }
-table.dc-board .dc-empty { color: var(--line); font-weight: 700; }
-table.dc-board .dc-open {
-  color: var(--muted); font-style: italic; font-weight: 600; text-align: center;
+/* Purple and Gold are the units, so the column headers wear them. A coach scanning
+   for the Gold left tackle finds the column by colour before reading a word of it. */
+table.dc-board thead th.rot-th[data-rot="purple"] { background: #5b2d8e; }
+table.dc-board thead th.rot-th[data-rot="gold"] { background: #8a6508; }
+table.dc-board .dc-poscell { background: var(--panel-2); white-space: nowrap; width: 1%; }
+table.dc-board .dc-poscell .dc-abbr { font-size: 14px; }
+table.dc-board .dc-poscell .dc-label { font-size: 11.5px; margin-left: 7px; }
+table.dc-board tbody tr:nth-child(even) td.dc-poscell { background: var(--panel); }
+/* A spot no formation on this board aligns — see side_board. Present only because
+   somebody is standing on it, and marked so it does not read as a twelfth starter. */
+table.dc-board tr.dc-alt td { opacity: .72; }
+table.dc-board tr.dc-alt .dc-abbr::after {
+  content: " ·"; color: var(--muted); font-weight: 500;
 }
+/* An empty spot. A button, not a label — see side_board: it is a drop target you
+   can also tab to, and a <span> would have been reachable by pointer only. */
+.dc-open {
+  font: inherit; font-size: 13px; font-style: italic; font-weight: 600;
+  color: var(--muted); background: none; border: 0; padding: 3px 4px; cursor: pointer;
+  border-radius: 999px;
+}
+.dc-open:hover { color: var(--ink-2); }
+.dc-open:focus-visible { outline: 2px solid var(--accent-solid); outline-offset: 2px; }
+/* The drop target is the whole cell, not the chip inside it, so an empty spot is as
+   easy to hit as a full one. Below 620px the table becomes cards and the cells stop
+   being cells, so the padding rides on the cell rather than the row. */
+table.dc-board td.dc-cell { min-width: 130px; }
 @media (max-width: 620px) {
   .tablewrap.dc-board-wrap { overflow-x: visible; }
   table.dc-board { min-width: 0; }
@@ -385,20 +408,92 @@ table.dc-board .dc-open {
   table.dc-board, table.dc-board tbody, table.dc-board tr, table.dc-board td {
     display: block; width: 100%;
   }
-  table.dc-board tr { padding: 12px 14px; border-bottom: 1px solid var(--line); }
+  table.dc-board tr { padding: 8px 12px; border-bottom: 1px solid var(--line); }
   table.dc-board tr:last-child { border-bottom: 0; }
   table.dc-board td {
-    border: 0; padding: 2px 0; text-align: left !important; background: none !important;
+    border: 0; padding: 2px 0; background: none !important; min-width: 0;
   }
-  table.dc-board .dc-poscell { padding: 0 0 8px; margin-bottom: 6px; border-bottom: 1px dashed var(--line); }
-  table.dc-board .dc-poscell .dc-abbr, table.dc-board .dc-poscell .dc-label { display: inline; }
-  table.dc-board .dc-poscell .dc-label { margin-left: 8px; }
-  table.dc-board td:not(.dc-poscell)::before {
-    content: attr(data-label) " "; display: inline-block; min-width: 42px;
-    font-size: 10px; text-transform: uppercase; letter-spacing: 1px; color: var(--muted);
+  table.dc-board .dc-poscell { padding: 0 0 5px; margin-bottom: 4px; border-bottom: 1px dashed var(--line); }
+  table.dc-board td.dc-cell::before {
+    content: attr(data-label); display: inline-block; min-width: 52px;
+    font-size: 10px; text-transform: uppercase; letter-spacing: 1px; font-weight: 800;
   }
-  table.dc-board .dc-empty { display: none; }
-  table.dc-board .dc-open { padding: 4px 0; }
+  table.dc-board td.dc-cell[data-rot="purple"]::before { color: #a882d8; }
+  table.dc-board td.dc-cell[data-rot="gold"]::before { color: #d0a63a; }
+  table.dc-board .dc-open { padding: 3px 0; }
+}
+
+/* ---------------------------------------------------------------------- chips -- */
+/* A name you can pick up. It is a <button> because every drag has a tap-then-tap
+   equivalent — see the pointer handler in site.js — and that is the path a phone,
+   a keyboard and a screen reader all take. */
+.dc-chip {
+  display: inline-flex; align-items: center; gap: 6px; font: inherit;
+  font-size: 13.5px; font-weight: 700; color: var(--ink); background: var(--panel-2);
+  border: 1px solid var(--line); border-radius: 999px; padding: 3px 11px;
+  cursor: grab; touch-action: manipulation; user-select: none; -webkit-user-select: none;
+  text-align: left; max-width: 100%;
+}
+.dc-chip:hover { border-color: var(--accent-solid); }
+.dc-chip:focus-visible { outline: 2px solid var(--accent-solid); outline-offset: 2px; }
+/* Picked up by tap. The next tap on any spot puts him there, so the whole board
+   reads as targets until he lands. */
+.dc-chip.picked {
+  background: var(--accent-solid); color: var(--on-accent);
+  border-color: var(--accent-solid); cursor: grabbing;
+}
+#dc-board.placing td.dc-cell, #dc-board.placing .dc-pool { cursor: copy; }
+#dc-board.placing td.dc-cell { box-shadow: inset 0 0 0 1px var(--accent-solid); }
+/* The chip under the finger while a drag is in flight. Positioned by script. */
+.dc-chip.flying {
+  position: fixed; z-index: 90; pointer-events: none; cursor: grabbing;
+  box-shadow: 0 8px 20px rgba(0,0,0,.45); opacity: .95;
+}
+.dc-chip.ghost { opacity: .3; }
+td.dc-cell.over, .dc-pool.over { background: var(--accent-soft) !important; }
+/* A kid on both sides of the same rotation is playing every snap. That is the fact
+   this page was hiding: nine of the eleven Purple starters never leave the field. */
+.dc-chip.two-way::before {
+  content: ""; width: 6px; height: 6px; border-radius: 999px; flex: 0 0 auto;
+  background: var(--red);
+}
+
+/* ---------------------------------------------------------------------- bench -- */
+/* The kids in neither rotation. It was a footnote at the bottom of the page; it is
+   now the pile you drag out of, so it sits under the board it feeds. */
+.dc-bench { margin: 0 0 6px; }
+.dc-pool {
+  display: flex; flex-wrap: wrap; gap: 6px; min-height: 38px; padding: 8px 10px;
+  border: 1px dashed var(--line); border-radius: 10px; background: var(--panel);
+}
+.dc-pool:empty::before {
+  content: "Everybody is in a rotation."; color: var(--muted); font-size: 13px;
+  font-style: italic;
+}
+
+/* ------------------------------------------------------------------ dc chrome -- */
+.dc-bar {
+  display: flex; align-items: center; justify-content: space-between; gap: 14px;
+  flex-wrap: wrap; margin: 14px 0 6px;
+}
+.dc-tally { margin: 0; font-size: 13px; color: var(--ink-2); }
+.dc-tally b { color: var(--ink); }
+.dc-tally .warn { color: var(--red); font-weight: 800; }
+.dc-tools { display: flex; gap: 8px; flex-wrap: wrap; }
+.dc-hint { margin: 0 0 10px; font-size: 13px; color: var(--muted); max-width: 62ch; }
+.dc-hint b { color: var(--ink-2); }
+.dc-edited {
+  margin: 0 0 14px; padding: 8px 12px; border-radius: 8px; font-size: 13px;
+  font-weight: 700; color: var(--ink); background: var(--accent-soft);
+  border-left: 3px solid var(--accent-solid);
+}
+/* Where the copied JSON goes when the clipboard is not available — an http:// page
+   on a phone, mostly, where navigator.clipboard is simply absent. */
+.dc-out {
+  display: block; width: 100%; margin: 0 0 14px; padding: 10px 12px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12px;
+  color: var(--ink); background: var(--panel); border: 1px solid var(--line);
+  border-radius: 8px;
 }
 
 .dc-list { display: flex; flex-direction: column; gap: 8px; margin-bottom: 8px; }
@@ -423,32 +518,32 @@ table.dc-board .dc-open {
 .dc-slot.dc-open { color: var(--muted); font-style: italic; font-weight: 500; }
 .dc-slot.dc-open b { background: var(--line); color: var(--muted); }
 
-/* ------------------------------------------------------------------ rotations -- */
-/* Purple and Gold are the two units, and they are the top split on this page: a
-   rotation is what actually runs onto the field, so it is the thing you hand
-   somebody, and offense and defense sit side by side inside it rather than being
-   two separate pages you have to hold at once. */
-.rot { border-left: 6px solid var(--rot); padding-left: 16px; margin: 34px 0 0; }
-.rot[data-rot="purple"] { --rot: #5b2d8e; }
-.rot[data-rot="gold"] { --rot: #8a6508; }
-.rot .hero-head { background: var(--rot); margin: 0 0 4px; }
+/* ----------------------------------------------------------------- both sides -- */
+/* Offense and defense are the top split, and Purple and Gold are columns inside
+   each. It was the other way round, which meant the answer to "who replaces the
+   left tackle" lived on a different sheet from the question. A coordinator only
+   ever wants one of these two sections, so each is a section and each is a sheet. */
+.dc-side { margin: 26px 0 0; }
+.dc-side .hero-head { margin: 0 0 2px; }
 .rot-sub {
   display: inline-block; margin-left: 10px; font-size: 13px; font-weight: 700;
   letter-spacing: .6px; text-transform: uppercase; opacity: .82;
 }
-.rot-grid { display: grid; gap: 20px; grid-template-columns: 1fr; margin-top: 14px; }
-@media (min-width: 900px) { .rot-grid { grid-template-columns: 1fr 1fr; } }
 .rot-h {
-  margin: 0 0 8px; font-size: 12px; font-weight: 800; letter-spacing: 1.4px;
+  display: flex; align-items: baseline; gap: 8px;
+  margin: 10px 0 6px; font-size: 12px; font-weight: 800; letter-spacing: 1.4px;
   text-transform: uppercase; color: var(--muted);
 }
-/* A unit short of eleven is a hole somebody has to fill, so say so next to the
-   heading instead of making the coach count Open rows. */
-.rot-gap {
-  margin-left: 6px; color: var(--red); font-weight: 800; letter-spacing: 0;
-}
-.rot-spare { margin: 16px 0 4px; }
-.rot-spare .dc-slots { display: flex; flex-wrap: wrap; gap: 8px; }
+/* A unit short of eleven is a hole somebody has to fill, so say so in the column
+   header instead of making the coach count Open rows. Written by site.js, because
+   after the first drag the number the page shipped with is a lie. */
+.rot-count { font-weight: 800; letter-spacing: 0; opacity: .85; }
+.rot-count.warn { color: var(--red); opacity: 1; }
+thead .rot-count { margin-left: 7px; font-size: 11px; }
+/* The body red is nearly invisible on the gold header fill. A short unit is the one
+   thing on this page that must not be missable, so on a coloured header it goes pale
+   instead of dark — same alarm, read against the fill it actually sits on. */
+thead .rot-count.warn { color: #ffd2d8; }
 
 .pkg {
   margin: 14px 0 8px; padding: 14px 16px 4px; background: var(--panel);
@@ -579,6 +674,9 @@ ul.coach li {
   text-decoration: none; white-space: nowrap;
 }
 .btn:hover { background: var(--accent-solid); border-color: var(--accent-solid); color: #fff; }
+/* display:inline-block above outranks the browser's own [hidden] rule, so a button
+   with the attribute set stays on screen. Same fix as .ddpanel and .scrim. */
+.btn[hidden] { display: none; }
 .btn.solid {
   background: var(--accent-solid); border-color: var(--accent-solid); color: var(--on-accent);
 }
@@ -1000,41 +1098,55 @@ footer.site a { color: var(--accent-ink); }
      with test_print_pages.py, which is why this is a + selector and not a comment
      apologising for the extra page. */
   .dc-side + .dc-side { page-break-before: always; break-before: page; }
-  /* The two units stay side by side on paper. A rotation is one name per spot, so
-     the pair fits a portrait sheet across — stacking them would spill. */
-  .rot-grid {
-    display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 8px;
-  }
-  .rot-col { break-inside: avoid; page-break-inside: avoid; }
   /* A board split down the middle of a row is unreadable on a clipboard. */
   table.dc-board tr { break-inside: avoid; page-break-inside: avoid; }
-  /* No break-inside:avoid on .dc-side itself. A rotation already starts at the top
-     of a fresh sheet, so keeping it whole can never move it anywhere useful — and
-     on a sheet too small to hold it, the browser honours the rule by emitting a
-     blank page first. Measured: it turned a two-page overflow into a three. */
-  .rot { border-left: 4px solid #000; padding-left: 10px; margin: 0; }
-  /* Background fills are a print-settings gamble; the rotation name is already
-     spelled out, so print it as plain text with a rule under it and let the left
-     border carry the rest. */
-  .rot .hero-head {
-    background: none; color: #000; padding: 0 0 3px; margin: 0;
-    border-bottom: 2px solid #000; border-radius: 0; display: block;
+  /* No break-inside:avoid on .dc-side itself. A side already starts at the top of a
+     fresh sheet, so keeping it whole can never move it anywhere useful — and on a
+     sheet too small to hold it, the browser honours the rule by emitting a blank
+     page first. Measured: it turned a two-page overflow into a three. */
+  .dc-side { margin: 0; }
+  /* Background fills are a print-settings gamble; the heading is already spelled
+     out, so print it as plain text with a rule under it. */
+  .dc-side .hero-head {
+    background: none; color: #000; padding: 0 0 3px; margin: 0 0 6px;
+    border-bottom: 2px solid #000; border-radius: 0; display: block; font-size: 17pt;
   }
   .rot-sub { font-size: 9pt; opacity: 1; }
-  .rot-h { font-size: 8pt; margin: 0 0 4px; }
-  .rot-spare { margin: 8px 0 0; }
+  .rot-h { font-size: 8pt; margin: 6px 0 3px; }
   /* Screen scrolls the wide board sideways; paper has nowhere to scroll to, and
      a clipped overflow box silently drops the last string. */
   .tablewrap.dc-board-wrap {
-    overflow: visible; box-shadow: none; border-radius: 0;
+    overflow: visible; box-shadow: none; border-radius: 0; margin: 0;
   }
   table.dc-board { min-width: 0; }
-  table.dc-board th, table.dc-board td { padding: 5px 8px; }
-  table.dc-board .dc-poscell .dc-abbr { font-size: 11pt; }
+  table.dc-board th, table.dc-board td { padding: 3px 8px; }
+  table.dc-board .dc-poscell .dc-abbr { font-size: 10pt; }
   table.dc-board .dc-poscell .dc-label { font-size: 7.5pt; }
-  table.dc-board td b { font-size: 10pt; }
-  table.dc-board thead th { padding: 6px 8px; font-size: 8pt; }
-  .dc-side .hero-head { margin: 0 0 10px; font-size: 17pt; padding: 5px 14px; }
+  table.dc-board thead th { padding: 5px 8px; font-size: 8pt; }
+  /* Purple and Gold survive as printed words. A header fill is the one place colour
+     would have carried meaning nothing else does, and a printer set to skip
+     backgrounds drops it silently — so the whole header row goes to plain text on a
+     rule, which reads the same out of any tray. */
+  table.dc-board thead th { background: none; color: #000; border-bottom: 2px solid #000; }
+  /* On paper a chip is just a name — the pill, the border and the drag affordance
+     all cost ink and say nothing a coach holding the sheet can act on. */
+  .dc-chip {
+    background: none; border: 0; padding: 0; font-size: 10pt; font-weight: 800;
+    color: #000; border-radius: 0;
+  }
+  .dc-chip.two-way::before {
+    width: auto; height: auto; background: none; content: "\\2022 "; font-weight: 800;
+  }
+  .dc-pool {
+    display: flex; flex-wrap: wrap; gap: 2px 12px; border: 0; padding: 0;
+    min-height: 0; background: none;
+  }
+  .dc-bench { margin: 6px 0 0; }
+  /* Buttons, hints and the local-edits banner are screen furniture. The tally is
+     not: how many spots are open is the first thing a coach checks on the sheet. */
+  .dc-tools, .dc-hint, .dc-edited { display: none; }
+  .dc-bar { margin: 0 0 6px; display: block; }
+  .dc-tally { font-size: 8.5pt; }
   /* The title block is the price of the first sheet and it is paid in rows: at
      web sizes the h1, the lede and the Jumbo cards together cost more vertical
      room than the four backfield spots underneath them, and the offense lands on
@@ -1280,6 +1392,413 @@ SITE_JS = """
     if (e.key === 'Escape' && document.activeElement === q) { q.value = ''; apply(); }
   });
   apply();
+})();
+
+/* The depth chart board.
+
+   Drag a name to another spot, or tap a name and then tap where it goes. Both run
+   the same move(): a drag is tap-then-tap with the finger held down in between, and
+   implementing it twice is how the two quietly come to disagree.
+
+   The DOM is the state. Every cell carries its side, position and rotation, so "what
+   does the chart say" is a query and there is no second copy to keep honest.
+   localStorage holds placements only — the roster the page shipped with stays both
+   the reset point and the baseline the Copy button edits, which is what keeps a
+   local rearrangement from ever being mistaken for the roster in the repo. */
+(function () {
+  var board = document.getElementById('dc-board');
+  var blob = document.getElementById('dc-data');
+  if (!board || !blob) return;
+  var data = JSON.parse(blob.textContent);
+  var KEY = 'sayville-depth-chart-v1';
+  var tally = document.getElementById('dc-tally');
+  var edited = document.getElementById('dc-edited');
+  var resetBtn = document.getElementById('dc-reset');
+  var copyBtn = document.getElementById('dc-copy');
+  var SLOT = 'td.dc-cell, .dc-pool';
+
+  function all(sel, ctx) {
+    return Array.prototype.slice.call((ctx || board).querySelectorAll(sel));
+  }
+  function sideOf(el) {
+    var side = el.closest('.dc-side');
+    return side ? side.dataset.side : '';
+  }
+  function chipIn(slot) { return slot.querySelector('.dc-chip'); }
+
+  /* A cell with nobody in it says Open, and says it as a button so that the spot can
+     be tabbed to and chosen from a keyboard exactly like a name can. The bench needs
+     no such marker — its :empty rule speaks for it. */
+  function fill(slot) {
+    if (!slot.classList.contains('dc-cell')) return;
+    var has = chipIn(slot), open = slot.querySelector('.dc-open');
+    if (has && open) open.remove();
+    if (!has && !open) {
+      slot.innerHTML = '<button type="button" class="dc-open">Open</button>';
+    }
+  }
+
+  function move(chip, target) {
+    var from = chip.parentNode;
+    if (!target || from === target) return;
+    // Offense chips stay on offense. The two sides are separate problems and a kid
+    // is on both of them; dragging across would merge two answers into one.
+    if (sideOf(target) !== sideOf(chip)) return;
+    var held = target.classList.contains('dc-cell') ? chipIn(target) : null;
+    // A swap, not a shove: whoever is already there goes back where this one came
+    // from. Dropping onto the bench is not a swap, because the bench holds any number.
+    if (held) from.appendChild(held);
+    var open = target.querySelector('.dc-open');
+    if (open) open.remove();
+    target.appendChild(chip);
+    fill(from);
+    fill(target);
+    refresh();
+  }
+
+  /* Every placement on the board, in a shape that survives a roster.json edit: a
+     record names the spot rather than pointing at it, so one whose spot has since
+     gone is skipped instead of taking the whole save down with it. */
+  function snapshot() {
+    var out = [];
+    all(SLOT).forEach(function (s) {
+      all('.dc-chip', s).forEach(function (c) {
+        out.push([sideOf(s), s.dataset.rot, s.dataset.pos || '',
+                  c.dataset.name, c.dataset.home]);
+      });
+    });
+    return out;
+  }
+
+  var pristine = JSON.stringify(snapshot());
+
+  function persist() {
+    var now = JSON.stringify(snapshot());
+    var dirty = now !== pristine;
+    try {
+      if (dirty) localStorage.setItem(KEY, now);
+      // Dragging the last kid back where he started is a reset. Clearing the key
+      // rather than storing a board identical to the shipped one means there is only
+      // one way to be unedited, and the banner cannot get stuck on.
+      else localStorage.removeItem(KEY);
+    } catch (e) { /* private mode: the board still works, it just will not keep */ }
+    if (edited) edited.hidden = !dirty;
+    if (resetBtn) resetBtn.hidden = !dirty;
+  }
+
+  function restore() {
+    var raw = null, at;
+    try { raw = localStorage.getItem(KEY); } catch (e) { return; }
+    if (!raw) return;
+    try { at = JSON.parse(raw); } catch (e) { return; }
+    if (!Array.isArray(at)) return;
+
+    var byKey = {};
+    all(SLOT).forEach(function (s) {
+      byKey[sideOf(s) + '/' + s.dataset.rot + '/' + (s.dataset.pos || '')] = s;
+    });
+    // Lift every chip off the board, then set them back down where the save says.
+    // Two chips can share a name — the same kid is on both sides — so they come off
+    // into a list per side and are matched out of it one at a time.
+    var loose = { offense: [], defense: [] };
+    all('.dc-chip').forEach(function (c) {
+      var side = sideOf(c);
+      if (loose[side]) loose[side].push(c);
+      c.remove();
+    });
+    all(SLOT).forEach(function (s) { s.innerHTML = ''; fill(s); });
+
+    function take(side, name) {
+      var list = loose[side] || [];
+      for (var i = 0; i < list.length; i++) {
+        if (list[i].dataset.name === name) return list.splice(i, 1)[0];
+      }
+      return null;
+    }
+
+    at.forEach(function (rec) {
+      var slot = byKey[rec[0] + '/' + rec[1] + '/' + (rec[2] || '')];
+      if (!slot) return;
+      if (slot.classList.contains('dc-cell') && chipIn(slot)) return;
+      var chip = take(rec[0], rec[3]);
+      if (!chip) return;
+      var open = slot.querySelector('.dc-open');
+      if (open) open.remove();
+      slot.appendChild(chip);
+    });
+    // Anybody the save never mentions is somebody added to roster.json since it was
+    // written. The bench is the honest place for him: unplaced, and visibly so.
+    Object.keys(loose).forEach(function (side) {
+      var bench = byKey[side + '/bench/'];
+      loose[side].forEach(function (c) { if (bench) bench.appendChild(c); });
+    });
+    all(SLOT).forEach(fill);
+  }
+
+  function refresh() {
+    var counts = {}, seen = {};
+    // Alt rows are off the count. They are spots no formation on this board aligns,
+    // carried only because somebody is standing on one, and counting them would make
+    // a complete eleven read as twelve.
+    all('tbody tr[data-pos]').forEach(function (tr) {
+      if (tr.classList.contains('dc-alt')) return;
+      all('td.dc-cell', tr).forEach(function (td) {
+        var k = sideOf(td) + '-' + td.dataset.rot;
+        var c = counts[k] || (counts[k] = { on: 0, of: 0 });
+        c.of++;
+        var chip = chipIn(td);
+        if (!chip) return;
+        c.on++;
+        var rot = seen[td.dataset.rot] || (seen[td.dataset.rot] = {});
+        rot[chip.dataset.name] = (rot[chip.dataset.name] || 0) + 1;
+      });
+    });
+
+    // A name on both sides of one rotation is a kid who never leaves the field. It
+    // is the most consequential thing this page knows and it used to say none of it.
+    all('.dc-chip').forEach(function (c) {
+      var rot = seen[c.parentNode.dataset.rot];
+      var two = !!(rot && rot[c.dataset.name] > 1);
+      c.classList.toggle('two-way', two);
+      c.title = two ? c.dataset.name + ' plays both ways in this rotation' : '';
+    });
+
+    Object.keys(counts).forEach(function (k) {
+      var el = board.querySelector('[data-count="' + k + '"]');
+      if (!el) return;
+      el.textContent = counts[k].on + '/' + counts[k].of;
+      el.classList.toggle('warn', counts[k].on < counts[k].of);
+    });
+    ['offense', 'defense'].forEach(function (side) {
+      var pool = board.querySelector('.dc-pool[data-side="' + side + '"]');
+      var el = board.querySelector('[data-count="' + side + '-bench"]');
+      if (pool && el) el.textContent = String(all('.dc-chip', pool).length);
+    });
+
+    if (tally) {
+      var open = 0;
+      Object.keys(counts).forEach(function (k) { open += counts[k].of - counts[k].on; });
+      var both = data.rotations.map(function (r) {
+        var n = 0, m = seen[r] || {};
+        Object.keys(m).forEach(function (name) { if (m[name] > 1) n++; });
+        return r.charAt(0).toUpperCase() + r.slice(1) + ' ' + n;
+      }).join(', ');
+      tally.innerHTML = '<b>' + data.squad.length + '</b> on the squad &middot; '
+        + (open
+            ? '<span class="warn">' + open + (open === 1 ? ' spot' : ' spots') + ' open</span>'
+            : 'every spot filled')
+        + ' &middot; playing both ways: ' + both;
+    }
+    persist();
+  }
+
+  /* ------------------------------------------------------------ tap to place -- */
+  var picked = null, suppress = false;
+
+  function clearPick() {
+    if (picked) picked.classList.remove('picked');
+    picked = null;
+    board.classList.remove('placing');
+  }
+  function pick(chip) {
+    var same = picked === chip;
+    clearPick();
+    if (same) return;
+    picked = chip;
+    chip.classList.add('picked');
+    board.classList.add('placing');
+  }
+
+  board.addEventListener('click', function (e) {
+    if (suppress) return;           // the drag that just ended already decided this
+    var chip = e.target.closest('.dc-chip');
+    var slot = e.target.closest(SLOT);
+    if (picked && slot && chip !== picked) {
+      var held = picked;
+      clearPick();
+      move(held, slot);
+      return;
+    }
+    if (chip) { pick(chip); return; }
+    clearPick();
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') clearPick();
+  });
+
+  /* --------------------------------------------------------------- drag it -- */
+  /* One handler for mouse and finger both. The native HTML5 drag events never fire
+     on touch, and a coach uses this on a phone on a sideline, so native drag was
+     never an option here.
+
+     A finger has to hold still for a moment before the drag takes. Without that,
+     every attempt to scroll the page would pick a kid up instead — and because the
+     hold elapses before the first move, the touchmove that follows can be cancelled
+     and the scroll never starts. Moving first is a scroll, and lets go of the chip. */
+  var HOLD = 180, SLOP = 5;
+  var down = null, dragged = null, fly = null, over = null;
+
+  function cleanup() {
+    if (down && down.timer) clearTimeout(down.timer);
+    if (fly) fly.remove();
+    if (dragged) dragged.classList.remove('ghost');
+    if (over) over.classList.remove('over');
+    down = null; dragged = null; fly = null; over = null;
+  }
+
+  function begin(e) {
+    dragged = down.chip;
+    var r = dragged.getBoundingClientRect();
+    fly = dragged.cloneNode(true);
+    fly.classList.add('flying');
+    fly.classList.remove('picked');
+    fly.style.width = r.width + 'px';
+    down.dx = e.clientX - r.left;
+    down.dy = e.clientY - r.top;
+    document.body.appendChild(fly);
+    dragged.classList.add('ghost');
+    clearPick();
+  }
+
+  function hover(e) {
+    var el = document.elementFromPoint(e.clientX, e.clientY);
+    var slot = el && el.closest ? el.closest(SLOT) : null;
+    if (slot && sideOf(slot) !== sideOf(dragged)) slot = null;
+    if (slot === over) return;
+    if (over) over.classList.remove('over');
+    over = slot;
+    if (over) over.classList.add('over');
+  }
+
+  board.addEventListener('pointerdown', function (e) {
+    if (e.button) return;
+    var chip = e.target.closest('.dc-chip');
+    if (!chip) return;
+    cleanup();
+    down = { chip: chip, x: e.clientX, y: e.clientY, id: e.pointerId, ready: false };
+    // A mouse means it — the button went down on a chip and nothing else was going
+    // to happen. A finger might be starting a scroll, so it waits out the hold.
+    if (e.pointerType === 'mouse') down.ready = true;
+    else down.timer = setTimeout(function () { if (down) down.ready = true; }, HOLD);
+  });
+
+  window.addEventListener('pointermove', function (e) {
+    if (!down || e.pointerId !== down.id) return;
+    if (!dragged) {
+      if (Math.abs(e.clientX - down.x) < SLOP && Math.abs(e.clientY - down.y) < SLOP) return;
+      if (!down.ready) { cleanup(); return; }   // moved before the hold: a scroll
+      begin(e);
+    }
+    e.preventDefault();
+    fly.style.left = (e.clientX - down.dx) + 'px';
+    fly.style.top = (e.clientY - down.dy) + 'px';
+    hover(e);
+  }, { passive: false });
+
+  // Belt and braces for iOS, where a scroll the compositor has already taken over
+  // cannot be called back by preventing a pointermove.
+  window.addEventListener('touchmove', function (e) {
+    if (dragged) e.preventDefault();
+  }, { passive: false });
+
+  function finish(e) {
+    if (!down || (e && e.pointerId !== down.id)) return;
+    var chip = dragged, target = over;
+    cleanup();
+    if (!chip) return;
+    if (target) move(chip, target);
+    // The click that follows a drag must not also pick the chip back up.
+    suppress = true;
+    setTimeout(function () { suppress = false; }, 0);
+  }
+  window.addEventListener('pointerup', finish);
+  window.addEventListener('pointercancel', finish);
+
+  /* ------------------------------------------------------------ back to JSON -- */
+  /* roster.json as this board would write it. Built by editing the file the page
+     shipped with rather than emitting a fresh one, so the note, the packages and
+     anything else a coach put in that file survive the round trip. */
+  function exported() {
+    var out = JSON.parse(JSON.stringify(data.roster));
+    ['offense', 'defense'].forEach(function (side) {
+      var lists = out[side] || (out[side] = {});
+      Object.keys(lists).forEach(function (pos) { lists[pos] = []; });
+      var sec = board.querySelector('.dc-side[data-side="' + side + '"]');
+      if (!sec) return;
+      all('td.dc-cell', sec).forEach(function (td) {
+        var at = data.rotations.indexOf(td.dataset.rot);
+        if (at < 0) return;
+        var list = lists[td.dataset.pos] || (lists[td.dataset.pos] = []);
+        while (list.length < at) list.push('');
+        // An empty Purple spot above a filled Gold one has to keep Gold at index 1,
+        // so the hole is written as a blank rather than closed up.
+        var chip = chipIn(td);
+        list[at] = chip ? chip.dataset.name : '';
+      });
+      all('.dc-pool[data-side="' + side + '"] .dc-chip', sec).forEach(function (chip) {
+        var list = lists[chip.dataset.home] || (lists[chip.dataset.home] = []);
+        while (list.length < data.rotations.length) list.push('');
+        list.push(chip.dataset.name);
+      });
+      // Trailing blanks say nothing, and a list of nothing but blanks is a spot with
+      // nobody on it — which is what an empty list already means.
+      Object.keys(lists).forEach(function (pos) {
+        while (lists[pos].length && !lists[pos][lists[pos].length - 1]) lists[pos].pop();
+      });
+    });
+    return JSON.stringify(out, null, 2) + '\\n';
+  }
+
+  function fallback(text) {
+    var ta = document.getElementById('dc-out');
+    if (!ta) {
+      ta = document.createElement('textarea');
+      ta.id = 'dc-out';
+      ta.className = 'dc-out';
+      ta.rows = 12;
+      ta.readOnly = true;
+      var bar = document.getElementById('dc-bar');
+      if (bar) bar.insertAdjacentElement('afterend', ta);
+    }
+    ta.value = text;
+    ta.hidden = false;
+    ta.focus();
+    ta.select();
+  }
+
+  function flash(btn, label) {
+    if (btn._was) return;
+    btn._was = btn.textContent;
+    btn.textContent = label;
+    setTimeout(function () { btn.textContent = btn._was; btn._was = null; }, 1500);
+  }
+
+  if (copyBtn) copyBtn.addEventListener('click', function () {
+    var text = exported();
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(
+        function () { flash(copyBtn, 'Copied'); },
+        function () { fallback(text); });
+    } else fallback(text);
+  });
+
+  // Two taps to throw the board away. A single misplaced tap on a phone should not
+  // cost a coach the rearrangement he just spent halftime on.
+  var armed = 0;
+  if (resetBtn) resetBtn.addEventListener('click', function () {
+    if (!armed) {
+      armed = setTimeout(function () { armed = 0; resetBtn.textContent = 'Reset'; }, 4000);
+      resetBtn.textContent = 'Reset — tap again';
+      return;
+    }
+    try { localStorage.removeItem(KEY); } catch (e) {}
+    // Reloading restores the roster the page ships with, which means there is no
+    // second copy of the default here to fall out of step with the real one.
+    location.reload();
+  });
+
+  restore();
+  refresh();
 })();
 """
 
@@ -2316,6 +2835,12 @@ DEFENSE_POSITION_NAMES = {
 
 
 def depth_rows(order: list[str], names_by_pos: dict, label_fn) -> str:
+    """A flat position/name list. The package block, and nothing else.
+
+    The rotations outgrew this shape — see side_board — but a package is three
+    spots that ride on the starting unit, and giving it Purple and Gold columns
+    would claim it is a unit of its own.
+    """
     rows = []
     for pos in order:
         names = names_by_pos.get(pos) or []
@@ -2345,36 +2870,74 @@ ROTATIONS = [
 ]
 
 
-def rotation_board(order: list[str], names_by_pos: dict, label_fn,
-                   idx: int, heading: str) -> str:
-    """One rotation's unit on one side of the ball: a single name at every spot.
+def dc_chip(name: str, home: str) -> str:
+    """One kid, one draggable name.
 
-    A rotation is eleven kids who run onto the field together, so it reads as a
-    list of eleven and not as a column of a wider grid — the coach making a
-    substitution wants the whole unit in one glance, not one cell out of five.
-    A spot this rotation has nobody for says Open, loudly, because that is a hole
-    somebody has to fill before Saturday.
+    A <button> rather than a <span> because everything a chip can do by drag it can
+    also do by tap-then-tap, and a button is focusable, keyboard-operable and
+    announced as interactive without a line of ARIA. draggable="false" is deliberate:
+    the native HTML5 drag never fires on touch, and a coach uses this on a phone on a
+    sideline — the pointer-event handler in site.js covers mouse and finger both, and
+    the native one would only fight it.
+
+    data-home is the position this name sits at in roster.json. A chip dragged to the
+    bench has to know where it came from or the copied-out JSON cannot put it back.
     """
-    rows, filled = [], 0
-    for pos in order:
+    return (f'<button type="button" class="dc-chip" draggable="false" '
+            f'data-name="{esc(name)}" data-home="{esc(home)}">{esc(name)}</button>')
+
+
+def side_board(side: str, order: list[str], alt_order: list[str],
+               names_by_pos: dict, label_fn) -> str:
+    """One side of the ball, both rotations, as columns of one grid.
+
+    Rotation belongs on the X axis. The question this page exists to answer is "the
+    left tackle just came off — who goes in", and with a table per rotation that
+    answer was eight hundred pixels down the page and had to be found by counting
+    rows. Side by side it is the next cell over.
+    """
+    rows = []
+    for pos in order + alt_order:
         names = names_by_pos.get(pos) or []
-        name = names[idx] if idx < len(names) else ""
-        if name:
-            filled += 1
-            cell = f'<td data-label="Player"><b>{esc(name)}</b></td>'
-        else:
-            cell = '<td data-label="Player" class="dc-open">Open</td>'
+        # A spot no formation on this board aligns, carried only because somebody is
+        # standing on it. Off the count, so it cannot make a full unit read as twelve.
+        alt = ' class="dc-alt"' if pos in alt_order else ""
+        cells = ""
+        for idx, (rot_name, _note, rot_key) in enumerate(ROTATIONS):
+            name = names[idx] if idx < len(names) else ""
+            # Open is a button so an empty spot can be tabbed to and chosen from a
+            # keyboard exactly like a name can — the whole board is reachable without
+            # a pointer, which a drag-only interface never is.
+            inner = (dc_chip(name, pos) if name
+                     else '<button type="button" class="dc-open">Open</button>')
+            cells += (f'<td class="dc-cell" data-label="{esc(rot_name)}" '
+                      f'data-side="{side}" data-pos="{esc(pos)}" data-rot="{rot_key}">'
+                      f'{inner}</td>')
         rows.append(
-            f'<tr><td data-label="Position" class="dc-poscell">'
-            f'<span class="dc-abbr">{esc(pos)}</span>'
-            f'<span class="dc-label">{esc(label_fn(pos))}</span></td>{cell}</tr>'
+            f'<tr{alt} data-pos="{esc(pos)}">'
+            f'<td class="dc-poscell"><span class="dc-abbr">{esc(pos)}</span>'
+            f'<span class="dc-label">{esc(label_fn(pos))}</span></td>{cells}</tr>'
         )
-    short = "" if filled == len(order) else f' <span class="rot-gap">{filled}/{len(order)}</span>'
+    head = "".join(
+        f'<th class="rot-th" data-rot="{rot_key}">{esc(rot_name)}'
+        f'<span class="rot-count" data-count="{side}-{rot_key}"></span></th>'
+        for rot_name, _note, rot_key in ROTATIONS
+    )
+    # Anybody sitting third or deeper at a position is in neither rotation. That used
+    # to be a footnote at the bottom of the page; now it is the pile you drag out of,
+    # so it sits under the board it feeds and says how deep it is.
+    bench = "".join(
+        dc_chip(name, pos)
+        for pos in order
+        for name in (names_by_pos.get(pos) or [])[len(ROTATIONS):]
+    )
     return (
-        f'<div class="rot-col"><p class="rot-h">{esc(heading)}{short}</p>'
         f'<div class="tablewrap dc-board-wrap"><table class="dc-board">'
-        f'<thead><tr><th>Position</th><th>Player</th></tr></thead>'
-        f'<tbody>{"".join(rows)}</tbody></table></div></div>'
+        f'<thead><tr><th>Position</th>{head}</tr></thead>'
+        f'<tbody>{"".join(rows)}</tbody></table></div>'
+        f'<div class="dc-bench"><p class="rot-h">Bench'
+        f'<span class="rot-count" data-count="{side}-bench"></span></p>'
+        f'<div class="dc-pool" data-side="{side}" data-rot="bench">{bench}</div></div>'
     )
 
 
@@ -2396,9 +2959,13 @@ def write_depth_chart(formations: list[dict], defenses: dict, root: Path) -> str
     # The spots the other formations use and this board does not. Nobody is on them
     # today, but a name put against one must not disappear just because the base
     # offense has no room for it — so they surface underneath, and only if used.
+    # "Only if used" is the whole rule: the Split Backs LH and RH are empty, and a
+    # pair of Open rows under a complete eleven says the unit is two short when it
+    # is not.
     alt_order = [p for p in CARD_ORDER
                  if p not in base["alignment"]
-                 and any(p in form["alignment"] for form in formations)]
+                 and any(p in form["alignment"] for form in formations)
+                 and any(roster.get("offense", {}).get(p) or [])]
     def_order = list(front["alignment"]) if front else []
 
     def_label = lambda p: DEFENSE_POSITION_NAMES.get(p, p)  # noqa: E731
@@ -2419,55 +2986,64 @@ def write_depth_chart(formations: list[dict], defenses: dict, root: Path) -> str
         )
     packages_html = "".join(pkg_blocks)
 
-    # Anybody sitting third or deeper is in neither rotation. That is a fact about
-    # the squad worth printing rather than hiding: these are the kids available to
-    # fill the Open spots on the Gold sheet, and the two lists are read together.
-    spare = []
-    for side, order, label in (("offense", off_order, position_name),
-                               ("defense", def_order, def_label)):
-        for pos in order:
-            for name in (roster.get(side, {}).get(pos) or [])[len(ROTATIONS):]:
-                spare.append(f'<span class="dc-slot"><b>{esc(pos)}</b>{esc(name)}</span>')
-    spare_html = (
-        f'<div class="rot-spare"><p class="rot-h">Not in a rotation</p>'
-        f'<div class="dc-slots">{"".join(spare)}</div></div>' if spare else ""
+    # One section per side of the ball, each carrying both rotations as columns. The
+    # split used to be Purple sheet / Gold sheet with offense and defense side by
+    # side inside; it is now offense sheet / defense sheet with Purple and Gold side
+    # by side. Same two sheets either way, and this way the coordinator who only ever
+    # looks at one side of the ball is handed exactly his page.
+    sides = (
+        ("offense", "Offense", off_order, alt_order, position_name,
+         "The base formation's eleven.", packages_html),
+        ("defense", "Defense", def_order, [], def_label,
+         "The 5–3, our everyday front.", ""),
     )
-
-    sides = (("offense", off_order, position_name), ("defense", def_order, def_label))
     sections = []
-    for idx, (rot_name, rot_note, rot_key) in enumerate(ROTATIONS):
-        cols = "".join(
-            rotation_board(order, roster.get(side, {}), label, idx, side.title())
-            for side, order, label in sides
-        )
-        # A spot off the base board that this rotation has somebody for. Empty in the
-        # ordinary case, which is the point: it costs nothing until it matters.
-        alt = [f'<span class="dc-slot"><b>{esc(pos)}</b>{esc(names[idx])}</span>'
-               for pos in alt_order
-               for names in [roster.get("offense", {}).get(pos) or []]
-               if idx < len(names)]
-        alt_html = (
-            f'<div class="rot-spare"><p class="rot-h">Other formations</p>'
-            f'<div class="dc-slots">{"".join(alt)}</div></div>' if alt else ""
-        )
-        # Purple carries the packages, Gold carries whoever is not in a rotation yet.
-        tail = alt_html + (packages_html if idx == 0 else spare_html)
+    for side, heading, order, alts, label, sub, tail in sides:
         sections.append(
-            f'<section class="dc-side rot" data-rot="{rot_key}">'
-            f'<p class="hero-head">{esc(rot_name)}'
-            f'<span class="rot-sub">{esc(rot_note)}</span></p>'
-            f'<div class="rot-grid">{cols}</div>{tail}</section>'
+            f'<section class="dc-side" data-side="{side}">'
+            f'<p class="hero-head">{esc(heading)}'
+            f'<span class="rot-sub">{esc(sub)}</span></p>'
+            f'{side_board(side, order, alts, roster.get(side, {}), label)}{tail}</section>'
         )
+
+    # What the page knows that the board alone cannot say. The squad is every name
+    # anywhere in the roster, so a kid benched on both sides is still countable; the
+    # roster goes along whole so Copy can hand back a file with the note and the
+    # package still in it rather than a board-shaped fragment of one.
+    squad = sorted({name
+                    for side in ("offense", "defense")
+                    for names in roster.get(side, {}).values()
+                    for name in (names or [])})
+    import json as _json
+    # A literal "</script>" inside the blob would close the tag early. Every "<" in
+    # JSON is inside a string, so escaping it is lossless and the parser never sees
+    # the difference — cheaper than trusting that no kid is ever nicknamed "<3".
+    data = _json.dumps({"squad": squad, "roster": roster,
+                        "rotations": [k for _n, _t, k in ROTATIONS]},
+                       ensure_ascii=False).replace("<", "\\u003c")
 
     note = roster.get("note") or "Who plays where, one and two deep."
-    # One rotation per sheet — see the .dc-side rules in the print stylesheet.
+    # One side per sheet — see the .dc-side rules in the print stylesheet.
     body = f"""<h1 class="page">Depth Chart</h1>
 <p class="lede dc-note">{esc(note)}</p>
-<div class="play-actions">
-  <button type="button" class="btn solid" onclick="window.print()">Print</button>
+<script type="application/json" id="dc-data">{data}</script>
+<div class="dc-bar" id="dc-bar">
+  <p class="dc-tally" id="dc-tally"></p>
+  <div class="dc-tools">
+    <button type="button" class="btn" id="dc-reset" hidden>Reset</button>
+    <button type="button" class="btn" id="dc-copy">Copy roster.json</button>
+    <button type="button" class="btn solid" onclick="window.print()">Print</button>
+  </div>
 </div>
+<p class="dc-hint" id="dc-hint">Drag a name to another spot, or tap a name and then tap
+where it goes. Edits are kept in this browser only — nobody else sees them, and
+<b>Copy roster.json</b> hands back a file to paste into the repo.</p>
+<div class="dc-edited" id="dc-edited" hidden>Showing your local edits, not the roster
+in the repo.</div>
 
-{"".join(sections)}"""
+<div id="dc-board">
+{"".join(sections)}
+</div>"""
     return page(
         f"Depth Chart — {SITE_TITLE}",
         body,
@@ -2475,7 +3051,7 @@ def write_depth_chart(formations: list[dict], defenses: dict, root: Path) -> str
         defenses=defenses,
         active_nav="depth",
         description="Purple and Gold rotations — offense and defense, who plays where.",
-        # Pin the margin so a rotation cannot be pushed onto a second sheet by a print
+        # Pin the margin so a side cannot be pushed onto a second sheet by a print
         # dialog set to wide margins. Same 9mm the play-card book uses. The paper size
         # is deliberately not pinned: whatever is in the tray, Letter or A4, both fit.
         page_rule="margin: 9mm;",

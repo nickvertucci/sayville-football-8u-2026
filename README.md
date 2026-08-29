@@ -228,16 +228,51 @@ someone a link to exactly the play you mean.
 | `p-<play>.html` | One play. Deep-linkable, and prints to a single sheet |
 | `defense.html` | The defensive playbook index |
 | `d-<front>.html` | One defensive front, with every assignment |
+| `depth-chart.html` | **Depth chart** — Purple and Gold, offense and defense, drag-and-drop |
 | `print.html` | The whole book for printing |
 
 On every page the diagram is the main attraction — full width of the card, edge to edge
 on a phone, with the assignments read underneath it rather than squeezed in beside it.
+
+## The depth chart
+
+Two boards, offense and defense, each with Purple and Gold as columns. Rotation is on the
+across axis because the question the page exists to answer is *"the left tackle just came
+off — who goes in"*, and the answer should be the next cell over rather than a scroll away.
+
+`roster.json` is the chart. Depth in it **is** the rotation — the first name at a position
+is Purple, the second is Gold, and anybody third or deeper is on the bench, which is the
+pile the board drags out of. One ordered list per position stays the thing a coach edits,
+and nothing has to be kept agreeing with anything else.
+
+**You can rearrange it in the browser.** Drag a name to another spot, or tap a name and
+then tap where it goes — a swap if somebody is already there, a move if the spot is Open.
+Both work with a finger; on a phone, hold a moment before dragging, or the swipe scrolls
+the page instead. Every spot is a button, so the whole board works from a keyboard too.
+
+Those edits live in that one browser's `localStorage` and nowhere else. Nobody else sees
+them, they do not touch `roster.json`, and a banner says so whenever the board on screen is
+not the board in the repo. Two things close the loop:
+
+- **Reset** puts the shipped roster back. It only appears once you have changed something,
+  and takes two taps.
+- **Copy roster.json** hands back the whole file with your board written into it — note,
+  packages and all — to paste into the repo when a halftime rearrangement turns out to be
+  the real answer.
+
+Two things the page works out that the JSON does not say. A name on both sides of the same
+rotation gets a dot: that kid never leaves the field, and on the Purple unit today nine of
+the eleven starters are in that position. And every column carries a live filled-of-eleven
+count, so a hole is a number at the top rather than something you find by counting *Open*.
 
 ## Printing
 
 - **Print book** (top bar) → 60 landscape pages: 56 plays then 4 defensive fronts,
   one per sheet.
 - **Print** (on any play or front page) → that one card, one landscape sheet.
+- **Print** (on the depth chart) → two portrait sheets, offense then defense, each with
+  both rotations on it. One goes in each coordinator's pocket. Whatever the board says
+  when you print is what comes out, local edits included.
 
 Both are already set to landscape, so there is no page setup to fiddle with. Print to PDF
 for a binder, or print the single sheet you need for tonight's practice.

@@ -12,6 +12,7 @@
   --accent: #14213d;
   --accent-ink: #14213d;
   --accent-solid: #14213d;
+  --accent-soft: #dde5f5;
   --on-accent: #ffffff;
   --red: #b3001b;
   --bar: #14213d;
@@ -35,6 +36,7 @@
     --accent: #9db6e8;
     --accent-ink: #b9cbf1;
     --accent-solid: #2f4372;
+    --accent-soft: #26314a;
     --on-accent: #ffffff;
     --red: #ff7183;
     --bar: #10141d;
@@ -305,37 +307,58 @@ h1.page { font-size: clamp(23px, 5vw, 33px); letter-spacing: -.5px; margin: 22px
   text-transform: uppercase; letter-spacing: .4px;
 }
 
-/* The board itself: positions down the left, string depth across the top, the
-   shape of an NFL team's depth chart. A real <table> so it reads as a grid, not
-   a stack of cards — collapsed to cards only below 620px, the one place a grid
-   this wide stops working. */
+/* The board itself: positions down the left, the two rotations across the top, the
+   shape of an NFL team's depth chart. A real <table> so it reads as a grid, not a
+   stack of cards — collapsed to cards only below 620px, the one place a grid this
+   wide stops working.
+
+   Rows are deliberately tight. Every row here is one name, and a name needs a chip,
+   not a cell with sixteen pixels of padding round it — the old spacing made eleven
+   positions three thousand pixels tall and put the answer to "who backs up the left
+   tackle" below the fold. */
 .tablewrap.dc-board-wrap {
-  margin: 14px 0 20px; overflow-x: auto; background: var(--panel);
+  margin: 10px 0 4px; overflow-x: auto; background: var(--panel);
   border: 1px solid var(--line); border-radius: 12px; box-shadow: var(--shadow);
 }
-table.dc-board { width: 100%; border-collapse: collapse; min-width: 480px; }
+table.dc-board { width: 100%; border-collapse: collapse; min-width: 460px; }
 table.dc-board th, table.dc-board td {
   border-bottom: 1px solid var(--line-soft); border-right: 1px solid var(--line-soft);
-  padding: 12px 16px;
+  padding: 5px 10px;
 }
 table.dc-board th:last-child, table.dc-board td:last-child { border-right: 0; }
 table.dc-board tbody tr:last-child td { border-bottom: 0; }
 table.dc-board thead th {
-  background: var(--accent-solid); color: var(--on-accent); text-align: center;
-  font-size: 12px; text-transform: uppercase; letter-spacing: 1.4px; font-weight: 800;
-  padding: 13px 16px;
+  background: var(--accent-solid); color: var(--on-accent); text-align: left;
+  font-size: 11px; text-transform: uppercase; letter-spacing: 1.3px; font-weight: 800;
+  padding: 9px 12px;
 }
-table.dc-board thead th:first-child { text-align: left; }
-table.dc-board .dc-poscell { background: var(--panel-2); white-space: nowrap; }
-table.dc-board .dc-poscell .dc-abbr { display: block; font-size: 18px; }
-table.dc-board .dc-poscell .dc-label { display: block; font-size: 12px; }
-table.dc-board td:not(.dc-poscell) { text-align: center; }
-table.dc-board td b { font-size: 16px; font-weight: 800; color: var(--ink); }
-table.dc-board tbody tr:nth-child(even) td:not(.dc-poscell) { background: var(--panel-2); }
-table.dc-board .dc-empty { color: var(--line); font-weight: 700; }
-table.dc-board .dc-open {
-  color: var(--muted); font-style: italic; font-weight: 600; text-align: center;
+/* Purple and Gold are the units, so the column headers wear them. A coach scanning
+   for the Gold left tackle finds the column by colour before reading a word of it. */
+table.dc-board thead th.rot-th[data-rot="purple"] { background: #5b2d8e; }
+table.dc-board thead th.rot-th[data-rot="gold"] { background: #8a6508; }
+table.dc-board .dc-poscell { background: var(--panel-2); white-space: nowrap; width: 1%; }
+table.dc-board .dc-poscell .dc-abbr { font-size: 14px; }
+table.dc-board .dc-poscell .dc-label { font-size: 11.5px; margin-left: 7px; }
+table.dc-board tbody tr:nth-child(even) td.dc-poscell { background: var(--panel); }
+/* A spot no formation on this board aligns — see side_board. Present only because
+   somebody is standing on it, and marked so it does not read as a twelfth starter. */
+table.dc-board tr.dc-alt td { opacity: .72; }
+table.dc-board tr.dc-alt .dc-abbr::after {
+  content: " ·"; color: var(--muted); font-weight: 500;
 }
+/* An empty spot. A button, not a label — see side_board: it is a drop target you
+   can also tab to, and a <span> would have been reachable by pointer only. */
+.dc-open {
+  font: inherit; font-size: 13px; font-style: italic; font-weight: 600;
+  color: var(--muted); background: none; border: 0; padding: 3px 4px; cursor: pointer;
+  border-radius: 999px;
+}
+.dc-open:hover { color: var(--ink-2); }
+.dc-open:focus-visible { outline: 2px solid var(--accent-solid); outline-offset: 2px; }
+/* The drop target is the whole cell, not the chip inside it, so an empty spot is as
+   easy to hit as a full one. Below 620px the table becomes cards and the cells stop
+   being cells, so the padding rides on the cell rather than the row. */
+table.dc-board td.dc-cell { min-width: 130px; }
 @media (max-width: 620px) {
   .tablewrap.dc-board-wrap { overflow-x: visible; }
   table.dc-board { min-width: 0; }
@@ -343,20 +366,92 @@ table.dc-board .dc-open {
   table.dc-board, table.dc-board tbody, table.dc-board tr, table.dc-board td {
     display: block; width: 100%;
   }
-  table.dc-board tr { padding: 12px 14px; border-bottom: 1px solid var(--line); }
+  table.dc-board tr { padding: 8px 12px; border-bottom: 1px solid var(--line); }
   table.dc-board tr:last-child { border-bottom: 0; }
   table.dc-board td {
-    border: 0; padding: 2px 0; text-align: left !important; background: none !important;
+    border: 0; padding: 2px 0; background: none !important; min-width: 0;
   }
-  table.dc-board .dc-poscell { padding: 0 0 8px; margin-bottom: 6px; border-bottom: 1px dashed var(--line); }
-  table.dc-board .dc-poscell .dc-abbr, table.dc-board .dc-poscell .dc-label { display: inline; }
-  table.dc-board .dc-poscell .dc-label { margin-left: 8px; }
-  table.dc-board td:not(.dc-poscell)::before {
-    content: attr(data-label) " "; display: inline-block; min-width: 42px;
-    font-size: 10px; text-transform: uppercase; letter-spacing: 1px; color: var(--muted);
+  table.dc-board .dc-poscell { padding: 0 0 5px; margin-bottom: 4px; border-bottom: 1px dashed var(--line); }
+  table.dc-board td.dc-cell::before {
+    content: attr(data-label); display: inline-block; min-width: 52px;
+    font-size: 10px; text-transform: uppercase; letter-spacing: 1px; font-weight: 800;
   }
-  table.dc-board .dc-empty { display: none; }
-  table.dc-board .dc-open { padding: 4px 0; }
+  table.dc-board td.dc-cell[data-rot="purple"]::before { color: #a882d8; }
+  table.dc-board td.dc-cell[data-rot="gold"]::before { color: #d0a63a; }
+  table.dc-board .dc-open { padding: 3px 0; }
+}
+
+/* ---------------------------------------------------------------------- chips -- */
+/* A name you can pick up. It is a <button> because every drag has a tap-then-tap
+   equivalent — see the pointer handler in site.js — and that is the path a phone,
+   a keyboard and a screen reader all take. */
+.dc-chip {
+  display: inline-flex; align-items: center; gap: 6px; font: inherit;
+  font-size: 13.5px; font-weight: 700; color: var(--ink); background: var(--panel-2);
+  border: 1px solid var(--line); border-radius: 999px; padding: 3px 11px;
+  cursor: grab; touch-action: manipulation; user-select: none; -webkit-user-select: none;
+  text-align: left; max-width: 100%;
+}
+.dc-chip:hover { border-color: var(--accent-solid); }
+.dc-chip:focus-visible { outline: 2px solid var(--accent-solid); outline-offset: 2px; }
+/* Picked up by tap. The next tap on any spot puts him there, so the whole board
+   reads as targets until he lands. */
+.dc-chip.picked {
+  background: var(--accent-solid); color: var(--on-accent);
+  border-color: var(--accent-solid); cursor: grabbing;
+}
+#dc-board.placing td.dc-cell, #dc-board.placing .dc-pool { cursor: copy; }
+#dc-board.placing td.dc-cell { box-shadow: inset 0 0 0 1px var(--accent-solid); }
+/* The chip under the finger while a drag is in flight. Positioned by script. */
+.dc-chip.flying {
+  position: fixed; z-index: 90; pointer-events: none; cursor: grabbing;
+  box-shadow: 0 8px 20px rgba(0,0,0,.45); opacity: .95;
+}
+.dc-chip.ghost { opacity: .3; }
+td.dc-cell.over, .dc-pool.over { background: var(--accent-soft) !important; }
+/* A kid on both sides of the same rotation is playing every snap. That is the fact
+   this page was hiding: nine of the eleven Purple starters never leave the field. */
+.dc-chip.two-way::before {
+  content: ""; width: 6px; height: 6px; border-radius: 999px; flex: 0 0 auto;
+  background: var(--red);
+}
+
+/* ---------------------------------------------------------------------- bench -- */
+/* The kids in neither rotation. It was a footnote at the bottom of the page; it is
+   now the pile you drag out of, so it sits under the board it feeds. */
+.dc-bench { margin: 0 0 6px; }
+.dc-pool {
+  display: flex; flex-wrap: wrap; gap: 6px; min-height: 38px; padding: 8px 10px;
+  border: 1px dashed var(--line); border-radius: 10px; background: var(--panel);
+}
+.dc-pool:empty::before {
+  content: "Everybody is in a rotation."; color: var(--muted); font-size: 13px;
+  font-style: italic;
+}
+
+/* ------------------------------------------------------------------ dc chrome -- */
+.dc-bar {
+  display: flex; align-items: center; justify-content: space-between; gap: 14px;
+  flex-wrap: wrap; margin: 14px 0 6px;
+}
+.dc-tally { margin: 0; font-size: 13px; color: var(--ink-2); }
+.dc-tally b { color: var(--ink); }
+.dc-tally .warn { color: var(--red); font-weight: 800; }
+.dc-tools { display: flex; gap: 8px; flex-wrap: wrap; }
+.dc-hint { margin: 0 0 10px; font-size: 13px; color: var(--muted); max-width: 62ch; }
+.dc-hint b { color: var(--ink-2); }
+.dc-edited {
+  margin: 0 0 14px; padding: 8px 12px; border-radius: 8px; font-size: 13px;
+  font-weight: 700; color: var(--ink); background: var(--accent-soft);
+  border-left: 3px solid var(--accent-solid);
+}
+/* Where the copied JSON goes when the clipboard is not available — an http:// page
+   on a phone, mostly, where navigator.clipboard is simply absent. */
+.dc-out {
+  display: block; width: 100%; margin: 0 0 14px; padding: 10px 12px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12px;
+  color: var(--ink); background: var(--panel); border: 1px solid var(--line);
+  border-radius: 8px;
 }
 
 .dc-list { display: flex; flex-direction: column; gap: 8px; margin-bottom: 8px; }
@@ -381,32 +476,32 @@ table.dc-board .dc-open {
 .dc-slot.dc-open { color: var(--muted); font-style: italic; font-weight: 500; }
 .dc-slot.dc-open b { background: var(--line); color: var(--muted); }
 
-/* ------------------------------------------------------------------ rotations -- */
-/* Purple and Gold are the two units, and they are the top split on this page: a
-   rotation is what actually runs onto the field, so it is the thing you hand
-   somebody, and offense and defense sit side by side inside it rather than being
-   two separate pages you have to hold at once. */
-.rot { border-left: 6px solid var(--rot); padding-left: 16px; margin: 34px 0 0; }
-.rot[data-rot="purple"] { --rot: #5b2d8e; }
-.rot[data-rot="gold"] { --rot: #8a6508; }
-.rot .hero-head { background: var(--rot); margin: 0 0 4px; }
+/* ----------------------------------------------------------------- both sides -- */
+/* Offense and defense are the top split, and Purple and Gold are columns inside
+   each. It was the other way round, which meant the answer to "who replaces the
+   left tackle" lived on a different sheet from the question. A coordinator only
+   ever wants one of these two sections, so each is a section and each is a sheet. */
+.dc-side { margin: 26px 0 0; }
+.dc-side .hero-head { margin: 0 0 2px; }
 .rot-sub {
   display: inline-block; margin-left: 10px; font-size: 13px; font-weight: 700;
   letter-spacing: .6px; text-transform: uppercase; opacity: .82;
 }
-.rot-grid { display: grid; gap: 20px; grid-template-columns: 1fr; margin-top: 14px; }
-@media (min-width: 900px) { .rot-grid { grid-template-columns: 1fr 1fr; } }
 .rot-h {
-  margin: 0 0 8px; font-size: 12px; font-weight: 800; letter-spacing: 1.4px;
+  display: flex; align-items: baseline; gap: 8px;
+  margin: 10px 0 6px; font-size: 12px; font-weight: 800; letter-spacing: 1.4px;
   text-transform: uppercase; color: var(--muted);
 }
-/* A unit short of eleven is a hole somebody has to fill, so say so next to the
-   heading instead of making the coach count Open rows. */
-.rot-gap {
-  margin-left: 6px; color: var(--red); font-weight: 800; letter-spacing: 0;
-}
-.rot-spare { margin: 16px 0 4px; }
-.rot-spare .dc-slots { display: flex; flex-wrap: wrap; gap: 8px; }
+/* A unit short of eleven is a hole somebody has to fill, so say so in the column
+   header instead of making the coach count Open rows. Written by site.js, because
+   after the first drag the number the page shipped with is a lie. */
+.rot-count { font-weight: 800; letter-spacing: 0; opacity: .85; }
+.rot-count.warn { color: var(--red); opacity: 1; }
+thead .rot-count { margin-left: 7px; font-size: 11px; }
+/* The body red is nearly invisible on the gold header fill. A short unit is the one
+   thing on this page that must not be missable, so on a coloured header it goes pale
+   instead of dark — same alarm, read against the fill it actually sits on. */
+thead .rot-count.warn { color: #ffd2d8; }
 
 .pkg {
   margin: 14px 0 8px; padding: 14px 16px 4px; background: var(--panel);
@@ -537,6 +632,9 @@ ul.coach li {
   text-decoration: none; white-space: nowrap;
 }
 .btn:hover { background: var(--accent-solid); border-color: var(--accent-solid); color: #fff; }
+/* display:inline-block above outranks the browser's own [hidden] rule, so a button
+   with the attribute set stays on screen. Same fix as .ddpanel and .scrim. */
+.btn[hidden] { display: none; }
 .btn.solid {
   background: var(--accent-solid); border-color: var(--accent-solid); color: var(--on-accent);
 }
@@ -958,41 +1056,55 @@ footer.site a { color: var(--accent-ink); }
      with test_print_pages.py, which is why this is a + selector and not a comment
      apologising for the extra page. */
   .dc-side + .dc-side { page-break-before: always; break-before: page; }
-  /* The two units stay side by side on paper. A rotation is one name per spot, so
-     the pair fits a portrait sheet across — stacking them would spill. */
-  .rot-grid {
-    display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 8px;
-  }
-  .rot-col { break-inside: avoid; page-break-inside: avoid; }
   /* A board split down the middle of a row is unreadable on a clipboard. */
   table.dc-board tr { break-inside: avoid; page-break-inside: avoid; }
-  /* No break-inside:avoid on .dc-side itself. A rotation already starts at the top
-     of a fresh sheet, so keeping it whole can never move it anywhere useful — and
-     on a sheet too small to hold it, the browser honours the rule by emitting a
-     blank page first. Measured: it turned a two-page overflow into a three. */
-  .rot { border-left: 4px solid #000; padding-left: 10px; margin: 0; }
-  /* Background fills are a print-settings gamble; the rotation name is already
-     spelled out, so print it as plain text with a rule under it and let the left
-     border carry the rest. */
-  .rot .hero-head {
-    background: none; color: #000; padding: 0 0 3px; margin: 0;
-    border-bottom: 2px solid #000; border-radius: 0; display: block;
+  /* No break-inside:avoid on .dc-side itself. A side already starts at the top of a
+     fresh sheet, so keeping it whole can never move it anywhere useful — and on a
+     sheet too small to hold it, the browser honours the rule by emitting a blank
+     page first. Measured: it turned a two-page overflow into a three. */
+  .dc-side { margin: 0; }
+  /* Background fills are a print-settings gamble; the heading is already spelled
+     out, so print it as plain text with a rule under it. */
+  .dc-side .hero-head {
+    background: none; color: #000; padding: 0 0 3px; margin: 0 0 6px;
+    border-bottom: 2px solid #000; border-radius: 0; display: block; font-size: 17pt;
   }
   .rot-sub { font-size: 9pt; opacity: 1; }
-  .rot-h { font-size: 8pt; margin: 0 0 4px; }
-  .rot-spare { margin: 8px 0 0; }
+  .rot-h { font-size: 8pt; margin: 6px 0 3px; }
   /* Screen scrolls the wide board sideways; paper has nowhere to scroll to, and
      a clipped overflow box silently drops the last string. */
   .tablewrap.dc-board-wrap {
-    overflow: visible; box-shadow: none; border-radius: 0;
+    overflow: visible; box-shadow: none; border-radius: 0; margin: 0;
   }
   table.dc-board { min-width: 0; }
-  table.dc-board th, table.dc-board td { padding: 5px 8px; }
-  table.dc-board .dc-poscell .dc-abbr { font-size: 11pt; }
+  table.dc-board th, table.dc-board td { padding: 3px 8px; }
+  table.dc-board .dc-poscell .dc-abbr { font-size: 10pt; }
   table.dc-board .dc-poscell .dc-label { font-size: 7.5pt; }
-  table.dc-board td b { font-size: 10pt; }
-  table.dc-board thead th { padding: 6px 8px; font-size: 8pt; }
-  .dc-side .hero-head { margin: 0 0 10px; font-size: 17pt; padding: 5px 14px; }
+  table.dc-board thead th { padding: 5px 8px; font-size: 8pt; }
+  /* Purple and Gold survive as printed words. A header fill is the one place colour
+     would have carried meaning nothing else does, and a printer set to skip
+     backgrounds drops it silently — so the whole header row goes to plain text on a
+     rule, which reads the same out of any tray. */
+  table.dc-board thead th { background: none; color: #000; border-bottom: 2px solid #000; }
+  /* On paper a chip is just a name — the pill, the border and the drag affordance
+     all cost ink and say nothing a coach holding the sheet can act on. */
+  .dc-chip {
+    background: none; border: 0; padding: 0; font-size: 10pt; font-weight: 800;
+    color: #000; border-radius: 0;
+  }
+  .dc-chip.two-way::before {
+    width: auto; height: auto; background: none; content: "\2022 "; font-weight: 800;
+  }
+  .dc-pool {
+    display: flex; flex-wrap: wrap; gap: 2px 12px; border: 0; padding: 0;
+    min-height: 0; background: none;
+  }
+  .dc-bench { margin: 6px 0 0; }
+  /* Buttons, hints and the local-edits banner are screen furniture. The tally is
+     not: how many spots are open is the first thing a coach checks on the sheet. */
+  .dc-tools, .dc-hint, .dc-edited { display: none; }
+  .dc-bar { margin: 0 0 6px; display: block; }
+  .dc-tally { font-size: 8.5pt; }
   /* The title block is the price of the first sheet and it is paid in rows: at
      web sizes the h1, the lede and the Jumbo cards together cost more vertical
      room than the four backfield spots underneath them, and the offense lands on
