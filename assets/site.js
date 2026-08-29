@@ -411,9 +411,10 @@
       all('td.dc-cell .dc-chip', sec).forEach(function (c) {
         rotations[c.dataset.name] = (rotations[c.dataset.name] || 0) + 1;
       });
-      var idle = 0;
+      var idle = 0, squad = [];
       all('.dc-pool .dc-chip', sec).forEach(function (c) {
         var n = rotations[c.dataset.name] || 0;
+        squad.push(c.dataset.name);
         c.classList.toggle('placed', n > 0);
         // The badge earns its space only past one. A kid in a single rotation is the
         // ordinary case and does not need a number to say so.
@@ -422,6 +423,23 @@
           ? c.dataset.name + ' is in ' + n + (n === 1 ? ' rotation' : ' rotations')
           : c.dataset.name + ' has no spot yet';
         if (!n) idle++;
+      });
+
+      /* The bench row: the squad for this side, minus whoever is in this column. It
+         is the other half of every column and the board could not say it before —
+         you had to hold eleven names in your head and subtract. The rail is the
+         squad, so it is also the list to subtract from, and nothing has to be told
+         twice who is on the team. */
+      all('tr.dc-benchrow td.dc-benchcell', sec).forEach(function (td) {
+        var on = {};
+        all('td.dc-cell[data-rot="' + td.dataset.rot + '"] .dc-chip', sec)
+          .forEach(function (c) { on[c.dataset.name] = true; });
+        var off = squad.filter(function (n) { return !on[n]; });
+        td.innerHTML = '<span class="dc-offn">' + off.length + '</span>'
+          + off.map(function (n) {
+              return '<span class="dc-off">' + n
+                .replace(/&/g, '&amp;').replace(/</g, '&lt;') + '</span>';
+            }).join('');
       });
       var el = board.querySelector('[data-count="' + side + '-idle"]');
       if (el) {
