@@ -9,7 +9,7 @@
   "roles": {
     "LE": "DL",
     "LT": "DL",
-    "NG": "DL",
+    "NT": "DL",
     "RT": "DL",
     "RE": "DL",
     "W": "LB",
@@ -22,7 +22,7 @@
   "alignment": {
     "LE": [-4.2, 0.8],
     "LT": [-2.4, 0.8],
-    "NG": [0.0, 0.8],
+    "NT": [0.0, 0.8],
     "RT": [2.4, 0.8],
     "RE": [4.2, 0.8],
     "W": [-3.2, 3.0],
@@ -47,7 +47,7 @@
         [0.4, -1.4]
       ]
     },
-    "NG": {
+    "NT": {
       "rule": "Head up on the center. Two hands on his chest, get your pads under his, then work to whichever side the ball goes.",
       "type": "attack",
       "path": [

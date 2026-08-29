@@ -903,7 +903,7 @@ GENERIC_OFFENSE = {
     "QB": [0.0, -1.5], "FB": [0.0, -3.3], "LH": [-2.9, -4.9], "RH": [2.9, -4.9],
 }
 
-DEF_LINEMEN = {"LE", "LT", "LG", "NG", "RG", "RT", "RE"}
+DEF_LINEMEN = {"LE", "LT", "LG", "NT", "RG", "RT", "RE"}
 
 
 def draw_ghost_offense() -> str:

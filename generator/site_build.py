@@ -2300,7 +2300,7 @@ def write_install(formations: list[dict], defenses: dict, root: Path) -> str:
 # defensive roles into that table would put "left end" in a place that answers a
 # different question. Kept local to the depth chart, the only page that needs it.
 DEFENSE_POSITION_NAMES = {
-    "LE": "Left end", "LT": "Left tackle", "NG": "Nose guard", "RT": "Right tackle",
+    "LE": "Left end", "LT": "Left tackle", "NT": "Nose tackle", "RT": "Right tackle",
     "RE": "Right end", "W": "Weak linebacker", "M": "Middle linebacker",
     "S": "Strong linebacker", "LC": "Left corner", "RC": "Right corner",
     "FS": "Free safety",
