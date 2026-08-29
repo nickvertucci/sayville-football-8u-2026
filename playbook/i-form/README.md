@@ -41,7 +41,7 @@ Normal line splits, about a foot. Both ends are on the line; the Z is off it, a 
 | [Regular I Iso Right](#regular-i-iso-right) | `Regular I Z Right 32 Iso` | run | TB |
 | [Regular I Iso Left](#regular-i-iso-left) | `Regular I Z Right 33 Iso` | run | TB |
 | [Regular I Power Right](#regular-i-power-right) | `Regular I Z Right 34 Power` | run | TB |
-| [Regular I Power Left](#regular-i-power-left) | `Regular I Z Right 35 Power` | run | TB |
+| [Regular I Power Left](#regular-i-power-left) | `Regular I Z Left 35 Power` | run | TB |
 | [Regular I Counter Right](#regular-i-counter-right) | `Regular I Z Right 34 Counter` | run | TB |
 | [Regular I Counter Left](#regular-i-counter-left) | `Regular I Z Right 35 Counter` | run | TB |
 | [Regular I Boot Right](#regular-i-boot-right) | `Regular I Z Right 16 Boot` | pass | Z |
@@ -345,11 +345,11 @@ Our best downhill run. Everybody blocks down to the inside, the Z kicks the end 
 
 ## Regular I Power Left
 
-**Call it:** `Regular I Z Right 35 Power`
+**Call it:** `Regular I Z Left 35 Power`
 
 ![Regular I Power Left](cards/i-power-l.svg)
 
-The same play away from the Z. We give up the Z's kick-out and the fullback does that job instead, which is why it is the second one we teach, not the first.
+Power Right's exact mirror. The Z is fixed on the right in every other Regular I play, but Power depends on his kick-out block to work, so this is the one play in the book where he flips sides before the snap — lined up left, same job, same footwork, just facing the other way.
 
 | Position | Assignment |
 |---|---|
@@ -360,17 +360,18 @@ The same play away from the Z. We give up the Z's kick-out and the fullback does
 | **RG** | PULL LEFT. Stay flat behind the line, turn up through the hole and block the first wrong shirt you see. Do not go around the pile — go through it. |
 | **RT** | Block back. Take the first defender on or inside you — nobody crosses your face. |
 | **RTE** | Cut off pursuit from behind. You are the last one to the ball, so never quit on the play. |
-| **Z** | Come flat across behind the line and cut off the backside. You are chasing the play, so take the first defender who crosses your path. |
+| **Z** | Kick the end out. Aim at his outside hip and drive him toward the sideline. Everything runs inside of you, so never let him come underneath. |
 | **QB** | Open to the left, hand it deep to the tailback, then carry out the boot fake to the edge. The fake is what keeps the backside end honest. |
-| **FB** | Kick the end out. Aim at his outside hip and drive him toward the sideline. The tailback is running inside of you, so never let him come underneath. |
-| **TB** **(ball)** | Take the handoff going downhill and aim at the outside hip of our tackle. Follow the guard through the hole. Stay tight to the blocks and do not bounce it outside. |
+| **FB** | Lead through the hole outside our tackle and block the first defender who shows in it. Get your head across him — do not wait for him to come to you. |
+| **TB** **(ball)** | Take the handoff going downhill and aim at the outside hip of our tackle. Follow the fullback, then the guard. Stay tight to the blocks and do not bounce it outside. |
 
 **Coaching points**
 
-- Run this the moment they start cheating a linebacker over to the Z. That is the only reason it is in the book.
-- The fullback is doing the Z's job here, and he is doing it from further away with less angle. Give him extra reps on the kick-out alone.
-- Everything else is Power Right in a mirror, so teach the pair together. The line rules do not change at all.
-- If the backside end is chasing the tailback down from behind, the quarterback's boot fake is not being carried out. Fix the fake, not the blocking.
+- This is the most physical run in the book, mirrored. If it works going right, it works going left — the blocking is identical, just flipped.
+- The Z is used to lining up on the right. Make sure he actually moves before the snap on this call and does not just run the block from where he always stands.
+- Drill the Z's kick-out on its own, same as the other direction. If he blocks the end with his shoulders square, the end slides underneath and makes the tackle for a loss — he has to attack the outside hip.
+- The pulling guard is late by design, same as the other direction. Tell him his man is the one who shows up in the hole, not a man he picks before the snap.
+- The tailback's most common mistake is bouncing it wide looking for green grass. The yards are inside the Z's block, same as Power Right. Make him run it tight in practice until it is automatic.
 
 ---
 
