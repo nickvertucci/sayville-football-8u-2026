@@ -19,6 +19,7 @@ import argparse
 import os
 import re
 import shutil
+import signal
 import subprocess
 import sys
 import tempfile
@@ -68,9 +69,54 @@ def page_count(pdf: Path) -> int:
     return pages
 
 
+def stop(proc: subprocess.Popen) -> None:
+    """Shut a render down, and the helper processes it forked with it.
+
+    Killing the process we launched is not enough on its own: Chrome forks a zygote, a
+    GPU process and a renderer, and on a full run this is called sixty times. Its own
+    session means one signal reaches the lot. Windows has no process groups in that
+    sense and no run of this test has ever needed them there, so it gets the plain
+    terminate.
+    """
+    if proc.poll() is not None:
+        return
+    try:
+        if hasattr(os, "killpg"):
+            os.killpg(os.getpgid(proc.pid), signal.SIGTERM)
+        else:
+            proc.terminate()
+    except (ProcessLookupError, PermissionError):
+        return
+    try:
+        proc.wait(timeout=10)
+    except subprocess.TimeoutExpired:
+        proc.kill()
+        try:
+            proc.wait(timeout=10)
+        except subprocess.TimeoutExpired:
+            pass
+
+
 def render_once(chrome: Path, page: Path, out: Path, profile: Path,
-                wait: float = 40.0) -> bool:
-    subprocess.run(
+                wait: float = 90.0) -> bool:
+    """Render one page and say whether a finished PDF landed.
+
+    Chrome is started and then abandoned rather than waited on. It writes the PDF and
+    then, on current builds, simply sits there: the file is complete in a couple of
+    seconds and the process never exits at all. Waiting on exit — which is what
+    subprocess.run does, timeout or no timeout — therefore hangs for the whole timeout
+    on a render that already finished, and the test cannot complete on a machine with
+    Chrome 132 or newer. Measured against Chrome 151; the same command on the same page
+    ran fine on the builds this test was written against, so the wait was never the
+    thing being checked. The PDF is.
+
+    So the file is the signal. Wait for it to appear and for its size to stop moving,
+    then shut Chrome down. That also covers the older failure this replaces, where the
+    parent exited before the child had flushed and left the caller looking at an empty
+    directory — a process that has quit gets a moment to finish writing before it
+    counts as a failure.
+    """
+    proc = subprocess.Popen(
         [
             str(chrome), "--headless", "--disable-gpu", "--no-sandbox",
             f"--user-data-dir={profile}",
@@ -79,21 +125,27 @@ def render_once(chrome: Path, page: Path, out: Path, profile: Path,
             f"--print-to-pdf={out}",
             page.as_uri(),
         ],
-        check=False, capture_output=True, timeout=180,
+        stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,
+        start_new_session=hasattr(os, "killpg"),
     )
-    # Chrome's parent process exits before the child has finished writing the file, so
-    # a plain subprocess.run() returns to an empty directory. Wait for the PDF to show
-    # up and for its size to stop moving.
-    deadline = time.time() + wait
-    size = -1
-    while time.time() < deadline:
-        if out.exists():
-            now = out.stat().st_size
-            if now > 0 and now == size:
-                return True
-            size = now
-        time.sleep(0.25)
-    return out.exists() and out.stat().st_size > 0
+    try:
+        deadline = time.time() + wait
+        size = -1
+        quit_at = None
+        while time.time() < deadline:
+            if out.exists():
+                now = out.stat().st_size
+                if now > 0 and now == size:
+                    return True
+                size = now
+            if proc.poll() is not None:
+                quit_at = quit_at or time.time()
+                if time.time() - quit_at > 5.0:
+                    break
+            time.sleep(0.25)
+        return out.exists() and out.stat().st_size > 0
+    finally:
+        stop(proc)
 
 
 def render(chrome: Path, page: Path, out: Path, profile_root: Path) -> int:
