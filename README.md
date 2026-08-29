@@ -228,7 +228,7 @@ someone a link to exactly the play you mean.
 | `p-<play>.html` | One play. Deep-linkable, and prints to a single sheet |
 | `defense.html` | The defensive playbook index |
 | `d-<front>.html` | One defensive front, with every assignment |
-| `depth-chart.html` | **Depth chart** — Purple and Gold, offense and defense, drag-and-drop |
+| `depth-chart.html` | **Depth chart** — Purple, Gold and White, offense and defense, drag-and-drop |
 | `print.html` | The whole book for printing |
 
 On every page the diagram is the main attraction — full width of the card, edge to edge
@@ -236,19 +236,39 @@ on a phone, with the assignments read underneath it rather than squeezed in besi
 
 ## The depth chart
 
-Two boards, offense and defense, each with Purple and Gold as columns. Rotation is on the
-across axis because the question the page exists to answer is *"the left tackle just came
-off — who goes in"*, and the answer should be the next cell over rather than a scroll away.
+Two boards, offense and defense, each with Purple, Gold and White as columns. Rotation is
+on the across axis because the question the page exists to answer is *"the left tackle just
+came off — who goes in"*, and the answer should be the next cell over rather than a scroll
+away.
 
-`roster.json` is the chart. Depth in it **is** the rotation — the first name at a position
-is Purple, the second is Gold, and anybody third or deeper is on the bench, which is the
-pile the board drags out of. One ordered list per position stays the thing a coach edits,
-and nothing has to be kept agreeing with anything else.
+`roster.json` is the chart. Depth in it **is** the rotation — first name at a position is
+Purple, second is Gold, third is White, and anybody after that is on the squad but in no
+rotation. One ordered list per position stays the thing a coach edits, and nothing has to
+be kept agreeing with anything else.
 
-**You can rearrange it in the browser.** Drag a name to another spot, or tap a name and
-then tap where it goes — a swap if somebody is already there, a move if the spot is Open.
-Both work with a finger; on a phone, hold a moment before dragging, or the swipe scrolls
-the page instead. Every spot is a button, so the whole board works from a keyboard too.
+**A name may repeat.** The same left tackle on all three rotations is that name three
+times in the list. That is the normal case for a kid you never take off, and it round-trips
+through the page without a second concept to learn.
+
+**You can rearrange it in the browser.** Under each board is the squad — everybody on that
+side of the ball, always. It is a *source*, not a pile of leftovers: drag a name onto a spot
+and he goes there while staying in the squad, so putting one kid on Purple, Gold and White
+is three drags rather than a special mode. Tap works too, and a name tapped in the squad
+stays picked after it lands — tap him once, then tap all three spots. Drag a name from the
+board back to the squad to take him out of that spot.
+
+Names already on the board are dimmed in the squad rail and carry the number of rotations
+they are in, which leaves the bright ones — the kids nobody has given a job — as the thing
+your eye lands on. The heading counts them.
+
+Moving a name that is already on the board is a move, swapping with whoever is there. The
+one thing the board will not do is put a kid in the same rotation twice: he cannot be at
+left tackle and centre on the unit that is on the field, so an assignment that would do it
+takes him off the first spot instead.
+
+Everything works with a finger; on a phone, hold a moment before dragging, or the swipe
+scrolls the page instead. Every spot is a button, so the whole board works from a keyboard
+too.
 
 Those edits live in that one browser's `localStorage` and nowhere else. Nobody else sees
 them, they do not touch `roster.json`, and a banner says so whenever the board on screen is
@@ -261,9 +281,14 @@ not the board in the repo. Two things close the loop:
   the real answer.
 
 Two things the page works out that the JSON does not say. A name on both sides of the same
-rotation gets a dot: that kid never leaves the field, and on the Purple unit today nine of
-the eleven starters are in that position. And every column carries a live filled-of-eleven
-count, so a hole is a number at the top rather than something you find by counting *Open*.
+rotation gets a dot: that kid never leaves the field while that unit is out, and on the
+Purple unit today nine of the eleven starters are in that position. And every column carries
+a live filled-of-eleven count, so a hole is a number at the top rather than something you
+find by counting *Open*.
+
+White ships nearly empty, because the file has a third name at only two spots. That is the
+honest state of a third unit nobody has picked yet, and filling it is what the squad rail
+is for.
 
 ## Printing
 
@@ -271,8 +296,8 @@ count, so a hole is a number at the top rather than something you find by counti
   one per sheet.
 - **Print** (on any play or front page) → that one card, one landscape sheet.
 - **Print** (on the depth chart) → two portrait sheets, offense then defense, each with
-  both rotations on it. One goes in each coordinator's pocket. Whatever the board says
-  when you print is what comes out, local edits included.
+  all three rotations on it. One goes in each coordinator's pocket. Whatever the board
+  says when you print is what comes out, local edits included.
 
 Both are already set to landscape, so there is no page setup to fiddle with. Print to PDF
 for a binder, or print the single sheet you need for tonight's practice.

@@ -374,10 +374,13 @@ table.dc-board thead th {
   font-size: 11px; text-transform: uppercase; letter-spacing: 1.3px; font-weight: 800;
   padding: 9px 12px;
 }
-/* Purple and Gold are the units, so the column headers wear them. A coach scanning
-   for the Gold left tackle finds the column by colour before reading a word of it. */
+/* The units wear their own colours in the column headers. A coach scanning for the
+   Gold left tackle finds the column by colour before reading a word of it. White is
+   a silver rather than a literal white, which on a light page would be no colour at
+   all, and it takes dark text — so the short-unit warning has to darken with it. */
 table.dc-board thead th.rot-th[data-rot="purple"] { background: #5b2d8e; }
 table.dc-board thead th.rot-th[data-rot="gold"] { background: #8a6508; }
+table.dc-board thead th.rot-th[data-rot="white"] { background: #dfe3ea; color: #14213d; }
 table.dc-board .dc-poscell { background: var(--panel-2); white-space: nowrap; width: 1%; }
 table.dc-board .dc-poscell .dc-abbr { font-size: 14px; }
 table.dc-board .dc-poscell .dc-label { font-size: 11.5px; margin-left: 7px; }
@@ -420,6 +423,7 @@ table.dc-board td.dc-cell { min-width: 130px; }
   }
   table.dc-board td.dc-cell[data-rot="purple"]::before { color: #a882d8; }
   table.dc-board td.dc-cell[data-rot="gold"]::before { color: #d0a63a; }
+  table.dc-board td.dc-cell[data-rot="white"]::before { color: #8b95a6; }
   table.dc-board .dc-open { padding: 3px 0; }
 }
 
@@ -458,17 +462,23 @@ td.dc-cell.over, .dc-pool.over { background: var(--accent-soft) !important; }
   background: var(--red);
 }
 
-/* ---------------------------------------------------------------------- bench -- */
-/* The kids in neither rotation. It was a footnote at the bottom of the page; it is
-   now the pile you drag out of, so it sits under the board it feeds. */
+/* ---------------------------------------------------------------------- squad -- */
+/* The whole squad for this side of the ball, and a source rather than a container:
+   dragging a name out leaves it here, so the same kid goes on Purple and Gold and
+   White without anyone having to think about where the chip "is". The ones already
+   on the board are dimmed, which leaves the bright ones — the kids nobody has given
+   a job — as the thing your eye lands on. */
 .dc-bench { margin: 0 0 6px; }
 .dc-pool {
   display: flex; flex-wrap: wrap; gap: 6px; min-height: 38px; padding: 8px 10px;
   border: 1px dashed var(--line); border-radius: 10px; background: var(--panel);
 }
-.dc-pool:empty::before {
-  content: "Everybody is in a rotation."; color: var(--muted); font-size: 13px;
-  font-style: italic;
+.dc-pool .dc-chip.placed { opacity: .45; font-weight: 600; }
+.dc-pool .dc-chip.placed:hover, .dc-pool .dc-chip.picked { opacity: 1; }
+/* How many rotations he is in, past the ordinary one. Written by site.js. */
+.dc-pool .dc-chip[data-count]:not([data-count=""])::after {
+  content: attr(data-count) "\\00d7"; margin-left: 1px; font-size: 10px;
+  font-weight: 800; color: var(--accent-ink); opacity: .9;
 }
 
 /* ------------------------------------------------------------------ dc chrome -- */
@@ -519,7 +529,7 @@ td.dc-cell.over, .dc-pool.over { background: var(--accent-soft) !important; }
 .dc-slot.dc-open b { background: var(--line); color: var(--muted); }
 
 /* ----------------------------------------------------------------- both sides -- */
-/* Offense and defense are the top split, and Purple and Gold are columns inside
+/* Offense and defense are the top split, and the rotations are columns inside
    each. It was the other way round, which meant the answer to "who replaces the
    left tackle" lived on a different sheet from the question. A coordinator only
    ever wants one of these two sections, so each is a section and each is a sheet. */
@@ -539,11 +549,16 @@ td.dc-cell.over, .dc-pool.over { background: var(--accent-soft) !important; }
    after the first drag the number the page shipped with is a lie. */
 .rot-count { font-weight: 800; letter-spacing: 0; opacity: .85; }
 .rot-count.warn { color: var(--red); opacity: 1; }
+/* The heading is uppercase; the squad count under it is a sentence and reading
+   "2 WITH NO SPOT" is being shouted at. */
+.rot-h .rot-count { text-transform: none; font-weight: 700; }
 thead .rot-count { margin-left: 7px; font-size: 11px; }
 /* The body red is nearly invisible on the gold header fill. A short unit is the one
-   thing on this page that must not be missable, so on a coloured header it goes pale
-   instead of dark — same alarm, read against the fill it actually sits on. */
+   thing on this page that must not be missable, so on a dark header it goes pale
+   instead — same alarm, read against the fill it actually sits on. White's header is
+   pale already, so there it stays dark. */
 thead .rot-count.warn { color: #ffd2d8; }
+thead th.rot-th[data-rot="white"] .rot-count.warn { color: #a3001a; }
 
 .pkg {
   margin: 14px 0 8px; padding: 14px 16px 4px; background: var(--panel);
@@ -1123,11 +1138,19 @@ footer.site a { color: var(--accent-ink); }
   table.dc-board .dc-poscell .dc-abbr { font-size: 10pt; }
   table.dc-board .dc-poscell .dc-label { font-size: 7.5pt; }
   table.dc-board thead th { padding: 5px 8px; font-size: 8pt; }
-  /* Purple and Gold survive as printed words. A header fill is the one place colour
+  /* The rotation names survive as printed words. A header fill is the one place colour
      would have carried meaning nothing else does, and a printer set to skip
-     backgrounds drops it silently — so the whole header row goes to plain text on a
-     rule, which reads the same out of any tray. */
+     backgrounds drops it silently — leaving white text on white paper — so the whole
+     header row goes to plain text on a rule, which reads the same out of any tray.
+
+     Both selectors are needed. The screen rules that colour these headers carry an
+     attribute and a second class, so a plain `thead th` here loses to them on
+     specificity no matter that it comes later in the file, and the fills print. */
   table.dc-board thead th { background: none; color: #000; border-bottom: 2px solid #000; }
+  table.dc-board thead th.rot-th[data-rot] { background: none; color: #000; }
+  /* Pale pink on paper is nothing at all. */
+  thead .rot-count.warn,
+  thead th.rot-th[data-rot] .rot-count.warn { color: #000; font-style: italic; }
   /* On paper a chip is just a name — the pill, the border and the drag affordance
      all cost ink and say nothing a coach holding the sheet can act on. */
   .dc-chip {
@@ -1427,8 +1450,8 @@ SITE_JS = """
   function chipIn(slot) { return slot.querySelector('.dc-chip'); }
 
   /* A cell with nobody in it says Open, and says it as a button so that the spot can
-     be tabbed to and chosen from a keyboard exactly like a name can. The bench needs
-     no such marker — its :empty rule speaks for it. */
+     be tabbed to and chosen from a keyboard exactly like a name can. The squad rail
+     needs no such marker — it is never empty. */
   function fill(slot) {
     if (!slot.classList.contains('dc-cell')) return;
     var has = chipIn(slot), open = slot.querySelector('.dc-open');
@@ -1438,34 +1461,76 @@ SITE_JS = """
     }
   }
 
+  function isPool(el) { return el.classList.contains('dc-pool'); }
+
+  /* Three rules, and every gesture on this page is one of them.
+
+       squad rail -> spot   assign. The rail is a source, not a container, so the kid
+                            stays in it and the board gets a copy. This is the whole
+                            reason a kid can be on Purple and Gold and White at once.
+       spot -> spot         move, swapping with whoever is there.
+       spot -> squad rail   take him out of that spot.
+
+     The one thing none of them may produce is the same kid twice in one rotation. He
+     cannot be at left tackle and centre on the unit that is on the field, so an
+     assignment that would do it takes him off the first spot instead — which turns
+     out to read as a move, which is what a coach expected anyway. */
   function move(chip, target) {
     var from = chip.parentNode;
     if (!target || from === target) return;
     // Offense chips stay on offense. The two sides are separate problems and a kid
     // is on both of them; dragging across would merge two answers into one.
     if (sideOf(target) !== sideOf(chip)) return;
-    var held = target.classList.contains('dc-cell') ? chipIn(target) : null;
-    // A swap, not a shove: whoever is already there goes back where this one came
-    // from. Dropping onto the bench is not a swap, because the bench holds any number.
-    if (held) from.appendChild(held);
+
+    if (isPool(target)) {
+      // Off the board. A rail chip dropped back on the rail is a no-op, caught above.
+      if (isPool(from)) return;
+      chip.remove();
+      fill(from);
+      refresh();
+      return;
+    }
+
+    // From the rail the chip is a template: clone it and leave the original in place.
+    var moving = isPool(from) ? chip.cloneNode(true) : chip;
+    if (moving !== chip) moving.classList.remove('picked', 'ghost', 'placed');
+
+    var held = chipIn(target);
+    if (held) {
+      // A swap when he came off the board, a bump to nowhere when he came off the
+      // rail — there is no spot to send the incumbent back to in that case.
+      if (moving === chip) from.appendChild(held); else held.remove();
+    }
     var open = target.querySelector('.dc-open');
     if (open) open.remove();
-    target.appendChild(chip);
+    target.appendChild(moving);
+
+    // One rotation, one spot. Anywhere else in this rotation holding the same name is
+    // the old spot, and it empties.
+    all('td.dc-cell[data-rot="' + target.dataset.rot + '"]',
+        target.closest('.dc-side')).forEach(function (td) {
+      if (td === target) return;
+      var other = chipIn(td);
+      if (other && other.dataset.name === moving.dataset.name) {
+        other.remove();
+        fill(td);
+      }
+    });
+
     fill(from);
     fill(target);
     refresh();
   }
 
-  /* Every placement on the board, in a shape that survives a roster.json edit: a
-     record names the spot rather than pointing at it, so one whose spot has since
-     gone is skipped instead of taking the whole save down with it. */
+  /* Every placement on the board — the cells only. The squad rail is the roster and
+     never changes, so saving it would be saving the input. A record names its spot
+     rather than pointing at it, so one whose spot has since gone from roster.json is
+     skipped instead of taking the whole save down with it. */
   function snapshot() {
     var out = [];
-    all(SLOT).forEach(function (s) {
-      all('.dc-chip', s).forEach(function (c) {
-        out.push([sideOf(s), s.dataset.rot, s.dataset.pos || '',
-                  c.dataset.name, c.dataset.home]);
-      });
+    all('td.dc-cell').forEach(function (td) {
+      var c = chipIn(td);
+      if (c) out.push([sideOf(td), td.dataset.rot, td.dataset.pos, c.dataset.name]);
     });
     return out;
   }
@@ -1493,46 +1558,29 @@ SITE_JS = """
     try { at = JSON.parse(raw); } catch (e) { return; }
     if (!Array.isArray(at)) return;
 
-    var byKey = {};
-    all(SLOT).forEach(function (s) {
-      byKey[sideOf(s) + '/' + s.dataset.rot + '/' + (s.dataset.pos || '')] = s;
+    var byKey = {}, template = {};
+    all('td.dc-cell').forEach(function (td) {
+      byKey[sideOf(td) + '/' + td.dataset.rot + '/' + td.dataset.pos] = td;
     });
-    // Lift every chip off the board, then set them back down where the save says.
-    // Two chips can share a name — the same kid is on both sides — so they come off
-    // into a list per side and are matched out of it one at a time.
-    var loose = { offense: [], defense: [] };
-    all('.dc-chip').forEach(function (c) {
-      var side = sideOf(c);
-      if (loose[side]) loose[side].push(c);
-      c.remove();
+    all('.dc-pool .dc-chip').forEach(function (c) {
+      template[sideOf(c) + '/' + c.dataset.name] = c;
     });
-    all(SLOT).forEach(function (s) { s.innerHTML = ''; fill(s); });
-
-    function take(side, name) {
-      var list = loose[side] || [];
-      for (var i = 0; i < list.length; i++) {
-        if (list[i].dataset.name === name) return list.splice(i, 1)[0];
-      }
-      return null;
-    }
+    // Clear the board and set it out again from the save. Every chip on it is a copy
+    // of a rail chip, so there is nothing here to preserve — only to rebuild.
+    all('td.dc-cell').forEach(function (td) { td.innerHTML = ''; fill(td); });
 
     at.forEach(function (rec) {
-      var slot = byKey[rec[0] + '/' + rec[1] + '/' + (rec[2] || '')];
-      if (!slot) return;
-      if (slot.classList.contains('dc-cell') && chipIn(slot)) return;
-      var chip = take(rec[0], rec[3]);
-      if (!chip) return;
-      var open = slot.querySelector('.dc-open');
+      var td = byKey[rec[0] + '/' + rec[1] + '/' + rec[2]];
+      var src = template[rec[0] + '/' + rec[3]];
+      // A spot or a kid that has left roster.json since this was saved. Dropping the
+      // one record keeps the rest of the board, which is the point of naming spots.
+      if (!td || !src || chipIn(td)) return;
+      var chip = src.cloneNode(true);
+      chip.classList.remove('picked', 'ghost', 'placed');
+      var open = td.querySelector('.dc-open');
       if (open) open.remove();
-      slot.appendChild(chip);
+      td.appendChild(chip);
     });
-    // Anybody the save never mentions is somebody added to roster.json since it was
-    // written. The bench is the honest place for him: unplaced, and visibly so.
-    Object.keys(loose).forEach(function (side) {
-      var bench = byKey[side + '/bench/'];
-      loose[side].forEach(function (c) { if (bench) bench.appendChild(c); });
-    });
-    all(SLOT).forEach(fill);
   }
 
   function refresh() {
@@ -1554,9 +1602,10 @@ SITE_JS = """
       });
     });
 
-    // A name on both sides of one rotation is a kid who never leaves the field. It
-    // is the most consequential thing this page knows and it used to say none of it.
-    all('.dc-chip').forEach(function (c) {
+    // A name on both sides of one rotation is a kid who never leaves the field while
+    // that unit is out. It is the most consequential thing this page knows and the
+    // old layout said none of it.
+    all('td.dc-cell .dc-chip').forEach(function (c) {
       var rot = seen[c.parentNode.dataset.rot];
       var two = !!(rot && rot[c.dataset.name] > 1);
       c.classList.toggle('two-way', two);
@@ -1569,28 +1618,50 @@ SITE_JS = """
       el.textContent = counts[k].on + '/' + counts[k].of;
       el.classList.toggle('warn', counts[k].on < counts[k].of);
     });
+
+    /* The rail carries the whole squad now, so it needs to say who in it is actually
+       doing something. A kid already on the board is dimmed and wears the number of
+       rotations he is in; the ones left bright are the ones nobody has given a job.
+       That is the question the rail is scanned for. */
     ['offense', 'defense'].forEach(function (side) {
-      var pool = board.querySelector('.dc-pool[data-side="' + side + '"]');
-      var el = board.querySelector('[data-count="' + side + '-bench"]');
-      if (pool && el) el.textContent = String(all('.dc-chip', pool).length);
+      var sec = board.querySelector('.dc-side[data-side="' + side + '"]');
+      if (!sec) return;
+      var rotations = {};
+      all('td.dc-cell .dc-chip', sec).forEach(function (c) {
+        rotations[c.dataset.name] = (rotations[c.dataset.name] || 0) + 1;
+      });
+      var idle = 0;
+      all('.dc-pool .dc-chip', sec).forEach(function (c) {
+        var n = rotations[c.dataset.name] || 0;
+        c.classList.toggle('placed', n > 0);
+        // The badge earns its space only past one. A kid in a single rotation is the
+        // ordinary case and does not need a number to say so.
+        c.dataset.count = n > 1 ? String(n) : '';
+        c.title = n
+          ? c.dataset.name + ' is in ' + n + (n === 1 ? ' rotation' : ' rotations')
+          : c.dataset.name + ' has no spot yet';
+        if (!n) idle++;
+      });
+      var el = board.querySelector('[data-count="' + side + '-idle"]');
+      if (el) {
+        el.textContent = idle ? idle + ' with no spot' : 'everybody is in';
+        el.classList.toggle('warn', idle > 0);
+      }
     });
 
     if (tally) {
-      var open = 0;
-      Object.keys(counts).forEach(function (k) { open += counts[k].of - counts[k].on; });
       var both = data.rotations.map(function (r) {
         var n = 0, m = seen[r] || {};
         Object.keys(m).forEach(function (name) { if (m[name] > 1) n++; });
-        return r.charAt(0).toUpperCase() + r.slice(1) + ' ' + n;
+        return label(r) + ' ' + n;
       }).join(', ');
       tally.innerHTML = '<b>' + data.squad.length + '</b> on the squad &middot; '
-        + (open
-            ? '<span class="warn">' + open + (open === 1 ? ' spot' : ' spots') + ' open</span>'
-            : 'every spot filled')
-        + ' &middot; playing both ways: ' + both;
+        + 'playing both ways: ' + both;
     }
     persist();
   }
+
+  function label(rot) { return rot.charAt(0).toUpperCase() + rot.slice(1); }
 
   /* ------------------------------------------------------------ tap to place -- */
   var picked = null, suppress = false;
@@ -1615,7 +1686,12 @@ SITE_JS = """
     var slot = e.target.closest(SLOT);
     if (picked && slot && chip !== picked) {
       var held = picked;
-      clearPick();
+      // A name tapped in the squad rail stays picked after it lands. Putting the same
+      // left tackle on Purple, Gold and White is one tap and then three, instead of
+      // six — and it is the reason the rail is a source in the first place, so the
+      // interface should not make you re-say it every time. A name picked up off the
+      // board has been moved, and moving is finished when it lands.
+      if (!isPool(held.parentNode)) clearPick();
       move(held, slot);
       return;
     }
@@ -1725,17 +1801,26 @@ SITE_JS = """
       Object.keys(lists).forEach(function (pos) { lists[pos] = []; });
       var sec = board.querySelector('.dc-side[data-side="' + side + '"]');
       if (!sec) return;
+      var playing = {};
       all('td.dc-cell', sec).forEach(function (td) {
         var at = data.rotations.indexOf(td.dataset.rot);
         if (at < 0) return;
         var list = lists[td.dataset.pos] || (lists[td.dataset.pos] = []);
         while (list.length < at) list.push('');
         // An empty Purple spot above a filled Gold one has to keep Gold at index 1,
-        // so the hole is written as a blank rather than closed up.
+        // so the hole is written as a blank rather than closed up. A kid in more than
+        // one rotation is simply written more than once, which is exactly how the
+        // file is read back — depth is the rotation, so the same name at index 0 and
+        // index 1 says he plays on both.
         var chip = chipIn(td);
         list[at] = chip ? chip.dataset.name : '';
+        if (chip) playing[chip.dataset.name] = true;
       });
-      all('.dc-pool[data-side="' + side + '"] .dc-chip', sec).forEach(function (chip) {
+      // Behind every rotation go the kids in none of them. The rail holds the whole
+      // squad now, so it is the ones NOT on the board that belong here — appending
+      // all of them would write every name back twice.
+      all('.dc-pool .dc-chip', sec).forEach(function (chip) {
+        if (playing[chip.dataset.name]) return;
         var list = lists[chip.dataset.home] || (lists[chip.dataset.home] = []);
         while (list.length < data.rotations.length) list.push('');
         list.push(chip.dataset.name);
@@ -2838,7 +2923,7 @@ def depth_rows(order: list[str], names_by_pos: dict, label_fn) -> str:
     """A flat position/name list. The package block, and nothing else.
 
     The rotations outgrew this shape — see side_board — but a package is three
-    spots that ride on the starting unit, and giving it Purple and Gold columns
+    spots that ride on the starting unit, and giving it a column per rotation
     would claim it is a unit of its own.
     """
     rows = []
@@ -2867,6 +2952,7 @@ def depth_rows(order: list[str], names_by_pos: dict, label_fn) -> str:
 ROTATIONS = [
     ("Purple", "starters", "purple"),
     ("Gold", "second", "gold"),
+    ("White", "third", "white"),
 ]
 
 
@@ -2880,16 +2966,33 @@ def dc_chip(name: str, home: str) -> str:
     sideline — the pointer-event handler in site.js covers mouse and finger both, and
     the native one would only fight it.
 
-    data-home is the position this name sits at in roster.json. A chip dragged to the
-    bench has to know where it came from or the copied-out JSON cannot put it back.
+    data-home is the position this name sits at in roster.json. A kid left out of every
+    rotation still has to be written back somewhere, and this is where.
     """
     return (f'<button type="button" class="dc-chip" draggable="false" '
             f'data-name="{esc(name)}" data-home="{esc(home)}">{esc(name)}</button>')
 
 
+def side_squad(order: list[str], names_by_pos: dict) -> list[tuple[str, str]]:
+    """Every kid on this side of the ball, once each, with the spot he is listed at.
+
+    Read in position order rather than alphabetically, because that is the order the
+    coach entered them and it keeps the linemen together. The spot travels with the
+    name so that a kid left out of every rotation can still be written back to the
+    file at the position he belongs to.
+    """
+    out, seen = [], set()
+    for pos in order:
+        for name in (names_by_pos.get(pos) or []):
+            if name and name not in seen:
+                seen.add(name)
+                out.append((name, pos))
+    return out
+
+
 def side_board(side: str, order: list[str], alt_order: list[str],
                names_by_pos: dict, label_fn) -> str:
-    """One side of the ball, both rotations, as columns of one grid.
+    """One side of the ball, every rotation, as columns of one grid.
 
     Rotation belongs on the X axis. The question this page exists to answer is "the
     left tackle just came off — who goes in", and with a table per rotation that
@@ -2923,21 +3026,21 @@ def side_board(side: str, order: list[str], alt_order: list[str],
         f'<span class="rot-count" data-count="{side}-{rot_key}"></span></th>'
         for rot_name, _note, rot_key in ROTATIONS
     )
-    # Anybody sitting third or deeper at a position is in neither rotation. That used
-    # to be a footnote at the bottom of the page; now it is the pile you drag out of,
-    # so it sits under the board it feeds and says how deep it is.
-    bench = "".join(
-        dc_chip(name, pos)
-        for pos in order
-        for name in (names_by_pos.get(pos) or [])[len(ROTATIONS):]
-    )
+    # The whole squad, not just whoever is left over. This rail used to be the bench —
+    # the kids in no rotation — and a chip lived in exactly one place, so putting a kid
+    # on Purple took him off Gold. Three rotations make that wrong: the same left
+    # tackle plays on all three, and a coach should say so by dragging, not by editing
+    # JSON. So the rail is a source rather than a container. Everybody stays in it, the
+    # board holds copies, and a kid can be in as many rotations as he can stand.
+    pool = "".join(dc_chip(name, home)
+                   for name, home in side_squad(order, names_by_pos))
     return (
         f'<div class="tablewrap dc-board-wrap"><table class="dc-board">'
         f'<thead><tr><th>Position</th>{head}</tr></thead>'
         f'<tbody>{"".join(rows)}</tbody></table></div>'
-        f'<div class="dc-bench"><p class="rot-h">Bench'
-        f'<span class="rot-count" data-count="{side}-bench"></span></p>'
-        f'<div class="dc-pool" data-side="{side}" data-rot="bench">{bench}</div></div>'
+        f'<div class="dc-bench"><p class="rot-h">Squad'
+        f'<span class="rot-count" data-count="{side}-idle"></span></p>'
+        f'<div class="dc-pool" data-side="{side}" data-rot="squad">{pool}</div></div>'
     )
 
 
@@ -2988,8 +3091,8 @@ def write_depth_chart(formations: list[dict], defenses: dict, root: Path) -> str
 
     # One section per side of the ball, each carrying both rotations as columns. The
     # split used to be Purple sheet / Gold sheet with offense and defense side by
-    # side inside; it is now offense sheet / defense sheet with Purple and Gold side
-    # by side. Same two sheets either way, and this way the coordinator who only ever
+    # side inside; it is now offense sheet / defense sheet with the rotations side by
+    # side. Same two sheets either way, and this way the coordinator who only ever
     # looks at one side of the ball is handed exactly his page.
     sides = (
         ("offense", "Offense", off_order, alt_order, position_name,
@@ -3035,9 +3138,11 @@ def write_depth_chart(formations: list[dict], defenses: dict, root: Path) -> str
     <button type="button" class="btn solid" onclick="window.print()">Print</button>
   </div>
 </div>
-<p class="dc-hint" id="dc-hint">Drag a name to another spot, or tap a name and then tap
-where it goes. Edits are kept in this browser only — nobody else sees them, and
-<b>Copy roster.json</b> hands back a file to paste into the repo.</p>
+<p class="dc-hint" id="dc-hint">Drag a name from the squad onto a spot, or tap the name
+and then tap the spot. A name stays in the squad after you place it, so the same kid
+goes on Purple, Gold and White — tap him once, then tap all three. Drag him off the
+board to take him out. Edits are kept in this browser only, and <b>Copy roster.json</b>
+hands back a file to paste into the repo.</p>
 <div class="dc-edited" id="dc-edited" hidden>Showing your local edits, not the roster
 in the repo.</div>
 
@@ -3050,7 +3155,7 @@ in the repo.</div>
         formations,
         defenses=defenses,
         active_nav="depth",
-        description="Purple and Gold rotations — offense and defense, who plays where.",
+        description="Purple, Gold and White rotations — offense and defense, who plays where.",
         # Pin the margin so a side cannot be pushed onto a second sheet by a print
         # dialog set to wide margins. Same 9mm the play-card book uses. The paper size
         # is deliberately not pinned: whatever is in the tray, Letter or A4, both fit.
