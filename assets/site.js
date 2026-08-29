@@ -230,7 +230,6 @@
   if (!board || !blob) return;
   var data = JSON.parse(blob.textContent);
   var KEY = 'sayville-depth-chart-v1';
-  var tally = document.getElementById('dc-tally');
   var edited = document.getElementById('dc-edited');
   var resetBtn = document.getElementById('dc-reset');
   var copyBtn = document.getElementById('dc-copy');
@@ -380,7 +379,7 @@
   }
 
   function refresh() {
-    var counts = {}, seen = {};
+    var counts = {};
     // Alt rows are off the count. They are spots no formation on this board aligns,
     // carried only because somebody is standing on one, and counting them would make
     // a complete eleven read as twelve.
@@ -390,22 +389,8 @@
         var k = sideOf(td) + '-' + td.dataset.rot;
         var c = counts[k] || (counts[k] = { on: 0, of: 0 });
         c.of++;
-        var chip = chipIn(td);
-        if (!chip) return;
-        c.on++;
-        var rot = seen[td.dataset.rot] || (seen[td.dataset.rot] = {});
-        rot[chip.dataset.name] = (rot[chip.dataset.name] || 0) + 1;
+        if (chipIn(td)) c.on++;
       });
-    });
-
-    // A name on both sides of one rotation is a kid who never leaves the field while
-    // that unit is out. It is the most consequential thing this page knows and the
-    // old layout said none of it.
-    all('td.dc-cell .dc-chip').forEach(function (c) {
-      var rot = seen[c.parentNode.dataset.rot];
-      var two = !!(rot && rot[c.dataset.name] > 1);
-      c.classList.toggle('two-way', two);
-      c.title = two ? c.dataset.name + ' plays both ways in this rotation' : '';
     });
 
     Object.keys(counts).forEach(function (k) {
@@ -445,19 +430,8 @@
       }
     });
 
-    if (tally) {
-      var both = data.rotations.map(function (r) {
-        var n = 0, m = seen[r] || {};
-        Object.keys(m).forEach(function (name) { if (m[name] > 1) n++; });
-        return label(r) + ' ' + n;
-      }).join(', ');
-      tally.innerHTML = '<b>' + data.squad.length + '</b> on the squad &middot; '
-        + 'playing both ways: ' + both;
-    }
     persist();
   }
-
-  function label(rot) { return rot.charAt(0).toUpperCase() + rot.slice(1); }
 
   /* ------------------------------------------------------------ tap to place -- */
   var picked = null, suppress = false;
@@ -597,9 +571,12 @@
       Object.keys(lists).forEach(function (pos) { lists[pos] = []; });
       var sec = board.querySelector('.dc-side[data-side="' + side + '"]');
       if (!sec) return;
+      // This side's columns, in depth order. Offense has a fourth; defense does not,
+      // and padding a defense list to four would invent a slot nothing reads back.
+      var cols = data.rotations[side] || [];
       var playing = {};
       all('td.dc-cell', sec).forEach(function (td) {
-        var at = data.rotations.indexOf(td.dataset.rot);
+        var at = cols.indexOf(td.dataset.rot);
         if (at < 0) return;
         var list = lists[td.dataset.pos] || (lists[td.dataset.pos] = []);
         while (list.length < at) list.push('');
@@ -618,7 +595,7 @@
       all('.dc-pool .dc-chip', sec).forEach(function (chip) {
         if (playing[chip.dataset.name]) return;
         var list = lists[chip.dataset.home] || (lists[chip.dataset.home] = []);
-        while (list.length < data.rotations.length) list.push('');
+        while (list.length < cols.length) list.push('');
         list.push(chip.dataset.name);
       });
       // Trailing blanks say nothing, and a list of nothing but blanks is a spot with
