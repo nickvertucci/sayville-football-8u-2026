@@ -385,14 +385,23 @@ table.dc-board td.dc-cell { min-width: 130px; }
     border: 0; padding: 2px 0; background: none !important; min-width: 0;
   }
   table.dc-board .dc-poscell { padding: 0 0 5px; margin-bottom: 4px; border-bottom: 1px dashed var(--line); }
-  table.dc-board td.dc-cell::before {
+  /* The header row is gone at this width, so every cell has to name its own column —
+     the bench cells too, or the row is four unlabelled columns of eleven names and
+     nothing says which unit each belongs to. */
+  table.dc-board td.dc-cell::before, table.dc-board td.dc-benchcell::before {
     content: attr(data-label); display: inline-block; min-width: 52px;
     font-size: 10px; text-transform: uppercase; letter-spacing: 1px; font-weight: 800;
   }
-  table.dc-board td.dc-cell[data-rot="purple"]::before { color: #a882d8; }
-  table.dc-board td.dc-cell[data-rot="gold"]::before { color: #d0a63a; }
-  table.dc-board td.dc-cell[data-rot="white"]::before { color: #8b95a6; }
-  table.dc-board td.dc-cell[data-rot="jumbo"]::before { color: #5aa7b3; }
+  table.dc-board td.dc-benchcell::before { display: block; margin-bottom: 3px; }
+  table.dc-board td[data-rot="purple"]::before { color: #a882d8; }
+  table.dc-board td[data-rot="gold"]::before { color: #d0a63a; }
+  table.dc-board td[data-rot="white"]::before { color: #8b95a6; }
+  table.dc-board td[data-rot="jumbo"]::before { color: #5aa7b3; }
+  /* Each column's bench is its own block, not a run-on with the one above it. */
+  table.dc-board tr.dc-benchrow td.dc-benchcell {
+    padding: 8px 0 4px; border-top: 1px dashed var(--line);
+  }
+  table.dc-board tr.dc-benchrow td.dc-benchcell:first-of-type { border-top: 0; }
   table.dc-board .dc-open { padding: 3px 0; }
 }
 
@@ -406,20 +415,19 @@ tr.dc-benchrow td {
 }
 tr.dc-benchrow .dc-poscell .dc-abbr { color: var(--muted); font-size: 12px; }
 .dc-benchcell {
-  font-size: 11.5px; line-height: 1.65; color: var(--muted);
-  overflow-wrap: anywhere;
+  font-size: 11.5px; line-height: 1.7; color: var(--muted); overflow-wrap: anywhere;
 }
 /* The headcount first, so "how many do I have left" is one glance rather than a
    count of the names after it. */
 .dc-offn {
-  display: inline-block; min-width: 17px; margin-right: 6px; padding: 0 5px;
-  border-radius: 999px; background: var(--line); color: var(--ink-2);
-  font-size: 10px; font-weight: 800; text-align: center; vertical-align: 1px;
+  display: inline-block; margin-bottom: 4px; padding: 1px 7px; border-radius: 999px;
+  background: var(--line); color: var(--ink-2); font-size: 10px; font-weight: 800;
 }
-/* Spacing rather than a separator character. The dot that was here rendered in the
-   rule colour, which on the panel this row sits on is the panel colour — an invisible
-   glyph doing a margin's job. */
-.dc-off { white-space: nowrap; margin-right: 10px; }
+/* One name per line. These flowed inline and wrapped at first, which is compact and
+   unreadable: eleven names running across four lines gives the eye nothing to count
+   down, and telling whether a kid is in a list means reading it rather than scanning
+   it. A column of names is the whole point of the row. */
+.dc-off { display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 
 /* ---------------------------------------------------------------------- chips -- */
 /* A name you can pick up. It is a <button> because every drag has a tap-then-tap
