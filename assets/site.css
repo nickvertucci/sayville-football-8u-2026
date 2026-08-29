@@ -332,10 +332,13 @@ table.dc-board thead th {
   font-size: 11px; text-transform: uppercase; letter-spacing: 1.3px; font-weight: 800;
   padding: 9px 12px;
 }
-/* Purple and Gold are the units, so the column headers wear them. A coach scanning
-   for the Gold left tackle finds the column by colour before reading a word of it. */
+/* The units wear their own colours in the column headers. A coach scanning for the
+   Gold left tackle finds the column by colour before reading a word of it. White is
+   a silver rather than a literal white, which on a light page would be no colour at
+   all, and it takes dark text — so the short-unit warning has to darken with it. */
 table.dc-board thead th.rot-th[data-rot="purple"] { background: #5b2d8e; }
 table.dc-board thead th.rot-th[data-rot="gold"] { background: #8a6508; }
+table.dc-board thead th.rot-th[data-rot="white"] { background: #dfe3ea; color: #14213d; }
 table.dc-board .dc-poscell { background: var(--panel-2); white-space: nowrap; width: 1%; }
 table.dc-board .dc-poscell .dc-abbr { font-size: 14px; }
 table.dc-board .dc-poscell .dc-label { font-size: 11.5px; margin-left: 7px; }
@@ -378,6 +381,7 @@ table.dc-board td.dc-cell { min-width: 130px; }
   }
   table.dc-board td.dc-cell[data-rot="purple"]::before { color: #a882d8; }
   table.dc-board td.dc-cell[data-rot="gold"]::before { color: #d0a63a; }
+  table.dc-board td.dc-cell[data-rot="white"]::before { color: #8b95a6; }
   table.dc-board .dc-open { padding: 3px 0; }
 }
 
@@ -416,17 +420,23 @@ td.dc-cell.over, .dc-pool.over { background: var(--accent-soft) !important; }
   background: var(--red);
 }
 
-/* ---------------------------------------------------------------------- bench -- */
-/* The kids in neither rotation. It was a footnote at the bottom of the page; it is
-   now the pile you drag out of, so it sits under the board it feeds. */
+/* ---------------------------------------------------------------------- squad -- */
+/* The whole squad for this side of the ball, and a source rather than a container:
+   dragging a name out leaves it here, so the same kid goes on Purple and Gold and
+   White without anyone having to think about where the chip "is". The ones already
+   on the board are dimmed, which leaves the bright ones — the kids nobody has given
+   a job — as the thing your eye lands on. */
 .dc-bench { margin: 0 0 6px; }
 .dc-pool {
   display: flex; flex-wrap: wrap; gap: 6px; min-height: 38px; padding: 8px 10px;
   border: 1px dashed var(--line); border-radius: 10px; background: var(--panel);
 }
-.dc-pool:empty::before {
-  content: "Everybody is in a rotation."; color: var(--muted); font-size: 13px;
-  font-style: italic;
+.dc-pool .dc-chip.placed { opacity: .45; font-weight: 600; }
+.dc-pool .dc-chip.placed:hover, .dc-pool .dc-chip.picked { opacity: 1; }
+/* How many rotations he is in, past the ordinary one. Written by site.js. */
+.dc-pool .dc-chip[data-count]:not([data-count=""])::after {
+  content: attr(data-count) "\00d7"; margin-left: 1px; font-size: 10px;
+  font-weight: 800; color: var(--accent-ink); opacity: .9;
 }
 
 /* ------------------------------------------------------------------ dc chrome -- */
@@ -477,7 +487,7 @@ td.dc-cell.over, .dc-pool.over { background: var(--accent-soft) !important; }
 .dc-slot.dc-open b { background: var(--line); color: var(--muted); }
 
 /* ----------------------------------------------------------------- both sides -- */
-/* Offense and defense are the top split, and Purple and Gold are columns inside
+/* Offense and defense are the top split, and the rotations are columns inside
    each. It was the other way round, which meant the answer to "who replaces the
    left tackle" lived on a different sheet from the question. A coordinator only
    ever wants one of these two sections, so each is a section and each is a sheet. */
@@ -497,11 +507,16 @@ td.dc-cell.over, .dc-pool.over { background: var(--accent-soft) !important; }
    after the first drag the number the page shipped with is a lie. */
 .rot-count { font-weight: 800; letter-spacing: 0; opacity: .85; }
 .rot-count.warn { color: var(--red); opacity: 1; }
+/* The heading is uppercase; the squad count under it is a sentence and reading
+   "2 WITH NO SPOT" is being shouted at. */
+.rot-h .rot-count { text-transform: none; font-weight: 700; }
 thead .rot-count { margin-left: 7px; font-size: 11px; }
 /* The body red is nearly invisible on the gold header fill. A short unit is the one
-   thing on this page that must not be missable, so on a coloured header it goes pale
-   instead of dark — same alarm, read against the fill it actually sits on. */
+   thing on this page that must not be missable, so on a dark header it goes pale
+   instead — same alarm, read against the fill it actually sits on. White's header is
+   pale already, so there it stays dark. */
 thead .rot-count.warn { color: #ffd2d8; }
+thead th.rot-th[data-rot="white"] .rot-count.warn { color: #a3001a; }
 
 .pkg {
   margin: 14px 0 8px; padding: 14px 16px 4px; background: var(--panel);
@@ -1081,11 +1096,19 @@ footer.site a { color: var(--accent-ink); }
   table.dc-board .dc-poscell .dc-abbr { font-size: 10pt; }
   table.dc-board .dc-poscell .dc-label { font-size: 7.5pt; }
   table.dc-board thead th { padding: 5px 8px; font-size: 8pt; }
-  /* Purple and Gold survive as printed words. A header fill is the one place colour
+  /* The rotation names survive as printed words. A header fill is the one place colour
      would have carried meaning nothing else does, and a printer set to skip
-     backgrounds drops it silently — so the whole header row goes to plain text on a
-     rule, which reads the same out of any tray. */
+     backgrounds drops it silently — leaving white text on white paper — so the whole
+     header row goes to plain text on a rule, which reads the same out of any tray.
+
+     Both selectors are needed. The screen rules that colour these headers carry an
+     attribute and a second class, so a plain `thead th` here loses to them on
+     specificity no matter that it comes later in the file, and the fills print. */
   table.dc-board thead th { background: none; color: #000; border-bottom: 2px solid #000; }
+  table.dc-board thead th.rot-th[data-rot] { background: none; color: #000; }
+  /* Pale pink on paper is nothing at all. */
+  thead .rot-count.warn,
+  thead th.rot-th[data-rot] .rot-count.warn { color: #000; font-style: italic; }
   /* On paper a chip is just a name — the pill, the border and the drag affordance
      all cost ink and say nothing a coach holding the sheet can act on. */
   .dc-chip {

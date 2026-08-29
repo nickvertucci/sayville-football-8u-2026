@@ -246,8 +246,8 @@
   function chipIn(slot) { return slot.querySelector('.dc-chip'); }
 
   /* A cell with nobody in it says Open, and says it as a button so that the spot can
-     be tabbed to and chosen from a keyboard exactly like a name can. The bench needs
-     no such marker — its :empty rule speaks for it. */
+     be tabbed to and chosen from a keyboard exactly like a name can. The squad rail
+     needs no such marker — it is never empty. */
   function fill(slot) {
     if (!slot.classList.contains('dc-cell')) return;
     var has = chipIn(slot), open = slot.querySelector('.dc-open');
@@ -257,34 +257,76 @@
     }
   }
 
+  function isPool(el) { return el.classList.contains('dc-pool'); }
+
+  /* Three rules, and every gesture on this page is one of them.
+
+       squad rail -> spot   assign. The rail is a source, not a container, so the kid
+                            stays in it and the board gets a copy. This is the whole
+                            reason a kid can be on Purple and Gold and White at once.
+       spot -> spot         move, swapping with whoever is there.
+       spot -> squad rail   take him out of that spot.
+
+     The one thing none of them may produce is the same kid twice in one rotation. He
+     cannot be at left tackle and centre on the unit that is on the field, so an
+     assignment that would do it takes him off the first spot instead — which turns
+     out to read as a move, which is what a coach expected anyway. */
   function move(chip, target) {
     var from = chip.parentNode;
     if (!target || from === target) return;
     // Offense chips stay on offense. The two sides are separate problems and a kid
     // is on both of them; dragging across would merge two answers into one.
     if (sideOf(target) !== sideOf(chip)) return;
-    var held = target.classList.contains('dc-cell') ? chipIn(target) : null;
-    // A swap, not a shove: whoever is already there goes back where this one came
-    // from. Dropping onto the bench is not a swap, because the bench holds any number.
-    if (held) from.appendChild(held);
+
+    if (isPool(target)) {
+      // Off the board. A rail chip dropped back on the rail is a no-op, caught above.
+      if (isPool(from)) return;
+      chip.remove();
+      fill(from);
+      refresh();
+      return;
+    }
+
+    // From the rail the chip is a template: clone it and leave the original in place.
+    var moving = isPool(from) ? chip.cloneNode(true) : chip;
+    if (moving !== chip) moving.classList.remove('picked', 'ghost', 'placed');
+
+    var held = chipIn(target);
+    if (held) {
+      // A swap when he came off the board, a bump to nowhere when he came off the
+      // rail — there is no spot to send the incumbent back to in that case.
+      if (moving === chip) from.appendChild(held); else held.remove();
+    }
     var open = target.querySelector('.dc-open');
     if (open) open.remove();
-    target.appendChild(chip);
+    target.appendChild(moving);
+
+    // One rotation, one spot. Anywhere else in this rotation holding the same name is
+    // the old spot, and it empties.
+    all('td.dc-cell[data-rot="' + target.dataset.rot + '"]',
+        target.closest('.dc-side')).forEach(function (td) {
+      if (td === target) return;
+      var other = chipIn(td);
+      if (other && other.dataset.name === moving.dataset.name) {
+        other.remove();
+        fill(td);
+      }
+    });
+
     fill(from);
     fill(target);
     refresh();
   }
 
-  /* Every placement on the board, in a shape that survives a roster.json edit: a
-     record names the spot rather than pointing at it, so one whose spot has since
-     gone is skipped instead of taking the whole save down with it. */
+  /* Every placement on the board — the cells only. The squad rail is the roster and
+     never changes, so saving it would be saving the input. A record names its spot
+     rather than pointing at it, so one whose spot has since gone from roster.json is
+     skipped instead of taking the whole save down with it. */
   function snapshot() {
     var out = [];
-    all(SLOT).forEach(function (s) {
-      all('.dc-chip', s).forEach(function (c) {
-        out.push([sideOf(s), s.dataset.rot, s.dataset.pos || '',
-                  c.dataset.name, c.dataset.home]);
-      });
+    all('td.dc-cell').forEach(function (td) {
+      var c = chipIn(td);
+      if (c) out.push([sideOf(td), td.dataset.rot, td.dataset.pos, c.dataset.name]);
     });
     return out;
   }
@@ -312,46 +354,29 @@
     try { at = JSON.parse(raw); } catch (e) { return; }
     if (!Array.isArray(at)) return;
 
-    var byKey = {};
-    all(SLOT).forEach(function (s) {
-      byKey[sideOf(s) + '/' + s.dataset.rot + '/' + (s.dataset.pos || '')] = s;
+    var byKey = {}, template = {};
+    all('td.dc-cell').forEach(function (td) {
+      byKey[sideOf(td) + '/' + td.dataset.rot + '/' + td.dataset.pos] = td;
     });
-    // Lift every chip off the board, then set them back down where the save says.
-    // Two chips can share a name — the same kid is on both sides — so they come off
-    // into a list per side and are matched out of it one at a time.
-    var loose = { offense: [], defense: [] };
-    all('.dc-chip').forEach(function (c) {
-      var side = sideOf(c);
-      if (loose[side]) loose[side].push(c);
-      c.remove();
+    all('.dc-pool .dc-chip').forEach(function (c) {
+      template[sideOf(c) + '/' + c.dataset.name] = c;
     });
-    all(SLOT).forEach(function (s) { s.innerHTML = ''; fill(s); });
-
-    function take(side, name) {
-      var list = loose[side] || [];
-      for (var i = 0; i < list.length; i++) {
-        if (list[i].dataset.name === name) return list.splice(i, 1)[0];
-      }
-      return null;
-    }
+    // Clear the board and set it out again from the save. Every chip on it is a copy
+    // of a rail chip, so there is nothing here to preserve — only to rebuild.
+    all('td.dc-cell').forEach(function (td) { td.innerHTML = ''; fill(td); });
 
     at.forEach(function (rec) {
-      var slot = byKey[rec[0] + '/' + rec[1] + '/' + (rec[2] || '')];
-      if (!slot) return;
-      if (slot.classList.contains('dc-cell') && chipIn(slot)) return;
-      var chip = take(rec[0], rec[3]);
-      if (!chip) return;
-      var open = slot.querySelector('.dc-open');
+      var td = byKey[rec[0] + '/' + rec[1] + '/' + rec[2]];
+      var src = template[rec[0] + '/' + rec[3]];
+      // A spot or a kid that has left roster.json since this was saved. Dropping the
+      // one record keeps the rest of the board, which is the point of naming spots.
+      if (!td || !src || chipIn(td)) return;
+      var chip = src.cloneNode(true);
+      chip.classList.remove('picked', 'ghost', 'placed');
+      var open = td.querySelector('.dc-open');
       if (open) open.remove();
-      slot.appendChild(chip);
+      td.appendChild(chip);
     });
-    // Anybody the save never mentions is somebody added to roster.json since it was
-    // written. The bench is the honest place for him: unplaced, and visibly so.
-    Object.keys(loose).forEach(function (side) {
-      var bench = byKey[side + '/bench/'];
-      loose[side].forEach(function (c) { if (bench) bench.appendChild(c); });
-    });
-    all(SLOT).forEach(fill);
   }
 
   function refresh() {
@@ -373,9 +398,10 @@
       });
     });
 
-    // A name on both sides of one rotation is a kid who never leaves the field. It
-    // is the most consequential thing this page knows and it used to say none of it.
-    all('.dc-chip').forEach(function (c) {
+    // A name on both sides of one rotation is a kid who never leaves the field while
+    // that unit is out. It is the most consequential thing this page knows and the
+    // old layout said none of it.
+    all('td.dc-cell .dc-chip').forEach(function (c) {
       var rot = seen[c.parentNode.dataset.rot];
       var two = !!(rot && rot[c.dataset.name] > 1);
       c.classList.toggle('two-way', two);
@@ -388,28 +414,50 @@
       el.textContent = counts[k].on + '/' + counts[k].of;
       el.classList.toggle('warn', counts[k].on < counts[k].of);
     });
+
+    /* The rail carries the whole squad now, so it needs to say who in it is actually
+       doing something. A kid already on the board is dimmed and wears the number of
+       rotations he is in; the ones left bright are the ones nobody has given a job.
+       That is the question the rail is scanned for. */
     ['offense', 'defense'].forEach(function (side) {
-      var pool = board.querySelector('.dc-pool[data-side="' + side + '"]');
-      var el = board.querySelector('[data-count="' + side + '-bench"]');
-      if (pool && el) el.textContent = String(all('.dc-chip', pool).length);
+      var sec = board.querySelector('.dc-side[data-side="' + side + '"]');
+      if (!sec) return;
+      var rotations = {};
+      all('td.dc-cell .dc-chip', sec).forEach(function (c) {
+        rotations[c.dataset.name] = (rotations[c.dataset.name] || 0) + 1;
+      });
+      var idle = 0;
+      all('.dc-pool .dc-chip', sec).forEach(function (c) {
+        var n = rotations[c.dataset.name] || 0;
+        c.classList.toggle('placed', n > 0);
+        // The badge earns its space only past one. A kid in a single rotation is the
+        // ordinary case and does not need a number to say so.
+        c.dataset.count = n > 1 ? String(n) : '';
+        c.title = n
+          ? c.dataset.name + ' is in ' + n + (n === 1 ? ' rotation' : ' rotations')
+          : c.dataset.name + ' has no spot yet';
+        if (!n) idle++;
+      });
+      var el = board.querySelector('[data-count="' + side + '-idle"]');
+      if (el) {
+        el.textContent = idle ? idle + ' with no spot' : 'everybody is in';
+        el.classList.toggle('warn', idle > 0);
+      }
     });
 
     if (tally) {
-      var open = 0;
-      Object.keys(counts).forEach(function (k) { open += counts[k].of - counts[k].on; });
       var both = data.rotations.map(function (r) {
         var n = 0, m = seen[r] || {};
         Object.keys(m).forEach(function (name) { if (m[name] > 1) n++; });
-        return r.charAt(0).toUpperCase() + r.slice(1) + ' ' + n;
+        return label(r) + ' ' + n;
       }).join(', ');
       tally.innerHTML = '<b>' + data.squad.length + '</b> on the squad &middot; '
-        + (open
-            ? '<span class="warn">' + open + (open === 1 ? ' spot' : ' spots') + ' open</span>'
-            : 'every spot filled')
-        + ' &middot; playing both ways: ' + both;
+        + 'playing both ways: ' + both;
     }
     persist();
   }
+
+  function label(rot) { return rot.charAt(0).toUpperCase() + rot.slice(1); }
 
   /* ------------------------------------------------------------ tap to place -- */
   var picked = null, suppress = false;
@@ -434,7 +482,12 @@
     var slot = e.target.closest(SLOT);
     if (picked && slot && chip !== picked) {
       var held = picked;
-      clearPick();
+      // A name tapped in the squad rail stays picked after it lands. Putting the same
+      // left tackle on Purple, Gold and White is one tap and then three, instead of
+      // six — and it is the reason the rail is a source in the first place, so the
+      // interface should not make you re-say it every time. A name picked up off the
+      // board has been moved, and moving is finished when it lands.
+      if (!isPool(held.parentNode)) clearPick();
       move(held, slot);
       return;
     }
@@ -544,17 +597,26 @@
       Object.keys(lists).forEach(function (pos) { lists[pos] = []; });
       var sec = board.querySelector('.dc-side[data-side="' + side + '"]');
       if (!sec) return;
+      var playing = {};
       all('td.dc-cell', sec).forEach(function (td) {
         var at = data.rotations.indexOf(td.dataset.rot);
         if (at < 0) return;
         var list = lists[td.dataset.pos] || (lists[td.dataset.pos] = []);
         while (list.length < at) list.push('');
         // An empty Purple spot above a filled Gold one has to keep Gold at index 1,
-        // so the hole is written as a blank rather than closed up.
+        // so the hole is written as a blank rather than closed up. A kid in more than
+        // one rotation is simply written more than once, which is exactly how the
+        // file is read back — depth is the rotation, so the same name at index 0 and
+        // index 1 says he plays on both.
         var chip = chipIn(td);
         list[at] = chip ? chip.dataset.name : '';
+        if (chip) playing[chip.dataset.name] = true;
       });
-      all('.dc-pool[data-side="' + side + '"] .dc-chip', sec).forEach(function (chip) {
+      // Behind every rotation go the kids in none of them. The rail holds the whole
+      // squad now, so it is the ones NOT on the board that belong here — appending
+      // all of them would write every name back twice.
+      all('.dc-pool .dc-chip', sec).forEach(function (chip) {
+        if (playing[chip.dataset.name]) return;
         var list = lists[chip.dataset.home] || (lists[chip.dataset.home] = []);
         while (list.length < data.rotations.length) list.push('');
         list.push(chip.dataset.name);

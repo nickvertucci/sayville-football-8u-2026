@@ -1,5 +1,5 @@
 {
-  "note": "Coach-editable. The offense side is one list covering every spot the four formations use — the same seven linemen and quarterback throughout, with FB and TB in the I looks and the Full House and LH and RH in the Split Backs. The defense side is the 5-3, our everyday front.",
+  "note": "Coach-editable. Depth is the rotation — Purple, then Gold, then White, and anybody after that is on the squad but in no rotation. A name may repeat: the same left tackle on all three is that name three times. Offense covers every spot the four formations use; defense is the 5-3, our everyday front.",
   "offense": {
     "LTE": ["Camden G.", "Joseph P."],
     "LT": ["Brooks A."],
