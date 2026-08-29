@@ -885,6 +885,12 @@ table.calls td.c { white-space: nowrap; }
 .ins-drills { margin: 0; padding-left: 18px; font-size: 13.5px; color: var(--ink-2); line-height: 1.6; }
 .ins-drills li { margin-bottom: 2px; }
 .ins-blk .ins-em:first-of-type { margin-top: 0; }
+/* Two position groups running side by side in one block — offense splitting off
+   from defense, or linemen from backs — need their own small heading or the drill
+   lists below them read as one group's list running twice as long as it is. */
+.ins-grp { margin: 0 0 10px; }
+.ins-grp:last-child { margin-bottom: 0; }
+.ins-grp-h { margin: 0 0 4px; font-size: 13.5px; font-weight: 700; color: var(--ink); }
 .ins-list { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 9px; }
 .ins-play {
   display: inline-flex; flex-direction: column; gap: 1px; text-decoration: none;
@@ -2819,6 +2825,51 @@ def write_install(formations: list[dict], defenses: dict, root: Path) -> str:
                 f'<p class="ins-em">{esc(fin)}</p></div>'
             )
 
+        # A practice with more going on than agility/install/finisher — position
+        # groups running side by side, a water break, a live scrimmage — names its
+        # own blocks instead of being squeezed into that fixed A/B/C shape. Only one
+        # practice needs this so far, so the older shape is left exactly as it was
+        # rather than migrated: rewriting four already-taught practices to a new
+        # schema buys nothing a coach can see and risks a diff nobody asked for.
+        # 'plays'/'fronts'/'formations'/'requires' still live on the practice, not
+        # inside a block — validate_install and the "not scheduled yet" count both
+        # read them from there, and an install block just points at that same data.
+        custom_blocks = pr.get("blocks")
+        if custom_blocks:
+            rendered = []
+            for blk in custom_blocks:
+                tag = blk.get("tag", "")
+                title = blk.get("title", "")
+                t = blk.get("time", "")
+                t_html = f'<span class="ins-blk-time">{esc(t)}</span>' if t else ""
+                head = (f'<p class="ins-blk-h"><span class="ins-blk-tag">'
+                        f'Block {esc(tag)}</span> {esc(title)}{t_html}</p>')
+                kind = blk.get("kind")
+                if kind == "note":
+                    body = f'<p class="ins-em">{esc(blk.get("note", ""))}</p>'
+                elif kind == "groups":
+                    body = "".join(
+                        f'<div class="ins-grp"><p class="ins-grp-h">{esc(g.get("name", ""))}</p>'
+                        f'<ul class="ins-drills">'
+                        f'{"".join(f"<li>{esc(d)}</li>" for d in g.get("drills", []))}'
+                        f'</ul></div>'
+                        for g in blk.get("groups", [])
+                    )
+                elif kind == "install":
+                    emphasis = pr.get("emphasis", "")
+                    emphasis_html = f'<p class="ins-em">{esc(emphasis)}</p>' if emphasis else ""
+                    extra = "".join(f"<li>{esc(n)}</li>" for n in blk.get("notes", []))
+                    extra_html = f'<ul class="ins-drills">{extra}</ul>' if extra else ""
+                    body = (f'<div class="ins-list">{"".join(items)}</div>'
+                            f'{emphasis_html}{extra_html}{needs}')
+                else:
+                    body = ""
+                rendered.append(f'<div class="ins-blk">{head}{body}</div>')
+            block_a_html = block_b_html = block_c_html = ""
+            custom_html = "".join(rendered)
+        else:
+            custom_html = ""
+
         huddle = pr.get("huddle", "")
         huddle_html = ""
         if huddle:
@@ -2832,7 +2883,7 @@ def write_install(formations: list[dict], defenses: dict, root: Path) -> str:
             f'<article class="ins">'
             f'<div class="ins-n"><span>Practice</span><b>{pr["n"]}</b>{date_html}</div>'
             f'<div class="ins-body"><h3>{esc(pr.get("focus", ""))}</h3>'
-            f'{block_a_html}{block_b_html}{block_c_html}{huddle_html}</div></article>'
+            f'{custom_html}{block_a_html}{block_b_html}{block_c_html}{huddle_html}</div></article>'
         )
 
     # Anything not on the schedule yet, so a play cannot go missing quietly.

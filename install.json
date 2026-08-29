@@ -97,6 +97,100 @@
       ],
       "huddle": "Name the first team out loud, and the first sub at every spot.",
       "huddle_time": "6:50–7:00"
+    },
+    {
+      "n": 5,
+      "date": "Tue, Sep 2",
+      "phase": "preseason",
+      "focus": "Fundamentals both ways, Power and Pitch, first live scrimmage",
+      "plays": [
+        "i-power-r",
+        "i-power-l",
+        "sb-pitch-r",
+        "sb-pitch-l"
+      ],
+      "blocks": [
+        {
+          "tag": "A",
+          "kind": "note",
+          "title": "Warm-up",
+          "time": "5:30–5:35",
+          "note": "5 minute warmup."
+        },
+        {
+          "tag": "B",
+          "kind": "groups",
+          "title": "Offensive position groups",
+          "time": "5:35–5:45",
+          "groups": [
+            {
+              "name": "Offensive line / TE",
+              "drills": [
+                "Getting into and out of the huddle",
+                "Positional splits",
+                "Firing out"
+              ]
+            },
+            {
+              "name": "QB / FB / TB / Z",
+              "drills": [
+                "Getting into and out of the huddle",
+                "Positional formations",
+                "Handoff, cut drills"
+              ]
+            }
+          ]
+        },
+        {
+          "tag": "C",
+          "kind": "groups",
+          "title": "Defensive position groups",
+          "time": "5:45–5:55",
+          "groups": [
+            {
+              "name": "Defensive line",
+              "drills": [
+                "Positional formations",
+                "Rush drill"
+              ]
+            },
+            {
+              "name": "LB / CB / S",
+              "drills": [
+                "Positional formations",
+                "Read, recognize, react",
+                "Tackle drill"
+              ]
+            }
+          ]
+        },
+        {
+          "tag": "D",
+          "kind": "note",
+          "title": "Water break",
+          "time": "5:55–6:00",
+          "note": "Water break."
+        },
+        {
+          "tag": "E",
+          "kind": "install",
+          "title": "Offensive install",
+          "time": "6:00–6:30",
+          "notes": [
+            "Rotating through the Purple, Gold, White and Jumbo lineups",
+            "No defense",
+            "In and out of the huddle"
+          ]
+        },
+        {
+          "tag": "F",
+          "kind": "note",
+          "title": "Live scrimmage",
+          "time": "6:30–7:55",
+          "note": "Offense vs. defense."
+        }
+      ],
+      "huddle": "Review what we did today at practice."
     }
   ]
 }
