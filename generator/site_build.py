@@ -362,7 +362,13 @@ h1.page { font-size: clamp(23px, 5vw, 33px); letter-spacing: -.5px; margin: 22px
   margin: 10px 0 4px; overflow-x: auto; background: var(--panel);
   border: 1px solid var(--line); border-radius: 12px; box-shadow: var(--shadow);
 }
-table.dc-board { width: 100%; border-collapse: collapse; min-width: 460px; }
+/* Fixed layout, because the bench row holds eleven names and auto layout lets one
+   long cell drag its whole column wide — the board went from four even columns to a
+   sideways scroll the moment that row appeared. Fixed also means the columns stay
+   the same width as names move around, so the grid does not twitch on every drag. */
+table.dc-board {
+  width: 100%; border-collapse: collapse; min-width: 560px; table-layout: fixed;
+}
 table.dc-board th, table.dc-board td {
   border-bottom: 1px solid var(--line-soft); border-right: 1px solid var(--line-soft);
   padding: 5px 10px;
@@ -384,7 +390,7 @@ table.dc-board thead th.rot-th[data-rot="white"] { background: #dfe3ea; color: #
 /* Jumbo is a package, not a jersey, so it gets a colour none of the units would wear
    — far enough from the navy of the Position header to still read as its own column. */
 table.dc-board thead th.rot-th[data-rot="jumbo"] { background: #1c5560; }
-table.dc-board .dc-poscell { background: var(--panel-2); white-space: nowrap; width: 1%; }
+table.dc-board .dc-poscell { background: var(--panel-2); white-space: nowrap; width: 160px; }
 table.dc-board .dc-poscell .dc-abbr { font-size: 14px; }
 table.dc-board .dc-poscell .dc-label { font-size: 11.5px; margin-left: 7px; }
 table.dc-board tbody tr:nth-child(even) td.dc-poscell { background: var(--panel); }
@@ -409,7 +415,8 @@ table.dc-board tr.dc-alt .dc-abbr::after {
 table.dc-board td.dc-cell { min-width: 130px; }
 @media (max-width: 620px) {
   .tablewrap.dc-board-wrap { overflow-x: visible; }
-  table.dc-board { min-width: 0; }
+  table.dc-board { min-width: 0; table-layout: auto; }
+  table.dc-board .dc-poscell { width: auto; }
   table.dc-board thead { display: none; }
   table.dc-board, table.dc-board tbody, table.dc-board tr, table.dc-board td {
     display: block; width: 100%;
@@ -431,6 +438,31 @@ table.dc-board td.dc-cell { min-width: 130px; }
   table.dc-board .dc-open { padding: 3px 0; }
 }
 
+/* The last row of every board: with this column on the field, who is standing next
+   to you. Nobody puts a name into it — it is worked out from the rows above every
+   time one of them changes — so it is styled as a readout and not as a row. Muted,
+   smaller, no pills, and a rule above it to say the grid has stopped. */
+tr.dc-benchrow td {
+  background: var(--panel-2); vertical-align: top; border-top: 2px solid var(--line);
+  padding-top: 8px; padding-bottom: 9px;
+}
+tr.dc-benchrow .dc-poscell .dc-abbr { color: var(--muted); font-size: 12px; }
+.dc-benchcell {
+  font-size: 11.5px; line-height: 1.65; color: var(--muted);
+  overflow-wrap: anywhere;
+}
+/* The headcount first, so "how many do I have left" is one glance rather than a
+   count of the names after it. */
+.dc-offn {
+  display: inline-block; min-width: 17px; margin-right: 6px; padding: 0 5px;
+  border-radius: 999px; background: var(--line); color: var(--ink-2);
+  font-size: 10px; font-weight: 800; text-align: center; vertical-align: 1px;
+}
+/* Spacing rather than a separator character. The dot that was here rendered in the
+   rule colour, which on the panel this row sits on is the panel colour — an invisible
+   glyph doing a margin's job. */
+.dc-off { white-space: nowrap; margin-right: 10px; }
+
 /* ---------------------------------------------------------------------- chips -- */
 /* A name you can pick up. It is a <button> because every drag has a tap-then-tap
    equivalent — see the pointer handler in site.js — and that is the path a phone,
@@ -442,6 +474,7 @@ table.dc-board td.dc-cell { min-width: 130px; }
   cursor: grab; touch-action: manipulation; user-select: none; -webkit-user-select: none;
   text-align: left; max-width: 100%;
 }
+.dc-chip { overflow: hidden; text-overflow: ellipsis; }
 .dc-chip:hover { border-color: var(--accent-solid); }
 .dc-chip:focus-visible { outline: 2px solid var(--accent-solid); outline-offset: 2px; }
 /* Picked up by tap. The next tap on any spot puts him there, so the whole board
@@ -1097,6 +1130,7 @@ footer.site a { color: var(--accent-ink); }
     overflow: visible; box-shadow: none; border-radius: 0; margin: 0;
   }
   table.dc-board { min-width: 0; }
+  table.dc-board .dc-poscell { width: 33mm; }
   table.dc-board th, table.dc-board td { padding: 3px 8px; }
   table.dc-board .dc-poscell .dc-abbr { font-size: 10pt; }
   table.dc-board .dc-poscell .dc-label { font-size: 7.5pt; }
@@ -1125,6 +1159,11 @@ footer.site a { color: var(--accent-ink); }
     min-height: 0; background: none;
   }
   .dc-bench { margin: 6px 0 0; }
+  /* Worth its ink on a clipboard: it answers "who do I still have" without counting.
+     Tighter than on screen, because it is the one row that can run to eleven names. */
+  tr.dc-benchrow td { border-top: 1.5pt solid #000; padding-top: 4px; }
+  .dc-benchcell { font-size: 7pt; line-height: 1.45; color: #000; }
+  .dc-offn { background: none; border: 0; padding: 0 4px 0 0; font-size: 7pt; }
   /* Buttons and the local-edits banner are screen furniture. */
   .dc-tools, .dc-edited { display: none; }
   .dc-bar { margin: 0 0 6px; display: block; }
@@ -1551,9 +1590,10 @@ SITE_JS = """
       all('td.dc-cell .dc-chip', sec).forEach(function (c) {
         rotations[c.dataset.name] = (rotations[c.dataset.name] || 0) + 1;
       });
-      var idle = 0;
+      var idle = 0, squad = [];
       all('.dc-pool .dc-chip', sec).forEach(function (c) {
         var n = rotations[c.dataset.name] || 0;
+        squad.push(c.dataset.name);
         c.classList.toggle('placed', n > 0);
         // The badge earns its space only past one. A kid in a single rotation is the
         // ordinary case and does not need a number to say so.
@@ -1562,6 +1602,23 @@ SITE_JS = """
           ? c.dataset.name + ' is in ' + n + (n === 1 ? ' rotation' : ' rotations')
           : c.dataset.name + ' has no spot yet';
         if (!n) idle++;
+      });
+
+      /* The bench row: the squad for this side, minus whoever is in this column. It
+         is the other half of every column and the board could not say it before —
+         you had to hold eleven names in your head and subtract. The rail is the
+         squad, so it is also the list to subtract from, and nothing has to be told
+         twice who is on the team. */
+      all('tr.dc-benchrow td.dc-benchcell', sec).forEach(function (td) {
+        var on = {};
+        all('td.dc-cell[data-rot="' + td.dataset.rot + '"] .dc-chip', sec)
+          .forEach(function (c) { on[c.dataset.name] = true; });
+        var off = squad.filter(function (n) { return !on[n]; });
+        td.innerHTML = '<span class="dc-offn">' + off.length + '</span>'
+          + off.map(function (n) {
+              return '<span class="dc-off">' + n
+                .replace(/&/g, '&amp;').replace(/</g, '&lt;') + '</span>';
+            }).join('');
       });
       var el = board.querySelector('[data-count="' + side + '-idle"]');
       if (el) {
@@ -2931,6 +2988,24 @@ def side_board(side: str, order: list[str], alt_order: list[str],
             f'<td class="dc-poscell"><span class="dc-abbr">{esc(pos)}</span>'
             f'<span class="dc-label">{esc(label_fn(pos))}</span></td>{cells}</tr>'
         )
+
+    # The last row, and the only one nobody puts a name into: with this unit on the
+    # field, who is standing next to you. It is the other half of every column and the
+    # board could not say it before — you had to hold eleven names in your head and
+    # subtract. Left empty here and filled by site.js, because after the first drag
+    # anything written at build time is a lie. No data-pos, so the filled-of-eleven
+    # count skips it; no dc-cell, so nothing can be dropped into it.
+    bench_cells = "".join(
+        f'<td class="dc-benchcell" data-label="{esc(rot_name)}" '
+        f'data-side="{side}" data-rot="{rot_key}"></td>'
+        for rot_name, rot_key, _hint in rotations_for(side)
+    )
+    rows.append(
+        f'<tr class="dc-benchrow">'
+        f'<td class="dc-poscell"><span class="dc-abbr">Bench</span>'
+        f'<span class="dc-label">off the field</span></td>{bench_cells}</tr>'
+    )
+
     head = "".join(
         f'<th class="rot-th" data-rot="{rot_key}"{title(hint)}>{esc(rot_name)}'
         f'<span class="rot-count" data-count="{side}-{rot_key}"></span></th>'
