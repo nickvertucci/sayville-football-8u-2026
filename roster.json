@@ -1,17 +1,61 @@
 {
   "note": "Coach-editable. Depth is the rotation — Purple, then Gold, then White, and anybody after that is on the squad but in no rotation. A name may repeat: the same left tackle on all three is that name three times. Offense covers every spot the four formations use; defense is the 5-3, our everyday front.",
   "offense": {
-    "LTE": ["Camden G.", "Joseph P."],
-    "LT": ["Brooks A."],
-    "LG": ["Gavin P.", "Finn S."],
-    "C": ["Jaxon E.", "Brayden S."],
-    "RG": ["Ace A.", "Brayden H."],
-    "RT": ["Mason A."],
-    "RTE": ["Jake G.", "Michael M."],
-    "Z": ["Ryan S.", "Clark J.", "Thomas D.", "Kilian F.", "Liam M."],
-    "QB": ["Brogan A."],
-    "FB": ["Elias F.", "Luca D."],
-    "TB": ["Philip A.", "Nico V."],
+    "LTE": [
+      "Camden G.",
+      "Joseph P.",
+      "Kilian F."
+    ],
+    "LT": [
+      "Jaxon E.",
+      "Jaxon E.",
+      "Jaxon E."
+    ],
+    "LG": [
+      "Elias F.",
+      "Brayden H.",
+      "Brayden H."
+    ],
+    "C": [
+      "Luca D.",
+      "Brayden S.",
+      "Brayden S."
+    ],
+    "RG": [
+      "Gavin P.",
+      "Brooks A.",
+      "Brooks A."
+    ],
+    "RT": [
+      "Ace A.",
+      "Mason A.",
+      "Mason A."
+    ],
+    "RTE": [
+      "Brayden S.",
+      "Clark J.",
+      "Clark J."
+    ],
+    "Z": [
+      "Ryan S.",
+      "Michael M.",
+      "Thomas D."
+    ],
+    "QB": [
+      "Brogan A.",
+      "Ryan S.",
+      "Brogan A."
+    ],
+    "FB": [
+      "Jake G.",
+      "Finn S.",
+      "Finn S."
+    ],
+    "TB": [
+      "Philip A.",
+      "Nico V.",
+      "Liam M."
+    ],
     "LH": [],
     "RH": []
   },
@@ -27,16 +71,60 @@
     }
   ],
   "defense": {
-    "LE": ["Brogan A.", "Brayden S."],
-    "LT": ["Gavin P.", "Brooks A."],
-    "NT": ["Elias F.", "Brayden H."],
-    "RT": ["Ace A.", "Mason A."],
-    "RE": ["Jaxon E.", "Finn S."],
-    "W": ["Luca D.", "Clark J."],
-    "M": ["Jake G."],
-    "S": ["Camden G.", "Michael M."],
-    "LC": ["Philip A.", "Joseph P."],
-    "RC": ["Nico V.", "Liam M."],
-    "FS": ["Ryan S.", "Thomas D.", "Kilian F."]
+    "LE": [
+      "Brogan A.",
+      "Brayden S.",
+      "Brogan A."
+    ],
+    "LT": [
+      "Gavin P.",
+      "Brooks A.",
+      "Brooks A."
+    ],
+    "NT": [
+      "Elias F.",
+      "Brayden H.",
+      "Brayden H."
+    ],
+    "RT": [
+      "Ace A.",
+      "Mason A.",
+      "Ace A."
+    ],
+    "RE": [
+      "Jaxon E.",
+      "Finn S.",
+      "Finn S."
+    ],
+    "W": [
+      "Luca D.",
+      "Clark J.",
+      "Luca D."
+    ],
+    "M": [
+      "Jake G.",
+      "Jake G.",
+      "Jake G."
+    ],
+    "S": [
+      "Camden G.",
+      "Michael M.",
+      "Camden G."
+    ],
+    "LC": [
+      "Philip A.",
+      "Joseph P.",
+      "Joseph P."
+    ],
+    "RC": [
+      "Nico V.",
+      "Liam M.",
+      "Nico V."
+    ],
+    "FS": [
+      "Ryan S.",
+      "Thomas D.",
+      "Kilian F."
+    ]
   }
 }
