@@ -964,6 +964,12 @@ footer.site a { color: var(--accent-ink); }
     display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 8px;
   }
   .rot-col { break-inside: avoid; page-break-inside: avoid; }
+  /* A board split down the middle of a row is unreadable on a clipboard. */
+  table.dc-board tr { break-inside: avoid; page-break-inside: avoid; }
+  /* No break-inside:avoid on .dc-side itself. A rotation already starts at the top
+     of a fresh sheet, so keeping it whole can never move it anywhere useful — and
+     on a sheet too small to hold it, the browser honours the rule by emitting a
+     blank page first. Measured: it turned a two-page overflow into a three. */
   .rot { border-left: 4px solid #000; padding-left: 10px; margin: 0; }
   /* Background fills are a print-settings gamble; the rotation name is already
      spelled out, so print it as plain text with a rule under it and let the left

@@ -1006,6 +1006,12 @@ footer.site a { color: var(--accent-ink); }
     display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 8px;
   }
   .rot-col { break-inside: avoid; page-break-inside: avoid; }
+  /* A board split down the middle of a row is unreadable on a clipboard. */
+  table.dc-board tr { break-inside: avoid; page-break-inside: avoid; }
+  /* No break-inside:avoid on .dc-side itself. A rotation already starts at the top
+     of a fresh sheet, so keeping it whole can never move it anywhere useful — and
+     on a sheet too small to hold it, the browser honours the rule by emitting a
+     blank page first. Measured: it turned a two-page overflow into a three. */
   .rot { border-left: 4px solid #000; padding-left: 10px; margin: 0; }
   /* Background fills are a print-settings gamble; the rotation name is already
      spelled out, so print it as plain text with a rule under it and let the left
@@ -1400,6 +1406,7 @@ def page(
     defenses: dict | None = None,
     description: str = "",
     landscape: bool = False,
+    page_rule: str = "",
     main_attrs: str = "",
 ) -> str:
     def link(href, label, key, cls="lnk"):
@@ -1422,7 +1429,8 @@ def page(
     drawer_links = "".join(link(h, la, k, "dlnk") for h, la, k in NAV_LINKS)
 
     page_style = (
-        '\n<style>@page { size: landscape; margin: 9mm; }</style>' if landscape else ""
+        '\n<style>@page { size: landscape; margin: 9mm; }</style>' if landscape else
+        f'\n<style>@page {{ {page_rule} }}</style>' if page_rule else ""
     )
     desc = (
         f'\n<meta name="description" content="{esc(description)}">' if description else ""
@@ -2467,6 +2475,10 @@ def write_depth_chart(formations: list[dict], defenses: dict, root: Path) -> str
         defenses=defenses,
         active_nav="depth",
         description="Purple and Gold rotations — offense and defense, who plays where.",
+        # Pin the margin so a rotation cannot be pushed onto a second sheet by a print
+        # dialog set to wide margins. Same 9mm the play-card book uses. The paper size
+        # is deliberately not pinned: whatever is in the tray, Letter or A4, both fit.
+        page_rule="margin: 9mm;",
     )
 
 
