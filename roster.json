@@ -2,7 +2,7 @@
   "note": "Coach-editable. Depth is the column — Purple, then Gold, then White, then Jumbo on offense only; anybody past that is on the squad but in nothing. A name may repeat: the same left tackle on all three units is that name three times. Offense covers every spot the four formations use; defense is the 5-3, our everyday front.",
   "offense": {
     "LTE": [
-      "Camden G.",
+      "Ryan S.",
       "Joseph P.",
       "Kilian F.",
       "Camden G."
@@ -14,37 +14,37 @@
       "Mason A."
     ],
     "LG": [
-      "Elias F.",
+      "Luca D.",
       "Brayden H.",
       "Brayden H.",
       "Brayden H."
     ],
     "C": [
-      "Luca D.",
+      "Camden G.",
       "Brayden S.",
       "Brayden S.",
       "Brayden S."
     ],
     "RG": [
-      "Gavin P.",
+      "Elias F.",
       "Brooks A.",
       "Brooks A.",
       "Gavin P."
     ],
     "RT": [
-      "Ace A.",
+      "Szuflada",
       "Mason A.",
       "Mason A.",
       "Ace A."
     ],
     "RTE": [
-      "Brayden S.",
+      "Ace A.",
       "Clark J.",
       "Clark J.",
       "Brooks A."
     ],
     "Z": [
-      "Ryan S.",
+      "",
       "Michael M.",
       "Thomas D.",
       "Luca D."
