@@ -75,6 +75,41 @@
   });
 })();
 
+/* The install calendar: which square is today, which practice is next.
+   Both are done here rather than in the generator on purpose — a "today" baked into a
+   static page is wrong the morning after the page was built, and this site is rebuilt
+   whenever a play changes, not every night. */
+(function () {
+  var cells = document.querySelectorAll('.cal-cell[data-date]');
+  if (!cells.length) return;
+  var now = new Date();
+  var today = now.getFullYear() + '-' +
+    String(now.getMonth() + 1).padStart(2, '0') + '-' +
+    String(now.getDate()).padStart(2, '0');
+
+  var next = null;
+  cells.forEach(function (cell) {
+    var d = cell.dataset.date;
+    if (d === today) cell.classList.add('is-today');
+    else if (d < today) cell.classList.add('is-past');
+    var ev = cell.querySelector('.cal-ev');
+    if (ev && !next && d >= today) next = { cell: cell, ev: ev, date: d };
+  });
+
+  var box = document.getElementById('calnext');
+  if (!box || !next) return;
+  var when = next.date === today ? 'Today' : new Date(next.date + 'T12:00:00')
+    .toLocaleDateString(undefined, { weekday: 'long', month: 'long', day: 'numeric' });
+  var name = next.ev.querySelector('.cal-ev-n');
+  var focus = next.ev.querySelector('.cal-ev-t');
+  box.innerHTML = '<b>Next up &mdash; ' + when + '.</b> ' +
+    '<a href="' + next.ev.getAttribute('href') + '">' +
+    (name ? name.textContent : 'Next practice') + '</a> ' +
+    '<span>' + (focus ? focus.textContent : '') + '</span>';
+  box.hidden = false;
+  next.ev.classList.add('is-next');
+})();
+
 /* Arrow keys walk through the plays in a formation. */
 (function () {
   var main = document.querySelector('main');

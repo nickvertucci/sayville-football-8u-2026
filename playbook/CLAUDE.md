@@ -108,6 +108,12 @@ later. That last one is the point of the file — the dependencies are already w
 the plays' own coaching points ("do not install this until Power Right is real"), and
 `requires` makes them checkable instead of hoping somebody read carefully.
 
+A practice's `date` is ISO — `"2026-09-02"`, never `"Wed, Sep 2"`. The site puts it on a
+month calendar and computes the weekday from it, so the weekday cannot disagree with the
+date printed beside it. The build rejects anything else, and rejects a practice dated
+before the one numbered ahead of it. A practice with no date at all is fine: it keeps its
+own page and its row in the list, it just does not land on a square yet.
+
 **A formation** needs `id` (must equal the folder name), `name`, an `alignment` of
 exactly eleven players, and `backs` — the digit-to-position map its calls are numbered
 from:

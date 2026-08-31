@@ -18,8 +18,10 @@ assignments read underneath it rather than squeezed into a column beside it.
 
 from __future__ import annotations
 
+import calendar
 import hashlib
 import re
+from datetime import date as _date
 from pathlib import Path
 
 from common import (CARD_ORDER, call_prefix, esc, form_label, ordered_positions,
@@ -848,23 +850,171 @@ table.calls td.c { white-space: nowrap; }
 }
 .ph p { margin: 0; color: var(--muted); font-size: 14px; max-width: 68ch; }
 
-.ins {
-  display: grid; grid-template-columns: 78px minmax(0, 1fr); gap: 16px;
+/* ---- the month grid ---- */
+/* "What are we doing Tuesday?" is a question about a month, not about a scroll. The
+   grid answers it at a glance and every event on it is a link to that practice's own
+   page, which is where the plan actually lives. */
+.cal-wrap { margin: 20px 0 8px; }
+table.cal {
+  width: 100%; border-collapse: separate; border-spacing: 0; table-layout: fixed;
   background: var(--panel); border: 1px solid var(--line); border-radius: 12px;
-  padding: 14px 16px; margin: 0 0 10px; box-shadow: var(--shadow);
+  box-shadow: var(--shadow); overflow: hidden; margin: 0 0 16px;
 }
-@media (max-width: 560px) { .ins { grid-template-columns: 1fr; gap: 8px; } }
-.ins-n {
+table.cal caption {
+  caption-side: top; text-align: left; padding: 12px 14px 10px;
+  font-size: clamp(15px, 2.6vw, 18px); font-weight: 700; color: var(--ink);
+  letter-spacing: -.2px; background: var(--panel-2);
+  border-bottom: 1px solid var(--line);
+}
+table.cal th {
+  padding: 7px 4px; font-size: 10.5px; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 1px; color: var(--muted); background: var(--panel-2);
+  border-bottom: 1px solid var(--line);
+}
+table.cal th abbr { text-decoration: none; border: 0; }
+.cal-cell {
+  vertical-align: top; height: 92px; padding: 4px 5px 6px; width: 14.28%;
+  border-right: 1px solid var(--line); border-bottom: 1px solid var(--line);
+}
+table.cal tr > .cal-cell:last-child { border-right: 0; }
+table.cal tbody tr:last-child .cal-cell { border-bottom: 0; }
+.cal-cell.out { background: var(--panel-2); }
+.cal-d {
+  display: block; font-size: 11.5px; font-weight: 600; color: var(--muted);
+  font-variant-numeric: tabular-nums; margin-bottom: 3px;
+}
+/* Marked in the browser, not at build time — a "today" baked into a generated page is
+   wrong the morning after it is generated. */
+.cal-cell.is-past { background: var(--line-soft); }
+.cal-cell.is-past .cal-ev { opacity: .62; }
+.cal-cell.is-today { background: var(--accent-soft); }
+.cal-cell.is-today .cal-d {
+  color: var(--on-accent); background: var(--accent-solid); border-radius: 999px;
+  min-width: 20px; height: 20px; padding: 0 6px; display: inline-flex;
+  align-items: center; justify-content: center; font-size: 11px;
+}
+.cal-ev {
+  display: block; text-decoration: none; border-radius: 7px; padding: 4px 6px;
+  background: var(--panel-2); border-left: 3px solid var(--accent-solid);
+  margin-bottom: 3px; min-width: 0;
+}
+.cal-ev[data-phase="season"] { border-left-color: var(--red); }
+.cal-ev:hover { background: var(--panel); outline: 1px solid var(--accent); }
+.cal-ev-n {
+  display: block; font-size: 11.5px; font-weight: 800; color: var(--accent-ink);
+  line-height: 1.25; overflow: hidden;
+}
+.cal-ev-t {
+  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;
+  overflow: hidden; font-size: 11px; line-height: 1.3; color: var(--ink-2);
+}
+.cal-ev-new {
+  display: inline-block; margin-top: 3px; font-size: 9.5px; font-weight: 800;
+  letter-spacing: .4px; text-transform: uppercase; border-radius: 999px;
+  padding: 1px 6px; background: var(--accent-solid); color: var(--on-accent);
+}
+.cal-ev-new.none { background: var(--line); color: var(--muted); }
+/* On a phone the month is still worth having — you can see the shape of the week —
+   but the words do not fit. The cells shrink to the practice number and the list
+   underneath carries the reading. */
+@media (max-width: 640px) {
+  .cal-cell { height: 56px; padding: 3px 2px 4px; }
+  .cal-ev { padding: 2px 3px; text-align: center; }
+  .cal-ev-t, .cal-ev-new { display: none; }
+  .cal-ev-n { font-size: 10.5px; }
+}
+@media (max-width: 480px) {
+  .cal-ev { border-left-width: 2px; }
+  .cal-ev-w { display: none; }
+  .cal-ev-n { font-size: 12px; }
+}
+.cal-legend {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 6px 14px;
+  margin: 0 0 6px; font-size: 12px; color: var(--muted);
+}
+.cal-key {
+  width: 11px; height: 11px; border-radius: 3px; display: inline-block;
+  margin-right: -6px; background: var(--accent-solid);
+}
+.cal-key.season { background: var(--red); }
+.cal-key.today { background: var(--accent-solid); border-radius: 999px; }
+/* Filled in by the browser once it knows what day it is. No display: block here — a
+   div is one already, and setting it would outrank the browser's own [hidden] rule
+   and leave an empty box on a page built after the last practice. */
+.cal-next {
+  margin: 16px 0 0; padding: 11px 14px; border-radius: 10px;
+  background: var(--panel); border: 1px solid var(--accent); box-shadow: var(--shadow);
+  font-size: 13.5px; color: var(--ink-2); text-decoration: none;
+}
+.cal-next b { color: var(--ink); }
+.cal-next span { color: var(--muted); }
+
+/* ---- the practice list under the calendar ---- */
+/* One row per practice, in teaching order, with the phase notes still over the top of
+   each run. It is the whole schedule as text: it survives a phone, a printer and a
+   screen reader, none of which love a month grid. */
+.ins-row {
+  display: grid; grid-template-columns: 62px minmax(0, 1fr) 20px; gap: 14px;
+  align-items: center; text-decoration: none;
+  background: var(--panel); border: 1px solid var(--line); border-radius: 12px;
+  padding: 11px 14px; margin: 0 0 8px; box-shadow: var(--shadow);
+}
+.ins-row:hover { border-color: var(--accent); }
+.ins-row-n {
   display: flex; flex-direction: column; align-items: center; justify-content: center;
   background: var(--accent-solid); color: var(--on-accent); border-radius: 10px;
-  padding: 8px 4px; align-self: start;
+  padding: 6px 4px;
 }
-@media (max-width: 560px) { .ins-n { flex-direction: row; gap: 8px; padding: 5px 10px; } }
-.ins-n span { font-size: 9.5px; text-transform: uppercase; letter-spacing: 1.2px; opacity: .75; }
-.ins-n b { font-size: 26px; line-height: 1.1; font-variant-numeric: tabular-nums; }
-@media (max-width: 560px) { .ins-n b { font-size: 18px; } }
+.ins-row-n small { font-size: 9px; text-transform: uppercase; letter-spacing: 1.1px; opacity: .75; }
+.ins-row-n b { font-size: 22px; line-height: 1.1; font-variant-numeric: tabular-nums; }
+.ins-row-body { min-width: 0; }
+.ins-row-body time { display: block; font-size: 11.5px; font-weight: 700; color: var(--accent-ink); }
+.ins-row-body strong { display: block; font-size: 15px; color: var(--ink); margin: 1px 0 3px; }
+.ins-row-meta { display: flex; flex-wrap: wrap; gap: 4px 12px; font-size: 12px; color: var(--muted); }
+.ins-row-meta .new { color: var(--accent-ink); font-weight: 700; }
+.ins-row-go { color: var(--muted); font-size: 17px; text-align: right; }
+.ins-row:hover .ins-row-go { color: var(--accent-ink); }
+@media (max-width: 560px) {
+  .ins-row { grid-template-columns: 48px minmax(0, 1fr); gap: 10px; }
+  .ins-row-go { display: none; }
+  .ins-row-n { flex-direction: row; gap: 6px; padding: 4px 8px; }
+  .ins-row-n b { font-size: 16px; }
+}
 
-.ins-body h3 { margin: 0 0 9px; font-size: 16.5px; color: var(--ink); }
+/* ---- one practice, on its own page ---- */
+.ins-day { margin-bottom: 26px; }
+.ins-day h1.page { margin: 2px 0 6px; }
+.ins-day-when { margin: 0; font-size: 14.5px; font-weight: 600; color: var(--accent-ink); }
+.ins-day-when.undated { color: var(--muted); font-weight: 500; font-style: italic; }
+.ins-day .rb-facts { margin: 14px 0 0; }
+.ins-day-new {
+  margin: 16px 0 0; padding: 11px 14px; border-radius: 10px; font-size: 14px;
+  line-height: 1.55; color: var(--ink-2);
+  background: var(--panel); border: 1px solid var(--line);
+  border-left: 4px solid var(--accent-solid); box-shadow: var(--shadow);
+}
+.ins-day-new.review { border-left-color: var(--line); }
+.ins-day-new b { color: var(--ink); }
+.ins-day-new a { color: var(--accent-ink); font-weight: 600; }
+.ins-day-phase { margin: 10px 0 0; font-size: 13px; color: var(--muted); max-width: 74ch; }
+.ins-day-h {
+  display: flex; align-items: center; gap: 12px; margin: 24px 0 10px;
+  padding-bottom: 8px; border-bottom: 2px solid var(--accent-solid);
+}
+.ins-day-h h2 { margin: 0; font-size: 16px; color: var(--ink); letter-spacing: -.2px; }
+.ins-day-plan .ins-blk { background: var(--panel); border: 1px solid var(--line); }
+.ins-day-plan .ins-huddle {
+  margin: 0; padding: 11px 13px; border: 1px solid var(--line); border-radius: 10px;
+  background: var(--panel); font-size: 13.5px;
+}
+.ins-day-plan .ins-blk .ins-play { background: var(--panel-2); }
+/* The strip of practice numbers at the top of a day page — the playbar the play pages
+   use, with numbers instead of names, so it stays one line for a whole season. */
+.playbar.nums a {
+  min-width: 34px; text-align: center; font-variant-numeric: tabular-nums;
+  font-weight: 700;
+}
+
 .ins-blk {
   padding: 11px 13px; background: var(--panel-2); border-radius: 10px; margin: 0 0 10px;
 }
@@ -1061,7 +1211,7 @@ footer.site a { color: var(--accent-ink); }
 @media print {
   header.site, .drawer, .scrim, .skip, footer.site, .pager, .play-actions, .searchbar,
   .chips, .fgroup, .morebtn, #morefilters, .countline, #count, .clearbtn, .activefilters,
-  .section-head, .btn, .print-intro,
+  .section-head, .btn, .print-intro, .cal-next, .cal-legend, .ins-todo,
   .crumbs, .playbar { display: none !important; }
   :root {
     --ink: #111318; --ink-2: #333b49; --muted: #5b6472;
@@ -1274,6 +1424,41 @@ SITE_JS = """
     var here = root.querySelector('.mplay.here');
     if (here) here.scrollIntoView({ block: 'nearest' });
   });
+})();
+
+/* The install calendar: which square is today, which practice is next.
+   Both are done here rather than in the generator on purpose — a "today" baked into a
+   static page is wrong the morning after the page was built, and this site is rebuilt
+   whenever a play changes, not every night. */
+(function () {
+  var cells = document.querySelectorAll('.cal-cell[data-date]');
+  if (!cells.length) return;
+  var now = new Date();
+  var today = now.getFullYear() + '-' +
+    String(now.getMonth() + 1).padStart(2, '0') + '-' +
+    String(now.getDate()).padStart(2, '0');
+
+  var next = null;
+  cells.forEach(function (cell) {
+    var d = cell.dataset.date;
+    if (d === today) cell.classList.add('is-today');
+    else if (d < today) cell.classList.add('is-past');
+    var ev = cell.querySelector('.cal-ev');
+    if (ev && !next && d >= today) next = { cell: cell, ev: ev, date: d };
+  });
+
+  var box = document.getElementById('calnext');
+  if (!box || !next) return;
+  var when = next.date === today ? 'Today' : new Date(next.date + 'T12:00:00')
+    .toLocaleDateString(undefined, { weekday: 'long', month: 'long', day: 'numeric' });
+  var name = next.ev.querySelector('.cal-ev-n');
+  var focus = next.ev.querySelector('.cal-ev-t');
+  box.innerHTML = '<b>Next up &mdash; ' + when + '.</b> ' +
+    '<a href="' + next.ev.getAttribute('href') + '">' +
+    (name ? name.textContent : 'Next practice') + '</a> ' +
+    '<span>' + (focus ? focus.textContent : '') + '</span>';
+  box.hidden = false;
+  next.ev.classList.add('is-next');
 })();
 
 /* Arrow keys walk through the plays in a formation. */
@@ -2724,170 +2909,303 @@ def defense_article(front: dict, heading: str = "h2", actions: str = "") -> str:
 </article>"""
 
 
-def write_install(formations: list[dict], defenses: dict, root: Path) -> str:
-    """The practice-by-practice install schedule.
+def install_href(pr: dict) -> str:
+    return f"install-{pr['n']}.html"
 
-    Numbered practices rather than dates: a rained-out session moves everything down
-    one instead of skipping something. Built from install.json, whose ordering the
-    generator has already checked — nothing here is taught before the play it is
-    built on.
+
+def practice_date(pr: dict):
+    """The day a practice lands on, or None if the schedule has not pinned one.
+
+    Dates are stored ISO in install.json and the weekday is computed here, so a
+    hand-typed "Mon" cannot disagree with the day it is printed next to. A practice
+    with no date, or a date the schedule has not committed to yet, still gets its own
+    page and its own row in the list — it just does not land on the calendar.
     """
+    raw = str(pr.get("date", "")).strip()
+    try:
+        return _date.fromisoformat(raw)
+    except ValueError:
+        return None
+
+
+def date_label(day, long: bool = False) -> str:
+    """"Tue, Aug 11" for a chip, "Tuesday, August 11, 2026" for a page heading."""
+    if long:
+        return f"{day.strftime('%A, %B')} {day.day}, {day.year}"
+    return f"{day.strftime('%a, %b')} {day.day}"
+
+
+def practice_agenda(pr: dict) -> list[dict]:
+    """Every practice, whichever shape it was written in, as one list of timed blocks.
+
+    Two shapes live in install.json. The first four practices use the fixed
+    agility/install/finisher trio they were authored in; a practice with more going on
+    — position groups running side by side, a water break, a live scrimmage — names its
+    own `blocks` instead. Normalising the two here rather than in the file means the
+    calendar, the day page and the practice list read one shape instead of carrying
+    three copies of the same branch, and no already-taught practice had to be rewritten
+    to a schema the coach never asked for.
+    """
+    custom = pr.get("blocks")
+    if custom:
+        return [dict(b) for b in custom]
+
+    out: list[dict] = []
+    tags = iter("ABCDEFGHIJ")
+    if pr.get("agility_drills"):
+        out.append({"tag": next(tags), "kind": "drills", "title": "Agility training",
+                    "time": pr.get("agility_time", ""),
+                    "drills": pr["agility_drills"]})
+    out.append({"tag": next(tags), "kind": "install", "title": "Install",
+                "time": pr.get("install_time", "")})
+    if pr.get("finisher"):
+        out.append({"tag": next(tags), "kind": "note", "title": "Finisher",
+                    "time": pr.get("finisher_time", ""), "note": pr["finisher"]})
+    return out
+
+
+def practice_window(pr: dict) -> str:
+    """When to show up and when it is over — the first block's start to the last
+    thing on the sheet, which is the huddle if there is one."""
+    times = [b.get("time", "") for b in practice_agenda(pr)]
+    times.append(pr.get("huddle_time", ""))
+    times = [t for t in times if t]
+    if not times:
+        return ""
+    start = times[0].split("–")[0].strip()
+    end = times[-1].split("–")[-1].strip()
+    return f"{start}–{end}" if end and end != start else start
+
+
+def install_items(pr: dict, plays: dict, forms_by_id: dict, defenses: dict) -> list[str]:
+    """The play, front and formation chips a practice installs."""
+    items = []
+    for pid in pr.get("plays", []):
+        play, _form = plays[pid]
+        items.append(
+            f'<a class="ins-play" href="{p_href(play)}">'
+            f'<span class="ins-call">{esc(play.get("call", ""))}</span>'
+            f'<span class="ins-name">{esc(play["name"])}</span></a>'
+        )
+    for fid in pr.get("fronts", []):
+        front = defenses[fid]
+        items.append(
+            f'<a class="ins-play def" href="{d_href(front)}">'
+            f'<span class="ins-call">{esc(front["call"])}</span>'
+            f'<span class="ins-name">{esc(front["name"])} defence</span></a>'
+        )
+    for fmid in pr.get("formations", []):
+        form = forms_by_id[fmid]
+        items.append(
+            f'<a class="ins-play form" href="{f_href(form)}">'
+            f'<span class="ins-call">{esc(form_label(form))}</span>'
+            f'<span class="ins-name">formation &mdash; alignment only</span></a>'
+        )
+    return items
+
+
+def install_count(pr: dict) -> int:
+    return (len(pr.get("plays", [])) + len(pr.get("fronts", []))
+            + len(pr.get("formations", [])))
+
+
+def requires_html(pr: dict, plays: dict, defenses: dict) -> str:
+    need = pr.get("requires", [])
+    if not need:
+        return ""
+    names = ", ".join(esc(plays[n][0]["name"]) if n in plays
+                      else esc(defenses[n]["call"]) for n in need)
+    return f'<p class="ins-req">Needs {names} working first</p>'
+
+
+def practice_blocks_html(pr: dict, items: list[str], needs: str) -> str:
+    """The run of practice, block by block, in the order it happens."""
+    if not items:
+        items = ['<span class="ins-none">No new install &mdash; review</span>']
+    rendered = []
+    for blk in practice_agenda(pr):
+        tag = blk.get("tag", "")
+        t = blk.get("time", "")
+        t_html = f'<span class="ins-blk-time">{esc(t)}</span>' if t else ""
+        head = (f'<p class="ins-blk-h"><span class="ins-blk-tag">Block {esc(tag)}</span> '
+                f'{esc(blk.get("title", ""))}{t_html}</p>')
+        kind = blk.get("kind")
+        if kind == "note":
+            body = f'<p class="ins-em">{esc(blk.get("note", ""))}</p>'
+        elif kind == "drills":
+            body = ('<ul class="ins-drills">'
+                    + "".join(f"<li>{esc(d)}</li>" for d in blk.get("drills", []))
+                    + "</ul>")
+        elif kind == "groups":
+            body = "".join(
+                f'<div class="ins-grp"><p class="ins-grp-h">{esc(g.get("name", ""))}</p>'
+                f'<ul class="ins-drills">'
+                f'{"".join(f"<li>{esc(d)}</li>" for d in g.get("drills", []))}'
+                f'</ul></div>'
+                for g in blk.get("groups", [])
+            )
+        elif kind == "install":
+            emphasis = pr.get("emphasis", "")
+            emphasis_html = f'<p class="ins-em">{esc(emphasis)}</p>' if emphasis else ""
+            extra = "".join(f"<li>{esc(n)}</li>" for n in blk.get("notes", []))
+            extra_html = f'<ul class="ins-drills">{extra}</ul>' if extra else ""
+            body = (f'<div class="ins-list">{"".join(items)}</div>'
+                    f'{emphasis_html}{extra_html}{needs}')
+        else:
+            body = ""
+        rendered.append(f'<div class="ins-blk">{head}{body}</div>')
+
+    huddle = pr.get("huddle", "")
+    if huddle:
+        h_time = pr.get("huddle_time", "")
+        h_time_html = (f'<span class="ins-huddle-time">{esc(h_time)}</span>'
+                       if h_time else "")
+        rendered.append(
+            f'<p class="ins-huddle"><b>Team huddle.</b> {esc(huddle)}{h_time_html}</p>')
+    return "".join(rendered)
+
+
+def month_grid(year: int, month: int, days: dict) -> str:
+    """One month, Sunday-first, with whatever practices fall in it.
+
+    A real table rather than a grid of divs: a month is a table of dates, and a screen
+    reader announcing "Tuesday, 11" off the column header is the whole reason to use
+    one. Days outside the month keep their cell so the weeks stay seven wide.
+    """
+    weeks = calendar.Calendar(firstweekday=6).monthdatescalendar(year, month)
+    head = "".join(
+        f'<th scope="col"><abbr title="{calendar.day_name[(i + 6) % 7]}">'
+        f'{calendar.day_abbr[(i + 6) % 7][:3]}</abbr></th>' for i in range(7)
+    )
+    rows = []
+    for week in weeks:
+        cells = []
+        for day in week:
+            if day.month != month:
+                cells.append('<td class="cal-cell out"></td>')
+                continue
+            evs = "".join(days.get(day, []))
+            cls = " has" if evs else ""
+            cells.append(
+                f'<td class="cal-cell{cls}" data-date="{day.isoformat()}">'
+                f'<span class="cal-d">{day.day}</span>{evs}</td>'
+            )
+        rows.append(f"<tr>{''.join(cells)}</tr>")
+    return (f'<table class="cal">'
+            f'<caption>{calendar.month_name[month]} {year}</caption>'
+            f'<thead><tr>{head}</tr></thead>'
+            f'<tbody>{"".join(rows)}</tbody></table>')
+
+
+def months_between(first, last) -> list[tuple[int, int]]:
+    out, y, m = [], first.year, first.month
+    while (y, m) <= (last.year, last.month):
+        out.append((y, m))
+        y, m = (y + 1, 1) if m == 12 else (y, m + 1)
+    return out
+
+
+def load_schedule(root: Path) -> dict:
     import json as _json
     path = root / "install.json"
     if not path.is_file():
-        schedule = {"practices": []}
-    else:
-        schedule = _json.loads(path.read_text(encoding="utf-8"))
+        return {"practices": []}
+    return _json.loads(path.read_text(encoding="utf-8"))
 
+
+def write_install(formations: list[dict], defenses: dict, root: Path) -> str:
+    """The install schedule as a calendar.
+
+    The schedule used to be one long scroll of practice cards, which is the wrong shape
+    for both questions a coach actually asks it. "What are we doing Tuesday?" wants a
+    month you can point at; "what is the plan for this practice?" wants one page with
+    nothing else on it. So this page is the month grid and a list of the practices under
+    it, and every practice links to its own page.
+
+    Practices are still numbered, and the number is still what carries teaching order —
+    a rained-out session moves the whole schedule down one rather than skipping
+    something. The date is only where that number happens to land.
+    """
+    schedule = load_schedule(root)
+    practices = schedule.get("practices", [])
     plays = {p["id"]: (p, f) for f in formations for p in f["_plays"]}
     forms_by_id = {f["id"]: f for f in formations}
     phases = schedule.get("phases", {})
 
-    total_plays = sum(len(pr.get("plays", [])) for pr in schedule["practices"])
-    total_fronts = sum(len(pr.get("fronts", [])) for pr in schedule["practices"])
-    preseason = [pr for pr in schedule["practices"] if pr.get("phase") == "preseason"]
+    total_plays = sum(len(pr.get("plays", [])) for pr in practices)
+    total_fronts = sum(len(pr.get("fronts", [])) for pr in practices)
 
-    blocks, seen_phase = [], None
-    for pr in schedule["practices"]:
+    # ---- the calendar -------------------------------------------------------
+    days: dict = {}
+    dated = [(practice_date(pr), pr) for pr in practices]
+    dated = [(d, pr) for d, pr in dated if d]
+    for day, pr in dated:
+        n_new = install_count(pr)
+        badge = (f'<span class="cal-ev-new">+{n_new}</span>' if n_new else
+                 '<span class="cal-ev-new none">rev</span>')
+        # A square on a phone is barely wider than the word "Practice", so the word is
+        # dropped below 480px and only the number is left. The link keeps its whole
+        # name in aria-label, so what is dropped is pixels, not meaning.
+        label = f'Practice {pr["n"]}'
+        if pr.get("focus"):
+            label += f' — {pr["focus"]}'
+        days.setdefault(day, []).append(
+            f'<a class="cal-ev" href="{install_href(pr)}" '
+            f'data-phase="{esc(pr.get("phase", ""))}" aria-label="{esc(label)}">'
+            f'<span class="cal-ev-n"><span class="cal-ev-w">Practice </span>{pr["n"]}</span>'
+            f'<span class="cal-ev-t">{esc(pr.get("focus", ""))}</span>'
+            f'{badge}</a>'
+        )
+
+    cal_html = ""
+    if dated:
+        first, last = min(d for d, _ in dated), max(d for d, _ in dated)
+        cal_html = (
+            '<div class="cal-next" id="calnext" hidden></div>'
+            '<div class="cal-wrap">'
+            + "".join(month_grid(y, m, days) for y, m in months_between(first, last))
+            + "</div>"
+            + '<p class="cal-legend">'
+            + "".join(
+                f'<span class="cal-key {esc(ph)}"></span> '
+                f'{esc(phases.get(ph, {}).get("label", ph))} '
+                for ph in dict.fromkeys(pr.get("phase") for _d, pr in dated)
+                if ph
+            )
+            + '<span class="cal-key today"></span> Today</p>'
+        )
+
+    # ---- the practices, in order, grouped by phase ---------------------------
+    rows, seen_phase = [], None
+    for pr in practices:
         phase = pr.get("phase")
         if phase != seen_phase:
             seen_phase = phase
             meta = phases.get(phase, {})
-            blocks.append(
+            rows.append(
                 f'<div class="ph"><h2>{esc(meta.get("label", phase or ""))}</h2>'
                 f'<p>{esc(meta.get("note", ""))}</p></div>'
             )
-        items = []
-        for pid in pr.get("plays", []):
-            play, form = plays[pid]
-            items.append(
-                f'<a class="ins-play" href="{p_href(play)}">'
-                f'<span class="ins-call">{esc(play.get("call", ""))}</span>'
-                f'<span class="ins-name">{esc(play["name"])}</span></a>'
-            )
-        for fid in pr.get("fronts", []):
-            front = defenses[fid]
-            items.append(
-                f'<a class="ins-play def" href="{d_href(front)}">'
-                f'<span class="ins-call">{esc(front["call"])}</span>'
-                f'<span class="ins-name">{esc(front["name"])} defence</span></a>'
-            )
-        for fmid in pr.get("formations", []):
-            form = forms_by_id[fmid]
-            items.append(
-                f'<a class="ins-play form" href="{f_href(form)}">'
-                f'<span class="ins-call">{esc(form_label(form))}</span>'
-                f'<span class="ins-name">formation &mdash; alignment only</span></a>'
-            )
-        if not items:
-            items.append('<span class="ins-none">No new install &mdash; review</span>')
-
-        need = pr.get("requires", [])
-        needs = ""
-        if need:
-            names = ", ".join(esc(plays[n][0]["name"]) if n in plays
-                              else esc(defenses[n]["call"]) for n in need)
-            needs = f'<p class="ins-req">Needs {names} working first</p>'
-
-        date = pr.get("date", "")
-        date_html = f"<time>{esc(date)}</time>" if date else ""
-
-        drills = pr.get("agility_drills", [])
-        block_a_html = ""
-        if drills:
-            a_time = pr.get("agility_time", "")
-            a_time_html = f'<span class="ins-blk-time">{esc(a_time)}</span>' if a_time else ""
-            drill_items = "".join(f"<li>{esc(d)}</li>" for d in drills)
-            block_a_html = (
-                '<div class="ins-blk"><p class="ins-blk-h">'
-                f'<span class="ins-blk-tag">Block A</span> Agility training{a_time_html}</p>'
-                f'<ul class="ins-drills">{drill_items}</ul></div>'
-            )
-
-        b_time = pr.get("install_time", "")
-        b_time_html = f'<span class="ins-blk-time">{esc(b_time)}</span>' if b_time else ""
-        block_b_html = (
-            '<div class="ins-blk"><p class="ins-blk-h">'
-            f'<span class="ins-blk-tag">Block B</span> Install{b_time_html}</p>'
-            f'<div class="ins-list">{"".join(items)}</div>'
-            f'<p class="ins-em">{esc(pr.get("emphasis", ""))}</p>'
-            f'{needs}</div>'
+        day = practice_date(pr)
+        when = date_label(day) if day else esc(str(pr.get("date", "")))
+        window = practice_window(pr)
+        n_new = install_count(pr)
+        blocks_n = len(practice_agenda(pr))
+        meta_bits = [f'<span>{esc(window)}</span>'] if window else []
+        meta_bits.append(f"<span>{blocks_n} block{'' if blocks_n == 1 else 's'}</span>")
+        meta_bits.append(f'<span class="new">{n_new} new</span>' if n_new
+                         else "<span>Review day</span>")
+        rows.append(
+            f'<a class="ins-row" href="{install_href(pr)}">'
+            f'<span class="ins-row-n"><small>Practice</small><b>{pr["n"]}</b></span>'
+            f'<span class="ins-row-body"><time>{when}</time>'
+            f'<strong>{esc(pr.get("focus", ""))}</strong>'
+            f'<span class="ins-row-meta">{"".join(meta_bits)}</span></span>'
+            f'<span class="ins-row-go" aria-hidden="true">&rarr;</span></a>'
         )
 
-        fin = pr.get("finisher", "")
-        block_c_html = ""
-        if fin:
-            c_time = pr.get("finisher_time", "")
-            c_time_html = f'<span class="ins-blk-time">{esc(c_time)}</span>' if c_time else ""
-            block_c_html = (
-                '<div class="ins-blk"><p class="ins-blk-h">'
-                f'<span class="ins-blk-tag">Block C</span> Finisher{c_time_html}</p>'
-                f'<p class="ins-em">{esc(fin)}</p></div>'
-            )
-
-        # A practice with more going on than agility/install/finisher — position
-        # groups running side by side, a water break, a live scrimmage — names its
-        # own blocks instead of being squeezed into that fixed A/B/C shape. Only one
-        # practice needs this so far, so the older shape is left exactly as it was
-        # rather than migrated: rewriting four already-taught practices to a new
-        # schema buys nothing a coach can see and risks a diff nobody asked for.
-        # 'plays'/'fronts'/'formations'/'requires' still live on the practice, not
-        # inside a block — validate_install and the "not scheduled yet" count both
-        # read them from there, and an install block just points at that same data.
-        custom_blocks = pr.get("blocks")
-        if custom_blocks:
-            rendered = []
-            for blk in custom_blocks:
-                tag = blk.get("tag", "")
-                title = blk.get("title", "")
-                t = blk.get("time", "")
-                t_html = f'<span class="ins-blk-time">{esc(t)}</span>' if t else ""
-                head = (f'<p class="ins-blk-h"><span class="ins-blk-tag">'
-                        f'Block {esc(tag)}</span> {esc(title)}{t_html}</p>')
-                kind = blk.get("kind")
-                if kind == "note":
-                    body = f'<p class="ins-em">{esc(blk.get("note", ""))}</p>'
-                elif kind == "groups":
-                    body = "".join(
-                        f'<div class="ins-grp"><p class="ins-grp-h">{esc(g.get("name", ""))}</p>'
-                        f'<ul class="ins-drills">'
-                        f'{"".join(f"<li>{esc(d)}</li>" for d in g.get("drills", []))}'
-                        f'</ul></div>'
-                        for g in blk.get("groups", [])
-                    )
-                elif kind == "install":
-                    emphasis = pr.get("emphasis", "")
-                    emphasis_html = f'<p class="ins-em">{esc(emphasis)}</p>' if emphasis else ""
-                    extra = "".join(f"<li>{esc(n)}</li>" for n in blk.get("notes", []))
-                    extra_html = f'<ul class="ins-drills">{extra}</ul>' if extra else ""
-                    body = (f'<div class="ins-list">{"".join(items)}</div>'
-                            f'{emphasis_html}{extra_html}{needs}')
-                else:
-                    body = ""
-                rendered.append(f'<div class="ins-blk">{head}{body}</div>')
-            block_a_html = block_b_html = block_c_html = ""
-            custom_html = "".join(rendered)
-        else:
-            custom_html = ""
-
-        huddle = pr.get("huddle", "")
-        huddle_html = ""
-        if huddle:
-            h_time = pr.get("huddle_time", "")
-            h_time_html = f'<span class="ins-huddle-time">{esc(h_time)}</span>' if h_time else ""
-            huddle_html = (
-                f'<p class="ins-huddle"><b>Team huddle.</b> {esc(huddle)}{h_time_html}</p>'
-            )
-
-        blocks.append(
-            f'<article class="ins">'
-            f'<div class="ins-n"><span>Practice</span><b>{pr["n"]}</b>{date_html}</div>'
-            f'<div class="ins-body"><h3>{esc(pr.get("focus", ""))}</h3>'
-            f'{custom_html}{block_a_html}{block_b_html}{block_c_html}{huddle_html}</div></article>'
-        )
-
-    # Anything not on the schedule yet, so a play cannot go missing quietly.
-    scheduled = {pid for pr in schedule["practices"] for pid in pr.get("plays", [])}
+    # ---- anything not on the schedule yet, so nothing goes missing quietly ----
+    scheduled = {pid for pr in practices for pid in pr.get("plays", [])}
     todo = []
     for form in formations:
         rest = [p for p in form["_plays"] if p["id"] not in scheduled]
@@ -2899,7 +3217,7 @@ def write_install(formations: list[dict], defenses: dict, root: Path) -> str:
             todo.append(f'<div class="ins-todo-grp"><h4>{esc(form_label(form))} '
                         f'<span>{len(rest)}</span></h4>'
                         f'<div class="ins-list">{links}</div></div>')
-    scheduled_fronts = {fid for pr in schedule["practices"] for fid in pr.get("fronts", [])}
+    scheduled_fronts = {fid for pr in practices for fid in pr.get("fronts", [])}
     rest_fronts = [f for fid, f in defenses.items() if fid not in scheduled_fronts]
     if rest_fronts:
         links = "".join(
@@ -2926,12 +3244,13 @@ def write_install(formations: list[dict], defenses: dict, root: Path) -> str:
     body = f"""<h1 class="page">Install schedule</h1>
 <p class="lede">{esc(schedule.get("intro", ""))}</p>
 <dl class="rb-facts">
-  <div><dt>Practices planned</dt><dd>{len(schedule["practices"])}</dd></div>
+  <div><dt>Practices planned</dt><dd>{len(practices)}</dd></div>
   <div><dt>Plays scheduled</dt><dd>{total_plays} of {sum(len(f["_plays"]) for f in formations)}</dd></div>
   <div><dt>Fronts scheduled</dt><dd>{total_fronts} of {len(defenses)}</dd></div>
 </dl>
+{cal_html}
 <div class="ins-wrap">
-{chr(10).join(blocks)}
+{chr(10).join(rows)}
 {todo_block}
 </div>"""
     return page(
@@ -2942,6 +3261,123 @@ def write_install(formations: list[dict], defenses: dict, root: Path) -> str:
         active_nav="install",
         description="Practice-by-practice install schedule for the playbook.",
     )
+
+
+def write_install_day(
+    pr: dict, prev: dict | None, nxt: dict | None, all_practices: list[dict],
+    phases: dict, formations: list[dict], defenses: dict,
+) -> str:
+    """One practice, on its own page: what we install, and the run of practice.
+
+    Everything a coach carries onto the field for that session and nothing from any
+    other one — the long scroll made you scan past four practices to find tonight's.
+    """
+    plays = {p["id"]: (p, f) for f in formations for p in f["_plays"]}
+    forms_by_id = {f["id"]: f for f in formations}
+
+    items = install_items(pr, plays, forms_by_id, defenses)
+    needs = requires_html(pr, plays, defenses)
+    day = practice_date(pr)
+    when = date_label(day, long=True) if day else str(pr.get("date", ""))
+    window = practice_window(pr)
+    phase = phases.get(pr.get("phase"), {})
+
+    crumbs = ('<nav class="crumbs"><a href="index.html">Home</a><span>/</span>'
+              f'<a href="install.html">Install schedule</a><span>/</span>'
+              f'<b>Practice {pr["n"]}</b></nav>')
+
+    # Every practice on the schedule, so you can step to any other one without going
+    # back to the calendar first — the same bar the play pages carry.
+    others = "\n    ".join(
+        f'<a href="{install_href(p)}"'
+        f'{ACTIVE_ATTR if p["n"] == pr["n"] else ""} '
+        f'title="{esc(p.get("focus", ""))}">{p["n"]}</a>'
+        for p in all_practices
+    )
+    bar = f'<div class="playbar nums">\n    {others}\n  </div>' if others else ""
+
+    facts = []
+    if window:
+        facts.append(f"<div><dt>On the field</dt><dd>{esc(window)}</dd></div>")
+    n_new = install_count(pr)
+    facts.append('<div><dt>New today</dt><dd>{}</dd></div>'.format(
+        f"{n_new} {'thing' if n_new == 1 else 'things'}" if n_new else "Review day"))
+    blocks_n = len(practice_agenda(pr))
+    facts.append(f"<div><dt>Blocks</dt><dd>{blocks_n}</dd></div>")
+    facts_html = f'<dl class="rb-facts">{"".join(facts)}</dl>'
+
+    # The one-line answer to "what are we putting in tonight?", above the agenda so it
+    # is readable at arm's length. The chips themselves live down in the install block,
+    # where the time they happen at is.
+    if items:
+        names = []
+        for pid in pr.get("plays", []):
+            names.append(f'<a href="{p_href(plays[pid][0])}">{esc(plays[pid][0]["name"])}</a>')
+        for fid in pr.get("fronts", []):
+            names.append(f'<a href="{d_href(defenses[fid])}">{esc(defenses[fid]["name"])} defence</a>')
+        for fmid in pr.get("formations", []):
+            names.append(f'<a href="{f_href(forms_by_id[fmid])}">'
+                         f'{esc(form_label(forms_by_id[fmid]))} formation</a>')
+        summary = (f'<p class="ins-day-new"><b>Installing today.</b> '
+                   f'{", ".join(names)}</p>')
+    else:
+        summary = ('<p class="ins-day-new review"><b>No new install.</b> '
+                   'Everything already in goes live &mdash; this is a rep day.</p>')
+
+    phase_note = (f'<p class="ins-day-phase">{esc(phase.get("note", ""))}</p>'
+                  if phase.get("note") else "")
+    # A practice whose date is not settled yet says so rather than leaving a gap where
+    # the date goes — the schedule is built out one practice at a time.
+    when_html = (f'<p class="ins-day-when">{esc(when)}</p>' if when else
+                 '<p class="ins-day-when undated">Date not set yet</p>')
+
+    pager = ['<div class="pager">']
+    pager.append(
+        f'<a href="{install_href(prev)}"><span class="dir">&larr; Previous</span>'
+        f'Practice {prev["n"]}</a>' if prev else "<span></span>")
+    pager.append('<a class="mid" href="install.html">'
+                 '<span class="dir">Schedule</span>All practices</a>')
+    pager.append(
+        f'<a class="nxt" href="{install_href(nxt)}">'
+        f'<span class="dir">Next &rarr;</span>Practice {nxt["n"]}</a>'
+        if nxt else "<span></span>")
+    pager.append("</div>")
+
+    body = f"""{crumbs}
+{bar}
+<div class="ins-day">
+  <p class="rb-eyebrow">Practice {pr["n"]}{" &middot; " + esc(phase.get("label", "")) if phase.get("label") else ""}</p>
+  <h1 class="page">{esc(pr.get("focus", ""))}</h1>
+  {when_html}
+  {facts_html}
+  {summary}
+  {phase_note}
+  <div class="ins-day-h"><h2>The run of practice</h2>
+    <div class="play-actions">
+      <button type="button" class="btn solid" onclick="window.print()">Print</button>
+    </div>
+  </div>
+  <div class="ins-day-plan">{practice_blocks_html(pr, items, needs)}</div>
+</div>
+{chr(10).join(pager)}"""
+
+    attrs = ""
+    if prev:
+        attrs += f' data-prev="{install_href(prev)}"'
+    if nxt:
+        attrs += f' data-next="{install_href(nxt)}"'
+    return page(
+        f"Practice {pr['n']}: {pr.get('focus', '')} — {SITE_TITLE}",
+        body,
+        formations,
+        defenses=defenses,
+        active_nav="install",
+        description=(f"Practice {pr['n']}"
+                     + (f" — {when}" if when else "")
+                     + f": {pr.get('focus', '')}")[:160],
+        main_attrs=attrs,
+    )
+
 
 
 # The defense side has no shared position-name table the way offense does — those
@@ -3328,6 +3764,20 @@ def write_all(formations: list[dict], defenses: dict, root: Path) -> int:
     (root / "depth-chart.html").write_text(
         write_depth_chart(formations, defenses, root), encoding="utf-8")
     written += 7
+
+    # One page per practice. The schedule page is the calendar; this is what a coach
+    # actually opens on the field, so it is a real page with a URL you can text to
+    # somebody rather than an anchor a fifth of the way down a scroll.
+    schedule = load_schedule(root)
+    practices = schedule.get("practices", [])
+    phases = schedule.get("phases", {})
+    for i, pr in enumerate(practices):
+        prev = practices[i - 1] if i else None
+        nxt = practices[i + 1] if i + 1 < len(practices) else None
+        (root / install_href(pr)).write_text(
+            write_install_day(pr, prev, nxt, practices, phases, formations, defenses),
+            encoding="utf-8")
+        written += 1
 
     for front in defenses.values():
         (root / d_href(front)).write_text(

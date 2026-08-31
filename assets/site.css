@@ -806,23 +806,171 @@ table.calls td.c { white-space: nowrap; }
 }
 .ph p { margin: 0; color: var(--muted); font-size: 14px; max-width: 68ch; }
 
-.ins {
-  display: grid; grid-template-columns: 78px minmax(0, 1fr); gap: 16px;
+/* ---- the month grid ---- */
+/* "What are we doing Tuesday?" is a question about a month, not about a scroll. The
+   grid answers it at a glance and every event on it is a link to that practice's own
+   page, which is where the plan actually lives. */
+.cal-wrap { margin: 20px 0 8px; }
+table.cal {
+  width: 100%; border-collapse: separate; border-spacing: 0; table-layout: fixed;
   background: var(--panel); border: 1px solid var(--line); border-radius: 12px;
-  padding: 14px 16px; margin: 0 0 10px; box-shadow: var(--shadow);
+  box-shadow: var(--shadow); overflow: hidden; margin: 0 0 16px;
 }
-@media (max-width: 560px) { .ins { grid-template-columns: 1fr; gap: 8px; } }
-.ins-n {
+table.cal caption {
+  caption-side: top; text-align: left; padding: 12px 14px 10px;
+  font-size: clamp(15px, 2.6vw, 18px); font-weight: 700; color: var(--ink);
+  letter-spacing: -.2px; background: var(--panel-2);
+  border-bottom: 1px solid var(--line);
+}
+table.cal th {
+  padding: 7px 4px; font-size: 10.5px; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 1px; color: var(--muted); background: var(--panel-2);
+  border-bottom: 1px solid var(--line);
+}
+table.cal th abbr { text-decoration: none; border: 0; }
+.cal-cell {
+  vertical-align: top; height: 92px; padding: 4px 5px 6px; width: 14.28%;
+  border-right: 1px solid var(--line); border-bottom: 1px solid var(--line);
+}
+table.cal tr > .cal-cell:last-child { border-right: 0; }
+table.cal tbody tr:last-child .cal-cell { border-bottom: 0; }
+.cal-cell.out { background: var(--panel-2); }
+.cal-d {
+  display: block; font-size: 11.5px; font-weight: 600; color: var(--muted);
+  font-variant-numeric: tabular-nums; margin-bottom: 3px;
+}
+/* Marked in the browser, not at build time — a "today" baked into a generated page is
+   wrong the morning after it is generated. */
+.cal-cell.is-past { background: var(--line-soft); }
+.cal-cell.is-past .cal-ev { opacity: .62; }
+.cal-cell.is-today { background: var(--accent-soft); }
+.cal-cell.is-today .cal-d {
+  color: var(--on-accent); background: var(--accent-solid); border-radius: 999px;
+  min-width: 20px; height: 20px; padding: 0 6px; display: inline-flex;
+  align-items: center; justify-content: center; font-size: 11px;
+}
+.cal-ev {
+  display: block; text-decoration: none; border-radius: 7px; padding: 4px 6px;
+  background: var(--panel-2); border-left: 3px solid var(--accent-solid);
+  margin-bottom: 3px; min-width: 0;
+}
+.cal-ev[data-phase="season"] { border-left-color: var(--red); }
+.cal-ev:hover { background: var(--panel); outline: 1px solid var(--accent); }
+.cal-ev-n {
+  display: block; font-size: 11.5px; font-weight: 800; color: var(--accent-ink);
+  line-height: 1.25; overflow: hidden;
+}
+.cal-ev-t {
+  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;
+  overflow: hidden; font-size: 11px; line-height: 1.3; color: var(--ink-2);
+}
+.cal-ev-new {
+  display: inline-block; margin-top: 3px; font-size: 9.5px; font-weight: 800;
+  letter-spacing: .4px; text-transform: uppercase; border-radius: 999px;
+  padding: 1px 6px; background: var(--accent-solid); color: var(--on-accent);
+}
+.cal-ev-new.none { background: var(--line); color: var(--muted); }
+/* On a phone the month is still worth having — you can see the shape of the week —
+   but the words do not fit. The cells shrink to the practice number and the list
+   underneath carries the reading. */
+@media (max-width: 640px) {
+  .cal-cell { height: 56px; padding: 3px 2px 4px; }
+  .cal-ev { padding: 2px 3px; text-align: center; }
+  .cal-ev-t, .cal-ev-new { display: none; }
+  .cal-ev-n { font-size: 10.5px; }
+}
+@media (max-width: 480px) {
+  .cal-ev { border-left-width: 2px; }
+  .cal-ev-w { display: none; }
+  .cal-ev-n { font-size: 12px; }
+}
+.cal-legend {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 6px 14px;
+  margin: 0 0 6px; font-size: 12px; color: var(--muted);
+}
+.cal-key {
+  width: 11px; height: 11px; border-radius: 3px; display: inline-block;
+  margin-right: -6px; background: var(--accent-solid);
+}
+.cal-key.season { background: var(--red); }
+.cal-key.today { background: var(--accent-solid); border-radius: 999px; }
+/* Filled in by the browser once it knows what day it is. No display: block here — a
+   div is one already, and setting it would outrank the browser's own [hidden] rule
+   and leave an empty box on a page built after the last practice. */
+.cal-next {
+  margin: 16px 0 0; padding: 11px 14px; border-radius: 10px;
+  background: var(--panel); border: 1px solid var(--accent); box-shadow: var(--shadow);
+  font-size: 13.5px; color: var(--ink-2); text-decoration: none;
+}
+.cal-next b { color: var(--ink); }
+.cal-next span { color: var(--muted); }
+
+/* ---- the practice list under the calendar ---- */
+/* One row per practice, in teaching order, with the phase notes still over the top of
+   each run. It is the whole schedule as text: it survives a phone, a printer and a
+   screen reader, none of which love a month grid. */
+.ins-row {
+  display: grid; grid-template-columns: 62px minmax(0, 1fr) 20px; gap: 14px;
+  align-items: center; text-decoration: none;
+  background: var(--panel); border: 1px solid var(--line); border-radius: 12px;
+  padding: 11px 14px; margin: 0 0 8px; box-shadow: var(--shadow);
+}
+.ins-row:hover { border-color: var(--accent); }
+.ins-row-n {
   display: flex; flex-direction: column; align-items: center; justify-content: center;
   background: var(--accent-solid); color: var(--on-accent); border-radius: 10px;
-  padding: 8px 4px; align-self: start;
+  padding: 6px 4px;
 }
-@media (max-width: 560px) { .ins-n { flex-direction: row; gap: 8px; padding: 5px 10px; } }
-.ins-n span { font-size: 9.5px; text-transform: uppercase; letter-spacing: 1.2px; opacity: .75; }
-.ins-n b { font-size: 26px; line-height: 1.1; font-variant-numeric: tabular-nums; }
-@media (max-width: 560px) { .ins-n b { font-size: 18px; } }
+.ins-row-n small { font-size: 9px; text-transform: uppercase; letter-spacing: 1.1px; opacity: .75; }
+.ins-row-n b { font-size: 22px; line-height: 1.1; font-variant-numeric: tabular-nums; }
+.ins-row-body { min-width: 0; }
+.ins-row-body time { display: block; font-size: 11.5px; font-weight: 700; color: var(--accent-ink); }
+.ins-row-body strong { display: block; font-size: 15px; color: var(--ink); margin: 1px 0 3px; }
+.ins-row-meta { display: flex; flex-wrap: wrap; gap: 4px 12px; font-size: 12px; color: var(--muted); }
+.ins-row-meta .new { color: var(--accent-ink); font-weight: 700; }
+.ins-row-go { color: var(--muted); font-size: 17px; text-align: right; }
+.ins-row:hover .ins-row-go { color: var(--accent-ink); }
+@media (max-width: 560px) {
+  .ins-row { grid-template-columns: 48px minmax(0, 1fr); gap: 10px; }
+  .ins-row-go { display: none; }
+  .ins-row-n { flex-direction: row; gap: 6px; padding: 4px 8px; }
+  .ins-row-n b { font-size: 16px; }
+}
 
-.ins-body h3 { margin: 0 0 9px; font-size: 16.5px; color: var(--ink); }
+/* ---- one practice, on its own page ---- */
+.ins-day { margin-bottom: 26px; }
+.ins-day h1.page { margin: 2px 0 6px; }
+.ins-day-when { margin: 0; font-size: 14.5px; font-weight: 600; color: var(--accent-ink); }
+.ins-day-when.undated { color: var(--muted); font-weight: 500; font-style: italic; }
+.ins-day .rb-facts { margin: 14px 0 0; }
+.ins-day-new {
+  margin: 16px 0 0; padding: 11px 14px; border-radius: 10px; font-size: 14px;
+  line-height: 1.55; color: var(--ink-2);
+  background: var(--panel); border: 1px solid var(--line);
+  border-left: 4px solid var(--accent-solid); box-shadow: var(--shadow);
+}
+.ins-day-new.review { border-left-color: var(--line); }
+.ins-day-new b { color: var(--ink); }
+.ins-day-new a { color: var(--accent-ink); font-weight: 600; }
+.ins-day-phase { margin: 10px 0 0; font-size: 13px; color: var(--muted); max-width: 74ch; }
+.ins-day-h {
+  display: flex; align-items: center; gap: 12px; margin: 24px 0 10px;
+  padding-bottom: 8px; border-bottom: 2px solid var(--accent-solid);
+}
+.ins-day-h h2 { margin: 0; font-size: 16px; color: var(--ink); letter-spacing: -.2px; }
+.ins-day-plan .ins-blk { background: var(--panel); border: 1px solid var(--line); }
+.ins-day-plan .ins-huddle {
+  margin: 0; padding: 11px 13px; border: 1px solid var(--line); border-radius: 10px;
+  background: var(--panel); font-size: 13.5px;
+}
+.ins-day-plan .ins-blk .ins-play { background: var(--panel-2); }
+/* The strip of practice numbers at the top of a day page — the playbar the play pages
+   use, with numbers instead of names, so it stays one line for a whole season. */
+.playbar.nums a {
+  min-width: 34px; text-align: center; font-variant-numeric: tabular-nums;
+  font-weight: 700;
+}
+
 .ins-blk {
   padding: 11px 13px; background: var(--panel-2); border-radius: 10px; margin: 0 0 10px;
 }
@@ -1019,7 +1167,7 @@ footer.site a { color: var(--accent-ink); }
 @media print {
   header.site, .drawer, .scrim, .skip, footer.site, .pager, .play-actions, .searchbar,
   .chips, .fgroup, .morebtn, #morefilters, .countline, #count, .clearbtn, .activefilters,
-  .section-head, .btn, .print-intro,
+  .section-head, .btn, .print-intro, .cal-next, .cal-legend, .ins-todo,
   .crumbs, .playbar { display: none !important; }
   :root {
     --ink: #111318; --ink-2: #333b49; --muted: #5b6472;

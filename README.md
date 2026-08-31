@@ -225,7 +225,8 @@ someone a link to exactly the play you mean.
 | `index.html` | Home: the formations, the install advice, the calling language |
 | `calls.html` | **Call sheet** — every play, searchable, filterable by formation, run/pass, where it hits, direction and who touches it |
 | `f-<formation>.html` | One formation: its notes and its plays |
-| `install.html` | **Install schedule** — practice by practice, generated from `install.json` |
+| `install.html` | **Install schedule** — a month calendar of the practices, generated from `install.json` |
+| `install-<n>.html` | One practice: what goes in, and the run of practice block by block |
 | `rules.html` | **The league rulebook, verbatim**, generated from `rulebook/*.txt` |
 | `p-<play>.html` | One play. Deep-linkable, and prints to a single sheet |
 | `defense.html` | The defensive playbook index |
