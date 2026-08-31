@@ -39,6 +39,7 @@ import json
 import math
 import re
 import sys
+from datetime import date
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
@@ -507,6 +508,25 @@ def validate_install(schedule: dict, formations: list[dict], defenses: dict) -> 
         phase = practice.get("phase")
         if phase and phase not in schedule.get("phases", {}):
             errors.append(f"install practice {n}: unknown phase '{phase}'")
+
+    # Dates are ISO so the site can put the practice on a calendar and compute the
+    # weekday from it. A hand-typed "Mon, Aug 11" cannot be placed, and — the reason
+    # this is checked rather than tolerated — a hand-typed weekday can disagree with
+    # the date printed beside it, which is exactly the mistake a coach acts on.
+    days = []
+    for practice in practices:
+        n = practice.get("n")
+        raw = str(practice.get("date", "")).strip()
+        if not raw:
+            continue
+        try:
+            days.append((n, date.fromisoformat(raw)))
+        except ValueError:
+            errors.append(f"install practice {n}: date '{raw}' is not YYYY-MM-DD")
+    for (n1, d1), (n2, d2) in zip(days, days[1:]):
+        if d2 < d1:
+            errors.append(f"install practice {n2} ({d2}) is dated before practice "
+                          f"{n1} ({d1}) — practices run in number order")
 
     # Not everything has to be scheduled. The plan is built out a practice at a time,
     # and a half-written schedule is the normal state of one in August — failing the

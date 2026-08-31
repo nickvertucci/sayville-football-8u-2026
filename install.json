@@ -1,5 +1,5 @@
 {
-  "intro": "Numbered practices, not dates — a rainout moves everything down one instead of skipping it. Built one practice at a time, in teaching order: nothing gets installed before its prerequisite is in place.",
+  "intro": "Every practice on the calendar, and every practice on its own page. The number is what carries the teaching order — a rainout moves the whole schedule down one instead of skipping it — and the date is only where that number happens to land. Built one practice at a time: nothing gets installed before its prerequisite is in place.",
   "phases": {
     "preseason": {
       "label": "Before the first game",
@@ -13,7 +13,7 @@
   "practices": [
     {
       "n": 1,
-      "date": "Mon, Aug 11",
+      "date": "2026-08-11",
       "phase": "preseason",
       "focus": "Line up in the Regular I",
       "agility_time": "5:30–6:15",
@@ -34,7 +34,7 @@
     },
     {
       "n": 2,
-      "date": "Thu, Aug 13",
+      "date": "2026-08-13",
       "phase": "preseason",
       "focus": "Line up in the Regular I again",
       "agility_time": "5:30–6:15",
@@ -55,7 +55,7 @@
     },
     {
       "n": 3,
-      "date": "Tue, Aug 18",
+      "date": "2026-08-18",
       "phase": "preseason",
       "focus": "First plays: Dive and Wedge",
       "agility_time": "5:30–6:15",
@@ -79,7 +79,7 @@
     },
     {
       "n": 4,
-      "date": "Fri, Aug 28",
+      "date": "2026-08-28",
       "phase": "preseason",
       "focus": "Go live and set the first team",
       "agility_time": "5:30–6:10",
@@ -100,7 +100,7 @@
     },
     {
       "n": 5,
-      "date": "Tue, Sep 2",
+      "date": "2026-09-02",
       "phase": "preseason",
       "focus": "Fundamentals both ways, Power and Pitch, first live scrimmage",
       "plays": [
