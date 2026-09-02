@@ -202,10 +202,16 @@ Four fronts, in `defense/`:
 
 | Call | Front | When |
 |---|---|---|
-| **Base** | 5-3 | Most downs. Five down, three linebackers, a free safety behind. |
+| **Base** | 4-4 | Most downs. Four down, four linebackers, two corners and a free safety. The outside pair force everything back in. |
+| **Tight** | 5-3 | When they are winning the middle. Trades the fourth linebacker back for a nose tackle so no guard is uncovered. |
 | **Goal Line** | 6-3 | Short yardage and inside the five. The heaviest front the league allows. |
-| **Wide** | 4-4 | When they keep getting outside us. Trades a lineman for a fourth linebacker. |
 | **Prevent** | 6-2-3 | Required by rule at an 18-point lead. Not a choice. |
+
+**Base is the 4-4 because of what actually beats us.** At this age the run that scores is
+the one that gets outside, and a fourth linebacker is a defender who can run to it — a
+fifth down lineman can only push. The cost is real and it is inside: both guards are
+uncovered in this front. `Tight` is the call that buys it back, and the 5-3 page is still
+in the book because we expect to need it.
 
 **The generator refuses to publish an illegal front.** `render.py` checks every defense
 against the league limits for 8- and 9-year-olds — at most six down linemen, at least
@@ -384,6 +390,11 @@ written for that front specifically rather than in general terms. The four excep
 the short-yardage plays — **Regular I Sneak** and **Regular I Wedge**, each way — drawn
 against the **6-3** because that is the heaviest front the league allows and it is what
 you actually see on fourth and one.
+
+**This is the front we expect to face, not the one we play.** Our own base is the 4-4;
+the cards are drawn against a 5-3 because that is what an 8U team lines up in against us
+once the 6-2 is off the table. The two questions are unrelated, and changing our base
+does not change what the offense is blocked against.
 
 Against a 5-3 our line is covered like this:
 

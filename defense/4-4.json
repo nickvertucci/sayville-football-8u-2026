@@ -1,11 +1,11 @@
 {
   "id": "4-4",
-  "order": 3,
+  "order": 1,
   "name": "4-4",
-  "call": "Wide",
-  "family": "Against speed and spread",
-  "summary": "Four down linemen and four linebackers. Trades a body on the line for a fourth linebacker, so we have two extra defenders who can run to the edge.",
-  "notes": "Four down linemen on the guards and the ends. Two inside linebackers and two outside linebackers at three yards, with the outside pair responsible for forcing everything back in. Two corners and a free safety behind.",
+  "call": "Base",
+  "family": "Base defense",
+  "summary": "Our everyday front. Four down linemen, four linebackers and three deep — a body off the line for a fourth linebacker, which gives us two extra defenders who can run to the edge.",
+  "notes": "Four down linemen on the guards and the ends. Two inside linebackers and two outside linebackers at three yards, with the outside pair responsible for forcing everything back in. Two corners and a free safety behind. This is the front we play unless there is a reason not to.",
   "roles": {
     "LE": "DL",
     "LT": "DL",
@@ -18,6 +18,12 @@
     "LC": "DB",
     "RC": "DB",
     "FS": "DB"
+  },
+  "position_names": {
+    "W": "Left outside linebacker",
+    "M": "Left inside linebacker",
+    "S": "Right inside linebacker",
+    "R": "Right outside linebacker"
   },
   "alignment": {
     "LE": [-3.8, 0.8],
@@ -114,9 +120,10 @@
     }
   },
   "coaching_points": [
-    "Call this when they keep getting outside us. Two extra defenders who can run beats two extra defenders who can only push.",
+    "This is our base, so it is the front the kids should be able to line up in without being told. Nearly everything that hurts you at this age gets outside, and two extra defenders who can run beats two extra defenders who can only push.",
     "The two outside linebackers are the reason this front works. They force everything back inside — if either one gets hooked and the ball gets outside him, it is a long run every time.",
-    "We give up a body inside to get it, so an offense that runs straight at the middle will find room. If they start hammering the A gaps, go back to the 5-3.",
+    "We give up a body inside to get it, so an offense that runs straight at the middle will find room. If they start hammering the A gaps, call Tight and put the fifth man back on the line.",
+    "The two inside linebackers are stacked behind the guards, not over the center, so neither one owns the middle by himself. Whichever one the ball declares to fills it, and the other takes the cutback — say it every practice or they both chase.",
     "Nobody crosses the line before the snap. The linebackers read one step, then go."
   ],
   "legal": "Four down linemen, four linebackers at three yards, and three defensive backs no closer than three yards. Comfortably inside every limit. No blitzing."
