@@ -43,12 +43,12 @@
 <polygon points="442.8,137.7 437.3,147.6 431.7,140.2" fill="#14213d"/>
 <path d="M351.0,364.5 L324.0,380.7 L394.2,394.2 L480.6,380.7 L529.2,315.9" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
 <polygon points="529.2,315.9 526.7,327.0 519.3,321.4" fill="#14213d"/>
-<path d="M426.6,437.4 L388.8,415.8 L313.2,372.6 L259.2,313.2" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 5"/>
-<polygon points="259.2,313.2 269.6,317.8 262.7,324.0" fill="#14213d"/>
-<path d="M351.0,437.4 L291.6,388.8 L259.2,345.6" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-<line x1="251.9" y1="351.1" x2="266.5" y2="340.1" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
-<path d="M275.4,437.4 L243.0,383.4 L232.2,361.8" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-<line x1="224.0" y1="365.9" x2="240.4" y2="357.7" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
+<path d="M388.8,413.1 L324.0,372.6 L264.6,329.4" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="259.2" y1="336.8" x2="270.0" y2="322.0" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
+<path d="M313.2,413.1 L275.4,378.0 L264.6,356.4" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="256.4" y1="360.5" x2="272.8" y2="352.3" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
+<path d="M351.0,437.4 L313.2,413.1 L270.0,367.2 L259.2,307.8" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 5"/>
+<polygon points="259.2,307.8 265.6,317.2 256.5,318.8" fill="#14213d"/>
 <rect x="225.7" y="325.6" width="23.8" height="23.8" rx="3" fill="#ffffff" stroke="#14213d" stroke-width="2.4"/>
 <text x="237.6" y="341.5" text-anchor="middle" font-size="11.5" font-weight="700" fill="#14213d">LTE</text>
 <rect x="263.5" y="325.6" width="23.8" height="23.8" rx="3" fill="#ffffff" stroke="#14213d" stroke-width="2.4"/>
@@ -65,10 +65,10 @@
 <text x="464.4" y="341.5" text-anchor="middle" font-size="11.5" font-weight="700" fill="#b3001b">RTE</text>
 <circle cx="351.0" cy="364.5" r="12.4" fill="#ffffff" stroke="#14213d" stroke-width="2.4"/>
 <text x="351.0" y="368.5" text-anchor="middle" font-size="11.5" font-weight="700" fill="#14213d">QB</text>
-<circle cx="275.4" cy="437.4" r="12.4" fill="#ffffff" stroke="#14213d" stroke-width="2.4"/>
-<text x="275.4" y="441.4" text-anchor="middle" font-size="11.5" font-weight="700" fill="#14213d">Z</text>
+<circle cx="313.2" cy="413.1" r="12.4" fill="#ffffff" stroke="#14213d" stroke-width="2.4"/>
+<text x="313.2" y="417.1" text-anchor="middle" font-size="11.5" font-weight="700" fill="#14213d">Z</text>
+<circle cx="388.8" cy="413.1" r="12.4" fill="#ffffff" stroke="#14213d" stroke-width="2.4"/>
+<text x="388.8" y="417.1" text-anchor="middle" font-size="11.5" font-weight="700" fill="#14213d">FB</text>
 <circle cx="351.0" cy="437.4" r="12.4" fill="#ffffff" stroke="#14213d" stroke-width="2.4"/>
-<text x="351.0" y="441.4" text-anchor="middle" font-size="11.5" font-weight="700" fill="#14213d">FB</text>
-<circle cx="426.6" cy="437.4" r="12.4" fill="#ffffff" stroke="#14213d" stroke-width="2.4"/>
-<text x="426.6" y="441.4" text-anchor="middle" font-size="11.5" font-weight="700" fill="#14213d">TB</text>
+<text x="351.0" y="441.4" text-anchor="middle" font-size="11.5" font-weight="700" fill="#14213d">TB</text>
 </svg>

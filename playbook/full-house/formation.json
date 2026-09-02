@@ -3,9 +3,9 @@
   "order": 4,
   "name": "Full House",
   "family": "Full House",
-  "summary": "Three backs in a straight line across, all at the same depth. Perfectly balanced, perfectly symmetric, and the defense cannot tell from the alignment which of the three is getting it.",
-  "personnel": "11 players, 2 tight ends, quarterback, fullback, 2 backs",
-  "notes": "The full house T. Both ends are tight on the line; the three backs sit shoulder to shoulder four yards deep — left back, fullback, right back, evenly spaced, giving nothing away. Perfectly symmetric, so every play has a left and right version off identical rules.",
+  "summary": "Three backs in a diamond behind the quarterback — one over each guard and the tailback alone at the point. Perfectly balanced, perfectly symmetric, and the defense cannot tell from the alignment which of the three is getting it.",
+  "personnel": "11 players, 2 tight ends, quarterback, 2 backs over the guards, tailback",
+  "notes": "The full house T in a diamond. Both ends are tight on the line; the Z and the fullback sit three and a half yards deep, one behind each guard, and the tailback is four yards deep in line with the quarterback. Perfectly symmetric, so every play has a left and right version off identical rules.",
   "alignment": {
     "LTE": [
       -4.2,
@@ -40,17 +40,22 @@
       -1.5
     ],
     "Z": [
-      -2.8,
-      -4.2
+      -1.4,
+      -3.3
     ],
     "FB": [
-      0.0,
-      -4.2
+      1.4,
+      -3.3
     ],
     "TB": [
-      2.8,
+      0.0,
       -4.2
     ]
+  },
+  "mirror": {
+    "Z": "FB",
+    "FB": "Z",
+    "TB": "TB"
   },
   "eligible": [
     "LTE",
@@ -67,9 +72,11 @@
     "4": "Z"
   },
   "coaching_notes": [
-    "The back digits are the book's digits — 2 fullback, 3 the right-side back, 4 the left one. A kid who knows the I's numbers already knows these.",
-    "Same depth for all three backs is the whole idea — put one closer than the others and a smart defense reads him; here all three leave at the same time.",
-    "Every run uses all three backs: one carries, one kicks out, one leads through. Teach the three jobs, not the plays — they work both directions.",
+    "The back digits are the book's digits — 2 fullback, 3 tailback, 4 the Z. Here the fullback and the Z are the two over the guards and the tailback is the deep one, so a kid who knows the I's numbers still knows these.",
+    "The two backs over the guards are one spot mirrored, not two positions. Whichever one the play goes to kicks the end out; the other one leads through the hole. Teach the two jobs and both directions come free.",
+    "The tailback is the only one who lines up on the middle, and on Power and Sweep he is the one who carries. He gets a full step to read the two blocks in front of him because he starts behind them, not beside them.",
+    "The diamond is what hides it. In a straight line across, a defense reads three backs at one depth and knows nobody is coming downhill; here the deep back can hit any gap and the near ones are already at the edge.",
+    "Depth is exact and it matters: three and a half yards for the two over the guards, four for the tailback. Let the deep back creep up and he arrives before his blockers do.",
     "Count seven on the line every snap. No Z to creep up here, so this formation draws the fewest illegal-formation flags.",
     "Symmetric formation, symmetric rules — the kids learn one play and get two."
   ]

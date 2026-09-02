@@ -8,7 +8,7 @@
   "defense": "5-3",
   "direction": "right",
   "ball_carrier": "FB",
-  "purpose": "The fastest handoff in the book. The fullback is going before the defense has read anything, and both backs leave on sweep paths so the linebackers have three things to look at and about half a second to pick.",
+  "purpose": "The fastest handoff in the book. The playside back is already standing behind the guard he is running past, so he is through the hole before the defense has read anything, and the other two backs leave on paths that threaten the edge and the middle at the same time.",
   "assignments": {
     "LTE": {
       "rule": "Cut off pursuit from behind. Nobody chases this down from the backside.",
@@ -61,11 +61,11 @@
       ]
     },
     "QB": {
-      "rule": "Open right and give it to the fullback now. This is a quick handoff, not a ride — he is past you before you finish turning.",
+      "rule": "Open right and give it to the playside back now. This is a quick handoff, not a ride — he is past you before you finish turning.",
       "type": "fake",
       "path": [
-        [0.8, -0.6],
-        [2.0, -1.0]
+        [0.5, -0.4],
+        [1.2, -0.6]
       ]
     },
     "Z": {
@@ -78,27 +78,28 @@
       ]
     },
     "FB": {
-      "rule": "Two steps and you are through the hole, just off the outside hip of the guard. Pads low, ball in both arms, hit it downhill. Do not dance and do not look for anything better.",
+      "rule": "Take one step to the quarterback and go straight ahead off the inside hip of the guard you are standing behind. Pads low, ball in both arms. Do not dance and do not look for anything better.",
       "type": "run",
       "path": [
-        [0.5, 2.0],
-        [0.7, 4.6],
-        [0.8, 7.0]
+        [-0.5, 1.3],
+        [-0.6, 3.9],
+        [-0.6, 6.3]
       ]
     },
     "TB": {
-      "rule": "Lead through the hole a step in front of the fullback and block the first linebacker who fills it. Get your head across him.",
+      "rule": "You leave on the snap, so you get there first. Step to the hole and block the first linebacker who fills it. Get your head across him.",
       "type": "block",
       "path": [
-        [-1.2, 1.8],
-        [-1.8, 3.6]
+        [0.5, 2.2],
+        [0.8, 4.0]
       ]
     }
   },
   "coaching_points": [
     "This is the first play you install in this formation and the one you fall back on all season. It works because it is fast, not because it is clever.",
-    "The fullback's aiming point is the outside hip of the guard, not the centre's back. If he aims at the centre he runs into the nose.",
-    "The far back's fake is worth more than most blocks in this book. If he jogs it, their backside linebacker is free to make the tackle. Make him sprint.",
-    "If the middle linebacker is meeting the fullback in the hole every time, the guard is not getting to him. Check that before you blame the back."
+    "The carrier is already lined up behind the guard he is running past. His only job is one step to the quarterback and then straight ahead off that guard's inside hip — if he aims at the center he runs into the nose.",
+    "The deep back leaves on the snap and the carrier does not, which is the whole reason a lead block is even possible on a play this quick. If he waits to see the handoff he arrives behind the man he is supposed to block.",
+    "The backside back's fake is worth more than most blocks in this book. If he jogs it, their backside linebacker is free to make the tackle. Make him sprint.",
+    "If the middle linebacker is meeting the carrier in the hole every time, the guard is not getting to him. Check that before you blame the back."
   ]
 }

@@ -47,10 +47,14 @@ CASES = [
     # crosses the line at all, so crediting him cannot be checked against a hole.
     ("split counter left",            "split-backs", "sb-counter-l", "Split Z Right 35 Counter", False),
     ("split counter left, wrong back", "split-backs", "sb-counter-l", "Split Z Right 24 Counter", True),
-    # The Full House is symmetric, so its left-handed plays are mirrored — which swaps TB
-    # and Z, and the back digit swaps with them.
+    # The Full House is symmetric, so its left-handed plays are mirrored. The tailback is
+    # on the middle and mirrors to himself, so Power keeps its back digit both ways.
     ("house power left, mirrored",    "full-house", "fh-power-l", "House 35 Power",       False),
     ("house power left, unmirrored",  "full-house", "fh-power-l", "House 44 Power",       True),
+    # Dive is the one pair whose two calls name different backs: mirroring trades the two
+    # backs over the guards, so the digit has to travel with them.
+    ("house dive left, mirrored",     "full-house", "fh-dive-l",  "House 41 Dive",        False),
+    ("house dive left, digit unswapped", "full-house", "fh-dive-l", "House 21 Dive",      True),
 ]
 
 

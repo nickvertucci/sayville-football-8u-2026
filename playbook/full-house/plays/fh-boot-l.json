@@ -64,7 +64,7 @@
       ]
     },
     "QB": {
-      "rule": "Fake the handoff to the far back with both hands, hide the ball on your back hip, and get to the edge the other way. Run it if it is open. Only throw if a defender comes up to take you.",
+      "rule": "Fake the handoff to the deep back with both hands, hide the ball on your back hip, and get to the edge the other way. Run it if it is open. Only throw if a defender comes up to take you.",
       "type": "run",
       "path": [
         [1.0, -0.6],
@@ -74,34 +74,35 @@
       ]
     },
     "Z": {
-      "rule": "Run your Power path to the right at full speed with your arms tucked like you have the ball. Sell it all the way — you are the reason nobody stays home.",
-      "type": "fake",
+      "rule": "Run your Power lead path to the right and block whoever shows in the hole. Sell it, then look back for anyone chasing the quarterback.",
+      "type": "block",
       "path": [
-        [1.4, 0.8],
-        [4.2, 2.4],
-        [6.2, 4.6]
+        [2.4, 1.5],
+        [4.6, 3.1]
       ]
     },
     "FB": {
-      "rule": "Run your Power lead path to the right and block whoever shows. Sell it, then look back for anyone chasing the quarterback.",
+      "rule": "Run your kick-out path at the end like Power is coming and get into him. Once the ball is gone, turn and look for anyone chasing the quarterback.",
       "type": "block",
       "path": [
-        [2.2, 1.8],
-        [3.4, 3.4]
+        [1.4, 1.3],
+        [1.8, 2.1]
       ]
     },
     "TB": {
-      "rule": "Run your kick-out path at the end like Power is coming, then peel back and protect the quarterback's outside shoulder.",
-      "type": "block",
+      "rule": "Run your Power path at full speed with your arms tucked like you have the ball. Sell it all the way — you are the man the fake goes to and the reason nobody stays home.",
+      "type": "fake",
       "path": [
-        [1.2, 2.0],
-        [1.6, 2.8]
+        [1.4, 0.9],
+        [3.0, 2.6],
+        [3.4, 4.8]
       ]
     }
   },
   "coaching_points": [
     "Do not call this until House Power Right has hurt them. Every part of it is a lie about Power, so Power has to be worth lying about.",
     "The three backs have to run their real Power paths at real speed. A jogged fake with three backs is three times as obvious as a jogged fake with one.",
+    "The deep back is the one the quarterback fakes to, and he is the one the linebackers are watching. If he stands up out of his path after the mesh, the whole play dies.",
     "Both ends must engage before releasing. If they run straight into their routes the fake dies and the flat defender is waiting.",
     "No blitzing is allowed for 8- and 9-year-olds, so the quarterback has time. Teach him to be patient and look up.",
     "Run first. One throw, then tuck it — no scrambling backwards, ever."

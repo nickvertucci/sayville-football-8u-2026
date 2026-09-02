@@ -129,7 +129,7 @@ so there is one copy of the numbering rather than three that can disagree.
 ### `name` and `call` are different on purpose
 
 Both are printed at the top of every card. `name` is the teaching name (*House Power
-Right*); `call` is the huddle call in the team's play-calling language (`House 44 Power` —
+Right*); `call` is the huddle call in the team's play-calling language (`House 34 Power` —
 formation, then **two digits: who carries it and where it goes**, then the play word).
 The numbering system is documented in the top-level [README](../README.md).
 
@@ -170,23 +170,41 @@ For a **symmetric** formation, left-handed plays are one file:
 The generator flips every path across the middle, swaps the position keys, and swaps the
 words "left" and "right" in every rule, purpose and coaching point.
 
-**The call is not mirrored — you write it.** Mirroring swaps `TB` and `Z`, so the back
-digit changes too: `House 44 Power` is the `Z` (the left back) through the 4 hole, and its
-mirror is `House 35 Power` — the `TB`, back 3, through the 5 hole. Get that wrong and
-the call check catches it, because the digits no longer match the flipped path.
+### Which keys swap is the formation's business
 
-**Only use `mirror_of` when the formation is symmetric.** A position with no counterpart
-in the `MIRROR` table maps to itself, which is correct for someone aligned on the middle
-(`C`, `QB`, `FB`) and wrong for a one-sided back or receiver; the two side backs are
-named `TB` and `Z` and the table swaps them.
+The line is the same in every formation we carry, so `MIRROR` in `render.py` pairs it up
+and nothing else has to. The backfield is not the same, so a formation that mirrors its
+plays declares its own pairs:
+
+```json
+"mirror": { "Z": "FB", "FB": "Z", "TB": "TB" }
+```
+
+That is the Full House, whose two backs over the guards trade places while the tailback,
+alone on the middle, stays put.
+
+**The build checks the map against the alignment.** Every pair has to be an actual
+reflection — same depth, opposite side — and mirroring has to undo itself. That check is
+the only thing standing between a moved backfield and eight silently wrong cards: the
+Full House used to be three backs in a row, where the two that swapped were `TB` and `Z`,
+and nothing else in the build would have noticed the difference. Every play would still
+have had eleven assignments, a call matching its own flipped diagram, and two backs drawn
+on spots the formation does not have.
+
+**The call is not mirrored — you write it.** When mirroring swaps two backs, the back
+digit changes with them: `House 20 Dive` is the fullback, back 2, through the 0 hole, and
+its mirror is `House 41 Dive` — the `Z`, back 4, through the 1 hole. A back who mirrors to
+himself keeps his digit, which is why `House 34 Power` mirrors to `House 35 Power`. Get it
+wrong and the call check catches it, because the digits no longer match the flipped path.
+
+**Only use `mirror_of` when the formation is symmetric.**
 
 - **Full House is symmetric** — it uses `mirror_of`, so a left-handed play is a
   four-line file.
 - **Regular I, Power I and Split Backs are not.** The `Z` sits on the right on every
   snap — out wide in the Regular I and the Split Backs, in the backfield in the Power
   I — so mirroring would flip its path while leaving it aligned on the same side. Their
-  left-handed plays are authored by hand, and their two side backs carry keys the
-  `MIRROR` table would not swap anyway (`LH` and `RH` in the Split Backs).
+  left-handed plays are authored by hand, and they carry no `mirror` map at all.
 
 **This is also why rules never name a specific position.** Write "the playside end", "the
 backside guard", "the center" — never "RTE" or "LG". Position abbreviations are not

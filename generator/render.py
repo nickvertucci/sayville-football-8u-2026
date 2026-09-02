@@ -71,20 +71,80 @@ LINE_H = 17
 # Which alignment keys are linemen (drawn as squares) vs backs and receivers (circles).
 LINEMEN = {"LTE", "LT", "LG", "C", "RG", "RT", "RTE", "TE"}
 
-# Only used by plays that declare `mirror_of`. A position with no counterpart maps to
-# itself, which is only correct when it aligns on the middle of the formation — so
-# formations with a one-sided back or receiver author both directions by hand instead.
+# Only used by plays that declare `mirror_of`. The line is the same in every formation
+# we carry, so it lives here; the backfield is not, so a formation names its own pairs
+# in `formation.json` under "mirror" and they are layered on top of this.
+#
+# A position with no counterpart anywhere maps to itself, which is only correct when it
+# aligns on the middle. That is not something to take on trust — mirror_pairs() checks
+# every pair against the alignment it claims to describe, so a back who moves off the
+# middle cannot keep a self-mapping nobody remembered to update.
 MIRROR = {
     "LTE": "RTE", "RTE": "LTE",
     "LT": "RT", "RT": "LT",
     "LG": "RG", "RG": "LG",
-    "C": "C", "QB": "QB", "FB": "FB",
-    # The two halfbacks of a symmetric formation are named TB (right) and Z (left),
-    # so mirroring a right-handed play swaps them. Only the symmetric Full House uses
-    # mirror_of; the Regular I, the Power I and the Split Backs keep the Z on a fixed
-    # side and author their left-handed plays by hand, so this swap never touches them.
-    "TB": "Z", "Z": "TB",
+    "C": "C", "QB": "QB",
 }
+
+
+def mirror_pairs(form: dict) -> dict:
+    """How this formation's positions swap when a play is flipped."""
+    return {**MIRROR, **(form.get("mirror") or {})}
+
+
+# How far two spots may be from being each other's reflection and still count as a
+# mirrored pair. Tight enough that a back a foot off the middle is caught.
+MIRROR_TOLERANCE = 0.05
+
+
+def validate_mirror(form: dict) -> list[str]:
+    """Refuse to flip a formation that is not actually symmetric.
+
+    Mirroring is four lines of JSON standing in for a whole play, and it is only honest
+    if flipping the picture lands every player on somebody's real spot. The Full House
+    used to be three backs in a row, where the two that swapped were TB and Z; it is a
+    diamond now, where they are Z and FB and the tailback sits on the middle. Nothing
+    but this check would have noticed the difference — every play would still have had
+    eleven assignments and a call that matched its own flipped diagram, drawn with two
+    backs standing on spots the formation does not have.
+    """
+    if not any("mirror_of" in p for p in form.get("_raw_plays", [])):
+        return []
+    errors = []
+    alignment = form.get("alignment", {})
+    pairs = mirror_pairs(form)
+    fid = form.get("id", "?")
+    for pos, spot in alignment.items():
+        other = pairs.get(pos)
+        if other is None:
+            errors.append(
+                f"formation {fid}: mirrors its plays but says nothing about where '{pos}' "
+                "goes when one is flipped — add it to the formation's 'mirror' map"
+            )
+            continue
+        if other not in alignment:
+            errors.append(
+                f"formation {fid}: mirror sends '{pos}' to '{other}', who is not in the "
+                "formation"
+            )
+            continue
+        if pairs.get(other) != pos:
+            errors.append(
+                f"formation {fid}: mirror sends '{pos}' to '{other}' but '{other}' to "
+                f"'{pairs.get(other)}' — mirroring has to undo itself"
+            )
+            continue
+        want = alignment[other]
+        if (abs(spot[0] + want[0]) > MIRROR_TOLERANCE
+                or abs(spot[1] - want[1]) > MIRROR_TOLERANCE):
+            errors.append(
+                f"formation {fid}: mirror pairs '{pos}' at "
+                f"[{spot[0]:g}, {spot[1]:g}] with '{other}' at "
+                f"[{want[0]:g}, {want[1]:g}], but those two spots are not reflections of "
+                "each other — this formation is not symmetric there, so its plays cannot "
+                "be mirrored"
+            )
+    return errors
 
 COLORS = {
     "ink": "#111318",
@@ -132,8 +192,9 @@ def swap_hands(text: str) -> str:
     return text
 
 
-def build_mirror(play: dict, source: dict) -> dict:
+def build_mirror(play: dict, source: dict, form: dict) -> dict:
     """Produce a left-handed copy of a right-handed play (or vice versa)."""
+    pairs = mirror_pairs(form)
     out = json.loads(json.dumps(source))
     out.update({k: v for k, v in play.items() if k != "mirror_of"})
 
@@ -143,10 +204,10 @@ def build_mirror(play: dict, source: dict) -> dict:
         if spec.get("path"):
             spec["path"] = [mirror_point(p) for p in spec["path"]]
         spec["rule"] = swap_hands(spec["rule"])
-        out["assignments"][MIRROR.get(pos, pos)] = spec
+        out["assignments"][pairs.get(pos, pos)] = spec
 
     if source.get("ball_carrier"):
-        out["ball_carrier"] = MIRROR.get(source["ball_carrier"], source["ball_carrier"])
+        out["ball_carrier"] = pairs.get(source["ball_carrier"], source["ball_carrier"])
     out["coaching_points"] = [swap_hands(c) for c in source.get("coaching_points", [])]
     if source.get("purpose"):
         out["purpose"] = swap_hands(source["purpose"])
@@ -260,6 +321,9 @@ def resolve_plays(plays_dir: Path, form: dict) -> list[dict]:
     raw = {}
     if plays_dir.is_dir():
         raw = {p.stem: load_json(p) for p in sorted(plays_dir.glob("*.json"))}
+    # Kept so validate_mirror() can ask whether this formation flips any of its plays
+    # without having to unpick the already-resolved copies.
+    form["_raw_plays"] = list(raw.values())
 
     resolved: dict[str, dict] = {}
     for pid, play in raw.items():          # two passes so file order doesn't matter
@@ -270,7 +334,7 @@ def resolve_plays(plays_dir: Path, form: dict) -> list[dict]:
             src = resolved.get(play["mirror_of"])
             if src is None:
                 raise SystemExit(f"{pid}: mirror_of '{play['mirror_of']}' not found")
-            resolved[pid] = build_mirror(play, src)
+            resolved[pid] = build_mirror(play, src, form)
 
     plays = list(resolved.values())
     for p in plays:
@@ -612,6 +676,13 @@ def validate(formations: list[dict], defenses: dict) -> list[str]:
                 f"formation {form.get('id')}: {len(form.get('alignment', {}))} players aligned, "
                 "must be 11 (this is 11v11 tackle)"
             )
+        for pos in form.get("mirror") or {}:
+            if pos not in form.get("alignment", {}):
+                errors.append(
+                    f"formation {form.get('id')}: mirror names '{pos}', who is not in "
+                    "this formation"
+                )
+        errors.extend(validate_mirror(form))
         for play in form["_plays"]:
             pid = play.get("id", "<no id>")
             for field in ("id", "name", "assignments"):
