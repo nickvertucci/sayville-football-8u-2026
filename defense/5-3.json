@@ -1,11 +1,11 @@
 {
   "id": "5-3",
-  "order": 1,
+  "order": 2,
   "name": "5-3",
-  "call": "Base",
-  "family": "Base defense",
-  "summary": "Our everyday front. Five down linemen cover the offensive line, three linebackers fill, and a free safety cleans up anything that gets through.",
-  "notes": "Five down linemen head up on the center, both guards' outside shoulders and both ends. Three linebackers at three yards. Two corners and a free safety. This is the front we play unless there is a reason not to.",
+  "call": "Tight",
+  "family": "Against a team running inside",
+  "summary": "The answer to a team running downhill at the middle. Five down linemen cover the offensive line, three linebackers fill, and a free safety cleans up anything that gets through.",
+  "notes": "Five down linemen head up on the center, both guards' outside shoulders and both ends. Three linebackers at three yards. Two corners and a free safety. This is the Base 4-4 with the fourth linebacker traded back for a nose tackle, so nobody is uncovered inside.",
   "roles": {
     "LE": "DL",
     "LT": "DL",
@@ -115,6 +115,7 @@
     }
   },
   "coaching_points": [
+    "Call this when they are winning the middle. The Base 4-4 leaves the guards uncovered on purpose; the moment a team makes us pay for it, the nose tackle goes back in and this is the front.",
     "Every down lineman has a gap and nothing else. The moment one of them chases the ball instead of holding his gap, we give up the play we were built to stop.",
     "Contain is the whole job for the ends. A back who gets outside our end at this age usually scores — teach them to keep the outside arm free and squeeze everything in.",
     "Linebackers read the back closest to them, not the ball. The ball lies to them; the blocking does not.",

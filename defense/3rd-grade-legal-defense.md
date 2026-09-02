@@ -1,7 +1,7 @@
 # Legal defensive formations — 3rd grade tackle (8-year-olds)
 
-**Short answer: yes, we have a legal defense.** Our base **5-3** is legal, and so are the
-other two fronts in this folder (**6-3** goal line, **4-4** wide). All three are checked
+**Short answer: yes, we have a legal defense.** Our base **4-4** is legal, and so are the
+other two fronts in this folder (**5-3** tight, **6-3** goal line). All three are checked
 against the rulebook by the generator on every build — an illegal front fails the build.
 
 Source: 2025 Suffolk County PAL rulebook (updated 10/5/2025), still the book for 2026.
@@ -62,21 +62,26 @@ that no legal opponent will show you one either.
 
 | Front | Call | DL | LB | DB | Legal? | Why |
 |---|---|----|----|----|--------|-----|
-| **5-3** | Base | 5 | 3 | 3 | ✅ | 5 DL (≤6), 3 LB at 3yd (≥2), 3 DB at 3yd+ (≥2) |
+| **4-4** | Base | 4 | 4 | 3 | ✅ | Comfortably inside every limit |
+| **5-3** | Tight | 5 | 3 | 3 | ✅ | 5 DL (≤6), 3 LB at 3yd (≥2), 3 DB at 3yd+ (≥2) |
 | **6-3** | Goal line | 6 | 3 | 2 | ✅ | 6 DL is the cap, 3 LB and 2 corners all at 2yd — the minimum depth |
-| **4-4** | Wide | 4 | 4 | 3 | ✅ | Comfortably inside every limit |
 | **6-2-3** | Prevent | 6 | 2 | 3 | ✅\* | **Required** at an 18-pt lead by 15.04, which overrides the 3-LB minimum |
 
 \* The Prevent front has only 2 linebackers, which normally fails #2. It is legal **only**
 because rule 15.04 specifically mandates a 6-2-3 once you lead by 18 (see below). The
 generator carries an explicit, documented exemption for this one front and nothing else.
 
-### Recommended base for 3rd grade: the **5-3**
+### Our base for 3rd grade: the **4-4**
 
-It's the everyday front for a reason — five down linemen cover the offensive line, three
-linebackers fill, and a free safety cleans up. It satisfies 9.02 with room to spare and
-gives you a last line of defense (the 6-3 goal-line front has no safety, so don't call it
-outside the 5-yard line).
+Four down linemen, four linebackers and three deep. It satisfies 9.02 with room to spare
+and gives you a last line of defense (the 6-3 goal-line front has no safety, so don't call
+it outside the 5-yard line). The reason it is the base rather than the 5-3 is what beats
+8-year-olds: the ball getting outside. Two outside linebackers who can run to the edge are
+worth more than a fifth man pushing on the line.
+
+It is not free — both guards are uncovered in a 4-4, so a team that runs straight at the
+middle will find room. That is what **Tight** (the 5-3) is for, and it stays in the book
+because we expect to need it.
 
 ---
 

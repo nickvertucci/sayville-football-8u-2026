@@ -55,11 +55,11 @@ book that used to be drawn against a 6-2 is now drawn against a **6-3**, which i
 heaviest front they are allowed to show us: six down linemen is the cap, three
 linebackers is the floor. The three fronts in `defense/` are all legal, and the generator fails the build if a new one is not:
 
-| Front | Down linemen | Linebackers | Legal |
-|---|---|---|---|
-| 6-3 | 6 | 3 | yes — this is the maximum front |
-| 5-3 | 5 | 3 | yes |
-| 4-4 | 4 | 4 | yes |
+| Front | Call | Down linemen | Linebackers | Legal |
+|---|---|---|---|---|
+| 4-4 | Base | 4 | 4 | yes |
+| 5-3 | Tight | 5 | 3 | yes |
+| 6-3 | Goal Line | 6 | 3 | yes — this is the maximum front |
 
 **It makes our passing game safer than it looks.** Nobody may cross the line before the
 snap, so the quarterback always has time. That is why Boot and Waggle are in the book at

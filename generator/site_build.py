@@ -3387,7 +3387,7 @@ def write_install_day(
 DEFENSE_POSITION_NAMES = {
     "LE": "Left end", "LT": "Left tackle", "NT": "Nose tackle", "RT": "Right tackle",
     "RE": "Right end", "W": "Weak linebacker", "M": "Middle linebacker",
-    "S": "Strong linebacker", "LC": "Left corner", "RC": "Right corner",
+    "S": "Strong linebacker", "R": "Rover", "LC": "Left corner", "RC": "Right corner",
     "FS": "Free safety",
 }
 
@@ -3539,7 +3539,10 @@ def write_depth_chart(formations: list[dict], defenses: dict, root: Path) -> str
         import json as _json
         roster = _json.loads(path.read_text(encoding="utf-8"))
 
-    front = defenses.get("5-3")
+    # Whichever front is the base — the same "lowest order wins" rule the offense
+    # board uses below, rather than a hardcoded id that keeps pointing at the old
+    # front the day the base changes.
+    front = next(iter(defenses.values()), None)
     # The board is the base formation's eleven — Z, FB and TB in the backfield. It
     # used to be every spot any formation aligns, which meant the Split Backs LH and
     # RH sat on both rotations reading Open and made a complete unit look two short
@@ -3558,8 +3561,18 @@ def write_depth_chart(formations: list[dict], defenses: dict, root: Path) -> str
                  and any(p in form["alignment"] for form in formations)
                  and any(roster.get("offense", {}).get(p) or [])]
     def_order = list(front["alignment"]) if front else []
+    # The same courtesy the offense board pays the Split Backs' LH and RH: a spot only
+    # a change-up front uses — the nose tackle, once the base stopped being the 5-3 —
+    # surfaces underneath rather than taking the name on it out of the book silently.
+    def_alt_order = [p for f in defenses.values() for p in f["alignment"]
+                     if p not in def_order
+                     and any(roster.get("defense", {}).get(p) or [])]
+    def_alt_order = list(dict.fromkeys(def_alt_order))
 
-    def_label = lambda p: DEFENSE_POSITION_NAMES.get(p, p)  # noqa: E731
+    # A front may name its own spots — W and S are the weak and strong linebackers of
+    # a three-linebacker front, and the two inside backers of a four-linebacker one.
+    def_names = {**DEFENSE_POSITION_NAMES, **(front or {}).get("position_names", {})}
+    def_label = lambda p: def_names.get(p, p)  # noqa: E731
 
     # One section per side of the ball, each carrying both rotations as columns. The
     # split used to be Purple sheet / Gold sheet with offense and defense side by
@@ -3569,8 +3582,9 @@ def write_depth_chart(formations: list[dict], defenses: dict, root: Path) -> str
     sides = (
         ("offense", "Offense", off_order, alt_order, position_name,
          "The base formation's eleven."),
-        ("defense", "Defense", def_order, [], def_label,
-         "The 5–3, our everyday front."),
+        ("defense", "Defense", def_order, def_alt_order, def_label,
+         f"The {front['name'].replace('-', '–')}, our everyday front."
+         if front else "Our everyday front."),
     )
     sections = []
     for side, heading, order, alts, label, sub in sides:

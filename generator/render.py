@@ -171,6 +171,17 @@ def load_defenses() -> dict:
     return dict(sorted(fronts.items(), key=lambda kv: (kv[1].get("order", 99), kv[0])))
 
 
+def base_defense(defenses: dict) -> dict | None:
+    """The front we play unless there is a reason not to.
+
+    It is whichever front sorts first, because `order` is the teaching order and the
+    base comes first — the same rule the formations use. Naming it here rather than
+    hardcoding an id is what let the base move from the 5-3 to the 4-4 without the
+    depth chart quietly staying on the old front.
+    """
+    return next(iter(defenses.values()), None)
+
+
 def validate_defenses(defenses: dict) -> list[str]:
     """Refuse to publish a front the league would flag.
 
@@ -442,7 +453,10 @@ def validate_roster(roster: dict, formations: list[dict], defenses: dict) -> lis
         return []
     errors = []
     offense_keys = {pos for f in formations for pos in f["alignment"]}
-    defense_keys = set(defenses["5-3"]["alignment"]) if "5-3" in defenses else set()
+    # Every spot any front aligns, not just the base one — the same rule the offense
+    # side follows. A coach who has named a nose tackle should not have that name
+    # rejected the week we make a front without one the base.
+    defense_keys = {pos for front in defenses.values() for pos in front["alignment"]}
     for side, valid in (("offense", offense_keys), ("defense", defense_keys)):
         for pos, names in roster.get(side, {}).items():
             if pos not in valid:
