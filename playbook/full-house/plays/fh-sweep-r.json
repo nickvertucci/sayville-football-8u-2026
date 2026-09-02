@@ -3,12 +3,12 @@
   "order": 7,
   "formation": "full-house",
   "name": "House Sweep Right",
-  "call": "House 48 Sweep",
+  "call": "House 38 Sweep",
   "type": "run",
   "defense": "5-3",
   "direction": "right",
-  "ball_carrier": "Z",
-  "purpose": "The same first three steps as Power, taken all the way outside. The near back and the pulling guard get around the corner in front of the carrier, and a defense that has been fighting the kick-out inside is a step late getting there.",
+  "ball_carrier": "TB",
+  "purpose": "The same first three steps as Power, taken all the way outside. The playside back and the pulling guard get around the corner in front of the carrier, and a defense that has been fighting the kick-out inside is a step late getting there.",
   "assignments": {
     "LTE": {
       "rule": "Cut off pursuit from behind. Everything is running away from you — chase flat down the line and never quit.",
@@ -63,46 +63,47 @@
       ]
     },
     "QB": {
-      "rule": "Open right, let the near back go, and hand it deep to the far back as he crosses. Then carry out a fake up the middle.",
+      "rule": "Open right, let the playside back go, and hand it to the deep back as he crosses behind you. Then carry out a fake up the middle.",
       "type": "fake",
       "path": [
-        [1.0, -0.6],
-        [2.6, -1.2]
+        [1.0, -1.0],
+        [2.6, -1.6]
       ]
     },
     "Z": {
-      "rule": "Take the handoff and get width first. Stay behind your blockers until you are outside our end, then turn up hard. Turning up too early is the only way this play loses yards.",
-      "type": "run",
-      "path": [
-        [1.6, 0.4],
-        [5.6, 1.0],
-        [9.4, 2.4],
-        [11.0, 4.8],
-        [11.4, 7.2]
-      ]
-    },
-    "FB": {
       "rule": "Fill hard through the middle like Dive is coming, then block anyone chasing from the inside. You buy the corner half a second.",
       "type": "block",
       "path": [
-        [0.8, 2.0],
-        [1.4, 3.6]
+        [1.6, 1.5],
+        [2.4, 3.1]
       ]
     },
-    "TB": {
+    "FB": {
       "rule": "Get outside fast and lead the carrier around the corner. Block the first man who shows up outside our end, and keep running — if nobody shows, go find the safety.",
       "type": "block",
       "path": [
-        [2.6, 1.2],
-        [5.4, 2.8],
-        [6.6, 4.6]
+        [3.0, 1.0],
+        [5.8, 2.6],
+        [7.0, 4.4]
+      ]
+    },
+    "TB": {
+      "rule": "Take the handoff and get width first. Stay behind your blockers until you are outside our end, then turn up hard. Turning up too early is the only way this play loses yards.",
+      "type": "run",
+      "path": [
+        [1.4, 0.4],
+        [5.0, 1.0],
+        [8.2, 2.4],
+        [9.0, 4.8],
+        [9.4, 7.2]
       ]
     }
   },
   "coaching_points": [
     "The first three steps are identical to Power Right. That is the point — do not let the backs give it away by leaning wider on this one.",
     "The carrier must not turn up until he is outside our end. Eight-year-olds cut upfield the moment they see grass and run straight into the tackle that Power was designed to beat.",
-    "The pulling guard has the longest trip on the play. If he cannot get there, block it with the near back alone and leave the guard in — a slow pull is worse than no pull.",
+    "The playside back is closer to the corner than the carrier is and starts on the snap, so getting there first is a question of effort, not speed. Time it in practice with both of them going.",
+    "The pulling guard has the longest trip on the play. If he cannot get there, block it with the playside back alone and leave the guard in — a slow pull is worse than no pull.",
     "Best call on the hash going to the wide side of the field. Do not call it into the boundary.",
     "If their corner is flying up to meet the pull every time, come back inside with Power Right or Dive Right."
   ]

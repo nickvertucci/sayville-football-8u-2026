@@ -3,12 +3,12 @@
   "order": 3,
   "formation": "full-house",
   "name": "House Power Right",
-  "call": "House 44 Power",
+  "call": "House 34 Power",
   "type": "run",
   "defense": "5-3",
   "direction": "right",
-  "ball_carrier": "Z",
-  "purpose": "All three backs get a job. The near back kicks the end out, the fullback leads through the hole, and the far back carries it in behind them both. Two lead blockers arrive in the same gap before the linebackers can fit.",
+  "ball_carrier": "TB",
+  "purpose": "All three backs get a job. The playside back kicks the end out, the backside back wraps around and leads through the hole, and the deep back carries it in behind them both. Two lead blockers arrive in the same gap before the linebackers can fit, and the carrier is far enough back to see them do it.",
   "assignments": {
     "LTE": {
       "rule": "Cut off pursuit from behind. You are the last one to the ball, so never quit on the play.",
@@ -61,46 +61,47 @@
       ]
     },
     "QB": {
-      "rule": "Open right, let the near back and the fullback clear, then hand it deep to the far back. Carry out a fake to the edge afterwards.",
+      "rule": "Open right, let the playside back clear, then hand it to the deep back as he comes past you. Carry out a fake to the edge afterwards.",
       "type": "fake",
       "path": [
-        [1.0, -0.6],
-        [2.8, -1.2],
-        [4.4, -1.6]
+        [0.9, -0.7],
+        [2.4, -1.3],
+        [4.0, -1.7]
       ]
     },
     "Z": {
-      "rule": "Take the handoff and aim at the outside hip of our tackle. Follow the fullback in and stay tight to his back. Do not bounce it outside — the yards are inside the kick-out.",
-      "type": "run",
+      "rule": "You are the lead. Cross behind the quarterback, get to the hole outside our tackle and block the first defender who shows in it. Get your head across him — do not wait for him to come to you.",
+      "type": "block",
       "path": [
-        [1.4, 0.8],
-        [4.2, 2.4],
-        [6.2, 4.6],
-        [6.6, 7.0]
+        [2.4, 1.5],
+        [4.6, 3.1]
       ]
     },
     "FB": {
-      "rule": "Lead through the hole outside our tackle and block the first defender who shows in it. Get your head across him — do not wait for him to come to you.",
-      "type": "block",
-      "path": [
-        [2.2, 1.8],
-        [3.4, 3.4]
-      ]
-    },
-    "TB": {
       "rule": "Kick the end out. Aim at his outside hip and drive him toward the sideline. Everything runs inside of you, so never let him come underneath.",
       "type": "block",
       "path": [
-        [0.6, 2.4],
-        [0.8, 4.9]
+        [0.7, 1.4],
+        [2.2, 4.0]
+      ]
+    },
+    "TB": {
+      "rule": "Take the handoff and aim at the outside hip of our tackle. Follow the lead back in and stay tight to his back. Do not bounce it outside — the yards are inside the kick-out.",
+      "type": "run",
+      "path": [
+        [1.4, 0.9],
+        [3.0, 2.6],
+        [3.4, 4.8],
+        [3.6, 7.2]
       ]
     }
   },
   "coaching_points": [
-    "This is Power without a pulling guard. The near back does the job the Z does in the Power I, and he does it from four yards deep with a running start — which is easier, not harder.",
-    "Three backs, three jobs: kick out, lead, carry. Teach the jobs and both directions come free.",
-    "Drill the near back's kick-out on its own. If he blocks the end with square shoulders the end slides underneath and makes the tackle in the backfield — he has to attack the outside hip.",
-    "The carrier is the far back so that he has time to see the two blocks develop in front of him. Do not swap the jobs to get your best runner the ball sooner.",
+    "This is Power without a pulling guard. The playside back does the job the Z does in the Power I, and he does it from three and a half yards deep standing right beside the man he has to kick — which is easier, not harder.",
+    "Three backs, three jobs: kick out, lead, carry. The two over the guards are one spot mirrored, so teach the jobs and both directions come free.",
+    "Drill the kick-out on its own. If he blocks the end with square shoulders the end slides underneath and makes the tackle in the backfield — he has to attack the outside hip.",
+    "The lead back has the longest trip on the play: he starts on the backside and has to cross the whole backfield. He leaves on the snap and he goes flat, not deep. If he is late, the carrier arrives at the hole alone.",
+    "The deep back carries because he starts behind both blocks and can see them develop. Do not swap the jobs to get your best runner the ball sooner.",
     "If they start jumping the kick-out, House Sweep Right is the same first three steps."
   ]
 }

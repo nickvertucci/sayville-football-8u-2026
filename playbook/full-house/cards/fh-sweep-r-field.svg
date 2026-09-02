@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="594" height="472" viewBox="54 27 594 472" font-family="Segoe UI, Helvetica, Arial, sans-serif" role="img">
-<title>House Sweep Right — House 48 Sweep</title>
+<title>House Sweep Right — House 38 Sweep</title>
 <rect x="0" y="0" width="702" height="513" fill="#ffffff"/>
 <line x1="0" y1="459.0" x2="702" y2="459.0" stroke="#c8cdd6" stroke-width="1"/>
 <line x1="0" y1="189.0" x2="702" y2="189.0" stroke="#c8cdd6" stroke-width="1"/>
@@ -41,14 +41,14 @@
 <line x1="404.6" y1="308.6" x2="421.6" y2="301.6" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 <path d="M464.4,337.5 L496.8,305.1" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
 <line x1="490.3" y1="298.6" x2="503.3" y2="311.6" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
-<path d="M351.0,364.5 L378.0,380.7 L421.2,396.9" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 5"/>
-<polygon points="421.2,396.9 409.9,397.6 413.1,388.9" fill="#14213d"/>
-<path d="M275.4,437.4 L318.6,426.6 L426.6,410.4 L529.2,372.6 L572.4,307.8 L583.2,243.0" fill="none" stroke="#b3001b" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
-<polygon points="583.2,243.0 586.1,254.0 576.9,252.5" fill="#b3001b"/>
-<path d="M351.0,437.4 L372.6,383.4 L388.8,340.2" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-<line x1="380.2" y1="337.0" x2="397.4" y2="343.4" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
-<path d="M426.6,437.4 L496.8,405.0 L572.4,361.8 L604.8,313.2" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-<line x1="597.2" y1="308.1" x2="612.4" y2="318.3" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
+<path d="M351.0,364.5 L378.0,391.5 L421.2,407.7" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 5"/>
+<polygon points="421.2,407.7 409.9,408.4 413.1,399.7" fill="#14213d"/>
+<path d="M313.2,413.1 L356.4,372.6 L378.0,329.4" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="369.8" y1="325.3" x2="386.2" y2="333.5" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
+<path d="M388.8,413.1 L469.8,386.1 L545.4,342.9 L577.8,294.3" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="570.2" y1="289.2" x2="585.4" y2="299.4" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
+<path d="M351.0,437.4 L388.8,426.6 L486.0,410.4 L572.4,372.6 L594.0,307.8 L604.8,243.0" fill="none" stroke="#b3001b" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+<polygon points="604.8,243.0 607.7,254.0 598.5,252.5" fill="#b3001b"/>
 <rect x="225.7" y="325.6" width="23.8" height="23.8" rx="3" fill="#ffffff" stroke="#14213d" stroke-width="2.4"/>
 <text x="237.6" y="341.5" text-anchor="middle" font-size="11.5" font-weight="700" fill="#14213d">LTE</text>
 <rect x="263.5" y="325.6" width="23.8" height="23.8" rx="3" fill="#ffffff" stroke="#14213d" stroke-width="2.4"/>
@@ -65,10 +65,10 @@
 <text x="464.4" y="341.5" text-anchor="middle" font-size="11.5" font-weight="700" fill="#14213d">RTE</text>
 <circle cx="351.0" cy="364.5" r="12.4" fill="#ffffff" stroke="#14213d" stroke-width="2.4"/>
 <text x="351.0" y="368.5" text-anchor="middle" font-size="11.5" font-weight="700" fill="#14213d">QB</text>
-<circle cx="275.4" cy="437.4" r="12.4" fill="#ffffff" stroke="#b3001b" stroke-width="2.4"/>
-<text x="275.4" y="441.4" text-anchor="middle" font-size="11.5" font-weight="700" fill="#b3001b">Z</text>
-<circle cx="351.0" cy="437.4" r="12.4" fill="#ffffff" stroke="#14213d" stroke-width="2.4"/>
-<text x="351.0" y="441.4" text-anchor="middle" font-size="11.5" font-weight="700" fill="#14213d">FB</text>
-<circle cx="426.6" cy="437.4" r="12.4" fill="#ffffff" stroke="#14213d" stroke-width="2.4"/>
-<text x="426.6" y="441.4" text-anchor="middle" font-size="11.5" font-weight="700" fill="#14213d">TB</text>
+<circle cx="313.2" cy="413.1" r="12.4" fill="#ffffff" stroke="#14213d" stroke-width="2.4"/>
+<text x="313.2" y="417.1" text-anchor="middle" font-size="11.5" font-weight="700" fill="#14213d">Z</text>
+<circle cx="388.8" cy="413.1" r="12.4" fill="#ffffff" stroke="#14213d" stroke-width="2.4"/>
+<text x="388.8" y="417.1" text-anchor="middle" font-size="11.5" font-weight="700" fill="#14213d">FB</text>
+<circle cx="351.0" cy="437.4" r="12.4" fill="#ffffff" stroke="#b3001b" stroke-width="2.4"/>
+<text x="351.0" y="441.4" text-anchor="middle" font-size="11.5" font-weight="700" fill="#b3001b">TB</text>
 </svg>

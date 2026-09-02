@@ -1,10 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="594" height="1200" viewBox="0 0 594 1200" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" width="594" height="1252" viewBox="0 0 594 1252" font-family="Segoe UI, Helvetica, Arial, sans-serif">
 <rect width="100%" height="100%" fill="#ffffff"/>
 <rect x="0" y="0" width="594" height="58" fill="#14213d"/>
 <text x="18" y="26" font-size="19.0" font-weight="700" fill="#ffffff">House Sweep Right</text>
 <text x="18" y="45" font-size="11.5" fill="#a9b4c7">RUN  •  Full House  •  vs 5-3</text>
 <rect x="425.2" y="13" width="150.8" height="31" rx="6" fill="#ffffff" fill-opacity="0.12" stroke="#8593ad" stroke-width="1"/>
-<text x="500.6" y="34" text-anchor="middle" font-size="14.5" font-weight="700" fill="#ffffff" letter-spacing="0.5">House 48 Sweep</text>
+<text x="500.6" y="34" text-anchor="middle" font-size="14.5" font-weight="700" fill="#ffffff" letter-spacing="0.5">House 38 Sweep</text>
 <clipPath id="fieldclip"><rect x="0" y="58" width="594" height="472"/></clipPath>
 <g clip-path="url(#fieldclip)"><g transform="translate(-54.0,31.0)">
 <rect x="0" y="0" width="702" height="513" fill="#ffffff"/>
@@ -48,14 +48,14 @@
 <line x1="404.6" y1="308.6" x2="421.6" y2="301.6" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 <path d="M464.4,337.5 L496.8,305.1" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
 <line x1="490.3" y1="298.6" x2="503.3" y2="311.6" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
-<path d="M351.0,364.5 L378.0,380.7 L421.2,396.9" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 5"/>
-<polygon points="421.2,396.9 409.9,397.6 413.1,388.9" fill="#14213d"/>
-<path d="M275.4,437.4 L318.6,426.6 L426.6,410.4 L529.2,372.6 L572.4,307.8 L583.2,243.0" fill="none" stroke="#b3001b" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
-<polygon points="583.2,243.0 586.1,254.0 576.9,252.5" fill="#b3001b"/>
-<path d="M351.0,437.4 L372.6,383.4 L388.8,340.2" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-<line x1="380.2" y1="337.0" x2="397.4" y2="343.4" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
-<path d="M426.6,437.4 L496.8,405.0 L572.4,361.8 L604.8,313.2" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-<line x1="597.2" y1="308.1" x2="612.4" y2="318.3" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
+<path d="M351.0,364.5 L378.0,391.5 L421.2,407.7" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 5"/>
+<polygon points="421.2,407.7 409.9,408.4 413.1,399.7" fill="#14213d"/>
+<path d="M313.2,413.1 L356.4,372.6 L378.0,329.4" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="369.8" y1="325.3" x2="386.2" y2="333.5" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
+<path d="M388.8,413.1 L469.8,386.1 L545.4,342.9 L577.8,294.3" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="570.2" y1="289.2" x2="585.4" y2="299.4" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
+<path d="M351.0,437.4 L388.8,426.6 L486.0,410.4 L572.4,372.6 L594.0,307.8 L604.8,243.0" fill="none" stroke="#b3001b" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+<polygon points="604.8,243.0 607.7,254.0 598.5,252.5" fill="#b3001b"/>
 <rect x="225.7" y="325.6" width="23.8" height="23.8" rx="3" fill="#ffffff" stroke="#14213d" stroke-width="2.4"/>
 <text x="237.6" y="341.5" text-anchor="middle" font-size="11.5" font-weight="700" fill="#14213d">LTE</text>
 <rect x="263.5" y="325.6" width="23.8" height="23.8" rx="3" fill="#ffffff" stroke="#14213d" stroke-width="2.4"/>
@@ -72,12 +72,12 @@
 <text x="464.4" y="341.5" text-anchor="middle" font-size="11.5" font-weight="700" fill="#14213d">RTE</text>
 <circle cx="351.0" cy="364.5" r="12.4" fill="#ffffff" stroke="#14213d" stroke-width="2.4"/>
 <text x="351.0" y="368.5" text-anchor="middle" font-size="11.5" font-weight="700" fill="#14213d">QB</text>
-<circle cx="275.4" cy="437.4" r="12.4" fill="#ffffff" stroke="#b3001b" stroke-width="2.4"/>
-<text x="275.4" y="441.4" text-anchor="middle" font-size="11.5" font-weight="700" fill="#b3001b">Z</text>
-<circle cx="351.0" cy="437.4" r="12.4" fill="#ffffff" stroke="#14213d" stroke-width="2.4"/>
-<text x="351.0" y="441.4" text-anchor="middle" font-size="11.5" font-weight="700" fill="#14213d">FB</text>
-<circle cx="426.6" cy="437.4" r="12.4" fill="#ffffff" stroke="#14213d" stroke-width="2.4"/>
-<text x="426.6" y="441.4" text-anchor="middle" font-size="11.5" font-weight="700" fill="#14213d">TB</text>
+<circle cx="313.2" cy="413.1" r="12.4" fill="#ffffff" stroke="#14213d" stroke-width="2.4"/>
+<text x="313.2" y="417.1" text-anchor="middle" font-size="11.5" font-weight="700" fill="#14213d">Z</text>
+<circle cx="388.8" cy="413.1" r="12.4" fill="#ffffff" stroke="#14213d" stroke-width="2.4"/>
+<text x="388.8" y="417.1" text-anchor="middle" font-size="11.5" font-weight="700" fill="#14213d">FB</text>
+<circle cx="351.0" cy="437.4" r="12.4" fill="#ffffff" stroke="#b3001b" stroke-width="2.4"/>
+<text x="351.0" y="441.4" text-anchor="middle" font-size="11.5" font-weight="700" fill="#b3001b">TB</text>
 </g></g>
 <line x1="18" y1="540" x2="576" y2="540" stroke="#c8cdd6" stroke-width="1"/>
 <text x="18" y="560" font-size="11" font-weight="700" fill="#5b6472" letter-spacing="1">ASSIGNMENTS</text>
@@ -115,27 +115,27 @@
 <text x="331" y="612" font-size="12" fill="#111318">going around you and he cannot be the</text>
 <text x="331" y="630" font-size="12" fill="#111318">one to make the tackle.</text>
 <text x="297" y="646" font-size="12" font-weight="700" fill="#111318">Z</text>
-<text x="331" y="646" font-size="12" fill="#111318">Take the handoff and get width first.</text>
-<text x="331" y="664" font-size="12" fill="#111318">Stay behind your blockers until you</text>
-<text x="331" y="680" font-size="12" fill="#111318">are outside our end, then turn up</text>
-<text x="331" y="698" font-size="12" fill="#111318">hard. Turning up too early is the</text>
-<text x="331" y="714" font-size="12" fill="#111318">only way this play loses yards.</text>
-<text x="297" y="732" font-size="12" font-weight="700" fill="#111318">QB</text>
-<text x="331" y="732" font-size="12" fill="#111318">Open right, let the near back go, and</text>
-<text x="331" y="748" font-size="12" fill="#111318">hand it deep to the far back as he</text>
-<text x="331" y="766" font-size="12" fill="#111318">crosses. Then carry out a fake up the</text>
-<text x="331" y="782" font-size="12" fill="#111318">middle.</text>
-<text x="297" y="800" font-size="12" font-weight="700" fill="#111318">FB</text>
-<text x="331" y="800" font-size="12" fill="#111318">Fill hard through the middle like</text>
-<text x="331" y="816" font-size="12" fill="#111318">Dive is coming, then block anyone</text>
-<text x="331" y="834" font-size="12" fill="#111318">chasing from the inside. You buy the</text>
-<text x="331" y="850" font-size="12" fill="#111318">corner half a second.</text>
+<text x="331" y="646" font-size="12" fill="#111318">Fill hard through the middle like</text>
+<text x="331" y="664" font-size="12" fill="#111318">Dive is coming, then block anyone</text>
+<text x="331" y="680" font-size="12" fill="#111318">chasing from the inside. You buy the</text>
+<text x="331" y="698" font-size="12" fill="#111318">corner half a second.</text>
+<text x="297" y="714" font-size="12" font-weight="700" fill="#111318">QB</text>
+<text x="331" y="714" font-size="12" fill="#111318">Open right, let the playside back go,</text>
+<text x="331" y="732" font-size="12" fill="#111318">and hand it to the deep back as he</text>
+<text x="331" y="748" font-size="12" fill="#111318">crosses behind you. Then carry out a</text>
+<text x="331" y="766" font-size="12" fill="#111318">fake up the middle.</text>
+<text x="297" y="782" font-size="12" font-weight="700" fill="#111318">FB</text>
+<text x="331" y="782" font-size="12" fill="#111318">Get outside fast and lead the carrier</text>
+<text x="331" y="800" font-size="12" fill="#111318">around the corner. Block the first</text>
+<text x="331" y="816" font-size="12" fill="#111318">man who shows up outside our end, and</text>
+<text x="331" y="834" font-size="12" fill="#111318">keep running — if nobody shows, go</text>
+<text x="331" y="850" font-size="12" fill="#111318">find the safety.</text>
 <text x="297" y="868" font-size="12" font-weight="700" fill="#111318">TB</text>
-<text x="331" y="868" font-size="12" fill="#111318">Get outside fast and lead the carrier</text>
-<text x="331" y="884" font-size="12" fill="#111318">around the corner. Block the first</text>
-<text x="331" y="902" font-size="12" fill="#111318">man who shows up outside our end, and</text>
-<text x="331" y="918" font-size="12" fill="#111318">keep running — if nobody shows, go</text>
-<text x="331" y="936" font-size="12" fill="#111318">find the safety.</text>
+<text x="331" y="868" font-size="12" fill="#111318">Take the handoff and get width first.</text>
+<text x="331" y="884" font-size="12" fill="#111318">Stay behind your blockers until you</text>
+<text x="331" y="902" font-size="12" fill="#111318">are outside our end, then turn up</text>
+<text x="331" y="918" font-size="12" fill="#111318">hard. Turning up too early is the</text>
+<text x="331" y="936" font-size="12" fill="#111318">only way this play loses yards.</text>
 <line x1="18" y1="942" x2="576" y2="942" stroke="#c8cdd6" stroke-width="1"/>
 <text x="18" y="960" font-size="11" font-weight="700" fill="#5b6472" letter-spacing="1">COACHING POINTS</text>
 <text x="18" y="980" font-size="12" fill="#111318">The first three steps are identical to Power Right. That is the point — do not</text>
@@ -143,11 +143,14 @@
 <text x="18" y="1014" font-size="12" fill="#111318">The carrier must not turn up until he is outside our end. Eight-year-olds cut</text>
 <text x="18" y="1032" font-size="12" fill="#111318">upfield the moment they see grass and run straight into the tackle that Power was</text>
 <text x="18" y="1048" font-size="12" fill="#111318">designed to beat.</text>
-<text x="18" y="1066" font-size="12" fill="#111318">The pulling guard has the longest trip on the play. If he cannot get there, block</text>
-<text x="18" y="1082" font-size="12" fill="#111318">it with the near back alone and leave the guard in — a slow pull is worse than no</text>
-<text x="18" y="1100" font-size="12" fill="#111318">pull.</text>
-<text x="18" y="1116" font-size="12" fill="#111318">Best call on the hash going to the wide side of the field. Do not call it into</text>
-<text x="18" y="1134" font-size="12" fill="#111318">the boundary.</text>
-<text x="18" y="1150" font-size="12" fill="#111318">If their corner is flying up to meet the pull every time, come back inside with</text>
-<text x="18" y="1168" font-size="12" fill="#111318">Power Right or Dive Right.</text>
+<text x="18" y="1066" font-size="12" fill="#111318">The playside back is closer to the corner than the carrier is and starts on the</text>
+<text x="18" y="1082" font-size="12" fill="#111318">snap, so getting there first is a question of effort, not speed. Time it in</text>
+<text x="18" y="1100" font-size="12" fill="#111318">practice with both of them going.</text>
+<text x="18" y="1116" font-size="12" fill="#111318">The pulling guard has the longest trip on the play. If he cannot get there, block</text>
+<text x="18" y="1134" font-size="12" fill="#111318">it with the playside back alone and leave the guard in — a slow pull is worse</text>
+<text x="18" y="1150" font-size="12" fill="#111318">than no pull.</text>
+<text x="18" y="1168" font-size="12" fill="#111318">Best call on the hash going to the wide side of the field. Do not call it into</text>
+<text x="18" y="1184" font-size="12" fill="#111318">the boundary.</text>
+<text x="18" y="1202" font-size="12" fill="#111318">If their corner is flying up to meet the pull every time, come back inside with</text>
+<text x="18" y="1218" font-size="12" fill="#111318">Power Right or Dive Right.</text>
 </svg>
