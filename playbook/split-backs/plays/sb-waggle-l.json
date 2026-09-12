@@ -8,7 +8,7 @@
   "fakes": "sb-dive-r",
   "direction": "left",
   "ball_carrier": "LTE",
-  "purpose": "The only pass in this formation, off the play they have seen most. Fake the dive, send the split man deep to carry the corner off, and the quarterback walks out onto an edge everybody has left.",
+  "purpose": "Waggle Right to the other edge, and the harder of the two. The quarterback's first steps are Dive Right's, the back away from the roll sells that dive, and he keeps going the way the dive's own fake takes him — out onto the left edge with our end in the flat in front of him. The split man is on the wrong end of the formation here, so instead of clearing that edge he runs deep from the back side. Run first, throw second.",
   "assignments": {
     "RTE": {
       "rule": "Engage the end over you for a count, then release and get across the field to eight yards. You are the second look and you arrive late on purpose.",
@@ -59,7 +59,7 @@
       ]
     },
     "Z": {
-      "rule": "Run straight down the field at the safety and hold him there. Nobody is throwing you the ball — you are the reason the middle is empty.",
+      "rule": "Sprint deep from the back side and lean toward the middle of the field. Nobody is throwing you the ball — you are holding their deep men away from the boot.",
       "type": "pass",
       "path": [
         [
@@ -73,7 +73,7 @@
       ]
     },
     "QB": {
-      "rule": "Fake the dive to the near back with both hands, hide the ball on your back hip, and get to the edge. Run it if it is open. Only throw if a defender comes up to take you.",
+      "rule": "Fake the dive to the back away from your roll, hide the ball on your back hip, and get to the edge. Run it if it is open. Only throw if a defender comes up to take you.",
       "type": "run",
       "path": [
         [
@@ -117,7 +117,8 @@
     "One pass in this formation is the right number. This is a running offence and the pass exists so the defence cannot put nine men in the box and forget about the edge.",
     "Both ends must engage before releasing. If they run straight into their routes the fake dies.",
     "The dive fake is the whole play. If that back does not get hit by somebody, he did not sell it.",
-    "The Z is on the wrong end of the formation for this one, so he takes the safety deep instead. That is what keeps the crosser open.",
+    "The dive comes from the back away from the roll. The back on the side he rolls to never chases it — he stays home and protects that edge. Get those two backwards and the quarterback runs into his own blocker.",
+    "The Z is on the wrong end of the formation for this one, so he cannot clear the edge the quarterback is rolling to. He runs deep from the back side instead and holds their deep men there, which is what keeps the crosser open.",
     "No blitzing is allowed for 8- and 9-year-olds, so the quarterback has time. Teach him to be patient and look up.",
     "Run first, throw second. One throw, then tuck it — no scrambling backwards, ever."
   ]

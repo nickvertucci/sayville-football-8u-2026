@@ -7,7 +7,7 @@
   "type": "run",
   "direction": "right",
   "ball_carrier": "LH",
-  "purpose": "Get outside in a hurry. The far back trails the quarterback, takes the pitch on the run and turns up inside the block on the corner. The split man makes that block, which is what frees both backs to stay in the backfield where the fake lives.",
+  "purpose": "Get outside in a hurry. The far back trails the quarterback, takes the pitch on the run and turns up inside the block out on the edge. The split man makes that block — their corner, or their outside linebacker against the 5-4-2, which has no corners — and that is what frees both backs to stay in the backfield where the fake lives.",
   "assignments": {
     "LTE": {
       "block": "cutoff"
@@ -88,7 +88,6 @@
   "coaching_points": [
     "The pitch goes early. A quarterback who waits to be tackled first will pitch it on the ground.",
     "This is not a read at this age — tell him before the snap that he is pitching it.",
-    "The back taking the pitch must stay behind the quarterback until he has the ball. Getting ahead means the pitch goes forward, which is a fumble waiting to happen.",
-    "Everything depends on the corner being blocked, and out here the split man does it — which is what frees both backs to fake and lead. Drill him on beating the corner to the spot without holding."
+    "Everything depends on the edge being blocked, and out here the split man does it — which is what frees both backs to fake and lead. Drill him on beating that man to the spot without holding."
   ]
 }

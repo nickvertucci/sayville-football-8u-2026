@@ -8,7 +8,7 @@
   "fakes": "sb-dive-l",
   "direction": "right",
   "ball_carrier": "RTE",
-  "purpose": "The only pass in this formation, off the play they have seen most. Fake the dive, send the split man deep to carry the corner off, and the quarterback walks out onto an edge everybody has left.",
+  "purpose": "The only pass in this formation, off the play they have seen most. The quarterback's first steps are Dive Left's, the back away from the roll sells that dive, and he keeps going the way the dive's own fake takes him — out onto the right edge, with our end in the flat in front of him and the split man running the deep man off. The back on the roll side never chases it; he stays home and protects. Run first, throw second.",
   "assignments": {
     "LTE": {
       "rule": "Engage the end over you for a count, then release and get across the field to eight yards. You are the second look and you arrive late on purpose.",
@@ -59,7 +59,7 @@
       ]
     },
     "Z": {
-      "rule": "Run straight down the field and take the corner with you. Nobody is throwing you the ball — you are the reason the flat is empty.",
+      "rule": "Sprint straight down the field and take the deep man on your side with you. Nobody is throwing you the ball — you are the reason the flat is empty.",
       "type": "pass",
       "path": [
         [
@@ -73,7 +73,7 @@
       ]
     },
     "QB": {
-      "rule": "Fake the dive to the near back with both hands, hide the ball on your back hip, and get to the edge. Run it if it is open. Only throw if a defender comes up to take you.",
+      "rule": "Fake the dive to the back away from your roll, hide the ball on your back hip, and get to the edge. Run it if it is open. Only throw if a defender comes up to take you.",
       "type": "run",
       "path": [
         [
@@ -117,7 +117,8 @@
     "One pass in this formation is the right number. This is a running offence and the pass exists so the defence cannot put nine men in the box and forget about the edge.",
     "Both ends must engage before releasing. If they run straight into their routes the fake dies.",
     "The dive fake is the whole play. If that back does not get hit by somebody, he did not sell it.",
-    "The Z running off the corner is what empties the flat. He never gets the ball on this one and he sprints anyway — the day he jogs is the day the corner sits on the tight end.",
+    "The dive comes from the back away from the roll. The back on the side he rolls to never chases it — he stays home and protects that edge. Get those two backwards and the quarterback runs into his own blocker.",
+    "The Z running the deep man off is what empties the flat. He never gets the ball on this one and he sprints anyway — the day he jogs is the day that man sits on the tight end.",
     "No blitzing is allowed for 8- and 9-year-olds, so the quarterback has time. Teach him to be patient and look up.",
     "Run first, throw second. One throw, then tuck it — no scrambling backwards, ever."
   ]

@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="621" height="1098" viewBox="0 0 621 1098" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" width="621" height="1030" viewBox="0 0 621 1030" font-family="Segoe UI, Helvetica, Arial, sans-serif">
 <rect width="100%" height="100%" fill="#ffffff"/>
 <rect x="0" y="0" width="621" height="58" fill="#14213d"/>
 <text x="18" y="26" font-size="19.0" font-weight="700" fill="#ffffff">Split QB Keep Left</text>
@@ -111,31 +111,26 @@
 <text x="344" y="630" font-size="12" fill="#111318">Stay in his way.</text>
 <text x="310" y="646" font-size="12" font-weight="700" fill="#111318">QB</text>
 <text x="344" y="646" font-size="12" fill="#111318">Show the ball to the back going right,</text>
-<text x="344" y="664" font-size="12" fill="#111318">pull it in on your back hip, and get</text>
-<text x="344" y="680" font-size="12" fill="#111318">outside our end. Tuck it on the first</text>
-<text x="344" y="698" font-size="12" fill="#111318">step and go north the moment the edge</text>
-<text x="344" y="714" font-size="12" fill="#111318">is sealed — do not drift sideways</text>
-<text x="344" y="732" font-size="12" fill="#111318">looking for more.</text>
-<text x="310" y="748" font-size="12" font-weight="700" fill="#111318">LH</text>
-<text x="344" y="748" font-size="12" fill="#111318">Lead outside our end. Block the first</text>
-<text x="344" y="766" font-size="12" fill="#111318">man out there — here it is the</text>
-<text x="344" y="782" font-size="12" fill="#111318">linebacker.</text>
-<text x="310" y="800" font-size="12" font-weight="700" fill="#111318">RH</text>
-<text x="344" y="800" font-size="12" fill="#111318">Run the sweep path away at full speed</text>
-<text x="344" y="816" font-size="12" fill="#111318">with your arms tucked. You are the lie,</text>
-<text x="344" y="834" font-size="12" fill="#111318">and the linebackers only leave if you</text>
-<text x="344" y="850" font-size="12" fill="#111318">are worth watching.</text>
-<line x1="18" y1="858" x2="603" y2="858" stroke="#c8cdd6" stroke-width="1"/>
-<text x="18" y="876" font-size="11" font-weight="700" fill="#5b6472" letter-spacing="1">COACHING POINTS</text>
-<text x="18" y="896" font-size="12" fill="#111318">Blocked exactly like Pitch — the line does not learn a new rule, only a new name. Say</text>
-<text x="18" y="912" font-size="12" fill="#111318">that out loud when you install it.</text>
-<text x="18" y="930" font-size="12" fill="#111318">This is the one play that moves the split man, so the huddle hears which side he is</text>
-<text x="18" y="946" font-size="12" fill="#111318">on: Z Right or Z Left. Count seven on the line before the snap like always.</text>
-<text x="18" y="964" font-size="12" fill="#111318">The fake is the play. If nobody looks at the back going the other way, the</text>
-<text x="18" y="980" font-size="12" fill="#111318">quarterback is running straight into a linebacker who never left.</text>
-<text x="18" y="998" font-size="12" fill="#111318">The quarterback is a runner here and nothing else. Tuck it on the first step, get to</text>
-<text x="18" y="1014" font-size="12" fill="#111318">the edge, and turn up — a quarterback who drifts sideways looking for more gets</text>
-<text x="18" y="1032" font-size="12" fill="#111318">caught from behind.</text>
-<text x="18" y="1048" font-size="12" fill="#111318">Do not call it until Pitch has been working. Their corner has to believe the ball is</text>
-<text x="18" y="1066" font-size="12" fill="#111318">going wide before a keep inside him is worth anything.</text>
+<text x="344" y="664" font-size="12" fill="#111318">tuck it on your back hip and get</text>
+<text x="344" y="680" font-size="12" fill="#111318">outside our end. Turn up the moment the</text>
+<text x="344" y="698" font-size="12" fill="#111318">edge is sealed — never drift sideways.</text>
+<text x="310" y="714" font-size="12" font-weight="700" fill="#111318">LH</text>
+<text x="344" y="714" font-size="12" fill="#111318">Lead outside our end. Block the first</text>
+<text x="344" y="732" font-size="12" fill="#111318">man out there — here it is the</text>
+<text x="344" y="748" font-size="12" fill="#111318">linebacker.</text>
+<text x="310" y="766" font-size="12" font-weight="700" fill="#111318">RH</text>
+<text x="344" y="766" font-size="12" fill="#111318">Run the sweep path away at full speed</text>
+<text x="344" y="782" font-size="12" fill="#111318">with your arms tucked. You are the lie,</text>
+<text x="344" y="800" font-size="12" fill="#111318">and the linebackers only leave if you</text>
+<text x="344" y="816" font-size="12" fill="#111318">are worth watching.</text>
+<line x1="18" y1="840" x2="603" y2="840" stroke="#c8cdd6" stroke-width="1"/>
+<text x="18" y="858" font-size="11" font-weight="700" fill="#5b6472" letter-spacing="1">COACHING POINTS</text>
+<text x="18" y="878" font-size="12" fill="#111318">Blocked exactly like Pitch — the line does not learn a new rule, only a new name. Say</text>
+<text x="18" y="896" font-size="12" fill="#111318">that out loud when you install it.</text>
+<text x="18" y="912" font-size="12" fill="#111318">This is the one play that moves the split man, so the huddle hears which side he is</text>
+<text x="18" y="930" font-size="12" fill="#111318">on: Z Right or Z Left. Count seven on the line before the snap like always.</text>
+<text x="18" y="946" font-size="12" fill="#111318">The fake is the play. If nobody looks at the back going the other way, the</text>
+<text x="18" y="964" font-size="12" fill="#111318">quarterback is running straight into a linebacker who never left.</text>
+<text x="18" y="980" font-size="12" fill="#111318">Do not call it until Pitch has been working. Their corner has to believe the ball is</text>
+<text x="18" y="998" font-size="12" fill="#111318">going wide before a keep inside him is worth anything.</text>
 </svg>

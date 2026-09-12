@@ -7,7 +7,7 @@
   "type": "run",
   "direction": "left",
   "ball_carrier": "RH",
-  "purpose": "Off-tackle power to the far back, who crosses behind the quarterback and takes a deep handoff. Our end drives their end out, the playside guard helps on the nose and comes off onto the middle linebacker, and the near back leads up through the hole.",
+  "purpose": "Off-tackle power to the far back, who crosses behind the quarterback and takes a deep handoff. Our end drives their end out, the playside guard takes the man over him or doubles the nose and climbs — whichever the front gives him — and the near back leads up through the hole.",
   "assignments": {
     "RTE": {
       "block": "cutoff"
@@ -23,7 +23,7 @@
     },
     "LG": {
       "block": "double",
-      "target": "middle"
+      "target": "playside"
     },
     "LT": {
       "block": "down"
@@ -80,7 +80,7 @@
     }
   },
   "coaching_points": [
-    "Identical blocking to Split Counter. The line learns one set of rules and gets two plays out of it — say that out loud when you install the second one.",
+    "Identical blocking to Split Counter. The line learns one set of rules and gets two plays out of it.",
     "The near back's block in the hole is the play. He takes the first man who shows in it rather than a man picked before the snap. Drill it on its own.",
     "The carrier travels further than the blocker, and that is the point — he arrives behind the lead, not beside it.",
     "If the handoff is late, the quarterback is reaching. He holds the ball still and lets the back run through it.",

@@ -7,7 +7,7 @@
   "type": "run",
   "direction": "left",
   "ball_carrier": "Z",
-  "purpose": "The Keep Right, until it is not. The quarterback and the near back start the Keep right and never stop selling it; the split man comes back underneath, takes a lateral going the other way and runs left behind the far back. The line blocks the side the ball actually ends up on, so all the defense gets to see is the Keep.",
+  "purpose": "The Keep Right, until it is not. The quarterback and the near back start the Keep right and never stop selling it; the split man comes back underneath, takes a lateral going the other way and runs left behind the far back. Only the backfield sells it. The line blocks left from the snap, the split man is running backwards behind the line instead of screening anybody, and with him carrying the ball there is one blocker fewer on that edge than Keep Left has going to the same place. It buys a count, not a disguise.",
   "assignments": {
     "LTE": {
       "block": "base",
@@ -34,7 +34,7 @@
       "note": "This one takes a long time, and he is quick enough to catch it."
     },
     "QB": {
-      "rule": "Start the Keep right — same first three steps, same ball on the hip — then pitch it back underneath to the split man crossing your face. Pitch it back, never forward, then keep running the Keep as if you still have it.",
+      "rule": "Start the Keep right. Pitch it back underneath — never forward — to the split man crossing your face, then run the Keep like you still have it.",
       "type": "fake",
       "path": [
         [

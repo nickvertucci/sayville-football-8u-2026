@@ -7,7 +7,7 @@
   "type": "run",
   "direction": "right",
   "ball_carrier": "LH",
-  "purpose": "Off-tackle power to the far back, who crosses behind the quarterback and takes a deep handoff. Our end drives their end out, the playside guard helps on the nose and comes off onto the middle linebacker, and the near back leads up through the hole.",
+  "purpose": "Off-tackle power to the far back, who crosses behind the quarterback and takes a deep handoff. Our end drives their end out, the playside guard takes the man over him or doubles the nose and climbs — whichever the front gives him — and the near back leads up through the hole.",
   "assignments": {
     "LTE": {
       "block": "cutoff"
@@ -23,7 +23,7 @@
     },
     "RG": {
       "block": "double",
-      "target": "middle"
+      "target": "playside"
     },
     "RT": {
       "block": "down"

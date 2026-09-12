@@ -23,7 +23,7 @@
     },
     "RG": {
       "block": "double",
-      "target": "middle"
+      "target": "playside"
     },
     "RT": {
       "block": "down"

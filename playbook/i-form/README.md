@@ -435,7 +435,7 @@ Misdirection off the toss. We show them the toss to the Z side, their linebacker
 - The tailback's counter steps must be full speed and full length. A shuffle fools nobody.
 - The fullback selling the toss matters more than his block. Tell him he is the decoy and mean it.
 - If their backside linebacker stops chasing the toss, go back to I Slant Left.
-- With nobody pulling, the tight end kicks the end out himself. Against a four-linebacker front that leaves the outside linebacker free — the Z takes him if he fills, and if he keeps making the tackle, run Toss at him instead.
+- With nobody pulling, the tight end kicks the end out himself. Against a four-linebacker front that leaves their outside linebacker free, and going this way we have nobody out there to take him — the Z lines up on the other side and is cutting off behind the play. If that linebacker keeps making the tackle, run Toss Left at him, where the fullback leads out there, or run Counter Right, which does have the Z on the playside.
 
 ---
 
@@ -557,7 +557,7 @@ Waggle Right the other way. The quarterback fakes the dive and gets to the weak 
 
 **Coaching points**
 
-- This is the partner to Boot Right, not a replacement for it. Call the one that goes away from wherever their outside linebacker has started cheating.
+- This is the partner to I Waggle Right, not a replacement for it. Call the one that boots away from wherever their outside linebacker has started cheating.
 - The end must engage before he releases. If he runs straight into the flat the whole fake dies and the flat defender is waiting for him.
 - No blitzing is allowed for 8- and 9-year-olds, so the quarterback has time. Teach him to be patient and look up.
 - The Z coming all the way across is a long trip. He is the second read and he is late by design — the quarterback must not stand there waiting for him.
@@ -583,7 +583,7 @@ Jet motion pulls the whole defense one way and the quarterback keeps it the othe
 | **RT** | Hinge back and protect the outside. Nobody gets past you. |
 | **RTE** **(ball)** | Engage the end over you for a count, then release to the flat at four yards and stay in front of the quarterback. You are the easy throw. |
 | **Z** | Run the Jet motion exactly the way you run it for real — start on the same call, full speed, flat across. Keep going after the fake. You are the reason this play is open. |
-| **QB** | Fake the jet handoff with both hands, hide the ball on your back hip, and get to the edge the other way. Run it if it is open. Only throw if a defender comes up to take you. |
+| **QB** | Fake the jet handoff and boot the other way, ball hidden on your back hip. Run it if it is open. Only throw if a defender comes up to take you. |
 | **FB** | Fill like Wedge is coming, then take anyone chasing from inside. |
 | **TB** | Run the Power path right, then protect the outside. Anyone chasing him is yours. |
 
@@ -717,7 +717,7 @@ Off the tight end. Our end seals their end inside and the fullback leads around 
 
 **Coaching points**
 
-- Same down-block-and-kick-out rules as Split Power. If the kids know one they know both — say that out loud when you install it.
+- Do not teach this as Split Power. Power's end kicks their end out and the ball goes inside him; here our end turns him in and the ball goes around behind him. Same down blocks, opposite edge — say that difference out loud or they will block it the way they blocked Power.
 - The tailback starts deeper than a split back does, so the seal block has to hold a beat longer. Drill it on a count.
 - The fullback stays tight to our end's block. Bellying out wide is what makes this play late.
 - If the fullback cannot get outside in time, run I Iso instead — it hits straight ahead.
@@ -749,8 +749,9 @@ Off the tight end. Our end seals their end inside and the fullback leads around 
 **Coaching points**
 
 - Check their alignment first. If they have shaded toward our Z, this is the call.
-- The Z chases from behind. Tell him he is not decoration — he cuts off the corner who would otherwise run this down.
-- Everything else is I Slant Right in a mirror. Teach the pair together.
+- The Z chases from the back side, and his man is the backside linebacker — not the corner, who is on the far side of the field from him. Tell him he is not decoration: he is the reason nothing catches this from behind.
+- Nobody is assigned to their playside corner. Against the 5-3 the fullback's lead block finds him anyway; against a four-linebacker front the fullback has the outside linebacker instead and the tailback beats the corner himself or gets caught.
+- The line and the fullback are I Slant Right in a mirror. Only the Z is different, because he lines up on the right either way. Teach the pair together.
 
 ---
 
@@ -781,7 +782,7 @@ Get all the way outside. Wider than the Slant — the tailback takes the handoff
 - The tailback is deep enough to get outside — but only if he is at full speed by the time he takes the handoff.
 - The fullback has to beat the tailback to the corner. If he is trailing, the play has no lead blocker.
 - One rule for the tailback: turn up off the fullback's block. Running to the sideline is how this play loses eight yards.
-- Watch our end reach-blocking. If he cannot reach their end, run I Slant to that side instead.
+- Watch our end turning their end inside — the ball goes around behind that block, so if he cannot get his head across, there is no outside. I Slant blocks that same end the same way and is no answer to it. Go to I Power instead, where the Z kicks that end out and our end leaves him alone and climbs to a linebacker.
 
 ---
 
@@ -812,7 +813,8 @@ Get all the way outside. Wider than the Slant — the tailback takes the handoff
 - Check their alignment first. If they have shifted toward our Z, this is the call.
 - The fullback has further to travel here than he does going right, so he has to leave on the snap. If he trails the tailback the play has no lead blocker.
 - One rule for the tailback: turn up off the fullback's block. Running to the sideline is how this play loses eight yards.
-- The Z chases from behind. Tell him he is the reason a fast corner does not run this down from the backside.
+- The Z chases from the back side, and his man is the backside linebacker, not the corner — he is running infield, away from the sideline the ball is headed for. He is the reason nothing catches this from behind.
+- Against the 4-4 the fullback leads on their outside linebacker and nobody touches the corner, a yard off where the ball crosses — the tailback has to turn up inside and make that corner come to him. The 5-3 puts the fullback on the corner instead; the 5-4-2 has no corner at all.
 
 ---
 

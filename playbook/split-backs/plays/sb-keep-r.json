@@ -7,7 +7,7 @@
   "type": "run",
   "direction": "right",
   "ball_carrier": "QB",
-  "purpose": "The quarterback keeps it himself, and he runs to the side the split man is lined up on — so the Z moves right for this one and the call says so. Fake to the back going left, seal the end inside, and get outside behind two blockers: the near back on the first man outside our end and the split man on the corner. Blocked exactly like Pitch.",
+  "purpose": "The quarterback keeps it himself, and he runs to the side the split man is lined up on — so the Z moves right for this one and the call says so. Fake to the back going left, seal the end inside, and get outside behind two blockers: the near back on the first man outside our end and the split man on their corner, or on their outside linebacker against the 5-4-2, which has no corners. Blocked exactly like Pitch.",
   "assignments": {
     "LTE": {
       "block": "cutoff"
@@ -36,7 +36,7 @@
       "block": "screen"
     },
     "QB": {
-      "rule": "Show the ball to the back going left, pull it in on your back hip, and get outside our end. Tuck it on the first step and go north the moment the edge is sealed — do not drift sideways looking for more.",
+      "rule": "Show the ball to the back going left, tuck it on your back hip and get outside our end. Turn up the moment the edge is sealed — never drift sideways.",
       "type": "run",
       "path": [
         [
@@ -84,7 +84,6 @@
     "Blocked exactly like Pitch — the line does not learn a new rule, only a new name. Say that out loud when you install it.",
     "This is the one play that moves the split man, so the huddle hears which side he is on: Z Right or Z Left. Count seven on the line before the snap like always.",
     "The fake is the play. If nobody looks at the back going the other way, the quarterback is running straight into a linebacker who never left.",
-    "The quarterback is a runner here and nothing else. Tuck it on the first step, get to the edge, and turn up — a quarterback who drifts sideways looking for more gets caught from behind.",
     "Do not call it until Pitch has been working. Their corner has to believe the ball is going wide before a keep inside him is worth anything."
   ]
 }

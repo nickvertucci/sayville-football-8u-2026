@@ -7,7 +7,7 @@
   "type": "run",
   "direction": "right",
   "ball_carrier": "RH",
-  "purpose": "The near back straight ahead, right off a double team on the nose and through the first gap outside the center. This one has to work before anything else in the formation does — it holds their linebackers inside and makes the pitch go.",
+  "purpose": "The near back straight ahead, through the first gap outside the center. Against a nose — the 5-3 and the 5-4-2 — the center and the playside guard double him and the ball runs right off it. The 4-4 has no nose, so the guard drives the man over him and the center climbs instead. The aiming point never changes. This one has to work before anything else in the formation does — it holds their linebackers inside and makes the pitch go.",
   "assignments": {
     "LTE": {
       "block": "cutoff"
@@ -50,7 +50,7 @@
       ]
     },
     "RH": {
-      "rule": "Aim at the outside hip of the center, right off the double team. Take the ball and get north — there is no hole to look for.",
+      "rule": "Aim at the outside hip of the center every time. Take the ball and get north — there is no hole to look for.",
       "type": "run",
       "path": [
         [
