@@ -1,3 +1,50 @@
+/* The defensive-front toggle on a play page.
+
+   Every front's diagram and assignments are already in the page, so this only moves a
+   class. Two things make it worth its twenty lines: the choice is remembered, because
+   a coach who has scouted the team they are playing wants every play in the book in
+   that front and not to press a button fifty-six times; and it works on the print
+   page too, where several plays are on one document at once. */
+(function () {
+  var KEY = 'sayville.front';
+  var groups = [].slice.call(document.querySelectorAll('.play'));
+  if (!groups.length) return;
+
+  function apply(play, front) {
+    var hit = false;
+    [].forEach.call(play.querySelectorAll('.dpanel'), function (p) {
+      var on = p.dataset.front === front;
+      p.classList.toggle('on', on);
+      hit = hit || on;
+    });
+    [].forEach.call(play.querySelectorAll('.dtab'), function (t) {
+      var on = t.dataset.front === front;
+      t.classList.toggle('on', on);
+      t.setAttribute('aria-pressed', on ? 'true' : 'false');
+    });
+    return hit;
+  }
+
+  function show(front) {
+    groups.forEach(function (play) { apply(play, front); });
+    try { localStorage.setItem(KEY, front); } catch (e) { /* private window */ }
+  }
+
+  groups.forEach(function (play) {
+    [].forEach.call(play.querySelectorAll('.dtab'), function (tab) {
+      tab.addEventListener('click', function () { show(tab.dataset.front); });
+    });
+  });
+
+  /* A remembered front that this build no longer has would blank the diagram, so it
+     is only applied if a panel actually answers to it. */
+  var saved = null;
+  try { saved = localStorage.getItem(KEY); } catch (e) { saved = null; }
+  if (saved && groups[0].querySelector('.dpanel[data-front="' + saved + '"]')) {
+    show(saved);
+  }
+}());
+
 /* Site navigation: hamburger drawer on a phone, dropdown on a desktop. */
 (function () {
   var burger = document.getElementById('burger');

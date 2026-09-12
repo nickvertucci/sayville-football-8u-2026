@@ -5,65 +5,35 @@
   "name": "Power I Counter Right",
   "call": "Power I Left 34 Counter",
   "type": "run",
-  "defense": "5-3",
   "direction": "right",
   "ball_carrier": "TB",
   "alignment": {
     "Z": [-2.6, -3.3]
   },
-  "purpose": "The Z is set to the strong side and runs his lead path that way, which is exactly what the defense has been punished for respecting. The tailback takes two hard steps toward him and comes back off-tackle to the weak side behind a pulling guard.",
+  "purpose": "The Z runs his Power lead path to the side he is set to — the thing the defense has been punished for respecting — and the tailback takes two hard steps after him, then comes back off-tackle the other way behind a pulling guard.",
   "assignments": {
     "LTE": {
-      "rule": "Cut off pursuit from behind. You are the last one to the ball, so never quit on the play.",
-      "type": "block",
-      "path": [
-        [1.0, 0.7]
-      ]
+      "block": "cutoff"
     },
     "LT": {
-      "rule": "Block back. Take the first defender on or inside you — nobody crosses your face.",
-      "type": "block",
-      "path": [
-        [1.0, 0.7]
-      ]
+      "block": "down"
     },
     "LG": {
-      "rule": "PULL RIGHT. Stay flat behind the line and kick out the end on the other side. Aim at his outside hip.",
-      "type": "block",
-      "path": [
-        [0.7, -1.0],
-        [3.6, -0.8],
-        [5.0, 1.2]
-      ]
+      "block": "pull",
+      "to": "kick"
     },
     "C": {
-      "rule": "You have the nose, head up on you. Hands inside and do not let him cross your face to the playside.",
-      "type": "block",
-      "path": [
-        [0.4, 1.1]
-      ]
+      "block": "reach"
     },
     "RG": {
-      "rule": "Nobody is over you. Help the center drive the nose for one count, then climb to the middle linebacker.",
-      "type": "block",
-      "path": [
-        [-0.6, 1.1],
-        [-1.2, 3.4]
-      ]
+      "block": "double",
+      "target": "middle"
     },
     "RT": {
-      "rule": "The tackle is on your inside shoulder. Block him down and seal him inside — that is what opens the hole.",
-      "type": "block",
-      "path": [
-        [-0.4, 1.3]
-      ]
+      "block": "down"
     },
     "RTE": {
-      "rule": "Release inside off his outside shoulder and take the playside linebacker. The end over you is being kicked out — leave him alone.",
-      "type": "block",
-      "path": [
-        [-1.0, 3.5]
-      ]
+      "block": "release"
     },
     "Z": {
       "rule": "Run your Power path to the left at full speed and block whatever shows. You never get the ball on this play and you are the reason it works.",
@@ -84,13 +54,8 @@
       ]
     },
     "FB": {
-      "rule": "False step left, then lead through the hole to the right and block the first defender who fills it. One step of the lie, then do your job.",
-      "type": "block",
-      "path": [
-        [-0.6, 0.6],
-        [1.6, 2.2],
-        [2.8, 3.6]
-      ]
+      "block": "lead",
+      "note": "One false step away from the hole first — one step of the lie, then do your job."
     },
     "TB": {
       "rule": "Take two hard steps toward the offset back, then plant and come back behind the pulling guard. Those two steps are the entire play.",

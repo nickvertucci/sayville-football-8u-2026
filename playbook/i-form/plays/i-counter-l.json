@@ -5,62 +5,32 @@
   "name": "Regular I Counter Left",
   "call": "Regular I Z Right 35 Counter",
   "type": "run",
-  "defense": "5-3",
   "direction": "left",
   "ball_carrier": "TB",
   "purpose": "Misdirection off the toss. We show them the toss to the Z side, their linebackers chase, and the tailback plants and comes back weak behind a pulling guard.",
   "assignments": {
     "LTE": {
-      "rule": "Release inside off his outside shoulder and take the playside linebacker. The end over you is being kicked out — leave him alone.",
-      "type": "block",
-      "path": [
-        [1.0, 3.5]
-      ]
+      "block": "release"
     },
     "LT": {
-      "rule": "The tackle is on your inside shoulder. Block him down and seal him inside — that is what opens the hole.",
-      "type": "block",
-      "path": [
-        [0.4, 1.3]
-      ]
+      "block": "down"
     },
     "LG": {
-      "rule": "Nobody is over you. Help the center drive the nose for one count, then climb to the middle linebacker.",
-      "type": "block",
-      "path": [
-        [0.6, 1.1],
-        [1.2, 3.4]
-      ]
+      "block": "double",
+      "target": "middle"
     },
     "C": {
-      "rule": "You have the nose, head up on you. Hands inside and do not let him cross your face to the playside.",
-      "type": "block",
-      "path": [
-        [-0.3, 1.1]
-      ]
+      "block": "reach"
     },
     "RG": {
-      "rule": "PULL LEFT. Stay flat behind the line and kick out the end on the other side.",
-      "type": "block",
-      "path": [
-        [-0.7, -1.0],
-        [-3.6, -0.8],
-        [-5.0, 1.2]
-      ]
+      "block": "pull",
+      "to": "kick"
     },
     "RT": {
-      "rule": "Block back. Take the first defender on or inside you — nobody crosses your face.",
-      "type": "block",
-      "path": [
-        [-1.0, 0.7]
-      ]
+      "block": "down"
     },
     "RTE": {
-      "rule": "Cut off pursuit from behind. You are the last one to the ball, so never quit on the play.",
-      "type": "block",
-      "path": [
-        [-1.0, 0.7]
-      ]
+      "block": "cutoff"
     },
     "Z": {
       "rule": "Take one hard step upfield like the toss is coming, then come back and cut off the backside.",
@@ -80,8 +50,8 @@
       ]
     },
     "FB": {
-      "rule": "Run the toss path to the other side at full speed and block anything that shows. You are the lie.",
-      "type": "block",
+      "block": "decoy",
+      "sell": "Run the toss path to the other side at full speed and block anything that shows. You are the lie.",
       "path": [
         [3.2, 1.4],
         [5.8, 3.2]

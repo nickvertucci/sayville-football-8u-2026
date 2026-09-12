@@ -5,7 +5,6 @@
   "name": "House Boot Left",
   "call": "House 17 Boot",
   "type": "pass",
-  "defense": "5-3",
   "direction": "left",
   "ball_carrier": "LTE",
   "purpose": "All three backs run their Power paths to the right and the quarterback keeps it left on his own. Three backs going one way is the hardest thing in this book to ignore, which is exactly why nobody is left on the other side.",
@@ -19,40 +18,22 @@
       ]
     },
     "LT": {
-      "rule": "Hinge and protect the boot side. Nobody comes free outside you — the quarterback is alone back there.",
-      "type": "block",
-      "path": [
-        [-1.0, 0.7]
-      ]
+      "block": "hinge"
     },
     "LG": {
-      "rule": "Nobody is over you. Help the center on the nose and drive him away from the boot.",
-      "type": "block",
-      "path": [
-        [0.6, 1.0]
-      ]
+      "block": "down"
     },
     "C": {
-      "rule": "Block the nose away from the boot. Nobody chases through the middle.",
-      "type": "block",
-      "path": [
-        [0.9, 0.8]
-      ]
+      "block": "reach"
     },
     "RG": {
-      "rule": "Nobody is over you. Climb like you are going to the middle linebacker on Power — take him with you.",
-      "type": "block",
-      "path": [
-        [-0.4, 1.4],
-        [-0.8, 3.2]
-      ]
+      "block": "climb",
+      "target": "middle",
+      "note": "Climb like Power is coming and take him with you."
     },
     "RT": {
-      "rule": "Block down inside and sell the run. This has to look exactly like Power going to your side.",
-      "type": "block",
-      "path": [
-        [-0.5, 1.2]
-      ]
+      "block": "down",
+      "note": "Sell the run. This has to look exactly like Power to your side."
     },
     "RTE": {
       "rule": "Engage the end over you for a count, then release and get across the field to eight yards. You are the second look and you arrive late on purpose.",
@@ -74,16 +55,16 @@
       ]
     },
     "Z": {
-      "rule": "Run your Power lead path to the right and block whoever shows in the hole. Sell it, then look back for anyone chasing the quarterback.",
-      "type": "block",
+      "block": "decoy",
+      "sell": "Run your Power lead path at full speed and block whoever shows in the hole. Once the ball is gone, look back for anyone chasing the quarterback.",
       "path": [
         [2.4, 1.5],
         [4.6, 3.1]
       ]
     },
     "FB": {
-      "rule": "Run your kick-out path at the end like Power is coming and get into him. Once the ball is gone, turn and look for anyone chasing the quarterback.",
-      "type": "block",
+      "block": "decoy",
+      "sell": "Run your kick-out path at the end like Power is coming and get into him. Once the ball is gone, turn and look for anyone chasing the quarterback.",
       "path": [
         [1.4, 1.3],
         [1.8, 2.1]

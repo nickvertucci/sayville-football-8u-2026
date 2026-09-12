@@ -5,98 +5,35 @@
   "name": "Split Pitch Left",
   "call": "Split Z Right 39 Pitch",
   "type": "run",
-  "defense": "5-3",
   "direction": "left",
   "ball_carrier": "RH",
-  "purpose": "Get outside in a hurry. Our end seals their end inside, the playside guard cuts the middle linebacker off from the sideline, and the far back trails the quarterback, takes the pitch on the run and turns up inside the block on the corner. Away from the split man there is nobody out there, so the near back has to go block the corner himself — which is why this side has no dive fake.",
+  "purpose": "Get outside in a hurry. The far back trails the quarterback, takes the pitch on the run and turns up inside the block on the corner. Away from the split man there is nobody out there, so the near back goes and blocks that corner himself — which is why this side has no dive fake.",
   "assignments": {
     "RTE": {
-      "rule": "Cut off pursuit from behind. You are the last one to the ball, so never quit on the play.",
-      "type": "block",
-      "path": [
-        [
-          -1.0,
-          0.7
-        ]
-      ]
+      "block": "cutoff"
     },
     "RT": {
-      "rule": "Block back. Take the first defender on or inside you — nobody crosses your face.",
-      "type": "block",
-      "path": [
-        [
-          -1.0,
-          0.7
-        ]
-      ]
+      "block": "down"
     },
     "RG": {
-      "rule": "Nobody is over you. Cut off the backside — nothing chases this from behind.",
-      "type": "block",
-      "path": [
-        [
-          -1.0,
-          0.7
-        ]
-      ]
+      "block": "cutoff"
     },
     "C": {
-      "rule": "Reach the nose. Get your head across his playside shoulder.",
-      "type": "block",
-      "path": [
-        [
-          -0.6,
-          1.0
-        ]
-      ]
+      "block": "reach"
     },
     "LG": {
-      "rule": "Nobody is over you. Climb to the middle linebacker and cut him off from the sideline.",
-      "type": "block",
-      "path": [
-        [
-          -0.4,
-          1.2
-        ],
-        [
-          0.6,
-          3.4
-        ]
-      ]
+      "block": "climb",
+      "target": "playside"
     },
     "LT": {
-      "rule": "Reach the tackle on your inside shoulder. Get your head across him — he cannot be allowed to run down the line after this.",
-      "type": "block",
-      "path": [
-        [
-          0.3,
-          1.3
-        ]
-      ]
+      "block": "down"
     },
     "LTE": {
-      "rule": "Seal the edge. Block the end over you and turn him inside — the ball is going around behind you, so he cannot be allowed to follow it out.",
-      "type": "block",
-      "path": [
-        [
-          0.2,
-          1.3
-        ]
-      ]
+      "block": "base",
+      "drive": "in"
     },
     "Z": {
-      "rule": "Release inside and chase the play across the field. You are the only one fast enough to catch a defender running it down from behind.",
-      "type": "block",
-      "path": [
-        [
-          -2.0,
-          3.4
-        ],
-        [
-          -5.0,
-          5.2
-        ]
-      ]
+      "block": "cutoff"
     },
     "QB": {
       "rule": "Open left, get to the edge, and pitch the ball to the trailing back before you get touched. There is no dive fake on this one — sell it with your eyes and get out there.",
@@ -117,22 +54,8 @@
       ]
     },
     "LH": {
-      "rule": "Beat the ball to the corner and block him. Drive him toward the sideline so the ball can turn up inside you — there is no receiver out here to do it for you.",
-      "type": "block",
-      "path": [
-        [
-          -3.4,
-          2.0
-        ],
-        [
-          -6.0,
-          5.6
-        ],
-        [
-          -6.5,
-          7.0
-        ]
-      ]
+      "block": "lead",
+      "target": "force"
     },
     "RH": {
       "rule": "Run flat behind everybody, stay outside and behind the quarterback, and catch the pitch on the run. Never get ahead of him — a pitch that goes forward is a fumble.",

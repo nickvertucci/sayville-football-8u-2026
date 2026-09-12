@@ -44,6 +44,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
+import blocking  # noqa: E402
 import site_build  # noqa: E402
 from common import CARD_ORDER, esc, form_label, ordered_positions, slug  # noqa: E402
 
@@ -203,7 +204,14 @@ def build_mirror(play: dict, source: dict, form: dict) -> dict:
         spec = json.loads(json.dumps(spec))
         if spec.get("path"):
             spec["path"] = [mirror_point(p) for p in spec["path"]]
-        spec["rule"] = swap_hands(spec["rule"])
+        # A blocking intent mirrors itself. "Block down", "kick the edge man out" and
+        # "pull and wrap" are the same instruction on either hand — the direction lives
+        # in the play's side, which the mirror flips, and the sentence is generated
+        # from that. The only wording a blocker owns is the note and a decoy's `sell`,
+        # so those are the only strings here that need flipping.
+        for field in ("rule", "note", "sell"):
+            if spec.get(field):
+                spec[field] = swap_hands(spec[field])
         out["assignments"][pairs.get(pos, pos)] = spec
 
     if source.get("ball_carrier"):
@@ -359,6 +367,56 @@ def resolve_plays(plays_dir: Path, form: dict) -> list[dict]:
 CALL_DIGITS = re.compile(r"\b(\d)(\d)\b")
 
 
+def play_side(play: dict) -> int:
+    """+1 if the call sends the ball right, -1 left.
+
+    Taken from the call rather than from the `direction` field because the call is the
+    thing the build already checks against the diagram. "Playside" in a blocking rule
+    and "the hole the call names" therefore cannot disagree.
+    """
+    m = CALL_DIGITS.search(play.get("call", "") or "")
+    if not m:
+        return 1 if (play.get("direction") or "right") == "right" else -1
+    return 1 if int(m.group(2)) % 2 == 0 else -1
+
+
+def play_hole(play: dict) -> float:
+    """Where the ball crosses the line of scrimmage, in field x.
+
+    Taken from the hole the call names, measured against this play's own alignment, so
+    it follows the formation's splits rather than a table of guessed numbers. It is
+    what the blockers who are told to block "whoever shows" are aimed at — the hole is
+    a place, and the man in it is not knowable before the snap.
+    """
+    form = play["_formation"]
+    alignment = play_alignment(form, play)
+    m = CALL_DIGITS.search(play.get("call", "") or "")
+    if not m:
+        return 1.5 * play_side(play)
+    hole = int(m.group(2))
+    low, high = hole_bounds(alignment, "R" if hole % 2 == 0 else "L", hole // 2)
+    if high == float("inf"):
+        high = low + 2.0
+    return (low + high) / 2 * (1 if hole % 2 == 0 else -1)
+
+
+def resolved_assignments(play: dict, front: dict) -> dict:
+    """This play's eleven assignments, blocking rules resolved against one front.
+
+    Cached per (play, front) because the card, the diagram, the web page, the print
+    book and PLAYBOOK.md all ask for the same thing, and resolving is where every
+    sentence in the book now comes from.
+    """
+    key = front["id"]
+    cache = play.setdefault("_resolved", {})
+    if key not in cache:
+        form = play["_formation"]
+        cache[key] = blocking.resolve_play(
+            play, play_alignment(form, play), front, play_side(play), play_hole(play)
+        )
+    return cache[key]
+
+
 def play_alignment(form: dict, play: dict) -> dict:
     """Where the eleven actually line up for this play.
 
@@ -426,7 +484,7 @@ def los_crossing(alignment: dict, pos: str, spec: dict) -> float | None:
     return None
 
 
-def validate_call(play: dict, form: dict) -> list[str]:
+def validate_call(play: dict, form: dict, defenses: dict) -> list[str]:
     """Check a play's call against the play's own diagram."""
     call = play.get("call")
     if not call:
@@ -451,7 +509,18 @@ def validate_call(play: dict, form: dict) -> list[str]:
         return [f"{pid}: call '{call}' names back {back_digit} = {pos}, who is not in the "
                 "formation"]
 
-    spec = play.get("assignments", {}).get(pos, {})
+    # The digits name the back who handles the ball, so the back they name has to be
+    # one. This used to be implied: a blocker's path was hand-drawn, so a call naming
+    # him almost never crossed the line in the hole it claimed and the geometry check
+    # caught it. Now every blocker's path is derived from the front, and a pulling
+    # guard's wrap crosses the line right where the ball does — which made a wrong
+    # call measurably true. Saying it outright is both stronger and honest.
+    source = play.get("assignments", {}).get(pos, {})
+    if "block" in source:
+        return [f"{pid}: call '{call}' names back {back_digit} = {pos}, who is blocking "
+                "on this play — the digits name the back who handles the ball"]
+
+    spec = resolved_assignments(play, defenses[blocking.DEFAULT_FRONT]).get(pos, {})
     crossing = los_crossing(alignment, pos, spec)
     if crossing is None:
         return [f"{pid}: call '{call}' says {pos} runs the {hole_digit} hole, but his path "
@@ -701,6 +770,33 @@ def validate(formations: list[dict], defenses: dict) -> list[str]:
             extra = set(play.get("assignments", {})) - set(form.get("alignment", {}))
             if extra:
                 errors.append(f"{pid}: assignment for unknown position {', '.join(sorted(extra))}")
+            # An assignment is either a blocking intent this build knows how to
+            # resolve, or a hand-drawn path. Anything else is a card with a blank spot
+            # on it, which is worse than no card.
+            for pos, spec in (play.get("assignments") or {}).items():
+                if "block" in spec:
+                    if spec["block"] not in blocking.VERBS:
+                        errors.append(
+                            f"{pid}: {pos} has unknown blocking verb "
+                            f"'{spec['block']}' — the verbs are "
+                            f"{', '.join(sorted(blocking.VERBS))}"
+                        )
+                    if spec["block"] == "lead" and spec.get("target") not in (
+                            None, "force"):
+                        errors.append(
+                            f"{pid}: {pos} leads with target '{spec['target']}', which "
+                            "this verb ignores — a lead aims at the hole, and only "
+                            "'force' names a man"
+                        )
+                    if spec["block"] == "decoy" and not spec.get("path"):
+                        errors.append(
+                            f"{pid}: {pos} sells a fake but has no path — a decoy copies "
+                            "another play's path, which cannot be derived from the front"
+                        )
+                elif not spec.get("rule"):
+                    errors.append(
+                        f"{pid}: {pos} has neither a blocking verb nor a written rule"
+                    )
             carrier = play.get("ball_carrier")
             if carrier and carrier not in form.get("alignment", {}):
                 errors.append(f"{pid}: ball_carrier '{carrier}' is not in the formation")
@@ -718,7 +814,7 @@ def validate(formations: list[dict], defenses: dict) -> list[str]:
                         f"{pid}: alignment for '{pos}' must be [x, y] in field yards"
                     )
             if not missing and not extra:
-                errors.extend(validate_call(play, form))
+                errors.extend(validate_call(play, form, defenses))
     return errors
 
 
@@ -842,10 +938,9 @@ def draw_defense(defense: dict) -> str:
     return "\n".join(out)
 
 
-def draw_paths(play: dict, alignment: dict) -> str:
+def draw_paths(assignments: dict, alignment: dict, carrier: str | None) -> str:
     out = []
-    carrier = play.get("ball_carrier")
-    for pos, spec in play["assignments"].items():
+    for pos, spec in assignments.items():
         path = spec.get("path")
         if not path:
             continue
@@ -902,10 +997,10 @@ def wrap(text, width: int) -> list[str]:
     return lines or [""]
 
 
-def render_card(play: dict, defenses: dict, frame: tuple[float, float, float]) -> str:
+def render_card(play: dict, defense: dict, frame: tuple[float, float, float]) -> str:
     form = play["_formation"]
     alignment = play_alignment(form, play)
-    defense = defenses.get(play.get("defense", ""))
+    assignments = resolved_assignments(play, defense)
 
     # Same frame as the web diagrams, so a card and a diagram of the same play are
     # drawn at the same scale with the formation in the same place.
@@ -918,7 +1013,7 @@ def render_card(play: dict, defenses: dict, frame: tuple[float, float, float]) -
     chars = max(24, int(((card_w - 2 * PAD) / 2 - 34) / 6.5))
 
     ordered = ordered_positions(play)
-    entries = [(pos, wrap(play["assignments"][pos]["rule"], chars)) for pos in ordered]
+    entries = [(pos, wrap(assignments[pos]["rule"], chars)) for pos in ordered]
     half = math.ceil(len(entries) / 2)
     columns = [entries[:half], entries[half:]]
     col_lines = max((sum(len(e[1]) for e in col) for col in columns), default=0)
@@ -949,9 +1044,8 @@ def render_card(play: dict, defenses: dict, frame: tuple[float, float, float]) -
         f'<g transform="translate({off_x:.1f},{TITLE_H + off_y:.1f})">',
         draw_field(),
     ]
-    if defense:
-        svg.append(draw_defense(defense))
-    svg.append(draw_paths(play, alignment))
+    svg.append(draw_defense(defense))
+    svg.append(draw_paths(assignments, alignment, play.get("ball_carrier")))
     svg.append(draw_offense(play, alignment))
     svg.append("</g></g>")
 
@@ -1136,17 +1230,18 @@ def diagram_frame(formations: list[dict], defenses: dict) -> tuple[float, float,
         xs += [x for x, _ in alignment.values()]
         ys += [y for _, y in alignment.values()]
         for play in form["_plays"]:
-            defense = defenses.get(play.get("defense", ""))
-            if defense:
-                xs += [x for x, _ in defense["alignment"].values()]
-                ys += [y for _, y in defense["alignment"].values()]
             spots = play_alignment(form, play)
             xs += [x for x, _ in spots.values()]
             ys += [y for _, y in spots.values()]
-            for pos, spec in play["assignments"].items():
-                ax, ay = spots[pos]
-                xs += [ax + p[0] for p in spec.get("path", [])]
-                ys += [ay + p[1] for p in spec.get("path", [])]
+            # Every front the play is drawn against, not just one: a blocking path is
+            # computed from where that front's eleven are standing, so the widest
+            # version of a pull or a kick-out only exists in one of the three. Framing
+            # on the default front alone would crop the other two.
+            for fid in blocking.SCOUT_FRONTS:
+                for pos, spec in resolved_assignments(play, defenses[fid]).items():
+                    ax, ay = spots[pos]
+                    xs += [ax + p[0] for p in spec.get("path", [])]
+                    ys += [ay + p[1] for p in spec.get("path", [])]
 
     def up(v, step=0.5):
         return math.ceil(v / step) * step
@@ -1158,7 +1253,7 @@ def diagram_frame(formations: list[dict], defenses: dict) -> tuple[float, float,
     return half, top, bottom
 
 
-def render_diagram(play: dict, defenses: dict, frame: tuple[float, float, float]) -> str:
+def render_diagram(play: dict, defense: dict, frame: tuple[float, float, float]) -> str:
     """Diagram only — no assignment text baked in.
 
     The web page pairs this with real HTML so the words reflow on a phone instead of
@@ -1166,7 +1261,7 @@ def render_diagram(play: dict, defenses: dict, frame: tuple[float, float, float]
     diagram_frame() so every play in the book lines up with every other one.
     """
     form = play["_formation"]
-    defense = defenses.get(play.get("defense", ""))
+    assignments = resolved_assignments(play, defense)
 
     # Crop to what this play actually uses. A front with no deep safety would otherwise
     # leave six yards of blank grass at the top, which on a phone is six yards of nothing.
@@ -1182,13 +1277,13 @@ def render_diagram(play: dict, defenses: dict, frame: tuple[float, float, float]
         f'<svg xmlns="http://www.w3.org/2000/svg" width="{vb_w:.0f}" height="{vb_h:.0f}" '
         f'viewBox="{vb_x:.0f} {vb_y:.0f} {vb_w:.0f} {vb_h:.0f}" '
         f'font-family="Segoe UI, Helvetica, Arial, sans-serif" role="img">',
-        f'<title>{esc(play["name"])} — {esc(play.get("call", ""))}</title>',
+        f'<title>{esc(play["name"])} — {esc(play.get("call", ""))} vs '
+        f'{esc(defense["name"])}</title>',
         draw_field(),
     ]
-    if defense:
-        svg.append(draw_defense(defense))
+    svg.append(draw_defense(defense))
     alignment = play_alignment(form, play)
-    svg.append(draw_paths(play, alignment))
+    svg.append(draw_paths(assignments, alignment, play.get("ball_carrier")))
     svg.append(draw_offense(play, alignment))
     svg.append("</svg>")
     return "\n".join(svg)
@@ -1198,7 +1293,7 @@ def render_diagram(play: dict, defenses: dict, frame: tuple[float, float, float]
 
 
 
-def play_section(play: dict, card_rel: str) -> list[str]:
+def play_section(play: dict, card_rel: str, defenses: dict) -> list[str]:
     title = play["name"]
     out = ["---", "", f"## {title}", ""]
     if play.get("call"):
@@ -1207,10 +1302,11 @@ def play_section(play: dict, card_rel: str) -> list[str]:
     if play.get("purpose"):
         out += [play["purpose"], ""]
     out += ["| Position | Assignment |", "|---|---|"]
-    ordered = [x for x in CARD_ORDER if x in play["assignments"]]
+    assignments = resolved_assignments(play, defenses[blocking.DEFAULT_FRONT])
+    ordered = [x for x in CARD_ORDER if x in assignments]
     for pos in ordered:
         carrier = " **(ball)**" if pos == play.get("ball_carrier") else ""
-        out.append(f"| **{pos}**{carrier} | {play['assignments'][pos]['rule']} |")
+        out.append(f"| **{pos}**{carrier} | {assignments[pos]['rule']} |")
     out.append("")
     if play.get("coaching_points"):
         out += ["**Coaching points**", ""]
@@ -1219,7 +1315,7 @@ def play_section(play: dict, card_rel: str) -> list[str]:
     return out
 
 
-def write_formation_readme(form: dict) -> str:
+def write_formation_readme(form: dict, defenses: dict) -> str:
     heading = form_label(form)
     out = [
         f"# {heading}",
@@ -1249,11 +1345,12 @@ f"| {p.get('ball_carrier', '—')} |"
         )
     out.append("")
     for p in form["_plays"]:
-        out += play_section(p, f"cards/{p['id']}.svg")
+        out += play_section(p, f"cards/{p['id']}-{blocking.DEFAULT_FRONT}.svg",
+                            defenses)
     return "\n".join(out) + "\n"
 
 
-def write_playbook(formations: list[dict]) -> str:
+def write_playbook(formations: list[dict], defenses: dict) -> str:
     out = [
         "# Sayville 8U Playbook",
         "",
@@ -1279,7 +1376,10 @@ def write_playbook(formations: list[dict]) -> str:
         label = form_label(form)
         out += [f"# {label}", ""]
         for p in form["_plays"]:
-            out += play_section(p, f"playbook/{form['id']}/cards/{p['id']}.svg")
+            out += play_section(
+                p,
+                f"playbook/{form['id']}/cards/{p['id']}-{blocking.DEFAULT_FRONT}.svg",
+                defenses)
     return "\n".join(out) + "\n"
 
 
@@ -1308,6 +1408,14 @@ def main() -> int:
     if args.check:
         return 0
 
+    # Resolve every play against every front once, up front. site_build reads the
+    # results off the play rather than importing render back — which it cannot do,
+    # because render imports it.
+    for form in formations:
+        for play in form["_plays"]:
+            for fid in blocking.SCOUT_FRONTS:
+                resolved_assignments(play, defenses[fid])
+
     # One frame for the whole book, so no two diagrams are drawn at different scales.
     frame = diagram_frame(formations, defenses)
     print(f"Diagram frame: {frame[0]*2:.1f} yards wide, {frame[2]:.1f} to {frame[1]:.1f} deep")
@@ -1316,30 +1424,41 @@ def main() -> int:
         cards_dir = form["_dir"] / "cards"
         cards_dir.mkdir(exist_ok=True)
         for p in form["_plays"]:
-            (cards_dir / f"{p['id']}.svg").write_text(render_card(p, defenses, frame), encoding="utf-8")
-            (cards_dir / f"{p['id']}-field.svg").write_text(
-                render_diagram(p, defenses, frame), encoding="utf-8"
-            )
+            for fid in blocking.SCOUT_FRONTS:
+                front = defenses[fid]
+                (cards_dir / f"{p['id']}-{fid}.svg").write_text(
+                    render_card(p, front, frame), encoding="utf-8")
+                (cards_dir / f"{p['id']}-{fid}-field.svg").write_text(
+                    render_diagram(p, front, frame), encoding="utf-8")
         (cards_dir / f"{form['id']}-icon.svg").write_text(
             render_formation_diagram(form), encoding="utf-8"
         )
-        (form["_dir"] / "README.md").write_text(write_formation_readme(form), encoding="utf-8")
+        (form["_dir"] / "README.md").write_text(
+            write_formation_readme(form, defenses), encoding="utf-8")
 
     cards = DEFENSE_DIR / "cards"
     cards.mkdir(exist_ok=True)
     for fid, front in defenses.items():
+        # A scout front has no page in the defensive book, so it has no card either.
+        # It is drawn inside every offensive diagram instead, which is the only place
+        # anybody looks at it.
+        if front.get("scout"):
+            continue
         (cards / f"{fid}-field.svg").write_text(
             render_defense_diagram(front, frame), encoding="utf-8"
         )
 
-    (ROOT / "PLAYBOOK.md").write_text(write_playbook(formations), encoding="utf-8")
+    (ROOT / "PLAYBOOK.md").write_text(
+        write_playbook(formations, defenses), encoding="utf-8")
 
     # The site is flat files at the repo root so Pages can serve from "/" and every page
     # can reference the cards in place, with no second copy of any SVG.
     pages = site_build.write_all(formations, defenses, ROOT)
 
+    n = total * len(blocking.SCOUT_FRONTS)
     print(
-        f"Wrote {total} cards (+{total} diagrams), {len(defenses)} defensive fronts, "
+        f"Wrote {n} cards (+{n} diagrams) — {total} plays against "
+        f"{len(blocking.SCOUT_FRONTS)} fronts — {len(defenses)} defensive fronts, "
         f"{len(formations)} formation README(s), PLAYBOOK.md and {pages} site pages"
     )
     return 0

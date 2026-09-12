@@ -5,98 +5,83 @@
   "name": "Regular I Power Left",
   "call": "Regular I Z Left 35 Power",
   "type": "run",
-  "defense": "5-3",
   "direction": "left",
   "ball_carrier": "TB",
-  "alignment": { "Z": [-7.0, -1.2] },
-  "purpose": "Power Right's exact mirror. The Z is fixed on the right in every other Regular I play, but Power depends on his kick-out block to work, so this is the one play in the book where he flips sides before the snap — lined up left, same job, same footwork, just facing the other way.",
+  "alignment": {
+    "Z": [
+      -7.0,
+      -1.2
+    ]
+  },
+  "purpose": "Power Right's exact mirror. The Z is fixed on the right in every other Regular I play, but Power depends on his kick-out block, so this is the one play in the book where he flips sides before the snap — lined up left, same job, same footwork, just facing the other way.",
   "assignments": {
     "LTE": {
-      "rule": "Release inside off his outside shoulder and take the playside linebacker. The end over you is getting kicked out — leave him alone.",
-      "type": "block",
-      "path": [
-        [1.0, 3.5]
-      ]
+      "block": "release"
     },
     "LT": {
-      "rule": "The tackle is on your inside shoulder. Block him down and seal him inside — that is what opens the hole.",
-      "type": "block",
-      "path": [
-        [0.4, 1.3]
-      ]
+      "block": "down"
     },
     "LG": {
-      "rule": "Nobody is over you. Help the center drive the nose for one count, then climb to the middle linebacker.",
-      "type": "block",
-      "path": [
-        [0.6, 1.1],
-        [1.0, 3.4]
-      ]
+      "block": "double",
+      "target": "middle"
     },
     "C": {
-      "rule": "You have the nose, head up on you. Hands inside and do not let him cross your face to the playside.",
-      "type": "block",
-      "path": [
-        [-0.4, 1.1]
-      ]
+      "block": "reach"
     },
     "RG": {
-      "rule": "PULL LEFT. Stay flat behind the line, turn up through the hole and block the first wrong shirt you see. Do not go around the pile — go through it.",
-      "type": "block",
-      "path": [
-        [-0.8, -0.9],
-        [-3.6, -0.7],
-        [-4.8, 1.6],
-        [-5.2, 3.6]
-      ]
+      "block": "pull",
+      "to": "wrap"
     },
     "RT": {
-      "rule": "Block back. Take the first defender on or inside you — nobody crosses your face.",
-      "type": "block",
-      "path": [
-        [-1.0, 0.7]
-      ]
+      "block": "down"
     },
     "RTE": {
-      "rule": "Cut off pursuit from behind. You are the last one to the ball, so never quit on the play.",
-      "type": "block",
-      "path": [
-        [-1.0, 0.7]
-      ]
+      "block": "cutoff"
     },
     "Z": {
-      "rule": "Kick the end out. Aim at his outside hip and drive him toward the sideline. Everything runs inside of you, so never let him come underneath.",
-      "type": "block",
-      "path": [
-        [2.4, 0.8],
-        [3.3, 1.9]
-      ]
+      "block": "kick"
     },
     "QB": {
       "rule": "Open to the left, hand it deep to the tailback, then carry out the boot fake to the edge. The fake is what keeps the backside end honest.",
       "type": "fake",
       "path": [
-        [-1.2, -0.5],
-        [-3.0, -1.2],
-        [-4.6, -1.6]
+        [
+          -1.2,
+          -0.5
+        ],
+        [
+          -3.0,
+          -1.2
+        ],
+        [
+          -4.6,
+          -1.6
+        ]
       ]
     },
     "FB": {
-      "rule": "Lead through the hole outside our tackle and block the first defender who shows in it. Get your head across him — do not wait for him to come to you.",
-      "type": "block",
-      "path": [
-        [-1.6, 1.4],
-        [-3.0, 3.2]
-      ]
+      "block": "lead"
     },
     "TB": {
       "rule": "Take the handoff going downhill and aim at the outside hip of our tackle. Follow the fullback, then the guard. Stay tight to the blocks and do not bounce it outside.",
       "type": "run",
       "path": [
-        [-1.2, 1.5],
-        [-2.6, 3.6],
-        [-3.4, 5.6],
-        [-3.6, 8.0]
+        [
+          -1.2,
+          1.5
+        ],
+        [
+          -2.6,
+          3.6
+        ],
+        [
+          -3.4,
+          5.6
+        ],
+        [
+          -3.6,
+          8.0
+        ]
       ]
     }
   },

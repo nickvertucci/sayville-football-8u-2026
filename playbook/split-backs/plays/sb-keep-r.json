@@ -5,98 +5,35 @@
   "name": "Split QB Keep Right",
   "call": "Split Z Right 16 Keep",
   "type": "run",
-  "defense": "5-3",
   "direction": "right",
   "ball_carrier": "QB",
-  "purpose": "The quarterback keeps it himself, and he runs to the side the split man is lined up on — so the Z moves to the right for this one and the call says so. Fake to the back going left, seal their end inside, and get outside our own end behind two blockers: the near back on the linebacker and the split man on the corner. Blocked exactly like Pitch.",
+  "purpose": "The quarterback keeps it himself, and he runs to the side the split man is lined up on — so the Z moves right for this one and the call says so. Fake to the back going left, seal the end inside, and get outside behind two blockers: the near back on the first man outside our end and the split man on the corner. Blocked exactly like Pitch.",
   "assignments": {
     "LTE": {
-      "rule": "Cut off pursuit from behind. You are the last one to the ball, so never quit on the play.",
-      "type": "block",
-      "path": [
-        [
-          1.0,
-          0.7
-        ]
-      ]
+      "block": "cutoff"
     },
     "LT": {
-      "rule": "Block back. Take the first defender on or inside you — nobody crosses your face.",
-      "type": "block",
-      "path": [
-        [
-          1.0,
-          0.7
-        ]
-      ]
+      "block": "down"
     },
     "LG": {
-      "rule": "Nobody is over you. Cut off the backside — nothing chases this from behind.",
-      "type": "block",
-      "path": [
-        [
-          1.0,
-          0.7
-        ]
-      ]
+      "block": "cutoff"
     },
     "C": {
-      "rule": "Reach the nose. Get your head across his playside shoulder.",
-      "type": "block",
-      "path": [
-        [
-          0.6,
-          1.0
-        ]
-      ]
+      "block": "reach"
     },
     "RG": {
-      "rule": "Nobody is over you. Climb to the middle linebacker and cut him off from the sideline.",
-      "type": "block",
-      "path": [
-        [
-          0.4,
-          1.2
-        ],
-        [
-          -0.6,
-          3.4
-        ]
-      ]
+      "block": "climb",
+      "target": "playside"
     },
     "RT": {
-      "rule": "Reach the tackle on your inside shoulder. Get your head across him — he cannot be allowed to run down the line after this.",
-      "type": "block",
-      "path": [
-        [
-          -0.3,
-          1.3
-        ]
-      ]
+      "block": "down"
     },
     "RTE": {
-      "rule": "Seal the edge. Block the end over you and turn him inside — the quarterback is going around behind you, so he cannot be allowed to follow him out.",
-      "type": "block",
-      "path": [
-        [
-          -0.2,
-          1.3
-        ]
-      ]
+      "block": "base",
+      "drive": "in"
     },
     "Z": {
-      "rule": "Block the corner over you and drive him toward the sideline. You moved over here for this block — he is the only man out there who can catch the quarterback.",
-      "type": "block",
-      "path": [
-        [
-          0.6,
-          3.0
-        ],
-        [
-          1.0,
-          4.4
-        ]
-      ]
+      "block": "screen"
     },
     "QB": {
       "rule": "Show the ball to the back going left, pull it in on your back hip, and get outside our end. Tuck it on the first step and go north the moment the edge is sealed — do not drift sideways looking for more.",
@@ -125,22 +62,8 @@
       ]
     },
     "RH": {
-      "rule": "Get outside our end ahead of the quarterback and block the first man outside. He is running off your shoulder, so do not let that man cross your face to the inside.",
-      "type": "block",
-      "path": [
-        [
-          1.6,
-          2.2
-        ],
-        [
-          3.2,
-          4.8
-        ],
-        [
-          3.6,
-          6.6
-        ]
-      ]
+      "block": "lead",
+      "target": "force"
     },
     "LH": {
       "rule": "Run the sweep path away at full speed with your arms tucked. You are the lie, and the linebackers only leave if you are worth watching.",

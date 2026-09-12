@@ -1,0 +1,46 @@
+{
+  "id": "5-4-2",
+  "order": 5,
+  "scout": true,
+  "name": "5-4-2",
+  "call": "Scout 5-4",
+  "family": "A look we expect to face",
+  "summary": "Five down linemen and four linebackers, with only two deep. The front that puts the most bodies in the box the league will let a team put there, and the one our off-tackle runs have to beat.",
+  "notes": "The 5-3's five down linemen — nose head up on the centre, tackles on our tackles' inside shoulders, ends head up on our tight ends — with the free safety traded for a fourth linebacker. Two inside linebackers over the guards and two outside at the edge, both at three yards, and two safeties splitting the field eight yards deep.",
+  "scout_note": "This is a scout look, not one of our calls. It is here because a team that has been run over by Power all morning will line up like this in the second half, and every card in the book has to be right when they do. The outside linebacker is the man our kick-out and our lead blocks have to find — in the 5-3 that job belongs to a corner, three yards further out and a step slower to arrive.",
+  "roles": {
+    "LE": "DL",
+    "LT": "DL",
+    "NT": "DL",
+    "RT": "DL",
+    "RE": "DL",
+    "W": "LB",
+    "M": "LB",
+    "S": "LB",
+    "R": "LB",
+    "LS": "DB",
+    "RS": "DB"
+  },
+  "position_names": {
+    "W": "Left outside linebacker",
+    "M": "Left inside linebacker",
+    "S": "Right inside linebacker",
+    "R": "Right outside linebacker",
+    "LS": "Left safety",
+    "RS": "Right safety"
+  },
+  "alignment": {
+    "LE": [-4.2, 0.8],
+    "LT": [-2.4, 0.8],
+    "NT": [0.0, 0.8],
+    "RT": [2.4, 0.8],
+    "RE": [4.2, 0.8],
+    "W": [-5.4, 3.0],
+    "M": [-1.5, 3.0],
+    "S": [1.5, 3.0],
+    "R": [5.4, 3.0],
+    "LS": [-6.0, 8.0],
+    "RS": [6.0, 8.0]
+  },
+  "legal": "Five down linemen (cap is six), four linebackers at three yards (minimum is three at two yards), two defensive backs at eight yards. Legal, and about as heavy as a team can get away with on a normal down."
+}
