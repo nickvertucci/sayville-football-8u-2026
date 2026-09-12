@@ -5,12 +5,13 @@
   "name": "Regular I Jet Boot Right",
   "call": "Regular I Z Right 16 Jet Boot",
   "type": "pass",
+  "fakes": "i-jet-l",
   "direction": "right",
   "ball_carrier": "RTE",
   "purpose": "Jet motion pulls the whole defense one way and the quarterback keeps it the other. This is the play Jet Left is really setting up, and at this age the edge is usually empty.",
   "assignments": {
     "LTE": {
-      "rule": "Engage the end over you for a count, then release and get across the field to eight yards. You are the second look and you arrive late on purpose.",
+      "rule": "Bump the end, then cross the field to eight yards. Second look, late on purpose.",
       "type": "pass",
       "path": [
         [
@@ -44,7 +45,7 @@
       "block": "hinge"
     },
     "RTE": {
-      "rule": "Engage the end over you for a count, then release to the flat at four yards and stay in front of the quarterback. You are the easy throw.",
+      "rule": "Bump the end, then release to the flat at four yards in front of the quarterback.",
       "type": "pass",
       "path": [
         [
@@ -58,7 +59,7 @@
       ]
     },
     "Z": {
-      "rule": "Run the Jet motion exactly the way you run it for real — start on the same call, full speed, flat across. Keep going after the fake. You are the reason this play is open.",
+      "rule": "Run the Jet motion for real: same call, full speed, flat across, never stopping.",
       "type": "motion",
       "path": [
         [
@@ -76,7 +77,7 @@
       ]
     },
     "QB": {
-      "rule": "Fake the jet handoff with both hands, hide the ball on your back hip, and get to the edge the other way. Run it if it is open. Only throw if a defender comes up to take you.",
+      "rule": "Fake the jet, hide it on your back hip, boot the other way. Throw only when they take you.",
       "type": "run",
       "path": [
         [

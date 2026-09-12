@@ -56,7 +56,7 @@ Both ends are tight on the line. The two backs sit four yards deep and just over
 
 ![Split Dive Right](cards/sb-dive-r-5-3.svg)
 
-The near back straight ahead, right off a double team on the nose and through the first gap outside the center. This one has to work before anything else in the formation does — it holds their linebackers inside and makes the pitch go.
+The near back straight ahead, through the first gap outside the center. Against a nose — the 5-3 and the 5-4-2 — the center and the playside guard double him and the ball runs right off it. The 4-4 has no nose, so the guard drives the man over him and the center climbs instead. The aiming point never changes. This one has to work before anything else in the formation does — it holds their linebackers inside and makes the pitch go.
 
 | Position | Assignment |
 |---|---|
@@ -68,9 +68,9 @@ The near back straight ahead, right off a double team on the nose and through th
 | **RT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
 | **RTE** | End head up on you. Drive him to the sideline. The ball goes inside you. |
 | **Z** | Run at the corner and screen him off. Stay in his way. |
-| **QB** | Take the snap, open right and hand the ball to the near back at two yards. Then carry out the pitch fake the other way. |
+| **QB** | Open right, hand to the near back at two yards, then fake the pitch away. |
 | **LH** | Run the pitch path away at full speed with your arms tucked. You are the lie. |
-| **RH** **(ball)** | Aim at the outside hip of the center, right off the double team. Take the ball and get north — there is no hole to look for. |
+| **RH** **(ball)** | Aim at the center's outside hip every time. Get north — there is no hole to find. |
 
 **Coaching points**
 
@@ -87,7 +87,7 @@ The near back straight ahead, right off a double team on the nose and through th
 
 ![Split Dive Left](cards/sb-dive-l-5-3.svg)
 
-The near back straight ahead, left off a double team on the nose and through the first gap outside the center. This one has to work before anything else in the formation does — it holds their linebackers inside and makes the pitch go.
+The near back straight ahead, through the first gap outside the center. Against a nose — the 5-3 and the 5-4-2 — the center and the playside guard double him and the ball runs right off it. The 4-4 has no nose, so the guard drives the man over him and the center climbs instead. The aiming point never changes. This one has to work before anything else in the formation does — it holds their linebackers inside and makes the pitch go.
 
 | Position | Assignment |
 |---|---|
@@ -99,8 +99,8 @@ The near back straight ahead, left off a double team on the nose and through the
 | **RT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
 | **RTE** | End head up on you. Cut him off — get between him and the ball. |
 | **Z** | Cut off the backside. Never quit on the play. |
-| **QB** | Take the snap, open left and hand the ball to the near back at two yards. Then carry out the pitch fake the other way. |
-| **LH** **(ball)** | Aim at the outside hip of the center, right off the double team. Take the ball and get north — there is no hole to look for. |
+| **QB** | Open left, hand to the near back at two yards, then fake the pitch away. |
+| **LH** **(ball)** | Aim at the center's outside hip every time. Get north — there is no hole to find. |
 | **RH** | Run the pitch path away at full speed with your arms tucked. You are the lie. |
 
 **Coaching points**
@@ -118,7 +118,7 @@ The near back straight ahead, left off a double team on the nose and through the
 
 ![Split Power Right](cards/sb-power-r-5-3.svg)
 
-Off-tackle power to the far back, who crosses behind the quarterback and takes a deep handoff. Our end drives their end out, the playside guard helps on the nose and comes off onto the middle linebacker, and the near back leads up through the hole.
+Off-tackle power to the far back, who crosses behind the quarterback and takes a deep handoff. Our end drives their end out, the playside guard takes the man over him or doubles the nose and climbs — whichever the front gives him — and the near back leads up through the hole.
 
 | Position | Assignment |
 |---|---|
@@ -126,22 +126,21 @@ Off-tackle power to the far back, who crosses behind the quarterback and takes a
 | **LT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
 | **LG** | Nobody on you. Cut off the backside. Never quit on the play. |
 | **C** | Reach the nose to your right. Head across his playside shoulder. |
-| **RG** | Nobody on you. Help on the nose, then take the middle linebacker. |
+| **RG** | Nobody on you. Help on the nose, then take the playside linebacker. |
 | **RT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
 | **RTE** | End head up on you. Drive him to the sideline. The ball goes inside you. |
 | **Z** | Run at the corner and screen him off. Stay in his way. |
-| **QB** | Open to the playside and hand deep to the back crossing from the backside. Let him come to you, then fake away. |
-| **LH** **(ball)** | You carry it. Cross behind the quarterback, take the handoff deep, then press the outside hip of our tackle and turn up inside the blocks. |
+| **QB** | Open playside and hand deep to the back crossing behind you. Let him come to you, then fake away. |
+| **LH** **(ball)** | Cross behind the quarterback, take the handoff deep, then press our tackle's outside hip. Turn up inside the blocks. |
 | **RH** | Lead through the hole. Block the first man who shows in it. |
 
 **Coaching points**
 
 - Identical blocking to Split Counter. The line learns one set of rules and gets two plays out of it — say that out loud when you install the second one.
-- The near back's block on the playside linebacker is the play. Drill it on its own.
+- The near back's block in the hole is the play. He takes the first man who shows in it rather than a man picked before the snap. Drill it on its own.
 - The carrier travels further than the blocker, and that is the point — he arrives behind the lead, not beside it.
 - If the handoff is late, the quarterback is reaching. He holds the ball still and lets the back run through it.
-- Against a four-linebacker front there is an outside linebacker nobody blocks. The near back has to take him if he fills, and if they keep winning there, the answer is the Pitch — it gets outside him instead of running at him.
-- Nobody blocks outside our end on this one — no kick-out and nobody leading out there. Against a four-linebacker front their outside linebacker is free, so if they are playing four, go get the edge with Pitch or Keep instead.
+- Against the 4-4 nobody is assigned to their outside linebacker — the near back is leading into the hole and has to take him if he fills. Against the 5-4-2 the Z screens that linebacker himself. If he keeps making the tackle either way, the answer is the Pitch: it gets outside him instead of running at him.
 
 ---
 
@@ -151,30 +150,29 @@ Off-tackle power to the far back, who crosses behind the quarterback and takes a
 
 ![Split Power Left](cards/sb-power-l-5-3.svg)
 
-Off-tackle power to the far back, who crosses behind the quarterback and takes a deep handoff. Our end drives their end out, the playside guard helps on the nose and comes off onto the middle linebacker, and the near back leads up through the hole.
+Off-tackle power to the far back, who crosses behind the quarterback and takes a deep handoff. Our end drives their end out, the playside guard takes the man over him or doubles the nose and climbs — whichever the front gives him — and the near back leads up through the hole.
 
 | Position | Assignment |
 |---|---|
 | **LTE** | End head up on you. Drive him to the sideline. The ball goes inside you. |
 | **LT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
-| **LG** | Nobody on you. Help on the nose, then take the middle linebacker. |
+| **LG** | Nobody on you. Help on the nose, then take the playside linebacker. |
 | **C** | Reach the nose to your left. Head across his playside shoulder. |
 | **RG** | Nobody on you. Cut off the backside. Never quit on the play. |
 | **RT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
 | **RTE** | End head up on you. Cut him off — get between him and the ball. |
 | **Z** | Cut off the backside. Never quit on the play. |
-| **QB** | Open to the playside and hand deep to the back crossing from the backside. Let him come to you, then fake away. |
+| **QB** | Open playside and hand deep to the back crossing behind you. Let him come to you, then fake away. |
 | **LH** | Lead through the hole. Block the first man who shows in it. |
-| **RH** **(ball)** | You carry it. Cross behind the quarterback, take the handoff deep, then press the outside hip of our tackle and turn up inside the blocks. |
+| **RH** **(ball)** | Cross behind the quarterback, take the handoff deep, then press our tackle's outside hip. Turn up inside the blocks. |
 
 **Coaching points**
 
-- Identical blocking to Split Counter. The line learns one set of rules and gets two plays out of it — say that out loud when you install the second one.
-- The near back's block on the playside linebacker is the play. Drill it on its own.
+- Identical blocking to Split Counter. The line learns one set of rules and gets two plays out of it.
+- The near back's block in the hole is the play. He takes the first man who shows in it rather than a man picked before the snap. Drill it on its own.
 - The carrier travels further than the blocker, and that is the point — he arrives behind the lead, not beside it.
 - If the handoff is late, the quarterback is reaching. He holds the ball still and lets the back run through it.
-- Against a four-linebacker front there is an outside linebacker nobody blocks. The near back has to take him if he fills, and if they keep winning there, the answer is the Pitch — it gets outside him instead of running at him.
-- Nobody blocks outside our end on this one — no kick-out and nobody leading out there. Against a four-linebacker front their outside linebacker is free, so if they are playing four, go get the edge with Pitch or Keep instead.
+- Against a four-linebacker front nobody is assigned to their outside linebacker, and on this side there is no Z out there to screen him — the near back is leading into the hole and has to take him if he fills. If they keep winning there, the answer is the Pitch: it gets outside him instead of running at him.
 
 ---
 
@@ -192,22 +190,21 @@ Misdirection off the pitch. The near back and the quarterback sell the pitch one
 | **LT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
 | **LG** | Nobody on you. Cut off the backside. Never quit on the play. |
 | **C** | Reach the nose to your right. Head across his playside shoulder. |
-| **RG** | Nobody on you. Help on the nose, then take the middle linebacker. |
+| **RG** | Nobody on you. Help on the nose, then take the playside linebacker. |
 | **RT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
 | **RTE** | End head up on you. Drive him to the sideline. The ball goes inside you. |
-| **Z** | Climb to the playside linebacker. Head across him. Leave like it is a route so he never sees you. Not low. |
-| **QB** | Fake the pitch to the left, then turn back and hand the ball to the other back coming across. The fake comes first. |
-| **LH** **(ball)** | Take two hard steps toward the fake, then plant and come all the way back behind the down blocks. |
-| **RH** | Run the full pitch path away at full speed with your arms tucked. You are the lie. |
+| **Z** | Climb to the outside linebacker. Head across him. Leave like it is a route so he never sees you. Not low. |
+| **QB** | Fake the pitch left, then turn back and hand to the back coming across. Fake first. |
+| **LH** **(ball)** | Take two hard steps at the fake, then plant and come back behind the down blocks. |
+| **RH** | Run the full pitch path away at full speed, arms tucked. You are the lie. |
 
 **Coaching points**
 
 - Do not call this until the pitch has been working. It is the counter-punch.
 - No lead blocker at all, so this hits faster than Power off exactly the same line rules. The line has to hold its blocks while the ball carrier crosses.
-- The Z's crack on the playside linebacker is what springs this one. Drill it on its own, and drill leaving flat and low-shouldered so it looks like a route until it is too late.
+- The Z's crack on their outside linebacker is what springs this one. Drill it on its own, and drill leaving flat and low-shouldered so it looks like a route until it is too late.
 - Two hard steps toward the fake before he comes back. A shuffle fools nobody.
-- Against a four-linebacker front there is an outside linebacker nobody blocks. The Z cracks the inside one, so it is the outside one who is free — if he keeps making the tackle, the answer is the Pitch, which gets outside him instead of running at him.
-- Nobody blocks outside our end on this one — no kick-out and nobody leading out there. Against a four-linebacker front their outside linebacker is free, so if they are playing four, go get the edge with Pitch or Keep instead.
+- This is the side where everybody near the ball is accounted for — our end kicks their end out and the Z has their outside linebacker, in every front. So the whole edge is one block. If the Z cannot get there in time, run the Pitch, which goes outside that linebacker instead of at him.
 
 ---
 
@@ -223,24 +220,23 @@ Misdirection off the pitch. The near back and the quarterback sell the pitch one
 |---|---|
 | **LTE** | End head up on you. Drive him to the sideline. The ball goes inside you. |
 | **LT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
-| **LG** | Nobody on you. Help on the nose, then take the middle linebacker. |
+| **LG** | Nobody on you. Help on the nose, then take the playside linebacker. |
 | **C** | Reach the nose to your left. Head across his playside shoulder. |
 | **RG** | Nobody on you. Cut off the backside. Never quit on the play. |
 | **RT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
 | **RTE** | End head up on you. Cut him off — get between him and the ball. |
 | **Z** | Cut off the backside. Never quit on the play. |
-| **QB** | Fake the pitch to the right, then turn back and hand the ball to the other back coming across. The fake comes first. |
-| **LH** | Run the full pitch path away at full speed with your arms tucked. You are the lie. |
-| **RH** **(ball)** | Take two hard steps toward the fake, then plant and come all the way back behind the down blocks. |
+| **QB** | Fake the pitch right, then turn back and hand to the back coming across. Fake first. |
+| **LH** | Run the full pitch path away at full speed, arms tucked. You are the lie. |
+| **RH** **(ball)** | Take two hard steps at the fake, then plant and come back behind the down blocks. |
 
 **Coaching points**
 
 - Do not call this until the pitch has been working. It is the counter-punch.
-- No lead blocker at all, so this hits faster than Power off exactly the same line rules. The line has to hold its blocks while the ball carrier crosses.
-- There is no crack block on this side — the Z is on the other end of the formation. The playside guard's climb to the middle linebacker has to be on time or there is nobody else for him.
+- No lead blocker at all, so this hits faster than Power off all but the same line rules — only the playside guard's climb differs, and only against the 5-3. The line has to hold its blocks while the ball carrier crosses.
+- There is no crack block on this side — the Z is on the other end of the formation. What the playside guard does instead depends on the front: against the 4-4 he is covered and simply drives the man over him, and against the 5-3 and 5-4-2 he is free to help on the nose and climb. Do not teach him a climb he only makes twice out of three times.
 - Two hard steps toward the fake before he comes back. A shuffle fools nobody.
-- The Z lines up on the right, so on this one he is cutting off the backside instead of cracking the playside linebacker the way he does on Counter Right. That linebacker is unblocked in every front — the near back's fake has to hold him for a count or this play is a two-yard gain.
-- Nobody blocks outside our end on this one — no kick-out and nobody leading out there. Against a four-linebacker front their outside linebacker is free, so if they are playing four, go get the edge with Pitch or Keep instead.
+- The Z lines up on the right, so on this one he is cutting off the backside instead of cracking the outside linebacker the way he does on Counter Right. Against a four-linebacker front that outside linebacker is unblocked and there is nobody left to get to him — the fake has to hold him for a count or this play is a two-yard gain. Against the 5-3 the playside guard's climb reaches him.
 
 ---
 
@@ -250,28 +246,29 @@ Misdirection off the pitch. The near back and the quarterback sell the pitch one
 
 ![Split Waggle Right](cards/sb-waggle-r-5-3.svg)
 
-The only pass in this formation, off the play they have seen most. Fake the dive, send the split man deep to carry the corner off, and the quarterback walks out onto an edge everybody has left.
+The only pass in this formation, off the play they have seen most. The quarterback's first steps are Dive Left's, the back away from the roll sells that dive, and he keeps going the way the dive's own fake takes him — out onto the right edge, with our end in the flat in front of him and the split man running the deep man off. The back on the roll side never chases it; he stays home and protects. Run first, throw second.
 
 | Position | Assignment |
 |---|---|
-| **LTE** | Engage the end over you for a count, then release and get across the field to eight yards. You are the second look and you arrive late on purpose. |
+| **LTE** | Bump the end, then cross the field to eight yards. Second look, late on purpose. |
 | **LT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
 | **LG** | Block down on the nose, inside shoulder. Head across him — nobody crosses your face. |
 | **C** | Nose head up on you. Cut him off — get between him and the ball. |
 | **RG** | Nobody on you. Help on the nose, then take the middle linebacker. |
 | **RT** | Hinge back and protect the outside. Nobody gets past you. |
-| **RTE** **(ball)** | Engage the end over you for a count, then release to the flat at four yards and stay in front of the quarterback. You are the easy throw. |
-| **Z** | Run straight down the field and take the corner with you. Nobody is throwing you the ball — you are the reason the flat is empty. |
-| **QB** | Fake the dive to the near back with both hands, hide the ball on your back hip, and get to the edge. Run it if it is open. Only throw if a defender comes up to take you. |
-| **LH** | Hinge back and protect the outside. Nobody gets past you. Cross behind the line to the waggle side first. |
-| **RH** | Run the dive path full speed with your arms tucked like you have it, and block the first defender who meets you. You are the lie. |
+| **RTE** **(ball)** | Bump the end, then release to the flat at four yards in front of the quarterback. |
+| **Z** | Sprint straight downfield and take the deep man with you. Nobody throws you the ball — you empty the flat. |
+| **QB** | Fake the dive away from your roll, ball on your hip, run the edge. Throw only when they take you. |
+| **LH** | Run the dive path full speed, arms tucked. Linebackers only leave if you are worth watching. |
+| **RH** | Hinge back and protect the outside. Nobody gets past you. You are already on the side he rolls to — do not chase the fake. |
 
 **Coaching points**
 
 - One pass in this formation is the right number. This is a running offence and the pass exists so the defence cannot put nine men in the box and forget about the edge.
 - Both ends must engage before releasing. If they run straight into their routes the fake dies.
 - The dive fake is the whole play. If that back does not get hit by somebody, he did not sell it.
-- The Z running off the corner is what empties the flat. He never gets the ball on this one and he sprints anyway — the day he jogs is the day the corner sits on the tight end.
+- The dive comes from the back away from the roll. The back on the side he rolls to never chases it — he stays home and protects that edge. Get those two backwards and the quarterback runs into his own blocker.
+- The Z running the deep man off is what empties the flat. He never gets the ball on this one and he sprints anyway — the day he jogs is the day that man sits on the tight end.
 - No blitzing is allowed for 8- and 9-year-olds, so the quarterback has time. Teach him to be patient and look up.
 - Run first, throw second. One throw, then tuck it — no scrambling backwards, ever.
 
@@ -283,28 +280,29 @@ The only pass in this formation, off the play they have seen most. Fake the dive
 
 ![Split Waggle Left](cards/sb-waggle-l-5-3.svg)
 
-The only pass in this formation, off the play they have seen most. Fake the dive, send the split man deep to carry the corner off, and the quarterback walks out onto an edge everybody has left.
+Waggle Right to the other edge, and the harder of the two. The quarterback's first steps are Dive Right's, the back away from the roll sells that dive, and he keeps going the way the dive's own fake takes him — out onto the left edge with our end in the flat in front of him. The split man is on the wrong end of the formation here, so instead of clearing that edge he runs deep from the back side. Run first, throw second.
 
 | Position | Assignment |
 |---|---|
-| **LTE** **(ball)** | Engage the end over you for a count, then release to the flat at four yards and stay in front of the quarterback. You are the easy throw. |
+| **LTE** **(ball)** | Bump the end, then release to the flat at four yards in front of the quarterback. |
 | **LT** | Hinge back and protect the outside. Nobody gets past you. |
 | **LG** | Nobody on you. Help on the nose, then take the middle linebacker. |
 | **C** | Nose head up on you. Cut him off — get between him and the ball. |
 | **RG** | Block down on the nose, inside shoulder. Head across him — nobody crosses your face. |
 | **RT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
-| **RTE** | Engage the end over you for a count, then release and get across the field to eight yards. You are the second look and you arrive late on purpose. |
-| **Z** | Run straight down the field at the safety and hold him there. Nobody is throwing you the ball — you are the reason the middle is empty. |
-| **QB** | Fake the dive to the near back with both hands, hide the ball on your back hip, and get to the edge. Run it if it is open. Only throw if a defender comes up to take you. |
-| **LH** | Run the dive path full speed with your arms tucked like you have it, and block the first defender who meets you. You are the lie. |
-| **RH** | Hinge back and protect the outside. Nobody gets past you. Cross behind the line to the waggle side first. |
+| **RTE** | Bump the end, then cross the field to eight yards. Second look, late on purpose. |
+| **Z** | Sprint deep from the back side toward the middle. Nobody throws you the ball — you hold their deep men. |
+| **QB** | Fake the dive away from your roll, ball on your hip, run the edge. Throw only when they take you. |
+| **LH** | Hinge back and protect the outside. Nobody gets past you. You are already on the side he rolls to — do not chase the fake. |
+| **RH** | Run the dive path full speed, arms tucked. Linebackers only leave if you are worth watching. |
 
 **Coaching points**
 
 - One pass in this formation is the right number. This is a running offence and the pass exists so the defence cannot put nine men in the box and forget about the edge.
 - Both ends must engage before releasing. If they run straight into their routes the fake dies.
 - The dive fake is the whole play. If that back does not get hit by somebody, he did not sell it.
-- The Z is on the wrong end of the formation for this one, so he takes the safety deep instead. That is what keeps the crosser open.
+- The dive comes from the back away from the roll. The back on the side he rolls to never chases it — he stays home and protects that edge. Get those two backwards and the quarterback runs into his own blocker.
+- The Z is on the wrong end of the formation for this one, so he cannot clear the edge the quarterback is rolling to. He runs deep from the back side instead and holds their deep men there, which is what keeps the crosser open.
 - No blitzing is allowed for 8- and 9-year-olds, so the quarterback has time. Teach him to be patient and look up.
 - Run first, throw second. One throw, then tuck it — no scrambling backwards, ever.
 
@@ -316,7 +314,7 @@ The only pass in this formation, off the play they have seen most. Fake the dive
 
 ![Split Pitch Right](cards/sb-pitch-r-5-3.svg)
 
-Get outside in a hurry. The far back trails the quarterback, takes the pitch on the run and turns up inside the block on the corner. The split man makes that block, which is what frees both backs to stay in the backfield where the fake lives.
+Get outside in a hurry. The far back trails the quarterback, takes the pitch on the run and turns up inside the block out on the edge. The split man makes that block — their corner, or their outside linebacker against the 5-4-2, which has no corners — and that is what frees both backs to stay in the backfield where the fake lives.
 
 | Position | Assignment |
 |---|---|
@@ -328,16 +326,15 @@ Get outside in a hurry. The far back trails the quarterback, takes the pitch on 
 | **RT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
 | **RTE** | End head up on you. Turn him inside. The ball goes around behind you. |
 | **Z** | Run at the corner and screen him off. Stay in his way. |
-| **QB** | Fake the dive to the near back, attack the outside, and pitch the ball to the trailing back before you get touched. Pitch early, not late. |
-| **LH** **(ball)** | Run flat behind everybody, stay outside and behind the quarterback, and catch the pitch on the run. Never get ahead of him — a pitch that goes forward is a fumble. |
+| **QB** | Fake the dive to the near back, attack the outside, then pitch to the trailing back early, never late. |
+| **LH** **(ball)** | Run flat, outside and behind the quarterback, and catch the pitch on the run. Ahead of him is a fumble. |
 | **RH** | Lead outside our end, then turn up inside — the playside linebacker is the man who shows. Head across him. Step at the dive first to hold their linebackers. |
 
 **Coaching points**
 
 - The pitch goes early. A quarterback who waits to be tackled first will pitch it on the ground.
 - This is not a read at this age — tell him before the snap that he is pitching it.
-- The back taking the pitch must stay behind the quarterback until he has the ball. Getting ahead means the pitch goes forward, which is a fumble waiting to happen.
-- Everything depends on the corner being blocked, and out here the split man does it — which is what frees both backs to fake and lead. Drill him on beating the corner to the spot without holding.
+- Everything depends on the edge being blocked, and out here the split man does it — which is what frees both backs to fake and lead. Drill him on beating that man to the spot without holding.
 
 ---
 
@@ -347,7 +344,7 @@ Get outside in a hurry. The far back trails the quarterback, takes the pitch on 
 
 ![Split Pitch Left](cards/sb-pitch-l-5-3.svg)
 
-Get outside in a hurry. The far back trails the quarterback, takes the pitch on the run and turns up inside the block on the corner. Away from the split man there is nobody out there, so the near back goes and blocks that corner himself — which is why this side has no dive fake.
+Get outside in a hurry. The far back trails the quarterback, takes the pitch on the run and turns up inside the block out in front of him. Away from the split man there is nobody out there to make that block, so the near back leaves early and takes the first man outside our end himself — which is why this side has no dive fake. That man is their corner only against the 5-3. Against a four-linebacker front he is the outside linebacker, and against the 4-4 that leaves their corner standing right where the ball turns up with nobody on him.
 
 | Position | Assignment |
 |---|---|
@@ -359,16 +356,15 @@ Get outside in a hurry. The far back trails the quarterback, takes the pitch on 
 | **RT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
 | **RTE** | End head up on you. Cut him off — get between him and the ball. |
 | **Z** | Cut off the backside. Never quit on the play. |
-| **QB** | Open left, get to the edge, and pitch the ball to the trailing back before you get touched. There is no dive fake on this one — sell it with your eyes and get out there. |
+| **QB** | Open left, attack the edge, and pitch to the trailing back before you get touched. No dive fake here. |
 | **LH** | Lead outside our end. Block the first man out there — here it is the corner. |
-| **RH** **(ball)** | Run flat behind everybody, stay outside and behind the quarterback, and catch the pitch on the run. Never get ahead of him — a pitch that goes forward is a fumble. |
+| **RH** **(ball)** | Run flat, outside and behind the quarterback, and catch the pitch on the run. Ahead of him is a fumble. |
 
 **Coaching points**
 
 - The pitch goes early. A quarterback who waits to be tackled first will pitch it on the ground.
 - This is not a read at this age — tell him before the snap that he is pitching it.
-- The back taking the pitch must stay behind the quarterback until he has the ball. Getting ahead means the pitch goes forward, which is a fumble waiting to happen.
-- Everything depends on the corner being blocked and there is no receiver on this side to do it, so the near back leaves early and there is no fake to hold anybody. If their corner is quick, call it to the other side instead.
+- Everything depends on the edge being blocked and there is no receiver on this side to help, so the near back leaves early and there is no fake to hold anybody. Against the 4-4 their corner is unblocked at the spot the ball turns up — if he is quick, call it to the other side instead.
 
 ---
 
@@ -378,7 +374,7 @@ Get outside in a hurry. The far back trails the quarterback, takes the pitch on 
 
 ![Split QB Keep Right](cards/sb-keep-r-5-3.svg)
 
-The quarterback keeps it himself, and he runs to the side the split man is lined up on — so the Z moves right for this one and the call says so. Fake to the back going left, seal the end inside, and get outside behind two blockers: the near back on the first man outside our end and the split man on the corner. Blocked exactly like Pitch.
+The quarterback keeps it himself, and he runs to the side the split man is lined up on — so the Z moves right for this one and the call says so. Fake to the back going left, seal the end inside, and get outside behind two blockers: the near back on the first man outside our end and the split man on their corner, or on their outside linebacker against the 5-4-2, which has no corners. Blocked exactly like Pitch.
 
 | Position | Assignment |
 |---|---|
@@ -390,8 +386,8 @@ The quarterback keeps it himself, and he runs to the side the split man is lined
 | **RT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
 | **RTE** | End head up on you. Turn him inside. The ball goes around behind you. |
 | **Z** | Run at the corner and screen him off. Stay in his way. |
-| **QB** **(ball)** | Show the ball to the back going left, pull it in on your back hip, and get outside our end. Tuck it on the first step and go north the moment the edge is sealed — do not drift sideways looking for more. |
-| **LH** | Run the sweep path away at full speed with your arms tucked. You are the lie, and the linebackers only leave if you are worth watching. |
+| **QB** **(ball)** | Fake to the back going left, hide the ball, get outside our end. Turn up the moment the edge seals. |
+| **LH** | Run the sweep path away full speed, arms tucked. Linebackers only leave if you are worth watching. |
 | **RH** | Lead outside our end, then turn up inside — the playside linebacker is the man who shows. Head across him. |
 
 **Coaching points**
@@ -399,7 +395,6 @@ The quarterback keeps it himself, and he runs to the side the split man is lined
 - Blocked exactly like Pitch — the line does not learn a new rule, only a new name. Say that out loud when you install it.
 - This is the one play that moves the split man, so the huddle hears which side he is on: Z Right or Z Left. Count seven on the line before the snap like always.
 - The fake is the play. If nobody looks at the back going the other way, the quarterback is running straight into a linebacker who never left.
-- The quarterback is a runner here and nothing else. Tuck it on the first step, get to the edge, and turn up — a quarterback who drifts sideways looking for more gets caught from behind.
 - Do not call it until Pitch has been working. Their corner has to believe the ball is going wide before a keep inside him is worth anything.
 
 ---
@@ -410,7 +405,7 @@ The quarterback keeps it himself, and he runs to the side the split man is lined
 
 ![Split QB Keep Left](cards/sb-keep-l-5-3.svg)
 
-The quarterback keeps it himself, and he runs to the side the split man is lined up on — so the Z moves left for this one and the call says so. Fake to the back going right, seal the end inside, and get outside behind two blockers: the near back on the first man outside our end and the split man on the corner. Blocked exactly like Pitch.
+The quarterback keeps it himself, and he runs to the side the split man is lined up on — so the Z moves left for this one and the call says so. Fake to the back going right, seal the end inside, and get outside behind two blockers: the near back on the first man outside our end and the split man on their corner, or on their outside linebacker against the 5-4-2, which has no corners. Blocked exactly like Pitch.
 
 | Position | Assignment |
 |---|---|
@@ -422,16 +417,15 @@ The quarterback keeps it himself, and he runs to the side the split man is lined
 | **RT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
 | **RTE** | End head up on you. Cut him off — get between him and the ball. |
 | **Z** | Run at the corner and screen him off. Stay in his way. |
-| **QB** **(ball)** | Show the ball to the back going right, pull it in on your back hip, and get outside our end. Tuck it on the first step and go north the moment the edge is sealed — do not drift sideways looking for more. |
+| **QB** **(ball)** | Fake to the back going right, hide the ball, get outside our end. Turn up the moment the edge seals. |
 | **LH** | Lead outside our end, then turn up inside — the playside linebacker is the man who shows. Head across him. |
-| **RH** | Run the sweep path away at full speed with your arms tucked. You are the lie, and the linebackers only leave if you are worth watching. |
+| **RH** | Run the sweep path away full speed, arms tucked. Linebackers only leave if you are worth watching. |
 
 **Coaching points**
 
 - Blocked exactly like Pitch — the line does not learn a new rule, only a new name. Say that out loud when you install it.
 - This is the one play that moves the split man, so the huddle hears which side he is on: Z Right or Z Left. Count seven on the line before the snap like always.
 - The fake is the play. If nobody looks at the back going the other way, the quarterback is running straight into a linebacker who never left.
-- The quarterback is a runner here and nothing else. Tuck it on the first step, get to the edge, and turn up — a quarterback who drifts sideways looking for more gets caught from behind.
 - Do not call it until Pitch has been working. Their corner has to believe the ball is going wide before a keep inside him is worth anything.
 
 ---
@@ -442,7 +436,7 @@ The quarterback keeps it himself, and he runs to the side the split man is lined
 
 ![Split Z Left Z Reverse Right](cards/sb-reverse-r-5-3.svg)
 
-The Keep Left, until it is not. The quarterback and the near back start the Keep left and never stop selling it; the split man comes back underneath, takes a lateral going the other way and runs right behind the far back. The line blocks the side the ball actually ends up on, so all the defense gets to see is the Keep.
+The Keep Left, until it is not. The quarterback and the near back start the Keep left and never stop selling it; the split man comes back underneath, takes a lateral going the other way and runs right behind the far back. Only the backfield sells it. The line blocks right from the snap, the split man is running backwards behind the line instead of screening anybody, and with him carrying the ball there is one blocker fewer on that edge than Keep Right has going to the same place. It buys a count, not a disguise.
 
 | Position | Assignment |
 |---|---|
@@ -453,8 +447,8 @@ The Keep Left, until it is not. The quarterback and the near back start the Keep
 | **RG** | Nobody on you. Climb to the playside linebacker. Head across him. |
 | **RT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
 | **RTE** | End head up on you. Turn him inside. The ball goes around behind you. |
-| **Z** **(ball)** | Come back behind the line the moment the ball is snapped, take the pitch going the other way, and get outside our end. Stay behind the quarterback until you have it — a pitch that goes forward is a fumble. |
-| **QB** | Start the Keep left — same first three steps, same ball on the hip — then pitch it back underneath to the split man crossing your face. Pitch it back, never forward, then keep running the Keep as if you still have it. |
+| **Z** **(ball)** | Come back behind the line on the snap, take the pitch the other way, and get outside our end. |
+| **QB** | Start the Keep left. Pitch back underneath, never forward, to the split man, then run the Keep like you kept it. |
 | **LH** | Run your Keep block exactly as always. At half speed, this play dies for good. |
 | **RH** | Lead outside our end. Block the first man out there — here it is the corner. |
 
@@ -474,7 +468,7 @@ The Keep Left, until it is not. The quarterback and the near back start the Keep
 
 ![Split Z Right Z Reverse Left](cards/sb-reverse-l-5-3.svg)
 
-The Keep Right, until it is not. The quarterback and the near back start the Keep right and never stop selling it; the split man comes back underneath, takes a lateral going the other way and runs left behind the far back. The line blocks the side the ball actually ends up on, so all the defense gets to see is the Keep.
+The Keep Right, until it is not. The quarterback and the near back start the Keep right and never stop selling it; the split man comes back underneath, takes a lateral going the other way and runs left behind the far back. Only the backfield sells it. The line blocks left from the snap, the split man is running backwards behind the line instead of screening anybody, and with him carrying the ball there is one blocker fewer on that edge than Keep Left has going to the same place. It buys a count, not a disguise.
 
 | Position | Assignment |
 |---|---|
@@ -485,8 +479,8 @@ The Keep Right, until it is not. The quarterback and the near back start the Kee
 | **RG** | Nobody on you. Cut off the backside. Never quit on the play. |
 | **RT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
 | **RTE** | End head up on you. Cut him off — get between him and the ball. This one takes a long time, and he is quick enough to catch it. |
-| **Z** **(ball)** | Come back behind the line the moment the ball is snapped, take the pitch going the other way, and get outside our end. Stay behind the quarterback until you have it — a pitch that goes forward is a fumble. |
-| **QB** | Start the Keep right — same first three steps, same ball on the hip — then pitch it back underneath to the split man crossing your face. Pitch it back, never forward, then keep running the Keep as if you still have it. |
+| **Z** **(ball)** | Come back behind the line on the snap, take the pitch the other way, and get outside our end. |
+| **QB** | Start the Keep right. Pitch back underneath, never forward, to the split man, then run the Keep like you kept it. |
 | **LH** | Lead outside our end. Block the first man out there — here it is the corner. |
 | **RH** | Run your Keep block exactly as always. At half speed, this play dies for good. |
 

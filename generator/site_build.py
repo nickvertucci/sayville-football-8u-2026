@@ -1582,7 +1582,7 @@ SITE_JS = """
 /* Call sheet filtering.
 
    Every chip belongs to a group (formation, type, zone, direction, carrier). Picking
-   two chips in the SAME group widens the list — Split Backs or Full House. Picking
+   two chips in the SAME group widens the list — Regular I or Split Backs. Picking
    chips in DIFFERENT groups narrows it — Split Backs AND runs. The old single-string
    filter could not express that at all: formation and type shared one exclusive group,
    so "Split Backs runs" quietly turned into "all runs". */
@@ -1646,7 +1646,7 @@ SITE_JS = """
   /* Every filter currently applied, spelled out and individually removable.
 
      Multi-select means a second click on a different formation ADDS it rather than
-     switching to it — pick Regular I then Power I and you are looking at eighteen
+     switching to it — pick Regular I then Split Backs and you are looking at every
      plays, not five. That is correct behaviour and it is also the easiest thing in
      the world to do by accident, so what is applied has to be readable in one glance
      rather than inferred from which chips look dark. */
@@ -3924,6 +3924,20 @@ def write_print_book(formations: list[dict], defenses: dict) -> str:
 
 
 def write_all(formations: list[dict], defenses: dict, root: Path) -> int:
+    # Sweep out pages this build no longer writes. The site is flat files at the repo
+    # root, so a deleted play or a dropped formation leaves its page sitting there,
+    # still linked from anyone's bookmark and still in the search engine's index. The
+    # cards learned this lesson first — 112 of them outlived the plays they drew.
+    keep = {"index.html", "calls.html", "print.html", "defense.html", "rules.html",
+            "install.html", "depth-chart.html"}
+    keep |= {f_href(f) for f in formations}
+    keep |= {p_href(p) for f in formations for p in f["_plays"]}
+    keep |= {d_href(d) for d in our_fronts(defenses).values()}
+    keep |= {install_href(pr) for pr in load_schedule(root).get("practices", [])}
+    for stale in root.glob("*.html"):
+        if stale.name not in keep:
+            stale.unlink()
+
     assets = root / "assets"
     assets.mkdir(exist_ok=True)
     (assets / "site.css").write_text(SITE_CSS.strip() + "\n", encoding="utf-8")

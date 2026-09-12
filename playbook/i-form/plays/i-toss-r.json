@@ -36,7 +36,7 @@
       "block": "screen"
     },
     "QB": {
-      "rule": "Reverse pivot and hand the ball to the tailback as deep as you can. Then boot away and sell it.",
+      "rule": "Reverse pivot, hand it deep to the tailback, then boot away and sell it.",
       "type": "fake",
       "path": [
         [
@@ -55,7 +55,7 @@
       "note": "Beat the tailback to the corner."
     },
     "TB": {
-      "rule": "Take the handoff at full speed and get to the corner. Turn up when the fullback blocks somebody, not before.",
+      "rule": "Take the handoff at full speed to the corner. Turn up when the fullback blocks somebody.",
       "type": "run",
       "path": [
         [
@@ -81,7 +81,7 @@
     "The tailback is deep enough to get outside — but only if he is at full speed by the time he takes the handoff.",
     "The fullback has to beat the tailback to the corner. If he is trailing, the play has no lead blocker.",
     "One rule for the tailback: turn up off the fullback's block. Running to the sideline is how this play loses eight yards.",
-    "Watch our end reach-blocking. If he cannot reach their end, run I Slant to that side instead."
+    "Watch our end turning their end inside — the ball goes around behind that block, so if he cannot get his head across, there is no outside. I Slant blocks that same end the same way and is no answer to it. Go to I Power instead, where the Z kicks that end out and our end leaves him alone and climbs to a linebacker."
   ],
   "z": "right"
 }

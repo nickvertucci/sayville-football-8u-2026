@@ -72,81 +72,6 @@ LINE_H = 17
 # Which alignment keys are linemen (drawn as squares) vs backs and receivers (circles).
 LINEMEN = {"LTE", "LT", "LG", "C", "RG", "RT", "RTE", "TE"}
 
-# Only used by plays that declare `mirror_of`. The line is the same in every formation
-# we carry, so it lives here; the backfield is not, so a formation names its own pairs
-# in `formation.json` under "mirror" and they are layered on top of this.
-#
-# A position with no counterpart anywhere maps to itself, which is only correct when it
-# aligns on the middle. That is not something to take on trust — mirror_pairs() checks
-# every pair against the alignment it claims to describe, so a back who moves off the
-# middle cannot keep a self-mapping nobody remembered to update.
-MIRROR = {
-    "LTE": "RTE", "RTE": "LTE",
-    "LT": "RT", "RT": "LT",
-    "LG": "RG", "RG": "LG",
-    "C": "C", "QB": "QB",
-}
-
-
-def mirror_pairs(form: dict) -> dict:
-    """How this formation's positions swap when a play is flipped."""
-    return {**MIRROR, **(form.get("mirror") or {})}
-
-
-# How far two spots may be from being each other's reflection and still count as a
-# mirrored pair. Tight enough that a back a foot off the middle is caught.
-MIRROR_TOLERANCE = 0.05
-
-
-def validate_mirror(form: dict) -> list[str]:
-    """Refuse to flip a formation that is not actually symmetric.
-
-    Mirroring is four lines of JSON standing in for a whole play, and it is only honest
-    if flipping the picture lands every player on somebody's real spot. The Full House
-    used to be three backs in a row, where the two that swapped were TB and Z; it is a
-    diamond now, where they are Z and FB and the tailback sits on the middle. Nothing
-    but this check would have noticed the difference — every play would still have had
-    eleven assignments and a call that matched its own flipped diagram, drawn with two
-    backs standing on spots the formation does not have.
-    """
-    if not any("mirror_of" in p for p in form.get("_raw_plays", [])):
-        return []
-    errors = []
-    alignment = form.get("alignment", {})
-    pairs = mirror_pairs(form)
-    fid = form.get("id", "?")
-    for pos, spot in alignment.items():
-        other = pairs.get(pos)
-        if other is None:
-            errors.append(
-                f"formation {fid}: mirrors its plays but says nothing about where '{pos}' "
-                "goes when one is flipped — add it to the formation's 'mirror' map"
-            )
-            continue
-        if other not in alignment:
-            errors.append(
-                f"formation {fid}: mirror sends '{pos}' to '{other}', who is not in the "
-                "formation"
-            )
-            continue
-        if pairs.get(other) != pos:
-            errors.append(
-                f"formation {fid}: mirror sends '{pos}' to '{other}' but '{other}' to "
-                f"'{pairs.get(other)}' — mirroring has to undo itself"
-            )
-            continue
-        want = alignment[other]
-        if (abs(spot[0] + want[0]) > MIRROR_TOLERANCE
-                or abs(spot[1] - want[1]) > MIRROR_TOLERANCE):
-            errors.append(
-                f"formation {fid}: mirror pairs '{pos}' at "
-                f"[{spot[0]:g}, {spot[1]:g}] with '{other}' at "
-                f"[{want[0]:g}, {want[1]:g}], but those two spots are not reflections of "
-                "each other — this formation is not symmetric there, so its plays cannot "
-                "be mirrored"
-            )
-    return errors
-
 COLORS = {
     "ink": "#111318",
     "muted": "#5b6472",
@@ -175,52 +100,6 @@ def fy(y: float) -> float:
 def load_json(path: Path) -> dict:
     with path.open(encoding="utf-8") as fh:
         return json.load(fh)
-
-
-def mirror_point(pt):
-    return [-pt[0], pt[1]]
-
-
-def swap_hands(text: str) -> str:
-    """Flip left/right wording when mirroring a play."""
-    swaps = [
-        ("right", "\x00"), ("Right", "\x01"), ("RIGHT", "\x02"),
-        ("left", "right"), ("Left", "Right"), ("LEFT", "RIGHT"),
-        ("\x00", "left"), ("\x01", "Left"), ("\x02", "LEFT"),
-    ]
-    for a, b in swaps:
-        text = text.replace(a, b)
-    return text
-
-
-def build_mirror(play: dict, source: dict, form: dict) -> dict:
-    """Produce a left-handed copy of a right-handed play (or vice versa)."""
-    pairs = mirror_pairs(form)
-    out = json.loads(json.dumps(source))
-    out.update({k: v for k, v in play.items() if k != "mirror_of"})
-
-    out["assignments"] = {}
-    for pos, spec in source["assignments"].items():
-        spec = json.loads(json.dumps(spec))
-        if spec.get("path"):
-            spec["path"] = [mirror_point(p) for p in spec["path"]]
-        # A blocking intent mirrors itself. "Block down", "kick the edge man out" and
-        # "pull and wrap" are the same instruction on either hand — the direction lives
-        # in the play's side, which the mirror flips, and the sentence is generated
-        # from that. The only wording a blocker owns is the note and a decoy's `sell`,
-        # so those are the only strings here that need flipping.
-        for field in ("rule", "note", "sell"):
-            if spec.get(field):
-                spec[field] = swap_hands(spec[field])
-        out["assignments"][pairs.get(pos, pos)] = spec
-
-    if source.get("ball_carrier"):
-        out["ball_carrier"] = pairs.get(source["ball_carrier"], source["ball_carrier"])
-    out["coaching_points"] = [swap_hands(c) for c in source.get("coaching_points", [])]
-    if source.get("purpose"):
-        out["purpose"] = swap_hands(source["purpose"])
-    out["direction"] = "left" if source.get("direction") == "right" else "right"
-    return out
 
 
 # The rulebook limits for 8- and 9-year-olds (PAL 9.02). The league's own wording is in
@@ -312,6 +191,9 @@ def validate_defenses(defenses: dict) -> list[str]:
     return errors
 
 
+_PLAYS_BY_ID: dict[str, dict] = {}
+
+
 def load_formations() -> list[dict]:
     """Each playbook/<dir>/formation.json is a formation; its plays live alongside."""
     formations = []
@@ -329,24 +211,10 @@ def resolve_plays(plays_dir: Path, form: dict) -> list[dict]:
     raw = {}
     if plays_dir.is_dir():
         raw = {p.stem: load_json(p) for p in sorted(plays_dir.glob("*.json"))}
-    # Kept so validate_mirror() can ask whether this formation flips any of its plays
-    # without having to unpick the already-resolved copies.
-    form["_raw_plays"] = list(raw.values())
-
-    resolved: dict[str, dict] = {}
-    for pid, play in raw.items():          # two passes so file order doesn't matter
-        if "mirror_of" not in play:
-            resolved[pid] = play
-    for pid, play in raw.items():
-        if "mirror_of" in play:
-            src = resolved.get(play["mirror_of"])
-            if src is None:
-                raise SystemExit(f"{pid}: mirror_of '{play['mirror_of']}' not found")
-            resolved[pid] = build_mirror(play, src, form)
-
-    plays = list(resolved.values())
+    plays = list(raw.values())
     for p in plays:
         p["_formation"] = form
+        _PLAYS_BY_ID[p["id"]] = p
     plays.sort(key=lambda p: (p.get("order", 99), p.get("name", ""), p.get("id", "")))
     return plays
 
@@ -400,6 +268,14 @@ def play_hole(play: dict) -> float:
     return (low + high) / 2 * (1 if hole % 2 == 0 else -1)
 
 
+def faked_play(play: dict):
+    """The run this play-action pass is pretending to be, if it is one."""
+    pid = play.get("fakes")
+    if not pid:
+        return None
+    return _PLAYS_BY_ID.get(pid)
+
+
 def resolved_assignments(play: dict, front: dict) -> dict:
     """This play's eleven assignments, blocking rules resolved against one front.
 
@@ -411,8 +287,15 @@ def resolved_assignments(play: dict, front: dict) -> dict:
     cache = play.setdefault("_resolved", {})
     if key not in cache:
         form = play["_formation"]
+        # A play-action pass blocks like the run it fakes, not like the direction the
+        # quarterback ends up running. Taking the side from the boot inverted every
+        # playside/backside rule on the line: the fake advertised itself by blocking
+        # the mirror image of the play it was selling. `fakes` names the run, and the
+        # blockers take that run's side and its hole.
+        run = faked_play(play) or play
         cache[key] = blocking.resolve_play(
-            play, play_alignment(form, play), front, play_side(play), play_hole(play)
+            play, play_alignment(form, play), front,
+            play_side(run), play_hole(run)
         )
     return cache[key]
 
@@ -421,11 +304,10 @@ def play_alignment(form: dict, play: dict) -> dict:
     """Where the eleven actually line up for this play.
 
     A formation has one alignment, but a formation is not always one picture. The
-    Power I's wingback has two legal spots in the same eleven-man look: tight to the
-    end where he is a blocker on the edge, or offset in the backfield where he is a
-    lead back. A play may say which, and the call says it out loud —
-    `Power I Offset Right 34 Power` — the same way the I's call names the flanker's
-    side.
+    The Z is split right on almost every snap, but Power is built on his kick-out and
+    Jet needs him with a formation to cross, so those two move him. A play may say
+    which, and the call says it out loud — `Regular I Z Left 35 Power` — so nobody is
+    moved silently.
 
     An override may only move somebody the formation already has. It cannot add a
     twelfth player or invent a position, and validate() rejects both.
@@ -745,13 +627,6 @@ def validate(formations: list[dict], defenses: dict) -> list[str]:
                 f"formation {form.get('id')}: {len(form.get('alignment', {}))} players aligned, "
                 "must be 11 (this is 11v11 tackle)"
             )
-        for pos in form.get("mirror") or {}:
-            if pos not in form.get("alignment", {}):
-                errors.append(
-                    f"formation {form.get('id')}: mirror names '{pos}', who is not in "
-                    "this formation"
-                )
-        errors.extend(validate_mirror(form))
         for play in form["_plays"]:
             pid = play.get("id", "<no id>")
             for field in ("id", "name", "assignments"):
@@ -761,6 +636,18 @@ def validate(formations: list[dict], defenses: dict) -> list[str]:
                 errors.append(
                     f"{pid}: formation '{play['formation']}' does not match its folder "
                     f"'{form.get('id')}'"
+                )
+            if play.get("fakes") and play["fakes"] not in _PLAYS_BY_ID:
+                errors.append(
+                    f"{pid}: fakes '{play['fakes']}', which is not a play in this book"
+                )
+            if play.get("fakes") == pid:
+                errors.append(f"{pid}: fakes itself")
+            if play.get("type") == "pass" and not play.get("fakes"):
+                errors.append(
+                    f"{pid}: is a play-action pass but does not say what it fakes — "
+                    "add `fakes`, or its line will block the mirror image of the run "
+                    "it is selling"
                 )
             if play.get("defense") and play["defense"] not in defenses:
                 errors.append(f"{pid}: unknown defense '{play['defense']}'")

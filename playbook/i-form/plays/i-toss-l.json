@@ -36,7 +36,7 @@
       "block": "cutoff"
     },
     "QB": {
-      "rule": "Reverse pivot and hand the ball to the tailback as deep as you can. Then boot away and sell it.",
+      "rule": "Reverse pivot, hand it deep to the tailback, then boot away and sell it.",
       "type": "fake",
       "path": [
         [
@@ -55,7 +55,7 @@
       "note": "Beat the tailback to the corner."
     },
     "TB": {
-      "rule": "Take the handoff at full speed and get to the corner. Turn up when the fullback blocks somebody, not before.",
+      "rule": "Take the handoff at full speed to the corner. Turn up when the fullback blocks somebody.",
       "type": "run",
       "path": [
         [
@@ -81,7 +81,8 @@
     "Check their alignment first. If they have shifted toward our Z, this is the call.",
     "The fullback has further to travel here than he does going right, so he has to leave on the snap. If he trails the tailback the play has no lead blocker.",
     "One rule for the tailback: turn up off the fullback's block. Running to the sideline is how this play loses eight yards.",
-    "The Z chases from behind. Tell him he is the reason a fast corner does not run this down from the backside."
+    "The Z chases from the back side, and his man is the backside linebacker, not the corner — he is running infield, away from the sideline the ball is headed for. He is the reason nothing catches this from behind.",
+    "Against the 4-4 the fullback leads on their outside linebacker and nobody touches the corner, a yard off where the ball crosses — the tailback has to turn up inside and make that corner come to him. The 5-3 puts the fullback on the corner instead; the 5-4-2 has no corner at all."
   ],
   "z": "right"
 }

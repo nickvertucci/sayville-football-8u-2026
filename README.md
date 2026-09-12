@@ -42,9 +42,9 @@ call.
 | Back | Who |
 |---|---|
 | **1** | Quarterback — every formation |
-| **2** | The fullback in the I looks; over the right guard in the Full House; the left back (LH) in the Split Backs |
-| **3** | The tailback (TB) — behind the fullback in the I, the deep back in the Full House; the right back (RH) in the Split Backs |
-| **4** | The Z — the flanker in the I and the Split Backs, in the backfield in the Power I, over the left guard in the Full House |
+| **2** | The fullback in the Regular I; the left back (LH) in the Split Backs |
+| **3** | The tailback (TB) — behind the fullback in the Regular I; the right back (RH) in the Split Backs |
+| **4** | The Z — the flanker, split wide in both formations |
 
 | Hole | Where |
 |---|---|
@@ -92,24 +92,6 @@ The plays are taught in that order on purpose — inside first and working out, 
 each gap the quarterback (back 1), then the fullback (2), then the tailback (3), then the
 Z (4). Every play has a left and a right.
 
-### Power I: formation + strength + back + hole + play word
-
-The base I with the Z dropped off the line into the backfield, offset beside the
-fullback as a third back. He is back **4**, though every Power I play today hands to the
-tailback and uses the Z to lead or to fake.
-
-**`Right`** or **`Left`** in the call is the strength — which side the Z is offset to —
-the same way `Z Right` names his side in the base I. He leads that way on Power and Toss;
-on Counter he sets to the strength and runs his lead path there while the ball goes back
-the other way.
-
-| Call | Play | Reads as |
-|---|---|---|
-| `Power I Right 34 Power` / `Power I Left 35 Power` | Power I Power Right / Left | tailback, tackle–end |
-| `Power I Right 35 Counter` / `Power I Left 34 Counter` | Power I Counter Left / Right | tailback, back the other way |
-| `Power I Left 46 Power` / `Power I Right 45 Power` | Power I Z Power Right / Left | the Z, away from his side behind three leads |
-| `Power I Right 38 Toss` / `Power I Left 39 Toss` | Power I Toss Right / Left | tailback, all the way outside |
-
 ### Split Backs: formation + Z + back + hole + play word
 
 Two backs to number instead of three, and a Z out wide to declare — so the call reads
@@ -142,85 +124,40 @@ side, going straight ahead off the double team; on Power, Counter and Pitch it i
 back, because the near one is busy leading through the hole or holding the linebackers
 with a fake.
 
-### Full House: formation + back + hole + play word
-
-Three backs in a diamond behind the quarterback, numbered the way the rest of the book
-numbers backs — `2` fullback, over the right guard; `4` the Z, over the left guard; `3`
-the tailback, alone at the point four yards deep. A kid who knows the I's numbers already
-knows `House` calls.
-
-| Call | Play | Reads as |
-|---|---|---|
-| `House 41 Dive` / `House 20 Dive` | House Dive Left / Right | the back over the playside guard, center–guard |
-| `House 35 Power` / `House 34 Power` | House Power Left / Right | the tailback, tackle–end |
-| `House 39 Sweep` / `House 38 Sweep` | House Sweep Left / Right | the tailback, all the way outside |
-| `House 17 Boot` | House Boot Left | quarterback, off the Power fake |
-
-**The two over the guards are one spot mirrored, so Dive is the only pair in the book
-whose two calls name different backs.** `20` is the fullback diving right off the guard
-he is already standing behind; `41` is the Z doing the identical thing on the other side.
-Nothing else needs it: Power and Sweep are carried by the tailback, who is on the middle
-and keeps his number both ways.
-
-On Power and Sweep the tailback carries because he starts behind both blocks and can see
-them develop. The back on the playside kicks the end out, the one on the backside wraps
-around and leads through the hole.
-
 **Play word** — the Regular I carries `Dive`, `Iso`, `Slant`, `Toss`, `Counter`, `Sneak`,
 `Power`, `Wedge` and `Jet`, plus the play-action `Boot`, `Waggle`, `Jet Boot` and
-`Power Boot`; the Power I runs `Power`, `Counter` and `Toss`; the Split Backs `Dive`,
-`Power`, `Counter`, `Pitch`, `Keep` and `Reverse`; the Full House `Dive`, `Power`,
-`Sweep`. Every formation carries at
-least one play-action pass, on the play word `Boot` or `Waggle`.
+`Power Boot`; the Split Backs runs `Dive`, `Power`, `Counter`, `Pitch`, `Keep` and
+`Reverse`. Both formations carry at least one play-action pass, on the play word `Boot`
+or `Waggle`.
 
 ## Formations
 
-Four formations, 56 plays, in teaching order:
+Two formations, 40 plays, in teaching order:
 
 | # | Formation | Family | Plays | What it is for |
 |---|---|---|---|---|
 | 1 | **Regular I** | Regular I | 26 | Base offense. Fullback and tailback stacked, so the same look threatens the middle and both edges. Teaches a back to read a block, and carries the Power, Wedge and Jet package built around the Z. |
-| 2 | **Power I** | Power I | 8 | The base I with the Z dropped into the backfield as a third back — an extra runner and blocker at the point of attack. Power, Counter and Toss each way, plus a Z Power that hands the third back the ball and leads him the other way. |
-| 3 | **Split Backs** | Split Backs | 14 | Two backs at even depth and a Z split out wide. One fewer back than a three-back look, and the receiver out there blocks the corner the pitch and the quarterback keep have to get around — then carries the ball himself on the reverse off that keep. |
-| 4 | **Full House** | Full House | 8 | Three backs in a diamond — one over each guard and the tailback alone at the point. The alignment gives nothing away, and every run splits the same three jobs — carry, kick out, lead. |
+| 2 | **Split Backs** | Split Backs | 14 | Two backs at even depth and a Z split out wide. One fewer back than a three-back look, and the receiver out there blocks the corner the pitch and the quarterback keep have to get around — then carries the ball himself on the reverse off that keep. |
 
-All four are two-tight-end, downhill running formations, so the blocking language carries
-over: "block down on the first defender inside you" means the same thing in any of them.
-That is the reason to carry these four rather than four unrelated offenses.
+Both are two-tight-end, downhill running formations, so the blocking language carries
+over: "block down on the first defender inside you" means the same thing in either. That
+is the reason to carry two related looks rather than two unrelated offenses.
 
 **Every pass is play-action, and run-first.** Each fakes one of that formation's best
 runs and boots the quarterback the other way, so it is the same first three steps the
 defense has already been punished for respecting. They exist so nobody can put nine in the
 box and forget the edge — not to throw the ball. Every one says *run first, throw second*,
 because no blitzing is allowed at this age (9.02) and the quarterback usually walks into
-ten yards before anybody finds him. The Split Backs and Full House keep one each; the
+ten yards before anybody finds him. The Split Backs keeps one; the
 Regular I, holding the most plays, carries several off the toss, the dive, the jet and the
 power.
 
-Two of them are nearly free to install. The **Power I** is the base I with the Z dropped into the backfield, so no line rule
-changes at all. The **Full House** shares the Split Backs' carry/kick-out/lead division of
-labour and adds a third back to it, so a team that knows `Split` calls is most of the way
-to `House` calls — and the two backs over the guards stand close to where the Split Backs'
-two halfbacks do, a little tighter and a little shallower, doing the same two jobs.
-
-**Symmetric formations author left-handed plays in one line.** The Full House is
-mirror-symmetric, so `House 35 Power` is a four-line file that says
-`"mirror_of": "fh-power-r"` — the generator flips every path, swaps the position keys and
-swaps the left/right wording. Which keys swap is the formation's own business and it says
-so in its `mirror` map: in the Full House the two backs over the guards trade places and
-the tailback stays put, because he is the one on the middle.
-
-**The build checks that a mirrored formation really is symmetric.** It reads the `mirror`
-map against the alignment and fails if a pair is not actually a reflection — which is the
-only thing that would catch a backfield being moved without its mirroring being updated.
-Every play would still have eleven assignments and a call that matched its own flipped
-diagram; two backs would just be standing on spots the formation does not have.
-
-The Regular I, the Power I and the Split Backs are *not* symmetric (the Z sits right on
-every snap — out wide in the Regular I and the Split Backs, in the backfield in the Power
-I), so their left-handed plays are written by hand. In the Split Backs that is not
-busywork: the two sides are genuinely different plays, because only the right one has a
-receiver out there to crack the linebacker or block the corner.
+**Neither formation is symmetric, so every left-handed play is written by hand.** The Z
+sits split to the right on every snap, so flipping a play would flip his path while
+leaving him aligned on the same side. In the Split Backs that is not busywork: the two
+directions are genuinely different plays, because only the right one has a receiver out
+there to crack the linebacker or block the corner. The two calls that do move him —
+`Z Left 35 Power` and `Z Left 48 Jet` — say so in the call.
 
 ## Defense
 
@@ -336,7 +273,7 @@ both sides — sixty-six spots, nobody left out. Jumbo is empty.
 
 ## Printing
 
-- **Print book** (top bar) → 60 landscape pages: 56 plays then 4 defensive fronts,
+- **Print book** (top bar) → 44 landscape pages: 40 plays then 4 defensive fronts,
   one per sheet.
 - **Print** (on any play or front page) → that one card, one landscape sheet.
 - **Print** (on the depth chart) → two portrait sheets, offense then defense, each with
@@ -373,7 +310,6 @@ drop one into a practice plan. Two versions of each:
 python generator/render.py            # rebuild cards, site, READMEs, PLAYBOOK.md
 python generator/render.py --check    # validate the JSON only, write nothing
 python generator/test_calls.py        # prove the call check still rejects a wrong call
-python generator/test_mirror.py       # prove a formation that stops being symmetric fails
 python generator/test_call_sheet.py   # prove the call sheet filters show the right plays
 python generator/test_print_pages.py  # prove every card still prints on one sheet
 python generator/test_rulebook.py     # prove the rules page still quotes the rulebook exactly

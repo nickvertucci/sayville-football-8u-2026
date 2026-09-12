@@ -5,12 +5,13 @@
   "name": "Regular I Power Boot Right",
   "call": "Regular I Z Right 16 Power Boot",
   "type": "pass",
+  "fakes": "i-power-l",
   "direction": "right",
   "ball_carrier": "RTE",
   "purpose": "Boot Right off the Power look. Everybody flows left selling Power and the quarterback keeps it to the right edge alone — the tight end in the flat, the backside end coming across behind. Run first, throw second.",
   "assignments": {
     "LTE": {
-      "rule": "Engage the end over you for a count, then release and get across the field to eight yards on the boot side. You are the second look and you arrive late on purpose.",
+      "rule": "Bump the end, then cross to eight yards on the boot side. Late on purpose.",
       "type": "pass",
       "path": [
         [
@@ -43,7 +44,7 @@
       "block": "hinge"
     },
     "RTE": {
-      "rule": "Engage the end over you for a count, then release to the flat at four yards and stay in front of the quarterback. You are the easy throw.",
+      "rule": "Bump the end, then release to the flat at four yards in front of the quarterback.",
       "type": "pass",
       "path": [
         [
@@ -57,7 +58,7 @@
       ]
     },
     "Z": {
-      "rule": "Release straight downfield outside the end and run the corner off — clear him out so the flat opens underneath, then you are the deep shot if he sits.",
+      "rule": "Run downfield outside the end and take the corner with you. Deep shot if he sits.",
       "type": "pass",
       "path": [
         [
@@ -71,7 +72,7 @@
       ]
     },
     "QB": {
-      "rule": "Fake the handoff to the tailback going left, hide the ball on your back hip, and get to the right edge. Run it if it is open. Only throw if a defender comes up to take you.",
+      "rule": "Fake the handoff left, ball on your back hip, run the right edge. Throw only when they take you.",
       "type": "run",
       "path": [
         [
@@ -107,7 +108,7 @@
       ]
     },
     "TB": {
-      "rule": "Run the Power path to the left with your arms tucked like you have the ball. Sell it all the way — you are the reason nobody stays home on the boot.",
+      "rule": "Run the Power path left, arms tucked like you have it. They chase you, not the boot.",
       "type": "fake",
       "path": [
         [

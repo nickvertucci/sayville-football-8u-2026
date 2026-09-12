@@ -36,7 +36,7 @@
       "block": "cutoff"
     },
     "QB": {
-      "rule": "Reverse pivot and hand the ball to the tailback at four yards. Then clear out and fake wide.",
+      "rule": "Reverse pivot, hand to the tailback at four yards, then clear out and fake wide.",
       "type": "fake",
       "path": [
         [

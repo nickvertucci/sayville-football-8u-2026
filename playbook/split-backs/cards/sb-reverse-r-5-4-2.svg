@@ -1,12 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="594" height="1166" viewBox="0 0 594 1166" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" width="621" height="1082" viewBox="0 0 621 1082" font-family="Segoe UI, Helvetica, Arial, sans-serif">
 <rect width="100%" height="100%" fill="#ffffff"/>
-<rect x="0" y="0" width="594" height="58" fill="#14213d"/>
-<text x="18" y="26" font-size="18.0" font-weight="700" fill="#ffffff">Split Z Left Z Reverse Right</text>
+<rect x="0" y="0" width="621" height="58" fill="#14213d"/>
+<text x="18" y="26" font-size="19.0" font-weight="700" fill="#ffffff">Split Z Left Z Reverse Right</text>
 <text x="18" y="45" font-size="11.5" fill="#a9b4c7">RUN  •  Split Backs  •  vs 5-4-2</text>
-<rect x="268.8" y="13" width="307.2" height="31" rx="6" fill="#ffffff" fill-opacity="0.12" stroke="#8593ad" stroke-width="1"/>
-<text x="422.4" y="34" text-anchor="middle" font-size="14.5" font-weight="700" fill="#ffffff" letter-spacing="0.5">Split Z Left 46 Z Reverse Right</text>
-<clipPath id="fieldclip"><rect x="0" y="58" width="594" height="472"/></clipPath>
-<g clip-path="url(#fieldclip)"><g transform="translate(-54.0,31.0)">
+<rect x="295.8" y="13" width="307.2" height="31" rx="6" fill="#ffffff" fill-opacity="0.12" stroke="#8593ad" stroke-width="1"/>
+<text x="449.4" y="34" text-anchor="middle" font-size="14.5" font-weight="700" fill="#ffffff" letter-spacing="0.5">Split Z Left 46 Z Reverse Right</text>
+<clipPath id="fieldclip"><rect x="0" y="58" width="621" height="472"/></clipPath>
+<g clip-path="url(#fieldclip)"><g transform="translate(-40.5,31.0)">
 <rect x="0" y="0" width="702" height="513" fill="#ffffff"/>
 <line x1="0" y1="459.0" x2="702" y2="459.0" stroke="#c8cdd6" stroke-width="1"/>
 <line x1="0" y1="189.0" x2="702" y2="189.0" stroke="#c8cdd6" stroke-width="1"/>
@@ -79,7 +79,7 @@
 <circle cx="410.4" cy="426.6" r="12.4" fill="#ffffff" stroke="#14213d" stroke-width="2.4"/>
 <text x="410.4" y="430.6" text-anchor="middle" font-size="11.5" font-weight="700" fill="#14213d">RH</text>
 </g></g>
-<line x1="18" y1="540" x2="576" y2="540" stroke="#c8cdd6" stroke-width="1"/>
+<line x1="18" y1="540" x2="603" y2="540" stroke="#c8cdd6" stroke-width="1"/>
 <text x="18" y="560" font-size="11" font-weight="700" fill="#5b6472" letter-spacing="1">ASSIGNMENTS</text>
 <text x="18" y="578" font-size="12" font-weight="700" fill="#111318">LTE</text>
 <text x="52" y="578" font-size="12" fill="#111318">End head up on you. Cut him off — get</text>
@@ -103,43 +103,36 @@
 <text x="52" y="800" font-size="12" fill="#111318">Block down on the tackle, inside</text>
 <text x="52" y="816" font-size="12" fill="#111318">shoulder. Head across him — nobody</text>
 <text x="52" y="834" font-size="12" fill="#111318">crosses your face.</text>
-<text x="297" y="578" font-size="12" font-weight="700" fill="#111318">RTE</text>
-<text x="331" y="578" font-size="12" fill="#111318">End head up on you. Turn him inside.</text>
-<text x="331" y="596" font-size="12" fill="#111318">The ball goes around behind you.</text>
-<text x="297" y="612" font-size="12" font-weight="700" fill="#111318">Z</text>
-<text x="331" y="612" font-size="12" fill="#111318">Come back behind the line the moment</text>
-<text x="331" y="630" font-size="12" fill="#111318">the ball is snapped, take the pitch</text>
-<text x="331" y="646" font-size="12" fill="#111318">going the other way, and get outside</text>
-<text x="331" y="664" font-size="12" fill="#111318">our end. Stay behind the quarterback</text>
-<text x="331" y="680" font-size="12" fill="#111318">until you have it — a pitch that goes</text>
-<text x="331" y="698" font-size="12" fill="#111318">forward is a fumble.</text>
-<text x="297" y="714" font-size="12" font-weight="700" fill="#111318">QB</text>
-<text x="331" y="714" font-size="12" fill="#111318">Start the Keep left — same first</text>
-<text x="331" y="732" font-size="12" fill="#111318">three steps, same ball on the hip —</text>
-<text x="331" y="748" font-size="12" fill="#111318">then pitch it back underneath to the</text>
-<text x="331" y="766" font-size="12" fill="#111318">split man crossing your face. Pitch</text>
-<text x="331" y="782" font-size="12" fill="#111318">it back, never forward, then keep</text>
-<text x="331" y="800" font-size="12" fill="#111318">running the Keep as if you still have</text>
-<text x="331" y="816" font-size="12" fill="#111318">it.</text>
-<text x="297" y="834" font-size="12" font-weight="700" fill="#111318">LH</text>
-<text x="331" y="834" font-size="12" fill="#111318">Run your Keep block exactly as</text>
-<text x="331" y="850" font-size="12" fill="#111318">always. At half speed, this play dies</text>
-<text x="331" y="868" font-size="12" fill="#111318">for good.</text>
-<text x="297" y="884" font-size="12" font-weight="700" fill="#111318">RH</text>
-<text x="331" y="884" font-size="12" fill="#111318">Lead outside our end. Block the first</text>
-<text x="331" y="902" font-size="12" fill="#111318">man out there — here it is the</text>
-<text x="331" y="918" font-size="12" fill="#111318">linebacker.</text>
-<line x1="18" y1="926" x2="576" y2="926" stroke="#c8cdd6" stroke-width="1"/>
-<text x="18" y="944" font-size="11" font-weight="700" fill="#5b6472" letter-spacing="1">COACHING POINTS</text>
-<text x="18" y="964" font-size="12" fill="#111318">This is the Keep Left for the first second and a half, and that is the whole</text>
-<text x="18" y="980" font-size="12" fill="#111318">play. Install it the week after the Keep has hurt somebody, never before.</text>
-<text x="18" y="998" font-size="12" fill="#111318">The far back leaves on the same track he leaves on for the Keep — the difference</text>
-<text x="18" y="1014" font-size="12" fill="#111318">is that this time somebody is following him. The defense cannot tell those two</text>
-<text x="18" y="1032" font-size="12" fill="#111318">apart, which is the point.</text>
-<text x="18" y="1048" font-size="12" fill="#111318">The pitch goes backward. Teach it as a flip to a man running past behind you, not</text>
-<text x="18" y="1066" font-size="12" fill="#111318">a throw to a man ahead of you.</text>
-<text x="18" y="1082" font-size="12" fill="#111318">The near back blocks for a quarterback with no ball. Tell him that out loud, then</text>
-<text x="18" y="1100" font-size="12" fill="#111318">tell him it is the reason the play scores.</text>
-<text x="18" y="1116" font-size="12" fill="#111318">The split man is the slowest-developing ball carrier in the book. If the line</text>
-<text x="18" y="1134" font-size="12" fill="#111318">cannot hold its blocks for a three count, run Pitch instead.</text>
+<text x="310" y="578" font-size="12" font-weight="700" fill="#111318">RTE</text>
+<text x="344" y="578" font-size="12" fill="#111318">End head up on you. Turn him inside.</text>
+<text x="344" y="596" font-size="12" fill="#111318">The ball goes around behind you.</text>
+<text x="310" y="612" font-size="12" font-weight="700" fill="#111318">Z</text>
+<text x="344" y="612" font-size="12" fill="#111318">Come back behind the line on the snap,</text>
+<text x="344" y="630" font-size="12" fill="#111318">take the pitch the other way, and get</text>
+<text x="344" y="646" font-size="12" fill="#111318">outside our end.</text>
+<text x="310" y="664" font-size="12" font-weight="700" fill="#111318">QB</text>
+<text x="344" y="664" font-size="12" fill="#111318">Start the Keep left. Pitch back</text>
+<text x="344" y="680" font-size="12" fill="#111318">underneath, never forward, to the split</text>
+<text x="344" y="698" font-size="12" fill="#111318">man, then run the Keep like you kept</text>
+<text x="344" y="714" font-size="12" fill="#111318">it.</text>
+<text x="310" y="732" font-size="12" font-weight="700" fill="#111318">LH</text>
+<text x="344" y="732" font-size="12" fill="#111318">Run your Keep block exactly as always.</text>
+<text x="344" y="748" font-size="12" fill="#111318">At half speed, this play dies for good.</text>
+<text x="310" y="766" font-size="12" font-weight="700" fill="#111318">RH</text>
+<text x="344" y="766" font-size="12" fill="#111318">Lead outside our end. Block the first</text>
+<text x="344" y="782" font-size="12" fill="#111318">man out there — here it is the</text>
+<text x="344" y="800" font-size="12" fill="#111318">linebacker.</text>
+<line x1="18" y1="840" x2="603" y2="840" stroke="#c8cdd6" stroke-width="1"/>
+<text x="18" y="858" font-size="11" font-weight="700" fill="#5b6472" letter-spacing="1">COACHING POINTS</text>
+<text x="18" y="878" font-size="12" fill="#111318">This is the Keep Left for the first second and a half, and that is the whole play.</text>
+<text x="18" y="896" font-size="12" fill="#111318">Install it the week after the Keep has hurt somebody, never before.</text>
+<text x="18" y="912" font-size="12" fill="#111318">The far back leaves on the same track he leaves on for the Keep — the difference is</text>
+<text x="18" y="930" font-size="12" fill="#111318">that this time somebody is following him. The defense cannot tell those two apart,</text>
+<text x="18" y="946" font-size="12" fill="#111318">which is the point.</text>
+<text x="18" y="964" font-size="12" fill="#111318">The pitch goes backward. Teach it as a flip to a man running past behind you, not a</text>
+<text x="18" y="980" font-size="12" fill="#111318">throw to a man ahead of you.</text>
+<text x="18" y="998" font-size="12" fill="#111318">The near back blocks for a quarterback with no ball. Tell him that out loud, then</text>
+<text x="18" y="1014" font-size="12" fill="#111318">tell him it is the reason the play scores.</text>
+<text x="18" y="1032" font-size="12" fill="#111318">The split man is the slowest-developing ball carrier in the book. If the line cannot</text>
+<text x="18" y="1048" font-size="12" fill="#111318">hold its blocks for a three count, run Pitch instead.</text>
 </svg>

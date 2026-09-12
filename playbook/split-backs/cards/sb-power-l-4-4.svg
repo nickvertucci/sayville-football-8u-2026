@@ -1,12 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="594" height="1116" viewBox="0 0 594 1116" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" width="621" height="1082" viewBox="0 0 621 1082" font-family="Segoe UI, Helvetica, Arial, sans-serif">
 <rect width="100%" height="100%" fill="#ffffff"/>
-<rect x="0" y="0" width="594" height="58" fill="#14213d"/>
+<rect x="0" y="0" width="621" height="58" fill="#14213d"/>
 <text x="18" y="26" font-size="19.0" font-weight="700" fill="#ffffff">Split Power Left</text>
 <text x="18" y="45" font-size="11.5" fill="#a9b4c7">RUN  •  Split Backs  •  vs 4-4</text>
-<rect x="351.6" y="13" width="224.4" height="31" rx="6" fill="#ffffff" fill-opacity="0.12" stroke="#8593ad" stroke-width="1"/>
-<text x="463.8" y="34" text-anchor="middle" font-size="14.5" font-weight="700" fill="#ffffff" letter-spacing="0.5">Split Z Right 35 Power</text>
-<clipPath id="fieldclip"><rect x="0" y="58" width="594" height="472"/></clipPath>
-<g clip-path="url(#fieldclip)"><g transform="translate(-54.0,31.0)">
+<rect x="378.6" y="13" width="224.4" height="31" rx="6" fill="#ffffff" fill-opacity="0.12" stroke="#8593ad" stroke-width="1"/>
+<text x="490.8" y="34" text-anchor="middle" font-size="14.5" font-weight="700" fill="#ffffff" letter-spacing="0.5">Split Z Right 35 Power</text>
+<clipPath id="fieldclip"><rect x="0" y="58" width="621" height="472"/></clipPath>
+<g clip-path="url(#fieldclip)"><g transform="translate(-40.5,31.0)">
 <rect x="0" y="0" width="702" height="513" fill="#ffffff"/>
 <line x1="0" y1="459.0" x2="702" y2="459.0" stroke="#c8cdd6" stroke-width="1"/>
 <line x1="0" y1="189.0" x2="702" y2="189.0" stroke="#c8cdd6" stroke-width="1"/>
@@ -79,12 +79,12 @@
 <circle cx="410.4" cy="426.6" r="12.4" fill="#ffffff" stroke="#b3001b" stroke-width="2.4"/>
 <text x="410.4" y="430.6" text-anchor="middle" font-size="11.5" font-weight="700" fill="#b3001b">RH</text>
 </g></g>
-<line x1="18" y1="540" x2="576" y2="540" stroke="#c8cdd6" stroke-width="1"/>
+<line x1="18" y1="540" x2="603" y2="540" stroke="#c8cdd6" stroke-width="1"/>
 <text x="18" y="560" font-size="11" font-weight="700" fill="#5b6472" letter-spacing="1">ASSIGNMENTS</text>
 <text x="18" y="578" font-size="12" font-weight="700" fill="#111318">LTE</text>
-<text x="52" y="578" font-size="12" fill="#111318">End on your inside shoulder. Drive</text>
-<text x="52" y="596" font-size="12" fill="#111318">him to the sideline. The ball goes</text>
-<text x="52" y="612" font-size="12" fill="#111318">inside you.</text>
+<text x="52" y="578" font-size="12" fill="#111318">End on your inside shoulder. Drive him</text>
+<text x="52" y="596" font-size="12" fill="#111318">to the sideline. The ball goes inside</text>
+<text x="52" y="612" font-size="12" fill="#111318">you.</text>
 <text x="18" y="630" font-size="12" font-weight="700" fill="#111318">LT</text>
 <text x="52" y="630" font-size="12" fill="#111318">Block down on the tackle, inside</text>
 <text x="52" y="646" font-size="12" fill="#111318">shoulder. Head across him — nobody</text>
@@ -102,38 +102,35 @@
 <text x="52" y="782" font-size="12" fill="#111318">Block down on the tackle, inside</text>
 <text x="52" y="800" font-size="12" fill="#111318">shoulder. Head across him — nobody</text>
 <text x="52" y="816" font-size="12" fill="#111318">crosses your face.</text>
-<text x="297" y="578" font-size="12" font-weight="700" fill="#111318">RTE</text>
-<text x="331" y="578" font-size="12" fill="#111318">End on your inside shoulder. Cut him</text>
-<text x="331" y="596" font-size="12" fill="#111318">off — get between him and the ball.</text>
-<text x="297" y="612" font-size="12" font-weight="700" fill="#111318">Z</text>
-<text x="331" y="612" font-size="12" fill="#111318">Cut off the backside. Never quit on</text>
-<text x="331" y="630" font-size="12" fill="#111318">the play.</text>
-<text x="297" y="646" font-size="12" font-weight="700" fill="#111318">QB</text>
-<text x="331" y="646" font-size="12" fill="#111318">Open to the playside and hand deep to</text>
-<text x="331" y="664" font-size="12" fill="#111318">the back crossing from the backside.</text>
-<text x="331" y="680" font-size="12" fill="#111318">Let him come to you, then fake away.</text>
-<text x="297" y="698" font-size="12" font-weight="700" fill="#111318">LH</text>
-<text x="331" y="698" font-size="12" fill="#111318">Lead through the hole. Block the</text>
-<text x="331" y="714" font-size="12" fill="#111318">first man who shows in it.</text>
-<text x="297" y="732" font-size="12" font-weight="700" fill="#111318">RH</text>
-<text x="331" y="732" font-size="12" fill="#111318">You carry it. Cross behind the</text>
-<text x="331" y="748" font-size="12" fill="#111318">quarterback, take the handoff deep,</text>
-<text x="331" y="766" font-size="12" fill="#111318">then press the outside hip of our</text>
-<text x="331" y="782" font-size="12" fill="#111318">tackle and turn up inside the blocks.</text>
-<line x1="18" y1="824" x2="576" y2="824" stroke="#c8cdd6" stroke-width="1"/>
+<text x="310" y="578" font-size="12" font-weight="700" fill="#111318">RTE</text>
+<text x="344" y="578" font-size="12" fill="#111318">End on your inside shoulder. Cut him</text>
+<text x="344" y="596" font-size="12" fill="#111318">off — get between him and the ball.</text>
+<text x="310" y="612" font-size="12" font-weight="700" fill="#111318">Z</text>
+<text x="344" y="612" font-size="12" fill="#111318">Cut off the backside. Never quit on the</text>
+<text x="344" y="630" font-size="12" fill="#111318">play.</text>
+<text x="310" y="646" font-size="12" font-weight="700" fill="#111318">QB</text>
+<text x="344" y="646" font-size="12" fill="#111318">Open playside and hand deep to the back</text>
+<text x="344" y="664" font-size="12" fill="#111318">crossing behind you. Let him come to</text>
+<text x="344" y="680" font-size="12" fill="#111318">you, then fake away.</text>
+<text x="310" y="698" font-size="12" font-weight="700" fill="#111318">LH</text>
+<text x="344" y="698" font-size="12" fill="#111318">Lead through the hole. Block the first</text>
+<text x="344" y="714" font-size="12" fill="#111318">man who shows in it.</text>
+<text x="310" y="732" font-size="12" font-weight="700" fill="#111318">RH</text>
+<text x="344" y="732" font-size="12" fill="#111318">Cross behind the quarterback, take the</text>
+<text x="344" y="748" font-size="12" fill="#111318">handoff deep, then press our tackle's</text>
+<text x="344" y="766" font-size="12" fill="#111318">outside hip. Turn up inside the blocks.</text>
+<line x1="18" y1="824" x2="603" y2="824" stroke="#c8cdd6" stroke-width="1"/>
 <text x="18" y="842" font-size="11" font-weight="700" fill="#5b6472" letter-spacing="1">COACHING POINTS</text>
-<text x="18" y="862" font-size="12" fill="#111318">Identical blocking to Split Counter. The line learns one set of rules and gets</text>
-<text x="18" y="878" font-size="12" fill="#111318">two plays out of it — say that out loud when you install the second one.</text>
-<text x="18" y="896" font-size="12" fill="#111318">The near back's block on the playside linebacker is the play. Drill it on its</text>
-<text x="18" y="912" font-size="12" fill="#111318">own.</text>
+<text x="18" y="862" font-size="12" fill="#111318">Identical blocking to Split Counter. The line learns one set of rules and gets two</text>
+<text x="18" y="878" font-size="12" fill="#111318">plays out of it.</text>
+<text x="18" y="896" font-size="12" fill="#111318">The near back's block in the hole is the play. He takes the first man who shows in it</text>
+<text x="18" y="912" font-size="12" fill="#111318">rather than a man picked before the snap. Drill it on its own.</text>
 <text x="18" y="930" font-size="12" fill="#111318">The carrier travels further than the blocker, and that is the point — he arrives</text>
 <text x="18" y="946" font-size="12" fill="#111318">behind the lead, not beside it.</text>
-<text x="18" y="964" font-size="12" fill="#111318">If the handoff is late, the quarterback is reaching. He holds the ball still and</text>
-<text x="18" y="980" font-size="12" fill="#111318">lets the back run through it.</text>
-<text x="18" y="998" font-size="12" fill="#111318">Against a four-linebacker front there is an outside linebacker nobody blocks. The</text>
-<text x="18" y="1014" font-size="12" fill="#111318">near back has to take him if he fills, and if they keep winning there, the answer</text>
-<text x="18" y="1032" font-size="12" fill="#111318">is the Pitch — it gets outside him instead of running at him.</text>
-<text x="18" y="1048" font-size="12" fill="#111318">Nobody blocks outside our end on this one — no kick-out and nobody leading out</text>
-<text x="18" y="1066" font-size="12" fill="#111318">there. Against a four-linebacker front their outside linebacker is free, so if</text>
-<text x="18" y="1082" font-size="12" fill="#111318">they are playing four, go get the edge with Pitch or Keep instead.</text>
+<text x="18" y="964" font-size="12" fill="#111318">If the handoff is late, the quarterback is reaching. He holds the ball still and lets</text>
+<text x="18" y="980" font-size="12" fill="#111318">the back run through it.</text>
+<text x="18" y="998" font-size="12" fill="#111318">Against a four-linebacker front nobody is assigned to their outside linebacker, and</text>
+<text x="18" y="1014" font-size="12" fill="#111318">on this side there is no Z out there to screen him — the near back is leading into</text>
+<text x="18" y="1032" font-size="12" fill="#111318">the hole and has to take him if he fills. If they keep winning there, the answer is</text>
+<text x="18" y="1048" font-size="12" fill="#111318">the Pitch: it gets outside him instead of running at him.</text>
 </svg>

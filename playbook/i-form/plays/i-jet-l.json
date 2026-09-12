@@ -34,7 +34,7 @@
       "block": "cutoff"
     },
     "Z": {
-      "rule": "Start moving on the coach's motion call and be at full speed when you pass the quarterback. Take the ball and get around the corner — do not turn upfield until you are outside our end.",
+      "rule": "Start on the motion call, full speed by the quarterback. Take it around the corner, never inside our end.",
       "type": "run",
       "path": [
         [
@@ -60,7 +60,7 @@
       ]
     },
     "QB": {
-      "rule": "Turn and hand it back to the Z as he crosses, then keep going the other way with your hands on your belly like you kept it.",
+      "rule": "Hand it back to the Z as he crosses, then keep going, hands on your belly.",
       "type": "fake",
       "path": [
         [
@@ -78,7 +78,7 @@
       ]
     },
     "FB": {
-      "rule": "Fill straight ahead like Wedge is coming. You are the reason their linebackers step up for one count.",
+      "rule": "Fill straight ahead like Wedge is coming. You are why their linebackers step up one count.",
       "type": "fake",
       "path": [
         [

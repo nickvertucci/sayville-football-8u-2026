@@ -77,13 +77,13 @@ move a player who has more than one legal spot in the same eleven-man look:
 "alignment": { "Z": [-2.6, -3.3] }
 ```
 
-That is a Power I play offsetting the Z to the weak side instead of its default
-strong-side backfield spot. Everything else — the line rules, the other ten spots — is
+That is Power Left putting the Z on the side his kick-out has to happen on, instead of
+the right, where he lines up on every other snap. Everything else — the line rules, the other ten spots — is
 unchanged, and the player's `path` is still relative to wherever he ends up, so the
 assignment does not have to know which look it is in.
 
-**Say it in the call.** `Power I Left 35 Power` tells the huddle which side the Z is
-offset to, the same way `Regular I Z Right 20 Dive` names the Z's side. A play that moves
+**Say it in the call.** `Regular I Z Left 35 Power` tells the huddle which side the Z is
+on, the same way `Regular I Z Right 20 Dive` does. A play that moves
 somebody silently is a play nobody can call.
 
 An override may only move a player the formation already has, and the coordinates must be
@@ -129,9 +129,10 @@ so there is one copy of the numbering rather than three that can disagree.
 
 ### `name` and `call` are different on purpose
 
-Both are printed at the top of every card. `name` is the teaching name (*House Power
-Right*); `call` is the huddle call in the team's play-calling language (`House 34 Power` —
-formation, then **two digits: who carries it and where it goes**, then the play word).
+Both are printed at the top of every card. `name` is the teaching name (*Regular I Power
+Right*); `call` is the huddle call in the team's play-calling language
+(`Regular I Z Right 34 Power` — formation, the Z's side, then **two digits: who carries
+it and where it goes**, then the play word).
 The numbering system is documented in the top-level [README](../README.md).
 
 **The build checks the call against the diagram**, so a call is not free text:
@@ -214,6 +215,24 @@ Every job a puller used to do belongs to somebody who was already standing there
 **playside end kicks the end out** (`base` with `drive: out`), **a back leads through the
 hole** (`lead`), and the **backside guard cuts off** behind the play (`cutoff`).
 
+### `fakes` — what a play-action pass is pretending to be
+
+```json
+{ "id": "i-boot-r", "type": "pass", "fakes": "i-toss-l", ... }
+```
+
+A play-action pass takes its **blocking side and hole from the run it names**, not from
+the direction the quarterback finishes in. Without that, "playside" meant the boot, and
+every side-sensitive rule on the line came out backwards — the fake blocked the mirror
+image of the run it was selling, on ten of the twelve passes in the book. `--check`
+rejects a `type: pass` play that does not say what it fakes.
+
+`test_blocking.py` then holds it honest: where the pass and the run give a lineman the
+**same verb**, it has to resolve to the **same block**. They are allowed to differ where
+the verbs differ — the boot-side tackle hinges and the centre cuts off, because somebody
+has to protect a quarterback the run never had — but one verb coming out two ways means
+the side is wrong again.
+
 **A play-action pass must block exactly like the run it fakes.** Eight of them were
 selling a pulling guard after the runs stopped pulling, which is a fake advertising a
 play the defence has never been shown. If you change how a run blocks, change its boot
@@ -240,57 +259,22 @@ playside nobody blocks, and three blockers arriving on the same man. A verb that
 well against the 5-3 and leaves an outside linebacker unblocked against the 4-4 is the
 exact bug this whole system exists to prevent, and it is invisible unless you look.
 
-## Mirroring
+## Every left-handed play is written by hand
 
-For a **symmetric** formation, left-handed plays are one file:
+Neither formation is symmetric — the Z is split to the right on every snap, so flipping
+a play would flip his path and leave him aligned on the same side. There is no
+`mirror_of` and no mirroring machinery; a left-handed play is its own file.
 
-```json
-{ "id": "fh-power-l", "name": "House Power Left", "call": "House 35 Power", "mirror_of": "fh-power-r" }
-```
+In the Split Backs that is not busywork. The two directions are genuinely different
+plays: only the right one has a receiver out there to crack the linebacker or block the
+corner, and `--audit` will tell you which left-handed plays are a blocker short because
+of it.
 
-The generator flips every path across the middle, swaps the position keys, and swaps the
-words "left" and "right" in every rule, purpose and coaching point.
-
-### Which keys swap is the formation's business
-
-The line is the same in every formation we carry, so `MIRROR` in `render.py` pairs it up
-and nothing else has to. The backfield is not the same, so a formation that mirrors its
-plays declares its own pairs:
-
-```json
-"mirror": { "Z": "FB", "FB": "Z", "TB": "TB" }
-```
-
-That is the Full House, whose two backs over the guards trade places while the tailback,
-alone on the middle, stays put.
-
-**The build checks the map against the alignment.** Every pair has to be an actual
-reflection — same depth, opposite side — and mirroring has to undo itself. That check is
-the only thing standing between a moved backfield and eight silently wrong cards: the
-Full House used to be three backs in a row, where the two that swapped were `TB` and `Z`,
-and nothing else in the build would have noticed the difference. Every play would still
-have had eleven assignments, a call matching its own flipped diagram, and two backs drawn
-on spots the formation does not have.
-
-**The call is not mirrored — you write it.** When mirroring swaps two backs, the back
-digit changes with them: `House 20 Dive` is the fullback, back 2, through the 0 hole, and
-its mirror is `House 41 Dive` — the `Z`, back 4, through the 1 hole. A back who mirrors to
-himself keeps his digit, which is why `House 34 Power` mirrors to `House 35 Power`. Get it
-wrong and the call check catches it, because the digits no longer match the flipped path.
-
-**Only use `mirror_of` when the formation is symmetric.**
-
-- **Full House is symmetric** — it uses `mirror_of`, so a left-handed play is a
-  four-line file.
-- **Regular I, Power I and Split Backs are not.** The `Z` sits on the right on every
-  snap — out wide in the Regular I and the Split Backs, in the backfield in the Power
-  I — so mirroring would flip its path while leaving it aligned on the same side. Their
-  left-handed plays are authored by hand, and they carry no `mirror` map at all.
-
-**This is also why rules never name a specific position.** Write "the playside end", "the
-backside guard", "the center" — never "RTE" or "LG". Position abbreviations are not
-mirrored and end up pointing at the wrong player. For the same reason, avoid words that
-merely contain "left" or "right" as a substring.
+**A play that moves the Z says so in its call.** `Regular I Z Left 35 Power` and
+`Regular I Z Left 48 Jet` are the two that do — Power because it is built on his
+kick-out, Jet because a receiver cannot go in motion toward the sideline he is already
+standing on. Use `alignment` to move him and name his side in the call; a play that
+moves somebody silently is a play nobody can call.
 
 ## House style for rules
 

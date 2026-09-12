@@ -1,8 +1,0 @@
-{
-  "id": "fh-sweep-l",
-  "order": 8,
-  "formation": "full-house",
-  "name": "House Sweep Left",
-  "call": "House 39 Sweep",
-  "mirror_of": "fh-sweep-r"
-}

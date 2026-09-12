@@ -34,7 +34,7 @@
       "drive": "in"
     },
     "Z": {
-      "rule": "Start moving on the coach's motion call and be at full speed when you pass the quarterback. Take the pitch and get around the corner — do not turn upfield until you are outside our end.",
+      "rule": "Start on the motion call, full speed by the quarterback. Take the pitch around the corner, never inside our end.",
       "type": "run",
       "path": [
         [
@@ -60,7 +60,7 @@
       ]
     },
     "QB": {
-      "rule": "Turn and pitch it out to the Z as he crosses, then carry out a boot fake back to the left with your hands on your belly.",
+      "rule": "Pitch it to the Z as he crosses, then boot back, hands on your belly.",
       "type": "fake",
       "path": [
         [

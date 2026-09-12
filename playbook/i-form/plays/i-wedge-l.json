@@ -32,11 +32,11 @@
       "block": "wedge"
     },
     "Z": {
-      "block": "wedge",
-      "note": "Tuck in behind the end. Nobody gets into the back of the wedge."
+      "block": "screen",
+      "note": "Nothing comes around the outside into the back of the wedge."
     },
     "QB": {
-      "rule": "Snap, hand it to the tailback left now, and stay out of his way. Do not ride the handoff — he is already moving.",
+      "rule": "Snap it and hand to the tailback immediately, then stay out of his way.",
       "type": "fake",
       "path": [
         [
@@ -50,7 +50,7 @@
       "note": "Both hands on the tailback's back and drive. You are pushing, not blocking."
     },
     "TB": {
-      "rule": "Put a hand on the center's back, get your pads low, and follow the wedge. Do not cut, do not bounce, do not look for a hole — the hole moves with you.",
+      "rule": "Hand on the center's back, pads low, follow the wedge. Never cut or bounce — the hole moves with you.",
       "type": "run",
       "path": [
         [

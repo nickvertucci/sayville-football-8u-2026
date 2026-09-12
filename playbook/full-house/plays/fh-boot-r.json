@@ -1,8 +1,0 @@
-{
-  "id": "fh-boot-r",
-  "order": 5,
-  "formation": "full-house",
-  "name": "House Boot Right",
-  "call": "House 16 Boot",
-  "mirror_of": "fh-boot-l"
-}

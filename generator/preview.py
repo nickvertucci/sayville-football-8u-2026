@@ -10,7 +10,9 @@ so this prints them side by side without rebuilding the book.
     python generator/preview.py --formation i-form     # every play in one formation
 
 It also flags the two things that go wrong when an intent is chosen badly: two blockers
-sent to the same defender, and a defender in the box nobody is assigned to.
+sent to the same defender, and a defender near the hole nobody is assigned to — down
+linemen, linebackers and the corners, who on a wide play are the men the whole call
+lives or dies on.
 """
 
 from __future__ import annotations
@@ -24,8 +26,10 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import blocking  # noqa: E402
 import render  # noqa: E402
 
-# How close a block has to finish to a defender to count as being on him.
-ON_HIM = 1.1
+# How close a block has to finish to a defender to count as being on him. A stalk
+# block stands off its man on purpose, so this matches the engine's own claim radius —
+# at 1.1 a correctly executed screen was reported as leaving its man unblocked.
+ON_HIM = 1.4
 # Anything deeper than this is a defensive back, and nobody is expected to block him.
 IN_THE_BOX = 4.0
 # How close to the hole a defender has to be before leaving him unblocked is a problem.
@@ -59,11 +63,14 @@ def audit(play, alignment, front, assignments) -> list[str]:
         # instruction about a man who is not there yet.
         if spec.get("aims") != "man":
             continue
-        for fx, fy in touches(alignment, pos, spec):
-            for label, x, y in defenders:
-                if (fx - x) ** 2 + (fy - y) ** 2 <= ON_HIM ** 2:
-                    if pos not in claimed.setdefault(label, []):
-                        claimed[label].append(pos)
+        # Where he FINISHES is who he is blocking. Counting every point he runs past
+        # makes a lead blocker whose path clips a defensive tackle look like the third
+        # man on a double team.
+        fx, fy = touches(alignment, pos, spec)[-1]
+        near = [(((fx - x) ** 2 + (fy - y) ** 2) ** 0.5, label) for label, x, y in defenders]
+        dist, label = min(near)
+        if dist <= ON_HIM:
+            claimed.setdefault(label, []).append(pos)
 
     notes = []
     lbs = {s[0] for s in blocking.spots(front, "LB")}
@@ -85,18 +92,32 @@ def audit(play, alignment, front, assignments) -> list[str]:
     # A blocker sent to a spot still blocks whoever turns up in it. He does not *claim*
     # a defender — two of them aimed at the same hole are not a double team — but a
     # linebacker standing in the hole he is running to is not unblocked either.
+    # Covered is a wider question than claimed: a man somebody runs through on the way
+    # to his own block is not free, and a blocker sent to a spot covers whoever turns
+    # up in it.
     covered = set(claimed)
     for pos, spec in assignments.items():
-        if spec.get("type") != "block" or spec.get("aims") == "man":
+        if spec.get("type") != "block":
             continue
-        fx, fy = touches(alignment, pos, spec)[-1]
-        for label, x, y in defenders:
-            if (fx - x) ** 2 + (fy - y) ** 2 <= COVERS_SPACE ** 2:
-                covered.add(label)
+        reach = COVERS_SPACE if spec.get("aims") != "man" else ON_HIM
+        for fx, fy in touches(alignment, pos, spec):
+            for label, x, y in defenders:
+                if (fx - x) ** 2 + (fy - y) ** 2 <= reach ** 2:
+                    covered.add(label)
 
     side = render.play_side(play)
+    # Where the ball ACTUALLY crosses the line, taken from the carrier's own path, not
+    # from the hole table's midpoint. On a wide play those differ by a yard or more,
+    # and a yard is the difference between a corner standing in the carrier's way and
+    # one he was always going to run past.
     hole = render.play_hole(play)
-    for label, x, y in blocking.spots(front, "DL") + blocking.spots(front, "LB"):
+    carrier = play.get("ball_carrier")
+    if carrier and carrier in assignments:
+        crossing = render.los_crossing(alignment, carrier, assignments[carrier])
+        if crossing is not None:
+            hole = crossing
+    for label, x, y in (blocking.spots(front, "DL") + blocking.spots(front, "LB")
+                        + blocking.spots(front, "DB")):
         if y > IN_THE_BOX or label in covered:
             continue
         # Only a defender near where the ball is actually going. A backside linebacker

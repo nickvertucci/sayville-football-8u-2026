@@ -7,7 +7,7 @@
   "type": "run",
   "direction": "right",
   "ball_carrier": "LH",
-  "purpose": "Get outside in a hurry. The far back trails the quarterback, takes the pitch on the run and turns up inside the block on the corner. The split man makes that block, which is what frees both backs to stay in the backfield where the fake lives.",
+  "purpose": "Get outside in a hurry. The far back trails the quarterback, takes the pitch on the run and turns up inside the block out on the edge. The split man makes that block — their corner, or their outside linebacker against the 5-4-2, which has no corners — and that is what frees both backs to stay in the backfield where the fake lives.",
   "assignments": {
     "LTE": {
       "block": "cutoff"
@@ -36,7 +36,7 @@
       "block": "screen"
     },
     "QB": {
-      "rule": "Fake the dive to the near back, attack the outside, and pitch the ball to the trailing back before you get touched. Pitch early, not late.",
+      "rule": "Fake the dive to the near back, attack the outside, then pitch to the trailing back early, never late.",
       "type": "fake",
       "path": [
         [
@@ -59,7 +59,7 @@
       "note": "Step at the dive first to hold their linebackers."
     },
     "LH": {
-      "rule": "Run flat behind everybody, stay outside and behind the quarterback, and catch the pitch on the run. Never get ahead of him — a pitch that goes forward is a fumble.",
+      "rule": "Run flat, outside and behind the quarterback, and catch the pitch on the run. Ahead of him is a fumble.",
       "type": "run",
       "path": [
         [
@@ -88,7 +88,6 @@
   "coaching_points": [
     "The pitch goes early. A quarterback who waits to be tackled first will pitch it on the ground.",
     "This is not a read at this age — tell him before the snap that he is pitching it.",
-    "The back taking the pitch must stay behind the quarterback until he has the ball. Getting ahead means the pitch goes forward, which is a fumble waiting to happen.",
-    "Everything depends on the corner being blocked, and out here the split man does it — which is what frees both backs to fake and lead. Drill him on beating the corner to the spot without holding."
+    "Everything depends on the edge being blocked, and out here the split man does it — which is what frees both backs to fake and lead. Drill him on beating that man to the spot without holding."
   ]
 }
