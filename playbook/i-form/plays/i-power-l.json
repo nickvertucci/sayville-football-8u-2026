@@ -29,8 +29,7 @@
       "block": "reach"
     },
     "RG": {
-      "block": "pull",
-      "to": "wrap"
+      "block": "cutoff"
     },
     "RT": {
       "block": "down"
@@ -63,7 +62,7 @@
       "block": "lead"
     },
     "TB": {
-      "rule": "Take the handoff going downhill and aim at the outside hip of our tackle. Follow the fullback, then the guard. Stay tight to the blocks and do not bounce it outside.",
+      "rule": "Take the handoff going downhill and aim at the outside hip of our tackle. Follow the fullback through the hole. Stay tight to the blocks and do not bounce it outside.",
       "type": "run",
       "path": [
         [
@@ -89,7 +88,7 @@
     "This is the most physical run in the book, mirrored. If it works going right, it works going left — the blocking is identical, just flipped.",
     "The Z is used to lining up on the right. Make sure he actually moves before the snap on this call and does not just run the block from where he always stands.",
     "Drill the Z's kick-out on its own, same as the other direction. If he blocks the end with his shoulders square, the end slides underneath and makes the tackle for a loss — he has to attack the outside hip.",
-    "The pulling guard is late by design, same as the other direction. Tell him his man is the one who shows up in the hole, not a man he picks before the snap.",
+    "The fullback's man is whoever shows in the hole, not one he picks before the snap. Same as the other direction.",
     "The tailback's most common mistake is bouncing it wide looking for green grass. The yards are inside the Z's block, same as Power Right. Make him run it tight in practice until it is automatic."
   ],
   "z": "left"

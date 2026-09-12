@@ -7,7 +7,7 @@
   "type": "run",
   "direction": "right",
   "ball_carrier": "TB",
-  "purpose": "Our best downhill run. The line blocks down inside, the Z leads out of the backfield to kick the playside end, and the backside guard pulls through the hole in front of the tailback — two blockers in the same gap before the linebackers read it.",
+  "purpose": "Our best downhill run. The line blocks down inside, the Z leads out of the backfield to kick the playside end, and the fullback leads through the hole in front of the tailback. Three backs do the work and no lineman leaves his spot.",
   "assignments": {
     "LTE": {
       "block": "cutoff"
@@ -16,8 +16,7 @@
       "block": "down"
     },
     "LG": {
-      "block": "pull",
-      "to": "wrap"
+      "block": "cutoff"
     },
     "C": {
       "block": "reach"
@@ -39,29 +38,50 @@
       "rule": "Open to the right, hand it deep to the tailback, then carry out the boot fake to the edge. The fake is what keeps the backside end honest.",
       "type": "fake",
       "path": [
-        [1.2, -0.5],
-        [3.0, -1.2],
-        [4.6, -1.6]
+        [
+          1.2,
+          -0.5
+        ],
+        [
+          3.0,
+          -1.2
+        ],
+        [
+          4.6,
+          -1.6
+        ]
       ]
     },
     "FB": {
       "block": "lead"
     },
     "TB": {
-      "rule": "Take the handoff going downhill and aim at the outside hip of our tackle. Follow the fullback, then the guard. Stay tight to the blocks and do not bounce it outside.",
+      "rule": "Take the handoff going downhill and aim at the outside hip of our tackle. Follow the fullback through the hole. Stay tight to the blocks and do not bounce it outside.",
       "type": "run",
       "path": [
-        [1.2, 1.5],
-        [2.6, 3.6],
-        [3.4, 5.6],
-        [3.6, 8.0]
+        [
+          1.2,
+          1.5
+        ],
+        [
+          2.6,
+          3.6
+        ],
+        [
+          3.4,
+          5.6
+        ],
+        [
+          3.6,
+          8.0
+        ]
       ]
     }
   },
   "coaching_points": [
     "This is the play the Power I is built for. If it works you can run it a dozen times, and at this age you often can.",
     "The Z leads from the backfield, so he arrives fast but with a tight angle. He must leave on the snap and attack the end's outside hip, or the end slides under him and makes the tackle for a loss.",
-    "The pulling guard is late by design. His man is whoever shows in the hole, not a man he picks before the snap.",
+    "The fullback's man is whoever shows in the hole, not one he picks before the snap.",
     "The tailback's worst habit is bouncing it wide for green grass. The yards are inside the Z's kick-out — drill it tight until it is automatic.",
     "If they walk a linebacker over to the Z side, come back with Counter the next play."
   ]

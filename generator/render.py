@@ -775,7 +775,14 @@ def validate(formations: list[dict], defenses: dict) -> list[str]:
             # on it, which is worse than no card.
             for pos, spec in (play.get("assignments") or {}).items():
                 if "block" in spec:
-                    if spec["block"] not in blocking.VERBS:
+                    if spec["block"] == "pull":
+                        errors.append(
+                            f"{pid}: {pos} pulls. Nobody pulls in this book — a puller "
+                            "is a half-count late and the hole he left is the hole the "
+                            "play wanted. The playside end kicks out, a back leads, the "
+                            "backside guard cuts off."
+                        )
+                    elif spec["block"] not in blocking.VERBS:
                         errors.append(
                             f"{pid}: {pos} has unknown blocking verb "
                             f"'{spec['block']}' — the verbs are "

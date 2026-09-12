@@ -8,9 +8,12 @@
   "direction": "left",
   "ball_carrier": "TB",
   "alignment": {
-    "Z": [-2.6, -3.3]
+    "Z": [
+      -2.6,
+      -3.3
+    ]
   },
-  "purpose": "Two lead blockers around the corner. The Z and the pulling guard get outside in front of the tailback, and a defense that has been squeezing the off-tackle hole all game has nobody left on the edge.",
+  "purpose": "Two lead blockers around the corner. The Z and the fullback get outside in front of the tailback, and a defense that has been squeezing the off-tackle hole all game has nobody left on the edge.",
   "assignments": {
     "LTE": {
       "block": "base",
@@ -20,8 +23,8 @@
       "block": "down"
     },
     "LG": {
-      "block": "pull",
-      "to": "edge"
+      "block": "double",
+      "target": "middle"
     },
     "C": {
       "block": "reach"
@@ -43,8 +46,14 @@
       "rule": "Open left and get the ball to the tailback deep and early, then carry out a fake up the middle. Do not float it — put it in his hands while he is still gaining width.",
       "type": "fake",
       "path": [
-        [-1.0, -0.6],
-        [-2.4, -1.0]
+        [
+          -1.0,
+          -0.6
+        ],
+        [
+          -2.4,
+          -1.0
+        ]
       ]
     },
     "FB": {
@@ -55,11 +64,26 @@
       "rule": "Take the ball and get width first. Stay behind the offset back until you are outside our end, then turn up hard. Turning up too early is the only way this play loses yards.",
       "type": "run",
       "path": [
-        [-1.8, 0.2],
-        [-5.0, 0.8],
-        [-7.6, 2.6],
-        [-8.4, 5.2],
-        [-8.8, 7.6]
+        [
+          -1.8,
+          0.2
+        ],
+        [
+          -5.0,
+          0.8
+        ],
+        [
+          -7.6,
+          2.6
+        ],
+        [
+          -8.4,
+          5.2
+        ],
+        [
+          -8.8,
+          7.6
+        ]
       ]
     }
   },
@@ -67,6 +91,6 @@
     "Best call on the hash going to the wide side of the field. Do not call it into the boundary.",
     "The Z is already behind the line and moving, so he gets to the corner faster than he would from a tight alignment on the edge — that head start is the whole point of running it from the backfield.",
     "The carrier must not turn up until he is outside our end. Eight-year-olds cut upfield the moment they see grass and run into the tackle the play was built to beat.",
-    "If their corner flies up to meet the pull every time, come back inside with Power Left."
+    "If their corner flies up to meet the Z every time, come back inside with Power Left."
   ]
 }

@@ -7,7 +7,7 @@
   "type": "run",
   "direction": "right",
   "ball_carrier": "TB",
-  "purpose": "Our best downhill run. Everybody blocks down inside, the Z kicks the end out, and the backside guard pulls through the hole in front of the tailback. Two blockers arrive in the same gap before the linebackers do.",
+  "purpose": "Our best downhill run. Everybody blocks down inside, the Z kicks the end out, and the fullback leads through the hole in front of the tailback. Nobody leaves his spot — every block on the card is made by the kid already standing there.",
   "assignments": {
     "LTE": {
       "block": "cutoff"
@@ -16,8 +16,7 @@
       "block": "down"
     },
     "LG": {
-      "block": "pull",
-      "to": "wrap"
+      "block": "cutoff"
     },
     "C": {
       "block": "reach"
@@ -57,7 +56,7 @@
       "block": "lead"
     },
     "TB": {
-      "rule": "Take the handoff going downhill and aim at the outside hip of our tackle. Follow the fullback, then the guard. Stay tight to the blocks and do not bounce it outside.",
+      "rule": "Take the handoff going downhill and aim at the outside hip of our tackle. Follow the fullback through the hole. Stay tight to the blocks and do not bounce it outside.",
       "type": "run",
       "path": [
         [
@@ -82,7 +81,7 @@
   "coaching_points": [
     "This is the most physical run in the book. If it works you can run it fifteen times, and at this age you often can.",
     "Drill the Z's kick-out on its own. If he blocks the end with his shoulders square, the end slides underneath and makes the tackle for a loss — he has to attack the outside hip.",
-    "The pulling guard is late by design. Tell him his man is the one who shows up in the hole, not a man he picks before the snap.",
+    "The fullback's man is whoever shows in the hole, not a man he picks before the snap. Tell him that every time.",
     "The tailback's most common mistake is bouncing it wide looking for green grass. The yards are inside the Z's block. Make him run it tight in practice until it is automatic."
   ],
   "z": "right"

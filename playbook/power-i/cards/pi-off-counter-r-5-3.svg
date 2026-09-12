@@ -38,16 +38,16 @@
 <line x1="239.5" y1="292.1" x2="257.3" y2="296.5" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 <path d="M275.4,337.5 L279.4,294.3" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
 <line x1="270.3" y1="293.4" x2="288.6" y2="295.2" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
-<path d="M313.2,337.5 L332.1,386.1 L450.9,386.1 L442.8,302.4" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-<line x1="433.7" y1="303.3" x2="451.9" y2="301.5" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
+<path d="M313.2,337.5 L291.3,318.6 L272.7,251.1" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="263.9" y1="253.5" x2="281.5" y2="248.7" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 <path d="M351.0,337.5 L363.1,294.3" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
 <line x1="354.3" y1="291.8" x2="372.0" y2="296.8" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 <path d="M388.8,337.5 L351.0,294.3 L351.0,253.8" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
 <line x1="341.8" y1="253.8" x2="360.2" y2="253.8" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 <path d="M426.6,337.5 L422.6,294.3" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
 <line x1="413.4" y1="295.2" x2="431.7" y2="293.4" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
-<path d="M464.4,337.5 L442.8,251.1" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-<line x1="433.9" y1="253.3" x2="451.7" y2="248.9" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
+<path d="M464.4,337.5 L483.3,292.9" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="474.8" y1="289.4" x2="491.8" y2="296.5" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 <path d="M280.8,413.1 L243.0,353.7 L216.0,321.3 L199.8,288.9" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 5"/>
 <polygon points="199.8,288.9 208.6,296.1 200.3,300.2" fill="#14213d"/>
 <path d="M351.0,364.5 L324.0,378.0 L361.8,386.1 L394.2,380.7" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 5"/>
@@ -82,69 +82,61 @@
 <line x1="18" y1="540" x2="576" y2="540" stroke="#c8cdd6" stroke-width="1"/>
 <text x="18" y="560" font-size="11" font-weight="700" fill="#5b6472" letter-spacing="1">ASSIGNMENTS</text>
 <text x="18" y="578" font-size="12" font-weight="700" fill="#111318">LTE</text>
-<text x="52" y="578" font-size="12" fill="#111318">The end is head up on you. Cut him</text>
-<text x="52" y="596" font-size="12" fill="#111318">off from the play — get your body</text>
-<text x="52" y="612" font-size="12" fill="#111318">between him and the ball. You are the</text>
-<text x="52" y="630" font-size="12" fill="#111318">last one to it, so never quit on it.</text>
-<text x="18" y="646" font-size="12" font-weight="700" fill="#111318">LT</text>
-<text x="52" y="646" font-size="12" fill="#111318">Block down on the tackle — he is on</text>
-<text x="52" y="664" font-size="12" fill="#111318">your inside shoulder. Get your head</text>
-<text x="52" y="680" font-size="12" fill="#111318">across him; nobody crosses your face.</text>
-<text x="18" y="698" font-size="12" font-weight="700" fill="#111318">LG</text>
-<text x="52" y="698" font-size="12" fill="#111318">PULL RIGHT. Stay flat behind the line</text>
-<text x="52" y="714" font-size="12" fill="#111318">and kick the end out — aim at his</text>
-<text x="52" y="732" font-size="12" fill="#111318">outside hip. The ball runs inside</text>
-<text x="52" y="748" font-size="12" fill="#111318">your block.</text>
-<text x="18" y="766" font-size="12" font-weight="700" fill="#111318">C</text>
-<text x="52" y="766" font-size="12" fill="#111318">Reach the nose to your right. Get</text>
-<text x="52" y="782" font-size="12" fill="#111318">your head across that shoulder so he</text>
-<text x="52" y="800" font-size="12" fill="#111318">cannot run down the line after the</text>
-<text x="52" y="816" font-size="12" fill="#111318">ball.</text>
-<text x="18" y="834" font-size="12" font-weight="700" fill="#111318">RG</text>
-<text x="52" y="834" font-size="12" fill="#111318">Double the nose with the man beside</text>
-<text x="52" y="850" font-size="12" fill="#111318">you and drive him off the spot, then</text>
-<text x="52" y="868" font-size="12" fill="#111318">come off onto the middle linebacker</text>
-<text x="52" y="884" font-size="12" fill="#111318">when he shows.</text>
-<text x="18" y="902" font-size="12" font-weight="700" fill="#111318">RT</text>
-<text x="52" y="902" font-size="12" fill="#111318">Block down on the tackle — he is on</text>
-<text x="52" y="918" font-size="12" fill="#111318">your inside shoulder. Get your head</text>
-<text x="52" y="936" font-size="12" fill="#111318">across him; nobody crosses your face.</text>
+<text x="52" y="578" font-size="12" fill="#111318">End head up on you. Cut him off — get</text>
+<text x="52" y="596" font-size="12" fill="#111318">between him and the ball.</text>
+<text x="18" y="612" font-size="12" font-weight="700" fill="#111318">LT</text>
+<text x="52" y="612" font-size="12" fill="#111318">Block down on the tackle, inside</text>
+<text x="52" y="630" font-size="12" fill="#111318">shoulder. Head across him — nobody</text>
+<text x="52" y="646" font-size="12" fill="#111318">crosses your face.</text>
+<text x="18" y="664" font-size="12" font-weight="700" fill="#111318">LG</text>
+<text x="52" y="664" font-size="12" fill="#111318">Nobody on you. Cut off the backside.</text>
+<text x="52" y="680" font-size="12" fill="#111318">Never quit on the play.</text>
+<text x="18" y="698" font-size="12" font-weight="700" fill="#111318">C</text>
+<text x="52" y="698" font-size="12" fill="#111318">Reach the nose to your right. Head</text>
+<text x="52" y="714" font-size="12" fill="#111318">across his playside shoulder.</text>
+<text x="18" y="732" font-size="12" font-weight="700" fill="#111318">RG</text>
+<text x="52" y="732" font-size="12" fill="#111318">Nobody on you. Help on the nose, then</text>
+<text x="52" y="748" font-size="12" fill="#111318">take the middle linebacker.</text>
+<text x="18" y="766" font-size="12" font-weight="700" fill="#111318">RT</text>
+<text x="52" y="766" font-size="12" fill="#111318">Block down on the tackle, inside</text>
+<text x="52" y="782" font-size="12" fill="#111318">shoulder. Head across him — nobody</text>
+<text x="52" y="800" font-size="12" fill="#111318">crosses your face.</text>
 <text x="297" y="578" font-size="12" font-weight="700" fill="#111318">RTE</text>
-<text x="331" y="578" font-size="12" fill="#111318">Leave the end alone — he is getting</text>
-<text x="331" y="596" font-size="12" fill="#111318">kicked out. Release past him and take</text>
-<text x="331" y="612" font-size="12" fill="#111318">the outside linebacker before he can</text>
-<text x="331" y="630" font-size="12" fill="#111318">fill.</text>
-<text x="297" y="646" font-size="12" font-weight="700" fill="#111318">Z</text>
-<text x="331" y="646" font-size="12" fill="#111318">Run your Power path to the left at</text>
-<text x="331" y="664" font-size="12" fill="#111318">full speed and block whatever shows.</text>
-<text x="331" y="680" font-size="12" fill="#111318">You never get the ball on this play</text>
-<text x="331" y="698" font-size="12" fill="#111318">and you are the reason it works.</text>
-<text x="297" y="714" font-size="12" font-weight="700" fill="#111318">QB</text>
-<text x="331" y="714" font-size="12" fill="#111318">Take the snap, fake the handoff to</text>
-<text x="331" y="732" font-size="12" fill="#111318">the left with both hands, then turn</text>
-<text x="331" y="748" font-size="12" fill="#111318">back and hand to the tailback. The</text>
-<text x="331" y="766" font-size="12" fill="#111318">fake comes first — the handoff is</text>
-<text x="331" y="782" font-size="12" fill="#111318">late on purpose.</text>
-<text x="297" y="800" font-size="12" font-weight="700" fill="#111318">FB</text>
-<text x="331" y="800" font-size="12" fill="#111318">Lead through the hole and block the</text>
-<text x="331" y="816" font-size="12" fill="#111318">first defender who shows in it. Get</text>
-<text x="331" y="834" font-size="12" fill="#111318">your head across him — do not wait</text>
-<text x="331" y="850" font-size="12" fill="#111318">for him to come to you. One false</text>
-<text x="331" y="868" font-size="12" fill="#111318">step away from the hole first — one</text>
-<text x="331" y="884" font-size="12" fill="#111318">step of the lie, then do your job.</text>
-<text x="297" y="902" font-size="12" font-weight="700" fill="#111318">TB</text>
-<text x="331" y="902" font-size="12" fill="#111318">Take two hard steps toward the offset</text>
-<text x="331" y="918" font-size="12" fill="#111318">back, then plant and come back behind</text>
-<text x="331" y="936" font-size="12" fill="#111318">the pulling guard. Those two steps</text>
-<text x="331" y="952" font-size="12" fill="#111318">are the entire play.</text>
-<line x1="18" y1="960" x2="576" y2="960" stroke="#c8cdd6" stroke-width="1"/>
-<text x="18" y="978" font-size="11" font-weight="700" fill="#5b6472" letter-spacing="1">COACHING POINTS</text>
-<text x="18" y="998" font-size="12" fill="#111318">Do not call this until Power Left has gone for real yards. Misdirection off a</text>
-<text x="18" y="1014" font-size="12" fill="#111318">play they do not fear is just a slower run.</text>
-<text x="18" y="1032" font-size="12" fill="#111318">The Z is the whole lie. He must run his Power lead path at Power speed and block</text>
-<text x="18" y="1048" font-size="12" fill="#111318">somebody at the end of it — if he coasts, their backside linebacker never leaves.</text>
-<text x="18" y="1066" font-size="12" fill="#111318">The tailback's counter steps must be full speed and full length. A shuffle fools</text>
-<text x="18" y="1082" font-size="12" fill="#111318">nobody.</text>
-<text x="18" y="1100" font-size="12" fill="#111318">The fullback's false step is one step, not two. Any more and he is late to the</text>
-<text x="18" y="1116" font-size="12" fill="#111318">hole.</text>
+<text x="331" y="578" font-size="12" fill="#111318">End head up on you. Drive him to the</text>
+<text x="331" y="596" font-size="12" fill="#111318">sideline. The ball goes inside you.</text>
+<text x="297" y="612" font-size="12" font-weight="700" fill="#111318">Z</text>
+<text x="331" y="612" font-size="12" fill="#111318">Run your Power path to the left at</text>
+<text x="331" y="630" font-size="12" fill="#111318">full speed and block whatever shows.</text>
+<text x="331" y="646" font-size="12" fill="#111318">You never get the ball on this play</text>
+<text x="331" y="664" font-size="12" fill="#111318">and you are the reason it works.</text>
+<text x="297" y="680" font-size="12" font-weight="700" fill="#111318">QB</text>
+<text x="331" y="680" font-size="12" fill="#111318">Take the snap, fake the handoff to</text>
+<text x="331" y="698" font-size="12" fill="#111318">the left with both hands, then turn</text>
+<text x="331" y="714" font-size="12" fill="#111318">back and hand to the tailback. The</text>
+<text x="331" y="732" font-size="12" fill="#111318">fake comes first — the handoff is</text>
+<text x="331" y="748" font-size="12" fill="#111318">late on purpose.</text>
+<text x="297" y="766" font-size="12" font-weight="700" fill="#111318">FB</text>
+<text x="331" y="766" font-size="12" fill="#111318">Lead through the hole. Block the</text>
+<text x="331" y="782" font-size="12" fill="#111318">first man who shows in it. One false</text>
+<text x="331" y="800" font-size="12" fill="#111318">step away from the hole, then do your</text>
+<text x="331" y="816" font-size="12" fill="#111318">job.</text>
+<text x="297" y="834" font-size="12" font-weight="700" fill="#111318">TB</text>
+<text x="331" y="834" font-size="12" fill="#111318">Take two hard steps toward the offset</text>
+<text x="331" y="850" font-size="12" fill="#111318">back, then plant and come back behind</text>
+<text x="331" y="868" font-size="12" fill="#111318">our tight end's block. Those two</text>
+<text x="331" y="884" font-size="12" fill="#111318">steps are the entire play.</text>
+<line x1="18" y1="892" x2="576" y2="892" stroke="#c8cdd6" stroke-width="1"/>
+<text x="18" y="910" font-size="11" font-weight="700" fill="#5b6472" letter-spacing="1">COACHING POINTS</text>
+<text x="18" y="930" font-size="12" fill="#111318">Do not call this until Power Left has gone for real yards. Misdirection off a</text>
+<text x="18" y="946" font-size="12" fill="#111318">play they do not fear is just a slower run.</text>
+<text x="18" y="964" font-size="12" fill="#111318">The Z is the whole lie. He must run his Power lead path at Power speed and block</text>
+<text x="18" y="980" font-size="12" fill="#111318">somebody at the end of it — if he coasts, their backside linebacker never leaves.</text>
+<text x="18" y="998" font-size="12" fill="#111318">The tailback's counter steps must be full speed and full length. A shuffle fools</text>
+<text x="18" y="1014" font-size="12" fill="#111318">nobody.</text>
+<text x="18" y="1032" font-size="12" fill="#111318">The fullback's false step is one step, not two. Any more and he is late to the</text>
+<text x="18" y="1048" font-size="12" fill="#111318">hole.</text>
+<text x="18" y="1066" font-size="12" fill="#111318">With nobody pulling, the tight end kicks the end out himself. Against a</text>
+<text x="18" y="1082" font-size="12" fill="#111318">four-linebacker front that leaves the outside linebacker free — the lead back</text>
+<text x="18" y="1100" font-size="12" fill="#111318">takes him if he fills, and if he keeps making the tackle, run Toss at him</text>
+<text x="18" y="1116" font-size="12" fill="#111318">instead.</text>
 </svg>

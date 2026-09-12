@@ -33,18 +33,7 @@
       "block": "cutoff"
     },
     "RG": {
-      "block": "decoy",
-      "sell": "PULL RIGHT and run the Power path to sell the fake. Take a linebacker with you.",
-      "path": [
-        [
-          1.4,
-          -0.7
-        ],
-        [
-          4.6,
-          0.4
-        ]
-      ]
+      "block": "cutoff"
     },
     "RT": {
       "block": "down"
@@ -69,7 +58,7 @@
     },
     "Z": {
       "block": "decoy",
-      "sell": "Show the power block for a step, then hinge back and protect the backside — nobody chases the quarterback from your side.",
+      "sell": "Show the power block a step, then hinge back. Nobody chases from your side.",
       "path": [
         [
           -2.0,
@@ -105,7 +94,7 @@
     },
     "FB": {
       "block": "decoy",
-      "sell": "Run your Power lead path to the right and block whoever shows, then look back for anyone chasing the quarterback.",
+      "sell": "Run your Power lead path right, then look back for anyone chasing him.",
       "path": [
         [
           1.6,

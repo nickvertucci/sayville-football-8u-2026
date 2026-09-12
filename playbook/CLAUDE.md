@@ -39,11 +39,12 @@ A player's `path` is a list of points **relative to that player's own alignment 
 so you never do field math. This:
 
 ```json
-"LG": {"rule": "Pull right, wrap", "type": "block", "path": [[0.4, -1.2], [5.0, -1.0], [6.2, 1.5]]}
+"TB": {"rule": "Take the handoff and aim at our tackle's outside hip", "type": "run", "path": [[1.2, 1.5], [2.6, 3.6], [3.4, 5.6]]}
 ```
 
-means the left guard goes 0.4 right / 1.2 back, then 5.0 right / 1.0 back of where he
-started, then up to 5.0 right / 1.5 downfield.
+means the tailback goes 1.2 right / 1.5 downfield of where he started, then 2.6 right /
+3.6 downfield, and so on. Only ball carriers, fakes, routes and motion carry a path —
+a blocker's is derived from the front.
 
 ## Path types
 
@@ -158,7 +159,7 @@ A blocker's assignment is **a verb, not a sentence**:
 ```json
 "RT": { "block": "down" },
 "Z":  { "block": "kick" },
-"LG": { "block": "pull", "to": "wrap" },
+"FB": { "block": "lead" },
 "RTE": { "block": "release", "note": "You are the widest man we have — if he beats you outside, it is a touchdown." }
 ```
 
@@ -179,7 +180,6 @@ typing three versions of it — and it is why a blocker no longer has a `rule` o
 | `cutoff` | The backside. Nobody chases this from behind. | |
 | `kick` | Kick the edge defender out. The ball runs inside the block. | |
 | `lead` | Through the hole, first defender who shows — aimed at the **hole**, not at a man, because "whoever shows" is not somebody you can pick before the snap. | `target: force` only, which instead names the man outside our end |
-| `pull` | Leave and block somewhere else. | `to`: `wrap` (default), `kick`, `edge` |
 | `hinge` | Protect the side the quarterback ends up on. | |
 | `wedge` | Shoulder to shoulder and push. Nobody picks a man. | |
 | `screen` | Get in a defensive back's way and stay there. | |
@@ -201,6 +201,26 @@ other value rather than accepting one it would ignore.
 A player who starts more than a yard behind the line has nobody over him, so that clause
 is dropped for him automatically — but the verb is still a lineman's verb, and a back is
 almost always better served by `lead`, `kick`, `hinge` or `decoy`.
+
+### Nobody pulls
+
+There is no `pull` verb and there is not meant to be one. A pulling guard asks an
+eight-year-old to leave the only spot he has learned, run flat behind two bodies he
+cannot see over, and arrive somewhere before a linebacker does — and when he is a
+half-count late, which he is, the hole he vacated is the hole the play was going to.
+The build rejects one by name.
+
+Every job a puller used to do belongs to somebody who was already standing there: the
+**playside end kicks the end out** (`base` with `drive: out`), **a back leads through the
+hole** (`lead`), and the **backside guard cuts off** behind the play (`cutoff`).
+
+**A play-action pass must block exactly like the run it fakes.** Eight of them were
+selling a pulling guard after the runs stopped pulling, which is a fake advertising a
+play the defence has never been shown. If you change how a run blocks, change its boot
+and its waggle in the same commit.
+
+**Keep it to about fifteen words.** The verb writes a short sentence on purpose; a note
+that doubles it undoes the point. If the note restates the verb, delete it.
 
 **`note` is for the one thing this play adds** and nothing else. If the note restates
 what the verb already says, delete it. Most blockers need no note at all.

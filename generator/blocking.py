@@ -13,8 +13,8 @@ So a blocking assignment is now an *intent* — a verb out of a closed list, and
 a target and a play-specific note:
 
     "RT": { "block": "down" }
-    "Z":  { "block": "kick", "target": "end" }
-    "LG": { "block": "pull", "to": "wrap" }
+    "Z":  { "block": "kick" }
+    "FB": { "block": "lead" }
 
 and this module resolves that intent against an actual front to produce the sentence a
 kid reads and the line the diagram draws. Change the front and both change, because
@@ -26,11 +26,19 @@ the `note`.
 
     base    drive the man over you             kick    kick out the edge defender
     down    first defender on or inside you    lead    through the hole, first man who shows
-    reach   head across his playside shoulder  pull    leave and block somewhere else
+    reach   head across his playside shoulder  release leave the kicked man, take a backer
     double  two on one, then climb             screen  get in a defensive back's way
     climb   straight to a linebacker           wedge   shoulder to shoulder, push
     cutoff  nobody chases from behind          decoy   sell a fake
     hinge   protect the quarterback's back
+
+**Nobody pulls.** There is no verb for it and there is not meant to be. A pulling guard
+is the one block on a card that asks an eight-year-old to leave the only spot he has
+learned, run flat behind two bodies he cannot see over, and arrive somewhere before a
+linebacker does — and when he is a half-count late, which he is, the hole he vacated is
+the hole the play was going to. Every job a puller used to do now belongs to somebody
+who was already standing there: the playside end kicks the end out, a back leads through
+the hole, and the backside guard cuts off behind the play.
 """
 
 from __future__ import annotations
@@ -248,11 +256,15 @@ def deep_back(front: dict, x: float):
 # The first half is the part that changes with the front and the part a kid cannot see
 # from the huddle, so it goes first.
 
+# Clipped on purpose. This is the first thing on every line and it is the half the
+# player already half-knows, so it earns three words, not eight — "Nose head up on you",
+# not "The nose is head up on you." Across the book that is the difference between a
+# card you scan and a card you read.
 SHADE_CLAUSE = {
-    "over": "The {noun} is head up on you.",
-    "inside": "The {noun} is on your inside shoulder.",
-    "outside": "The {noun} is on your outside shoulder.",
-    "free": "Nobody is over you.",
+    "over": "{Noun} head up on you.",
+    "inside": "{Noun} on your inside shoulder.",
+    "outside": "{Noun} on your outside shoulder.",
+    "free": "Nobody on you.",
 }
 
 
@@ -275,7 +287,8 @@ def shade_clause(front, spot) -> tuple[str, tuple | None]:
     label, dx, dy, shade = covering(front, x)
     if shade == "free":
         return SHADE_CLAUSE["free"], None
-    return SHADE_CLAUSE[shade].format(noun=noun(front, label)), (label, dx, dy)
+    n = noun(front, label)
+    return SHADE_CLAUSE[shade].format(Noun=n[0].upper() + n[1:]), (label, dx, dy)
 
 
 def side_word(side: int) -> str:
@@ -304,15 +317,13 @@ def v_base(front, spot, side, intent):
     drive = intent.get("drive", "back")
     out_side = 1 if spot[0] >= 0 else -1
     if drive == "out":
-        text = (f"{clause} Drive him out toward the sideline. "
-                "The ball goes inside you — he cannot be the one who makes the tackle.")
+        text = f"{clause} Drive him to the sideline. The ball goes inside you."
         bias = 0.7 * out_side
     elif drive == "in":
-        text = (f"{clause} Turn him inside and wall him off. "
-                "The ball goes around behind you, so he cannot follow it out.")
+        text = f"{clause} Turn him inside. The ball goes around behind you."
         bias = -0.7 * out_side
     else:
-        text = f"{clause} Hands inside, pads under his, and drive him straight back."
+        text = f"{clause} Hands inside, pads under his, drive him back."
         bias = 0.0
     return text, to(spot, man, bias_x=bias, bias_y=0.35)
 
@@ -337,8 +348,7 @@ def v_release(front, spot, side, intent):
     if lb is None:
         return v_base(front, spot, side, dict(intent, drive="in"))
     who = noun(front, edge[0]) if edge else "man on the edge"
-    text = (f"Leave the {who} alone — he is getting kicked out. Release past him and "
-            f"take the {lb_noun(which)} before he can fill.")
+    text = f"Leave the {who} — he is kicked out. Go take the {lb_noun(which)}."
     return text, to(spot, lb, bias_x=0.2 * side, bias_y=-0.3)
 
 
@@ -348,10 +358,9 @@ def v_down(front, spot, side, intent):
     if man is None:
         return v_cutoff(front, spot, side, intent)
     n = noun(front, man[0])
-    where = ("he is head up on you" if abs(man[1] - spot[0]) <= HEAD_UP
-             else "he is on your inside shoulder")
-    text = (f"Block down on the {n} — {where}. "
-            "Get your head across him; nobody crosses your face.")
+    where = ("head up" if abs(man[1] - spot[0]) <= HEAD_UP else "inside shoulder")
+    text = (f"Block down on the {n}, {where}. "
+            "Head across him — nobody crosses your face.")
     inside = -1 if man[1] > spot[0] else 1
     return text, to(spot, man, bias_x=0.25 * inside, bias_y=0.3)
 
@@ -365,8 +374,7 @@ def v_reach(front, spot, side, intent):
     if man is None or abs(man[1] - spot[0]) > SHOULDER:
         return v_climb(front, spot, side, dict(intent, target="playside"))
     n = noun(front, man[0])
-    text = (f"Reach the {n} to your {side_word(side)}. Get your head across that "
-            "shoulder so he cannot run down the line after the ball.")
+    text = f"Reach the {n} to your {side_word(side)}. Head across his playside shoulder."
     return text, to(spot, man, bias_x=0.45 * side, bias_y=0.3)
 
 
@@ -389,10 +397,9 @@ def v_double(front, spot, side, intent):
     lb = linebacker(front, side, which)
     n = noun(front, man[0])
     if lb is None:
-        return (f"Double the {n} with the man beside you. Drive him off the spot — "
-                "the hole is right off his back."), to(spot, man, bias_y=0.4)
-    text = (f"Double the {n} with the man beside you and drive him off the spot, then "
-            f"come off onto the {lb_noun(which)} when he shows.")
+        return (f"Help on the {n} and drive him off the spot. The hole is off his "
+                "back."), to(spot, man, bias_y=0.4)
+    text = f"Nobody on you. Help on the {n}, then take the {lb_noun(which)}."
     return text, to(spot, man, bias_y=0.3) + to(spot, lb, bias_y=-0.4)
 
 
@@ -404,8 +411,7 @@ def v_climb(front, spot, side, intent):
         return v_cutoff(front, spot, side, intent)
     clause, man = shade_clause(front, spot)
     lead = clause if man is None else f"{clause} Step past him."
-    text = (f"{lead} Climb to the {lb_noun(which)} and get your head across him — he "
-            "is the man who makes this tackle if nobody gets to him.")
+    text = f"{lead} Climb to the {lb_noun(which)}. Head across him."
     return text, to(spot, lb, bias_x=0.3 * side, bias_y=-0.3)
 
 
@@ -413,16 +419,14 @@ def v_cutoff(front, spot, side, intent):
     """The backside. Nobody chases this down from behind."""
     clause, man = shade_clause(front, spot)
     if man is not None:
-        text = (f"{clause} Cut him off from the play — get your body between him and "
-                "the ball. You are the last one to it, so never quit on it.")
+        text = f"{clause} Cut him off — get between him and the ball."
         return text, to(spot, man, bias_x=0.4 * side, bias_y=0.3)
     # Aim at the man who actually chases it down. The first version drew a fixed
     # 1.8-yard stub from wherever the blocker stood, which is a reasonable line for a
     # guard and a meaningless one for a flanker seven yards wide — he was drawn taking
     # two steps infield and stopping.
     lb = linebacker(front, side, "backside")
-    text = ("Nobody is over you. Cut off the backside — take the man chasing it from "
-            "behind. Never quit on the play.")
+    text = "Nobody on you. Cut off the backside. Never quit on the play."
     if lb is None:
         return text, [[round(0.9 * side, 2), 0.7], [round(1.8 * side, 2), 1.6]], None
     return text, [[round(0.45 * (lb[1] - spot[0]), 2), round(0.2 - spot[1], 2)]] \
@@ -437,15 +441,14 @@ def v_hinge(front, spot, side, intent):
     trailing a bootleg — hinged right on a play going left, which is the one direction
     that does not protect the man the verb exists to protect.
     """
-    text = ("Hinge back and protect the outside. Nobody comes free past you — the "
-            "quarterback is alone back there.")
+    text = "Hinge back and protect the outside. Nobody gets past you."
     return text, [[round(0.5 * side, 2), -0.4], [round(1.4 * side, 2), -1.4]]
 
 
 def v_wedge(front, spot, side, intent):
     """Shoulder to shoulder and push. Nobody picks a man."""
-    text = ("Close down until your shoulder touches the man beside you, then push "
-            "straight ahead. Low pads, short steps, and never look for someone to block.")
+    text = ("Shoulder to shoulder with the man beside you, and push. Low pads — never "
+            "look for a man.")
     inside = -1 if spot[0] > 0 else (1 if spot[0] < 0 else 0)
     # Finish at the line, not a fixed step from wherever he started — a fullback three
     # yards deep was being drawn wedging to a yard behind the line and stopping there.
@@ -458,8 +461,8 @@ def v_kick(front, spot, side, intent):
     if man is None:
         return v_lead(front, spot, side, intent)
     n = noun(front, man[0])
-    text = (f"Kick the {n} out. Aim at his outside hip and drive him toward the "
-            "sideline. Everything runs inside of you, so never let him come underneath.")
+    text = (f"Kick the {n} out. Aim at his outside hip. Never let him come "
+            "underneath you.")
     # Finish INSIDE the man at his own depth: a kick-out that finishes outside him
     # draws the blocker running past, and the defender comes underneath.
     return text, to(spot, man, bias_x=-0.8 * side, bias_y=0.0)
@@ -494,86 +497,24 @@ def v_lead(front, spot, side, intent):
     if intent.get("target") == "force":
         man = force_defender(front, side)
         if man is not None:
-            text = (f"Lead outside our end and block the first defender out there — in "
-                    f"this front it is the {noun(front, man[0])}. Get your head across "
-                    "him; do not wait for him to come to you.")
+            text = (f"Lead outside our end. Block the first man out there — here it "
+                    f"is the {noun(front, man[0])}.")
             return text, through_hole(spot, man, side, bias_x=0.3 * side, bias_y=-0.5), man
     aim = intent.get("_hole")
     if aim is None:
         aim = 1.6 * side
-    text = ("Lead through the hole and block the first defender who shows in it. Get "
-            "your head across him — do not wait for him to come to you.")
+    text = "Lead through the hole. Block the first man who shows in it."
     return text, [[round(0.6 * (aim - spot[0]) + 0.2 * side, 2), round(0.4 - spot[1], 2)],
                   [round(aim - spot[0], 2), round(2.4 - spot[1], 2)]], None
-
-
-# How deep behind the line a puller runs. Not a coaching preference — a drawing one.
-# Our linemen sit at y = -0.5 and are drawn 0.44 yards square, so they fill the field
-# down to -0.94; the quarterback's circle spans -1.04 to -1.96 and the deepest back in
-# any of our formations starts at -3.3. That leaves one clear lane on the whole field,
-# and a pull drawn anywhere else runs visibly through somebody. The first version of
-# this ran at -1.4 and drew every puller straight across the quarterback's chest.
-PULL_LANE = -2.3
-
-
-def pull_path(spot, target, side, bias_x=0.0, bias_y=0.0):
-    """Get depth, run flat under the man, then turn up into him.
-
-    Three points, and the middle one is the whole technique: a puller drawn going
-    straight at his man from where he started is drawn running into the back of his own
-    centre. He gets depth, runs flat until he is under the block, and only then turns
-    up.
-    """
-    depth = round(PULL_LANE - spot[1], 2)
-    return [[round(0.7 * side, 2), depth],
-            [round(target[1] - spot[0] - 0.5 * side, 2), depth]] \
-        + to(spot, target, bias_x=bias_x, bias_y=bias_y)
-
-
-def v_pull(front, spot, side, intent):
-    """Leave your spot and block somewhere else. Three jobs, one verb."""
-    job = intent.get("to", "wrap")
-    if job == "kick":
-        man = edge_defender(front, side)
-        text = (f"PULL {side_word(side).upper()}. Stay flat behind the line and kick "
-                f"the {noun(front, man[0]) if man else 'end'} out — aim at his outside "
-                "hip. The ball runs inside your block.")
-        if man is None:
-            return text, [[round(0.7 * side, 2), -0.9], [round(4.2 * side, 2), 0.4]]
-        return text, pull_path(spot, man, side, bias_x=-0.8 * side, bias_y=0.0)
-    if job == "edge":
-        man = force_defender(front, side)
-        n = noun(front, man[0]) if man else "first man outside"
-        text = (f"PULL {side_word(side).upper()}. Stay flat, get outside our end and "
-                f"turn up. Block the first defender outside — in this front it is the "
-                f"{n}. You are the last blocker the carrier has.")
-        if man is None:
-            return text, [[round(0.7 * side, 2), -0.9], [round(6.0 * side, 2), 0.6],
-                          [round(6.6 * side, 2), 2.6]]
-        return text, pull_path(spot, man, side, bias_x=-0.4 * side, bias_y=-0.4)
-    # A wrapping puller blocks "the first wrong shirt", which is not a man he can pick
-    # before the snap — so he is drawn to the hole, not to somebody.
-    aim = intent.get("_hole")
-    if aim is None:
-        aim = 3.0 * side
-    text = (f"PULL {side_word(side).upper()}. Stay flat behind the line, turn up "
-            "through the hole and block the first wrong shirt you see. Do not go "
-            "around the pile — go through it.")
-    depth = round(PULL_LANE - spot[1], 2)
-    return text, [[round(0.7 * side, 2), depth],
-                  [round(aim - spot[0] - 0.3 * side, 2), depth],
-                  [round(aim - spot[0], 2), round(2.6 - spot[1], 2)]], None
 
 
 def v_screen(front, spot, side, intent):
     """Get in a defensive back's way and stay there."""
     man = deep_back(front, spot[0])
     if man is None:
-        return ("Run at the first defender outside and screen him away from the ball. "
-                "Get in his way and stay there."), [[round(1.2 * side, 2), 3.0]]
+        return ("Run at the first man outside and screen him off. Stay in his way."), [[round(1.2 * side, 2), 3.0]]
     n = noun(front, man[0])
-    text = (f"Run at the {n} on your side and screen him off. Get in his way and stay "
-            "there — do not go looking for a knockdown.")
+    text = f"Run at the {n} and screen him off. Stay in his way."
     return text, to(spot, man, bias_x=-0.9 * side, bias_y=-0.8)
 
 
@@ -588,7 +529,7 @@ def v_decoy(front, spot, side, intent):
 VERBS = {
     "base": v_base, "down": v_down, "reach": v_reach, "double": v_double,
     "climb": v_climb, "cutoff": v_cutoff, "hinge": v_hinge, "wedge": v_wedge,
-    "kick": v_kick, "lead": v_lead, "pull": v_pull, "screen": v_screen,
+    "kick": v_kick, "lead": v_lead, "screen": v_screen,
     "release": v_release, "decoy": v_decoy,
 }
 

@@ -31,18 +31,8 @@
       "block": "down"
     },
     "LG": {
-      "block": "decoy",
-      "sell": "PULL LEFT and run the Jet path to sell the sweep. Take a linebacker with you.",
-      "path": [
-        [
-          -1.4,
-          -0.7
-        ],
-        [
-          -4.6,
-          0.4
-        ]
-      ]
+      "block": "climb",
+      "target": "playside"
     },
     "C": {
       "block": "cutoff"
@@ -109,7 +99,7 @@
     },
     "FB": {
       "block": "decoy",
-      "sell": "Fill straight ahead like Wedge is coming, then block anyone chasing the quarterback from the inside.",
+      "sell": "Fill like Wedge is coming, then take anyone chasing from inside.",
       "path": [
         [
           0.4,
@@ -123,7 +113,7 @@
     },
     "TB": {
       "block": "decoy",
-      "sell": "Run the Power path to the right, then keep going and protect the outside. Anybody chasing the quarterback from behind is yours.",
+      "sell": "Run the Power path right, then protect the outside. Anyone chasing him is yours.",
       "path": [
         [
           1.4,
