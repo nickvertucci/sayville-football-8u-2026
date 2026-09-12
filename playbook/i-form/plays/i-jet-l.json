@@ -17,8 +17,8 @@
       "block": "down"
     },
     "LG": {
-      "block": "pull",
-      "to": "edge"
+      "block": "climb",
+      "target": "playside"
     },
     "C": {
       "block": "reach"
@@ -92,22 +92,8 @@
       ]
     },
     "TB": {
-      "rule": "Run the Power path to the right with your arms tucked like you have the ball. Sell it all the way — you are the reason nobody chases the Z.",
-      "type": "fake",
-      "path": [
-        [
-          1.2,
-          1.5
-        ],
-        [
-          2.6,
-          3.6
-        ],
-        [
-          3.4,
-          5.6
-        ]
-      ]
+      "block": "lead",
+      "target": "force"
     }
   },
   "coaching_points": [

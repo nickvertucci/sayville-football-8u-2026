@@ -20,7 +20,7 @@
     },
     "C": {
       "block": "wedge",
-      "note": "One yard is all we need and it comes from you."
+      "note": "One yard is all we need, and it comes from you."
     },
     "RG": {
       "block": "wedge"
@@ -61,11 +61,11 @@
     },
     "FB": {
       "block": "wedge",
-      "note": "Fire into the back of the pile and push. Both hands on whoever is in front of you."
+      "note": "Both hands on the man in front of you, and push."
     },
     "TB": {
       "block": "wedge",
-      "note": "Come downhill behind the fullback and push the pile. If the ball comes loose you are the closest man to it."
+      "note": "Push the pile. If the ball comes loose, you are closest to it."
     }
   },
   "coaching_points": [

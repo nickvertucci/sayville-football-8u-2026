@@ -7,7 +7,7 @@
   "type": "run",
   "direction": "right",
   "ball_carrier": "TB",
-  "purpose": "Off the tight end. Our end seals their end inside, the guard pulls and turns up outside him, and the fullback leads through the hole. This one hits just wide of the formation, not between the tackle and the end.",
+  "purpose": "Off the tight end. Our end seals their end inside and the fullback leads around him. This one hits just wide of the formation, not between the tackle and the end.",
   "assignments": {
     "LTE": {
       "block": "cutoff"
@@ -16,8 +16,7 @@
       "block": "down"
     },
     "LG": {
-      "block": "pull",
-      "to": "edge"
+      "block": "cutoff"
     },
     "C": {
       "block": "reach"
@@ -40,29 +39,48 @@
       "rule": "Reverse pivot, hand the ball to the tailback deep, then carry out the bootleg fake away from the play.",
       "type": "fake",
       "path": [
-        [-0.6, -0.6],
-        [-3.0, -0.3]
+        [
+          -0.6,
+          -0.6
+        ],
+        [
+          -3.0,
+          -0.3
+        ]
       ]
     },
     "FB": {
-      "block": "lead"
+      "block": "lead",
+      "target": "force"
     },
     "TB": {
       "rule": "Take the handoff and press outside our end. Turn up off the fullback's block — this hits outside the tight end, not inside him.",
       "type": "run",
       "path": [
-        [1.2, 2.2],
-        [4.2, 4.4],
-        [6.0, 6.6],
-        [6.2, 9.2]
+        [
+          1.2,
+          2.2
+        ],
+        [
+          4.2,
+          4.4
+        ],
+        [
+          6.0,
+          6.6
+        ],
+        [
+          6.2,
+          9.2
+        ]
       ]
     }
   },
   "coaching_points": [
     "Same down-block-and-kick-out rules as Split Power. If the kids know one they know both — say that out loud when you install it.",
     "The tailback starts deeper than a split back does, so the seal block has to hold a beat longer. Drill it on a count.",
-    "The pulling guard stays flat and tight to the line. Bellying back is what makes this play late.",
-    "If the pulling guard cannot get there in time, run I Iso instead — it needs no pullers."
+    "The fullback stays tight to our end's block. Bellying out wide is what makes this play late.",
+    "If the fullback cannot get outside in time, run I Iso instead — it hits straight ahead."
   ],
   "z": "right"
 }

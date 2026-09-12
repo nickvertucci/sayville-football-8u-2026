@@ -48,27 +48,27 @@ The base I with the Z off the line and into the backfield, offset beside the ful
 
 ![Power I Power Right](cards/pi-off-power-r-5-3.svg)
 
-Our best downhill run. The line blocks down inside, the Z leads out of the backfield to kick the playside end, and the backside guard pulls through the hole in front of the tailback — two blockers in the same gap before the linebackers read it.
+Our best downhill run. The line blocks down inside, the Z leads out of the backfield to kick the playside end, and the fullback leads through the hole in front of the tailback. Three backs do the work and no lineman leaves his spot.
 
 | Position | Assignment |
 |---|---|
-| **LTE** | The end is head up on you. Cut him off from the play — get your body between him and the ball. You are the last one to it, so never quit on it. |
-| **LT** | Block down on the tackle — he is on your inside shoulder. Get your head across him; nobody crosses your face. |
-| **LG** | PULL RIGHT. Stay flat behind the line, turn up through the hole and block the first wrong shirt you see. Do not go around the pile — go through it. |
-| **C** | Reach the nose to your right. Get your head across that shoulder so he cannot run down the line after the ball. |
-| **RG** | Double the nose with the man beside you and drive him off the spot, then come off onto the middle linebacker when he shows. |
-| **RT** | Block down on the tackle — he is on your inside shoulder. Get your head across him; nobody crosses your face. |
-| **RTE** | Leave the end alone — he is getting kicked out. Release past him and take the outside linebacker before he can fill. |
-| **Z** | Kick the end out. Aim at his outside hip and drive him toward the sideline. Everything runs inside of you, so never let him come underneath. |
+| **LTE** | End head up on you. Cut him off — get between him and the ball. |
+| **LT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
+| **LG** | Nobody on you. Cut off the backside. Never quit on the play. |
+| **C** | Reach the nose to your right. Head across his playside shoulder. |
+| **RG** | Nobody on you. Help on the nose, then take the middle linebacker. |
+| **RT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
+| **RTE** | Leave the end — he is kicked out. Go take the outside linebacker. |
+| **Z** | Kick the end out. Aim at his outside hip. Never let him come underneath you. |
 | **QB** | Open to the right, hand it deep to the tailback, then carry out the boot fake to the edge. The fake is what keeps the backside end honest. |
-| **FB** | Lead through the hole and block the first defender who shows in it. Get your head across him — do not wait for him to come to you. |
-| **TB** **(ball)** | Take the handoff going downhill and aim at the outside hip of our tackle. Follow the fullback, then the guard. Stay tight to the blocks and do not bounce it outside. |
+| **FB** | Lead through the hole. Block the first man who shows in it. |
+| **TB** **(ball)** | Take the handoff going downhill and aim at the outside hip of our tackle. Follow the fullback through the hole. Stay tight to the blocks and do not bounce it outside. |
 
 **Coaching points**
 
 - This is the play the Power I is built for. If it works you can run it a dozen times, and at this age you often can.
 - The Z leads from the backfield, so he arrives fast but with a tight angle. He must leave on the snap and attack the end's outside hip, or the end slides under him and makes the tackle for a loss.
-- The pulling guard is late by design. His man is whoever shows in the hole, not a man he picks before the snap.
+- The fullback's man is whoever shows in the hole, not one he picks before the snap.
 - The tailback's worst habit is bouncing it wide for green grass. The yards are inside the Z's kick-out — drill it tight until it is automatic.
 - If they walk a linebacker over to the Z side, come back with Counter the next play.
 
@@ -80,27 +80,27 @@ Our best downhill run. The line blocks down inside, the Z leads out of the backf
 
 ![Power I Power Left](cards/pi-off-power-l-5-3.svg)
 
-Power the other way. The line blocks down inside, the Z leads out of the backfield to kick the playside end, and the backside guard pulls through the hole in front of the tailback — two blockers in the same gap before the linebackers read it.
+Power the other way. The line blocks down inside, the Z leads out of the backfield to kick the playside end, and the fullback leads through the hole in front of the tailback. Three backs do the work and no lineman leaves his spot.
 
 | Position | Assignment |
 |---|---|
-| **LTE** | Leave the end alone — he is getting kicked out. Release past him and take the outside linebacker before he can fill. |
-| **LT** | Block down on the tackle — he is on your inside shoulder. Get your head across him; nobody crosses your face. |
-| **LG** | Double the nose with the man beside you and drive him off the spot, then come off onto the middle linebacker when he shows. |
-| **C** | Reach the nose to your left. Get your head across that shoulder so he cannot run down the line after the ball. |
-| **RG** | PULL LEFT. Stay flat behind the line, turn up through the hole and block the first wrong shirt you see. Do not go around the pile — go through it. |
-| **RT** | Block down on the tackle — he is on your inside shoulder. Get your head across him; nobody crosses your face. |
-| **RTE** | The end is head up on you. Cut him off from the play — get your body between him and the ball. You are the last one to it, so never quit on it. |
-| **Z** | Kick the end out. Aim at his outside hip and drive him toward the sideline. Everything runs inside of you, so never let him come underneath. |
+| **LTE** | Leave the end — he is kicked out. Go take the outside linebacker. |
+| **LT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
+| **LG** | Nobody on you. Help on the nose, then take the middle linebacker. |
+| **C** | Reach the nose to your left. Head across his playside shoulder. |
+| **RG** | Nobody on you. Cut off the backside. Never quit on the play. |
+| **RT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
+| **RTE** | End head up on you. Cut him off — get between him and the ball. |
+| **Z** | Kick the end out. Aim at his outside hip. Never let him come underneath you. |
 | **QB** | Open to the left, hand it deep to the tailback, then carry out the boot fake to the edge. The fake is what keeps the backside end honest. |
-| **FB** | Lead through the hole and block the first defender who shows in it. Get your head across him — do not wait for him to come to you. |
-| **TB** **(ball)** | Take the handoff going downhill and aim at the outside hip of our tackle. Follow the fullback, then the guard. Stay tight to the blocks and do not bounce it outside. |
+| **FB** | Lead through the hole. Block the first man who shows in it. |
+| **TB** **(ball)** | Take the handoff going downhill and aim at the outside hip of our tackle. Follow the fullback through the hole. Stay tight to the blocks and do not bounce it outside. |
 
 **Coaching points**
 
 - The mirror of Power Right — run it the same week so the defense cannot lean to the Z side.
 - The Z leads from the backfield, so he arrives fast but with a tight angle. He must leave on the snap and attack the end's outside hip, or the end slides under him.
-- The pulling guard is late by design. His man is whoever shows in the hole, not a man he picks before the snap.
+- The fullback's man is whoever shows in the hole, not one he picks before the snap.
 - The tailback's worst habit is bouncing it wide for green grass. The yards are inside the Z's kick-out — drill it tight until it is automatic.
 
 ---
@@ -111,21 +111,21 @@ Power the other way. The line blocks down inside, the Z leads out of the backfie
 
 ![Power I Counter Right](cards/pi-off-counter-r-5-3.svg)
 
-The Z runs his Power lead path to the side he is set to — the thing the defense has been punished for respecting — and the tailback takes two hard steps after him, then comes back off-tackle the other way behind a pulling guard.
+The Z runs his Power lead path to the side he is set to — the thing the defense has been punished for respecting — and the tailback takes two hard steps after him, then comes back off-tackle the other way behind the tight end's kick-out.
 
 | Position | Assignment |
 |---|---|
-| **LTE** | The end is head up on you. Cut him off from the play — get your body between him and the ball. You are the last one to it, so never quit on it. |
-| **LT** | Block down on the tackle — he is on your inside shoulder. Get your head across him; nobody crosses your face. |
-| **LG** | PULL RIGHT. Stay flat behind the line and kick the end out — aim at his outside hip. The ball runs inside your block. |
-| **C** | Reach the nose to your right. Get your head across that shoulder so he cannot run down the line after the ball. |
-| **RG** | Double the nose with the man beside you and drive him off the spot, then come off onto the middle linebacker when he shows. |
-| **RT** | Block down on the tackle — he is on your inside shoulder. Get your head across him; nobody crosses your face. |
-| **RTE** | Leave the end alone — he is getting kicked out. Release past him and take the outside linebacker before he can fill. |
+| **LTE** | End head up on you. Cut him off — get between him and the ball. |
+| **LT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
+| **LG** | Nobody on you. Cut off the backside. Never quit on the play. |
+| **C** | Reach the nose to your right. Head across his playside shoulder. |
+| **RG** | Nobody on you. Help on the nose, then take the middle linebacker. |
+| **RT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
+| **RTE** | End head up on you. Drive him to the sideline. The ball goes inside you. |
 | **Z** | Run your Power path to the left at full speed and block whatever shows. You never get the ball on this play and you are the reason it works. |
 | **QB** | Take the snap, fake the handoff to the left with both hands, then turn back and hand to the tailback. The fake comes first — the handoff is late on purpose. |
-| **FB** | Lead through the hole and block the first defender who shows in it. Get your head across him — do not wait for him to come to you. One false step away from the hole first — one step of the lie, then do your job. |
-| **TB** **(ball)** | Take two hard steps toward the offset back, then plant and come back behind the pulling guard. Those two steps are the entire play. |
+| **FB** | Lead through the hole. Block the first man who shows in it. One false step away from the hole, then do your job. |
+| **TB** **(ball)** | Take two hard steps toward the offset back, then plant and come back behind our tight end's block. Those two steps are the entire play. |
 
 **Coaching points**
 
@@ -133,6 +133,7 @@ The Z runs his Power lead path to the side he is set to — the thing the defens
 - The Z is the whole lie. He must run his Power lead path at Power speed and block somebody at the end of it — if he coasts, their backside linebacker never leaves.
 - The tailback's counter steps must be full speed and full length. A shuffle fools nobody.
 - The fullback's false step is one step, not two. Any more and he is late to the hole.
+- With nobody pulling, the tight end kicks the end out himself. Against a four-linebacker front that leaves the outside linebacker free — the lead back takes him if he fills, and if he keeps making the tackle, run Toss at him instead.
 
 ---
 
@@ -142,28 +143,29 @@ The Z runs his Power lead path to the side he is set to — the thing the defens
 
 ![Power I Counter Left](cards/pi-off-counter-l-5-3.svg)
 
-The Z runs his Power lead path to the side he is set to — the thing the defense has been punished for respecting — and the tailback takes two hard steps after him, then comes back off-tackle the other way behind a pulling guard.
+The Z runs his Power lead path to the side he is set to — the thing the defense has been punished for respecting — and the tailback takes two hard steps after him, then comes back off-tackle the other way behind the tight end's kick-out.
 
 | Position | Assignment |
 |---|---|
-| **LTE** | Leave the end alone — he is getting kicked out. Release past him and take the outside linebacker before he can fill. |
-| **LT** | Block down on the tackle — he is on your inside shoulder. Get your head across him; nobody crosses your face. |
-| **LG** | Double the nose with the man beside you and drive him off the spot, then come off onto the middle linebacker when he shows. |
-| **C** | Reach the nose to your left. Get your head across that shoulder so he cannot run down the line after the ball. |
-| **RG** | PULL LEFT. Stay flat behind the line and kick the end out — aim at his outside hip. The ball runs inside your block. |
-| **RT** | Block down on the tackle — he is on your inside shoulder. Get your head across him; nobody crosses your face. |
-| **RTE** | The end is head up on you. Cut him off from the play — get your body between him and the ball. You are the last one to it, so never quit on it. |
+| **LTE** | End head up on you. Drive him to the sideline. The ball goes inside you. |
+| **LT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
+| **LG** | Nobody on you. Help on the nose, then take the middle linebacker. |
+| **C** | Reach the nose to your left. Head across his playside shoulder. |
+| **RG** | Nobody on you. Cut off the backside. Never quit on the play. |
+| **RT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
+| **RTE** | End head up on you. Cut him off — get between him and the ball. |
 | **Z** | Run your Power path to the right at full speed and block whatever shows. You never get the ball on this play and you are the reason it works. |
 | **QB** | Take the snap, fake the handoff to the right with both hands, then turn back and hand to the tailback. The fake comes first — the handoff is late on purpose. |
-| **FB** | Lead through the hole and block the first defender who shows in it. Get your head across him — do not wait for him to come to you. One false step away from the hole first — one step of the lie, then do your job. |
-| **TB** **(ball)** | Take two hard steps toward the offset back, then plant and come back behind the pulling guard. Those two steps are the entire play. |
+| **FB** | Lead through the hole. Block the first man who shows in it. One false step away from the hole, then do your job. |
+| **TB** **(ball)** | Take two hard steps toward the offset back, then plant and come back behind our tight end's block. Those two steps are the entire play. |
 
 **Coaching points**
 
 - Do not call this until Power Right has gone for real yards. Misdirection off a play they do not fear is just a slower run.
 - The Z is the whole lie. He must run his Power lead path at Power speed and block somebody at the end of it — if he coasts, their backside linebacker never leaves.
 - The tailback's counter steps must be full speed and full length. A shuffle fools nobody.
-- The fullback's false step is one step, not two. Any more and he is late to the hole and the pulling guard is running alone.
+- The fullback's false step is one step, not two. Any more and he is late to the hole.
+- With nobody pulling, the tight end kicks the end out himself. Against a four-linebacker front that leaves the outside linebacker free — the lead back takes him if he fills, and if he keeps making the tackle, run Toss at him instead.
 
 ---
 
@@ -173,26 +175,26 @@ The Z runs his Power lead path to the side he is set to — the thing the defens
 
 ![Power I Z Power Right](cards/pi-z-power-r-5-3.svg)
 
-The wider mirror of Z Power Left. The Z is set to the left and takes it all the way around the right end behind three lead blockers — fullback, tailback and the pulling guard.
+The wider mirror of Z Power Left. The Z is set to the left and takes it all the way around the right end behind two lead blockers — the fullback outside our end and the tailback on the corner.
 
 | Position | Assignment |
 |---|---|
-| **LTE** | The end is head up on you. Cut him off from the play — get your body between him and the ball. You are the last one to it, so never quit on it. |
-| **LT** | Block down on the tackle — he is on your inside shoulder. Get your head across him; nobody crosses your face. |
-| **LG** | Nobody is over you. Cut off the backside — take the man chasing it from behind. Never quit on the play. |
-| **C** | Reach the nose to your right. Get your head across that shoulder so he cannot run down the line after the ball. |
-| **RG** | PULL RIGHT. Stay flat, get outside our end and turn up. Block the first defender outside — in this front it is the corner. You are the last blocker the carrier has. |
-| **RT** | Block down on the tackle — he is on your inside shoulder. Get your head across him; nobody crosses your face. |
-| **RTE** | The end is head up on you. Turn him inside and wall him off. The ball goes around behind you, so he cannot follow it out. |
+| **LTE** | End head up on you. Cut him off — get between him and the ball. |
+| **LT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
+| **LG** | Nobody on you. Cut off the backside. Never quit on the play. |
+| **C** | Reach the nose to your right. Head across his playside shoulder. |
+| **RG** | Nobody on you. Climb to the playside linebacker. Head across him. |
+| **RT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
+| **RTE** | End head up on you. Turn him inside. The ball goes around behind you. |
 | **Z** **(ball)** | Take the handoff and get width. Stay behind the fullback until you are outside our end, then turn up hard. Turning up too early is the only way this loses yards. |
 | **QB** | Open right and get the ball to the Z deep and early, then carry out a fake up the middle. |
-| **FB** | Lead outside our end and block the first defender out there — in this front it is the corner. Get your head across him; do not wait for him to come to you. |
-| **TB** | Run at the safety on your side and screen him off. Get in his way and stay there — do not go looking for a knockdown. |
+| **FB** | Lead outside our end. Block the first man out there — here it is the corner. |
+| **TB** | Run at the safety and screen him off. Stay in his way. |
 
 **Coaching points**
 
 - Do not call this until they are flying to the Z's side. His alignment is what makes it — if they are not honouring Power to him, run that first.
-- Three blockers lead it: the fullback, the tailback and the pulling guard all get outside in front of the Z. He stays behind them until he is past our end.
+- Two blockers lead it: the fullback takes the first man outside our end and the tailback takes the corner. The Z stays behind them until he is past our end.
 - The tailback does not need a particular man — find one and finish the block. One more hat at the point of attack is the whole idea.
 - The Z must not turn up until he is outside our end. Coming all the way from the far side, the temptation to cut it up early is strong — the yards are around the corner.
 
@@ -204,26 +206,26 @@ The wider mirror of Z Power Left. The Z is set to the left and takes it all the 
 
 ![Power I Z Power Left](cards/pi-z-power-l-5-3.svg)
 
-The Z's alignment says Power to his side; this goes the other way. He takes the ball back across behind the fullback's kick-out, the pulling guard and the tailback — three blockers clearing the way instead of one selling a fake.
+The Z's alignment says Power to his side; this goes the other way. He takes the ball back across behind the fullback's kick-out and the tailback's block on the corner — two blockers clearing the way instead of one selling a fake.
 
 | Position | Assignment |
 |---|---|
-| **LTE** | Leave the end alone — he is getting kicked out. Release past him and take the outside linebacker before he can fill. |
-| **LT** | Block down on the tackle — he is on your inside shoulder. Get your head across him; nobody crosses your face. |
-| **LG** | Double the nose with the man beside you and drive him off the spot, then come off onto the middle linebacker when he shows. |
-| **C** | Reach the nose to your left. Get your head across that shoulder so he cannot run down the line after the ball. |
-| **RG** | PULL LEFT. Stay flat behind the line, turn up through the hole and block the first wrong shirt you see. Do not go around the pile — go through it. |
-| **RT** | Block down on the tackle — he is on your inside shoulder. Get your head across him; nobody crosses your face. |
-| **RTE** | The end is head up on you. Cut him off from the play — get your body between him and the ball. You are the last one to it, so never quit on it. |
-| **Z** **(ball)** | Take the handoff going left and aim at the outside hip of our left tackle. Follow the fullback's kick-out, then the guard. Stay tight to the blocks — do not bounce it outside. |
+| **LTE** | Leave the end — he is kicked out. Go take the outside linebacker. |
+| **LT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
+| **LG** | Nobody on you. Help on the nose, then take the middle linebacker. |
+| **C** | Reach the nose to your left. Head across his playside shoulder. |
+| **RG** | Nobody on you. Cut off the backside. Never quit on the play. |
+| **RT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
+| **RTE** | End head up on you. Cut him off — get between him and the ball. |
+| **Z** **(ball)** | Take the handoff going left and aim at the outside hip of our left tackle. Follow the fullback's kick-out. Stay tight to the blocks — do not bounce it outside. |
 | **QB** | Open left and hand the ball deep to the Z as he crosses, then carry out a fake to the right edge. |
-| **FB** | Kick the end out. Aim at his outside hip and drive him toward the sideline. Everything runs inside of you, so never let him come underneath. |
-| **TB** | Run at the safety on your side and screen him off. Get in his way and stay there — do not go looking for a knockdown. |
+| **FB** | Kick the end out. Aim at his outside hip. Never let him come underneath you. |
+| **TB** | Run at the safety and screen him off. Stay in his way. |
 
 **Coaching points**
 
 - Do not call this until they are flying to the Z's side. His alignment is what makes it — if they are not honouring Power to him, run that first.
-- Three blockers lead it: the fullback kicks the end, the backside guard pulls up through the hole, and the tailback follows in behind them. The Z stays tight and does not bounce.
+- Two blockers lead it: the fullback kicks the end and the tailback takes the corner. The Z stays tight behind them and does not bounce.
 - The tailback does not need a particular man — find the safety if he shows, or just find work. One more blocker at the point of attack is the whole idea.
 - This is a patient run for the Z — he is coming from the far side, so the hole is a half-count later than it looks. Trust the blocks.
 
@@ -235,20 +237,20 @@ The Z's alignment says Power to his side; this goes the other way. He takes the 
 
 ![Power I Toss Right](cards/pi-off-toss-r-5-3.svg)
 
-Two lead blockers around the corner. The Z and the pulling guard get outside in front of the tailback, and a defense that has been squeezing the off-tackle hole all game has nobody left on the edge.
+Two lead blockers around the corner. The Z and the fullback get outside in front of the tailback, and a defense that has been squeezing the off-tackle hole all game has nobody left on the edge.
 
 | Position | Assignment |
 |---|---|
-| **LTE** | The end is head up on you. Cut him off from the play — get your body between him and the ball. You are the last one to it, so never quit on it. |
-| **LT** | Block down on the tackle — he is on your inside shoulder. Get your head across him; nobody crosses your face. |
-| **LG** | Nobody is over you. Cut off the backside — take the man chasing it from behind. Never quit on the play. |
-| **C** | Reach the nose to your right. Get your head across that shoulder so he cannot run down the line after the ball. |
-| **RG** | PULL RIGHT. Stay flat, get outside our end and turn up. Block the first defender outside — in this front it is the corner. You are the last blocker the carrier has. |
-| **RT** | Block down on the tackle — he is on your inside shoulder. Get your head across him; nobody crosses your face. |
-| **RTE** | The end is head up on you. Turn him inside and wall him off. The ball goes around behind you, so he cannot follow it out. |
-| **Z** | Lead outside our end and block the first defender out there — in this front it is the corner. Get your head across him; do not wait for him to come to you. |
+| **LTE** | End head up on you. Cut him off — get between him and the ball. |
+| **LT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
+| **LG** | Nobody on you. Cut off the backside. Never quit on the play. |
+| **C** | Reach the nose to your right. Head across his playside shoulder. |
+| **RG** | Nobody on you. Help on the nose, then take the middle linebacker. |
+| **RT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
+| **RTE** | End head up on you. Turn him inside. The ball goes around behind you. |
+| **Z** | Lead outside our end. Block the first man out there — here it is the corner. |
 | **QB** | Open right and get the ball to the tailback deep and early, then carry out a fake up the middle. Do not float it — put it in his hands while he is still gaining width. |
-| **FB** |  Climb to the playside linebacker and get your head across him — he is the man who makes this tackle if nobody gets to him. |
+| **FB** |  Climb to the playside linebacker. Head across him. |
 | **TB** **(ball)** | Take the ball and get width first. Stay behind the offset back until you are outside our end, then turn up hard. Turning up too early is the only way this play loses yards. |
 
 **Coaching points**
@@ -256,7 +258,7 @@ Two lead blockers around the corner. The Z and the pulling guard get outside in 
 - Best call on the hash going to the wide side of the field. Do not call it into the boundary.
 - The Z is already behind the line and moving, so he gets to the corner faster than he would from a tight alignment on the edge — that head start is the whole point of running it from the backfield.
 - The carrier must not turn up until he is outside our end. Eight-year-olds cut upfield the moment they see grass and run into the tackle the play was built to beat.
-- If their corner flies up to meet the pull every time, come back inside with Power Right.
+- If their corner flies up to meet the Z every time, come back inside with Power Right.
 
 ---
 
@@ -266,20 +268,20 @@ Two lead blockers around the corner. The Z and the pulling guard get outside in 
 
 ![Power I Toss Left](cards/pi-off-toss-l-5-3.svg)
 
-Two lead blockers around the corner. The Z and the pulling guard get outside in front of the tailback, and a defense that has been squeezing the off-tackle hole all game has nobody left on the edge.
+Two lead blockers around the corner. The Z and the fullback get outside in front of the tailback, and a defense that has been squeezing the off-tackle hole all game has nobody left on the edge.
 
 | Position | Assignment |
 |---|---|
-| **LTE** | The end is head up on you. Turn him inside and wall him off. The ball goes around behind you, so he cannot follow it out. |
-| **LT** | Block down on the tackle — he is on your inside shoulder. Get your head across him; nobody crosses your face. |
-| **LG** | PULL LEFT. Stay flat, get outside our end and turn up. Block the first defender outside — in this front it is the corner. You are the last blocker the carrier has. |
-| **C** | Reach the nose to your left. Get your head across that shoulder so he cannot run down the line after the ball. |
-| **RG** | Nobody is over you. Cut off the backside — take the man chasing it from behind. Never quit on the play. |
-| **RT** | Block down on the tackle — he is on your inside shoulder. Get your head across him; nobody crosses your face. |
-| **RTE** | The end is head up on you. Cut him off from the play — get your body between him and the ball. You are the last one to it, so never quit on it. |
-| **Z** | Lead outside our end and block the first defender out there — in this front it is the corner. Get your head across him; do not wait for him to come to you. |
+| **LTE** | End head up on you. Turn him inside. The ball goes around behind you. |
+| **LT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
+| **LG** | Nobody on you. Help on the nose, then take the middle linebacker. |
+| **C** | Reach the nose to your left. Head across his playside shoulder. |
+| **RG** | Nobody on you. Cut off the backside. Never quit on the play. |
+| **RT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
+| **RTE** | End head up on you. Cut him off — get between him and the ball. |
+| **Z** | Lead outside our end. Block the first man out there — here it is the corner. |
 | **QB** | Open left and get the ball to the tailback deep and early, then carry out a fake up the middle. Do not float it — put it in his hands while he is still gaining width. |
-| **FB** |  Climb to the playside linebacker and get your head across him — he is the man who makes this tackle if nobody gets to him. |
+| **FB** |  Climb to the playside linebacker. Head across him. |
 | **TB** **(ball)** | Take the ball and get width first. Stay behind the offset back until you are outside our end, then turn up hard. Turning up too early is the only way this play loses yards. |
 
 **Coaching points**
@@ -287,5 +289,5 @@ Two lead blockers around the corner. The Z and the pulling guard get outside in 
 - Best call on the hash going to the wide side of the field. Do not call it into the boundary.
 - The Z is already behind the line and moving, so he gets to the corner faster than he would from a tight alignment on the edge — that head start is the whole point of running it from the backfield.
 - The carrier must not turn up until he is outside our end. Eight-year-olds cut upfield the moment they see grass and run into the tackle the play was built to beat.
-- If their corner flies up to meet the pull every time, come back inside with Power Left.
+- If their corner flies up to meet the Z every time, come back inside with Power Left.
 

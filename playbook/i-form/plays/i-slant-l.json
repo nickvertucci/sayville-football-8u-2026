@@ -7,7 +7,7 @@
   "type": "run",
   "direction": "left",
   "ball_carrier": "TB",
-  "purpose": "Off the tight end. Our end seals their end inside, the guard pulls and turns up outside him, and the fullback leads. This one hits just wide of the formation, not between the tackle and the end.",
+  "purpose": "Off the tight end. Our end seals their end inside and the fullback leads around him. This one hits just wide of the formation, not between the tackle and the end.",
   "assignments": {
     "LTE": {
       "block": "base",
@@ -24,8 +24,7 @@
       "block": "reach"
     },
     "RG": {
-      "block": "pull",
-      "to": "edge"
+      "block": "cutoff"
     },
     "RT": {
       "block": "down"
@@ -51,7 +50,8 @@
       ]
     },
     "FB": {
-      "block": "lead"
+      "block": "lead",
+      "target": "force"
     },
     "TB": {
       "rule": "Take the handoff and press outside our end. Turn up off the fullback's block — this hits outside the tight end, not inside him.",

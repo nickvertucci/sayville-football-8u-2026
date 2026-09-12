@@ -23,8 +23,8 @@
       "block": "reach"
     },
     "RG": {
-      "block": "pull",
-      "to": "edge"
+      "block": "climb",
+      "target": "playside"
     },
     "RT": {
       "block": "down"
@@ -34,7 +34,7 @@
       "drive": "in"
     },
     "Z": {
-      "rule": "Jet in motion to the right on the coach's call, full speed, and take the pitch behind the pulling guard. Get around our end before you turn up — do not cut it inside.",
+      "rule": "Jet in motion to the right on the coach's call, full speed, and take the pitch behind the tailback. Get around our end before you turn up — do not cut it inside.",
       "type": "run",
       "path": [
         [
@@ -75,7 +75,7 @@
     },
     "FB": {
       "block": "decoy",
-      "sell": "Fill straight ahead like Wedge is coming, then block anyone chasing the Z from the inside.",
+      "sell": "Fill like Wedge is coming, then take anyone chasing from inside.",
       "path": [
         [
           0.4,
@@ -88,14 +88,15 @@
       ]
     },
     "TB": {
-      "block": "lead"
+      "block": "lead",
+      "target": "force"
     }
   },
   "coaching_points": [
     "This is the answer when their end starts chasing Jet Left flat down the line — the Z pitches off his own edge before the end can recover.",
     "Motion is legal in 11-man play, but only one man may be moving at the snap and he cannot be moving toward the line. Keep the Z flat.",
     "The pitch has to beat the Z to the corner. Get it to him deep and early so he never breaks stride.",
-    "The pulling guard is the carrier's last blocker. If the corner beats him outside, the play dies — drill the block on air.",
+    "The tailback is the carrier's last blocker. If the corner beats him outside, the play dies — drill the block on air.",
     "Do not install this until Jet Left is real. It only works because they have been punished for leaving with the motion."
   ],
   "z": "right"

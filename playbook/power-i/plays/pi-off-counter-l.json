@@ -7,10 +7,11 @@
   "type": "run",
   "direction": "left",
   "ball_carrier": "TB",
-  "purpose": "The Z runs his Power lead path to the side he is set to — the thing the defense has been punished for respecting — and the tailback takes two hard steps after him, then comes back off-tackle the other way behind a pulling guard.",
+  "purpose": "The Z runs his Power lead path to the side he is set to — the thing the defense has been punished for respecting — and the tailback takes two hard steps after him, then comes back off-tackle the other way behind the tight end's kick-out.",
   "assignments": {
     "LTE": {
-      "block": "release"
+      "block": "base",
+      "drive": "out"
     },
     "LT": {
       "block": "down"
@@ -23,8 +24,7 @@
       "block": "reach"
     },
     "RG": {
-      "block": "pull",
-      "to": "kick"
+      "block": "cutoff"
     },
     "RT": {
       "block": "down"
@@ -36,32 +36,62 @@
       "rule": "Run your Power path to the right at full speed and block whatever shows. You never get the ball on this play and you are the reason it works.",
       "type": "fake",
       "path": [
-        [1.4, 2.2],
-        [2.4, 3.4],
-        [3.0, 4.6]
+        [
+          1.4,
+          2.2
+        ],
+        [
+          2.4,
+          3.4
+        ],
+        [
+          3.0,
+          4.6
+        ]
       ]
     },
     "QB": {
       "rule": "Take the snap, fake the handoff to the right with both hands, then turn back and hand to the tailback. The fake comes first — the handoff is late on purpose.",
       "type": "fake",
       "path": [
-        [1.0, -0.5],
-        [-0.4, -0.8],
-        [-1.6, -0.6]
+        [
+          1.0,
+          -0.5
+        ],
+        [
+          -0.4,
+          -0.8
+        ],
+        [
+          -1.6,
+          -0.6
+        ]
       ]
     },
     "FB": {
       "block": "lead",
-      "note": "One false step away from the hole first — one step of the lie, then do your job."
+      "note": "One false step away from the hole, then do your job."
     },
     "TB": {
-      "rule": "Take two hard steps toward the offset back, then plant and come back behind the pulling guard. Those two steps are the entire play.",
+      "rule": "Take two hard steps toward the offset back, then plant and come back behind our tight end's block. Those two steps are the entire play.",
       "type": "run",
       "path": [
-        [1.0, 0.8],
-        [-1.4, 2.6],
-        [-3.6, 5.0],
-        [-4.0, 7.6]
+        [
+          1.0,
+          0.8
+        ],
+        [
+          -1.4,
+          2.6
+        ],
+        [
+          -3.6,
+          5.0
+        ],
+        [
+          -4.0,
+          7.6
+        ]
       ]
     }
   },
@@ -69,6 +99,7 @@
     "Do not call this until Power Right has gone for real yards. Misdirection off a play they do not fear is just a slower run.",
     "The Z is the whole lie. He must run his Power lead path at Power speed and block somebody at the end of it — if he coasts, their backside linebacker never leaves.",
     "The tailback's counter steps must be full speed and full length. A shuffle fools nobody.",
-    "The fullback's false step is one step, not two. Any more and he is late to the hole and the pulling guard is running alone."
+    "The fullback's false step is one step, not two. Any more and he is late to the hole.",
+    "With nobody pulling, the tight end kicks the end out himself. Against a four-linebacker front that leaves the outside linebacker free — the lead back takes him if he fills, and if he keeps making the tackle, run Toss at him instead."
   ]
 }

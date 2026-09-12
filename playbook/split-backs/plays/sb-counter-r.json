@@ -7,7 +7,7 @@
   "type": "run",
   "direction": "right",
   "ball_carrier": "LH",
-  "purpose": "Misdirection off the pitch. The near back and the quarterback sell the pitch one way and the far back plants and comes all the way back. Nobody pulls and nobody leads, so it hits faster than Power off the same blocks.",
+  "purpose": "Misdirection off the pitch. The near back and the quarterback sell the pitch one way and the far back plants and comes all the way back. Nobody leads, so it hits faster than Power off the same blocks.",
   "assignments": {
     "LTE": {
       "block": "cutoff"
@@ -35,7 +35,7 @@
     "Z": {
       "block": "climb",
       "target": "playside",
-      "note": "Leave like you are running a route so he never sees you coming, and do not go low."
+      "note": "Leave like it is a route so he never sees you. Not low."
     },
     "QB": {
       "rule": "Fake the pitch to the left, then turn back and hand the ball to the other back coming across. The fake comes first.",
@@ -94,10 +94,10 @@
   },
   "coaching_points": [
     "Do not call this until the pitch has been working. It is the counter-punch.",
-    "No pullers and no lead blocker, so this hits faster than Power off exactly the same line rules. The line has to hold its blocks while the ball carrier crosses.",
+    "No lead blocker at all, so this hits faster than Power off exactly the same line rules. The line has to hold its blocks while the ball carrier crosses.",
     "The Z's crack on the playside linebacker is what springs this one. Drill it on its own, and drill leaving flat and low-shouldered so it looks like a route until it is too late.",
     "Two hard steps toward the fake before he comes back. A shuffle fools nobody.",
     "Against a four-linebacker front there is an outside linebacker nobody blocks. The Z cracks the inside one, so it is the outside one who is free — if he keeps making the tackle, the answer is the Pitch, which gets outside him instead of running at him.",
-    "Nobody blocks outside our end on this one — no kick-out and no puller. Against a four-linebacker front their outside linebacker is free, so if they are playing four, go get the edge with Pitch or Keep instead."
+    "Nobody blocks outside our end on this one — no kick-out and nobody leading out there. Against a four-linebacker front their outside linebacker is free, so if they are playing four, go get the edge with Pitch or Keep instead."
   ]
 }

@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="594" height="1302" viewBox="0 0 594 1302" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" width="594" height="1184" viewBox="0 0 594 1184" font-family="Segoe UI, Helvetica, Arial, sans-serif">
 <rect width="100%" height="100%" fill="#ffffff"/>
 <rect x="0" y="0" width="594" height="58" fill="#14213d"/>
 <text x="18" y="26" font-size="19.0" font-weight="700" fill="#ffffff">House Power Right</text>
@@ -82,79 +82,65 @@
 <line x1="18" y1="540" x2="576" y2="540" stroke="#c8cdd6" stroke-width="1"/>
 <text x="18" y="560" font-size="11" font-weight="700" fill="#5b6472" letter-spacing="1">ASSIGNMENTS</text>
 <text x="18" y="578" font-size="12" font-weight="700" fill="#111318">LTE</text>
-<text x="52" y="578" font-size="12" fill="#111318">The end is on your inside shoulder.</text>
-<text x="52" y="596" font-size="12" fill="#111318">Cut him off from the play — get your</text>
-<text x="52" y="612" font-size="12" fill="#111318">body between him and the ball. You</text>
-<text x="52" y="630" font-size="12" fill="#111318">are the last one to it, so never quit</text>
-<text x="52" y="646" font-size="12" fill="#111318">on it.</text>
-<text x="18" y="664" font-size="12" font-weight="700" fill="#111318">LT</text>
-<text x="52" y="664" font-size="12" fill="#111318">Block down on the tackle — he is on</text>
-<text x="52" y="680" font-size="12" fill="#111318">your inside shoulder. Get your head</text>
-<text x="52" y="698" font-size="12" fill="#111318">across him; nobody crosses your face.</text>
-<text x="18" y="714" font-size="12" font-weight="700" fill="#111318">LG</text>
-<text x="52" y="714" font-size="12" fill="#111318">Block down on the tackle — he is head</text>
-<text x="52" y="732" font-size="12" fill="#111318">up on you. Get your head across him;</text>
-<text x="52" y="748" font-size="12" fill="#111318">nobody crosses your face.</text>
-<text x="18" y="766" font-size="12" font-weight="700" fill="#111318">C</text>
-<text x="52" y="766" font-size="12" fill="#111318">Nobody is over you. Climb to the</text>
-<text x="52" y="782" font-size="12" fill="#111318">playside linebacker and get your head</text>
-<text x="52" y="800" font-size="12" fill="#111318">across him — he is the man who makes</text>
-<text x="52" y="816" font-size="12" fill="#111318">this tackle if nobody gets to him.</text>
-<text x="18" y="834" font-size="12" font-weight="700" fill="#111318">RG</text>
-<text x="52" y="834" font-size="12" fill="#111318">The tackle is head up on you. Step</text>
-<text x="52" y="850" font-size="12" fill="#111318">past him. Climb to the middle</text>
-<text x="52" y="868" font-size="12" fill="#111318">linebacker and get your head across</text>
-<text x="52" y="884" font-size="12" fill="#111318">him — he is the man who makes this</text>
-<text x="52" y="902" font-size="12" fill="#111318">tackle if nobody gets to him.</text>
-<text x="18" y="918" font-size="12" font-weight="700" fill="#111318">RT</text>
-<text x="52" y="918" font-size="12" fill="#111318">Block down on the tackle — he is on</text>
-<text x="52" y="936" font-size="12" fill="#111318">your inside shoulder. Get your head</text>
-<text x="52" y="952" font-size="12" fill="#111318">across him; nobody crosses your face.</text>
+<text x="52" y="578" font-size="12" fill="#111318">End on your inside shoulder. Cut him</text>
+<text x="52" y="596" font-size="12" fill="#111318">off — get between him and the ball.</text>
+<text x="18" y="612" font-size="12" font-weight="700" fill="#111318">LT</text>
+<text x="52" y="612" font-size="12" fill="#111318">Block down on the tackle, inside</text>
+<text x="52" y="630" font-size="12" fill="#111318">shoulder. Head across him — nobody</text>
+<text x="52" y="646" font-size="12" fill="#111318">crosses your face.</text>
+<text x="18" y="664" font-size="12" font-weight="700" fill="#111318">LG</text>
+<text x="52" y="664" font-size="12" fill="#111318">Block down on the tackle, head up.</text>
+<text x="52" y="680" font-size="12" fill="#111318">Head across him — nobody crosses your</text>
+<text x="52" y="698" font-size="12" fill="#111318">face.</text>
+<text x="18" y="714" font-size="12" font-weight="700" fill="#111318">C</text>
+<text x="52" y="714" font-size="12" fill="#111318">Nobody on you. Climb to the playside</text>
+<text x="52" y="732" font-size="12" fill="#111318">linebacker. Head across him.</text>
+<text x="18" y="748" font-size="12" font-weight="700" fill="#111318">RG</text>
+<text x="52" y="748" font-size="12" fill="#111318">Tackle head up on you. Step past him.</text>
+<text x="52" y="766" font-size="12" fill="#111318">Climb to the middle linebacker. Head</text>
+<text x="52" y="782" font-size="12" fill="#111318">across him.</text>
+<text x="18" y="800" font-size="12" font-weight="700" fill="#111318">RT</text>
+<text x="52" y="800" font-size="12" fill="#111318">Block down on the tackle, inside</text>
+<text x="52" y="816" font-size="12" fill="#111318">shoulder. Head across him — nobody</text>
+<text x="52" y="834" font-size="12" fill="#111318">crosses your face.</text>
 <text x="297" y="578" font-size="12" font-weight="700" fill="#111318">RTE</text>
-<text x="331" y="578" font-size="12" fill="#111318">Leave the end alone — he is getting</text>
-<text x="331" y="596" font-size="12" fill="#111318">kicked out. Release past him and take</text>
-<text x="331" y="612" font-size="12" fill="#111318">the outside linebacker before he can</text>
-<text x="331" y="630" font-size="12" fill="#111318">fill.</text>
-<text x="297" y="646" font-size="12" font-weight="700" fill="#111318">Z</text>
-<text x="331" y="646" font-size="12" fill="#111318">Lead through the hole and block the</text>
-<text x="331" y="664" font-size="12" fill="#111318">first defender who shows in it. Get</text>
-<text x="331" y="680" font-size="12" fill="#111318">your head across him — do not wait</text>
-<text x="331" y="698" font-size="12" fill="#111318">for him to come to you. Cross behind</text>
-<text x="331" y="714" font-size="12" fill="#111318">the quarterback and go flat, not</text>
-<text x="331" y="732" font-size="12" fill="#111318">deep. You start on the backside and</text>
-<text x="331" y="748" font-size="12" fill="#111318">you cannot be late.</text>
-<text x="297" y="766" font-size="12" font-weight="700" fill="#111318">QB</text>
-<text x="331" y="766" font-size="12" fill="#111318">Open right, let the playside back</text>
-<text x="331" y="782" font-size="12" fill="#111318">clear, then hand it to the deep back</text>
-<text x="331" y="800" font-size="12" fill="#111318">as he comes past you. Carry out a</text>
-<text x="331" y="816" font-size="12" fill="#111318">fake to the edge afterwards.</text>
-<text x="297" y="834" font-size="12" font-weight="700" fill="#111318">FB</text>
-<text x="331" y="834" font-size="12" fill="#111318">Kick the end out. Aim at his outside</text>
-<text x="331" y="850" font-size="12" fill="#111318">hip and drive him toward the</text>
-<text x="331" y="868" font-size="12" fill="#111318">sideline. Everything runs inside of</text>
-<text x="331" y="884" font-size="12" fill="#111318">you, so never let him come</text>
-<text x="331" y="902" font-size="12" fill="#111318">underneath.</text>
-<text x="297" y="918" font-size="12" font-weight="700" fill="#111318">TB</text>
-<text x="331" y="918" font-size="12" fill="#111318">Take the handoff and aim at the</text>
-<text x="331" y="936" font-size="12" fill="#111318">outside hip of our tackle. Follow the</text>
-<text x="331" y="952" font-size="12" fill="#111318">lead back in and stay tight to his</text>
-<text x="331" y="970" font-size="12" fill="#111318">back. Do not bounce it outside — the</text>
-<text x="331" y="986" font-size="12" fill="#111318">yards are inside the kick-out.</text>
-<line x1="18" y1="994" x2="576" y2="994" stroke="#c8cdd6" stroke-width="1"/>
-<text x="18" y="1012" font-size="11" font-weight="700" fill="#5b6472" letter-spacing="1">COACHING POINTS</text>
-<text x="18" y="1032" font-size="12" fill="#111318">This is Power without a pulling guard. The playside back does the job the Z does</text>
-<text x="18" y="1048" font-size="12" fill="#111318">in the Power I, and he does it from three and a half yards deep standing right</text>
-<text x="18" y="1066" font-size="12" fill="#111318">beside the man he has to kick — which is easier, not harder.</text>
-<text x="18" y="1082" font-size="12" fill="#111318">Three backs, three jobs: kick out, lead, carry. The two over the guards are one</text>
-<text x="18" y="1100" font-size="12" fill="#111318">spot mirrored, so teach the jobs and both directions come free.</text>
-<text x="18" y="1116" font-size="12" fill="#111318">Drill the kick-out on its own. If he blocks the end with square shoulders the end</text>
-<text x="18" y="1134" font-size="12" fill="#111318">slides underneath and makes the tackle in the backfield — he has to attack the</text>
-<text x="18" y="1150" font-size="12" fill="#111318">outside hip.</text>
-<text x="18" y="1168" font-size="12" fill="#111318">The lead back has the longest trip on the play: he starts on the backside and has</text>
-<text x="18" y="1184" font-size="12" fill="#111318">to cross the whole backfield. He leaves on the snap and he goes flat, not deep.</text>
-<text x="18" y="1202" font-size="12" fill="#111318">If he is late, the carrier arrives at the hole alone.</text>
-<text x="18" y="1218" font-size="12" fill="#111318">The deep back carries because he starts behind both blocks and can see them</text>
-<text x="18" y="1236" font-size="12" fill="#111318">develop. Do not swap the jobs to get your best runner the ball sooner.</text>
-<text x="18" y="1252" font-size="12" fill="#111318">If they start jumping the kick-out, House Sweep Right is the same first three</text>
-<text x="18" y="1270" font-size="12" fill="#111318">steps.</text>
+<text x="331" y="578" font-size="12" fill="#111318">Leave the end — he is kicked out. Go</text>
+<text x="331" y="596" font-size="12" fill="#111318">take the outside linebacker.</text>
+<text x="297" y="612" font-size="12" font-weight="700" fill="#111318">Z</text>
+<text x="331" y="612" font-size="12" fill="#111318">Lead through the hole. Block the</text>
+<text x="331" y="630" font-size="12" fill="#111318">first man who shows in it. Cross</text>
+<text x="331" y="646" font-size="12" fill="#111318">behind the quarterback flat, not</text>
+<text x="331" y="664" font-size="12" fill="#111318">deep. You cannot be late.</text>
+<text x="297" y="680" font-size="12" font-weight="700" fill="#111318">QB</text>
+<text x="331" y="680" font-size="12" fill="#111318">Open right, let the playside back</text>
+<text x="331" y="698" font-size="12" fill="#111318">clear, then hand it to the deep back</text>
+<text x="331" y="714" font-size="12" fill="#111318">as he comes past you. Carry out a</text>
+<text x="331" y="732" font-size="12" fill="#111318">fake to the edge afterwards.</text>
+<text x="297" y="748" font-size="12" font-weight="700" fill="#111318">FB</text>
+<text x="331" y="748" font-size="12" fill="#111318">Kick the end out. Aim at his outside</text>
+<text x="331" y="766" font-size="12" fill="#111318">hip. Never let him come underneath</text>
+<text x="331" y="782" font-size="12" fill="#111318">you.</text>
+<text x="297" y="800" font-size="12" font-weight="700" fill="#111318">TB</text>
+<text x="331" y="800" font-size="12" fill="#111318">Take the handoff and aim at the</text>
+<text x="331" y="816" font-size="12" fill="#111318">outside hip of our tackle. Follow the</text>
+<text x="331" y="834" font-size="12" fill="#111318">lead back in and stay tight to his</text>
+<text x="331" y="850" font-size="12" fill="#111318">back. Do not bounce it outside — the</text>
+<text x="331" y="868" font-size="12" fill="#111318">yards are inside the kick-out.</text>
+<line x1="18" y1="874" x2="576" y2="874" stroke="#c8cdd6" stroke-width="1"/>
+<text x="18" y="892" font-size="11" font-weight="700" fill="#5b6472" letter-spacing="1">COACHING POINTS</text>
+<text x="18" y="912" font-size="12" fill="#111318">The playside back does the job the Z does in the Power I, and he does it from</text>
+<text x="18" y="930" font-size="12" fill="#111318">three and a half yards deep standing right beside the man he has to kick — which</text>
+<text x="18" y="946" font-size="12" fill="#111318">is easier, not harder.</text>
+<text x="18" y="964" font-size="12" fill="#111318">Three backs, three jobs: kick out, lead, carry. The two over the guards are one</text>
+<text x="18" y="980" font-size="12" fill="#111318">spot mirrored, so teach the jobs and both directions come free.</text>
+<text x="18" y="998" font-size="12" fill="#111318">Drill the kick-out on its own. If he blocks the end with square shoulders the end</text>
+<text x="18" y="1014" font-size="12" fill="#111318">slides underneath and makes the tackle in the backfield — he has to attack the</text>
+<text x="18" y="1032" font-size="12" fill="#111318">outside hip.</text>
+<text x="18" y="1048" font-size="12" fill="#111318">The lead back has the longest trip on the play: he starts on the backside and has</text>
+<text x="18" y="1066" font-size="12" fill="#111318">to cross the whole backfield. He leaves on the snap and he goes flat, not deep.</text>
+<text x="18" y="1082" font-size="12" fill="#111318">If he is late, the carrier arrives at the hole alone.</text>
+<text x="18" y="1100" font-size="12" fill="#111318">The deep back carries because he starts behind both blocks and can see them</text>
+<text x="18" y="1116" font-size="12" fill="#111318">develop. Do not swap the jobs to get your best runner the ball sooner.</text>
+<text x="18" y="1134" font-size="12" fill="#111318">If they start jumping the kick-out, House Sweep Right is the same first three</text>
+<text x="18" y="1150" font-size="12" fill="#111318">steps.</text>
 </svg>

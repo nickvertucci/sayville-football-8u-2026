@@ -7,7 +7,7 @@
   "type": "run",
   "direction": "left",
   "ball_carrier": "RH",
-  "purpose": "Off-tackle power to the far back, who crosses behind the quarterback and takes a deep handoff. Nobody pulls: our end drives their end out, the playside guard helps on the nose and comes off onto the middle linebacker, and the near back leads up through the hole.",
+  "purpose": "Off-tackle power to the far back, who crosses behind the quarterback and takes a deep handoff. Our end drives their end out, the playside guard helps on the nose and comes off onto the middle linebacker, and the near back leads up through the hole.",
   "assignments": {
     "RTE": {
       "block": "cutoff"
@@ -85,6 +85,6 @@
     "The carrier travels further than the blocker, and that is the point — he arrives behind the lead, not beside it.",
     "If the handoff is late, the quarterback is reaching. He holds the ball still and lets the back run through it.",
     "Against a four-linebacker front there is an outside linebacker nobody blocks. The near back has to take him if he fills, and if they keep winning there, the answer is the Pitch — it gets outside him instead of running at him.",
-    "Nobody blocks outside our end on this one — no kick-out and no puller. Against a four-linebacker front their outside linebacker is free, so if they are playing four, go get the edge with Pitch or Keep instead."
+    "Nobody blocks outside our end on this one — no kick-out and nobody leading out there. Against a four-linebacker front their outside linebacker is free, so if they are playing four, go get the edge with Pitch or Keep instead."
   ]
 }

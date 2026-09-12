@@ -429,6 +429,19 @@ that is a separate question; the 5-4-2 is not in our defensive book at all, beca
 nobody on this team is going to call it. Changing our base does not change what the
 offense is blocked against.
 
+### Nobody pulls
+
+No guard and no tackle leaves his spot. A pulling lineman is the one block on a card
+that asks an eight-year-old to abandon the only spot he has learned, run flat behind two
+bodies he cannot see over, and get somewhere before a linebacker does — and when he is a
+half-count late, the hole he left is the hole the play was going to. The seventeen pulls
+this book used to carry are gone, and the build rejects a new one by name.
+
+The work went to players who were already standing there: the playside end kicks the end
+out, a back leads through the hole, and the backside guard cuts off behind the play.
+Power is now a down block, a kick-out and one lead back, which is a thing you can teach
+in a practice.
+
 ### The card is computed, not typed
 
 A blocker's assignment in the JSON is a **verb**, not a sentence:
@@ -436,7 +449,7 @@ A blocker's assignment in the JSON is a **verb**, not a sentence:
 ```json
 "RT": { "block": "down" },
 "Z":  { "block": "kick" },
-"LG": { "block": "pull", "to": "wrap" }
+"FB": { "block": "lead" }
 ```
 
 `generator/blocking.py` resolves that verb against a front — working out who is head up

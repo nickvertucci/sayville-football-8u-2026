@@ -33,22 +33,8 @@
       "block": "cutoff"
     },
     "RG": {
-      "block": "decoy",
-      "sell": "PULL LEFT and run the Jet path to sell the sweep, then turn up and lead the quarterback. You are the lie and the last blocker both.",
-      "path": [
-        [
-          -1.4,
-          -0.7
-        ],
-        [
-          -4.6,
-          0.4
-        ],
-        [
-          -6.4,
-          2.2
-        ]
-      ]
+      "block": "climb",
+      "target": "playside"
     },
     "RT": {
       "block": "down"
@@ -113,7 +99,7 @@
     },
     "FB": {
       "block": "decoy",
-      "sell": "Fill straight ahead like Wedge is coming, then block anyone chasing the quarterback from the inside.",
+      "sell": "Fill like Wedge is coming, then take anyone chasing from inside.",
       "path": [
         [
           0.4,
@@ -127,7 +113,7 @@
     },
     "TB": {
       "block": "decoy",
-      "sell": "Run the Power path to the left, then protect the outside. Anybody chasing the quarterback from behind is yours.",
+      "sell": "Run the Power path left, then protect the outside. Anyone chasing him is yours.",
       "path": [
         [
           -1.4,

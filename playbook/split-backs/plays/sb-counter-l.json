@@ -7,7 +7,7 @@
   "type": "run",
   "direction": "left",
   "ball_carrier": "RH",
-  "purpose": "Misdirection off the pitch. The near back and the quarterback sell the pitch one way and the far back plants and comes all the way back. Nobody pulls and nobody leads, so it hits faster than Power off the same blocks.",
+  "purpose": "Misdirection off the pitch. The near back and the quarterback sell the pitch one way and the far back plants and comes all the way back. Nobody leads, so it hits faster than Power off the same blocks.",
   "assignments": {
     "RTE": {
       "block": "cutoff"
@@ -92,10 +92,10 @@
   },
   "coaching_points": [
     "Do not call this until the pitch has been working. It is the counter-punch.",
-    "No pullers and no lead blocker, so this hits faster than Power off exactly the same line rules. The line has to hold its blocks while the ball carrier crosses.",
+    "No lead blocker at all, so this hits faster than Power off exactly the same line rules. The line has to hold its blocks while the ball carrier crosses.",
     "There is no crack block on this side — the Z is on the other end of the formation. The playside guard's climb to the middle linebacker has to be on time or there is nobody else for him.",
     "Two hard steps toward the fake before he comes back. A shuffle fools nobody.",
     "The Z lines up on the right, so on this one he is cutting off the backside instead of cracking the playside linebacker the way he does on Counter Right. That linebacker is unblocked in every front — the near back's fake has to hold him for a count or this play is a two-yard gain.",
-    "Nobody blocks outside our end on this one — no kick-out and no puller. Against a four-linebacker front their outside linebacker is free, so if they are playing four, go get the edge with Pitch or Keep instead."
+    "Nobody blocks outside our end on this one — no kick-out and nobody leading out there. Against a four-linebacker front their outside linebacker is free, so if they are playing four, go get the edge with Pitch or Keep instead."
   ]
 }

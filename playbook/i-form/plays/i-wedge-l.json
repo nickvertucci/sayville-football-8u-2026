@@ -20,7 +20,7 @@
     },
     "C": {
       "block": "wedge",
-      "note": "You are the tip of the wedge — everybody else comes to you. Fire off the snap with your pads under whoever is on you."
+      "note": "You are the tip of the wedge — everybody comes to you."
     },
     "RG": {
       "block": "wedge"
@@ -33,26 +33,38 @@
     },
     "Z": {
       "block": "wedge",
-      "note": "Tuck in tight behind the end. Nobody comes around the outside into the back of the wedge."
+      "note": "Tuck in behind the end. Nobody gets into the back of the wedge."
     },
     "QB": {
       "rule": "Snap, hand it to the tailback left now, and stay out of his way. Do not ride the handoff — he is already moving.",
       "type": "fake",
       "path": [
-        [-0.5, -0.7]
+        [
+          -0.5,
+          -0.7
+        ]
       ]
     },
     "FB": {
       "block": "wedge",
-      "note": "Get in behind the wedge with both hands on the tailback's back and drive your legs. You are pushing him, not blocking anybody."
+      "note": "Both hands on the tailback's back and drive. You are pushing, not blocking."
     },
     "TB": {
       "rule": "Put a hand on the center's back, get your pads low, and follow the wedge. Do not cut, do not bounce, do not look for a hole — the hole moves with you.",
       "type": "run",
       "path": [
-        [-0.2, 2.0],
-        [-0.4, 4.5],
-        [-0.5, 6.5]
+        [
+          -0.2,
+          2.0
+        ],
+        [
+          -0.4,
+          4.5
+        ],
+        [
+          -0.5,
+          6.5
+        ]
       ]
     }
   },

@@ -22,22 +22,7 @@
       "block": "cutoff"
     },
     "RG": {
-      "block": "decoy",
-      "sell": "PULL LEFT and run the dive path to sell the fake. Take a linebacker with you.",
-      "path": [
-        [
-          -0.7,
-          -1.0
-        ],
-        [
-          -3.6,
-          -0.8
-        ],
-        [
-          -4.6,
-          0.6
-        ]
-      ]
+      "block": "cutoff"
     },
     "RT": {
       "block": "hinge"
@@ -112,7 +97,7 @@
     },
     "TB": {
       "block": "decoy",
-      "sell": "Come around behind the quarterback and protect his outside. Anybody chasing him from behind is yours.",
+      "sell": "Come behind the quarterback and protect his outside. Anyone chasing him is yours.",
       "path": [
         [
           2.0,

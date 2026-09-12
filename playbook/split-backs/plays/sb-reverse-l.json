@@ -31,7 +31,7 @@
     },
     "RTE": {
       "block": "cutoff",
-      "note": "This one takes a long time to get there, and he is the one man quick enough to catch it from behind."
+      "note": "This one takes a long time, and he is quick enough to catch it."
     },
     "QB": {
       "rule": "Start the Keep right — same first three steps, same ball on the hip — then pitch it back underneath to the split man crossing your face. Pitch it back, never forward, then keep running the Keep as if you still have it.",
@@ -61,7 +61,7 @@
     },
     "RH": {
       "block": "decoy",
-      "sell": "Run your Keep block exactly the way you always run it. You are blocking for a quarterback who does not have the ball, and the moment you do it at half speed this play stops working forever.",
+      "sell": "Run your Keep block exactly as always. At half speed, this play dies for good.",
       "path": [
         [
           1.6,
