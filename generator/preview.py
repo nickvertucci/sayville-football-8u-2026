@@ -66,10 +66,15 @@ def audit(play, alignment, front, assignments) -> list[str]:
                         claimed[label].append(pos)
 
     notes = []
+    lbs = {s[0] for s in blocking.spots(front, "LB")}
     for label, blockers in sorted(claimed.items()):
-        if len(blockers) > 2:
+        # Two on a down lineman is a double team and the point of several plays. Two on
+        # a LINEBACKER is two blockers doing one job, and it was invisible while this
+        # only complained at three.
+        limit = 1 if label in lbs else 2
+        if len(blockers) > limit:
             notes.append(f"{len(blockers)} blockers ({', '.join(blockers)}) are on "
-                         f"{label} — one man cannot need three")
+                         f"{label} — one man does not need them")
 
     # A wedge blocks everyone in front of it and picks nobody — that is the definition
     # of the play. There is no man-by-man account to take, so there is nothing here to

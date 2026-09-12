@@ -52,8 +52,8 @@
 <line x1="475.0" y1="252.6" x2="491.6" y2="260.4" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 <path d="M351.0,364.5 L378.0,380.7 L415.8,391.5" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 5"/>
 <polygon points="415.8,391.5 404.6,393.1 407.1,384.2" fill="#14213d"/>
-<path d="M351.0,413.1 L396.9,251.1" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-<line x1="388.1" y1="248.6" x2="405.7" y2="253.6" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
+<path d="M351.0,413.1 L321.3,251.1" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="312.3" y1="252.8" x2="330.3" y2="249.4" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 <path d="M351.0,472.5 L399.6,467.1 L486.0,450.9 L556.2,402.3 L577.8,332.1 L588.6,267.3" fill="none" stroke="#b3001b" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
 <polygon points="588.6,267.3 591.5,278.3 582.3,276.8" fill="#b3001b"/>
 <rect x="225.7" y="325.6" width="23.8" height="23.8" rx="3" fill="#ffffff" stroke="#14213d" stroke-width="2.4"/>

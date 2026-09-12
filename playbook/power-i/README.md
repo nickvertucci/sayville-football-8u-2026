@@ -189,7 +189,7 @@ The wider mirror of Z Power Left. The Z is set to the left and takes it all the 
 | **Z** **(ball)** | Take the handoff and get width. Stay behind the fullback until you are outside our end, then turn up hard. Turning up too early is the only way this loses yards. |
 | **QB** | Open right and get the ball to the Z deep and early, then carry out a fake up the middle. |
 | **FB** | Lead outside our end. Block the first man out there — here it is the corner. |
-| **TB** | Run at the safety and screen him off. Stay in his way. |
+| **TB** | Run at the outside linebacker and screen him off. Stay in his way. |
 
 **Coaching points**
 
@@ -220,7 +220,7 @@ The Z's alignment says Power to his side; this goes the other way. He takes the 
 | **Z** **(ball)** | Take the handoff going left and aim at the outside hip of our left tackle. Follow the fullback's kick-out. Stay tight to the blocks — do not bounce it outside. |
 | **QB** | Open left and hand the ball deep to the Z as he crosses, then carry out a fake to the right edge. |
 | **FB** | Kick the end out. Aim at his outside hip. Never let him come underneath you. |
-| **TB** | Run at the safety and screen him off. Stay in his way. |
+| **TB** | Run at the outside linebacker and screen him off. Stay in his way. |
 
 **Coaching points**
 
@@ -250,7 +250,7 @@ Two lead blockers around the corner. The Z and the fullback get outside in front
 | **RTE** | End head up on you. Turn him inside. The ball goes around behind you. |
 | **Z** | Lead outside our end. Block the first man out there — here it is the corner. |
 | **QB** | Open right and get the ball to the tailback deep and early, then carry out a fake up the middle. Do not float it — put it in his hands while he is still gaining width. |
-| **FB** |  Climb to the playside linebacker. Head across him. |
+| **FB** | Climb to the playside linebacker. Head across him. |
 | **TB** **(ball)** | Take the ball and get width first. Stay behind the offset back until you are outside our end, then turn up hard. Turning up too early is the only way this play loses yards. |
 
 **Coaching points**
@@ -281,7 +281,7 @@ Two lead blockers around the corner. The Z and the fullback get outside in front
 | **RTE** | End head up on you. Cut him off — get between him and the ball. |
 | **Z** | Lead outside our end. Block the first man out there — here it is the corner. |
 | **QB** | Open left and get the ball to the tailback deep and early, then carry out a fake up the middle. Do not float it — put it in his hands while he is still gaining width. |
-| **FB** |  Climb to the playside linebacker. Head across him. |
+| **FB** | Climb to the playside linebacker. Head across him. |
 | **TB** **(ball)** | Take the ball and get width first. Stay behind the offset back until you are outside our end, then turn up hard. Turning up too early is the only way this play loses yards. |
 
 **Coaching points**

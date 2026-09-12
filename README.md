@@ -26,11 +26,18 @@ digits: the first says **who carries it**, the second says **where it goes**. So
 `Regular I Z Right 20 Dive` is the Regular I, Z on the right, the fullback through
 the 0 hole.
 
-Every Regular I play is `Z Right` except one. The Z does not move in this formation —
-naming his side in the call anyway is what let the Split Backs add a `Z Left` look
-later without changing how a single play is called. Power is the exception: it depends
-on the Z's kick-out block to work, so `Regular I Z Left 35 Power` is the one call in the
-book where he actually lines up on the other side, and the call says so.
+Every Regular I play is `Z Right` except two, and naming his side in every call is what
+makes those two free — it is also what let the Split Backs add a `Z Left` look later
+without changing how a single play is called.
+
+- **`Regular I Z Left 35 Power`** — Power depends on the Z's kick-out block, so he
+  lines up on the side it has to happen.
+- **`Regular I Z Left 48 Jet`** — Jet is motion, and a receiver cannot go in motion
+  toward the sideline he is already standing on. Jet Right starts him on the weak side
+  so he has the whole formation to cross, which is the mirror of what Jet Left does.
+
+Both say so out loud, because a play that moves somebody silently is a play nobody can
+call.
 
 | Back | Who |
 |---|---|
@@ -79,7 +86,7 @@ tight end.
 | `Regular I Z Right 16 Power Boot` / `17 Power Boot` | Regular I Power Boot Right / Left | quarterback, off the Power fake |
 | `Regular I Z Right 36 Slant` / `37 Slant` | Regular I Slant Right / Left | outside the tight end |
 | `Regular I Z Right 38 Toss` / `39 Toss` | Regular I Toss Right / Left | all the way outside |
-| `Regular I Z Right 48 Jet` / `49 Jet` | Regular I Jet Right / Left | the Z in motion, all the way outside |
+| `Regular I Z Left 48 Jet` / `Z Right 49 Jet` | Regular I Jet Right / Left | the Z in motion, all the way outside |
 
 The plays are taught in that order on purpose — inside first and working out, and within
 each gap the quarterback (back 1), then the fullback (2), then the tailback (3), then the

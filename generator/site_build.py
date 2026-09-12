@@ -1080,6 +1080,17 @@ table.cal tbody tr:last-child .cal-cell { border-bottom: 0; }
 }
 .ins-play:hover { border-color: var(--accent); background: var(--panel); }
 .ins-play.def { border-left: 3px solid var(--red); }
+/* The water break between blocks. Deliberately quiet — it is punctuation in the run
+   of practice, not a coaching block, and it appears after every one of them. */
+.ins-water {
+  display: flex; align-items: center; gap: 8px; margin: 6px 0 6px 2px;
+  font-size: 12.5px; font-weight: 600; color: var(--muted);
+  letter-spacing: 0.2px; text-transform: uppercase;
+}
+.ins-water::before {
+  content: ""; width: 3px; height: 14px; border-radius: 2px; background: var(--line);
+}
+.ins-water-t { font-weight: 500; text-transform: none; letter-spacing: 0; }
 .ins-play.form { border-left: 3px solid var(--accent-solid); }
 .ins-n time { display: block; font-size: 11px; line-height: 1.2; margin-top: 3px;
   font-style: normal; opacity: .85; }
@@ -3171,6 +3182,7 @@ def practice_blocks_html(pr: dict, items: list[str], needs: str) -> str:
         t_html = f'<span class="ins-blk-time">{esc(t)}</span>' if t else ""
         head = (f'<p class="ins-blk-h"><span class="ins-blk-tag">Block {esc(tag)}</span> '
                 f'{esc(blk.get("title", ""))}{t_html}</p>')
+        water = pr.get("water_break")
         kind = blk.get("kind")
         if kind == "note":
             body = f'<p class="ins-em">{esc(blk.get("note", ""))}</p>'
@@ -3196,6 +3208,15 @@ def practice_blocks_html(pr: dict, items: list[str], needs: str) -> str:
         else:
             body = ""
         rendered.append(f'<div class="ins-blk">{head}{body}</div>')
+        # A water break after every block, written once on the practice rather than
+        # five times in its block list. Typed out it is five entries a coach has to
+        # keep in step with the clock; as a property it cannot drift, and the run of
+        # practice still reads as the coaching blocks instead of alternating between
+        # work and water.
+        if water:
+            rendered.append(
+                f'<p class="ins-water">Water break'
+                f'<span class="ins-water-t">{esc(water)} min</span></p>')
 
     huddle = pr.get("huddle", "")
     if huddle:

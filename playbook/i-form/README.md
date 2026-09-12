@@ -56,7 +56,7 @@ Normal line splits, about a foot. Both ends are on the line; the Z is off it, a 
 | [Regular I Slant Left](#regular-i-slant-left) | `Regular I Z Right 37 Slant` | run | TB |
 | [Regular I Toss Right](#regular-i-toss-right) | `Regular I Z Right 38 Toss` | run | TB |
 | [Regular I Toss Left](#regular-i-toss-left) | `Regular I Z Right 39 Toss` | run | TB |
-| [Regular I Jet Right](#regular-i-jet-right) | `Regular I Z Right 48 Jet` | run | Z |
+| [Regular I Jet Right](#regular-i-jet-right) | `Regular I Z Left 48 Jet` | run | Z |
 | [Regular I Jet Left](#regular-i-jet-left) | `Regular I Z Right 49 Jet` | run | Z |
 
 ---
@@ -173,7 +173,7 @@ The same quick handoff through the other A gap. Worth having both so the fullbac
 | **RG** | Nobody on you. Cut off the backside. Never quit on the play. |
 | **RT** | Tackle on your inside shoulder. Cut him off — get between him and the ball. |
 | **RTE** | End head up on you. Cut him off — get between him and the ball. |
-| **Z** | Nobody on you. Cut off the backside. Never quit on the play. |
+| **Z** | Cut off the backside. Never quit on the play. |
 | **QB** | Take the snap, open a quarter turn and hand to the fullback at two yards. Then carry out a fake to the outside. |
 | **FB** **(ball)** | Aim at the outside hip of the center, right off the double team. Take the ball and get north — no reading, no dancing. |
 | **TB** | Run the toss path outside and sell it. You will not get the ball on this play. |
@@ -299,7 +299,7 @@ The same isolation block the other way. The Z stays where he is, so this runs aw
 | **RG** | Nobody on you. Cut off the backside. Never quit on the play. |
 | **RT** | Tackle on your inside shoulder. Cut him off — get between him and the ball. |
 | **RTE** | End head up on you. Cut him off — get between him and the ball. |
-| **Z** | Nobody on you. Cut off the backside. Never quit on the play. |
+| **Z** | Cut off the backside. Never quit on the play. |
 | **QB** | Reverse pivot and hand the ball to the tailback at four yards. Then clear out and fake wide. |
 | **FB** | Lead through the hole. Block the first man who shows in it. Move him any direction — just move him. |
 | **TB** **(ball)** | Take the handoff at four yards, get downhill behind the fullback, and cut off his block. |
@@ -712,7 +712,7 @@ Off the tight end. Our end seals their end inside and the fullback leads around 
 | **RTE** | End head up on you. Turn him inside. The ball goes around behind you. |
 | **Z** | Run at the corner and screen him off. Stay in his way. |
 | **QB** | Reverse pivot, hand the ball to the tailback deep, then carry out the bootleg fake away from the play. |
-| **FB** | Lead outside our end. Block the first man out there — here it is the corner. |
+| **FB** | Lead outside our end, then turn up inside — the playside linebacker is the man who shows. Head across him. |
 | **TB** **(ball)** | Take the handoff and press outside our end. Turn up off the fullback's block — this hits outside the tight end, not inside him. |
 
 **Coaching points**
@@ -741,7 +741,7 @@ Off the tight end. Our end seals their end inside and the fullback leads around 
 | **RG** | Nobody on you. Cut off the backside. Never quit on the play. |
 | **RT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
 | **RTE** | End head up on you. Cut him off — get between him and the ball. |
-| **Z** | Nobody on you. Cut off the backside. Never quit on the play. |
+| **Z** | Cut off the backside. Never quit on the play. |
 | **QB** | Reverse pivot, hand the ball to the tailback deep, then carry out the bootleg fake away from the play. |
 | **FB** | Lead outside our end. Block the first man out there — here it is the corner. |
 | **TB** **(ball)** | Take the handoff and press outside our end. Turn up off the fullback's block — this hits outside the tight end, not inside him. |
@@ -773,7 +773,7 @@ Get all the way outside. Wider than the Slant — the tailback takes the handoff
 | **RTE** | End head up on you. Turn him inside. The ball goes around behind you. |
 | **Z** | Run at the corner and screen him off. Stay in his way. |
 | **QB** | Reverse pivot and hand the ball to the tailback as deep as you can. Then boot away and sell it. |
-| **FB** | Lead outside our end. Block the first man out there — here it is the corner. Beat the tailback to the corner. |
+| **FB** | Lead outside our end, then turn up inside — the playside linebacker is the man who shows. Head across him. Beat the tailback to the corner. |
 | **TB** **(ball)** | Take the handoff at full speed and get to the corner. Turn up when the fullback blocks somebody, not before. |
 
 **Coaching points**
@@ -802,7 +802,7 @@ Get all the way outside. Wider than the Slant — the tailback takes the handoff
 | **RG** | Nobody on you. Cut off the backside. Never quit on the play. |
 | **RT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
 | **RTE** | End head up on you. Cut him off — get between him and the ball. |
-| **Z** | Nobody on you. Cut off the backside. Never quit on the play. |
+| **Z** | Cut off the backside. Never quit on the play. |
 | **QB** | Reverse pivot and hand the ball to the tailback as deep as you can. Then boot away and sell it. |
 | **FB** | Lead outside our end. Block the first man out there — here it is the corner. Beat the tailback to the corner. |
 | **TB** **(ball)** | Take the handoff at full speed and get to the corner. Turn up when the fullback blocks somebody, not before. |
@@ -818,11 +818,11 @@ Get all the way outside. Wider than the Slant — the tailback takes the handoff
 
 ## Regular I Jet Right
 
-**Call it:** `Regular I Z Right 48 Jet`
+**Call it:** `Regular I Z Left 48 Jet`
 
 ![Regular I Jet Right](cards/i-jet-r-5-3.svg)
 
-The Z keeps it to his own side. Jet Left has been taking the ball away from the Z all game; here he takes the quick pitch right back around his own end, where the defense has stopped honouring him.
+Jet Left run back the other way. The Z lines up on the weak side and goes in motion across the formation at full speed, and the pitch gets him outside our tight end before the defense can turn and run with him.
 
 | Position | Assignment |
 |---|---|
@@ -833,14 +833,14 @@ The Z keeps it to his own side. Jet Left has been taking the ball away from the 
 | **RG** | Nobody on you. Climb to the playside linebacker. Head across him. |
 | **RT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
 | **RTE** | End head up on you. Turn him inside. The ball goes around behind you. |
-| **Z** **(ball)** | Jet in motion to the right on the coach's call, full speed, and take the pitch behind the tailback. Get around our end before you turn up — do not cut it inside. |
+| **Z** **(ball)** | Start moving on the coach's motion call and be at full speed when you pass the quarterback. Take the pitch and get around the corner — do not turn upfield until you are outside our end. |
 | **QB** | Turn and pitch it out to the Z as he crosses, then carry out a boot fake back to the left with your hands on your belly. |
 | **FB** | Fill like Wedge is coming, then take anyone chasing from inside. |
 | **TB** | Lead outside our end. Block the first man out there — here it is the corner. |
 
 **Coaching points**
 
-- This is the answer when their end starts chasing Jet Left flat down the line — the Z pitches off his own edge before the end can recover.
+- This is the answer when they start flying with the motion on Jet Left. Same motion, same speed, coming from the other side.
 - Motion is legal in 11-man play, but only one man may be moving at the snap and he cannot be moving toward the line. Keep the Z flat.
 - The pitch has to beat the Z to the corner. Get it to him deep and early so he never breaks stride.
 - The tailback is the carrier's last blocker. If the corner beats him outside, the play dies — drill the block on air.
