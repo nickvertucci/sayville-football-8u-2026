@@ -5,6 +5,7 @@
   "name": "Regular I Boot Left",
   "call": "Regular I Z Right 17 Boot",
   "type": "pass",
+  "fakes": "i-toss-r",
   "direction": "left",
   "ball_carrier": "LTE",
   "purpose": "Boot Left off the toss action. Everybody sells the toss going right and the quarterback keeps it to the left edge alone — the tight end in the flat in front of him, the Z coming all the way across behind. Run first, throw second.",

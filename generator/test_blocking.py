@@ -28,6 +28,11 @@ nobody would ever find by eye, and there are now three times as many chances to 
   space`, and the ones aimed at a spot — a wedge, a cut-off, "block the first wrong
   shirt you see" — are exempt, because the man they block is not there yet.
 
+  A FAKE BLOCKS LIKE THE RUN IT SELLS. Where a play-action pass and the run it fakes
+  give a lineman the same verb, it must resolve to the same block. Pass protection may
+  differ — somebody has to protect a quarterback the run never had — but the same verb
+  coming out two different ways means the play's side is wrong.
+
   A BLOCK STAYS ON THE FIELD. A derived path that runs off the frame is a drawing bug,
   not a block.
 
@@ -134,6 +139,49 @@ def check_reaches(play, resolved, alignment, front, frame):
     return problems
 
 
+# Our line, for the play-action check.
+LINE = ("LTE", "LT", "LG", "C", "RG", "RT", "RTE")
+
+
+def check_play_action(play, defenses):
+    """A fake has to block like the run it sells.
+
+    Not identically — the boot-side tackle hinges and the centre cuts off, because
+    somebody has to protect a quarterback the run never had. But where the fake and
+    the run give a lineman THE SAME VERB, it has to resolve to the same block. If it
+    does not, the play's side is wrong, and the line is drawing the mirror image of
+    the run it is advertising. That is what "playside" meant before `fakes` existed:
+    the direction the quarterback finished in, not the direction the fake went.
+    """
+    run = render.faked_play(play)
+    if run is None:
+        return []
+    problems = []
+    for fid in blocking.SCOUT_FRONTS:
+        a = render.resolved_assignments(play, defenses[fid])
+        b = render.resolved_assignments(run, defenses[fid])
+        for pos in LINE:
+            pa = play["assignments"].get(pos, {})
+            pb = run["assignments"].get(pos, {})
+            if pa.get("block") is None or pa.get("block") != pb.get("block"):
+                continue
+            # Compare the generated block, not the play-specific note appended after
+            # it. "Sell it, this has to look like Power" is exactly the sort of thing a
+            # fake SHOULD say and the run should not.
+            note = pa.get("note") or pa.get("sell") or ""
+            ra = a[pos]["rule"][:-len(note) - 1] if note and a[pos]["rule"].endswith(note) \
+                else a[pos]["rule"]
+            nb = pb.get("note") or pb.get("sell") or ""
+            rb = b[pos]["rule"][:-len(nb) - 1] if nb and b[pos]["rule"].endswith(nb) \
+                else b[pos]["rule"]
+            if ra != rb:
+                problems.append(
+                    f"{pos} blocks '{pa['block']}' on both this and {run['id']}, but "
+                    f"vs the {fid} they come out different — the fake is blocking the "
+                    "mirror image of the run it sells")
+    return problems
+
+
 def main() -> int:
     defenses = render.load_defenses()
     formations = render.load_formations()
@@ -146,7 +194,10 @@ def main() -> int:
     failures, checked = [], 0
     for form in formations:
         for play in form["_plays"]:
-            side = render.play_side(play)
+            # A play-action pass's LINE blocks for the run it fakes, so the side the
+            # centre is sealing away from is that run's, not the boot's.
+            run = render.faked_play(play) or play
+            side = render.play_side(run)
             alignment = render.play_alignment(form, play)
             for fid in blocking.SCOUT_FRONTS:
                 front = defenses[fid]
@@ -160,6 +211,8 @@ def main() -> int:
                     failures.append(f"{where}: {problem}")
                 for problem in check_reaches(play, resolved, alignment, front, frame):
                     failures.append(f"{where}: {problem}")
+            for problem in check_play_action(play, defenses):
+                failures.append(f"{play['id']}: {problem}")
 
     if failures:
         print(f"{len(failures)} blocking problem(s) across {checked} play/front pairs:\n")

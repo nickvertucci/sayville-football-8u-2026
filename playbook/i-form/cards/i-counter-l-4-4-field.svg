@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="594" height="472" viewBox="54 27 594 472" font-family="Segoe UI, Helvetica, Arial, sans-serif" role="img">
+<svg xmlns="http://www.w3.org/2000/svg" width="621" height="472" viewBox="40 27 621 472" font-family="Segoe UI, Helvetica, Arial, sans-serif" role="img">
 <title>Regular I Counter Left — Regular I Z Right 35 Counter vs 4-4</title>
 <rect x="0" y="0" width="702" height="513" fill="#ffffff"/>
 <line x1="0" y1="459.0" x2="702" y2="459.0" stroke="#c8cdd6" stroke-width="1"/>
@@ -41,8 +41,8 @@
 <line x1="388.1" y1="299.7" x2="403.0" y2="288.9" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 <path d="M464.4,337.5 L442.8,294.3" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
 <line x1="434.6" y1="298.4" x2="451.0" y2="290.2" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
-<path d="M540.0,356.4 L364.5,313.2 L256.5,259.2" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-<line x1="252.4" y1="267.4" x2="260.6" y2="251.0" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
+<path d="M540.0,356.4 L472.0,318.6 L380.7,251.1" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="375.2" y1="258.5" x2="386.2" y2="243.7" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 <path d="M351.0,364.5 L378.0,378.0 L340.2,386.1 L307.8,380.7" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 5"/>
 <polygon points="307.8,380.7 318.8,377.8 317.3,387.0" fill="#14213d"/>
 <path d="M351.0,413.1 L437.4,375.3 L507.6,326.7" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>

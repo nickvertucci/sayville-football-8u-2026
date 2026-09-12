@@ -23,7 +23,7 @@
     },
     "RG": {
       "block": "double",
-      "target": "middle"
+      "target": "playside"
     },
     "RT": {
       "block": "down"
@@ -33,7 +33,8 @@
       "drive": "out"
     },
     "Z": {
-      "block": "lead"
+      "block": "lead",
+      "target": "force"
     },
     "QB": {
       "rule": "Take the snap, fake the toss the other way with both hands, then turn back and hand to the tailback. The fake comes first — the handoff is late on purpose.",

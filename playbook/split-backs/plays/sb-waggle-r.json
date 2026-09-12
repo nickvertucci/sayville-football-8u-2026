@@ -5,6 +5,7 @@
   "name": "Split Waggle Right",
   "call": "Split Z Right 16 Waggle",
   "type": "pass",
+  "fakes": "sb-dive-l",
   "direction": "right",
   "ball_carrier": "RTE",
   "purpose": "The only pass in this formation, off the play they have seen most. Fake the dive, send the split man deep to carry the corner off, and the quarterback walks out onto an edge everybody has left.",
@@ -76,7 +77,7 @@
       "type": "run",
       "path": [
         [
-          -0.8,
+          0.8,
           -0.5
         ],
         [
@@ -94,22 +95,22 @@
       ]
     },
     "RH": {
-      "rule": "Run the dive path full speed with your arms tucked like you have it, and block the first defender who meets you. You are the lie.",
+      "block": "hinge",
+      "note": "You are already on the side he rolls to — do not chase the fake."
+    },
+    "LH": {
+      "rule": "Run the dive path full speed with your arms tucked like you have it. Their linebackers only leave if you are worth watching.",
       "type": "fake",
       "path": [
         [
-          -1.0,
+          1.0,
           2.0
         ],
         [
-          -1.2,
+          1.2,
           3.6
         ]
       ]
-    },
-    "LH": {
-      "block": "hinge",
-      "note": "Cross behind the line to the waggle side first."
     }
   },
   "coaching_points": [

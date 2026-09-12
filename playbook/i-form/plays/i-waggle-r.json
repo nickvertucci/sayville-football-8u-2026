@@ -5,6 +5,7 @@
   "name": "Regular I Waggle Right",
   "call": "Regular I Z Right 16 Waggle",
   "type": "pass",
+  "fakes": "i-dive-l",
   "direction": "right",
   "ball_carrier": "RTE",
   "purpose": "Waggle Right off the dive fake. The quarterback fakes the dive and boots to the right edge, with the tight end in the flat in front of him and the Z clearing the corner over the top. Run first, throw second.",

@@ -17,8 +17,8 @@
       "block": "down"
     },
     "LG": {
-      "block": "double",
-      "target": "middle"
+      "block": "climb",
+      "target": "playside"
     },
     "C": {
       "block": "reach"
@@ -78,8 +78,9 @@
   },
   "coaching_points": [
     "Check their alignment first. If they have shaded toward our Z, this is the call.",
-    "The Z chases from behind. Tell him he is not decoration — he cuts off the corner who would otherwise run this down.",
-    "Everything else is I Slant Right in a mirror. Teach the pair together."
+    "The Z chases from the back side, and his man is the backside linebacker — not the corner, who is on the far side of the field from him. Tell him he is not decoration: he is the reason nothing catches this from behind.",
+    "Nobody is assigned to their playside corner. Against the 5-3 the fullback's lead block finds him anyway; against a four-linebacker front the fullback has the outside linebacker instead and the tailback beats the corner himself or gets caught.",
+    "The line and the fullback are I Slant Right in a mirror. Only the Z is different, because he lines up on the right either way. Teach the pair together."
   ],
   "z": "right"
 }

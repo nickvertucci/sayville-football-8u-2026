@@ -5,6 +5,7 @@
   "name": "Regular I Power Boot Left",
   "call": "Regular I Z Right 17 Power Boot",
   "type": "pass",
+  "fakes": "i-power-r",
   "direction": "left",
   "ball_carrier": "LTE",
   "purpose": "Boot Left off the Power look. Everybody flows right selling Power and the quarterback keeps it to the left edge alone — the tight end in the flat, the backside end coming across behind. Run first, throw second.",

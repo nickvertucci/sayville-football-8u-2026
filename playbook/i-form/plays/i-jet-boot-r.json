@@ -5,6 +5,7 @@
   "name": "Regular I Jet Boot Right",
   "call": "Regular I Z Right 16 Jet Boot",
   "type": "pass",
+  "fakes": "i-jet-l",
   "direction": "right",
   "ball_carrier": "RTE",
   "purpose": "Jet motion pulls the whole defense one way and the quarterback keeps it the other. This is the play Jet Left is really setting up, and at this age the edge is usually empty.",

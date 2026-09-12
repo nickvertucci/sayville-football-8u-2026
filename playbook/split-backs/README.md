@@ -195,7 +195,7 @@ Misdirection off the pitch. The near back and the quarterback sell the pitch one
 | **RG** | Nobody on you. Help on the nose, then take the middle linebacker. |
 | **RT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
 | **RTE** | End head up on you. Drive him to the sideline. The ball goes inside you. |
-| **Z** | Climb to the playside linebacker. Head across him. Leave like it is a route so he never sees you. Not low. |
+| **Z** | Climb to the outside linebacker. Head across him. Leave like it is a route so he never sees you. Not low. |
 | **QB** | Fake the pitch to the left, then turn back and hand the ball to the other back coming across. The fake comes first. |
 | **LH** **(ball)** | Take two hard steps toward the fake, then plant and come all the way back behind the down blocks. |
 | **RH** | Run the full pitch path away at full speed with your arms tucked. You are the lie. |
@@ -223,7 +223,7 @@ Misdirection off the pitch. The near back and the quarterback sell the pitch one
 |---|---|
 | **LTE** | End head up on you. Drive him to the sideline. The ball goes inside you. |
 | **LT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
-| **LG** | Nobody on you. Help on the nose, then take the middle linebacker. |
+| **LG** | Nobody on you. Help on the nose, then take the playside linebacker. |
 | **C** | Reach the nose to your left. Head across his playside shoulder. |
 | **RG** | Nobody on you. Cut off the backside. Never quit on the play. |
 | **RT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
@@ -263,8 +263,8 @@ The only pass in this formation, off the play they have seen most. Fake the dive
 | **RTE** **(ball)** | Engage the end over you for a count, then release to the flat at four yards and stay in front of the quarterback. You are the easy throw. |
 | **Z** | Run straight down the field and take the corner with you. Nobody is throwing you the ball — you are the reason the flat is empty. |
 | **QB** | Fake the dive to the near back with both hands, hide the ball on your back hip, and get to the edge. Run it if it is open. Only throw if a defender comes up to take you. |
-| **LH** | Hinge back and protect the outside. Nobody gets past you. Cross behind the line to the waggle side first. |
-| **RH** | Run the dive path full speed with your arms tucked like you have it, and block the first defender who meets you. You are the lie. |
+| **LH** | Run the dive path full speed with your arms tucked like you have it. Their linebackers only leave if you are worth watching. |
+| **RH** | Hinge back and protect the outside. Nobody gets past you. You are already on the side he rolls to — do not chase the fake. |
 
 **Coaching points**
 
@@ -296,8 +296,8 @@ The only pass in this formation, off the play they have seen most. Fake the dive
 | **RTE** | Engage the end over you for a count, then release and get across the field to eight yards. You are the second look and you arrive late on purpose. |
 | **Z** | Run straight down the field at the safety and hold him there. Nobody is throwing you the ball — you are the reason the middle is empty. |
 | **QB** | Fake the dive to the near back with both hands, hide the ball on your back hip, and get to the edge. Run it if it is open. Only throw if a defender comes up to take you. |
-| **LH** | Run the dive path full speed with your arms tucked like you have it, and block the first defender who meets you. You are the lie. |
-| **RH** | Hinge back and protect the outside. Nobody gets past you. Cross behind the line to the waggle side first. |
+| **LH** | Hinge back and protect the outside. Nobody gets past you. You are already on the side he rolls to — do not chase the fake. |
+| **RH** | Run the dive path full speed with your arms tucked like you have it. Their linebackers only leave if you are worth watching. |
 
 **Coaching points**
 

@@ -5,6 +5,7 @@
   "name": "Regular I Jet Boot Left",
   "call": "Regular I Z Right 17 Jet Boot",
   "type": "pass",
+  "fakes": "i-jet-l",
   "direction": "left",
   "ball_carrier": "LTE",
   "purpose": "The change-up to Jet Boot Right. The Z runs the jet the same way, but this time the quarterback keeps it and boots in behind the motion instead of away from it. The end who has been squeezing the keeper the other way is the one it beats.",

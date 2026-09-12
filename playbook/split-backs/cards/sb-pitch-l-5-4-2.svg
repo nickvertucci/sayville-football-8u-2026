@@ -1,12 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="594" height="1048" viewBox="0 0 594 1048" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" width="621" height="1048" viewBox="0 0 621 1048" font-family="Segoe UI, Helvetica, Arial, sans-serif">
 <rect width="100%" height="100%" fill="#ffffff"/>
-<rect x="0" y="0" width="594" height="58" fill="#14213d"/>
+<rect x="0" y="0" width="621" height="58" fill="#14213d"/>
 <text x="18" y="26" font-size="19.0" font-weight="700" fill="#ffffff">Split Pitch Left</text>
 <text x="18" y="45" font-size="11.5" fill="#a9b4c7">RUN  •  Split Backs  •  vs 5-4-2</text>
-<rect x="351.6" y="13" width="224.4" height="31" rx="6" fill="#ffffff" fill-opacity="0.12" stroke="#8593ad" stroke-width="1"/>
-<text x="463.8" y="34" text-anchor="middle" font-size="14.5" font-weight="700" fill="#ffffff" letter-spacing="0.5">Split Z Right 39 Pitch</text>
-<clipPath id="fieldclip"><rect x="0" y="58" width="594" height="472"/></clipPath>
-<g clip-path="url(#fieldclip)"><g transform="translate(-54.0,31.0)">
+<rect x="378.6" y="13" width="224.4" height="31" rx="6" fill="#ffffff" fill-opacity="0.12" stroke="#8593ad" stroke-width="1"/>
+<text x="490.8" y="34" text-anchor="middle" font-size="14.5" font-weight="700" fill="#ffffff" letter-spacing="0.5">Split Z Right 39 Pitch</text>
+<clipPath id="fieldclip"><rect x="0" y="58" width="621" height="472"/></clipPath>
+<g clip-path="url(#fieldclip)"><g transform="translate(-40.5,31.0)">
 <rect x="0" y="0" width="702" height="513" fill="#ffffff"/>
 <line x1="0" y1="459.0" x2="702" y2="459.0" stroke="#c8cdd6" stroke-width="1"/>
 <line x1="0" y1="189.0" x2="702" y2="189.0" stroke="#c8cdd6" stroke-width="1"/>
@@ -79,7 +79,7 @@
 <circle cx="410.4" cy="426.6" r="12.4" fill="#ffffff" stroke="#b3001b" stroke-width="2.4"/>
 <text x="410.4" y="430.6" text-anchor="middle" font-size="11.5" font-weight="700" fill="#b3001b">RH</text>
 </g></g>
-<line x1="18" y1="540" x2="576" y2="540" stroke="#c8cdd6" stroke-width="1"/>
+<line x1="18" y1="540" x2="603" y2="540" stroke="#c8cdd6" stroke-width="1"/>
 <text x="18" y="560" font-size="11" font-weight="700" fill="#5b6472" letter-spacing="1">ASSIGNMENTS</text>
 <text x="18" y="578" font-size="12" font-weight="700" fill="#111318">LTE</text>
 <text x="52" y="578" font-size="12" fill="#111318">End head up on you. Turn him inside.</text>
@@ -101,36 +101,36 @@
 <text x="52" y="766" font-size="12" fill="#111318">Block down on the tackle, inside</text>
 <text x="52" y="782" font-size="12" fill="#111318">shoulder. Head across him — nobody</text>
 <text x="52" y="800" font-size="12" fill="#111318">crosses your face.</text>
-<text x="297" y="578" font-size="12" font-weight="700" fill="#111318">RTE</text>
-<text x="331" y="578" font-size="12" fill="#111318">End head up on you. Cut him off — get</text>
-<text x="331" y="596" font-size="12" fill="#111318">between him and the ball.</text>
-<text x="297" y="612" font-size="12" font-weight="700" fill="#111318">Z</text>
-<text x="331" y="612" font-size="12" fill="#111318">Cut off the backside. Never quit on</text>
-<text x="331" y="630" font-size="12" fill="#111318">the play.</text>
-<text x="297" y="646" font-size="12" font-weight="700" fill="#111318">QB</text>
-<text x="331" y="646" font-size="12" fill="#111318">Open left, get to the edge, and pitch</text>
-<text x="331" y="664" font-size="12" fill="#111318">the ball to the trailing back before</text>
-<text x="331" y="680" font-size="12" fill="#111318">you get touched. There is no dive</text>
-<text x="331" y="698" font-size="12" fill="#111318">fake on this one — sell it with your</text>
-<text x="331" y="714" font-size="12" fill="#111318">eyes and get out there.</text>
-<text x="297" y="732" font-size="12" font-weight="700" fill="#111318">LH</text>
-<text x="331" y="732" font-size="12" fill="#111318">Lead outside our end. Block the first</text>
-<text x="331" y="748" font-size="12" fill="#111318">man out there — here it is the</text>
-<text x="331" y="766" font-size="12" fill="#111318">linebacker.</text>
-<text x="297" y="782" font-size="12" font-weight="700" fill="#111318">RH</text>
-<text x="331" y="782" font-size="12" fill="#111318">Run flat behind everybody, stay</text>
-<text x="331" y="800" font-size="12" fill="#111318">outside and behind the quarterback,</text>
-<text x="331" y="816" font-size="12" fill="#111318">and catch the pitch on the run. Never</text>
-<text x="331" y="834" font-size="12" fill="#111318">get ahead of him — a pitch that goes</text>
-<text x="331" y="850" font-size="12" fill="#111318">forward is a fumble.</text>
-<line x1="18" y1="858" x2="576" y2="858" stroke="#c8cdd6" stroke-width="1"/>
+<text x="310" y="578" font-size="12" font-weight="700" fill="#111318">RTE</text>
+<text x="344" y="578" font-size="12" fill="#111318">End head up on you. Cut him off — get</text>
+<text x="344" y="596" font-size="12" fill="#111318">between him and the ball.</text>
+<text x="310" y="612" font-size="12" font-weight="700" fill="#111318">Z</text>
+<text x="344" y="612" font-size="12" fill="#111318">Cut off the backside. Never quit on the</text>
+<text x="344" y="630" font-size="12" fill="#111318">play.</text>
+<text x="310" y="646" font-size="12" font-weight="700" fill="#111318">QB</text>
+<text x="344" y="646" font-size="12" fill="#111318">Open left, get to the edge, and pitch</text>
+<text x="344" y="664" font-size="12" fill="#111318">the ball to the trailing back before</text>
+<text x="344" y="680" font-size="12" fill="#111318">you get touched. There is no dive fake</text>
+<text x="344" y="698" font-size="12" fill="#111318">on this one — sell it with your eyes</text>
+<text x="344" y="714" font-size="12" fill="#111318">and get out there.</text>
+<text x="310" y="732" font-size="12" font-weight="700" fill="#111318">LH</text>
+<text x="344" y="732" font-size="12" fill="#111318">Lead outside our end. Block the first</text>
+<text x="344" y="748" font-size="12" fill="#111318">man out there — here it is the</text>
+<text x="344" y="766" font-size="12" fill="#111318">linebacker.</text>
+<text x="310" y="782" font-size="12" font-weight="700" fill="#111318">RH</text>
+<text x="344" y="782" font-size="12" fill="#111318">Run flat behind everybody, stay outside</text>
+<text x="344" y="800" font-size="12" fill="#111318">and behind the quarterback, and catch</text>
+<text x="344" y="816" font-size="12" fill="#111318">the pitch on the run. Never get ahead</text>
+<text x="344" y="834" font-size="12" fill="#111318">of him — a pitch that goes forward is a</text>
+<text x="344" y="850" font-size="12" fill="#111318">fumble.</text>
+<line x1="18" y1="858" x2="603" y2="858" stroke="#c8cdd6" stroke-width="1"/>
 <text x="18" y="876" font-size="11" font-weight="700" fill="#5b6472" letter-spacing="1">COACHING POINTS</text>
-<text x="18" y="896" font-size="12" fill="#111318">The pitch goes early. A quarterback who waits to be tackled first will pitch it</text>
-<text x="18" y="912" font-size="12" fill="#111318">on the ground.</text>
+<text x="18" y="896" font-size="12" fill="#111318">The pitch goes early. A quarterback who waits to be tackled first will pitch it on</text>
+<text x="18" y="912" font-size="12" fill="#111318">the ground.</text>
 <text x="18" y="930" font-size="12" fill="#111318">This is not a read at this age — tell him before the snap that he is pitching it.</text>
 <text x="18" y="946" font-size="12" fill="#111318">The back taking the pitch must stay behind the quarterback until he has the ball.</text>
 <text x="18" y="964" font-size="12" fill="#111318">Getting ahead means the pitch goes forward, which is a fumble waiting to happen.</text>
-<text x="18" y="980" font-size="12" fill="#111318">Everything depends on the corner being blocked and there is no receiver on this</text>
-<text x="18" y="998" font-size="12" fill="#111318">side to do it, so the near back leaves early and there is no fake to hold</text>
-<text x="18" y="1014" font-size="12" fill="#111318">anybody. If their corner is quick, call it to the other side instead.</text>
+<text x="18" y="980" font-size="12" fill="#111318">Everything depends on the corner being blocked and there is no receiver on this side</text>
+<text x="18" y="998" font-size="12" fill="#111318">to do it, so the near back leaves early and there is no fake to hold anybody. If</text>
+<text x="18" y="1014" font-size="12" fill="#111318">their corner is quick, call it to the other side instead.</text>
 </svg>

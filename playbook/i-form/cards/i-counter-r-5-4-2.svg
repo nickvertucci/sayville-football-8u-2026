@@ -1,12 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="594" height="1082" viewBox="0 0 594 1082" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" width="621" height="1082" viewBox="0 0 621 1082" font-family="Segoe UI, Helvetica, Arial, sans-serif">
 <rect width="100%" height="100%" fill="#ffffff"/>
-<rect x="0" y="0" width="594" height="58" fill="#14213d"/>
+<rect x="0" y="0" width="621" height="58" fill="#14213d"/>
 <text x="18" y="26" font-size="19.0" font-weight="700" fill="#ffffff">Regular I Counter Right</text>
 <text x="18" y="45" font-size="11.5" fill="#a9b4c7">RUN  •  Regular I  •  vs 5-4-2</text>
-<rect x="296.4" y="13" width="279.6" height="31" rx="6" fill="#ffffff" fill-opacity="0.12" stroke="#8593ad" stroke-width="1"/>
-<text x="436.2" y="34" text-anchor="middle" font-size="14.5" font-weight="700" fill="#ffffff" letter-spacing="0.5">Regular I Z Right 34 Counter</text>
-<clipPath id="fieldclip"><rect x="0" y="58" width="594" height="472"/></clipPath>
-<g clip-path="url(#fieldclip)"><g transform="translate(-54.0,31.0)">
+<rect x="323.4" y="13" width="279.6" height="31" rx="6" fill="#ffffff" fill-opacity="0.12" stroke="#8593ad" stroke-width="1"/>
+<text x="463.2" y="34" text-anchor="middle" font-size="14.5" font-weight="700" fill="#ffffff" letter-spacing="0.5">Regular I Z Right 34 Counter</text>
+<clipPath id="fieldclip"><rect x="0" y="58" width="621" height="472"/></clipPath>
+<g clip-path="url(#fieldclip)"><g transform="translate(-40.5,31.0)">
 <rect x="0" y="0" width="702" height="513" fill="#ffffff"/>
 <line x1="0" y1="459.0" x2="702" y2="459.0" stroke="#c8cdd6" stroke-width="1"/>
 <line x1="0" y1="189.0" x2="702" y2="189.0" stroke="#c8cdd6" stroke-width="1"/>
@@ -48,8 +48,8 @@
 <line x1="413.4" y1="295.2" x2="431.7" y2="293.4" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 <path d="M464.4,337.5 L483.3,292.9" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
 <line x1="474.8" y1="289.4" x2="491.8" y2="296.5" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
-<path d="M540.0,356.4 L488.7,313.2 L445.5,259.2" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-<line x1="438.3" y1="264.9" x2="452.7" y2="253.5" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
+<path d="M540.0,356.4 L524.3,307.8 L504.9,256.5" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="496.3" y1="259.8" x2="513.5" y2="253.2" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 <path d="M351.0,364.5 L324.0,378.0 L361.8,386.1 L394.2,380.7" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 5"/>
 <polygon points="394.2,380.7 384.7,387.0 383.2,377.8" fill="#14213d"/>
 <path d="M351.0,413.1 L264.6,375.3 L194.4,326.7" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
@@ -79,7 +79,7 @@
 <circle cx="351.0" cy="472.5" r="12.4" fill="#ffffff" stroke="#b3001b" stroke-width="2.4"/>
 <text x="351.0" y="476.5" text-anchor="middle" font-size="11.5" font-weight="700" fill="#b3001b">TB</text>
 </g></g>
-<line x1="18" y1="540" x2="576" y2="540" stroke="#c8cdd6" stroke-width="1"/>
+<line x1="18" y1="540" x2="603" y2="540" stroke="#c8cdd6" stroke-width="1"/>
 <text x="18" y="560" font-size="11" font-weight="700" fill="#5b6472" letter-spacing="1">ASSIGNMENTS</text>
 <text x="18" y="578" font-size="12" font-weight="700" fill="#111318">LTE</text>
 <text x="52" y="578" font-size="12" fill="#111318">End head up on you. Cut him off — get</text>
@@ -96,43 +96,43 @@
 <text x="52" y="714" font-size="12" fill="#111318">across his playside shoulder.</text>
 <text x="18" y="732" font-size="12" font-weight="700" fill="#111318">RG</text>
 <text x="52" y="732" font-size="12" fill="#111318">Nobody on you. Help on the nose, then</text>
-<text x="52" y="748" font-size="12" fill="#111318">take the middle linebacker.</text>
+<text x="52" y="748" font-size="12" fill="#111318">take the playside linebacker.</text>
 <text x="18" y="766" font-size="12" font-weight="700" fill="#111318">RT</text>
 <text x="52" y="766" font-size="12" fill="#111318">Block down on the tackle, inside</text>
 <text x="52" y="782" font-size="12" fill="#111318">shoulder. Head across him — nobody</text>
 <text x="52" y="800" font-size="12" fill="#111318">crosses your face.</text>
-<text x="297" y="578" font-size="12" font-weight="700" fill="#111318">RTE</text>
-<text x="331" y="578" font-size="12" fill="#111318">End head up on you. Drive him to the</text>
-<text x="331" y="596" font-size="12" fill="#111318">sideline. The ball goes inside you.</text>
-<text x="297" y="612" font-size="12" font-weight="700" fill="#111318">Z</text>
-<text x="331" y="612" font-size="12" fill="#111318">Lead through the hole. Block the</text>
-<text x="331" y="630" font-size="12" fill="#111318">first man who shows in it.</text>
-<text x="297" y="646" font-size="12" font-weight="700" fill="#111318">QB</text>
-<text x="331" y="646" font-size="12" fill="#111318">Take the snap, fake the toss the</text>
-<text x="331" y="664" font-size="12" fill="#111318">other way with both hands, then turn</text>
-<text x="331" y="680" font-size="12" fill="#111318">back and hand to the tailback. The</text>
-<text x="331" y="698" font-size="12" fill="#111318">fake comes first — the handoff is</text>
-<text x="331" y="714" font-size="12" fill="#111318">late on purpose.</text>
-<text x="297" y="732" font-size="12" font-weight="700" fill="#111318">FB</text>
-<text x="331" y="732" font-size="12" fill="#111318">Run the toss path the other way, full</text>
-<text x="331" y="748" font-size="12" fill="#111318">speed. You are the lie.</text>
-<text x="297" y="766" font-size="12" font-weight="700" fill="#111318">TB</text>
-<text x="331" y="766" font-size="12" fill="#111318">Take two hard steps toward the toss,</text>
-<text x="331" y="782" font-size="12" fill="#111318">then plant and come back behind our</text>
-<text x="331" y="800" font-size="12" fill="#111318">tight end's block. Those two steps</text>
-<text x="331" y="816" font-size="12" fill="#111318">are the entire play.</text>
-<line x1="18" y1="824" x2="576" y2="824" stroke="#c8cdd6" stroke-width="1"/>
+<text x="310" y="578" font-size="12" font-weight="700" fill="#111318">RTE</text>
+<text x="344" y="578" font-size="12" fill="#111318">End head up on you. Drive him to the</text>
+<text x="344" y="596" font-size="12" fill="#111318">sideline. The ball goes inside you.</text>
+<text x="310" y="612" font-size="12" font-weight="700" fill="#111318">Z</text>
+<text x="344" y="612" font-size="12" fill="#111318">Lead outside our end. Block the first</text>
+<text x="344" y="630" font-size="12" fill="#111318">man out there — here it is the</text>
+<text x="344" y="646" font-size="12" fill="#111318">linebacker.</text>
+<text x="310" y="664" font-size="12" font-weight="700" fill="#111318">QB</text>
+<text x="344" y="664" font-size="12" fill="#111318">Take the snap, fake the toss the other</text>
+<text x="344" y="680" font-size="12" fill="#111318">way with both hands, then turn back and</text>
+<text x="344" y="698" font-size="12" fill="#111318">hand to the tailback. The fake comes</text>
+<text x="344" y="714" font-size="12" fill="#111318">first — the handoff is late on purpose.</text>
+<text x="310" y="732" font-size="12" font-weight="700" fill="#111318">FB</text>
+<text x="344" y="732" font-size="12" fill="#111318">Run the toss path the other way, full</text>
+<text x="344" y="748" font-size="12" fill="#111318">speed. You are the lie.</text>
+<text x="310" y="766" font-size="12" font-weight="700" fill="#111318">TB</text>
+<text x="344" y="766" font-size="12" fill="#111318">Take two hard steps toward the toss,</text>
+<text x="344" y="782" font-size="12" fill="#111318">then plant and come back behind our</text>
+<text x="344" y="800" font-size="12" fill="#111318">tight end's block. Those two steps are</text>
+<text x="344" y="816" font-size="12" fill="#111318">the entire play.</text>
+<line x1="18" y1="824" x2="603" y2="824" stroke="#c8cdd6" stroke-width="1"/>
 <text x="18" y="842" font-size="11" font-weight="700" fill="#5b6472" letter-spacing="1">COACHING POINTS</text>
-<text x="18" y="862" font-size="12" fill="#111318">Do not call this until I Toss Left has gone for real yards. Misdirection off a</text>
-<text x="18" y="878" font-size="12" fill="#111318">play they do not fear is just a slower run.</text>
-<text x="18" y="896" font-size="12" fill="#111318">This one has the Z on the playside, which Counter Left does not. That is a</text>
-<text x="18" y="912" font-size="12" fill="#111318">blocker Counter Left never had, so this is the better of the pair against a team</text>
-<text x="18" y="930" font-size="12" fill="#111318">that flows hard.</text>
+<text x="18" y="862" font-size="12" fill="#111318">Do not call this until I Toss Left has gone for real yards. Misdirection off a play</text>
+<text x="18" y="878" font-size="12" fill="#111318">they do not fear is just a slower run.</text>
+<text x="18" y="896" font-size="12" fill="#111318">This one has the Z on the playside, which Counter Left does not. That is a blocker</text>
+<text x="18" y="912" font-size="12" fill="#111318">Counter Left never had, so this is the better of the pair against a team that flows</text>
+<text x="18" y="930" font-size="12" fill="#111318">hard.</text>
 <text x="18" y="946" font-size="12" fill="#111318">The tailback's counter steps must be full speed and full length. A shuffle fools</text>
 <text x="18" y="964" font-size="12" fill="#111318">nobody.</text>
 <text x="18" y="980" font-size="12" fill="#111318">Teach it the same day as Counter Left. The line rules are identical both ways and</text>
 <text x="18" y="998" font-size="12" fill="#111318">nobody moves, so there is nothing extra to learn.</text>
 <text x="18" y="1014" font-size="12" fill="#111318">With nobody pulling, the tight end kicks the end out himself. Against a</text>
-<text x="18" y="1032" font-size="12" fill="#111318">four-linebacker front that leaves the outside linebacker free — the Z takes him</text>
-<text x="18" y="1048" font-size="12" fill="#111318">if he fills, and if he keeps making the tackle, run Toss at him instead.</text>
+<text x="18" y="1032" font-size="12" fill="#111318">four-linebacker front that leaves the outside linebacker free — the Z takes him if he</text>
+<text x="18" y="1048" font-size="12" fill="#111318">fills, and if he keeps making the tackle, run Toss at him instead.</text>
 </svg>

@@ -23,7 +23,7 @@
     },
     "LG": {
       "block": "double",
-      "target": "middle"
+      "target": "playside"
     },
     "LT": {
       "block": "down"
@@ -93,9 +93,8 @@
   "coaching_points": [
     "Do not call this until the pitch has been working. It is the counter-punch.",
     "No lead blocker at all, so this hits faster than Power off exactly the same line rules. The line has to hold its blocks while the ball carrier crosses.",
-    "There is no crack block on this side — the Z is on the other end of the formation. The playside guard's climb to the middle linebacker has to be on time or there is nobody else for him.",
+    "There is no crack block on this side — the Z is on the other end of the formation. What the playside guard does instead depends on the front: against the 4-4 he is covered and simply drives the man over him, and against the 5-3 and 5-4-2 he is free to help on the nose and climb. Do not teach him a climb he only makes twice out of three times.",
     "Two hard steps toward the fake before he comes back. A shuffle fools nobody.",
-    "The Z lines up on the right, so on this one he is cutting off the backside instead of cracking the playside linebacker the way he does on Counter Right. That linebacker is unblocked in every front — the near back's fake has to hold him for a count or this play is a two-yard gain.",
-    "Nobody blocks outside our end on this one — no kick-out and nobody leading out there. Against a four-linebacker front their outside linebacker is free, so if they are playing four, go get the edge with Pitch or Keep instead."
+    "The Z lines up on the right, so on this one he is cutting off the backside instead of cracking the outside linebacker the way he does on Counter Right. Against a four-linebacker front that outside linebacker is unblocked and there is nobody left to get to him — the fake has to hold him for a count or this play is a two-yard gain. Against the 5-3 the playside guard's climb reaches him."
   ]
 }

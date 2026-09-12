@@ -5,6 +5,7 @@
   "name": "Regular I Boot Right",
   "call": "Regular I Z Right 16 Boot",
   "type": "pass",
+  "fakes": "i-toss-l",
   "direction": "right",
   "ball_carrier": "Z",
   "purpose": "Play action off the toss look. Two receivers to the Z side and a quarterback with the whole edge to himself. Run first, throw second.",
