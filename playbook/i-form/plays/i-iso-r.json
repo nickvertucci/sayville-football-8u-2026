@@ -36,7 +36,7 @@
       "block": "screen"
     },
     "QB": {
-      "rule": "Reverse pivot and hand the ball to the tailback at four yards. Then clear out and fake wide.",
+      "rule": "Reverse pivot, hand to the tailback at four yards, then clear out and fake wide.",
       "type": "fake",
       "path": [
         [
@@ -54,7 +54,7 @@
       "note": "Move him any direction — just move him."
     },
     "TB": {
-      "rule": "Take the handoff at four yards, get downhill behind the fullback, and cut off his block. If he takes the linebacker outside, you go inside.",
+      "rule": "Take the handoff at four yards and run downhill off the fullback's block. He goes outside, you cut inside.",
       "type": "run",
       "path": [
         [

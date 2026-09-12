@@ -38,7 +38,7 @@
       "note": "Leave like it is a route so he never sees you. Not low."
     },
     "QB": {
-      "rule": "Fake the pitch to the left, then turn back and hand the ball to the other back coming across. The fake comes first.",
+      "rule": "Fake the pitch left, then turn back and hand to the back coming across. Fake first.",
       "type": "fake",
       "path": [
         [
@@ -56,7 +56,7 @@
       ]
     },
     "RH": {
-      "rule": "Run the full pitch path away at full speed with your arms tucked. You are the lie.",
+      "rule": "Run the full pitch path away at full speed, arms tucked. You are the lie.",
       "type": "fake",
       "path": [
         [
@@ -70,7 +70,7 @@
       ]
     },
     "LH": {
-      "rule": "Take two hard steps toward the fake, then plant and come all the way back behind the down blocks.",
+      "rule": "Take two hard steps at the fake, then plant and come back behind the down blocks.",
       "type": "run",
       "path": [
         [

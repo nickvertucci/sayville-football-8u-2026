@@ -29,7 +29,7 @@
       "block": "hinge"
     },
     "RTE": {
-      "rule": "Engage the end over you for a count, then release to the flat at four yards and stay in front of the quarterback. You are the easy throw.",
+      "rule": "Bump the end, then release to the flat at four yards in front of the quarterback.",
       "type": "pass",
       "path": [
         [
@@ -43,7 +43,7 @@
       ]
     },
     "Z": {
-      "rule": "Release outside the end and get down the right sideline to ten yards. You are the second look — clear the corner so the flat stays open, then work back to the quarterback.",
+      "rule": "Sprint down the right sideline to ten yards, taking the corner with you. Then work back to the quarterback.",
       "type": "pass",
       "path": [
         [
@@ -61,7 +61,7 @@
       ]
     },
     "QB": {
-      "rule": "Fake the dive to the fullback with both hands, hide the ball on your back hip, and get to the edge. Run it if it is open. Only throw if a defender comes up to take you.",
+      "rule": "Fake the dive, hide it on your back hip, run the edge. Throw only when they take you.",
       "type": "run",
       "path": [
         [
@@ -83,7 +83,7 @@
       ]
     },
     "FB": {
-      "rule": "Run the dive path full speed with your arms tucked like you have it, and block the first defender who meets you. You are the lie.",
+      "rule": "Run the dive path full speed, arms tucked, and block whoever meets you. Be the lie.",
       "type": "fake",
       "path": [
         [

@@ -11,7 +11,7 @@
   "purpose": "Boot Left off the toss action. Everybody sells the toss going right and the quarterback keeps it to the left edge alone — the tight end in the flat in front of him, the Z coming all the way across behind. Run first, throw second.",
   "assignments": {
     "LTE": {
-      "rule": "Engage the end over you for a count, then release to the flat at four yards and stay in front of the quarterback. You are the easy throw.",
+      "rule": "Bump the end, then release to the flat at four yards in front of the quarterback.",
       "type": "pass",
       "path": [
         [
@@ -43,7 +43,7 @@
       "block": "down"
     },
     "Z": {
-      "rule": "Come all the way across the field behind the line and get to eight yards on the far side. You are the second look and you arrive late on purpose.",
+      "rule": "Cross behind the line to eight yards on the far side. Second look, late on purpose.",
       "type": "pass",
       "path": [
         [
@@ -61,7 +61,7 @@
       ]
     },
     "QB": {
-      "rule": "Fake the toss with both hands, hide the ball on your back hip, and get to the edge. Run it if it is open. Only throw if a defender comes up to take you.",
+      "rule": "Fake the toss, hide it on your back hip, run the edge. Throw only when they take you.",
       "type": "run",
       "path": [
         [
@@ -97,7 +97,7 @@
       ]
     },
     "TB": {
-      "rule": "Run the full toss path away from the boot with your arms tucked like you have the ball. Sell it all the way to the sideline.",
+      "rule": "Run the toss path away, arms tucked like you have it. Sell it to the sideline.",
       "type": "fake",
       "path": [
         [

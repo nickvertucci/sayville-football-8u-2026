@@ -36,7 +36,7 @@
       "block": "cutoff"
     },
     "QB": {
-      "rule": "Open left, get to the edge, and pitch the ball to the trailing back before you get touched. There is no dive fake on this one — sell it with your eyes and get out there.",
+      "rule": "Open left, attack the edge, and pitch to the trailing back before you get touched. No dive fake here.",
       "type": "fake",
       "path": [
         [
@@ -58,7 +58,7 @@
       "target": "force"
     },
     "RH": {
-      "rule": "Run flat behind everybody, stay outside and behind the quarterback, and catch the pitch on the run. Never get ahead of him — a pitch that goes forward is a fumble.",
+      "rule": "Run flat, outside and behind the quarterback, and catch the pitch on the run. Ahead of him is a fumble.",
       "type": "run",
       "path": [
         [

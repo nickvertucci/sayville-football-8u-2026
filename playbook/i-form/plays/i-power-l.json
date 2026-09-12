@@ -41,7 +41,7 @@
       "block": "kick"
     },
     "QB": {
-      "rule": "Open to the left, hand it deep to the tailback, then carry out the boot fake to the edge. The fake is what keeps the backside end honest.",
+      "rule": "Open left, hand deep to the tailback, then fake the boot. It holds the backside end.",
       "type": "fake",
       "path": [
         [
@@ -62,7 +62,7 @@
       "block": "lead"
     },
     "TB": {
-      "rule": "Take the handoff going downhill and aim at the outside hip of our tackle. Follow the fullback through the hole. Stay tight to the blocks and do not bounce it outside.",
+      "rule": "Take the handoff downhill at our tackle's outside hip, following the fullback. Never bounce it outside.",
       "type": "run",
       "path": [
         [

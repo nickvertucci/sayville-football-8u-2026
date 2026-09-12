@@ -11,7 +11,7 @@
   "purpose": "Waggle Right to the other edge, and the harder of the two. The quarterback's first steps are Dive Right's, the back away from the roll sells that dive, and he keeps going the way the dive's own fake takes him — out onto the left edge with our end in the flat in front of him. The split man is on the wrong end of the formation here, so instead of clearing that edge he runs deep from the back side. Run first, throw second.",
   "assignments": {
     "RTE": {
-      "rule": "Engage the end over you for a count, then release and get across the field to eight yards. You are the second look and you arrive late on purpose.",
+      "rule": "Bump the end, then cross the field to eight yards. Second look, late on purpose.",
       "type": "pass",
       "path": [
         [
@@ -45,7 +45,7 @@
       "block": "hinge"
     },
     "LTE": {
-      "rule": "Engage the end over you for a count, then release to the flat at four yards and stay in front of the quarterback. You are the easy throw.",
+      "rule": "Bump the end, then release to the flat at four yards in front of the quarterback.",
       "type": "pass",
       "path": [
         [
@@ -59,7 +59,7 @@
       ]
     },
     "Z": {
-      "rule": "Sprint deep from the back side and lean toward the middle of the field. Nobody is throwing you the ball — you are holding their deep men away from the boot.",
+      "rule": "Sprint deep from the back side toward the middle. Nobody throws you the ball — you hold their deep men.",
       "type": "pass",
       "path": [
         [
@@ -73,7 +73,7 @@
       ]
     },
     "QB": {
-      "rule": "Fake the dive to the back away from your roll, hide the ball on your back hip, and get to the edge. Run it if it is open. Only throw if a defender comes up to take you.",
+      "rule": "Fake the dive away from your roll, ball on your hip, run the edge. Throw only when they take you.",
       "type": "run",
       "path": [
         [
@@ -99,7 +99,7 @@
       "note": "You are already on the side he rolls to — do not chase the fake."
     },
     "RH": {
-      "rule": "Run the dive path full speed with your arms tucked like you have it. Their linebackers only leave if you are worth watching.",
+      "rule": "Run the dive path full speed, arms tucked. Linebackers only leave if you are worth watching.",
       "type": "fake",
       "path": [
         [

@@ -11,7 +11,7 @@
   "purpose": "The change-up to Jet Boot Right. The Z runs the jet the same way, but this time the quarterback keeps it and boots in behind the motion instead of away from it. The end who has been squeezing the keeper the other way is the one it beats.",
   "assignments": {
     "LTE": {
-      "rule": "Engage the end over you for a count, then release to the flat at four yards and stay in front of the quarterback. You are the easy throw.",
+      "rule": "Bump the end, then release to the flat at four yards in front of the quarterback.",
       "type": "pass",
       "path": [
         [
@@ -41,7 +41,7 @@
       "block": "down"
     },
     "RTE": {
-      "rule": "Engage the end over you for a count, then release and get across the field to eight yards on the boot side. You are the second look and you arrive late on purpose.",
+      "rule": "Bump the end, then cross to eight yards on the boot side. Late on purpose.",
       "type": "pass",
       "path": [
         [
@@ -59,7 +59,7 @@
       ]
     },
     "Z": {
-      "rule": "Run the Jet motion the way you run it for real — full speed, flat across, and keep going after the fake. You take the edge defender with you and the quarterback boots in behind you.",
+      "rule": "Run the Jet motion for real: full speed, flat across, keep going after the fake. Take the edge defender with you.",
       "type": "motion",
       "path": [
         [
@@ -77,7 +77,7 @@
       ]
     },
     "QB": {
-      "rule": "Fake the jet handoff, hide the ball on your back hip, and boot left in behind the motion. Run it if it is open. Only throw if a defender comes up to take you.",
+      "rule": "Fake the jet, hide it on your back hip, boot left behind the motion. Throw only when they take you.",
       "type": "run",
       "path": [
         [

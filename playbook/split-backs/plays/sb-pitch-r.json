@@ -36,7 +36,7 @@
       "block": "screen"
     },
     "QB": {
-      "rule": "Fake the dive to the near back, attack the outside, and pitch the ball to the trailing back before you get touched. Pitch early, not late.",
+      "rule": "Fake the dive to the near back, attack the outside, then pitch to the trailing back early, never late.",
       "type": "fake",
       "path": [
         [
@@ -59,7 +59,7 @@
       "note": "Step at the dive first to hold their linebackers."
     },
     "LH": {
-      "rule": "Run flat behind everybody, stay outside and behind the quarterback, and catch the pitch on the run. Never get ahead of him — a pitch that goes forward is a fumble.",
+      "rule": "Run flat, outside and behind the quarterback, and catch the pitch on the run. Ahead of him is a fumble.",
       "type": "run",
       "path": [
         [

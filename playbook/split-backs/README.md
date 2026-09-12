@@ -68,9 +68,9 @@ The near back straight ahead, through the first gap outside the center. Against 
 | **RT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
 | **RTE** | End head up on you. Drive him to the sideline. The ball goes inside you. |
 | **Z** | Run at the corner and screen him off. Stay in his way. |
-| **QB** | Take the snap, open right and hand the ball to the near back at two yards. Then carry out the pitch fake the other way. |
+| **QB** | Open right, hand to the near back at two yards, then fake the pitch away. |
 | **LH** | Run the pitch path away at full speed with your arms tucked. You are the lie. |
-| **RH** **(ball)** | Aim at the outside hip of the center every time. Take the ball and get north — there is no hole to look for. |
+| **RH** **(ball)** | Aim at the center's outside hip every time. Get north — there is no hole to find. |
 
 **Coaching points**
 
@@ -99,8 +99,8 @@ The near back straight ahead, through the first gap outside the center. Against 
 | **RT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
 | **RTE** | End head up on you. Cut him off — get between him and the ball. |
 | **Z** | Cut off the backside. Never quit on the play. |
-| **QB** | Take the snap, open left and hand the ball to the near back at two yards. Then carry out the pitch fake the other way. |
-| **LH** **(ball)** | Aim at the outside hip of the center every time. Take the ball and get north — there is no hole to look for. |
+| **QB** | Open left, hand to the near back at two yards, then fake the pitch away. |
+| **LH** **(ball)** | Aim at the center's outside hip every time. Get north — there is no hole to find. |
 | **RH** | Run the pitch path away at full speed with your arms tucked. You are the lie. |
 
 **Coaching points**
@@ -130,8 +130,8 @@ Off-tackle power to the far back, who crosses behind the quarterback and takes a
 | **RT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
 | **RTE** | End head up on you. Drive him to the sideline. The ball goes inside you. |
 | **Z** | Run at the corner and screen him off. Stay in his way. |
-| **QB** | Open to the playside and hand deep to the back crossing from the backside. Let him come to you, then fake away. |
-| **LH** **(ball)** | You carry it. Cross behind the quarterback, take the handoff deep, then press the outside hip of our tackle and turn up inside the blocks. |
+| **QB** | Open playside and hand deep to the back crossing behind you. Let him come to you, then fake away. |
+| **LH** **(ball)** | Cross behind the quarterback, take the handoff deep, then press our tackle's outside hip. Turn up inside the blocks. |
 | **RH** | Lead through the hole. Block the first man who shows in it. |
 
 **Coaching points**
@@ -162,9 +162,9 @@ Off-tackle power to the far back, who crosses behind the quarterback and takes a
 | **RT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
 | **RTE** | End head up on you. Cut him off — get between him and the ball. |
 | **Z** | Cut off the backside. Never quit on the play. |
-| **QB** | Open to the playside and hand deep to the back crossing from the backside. Let him come to you, then fake away. |
+| **QB** | Open playside and hand deep to the back crossing behind you. Let him come to you, then fake away. |
 | **LH** | Lead through the hole. Block the first man who shows in it. |
-| **RH** **(ball)** | You carry it. Cross behind the quarterback, take the handoff deep, then press the outside hip of our tackle and turn up inside the blocks. |
+| **RH** **(ball)** | Cross behind the quarterback, take the handoff deep, then press our tackle's outside hip. Turn up inside the blocks. |
 
 **Coaching points**
 
@@ -194,9 +194,9 @@ Misdirection off the pitch. The near back and the quarterback sell the pitch one
 | **RT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
 | **RTE** | End head up on you. Drive him to the sideline. The ball goes inside you. |
 | **Z** | Climb to the outside linebacker. Head across him. Leave like it is a route so he never sees you. Not low. |
-| **QB** | Fake the pitch to the left, then turn back and hand the ball to the other back coming across. The fake comes first. |
-| **LH** **(ball)** | Take two hard steps toward the fake, then plant and come all the way back behind the down blocks. |
-| **RH** | Run the full pitch path away at full speed with your arms tucked. You are the lie. |
+| **QB** | Fake the pitch left, then turn back and hand to the back coming across. Fake first. |
+| **LH** **(ball)** | Take two hard steps at the fake, then plant and come back behind the down blocks. |
+| **RH** | Run the full pitch path away at full speed, arms tucked. You are the lie. |
 
 **Coaching points**
 
@@ -226,9 +226,9 @@ Misdirection off the pitch. The near back and the quarterback sell the pitch one
 | **RT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
 | **RTE** | End head up on you. Cut him off — get between him and the ball. |
 | **Z** | Cut off the backside. Never quit on the play. |
-| **QB** | Fake the pitch to the right, then turn back and hand the ball to the other back coming across. The fake comes first. |
-| **LH** | Run the full pitch path away at full speed with your arms tucked. You are the lie. |
-| **RH** **(ball)** | Take two hard steps toward the fake, then plant and come all the way back behind the down blocks. |
+| **QB** | Fake the pitch right, then turn back and hand to the back coming across. Fake first. |
+| **LH** | Run the full pitch path away at full speed, arms tucked. You are the lie. |
+| **RH** **(ball)** | Take two hard steps at the fake, then plant and come back behind the down blocks. |
 
 **Coaching points**
 
@@ -250,16 +250,16 @@ The only pass in this formation, off the play they have seen most. The quarterba
 
 | Position | Assignment |
 |---|---|
-| **LTE** | Engage the end over you for a count, then release and get across the field to eight yards. You are the second look and you arrive late on purpose. |
+| **LTE** | Bump the end, then cross the field to eight yards. Second look, late on purpose. |
 | **LT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
 | **LG** | Block down on the nose, inside shoulder. Head across him — nobody crosses your face. |
 | **C** | Nose head up on you. Cut him off — get between him and the ball. |
 | **RG** | Nobody on you. Help on the nose, then take the middle linebacker. |
 | **RT** | Hinge back and protect the outside. Nobody gets past you. |
-| **RTE** **(ball)** | Engage the end over you for a count, then release to the flat at four yards and stay in front of the quarterback. You are the easy throw. |
-| **Z** | Sprint straight down the field and take the deep man on your side with you. Nobody is throwing you the ball — you are the reason the flat is empty. |
-| **QB** | Fake the dive to the back away from your roll, hide the ball on your back hip, and get to the edge. Run it if it is open. Only throw if a defender comes up to take you. |
-| **LH** | Run the dive path full speed with your arms tucked like you have it. Their linebackers only leave if you are worth watching. |
+| **RTE** **(ball)** | Bump the end, then release to the flat at four yards in front of the quarterback. |
+| **Z** | Sprint straight downfield and take the deep man with you. Nobody throws you the ball — you empty the flat. |
+| **QB** | Fake the dive away from your roll, ball on your hip, run the edge. Throw only when they take you. |
+| **LH** | Run the dive path full speed, arms tucked. Linebackers only leave if you are worth watching. |
 | **RH** | Hinge back and protect the outside. Nobody gets past you. You are already on the side he rolls to — do not chase the fake. |
 
 **Coaching points**
@@ -284,17 +284,17 @@ Waggle Right to the other edge, and the harder of the two. The quarterback's fir
 
 | Position | Assignment |
 |---|---|
-| **LTE** **(ball)** | Engage the end over you for a count, then release to the flat at four yards and stay in front of the quarterback. You are the easy throw. |
+| **LTE** **(ball)** | Bump the end, then release to the flat at four yards in front of the quarterback. |
 | **LT** | Hinge back and protect the outside. Nobody gets past you. |
 | **LG** | Nobody on you. Help on the nose, then take the middle linebacker. |
 | **C** | Nose head up on you. Cut him off — get between him and the ball. |
 | **RG** | Block down on the nose, inside shoulder. Head across him — nobody crosses your face. |
 | **RT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
-| **RTE** | Engage the end over you for a count, then release and get across the field to eight yards. You are the second look and you arrive late on purpose. |
-| **Z** | Sprint deep from the back side and lean toward the middle of the field. Nobody is throwing you the ball — you are holding their deep men away from the boot. |
-| **QB** | Fake the dive to the back away from your roll, hide the ball on your back hip, and get to the edge. Run it if it is open. Only throw if a defender comes up to take you. |
+| **RTE** | Bump the end, then cross the field to eight yards. Second look, late on purpose. |
+| **Z** | Sprint deep from the back side toward the middle. Nobody throws you the ball — you hold their deep men. |
+| **QB** | Fake the dive away from your roll, ball on your hip, run the edge. Throw only when they take you. |
 | **LH** | Hinge back and protect the outside. Nobody gets past you. You are already on the side he rolls to — do not chase the fake. |
-| **RH** | Run the dive path full speed with your arms tucked like you have it. Their linebackers only leave if you are worth watching. |
+| **RH** | Run the dive path full speed, arms tucked. Linebackers only leave if you are worth watching. |
 
 **Coaching points**
 
@@ -326,8 +326,8 @@ Get outside in a hurry. The far back trails the quarterback, takes the pitch on 
 | **RT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
 | **RTE** | End head up on you. Turn him inside. The ball goes around behind you. |
 | **Z** | Run at the corner and screen him off. Stay in his way. |
-| **QB** | Fake the dive to the near back, attack the outside, and pitch the ball to the trailing back before you get touched. Pitch early, not late. |
-| **LH** **(ball)** | Run flat behind everybody, stay outside and behind the quarterback, and catch the pitch on the run. Never get ahead of him — a pitch that goes forward is a fumble. |
+| **QB** | Fake the dive to the near back, attack the outside, then pitch to the trailing back early, never late. |
+| **LH** **(ball)** | Run flat, outside and behind the quarterback, and catch the pitch on the run. Ahead of him is a fumble. |
 | **RH** | Lead outside our end, then turn up inside — the playside linebacker is the man who shows. Head across him. Step at the dive first to hold their linebackers. |
 
 **Coaching points**
@@ -356,9 +356,9 @@ Get outside in a hurry. The far back trails the quarterback, takes the pitch on 
 | **RT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
 | **RTE** | End head up on you. Cut him off — get between him and the ball. |
 | **Z** | Cut off the backside. Never quit on the play. |
-| **QB** | Open left, get to the edge, and pitch the ball to the trailing back before you get touched. There is no dive fake on this one — sell it with your eyes and get out there. |
+| **QB** | Open left, attack the edge, and pitch to the trailing back before you get touched. No dive fake here. |
 | **LH** | Lead outside our end. Block the first man out there — here it is the corner. |
-| **RH** **(ball)** | Run flat behind everybody, stay outside and behind the quarterback, and catch the pitch on the run. Never get ahead of him — a pitch that goes forward is a fumble. |
+| **RH** **(ball)** | Run flat, outside and behind the quarterback, and catch the pitch on the run. Ahead of him is a fumble. |
 
 **Coaching points**
 
@@ -386,8 +386,8 @@ The quarterback keeps it himself, and he runs to the side the split man is lined
 | **RT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
 | **RTE** | End head up on you. Turn him inside. The ball goes around behind you. |
 | **Z** | Run at the corner and screen him off. Stay in his way. |
-| **QB** **(ball)** | Show the ball to the back going left, tuck it on your back hip and get outside our end. Turn up the moment the edge is sealed — never drift sideways. |
-| **LH** | Run the sweep path away at full speed with your arms tucked. You are the lie, and the linebackers only leave if you are worth watching. |
+| **QB** **(ball)** | Fake to the back going left, hide the ball, get outside our end. Turn up the moment the edge seals. |
+| **LH** | Run the sweep path away full speed, arms tucked. Linebackers only leave if you are worth watching. |
 | **RH** | Lead outside our end, then turn up inside — the playside linebacker is the man who shows. Head across him. |
 
 **Coaching points**
@@ -417,9 +417,9 @@ The quarterback keeps it himself, and he runs to the side the split man is lined
 | **RT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
 | **RTE** | End head up on you. Cut him off — get between him and the ball. |
 | **Z** | Run at the corner and screen him off. Stay in his way. |
-| **QB** **(ball)** | Show the ball to the back going right, tuck it on your back hip and get outside our end. Turn up the moment the edge is sealed — never drift sideways. |
+| **QB** **(ball)** | Fake to the back going right, hide the ball, get outside our end. Turn up the moment the edge seals. |
 | **LH** | Lead outside our end, then turn up inside — the playside linebacker is the man who shows. Head across him. |
-| **RH** | Run the sweep path away at full speed with your arms tucked. You are the lie, and the linebackers only leave if you are worth watching. |
+| **RH** | Run the sweep path away full speed, arms tucked. Linebackers only leave if you are worth watching. |
 
 **Coaching points**
 
@@ -447,8 +447,8 @@ The Keep Left, until it is not. The quarterback and the near back start the Keep
 | **RG** | Nobody on you. Climb to the playside linebacker. Head across him. |
 | **RT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
 | **RTE** | End head up on you. Turn him inside. The ball goes around behind you. |
-| **Z** **(ball)** | Come back behind the line the moment the ball is snapped, take the pitch going the other way, and get outside our end. Stay behind the quarterback until you have it — a pitch that goes forward is a fumble. |
-| **QB** | Start the Keep left. Pitch it back underneath — never forward — to the split man crossing your face, then run the Keep like you still have it. |
+| **Z** **(ball)** | Come back behind the line on the snap, take the pitch the other way, and get outside our end. |
+| **QB** | Start the Keep left. Pitch back underneath, never forward, to the split man, then run the Keep like you kept it. |
 | **LH** | Run your Keep block exactly as always. At half speed, this play dies for good. |
 | **RH** | Lead outside our end. Block the first man out there — here it is the corner. |
 
@@ -479,8 +479,8 @@ The Keep Right, until it is not. The quarterback and the near back start the Kee
 | **RG** | Nobody on you. Cut off the backside. Never quit on the play. |
 | **RT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
 | **RTE** | End head up on you. Cut him off — get between him and the ball. This one takes a long time, and he is quick enough to catch it. |
-| **Z** **(ball)** | Come back behind the line the moment the ball is snapped, take the pitch going the other way, and get outside our end. Stay behind the quarterback until you have it — a pitch that goes forward is a fumble. |
-| **QB** | Start the Keep right. Pitch it back underneath — never forward — to the split man crossing your face, then run the Keep like you still have it. |
+| **Z** **(ball)** | Come back behind the line on the snap, take the pitch the other way, and get outside our end. |
+| **QB** | Start the Keep right. Pitch back underneath, never forward, to the split man, then run the Keep like you kept it. |
 | **LH** | Lead outside our end. Block the first man out there — here it is the corner. |
 | **RH** | Run your Keep block exactly as always. At half speed, this play dies for good. |
 

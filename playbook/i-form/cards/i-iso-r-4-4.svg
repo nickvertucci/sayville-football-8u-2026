@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="621" height="996" viewBox="0 0 621 996" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" width="621" height="980" viewBox="0 0 621 980" font-family="Segoe UI, Helvetica, Arial, sans-serif">
 <rect width="100%" height="100%" fill="#ffffff"/>
 <rect x="0" y="0" width="621" height="58" fill="#14213d"/>
 <text x="18" y="26" font-size="19.0" font-weight="700" fill="#ffffff">Regular I Iso Right</text>
@@ -108,25 +108,24 @@
 <text x="344" y="630" font-size="12" fill="#111318">Run at the corner and screen him off.</text>
 <text x="344" y="646" font-size="12" fill="#111318">Stay in his way.</text>
 <text x="310" y="664" font-size="12" font-weight="700" fill="#111318">QB</text>
-<text x="344" y="664" font-size="12" fill="#111318">Reverse pivot and hand the ball to the</text>
-<text x="344" y="680" font-size="12" fill="#111318">tailback at four yards. Then clear out</text>
-<text x="344" y="698" font-size="12" fill="#111318">and fake wide.</text>
+<text x="344" y="664" font-size="12" fill="#111318">Reverse pivot, hand to the tailback at</text>
+<text x="344" y="680" font-size="12" fill="#111318">four yards, then clear out and fake</text>
+<text x="344" y="698" font-size="12" fill="#111318">wide.</text>
 <text x="310" y="714" font-size="12" font-weight="700" fill="#111318">FB</text>
 <text x="344" y="714" font-size="12" fill="#111318">Lead through the hole. Block the first</text>
 <text x="344" y="732" font-size="12" fill="#111318">man who shows in it. Move him any</text>
 <text x="344" y="748" font-size="12" fill="#111318">direction — just move him.</text>
 <text x="310" y="766" font-size="12" font-weight="700" fill="#111318">TB</text>
-<text x="344" y="766" font-size="12" fill="#111318">Take the handoff at four yards, get</text>
-<text x="344" y="782" font-size="12" fill="#111318">downhill behind the fullback, and cut</text>
-<text x="344" y="800" font-size="12" fill="#111318">off his block. If he takes the</text>
-<text x="344" y="816" font-size="12" fill="#111318">linebacker outside, you go inside.</text>
-<line x1="18" y1="824" x2="603" y2="824" stroke="#c8cdd6" stroke-width="1"/>
-<text x="18" y="842" font-size="11" font-weight="700" fill="#5b6472" letter-spacing="1">COACHING POINTS</text>
-<text x="18" y="862" font-size="12" fill="#111318">Drill the fullback's block by itself with a bag. He does not have to win — he has to</text>
-<text x="18" y="878" font-size="12" fill="#111318">make the linebacker pick a side.</text>
-<text x="18" y="896" font-size="12" fill="#111318">Teach the tailback one rule: cut off the fullback's back. Do not let him decide</text>
-<text x="18" y="912" font-size="12" fill="#111318">before he gets there.</text>
-<text x="18" y="930" font-size="12" fill="#111318">If their linebacker is faster than our fullback, stop calling this and run I Slant</text>
-<text x="18" y="946" font-size="12" fill="#111318">instead.</text>
-<text x="18" y="964" font-size="12" fill="#111318">The tailback should be running downhill at the hole, not sideways looking for one.</text>
+<text x="344" y="766" font-size="12" fill="#111318">Take the handoff at four yards and run</text>
+<text x="344" y="782" font-size="12" fill="#111318">downhill off the fullback's block. He</text>
+<text x="344" y="800" font-size="12" fill="#111318">goes outside, you cut inside.</text>
+<line x1="18" y1="806" x2="603" y2="806" stroke="#c8cdd6" stroke-width="1"/>
+<text x="18" y="824" font-size="11" font-weight="700" fill="#5b6472" letter-spacing="1">COACHING POINTS</text>
+<text x="18" y="844" font-size="12" fill="#111318">Drill the fullback's block by itself with a bag. He does not have to win — he has to</text>
+<text x="18" y="862" font-size="12" fill="#111318">make the linebacker pick a side.</text>
+<text x="18" y="878" font-size="12" fill="#111318">Teach the tailback one rule: cut off the fullback's back. Do not let him decide</text>
+<text x="18" y="896" font-size="12" fill="#111318">before he gets there.</text>
+<text x="18" y="912" font-size="12" fill="#111318">If their linebacker is faster than our fullback, stop calling this and run I Slant</text>
+<text x="18" y="930" font-size="12" fill="#111318">instead.</text>
+<text x="18" y="946" font-size="12" fill="#111318">The tailback should be running downhill at the hole, not sideways looking for one.</text>
 </svg>

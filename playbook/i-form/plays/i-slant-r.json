@@ -36,7 +36,7 @@
       "block": "screen"
     },
     "QB": {
-      "rule": "Reverse pivot, hand the ball to the tailback deep, then carry out the bootleg fake away from the play.",
+      "rule": "Reverse pivot, hand it deep to the tailback, then fake the bootleg away from the play.",
       "type": "fake",
       "path": [
         [
@@ -54,7 +54,7 @@
       "target": "force"
     },
     "TB": {
-      "rule": "Take the handoff and press outside our end. Turn up off the fullback's block — this hits outside the tight end, not inside him.",
+      "rule": "Take the handoff and press outside our end. Turn up off the fullback's block, never inside.",
       "type": "run",
       "path": [
         [

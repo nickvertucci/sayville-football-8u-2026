@@ -36,7 +36,7 @@
       "block": "cutoff"
     },
     "QB": {
-      "rule": "Take the snap, open a quarter turn and hand to the fullback at two yards. Then carry out a fake to the outside.",
+      "rule": "Open a quarter turn, hand to the fullback at two yards, then fake outside.",
       "type": "fake",
       "path": [
         [
@@ -50,7 +50,7 @@
       ]
     },
     "FB": {
-      "rule": "Aim at the outside hip of the center, right off the double team. Take the ball and get north — no reading, no dancing.",
+      "rule": "Aim at the center's outside hip, just off the double team. Get north, no dancing.",
       "type": "run",
       "path": [
         [
@@ -68,7 +68,7 @@
       ]
     },
     "TB": {
-      "rule": "Run the toss path outside and sell it. You will not get the ball on this play.",
+      "rule": "Run the toss path outside and sell it. You will not get the ball.",
       "type": "fake",
       "path": [
         [

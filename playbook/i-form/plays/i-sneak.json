@@ -32,7 +32,7 @@
       "block": "wedge"
     },
     "Z": {
-      "rule": "Release straight downfield and run the corner off. You will not get the ball — take his eyes with you so he never looks in.",
+      "rule": "Release downfield and run the corner off. You will not get the ball, just his eyes.",
       "type": "pass",
       "path": [
         [
@@ -46,7 +46,7 @@
       ]
     },
     "QB": {
-      "rule": "Snap it and go now, right behind the outside hip of the guard on the Z side. Low pads, ball in both arms, fall forward. Do not stand up and do not look for a hole.",
+      "rule": "Go on the snap behind the guard's outside hip on the Z side. Low pads, ball tight, fall forward.",
       "type": "run",
       "path": [
         [
@@ -72,7 +72,7 @@
     "This is a one-yard play. Do not call it needing two.",
     "The snap count is the whole play. If they know it is coming they still cannot stop it, but only if we go on the first sound and they do not.",
     "Expect the heaviest front the league allows on fourth and one. Nobody blocks a man on this play, so it does not change the call.",
-    "Teach the quarterback to fall forward the moment he feels contact. Eight-year-olds try to spin and lose the yard they already had.",
+    "Teach the quarterback to fall forward the moment he feels contact. Eight-year-olds try to spin and lose the yard they already had. And he does not get to pick a hole — there is no hole, there is a snap count and a yard.",
     "It is legal for us in 11-man play. It is specifically prohibited in the 8-man Rookie division, so if we ever end up there this play comes straight out of the book."
   ],
   "z": "right"

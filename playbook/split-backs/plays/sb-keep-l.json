@@ -36,7 +36,7 @@
       "block": "screen"
     },
     "QB": {
-      "rule": "Show the ball to the back going right, tuck it on your back hip and get outside our end. Turn up the moment the edge is sealed — never drift sideways.",
+      "rule": "Fake to the back going right, hide the ball, get outside our end. Turn up the moment the edge seals.",
       "type": "run",
       "path": [
         [
@@ -66,7 +66,7 @@
       "target": "force"
     },
     "RH": {
-      "rule": "Run the sweep path away at full speed with your arms tucked. You are the lie, and the linebackers only leave if you are worth watching.",
+      "rule": "Run the sweep path away full speed, arms tucked. Linebackers only leave if you are worth watching.",
       "type": "fake",
       "path": [
         [

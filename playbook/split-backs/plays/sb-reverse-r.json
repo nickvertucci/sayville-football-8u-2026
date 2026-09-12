@@ -34,7 +34,7 @@
       "note": "This one takes a long time, and he is quick enough to catch it."
     },
     "QB": {
-      "rule": "Start the Keep left. Pitch it back underneath — never forward — to the split man crossing your face, then run the Keep like you still have it.",
+      "rule": "Start the Keep left. Pitch back underneath, never forward, to the split man, then run the Keep like you kept it.",
       "type": "fake",
       "path": [
         [
@@ -78,7 +78,7 @@
       ]
     },
     "Z": {
-      "rule": "Come back behind the line the moment the ball is snapped, take the pitch going the other way, and get outside our end. Stay behind the quarterback until you have it — a pitch that goes forward is a fumble.",
+      "rule": "Come back behind the line on the snap, take the pitch the other way, and get outside our end.",
       "type": "run",
       "path": [
         [

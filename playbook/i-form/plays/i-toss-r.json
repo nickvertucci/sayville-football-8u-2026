@@ -36,7 +36,7 @@
       "block": "screen"
     },
     "QB": {
-      "rule": "Reverse pivot and hand the ball to the tailback as deep as you can. Then boot away and sell it.",
+      "rule": "Reverse pivot, hand it deep to the tailback, then boot away and sell it.",
       "type": "fake",
       "path": [
         [
@@ -55,7 +55,7 @@
       "note": "Beat the tailback to the corner."
     },
     "TB": {
-      "rule": "Take the handoff at full speed and get to the corner. Turn up when the fullback blocks somebody, not before.",
+      "rule": "Take the handoff at full speed to the corner. Turn up when the fullback blocks somebody.",
       "type": "run",
       "path": [
         [

@@ -36,7 +36,7 @@
       "block": "cutoff"
     },
     "QB": {
-      "rule": "Open to the playside and hand deep to the back crossing from the backside. Let him come to you, then fake away.",
+      "rule": "Open playside and hand deep to the back crossing behind you. Let him come to you, then fake away.",
       "type": "fake",
       "path": [
         [
@@ -57,7 +57,7 @@
       "block": "lead"
     },
     "RH": {
-      "rule": "You carry it. Cross behind the quarterback, take the handoff deep, then press the outside hip of our tackle and turn up inside the blocks.",
+      "rule": "Cross behind the quarterback, take the handoff deep, then press our tackle's outside hip. Turn up inside the blocks.",
       "type": "run",
       "path": [
         [
