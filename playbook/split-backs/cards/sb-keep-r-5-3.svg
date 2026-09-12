@@ -38,8 +38,8 @@
 <line x1="239.5" y1="292.1" x2="257.3" y2="296.5" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 <path d="M275.4,337.5 L279.4,294.3" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
 <line x1="270.3" y1="293.4" x2="288.6" y2="295.2" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
-<path d="M313.2,337.5 L291.3,318.6 L272.7,251.1" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-<line x1="263.9" y1="253.5" x2="281.5" y2="248.7" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
+<path d="M313.2,337.5 L330.2,318.6 L359.1,251.1" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="350.7" y1="247.5" x2="367.5" y2="254.7" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 <path d="M351.0,337.5 L363.1,294.3" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
 <line x1="354.3" y1="291.8" x2="372.0" y2="296.8" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 <path d="M388.8,337.5 L445.5,251.1" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
@@ -52,8 +52,8 @@
 <line x1="560.5" y1="264.3" x2="578.9" y2="264.9" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 <path d="M351.0,364.5 L334.8,375.3 L399.6,386.1 L469.8,375.3 L502.2,321.3 L510.3,251.1" fill="none" stroke="#b3001b" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
 <polygon points="510.3,251.1 513.7,261.9 504.5,260.9" fill="#b3001b"/>
-<path d="M410.4,426.6 L519.5,307.8 L602.1,256.5" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-<line x1="597.3" y1="248.7" x2="606.9" y2="264.3" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
+<path d="M410.4,426.6 L385.8,307.8 L359.1,256.5" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="351.0" y1="260.7" x2="367.2" y2="252.3" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 <path d="M291.6,426.6 L221.4,399.6 L129.6,367.2" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 5"/>
 <polygon points="129.6,367.2 140.9,366.3 137.8,375.0" fill="#14213d"/>
 <rect x="225.7" y="325.6" width="23.8" height="23.8" rx="3" fill="#ffffff" stroke="#14213d" stroke-width="2.4"/>
@@ -120,9 +120,9 @@
 <text x="331" y="782" font-size="12" fill="#111318">lie, and the linebackers only leave</text>
 <text x="331" y="800" font-size="12" fill="#111318">if you are worth watching.</text>
 <text x="297" y="816" font-size="12" font-weight="700" fill="#111318">RH</text>
-<text x="331" y="816" font-size="12" fill="#111318">Lead outside our end. Block the first</text>
-<text x="331" y="834" font-size="12" fill="#111318">man out there — here it is the</text>
-<text x="331" y="850" font-size="12" fill="#111318">corner.</text>
+<text x="331" y="816" font-size="12" fill="#111318">Lead outside our end, then turn up</text>
+<text x="331" y="834" font-size="12" fill="#111318">inside — the playside linebacker is</text>
+<text x="331" y="850" font-size="12" fill="#111318">the man who shows. Head across him.</text>
 <line x1="18" y1="858" x2="576" y2="858" stroke="#c8cdd6" stroke-width="1"/>
 <text x="18" y="876" font-size="11" font-weight="700" fill="#5b6472" letter-spacing="1">COACHING POINTS</text>
 <text x="18" y="896" font-size="12" fill="#111318">Blocked exactly like Pitch — the line does not learn a new rule, only a new name.</text>

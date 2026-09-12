@@ -1034,6 +1034,17 @@ table.cal tbody tr:last-child .cal-cell { border-bottom: 0; }
 }
 .ins-play:hover { border-color: var(--accent); background: var(--panel); }
 .ins-play.def { border-left: 3px solid var(--red); }
+/* The water break between blocks. Deliberately quiet — it is punctuation in the run
+   of practice, not a coaching block, and it appears after every one of them. */
+.ins-water {
+  display: flex; align-items: center; gap: 8px; margin: 6px 0 6px 2px;
+  font-size: 12.5px; font-weight: 600; color: var(--muted);
+  letter-spacing: 0.2px; text-transform: uppercase;
+}
+.ins-water::before {
+  content: ""; width: 3px; height: 14px; border-radius: 2px; background: var(--line);
+}
+.ins-water-t { font-weight: 500; text-transform: none; letter-spacing: 0; }
 .ins-play.form { border-left: 3px solid var(--accent-solid); }
 .ins-n time { display: block; font-size: 11px; line-height: 1.2; margin-top: 3px;
   font-style: normal; opacity: .85; }

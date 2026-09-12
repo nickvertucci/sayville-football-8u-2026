@@ -38,8 +38,8 @@
 <line x1="444.7" y1="296.5" x2="462.5" y2="292.1" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 <path d="M426.6,337.5 L422.6,294.3" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
 <line x1="413.4" y1="295.2" x2="431.7" y2="293.4" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
-<path d="M388.8,337.5 L410.7,318.6 L429.3,251.1" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-<line x1="420.5" y1="248.7" x2="438.1" y2="253.5" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
+<path d="M388.8,337.5 L371.8,318.6 L342.9,251.1" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="334.5" y1="254.7" x2="351.3" y2="247.5" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 <path d="M351.0,337.5 L338.9,294.3" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
 <line x1="330.0" y1="296.8" x2="347.7" y2="291.8" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 <path d="M313.2,337.5 L256.5,251.1" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
@@ -52,8 +52,8 @@
 <line x1="123.1" y1="264.9" x2="141.5" y2="264.3" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 <path d="M351.0,364.5 L367.2,375.3 L302.4,386.1 L232.2,375.3 L199.8,321.3 L191.7,251.1" fill="none" stroke="#b3001b" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
 <polygon points="191.7,251.1 197.5,260.9 188.3,261.9" fill="#b3001b"/>
-<path d="M291.6,426.6 L182.5,307.8 L99.9,256.5" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-<line x1="95.1" y1="264.3" x2="104.7" y2="248.7" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
+<path d="M291.6,426.6 L316.2,307.8 L342.9,256.5" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="334.8" y1="252.3" x2="351.0" y2="260.7" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 <path d="M410.4,426.6 L480.6,399.6 L572.4,367.2" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 5"/>
 <polygon points="572.4,367.2 564.2,375.0 561.1,366.3" fill="#14213d"/>
 <rect x="225.7" y="325.6" width="23.8" height="23.8" rx="3" fill="#ffffff" stroke="#14213d" stroke-width="2.4"/>
@@ -115,9 +115,9 @@
 <text x="331" y="714" font-size="12" fill="#111318">moment the edge is sealed — do not</text>
 <text x="331" y="732" font-size="12" fill="#111318">drift sideways looking for more.</text>
 <text x="297" y="748" font-size="12" font-weight="700" fill="#111318">LH</text>
-<text x="331" y="748" font-size="12" fill="#111318">Lead outside our end. Block the first</text>
-<text x="331" y="766" font-size="12" fill="#111318">man out there — here it is the</text>
-<text x="331" y="782" font-size="12" fill="#111318">corner.</text>
+<text x="331" y="748" font-size="12" fill="#111318">Lead outside our end, then turn up</text>
+<text x="331" y="766" font-size="12" fill="#111318">inside — the playside linebacker is</text>
+<text x="331" y="782" font-size="12" fill="#111318">the man who shows. Head across him.</text>
 <text x="297" y="800" font-size="12" font-weight="700" fill="#111318">RH</text>
 <text x="331" y="800" font-size="12" fill="#111318">Run the sweep path away at full speed</text>
 <text x="331" y="816" font-size="12" fill="#111318">with your arms tucked. You are the</text>

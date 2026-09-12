@@ -191,6 +191,190 @@
         }
       ],
       "huddle": "Review what we did today at practice."
+    },
+    {
+      "n": 6,
+      "date": "2026-09-15",
+      "phase": "season",
+      "water_break": 1,
+      "focus": "Iso and the Sneak — the two calls that need no edge",
+      "plays": [
+        "i-iso-r",
+        "i-iso-l",
+        "i-sneak",
+        "i-sneak-l"
+      ],
+      "requires": [
+        "i-dive-r",
+        "i-power-r"
+      ],
+      "emphasis": "Both of today's calls win inside. Iso asks the fullback to find one linebacker in a gap the line has already opened; the Sneak asks for a yard and nothing more.",
+      "blocks": [
+        {
+          "tag": "A",
+          "kind": "note",
+          "title": "Warm-up",
+          "time": "5:30–5:35",
+          "note": "Five minutes, moving the whole time."
+        },
+        {
+          "tag": "B",
+          "kind": "groups",
+          "title": "Offensive position groups",
+          "time": "5:36–5:46",
+          "groups": [
+            {
+              "name": "Offensive line / TE",
+              "drills": [
+                "Down block, head across the man",
+                "Firing out low",
+                "Wedge shoulder to shoulder"
+              ]
+            },
+            {
+              "name": "QB / FB / TB / Z",
+              "drills": [
+                "Handoff timing at the guard-tackle gap",
+                "Fullback lead through the hole",
+                "Ball security in traffic"
+              ]
+            }
+          ]
+        },
+        {
+          "tag": "C",
+          "kind": "groups",
+          "title": "Defensive position groups",
+          "time": "5:47–5:57",
+          "groups": [
+            {
+              "name": "Defensive line",
+              "drills": [
+                "Gap control, one gap each",
+                "Hands inside, pads under"
+              ]
+            },
+            {
+              "name": "LB / CB / S",
+              "drills": [
+                "Read the back nearest you",
+                "Fill the first open gap",
+                "Tackle drill"
+              ]
+            }
+          ]
+        },
+        {
+          "tag": "D",
+          "kind": "install",
+          "title": "Offensive install",
+          "time": "5:58–6:28",
+          "notes": [
+            "Rotating through Purple, Gold, White and Jumbo",
+            "No defense for the first ten minutes, then air-to-bags",
+            "In and out of the huddle every rep"
+          ]
+        },
+        {
+          "tag": "E",
+          "kind": "note",
+          "title": "Live scrimmage",
+          "time": "6:29–6:59",
+          "note": "Offense vs. defense. Iso and Sneak only — make them earn the yard."
+        }
+      ],
+      "huddle": "Two calls that do not need the edge. Every yard today came from inside."
+    },
+    {
+      "n": 7,
+      "date": "2026-09-17",
+      "phase": "season",
+      "water_break": 1,
+      "focus": "Counter off the Power they have already seen",
+      "plays": [
+        "i-counter-r",
+        "i-counter-l"
+      ],
+      "requires": [
+        "i-power-r",
+        "i-power-l"
+      ],
+      "emphasis": "Counter only works because Power has hurt them. The two hard steps toward the fake are the whole play — a back who leaves early has run Power slowly.",
+      "blocks": [
+        {
+          "tag": "A",
+          "kind": "note",
+          "title": "Warm-up",
+          "time": "5:30–5:35",
+          "note": "Five minutes, moving the whole time."
+        },
+        {
+          "tag": "B",
+          "kind": "groups",
+          "title": "Offensive position groups",
+          "time": "5:36–5:46",
+          "groups": [
+            {
+              "name": "Offensive line / TE",
+              "drills": [
+                "Down block both ways",
+                "The end's kick-out on the counter",
+                "Holding a block while the ball crosses"
+              ]
+            },
+            {
+              "name": "QB / FB / TB / Z",
+              "drills": [
+                "Two hard steps and plant",
+                "Deep handoff on the counter path",
+                "Selling the fake at full speed"
+              ]
+            }
+          ]
+        },
+        {
+          "tag": "C",
+          "kind": "groups",
+          "title": "Defensive position groups",
+          "time": "5:47–5:57",
+          "groups": [
+            {
+              "name": "Defensive line",
+              "drills": [
+                "Stay in your gap when the back crosses",
+                "Do not chase the first step"
+              ]
+            },
+            {
+              "name": "LB / CB / S",
+              "drills": [
+                "Read the back, not the ball",
+                "Flow, then stop your feet",
+                "Tackle drill"
+              ]
+            }
+          ]
+        },
+        {
+          "tag": "D",
+          "kind": "install",
+          "title": "Offensive install",
+          "time": "5:58–6:28",
+          "notes": [
+            "Power first, three reps, so the fake has something to copy",
+            "Then Counter to the same side off the identical first step",
+            "Rotating through Purple, Gold and White"
+          ]
+        },
+        {
+          "tag": "E",
+          "kind": "note",
+          "title": "Live scrimmage",
+          "time": "6:29–6:59",
+          "note": "Offense vs. defense. Call Power until they cheat, then Counter."
+        }
+      ],
+      "huddle": "Power is why Counter works. Run the first two steps the same every time."
     }
   ]
 }

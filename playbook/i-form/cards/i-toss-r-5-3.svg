@@ -38,8 +38,8 @@
 <line x1="239.5" y1="292.1" x2="257.3" y2="296.5" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 <path d="M275.4,337.5 L279.4,294.3" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
 <line x1="270.3" y1="293.4" x2="288.6" y2="295.2" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
-<path d="M313.2,337.5 L291.3,318.6 L272.7,251.1" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-<line x1="263.9" y1="253.5" x2="281.5" y2="248.7" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
+<path d="M313.2,337.5 L330.2,318.6 L359.1,251.1" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="350.7" y1="247.5" x2="367.5" y2="254.7" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 <path d="M351.0,337.5 L363.1,294.3" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
 <line x1="354.3" y1="291.8" x2="372.0" y2="296.8" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 <path d="M388.8,337.5 L445.5,251.1" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
@@ -52,8 +52,8 @@
 <line x1="561.0" y1="261.8" x2="578.4" y2="267.4" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 <path d="M351.0,364.5 L332.1,378.0 L275.4,369.9" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 5"/>
 <polygon points="275.4,369.9 286.3,366.8 285.0,375.9" fill="#14213d"/>
-<path d="M351.0,413.1 L492.8,307.8 L602.1,256.5" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-<line x1="598.2" y1="248.2" x2="606.0" y2="264.8" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
+<path d="M351.0,413.1 L359.1,307.8 L359.1,256.5" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="349.9" y1="256.5" x2="368.3" y2="256.5" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 <path d="M351.0,472.5 L410.4,418.5 L513.0,380.7 L588.6,310.5 L588.6,234.9" fill="none" stroke="#b3001b" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
 <polygon points="588.6,234.9 593.2,245.3 584.0,245.3" fill="#b3001b"/>
 <rect x="225.7" y="325.6" width="23.8" height="23.8" rx="3" fill="#ffffff" stroke="#14213d" stroke-width="2.4"/>
@@ -112,10 +112,10 @@
 <text x="331" y="664" font-size="12" fill="#111318">the tailback as deep as you can. Then</text>
 <text x="331" y="680" font-size="12" fill="#111318">boot away and sell it.</text>
 <text x="297" y="698" font-size="12" font-weight="700" fill="#111318">FB</text>
-<text x="331" y="698" font-size="12" fill="#111318">Lead outside our end. Block the first</text>
-<text x="331" y="714" font-size="12" fill="#111318">man out there — here it is the</text>
-<text x="331" y="732" font-size="12" fill="#111318">corner. Beat the tailback to the</text>
-<text x="331" y="748" font-size="12" fill="#111318">corner.</text>
+<text x="331" y="698" font-size="12" fill="#111318">Lead outside our end, then turn up</text>
+<text x="331" y="714" font-size="12" fill="#111318">inside — the playside linebacker is</text>
+<text x="331" y="732" font-size="12" fill="#111318">the man who shows. Head across him.</text>
+<text x="331" y="748" font-size="12" fill="#111318">Beat the tailback to the corner.</text>
 <text x="297" y="766" font-size="12" font-weight="700" fill="#111318">TB</text>
 <text x="331" y="766" font-size="12" fill="#111318">Take the handoff at full speed and</text>
 <text x="331" y="782" font-size="12" fill="#111318">get to the corner. Turn up when the</text>

@@ -1,10 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="594" height="1064" viewBox="0 0 594 1064" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" width="594" height="1082" viewBox="0 0 594 1082" font-family="Segoe UI, Helvetica, Arial, sans-serif">
 <rect width="100%" height="100%" fill="#ffffff"/>
 <rect x="0" y="0" width="594" height="58" fill="#14213d"/>
 <text x="18" y="26" font-size="19.0" font-weight="700" fill="#ffffff">Regular I Jet Right</text>
 <text x="18" y="45" font-size="11.5" fill="#a9b4c7">RUN  •  Regular I  •  vs 5-4-2</text>
-<rect x="333.2" y="13" width="242.8" height="31" rx="6" fill="#ffffff" fill-opacity="0.12" stroke="#8593ad" stroke-width="1"/>
-<text x="454.6" y="34" text-anchor="middle" font-size="14.5" font-weight="700" fill="#ffffff" letter-spacing="0.5">Regular I Z Right 48 Jet</text>
+<rect x="342.4" y="13" width="233.6" height="31" rx="6" fill="#ffffff" fill-opacity="0.12" stroke="#8593ad" stroke-width="1"/>
+<text x="459.2" y="34" text-anchor="middle" font-size="14.5" font-weight="700" fill="#ffffff" letter-spacing="0.5">Regular I Z Left 48 Jet</text>
 <clipPath id="fieldclip"><rect x="0" y="58" width="594" height="472"/></clipPath>
 <g clip-path="url(#fieldclip)"><g transform="translate(-54.0,31.0)">
 <rect x="0" y="0" width="702" height="513" fill="#ffffff"/>
@@ -42,14 +42,14 @@
 <line x1="385.0" y1="247.3" x2="398.0" y2="260.3" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 <path d="M351.0,337.5 L363.1,294.3" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
 <line x1="354.3" y1="291.8" x2="372.0" y2="296.8" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
-<path d="M388.8,337.5 L399.6,251.1" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-<line x1="390.5" y1="250.0" x2="408.7" y2="252.2" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
+<path d="M388.8,337.5 L318.6,251.1" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="311.5" y1="256.9" x2="325.7" y2="245.3" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 <path d="M426.6,337.5 L422.6,294.3" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
 <line x1="413.4" y1="295.2" x2="431.7" y2="293.4" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 <path d="M464.4,337.5 L445.5,292.9" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
 <line x1="437.0" y1="296.5" x2="454.0" y2="289.4" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
-<path d="M540.0,356.4 L550.8,353.7 L604.8,334.8 L626.4,286.2 L626.4,216.0" fill="none" stroke="#b3001b" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
-<polygon points="626.4,216.0 631.0,226.4 621.8,226.4" fill="#b3001b"/>
+<path d="M162.0,356.4 L302.4,375.3 L410.4,378.0 L518.4,351.0 L572.4,307.8 L599.4,240.3" fill="none" stroke="#b3001b" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+<polygon points="599.4,240.3 599.8,251.6 591.3,248.2" fill="#b3001b"/>
 <path d="M351.0,364.5 L334.8,380.7 L280.8,391.5 L237.6,380.7" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 5"/>
 <polygon points="237.6,380.7 248.8,378.7 246.5,387.7" fill="#14213d"/>
 <path d="M351.0,413.1 L361.8,364.5 L383.4,332.1" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
@@ -70,8 +70,8 @@
 <text x="426.6" y="341.5" text-anchor="middle" font-size="11.5" font-weight="700" fill="#14213d">RT</text>
 <rect x="452.5" y="325.6" width="23.8" height="23.8" rx="3" fill="#ffffff" stroke="#14213d" stroke-width="2.4"/>
 <text x="464.4" y="341.5" text-anchor="middle" font-size="11.5" font-weight="700" fill="#14213d">RTE</text>
-<circle cx="540.0" cy="356.4" r="12.4" fill="#ffffff" stroke="#b3001b" stroke-width="2.4"/>
-<text x="540.0" y="360.4" text-anchor="middle" font-size="11.5" font-weight="700" fill="#b3001b">Z</text>
+<circle cx="162.0" cy="356.4" r="12.4" fill="#ffffff" stroke="#b3001b" stroke-width="2.4"/>
+<text x="162.0" y="360.4" text-anchor="middle" font-size="11.5" font-weight="700" fill="#b3001b">Z</text>
 <circle cx="351.0" cy="364.5" r="12.4" fill="#ffffff" stroke="#14213d" stroke-width="2.4"/>
 <text x="351.0" y="368.5" text-anchor="middle" font-size="11.5" font-weight="700" fill="#14213d">QB</text>
 <circle cx="351.0" cy="413.1" r="12.4" fill="#ffffff" stroke="#14213d" stroke-width="2.4"/>
@@ -105,33 +105,34 @@
 <text x="331" y="578" font-size="12" fill="#111318">End head up on you. Turn him inside.</text>
 <text x="331" y="596" font-size="12" fill="#111318">The ball goes around behind you.</text>
 <text x="297" y="612" font-size="12" font-weight="700" fill="#111318">Z</text>
-<text x="331" y="612" font-size="12" fill="#111318">Jet in motion to the right on the</text>
-<text x="331" y="630" font-size="12" fill="#111318">coach's call, full speed, and take</text>
-<text x="331" y="646" font-size="12" fill="#111318">the pitch behind the tailback. Get</text>
-<text x="331" y="664" font-size="12" fill="#111318">around our end before you turn up —</text>
-<text x="331" y="680" font-size="12" fill="#111318">do not cut it inside.</text>
-<text x="297" y="698" font-size="12" font-weight="700" fill="#111318">QB</text>
-<text x="331" y="698" font-size="12" fill="#111318">Turn and pitch it out to the Z as he</text>
-<text x="331" y="714" font-size="12" fill="#111318">crosses, then carry out a boot fake</text>
-<text x="331" y="732" font-size="12" fill="#111318">back to the left with your hands on</text>
-<text x="331" y="748" font-size="12" fill="#111318">your belly.</text>
-<text x="297" y="766" font-size="12" font-weight="700" fill="#111318">FB</text>
-<text x="331" y="766" font-size="12" fill="#111318">Fill like Wedge is coming, then take</text>
-<text x="331" y="782" font-size="12" fill="#111318">anyone chasing from inside.</text>
-<text x="297" y="800" font-size="12" font-weight="700" fill="#111318">TB</text>
-<text x="331" y="800" font-size="12" fill="#111318">Lead outside our end. Block the first</text>
-<text x="331" y="816" font-size="12" fill="#111318">man out there — here it is the</text>
-<text x="331" y="834" font-size="12" fill="#111318">linebacker.</text>
-<line x1="18" y1="840" x2="576" y2="840" stroke="#c8cdd6" stroke-width="1"/>
-<text x="18" y="858" font-size="11" font-weight="700" fill="#5b6472" letter-spacing="1">COACHING POINTS</text>
-<text x="18" y="878" font-size="12" fill="#111318">This is the answer when their end starts chasing Jet Left flat down the line —</text>
-<text x="18" y="896" font-size="12" fill="#111318">the Z pitches off his own edge before the end can recover.</text>
-<text x="18" y="912" font-size="12" fill="#111318">Motion is legal in 11-man play, but only one man may be moving at the snap and he</text>
-<text x="18" y="930" font-size="12" fill="#111318">cannot be moving toward the line. Keep the Z flat.</text>
-<text x="18" y="946" font-size="12" fill="#111318">The pitch has to beat the Z to the corner. Get it to him deep and early so he</text>
-<text x="18" y="964" font-size="12" fill="#111318">never breaks stride.</text>
-<text x="18" y="980" font-size="12" fill="#111318">The tailback is the carrier's last blocker. If the corner beats him outside, the</text>
-<text x="18" y="998" font-size="12" fill="#111318">play dies — drill the block on air.</text>
-<text x="18" y="1014" font-size="12" fill="#111318">Do not install this until Jet Left is real. It only works because they have been</text>
-<text x="18" y="1032" font-size="12" fill="#111318">punished for leaving with the motion.</text>
+<text x="331" y="612" font-size="12" fill="#111318">Start moving on the coach's motion</text>
+<text x="331" y="630" font-size="12" fill="#111318">call and be at full speed when you</text>
+<text x="331" y="646" font-size="12" fill="#111318">pass the quarterback. Take the pitch</text>
+<text x="331" y="664" font-size="12" fill="#111318">and get around the corner — do not</text>
+<text x="331" y="680" font-size="12" fill="#111318">turn upfield until you are outside</text>
+<text x="331" y="698" font-size="12" fill="#111318">our end.</text>
+<text x="297" y="714" font-size="12" font-weight="700" fill="#111318">QB</text>
+<text x="331" y="714" font-size="12" fill="#111318">Turn and pitch it out to the Z as he</text>
+<text x="331" y="732" font-size="12" fill="#111318">crosses, then carry out a boot fake</text>
+<text x="331" y="748" font-size="12" fill="#111318">back to the left with your hands on</text>
+<text x="331" y="766" font-size="12" fill="#111318">your belly.</text>
+<text x="297" y="782" font-size="12" font-weight="700" fill="#111318">FB</text>
+<text x="331" y="782" font-size="12" fill="#111318">Fill like Wedge is coming, then take</text>
+<text x="331" y="800" font-size="12" fill="#111318">anyone chasing from inside.</text>
+<text x="297" y="816" font-size="12" font-weight="700" fill="#111318">TB</text>
+<text x="331" y="816" font-size="12" fill="#111318">Lead outside our end. Block the first</text>
+<text x="331" y="834" font-size="12" fill="#111318">man out there — here it is the</text>
+<text x="331" y="850" font-size="12" fill="#111318">linebacker.</text>
+<line x1="18" y1="858" x2="576" y2="858" stroke="#c8cdd6" stroke-width="1"/>
+<text x="18" y="876" font-size="11" font-weight="700" fill="#5b6472" letter-spacing="1">COACHING POINTS</text>
+<text x="18" y="896" font-size="12" fill="#111318">This is the answer when they start flying with the motion on Jet Left. Same</text>
+<text x="18" y="912" font-size="12" fill="#111318">motion, same speed, coming from the other side.</text>
+<text x="18" y="930" font-size="12" fill="#111318">Motion is legal in 11-man play, but only one man may be moving at the snap and he</text>
+<text x="18" y="946" font-size="12" fill="#111318">cannot be moving toward the line. Keep the Z flat.</text>
+<text x="18" y="964" font-size="12" fill="#111318">The pitch has to beat the Z to the corner. Get it to him deep and early so he</text>
+<text x="18" y="980" font-size="12" fill="#111318">never breaks stride.</text>
+<text x="18" y="998" font-size="12" fill="#111318">The tailback is the carrier's last blocker. If the corner beats him outside, the</text>
+<text x="18" y="1014" font-size="12" fill="#111318">play dies — drill the block on air.</text>
+<text x="18" y="1032" font-size="12" fill="#111318">Do not install this until Jet Left is real. It only works because they have been</text>
+<text x="18" y="1048" font-size="12" fill="#111318">punished for leaving with the motion.</text>
 </svg>

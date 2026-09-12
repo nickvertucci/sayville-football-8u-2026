@@ -1430,6 +1430,20 @@ def main() -> int:
     for form in formations:
         cards_dir = form["_dir"] / "cards"
         cards_dir.mkdir(exist_ok=True)
+        # Sweep out cards this build no longer writes. When a play was drawn against
+        # one front its card was <play>.svg; it is now <play>-<front>.svg, and 112 of
+        # the old ones simply stayed — tracked in git, still on disk, still teaching
+        # pulling guards months after the pulls were removed, and still reachable from
+        # the path the README hands a coach. A generated directory that only ever
+        # gains files is one where the wrong answer outlives the right one.
+        keep = {f"{form['id']}-icon.svg"}
+        for p in form["_plays"]:
+            for fid in blocking.SCOUT_FRONTS:
+                keep.add(f"{p['id']}-{fid}.svg")
+                keep.add(f"{p['id']}-{fid}-field.svg")
+        for stale in cards_dir.glob("*.svg"):
+            if stale.name not in keep:
+                stale.unlink()
         for p in form["_plays"]:
             for fid in blocking.SCOUT_FRONTS:
                 front = defenses[fid]

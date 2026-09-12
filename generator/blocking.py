@@ -57,6 +57,13 @@ DEFAULT_FRONT = "5-3"
 # Our line, from the middle out. Used to find a blocker's neighbour.
 LINE = ("LTE", "LT", "LG", "C", "RG", "RT", "RTE")
 
+# The order blocks are resolved in, which decides who gets first refusal on a defender
+# two blockers could both be sent at. Linemen, then the receiver, then the backs: the
+# man already standing next to the corner claims him, and the back coming out of the
+# backfield takes the next one in.
+CARD_ORDER = ("LTE", "LT", "LG", "C", "RG", "RT", "RTE", "TE",
+              "X", "LW", "RW", "WB", "W", "Z", "QB", "BB", "FB", "TB", "HB", "LH", "RH")
+
 # How close a down lineman has to be to count as head up on a blocker, and how far out
 # he can be and still count as shading one of his shoulders. Beyond that he is somebody
 # else's man and this blocker is uncovered.
@@ -186,7 +193,7 @@ def edge_defender(front: dict, side: int):
     return max(dl, key=lambda s: s[1] * side)
 
 
-def force_defender(front: dict, side: int):
+def force_defender(front: dict, side: int, taken=()):
     """The first defender outside our tight end who is not a down lineman.
 
     On a toss or a sweep this is the man the lead blocker has to find, and it is a
@@ -201,53 +208,96 @@ def force_defender(front: dict, side: int):
                   if (x - limit) * side > -0.5 and y < 6.0]
     if not candidates:
         return None
-    return min(candidates, key=lambda s: ((s[1] - limit) * side, s[2]))
+    ranked = sorted(candidates, key=lambda s: ((s[1] - limit) * side, s[2]))
+    for man in ranked:
+        if man[0] not in taken:
+            return man
+    return ranked[0]
 
 
-def linebacker(front: dict, side: int, which: str = "playside"):
-    """A linebacker by job rather than by name.
+def linebacker(front: dict, side: int, which: str = "playside", taken=()):
+    """A linebacker by the job he is doing, not by his name.
 
-    `which` is "playside", "backside", "middle" or "outside".
+    `which` is "playside", "backside", "middle" or "outside". Each builds a RANKED list
+    and takes the first man nobody else on this play has been sent to — which is how a
+    coach assigns them, and the only way two blockers stop arriving on one body. Only
+    the 5-3 has a linebacker standing on the ball, so in the other two fronts "middle"
+    and "playside" name the same man and something has to break the tie.
 
-    Playside is the *inside* linebacker on the playside — the man who fills the hole,
-    not the widest body on that side. That distinction is the difference between two
-    of our blockers walling off the same defender and the hole actually being blocked:
-    in the 4-4 the widest playside linebacker is the force man standing outside our
-    tight end, and he is the lead back's business, not the tight end's.
+    **The force defender is not on the inside lists.** He is the man outside our end,
+    he belongs to whoever is leading out there, and an interior blocker who drifts onto
+    him because his own man was taken has abandoned the hole to double-team the edge.
     """
     lbs = spots(front, "LB")
     if not lbs:
         return None
-    if which == "middle":
-        # A front with nobody standing on the ball has two men equally close to it.
-        # Break that tie toward the play: the linebacker on the side the ball is
-        # going is the one who makes the tackle, and a blocker climbing away from the
-        # ball to the mirror image of him has blocked nobody.
-        return min(lbs, key=lambda s: (abs(s[1]), -s[1] * side, s[2]))
+    force = force_defender(front, side)
+    inside = [s for s in lbs if not (force and s[0] == force[0])] or lbs
+
     if which == "outside":
-        return max(lbs, key=lambda s: s[1] * side)
-    if which == "backside":
-        return min(lbs, key=lambda s: s[1] * side)
-    # Playside: the innermost linebacker who is actually on the playside. One standing
-    # on the ball is the middle linebacker, not the playside one, and blocking him
-    # leaves the man filling the hole free.
-    on_side = [s for s in lbs if s[1] * side > 0.5]
-    return min(on_side or lbs, key=lambda s: (abs(s[1] - 2.0 * side), s[2]))
+        ranked = sorted(lbs, key=lambda s: -s[1] * side)
+    elif which == "middle":
+        # Nearest the ball; toward the play when two are equally close, because the
+        # one on the side the ball is going is the one who makes the tackle.
+        ranked = sorted(inside, key=lambda s: (abs(s[1]), -s[1] * side, s[2]))
+    elif which == "backside":
+        # The innermost man on the backside — the one who actually chases the play
+        # from behind. The mirror of the playside rule, for the same reason.
+        away = [s for s in inside if s[1] * side < 0.5] or inside
+        ranked = sorted(away, key=lambda s: (abs(s[1]), s[2]))
+    else:
+        # Playside: the man who fills the hole. Ranked outward from a point just to the
+        # playside of the ball, so a second blocker asking for the same job gets the
+        # next linebacker in, never the force man out on the edge.
+        ranked = sorted(inside, key=lambda s: (abs(s[1] - 2.0 * side), s[2]))
+
+    for lb in ranked:
+        if lb[0] not in taken:
+            return lb
+    return ranked[0]
 
 
-def deep_back(front: dict, x: float):
-    """The defensive back over this blocker — the man a receiver screens or stalks.
+# How far a receiver can realistically chase somebody down and still be blocking him.
+# Beyond this he is not stalking a man, he is jogging at one.
+MAX_STALK = 6.0
 
-    Over *him*, not over the play. A flanker who lines up on the right every snap has
-    a corner on his nose on every snap, and on a play going left that corner is still
-    his man — he is the one defender out there who can run the ball down from behind.
-    Picking by play side sent him seventeen yards across the formation to block
-    somebody else's corner.
+
+def perimeter_defender(front: dict, x: float, side: int, taken=()):
+    """The man a receiver has to get in front of out on the perimeter.
+
+    A defensive back over him if there is one within reach — that is the corner, and
+    stalking him is the whole job. But **the 5-4-2 has no corners**: it trades them for
+    a fourth linebacker and plays two safeties eight yards deep. Picking "the nearest
+    defensive back" there sent every flanker in the book on a nine-yard run diagonally
+    INFIELD at a safety, away from the sideline he is supposed to be walling off, while
+    the outside linebacker standing four yards from him — the man who actually makes
+    that tackle — went unblocked.
+
+    So: the nearest defensive back if one is close enough to block, otherwise the
+    outermost linebacker on his side. A front with no corners still has somebody out
+    there, and it is him.
+
+    A blocker standing on the middle has no side of his own, so he takes the play's —
+    the same rule the centre's down block follows. Without it a tailback aligned at
+    x = 0 was sent at the LEFT safety on a play going right.
     """
-    dbs = spots(front, "DB")
-    if not dbs:
-        return None
-    return min(dbs, key=lambda s: (abs(s[1] - x), -s[2]))
+    lean = side if abs(x) < 1.0 else (1 if x > 0 else -1)
+    here = (x, -1.2)
+
+    def reach(s):
+        return ((s[1] - here[0]) ** 2 + (s[2] - here[1]) ** 2) ** 0.5
+
+    dbs = [s for s in spots(front, "DB") if s[1] * lean > 1.0]
+    free_dbs = [s for s in dbs if s[0] not in taken] or dbs
+    if free_dbs:
+        best = min(free_dbs, key=reach)
+        if reach(best) <= MAX_STALK:
+            return best
+    lbs = [s for s in spots(front, "LB") if s[1] * lean > 1.0]
+    if lbs:
+        free = [s for s in lbs if s[0] not in taken] or lbs
+        return max(free, key=lambda s: s[1] * lean)
+    return min(dbs, key=reach) if dbs else None
 
 
 # --------------------------------------------------------------- the sentences --
@@ -282,7 +332,7 @@ def shade_clause(front, spot) -> tuple[str, tuple | None]:
     got the clause because the function only ever looked at x.
     """
     x, y = spot[0], spot[1]
-    if y < ON_THE_LINE:
+    if y <= ON_THE_LINE:
         return "", None
     label, dx, dy, shade = covering(front, x)
     if shade == "free":
@@ -309,11 +359,11 @@ def to(spot, target, bias_x=0.0, bias_y=0.0):
              round(target[2] - spot[1] + bias_y, 2)]]
 
 
-def v_base(front, spot, side, intent):
+def v_base(front, spot, side, intent, taken=()):
     """Drive the man over you. `drive` says which way he goes."""
     clause, man = shade_clause(front, spot)
     if man is None:                      # uncovered: there is nobody to base block
-        return v_down(front, spot, side, intent)
+        return v_down(front, spot, side, intent, taken)
     drive = intent.get("drive", "back")
     out_side = 1 if spot[0] >= 0 else -1
     if drive == "out":
@@ -328,7 +378,7 @@ def v_base(front, spot, side, intent):
     return text, to(spot, man, bias_x=bias, bias_y=0.35)
 
 
-def v_release(front, spot, side, intent):
+def v_release(front, spot, side, intent, taken=()):
     """Go past the edge defender — somebody else is kicking him — and take a linebacker.
 
     The end man on the line of scrimmage on a kick-out play. Whether the man he steps
@@ -344,19 +394,19 @@ def v_release(front, spot, side, intent):
     # linebacker beyond him, and if the end releases inside to the same man the guard
     # is climbing to, the force defender runs free into the hole.
     which = intent.get("target", "outside").replace("-lb", "")
-    lb = linebacker(front, side, which)
+    lb = linebacker(front, side, which, taken)
     if lb is None:
-        return v_base(front, spot, side, dict(intent, drive="in"))
+        return v_base(front, spot, side, dict(intent, drive="in"), taken)
     who = noun(front, edge[0]) if edge else "man on the edge"
     text = f"Leave the {who} — he is kicked out. Go take the {lb_noun(which)}."
     return text, to(spot, lb, bias_x=0.2 * side, bias_y=-0.3)
 
 
-def v_down(front, spot, side, intent):
+def v_down(front, spot, side, intent, taken=()):
     """Block down on the first defender on or inside you."""
     man = first_inside(front, spot[0], side)
     if man is None:
-        return v_cutoff(front, spot, side, intent)
+        return v_cutoff(front, spot, side, intent, taken)
     n = noun(front, man[0])
     where = ("head up" if abs(man[1] - spot[0]) <= HEAD_UP else "inside shoulder")
     text = (f"Block down on the {n}, {where}. "
@@ -365,20 +415,20 @@ def v_down(front, spot, side, intent):
     return text, to(spot, man, bias_x=0.25 * inside, bias_y=0.3)
 
 
-def v_reach(front, spot, side, intent):
+def v_reach(front, spot, side, intent, taken=()):
     """Get your head across the playside shoulder of the man in the playside gap."""
     man = gap_defender(front, spot[0], side)
     # Nobody within a shoulder of the playside gap is nobody this blocker can reach —
     # the man out there belongs to the next blocker over. An uncovered lineman who is
     # told to reach thin air is a lineman blocking nobody, so he climbs instead.
     if man is None or abs(man[1] - spot[0]) > SHOULDER:
-        return v_climb(front, spot, side, dict(intent, target="playside"))
+        return v_climb(front, spot, side, dict(intent, target="playside"), taken)
     n = noun(front, man[0])
     text = f"Reach the {n} to your {side_word(side)}. Head across his playside shoulder."
     return text, to(spot, man, bias_x=0.45 * side, bias_y=0.3)
 
 
-def v_double(front, spot, side, intent):
+def v_double(front, spot, side, intent, taken=()):
     """Two blockers on one man, and whoever is free comes off onto the linebacker.
 
     This is the uncovered lineman's rule, and it is the one intent whose answer flips
@@ -389,33 +439,38 @@ def v_double(front, spot, side, intent):
     """
     _, _, _, shade = covering(front, spot[0])
     if shade in ("over", "outside"):
-        return v_base(front, spot, side, dict(intent, drive="back"))
+        return v_base(front, spot, side, dict(intent, drive="back"), taken)
     man = first_inside(front, spot[0], side)
     if man is None:
-        return v_climb(front, spot, side, intent)
+        return v_climb(front, spot, side, intent, taken)
     which = intent.get("target", "middle").replace("-lb", "")
-    lb = linebacker(front, side, which)
+    lb = linebacker(front, side, which, taken)
     n = noun(front, man[0])
     if lb is None:
         return (f"Help on the {n} and drive him off the spot. The hole is off his "
                 "back."), to(spot, man, bias_y=0.4)
-    text = f"Nobody on you. Help on the {n}, then take the {lb_noun(which)}."
+    clause, _ = shade_clause(front, spot)
+    text = " ".join(x for x in (clause, f"Help on the {n},",
+                                f"then take the {lb_noun(which)}.") if x)
     return text, to(spot, man, bias_y=0.3) + to(spot, lb, bias_y=-0.4)
 
 
-def v_climb(front, spot, side, intent):
+def v_climb(front, spot, side, intent, taken=()):
     """Go past the line and get on a linebacker."""
     which = intent.get("target", "playside").replace("-lb", "")
-    lb = linebacker(front, side, which)
+    lb = linebacker(front, side, which, taken)
     if lb is None:
-        return v_cutoff(front, spot, side, intent)
+        return v_cutoff(front, spot, side, intent, taken)
     clause, man = shade_clause(front, spot)
+    # A back has no shade clause at all, so joining blindly left a leading space on
+    # the card — visible on the site as an indented assignment.
     lead = clause if man is None else f"{clause} Step past him."
-    text = f"{lead} Climb to the {lb_noun(which)}. Head across him."
+    text = " ".join(x for x in (lead, f"Climb to the {lb_noun(which)}.",
+                                "Head across him.") if x)
     return text, to(spot, lb, bias_x=0.3 * side, bias_y=-0.3)
 
 
-def v_cutoff(front, spot, side, intent):
+def v_cutoff(front, spot, side, intent, taken=()):
     """The backside. Nobody chases this down from behind."""
     clause, man = shade_clause(front, spot)
     if man is not None:
@@ -425,15 +480,17 @@ def v_cutoff(front, spot, side, intent):
     # 1.8-yard stub from wherever the blocker stood, which is a reasonable line for a
     # guard and a meaningless one for a flanker seven yards wide — he was drawn taking
     # two steps infield and stopping.
-    lb = linebacker(front, side, "backside")
-    text = "Nobody on you. Cut off the backside. Never quit on the play."
+    lb = linebacker(front, side, "backside", taken)
+    clause, _ = shade_clause(front, spot)
+    text = " ".join(x for x in (clause, "Cut off the backside.",
+                                "Never quit on the play.") if x)
     if lb is None:
         return text, [[round(0.9 * side, 2), 0.7], [round(1.8 * side, 2), 1.6]], None
     return text, [[round(0.45 * (lb[1] - spot[0]), 2), round(0.2 - spot[1], 2)]] \
         + to(spot, lb, bias_x=0.3 * side, bias_y=-0.3), lb
 
 
-def v_hinge(front, spot, side, intent):
+def v_hinge(front, spot, side, intent, taken=()):
     """Protect the side the quarterback ends up on.
 
     The direction is the play's, not the blocker's. Taking it from the sign of the
@@ -445,7 +502,7 @@ def v_hinge(front, spot, side, intent):
     return text, [[round(0.5 * side, 2), -0.4], [round(1.4 * side, 2), -1.4]]
 
 
-def v_wedge(front, spot, side, intent):
+def v_wedge(front, spot, side, intent, taken=()):
     """Shoulder to shoulder and push. Nobody picks a man."""
     text = ("Shoulder to shoulder with the man beside you, and push. Low pads — never "
             "look for a man.")
@@ -455,11 +512,11 @@ def v_wedge(front, spot, side, intent):
     return text, [[round(0.45 * inside, 2), round(0.7 - spot[1], 2)]]
 
 
-def v_kick(front, spot, side, intent):
+def v_kick(front, spot, side, intent, taken=()):
     """Kick the edge defender out. The ball runs inside the block."""
     man = edge_defender(front, side)
     if man is None:
-        return v_lead(front, spot, side, intent)
+        return v_lead(front, spot, side, intent, taken)
     n = noun(front, man[0])
     text = (f"Kick the {n} out. Aim at his outside hip. Never let him come "
             "underneath you.")
@@ -480,7 +537,7 @@ def through_hole(spot, target, side, bias_x=0.0, bias_y=0.0):
     return [elbow] + to(spot, target, bias_x=bias_x, bias_y=bias_y)
 
 
-def v_lead(front, spot, side, intent):
+def v_lead(front, spot, side, intent, taken=()):
     """Lead through the hole and block whoever shows in it.
 
     Two different jobs wear this verb, and the difference is whether there is a man to
@@ -495,7 +552,16 @@ def v_lead(front, spot, side, intent):
     verbs each resolved "playside linebacker" to the same body.
     """
     if intent.get("target") == "force":
-        man = force_defender(front, side)
+        man = force_defender(front, side, taken)
+        if man is not None and man[0] in taken:
+            # Somebody is already on him and there is nobody further out. Turn up
+            # inside rather than putting two blockers on one defender.
+            inside = linebacker(front, side, "playside", taken)
+            if inside is not None and inside[0] not in taken:
+                text = (f"Lead outside our end, then turn up inside — the {lb_noun('playside')} "
+                        "is the man who shows. Head across him.")
+                return text, through_hole(spot, inside, side, bias_x=0.3 * side,
+                                          bias_y=-0.5), inside
         if man is not None:
             text = (f"Lead outside our end. Block the first man out there — here it "
                     f"is the {noun(front, man[0])}.")
@@ -508,17 +574,18 @@ def v_lead(front, spot, side, intent):
                   [round(aim - spot[0], 2), round(2.4 - spot[1], 2)]], None
 
 
-def v_screen(front, spot, side, intent):
-    """Get in a defensive back's way and stay there."""
-    man = deep_back(front, spot[0])
+def v_screen(front, spot, side, intent, taken=()):
+    """Get in front of the man on the perimeter and stay there."""
+    man = perimeter_defender(front, spot[0], side, taken)
     if man is None:
         return ("Run at the first man outside and screen him off. Stay in his way."), [[round(1.2 * side, 2), 3.0]]
-    n = noun(front, man[0])
+    n = (lb_noun("outside") if front["roles"].get(man[0]) == "LB"
+         else noun(front, man[0]))
     text = f"Run at the {n} and screen him off. Stay in his way."
     return text, to(spot, man, bias_x=-0.9 * side, bias_y=-0.8)
 
 
-def v_decoy(front, spot, side, intent):
+def v_decoy(front, spot, side, intent, taken=()):
     """Sell something that is not happening. The path is hand-drawn because the lie is
     the point — it copies another play's path, and that path is not derivable from
     where the defence is standing."""
@@ -538,7 +605,7 @@ VERBS = {
 
 
 def resolve(pos: str, intent: dict, alignment: dict, front: dict, side: int,
-            hole: float | None = None) -> dict:
+            hole: float | None = None, taken=()) -> dict:
     """One blocking intent against one front -> the assignment a card prints.
 
     `side` is +1 if the play goes right, -1 left, taken from the call. It is what turns
@@ -556,7 +623,7 @@ def resolve(pos: str, intent: dict, alignment: dict, front: dict, side: int,
     spot = alignment[pos]
     if hole is not None:
         intent = dict(intent, _hole=hole)
-    result = VERBS[verb](front, spot, side, intent)
+    result = VERBS[verb](front, spot, side, intent, taken)
     text, path = result[0], result[1]
     aims = "space" if (len(result) > 2 and result[2] is None) else "man"
     if verb in SPACE_VERBS:
@@ -568,7 +635,30 @@ def resolve(pos: str, intent: dict, alignment: dict, front: dict, side: int,
         "type": "block",
         "aims": aims,
         "path": intent["path"] if path is None else path,
+        # Which linebacker this blocker took, so the next one does not take him too.
+        "claimed": claimed_lb(front, alignment[pos], path) if aims == "man" else None,
     }
+
+
+# How close a block has to finish to a defender to count as having taken him. Wider
+# than a linebacker check because a stalk block deliberately stands off its man.
+CLAIM_RADIUS = 1.4
+
+
+def claimed_lb(front: dict, spot, path):
+    """The defender this block finishes on, if it finishes on one.
+
+    Any defender, not just a linebacker. The collision worth catching on this book's
+    edge plays is a flanker and a lead back both sent at one corner.
+    """
+    if not path:
+        return None
+    ex, ey = spot[0] + path[-1][0], spot[1] + path[-1][1]
+    near = [(((ex - x) ** 2 + (ey - y) ** 2) ** 0.5, label)
+            for label, x, y in (spots(front, "DL") + spots(front, "LB")
+                                + spots(front, "DB"))]
+    d, label = min(near)
+    return label if d <= CLAIM_RADIUS else None
 
 
 # Verbs that block a gap, a spot or a lie rather than a particular defender.
@@ -583,8 +673,19 @@ def resolve_play(play: dict, alignment: dict, front: dict, side: int,
     carrier, a fake, a route, a lead back whose path is the play itself — is passed
     through untouched, because none of those depend on where the defence lines up.
     """
-    out = {}
-    for pos, spec in play["assignments"].items():
-        out[pos] = (resolve(pos, spec, alignment, front, side, hole)
-                    if "block" in spec else spec)
-    return out
+    out, taken = {}, set()
+    # In reading order, so the answer does not depend on dict ordering: the line from
+    # the middle out, then the backs. A lineman is closer to the second level than a
+    # back is, so he gets first refusal on the linebacker he is climbing to.
+    order = [p for p in CARD_ORDER if p in play["assignments"]]
+    order += [p for p in play["assignments"] if p not in order]
+    for pos in order:
+        spec = play["assignments"][pos]
+        if "block" not in spec:
+            out[pos] = spec
+            continue
+        r = resolve(pos, spec, alignment, front, side, hole, taken)
+        if r.pop("claimed", None):
+            taken.add(claimed_lb(front, alignment[pos], r["path"]))
+        out[pos] = r
+    return {p: out[p] for p in play["assignments"]}

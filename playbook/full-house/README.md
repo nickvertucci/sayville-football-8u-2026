@@ -258,7 +258,7 @@ The same first three steps as Power, taken all the way outside. The playside bac
 | **RG** | Block down on the nose, inside shoulder. Head across him — nobody crosses your face. |
 | **RT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
 | **RTE** | End head up on you. Turn him inside. The ball goes around behind you. |
-| **Z** |  Climb to the middle linebacker. Head across him. Fill like Dive is coming. It buys the corner half a second. |
+| **Z** | Climb to the middle linebacker. Head across him. Fill like Dive is coming. It buys the corner half a second. |
 | **QB** | Open right, let the playside back go, and hand it to the deep back as he crosses behind you. Then carry out a fake up the middle. |
 | **FB** | Lead outside our end. Block the first man out there — here it is the corner. |
 | **TB** **(ball)** | Take the handoff and get width first. Stay behind your blockers until you are outside our end, then turn up hard. Turning up too early is the only way this play loses yards. |
@@ -293,7 +293,7 @@ The same first three steps as Power, taken all the way outside. The playside bac
 | **RTE** | End head up on you. Cut him off — get between him and the ball. |
 | **Z** | Lead outside our end. Block the first man out there — here it is the corner. |
 | **QB** | Open left, let the playside back go, and hand it to the deep back as he crosses behind you. Then carry out a fake up the middle. |
-| **FB** |  Climb to the middle linebacker. Head across him. Fill like Dive is coming. It buys the corner half a second. |
+| **FB** | Climb to the middle linebacker. Head across him. Fill like Dive is coming. It buys the corner half a second. |
 | **TB** **(ball)** | Take the handoff and get width first. Stay behind your blockers until you are outside our end, then turn up hard. Turning up too early is the only way this play loses yards. |
 
 **Coaching points**
