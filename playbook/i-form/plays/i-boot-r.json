@@ -5,96 +5,123 @@
   "name": "Regular I Boot Right",
   "call": "Regular I Z Right 16 Boot",
   "type": "pass",
-  "defense": "5-3",
   "direction": "right",
   "ball_carrier": "Z",
   "purpose": "Play action off the toss look. Two receivers to the Z side and a quarterback with the whole edge to himself. Run first, throw second.",
   "assignments": {
     "LTE": {
-      "rule": "Block down inside and sell the run. This has to look exactly like the toss going the other way.",
-      "type": "block",
-      "path": [
-        [1.2, 0.9]
-      ]
+      "block": "down"
     },
     "LT": {
-      "rule": "The tackle is on your inside shoulder. Block him down and seal him inside — that is what opens the hole.",
-      "type": "block",
-      "path": [
-        [0.4, 1.3]
-      ]
+      "block": "down"
     },
     "LG": {
-      "rule": "Nobody is over you. Help the center on the nose and drive him away from the boot.",
-      "type": "block",
-      "path": [
-        [0.6, 1.0]
-      ]
+      "block": "double"
     },
     "C": {
-      "rule": "Block the nose back toward the boot side. Nobody chases through the middle.",
-      "type": "block",
-      "path": [
-        [0.9, 0.8]
-      ]
+      "block": "cutoff"
     },
     "RG": {
-      "rule": "PULL LEFT and run the toss path to sell the fake. You are a decoy — take a linebacker with you.",
-      "type": "block",
+      "block": "decoy",
+      "sell": "PULL LEFT and run the toss path to sell the fake. Take a linebacker with you.",
       "path": [
-        [-0.7, -1.0],
-        [-3.6, -0.8],
-        [-4.6, 0.6]
+        [
+          -0.7,
+          -1.0
+        ],
+        [
+          -3.6,
+          -0.8
+        ],
+        [
+          -4.6,
+          0.6
+        ]
       ]
     },
     "RT": {
-      "rule": "Hinge and protect the boot side. Nobody comes free outside you — the quarterback is alone back there.",
-      "type": "block",
-      "path": [
-        [1.0, 0.7]
-      ]
+      "block": "hinge"
     },
     "RTE": {
       "rule": "Engage the end over you for a count, then release and settle at eight yards on the boot side.",
       "type": "pass",
       "path": [
-        [0.8, 4.2],
-        [3.2, 6.4]
+        [
+          0.8,
+          4.2
+        ],
+        [
+          3.2,
+          6.4
+        ]
       ]
     },
     "Z": {
       "rule": "Run to the flat at four yards and stay in front of the quarterback. You are the easy throw.",
       "type": "pass",
       "path": [
-        [-0.6, 0.6],
-        [1.8, 2.0]
+        [
+          -0.6,
+          0.6
+        ],
+        [
+          1.8,
+          2.0
+        ]
       ]
     },
     "QB": {
       "rule": "Fake the toss with both hands, hide the ball on your back hip, and get to the edge. Run it if it is open. Only throw if a defender comes up to take you.",
       "type": "run",
       "path": [
-        [-1.2, -0.6],
-        [1.8, -1.0],
-        [5.2, -0.4],
-        [7.2, 2.4]
+        [
+          -1.2,
+          -0.6
+        ],
+        [
+          1.8,
+          -1.0
+        ],
+        [
+          5.2,
+          -0.4
+        ],
+        [
+          7.2,
+          2.4
+        ]
       ]
     },
     "FB": {
-      "rule": "Run the toss path away from the boot and block whatever shows. Sell it.",
-      "type": "block",
+      "block": "decoy",
+      "sell": "Run the toss path away from the boot and block whatever shows. Sell it.",
       "path": [
-        [-3.2, 1.4],
-        [-5.8, 3.2]
+        [
+          -3.2,
+          1.4
+        ],
+        [
+          -5.8,
+          3.2
+        ]
       ]
     },
     "TB": {
       "rule": "Run the full toss path away from the boot with your arms tucked like you have the ball. Sell it all the way to the sideline.",
       "type": "fake",
       "path": [
-        [-1.6, 2.0],
-        [-4.6, 3.4],
-        [-6.4, 5.2]
+        [
+          -1.6,
+          2.0
+        ],
+        [
+          -4.6,
+          3.4
+        ],
+        [
+          -6.4,
+          5.2
+        ]
       ]
     }
   },

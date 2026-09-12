@@ -5,65 +5,35 @@
   "name": "Power I Z Power Right",
   "call": "Power I Left 46 Power",
   "type": "run",
-  "defense": "5-3",
   "direction": "right",
   "ball_carrier": "Z",
   "alignment": {
     "Z": [-2.6, -3.3]
   },
-  "purpose": "The wider mirror of Z Power Left. The Z is set to the left, and he takes it all the way around the right end behind three lead blockers — fullback, tailback and the pulling guard.",
+  "purpose": "The wider mirror of Z Power Left. The Z is set to the left and takes it all the way around the right end behind three lead blockers — fullback, tailback and the pulling guard.",
   "assignments": {
     "LTE": {
-      "rule": "Cut off pursuit from behind. Everything runs away from you — chase flat down the line and never quit.",
-      "type": "block",
-      "path": [
-        [1.2, 0.8]
-      ]
+      "block": "cutoff"
     },
     "LT": {
-      "rule": "Block back. Take the first man on or inside you — nobody crosses your face.",
-      "type": "block",
-      "path": [
-        [-1.0, 0.7]
-      ]
+      "block": "down"
     },
     "LG": {
-      "rule": "Nobody is over you. Help the center on the nose for a count, then chase flat behind the play.",
-      "type": "block",
-      "path": [
-        [0.8, 1.0],
-        [2.6, 1.4]
-      ]
+      "block": "cutoff"
     },
     "C": {
-      "rule": "You have the nose. Get your body between him and the ball and drive him away from where we are going.",
-      "type": "block",
-      "path": [
-        [-0.5, 1.1]
-      ]
+      "block": "reach"
     },
     "RG": {
-      "rule": "PULL RIGHT. Get outside our end and turn up. Block the first man outside — usually the corner. You are the Z's last blocker.",
-      "type": "block",
-      "path": [
-        [1.2, -0.8],
-        [4.4, 0.2],
-        [6.4, 2.0]
-      ]
+      "block": "pull",
+      "to": "edge"
     },
     "RT": {
-      "rule": "Block down inside. Take the first man on or inside you and seal him — nobody crosses your face.",
-      "type": "block",
-      "path": [
-        [-0.5, 1.2]
-      ]
+      "block": "down"
     },
     "RTE": {
-      "rule": "Block the end over you out toward the sideline. The ball is going around you — do not let him make the tackle.",
-      "type": "block",
-      "path": [
-        [1.2, 1.2]
-      ]
+      "block": "base",
+      "drive": "in"
     },
     "Z": {
       "rule": "Take the handoff and get width. Stay behind the fullback until you are outside our end, then turn up hard. Turning up too early is the only way this loses yards.",
@@ -84,22 +54,11 @@
       ]
     },
     "FB": {
-      "rule": "Lead the Z around the right end. Block the first man outside our end, and if nobody shows, keep running and find the safety.",
-      "type": "block",
-      "path": [
-        [2.0, 1.2],
-        [5.0, 2.4],
-        [6.4, 3.6]
-      ]
+      "block": "lead",
+      "target": "force"
     },
     "TB": {
-      "rule": "Lead through the convoy to the second level. Block the last man between the Z and the open field — usually a linebacker or the safety.",
-      "type": "block",
-      "path": [
-        [2.2, 3.0],
-        [4.8, 6.0],
-        [7.2, 8.1]
-      ]
+      "block": "screen"
     }
   },
   "coaching_points": [

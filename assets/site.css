@@ -614,6 +614,35 @@ figure.diagram img { display: block; width: 100%; height: auto; }
 }
 
 .purpose { margin: 0 0 4px; color: var(--ink-2); font-size: 15.5px; max-width: 78ch; }
+
+/* ---------------------------------------------------------- the front toggle --
+
+   The same play, blocked three ways. The tabs sit directly above the diagram because
+   the diagram is what changes — putting them anywhere else makes you hunt for what
+   moved. All three panels are in the page and the toggle swaps which one is shown, so
+   changing front is instant on a sideline with no signal. */
+.fronts {
+  display: flex; align-items: center; gap: 6px; flex-wrap: wrap;
+  margin: 14px 0 10px; padding-top: 12px; border-top: 1px solid var(--line);
+}
+.fronts-label {
+  font-size: 11px; font-weight: 700; letter-spacing: 1.3px; text-transform: uppercase;
+  color: var(--muted); margin-right: 4px;
+}
+.dtab {
+  cursor: pointer; font: inherit; font-size: 13.5px; font-weight: 700;
+  color: var(--accent-ink); background: var(--panel);
+  border: 1px solid var(--line); border-radius: 999px; padding: 6px 15px;
+  min-height: 36px;          /* a thumb on a phone, not a mouse on a desk */
+}
+.dtab:hover { border-color: var(--accent-solid); }
+.dtab.on {
+  background: var(--accent-solid); border-color: var(--accent-solid);
+  color: var(--on-accent);
+}
+.dpanel { display: none; }
+.dpanel.on { display: block; }
+.block-title .vs { float: right; font-weight: 600; letter-spacing: 0.4px; }
 .block-title {
   font-size: 11px; font-weight: 700; letter-spacing: 1.3px; text-transform: uppercase;
   color: var(--muted); margin: 18px 0 2px; padding-top: 12px;
@@ -1168,7 +1197,22 @@ footer.site a { color: var(--accent-ink); }
   header.site, .drawer, .scrim, .skip, footer.site, .pager, .play-actions, .searchbar,
   .chips, .fgroup, .morebtn, #morefilters, .countline, #count, .clearbtn, .activefilters,
   .section-head, .btn, .print-intro, .cal-next, .cal-legend, .ins-todo,
-  .crumbs, .playbar { display: none !important; }
+  .crumbs, .playbar, .fronts { display: none !important; }
+  /* Print the front that is on screen, and only that one. A play page printed while
+     you are looking at the 4-4 gives you the 4-4 sheet, which is the whole reason
+     somebody flipped to it.
+
+     The panel has to *become* the card's flexible column, not merely be visible
+     inside it. The one-card-one-sheet layout below works by making the card a flex
+     column whose diagram takes whatever height the words leave; wrapping the diagram
+     in a plain block put an unflexing box between the two and the diagram stopped
+     shrinking — every play page printed on two sheets while the book itself, which
+     renders a single panel, still printed on one. */
+  .dpanel { display: none !important; }
+  .dpanel.on {
+    display: flex !important; flex-direction: column;
+    flex: 1 1 auto; min-height: 0;
+  }
   :root {
     --ink: #111318; --ink-2: #333b49; --muted: #5b6472;
     --line: #dde1e8; --line-soft: #eef1f6; --panel: #fff; --accent-solid: #14213d;

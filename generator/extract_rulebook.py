@@ -26,6 +26,8 @@ except for the anchor placeholders Word emits for the seven floating images
 (which are not text). See rulebook/README.md.
 """
 
+from __future__ import annotations
+
 import sys
 import zipfile
 import xml.etree.ElementTree as ET

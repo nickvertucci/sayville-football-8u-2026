@@ -5,60 +5,33 @@
   "name": "House Dive Right",
   "call": "House 20 Dive",
   "type": "run",
-  "defense": "5-3",
   "direction": "right",
   "ball_carrier": "FB",
   "purpose": "The fastest handoff in the book. The playside back is already standing behind the guard he is running past, so he is through the hole before the defense has read anything, and the other two backs leave on paths that threaten the edge and the middle at the same time.",
   "assignments": {
     "LTE": {
-      "rule": "Cut off pursuit from behind. Nobody chases this down from the backside.",
-      "type": "block",
-      "path": [
-        [0.9, 0.9]
-      ]
+      "block": "cutoff"
     },
     "LT": {
-      "rule": "The tackle is on your inside shoulder. Block him down and seal him inside — nobody crosses your face.",
-      "type": "block",
-      "path": [
-        [0.5, 1.2]
-      ]
+      "block": "down"
     },
     "LG": {
-      "rule": "Nobody is over you. Help the center drive the nose away from the hole and stay on him.",
-      "type": "block",
-      "path": [
-        [0.6, 1.1]
-      ]
+      "block": "down"
     },
     "C": {
-      "rule": "You have the nose, head up on you. Drive him to the backside — the hole is on the other side of your body, so he cannot cross your face.",
-      "type": "block",
-      "path": [
-        [0.5, 1.2]
-      ]
+      "block": "reach"
     },
     "RG": {
-      "rule": "Nobody is over you. Go straight to the middle linebacker and get your head across him. He is the only man who can make this tackle for a short gain.",
-      "type": "block",
-      "path": [
-        [0.2, 1.4],
-        [0.6, 3.6]
-      ]
+      "block": "climb",
+      "target": "middle"
     },
     "RT": {
-      "rule": "The tackle is on your inside shoulder. Drive him out toward the sideline — every step you move him is another step wide the hole gets.",
-      "type": "block",
-      "path": [
-        [1.0, 1.1]
-      ]
+      "block": "base",
+      "drive": "out"
     },
     "RTE": {
-      "rule": "Block the end over you out. He is the man who closes this down if you let him step inside.",
-      "type": "block",
-      "path": [
-        [1.0, 1.0]
-      ]
+      "block": "base",
+      "drive": "out"
     },
     "QB": {
       "rule": "Open right and give it to the playside back now. This is a quick handoff, not a ride — he is past you before you finish turning.",
@@ -87,12 +60,8 @@
       ]
     },
     "TB": {
-      "rule": "You leave on the snap, so you get there first. Step to the hole and block the first linebacker who fills it. Get your head across him.",
-      "type": "block",
-      "path": [
-        [0.5, 2.2],
-        [0.8, 4.0]
-      ]
+      "block": "lead",
+      "note": "You leave on the snap and the carrier does not, so you get there first."
     }
   },
   "coaching_points": [

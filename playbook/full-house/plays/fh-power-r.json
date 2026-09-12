@@ -5,60 +5,31 @@
   "name": "House Power Right",
   "call": "House 34 Power",
   "type": "run",
-  "defense": "5-3",
   "direction": "right",
   "ball_carrier": "TB",
   "purpose": "All three backs get a job. The playside back kicks the end out, the backside back wraps around and leads through the hole, and the deep back carries it in behind them both. Two lead blockers arrive in the same gap before the linebackers can fit, and the carrier is far enough back to see them do it.",
   "assignments": {
     "LTE": {
-      "rule": "Cut off pursuit from behind. You are the last one to the ball, so never quit on the play.",
-      "type": "block",
-      "path": [
-        [1.0, 0.7]
-      ]
+      "block": "cutoff"
     },
     "LT": {
-      "rule": "Block back. Take the first defender on or inside you — nobody crosses your face.",
-      "type": "block",
-      "path": [
-        [1.0, 0.7]
-      ]
+      "block": "down"
     },
     "LG": {
-      "rule": "Nobody is over you. Help the center drive the nose away from the play, then stay on him.",
-      "type": "block",
-      "path": [
-        [0.6, 1.1]
-      ]
+      "block": "down"
     },
     "C": {
-      "rule": "You have the nose, head up on you. Hands inside and do not let him cross your face to the playside.",
-      "type": "block",
-      "path": [
-        [0.4, 1.1]
-      ]
+      "block": "reach"
     },
     "RG": {
-      "rule": "Nobody is over you. Climb to the middle linebacker and get your head across him.",
-      "type": "block",
-      "path": [
-        [-0.4, 1.4],
-        [-0.8, 3.6]
-      ]
+      "block": "climb",
+      "target": "middle"
     },
     "RT": {
-      "rule": "The tackle is on your inside shoulder. Block him down and seal him inside — that is what opens the hole.",
-      "type": "block",
-      "path": [
-        [-0.4, 1.3]
-      ]
+      "block": "down"
     },
     "RTE": {
-      "rule": "Release inside off his outside shoulder and take the playside linebacker. The end over you is getting kicked out — leave him alone.",
-      "type": "block",
-      "path": [
-        [-1.0, 3.5]
-      ]
+      "block": "release"
     },
     "QB": {
       "rule": "Open right, let the playside back clear, then hand it to the deep back as he comes past you. Carry out a fake to the edge afterwards.",
@@ -70,20 +41,11 @@
       ]
     },
     "Z": {
-      "rule": "You are the lead. Cross behind the quarterback, get to the hole outside our tackle and block the first defender who shows in it. Get your head across him — do not wait for him to come to you.",
-      "type": "block",
-      "path": [
-        [2.4, 1.5],
-        [4.6, 3.1]
-      ]
+      "block": "lead",
+      "note": "Cross behind the quarterback and go flat, not deep. You start on the backside and you cannot be late."
     },
     "FB": {
-      "rule": "Kick the end out. Aim at his outside hip and drive him toward the sideline. Everything runs inside of you, so never let him come underneath.",
-      "type": "block",
-      "path": [
-        [0.7, 1.4],
-        [2.2, 4.0]
-      ]
+      "block": "kick"
     },
     "TB": {
       "rule": "Take the handoff and aim at the outside hip of our tackle. Follow the lead back in and stay tight to his back. Do not bounce it outside — the yards are inside the kick-out.",

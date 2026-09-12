@@ -5,68 +5,35 @@
   "name": "Regular I Dive Right",
   "call": "Regular I Z Right 20 Dive",
   "type": "run",
-  "defense": "5-3",
   "direction": "right",
   "ball_carrier": "FB",
   "purpose": "The quickest handoff in the book. The fullback is through the line before their linebackers have read anything. We run it to remind them the middle is not free, which is what makes the toss work later.",
   "assignments": {
     "LTE": {
-      "rule": "Cut off pursuit from behind. You are the last one to the ball, so never quit on the play.",
-      "type": "block",
-      "path": [
-        [1.0, 0.7]
-      ]
+      "block": "cutoff"
     },
     "LT": {
-      "rule": "The tackle is on your inside shoulder. Get your head across him and wall him off so he cannot chase.",
-      "type": "block",
-      "path": [
-        [1.0, 0.7]
-      ]
+      "block": "cutoff"
     },
     "LG": {
-      "rule": "Nobody is over you. Step back inside and cut off anyone chasing through the middle.",
-      "type": "block",
-      "path": [
-        [1.0, 0.7]
-      ]
+      "block": "cutoff"
     },
     "C": {
-      "rule": "You and the playside guard double the nose. Drive him off the spot — the hole is right off his back.",
-      "type": "block",
-      "path": [
-        [0.3, 1.3]
-      ]
+      "block": "reach"
     },
     "RG": {
-      "rule": "Nobody is over you. Double the nose with the center, and come off onto the middle linebacker when he shows.",
-      "type": "block",
-      "path": [
-        [-0.5, 1.2],
-        [-0.7, 3.4]
-      ]
+      "block": "double",
+      "target": "middle"
     },
     "RT": {
-      "rule": "The tackle is on your inside shoulder. Block him down and seal him inside — that is what opens the hole.",
-      "type": "block",
-      "path": [
-        [0.0, 1.0]
-      ]
+      "block": "down"
     },
     "RTE": {
-      "rule": "The end is head up on you. Drive him out and away from the ball.",
-      "type": "block",
-      "path": [
-        [-0.4, 1.0]
-      ]
+      "block": "base",
+      "drive": "out"
     },
     "Z": {
-      "rule": "Release and screen the corner on your side. Get in his way and stay there.",
-      "type": "block",
-      "path": [
-        [1.4, 2.6],
-        [2.0, 4.4]
-      ]
+      "block": "screen"
     },
     "QB": {
       "rule": "Take the snap, open a quarter turn and hand to the fullback at two yards. Then carry out a fake to the outside.",

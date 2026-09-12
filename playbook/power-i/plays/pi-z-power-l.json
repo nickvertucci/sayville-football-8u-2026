@@ -5,63 +5,32 @@
   "name": "Power I Z Power Left",
   "call": "Power I Right 45 Power",
   "type": "run",
-  "defense": "5-3",
   "direction": "left",
   "ball_carrier": "Z",
   "purpose": "The Z's alignment says Power to his side; this goes the other way. He takes the ball back across behind the fullback's kick-out, the pulling guard and the tailback — three blockers clearing the way instead of one selling a fake.",
   "assignments": {
     "LTE": {
-      "rule": "Release inside off the end and take the playside linebacker. The end over you is getting kicked out — leave him alone.",
-      "type": "block",
-      "path": [
-        [1.0, 3.5]
-      ]
+      "block": "release"
     },
     "LT": {
-      "rule": "Block down. Take the tackle on your inside shoulder and seal him inside — that is what opens the hole.",
-      "type": "block",
-      "path": [
-        [0.4, 1.3]
-      ]
+      "block": "down"
     },
     "LG": {
-      "rule": "Nobody is over you. Help the center drive the nose for a count, then climb to the middle linebacker.",
-      "type": "block",
-      "path": [
-        [0.6, 1.1],
-        [1.0, 3.4]
-      ]
+      "block": "double",
+      "target": "middle"
     },
     "C": {
-      "rule": "You have the nose head up. Hands inside and do not let him cross your face to the playside.",
-      "type": "block",
-      "path": [
-        [-0.4, 1.1]
-      ]
+      "block": "reach"
     },
     "RG": {
-      "rule": "PULL LEFT. Stay flat behind the line, turn up through the hole and block the first wrong shirt you see. Do not go around the pile — go through it.",
-      "type": "block",
-      "path": [
-        [-0.8, -0.9],
-        [-3.6, -0.7],
-        [-4.8, 1.6],
-        [-5.2, 3.6]
-      ]
+      "block": "pull",
+      "to": "wrap"
     },
     "RT": {
-      "rule": "Block back. Take the first man on or inside you — nobody crosses your face.",
-      "type": "block",
-      "path": [
-        [-1.0, 0.7]
-      ]
+      "block": "down"
     },
     "RTE": {
-      "rule": "Cut off pursuit from behind. You are the last one to the ball, so never quit on the play.",
-      "type": "block",
-      "path": [
-        [-1.0, 0.7]
-      ]
+      "block": "cutoff"
     },
     "Z": {
       "rule": "Take the handoff going left and aim at the outside hip of our left tackle. Follow the fullback's kick-out, then the guard. Stay tight to the blocks — do not bounce it outside.",
@@ -83,21 +52,10 @@
       ]
     },
     "FB": {
-      "rule": "Kick the end out. Leave on the snap, aim at his outside hip and drive him toward the sideline — the Z runs inside your block.",
-      "type": "block",
-      "path": [
-        [-2.2, 1.8],
-        [-3.6, 4.0]
-      ]
+      "block": "kick"
     },
     "TB": {
-      "rule": "Follow the pulling guard through, then keep going to the second level. Block the last man between the Z and the open field — usually the safety.",
-      "type": "block",
-      "path": [
-        [-0.5, 3.5],
-        [-1.0, 7.5],
-        [-1.5, 11.5]
-      ]
+      "block": "screen"
     }
   },
   "coaching_points": [

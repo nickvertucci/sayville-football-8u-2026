@@ -15,6 +15,8 @@ the only dependency and it is the thing that actually prints the book, so nothin
 would be a real answer.
 """
 
+from __future__ import annotations
+
 import argparse
 import os
 import re

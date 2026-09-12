@@ -21,6 +21,8 @@ from __future__ import annotations
 import calendar
 import hashlib
 import re
+
+import blocking
 from datetime import date as _date
 from pathlib import Path
 
@@ -658,6 +660,35 @@ figure.diagram img { display: block; width: 100%; height: auto; }
 }
 
 .purpose { margin: 0 0 4px; color: var(--ink-2); font-size: 15.5px; max-width: 78ch; }
+
+/* ---------------------------------------------------------- the front toggle --
+
+   The same play, blocked three ways. The tabs sit directly above the diagram because
+   the diagram is what changes — putting them anywhere else makes you hunt for what
+   moved. All three panels are in the page and the toggle swaps which one is shown, so
+   changing front is instant on a sideline with no signal. */
+.fronts {
+  display: flex; align-items: center; gap: 6px; flex-wrap: wrap;
+  margin: 14px 0 10px; padding-top: 12px; border-top: 1px solid var(--line);
+}
+.fronts-label {
+  font-size: 11px; font-weight: 700; letter-spacing: 1.3px; text-transform: uppercase;
+  color: var(--muted); margin-right: 4px;
+}
+.dtab {
+  cursor: pointer; font: inherit; font-size: 13.5px; font-weight: 700;
+  color: var(--accent-ink); background: var(--panel);
+  border: 1px solid var(--line); border-radius: 999px; padding: 6px 15px;
+  min-height: 36px;          /* a thumb on a phone, not a mouse on a desk */
+}
+.dtab:hover { border-color: var(--accent-solid); }
+.dtab.on {
+  background: var(--accent-solid); border-color: var(--accent-solid);
+  color: var(--on-accent);
+}
+.dpanel { display: none; }
+.dpanel.on { display: block; }
+.block-title .vs { float: right; font-weight: 600; letter-spacing: 0.4px; }
 .block-title {
   font-size: 11px; font-weight: 700; letter-spacing: 1.3px; text-transform: uppercase;
   color: var(--muted); margin: 18px 0 2px; padding-top: 12px;
@@ -1212,7 +1243,22 @@ footer.site a { color: var(--accent-ink); }
   header.site, .drawer, .scrim, .skip, footer.site, .pager, .play-actions, .searchbar,
   .chips, .fgroup, .morebtn, #morefilters, .countline, #count, .clearbtn, .activefilters,
   .section-head, .btn, .print-intro, .cal-next, .cal-legend, .ins-todo,
-  .crumbs, .playbar { display: none !important; }
+  .crumbs, .playbar, .fronts { display: none !important; }
+  /* Print the front that is on screen, and only that one. A play page printed while
+     you are looking at the 4-4 gives you the 4-4 sheet, which is the whole reason
+     somebody flipped to it.
+
+     The panel has to *become* the card's flexible column, not merely be visible
+     inside it. The one-card-one-sheet layout below works by making the card a flex
+     column whose diagram takes whatever height the words leave; wrapping the diagram
+     in a plain block put an unflexing box between the two and the diagram stopped
+     shrinking — every play page printed on two sheets while the book itself, which
+     renders a single panel, still printed on one. */
+  .dpanel { display: none !important; }
+  .dpanel.on {
+    display: flex !important; flex-direction: column;
+    flex: 1 1 auto; min-height: 0;
+  }
   :root {
     --ink: #111318; --ink-2: #333b49; --muted: #5b6472;
     --line: #dde1e8; --line-soft: #eef1f6; --panel: #fff; --accent-solid: #14213d;
@@ -1349,6 +1395,53 @@ footer.site a { color: var(--accent-ink); }
 """
 
 SITE_JS = """
+/* The defensive-front toggle on a play page.
+
+   Every front's diagram and assignments are already in the page, so this only moves a
+   class. Two things make it worth its twenty lines: the choice is remembered, because
+   a coach who has scouted the team they are playing wants every play in the book in
+   that front and not to press a button fifty-six times; and it works on the print
+   page too, where several plays are on one document at once. */
+(function () {
+  var KEY = 'sayville.front';
+  var groups = [].slice.call(document.querySelectorAll('.play'));
+  if (!groups.length) return;
+
+  function apply(play, front) {
+    var hit = false;
+    [].forEach.call(play.querySelectorAll('.dpanel'), function (p) {
+      var on = p.dataset.front === front;
+      p.classList.toggle('on', on);
+      hit = hit || on;
+    });
+    [].forEach.call(play.querySelectorAll('.dtab'), function (t) {
+      var on = t.dataset.front === front;
+      t.classList.toggle('on', on);
+      t.setAttribute('aria-pressed', on ? 'true' : 'false');
+    });
+    return hit;
+  }
+
+  function show(front) {
+    groups.forEach(function (play) { apply(play, front); });
+    try { localStorage.setItem(KEY, front); } catch (e) { /* private window */ }
+  }
+
+  groups.forEach(function (play) {
+    [].forEach.call(play.querySelectorAll('.dtab'), function (tab) {
+      tab.addEventListener('click', function () { show(tab.dataset.front); });
+    });
+  });
+
+  /* A remembered front that this build no longer has would blank the diagram, so it
+     is only applied if a panel actually answers to it. */
+  var saved = null;
+  try { saved = localStorage.getItem(KEY); } catch (e) { saved = null; }
+  if (saved && groups[0].querySelector('.dpanel[data-front="' + saved + '"]')) {
+    show(saved);
+  }
+}());
+
 /* Site navigation: hamburger drawer on a phone, dropdown on a desktop. */
 (function () {
   var burger = document.getElementById('burger');
@@ -2126,9 +2219,25 @@ def def_src(front: dict) -> str:
     return f"defense/cards/{front['id']}-field.svg"
 
 
-def card_src(form: dict, play: dict, full: bool = False) -> str:
+def card_src(form: dict, play: dict, front: str = blocking.DEFAULT_FRONT,
+             full: bool = False) -> str:
     suffix = "" if full else "-field"
-    return f"playbook/{form['id']}/cards/{play['id']}{suffix}.svg"
+    return f"playbook/{form['id']}/cards/{play['id']}-{front}{suffix}.svg"
+
+
+def resolved(play: dict, front: str) -> dict:
+    """This play's assignments against one front, resolved by render.py before we ran."""
+    return play["_resolved"][front]
+
+
+def our_fronts(defenses: dict) -> dict:
+    """The defensive playbook: the fronts we call, not the ones we expect to face.
+
+    A scout front is in `defense/` because every offensive card is drawn against it,
+    not because anybody is going to call it on a Saturday. Putting it in the defensive
+    book would be telling nine-year-olds to learn a defence we do not play.
+    """
+    return {fid: f for fid, f in defenses.items() if not f.get("scout")}
 
 
 def formation_icon_src(form: dict) -> str:
@@ -2139,12 +2248,12 @@ def defense_menu(defenses: dict, active_def: str) -> str:
     rows = "".join(
         f'<a class="mplay{" here" if fid == active_def else ""}" href="{d_href(f)}">'
         f'<span>{esc(f["call"])}</span><em>{esc(f["name"])}</em></a>'
-        for fid, f in defenses.items()
+        for fid, f in our_fronts(defenses).items()
     )
     return (
         f'<section class="mgrp">'
         f'<a class="mgh" href="defense.html">Fronts'
-        f'<span class="mgn">{len(defenses)} legal</span></a>'
+        f'<span class="mgn">{len(our_fronts(defenses))} legal</span></a>'
         f'<div class="mplays">{rows}</div></section>'
     )
 
@@ -2260,22 +2369,60 @@ def page(
 """
 
 
-def play_article(form: dict, play: dict, heading: str = "h2", actions: str = "") -> str:
-    """One play: diagram full width, assignments underneath, coaching points last."""
-    rows = []
-    for pos in ordered_positions(play):
-        ball = " ball" if pos == play.get("ball_carrier") else ""
-        rows.append(
-            f'<div class="row{ball}"><dt>{esc(pos)}</dt>'
-            f'<dd>{esc(play["assignments"][pos]["rule"])}</dd></div>'
-        )
+def front_panels(form: dict, play: dict, defenses: dict,
+                 single: str | None = None) -> str:
+    """The same play drawn and blocked against each front, one panel per front.
 
+    All three are in the page, and the toggle shows one. They are not fetched on
+    demand because the reason this page exists is to be opened on a phone on a
+    sideline, where the network is a field full of people and one of these is what you
+    need in the next fifteen seconds.
+    """
+    tabs, panels = [], []
+    fronts = [single] if single else list(blocking.SCOUT_FRONTS)
+    for fid in fronts:
+        front = defenses[fid]
+        # The 5-3 is the tab that starts on, not whichever front sorts first. It is
+        # what an 8U team actually lines up in against us, so it is the answer to the
+        # question the page is usually being opened to ask.
+        first = " on" if fid == blocking.DEFAULT_FRONT or single else ""
+        tabs.append(
+            f'<button type="button" class="dtab{first}" data-front="{esc(fid)}" '
+            f'aria-pressed="{"true" if first else "false"}">{esc(front["name"])}</button>'
+        )
+        rows = "\n      ".join(
+            f'<div class="row{" ball" if pos == play.get("ball_carrier") else ""}">'
+            f'<dt>{esc(pos)}</dt>'
+            f'<dd>{esc(resolved(play, fid)[pos]["rule"])}</dd></div>'
+            for pos in ordered_positions(play)
+        )
+        panels.append(
+            f'<div class="dpanel{first}" data-front="{esc(fid)}">\n'
+            f'  <figure class="diagram">\n'
+            f'    <img src="{card_src(form, play, fid)}" loading="lazy" '
+            f'alt="{esc(play["name"])} against the {esc(front["name"])}">\n'
+            f'  </figure>\n'
+            f'  <p class="block-title">Assignments <span class="vs">vs '
+            f'{esc(front["name"])}</span></p>\n'
+            f'  <dl class="assign">\n      {rows}\n  </dl>\n'
+            f'</div>'
+        )
+    if single:
+        return "\n".join(panels)
+    return (
+        '<div class="fronts" role="group" aria-label="Defensive front">\n'
+        f'  <span class="fronts-label">Blocked against</span>\n  '
+        + "\n  ".join(tabs) + "\n</div>\n" + "\n".join(panels)
+    )
+
+
+def play_article(form: dict, play: dict, defenses: dict, heading: str = "h2",
+                 actions: str = "", single: str | None = None) -> str:
+    """One play: diagram full width, assignments underneath, coaching points last."""
     tags = [f'<span class="call">{esc(play["call"])}</span>'] if play.get("call") else []
     for t in (play.get("type", "").upper(), play.get("ball_carrier", "")):
         if t:
             tags.append(f'<span class="tag">{esc(t)}</span>')
-    if play.get("defense"):
-        tags.append(f'<span class="tag">vs {esc(play["defense"])}</span>')
 
     coach = ""
     if play.get("coaching_points"):
@@ -2292,14 +2439,8 @@ def play_article(form: dict, play: dict, heading: str = "h2", actions: str = "")
     <div class="tags">{''.join(tags)}</div>
     {actions}
   </header>
-  <figure class="diagram">
-    <img src="{card_src(form, play)}" alt="{esc(play['name'])} diagram">
-  </figure>
   {purpose}
-  <p class="block-title">Assignments</p>
-  <dl class="assign">
-    {chr(10).join('    ' + r for r in rows).strip()}
-  </dl>
+  {front_panels(form, play, defenses, single)}
   {coach}
 </article>"""
 
@@ -2541,11 +2682,11 @@ def write_home(formations: list[dict], defenses: dict) -> str:
         f'<div class="body"><div class="ftop"><h3>{esc(f["call"])}</h3>'
         f'<span class="n">{esc(f["name"])}</span></div>'
         f'<p>{esc(first_sentence(f.get("summary", "")))}</p></div></a>'
-        for f in defenses.values()
+        for f in our_fronts(defenses).values()
     )
     body = f"""<h1 class="page">The 2026 Playbook</h1>
 <p class="lede">{_count(len(formations)).capitalize()} formations &middot; {total} plays
-&middot; {_count(len(defenses))} fronts.</p>
+&middot; {_count(len(our_fronts(defenses)))} fronts.</p>
 
 <div class="quicklinks">
   <a class="qlink" href="calls.html">{icon('search')}<span>Call sheet</span></a>
@@ -2847,7 +2988,8 @@ def write_play_page(
 
     body = (
         crumbs + "\n" + playbar + "\n"
-        + play_article(form, play, actions=actions) + "\n" + "\n".join(pager)
+        + play_article(form, play, defenses, actions=actions)
+        + "\n" + "\n".join(pager)
     )
     attrs = ""
     if prev:
@@ -3218,7 +3360,8 @@ def write_install(formations: list[dict], defenses: dict, root: Path) -> str:
                         f'<span>{len(rest)}</span></h4>'
                         f'<div class="ins-list">{links}</div></div>')
     scheduled_fronts = {fid for pr in practices for fid in pr.get("fronts", [])}
-    rest_fronts = [f for fid, f in defenses.items() if fid not in scheduled_fronts]
+    rest_fronts = [f for fid, f in our_fronts(defenses).items()
+                   if fid not in scheduled_fronts]
     if rest_fronts:
         links = "".join(
             f'<a class="ins-play def" href="{d_href(f)}">'
@@ -3246,7 +3389,7 @@ def write_install(formations: list[dict], defenses: dict, root: Path) -> str:
 <dl class="rb-facts">
   <div><dt>Practices planned</dt><dd>{len(practices)}</dd></div>
   <div><dt>Plays scheduled</dt><dd>{total_plays} of {sum(len(f["_plays"]) for f in formations)}</dd></div>
-  <div><dt>Fronts scheduled</dt><dd>{total_fronts} of {len(defenses)}</dd></div>
+  <div><dt>Fronts scheduled</dt><dd>{total_fronts} of {len(our_fronts(defenses))}</dd></div>
 </dl>
 {cal_html}
 <div class="ins-wrap">
@@ -3648,7 +3791,7 @@ in the repo.</div>
 
 def write_defense_index(formations: list[dict], defenses: dict) -> str:
     cards = []
-    for fid, f in defenses.items():
+    for fid, f in our_fronts(defenses).items():
         counts = {}
         for r in f.get("roles", {}).values():
             counts[r] = counts.get(r, 0) + 1
@@ -3664,7 +3807,7 @@ def write_defense_index(formations: list[dict], defenses: dict) -> str:
             f'{counts.get("DB", 0)} defensive backs</span></div></a>'
         )
     body = f"""<h1 class="page">Defensive playbook</h1>
-<p class="lede">{_count(len(defenses)).capitalize()} fronts, each checked against the
+<p class="lede">{_count(len(our_fronts(defenses))).capitalize()} fronts, each checked against the
 league rulebook by the generator &mdash; an illegal front fails the build.</p>
 
 <div class="cards imgcards">{''.join(cards)}</div>
@@ -3680,13 +3823,13 @@ league rulebook by the generator &mdash; an illegal front fails the build.</p>
         formations,
         defenses=defenses,
         active_nav="defense",
-        description=f"{_count(len(defenses)).capitalize()} legal defensive fronts for "
+        description=f"{_count(len(our_fronts(defenses))).capitalize()} legal defensive fronts for "
         "8U tackle, with assignments.",
     )
 
 
 def write_defense_page(front: dict, formations: list[dict], defenses: dict) -> str:
-    ids = list(defenses)
+    ids = list(our_fronts(defenses))
     i = ids.index(front["id"])
     prev = defenses[ids[i - 1]] if i else None
     nxt = defenses[ids[i + 1]] if i + 1 < len(ids) else None
@@ -3696,7 +3839,7 @@ def write_defense_page(front: dict, formations: list[dict], defenses: dict) -> s
                "</div>")
     siblings = "".join(
         f'<a href="{d_href(f)}"{ACTIVE_ATTR if fid == front["id"] else ""}>{esc(f["call"])}</a>'
-        for fid, f in defenses.items()
+        for fid, f in our_fronts(defenses).items()
     )
     crumbs = (f'<nav class="crumbs"><a href="index.html">Home</a><span>/</span>'
               f'<a href="defense.html">Defense</a><span>/</span>'
@@ -3732,9 +3875,10 @@ def write_defense_page(front: dict, formations: list[dict], defenses: dict) -> s
 
 
 def write_print_book(formations: list[dict], defenses: dict) -> str:
-    total = sum(len(f["_plays"]) for f in formations) + len(defenses)
-    arts = [play_article(f, p) for f in formations for p in f["_plays"]]
-    arts += [defense_article(d) for d in defenses.values()]
+    total = sum(len(f["_plays"]) for f in formations) + len(our_fronts(defenses))
+    arts = [play_article(f, p, defenses, single=blocking.DEFAULT_FRONT)
+            for f in formations for p in f["_plays"]]
+    arts += [defense_article(d) for d in our_fronts(defenses).values()]
     body = f"""<div class="print-intro">
   <h1 class="page">Print the whole book</h1>
   <p class="lede">{total} plays, one per landscape sheet, diagram first. Hit the button
@@ -3793,7 +3937,7 @@ def write_all(formations: list[dict], defenses: dict, root: Path) -> int:
             encoding="utf-8")
         written += 1
 
-    for front in defenses.values():
+    for front in our_fronts(defenses).values():
         (root / d_href(front)).write_text(
             write_defense_page(front, formations, defenses), encoding="utf-8")
         written += 1

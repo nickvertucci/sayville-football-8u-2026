@@ -60,13 +60,16 @@ CASES = [
 
 def main() -> int:
     forms = {f["id"]: f for f in render.load_formations()}
+    defenses = render.load_defenses()
     wrong = 0
 
     for label, form_id, play_id, call, should_reject in CASES:
         form = forms[form_id]
         play = copy.deepcopy(next(p for p in form["_plays"] if p["id"] == play_id))
         play["call"] = call
-        errors = render.validate_call(play, form)
+        # The deep copy has its own (empty) resolve cache, so the back's path is
+        # recomputed for this call rather than reused from the real play.
+        errors = render.validate_call(play, form, defenses)
         rejected = bool(errors)
         if rejected != should_reject:
             wrong += 1

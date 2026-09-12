@@ -5,10 +5,9 @@
   "name": "Split Waggle Left",
   "call": "Split Z Right 17 Waggle",
   "type": "pass",
-  "defense": "5-3",
   "direction": "left",
   "ball_carrier": "LTE",
-  "purpose": "The only pass in this formation, and it comes off the play they have seen most. Fake the dive, send the split man deep to carry the corner off, and the quarterback walks out onto an edge everybody has left.",
+  "purpose": "The only pass in this formation, off the play they have seen most. Fake the dive, send the split man deep to carry the corner off, and the quarterback walks out onto an edge everybody has left.",
   "assignments": {
     "RTE": {
       "rule": "Engage the end over you for a count, then release and get across the field to eight yards. You are the second look and you arrive late on purpose.",
@@ -29,54 +28,20 @@
       ]
     },
     "RT": {
-      "rule": "Block down inside and sell the run. Nobody comes through your gap.",
-      "type": "block",
-      "path": [
-        [
-          -0.5,
-          1.2
-        ]
-      ]
+      "block": "down"
     },
     "RG": {
-      "rule": "Nobody is over you. Help the center on the nose and drive him away from the waggle.",
-      "type": "block",
-      "path": [
-        [
-          -0.6,
-          1.0
-        ]
-      ]
+      "block": "down"
     },
     "C": {
-      "rule": "Block the nose away from the waggle. Nobody chases through the middle.",
-      "type": "block",
-      "path": [
-        [
-          0.9,
-          0.8
-        ]
-      ]
+      "block": "cutoff"
     },
     "LG": {
-      "rule": "Nobody is over you. Help the center on the nose for a count, then stay on him.",
-      "type": "block",
-      "path": [
-        [
-          0.6,
-          1.0
-        ]
-      ]
+      "block": "double",
+      "target": "middle"
     },
     "LT": {
-      "rule": "Hinge and protect the waggle side. Nobody comes free outside you — the quarterback is alone back there.",
-      "type": "block",
-      "path": [
-        [
-          -1.0,
-          0.7
-        ]
-      ]
+      "block": "hinge"
     },
     "LTE": {
       "rule": "Engage the end over you for a count, then release to the flat at four yards and stay in front of the quarterback. You are the easy throw.",
@@ -143,22 +108,8 @@
       ]
     },
     "RH": {
-      "rule": "Cross behind the line to the waggle side and protect the outside. Anybody chasing the quarterback from behind is yours.",
-      "type": "block",
-      "path": [
-        [
-          -3.4,
-          0.6
-        ],
-        [
-          -6.6,
-          0.4
-        ],
-        [
-          -8.2,
-          1.0
-        ]
-      ]
+      "block": "hinge",
+      "note": "Cross behind the line to the waggle side before you set."
     }
   },
   "coaching_points": [

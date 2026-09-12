@@ -5,70 +5,36 @@
   "name": "Regular I Slant Right",
   "call": "Regular I Z Right 36 Slant",
   "type": "run",
-  "defense": "5-3",
   "direction": "right",
   "ball_carrier": "TB",
-  "purpose": "Off the tight end. Our end seals their end inside, the guard pulls and turns up outside him, and the fullback leads through the hole. The tailback presses outside our end and turns up — this is the run that hits just wide of the formation, not between the tackle and the end.",
+  "purpose": "Off the tight end. Our end seals their end inside, the guard pulls and turns up outside him, and the fullback leads through the hole. This one hits just wide of the formation, not between the tackle and the end.",
   "assignments": {
     "LTE": {
-      "rule": "Cut off pursuit from behind. You are the last one to the ball, so never quit on the play.",
-      "type": "block",
-      "path": [
-        [1.0, 0.7]
-      ]
+      "block": "cutoff"
     },
     "LT": {
-      "rule": "Block back. Take the first defender on or inside you — nobody crosses your face.",
-      "type": "block",
-      "path": [
-        [1.0, 0.7]
-      ]
+      "block": "down"
     },
     "LG": {
-      "rule": "PULL RIGHT. Run flat behind the line and turn up outside our end. Block the first wrong-colored jersey you see.",
-      "type": "block",
-      "path": [
-        [0.5, -1.2],
-        [6.0, -1.0],
-        [7.0, 1.7]
-      ]
+      "block": "pull",
+      "to": "edge"
     },
     "C": {
-      "rule": "You have the nose, head up on you. Hands inside and do not let him cross your face to the playside.",
-      "type": "block",
-      "path": [
-        [0.9, 0.8]
-      ]
+      "block": "reach"
     },
     "RG": {
-      "rule": "Nobody is over you. Help the center drive the nose for one count, then climb to the middle linebacker.",
-      "type": "block",
-      "path": [
-        [-0.6, 1.1],
-        [-1.2, 3.4]
-      ]
+      "block": "double",
+      "target": "middle"
     },
     "RT": {
-      "rule": "The tackle is on your inside shoulder. Block him down and seal him inside — that is what opens the hole.",
-      "type": "block",
-      "path": [
-        [-0.4, 1.3]
-      ]
+      "block": "down"
     },
     "RTE": {
-      "rule": "Seal the end inside. Get your head across him and turn him in — the ball is going outside you.",
-      "type": "block",
-      "path": [
-        [0.4, 1.3]
-      ]
+      "block": "base",
+      "drive": "in"
     },
     "Z": {
-      "rule": "Release and screen the corner on your side. Get in his way and stay there.",
-      "type": "block",
-      "path": [
-        [1.2, 2.4],
-        [1.8, 4.2]
-      ]
+      "block": "screen"
     },
     "QB": {
       "rule": "Reverse pivot, hand the ball to the tailback deep, then carry out the bootleg fake away from the play.",
@@ -79,12 +45,7 @@
       ]
     },
     "FB": {
-      "rule": "Lead through the hole outside our end and block the first defender who shows.",
-      "type": "block",
-      "path": [
-        [2.6, 2.0],
-        [4.6, 5.2]
-      ]
+      "block": "lead"
     },
     "TB": {
       "rule": "Take the handoff and press outside our end. Turn up off the fullback's block — this hits outside the tight end, not inside him.",
@@ -99,7 +60,7 @@
   },
   "coaching_points": [
     "Same down-block-and-kick-out rules as Split Power. If the kids know one they know both — say that out loud when you install it.",
-    "The tailback starts deeper than a split back does, so the kick-out block has to hold a beat longer. Drill it on a count.",
+    "The tailback starts deeper than a split back does, so the seal block has to hold a beat longer. Drill it on a count.",
     "The pulling guard stays flat and tight to the line. Bellying back is what makes this play late.",
     "If the pulling guard cannot get there in time, run I Iso instead — it needs no pullers."
   ],

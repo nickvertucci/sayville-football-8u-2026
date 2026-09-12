@@ -151,13 +151,74 @@ also fails `--check`.
 Formations carry an `order` field too, which is teaching order, not the alphabet.
 Both control the sequence on the site and in `PLAYBOOK.md`.
 
-### Write assignments for the 5-3
+### Do not write blocking rules. Write blocking intents.
 
-Every offensive play is drawn against the 5-3, so write the rules for that front:
-the center has the nose head up, **both guards are uncovered**, each tackle has a
-tackle on his inside shoulder, each end has an end head up, and the gap between our
-tackle and our end is open. A rule that tells a guard to block the man over him is
-wrong against this front.
+A blocker's assignment is **a verb, not a sentence**:
+
+```json
+"RT": { "block": "down" },
+"Z":  { "block": "kick" },
+"LG": { "block": "pull", "to": "wrap" },
+"RTE": { "block": "release", "note": "You are the widest man we have — if he beats you outside, it is a touchdown." }
+```
+
+`generator/blocking.py` resolves that against a real defensive front and produces both
+the sentence on the card and the line on the diagram. That is what lets every play in
+the book be drawn against the **4-4**, the **5-3** and the **5-4-2** without anybody
+typing three versions of it — and it is why a blocker no longer has a `rule` or a
+`path`. He has a job; where the job puts him is the front's business.
+
+| Verb | The job | Options |
+|---|---|---|
+| `base` | Drive the man over you. Falls back to `down` if nobody is over him. | `drive`: `back` (default), `out`, `in` |
+| `down` | The first defender on or inside you. The bread-and-butter block. | |
+| `reach` | Get your head across the playside shoulder of the man in the playside gap. Climbs instead if that gap is empty. | |
+| `double` | Uncovered? Help inside, then climb. **Covered? He is yours** — the verb resolves to a base block by itself. | `target`: which linebacker to climb to |
+| `climb` | Straight past the line to a linebacker. | `target` |
+| `release` | Leave the man being kicked out alone and take a linebacker. The end man on a kick-out play. Defaults to `outside`, which is the whole adjustment between a three- and a four-linebacker front. | `target` |
+| `cutoff` | The backside. Nobody chases this from behind. | |
+| `kick` | Kick the edge defender out. The ball runs inside the block. | |
+| `lead` | Through the hole, first defender who shows — aimed at the **hole**, not at a man, because "whoever shows" is not somebody you can pick before the snap. | `target: force` only, which instead names the man outside our end |
+| `pull` | Leave and block somewhere else. | `to`: `wrap` (default), `kick`, `edge` |
+| `hinge` | Protect the side the quarterback ends up on. | |
+| `wedge` | Shoulder to shoulder and push. Nobody picks a man. | |
+| `screen` | Get in a defensive back's way and stay there. | |
+| `decoy` | Sell a fake. **Keeps its hand-drawn `path`** — the lie copies another play's path, which is not derivable from the defence. Give it `sell`. | `sell`, `path` |
+
+`target` names a linebacker by job: `playside` (the innermost one actually on the
+playside — the man who fills the hole), `middle`, `backside` or `outside`. **They are
+not always four different men.** Only the 5-3 has a linebacker standing on the ball; in
+the 4-4 and the 5-4-2 `middle` breaks the tie toward the play and lands on the same body
+`playside` does. That is correct — he is the man who makes the tackle — but it means two
+blockers given `middle` and `playside` can end up on one defender, which is what
+`--audit` is for.
+
+`lead` is the exception: it accepts only `target: force`, and the build rejects any
+other value rather than accepting one it would ignore.
+
+**Verbs read the line of scrimmage, so give line verbs to linemen.** `base`, `down`,
+`reach`, `double`, `climb` and `cutoff` open by saying who is lined up over the blocker.
+A player who starts more than a yard behind the line has nobody over him, so that clause
+is dropped for him automatically — but the verb is still a lineman's verb, and a back is
+almost always better served by `lead`, `kick`, `hinge` or `decoy`.
+
+**`note` is for the one thing this play adds** and nothing else. If the note restates
+what the verb already says, delete it. Most blockers need no note at all.
+
+**Ball carriers, fakes, routes and motion keep their `rule`, `type` and `path`**, because
+none of those depend on where the defence lines up. Only blocking is resolved.
+
+### Read all three before you commit an intent
+
+```
+python generator/preview.py i-power-r          # all three fronts, side by side
+python generator/preview.py --formation i-form --audit
+```
+
+`--audit` is the one that catches a badly chosen verb: it flags a defender on the
+playside nobody blocks, and three blockers arriving on the same man. A verb that reads
+well against the 5-3 and leaves an outside linebacker unblocked against the 4-4 is the
+exact bug this whole system exists to prevent, and it is invisible unless you look.
 
 ## Mirroring
 

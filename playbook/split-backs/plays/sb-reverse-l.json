@@ -5,84 +5,33 @@
   "name": "Split Z Right Z Reverse Left",
   "call": "Split Z Right 47 Z Reverse Left",
   "type": "run",
-  "defense": "5-3",
   "direction": "left",
   "ball_carrier": "Z",
-  "purpose": "The Keep Right, until it is not. The quarterback and the near back start the Keep right and never stop selling it; the split man comes back underneath, takes a lateral going the other way and runs left behind the far back. The line blocks the side the ball actually ends up on, so the only thing the defense gets to see is the Keep.",
+  "purpose": "The Keep Right, until it is not. The quarterback and the near back start the Keep right and never stop selling it; the split man comes back underneath, takes a lateral going the other way and runs left behind the far back. The line blocks the side the ball actually ends up on, so all the defense gets to see is the Keep.",
   "assignments": {
     "LTE": {
-      "rule": "Seal the edge. Block the end over you and turn him inside — the ball comes back around behind you, so he cannot be allowed to follow it out.",
-      "type": "block",
-      "path": [
-        [
-          0.2,
-          1.3
-        ]
-      ]
+      "block": "base",
+      "drive": "in"
     },
     "LT": {
-      "rule": "Reach the tackle on your inside shoulder and get your head across him. The ball is coming back to your side, so he cannot run down the line after it.",
-      "type": "block",
-      "path": [
-        [
-          0.3,
-          1.3
-        ]
-      ]
+      "block": "down"
     },
     "LG": {
-      "rule": "Nobody is over you. Climb to the middle linebacker and cut him off from the sideline the ball is going to.",
-      "type": "block",
-      "path": [
-        [
-          -0.4,
-          1.2
-        ],
-        [
-          0.6,
-          3.4
-        ]
-      ]
+      "block": "climb",
+      "target": "playside"
     },
     "C": {
-      "rule": "Reach the nose to your left. Get your head across that shoulder — the ball finishes on that side, whatever the backfield is doing.",
-      "type": "block",
-      "path": [
-        [
-          -0.6,
-          1.0
-        ]
-      ]
+      "block": "reach"
     },
     "RG": {
-      "rule": "Nobody is over you. Cut off behind you. This play takes a long time and everything that catches it comes from here.",
-      "type": "block",
-      "path": [
-        [
-          -1.0,
-          0.7
-        ]
-      ]
+      "block": "cutoff"
     },
     "RT": {
-      "rule": "Block back. Take the first defender on or inside you — nobody crosses your face.",
-      "type": "block",
-      "path": [
-        [
-          -1.0,
-          0.7
-        ]
-      ]
+      "block": "down"
     },
     "RTE": {
-      "rule": "Block the end over you and drive him out, exactly like the Keep. He is the one man quick enough to catch this from behind, and he only stays put if your block looks the same as it always does.",
-      "type": "block",
-      "path": [
-        [
-          -0.3,
-          1.3
-        ]
-      ]
+      "block": "cutoff",
+      "note": "This one takes a long time to get there, and he is the one man quick enough to catch it from behind."
     },
     "QB": {
       "rule": "Start the Keep right — same first three steps, same ball on the hip — then pitch it back underneath to the split man crossing your face. Pitch it back, never forward, then keep running the Keep as if you still have it.",
@@ -107,26 +56,12 @@
       ]
     },
     "LH": {
-      "rule": "Get outside our end ahead of the ball and block the first man outside. Everybody else on this play is telling a lie — you are the only blocker out here, so you cannot miss.",
-      "type": "block",
-      "path": [
-        [
-          -1.6,
-          2.2
-        ],
-        [
-          -3.2,
-          4.8
-        ],
-        [
-          -3.6,
-          6.6
-        ]
-      ]
+      "block": "lead",
+      "target": "force"
     },
     "RH": {
-      "rule": "Run your Keep block exactly the way you always run it. You are blocking for a quarterback who does not have the ball, and the moment you do that at half speed this play stops working forever.",
-      "type": "block",
+      "block": "decoy",
+      "sell": "Run your Keep block exactly the way you always run it. You are blocking for a quarterback who does not have the ball, and the moment you do it at half speed this play stops working forever.",
       "path": [
         [
           1.6,

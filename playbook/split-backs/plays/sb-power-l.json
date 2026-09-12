@@ -5,98 +5,35 @@
   "name": "Split Power Left",
   "call": "Split Z Right 35 Power",
   "type": "run",
-  "defense": "5-3",
   "direction": "left",
   "ball_carrier": "RH",
-  "purpose": "Off-tackle power to the far back, who crosses behind the quarterback and takes a deep handoff. Nobody pulls: our end drives their end out, the playside guard climbs to the middle linebacker and the near back leads up through the hole onto the playside linebacker.",
+  "purpose": "Off-tackle power to the far back, who crosses behind the quarterback and takes a deep handoff. Nobody pulls: our end drives their end out, the playside guard helps on the nose and comes off onto the middle linebacker, and the near back leads up through the hole.",
   "assignments": {
     "RTE": {
-      "rule": "Cut off pursuit from behind. You are the last one to the ball, so never quit on the play.",
-      "type": "block",
-      "path": [
-        [
-          -1.0,
-          0.7
-        ]
-      ]
+      "block": "cutoff"
     },
     "RT": {
-      "rule": "Block back. Take the first defender on or inside you — nobody crosses your face.",
-      "type": "block",
-      "path": [
-        [
-          -1.0,
-          0.7
-        ]
-      ]
+      "block": "down"
     },
     "RG": {
-      "rule": "Nobody is over you. Cut off the backside.",
-      "type": "block",
-      "path": [
-        [
-          -1.0,
-          0.7
-        ]
-      ]
+      "block": "cutoff"
     },
     "C": {
-      "rule": "You have the nose, head up on you. Hands inside and do not let him cross your face to the playside.",
-      "type": "block",
-      "path": [
-        [
-          -0.3,
-          1.1
-        ]
-      ]
+      "block": "reach"
     },
     "LG": {
-      "rule": "Nobody is over you. Climb straight to the middle linebacker and take him wherever he goes.",
-      "type": "block",
-      "path": [
-        [
-          -0.2,
-          1.2
-        ],
-        [
-          1.4,
-          3.5
-        ]
-      ]
+      "block": "double",
+      "target": "middle"
     },
     "LT": {
-      "rule": "The tackle is on your inside shoulder. Block him down and seal him inside — that is what opens the hole.",
-      "type": "block",
-      "path": [
-        [
-          0.4,
-          1.3
-        ]
-      ]
+      "block": "down"
     },
     "LTE": {
-      "rule": "Block the end over you and drive him out, away from the hole. Nobody is kicking him out for you — he is yours.",
-      "type": "block",
-      "path": [
-        [
-          -0.3,
-          1.3
-        ]
-      ]
+      "block": "base",
+      "drive": "out"
     },
     "Z": {
-      "rule": "Release inside and run this down from behind. Anybody chasing the ball across the field is yours — you are the fastest man on our side of it.",
-      "type": "block",
-      "path": [
-        [
-          -1.6,
-          3.4
-        ],
-        [
-          -4.4,
-          5.2
-        ]
-      ]
+      "block": "cutoff"
     },
     "QB": {
       "rule": "Open to the playside and hand deep to the back crossing from the backside. Let him come to you, then fake away.",
@@ -117,22 +54,7 @@
       ]
     },
     "LH": {
-      "rule": "Lead up through the hole and block the playside linebacker. You are the lead blocker — the ball is right behind you.",
-      "type": "block",
-      "path": [
-        [
-          -0.6,
-          2.2
-        ],
-        [
-          -1.4,
-          4.6
-        ],
-        [
-          -1.6,
-          6.4
-        ]
-      ]
+      "block": "lead"
     },
     "RH": {
       "rule": "You carry it. Cross behind the quarterback, take the handoff deep, then press the outside hip of our tackle and turn up inside the blocks.",
@@ -161,6 +83,8 @@
     "Identical blocking to Split Counter. The line learns one set of rules and gets two plays out of it — say that out loud when you install the second one.",
     "The near back's block on the playside linebacker is the play. Drill it on its own.",
     "The carrier travels further than the blocker, and that is the point — he arrives behind the lead, not beside it.",
-    "If the handoff is late, the quarterback is reaching. He holds the ball still and lets the back run through it."
+    "If the handoff is late, the quarterback is reaching. He holds the ball still and lets the back run through it.",
+    "Against a four-linebacker front there is an outside linebacker nobody blocks. The near back has to take him if he fills, and if they keep winning there, the answer is the Pitch — it gets outside him instead of running at him.",
+    "Nobody blocks outside our end on this one — no kick-out and no puller. Against a four-linebacker front their outside linebacker is free, so if they are playing four, go get the edge with Pitch or Keep instead."
   ]
 }
