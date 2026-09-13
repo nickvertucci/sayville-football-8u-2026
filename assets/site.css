@@ -316,8 +316,20 @@ h1.page { font-size: clamp(23px, 5vw, 33px); letter-spacing: -.5px; margin: 22px
    not a cell with sixteen pixels of padding round it — the old spacing made eleven
    positions three thousand pixels tall and put the answer to "who backs up the left
    tackle" below the fold. */
+/* A scroll pane on both axes, and it has to be both. Sideways is what a phone needs,
+   because four columns of names do not fit one and squeezing them is worse than
+   scrolling them. Vertical is what makes the header freeze: a sticky cell sticks to
+   its scroll container, so if the pane does not scroll, nothing holds 1st/2nd/3rd on
+   screen and a coach reading down to the tailback is looking at unlabelled columns
+   again.
+
+   The cap is a share of the screen rather than a number of rows. On a tall screen the
+   whole board clears it and the pane never scrolls; on a short one it does, and the
+   header and the position column freeze. Same rule, and it is the small screen — the
+   one being complained about — that gets the frozen panes. */
 .tablewrap.dc-board-wrap {
-  margin: 10px 0 4px; overflow-x: auto; background: var(--panel);
+  margin: 10px 0 4px; overflow: auto; max-height: 65vh; overscroll-behavior: contain;
+  background: var(--panel);
   border: 1px solid var(--line); border-radius: 12px; box-shadow: var(--shadow);
 }
 /* Fixed layout, because the bench row holds eleven names and auto layout lets one
@@ -325,7 +337,7 @@ h1.page { font-size: clamp(23px, 5vw, 33px); letter-spacing: -.5px; margin: 22px
    sideways scroll the moment that row appeared. Fixed also means the columns stay
    the same width as names move around, so the grid does not twitch on every drag. */
 table.dc-board {
-  width: 100%; border-collapse: collapse; min-width: 560px; table-layout: fixed;
+  width: 100%; border-collapse: collapse; table-layout: fixed; min-width: 620px;
 }
 table.dc-board th, table.dc-board td {
   border-bottom: 1px solid var(--line-soft); border-right: 1px solid var(--line-soft);
@@ -333,21 +345,31 @@ table.dc-board th, table.dc-board td {
 }
 table.dc-board th:last-child, table.dc-board td:last-child { border-right: 0; }
 table.dc-board tbody tr:last-child td { border-bottom: 0; }
+/* The header stays put while you read down the board. Twelve rows is more than a
+   phone shows at once, so scrolling to the tailback used to leave four unlabelled
+   columns of names and no way to tell a starter from third string — which is the
+   question this page exists to answer. */
+table.dc-board thead th { position: sticky; top: 0; z-index: 3; }
+/* And the position stays put while you scroll sideways. The board is wider than a
+   phone, and the column that says which row you are on was the first thing to leave
+   the screen. */
+table.dc-board .dc-poscell { position: sticky; left: 0; z-index: 2; }
+table.dc-board thead th:first-child {
+  left: 0; z-index: 4; background: var(--accent-solid);
+}
+/* The frozen column casts a shadow, so the half a name sliding under it reads as
+   something passing behind rather than as a name that has been cut in half. */
+table.dc-board .dc-poscell { box-shadow: 3px 0 6px rgba(0, 0, 0, .18); }
 table.dc-board thead th {
   background: var(--accent-solid); color: var(--on-accent); text-align: left;
   font-size: 11px; text-transform: uppercase; letter-spacing: 1.3px; font-weight: 800;
   padding: 9px 12px;
 }
-/* The units wear their own colours in the column headers. A coach scanning for the
-   Gold left tackle finds the column by colour before reading a word of it. White is
-   a silver rather than a literal white, which on a light page would be no colour at
-   all, and it takes dark text — so the short-unit warning has to darken with it. */
-table.dc-board thead th.rot-th[data-rot="purple"] { background: #5b2d8e; }
-table.dc-board thead th.rot-th[data-rot="gold"] { background: #8a6508; }
-table.dc-board thead th.rot-th[data-rot="white"] { background: #dfe3ea; color: #14213d; }
-/* Jumbo is a package, not a jersey, so it gets a colour none of the units would wear
-   — far enough from the navy of the Position header to still read as its own column. */
-table.dc-board thead th.rot-th[data-rot="jumbo"] { background: #1c5560; }
+/* Every column header reads the same. The units used to wear colours here and the
+   colour was doing the work of the label — which failed the moment the header
+   scrolled away, and told you nothing about order even when it was on screen. A
+   depth chart numbers its columns; a number says both which one it is and where it
+   sits behind the one in front of it. */
 table.dc-board .dc-poscell { background: var(--panel-2); white-space: nowrap; width: 160px; }
 table.dc-board .dc-poscell .dc-abbr { font-size: 14px; }
 table.dc-board .dc-poscell .dc-label { font-size: 11.5px; margin-left: 7px; }
@@ -371,64 +393,6 @@ table.dc-board tr.dc-alt .dc-abbr::after {
    easy to hit as a full one. Below 620px the table becomes cards and the cells stop
    being cells, so the padding rides on the cell rather than the row. */
 table.dc-board td.dc-cell { min-width: 130px; }
-@media (max-width: 620px) {
-  .tablewrap.dc-board-wrap { overflow-x: visible; }
-  table.dc-board { min-width: 0; table-layout: auto; }
-  table.dc-board .dc-poscell { width: auto; }
-  table.dc-board thead { display: none; }
-  table.dc-board, table.dc-board tbody, table.dc-board tr, table.dc-board td {
-    display: block; width: 100%;
-  }
-  table.dc-board tr { padding: 8px 12px; border-bottom: 1px solid var(--line); }
-  table.dc-board tr:last-child { border-bottom: 0; }
-  table.dc-board td {
-    border: 0; padding: 2px 0; background: none !important; min-width: 0;
-  }
-  table.dc-board .dc-poscell { padding: 0 0 5px; margin-bottom: 4px; border-bottom: 1px dashed var(--line); }
-  /* The header row is gone at this width, so every cell has to name its own column —
-     the bench cells too, or the row is four unlabelled columns of eleven names and
-     nothing says which unit each belongs to. */
-  table.dc-board td.dc-cell::before, table.dc-board td.dc-benchcell::before {
-    content: attr(data-label); display: inline-block; min-width: 52px;
-    font-size: 10px; text-transform: uppercase; letter-spacing: 1px; font-weight: 800;
-  }
-  table.dc-board td.dc-benchcell::before { display: block; margin-bottom: 3px; }
-  table.dc-board td[data-rot="purple"]::before { color: #a882d8; }
-  table.dc-board td[data-rot="gold"]::before { color: #d0a63a; }
-  table.dc-board td[data-rot="white"]::before { color: #8b95a6; }
-  table.dc-board td[data-rot="jumbo"]::before { color: #5aa7b3; }
-  /* Each column's bench is its own block, not a run-on with the one above it. */
-  table.dc-board tr.dc-benchrow td.dc-benchcell {
-    padding: 8px 0 4px; border-top: 1px dashed var(--line);
-  }
-  table.dc-board tr.dc-benchrow td.dc-benchcell:first-of-type { border-top: 0; }
-  table.dc-board .dc-open { padding: 3px 0; }
-}
-
-/* The last row of every board: with this column on the field, who is standing next
-   to you. Nobody puts a name into it — it is worked out from the rows above every
-   time one of them changes — so it is styled as a readout and not as a row. Muted,
-   smaller, no pills, and a rule above it to say the grid has stopped. */
-tr.dc-benchrow td {
-  background: var(--panel-2); vertical-align: top; border-top: 2px solid var(--line);
-  padding-top: 8px; padding-bottom: 9px;
-}
-tr.dc-benchrow .dc-poscell .dc-abbr { color: var(--muted); font-size: 12px; }
-.dc-benchcell {
-  font-size: 11.5px; line-height: 1.7; color: var(--muted); overflow-wrap: anywhere;
-}
-/* The headcount first, so "how many do I have left" is one glance rather than a
-   count of the names after it. */
-.dc-offn {
-  display: inline-block; margin-bottom: 4px; padding: 1px 7px; border-radius: 999px;
-  background: var(--line); color: var(--ink-2); font-size: 10px; font-weight: 800;
-}
-/* One name per line. These flowed inline and wrapped at first, which is compact and
-   unreadable: eleven names running across four lines gives the eye nothing to count
-   down, and telling whether a kid is in a list means reading it rather than scanning
-   it. A column of names is the whole point of the row. */
-.dc-off { display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-
 /* ---------------------------------------------------------------------- chips -- */
 /* A name you can pick up. It is a <button> because every drag has a tap-then-tap
    equivalent — see the pointer handler in site.js — and that is the path a phone,
@@ -461,8 +425,8 @@ td.dc-cell.over, .dc-pool.over { background: var(--accent-soft) !important; }
 
 /* ---------------------------------------------------------------------- squad -- */
 /* The whole squad for this side of the ball, and a source rather than a container:
-   dragging a name out leaves it here, so the same kid goes on Purple and Gold and
-   White without anyone having to think about where the chip "is". The ones already
+   dragging a name out leaves it here, so the same kid goes on the first, second and
+   third string without anyone having to think about where the chip "is". The ones already
    on the board are dimmed, which leaves the bright ones — the kids nobody has given
    a job — as the thing your eye lands on. */
 .dc-bench { margin: 0 0 6px; }
@@ -526,12 +490,12 @@ td.dc-cell.over, .dc-pool.over { background: var(--accent-soft) !important; }
    "2 WITH NO SPOT" is being shouted at. */
 .rot-h .rot-count { text-transform: none; font-weight: 700; }
 thead .rot-count { margin-left: 7px; font-size: 11px; }
-/* The body red is nearly invisible on the gold header fill. A short unit is the one
-   thing on this page that must not be missable, so on a dark header it goes pale
-   instead — same alarm, read against the fill it actually sits on. White's header is
-   pale already, so there it stays dark. */
+/* A short unit is the one thing on this page that must not be missable, and the body
+   red is nearly invisible on the header fill, so on the header it goes pale instead —
+   same alarm, read against the fill it actually sits on. This used to need a second
+   rule for the one column whose header was pale; the columns are numbered now and
+   every header is the same colour, so it does not. */
 thead .rot-count.warn { color: #ffd2d8; }
-thead th.rot-th[data-rot="white"] .rot-count.warn { color: #a3001a; }
 
 
 .plist { display: grid; gap: 12px; grid-template-columns: 1fr; }
@@ -1343,7 +1307,7 @@ footer.site a { color: var(--accent-ink); }
   .ins-huddle { margin: 7px 0 0; padding-top: 6px; font-size: 9.5pt; }
 
   /* Depth chart: one rotation per sheet, offense and defense side by side on it.
-     Hand the Purple sheet to the group that is on the field and the Gold sheet to
+     Hand the starters' sheet to the group that is on the field and the second's to
      the group that is coming on, and neither is holding the other's paper.
 
      Break *before* each rotation after the first rather than after every one. A
@@ -1371,14 +1335,17 @@ footer.site a { color: var(--accent-ink); }
   /* Screen scrolls the wide board sideways; paper has nowhere to scroll to, and
      a clipped overflow box silently drops the last string. */
   .tablewrap.dc-board-wrap {
-    overflow: visible; box-shadow: none; border-radius: 0; margin: 0;
+    overflow: visible; max-height: none; box-shadow: none; border-radius: 0; margin: 0;
+  }
+  table.dc-board thead th, table.dc-board .dc-poscell {
+    position: static; box-shadow: none;
   }
   table.dc-board { min-width: 0; }
   table.dc-board .dc-poscell { width: 33mm; }
   table.dc-board th, table.dc-board td { padding: 3px 8px; }
   table.dc-board .dc-poscell .dc-abbr { font-size: 10pt; }
   table.dc-board .dc-poscell .dc-label { font-size: 7.5pt; }
-  table.dc-board thead th { padding: 5px 8px; font-size: 8pt; }
+table.dc-board thead th { padding: 5px 8px; font-size: 8pt; }
   /* The rotation names survive as printed words. A header fill is the one place colour
      would have carried meaning nothing else does, and a printer set to skip
      backgrounds drops it silently — leaving white text on white paper — so the whole
@@ -1387,7 +1354,7 @@ footer.site a { color: var(--accent-ink); }
      Both selectors are needed. The screen rules that colour these headers carry an
      attribute and a second class, so a plain `thead th` here loses to them on
      specificity no matter that it comes later in the file, and the fills print. */
-  table.dc-board thead th { background: none; color: #000; border-bottom: 2px solid #000; }
+table.dc-board thead th { background: none; color: #000; border-bottom: 2px solid #000; }
   table.dc-board thead th.rot-th[data-rot] { background: none; color: #000; }
   /* Pale pink on paper is nothing at all. */
   thead .rot-count.warn,
@@ -1405,9 +1372,6 @@ footer.site a { color: var(--accent-ink); }
   .dc-bench { margin: 6px 0 0; }
   /* Worth its ink on a clipboard: it answers "who do I still have" without counting.
      Tighter than on screen, because it is the one row that can run to eleven names. */
-  tr.dc-benchrow td { border-top: 1.5pt solid #000; padding-top: 4px; }
-  .dc-benchcell { font-size: 7pt; line-height: 1.45; color: #000; }
-  .dc-offn { background: none; border: 0; padding: 0 4px 0 0; font-size: 7pt; }
   /* Buttons and the local-edits banner are screen furniture. */
   .dc-tools, .dc-edited { display: none; }
   .dc-bar { margin: 0 0 6px; display: block; }

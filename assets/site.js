@@ -312,6 +312,7 @@
   if (!board || !blob) return;
   var data = JSON.parse(blob.textContent);
   var KEY = 'sayville-depth-chart-v1';
+  var LEGACY_ROT = { purple: 'd1', gold: 'd2', white: 'd3' };
   var edited = document.getElementById('dc-edited');
   var resetBtn = document.getElementById('dc-reset');
   var copyBtn = document.getElementById('dc-copy');
@@ -344,7 +345,7 @@
 
        squad rail -> spot   assign. The rail is a source, not a container, so the kid
                             stays in it and the board gets a copy. This is the whole
-                            reason a kid can be on Purple and Gold and White at once.
+                            reason a kid can be on all three units at once.
        spot -> spot         move, swapping with whoever is there.
        spot -> squad rail   take him out of that spot.
 
@@ -447,7 +448,11 @@
     all('td.dc-cell').forEach(function (td) { td.innerHTML = ''; fill(td); });
 
     at.forEach(function (rec) {
-      var td = byKey[rec[0] + '/' + rec[1] + '/' + rec[2]];
+      // A board saved while the columns were still called Purple, Gold and White.
+      // Without this every record misses its cell, and the coach who rearranged his
+      // line at halftime opens the page to the shipped roster and no explanation.
+      var rot = LEGACY_ROT[rec[1]] || rec[1];
+      var td = byKey[rec[0] + '/' + rot + '/' + rec[2]];
       var src = template[rec[0] + '/' + rec[3]];
       // A spot or a kid that has left roster.json since this was saved. Dropping the
       // one record keeps the rest of the board, which is the point of naming spots.
@@ -507,22 +512,6 @@
         if (!n) idle++;
       });
 
-      /* The bench row: the squad for this side, minus whoever is in this column. It
-         is the other half of every column and the board could not say it before —
-         you had to hold eleven names in your head and subtract. The rail is the
-         squad, so it is also the list to subtract from, and nothing has to be told
-         twice who is on the team. */
-      all('tr.dc-benchrow td.dc-benchcell', sec).forEach(function (td) {
-        var on = {};
-        all('td.dc-cell[data-rot="' + td.dataset.rot + '"] .dc-chip', sec)
-          .forEach(function (c) { on[c.dataset.name] = true; });
-        var off = squad.filter(function (n) { return !on[n]; });
-        td.innerHTML = '<span class="dc-offn">' + off.length + '</span>'
-          + off.map(function (n) {
-              return '<span class="dc-off">' + n
-                .replace(/&/g, '&amp;').replace(/</g, '&lt;') + '</span>';
-            }).join('');
-      });
       var el = board.querySelector('[data-count="' + side + '-idle"]');
       if (el) {
         el.textContent = idle ? idle + ' with no spot' : 'everybody is in';
@@ -557,7 +546,7 @@
     if (picked && slot && chip !== picked) {
       var held = picked;
       // A name tapped in the squad rail stays picked after it lands. Putting the same
-      // left tackle on Purple, Gold and White is one tap and then three, instead of
+      // left tackle on all three units is one tap and then three, instead of
       // six — and it is the reason the rail is a source in the first place, so the
       // interface should not make you re-say it every time. A name picked up off the
       // board has been moved, and moving is finished when it lands.
@@ -680,7 +669,7 @@
         if (at < 0) return;
         var list = lists[td.dataset.pos] || (lists[td.dataset.pos] = []);
         while (list.length < at) list.push('');
-        // An empty Purple spot above a filled Gold one has to keep Gold at index 1,
+        // An empty 1st spot above a filled 2nd one has to keep 2nd at index 1,
         // so the hole is written as a blank rather than closed up. A kid in more than
         // one rotation is simply written more than once, which is exactly how the
         // file is read back — depth is the rotation, so the same name at index 0 and

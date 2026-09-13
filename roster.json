@@ -1,5 +1,5 @@
 {
-  "note": "Coach-editable. Depth is the column — Purple, then Gold, then White, then Jumbo on offense only; anybody past that is on the squad but in nothing. A name may repeat: the same left tackle on all three units is that name three times. Offense covers every spot the four formations use; defense is the 4-4, our everyday front.",
+  "note": "Coach-editable. Depth is the column — 1st, then 2nd, then 3rd, plus Jumbo on offense only; anybody past that is on the squad but in nothing. A name may repeat: the same left tackle on all three units is that name three times. Offense covers every spot both formations use; defense is the 4-4, our everyday front.",
   "offense": {
     "LTE": [
       "Ryan S.",

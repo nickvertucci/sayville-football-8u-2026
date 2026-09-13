@@ -200,7 +200,7 @@ someone a link to exactly the play you mean.
 | `p-<play>.html` | One play. Deep-linkable, and prints to a single sheet |
 | `defense.html` | The defensive playbook index |
 | `d-<front>.html` | One defensive front, with every assignment |
-| `depth-chart.html` | **Depth chart** — Purple, Gold, White and Jumbo, offense and defense, drag-and-drop |
+| `depth-chart.html` | **Depth chart** — first, second and third string plus Jumbo, offense and defense, drag-and-drop |
 | `print.html` | The whole book for printing |
 
 On every page the diagram is the main attraction — full width of the card, edge to edge
@@ -214,14 +214,22 @@ prints whichever one is on screen.
 
 ## The depth chart
 
-Two boards, offense and defense. Defense has Purple, Gold and White as columns; offense
-has those three and **Jumbo**. Rotation is on the across axis because the question the page
+Two boards, offense and defense. Defense has 1st, 2nd and 3rd as columns; offense has
+those three and **Jumbo**.
+
+They were called Purple, Gold and White until the page stopped being readable. A colour
+is a fine name for a practice jersey and a poor one for a column: it carries no order,
+so "who is behind him" needed a key nobody had, and once the header had scrolled off the
+top the board was four anonymous columns of names. A depth chart numbers its columns,
+because the number is the one label that answers the question the page exists to
+answer — and the ids changed with it, so a board saved under the old names is migrated
+rather than silently dropped. Rotation is on the across axis because the question the page
 exists to answer is *"the left tackle just came off — who goes in"*, and the answer should
 be the next cell over rather than a scroll away.
 
 `roster.json` is the chart. Depth in it **is** the column — first name at a position is
-Purple, second Gold, third White, fourth Jumbo, and anybody past that is on the squad but
-in nothing. One ordered list per position stays the thing a coach edits, and nothing has to
+the starter, second is second string, third is third, fourth is Jumbo, and anybody past
+that is on the squad but in nothing. One ordered list per position stays the thing a coach edits, and nothing has to
 be kept agreeing with anything else. Defense stops at three, so a defensive list is never
 four long.
 
@@ -238,8 +246,8 @@ through the page without a second concept to learn.
 
 **You can rearrange it in the browser.** Under each board is the squad — everybody on that
 side of the ball, always. It is a *source*, not a pile of leftovers: drag a name onto a spot
-and he goes there while staying in the squad, so putting one kid on Purple, Gold and White
-is three drags rather than a special mode. Tap works too, and a name tapped in the squad
+and he goes there while staying in the squad, so putting one kid on all three units is
+three drags rather than a special mode. Tap works too, and a name tapped in the squad
 stays picked after it lands — tap him once, then tap all three spots. Drag a name from the
 board back to the squad to take him out of that spot.
 
@@ -268,7 +276,7 @@ not the board in the repo. Two things close the loop:
   side to its own depth — four slots for offense, three for defense.
 
 Every column carries a live filled-of-eleven count, so a hole is a number at the top rather
-than something you find by counting *Open*. Purple, Gold and White are currently full on
+than something you find by counting *Open*. All three units are currently full on
 both sides — sixty-six spots, nobody left out. Jumbo is empty.
 
 ## Printing
