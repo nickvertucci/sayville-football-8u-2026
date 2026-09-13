@@ -209,7 +209,7 @@ def main(argv=None) -> int:
         # and the defense sheet in the other, and neither coordinator is holding a
         # page that is half somebody else's. It used to split the other way, one
         # sheet per rotation — same two sheets, and the count below did not move,
-        # but a Purple sheet answered "who is on the field" while leaving "who
+        # but a starters' sheet answered "who is on the field" while leaving "who
         # replaces him" on the other one.
         #
         # It is also the page most likely to drift to three. It grows a row every
