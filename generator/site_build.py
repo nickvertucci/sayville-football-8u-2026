@@ -475,7 +475,38 @@ td.dc-cell.over, .dc-pool.over { background: var(--accent-soft) !important; }
    third string without anyone having to think about where the chip "is". The ones already
    on the board are dimmed, which leaves the bright ones — the kids nobody has given
    a job — as the thing your eye lands on. */
-.dc-bench { margin: 0 0 6px; }
+/* ------------------------------------------------------------------ packages --
+   Five pairs per side, on one line above the squad. A package is who goes on and
+   comes off together, so the two slots sit one above the other inside a box and the
+   box is the unit your eye picks up — not ten loose slots in a row.
+
+   On a phone the five stay on their line and the row scrolls sideways, the same
+   idiom the board itself uses. Wrapping them to two rows would break the one thing
+   the layout is saying, which is that these five are the same kind of thing. */
+.dc-pkgs { margin: 14px 0 0; }
+.dc-pkgwrap { overflow-x: auto; overscroll-behavior-x: contain; }
+.dc-pkgrow {
+  display: grid; grid-template-columns: repeat(5, minmax(132px, 1fr));
+  gap: 8px; padding-bottom: 2px;
+}
+.dc-pkg {
+  background: var(--panel); border: 1px solid var(--line); border-radius: 10px;
+  padding: 8px 9px; box-shadow: var(--shadow);
+}
+.dc-pkg-h {
+  margin: 0 0 6px; font-size: 10.5px; font-weight: 800; letter-spacing: 1.1px;
+  text-transform: uppercase; color: var(--muted);
+}
+/* Same drop target as a board cell, and it has to look like one or nothing says it
+   can be dropped into. */
+.dc-pkg-slot {
+  min-height: 30px; display: flex; align-items: center;
+  border-radius: 8px; padding: 2px;
+}
+.dc-pkg-slot + .dc-pkg-slot { margin-top: 4px; }
+.dc-pkg-slot .dc-chip { max-width: 100%; }
+
+.dc-bench { margin: 14px 0 6px; }
 .dc-pool {
   display: flex; flex-wrap: wrap; gap: 6px; min-height: 38px; padding: 8px 10px;
   border: 1px dashed var(--line); border-radius: 10px; background: var(--panel);
@@ -1744,7 +1775,11 @@ SITE_JS = """
   var edited = document.getElementById('dc-edited');
   var resetBtn = document.getElementById('dc-reset');
   var copyBtn = document.getElementById('dc-copy');
-  var SLOT = 'td.dc-cell, .dc-pool';
+  // Every drop target on the page. A package slot is one of these too: it takes a
+  // name the same way a board cell does, so it goes in the selector rather than into
+  // a second set of handlers that would have to be kept in step with this one.
+  var SLOT = 'td.dc-cell, .dc-pkg-slot, .dc-pool';
+  var HOLDER = 'td.dc-cell, .dc-pkg-slot';
 
   function all(sel, ctx) {
     return Array.prototype.slice.call((ctx || board).querySelectorAll(sel));
@@ -1759,7 +1794,7 @@ SITE_JS = """
      be tabbed to and chosen from a keyboard exactly like a name can. The squad rail
      needs no such marker — it is never empty. */
   function fill(slot) {
-    if (!slot.classList.contains('dc-cell')) return;
+    if (!slot.matches(HOLDER)) return;
     var has = chipIn(slot), open = slot.querySelector('.dc-open');
     if (has && open) open.remove();
     if (!has && !open) {
@@ -1829,9 +1864,15 @@ SITE_JS = """
      skipped instead of taking the whole save down with it. */
   function snapshot() {
     var out = [];
-    all('td.dc-cell').forEach(function (td) {
+    all(HOLDER).forEach(function (td) {
       var c = chipIn(td);
-      if (c) out.push([sideOf(td), td.dataset.rot, td.dataset.pos, c.dataset.name]);
+      if (!c) return;
+      // A package slot has no rot/pos, so it names itself: "pkg" and its number, then
+      // which of the two it is. Same four-part shape as a board record, so restore()
+      // needs no second branch and an old save stays readable.
+      out.push(td.dataset.pkg
+        ? [sideOf(td), 'pkg', td.dataset.pkg + ':' + td.dataset.at, c.dataset.name]
+        : [sideOf(td), td.dataset.rot, td.dataset.pos, c.dataset.name]);
     });
     return out;
   }
@@ -1860,15 +1901,17 @@ SITE_JS = """
     if (!Array.isArray(at)) return;
 
     var byKey = {}, template = {};
-    all('td.dc-cell').forEach(function (td) {
-      byKey[sideOf(td) + '/' + td.dataset.rot + '/' + td.dataset.pos] = td;
+    all(HOLDER).forEach(function (td) {
+      byKey[td.dataset.pkg
+        ? sideOf(td) + '/pkg/' + td.dataset.pkg + ':' + td.dataset.at
+        : sideOf(td) + '/' + td.dataset.rot + '/' + td.dataset.pos] = td;
     });
     all('.dc-pool .dc-chip').forEach(function (c) {
       template[sideOf(c) + '/' + c.dataset.name] = c;
     });
     // Clear the board and set it out again from the save. Every chip on it is a copy
     // of a rail chip, so there is nothing here to preserve — only to rebuild.
-    all('td.dc-cell').forEach(function (td) { td.innerHTML = ''; fill(td); });
+    all(HOLDER).forEach(function (td) { td.innerHTML = ''; fill(td); });
 
     at.forEach(function (rec) {
       // A board saved while the columns were still called Purple, Gold and White.
@@ -1900,7 +1943,7 @@ SITE_JS = """
       var sec = board.querySelector('.dc-side[data-side="' + side + '"]');
       if (!sec) return;
       var spots = {};
-      all('td.dc-cell .dc-chip', sec).forEach(function (c) {
+      all('td.dc-cell .dc-chip, .dc-pkg-slot .dc-chip', sec).forEach(function (c) {
         spots[c.dataset.name] = (spots[c.dataset.name] || 0) + 1;
       });
       var idle = 0, squad = [];
@@ -1948,6 +1991,10 @@ SITE_JS = """
     if (suppress) return;           // the drag that just ended already decided this
     var chip = e.target.closest('.dc-chip');
     var slot = e.target.closest(SLOT);
+    if (picked && chip && isPool(slot) && isPool(picked.parentNode)) {
+      pick(chip);
+      return;
+    }
     if (picked && slot && chip !== picked) {
       var held = picked;
       // A name tapped in the squad rail stays picked after it lands. Putting the same
@@ -2060,6 +2107,26 @@ SITE_JS = """
      anything else a coach put in that file survive the round trip. */
   function exported() {
     var out = JSON.parse(JSON.stringify(data.roster));
+    /* Packages go back into the file too. The button says it hands you the whole
+       roster, and a coach who sets his packages, hits Copy and pastes the result into
+       the repo should not find them missing — the one thing worse than not saving is
+       looking like you did. Trailing empty packages are dropped so an untouched board
+       writes nothing rather than ten empty pairs. */
+    var packs = out.packages || (out.packages = {});
+    ['offense', 'defense'].forEach(function (side) {
+      var sec = board.querySelector('.dc-side[data-side="' + side + '"]');
+      if (!sec) return;
+      var rows = [];
+      all('.dc-pkg', sec).forEach(function (box) {
+        rows.push(all('.dc-pkg-slot', box).map(function (sl) {
+          var c = chipIn(sl);
+          return c ? c.dataset.name : '';
+        }));
+      });
+      while (rows.length && !rows[rows.length - 1].join('')) rows.pop();
+      if (rows.length) packs[side] = rows; else delete packs[side];
+    });
+    if (!Object.keys(packs).length) delete out.packages;
     ['offense', 'defense'].forEach(function (side) {
       var lists = out[side] || (out[side] = {});
       Object.keys(lists).forEach(function (pos) { lists[pos] = []; });
@@ -3558,6 +3625,11 @@ DEFENSE_POSITION_NAMES = {
 # per-side column list and nothing has to ask which side it is building.
 ROTATIONS = [str(n) for n in range(1, 7)]
 
+# Packages: five pairs per side, above the squad. A pair rather than a list because
+# that is the thing being named — two kids who go on and come off together.
+PACKAGE_COUNT = 5
+PACKAGE_SIZE = 2
+
 
 def rotations_for(side: str) -> list[tuple[str, str, str]]:
     """The columns, in depth order. Both sides run the same six."""
@@ -3599,7 +3671,7 @@ def side_squad(order: list[str], names_by_pos: dict) -> list[tuple[str, str]]:
 
 
 def side_board(side: str, order: list[str], alt_order: list[str],
-               names_by_pos: dict, label_fn) -> str:
+               names_by_pos: dict, label_fn, packages: list | None = None) -> str:
     """One side of the ball, every rotation, as columns of one grid.
 
     Rotation belongs on the X axis. The question this page exists to answer is "the
@@ -3642,10 +3714,32 @@ def side_board(side: str, order: list[str], alt_order: list[str],
     # board holds copies, and a kid can be in as many rotations as he can stand.
     pool = "".join(dc_chip(name, home)
                    for name, home in side_squad(order, names_by_pos))
+    # Five packages of two, above the squad. A package is a pair who go on and come
+    # off together, so it is two slots rather than a list: the board answers "who
+    # plays left guard", and this answers "who am I sending in next".
+    packs = packages or []
+
+    def in_slot(n: int, at: int) -> str:
+        pair = packs[n - 1] if n - 1 < len(packs) else []
+        name = pair[at] if isinstance(pair, list) and at < len(pair) else ""
+        return (dc_chip(name, "") if name
+                else '<button type="button" class="dc-open">Open</button>')
+
+    pkgs = "".join(
+        f'<div class="dc-pkg"><p class="dc-pkg-h">Package {n}</p>'
+        + "".join(
+            f'<div class="dc-pkg-slot" data-side="{side}" data-pkg="{n}" '
+            f'data-at="{at}">{in_slot(n, at)}</div>'
+            for at in range(PACKAGE_SIZE))
+        + '</div>'
+        for n in range(1, PACKAGE_COUNT + 1)
+    )
     return (
         f'<div class="tablewrap dc-board-wrap"><table class="dc-board">'
         f'<thead><tr><th>Position</th>{head}</tr></thead>'
         f'<tbody>{"".join(rows)}</tbody></table></div>'
+        f'<div class="dc-pkgs"><p class="rot-h">Packages</p>'
+        f'<div class="dc-pkgwrap"><div class="dc-pkgrow">{pkgs}</div></div></div>'
         f'<div class="dc-bench"><p class="rot-h">Squad'
         f'<span class="rot-count" data-count="{side}-idle"></span></p>'
         f'<div class="dc-pool" data-side="{side}" data-rot="squad">{pool}</div></div>'
@@ -3708,11 +3802,13 @@ def write_depth_chart(formations: list[dict], defenses: dict, root: Path) -> str
     )
     sections = []
     for side, heading, order, alts, label, sub in sides:
+        packs = (roster.get("packages") or {}).get(side)
         sections.append(
             f'<section class="dc-side" data-side="{side}">'
             f'<p class="hero-head">{esc(heading)}'
             f'<span class="rot-sub">{esc(sub)}</span></p>'
-            f'{side_board(side, order, alts, roster.get(side, {}), label)}</section>'
+            f'{side_board(side, order, alts, roster.get(side, {}), label, packs)}'
+            f'</section>'
         )
 
     # What the script needs that the board does not already carry. The roster goes

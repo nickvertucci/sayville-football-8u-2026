@@ -429,7 +429,38 @@ td.dc-cell.over, .dc-pool.over { background: var(--accent-soft) !important; }
    third string without anyone having to think about where the chip "is". The ones already
    on the board are dimmed, which leaves the bright ones — the kids nobody has given
    a job — as the thing your eye lands on. */
-.dc-bench { margin: 0 0 6px; }
+/* ------------------------------------------------------------------ packages --
+   Five pairs per side, on one line above the squad. A package is who goes on and
+   comes off together, so the two slots sit one above the other inside a box and the
+   box is the unit your eye picks up — not ten loose slots in a row.
+
+   On a phone the five stay on their line and the row scrolls sideways, the same
+   idiom the board itself uses. Wrapping them to two rows would break the one thing
+   the layout is saying, which is that these five are the same kind of thing. */
+.dc-pkgs { margin: 14px 0 0; }
+.dc-pkgwrap { overflow-x: auto; overscroll-behavior-x: contain; }
+.dc-pkgrow {
+  display: grid; grid-template-columns: repeat(5, minmax(132px, 1fr));
+  gap: 8px; padding-bottom: 2px;
+}
+.dc-pkg {
+  background: var(--panel); border: 1px solid var(--line); border-radius: 10px;
+  padding: 8px 9px; box-shadow: var(--shadow);
+}
+.dc-pkg-h {
+  margin: 0 0 6px; font-size: 10.5px; font-weight: 800; letter-spacing: 1.1px;
+  text-transform: uppercase; color: var(--muted);
+}
+/* Same drop target as a board cell, and it has to look like one or nothing says it
+   can be dropped into. */
+.dc-pkg-slot {
+  min-height: 30px; display: flex; align-items: center;
+  border-radius: 8px; padding: 2px;
+}
+.dc-pkg-slot + .dc-pkg-slot { margin-top: 4px; }
+.dc-pkg-slot .dc-chip { max-width: 100%; }
+
+.dc-bench { margin: 14px 0 6px; }
 .dc-pool {
   display: flex; flex-wrap: wrap; gap: 6px; min-height: 38px; padding: 8px 10px;
   border: 1px dashed var(--line); border-radius: 10px; background: var(--panel);

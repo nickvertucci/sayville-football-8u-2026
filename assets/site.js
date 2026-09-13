@@ -316,7 +316,11 @@
   var edited = document.getElementById('dc-edited');
   var resetBtn = document.getElementById('dc-reset');
   var copyBtn = document.getElementById('dc-copy');
-  var SLOT = 'td.dc-cell, .dc-pool';
+  // Every drop target on the page. A package slot is one of these too: it takes a
+  // name the same way a board cell does, so it goes in the selector rather than into
+  // a second set of handlers that would have to be kept in step with this one.
+  var SLOT = 'td.dc-cell, .dc-pkg-slot, .dc-pool';
+  var HOLDER = 'td.dc-cell, .dc-pkg-slot';
 
   function all(sel, ctx) {
     return Array.prototype.slice.call((ctx || board).querySelectorAll(sel));
@@ -331,7 +335,7 @@
      be tabbed to and chosen from a keyboard exactly like a name can. The squad rail
      needs no such marker — it is never empty. */
   function fill(slot) {
-    if (!slot.classList.contains('dc-cell')) return;
+    if (!slot.matches(HOLDER)) return;
     var has = chipIn(slot), open = slot.querySelector('.dc-open');
     if (has && open) open.remove();
     if (!has && !open) {
@@ -401,9 +405,15 @@
      skipped instead of taking the whole save down with it. */
   function snapshot() {
     var out = [];
-    all('td.dc-cell').forEach(function (td) {
+    all(HOLDER).forEach(function (td) {
       var c = chipIn(td);
-      if (c) out.push([sideOf(td), td.dataset.rot, td.dataset.pos, c.dataset.name]);
+      if (!c) return;
+      // A package slot has no rot/pos, so it names itself: "pkg" and its number, then
+      // which of the two it is. Same four-part shape as a board record, so restore()
+      // needs no second branch and an old save stays readable.
+      out.push(td.dataset.pkg
+        ? [sideOf(td), 'pkg', td.dataset.pkg + ':' + td.dataset.at, c.dataset.name]
+        : [sideOf(td), td.dataset.rot, td.dataset.pos, c.dataset.name]);
     });
     return out;
   }
@@ -432,15 +442,17 @@
     if (!Array.isArray(at)) return;
 
     var byKey = {}, template = {};
-    all('td.dc-cell').forEach(function (td) {
-      byKey[sideOf(td) + '/' + td.dataset.rot + '/' + td.dataset.pos] = td;
+    all(HOLDER).forEach(function (td) {
+      byKey[td.dataset.pkg
+        ? sideOf(td) + '/pkg/' + td.dataset.pkg + ':' + td.dataset.at
+        : sideOf(td) + '/' + td.dataset.rot + '/' + td.dataset.pos] = td;
     });
     all('.dc-pool .dc-chip').forEach(function (c) {
       template[sideOf(c) + '/' + c.dataset.name] = c;
     });
     // Clear the board and set it out again from the save. Every chip on it is a copy
     // of a rail chip, so there is nothing here to preserve — only to rebuild.
-    all('td.dc-cell').forEach(function (td) { td.innerHTML = ''; fill(td); });
+    all(HOLDER).forEach(function (td) { td.innerHTML = ''; fill(td); });
 
     at.forEach(function (rec) {
       // A board saved while the columns were still called Purple, Gold and White.
@@ -472,7 +484,7 @@
       var sec = board.querySelector('.dc-side[data-side="' + side + '"]');
       if (!sec) return;
       var spots = {};
-      all('td.dc-cell .dc-chip', sec).forEach(function (c) {
+      all('td.dc-cell .dc-chip, .dc-pkg-slot .dc-chip', sec).forEach(function (c) {
         spots[c.dataset.name] = (spots[c.dataset.name] || 0) + 1;
       });
       var idle = 0, squad = [];
@@ -520,6 +532,10 @@
     if (suppress) return;           // the drag that just ended already decided this
     var chip = e.target.closest('.dc-chip');
     var slot = e.target.closest(SLOT);
+    if (picked && chip && isPool(slot) && isPool(picked.parentNode)) {
+      pick(chip);
+      return;
+    }
     if (picked && slot && chip !== picked) {
       var held = picked;
       // A name tapped in the squad rail stays picked after it lands. Putting the same
@@ -632,6 +648,26 @@
      anything else a coach put in that file survive the round trip. */
   function exported() {
     var out = JSON.parse(JSON.stringify(data.roster));
+    /* Packages go back into the file too. The button says it hands you the whole
+       roster, and a coach who sets his packages, hits Copy and pastes the result into
+       the repo should not find them missing — the one thing worse than not saving is
+       looking like you did. Trailing empty packages are dropped so an untouched board
+       writes nothing rather than ten empty pairs. */
+    var packs = out.packages || (out.packages = {});
+    ['offense', 'defense'].forEach(function (side) {
+      var sec = board.querySelector('.dc-side[data-side="' + side + '"]');
+      if (!sec) return;
+      var rows = [];
+      all('.dc-pkg', sec).forEach(function (box) {
+        rows.push(all('.dc-pkg-slot', box).map(function (sl) {
+          var c = chipIn(sl);
+          return c ? c.dataset.name : '';
+        }));
+      });
+      while (rows.length && !rows[rows.length - 1].join('')) rows.pop();
+      if (rows.length) packs[side] = rows; else delete packs[side];
+    });
+    if (!Object.keys(packs).length) delete out.packages;
     ['offense', 'defense'].forEach(function (side) {
       var lists = out[side] || (out[side] = {});
       Object.keys(lists).forEach(function (pos) { lists[pos] = []; });

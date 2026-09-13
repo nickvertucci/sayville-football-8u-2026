@@ -243,6 +243,23 @@ from the middle of a list promotes everybody below it — which is how removing 
 fullback would quietly promote everybody below him. An empty string holds the spot
 and renders as *Open*.
 
+### Packages
+
+Five boxes of two above the squad on each board. A package is a pair who go on and come
+off together, which is the other question a coach asks at this age and the one the board
+could not answer: the columns say who plays left guard, and these say who you are sending
+in next.
+
+They are two slots rather than a list because the pair is the thing being named. They
+take a name exactly the way a board cell does — same drag, same tap, same *Open* marker —
+because they are in the same drop-target list and not a second set of handlers that would
+have to be kept in step.
+
+`roster.json` carries them under `packages`, one array of pairs per side, and **Copy
+roster.json** writes them back. Trailing empty packages are dropped, so an untouched board
+adds nothing to the file rather than ten empty pairs. They ship empty; the squad rail is
+how you fill them.
+
 **A name may repeat, down a column and across one.** The same left tackle at three
 depths is that name three times in the list — the normal case for a kid you never take
 off. And the same backup can be second in line at two different positions, because a
