@@ -1327,6 +1327,67 @@ footer.site a { color: var(--accent-ink); }
   ul.coach li { font-size: 8pt; line-height: 1.32; margin-bottom: 2px; }
   a[href]::after { content: ""; }
 
+  /* A practice plan is one sheet, held on the field.
+
+     This is the same argument the play cards make, and it reaches the same answer: a
+     coach standing on a field is holding one piece of paper, and anything that spills
+     onto a second sheet is something he is not going to see. Practices 1-4 fitted by
+     luck — they are the short ones. The three that carry position groups, an install
+     block and a scrimmage did not, and nothing was checking.
+
+     What the sheet drops is the planning context. The phase note explains WHY a play
+     is going in this week, which is a thing to read while writing the schedule, not
+     while running it. The facts strip is worse than redundant: "Blocks 5" sits above
+     a list of five numbered blocks, and "New today 4 things" above the four plays it
+     is counting. Both stay on the website, which is where you plan. */
+  .ins-day-phase, .ins-day .rb-facts, .ins-todo { display: none !important; }
+
+  .ins-day, .ins-day-plan { padding-right: 10px; }
+  .ins-day { margin-bottom: 10px; }
+  .ins-day h1.page { font-size: 16pt; margin: 0 0 2px; }
+  .rb-eyebrow { font-size: 8.5pt; margin: 0 0 1px; }
+  .ins-day-when { font-size: 9.5pt; }
+  .ins-day-new {
+    margin: 6px 0 0; padding: 5px 8px; font-size: 9.5pt; line-height: 1.4;
+    background: none; border: 1px solid var(--line); border-radius: 0;
+  }
+  .ins-day-h { margin: 10px 0 6px; padding-bottom: 3px; border-bottom-width: 1.5px; }
+  .ins-day-h h2 { font-size: 12pt; }
+
+  /* Blocks lose their panel fill — a background is a print-settings gamble, and the
+     tag and the time already say where one block ends and the next begins. */
+  .ins-day-plan .ins-blk, .ins-blk {
+    background: none; border: 0; border-top: 1px solid var(--line);
+    border-radius: 0; padding: 6px 0 4px; margin: 0;
+    break-inside: avoid; page-break-inside: avoid;
+  }
+  .ins-blk-h { margin: 0 0 3px; font-size: 10.5pt; }
+  .ins-blk-tag { font-size: 8pt; padding: 0 5px; }
+  .ins-blk-time { font-size: 9.5pt; }
+  .ins-em { font-size: 9.5pt; line-height: 1.4; }
+  .ins-drills { font-size: 9.5pt; line-height: 1.45; padding-left: 15px; }
+  .ins-drills li { margin-bottom: 0; }
+  .ins-req { font-size: 8.5pt; margin-top: 4px; }
+
+  /* Position groups run side by side. They are two independent lists that happen on
+     the field at the same time, so stacking them was only ever a phone compromise. */
+  .ins-grp { margin: 0; break-inside: avoid; page-break-inside: avoid; }
+  .ins-grp-h { font-size: 9.5pt; margin: 0 0 2px; }
+  .ins-blk:has(.ins-grp + .ins-grp) > .ins-grp { display: inline-block; width: 49%; vertical-align: top; }
+
+  .ins-list { gap: 4px; margin-bottom: 5px; }
+  .ins-play { padding: 1px 6px; background: none; }
+  .ins-call { font-size: 9.5pt; }
+  .ins-name { font-size: 8.5pt; }
+
+  /* The water break is punctuation. On screen it is a quiet line between blocks; on
+     paper it is a run of five identical lines competing with the coaching, so it
+     shrinks to a mark the eye skips until it wants it. */
+  .ins-water { margin: 3px 0 0 1px; font-size: 8pt; gap: 6px; }
+  .ins-water::before { height: 9px; }
+
+  .ins-huddle { margin: 7px 0 0; padding-top: 6px; font-size: 9.5pt; }
+
   /* Depth chart: one rotation per sheet, offense and defense side by side on it.
      Hand the Purple sheet to the group that is on the field and the Gold sheet to
      the group that is coming on, and neither is holding the other's paper.
