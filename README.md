@@ -259,13 +259,16 @@ stays picked after it lands — tap him once, then tap all three spots. Drag a n
 board back to the squad to take him out of that spot.
 
 Names already on the board are dimmed in the squad rail and carry the number of rotations
-they are in, which leaves the bright ones — the kids nobody has given a job — as the thing
+they hold, which leaves the bright ones — the kids nobody has given a job — as the thing
 your eye lands on. The heading counts them.
 
-Moving a name that is already on the board is a move, swapping with whoever is there. The
-one thing the board will not do is put a kid in the same rotation twice: he cannot be at
-left tackle and centre on the unit that is on the field, so an assignment that would do it
-takes him off the first spot instead.
+Moving a name that is already on the board is a move, swapping with whoever is there. A
+kid may hold as many spots as you like, including more than one in the same column. The
+board used to forbid that on the grounds that he cannot be at left tackle and centre at
+the same time — which is true of a unit that takes the field together and false of a
+depth chart. **Column 2 is not the second eleven. It is "second in line here."** The same
+backup can be second at left tackle and second at right tackle and never play both at
+once.
 
 Everything works with a finger; on a phone, hold a moment before dragging, or the swipe
 scrolls the page instead. Every spot is a button, so the whole board works from a keyboard
