@@ -214,24 +214,31 @@ prints whichever one is on screen.
 
 ## The depth chart
 
-Two boards, offense and defense. Defense has 1st, 2nd and 3rd as columns; offense has
-those three and **Jumbo**.
+Two boards, offense and defense. Both run five numbered columns, 1 through 5; offense
+carries a sixth, **Jumbo**. Five is room to name a whole rotation deep at every spot
+without editing anything first — the columns past the third start empty and are there to
+be filled.
 
 They were called Purple, Gold and White until the page stopped being readable. A colour
 is a fine name for a practice jersey and a poor one for a column: it carries no order,
 so "who is behind him" needed a key nobody had, and once the header had scrolled off the
-top the board was four anonymous columns of names. A depth chart numbers its columns,
+top the board was a row of anonymous columns of names. A depth chart numbers its columns,
 because the number is the one label that answers the question the page exists to
 answer — and the ids changed with it, so a board saved under the old names is migrated
 rather than silently dropped. Rotation is on the across axis because the question the page
 exists to answer is *"the left tackle just came off — who goes in"*, and the answer should
 be the next cell over rather than a scroll away.
 
-`roster.json` is the chart. Depth in it **is** the column — first name at a position is
-the starter, second is second string, third is third, fourth is Jumbo, and anybody past
-that is on the squad but in nothing. One ordered list per position stays the thing a coach edits, and nothing has to
-be kept agreeing with anything else. Defense stops at three, so a defensive list is never
-four long.
+`roster.json` is the chart. Depth in it **is** the column — the first name at a position
+is the starter, the second is second string, and so on to the fifth; on offense the sixth
+is Jumbo, and anybody past that is on the squad but in nothing. One ordered list per
+position stays the thing a coach edits, and nothing has to be kept agreeing with anything
+else. Defense has no Jumbo, so a defensive list is never six long.
+
+**A gap is written as a blank, not closed up.** Depth is the index, so deleting a name
+from the middle of a list promotes everybody below it — which is how removing a third-string
+fullback would quietly move somebody out of Jumbo. An empty string holds the spot and
+renders as *Open*.
 
 **Jumbo is a package, not a jersey** — short yardage and goal line, size over speed. It was
 once a separate block under the board listing only the three backfield spots that change,
@@ -273,11 +280,12 @@ not the board in the repo. Two things close the loop:
 - **Copy roster.json** hands back the whole file with your board written into it, to paste
   into the repo when a halftime rearrangement turns out to be the real answer. It rewrites
   only `offense` and `defense` and carries the note through untouched, and it writes each
-  side to its own depth — four slots for offense, three for defense.
+  side to its own depth — six slots for offense, five for defense.
 
-Every column carries a live filled-of-eleven count, so a hole is a number at the top rather
-than something you find by counting *Open*. All three units are currently full on
-both sides — sixty-six spots, nobody left out. Jumbo is empty.
+Every column carries a live filled-of-eleven count, so a hole is a number at the top
+rather than something you find by counting *Open*. Both starting units are full, and so is
+Jumbo; third string is a fullback short and defense is missing both backup right ends.
+Columns 4 and 5 are empty and waiting.
 
 ## Printing
 

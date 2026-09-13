@@ -1,63 +1,83 @@
 {
-  "note": "Coach-editable. Depth is the column — 1st, then 2nd, then 3rd, plus Jumbo on offense only; anybody past that is on the squad but in nothing. A name may repeat: the same left tackle on all three units is that name three times. Offense covers every spot both formations use; defense is the 4-4, our everyday front.",
+  "note": "Coach-editable. Depth is the column — 1 through 5, plus Jumbo on offense only; anybody past that is on the squad but in nothing. A name may repeat: the same left tackle on three units is that name three times. Offense covers every spot both formations use; defense is the 4-4, our everyday front.",
   "offense": {
     "LTE": [
       "Ryan S.",
       "Joseph P.",
       "Kilian F.",
+      "",
+      "",
       "Camden G."
     ],
     "LT": [
       "Jaxon E.",
       "Jaxon E.",
       "Jaxon E.",
+      "",
+      "",
       "Mason A."
     ],
     "LG": [
       "Brayden H.",
       "Luca D.",
       "Brayden H.",
+      "",
+      "",
       "Brayden H."
     ],
     "C": [
       "Camden G.",
       "Brayden S.",
       "Brayden S.",
+      "",
+      "",
       "Brayden S."
     ],
     "RG": [
       "Elias F.",
       "Brooks A.",
       "Brooks A.",
+      "",
+      "",
       "Gavin P."
     ],
     "RT": [
       "Brayden S.",
       "Mason A.",
       "Mason A.",
+      "",
+      "",
       "Ace A."
     ],
     "RTE": [
       "Ace A.",
       "Clark J.",
       "Clark J.",
+      "",
+      "",
       "Brooks A."
     ],
     "Z": [
       "Michael M.",
       "Michael M.",
       "Thomas D.",
+      "",
+      "",
       "Luca D."
     ],
     "QB": [
       "Brogan A.",
       "Ryan S.",
       "Brogan A.",
+      "",
+      "",
       "Brogan A."
     ],
     "FB": [
       "Jake G.",
       "Jake G.",
+      "",
+      "",
       "",
       "Jaxon E."
     ],
@@ -65,6 +85,8 @@
       "Philip A.",
       "Nico V.",
       "Liam M.",
+      "",
+      "",
       "Elias F."
     ],
     "LH": [],

@@ -337,7 +337,7 @@ h1.page { font-size: clamp(23px, 5vw, 33px); letter-spacing: -.5px; margin: 22px
    sideways scroll the moment that row appeared. Fixed also means the columns stay
    the same width as names move around, so the grid does not twitch on every drag. */
 table.dc-board {
-  width: 100%; border-collapse: collapse; table-layout: fixed; min-width: 620px;
+  width: 100%; border-collapse: collapse; table-layout: fixed; min-width: 900px;
 }
 table.dc-board th, table.dc-board td {
   border-bottom: 1px solid var(--line-soft); border-right: 1px solid var(--line-soft);
@@ -1341,7 +1341,8 @@ footer.site a { color: var(--accent-ink); }
     position: static; box-shadow: none;
   }
   table.dc-board { min-width: 0; }
-  table.dc-board .dc-poscell { width: 33mm; }
+  table.dc-board .dc-poscell { width: 33mm; white-space: normal; }
+  table.dc-board .dc-poscell .dc-label { display: block; margin-left: 0; }
   table.dc-board th, table.dc-board td { padding: 3px 8px; }
   table.dc-board .dc-poscell .dc-abbr { font-size: 10pt; }
   table.dc-board .dc-poscell .dc-label { font-size: 7.5pt; }

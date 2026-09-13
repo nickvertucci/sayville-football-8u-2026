@@ -383,7 +383,7 @@ h1.page { font-size: clamp(23px, 5vw, 33px); letter-spacing: -.5px; margin: 22px
    sideways scroll the moment that row appeared. Fixed also means the columns stay
    the same width as names move around, so the grid does not twitch on every drag. */
 table.dc-board {
-  width: 100%; border-collapse: collapse; table-layout: fixed; min-width: 620px;
+  width: 100%; border-collapse: collapse; table-layout: fixed; min-width: 900px;
 }
 table.dc-board th, table.dc-board td {
   border-bottom: 1px solid var(--line-soft); border-right: 1px solid var(--line-soft);
@@ -1387,7 +1387,8 @@ footer.site a { color: var(--accent-ink); }
     position: static; box-shadow: none;
   }
   table.dc-board { min-width: 0; }
-  table.dc-board .dc-poscell { width: 33mm; }
+  table.dc-board .dc-poscell { width: 33mm; white-space: normal; }
+  table.dc-board .dc-poscell .dc-label { display: block; margin-left: 0; }
   table.dc-board th, table.dc-board td { padding: 3px 8px; }
   table.dc-board .dc-poscell .dc-abbr { font-size: 10pt; }
   table.dc-board .dc-poscell .dc-label { font-size: 7.5pt; }
@@ -3583,16 +3584,20 @@ DEFENSE_POSITION_NAMES = {
 # The ids changed with the names, and restore() migrates the old ones.
 #
 # Jumbo is offense only, and it is a package rather than a depth — short yardage and
-# goal line, size over speed. It used to be a separate block under the board listing
+# goal line, size over speed. It sits after the numbers for that reason: it is not the
+# sixth-best eleven, it is a different eleven, and a coach reading left to right should
+# run out of depth before he reaches it. It used to be a separate block under the board listing
 # only the three spots that change, which meant it was the one thing on this page you
 # could not drag a name into. A column costs the same eleven rows the other three cost
 # and behaves like everything else. It sits last because it is not a fourth string.
 ROTATIONS = [
-    ("1st", "d1", ("offense", "defense"), "Starters."),
-    ("2nd", "d2", ("offense", "defense"), "Second string."),
-    ("3rd", "d3", ("offense", "defense"), "Third string."),
+    ("1", "d1", ("offense", "defense"), "Starters."),
+    ("2", "d2", ("offense", "defense"), "Second string."),
+    ("3", "d3", ("offense", "defense"), "Third string."),
+    ("4", "d4", ("offense", "defense"), "Fourth string."),
+    ("5", "d5", ("offense", "defense"), "Fifth string."),
     ("Jumbo", "jumbo", ("offense",),
-     "Short yardage and goal line — size over speed. A package, not a fourth string."),
+     "Short yardage and goal line — size over speed. A package, not a sixth string."),
 ]
 
 
