@@ -383,17 +383,12 @@
     if (open) open.remove();
     target.appendChild(moving);
 
-    // One rotation, one spot. Anywhere else in this rotation holding the same name is
-    // the old spot, and it empties.
-    all('td.dc-cell[data-rot="' + target.dataset.rot + '"]',
-        target.closest('.dc-side')).forEach(function (td) {
-      if (td === target) return;
-      var other = chipIn(td);
-      if (other && other.dataset.name === moving.dataset.name) {
-        other.remove();
-        fill(td);
-      }
-    });
+    // A kid may appear as many times in a column as the coach wants. This used to
+    // clear him out of every other spot in the same column on the grounds that he
+    // cannot be in two places at once — which is true of a unit that takes the field
+    // together and false of a depth chart. Column 2 is not the second eleven; it is
+    // "second in line here", and the same backup can be second at left tackle and
+    // second at right tackle without ever playing both at once.
 
     fill(from);
     fill(target);
@@ -489,25 +484,28 @@
 
     /* The rail carries the whole squad now, so it needs to say who in it is actually
        doing something. A kid already on the board is dimmed and wears the number of
-       rotations he is in; the ones left bright are the ones nobody has given a job.
-       That is the question the rail is scanned for. */
+       spots he holds; the ones left bright are the ones nobody has given a job. That
+       is the question the rail is scanned for.
+
+       Spots, not rotations: two of them can be in the same column now, because a
+       backup can be second in line at two different positions. */
     ['offense', 'defense'].forEach(function (side) {
       var sec = board.querySelector('.dc-side[data-side="' + side + '"]');
       if (!sec) return;
-      var rotations = {};
+      var spots = {};
       all('td.dc-cell .dc-chip', sec).forEach(function (c) {
-        rotations[c.dataset.name] = (rotations[c.dataset.name] || 0) + 1;
+        spots[c.dataset.name] = (spots[c.dataset.name] || 0) + 1;
       });
       var idle = 0, squad = [];
       all('.dc-pool .dc-chip', sec).forEach(function (c) {
-        var n = rotations[c.dataset.name] || 0;
+        var n = spots[c.dataset.name] || 0;
         squad.push(c.dataset.name);
         c.classList.toggle('placed', n > 0);
-        // The badge earns its space only past one. A kid in a single rotation is the
+        // The badge earns its space only past one. A kid in a single spot is the
         // ordinary case and does not need a number to say so.
         c.dataset.count = n > 1 ? String(n) : '';
         c.title = n
-          ? c.dataset.name + ' is in ' + n + (n === 1 ? ' rotation' : ' rotations')
+          ? c.dataset.name + ' is in ' + n + (n === 1 ? ' spot' : ' spots')
           : c.dataset.name + ' has no spot yet';
         if (!n) idle++;
       });
@@ -660,8 +658,9 @@
       Object.keys(lists).forEach(function (pos) { lists[pos] = []; });
       var sec = board.querySelector('.dc-side[data-side="' + side + '"]');
       if (!sec) return;
-      // This side's columns, in depth order. Offense has a fourth; defense does not,
-      // and padding a defense list to four would invent a slot nothing reads back.
+      // This side's columns, in depth order. Offense has a sixth for Jumbo; defense
+      // does not, and padding a defense list to six would invent a slot nothing
+      // reads back.
       var cols = data.rotations[side] || [];
       var playing = {};
       all('td.dc-cell', sec).forEach(function (td) {
@@ -669,11 +668,12 @@
         if (at < 0) return;
         var list = lists[td.dataset.pos] || (lists[td.dataset.pos] = []);
         while (list.length < at) list.push('');
-        // An empty 1st spot above a filled 2nd one has to keep 2nd at index 1,
-        // so the hole is written as a blank rather than closed up. A kid in more than
-        // one rotation is simply written more than once, which is exactly how the
-        // file is read back — depth is the rotation, so the same name at index 0 and
-        // index 1 says he plays on both.
+        // An empty 1st spot above a filled 2nd one has to keep 2nd at index 1, so the
+        // hole is written as a blank rather than closed up. A kid in more than one
+        // spot is simply written more than once, which is exactly how the file is read
+        // back — depth is the index, so the same name at index 0 and index 1 says he
+        // is the starter and his own backup, and the same name at index 1 of two
+        // different positions says he is second in line at both.
         var chip = chipIn(td);
         list[at] = chip ? chip.dataset.name : '';
         if (chip) playing[chip.dataset.name] = true;
