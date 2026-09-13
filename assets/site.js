@@ -461,27 +461,6 @@
   }
 
   function refresh() {
-    var counts = {};
-    // Alt rows are off the count. They are spots no formation on this board aligns,
-    // carried only because somebody is standing on one, and counting them would make
-    // a complete eleven read as twelve.
-    all('tbody tr[data-pos]').forEach(function (tr) {
-      if (tr.classList.contains('dc-alt')) return;
-      all('td.dc-cell', tr).forEach(function (td) {
-        var k = sideOf(td) + '-' + td.dataset.rot;
-        var c = counts[k] || (counts[k] = { on: 0, of: 0 });
-        c.of++;
-        if (chipIn(td)) c.on++;
-      });
-    });
-
-    Object.keys(counts).forEach(function (k) {
-      var el = board.querySelector('[data-count="' + k + '"]');
-      if (!el) return;
-      el.textContent = counts[k].on + '/' + counts[k].of;
-      el.classList.toggle('warn', counts[k].on < counts[k].of);
-    });
-
     /* The rail carries the whole squad now, so it needs to say who in it is actually
        doing something. A kid already on the board is dimmed and wears the number of
        spots he holds; the ones left bright are the ones nobody has given a job. That
@@ -658,9 +637,7 @@
       Object.keys(lists).forEach(function (pos) { lists[pos] = []; });
       var sec = board.querySelector('.dc-side[data-side="' + side + '"]');
       if (!sec) return;
-      // This side's columns, in depth order. Offense has a sixth for Jumbo; defense
-      // does not, and padding a defense list to six would invent a slot nothing
-      // reads back.
+      // The columns, in depth order. Both sides run the same six.
       var cols = data.rotations[side] || [];
       var playing = {};
       all('td.dc-cell', sec).forEach(function (td) {

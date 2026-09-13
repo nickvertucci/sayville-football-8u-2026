@@ -527,21 +527,18 @@ td.dc-cell.over, .dc-pool.over { background: var(--accent-soft) !important; }
   margin: 10px 0 6px; font-size: 12px; font-weight: 800; letter-spacing: 1.4px;
   text-transform: uppercase; color: var(--muted);
 }
-/* A unit short of eleven is a hole somebody has to fill, so say so in the column
-   header instead of making the coach count Open rows. Written by site.js, because
-   after the first drag the number the page shipped with is a lie. */
+/* The squad count under each board's heading. Written by site.js, because after the
+   first drag the number the page shipped with is a lie.
+
+   The column headers used to carry one of these too — a filled-of-eleven tally per
+   column. It went because it was answering a question the columns past the third do
+   not have: a depth chart is not eleven-deep at every spot and is not supposed to be,
+   so "0/11" over column five was reporting a shortfall that is not one. */
 .rot-count { font-weight: 800; letter-spacing: 0; opacity: .85; }
 .rot-count.warn { color: var(--red); opacity: 1; }
 /* The heading is uppercase; the squad count under it is a sentence and reading
    "2 WITH NO SPOT" is being shouted at. */
 .rot-h .rot-count { text-transform: none; font-weight: 700; }
-thead .rot-count { margin-left: 7px; font-size: 11px; }
-/* A short unit is the one thing on this page that must not be missable, and the body
-   red is nearly invisible on the header fill, so on the header it goes pale instead —
-   same alarm, read against the fill it actually sits on. This used to need a second
-   rule for the one column whose header was pale; the columns are numbered now and
-   every header is the same colour, so it does not. */
-thead .rot-count.warn { color: #ffd2d8; }
 
 
 .plist { display: grid; gap: 12px; grid-template-columns: 1fr; }
@@ -1403,9 +1400,6 @@ table.dc-board thead th { padding: 5px 8px; font-size: 8pt; }
      specificity no matter that it comes later in the file, and the fills print. */
 table.dc-board thead th { background: none; color: #000; border-bottom: 2px solid #000; }
   table.dc-board thead th.rot-th[data-rot] { background: none; color: #000; }
-  /* Pale pink on paper is nothing at all. */
-  thead .rot-count.warn,
-  thead th.rot-th[data-rot] .rot-count.warn { color: #000; font-style: italic; }
   /* On paper a chip is just a name — the pill, the border and the drag affordance
      all cost ink and say nothing a coach holding the sheet can act on. */
   .dc-chip {
@@ -1895,27 +1889,6 @@ SITE_JS = """
   }
 
   function refresh() {
-    var counts = {};
-    // Alt rows are off the count. They are spots no formation on this board aligns,
-    // carried only because somebody is standing on one, and counting them would make
-    // a complete eleven read as twelve.
-    all('tbody tr[data-pos]').forEach(function (tr) {
-      if (tr.classList.contains('dc-alt')) return;
-      all('td.dc-cell', tr).forEach(function (td) {
-        var k = sideOf(td) + '-' + td.dataset.rot;
-        var c = counts[k] || (counts[k] = { on: 0, of: 0 });
-        c.of++;
-        if (chipIn(td)) c.on++;
-      });
-    });
-
-    Object.keys(counts).forEach(function (k) {
-      var el = board.querySelector('[data-count="' + k + '"]');
-      if (!el) return;
-      el.textContent = counts[k].on + '/' + counts[k].of;
-      el.classList.toggle('warn', counts[k].on < counts[k].of);
-    });
-
     /* The rail carries the whole squad now, so it needs to say who in it is actually
        doing something. A kid already on the board is dimmed and wears the number of
        spots he holds; the ones left bright are the ones nobody has given a job. That
@@ -2092,9 +2065,7 @@ SITE_JS = """
       Object.keys(lists).forEach(function (pos) { lists[pos] = []; });
       var sec = board.querySelector('.dc-side[data-side="' + side + '"]');
       if (!sec) return;
-      // This side's columns, in depth order. Offense has a sixth for Jumbo; defense
-      // does not, and padding a defense list to six would invent a slot nothing
-      // reads back.
+      // The columns, in depth order. Both sides run the same six.
       var cols = data.rotations[side] || [];
       var playing = {};
       all('td.dc-cell', sec).forEach(function (td) {
@@ -3572,38 +3543,25 @@ DEFENSE_POSITION_NAMES = {
 
 
 # The columns, in the order they take the field. Depth in roster.json *is* the column:
-# the first name at a position is the starter, the second is second string, the third
-# is third. One ordered list per position stays the thing a coach edits, and nobody has
-# to keep two copies of the same roster agreeing with each other.
+# the first name at a position is the starter, the second is second string, and so on.
+# One ordered list per position stays the thing a coach edits, and nobody has to keep
+# two copies of the same roster agreeing with each other.
 #
-# These used to be called Purple, Gold and White. A colour is a fine name for a
-# practice jersey and a poor one for a column: it carries no order, so "who is behind
-# him" needed a key nobody had, and on a board where the header had scrolled away four
-# columns of names were four anonymous columns of names. A depth chart numbers its
-# columns, which is the one label that answers the question the page exists to answer.
-# The ids changed with the names, and restore() migrates the old ones.
+# These were Purple, Gold and White once. A colour is a fine name for a practice jersey
+# and a poor one for a column: it carries no order, so "who is behind him" needed a key
+# nobody had, and once the header had scrolled away the board was a row of anonymous
+# columns of names. A depth chart numbers its columns.
 #
-# Jumbo is offense only, and it is a package rather than a depth — short yardage and
-# goal line, size over speed. It sits after the numbers for that reason: it is not the
-# sixth-best eleven, it is a different eleven, and a coach reading left to right should
-# run out of depth before he reaches it. It used to be a separate block under the board listing
-# only the three spots that change, which meant it was the one thing on this page you
-# could not drag a name into. A column costs the same eleven rows the other three cost
-# and behaves like everything else. It sits last because it is not a fourth string.
-ROTATIONS = [
-    ("1", "d1", ("offense", "defense"), "Starters."),
-    ("2", "d2", ("offense", "defense"), "Second string."),
-    ("3", "d3", ("offense", "defense"), "Third string."),
-    ("4", "d4", ("offense", "defense"), "Fourth string."),
-    ("5", "d5", ("offense", "defense"), "Fifth string."),
-    ("Jumbo", "jumbo", ("offense",),
-     "Short yardage and goal line — size over speed. A package, not a sixth string."),
-]
+# The sixth used to be Jumbo, a short-yardage package rather than a depth, and it was
+# the last thing on this page that needed explaining before it could be read. It is
+# column six now. Both sides of the ball run the same six, so there is no longer a
+# per-side column list and nothing has to ask which side it is building.
+ROTATIONS = [str(n) for n in range(1, 7)]
 
 
 def rotations_for(side: str) -> list[tuple[str, str, str]]:
-    """The columns this side of the ball has, in depth order."""
-    return [(name, key, hint) for name, key, sides, hint in ROTATIONS if side in sides]
+    """The columns, in depth order. Both sides run the same six."""
+    return [(n, "d" + n, "") for n in ROTATIONS]
 
 
 def dc_chip(name: str, home: str) -> str:
@@ -3621,11 +3579,6 @@ def dc_chip(name: str, home: str) -> str:
     """
     return (f'<button type="button" class="dc-chip" draggable="false" '
             f'data-name="{esc(name)}" data-home="{esc(home)}">{esc(name)}</button>')
-
-
-def title(hint: str) -> str:
-    """A title attribute, or nothing at all. Only Jumbo carries one."""
-    return f' title="{esc(hint)}"' if hint else ""
 
 
 def side_squad(order: list[str], names_by_pos: dict) -> list[tuple[str, str]]:
@@ -3678,8 +3631,7 @@ def side_board(side: str, order: list[str], alt_order: list[str],
         )
 
     head = "".join(
-        f'<th class="rot-th" data-rot="{rot_key}"{title(hint)}>{esc(rot_name)}'
-        f'<span class="rot-count" data-count="{side}-{rot_key}"></span></th>'
+        f'<th class="rot-th" data-rot="{rot_key}">{esc(rot_name)}</th>'
         for rot_name, rot_key, hint in rotations_for(side)
     )
     # The whole squad, not just whoever is left over. This rail used to be the bench —
