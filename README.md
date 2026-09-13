@@ -200,7 +200,7 @@ someone a link to exactly the play you mean.
 | `p-<play>.html` | One play. Deep-linkable, and prints to a single sheet |
 | `defense.html` | The defensive playbook index |
 | `d-<front>.html` | One defensive front, with every assignment |
-| `depth-chart.html` | **Depth chart** — first, second and third string plus Jumbo, offense and defense, drag-and-drop |
+| `depth-chart.html` | **Depth chart** — six columns deep, offense and defense, drag-and-drop |
 | `print.html` | The whole book for printing |
 
 On every page the diagram is the main attraction — full width of the card, edge to edge
@@ -214,10 +214,13 @@ prints whichever one is on screen.
 
 ## The depth chart
 
-Two boards, offense and defense. Both run five numbered columns, 1 through 5; offense
-carries a sixth, **Jumbo**. Five is room to name a whole rotation deep at every spot
-without editing anything first — the columns past the third start empty and are there to
-be filled.
+Two boards, offense and defense, and both run the same six numbered columns. Six is
+room to name a rotation deep at every spot without editing the file first; the columns
+nobody has reached yet sit empty and are there to be filled.
+
+The sixth used to be **Jumbo**, a short-yardage package rather than a depth, and it was
+the last thing on the page that had to be explained before it could be read. It is
+column six now.
 
 They were called Purple, Gold and White until the page stopped being readable. A colour
 is a fine name for a practice jersey and a poor one for a column: it carries no order,
@@ -231,25 +234,20 @@ be the next cell over rather than a scroll away.
 
 `roster.json` is the chart. Depth in it **is** the column — the first name at a position
 is the starter, the second is second string, and so on to the fifth; on offense the sixth
-is Jumbo, and anybody past that is on the squad but in nothing. One ordered list per
-position stays the thing a coach edits, and nothing has to be kept agreeing with anything
-else. Defense has no Jumbo, so a defensive list is never six long.
+and so on to the sixth, and anybody past that is on the squad but in nothing. One
+ordered list per position stays the thing a coach edits, and nothing has to be kept
+agreeing with anything else.
 
 **A gap is written as a blank, not closed up.** Depth is the index, so deleting a name
 from the middle of a list promotes everybody below it — which is how removing a third-string
-fullback would quietly move somebody out of Jumbo. An empty string holds the spot and
-renders as *Open*.
+fullback would quietly promote everybody below him. An empty string holds the spot
+and renders as *Open*.
 
-**Jumbo is a package, not a jersey** — short yardage and goal line, size over speed. It was
-once a separate block under the board listing only the three backfield spots that change,
-which made it the one thing on this page you could not drag a name into. As a column it
-costs the same eleven rows the others cost and behaves like everything else, which is worth
-more than the honesty of showing only what differs. It ships empty; the squad rail is how
-you fill it.
-
-**A name may repeat.** The same left tackle on all three rotations is that name three
-times in the list. That is the normal case for a kid you never take off, and it round-trips
-through the page without a second concept to learn.
+**A name may repeat, down a column and across one.** The same left tackle at three
+depths is that name three times in the list — the normal case for a kid you never take
+off. And the same backup can be second in line at two different positions, because a
+column is "second here", not "the second eleven". Both round-trip through the page
+without a second concept to learn.
 
 **You can rearrange it in the browser.** Under each board is the squad — everybody on that
 side of the ball, always. It is a *source*, not a pile of leftovers: drag a name onto a spot
@@ -285,10 +283,11 @@ not the board in the repo. Two things close the loop:
   only `offense` and `defense` and carries the note through untouched, and it writes each
   side to its own depth — six slots for offense, five for defense.
 
-Every column carries a live filled-of-eleven count, so a hole is a number at the top
-rather than something you find by counting *Open*. Both starting units are full, and so is
-Jumbo; third string is a fullback short and defense is missing both backup right ends.
-Columns 4 and 5 are empty and waiting.
+The column headers used to carry a live filled-of-eleven count. It went with the
+Jumbo column: a depth chart is not eleven deep at every spot and is not meant to be, so
+"0/11" over a column nobody has filled yet was reporting a shortfall that is not one. The
+squad rail still counts the kids in no spot at all, which is the number that does mean
+something.
 
 ## Printing
 

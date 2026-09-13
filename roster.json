@@ -1,50 +1,50 @@
 {
-  "note": "Coach-editable. Depth is the column — 1 through 5, plus Jumbo on offense only; anybody past that is on the squad but in nothing. A name may repeat: the same left tackle on three units is that name three times. Offense covers every spot both formations use; defense is the 4-4, our everyday front.",
+  "note": "Coach-editable. Depth is the column — 1 through 6; anybody past that is on the squad but in nothing. A name may repeat, both down a column and across one: the same left tackle at three depths is that name three times, and a backup can be second in line at two positions. Offense covers every spot both formations use; defense is the 4-4, our everyday front.",
   "offense": {
     "LTE": [
       "Ryan S.",
       "Joseph P.",
-      "Kilian F.",
-      "",
+      "Clark J.",
+      "Michael M.",
       "",
       "Camden G."
     ],
     "LT": [
       "Jaxon E.",
-      "Jaxon E.",
-      "Jaxon E.",
+      "Brayden S.",
+      "Gavin P.",
       "",
       "",
       "Mason A."
     ],
     "LG": [
       "Brayden H.",
-      "Luca D.",
-      "Brayden H.",
-      "",
+      "Elias F.",
+      "Mason A.",
+      "Brooks A.",
       "",
       "Brayden H."
     ],
     "C": [
       "Camden G.",
       "Brayden S.",
-      "Brayden S.",
+      "",
       "",
       "",
       "Brayden S."
     ],
     "RG": [
       "Elias F.",
+      "Brayden H.",
+      "Mason A.",
       "Brooks A.",
-      "Brooks A.",
-      "",
       "",
       "Gavin P."
     ],
     "RT": [
       "Brayden S.",
-      "Mason A.",
-      "Mason A.",
+      "Jaxon E.",
+      "Gavin P.",
       "",
       "",
       "Ace A."
@@ -52,31 +52,31 @@
     "RTE": [
       "Ace A.",
       "Clark J.",
-      "Clark J.",
-      "",
+      "Joseph P.",
+      "Michael M.",
       "",
       "Brooks A."
     ],
     "Z": [
       "Michael M.",
-      "Michael M.",
-      "Thomas D.",
-      "",
-      "",
+      "Nico V.",
+      "Jake G.",
+      "Liam M.",
+      "Kilian F.",
       "Luca D."
     ],
     "QB": [
       "Brogan A.",
       "Ryan S.",
-      "Brogan A.",
+      "",
       "",
       "",
       "Brogan A."
     ],
     "FB": [
       "Jake G.",
-      "Jake G.",
-      "",
+      "Luca D.",
+      "Michael M.",
       "",
       "",
       "Jaxon E."
@@ -85,8 +85,8 @@
       "Philip A.",
       "Nico V.",
       "Liam M.",
-      "",
-      "",
+      "Kilian F.",
+      "Thomas D.",
       "Elias F."
     ],
     "LH": [],
