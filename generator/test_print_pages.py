@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
-"""Check every play prints on exactly one sheet, and the depth chart on exactly two.
+"""Check every play and practice prints on one sheet, and the depth chart on two.
 
 A card that spills onto a second page is not a cosmetic problem: it is a coach at
-practice holding page one and looking for the coaching points on page two. The print
+practice holding page one and looking for the coaching points on page two. The same
+goes for a practice plan, which is the sheet he is holding while he runs the thing. The print
 CSS pins the diagram to a fixed height so that pagination is the same for a wide play
 and a deep one, but that height was measured once by hand and the book has grown a lot
 since. So measure it every time instead of trusting the comment.
@@ -183,6 +184,11 @@ def main(argv=None) -> int:
 
     plays = sorted(ROOT.glob("p-*.html"))
     fronts = sorted(ROOT.glob("d-*.html"))
+    # A practice plan is a sheet a coach holds on the field, so it is one sheet for the
+    # same reason a play card is. These were not checked until three of them were
+    # already spilling: practices 1-4 fitted because they are the short ones, and the
+    # three carrying position groups, an install block and a scrimmage did not.
+    practices = sorted(ROOT.glob("install-*.html"))
     expected_book = len(plays) + len(fronts)
 
     failures = []
@@ -218,7 +224,7 @@ def main(argv=None) -> int:
             )
 
         if not args.quick:
-            for page in plays + fronts:
+            for page in plays + fronts + practices:
                 n = render(chrome, page, tmp / f"{page.stem}.pdf", profile)
                 flag = "" if n == 1 else f"  <-- {n} PAGES"
                 print(f"  {page.name:<26} {n}{flag}")
