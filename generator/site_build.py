@@ -2985,7 +2985,6 @@ def write_calls(formations: list[dict], defenses: dict, root: Path) -> str:
     ) or '<p class="lede">No offensive packages in roster.json yet.</p>'
 
     body = f"""<h1 class="page">Call sheet</h1>
-<p class="hero-head">{esc(PACKAGE_TITLE["offense"])}</p>
 <div class="xl-sheets">{sheets}</div>"""
     return page(
         f"Call sheet — {SITE_TITLE}",
