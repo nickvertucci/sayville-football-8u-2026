@@ -28,6 +28,8 @@ Both ends are tight on the line. The two backs sit four yards deep and just over
 | [Split formation - Strong left - Quick pitch left](#split-formation---strong-left---quick-pitch-left) | `Split SL Left 39 Pitch` | run | RH |
 | [Split formation - Strong right - QB sweep right](#split-formation---strong-right---qb-sweep-right) | `Split SL Right 18 Sweep` | run | QB |
 | [Split formation - Strong left - QB sweep left](#split-formation---strong-left---qb-sweep-left) | `Split SL Left 19 Sweep` | run | QB |
+| [Split formation - Strong left - Fake handoff right QB sweep left](#split-formation---strong-left---fake-handoff-right-qb-sweep-left) | `Split SL Left 19 Fake Sweep` | run | QB |
+| [Split formation - Strong right - Fake handoff left QB sweep right](#split-formation---strong-right---fake-handoff-left-qb-sweep-right) | `Split SL Right 18 Fake Sweep` | run | QB |
 
 ---
 
@@ -148,4 +150,64 @@ The quarterback keeps it and gets to the edge in a hurry behind the near back, w
 - The quarterback keeps it every time — tell him before the snap, there is no read.
 - The right halfback's fake is the play. If he jogs, nobody follows him and the defense is waiting at the edge.
 - The quarterback stays behind the left halfback until the block is made, then turns it up. Running past his blocker is how the sweep loses yards.
+
+---
+
+## Split formation - Strong left - Fake handoff right QB sweep left
+
+**Call it:** `Split SL Left 19 Fake Sweep`
+
+![Split formation - Strong left - Fake handoff right QB sweep left](cards/sb-fake-sweep-l-5-3.svg)
+
+The quarterback fakes the handoff to the right halfback, who carries the fake hard to the right, then rolls back and sweeps it left behind the left halfback.
+
+| Position | Assignment |
+|---|---|
+| **LTE** | End head up on you. Turn him inside. The ball goes around behind you. |
+| **LT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
+| **LG** | Nobody on you. Climb to the playside linebacker. Head across him. |
+| **C** | Reach the nose to your left. Head across his playside shoulder. |
+| **RG** | Nobody on you. Cut off the backside. Never quit on the play. |
+| **RT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
+| **RTE** | End head up on you. Cut him off — get between him and the ball. |
+| **SL** | Run at the corner and screen him off. Stay in his way. |
+| **QB** **(ball)** | Fake the handoff to the right halfback, then roll back left and sweep it, flat and fast, behind the left halfback. Turn up outside his block. |
+| **LH** | Lead outside our end. Block the first man out there — here it is the corner. |
+| **RH** | Take the fake from the quarterback and run hard to the right like you have the ball. Sell it all the way — you are the reason the defense goes the wrong way. |
+
+**Coaching points**
+
+- The fake has to look real: the quarterback puts the ball at the right halfback's belly and pulls it back out.
+- The right halfback's fake is the play. If he jogs, nobody follows him and the defense is waiting on the left.
+- After the fake the quarterback gets back to the left fast, stays behind the left halfback until the block is made, then turns it up.
+
+---
+
+## Split formation - Strong right - Fake handoff left QB sweep right
+
+**Call it:** `Split SL Right 18 Fake Sweep`
+
+![Split formation - Strong right - Fake handoff left QB sweep right](cards/sb-fake-sweep-r-5-3.svg)
+
+The quarterback fakes the handoff to the left halfback, who carries the fake hard to the left, then rolls back and sweeps it right behind the right halfback.
+
+| Position | Assignment |
+|---|---|
+| **LTE** | End head up on you. Cut him off — get between him and the ball. |
+| **LT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
+| **LG** | Nobody on you. Cut off the backside. Never quit on the play. |
+| **C** | Reach the nose to your right. Head across his playside shoulder. |
+| **RG** | Nobody on you. Climb to the playside linebacker. Head across him. |
+| **RT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
+| **RTE** | End head up on you. Turn him inside. The ball goes around behind you. |
+| **SL** | Run at the corner and screen him off. Stay in his way. |
+| **QB** **(ball)** | Fake the handoff to the left halfback, then roll back right and sweep it, flat and fast, behind the right halfback. Turn up outside his block. |
+| **LH** | Take the fake from the quarterback and run hard to the left like you have the ball. Sell it all the way — you are the reason the defense goes the wrong way. |
+| **RH** | Lead outside our end. Block the first man out there — here it is the corner. |
+
+**Coaching points**
+
+- The fake has to look real: the quarterback puts the ball at the left halfback's belly and pulls it back out.
+- The left halfback's fake is the play. If he jogs, nobody follows him and the defense is waiting on the right.
+- After the fake the quarterback gets back to the right fast, stays behind the right halfback until the block is made, then turns it up.
 
