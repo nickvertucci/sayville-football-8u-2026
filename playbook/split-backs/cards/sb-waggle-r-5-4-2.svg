@@ -46,8 +46,8 @@
 <line x1="310.9" y1="257.8" x2="325.8" y2="247.1" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 <path d="M426.6,337.5 L413.1,348.3 L388.8,375.3" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
 <line x1="395.6" y1="381.4" x2="382.0" y2="369.2" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
-<path d="M464.4,337.5 L486.0,299.7 L545.4,267.3" fill="none" stroke="#b3001b" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 5"/>
-<polygon points="545.4,267.3 538.5,276.3 534.1,268.2" fill="#b3001b"/>
+<path d="M464.4,337.5 L486.0,299.7 L545.4,267.3" fill="none" stroke="#b3001b" stroke-width="4.6" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 5"/>
+<polygon points="545.4,267.3 536.2,279.3 530.3,268.5" fill="#b3001b"/>
 <path d="M567.0,356.4 L577.8,259.2 L588.6,178.2" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 5"/>
 <polygon points="588.6,178.2 591.8,189.1 582.6,187.9" fill="#14213d"/>
 <path d="M351.0,364.5 L372.6,378.0 L394.2,391.5 L475.2,378.0 L523.8,313.2" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
@@ -56,6 +56,7 @@
 <line x1="379.4" y1="470.5" x2="365.8" y2="458.3" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 <path d="M291.6,426.6 L318.6,372.6 L324.0,329.4" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 5"/>
 <polygon points="324.0,329.4 327.3,340.2 318.1,339.1" fill="#14213d"/>
+
 <rect x="224.1" y="324.0" width="27.0" height="27.0" rx="3" fill="#ffffff" stroke="#14213d" stroke-width="2.6"/>
 <text x="237.6" y="342.0" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">LTE</text>
 <rect x="261.9" y="324.0" width="27.0" height="27.0" rx="3" fill="#ffffff" stroke="#14213d" stroke-width="2.6"/>
