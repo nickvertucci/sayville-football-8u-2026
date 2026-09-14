@@ -653,7 +653,7 @@ table.xl.xl-plays td {
   .xl-lineup td { height: 30px; padding: 1px 0; vertical-align: middle; }
   /* On paper the formation reads as players, not a spreadsheet: the grid behind them
      is barely there, and an empty square has no fill, so only the named spots show. */
-  table.xl.xl-lineup td { border-color: #f1f2f5; }
+  table.xl.xl-lineup td { border-color: #f9fafb; }
   .xl-lineup .xl-empty { background: none !important; }
   .xl-pos { font-size: 7.5px; }
   .xl-name { font-size: 8px; white-space: nowrap; letter-spacing: -.2px; }
