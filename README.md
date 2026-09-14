@@ -92,10 +92,10 @@ tight end is not a numbered back, so it is a word call.
 
 | Call | Play | Reads as |
 |---|---|---|
-| `Shotgun SL Right RTE Out` / `SL Left LTE Out` | Shotgun - Strong right - RTE quick out / Strong left - LTE quick out | the play-side tight end, five yards and out to the sideline |
+| `Shotgun SL Right RTE Slant Out` / `SL Left LTE Slant Out` | Shotgun - Strong right - RTE slant out / Strong left - LTE slant out | the play-side tight end, a shallow slant out toward the sideline |
 
 **Play word** — the Regular I carries `Power` and the tight-end `Jet`; the Split Backs
-carries `Pitch`, `Sweep` and `Fake Sweep`; the Shotgun carries the tight end's `Out`, the
+carries `Pitch`, `Sweep` and `Fake Sweep`; the Shotgun carries the tight end's `Slant Out`, the
 only pass in the book, which fakes nothing.
 
 ## Formations
@@ -106,7 +106,7 @@ Three formations, 12 plays, in teaching order:
 |---|---|---|---|---|
 | 1 | **Regular I** | Regular I | 4 | Base offense. Fullback and tailback stacked behind the quarterback. Off tackle, the tailback between the tackle and the end behind the SL's kick-out, and the tight-end jet, both ways. |
 | 2 | **Split Backs** | Split Backs | 6 | Two backs at even depth and a SL split out wide. The Quick pitch, the QB sweep and the fake-handoff QB sweep, both ways. |
-| 3 | **Shotgun** | Shotgun | 2 | The quarterback five yards deep with a back either side. The tight-end quick out, both ways, with everyone else but the SL in to block. |
+| 3 | **Shotgun** | Shotgun | 2 | The quarterback five yards deep with a back either side. The tight-end slant out, both ways, with everyone else but the SL in to block. |
 
 Both are two-tight-end, downhill running formations, so the blocking language carries
 over: "block down on the first defender inside you" means the same thing in either. That

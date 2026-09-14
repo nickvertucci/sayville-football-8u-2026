@@ -24,18 +24,18 @@ Both ends are tight on the line and the SL is off it and split out wide, which k
 
 | Play | Call | Type | Ball |
 |---|---|---|---|
-| [Shotgun - Strong right - RTE quick out](#shotgun---strong-right---rte-quick-out) | `Shotgun SL Right RTE Out` | pass | RTE |
-| [Shotgun - Strong left - LTE quick out](#shotgun---strong-left---lte-quick-out) | `Shotgun SL Left LTE Out` | pass | LTE |
+| [Shotgun - Strong right - RTE slant out](#shotgun---strong-right---rte-slant-out) | `Shotgun SL Right RTE Slant Out` | pass | RTE |
+| [Shotgun - Strong left - LTE slant out](#shotgun---strong-left---lte-slant-out) | `Shotgun SL Left LTE Slant Out` | pass | LTE |
 
 ---
 
-## Shotgun - Strong right - RTE quick out
+## Shotgun - Strong right - RTE slant out
 
-**Call it:** `Shotgun SL Right RTE Out`
+**Call it:** `Shotgun SL Right RTE Slant Out`
 
-![Shotgun - Strong right - RTE quick out](cards/sg-te-out-r-5-3.svg)
+![Shotgun - Strong right - RTE slant out](cards/sg-te-out-r-5-3.svg)
 
-A throw the quarterback can make before anybody gets to him: the right tight end runs five yards and breaks to the sideline, and everybody else but the SL stays in and blocks.
+A throw the quarterback can make before anybody gets to him: the right tight end slants out shallow toward the right sideline, and everybody else but the SL stays in and blocks.
 
 | Position | Assignment |
 |---|---|
@@ -45,31 +45,31 @@ A throw the quarterback can make before anybody gets to him: the right tight end
 | **C** | Pass block: step back, hands up, and stay between your man and the quarterback. |
 | **RG** | Pass block: step back, hands up, and stay between your man and the quarterback. |
 | **RT** | Pass block: step back, hands up, and stay between your man and the quarterback. |
-| **RTE** **(ball)** | Run straight up five yards, then snap it out to the sideline and turn your eyes back to the quarterback. The ball is there when you turn. |
+| **RTE** **(ball)** | Take two steps up, then slant out shallow toward the right sideline. Look for the ball as soon as you clear the end. |
 | **SL** | Run at the corner and screen him off. Stay in his way. |
-| **QB** | Catch the snap, take one step and throw to the right tight end as he breaks out. If he is covered, tuck it and run. |
+| **QB** | Catch the snap, take one step and throw to the right tight end as he slants out. If he is covered, tuck it and run. |
 | **LH** | Step up and out, hands up. Pick up anybody coming at the quarterback. |
 | **RH** | Step up and out, hands up. Pick up anybody coming at the quarterback. |
 
 **Coaching points**
 
 - Everybody but the tight end and the SL pass blocks: step back, hands up, stay between your man and the quarterback.
-- The tight end runs five hard yards and snaps it to the sideline. A soft break is a pick for the corner.
-- The quarterback throws the moment the tight end breaks. If he is covered, tuck it and run — no second look.
+- The tight end's slant stays shallow — two steps up and angle out. Drifting deep takes him into the linebackers.
+- The quarterback throws it as soon as the tight end clears the end. If he is covered, tuck it and run — no second look.
 
 ---
 
-## Shotgun - Strong left - LTE quick out
+## Shotgun - Strong left - LTE slant out
 
-**Call it:** `Shotgun SL Left LTE Out`
+**Call it:** `Shotgun SL Left LTE Slant Out`
 
-![Shotgun - Strong left - LTE quick out](cards/sg-te-out-l-5-3.svg)
+![Shotgun - Strong left - LTE slant out](cards/sg-te-out-l-5-3.svg)
 
-A throw the quarterback can make before anybody gets to him: the left tight end runs five yards and breaks to the sideline, and everybody else but the SL stays in and blocks.
+A throw the quarterback can make before anybody gets to him: the left tight end slants out shallow toward the left sideline, and everybody else but the SL stays in and blocks.
 
 | Position | Assignment |
 |---|---|
-| **LTE** **(ball)** | Run straight up five yards, then snap it out to the sideline and turn your eyes back to the quarterback. The ball is there when you turn. |
+| **LTE** **(ball)** | Take two steps up, then slant out shallow toward the left sideline. Look for the ball as soon as you clear the end. |
 | **LT** | Pass block: step back, hands up, and stay between your man and the quarterback. |
 | **LG** | Pass block: step back, hands up, and stay between your man and the quarterback. |
 | **C** | Pass block: step back, hands up, and stay between your man and the quarterback. |
@@ -77,13 +77,13 @@ A throw the quarterback can make before anybody gets to him: the left tight end 
 | **RT** | Pass block: step back, hands up, and stay between your man and the quarterback. |
 | **RTE** | Pass block: step back, hands up, and stay between your man and the quarterback. |
 | **SL** | Run at the corner and screen him off. Stay in his way. |
-| **QB** | Catch the snap, take one step and throw to the left tight end as he breaks out. If he is covered, tuck it and run. |
+| **QB** | Catch the snap, take one step and throw to the left tight end as he slants out. If he is covered, tuck it and run. |
 | **LH** | Step up and out, hands up. Pick up anybody coming at the quarterback. |
 | **RH** | Step up and out, hands up. Pick up anybody coming at the quarterback. |
 
 **Coaching points**
 
 - Everybody but the tight end and the SL pass blocks: step back, hands up, stay between your man and the quarterback.
-- The tight end runs five hard yards and snaps it to the sideline. A soft break is a pick for the corner.
-- The quarterback throws the moment the tight end breaks. If he is covered, tuck it and run — no second look.
+- The tight end's slant stays shallow — two steps up and angle out. Drifting deep takes him into the linebackers.
+- The quarterback throws it as soon as the tight end clears the end. If he is covered, tuck it and run — no second look.
 
