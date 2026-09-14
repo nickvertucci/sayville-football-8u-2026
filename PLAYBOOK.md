@@ -10,6 +10,8 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 | 2 | [I Formation - Strong Left - Off Tackle Handoff](#i-formation---strong-left---off-tackle-handoff) | `Regular I SL Left 35 Power` | run | Regular I | TB |
 | 3 | [Split formation - Strong right - Quick pitch right](#split-formation---strong-right---quick-pitch-right) | `Split SL Right 28 Pitch` | run | Split Backs | LH |
 | 4 | [Split formation - Strong left - Quick pitch left](#split-formation---strong-left---quick-pitch-left) | `Split SL Left 39 Pitch` | run | Split Backs | RH |
+| 5 | [Split formation - Strong right - QB sweep right](#split-formation---strong-right---qb-sweep-right) | `Split SL Right 18 Sweep` | run | Split Backs | QB |
+| 6 | [Split formation - Strong left - QB sweep left](#split-formation---strong-left---qb-sweep-left) | `Split SL Left 19 Sweep` | run | Split Backs | QB |
 
 # Regular I
 
@@ -136,4 +138,64 @@ Get outside in a hurry. The far back trails the quarterback, takes the pitch on 
 - The pitch goes early. A quarterback who waits to be tackled first will pitch it on the ground.
 - This is not a read at this age — tell him before the snap that he is pitching it.
 - Everything depends on the edge being blocked, and out here the split man does it — which is what frees both backs to fake and lead. Drill him on beating that man to the spot without holding.
+
+---
+
+## Split formation - Strong right - QB sweep right
+
+**Call it:** `Split SL Right 18 Sweep`
+
+![Split formation - Strong right - QB sweep right](playbook/split-backs/cards/sb-qb-sweep-r-5-3.svg)
+
+The quarterback keeps it and gets to the edge in a hurry behind the near back, while the far back runs hard the other way to take the defense with him.
+
+| Position | Assignment |
+|---|---|
+| **LTE** | End head up on you. Cut him off — get between him and the ball. |
+| **LT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
+| **LG** | Nobody on you. Cut off the backside. Never quit on the play. |
+| **C** | Reach the nose to your right. Head across his playside shoulder. |
+| **RG** | Nobody on you. Climb to the playside linebacker. Head across him. |
+| **RT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
+| **RTE** | End head up on you. Turn him inside. The ball goes around behind you. |
+| **SL** | Run at the corner and screen him off. Stay in his way. |
+| **QB** **(ball)** | Take the snap and sweep right, flat and fast, behind the right halfback. Turn up outside his block. |
+| **LH** | Run hard to the left like you have the ball. Sell it all the way — you are the reason the defense goes the wrong way. |
+| **RH** | Lead outside our end. Block the first man out there — here it is the corner. |
+
+**Coaching points**
+
+- The quarterback keeps it every time — tell him before the snap, there is no read.
+- The left halfback's fake is the play. If he jogs, nobody follows him and the defense is waiting at the edge.
+- The quarterback stays behind the right halfback until the block is made, then turns it up. Running past his blocker is how the sweep loses yards.
+
+---
+
+## Split formation - Strong left - QB sweep left
+
+**Call it:** `Split SL Left 19 Sweep`
+
+![Split formation - Strong left - QB sweep left](playbook/split-backs/cards/sb-qb-sweep-l-5-3.svg)
+
+The quarterback keeps it and gets to the edge in a hurry behind the near back, while the far back runs hard the other way to take the defense with him.
+
+| Position | Assignment |
+|---|---|
+| **LTE** | End head up on you. Turn him inside. The ball goes around behind you. |
+| **LT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
+| **LG** | Nobody on you. Climb to the playside linebacker. Head across him. |
+| **C** | Reach the nose to your left. Head across his playside shoulder. |
+| **RG** | Nobody on you. Cut off the backside. Never quit on the play. |
+| **RT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
+| **RTE** | End head up on you. Cut him off — get between him and the ball. |
+| **SL** | Run at the corner and screen him off. Stay in his way. |
+| **QB** **(ball)** | Take the snap and sweep left, flat and fast, behind the left halfback. Turn up outside his block. |
+| **LH** | Lead outside our end. Block the first man out there — here it is the corner. |
+| **RH** | Run hard to the right like you have the ball. Sell it all the way — you are the reason the defense goes the wrong way. |
+
+**Coaching points**
+
+- The quarterback keeps it every time — tell him before the snap, there is no read.
+- The right halfback's fake is the play. If he jogs, nobody follows him and the defense is waiting at the edge.
+- The quarterback stays behind the left halfback until the block is made, then turns it up. Running past his blocker is how the sweep loses yards.
 

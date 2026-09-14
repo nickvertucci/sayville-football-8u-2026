@@ -3089,8 +3089,8 @@ def write_calls(formations: list[dict], defenses: dict, root: Path) -> str:
     order = []
     if packages:
         p = packages[0]
-        order += [("Split formation - Strong left", p, "split-left", {"Left": ["sb-pitch-l"]}),
-                  ("Split formation - Strong right", p, "split-right", {"Right": ["sb-pitch-r"]}),
+        order += [("Split formation - Strong left", p, "split-left", {"Left": ["sb-pitch-l", "sb-qb-sweep-l"]}),
+                  ("Split formation - Strong right", p, "split-right", {"Right": ["sb-pitch-r", "sb-qb-sweep-r"]}),
                   ("I formation - Strong left", p, "i-left", {"Left": ["i-power-l"]}),
                   ("I formation - Strong right", p, "i-right", {"Right": ["i-power-r"]})]
     sheets = "".join(
