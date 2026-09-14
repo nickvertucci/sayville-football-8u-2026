@@ -635,8 +635,8 @@ table.xl.xl-plays td {
      browser's background-graphics setting is: a thick black rule down the middle and
      one across, with room inside each so no table touches a rule. */
   .xl-sheet { padding: 8px 12px; }
-  .xl-sheet:nth-child(odd) { border-right: 5px solid #000; }
-  .xl-sheet:nth-child(-n+2) { border-bottom: 5px solid #000; }
+  .xl-sheet:nth-child(odd) { border-right: 10px solid #000; }
+  .xl-sheet:nth-child(-n+2) { border-bottom: 10px solid #000; }
   /* Two rows of two fill the landscape sheet, so everything is sized up to use it:
      taller cells to write in and names a coach can read at arm's length. */
   table.xl { font-size: 11px; }
@@ -650,7 +650,7 @@ table.xl.xl-plays td {
   }
   /* A name is one line on paper: small enough to fit its cell, and never wrapping
      into a second line that makes the row taller. */
-  .xl-lineup td { height: 40px; padding: 2px 0; vertical-align: middle; }
+  .xl-lineup td { height: 36px; padding: 2px 0; vertical-align: middle; }
   .xl-pos { font-size: 10px; }
   .xl-name { font-size: 11px; white-space: nowrap; }
   table.xl.xl-plays td { height: 40px; vertical-align: middle; }
