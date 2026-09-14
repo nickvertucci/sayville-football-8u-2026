@@ -192,7 +192,7 @@ someone a link to exactly the play you mean.
 | Page | What it is |
 |---|---|
 | `index.html` | Home: the formations, the install advice, the calling language |
-| `calls.html` | **Call sheet** — one sheet per offensive package: the lineup with names, and the plays Left, Middle and Right |
+| `calls.html` | **Call sheet** — one sheet per offensive package: the I-formation lineup with names, and blank Left, Middle and Right columns for plays |
 | `f-<formation>.html` | One formation: its notes and its plays |
 | `install.html` | **Install schedule** — a month calendar of the practices, generated from `install.json` |
 | `install-<n>.html` | One practice: what goes in, and the run of practice block by block |
