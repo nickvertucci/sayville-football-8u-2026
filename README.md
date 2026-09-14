@@ -95,21 +95,14 @@ SL (4). Every play has a left and a right.
 ### Split Backs: formation + SL + back + hole + play word
 
 Two backs to number instead of three, and a SL out wide to declare — so the call reads
-like the Regular I's. `Split SL Right 24 Power` is the Split Backs, SL on the right, the
-left back through the 4 hole. The two halfbacks are back **2** (LH, the left one) and
+like the Regular I's. `Split SL Right 28 Pitch` is the Split Backs, SL on the right, the
+left back all the way outside at the 8 hole. The two halfbacks are back **2** (LH, the left one) and
 back **3** (RH, the right one); the SL out wide keeps **4**, the number he carries in
 both I looks.
 
 | Call | Play | Reads as |
 |---|---|---|
-| `Split SL Right 21 Dive` / `30 Dive` | Split Dive Left / Right | the near back, center–guard |
-| `Split SL Right 35 Power` / `24 Power` | Split Power Left / Right | the far back, tackle–end |
-| `Split SL Right 35 Counter` / `24 Counter` | Split Counter Left / Right | the far back, tackle–end |
-| `Split SL Right 17 Waggle` / `16 Waggle` | Split Waggle Left / Right | quarterback, off the dive fake |
 | `Split SL Right 39 Pitch` / `28 Pitch` | Split formation - Strong right - Quick pitch left / right | the far back, all the way outside |
-| `Split SL Left 17 Keep` / `Split SL Right 16 Keep` | Split QB Keep Left / Right | quarterback, outside the tight end |
-| `Split SL Left 46 SL Reverse Right` | Split SL Left SL Reverse Right | the SL, back the other way |
-| `Split SL Right 47 SL Reverse Left` | Split SL Right SL Reverse Left | the SL, back the other way |
 
 **The Keep and the Reverse are the plays that move the SL.** The Keep runs to whichever
 side he is on, so `Split SL Left 17 Keep` really does line him up on the left. The Reverse
@@ -132,12 +125,12 @@ or `Waggle`.
 
 ## Formations
 
-Two formations, 40 plays, in teaching order:
+Two formations, 28 plays, in teaching order:
 
 | # | Formation | Family | Plays | What it is for |
 |---|---|---|---|---|
 | 1 | **Regular I** | Regular I | 26 | Base offense. Fullback and tailback stacked, so the same look threatens the middle and both edges. Teaches a back to read a block, and carries the Power, Wedge and Jet package built around the SL. |
-| 2 | **Split Backs** | Split Backs | 14 | Two backs at even depth and a SL split out wide. One fewer back than a three-back look, and the receiver out there blocks the corner the pitch and the quarterback keep have to get around — then carries the ball himself on the reverse off that keep. |
+| 2 | **Split Backs** | Split Backs | 2 | Two backs at even depth and a SL split out wide. One play, both ways: the Quick pitch, the far back all the way outside, with the receiver out there blocking the corner he has to get around. |
 
 Both are two-tight-end, downhill running formations, so the blocking language carries
 over: "block down on the first defender inside you" means the same thing in either. That
@@ -148,9 +141,8 @@ runs and boots the quarterback the other way, so it is the same first three step
 defense has already been punished for respecting. They exist so nobody can put nine in the
 box and forget the edge — not to throw the ball. Every one says *run first, throw second*,
 because no blitzing is allowed at this age (9.02) and the quarterback usually walks into
-ten yards before anybody finds him. The Split Backs keeps one; the
-Regular I, holding the most plays, carries several off the toss, the dive, the jet and the
-power.
+ten yards before anybody finds him. They are all in the Regular I, off the toss, the dive,
+the jet and the power; the Split Backs carries only the Quick pitch.
 
 **Neither formation is symmetric, so every left-handed play is written by hand.** The SL
 sits split to the right on every snap, so flipping a play would flip his path while
@@ -321,7 +313,7 @@ something.
 
 ## Printing
 
-- **Print book** (top bar) → 44 landscape pages: 40 plays then 4 defensive fronts,
+- **Print book** (top bar) → 32 landscape pages: 28 plays then 4 defensive fronts,
   one per sheet.
 - **Print** (on any play or front page) → that one card, one landscape sheet.
 - **Print** (on the depth chart) → two portrait sheets, offense then defense, each with
