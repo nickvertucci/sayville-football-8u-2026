@@ -106,7 +106,7 @@ both I looks.
 | `Split SL Right 35 Power` / `24 Power` | Split Power Left / Right | the far back, tackle–end |
 | `Split SL Right 35 Counter` / `24 Counter` | Split Counter Left / Right | the far back, tackle–end |
 | `Split SL Right 17 Waggle` / `16 Waggle` | Split Waggle Left / Right | quarterback, off the dive fake |
-| `Split SL Right 39 Pitch` / `28 Pitch` | Split Pitch Left / Right | the far back, all the way outside |
+| `Split SL Right 39 Pitch` / `28 Pitch` | Split formation - Strong right - Quick pitch left / right | the far back, all the way outside |
 | `Split SL Left 17 Keep` / `Split SL Right 16 Keep` | Split QB Keep Left / Right | quarterback, outside the tight end |
 | `Split SL Left 46 SL Reverse Right` | Split SL Left SL Reverse Right | the SL, back the other way |
 | `Split SL Right 47 SL Reverse Left` | Split SL Right SL Reverse Left | the SL, back the other way |
