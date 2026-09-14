@@ -634,27 +634,27 @@ table.xl.xl-plays td {
   /* Quadrants, drawn with borders rather than a background so they print whatever the
      browser's background-graphics setting is: a thick black rule down the middle and
      one across, with room inside each so no table touches a rule. */
-  .xl-sheet { padding: 8px 12px; }
+  .xl-sheet { padding: 6px 8px; }
   .xl-sheet:nth-child(odd) { border-right: 10px solid #000; }
-  .xl-sheet:nth-child(-n+2) { border-bottom: 10px solid #000; }
+  .xl-sheet:nth-last-child(n+3) { border-bottom: 10px solid #000; }
   /* Two rows of two fill the landscape sheet, so everything is sized up to use it:
      taller cells to write in and names a coach can read at arm's length. */
-  table.xl { font-size: 11px; }
-  table.xl td, table.xl th { padding: 2px 3px; }
-  table.xl th { font-size: 11px; }
+  table.xl { font-size: 9px; }
+  table.xl td, table.xl th { padding: 1px 1px; }
+  table.xl th { font-size: 9px; }
   /* Black text on no background. The screen's white-on-navy title printed as pale grey
      on paper whenever the browser left background graphics off. */
   .xl-title {
-    padding: 0 0 5px; font-size: 18px; font-weight: 900;
+    padding: 0 0 3px; font-size: 14px; font-weight: 900;
     color: #000 !important; background: none !important;
   }
   /* A name is one line on paper: small enough to fit its cell, and never wrapping
      into a second line that makes the row taller. */
-  .xl-lineup td { height: 36px; padding: 2px 0; vertical-align: middle; }
-  .xl-pos { font-size: 10px; }
-  .xl-name { font-size: 11px; white-space: nowrap; }
-  table.xl.xl-plays td { height: 40px; vertical-align: middle; }
-  .xl-plays td a { font-size: 12px; }
+  .xl-lineup td { height: 30px; padding: 1px 0; vertical-align: middle; }
+  .xl-pos { font-size: 7.5px; }
+  .xl-name { font-size: 8px; white-space: nowrap; letter-spacing: -.2px; }
+  table.xl.xl-plays td { height: 32px; vertical-align: middle; }
+  .xl-plays td a { font-size: 9.5px; }
 }
 
 .plist { display: grid; gap: 12px; grid-template-columns: 1fr; }
@@ -3016,7 +3016,7 @@ def write_calls(formations: list[dict], defenses: dict, root: Path) -> str:
     line = ("LTE", "LT", "LG", "C", "RG", "RT", "RTE")
 
     def lineup_table(package: list[str], layout: str) -> str:
-        """`layout` is "i-right", "i-left", "split-right" or "split-left"."""
+        """`layout` is "i-", "split-" or "sg-" (Shotgun), then "right" or "left"."""
         backs = dict(zip(PACKAGE_SPOTS["offense"], package))
         # The line across and the quarterback under the center, with the SL just off the
         # line past one end: the right, unless the formation is strong left, when he is
@@ -3032,7 +3032,16 @@ def write_calls(formations: list[dict], defenses: dict, root: Path) -> str:
             grid[0][col] = (pos, backs.get(pos) or starter(pos))
         grid[1][center] = ("QB", starter("QB"))
         grid[1][0 if left else 7] = ("SL", backs.get("SL", ""))
-        if layout.startswith("i-"):
+        if layout.startswith("sg-"):
+            # The Shotgun: the quarterback five yards deep in the last row, a halfback
+            # either side of him. The fullback is the back on the SL's side, as in the
+            # Split formation, and each is labelled by the side he stands on.
+            grid[1][center] = None
+            grid[3][center] = ("QB", starter("QB"))
+            near, far = (center - 1, center + 1) if left else (center + 1, center - 1)
+            grid[3][near] = ("LH" if left else "RH", backs.get("FB", ""))
+            grid[3][far] = ("RH" if left else "LH", backs.get("TB", ""))
+        elif layout.startswith("i-"):
             grid[2][center] = ("FB", backs.get("FB", ""))
             grid[3][center] = ("TB", backs.get("TB", ""))
         else:
@@ -3092,7 +3101,9 @@ def write_calls(formations: list[dict], defenses: dict, root: Path) -> str:
         order += [("Split formation - Strong left", p, "split-left", {"Left": ["sb-pitch-l", "sb-qb-sweep-l", "sb-fake-sweep-l"]}),
                   ("Split formation - Strong right", p, "split-right", {"Right": ["sb-pitch-r", "sb-qb-sweep-r", "sb-fake-sweep-r"]}),
                   ("I formation - Strong left", p, "i-left", {"Left": ["i-power-l", "i-te-jet-l"]}),
-                  ("I formation - Strong right", p, "i-right", {"Right": ["i-power-r", "i-te-jet-r"]})]
+                  ("I formation - Strong right", p, "i-right", {"Right": ["i-power-r", "i-te-jet-r"]}),
+                  ("Shotgun - Strong left", p, "sg-left", {"Left": ["sg-te-out-l"]}),
+                  ("Shotgun - Strong right", p, "sg-right", {"Right": ["sg-te-out-r"]})]
     sheets = "".join(
         f'<section class="xl-sheet"><p class="xl-title">{esc(title)}</p>'
         f'{lineup_table(package, layout)}{plays_table(title, placed)}</section>'
@@ -3108,7 +3119,9 @@ def write_calls(formations: list[dict], defenses: dict, root: Path) -> str:
         defenses=defenses,
         active_nav="calls",
         description="Each offensive package with its lineup, and the plays by side.",
-        landscape=True,
+        # Portrait: two sheets across and three rows down, so all six formations fit
+        # one page with each strength beside its mirror.
+        page_rule="size: letter portrait; margin: 0.3in;",
     )
 
 
