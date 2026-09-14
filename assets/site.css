@@ -576,7 +576,10 @@ table.xl th {
 .xl-pos { display: block; font-size: 10px; font-weight: 800; color: var(--accent-ink); }
 .xl-name { display: block; font-size: 10.5px; }
 .xl-open { color: var(--muted); font-style: italic; }
-.xl-plays td { height: 22px; }
+/* Specific enough to beat `table.xl td`, whose top alignment would otherwise win. */
+table.xl.xl-plays td {
+  height: 22px; text-align: center; vertical-align: middle; padding: 4px 6px;
+}
 .xl-plays td a { color: var(--ink); font-weight: 700; text-decoration: none; }
 .xl-plays td a:hover { text-decoration: underline; }
 @media print {
@@ -593,7 +596,7 @@ table.xl th {
   .xl-lineup td { height: 44px; padding: 2px 0; vertical-align: middle; }
   .xl-pos { font-size: 10px; }
   .xl-name { font-size: 11px; white-space: nowrap; }
-  .xl-plays td { height: 40px; vertical-align: middle; }
+  table.xl.xl-plays td { height: 40px; vertical-align: middle; }
   .xl-plays td a { font-size: 12px; }
 }
 
