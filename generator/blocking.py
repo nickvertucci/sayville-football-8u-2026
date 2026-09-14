@@ -696,6 +696,9 @@ def resolve(pos: str, intent: dict, alignment: dict, front: dict, side: int,
         "type": "block",
         "aims": aims,
         "path": intent["path"] if path is None else path,
+        # A block that goes round somebody first is drawn as one rounded bubble through
+        # its waypoints, not as straight legs with a corner at each.
+        "curve": bool(intent.get("via")),
         # Which linebacker this blocker took, so the next one does not take him too.
         "claimed": claimed_lb(front, alignment[pos], path) if aims == "man" else None,
     }
