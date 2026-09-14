@@ -110,13 +110,16 @@
       },
       "TB": {
         "block": "man",
-        "man": "LC",
-        "or": "FS",
-        "how": "Bubble out around the left end",
+        "man": "FS",
+        "how": "Bubble out around the left end with the fullback",
         "via": [
           [
             -6.4,
             2.9
+          ],
+          [
+            -5.5,
+            7.0
           ]
         ]
       }
@@ -125,6 +128,6 @@
   "coaching_points": [
     "No motion before the snap. The end stays down in his stance, so the play is legal and nothing tips it off.",
     "The handoff is the whole play: the quarterback opens left and puts the ball in the end's belly at full speed, then carries out his fake.",
-    "Both backs bubble out to the left ahead of the end — the fullback takes the outside linebacker, the tailback the corner or the free safety, whoever comes first."
+    "Both backs bubble out to the left ahead of the end — the fullback takes the outside linebacker, and the tailback goes out with him and up to the free safety."
   ]
 }
