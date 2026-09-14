@@ -3,7 +3,7 @@
   "order": 7,
   "formation": "split-backs",
   "name": "Split Waggle Right",
-  "call": "Split Z Right 16 Waggle",
+  "call": "Split SL Right 16 Waggle",
   "type": "pass",
   "fakes": "sb-dive-l",
   "direction": "right",
@@ -58,7 +58,7 @@
         ]
       ]
     },
-    "Z": {
+    "SL": {
       "rule": "Sprint straight downfield and take the deep man with you. Nobody throws you the ball — you empty the flat.",
       "type": "pass",
       "path": [
@@ -118,7 +118,7 @@
     "Both ends must engage before releasing. If they run straight into their routes the fake dies.",
     "The dive fake is the whole play. If that back does not get hit by somebody, he did not sell it.",
     "The dive comes from the back away from the roll. The back on the side he rolls to never chases it — he stays home and protects that edge. Get those two backwards and the quarterback runs into his own blocker.",
-    "The Z running the deep man off is what empties the flat. He never gets the ball on this one and he sprints anyway — the day he jogs is the day that man sits on the tight end.",
+    "The SL running the deep man off is what empties the flat. He never gets the ball on this one and he sprints anyway — the day he jogs is the day that man sits on the tight end.",
     "No blitzing is allowed for 8- and 9-year-olds, so the quarterback has time. Teach him to be patient and look up.",
     "Run first, throw second. One throw, then tuck it — no scrambling backwards, ever."
   ]

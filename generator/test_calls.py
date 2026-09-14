@@ -22,31 +22,31 @@ import render  # noqa: E402
 
 # (what it is, formation, play, the call to try, should the check reject it?)
 CASES = [
-    ("the real call",                 "i-form",   "i-iso-r",    "I Z Right 32 Iso",   False),
-    ("iso, called at the 0 hole",     "i-form",   "i-iso-r",    "I Z Right 30 Iso",   True),
-    ("iso, called outside the end",   "i-form",   "i-iso-r",    "I Z Right 36 Iso",   True),
-    ("slant, off by one hole",        "i-form",   "i-slant-r",  "I Z Right 34 Slant", True),
-    ("dive right, numbered left",     "i-form",   "i-dive-r",   "I Z Right 21 Dive",  True),
-    ("toss left, numbered right",     "i-form",   "i-toss-l",   "I Z Right 38 Toss",  True),
-    ("dive, credited to the tailback", "i-form",  "i-dive-r",   "I Z Right 30 Dive",  True),
-    ("a back this formation lacks",   "i-form",   "i-iso-r",    "I Z Right 42 Iso",   True),
-    ("a back number nobody defines",  "i-form",   "i-iso-r",    "I Z Right 52 Iso",   True),
-    ("no number at all",              "i-form",   "i-iso-r",    "I Z Right Iso",      True),
+    ("the real call",                 "i-form",   "i-iso-r",    "I SL Right 32 Iso",   False),
+    ("iso, called at the 0 hole",     "i-form",   "i-iso-r",    "I SL Right 30 Iso",   True),
+    ("iso, called outside the end",   "i-form",   "i-iso-r",    "I SL Right 36 Iso",   True),
+    ("slant, off by one hole",        "i-form",   "i-slant-r",  "I SL Right 34 Slant", True),
+    ("dive right, numbered left",     "i-form",   "i-dive-r",   "I SL Right 21 Dive",  True),
+    ("toss left, numbered right",     "i-form",   "i-toss-l",   "I SL Right 38 Toss",  True),
+    ("dive, credited to the tailback", "i-form",  "i-dive-r",   "I SL Right 30 Dive",  True),
+    ("a back this formation lacks",   "i-form",   "i-iso-r",    "I SL Right 42 Iso",   True),
+    ("a back number nobody defines",  "i-form",   "i-iso-r",    "I SL Right 52 Iso",   True),
+    ("no number at all",              "i-form",   "i-iso-r",    "I SL Right Iso",      True),
     # The boot is the case the check has to get right for the right reason: the digits
-    # describe the quarterback, while the ball carrier is the flanker he throws to.
-    ("boot, quarterback at the 6",    "i-form",   "i-boot-r",   "I Z Right 16 Boot",  False),
-    ("boot, called too wide",         "i-form",   "i-boot-r",   "I Z Right 18 Boot",  True),
-    ("split power right",             "split-backs", "sb-power-r", "Split Z Right 24 Power",  False),
-    ("split power, called a pitch",   "split-backs", "sb-power-r", "Split Z Right 28 Power",  True),
-    ("split power, credited to the Z", "split-backs", "sb-power-r", "Split Z Right 44 Power", True),
-    ("split pitch, called off tackle", "split-backs", "sb-pitch-r", "Split Z Right 24 Pitch", True),
-    ("split dive right, numbered left", "split-backs", "sb-dive-r", "Split Z Right 31 Dive",  True),
-    ("split waggle, quarterback at 6", "split-backs", "sb-waggle-r", "Split Z Right 16 Waggle", False),
-    ("split waggle, called too wide",  "split-backs", "sb-waggle-r", "Split Z Right 18 Waggle", True),
+    # describe the quarterback, while the ball carrier is the slot he throws to.
+    ("boot, quarterback at the 6",    "i-form",   "i-boot-r",   "I SL Right 16 Boot",  False),
+    ("boot, called too wide",         "i-form",   "i-boot-r",   "I SL Right 18 Boot",  True),
+    ("split power right",             "split-backs", "sb-power-r", "Split SL Right 24 Power",  False),
+    ("split power, called a pitch",   "split-backs", "sb-power-r", "Split SL Right 28 Power",  True),
+    ("split power, credited to the SL", "split-backs", "sb-power-r", "Split SL Right 44 Power", True),
+    ("split pitch, called off tackle", "split-backs", "sb-pitch-r", "Split SL Right 24 Pitch", True),
+    ("split dive right, numbered left", "split-backs", "sb-dive-r", "Split SL Right 31 Dive",  True),
+    ("split waggle, quarterback at 6", "split-backs", "sb-waggle-r", "Split SL Right 16 Waggle", False),
+    ("split waggle, called too wide",  "split-backs", "sb-waggle-r", "Split SL Right 18 Waggle", True),
     # Counter Left hands to the right back; the left one runs the pitch fake and never
     # crosses the line at all, so crediting him cannot be checked against a hole.
-    ("split counter left",            "split-backs", "sb-counter-l", "Split Z Right 35 Counter", False),
-    ("split counter left, wrong back", "split-backs", "sb-counter-l", "Split Z Right 24 Counter", True),
+    ("split counter left",            "split-backs", "sb-counter-l", "Split SL Right 35 Counter", False),
+    ("split counter left, wrong back", "split-backs", "sb-counter-l", "Split SL Right 24 Counter", True),
 ]
 
 

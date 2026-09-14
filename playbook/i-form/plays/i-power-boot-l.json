@@ -3,7 +3,7 @@
   "order": 20,
   "formation": "i-form",
   "name": "Regular I Power Boot Left",
-  "call": "Regular I Z Right 17 Power Boot",
+  "call": "Regular I SL Right 17 Power Boot",
   "type": "pass",
   "fakes": "i-power-r",
   "direction": "left",
@@ -57,7 +57,7 @@
         ]
       ]
     },
-    "Z": {
+    "SL": {
       "block": "decoy",
       "sell": "Show the power block a step, then hinge back. Nobody chases from your side.",
       "path": [

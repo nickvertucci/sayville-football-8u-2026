@@ -3,7 +3,7 @@
   "order": 1,
   "formation": "split-backs",
   "name": "Split Dive Right",
-  "call": "Split Z Right 30 Dive",
+  "call": "Split SL Right 30 Dive",
   "type": "run",
   "direction": "right",
   "ball_carrier": "RH",
@@ -32,7 +32,7 @@
       "block": "base",
       "drive": "out"
     },
-    "Z": {
+    "SL": {
       "block": "screen"
     },
     "QB": {

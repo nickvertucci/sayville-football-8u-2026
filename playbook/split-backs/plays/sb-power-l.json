@@ -3,7 +3,7 @@
   "order": 4,
   "formation": "split-backs",
   "name": "Split Power Left",
-  "call": "Split Z Right 35 Power",
+  "call": "Split SL Right 35 Power",
   "type": "run",
   "direction": "left",
   "ball_carrier": "RH",
@@ -32,7 +32,7 @@
       "block": "base",
       "drive": "out"
     },
-    "Z": {
+    "SL": {
       "block": "cutoff"
     },
     "QB": {
@@ -84,6 +84,6 @@
     "The near back's block in the hole is the play. He takes the first man who shows in it rather than a man picked before the snap. Drill it on its own.",
     "The carrier travels further than the blocker, and that is the point — he arrives behind the lead, not beside it.",
     "If the handoff is late, the quarterback is reaching. He holds the ball still and lets the back run through it.",
-    "Against a four-linebacker front nobody is assigned to their outside linebacker, and on this side there is no Z out there to screen him — the near back is leading into the hole and has to take him if he fills. If they keep winning there, the answer is the Pitch: it gets outside him instead of running at him."
+    "Against a four-linebacker front nobody is assigned to their outside linebacker, and on this side there is no SL out there to screen him — the near back is leading into the hole and has to take him if he fills. If they keep winning there, the answer is the Pitch: it gets outside him instead of running at him."
   ]
 }

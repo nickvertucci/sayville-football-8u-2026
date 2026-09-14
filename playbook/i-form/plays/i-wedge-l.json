@@ -3,7 +3,7 @@
   "order": 6,
   "formation": "i-form",
   "name": "Regular I Wedge Left",
-  "call": "Regular I Z Right 31 Wedge",
+  "call": "Regular I SL Right 31 Wedge",
   "type": "run",
   "direction": "left",
   "ball_carrier": "TB",
@@ -31,7 +31,7 @@
     "RTE": {
       "block": "wedge"
     },
-    "Z": {
+    "SL": {
       "block": "screen",
       "note": "Nothing comes around the outside into the back of the wedge."
     },

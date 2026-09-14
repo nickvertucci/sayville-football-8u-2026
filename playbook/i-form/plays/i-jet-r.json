@@ -3,11 +3,11 @@
   "order": 25,
   "formation": "i-form",
   "name": "Regular I Jet Right",
-  "call": "Regular I Z Left 48 Jet",
+  "call": "Regular I SL Left 48 Jet",
   "type": "run",
   "direction": "right",
-  "ball_carrier": "Z",
-  "purpose": "Jet Left run back the other way. The Z lines up on the weak side and goes in motion across the formation at full speed, and the pitch gets him outside our tight end before the defense can turn and run with him.",
+  "ball_carrier": "SL",
+  "purpose": "Jet Left run back the other way. The SL lines up on the weak side and goes in motion across the formation at full speed, and the pitch gets him outside our tight end before the defense can turn and run with him.",
   "assignments": {
     "LTE": {
       "block": "cutoff"
@@ -33,7 +33,7 @@
       "block": "base",
       "drive": "in"
     },
-    "Z": {
+    "SL": {
       "rule": "Start on the motion call, full speed by the quarterback. Take the pitch around the corner, never inside our end.",
       "type": "run",
       "path": [
@@ -60,7 +60,7 @@
       ]
     },
     "QB": {
-      "rule": "Pitch it to the Z as he crosses, then boot back, hands on your belly.",
+      "rule": "Pitch it to the SL as he crosses, then boot back, hands on your belly.",
       "type": "fake",
       "path": [
         [
@@ -98,14 +98,14 @@
   },
   "coaching_points": [
     "This is the answer when they start flying with the motion on Jet Left. Same motion, same speed, coming from the other side.",
-    "Motion is legal in 11-man play, but only one man may be moving at the snap and he cannot be moving toward the line. Keep the Z flat.",
-    "The pitch has to beat the Z to the corner. Get it to him deep and early so he never breaks stride.",
+    "Motion is legal in 11-man play, but only one man may be moving at the snap and he cannot be moving toward the line. Keep the SL flat.",
+    "The pitch has to beat the SL to the corner. Get it to him deep and early so he never breaks stride.",
     "The tailback is the carrier's last blocker. If the corner beats him outside, the play dies — drill the block on air.",
     "Do not install this until Jet Left is real. It only works because they have been punished for leaving with the motion."
   ],
   "z": "left",
   "alignment": {
-    "Z": [
+    "SL": [
       -7.0,
       -1.2
     ]

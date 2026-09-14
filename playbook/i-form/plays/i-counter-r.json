@@ -3,11 +3,11 @@
   "order": 11,
   "formation": "i-form",
   "name": "Regular I Counter Right",
-  "call": "Regular I Z Right 34 Counter",
+  "call": "Regular I SL Right 34 Counter",
   "type": "run",
   "direction": "right",
   "ball_carrier": "TB",
-  "purpose": "Counter Left the other way. We show them the toss to the weak side, their linebackers chase it, and the tailback plants and comes back to the Z side behind the tight end's kick-out.",
+  "purpose": "Counter Left the other way. We show them the toss to the weak side, their linebackers chase it, and the tailback plants and comes back to the SL side behind the tight end's kick-out.",
   "assignments": {
     "LTE": {
       "block": "cutoff"
@@ -32,7 +32,7 @@
       "block": "base",
       "drive": "out"
     },
-    "Z": {
+    "SL": {
       "block": "lead",
       "target": "force"
     },
@@ -93,10 +93,10 @@
   },
   "coaching_points": [
     "Do not call this until I Toss Left has gone for real yards. Misdirection off a play they do not fear is just a slower run.",
-    "This one has the Z on the playside, which Counter Left does not. That is a blocker Counter Left never had, so this is the better of the pair against a team that flows hard.",
+    "This one has the SL on the playside, which Counter Left does not. That is a blocker Counter Left never had, so this is the better of the pair against a team that flows hard.",
     "The tailback's counter steps must be full speed and full length. A shuffle fools nobody.",
     "Teach it the same day as Counter Left. The line rules are identical both ways and nobody moves, so there is nothing extra to learn.",
-    "With nobody pulling, the tight end kicks the end out himself. Against a four-linebacker front that leaves the outside linebacker free — the Z takes him if he fills, and if he keeps making the tackle, run Toss at him instead."
+    "With nobody pulling, the tight end kicks the end out himself. Against a four-linebacker front that leaves the outside linebacker free — the SL takes him if he fills, and if he keeps making the tackle, run Toss at him instead."
   ],
   "z": "right"
 }

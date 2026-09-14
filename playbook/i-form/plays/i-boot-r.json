@@ -3,12 +3,12 @@
   "order": 13,
   "formation": "i-form",
   "name": "Regular I Boot Right",
-  "call": "Regular I Z Right 16 Boot",
+  "call": "Regular I SL Right 16 Boot",
   "type": "pass",
   "fakes": "i-toss-l",
   "direction": "right",
-  "ball_carrier": "Z",
-  "purpose": "Play action off the toss look. Two receivers to the Z side and a quarterback with the whole edge to himself. Run first, throw second.",
+  "ball_carrier": "SL",
+  "purpose": "Play action off the toss look. Two receivers to the SL side and a quarterback with the whole edge to himself. Run first, throw second.",
   "assignments": {
     "LTE": {
       "block": "down"
@@ -42,7 +42,7 @@
         ]
       ]
     },
-    "Z": {
+    "SL": {
       "rule": "Run to the flat at four yards in front of the quarterback. You are his easy throw.",
       "type": "pass",
       "path": [

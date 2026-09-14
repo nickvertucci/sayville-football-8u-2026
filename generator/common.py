@@ -9,14 +9,14 @@ from __future__ import annotations
 # Order assignments are listed: line first, then receivers, then backs.
 CARD_ORDER = [
     "X", "LTE", "LT", "LG", "C", "RG", "RT", "RTE", "TE",
-    "LW", "RW", "WB", "W", "Z",
+    "LW", "RW", "WB", "W", "SL",
     "QB", "BB", "FB", "TB", "HB", "LH", "RH",
 ]
 
 # What a position key is called in prose. Only used for headings and the calling-
 # language table — assignment text never names a position, see playbook/CLAUDE.md.
 POSITION_NAMES = {
-    "X": "Split end", "TE": "Tight end", "Z": "Flanker",
+    "X": "Split end", "TE": "Tight end", "SL": "Slot",
     "LTE": "Left tight end", "RTE": "Right tight end",
     # LE and RE stay: on a defensive front they are the defensive ends.
     "LE": "Left end", "RE": "Right end",

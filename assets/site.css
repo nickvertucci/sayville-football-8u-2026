@@ -581,7 +581,11 @@ table.xl th {
   table.xl { font-size: 9px; }
   table.xl td, table.xl th { padding: 1px 2px; }
   .xl-title { padding: 2px 6px; font-size: 11px; }
-  .xl-lineup td { height: 24px; }
+  /* A name is one line on paper: small enough to fit its cell, and never wrapping
+     into a second line that makes the row taller. */
+  .xl-lineup td { height: 24px; padding: 1px 0; }
+  .xl-pos { font-size: 7px; }
+  .xl-name { font-size: 7px; white-space: nowrap; letter-spacing: -.1px; }
 }
 
 .plist { display: grid; gap: 12px; grid-template-columns: 1fr; }
@@ -1340,6 +1344,12 @@ footer.site a { color: var(--accent-ink); }
   ul.coach { columns: 3; column-gap: 18px; margin-top: 3px; }
   ul.coach li { font-size: 8pt; line-height: 1.32; margin-bottom: 2px; }
   a[href]::after { content: ""; }
+  /* A play printed from its own page is the graphic and nothing else. The card already
+     carries the play's name and call in its header strip, so the page's header, the
+     assignments and the coaching points all go, and the diagram takes the sheet. The
+     printed book keeps them. */
+  main.play-page article.play > header, main.play-page .block-title,
+  main.play-page dl.assign, main.play-page ul.coach { display: none !important; }
 
   /* A practice plan is one sheet, held on the field.
 

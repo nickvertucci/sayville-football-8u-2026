@@ -3,11 +3,11 @@
   "order": 26,
   "formation": "i-form",
   "name": "Regular I Jet Left",
-  "call": "Regular I Z Right 49 Jet",
+  "call": "Regular I SL Right 49 Jet",
   "type": "run",
   "direction": "left",
-  "ball_carrier": "Z",
-  "purpose": "The Z goes in motion across the formation and takes the handoff at full speed going the other way. The defense has spent all day watching Power go to the Z side, and this is the same look leaving in the opposite direction.",
+  "ball_carrier": "SL",
+  "purpose": "The SL goes in motion across the formation and takes the handoff at full speed going the other way. The defense has spent all day watching Power go to the SL side, and this is the same look leaving in the opposite direction.",
   "assignments": {
     "LTE": {
       "block": "base",
@@ -33,7 +33,7 @@
     "RTE": {
       "block": "cutoff"
     },
-    "Z": {
+    "SL": {
       "rule": "Start on the motion call, full speed by the quarterback. Take it around the corner, never inside our end.",
       "type": "run",
       "path": [
@@ -60,7 +60,7 @@
       ]
     },
     "QB": {
-      "rule": "Hand it back to the Z as he crosses, then keep going, hands on your belly.",
+      "rule": "Hand it back to the SL as he crosses, then keep going, hands on your belly.",
       "type": "fake",
       "path": [
         [
@@ -97,11 +97,11 @@
     }
   },
   "coaching_points": [
-    "Motion is legal in 11-man play, but only one man may be moving at the snap and he cannot be moving toward the line of scrimmage. Teach the Z to run flat across, never forward.",
-    "The handoff timing is the whole play. If the Z is slowing down to catch it the play is dead — snap it when he is a stride from the quarterback and let him run through it.",
+    "Motion is legal in 11-man play, but only one man may be moving at the snap and he cannot be moving toward the line of scrimmage. Teach the SL to run flat across, never forward.",
+    "The handoff timing is the whole play. If the SL is slowing down to catch it the play is dead — snap it when he is a stride from the quarterback and let him run through it.",
     "Call the motion the same way every single time so the snap count and his start never drift apart.",
-    "Do not install this until Power Right is real. Jet works because they have already been punished for not honouring the Z side.",
-    "If their end chases the Z flat down the line, come back to Power Right the very next play — he has left the edge."
+    "Do not install this until Power Right is real. Jet works because they have already been punished for not honouring the SL side.",
+    "If their end chases the SL flat down the line, come back to Power Right the very next play — he has left the edge."
   ],
   "z": "right"
 }

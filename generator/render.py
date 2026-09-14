@@ -229,8 +229,8 @@ def resolve_plays(plays_dir: Path, form: dict) -> list[dict]:
 # diagram.
 #
 # The digits describe the player the FIRST digit names, not the ball carrier. On a pass
-# they are the same only by accident: I Z Right 16 Boot is the quarterback at the 6 hole,
-# while `ball_carrier` is the flanker he throws to.
+# they are the same only by accident: I SL Right 16 Boot is the quarterback at the 6 hole,
+# while `ball_carrier` is the slot he throws to.
 
 CALL_DIGITS = re.compile(r"\b(\d)(\d)\b")
 
@@ -304,9 +304,9 @@ def play_alignment(form: dict, play: dict) -> dict:
     """Where the eleven actually line up for this play.
 
     A formation has one alignment, but a formation is not always one picture. The
-    The Z is split right on almost every snap, but Power is built on his kick-out and
+    The SL is split right on almost every snap, but Power is built on his kick-out and
     Jet needs him with a formation to cross, so those two move him. A play may say
-    which, and the call says it out loud — `Regular I Z Left 35 Power` — so nobody is
+    which, and the call says it out loud — `Regular I SL Left 35 Power` — so nobody is
     moved silently.
 
     An override may only move somebody the formation already has. It cannot add a

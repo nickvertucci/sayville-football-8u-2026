@@ -13,7 +13,7 @@ So a blocking assignment is now an *intent* — a verb out of a closed list, and
 a target and a play-specific note:
 
     "RT": { "block": "down" }
-    "Z":  { "block": "kick" }
+    "SL":  { "block": "kick" }
     "FB": { "block": "lead" }
 
 and this module resolves that intent against an actual front to produce the sentence a
@@ -62,7 +62,7 @@ LINE = ("LTE", "LT", "LG", "C", "RG", "RT", "RTE")
 # man already standing next to the corner claims him, and the back coming out of the
 # backfield takes the next one in.
 CARD_ORDER = ("LTE", "LT", "LG", "C", "RG", "RT", "RTE", "TE",
-              "X", "LW", "RW", "WB", "W", "Z", "QB", "BB", "FB", "TB", "HB", "LH", "RH")
+              "X", "LW", "RW", "WB", "W", "SL", "QB", "BB", "FB", "TB", "HB", "LH", "RH")
 
 # How close a down lineman has to be to count as head up on a blocker, and how far out
 # he can be and still count as shading one of his shoulders. Beyond that he is somebody
@@ -268,7 +268,7 @@ def perimeter_defender(front: dict, x: float, side: int, taken=()):
     A defensive back over him if there is one within reach — that is the corner, and
     stalking him is the whole job. But **the 5-4-2 has no corners**: it trades them for
     a fourth linebacker and plays two safeties eight yards deep. Picking "the nearest
-    defensive back" there sent every flanker in the book on a nine-yard run diagonally
+    defensive back" there sent every slot in the book on a nine-yard run diagonally
     INFIELD at a safety, away from the sideline he is supposed to be walling off, while
     the outside linebacker standing four yards from him — the man who actually makes
     that tackle — went unblocked.
@@ -328,7 +328,7 @@ def shade_clause(front, spot) -> tuple[str, tuple | None]:
 
     A back is not covered by anybody. Telling a halfback four yards deep that "the
     tackle is head up on you" describes a defender he is nowhere near, and telling a
-    flanker split eight yards wide that "nobody is over you" is true and useless. Both
+    slot split eight yards wide that "nobody is over you" is true and useless. Both
     got the clause because the function only ever looked at x.
     """
     x, y = spot[0], spot[1]
@@ -478,7 +478,7 @@ def v_cutoff(front, spot, side, intent, taken=()):
         return text, to(spot, man, bias_x=0.4 * side, bias_y=0.3)
     # Aim at the man who actually chases it down. The first version drew a fixed
     # 1.8-yard stub from wherever the blocker stood, which is a reasonable line for a
-    # guard and a meaningless one for a flanker seven yards wide — he was drawn taking
+    # guard and a meaningless one for a slot seven yards wide — he was drawn taking
     # two steps infield and stopping.
     lb = linebacker(front, side, "backside", taken)
     clause, _ = shade_clause(front, spot)
@@ -659,7 +659,7 @@ def claimed_lb(front: dict, spot, path):
     """The defender this block finishes on, if it finishes on one.
 
     Any defender, not just a linebacker. The collision worth catching on this book's
-    edge plays is a flanker and a lead back both sent at one corner.
+    edge plays is a slot and a lead back both sent at one corner.
     """
     if not path:
         return None

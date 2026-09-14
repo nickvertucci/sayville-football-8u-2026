@@ -2,11 +2,11 @@
   "id": "sb-reverse-r",
   "order": 13,
   "formation": "split-backs",
-  "name": "Split Z Left Z Reverse Right",
-  "call": "Split Z Left 46 Z Reverse Right",
+  "name": "Split SL Left SL Reverse Right",
+  "call": "Split SL Left 46 SL Reverse Right",
   "type": "run",
   "direction": "right",
-  "ball_carrier": "Z",
+  "ball_carrier": "SL",
   "purpose": "The Keep Left, until it is not. The quarterback and the near back start the Keep left and never stop selling it; the split man comes back underneath, takes a lateral going the other way and runs right behind the far back. Only the backfield sells it. The line blocks right from the snap, the split man is running backwards behind the line instead of screening anybody, and with him carrying the ball there is one blocker fewer on that edge than Keep Right has going to the same place. It buys a count, not a disguise.",
   "assignments": {
     "RTE": {
@@ -77,7 +77,7 @@
         ]
       ]
     },
-    "Z": {
+    "SL": {
       "rule": "Come back behind the line on the snap, take the pitch the other way, and get outside our end.",
       "type": "run",
       "path": [
@@ -112,7 +112,7 @@
     "The split man is the slowest-developing ball carrier in the book. If the line cannot hold its blocks for a three count, run Pitch instead."
   ],
   "alignment": {
-    "Z": [
+    "SL": [
       -8.0,
       -1.2
     ]

@@ -3,11 +3,11 @@
   "order": 9,
   "formation": "i-form",
   "name": "Regular I Power Right",
-  "call": "Regular I Z Right 34 Power",
+  "call": "Regular I SL Right 34 Power",
   "type": "run",
   "direction": "right",
   "ball_carrier": "TB",
-  "purpose": "Our best downhill run. Everybody blocks down inside, the Z kicks the end out, and the fullback leads through the hole in front of the tailback. Nobody leaves his spot — every block on the card is made by the kid already standing there.",
+  "purpose": "Our best downhill run. Everybody blocks down inside, the SL kicks the end out, and the fullback leads through the hole in front of the tailback. Nobody leaves his spot — every block on the card is made by the kid already standing there.",
   "assignments": {
     "LTE": {
       "block": "cutoff"
@@ -31,7 +31,7 @@
     "RTE": {
       "block": "release"
     },
-    "Z": {
+    "SL": {
       "block": "kick"
     },
     "QB": {
@@ -80,9 +80,9 @@
   },
   "coaching_points": [
     "This is the most physical run in the book. If it works you can run it fifteen times, and at this age you often can.",
-    "Drill the Z's kick-out on its own. If he blocks the end with his shoulders square, the end slides underneath and makes the tackle for a loss — he has to attack the outside hip.",
+    "Drill the SL's kick-out on its own. If he blocks the end with his shoulders square, the end slides underneath and makes the tackle for a loss — he has to attack the outside hip.",
     "The fullback's man is whoever shows in the hole, not a man he picks before the snap. Tell him that every time.",
-    "The tailback's most common mistake is bouncing it wide looking for green grass. The yards are inside the Z's block. Make him run it tight in practice until it is automatic."
+    "The tailback's most common mistake is bouncing it wide looking for green grass. The yards are inside the SL's block. Make him run it tight in practice until it is automatic."
   ],
   "z": "right"
 }

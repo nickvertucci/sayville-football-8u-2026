@@ -132,7 +132,7 @@
               ]
             },
             {
-              "name": "QB / FB / TB / Z",
+              "name": "QB / FB / TB / SL",
               "drills": [
                 "Getting into and out of the huddle",
                 "Positional formations",
@@ -233,16 +233,16 @@
               ]
             },
             {
-              "name": "QB / FB / TB / Z",
+              "name": "QB / FB / TB / SL",
               "drills": [
                 "One group, handoff walkthrough — the quarterback gives the ball every rep",
-                "Rotate the quarterbacks, fullbacks, tailbacks and the Z after every handoff",
+                "Rotate the quarterbacks, fullbacks, tailbacks and the SL after every handoff",
                 {
                   "drill": "Start with handoffs up the middle",
                   "then": [
                     "Move to slant handoffs",
                     "Move to pitches",
-                    "Move to Z sweeps"
+                    "Move to SL sweeps"
                   ]
                 }
               ]
@@ -345,7 +345,7 @@
               ]
             },
             {
-              "name": "QB / FB / TB / Z",
+              "name": "QB / FB / TB / SL",
               "drills": [
                 "Two hard steps and plant",
                 "Deep handoff on the counter path",

@@ -627,7 +627,11 @@ table.xl th {
   table.xl { font-size: 9px; }
   table.xl td, table.xl th { padding: 1px 2px; }
   .xl-title { padding: 2px 6px; font-size: 11px; }
-  .xl-lineup td { height: 24px; }
+  /* A name is one line on paper: small enough to fit its cell, and never wrapping
+     into a second line that makes the row taller. */
+  .xl-lineup td { height: 24px; padding: 1px 0; }
+  .xl-pos { font-size: 7px; }
+  .xl-name { font-size: 7px; white-space: nowrap; letter-spacing: -.1px; }
 }
 
 .plist { display: grid; gap: 12px; grid-template-columns: 1fr; }
@@ -1386,6 +1390,12 @@ footer.site a { color: var(--accent-ink); }
   ul.coach { columns: 3; column-gap: 18px; margin-top: 3px; }
   ul.coach li { font-size: 8pt; line-height: 1.32; margin-bottom: 2px; }
   a[href]::after { content: ""; }
+  /* A play printed from its own page is the graphic and nothing else. The card already
+     carries the play's name and call in its header strip, so the page's header, the
+     assignments and the coaching points all go, and the diagram takes the sheet. The
+     printed book keeps them. */
+  main.play-page article.play > header, main.play-page .block-title,
+  main.play-page dl.assign, main.play-page ul.coach { display: none !important; }
 
   /* A practice plan is one sheet, held on the field.
 
@@ -1846,6 +1856,8 @@ SITE_JS = """
   var data = JSON.parse(blob.textContent);
   var KEY = 'sayville-depth-chart-v1';
   var LEGACY_ROT = { purple: 'd1', gold: 'd2', white: 'd3' };
+  // The slot was the Z until the book renamed him SL.
+  var LEGACY_POS = { Z: 'SL' };
   var edited = document.getElementById('dc-edited');
   var resetBtn = document.getElementById('dc-reset');
   var copyBtn = document.getElementById('dc-copy');
@@ -1992,7 +2004,7 @@ SITE_JS = """
       // Without this every record misses its cell, and the coach who rearranged his
       // line at halftime opens the page to the shipped roster and no explanation.
       var rot = LEGACY_ROT[rec[1]] || rec[1];
-      var td = byKey[rec[0] + '/' + rot + '/' + rec[2]];
+      var td = byKey[rec[0] + '/' + rot + '/' + (LEGACY_POS[rec[2]] || rec[2])];
       var src = template[rec[0] + '/' + rec[3]];
       // A spot or a kid that has left roster.json since this was saved. Dropping the
       // one record keeps the rest of the board, which is the point of naming spots.
@@ -2918,10 +2930,10 @@ def strip_direction(name: str) -> str:
     should not claim to be just the right (or just the left) — "Slant", not "Slant
     Right".
 
-    The Z's alignment goes the same way. A reverse starts him on the side its own
+    The SL's alignment goes the same way. A reverse starts him on the side its own
     direction comes back from, so the two halves of that pair disagree about where he
-    lines up and one card cannot claim either — "Split Z Reverse", not "Split Z Left
-    Z Reverse". Both sides are a click away on the card itself, named in full.
+    lines up and one card cannot claim either — "Split SL Reverse", not "Split SL Left
+    SL Reverse". Both sides are a click away on the card itself, named in full.
     """
     name = re.sub(r"\bZ (?:Right|Left)\s+", "", name)
     return re.sub(r"\s+(Right|Left)$", "", name)
@@ -2938,8 +2950,8 @@ def write_calls(formations: list[dict], defenses: dict, root: Path) -> str:
 
     One sheet per offensive package, side by side like a spreadsheet. The top table is
     the lineup: eight columns, seven for the line and an eighth on the right because
-    the flanker stands out there rather than on anybody's shoulder. The line and the
-    quarterback are column one of the depth chart; the fullback, tailback and flanker
+    the slot stands out there rather than on anybody's shoulder. The line and the
+    quarterback are column one of the depth chart; the fullback, tailback and slot
     are the package, which is the only thing that changes between them. Every package
     lines up in the I: quarterback, fullback and tailback stacked behind the center.
 
@@ -2961,14 +2973,14 @@ def write_calls(formations: list[dict], defenses: dict, root: Path) -> str:
 
     def lineup_table(package: list[str]) -> str:
         backs = dict(zip(PACKAGE_SPOTS["offense"], package))
-        # The I: the line across, the Z just off it past the right end, and the
+        # The I: the line across, the SL just off it past the right end, and the
         # quarterback, fullback and tailback in one column behind the center.
         grid = [[None] * 8 for _ in range(4)]
         # A package that sets a lineman plays him; otherwise it is the starter.
         for col, pos in enumerate(line):
             grid[0][col] = (pos, backs.get(pos) or starter(pos))
         grid[1][3] = ("QB", starter("QB"))
-        grid[1][7] = ("Z", backs.get("Z", ""))
+        grid[1][7] = ("SL", backs.get("SL", ""))
         grid[2][3] = ("FB", backs.get("FB", ""))
         grid[3][3] = ("TB", backs.get("TB", ""))
         rows = []
@@ -3100,7 +3112,9 @@ def write_play_page(
         + play_article(form, play, defenses, actions=actions)
         + "\n" + "\n".join(pager)
     )
-    attrs = ""
+    # Marks this as a play's own page, so its print is the picture alone. print.html
+    # renders the same article without it and keeps the words.
+    attrs = ' class="play-page"'
     if prev:
         attrs += f' data-prev="{p_href(prev)}"'
     if nxt:
@@ -3714,19 +3728,19 @@ PACKAGE_SIZE = {"offense": 7, "defense": 3}
 # packages, so the package IS the backfield, and saying which three it is turns a box
 # of names into something a coach can check at a glance.
 PACKAGE_TITLE = {
-    "offense": "Offensive FB-TB-Z Packages",
+    "offense": "Offensive FB-TB-SL Packages",
     "defense": "Packages",
 }
 
 # What each slot in a package is, where the side has a fixed answer. Offense does: the
-# fullback, the tailback and the flanker, then the left tackle, left guard, right guard
+# fullback, the tailback and the slot, then the left tackle, left guard, right guard
 # and right tackle, in that order. Defense does not, and labelling its slots would be
 # inventing a structure it has not got.
 #
 # The label is drawn from this attribute in CSS rather than put in the slot as an
 # element, because the slot's contents are rewritten whenever it empties or fills —
 # a child element would be wiped the first time somebody took a name out of it.
-PACKAGE_SPOTS = {"offense": ("FB", "TB", "Z", "LT", "LG", "RG", "RT")}
+PACKAGE_SPOTS = {"offense": ("FB", "TB", "SL", "LT", "LG", "RG", "RT")}
 
 
 def rotations_for(side: str) -> list[tuple[str, str, str]]:
@@ -3861,7 +3875,7 @@ def write_depth_chart(formations: list[dict], defenses: dict, root: Path) -> str
     # board uses below, rather than a hardcoded id that keeps pointing at the old
     # front the day the base changes.
     front = next(iter(defenses.values()), None)
-    # The board is the base formation's eleven — Z, FB and TB in the backfield. It
+    # The board is the base formation's eleven — SL, FB and TB in the backfield. It
     # used to be every spot any formation aligns, which meant the Split Backs LH and
     # RH sat on both rotations reading Open and made a complete unit look two short
     # of a full sheet. A depth chart answers "who is on the field", and what is on
