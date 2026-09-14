@@ -2972,8 +2972,9 @@ def write_calls(formations: list[dict], defenses: dict, root: Path) -> str:
     the lineup: eight columns, seven for the line and an eighth on the right because
     the slot stands out there rather than on anybody's shoulder. The line and the
     quarterback are column one of the depth chart; the fullback, tailback and slot
-    are the package, which is the only thing that changes between them. Every package
-    lines up in the I: quarterback, fullback and tailback stacked behind the center.
+    are the package, which is the only thing that changes between them. The first two
+    sheets are the Split formation, strong right and strong left, with the fullback and
+    tailback side by side; the rest line up in the I, stacked behind the center.
 
     Under it, blank Left, Middle and Right columns to write the plays into.
     """
@@ -2991,18 +2992,23 @@ def write_calls(formations: list[dict], defenses: dict, root: Path) -> str:
 
     line = ("LTE", "LT", "LG", "C", "RG", "RT", "RTE")
 
-    def lineup_table(package: list[str]) -> str:
+    def lineup_table(package: list[str], split: bool) -> str:
         backs = dict(zip(PACKAGE_SPOTS["offense"], package))
-        # The I: the line across, the SL just off it past the right end, and the
-        # quarterback, fullback and tailback in one column behind the center.
+        # The line across, the SL just off it past the right end, and the quarterback
+        # under the center. In the I the fullback and tailback stack behind him; in the
+        # Split formation they sit side by side a row deeper, off either shoulder.
         grid = [[None] * 8 for _ in range(4)]
         # A package that sets a lineman plays him; otherwise it is the starter.
         for col, pos in enumerate(line):
             grid[0][col] = (pos, backs.get(pos) or starter(pos))
         grid[1][3] = ("QB", starter("QB"))
         grid[1][7] = ("SL", backs.get("SL", ""))
-        grid[2][3] = ("FB", backs.get("FB", ""))
-        grid[3][3] = ("TB", backs.get("TB", ""))
+        if split:
+            grid[3][2] = ("FB", backs.get("FB", ""))
+            grid[3][4] = ("TB", backs.get("TB", ""))
+        else:
+            grid[2][3] = ("FB", backs.get("FB", ""))
+            grid[3][3] = ("TB", backs.get("TB", ""))
         rows = []
         for row in grid:
             tds = []
@@ -3026,9 +3032,13 @@ def write_calls(formations: list[dict], defenses: dict, root: Path) -> str:
         + f'</tr></thead><tbody>{blank_row * 3}</tbody></table>'
     )
 
+    # The first two sheets are the Split formation, one per strength, named for it and
+    # drawn with its backs side by side. Every other sheet is its package number in the I.
+    split_titles = {1: "Split formation - Strong right", 2: "Split formation - Strong left"}
     sheets = "".join(
-        f'<section class="xl-sheet"><p class="xl-title">Package {n}</p>'
-        f'{lineup_table(package)}{plays_table}</section>'
+        f'<section class="xl-sheet"><p class="xl-title">'
+        f'{esc(split_titles.get(n, f"Package {n}"))}</p>'
+        f'{lineup_table(package, n in split_titles)}{plays_table}</section>'
         for n, package in enumerate(packages, start=1)
     ) or '<p class="lede">No offensive packages in roster.json yet.</p>'
 
