@@ -613,9 +613,7 @@ table.xl th {
 .xl-pos { display: block; font-size: 10px; font-weight: 800; color: var(--accent-ink); }
 .xl-name { display: block; font-size: 10.5px; }
 .xl-open { color: var(--muted); font-style: italic; }
-.xl-plays td a { color: var(--ink); text-decoration: none; }
-.xl-plays td a:hover { text-decoration: underline; }
-.xl-z { font-size: 9.5px; color: var(--muted); white-space: nowrap; }
+.xl-plays td { height: 22px; }
 @media print {
   .xl-sheets { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
   table.xl { font-size: 9px; }
@@ -2927,11 +2925,10 @@ def write_calls(formations: list[dict], defenses: dict, root: Path) -> str:
     the lineup: eight columns, seven for the line and an eighth on the right because
     the flanker stands out there rather than on anybody's shoulder. The line and the
     quarterback are column one of the depth chart; the fullback, tailback and flanker
-    are the package, which is the only thing that changes between them.
+    are the package, which is the only thing that changes between them. Every package
+    lines up in the I: quarterback, fullback and tailback stacked behind the center.
 
-    Under it, the base formation's plays split Left, Middle and Right by the hole the
-    call already names: 0 to 3 is the middle, and past that even is right and odd is
-    left. Nothing is typed twice — change a package or a call and the sheet follows.
+    Under it, blank Left, Middle and Right columns to write the plays into.
     """
     roster = {}
     path = root / "roster.json"
@@ -2940,7 +2937,6 @@ def write_calls(formations: list[dict], defenses: dict, root: Path) -> str:
         roster = _json.loads(path.read_text(encoding="utf-8"))
     offense = roster.get("offense") or {}
     packages = [p for p in (roster.get("packages") or {}).get("offense") or [] if any(p)]
-    base = min(formations, key=lambda f: f.get("order", 99))
 
     def starter(pos: str) -> str:
         names = offense.get(pos) or []
@@ -2950,13 +2946,15 @@ def write_calls(formations: list[dict], defenses: dict, root: Path) -> str:
 
     def lineup_table(package: list[str]) -> str:
         backs = dict(zip(PACKAGE_SPOTS["offense"], package))
-        grid = [[None] * 8 for _ in range(3)]
+        # The I: the line across, the Z just off it past the right end, and the
+        # quarterback, fullback and tailback in one column behind the center.
+        grid = [[None] * 8 for _ in range(4)]
         for col, pos in enumerate(line):
             grid[0][col] = (pos, starter(pos))
         grid[1][3] = ("QB", starter("QB"))
         grid[1][7] = ("Z", backs.get("Z", ""))
-        grid[2][2] = ("FB", backs.get("FB", ""))
-        grid[2][4] = ("TB", backs.get("TB", ""))
+        grid[2][3] = ("FB", backs.get("FB", ""))
+        grid[3][3] = ("TB", backs.get("TB", ""))
         rows = []
         for row in grid:
             tds = []
@@ -2971,34 +2969,13 @@ def write_calls(formations: list[dict], defenses: dict, root: Path) -> str:
             rows.append(f'<tr>{"".join(tds)}</tr>')
         return f'<table class="xl xl-lineup">{"".join(rows)}</table>'
 
-    sides = {"Left": [], "Middle": [], "Right": []}
-    for play in base.get("_plays", []):
-        m = re.search(r"\b(\d+)\s+(.+)$", play.get("call", ""))
-        if not m:
-            continue
-        number, name = int(m.group(1)), m.group(2)
-        hole = number % 10
-        side = "Middle" if hole <= 3 else ("Right" if hole % 2 == 0 else "Left")
-        z_left = " Z Left " in f' {play["call"]} '
-        sides[side].append((number, name, z_left, play))
-    for plays in sides.values():
-        plays.sort(key=lambda p: (p[0], p[1]))
-    depth = max((len(p) for p in sides.values()), default=0)
-    play_rows = []
-    for i in range(depth):
-        tds = []
-        for plays in sides.values():
-            if i >= len(plays):
-                tds.append('<td class="xl-empty"></td>')
-                continue
-            number, name, z_left, play = plays[i]
-            z = ' <span class="xl-z">Z Left</span>' if z_left else ""
-            tds.append(f'<td><a href="{p_href(play)}"><b>{number}</b> {esc(name)}</a>{z}</td>')
-        play_rows.append(f'<tr>{"".join(tds)}</tr>')
+    # Blank, to be filled in: the columns stay so a coach writes each play on the side
+    # it goes.
+    blank_row = "<tr>" + "<td></td>" * 3 + "</tr>"
     plays_table = (
         '<table class="xl xl-plays"><thead><tr>'
-        + "".join(f"<th>{side}</th>" for side in sides)
-        + f'</tr></thead><tbody>{"".join(play_rows)}</tbody></table>'
+        + "".join(f"<th>{side}</th>" for side in ("Left", "Middle", "Right"))
+        + f'</tr></thead><tbody>{blank_row * 9}</tbody></table>'
     )
 
     sheets = "".join(

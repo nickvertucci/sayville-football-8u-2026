@@ -567,9 +567,7 @@ table.xl th {
 .xl-pos { display: block; font-size: 10px; font-weight: 800; color: var(--accent-ink); }
 .xl-name { display: block; font-size: 10.5px; }
 .xl-open { color: var(--muted); font-style: italic; }
-.xl-plays td a { color: var(--ink); text-decoration: none; }
-.xl-plays td a:hover { text-decoration: underline; }
-.xl-z { font-size: 9.5px; color: var(--muted); white-space: nowrap; }
+.xl-plays td { height: 22px; }
 @media print {
   .xl-sheets { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
   table.xl { font-size: 9px; }
