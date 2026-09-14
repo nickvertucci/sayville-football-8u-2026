@@ -8,15 +8,15 @@
       "Michael M."
     ],
     "LT": [
-      "Jaxon E.",
-      "Brayden S.",
-      "Gavin P."
+      "Michael M.",
+      "Gavin P.",
+      "Brayden S."
     ],
     "LG": [
+      "Luca D.",
       "Brayden H.",
-      "Elias F.",
-      "Mason A.",
-      "Brooks A."
+      "Brooks A.",
+      "Mason A."
     ],
     "C": [
       "Camden G.",
@@ -40,11 +40,10 @@
       "Michael M."
     ],
     "Z": [
-      "Michael M.",
+      "Philip A.",
       "Nico V.",
       "Jake G.",
-      "Liam M.",
-      "Kilian F."
+      "Ryan S."
     ],
     "QB": [
       "Brogan A.",
@@ -56,8 +55,8 @@
       "Michael M."
     ],
     "TB": [
-      "Philip A.",
       "Nico V.",
+      "Philip A.",
       "Liam M.",
       "Kilian F.",
       "Thomas D."
@@ -124,18 +123,28 @@
     "offense": [
       [
         "Jake G.",
-        "Philip A.",
-        "Michael M."
+        "Nico V.",
+        "Philip A."
       ],
       [
-        "Jake G.",
-        "Nico V.",
-        "Luca D."
+        "Luca D.",
+        "Philip A.",
+        "Nico V."
       ],
       [
         "Luca D.",
         "Liam M.",
+        "Philip A."
+      ],
+      [
+        "Jake G.",
+        "Thomas D.",
         "Kilian F."
+      ],
+      [
+        "Brayden H.",
+        "Elias F.",
+        "Jake G."
       ]
     ]
   }
