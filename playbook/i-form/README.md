@@ -74,7 +74,7 @@ Our best downhill run. Everybody blocks down inside, the SL kicks the end out, a
 
 ![I Formation - Strong Left - Off Tackle Handoff](cards/i-power-l-5-3.svg)
 
-Power Right's exact mirror. The SL is fixed on the right in every other Regular I play, but Power depends on his kick-out block, so this is the one play in the book where he flips sides before the snap — lined up left, same job, same footwork, just facing the other way.
+Our best downhill run. Everybody blocks down inside, the SL kicks the end out, and the fullback leads through the hole in front of the tailback. Nobody leaves his spot — every block on the card is made by the kid already standing there.
 
 | Position | Assignment |
 |---|---|
@@ -92,9 +92,8 @@ Power Right's exact mirror. The SL is fixed on the right in every other Regular 
 
 **Coaching points**
 
-- This is the most physical run in the book, mirrored. If it works going right, it works going left — the blocking is identical, just flipped.
-- The SL is used to lining up on the right. Make sure he actually moves before the snap on this call and does not just run the block from where he always stands.
-- Drill the SL's kick-out on its own, same as the other direction. If he blocks the end with his shoulders square, the end slides underneath and makes the tackle for a loss — he has to attack the outside hip.
-- The fullback's man is whoever shows in the hole, not one he picks before the snap. Same as the other direction.
-- The tailback's most common mistake is bouncing it wide looking for green grass. The yards are inside the SL's block, same as Power Right. Make him run it tight in practice until it is automatic.
+- This is the most physical run in the book. If it works you can run it fifteen times, and at this age you often can.
+- Drill the SL's kick-out on its own. If he blocks the end with his shoulders square, the end slides underneath and makes the tackle for a loss — he has to attack the outside hip.
+- The fullback's man is whoever shows in the hole, not a man he picks before the snap. Tell him that every time.
+- The tailback's most common mistake is bouncing it wide looking for green grass. The yards are inside the SL's block. Make him run it tight in practice until it is automatic.
 
