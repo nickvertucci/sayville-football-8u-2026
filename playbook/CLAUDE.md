@@ -201,6 +201,7 @@ typing three versions of it — and it is why a blocker no longer has a `rule` o
 | `wedge` | Shoulder to shoulder and push. Nobody picks a man. | |
 | `screen` | Get in a defensive back's way and stay there. | |
 | `decoy` | Sell a fake. **Keeps its hand-drawn `path`** — the lie copies another play's path, which is not derivable from the defence. Give it `sell`. | `sell`, `path` |
+| `protect` | Pass block. A lineman steps back and sets; a back beside a shotgun quarterback steps up and out to pick up the rush. Nobody picks a man before the snap. | |
 | `man` | Block the defender the coach names. **Only under `fronts`**, because a label means a man in one front. `help` adds a first stop on another man; `via` is waypoints to get round somebody first, with `how` saying so in words; `with` names the teammate on the same man, for a double team ("…double team the W with the tailback"). | `man`, `help`, `via`, `how`, `with` |
 
 `target` names a linebacker by job: `playside` (the innermost one actually on the
@@ -260,8 +261,9 @@ hole** (`lead`), and the **backside guard cuts off** behind the play (`cutoff`).
 A play-action pass takes its **blocking side and hole from the run it names**, not from
 the direction the quarterback finishes in. Without that, "playside" meant the boot, and
 every side-sensitive rule on the line came out backwards — the fake blocked the mirror
-image of the run it was selling, on ten of the twelve passes in the book. `--check`
-rejects a `type: pass` play that does not say what it fakes.
+image of the run it was selling, on ten of the twelve passes in the book. A pass that
+fakes nothing — a quick throw out of the shotgun — leaves `fakes` out and gives its
+`direction` instead; `--check` rejects a pass with neither.
 
 `test_blocking.py` then holds it honest: where the pass and the run give a lineman the
 **same verb**, it has to resolve to the **same block**. They are allowed to differ where

@@ -1,0 +1,69 @@
+{
+  "id": "shotgun",
+  "order": 4,
+  "name": "Shotgun",
+  "family": "Shotgun",
+  "summary": "The quarterback five yards deep with a back on each side of him and the SL out wide. A passing look: the quarterback sees the field and has room to throw before anybody reaches him.",
+  "personnel": "11 players, 2 tight ends, quarterback, 2 halfbacks, 1 SL split out",
+  "notes": "Both ends are tight on the line and the SL is off it and split out wide, which keeps seven on the line. The quarterback takes the snap five yards deep, and the two halfbacks stand level with him, two yards either side, where they can step up and pick up the rush. The call names the SL's side every time — SL Right or SL Left.",
+  "alignment": {
+    "LTE": [
+      -4.2,
+      -0.5
+    ],
+    "LT": [
+      -2.8,
+      -0.5
+    ],
+    "LG": [
+      -1.4,
+      -0.5
+    ],
+    "C": [
+      0.0,
+      -0.5
+    ],
+    "RG": [
+      1.4,
+      -0.5
+    ],
+    "RT": [
+      2.8,
+      -0.5
+    ],
+    "RTE": [
+      4.2,
+      -0.5
+    ],
+    "SL": [
+      7.0,
+      -1.2
+    ],
+    "QB": [
+      0.0,
+      -5.0
+    ],
+    "LH": [
+      -2.0,
+      -5.0
+    ],
+    "RH": [
+      2.0,
+      -5.0
+    ]
+  },
+  "eligible": [
+    "LTE",
+    "RTE",
+    "SL",
+    "LH",
+    "RH",
+    "QB"
+  ],
+  "backs": {
+    "1": "QB",
+    "2": "LH",
+    "3": "RH",
+    "4": "SL"
+  }
+}

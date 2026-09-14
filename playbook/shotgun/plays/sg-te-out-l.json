@@ -1,0 +1,84 @@
+{
+  "id": "sg-te-out-l",
+  "order": 2,
+  "formation": "shotgun",
+  "name": "Shotgun - Strong left - LTE quick out",
+  "call": "Shotgun SL Left LTE Out",
+  "word_call": true,
+  "type": "pass",
+  "direction": "left",
+  "ball_carrier": "LTE",
+  "alignment": {
+    "SL": [
+      -7.0,
+      -1.2
+    ]
+  },
+  "purpose": "A throw the quarterback can make before anybody gets to him: the left tight end runs five yards and breaks to the sideline, and everybody else but the SL stays in and blocks.",
+  "assignments": {
+    "RTE": {
+      "block": "protect"
+    },
+    "RT": {
+      "block": "protect"
+    },
+    "RG": {
+      "block": "protect"
+    },
+    "C": {
+      "block": "protect"
+    },
+    "LG": {
+      "block": "protect"
+    },
+    "LT": {
+      "block": "protect"
+    },
+    "LTE": {
+      "rule": "Run straight up five yards, then snap it out to the sideline and turn your eyes back to the quarterback. The ball is there when you turn.",
+      "type": "pass",
+      "path": [
+        [
+          -0.2,
+          4.5
+        ],
+        [
+          -3.2,
+          4.7
+        ]
+      ]
+    },
+    "SL": {
+      "block": "screen"
+    },
+    "QB": {
+      "rule": "Catch the snap, take one step and throw to the left tight end as he breaks out. If he is covered, tuck it and run.",
+      "type": "pass",
+      "path": [
+        [
+          0.0,
+          -0.6
+        ]
+      ]
+    },
+    "RH": {
+      "block": "protect"
+    },
+    "LH": {
+      "block": "protect"
+    }
+  },
+  "fronts": {
+    "4-4": {
+      "SL": {
+        "block": "man",
+        "man": "LC"
+      }
+    }
+  },
+  "coaching_points": [
+    "Everybody but the tight end and the SL pass blocks: step back, hands up, stay between your man and the quarterback.",
+    "The tight end runs five hard yards and snaps it to the sideline. A soft break is a pick for the corner.",
+    "The quarterback throws the moment the tight end breaks. If he is covered, tuck it and run — no second look."
+  ]
+}

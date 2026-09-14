@@ -670,11 +670,15 @@ def validate(formations: list[dict], defenses: dict) -> list[str]:
                 )
             if play.get("fakes") == pid:
                 errors.append(f"{pid}: fakes itself")
-            if play.get("type") == "pass" and not play.get("fakes"):
+            # A play-action pass takes its blocking side from the run it fakes. A pass
+            # that fakes nothing (a quick throw out of the shotgun) takes it from its own
+            # direction, so it has to have one.
+            if play.get("type") == "pass" and not play.get("fakes") \
+                    and play.get("direction") not in ("left", "right"):
                 errors.append(
-                    f"{pid}: is a play-action pass but does not say what it fakes — "
-                    "add `fakes`, or its line will block the mirror image of the run "
-                    "it is selling"
+                    f"{pid}: is a pass that neither says what it fakes nor gives a "
+                    "direction — add `fakes` for play-action, or `direction` for a "
+                    "straight drop-back, or its line cannot tell which side is playside"
                 )
             if play.get("defense") and play["defense"] not in defenses:
                 errors.append(f"{pid}: unknown defense '{play['defense']}'")
