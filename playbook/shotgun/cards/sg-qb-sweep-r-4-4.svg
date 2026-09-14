@@ -38,8 +38,8 @@
 <line x1="448.3" y1="316.7" x2="465.9" y2="311.3" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 <path d="M426.6,337.5 L397.7,310.8 L393.4,254.3" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
 <line x1="384.2" y1="255.0" x2="402.5" y2="253.6" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
-<path d="M388.8,337.5 L388.8,255.1" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-<line x1="379.6" y1="255.1" x2="398.0" y2="255.1" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
+<path d="M388.8,337.5 L388.8,314.6" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="379.6" y1="314.6" x2="398.0" y2="314.6" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 <path d="M351.0,337.5 L322.1,310.8 L317.8,254.3" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
 <line x1="308.6" y1="255.0" x2="326.9" y2="253.6" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 <path d="M313.2,337.5 L313.2,314.6" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
@@ -93,12 +93,10 @@
 <text x="52" y="646" font-size="12" fill="#111318">Help on the left tackle, then block</text>
 <text x="52" y="664" font-size="12" fill="#111318">the left inside linebacker.</text>
 <text x="18" y="680" font-size="12" font-weight="700" fill="#111318">RG</text>
-<text x="52" y="680" font-size="12" fill="#111318">Tackle head up on you. Step past him.</text>
-<text x="52" y="698" font-size="12" fill="#111318">Climb to the playside linebacker.</text>
-<text x="52" y="714" font-size="12" fill="#111318">Head across him.</text>
-<text x="18" y="732" font-size="12" font-weight="700" fill="#111318">RT</text>
-<text x="52" y="732" font-size="12" fill="#111318">Help on the right tackle, then block</text>
-<text x="52" y="748" font-size="12" fill="#111318">the right inside linebacker.</text>
+<text x="52" y="680" font-size="12" fill="#111318">Block the right tackle.</text>
+<text x="18" y="698" font-size="12" font-weight="700" fill="#111318">RT</text>
+<text x="52" y="698" font-size="12" fill="#111318">Help on the right tackle, then block</text>
+<text x="52" y="714" font-size="12" fill="#111318">the right inside linebacker.</text>
 <text x="297" y="578" font-size="12" font-weight="700" fill="#111318">RTE</text>
 <text x="331" y="578" font-size="12" fill="#111318">Block the right end.</text>
 <text x="297" y="596" font-size="12" font-weight="700" fill="#111318">SL</text>
