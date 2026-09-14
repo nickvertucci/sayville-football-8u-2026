@@ -622,7 +622,10 @@ table.xl th {
 .xl-pos { display: block; font-size: 10px; font-weight: 800; color: var(--accent-ink); }
 .xl-name { display: block; font-size: 10.5px; }
 .xl-open { color: var(--muted); font-style: italic; }
-.xl-plays td { height: 22px; }
+/* Specific enough to beat `table.xl td`, whose top alignment would otherwise win. */
+table.xl.xl-plays td {
+  height: 22px; text-align: center; vertical-align: middle; padding: 4px 6px;
+}
 .xl-plays td a { color: var(--ink); font-weight: 700; text-decoration: none; }
 .xl-plays td a:hover { text-decoration: underline; }
 @media print {
@@ -639,7 +642,7 @@ table.xl th {
   .xl-lineup td { height: 44px; padding: 2px 0; vertical-align: middle; }
   .xl-pos { font-size: 10px; }
   .xl-name { font-size: 11px; white-space: nowrap; }
-  .xl-plays td { height: 40px; vertical-align: middle; }
+  table.xl.xl-plays td { height: 40px; vertical-align: middle; }
   .xl-plays td a { font-size: 12px; }
 }
 
@@ -2981,9 +2984,8 @@ def write_calls(formations: list[dict], defenses: dict, root: Path) -> str:
     the lineup: eight columns, seven for the line and an eighth on the right because
     the slot stands out there rather than on anybody's shoulder. The line and the
     quarterback are column one of the depth chart; the fullback, tailback and slot
-    are the package, which is the only thing that changes between them. The first two
-    sheets are the Split formation from package 1, strong left and then strong right,
-    each the mirror of the other; the next two are the I formation from package 4,
+    are the package. Every sheet is package 1's personnel: the Split formation, strong
+    left and then strong right, each the mirror of the other, and then the I formation,
     strong left and strong right, mirrored the same way.
 
     Under it, blank Left, Middle and Right columns to write the plays into.
@@ -3068,21 +3070,17 @@ def write_calls(formations: list[dict], defenses: dict, root: Path) -> str:
                 + "".join(f"<th>{side}</th>" for side in sides)
                 + f'</tr></thead><tbody>{rows}</tbody></table>')
 
-    # The Split formation leads, both strengths from package 1's players: strong left on
-    # the left of the page and strong right on the right, so each sits on the side it
-    # runs to. Package 2 is not on the sheet. From package 3 on, each is its number in
-    # the I.
-    # Plays placed on a sheet, by the side of the table they go in.
+    # Every sheet is the same personnel, package 1's: the Split formation and then the I,
+    # each with strong left on the left of the page and strong right on the right, so a
+    # sheet sits on the side it runs to. The other packages stay on the depth chart.
+    # The last item of each is the plays placed on it, by the side of the table.
     order = []
     if packages:
-        order += [("Split formation - Strong left", packages[0], "split-left",
-                   {"Left": ["sb-pitch-l"]}),
-                  ("Split formation - Strong right", packages[0], "split-right", {})]
-    # Then the I formation, both strengths from package 4's players and mirrored the same
-    # way, on the same sides. Packages 2, 3, 5 and 6 are on the depth chart but not here.
-    if len(packages) >= 4:
-        order += [("I formation - Strong left", packages[3], "i-left", {}),
-                  ("I formation - Strong right", packages[3], "i-right", {})]
+        p = packages[0]
+        order += [("Split formation - Strong left", p, "split-left", {"Left": ["sb-pitch-l"]}),
+                  ("Split formation - Strong right", p, "split-right", {}),
+                  ("I formation - Strong left", p, "i-left", {}),
+                  ("I formation - Strong right", p, "i-right", {})]
     sheets = "".join(
         f'<section class="xl-sheet"><p class="xl-title">{esc(title)}</p>'
         f'{lineup_table(package, layout)}{plays_table(title, placed)}</section>'
