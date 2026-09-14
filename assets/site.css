@@ -554,7 +554,8 @@ td.dc-cell.over, .dc-pool.over { background: var(--accent-soft) !important; }
 }
 .xl-sheet { min-width: 0; }
 .xl-title {
-  margin: 0; padding: 6px 8px; font-size: 13px; font-weight: 800;
+  margin: 0; padding: 7px 8px; font-size: 15px; font-weight: 800;
+  text-transform: uppercase; letter-spacing: .5px;
   color: var(--on-accent); background: var(--accent-solid);
 }
 table.xl {
@@ -580,7 +581,7 @@ table.xl th {
   .xl-sheets { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; margin: 4px 0 0; }
   table.xl { font-size: 9px; }
   table.xl td, table.xl th { padding: 1px 2px; }
-  .xl-title { padding: 2px 6px; font-size: 11px; }
+  .xl-title { padding: 3px 6px; font-size: 13px; }
   /* A name is one line on paper: small enough to fit its cell, and never wrapping
      into a second line that makes the row taller. */
   .xl-lineup td { height: 24px; padding: 1px 0; }

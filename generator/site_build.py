@@ -600,7 +600,8 @@ td.dc-cell.over, .dc-pool.over { background: var(--accent-soft) !important; }
 }
 .xl-sheet { min-width: 0; }
 .xl-title {
-  margin: 0; padding: 6px 8px; font-size: 13px; font-weight: 800;
+  margin: 0; padding: 7px 8px; font-size: 15px; font-weight: 800;
+  text-transform: uppercase; letter-spacing: .5px;
   color: var(--on-accent); background: var(--accent-solid);
 }
 table.xl {
@@ -626,7 +627,7 @@ table.xl th {
   .xl-sheets { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; margin: 4px 0 0; }
   table.xl { font-size: 9px; }
   table.xl td, table.xl th { padding: 1px 2px; }
-  .xl-title { padding: 2px 6px; font-size: 11px; }
+  .xl-title { padding: 3px 6px; font-size: 13px; }
   /* A name is one line on paper: small enough to fit its cell, and never wrapping
      into a second line that makes the row taller. */
   .xl-lineup td { height: 24px; padding: 1px 0; }
@@ -2973,8 +2974,8 @@ def write_calls(formations: list[dict], defenses: dict, root: Path) -> str:
     the slot stands out there rather than on anybody's shoulder. The line and the
     quarterback are column one of the depth chart; the fullback, tailback and slot
     are the package, which is the only thing that changes between them. The first two
-    sheets are the Split formation, strong right and strong left, with the fullback and
-    tailback side by side; the rest line up in the I, stacked behind the center.
+    sheets are the Split formation from package 1, strong left and then strong right,
+    each the mirror of the other; from package 3 on they line up in the I.
 
     Under it, blank Left, Middle and Right columns to write the plays into.
     """
@@ -2992,23 +2993,30 @@ def write_calls(formations: list[dict], defenses: dict, root: Path) -> str:
 
     line = ("LTE", "LT", "LG", "C", "RG", "RT", "RTE")
 
-    def lineup_table(package: list[str], split: bool) -> str:
+    def lineup_table(package: list[str], layout: str) -> str:
+        """`layout` is "i", "split-right" or "split-left"."""
         backs = dict(zip(PACKAGE_SPOTS["offense"], package))
-        # The line across, the SL just off it past the right end, and the quarterback
-        # under the center. In the I the fullback and tailback stack behind him; in the
-        # Split formation they sit side by side a row deeper, off either shoulder.
+        # The line across and the quarterback under the center, with the SL just off the
+        # line past one end: the right, unless the formation is strong left, when he is
+        # past the left end and the line moves over a column to make room. In the I the
+        # fullback and tailback stack behind the quarterback; in the Split formation they
+        # sit side by side a row deeper, and strong left is the mirror of strong right.
+        left = layout == "split-left"
+        first = 1 if left else 0
+        center = first + 3
         grid = [[None] * 8 for _ in range(4)]
         # A package that sets a lineman plays him; otherwise it is the starter.
-        for col, pos in enumerate(line):
+        for col, pos in enumerate(line, start=first):
             grid[0][col] = (pos, backs.get(pos) or starter(pos))
-        grid[1][3] = ("QB", starter("QB"))
-        grid[1][7] = ("SL", backs.get("SL", ""))
-        if split:
-            grid[3][2] = ("FB", backs.get("FB", ""))
-            grid[3][4] = ("TB", backs.get("TB", ""))
+        grid[1][center] = ("QB", starter("QB"))
+        grid[1][0 if left else 7] = ("SL", backs.get("SL", ""))
+        if layout == "i":
+            grid[2][center] = ("FB", backs.get("FB", ""))
+            grid[3][center] = ("TB", backs.get("TB", ""))
         else:
-            grid[2][3] = ("FB", backs.get("FB", ""))
-            grid[3][3] = ("TB", backs.get("TB", ""))
+            side = 1 if left else -1
+            grid[3][center + side] = ("FB", backs.get("FB", ""))
+            grid[3][center - side] = ("TB", backs.get("TB", ""))
         rows = []
         for row in grid:
             tds = []
@@ -3032,14 +3040,19 @@ def write_calls(formations: list[dict], defenses: dict, root: Path) -> str:
         + f'</tr></thead><tbody>{blank_row * 3}</tbody></table>'
     )
 
-    # The first two sheets are the Split formation, one per strength, named for it and
-    # drawn with its backs side by side. Every other sheet is its package number in the I.
-    split_titles = {1: "Split formation - Strong right", 2: "Split formation - Strong left"}
+    # The Split formation leads, both strengths from package 1's players: strong left on
+    # the left of the page and strong right on the right, so each sits on the side it
+    # runs to. Package 2 is not on the sheet. From package 3 on, each is its number in
+    # the I.
+    order = []
+    if packages:
+        order += [("Split formation - Strong left", packages[0], "split-left"),
+                  ("Split formation - Strong right", packages[0], "split-right")]
+    order += [(f"Package {n}", p, "i") for n, p in enumerate(packages[2:], start=3)]
     sheets = "".join(
-        f'<section class="xl-sheet"><p class="xl-title">'
-        f'{esc(split_titles.get(n, f"Package {n}"))}</p>'
-        f'{lineup_table(package, n in split_titles)}{plays_table}</section>'
-        for n, package in enumerate(packages, start=1)
+        f'<section class="xl-sheet"><p class="xl-title">{esc(title)}</p>'
+        f'{lineup_table(package, layout)}{plays_table}</section>'
+        for title, package, layout in order
     ) or '<p class="lede">No offensive packages in roster.json yet.</p>'
 
     body = f"""<h1 class="page">Call sheet</h1>
