@@ -98,6 +98,23 @@ def noun(front: dict, label: str) -> str:
     return "safety" if label.endswith("S") and label != "S" else "corner"
 
 
+def named(front: dict, label: str) -> str:
+    """This defender by name, side included, for a block the coach assigned to him.
+
+    `noun` is vague on purpose: a rule has to read right in every front, so it cannot
+    say which end. A named block belongs to one front, so it can — "the left end", "the
+    right inside linebacker" — using the front's own names where it has them.
+    """
+    names = front.get("position_names") or {}
+    if label in names:
+        return names[label].lower()
+    if label == "FS":
+        return "free safety"
+    side = {"L": "left", "R": "right"}.get(label[0]) if len(label) > 1 else None
+    base = noun(front, label)
+    return f"{side} {base}" if side else base
+
+
 # ------------------------------------------------------------ reading a front --
 
 
@@ -599,6 +616,32 @@ def v_screen(front, spot, side, intent, taken=()):
     return text, to(spot, man)
 
 
+def v_man(front, spot, side, intent, taken=()):
+    """Block the man the coach names, in the one front the play names him for.
+
+    Every other verb works a block out from where the defence stands. Sometimes the
+    coach has already decided who blocks whom against a front, and then the card should
+    say exactly that. `man` is the defender's label in that front. `help` puts a first
+    stop on another man, for a double that comes off onto `man`. `via` is waypoints to
+    get round somebody first, relative to the blocker like any path, and `how` says
+    what they are in words.
+    """
+    label = intent["man"]
+    x, y = front["alignment"][label]
+    n = named(front, label)
+    path = [list(p) for p in intent.get("via", [])]
+    if intent.get("help"):
+        helped = intent["help"]
+        hx, hy = front["alignment"][helped]
+        path += to(spot, (helped, hx, hy))
+        text = f"Help on the {named(front, helped)}, then block the {n}."
+    elif intent.get("how"):
+        text = f"{intent['how']}, then block the {n}."
+    else:
+        text = f"Block the {n}."
+    return text, path + to(spot, (label, x, y))
+
+
 def v_decoy(front, spot, side, intent, taken=()):
     """Sell something that is not happening. The path is hand-drawn because the lie is
     the point — it copies another play's path, and that path is not derivable from
@@ -611,7 +654,7 @@ VERBS = {
     "base": v_base, "down": v_down, "reach": v_reach, "double": v_double,
     "climb": v_climb, "cutoff": v_cutoff, "hinge": v_hinge, "wedge": v_wedge,
     "kick": v_kick, "lead": v_lead, "screen": v_screen,
-    "release": v_release, "decoy": v_decoy,
+    "release": v_release, "decoy": v_decoy, "man": v_man,
 }
 
 

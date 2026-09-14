@@ -326,7 +326,7 @@ Get outside in a hurry. The far back trails the quarterback, takes the pitch on 
 | **RT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
 | **RTE** | End head up on you. Turn him inside. The ball goes around behind you. |
 | **SL** | Run at the corner and screen him off. Stay in his way. |
-| **QB** | Fake the dive to the near back, attack the outside, then pitch to the trailing back early, never late. |
+| **QB** | Quick pitch to the left halfback, then run the other way, to the left, like you still have it. |
 | **LH** **(ball)** | Run flat, outside and behind the quarterback, and catch the pitch on the run. Ahead of him is a fumble. |
 | **RH** | Lead outside our end. Block the first man out there — here it is the corner. Step at the dive first to hold their linebackers. |
 

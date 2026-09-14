@@ -185,6 +185,7 @@ typing three versions of it — and it is why a blocker no longer has a `rule` o
 | `wedge` | Shoulder to shoulder and push. Nobody picks a man. | |
 | `screen` | Get in a defensive back's way and stay there. | |
 | `decoy` | Sell a fake. **Keeps its hand-drawn `path`** — the lie copies another play's path, which is not derivable from the defence. Give it `sell`. | `sell`, `path` |
+| `man` | Block the defender the coach names. **Only under `fronts`**, because a label means a man in one front. `help` adds a first stop on another man; `via` is waypoints to get round somebody first, with `how` saying so in words. | `man`, `help`, `via`, `how` |
 
 `target` names a linebacker by job: `playside` (the innermost one actually on the
 playside — the man who fills the hole), `middle`, `backside` or `outside`. **They are
@@ -202,6 +203,25 @@ other value rather than accepting one it would ignore.
 A player who starts more than a yard behind the line has nobody over him, so that clause
 is dropped for him automatically — but the verb is still a lineman's verb, and a back is
 almost always better served by `lead`, `kick`, `hinge` or `decoy`.
+
+### `fronts` — who blocks whom against one front
+
+When the coach has decided the blocks against a particular front, write them under
+`fronts`, keyed by the front's id. They replace the play's own assignments for that front
+only; every other front still works its blocks out from the intents above.
+
+```json
+"fronts": {
+  "4-4": {
+    "C":  { "block": "man", "man": "S", "help": "RT" },
+    "RH": { "block": "man", "man": "R", "how": "Bubble around the right tight end",
+            "via": [[3.4, 2.0], [3.6, 4.2]] }
+  }
+}
+```
+
+The build rejects a front that does not exist, a position the formation does not have, and
+a `man` or `help` who is not standing in that front.
 
 ### Nobody pulls
 
