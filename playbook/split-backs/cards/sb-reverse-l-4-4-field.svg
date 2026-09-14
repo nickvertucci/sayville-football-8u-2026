@@ -47,8 +47,9 @@
 <line x1="222.1" y1="257.1" x2="239.6" y2="251.6" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 <path d="M410.4,426.6 L453.6,367.2 L496.8,297.0 L507.6,248.4" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
 <line x1="498.6" y1="246.4" x2="516.6" y2="250.4" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
-<path d="M567.0,356.4 L486.0,399.6 L324.0,410.4 L226.8,388.8 L199.8,329.4 L194.4,259.2" fill="none" stroke="#b3001b" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
-<polygon points="194.4,259.2 199.8,269.2 190.6,269.9" fill="#b3001b"/>
+<path d="M567.0,356.4 L486.0,399.6 L324.0,410.4 L226.8,388.8 L199.8,329.4 L194.4,259.2" fill="none" stroke="#b3001b" stroke-width="4.6" stroke-linecap="round" stroke-linejoin="round"/>
+<polygon points="194.4,259.2 201.6,272.5 189.3,273.4" fill="#b3001b"/>
+
 <rect x="224.1" y="324.0" width="27.0" height="27.0" rx="3" fill="#ffffff" stroke="#14213d" stroke-width="2.6"/>
 <text x="237.6" y="342.0" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">LTE</text>
 <rect x="261.9" y="324.0" width="27.0" height="27.0" rx="3" fill="#ffffff" stroke="#14213d" stroke-width="2.6"/>

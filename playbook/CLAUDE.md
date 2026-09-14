@@ -55,9 +55,19 @@ a blocker's is derived from the front.
 | `pass` | dashed line, arrowhead | routes and the quarterback's drop or roll |
 | `fake` | dashed line, arrowhead | decoys carrying out fakes |
 | `motion` | dashed line, arrowhead | pre-snap motion |
+| `rollout` | dotted line, arrowhead | the quarterback rolling out after he pitches |
 
 The ball carrier's line is drawn thicker and in red — set `ball_carrier` to his position
 key. On pass plays, set it to the primary receiver.
+
+**A pitch is a dotted line.** Give the play a `pitch` — `from` (default `QB`), `to`, and
+`at`, the waypoint on the receiver's path where he catches it, counting from 1 — and the
+card draws a red dotted line from the pitcher to that point, with no arrowhead. The
+build checks the receiver's path is that long.
+
+```json
+"pitch": { "from": "QB", "to": "LH", "at": 1 }
+```
 
 ## Required fields
 

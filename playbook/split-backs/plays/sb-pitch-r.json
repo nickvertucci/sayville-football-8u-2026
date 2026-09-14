@@ -7,6 +7,11 @@
   "type": "run",
   "direction": "right",
   "ball_carrier": "LH",
+  "pitch": {
+    "from": "QB",
+    "to": "LH",
+    "at": 1
+  },
   "purpose": "Get outside in a hurry. The far back trails the quarterback, takes the pitch on the run and turns up inside the block out on the edge. The split man makes that block — their corner, or their outside linebacker against the 5-4-2, which has no corners — and that is what frees both backs to stay in the backfield where the fake lives.",
   "assignments": {
     "LTE": {
@@ -37,7 +42,7 @@
     },
     "QB": {
       "rule": "Quick pitch to the left halfback, then run the other way, to the left, like you still have it.",
-      "type": "fake",
+      "type": "rollout",
       "path": [
         [
           -0.8,

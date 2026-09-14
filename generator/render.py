@@ -734,6 +734,18 @@ def validate(formations: list[dict], defenses: dict) -> list[str]:
                         if spec.get(k) and spec[k] not in labels:
                             errors.append(f"{pid} vs {fid}: {pos} blocks '{spec[k]}', who "
                                           f"is not in the {fid}")
+            # A pitch is drawn to a point on the receiver's path, so he has to be in the
+            # formation and his path has to reach the waypoint it names.
+            pitch = play.get("pitch")
+            if pitch:
+                for k in ("from", "to"):
+                    who = pitch.get(k, "QB" if k == "from" else None)
+                    if who not in form.get("alignment", {}):
+                        errors.append(f"{pid}: pitch {k} '{who}', who is not in this formation")
+                receiver = (play.get("assignments") or {}).get(pitch.get("to"), {})
+                if len(receiver.get("path") or []) < pitch.get("at", 1):
+                    errors.append(f"{pid}: pitch is caught at waypoint {pitch.get('at', 1)} "
+                                  f"of {pitch.get('to')}'s path, which is not that long")
             carrier = play.get("ball_carrier")
             if carrier and carrier not in form.get("alignment", {}):
                 errors.append(f"{pid}: ball_carrier '{carrier}' is not in the formation")
@@ -758,12 +770,14 @@ def validate(formations: list[dict], defenses: dict) -> list[str]:
 # ------------------------------------------------------------------ drawing --
 
 
-def polyline(points, color, width=2.6, dashed=False):
+def polyline(points, color, width=2.6, dashed=False, dotted=False):
     d = " ".join(
         ("M" if i == 0 else "L") + f"{fx(p[0]):.1f},{fy(p[1]):.1f}"
         for i, p in enumerate(points)
     )
-    dash = ' stroke-dasharray="7 5"' if dashed else ""
+    # A near-zero dash with a round cap is a dot the width of the line.
+    dash = (' stroke-dasharray="7 5"' if dashed
+            else ' stroke-dasharray="0.1 7"' if dotted else "")
     return (
         f'<path d="{d}" fill="none" stroke="{color}" stroke-width="{width}" '
         f'stroke-linecap="round" stroke-linejoin="round"{dash}/>'
@@ -887,13 +901,35 @@ def draw_paths(assignments: dict, alignment: dict, carrier: str | None) -> str:
         is_carrier = pos == carrier
         color = COLORS["carrier"] if is_carrier else COLORS["offense"]
         dashed = kind in ("motion", "pass", "fake")
-        width = 3.2 if is_carrier else 2.4
-        out.append(polyline(pts, color, width=width, dashed=dashed))
+        # The man with the ball is the line to find first, and on a black-and-white
+        # printout red is just another grey — so he is told apart by weight, not colour.
+        width = 4.6 if is_carrier else 2.4
+        out.append(polyline(pts, color, width=width, dashed=dashed,
+                            dotted=kind == "rollout"))
         if kind == "block":
             out.append(block_cap(pts[-2], pts[-1], color, width=width))
         else:
-            out.append(arrow_head(pts[-2], pts[-1], color))
+            out.append(arrow_head(pts[-2], pts[-1], color,
+                                  size=0.56 if is_carrier else 0.42))
     return "\n".join(out)
+
+
+def draw_pitch(play: dict, alignment: dict) -> str:
+    """The ball, pitched: a dotted line from the man who pitches it to where it is caught.
+
+    Where is a point on the receiver's own path — `at` counts his waypoints from 1 —
+    so the pitch meets his line and his line carries on from there. No arrowhead: it
+    is the ball's flight, not somebody running.
+    """
+    pitch = play.get("pitch")
+    if not pitch:
+        return ""
+    sx, sy = alignment[pitch.get("from", "QB")]
+    rx, ry = alignment[pitch["to"]]
+    path = play["assignments"][pitch["to"]].get("path") or []
+    at = pitch.get("at", 1)
+    catch = [rx + path[at - 1][0], ry + path[at - 1][1]] if path else [rx, ry]
+    return polyline([[sx, sy], catch], COLORS["carrier"], width=3.2, dotted=True)
 
 
 def draw_offense(play: dict, alignment: dict) -> str:
@@ -985,6 +1021,7 @@ def render_card(play: dict, defense: dict, frame: tuple[float, float, float]) ->
     ]
     svg.append(draw_defense(defense))
     svg.append(draw_paths(assignments, alignment, play.get("ball_carrier")))
+    svg.append(draw_pitch(play, alignment))
     svg.append(draw_offense(play, alignment))
     svg.append("</g></g>")
 
@@ -1223,6 +1260,7 @@ def render_diagram(play: dict, defense: dict, frame: tuple[float, float, float])
     svg.append(draw_defense(defense))
     alignment = play_alignment(form, play)
     svg.append(draw_paths(assignments, alignment, play.get("ball_carrier")))
+    svg.append(draw_pitch(play, alignment))
     svg.append(draw_offense(play, alignment))
     svg.append("</svg>")
     return "\n".join(svg)
