@@ -635,6 +635,10 @@ def v_man(front, spot, side, intent, taken=()):
         hx, hy = front["alignment"][helped]
         path += to(spot, (helped, hx, hy))
         text = f"Help on the {named(front, helped)}, then block the {n}."
+    elif intent.get("with"):
+        # A double team: `with` is the teammate on the same man, in words.
+        lead = f"{intent['how']}, then double" if intent.get("how") else "Double"
+        text = f"{lead} team the {n} with the {intent['with']}."
     elif intent.get("how"):
         text = f"{intent['how']}, then block the {n}."
     else:

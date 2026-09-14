@@ -201,7 +201,7 @@ typing three versions of it — and it is why a blocker no longer has a `rule` o
 | `wedge` | Shoulder to shoulder and push. Nobody picks a man. | |
 | `screen` | Get in a defensive back's way and stay there. | |
 | `decoy` | Sell a fake. **Keeps its hand-drawn `path`** — the lie copies another play's path, which is not derivable from the defence. Give it `sell`. | `sell`, `path` |
-| `man` | Block the defender the coach names. **Only under `fronts`**, because a label means a man in one front. `help` adds a first stop on another man; `via` is waypoints to get round somebody first, with `how` saying so in words. | `man`, `help`, `via`, `how` |
+| `man` | Block the defender the coach names. **Only under `fronts`**, because a label means a man in one front. `help` adds a first stop on another man; `via` is waypoints to get round somebody first, with `how` saying so in words; `with` names the teammate on the same man, for a double team ("…double team the W with the tailback"). | `man`, `help`, `via`, `how`, `with` |
 
 `target` names a linebacker by job: `playside` (the innermost one actually on the
 playside — the man who fills the hole), `middle`, `backside` or `outside`. **They are
