@@ -101,6 +101,10 @@
         "man": "M",
         "help": "LT"
       },
+      "LG": {
+        "block": "man",
+        "man": "LT"
+      },
       "C": {
         "block": "man",
         "man": "S",

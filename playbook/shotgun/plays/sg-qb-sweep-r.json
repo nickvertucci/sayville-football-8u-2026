@@ -104,6 +104,10 @@
         "man": "M",
         "help": "LT"
       },
+      "RG": {
+        "block": "man",
+        "man": "RT"
+      },
       "RT": {
         "block": "man",
         "man": "S",
