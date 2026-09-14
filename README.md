@@ -360,7 +360,7 @@ python generator/render.py --check    # validate the JSON only, write nothing
 python generator/test_calls.py        # prove the call check still rejects a wrong call
 python generator/test_print_pages.py  # prove every card still prints on one sheet
 python generator/test_rulebook.py     # prove the rules page still quotes the rulebook exactly
-python generator/test_blocking.py     # prove every block is drawn to the right side of its man
+python generator/test_blocking.py     # prove every block is drawn onto the man it names
 python generator/preview.py <play-id> # read one play's assignments against all three fronts
 ```
 

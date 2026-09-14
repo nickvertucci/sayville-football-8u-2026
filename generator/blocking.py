@@ -353,10 +353,22 @@ def side_word(side: int) -> str:
 # changes.
 
 
-def to(spot, target, bias_x=0.0, bias_y=0.0):
-    """A one-point path from a blocker to a defender, with a shoulder bias."""
-    return [[round(target[1] - spot[0] + bias_x, 2),
-             round(target[2] - spot[1] + bias_y, 2)]]
+# How far short of the man a block stops, in yards: the bar lands on the edge of his X
+# rather than across it, so the defender stays readable under the line.
+ON_MAN = 0.45
+
+
+def to(spot, target):
+    """A one-point path from a blocker straight onto a defender.
+
+    Onto the man, not a shoulder of him. The card's job is who blocks whom; which side
+    to take is in the words of the rule, and drawing it as a finish a yard off to one
+    side made the matchup harder to read, not easier.
+    """
+    dx, dy = target[1] - spot[0], target[2] - spot[1]
+    d = (dx * dx + dy * dy) ** 0.5
+    k = max(0.0, d - ON_MAN) / d if d else 0.0
+    return [[round(dx * k, 2), round(dy * k, 2)]]
 
 
 def v_base(front, spot, side, intent, taken=()):
@@ -365,17 +377,13 @@ def v_base(front, spot, side, intent, taken=()):
     if man is None:                      # uncovered: there is nobody to base block
         return v_down(front, spot, side, intent, taken)
     drive = intent.get("drive", "back")
-    out_side = 1 if spot[0] >= 0 else -1
     if drive == "out":
         text = f"{clause} Drive him to the sideline. The ball goes inside you."
-        bias = 0.7 * out_side
     elif drive == "in":
         text = f"{clause} Turn him inside. The ball goes around behind you."
-        bias = -0.7 * out_side
     else:
         text = f"{clause} Hands inside, pads under his, drive him back."
-        bias = 0.0
-    return text, to(spot, man, bias_x=bias, bias_y=0.35)
+    return text, to(spot, man)
 
 
 def v_release(front, spot, side, intent, taken=()):
@@ -399,7 +407,7 @@ def v_release(front, spot, side, intent, taken=()):
         return v_base(front, spot, side, dict(intent, drive="in"), taken)
     who = noun(front, edge[0]) if edge else "man on the edge"
     text = f"Leave the {who} — he is kicked out. Go take the {lb_noun(which)}."
-    return text, to(spot, lb, bias_x=0.2 * side, bias_y=-0.3)
+    return text, to(spot, lb)
 
 
 def v_down(front, spot, side, intent, taken=()):
@@ -411,8 +419,7 @@ def v_down(front, spot, side, intent, taken=()):
     where = ("head up" if abs(man[1] - spot[0]) <= HEAD_UP else "inside shoulder")
     text = (f"Block down on the {n}, {where}. "
             "Head across him — nobody crosses your face.")
-    inside = -1 if man[1] > spot[0] else 1
-    return text, to(spot, man, bias_x=0.25 * inside, bias_y=0.3)
+    return text, to(spot, man)
 
 
 def v_reach(front, spot, side, intent, taken=()):
@@ -425,7 +432,7 @@ def v_reach(front, spot, side, intent, taken=()):
         return v_climb(front, spot, side, dict(intent, target="playside"), taken)
     n = noun(front, man[0])
     text = f"Reach the {n} to your {side_word(side)}. Head across his playside shoulder."
-    return text, to(spot, man, bias_x=0.45 * side, bias_y=0.3)
+    return text, to(spot, man)
 
 
 def v_double(front, spot, side, intent, taken=()):
@@ -448,11 +455,11 @@ def v_double(front, spot, side, intent, taken=()):
     n = noun(front, man[0])
     if lb is None:
         return (f"Help on the {n} and drive him off the spot. The hole is off his "
-                "back."), to(spot, man, bias_y=0.4)
+                "back."), to(spot, man)
     clause, _ = shade_clause(front, spot)
     text = " ".join(x for x in (clause, f"Help on the {n},",
                                 f"then take the {lb_noun(which)}.") if x)
-    return text, to(spot, man, bias_y=0.3) + to(spot, lb, bias_y=-0.4)
+    return text, to(spot, man) + to(spot, lb)
 
 
 def v_climb(front, spot, side, intent, taken=()):
@@ -467,7 +474,7 @@ def v_climb(front, spot, side, intent, taken=()):
     lead = clause if man is None else f"{clause} Step past him."
     text = " ".join(x for x in (lead, f"Climb to the {lb_noun(which)}.",
                                 "Head across him.") if x)
-    return text, to(spot, lb, bias_x=0.3 * side, bias_y=-0.3)
+    return text, to(spot, lb)
 
 
 def v_cutoff(front, spot, side, intent, taken=()):
@@ -475,7 +482,7 @@ def v_cutoff(front, spot, side, intent, taken=()):
     clause, man = shade_clause(front, spot)
     if man is not None:
         text = f"{clause} Cut him off — get between him and the ball."
-        return text, to(spot, man, bias_x=0.4 * side, bias_y=0.3)
+        return text, to(spot, man)
     # Aim at the man who actually chases it down. The first version drew a fixed
     # 1.8-yard stub from wherever the blocker stood, which is a reasonable line for a
     # guard and a meaningless one for a slot seven yards wide — he was drawn taking
@@ -487,7 +494,7 @@ def v_cutoff(front, spot, side, intent, taken=()):
     if lb is None:
         return text, [[round(0.9 * side, 2), 0.7], [round(1.8 * side, 2), 1.6]], None
     return text, [[round(0.45 * (lb[1] - spot[0]), 2), round(0.2 - spot[1], 2)]] \
-        + to(spot, lb, bias_x=0.3 * side, bias_y=-0.3), lb
+        + to(spot, lb), lb
 
 
 def v_hinge(front, spot, side, intent, taken=()):
@@ -520,12 +527,10 @@ def v_kick(front, spot, side, intent, taken=()):
     n = noun(front, man[0])
     text = (f"Kick the {n} out. Aim at his outside hip. Never let him come "
             "underneath you.")
-    # Finish INSIDE the man at his own depth: a kick-out that finishes outside him
-    # draws the blocker running past, and the defender comes underneath.
-    return text, to(spot, man, bias_x=-0.8 * side, bias_y=0.0)
+    return text, to(spot, man)
 
 
-def through_hole(spot, target, side, bias_x=0.0, bias_y=0.0):
+def through_hole(spot, target, side):
     """A back's blocking path: get to the line of scrimmage first, then to the man.
 
     A lead blocker four yards deep who is drawn as one straight line to a linebacker
@@ -534,7 +539,7 @@ def through_hole(spot, target, side, bias_x=0.0, bias_y=0.0):
     """
     elbow = [round(0.55 * (target[1] - spot[0]) + 0.3 * side, 2),
              round(0.6 - spot[1], 2)]
-    return [elbow] + to(spot, target, bias_x=bias_x, bias_y=bias_y)
+    return [elbow] + to(spot, target)
 
 
 def v_lead(front, spot, side, intent, taken=()):
@@ -570,12 +575,11 @@ def v_lead(front, spot, side, intent, taken=()):
             if inside is not None and inside[0] not in taken:
                 text = (f"Lead outside our end, then turn up inside — the {lb_noun('playside')} "
                         "is the man who shows. Head across him.")
-                return text, through_hole(spot, inside, side, bias_x=0.3 * side,
-                                          bias_y=-0.5), inside
+                return text, through_hole(spot, inside, side), inside
         if man is not None:
             text = (f"Lead outside our end. Block the first man out there — here it "
                     f"is the {noun(front, man[0])}.")
-            return text, through_hole(spot, man, side, bias_x=0.3 * side, bias_y=-0.5), man
+            return text, through_hole(spot, man, side), man
     aim = intent.get("_hole")
     if aim is None:
         aim = 1.6 * side
@@ -592,7 +596,7 @@ def v_screen(front, spot, side, intent, taken=()):
     n = (lb_noun("outside") if front["roles"].get(man[0]) == "LB"
          else noun(front, man[0]))
     text = f"Run at the {n} and screen him off. Stay in his way."
-    return text, to(spot, man, bias_x=-0.9 * side, bias_y=-0.8)
+    return text, to(spot, man)
 
 
 def v_decoy(front, spot, side, intent, taken=()):

@@ -1,39 +1,39 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="621" height="1082" viewBox="0 0 621 1082" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" width="594" height="1132" viewBox="0 0 594 1132" font-family="Segoe UI, Helvetica, Arial, sans-serif">
 <rect width="100%" height="100%" fill="#ffffff"/>
-<rect x="0" y="0" width="621" height="58" fill="#14213d"/>
+<rect x="0" y="0" width="594" height="58" fill="#14213d"/>
 <text x="18" y="26" font-size="19.0" font-weight="700" fill="#ffffff">Regular I Wedge Right</text>
 <text x="18" y="45" font-size="11.5" fill="#a9b4c7">RUN  •  Regular I  •  vs 5-3</text>
-<rect x="332.6" y="13" width="270.4" height="31" rx="6" fill="#ffffff" fill-opacity="0.12" stroke="#8593ad" stroke-width="1"/>
-<text x="467.8" y="34" text-anchor="middle" font-size="14.5" font-weight="700" fill="#ffffff" letter-spacing="0.5">Regular I SL Right 30 Wedge</text>
-<clipPath id="fieldclip"><rect x="0" y="58" width="621" height="472"/></clipPath>
-<g clip-path="url(#fieldclip)"><g transform="translate(-40.5,31.0)">
+<rect x="305.6" y="13" width="270.4" height="31" rx="6" fill="#ffffff" fill-opacity="0.12" stroke="#8593ad" stroke-width="1"/>
+<text x="440.8" y="34" text-anchor="middle" font-size="14.5" font-weight="700" fill="#ffffff" letter-spacing="0.5">Regular I SL Right 30 Wedge</text>
+<clipPath id="fieldclip"><rect x="0" y="58" width="594" height="472"/></clipPath>
+<g clip-path="url(#fieldclip)"><g transform="translate(-54.0,31.0)">
 <rect x="0" y="0" width="702" height="513" fill="#ffffff"/>
 <line x1="0" y1="459.0" x2="702" y2="459.0" stroke="#c8cdd6" stroke-width="1"/>
 <line x1="0" y1="189.0" x2="702" y2="189.0" stroke="#c8cdd6" stroke-width="1"/>
 <line x1="0" y1="324.0" x2="702" y2="324.0" stroke="#3a4150" stroke-width="2" stroke-dasharray="9 6"/>
 <ellipse cx="351.0" cy="324.0" rx="9" ry="5.5" fill="#6b4a2b" stroke="#3a2716" stroke-width="1.2"/>
-<line x1="230.6" y1="295.4" x2="244.6" y2="309.4" stroke="#9aa2ae" stroke-width="3"/><line x1="244.6" y1="295.4" x2="230.6" y2="309.4" stroke="#9aa2ae" stroke-width="3"/>
-<text x="237.6" y="287.1" text-anchor="middle" font-size="10" fill="#9aa2ae" font-weight="600">LE</text>
-<line x1="279.2" y1="295.4" x2="293.2" y2="309.4" stroke="#9aa2ae" stroke-width="3"/><line x1="293.2" y1="295.4" x2="279.2" y2="309.4" stroke="#9aa2ae" stroke-width="3"/>
-<text x="286.2" y="287.1" text-anchor="middle" font-size="10" fill="#9aa2ae" font-weight="600">LT</text>
-<line x1="344.0" y1="295.4" x2="358.0" y2="309.4" stroke="#9aa2ae" stroke-width="3"/><line x1="358.0" y1="295.4" x2="344.0" y2="309.4" stroke="#9aa2ae" stroke-width="3"/>
-<text x="351.0" y="287.1" text-anchor="middle" font-size="10" fill="#9aa2ae" font-weight="600">NT</text>
-<line x1="408.8" y1="295.4" x2="422.8" y2="309.4" stroke="#9aa2ae" stroke-width="3"/><line x1="422.8" y1="295.4" x2="408.8" y2="309.4" stroke="#9aa2ae" stroke-width="3"/>
-<text x="415.8" y="287.1" text-anchor="middle" font-size="10" fill="#9aa2ae" font-weight="600">RT</text>
-<line x1="457.4" y1="295.4" x2="471.4" y2="309.4" stroke="#9aa2ae" stroke-width="3"/><line x1="471.4" y1="295.4" x2="457.4" y2="309.4" stroke="#9aa2ae" stroke-width="3"/>
-<text x="464.4" y="287.1" text-anchor="middle" font-size="10" fill="#9aa2ae" font-weight="600">RE</text>
-<line x1="257.6" y1="236.0" x2="271.6" y2="250.0" stroke="#9aa2ae" stroke-width="3"/><line x1="271.6" y1="236.0" x2="257.6" y2="250.0" stroke="#9aa2ae" stroke-width="3"/>
-<text x="264.6" y="227.7" text-anchor="middle" font-size="10" fill="#9aa2ae" font-weight="600">W</text>
-<line x1="344.0" y1="236.0" x2="358.0" y2="250.0" stroke="#9aa2ae" stroke-width="3"/><line x1="358.0" y1="236.0" x2="344.0" y2="250.0" stroke="#9aa2ae" stroke-width="3"/>
-<text x="351.0" y="227.7" text-anchor="middle" font-size="10" fill="#9aa2ae" font-weight="600">M</text>
-<line x1="430.4" y1="236.0" x2="444.4" y2="250.0" stroke="#9aa2ae" stroke-width="3"/><line x1="444.4" y1="236.0" x2="430.4" y2="250.0" stroke="#9aa2ae" stroke-width="3"/>
-<text x="437.4" y="227.7" text-anchor="middle" font-size="10" fill="#9aa2ae" font-weight="600">S</text>
-<line x1="101.0" y1="236.0" x2="115.0" y2="250.0" stroke="#9aa2ae" stroke-width="3"/><line x1="115.0" y1="236.0" x2="101.0" y2="250.0" stroke="#9aa2ae" stroke-width="3"/>
-<text x="108.0" y="227.7" text-anchor="middle" font-size="10" fill="#9aa2ae" font-weight="600">LC</text>
-<line x1="587.0" y1="236.0" x2="601.0" y2="250.0" stroke="#9aa2ae" stroke-width="3"/><line x1="601.0" y1="236.0" x2="587.0" y2="250.0" stroke="#9aa2ae" stroke-width="3"/>
-<text x="594.0" y="227.7" text-anchor="middle" font-size="10" fill="#9aa2ae" font-weight="600">RC</text>
-<line x1="344.0" y1="101.0" x2="358.0" y2="115.0" stroke="#9aa2ae" stroke-width="3"/><line x1="358.0" y1="101.0" x2="344.0" y2="115.0" stroke="#9aa2ae" stroke-width="3"/>
-<text x="351.0" y="92.7" text-anchor="middle" font-size="10" fill="#9aa2ae" font-weight="600">FS</text>
+<line x1="228.4" y1="293.2" x2="246.8" y2="311.6" stroke="#9aa2ae" stroke-width="3.6"/><line x1="246.8" y1="293.2" x2="228.4" y2="311.6" stroke="#9aa2ae" stroke-width="3.6"/>
+<text x="237.6" y="284.5" text-anchor="middle" font-size="12.5" fill="#9aa2ae" font-weight="600">LE</text>
+<line x1="277.0" y1="293.2" x2="295.4" y2="311.6" stroke="#9aa2ae" stroke-width="3.6"/><line x1="295.4" y1="293.2" x2="277.0" y2="311.6" stroke="#9aa2ae" stroke-width="3.6"/>
+<text x="286.2" y="284.5" text-anchor="middle" font-size="12.5" fill="#9aa2ae" font-weight="600">LT</text>
+<line x1="341.8" y1="293.2" x2="360.2" y2="311.6" stroke="#9aa2ae" stroke-width="3.6"/><line x1="360.2" y1="293.2" x2="341.8" y2="311.6" stroke="#9aa2ae" stroke-width="3.6"/>
+<text x="351.0" y="284.5" text-anchor="middle" font-size="12.5" fill="#9aa2ae" font-weight="600">NT</text>
+<line x1="406.6" y1="293.2" x2="425.0" y2="311.6" stroke="#9aa2ae" stroke-width="3.6"/><line x1="425.0" y1="293.2" x2="406.6" y2="311.6" stroke="#9aa2ae" stroke-width="3.6"/>
+<text x="415.8" y="284.5" text-anchor="middle" font-size="12.5" fill="#9aa2ae" font-weight="600">RT</text>
+<line x1="455.2" y1="293.2" x2="473.6" y2="311.6" stroke="#9aa2ae" stroke-width="3.6"/><line x1="473.6" y1="293.2" x2="455.2" y2="311.6" stroke="#9aa2ae" stroke-width="3.6"/>
+<text x="464.4" y="284.5" text-anchor="middle" font-size="12.5" fill="#9aa2ae" font-weight="600">RE</text>
+<line x1="255.4" y1="233.8" x2="273.8" y2="252.2" stroke="#9aa2ae" stroke-width="3.6"/><line x1="273.8" y1="233.8" x2="255.4" y2="252.2" stroke="#9aa2ae" stroke-width="3.6"/>
+<text x="264.6" y="225.2" text-anchor="middle" font-size="12.5" fill="#9aa2ae" font-weight="600">W</text>
+<line x1="341.8" y1="233.8" x2="360.2" y2="252.2" stroke="#9aa2ae" stroke-width="3.6"/><line x1="360.2" y1="233.8" x2="341.8" y2="252.2" stroke="#9aa2ae" stroke-width="3.6"/>
+<text x="351.0" y="225.2" text-anchor="middle" font-size="12.5" fill="#9aa2ae" font-weight="600">M</text>
+<line x1="428.2" y1="233.8" x2="446.6" y2="252.2" stroke="#9aa2ae" stroke-width="3.6"/><line x1="446.6" y1="233.8" x2="428.2" y2="252.2" stroke="#9aa2ae" stroke-width="3.6"/>
+<text x="437.4" y="225.2" text-anchor="middle" font-size="12.5" fill="#9aa2ae" font-weight="600">S</text>
+<line x1="98.8" y1="233.8" x2="117.2" y2="252.2" stroke="#9aa2ae" stroke-width="3.6"/><line x1="117.2" y1="233.8" x2="98.8" y2="252.2" stroke="#9aa2ae" stroke-width="3.6"/>
+<text x="108.0" y="225.2" text-anchor="middle" font-size="12.5" fill="#9aa2ae" font-weight="600">LC</text>
+<line x1="584.8" y1="233.8" x2="603.2" y2="252.2" stroke="#9aa2ae" stroke-width="3.6"/><line x1="603.2" y1="233.8" x2="584.8" y2="252.2" stroke="#9aa2ae" stroke-width="3.6"/>
+<text x="594.0" y="225.2" text-anchor="middle" font-size="12.5" fill="#9aa2ae" font-weight="600">RC</text>
+<line x1="341.8" y1="98.8" x2="360.2" y2="117.2" stroke="#9aa2ae" stroke-width="3.6"/><line x1="360.2" y1="98.8" x2="341.8" y2="117.2" stroke="#9aa2ae" stroke-width="3.6"/>
+<text x="351.0" y="90.2" text-anchor="middle" font-size="12.5" fill="#9aa2ae" font-weight="600">FS</text>
 <path d="M237.6,337.5 L249.8,305.1" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
 <line x1="241.2" y1="301.9" x2="258.3" y2="308.3" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 <path d="M275.4,337.5 L287.6,305.1" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
@@ -48,94 +48,98 @@
 <line x1="405.9" y1="308.3" x2="423.0" y2="301.9" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 <path d="M464.4,337.5 L452.2,305.1" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
 <line x1="443.7" y1="308.3" x2="460.8" y2="301.9" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
-<path d="M540.0,356.4 L569.7,264.6" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-<line x1="561.0" y1="261.8" x2="578.4" y2="267.4" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
+<path d="M540.0,356.4 L588.9,254.1" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="580.6" y1="250.1" x2="597.2" y2="258.0" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 <path d="M351.0,364.5 L364.5,383.4" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 5"/>
 <polygon points="364.5,383.4 354.7,377.7 362.2,372.3" fill="#14213d"/>
 <path d="M351.0,413.1 L351.0,305.1" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
 <line x1="341.8" y1="305.1" x2="360.2" y2="305.1" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 <path d="M351.0,472.5 L356.4,418.5 L361.8,351.0 L364.5,297.0" fill="none" stroke="#b3001b" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
 <polygon points="364.5,297.0 368.6,307.6 359.4,307.1" fill="#b3001b"/>
-<rect x="225.7" y="325.6" width="23.8" height="23.8" rx="3" fill="#ffffff" stroke="#14213d" stroke-width="2.4"/>
-<text x="237.6" y="341.5" text-anchor="middle" font-size="11.5" font-weight="700" fill="#14213d">LTE</text>
-<rect x="263.5" y="325.6" width="23.8" height="23.8" rx="3" fill="#ffffff" stroke="#14213d" stroke-width="2.4"/>
-<text x="275.4" y="341.5" text-anchor="middle" font-size="11.5" font-weight="700" fill="#14213d">LT</text>
-<rect x="301.3" y="325.6" width="23.8" height="23.8" rx="3" fill="#ffffff" stroke="#14213d" stroke-width="2.4"/>
-<text x="313.2" y="341.5" text-anchor="middle" font-size="11.5" font-weight="700" fill="#14213d">LG</text>
-<rect x="339.1" y="325.6" width="23.8" height="23.8" rx="3" fill="#ffffff" stroke="#14213d" stroke-width="2.4"/>
-<text x="351.0" y="341.5" text-anchor="middle" font-size="11.5" font-weight="700" fill="#14213d">C</text>
-<rect x="376.9" y="325.6" width="23.8" height="23.8" rx="3" fill="#ffffff" stroke="#14213d" stroke-width="2.4"/>
-<text x="388.8" y="341.5" text-anchor="middle" font-size="11.5" font-weight="700" fill="#14213d">RG</text>
-<rect x="414.7" y="325.6" width="23.8" height="23.8" rx="3" fill="#ffffff" stroke="#14213d" stroke-width="2.4"/>
-<text x="426.6" y="341.5" text-anchor="middle" font-size="11.5" font-weight="700" fill="#14213d">RT</text>
-<rect x="452.5" y="325.6" width="23.8" height="23.8" rx="3" fill="#ffffff" stroke="#14213d" stroke-width="2.4"/>
-<text x="464.4" y="341.5" text-anchor="middle" font-size="11.5" font-weight="700" fill="#14213d">RTE</text>
-<circle cx="540.0" cy="356.4" r="12.4" fill="#ffffff" stroke="#14213d" stroke-width="2.4"/>
-<text x="540.0" y="360.4" text-anchor="middle" font-size="11.5" font-weight="700" fill="#14213d">SL</text>
-<circle cx="351.0" cy="364.5" r="12.4" fill="#ffffff" stroke="#14213d" stroke-width="2.4"/>
-<text x="351.0" y="368.5" text-anchor="middle" font-size="11.5" font-weight="700" fill="#14213d">QB</text>
-<circle cx="351.0" cy="413.1" r="12.4" fill="#ffffff" stroke="#14213d" stroke-width="2.4"/>
-<text x="351.0" y="417.1" text-anchor="middle" font-size="11.5" font-weight="700" fill="#14213d">FB</text>
-<circle cx="351.0" cy="472.5" r="12.4" fill="#ffffff" stroke="#b3001b" stroke-width="2.4"/>
-<text x="351.0" y="476.5" text-anchor="middle" font-size="11.5" font-weight="700" fill="#b3001b">TB</text>
+<rect x="224.1" y="324.0" width="27.0" height="27.0" rx="3" fill="#ffffff" stroke="#14213d" stroke-width="2.6"/>
+<text x="237.6" y="342.0" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">LTE</text>
+<rect x="261.9" y="324.0" width="27.0" height="27.0" rx="3" fill="#ffffff" stroke="#14213d" stroke-width="2.6"/>
+<text x="275.4" y="342.0" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">LT</text>
+<rect x="299.7" y="324.0" width="27.0" height="27.0" rx="3" fill="#ffffff" stroke="#14213d" stroke-width="2.6"/>
+<text x="313.2" y="342.0" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">LG</text>
+<rect x="337.5" y="324.0" width="27.0" height="27.0" rx="3" fill="#ffffff" stroke="#14213d" stroke-width="2.6"/>
+<text x="351.0" y="342.0" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">C</text>
+<rect x="375.3" y="324.0" width="27.0" height="27.0" rx="3" fill="#ffffff" stroke="#14213d" stroke-width="2.6"/>
+<text x="388.8" y="342.0" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">RG</text>
+<rect x="413.1" y="324.0" width="27.0" height="27.0" rx="3" fill="#ffffff" stroke="#14213d" stroke-width="2.6"/>
+<text x="426.6" y="342.0" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">RT</text>
+<rect x="450.9" y="324.0" width="27.0" height="27.0" rx="3" fill="#ffffff" stroke="#14213d" stroke-width="2.6"/>
+<text x="464.4" y="342.0" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">RTE</text>
+<circle cx="540.0" cy="356.4" r="13.5" fill="#ffffff" stroke="#14213d" stroke-width="2.6"/>
+<text x="540.0" y="360.9" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">SL</text>
+<circle cx="351.0" cy="364.5" r="13.5" fill="#ffffff" stroke="#14213d" stroke-width="2.6"/>
+<text x="351.0" y="369.0" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">QB</text>
+<circle cx="351.0" cy="413.1" r="13.5" fill="#ffffff" stroke="#14213d" stroke-width="2.6"/>
+<text x="351.0" y="417.6" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">FB</text>
+<circle cx="351.0" cy="472.5" r="13.5" fill="#ffffff" stroke="#b3001b" stroke-width="2.6"/>
+<text x="351.0" y="477.0" text-anchor="middle" font-size="13" font-weight="700" fill="#b3001b">TB</text>
 </g></g>
-<line x1="18" y1="540" x2="603" y2="540" stroke="#c8cdd6" stroke-width="1"/>
+<line x1="18" y1="540" x2="576" y2="540" stroke="#c8cdd6" stroke-width="1"/>
 <text x="18" y="560" font-size="11" font-weight="700" fill="#5b6472" letter-spacing="1">ASSIGNMENTS</text>
 <text x="18" y="578" font-size="12" font-weight="700" fill="#111318">LTE</text>
 <text x="52" y="578" font-size="12" fill="#111318">Shoulder to shoulder with the man</text>
-<text x="52" y="596" font-size="12" fill="#111318">beside you, and push. Low pads — never</text>
-<text x="52" y="612" font-size="12" fill="#111318">look for a man.</text>
+<text x="52" y="596" font-size="12" fill="#111318">beside you, and push. Low pads —</text>
+<text x="52" y="612" font-size="12" fill="#111318">never look for a man.</text>
 <text x="18" y="630" font-size="12" font-weight="700" fill="#111318">LT</text>
 <text x="52" y="630" font-size="12" fill="#111318">Shoulder to shoulder with the man</text>
-<text x="52" y="646" font-size="12" fill="#111318">beside you, and push. Low pads — never</text>
-<text x="52" y="664" font-size="12" fill="#111318">look for a man.</text>
+<text x="52" y="646" font-size="12" fill="#111318">beside you, and push. Low pads —</text>
+<text x="52" y="664" font-size="12" fill="#111318">never look for a man.</text>
 <text x="18" y="680" font-size="12" font-weight="700" fill="#111318">LG</text>
 <text x="52" y="680" font-size="12" fill="#111318">Shoulder to shoulder with the man</text>
-<text x="52" y="698" font-size="12" fill="#111318">beside you, and push. Low pads — never</text>
-<text x="52" y="714" font-size="12" fill="#111318">look for a man.</text>
+<text x="52" y="698" font-size="12" fill="#111318">beside you, and push. Low pads —</text>
+<text x="52" y="714" font-size="12" fill="#111318">never look for a man.</text>
 <text x="18" y="732" font-size="12" font-weight="700" fill="#111318">C</text>
 <text x="52" y="732" font-size="12" fill="#111318">Shoulder to shoulder with the man</text>
-<text x="52" y="748" font-size="12" fill="#111318">beside you, and push. Low pads — never</text>
-<text x="52" y="766" font-size="12" fill="#111318">look for a man. You are the tip of the</text>
-<text x="52" y="782" font-size="12" fill="#111318">wedge — everybody comes to you.</text>
-<text x="18" y="800" font-size="12" font-weight="700" fill="#111318">RG</text>
-<text x="52" y="800" font-size="12" fill="#111318">Shoulder to shoulder with the man</text>
-<text x="52" y="816" font-size="12" fill="#111318">beside you, and push. Low pads — never</text>
-<text x="52" y="834" font-size="12" fill="#111318">look for a man.</text>
-<text x="18" y="850" font-size="12" font-weight="700" fill="#111318">RT</text>
-<text x="52" y="850" font-size="12" fill="#111318">Shoulder to shoulder with the man</text>
-<text x="52" y="868" font-size="12" fill="#111318">beside you, and push. Low pads — never</text>
-<text x="52" y="884" font-size="12" fill="#111318">look for a man.</text>
-<text x="310" y="578" font-size="12" font-weight="700" fill="#111318">RTE</text>
-<text x="344" y="578" font-size="12" fill="#111318">Shoulder to shoulder with the man</text>
-<text x="344" y="596" font-size="12" fill="#111318">beside you, and push. Low pads — never</text>
-<text x="344" y="612" font-size="12" fill="#111318">look for a man.</text>
-<text x="310" y="630" font-size="12" font-weight="700" fill="#111318">SL</text>
-<text x="344" y="630" font-size="12" fill="#111318">Run at the corner and screen him off.</text>
-<text x="344" y="646" font-size="12" fill="#111318">Stay in his way. Nothing comes around</text>
-<text x="344" y="664" font-size="12" fill="#111318">the outside into the back of the wedge.</text>
-<text x="310" y="680" font-size="12" font-weight="700" fill="#111318">QB</text>
-<text x="344" y="680" font-size="12" fill="#111318">Snap and hand to the tailback</text>
-<text x="344" y="698" font-size="12" fill="#111318">immediately, then stay out of his way.</text>
-<text x="344" y="714" font-size="12" fill="#111318">Never ride the handoff.</text>
-<text x="310" y="732" font-size="12" font-weight="700" fill="#111318">FB</text>
-<text x="344" y="732" font-size="12" fill="#111318">Shoulder to shoulder with the man</text>
-<text x="344" y="748" font-size="12" fill="#111318">beside you, and push. Low pads — never</text>
-<text x="344" y="766" font-size="12" fill="#111318">look for a man. Both hands on the</text>
-<text x="344" y="782" font-size="12" fill="#111318">tailback's back and drive. You are</text>
-<text x="344" y="800" font-size="12" fill="#111318">pushing, not blocking.</text>
-<text x="310" y="816" font-size="12" font-weight="700" fill="#111318">TB</text>
-<text x="344" y="816" font-size="12" fill="#111318">Hand on the center's back, pads low,</text>
-<text x="344" y="834" font-size="12" fill="#111318">follow the wedge. Never cut or bounce —</text>
-<text x="344" y="850" font-size="12" fill="#111318">the hole moves with you.</text>
-<line x1="18" y1="892" x2="603" y2="892" stroke="#c8cdd6" stroke-width="1"/>
-<text x="18" y="910" font-size="11" font-weight="700" fill="#5b6472" letter-spacing="1">COACHING POINTS</text>
-<text x="18" y="930" font-size="12" fill="#111318">Two yards is a good wedge. Do not call it needing four.</text>
-<text x="18" y="946" font-size="12" fill="#111318">Expect the heaviest front the league allows inside the five. It does not change the</text>
-<text x="18" y="964" font-size="12" fill="#111318">call — nobody is picking a man anyway.</text>
-<text x="18" y="980" font-size="12" fill="#111318">Nothing in the league rulebook prohibits wedge blocking for 11-man play, but it is</text>
-<text x="18" y="998" font-size="12" fill="#111318">the first thing leagues take away. Re-check it every season before you install it.</text>
-<text x="18" y="1014" font-size="12" fill="#111318">Coach the shoulders, not the feet. If there is daylight between two linemen the wedge</text>
-<text x="18" y="1032" font-size="12" fill="#111318">is a line of five men getting pushed backwards instead of one thing moving forward.</text>
-<text x="18" y="1048" font-size="12" fill="#111318">Low pads win this and nothing else does. The team that stands up loses.</text>
+<text x="52" y="748" font-size="12" fill="#111318">beside you, and push. Low pads —</text>
+<text x="52" y="766" font-size="12" fill="#111318">never look for a man. You are the tip</text>
+<text x="52" y="782" font-size="12" fill="#111318">of the wedge — everybody comes to</text>
+<text x="52" y="800" font-size="12" fill="#111318">you.</text>
+<text x="18" y="816" font-size="12" font-weight="700" fill="#111318">RG</text>
+<text x="52" y="816" font-size="12" fill="#111318">Shoulder to shoulder with the man</text>
+<text x="52" y="834" font-size="12" fill="#111318">beside you, and push. Low pads —</text>
+<text x="52" y="850" font-size="12" fill="#111318">never look for a man.</text>
+<text x="18" y="868" font-size="12" font-weight="700" fill="#111318">RT</text>
+<text x="52" y="868" font-size="12" fill="#111318">Shoulder to shoulder with the man</text>
+<text x="52" y="884" font-size="12" fill="#111318">beside you, and push. Low pads —</text>
+<text x="52" y="902" font-size="12" fill="#111318">never look for a man.</text>
+<text x="297" y="578" font-size="12" font-weight="700" fill="#111318">RTE</text>
+<text x="331" y="578" font-size="12" fill="#111318">Shoulder to shoulder with the man</text>
+<text x="331" y="596" font-size="12" fill="#111318">beside you, and push. Low pads —</text>
+<text x="331" y="612" font-size="12" fill="#111318">never look for a man.</text>
+<text x="297" y="630" font-size="12" font-weight="700" fill="#111318">SL</text>
+<text x="331" y="630" font-size="12" fill="#111318">Run at the corner and screen him off.</text>
+<text x="331" y="646" font-size="12" fill="#111318">Stay in his way. Nothing comes around</text>
+<text x="331" y="664" font-size="12" fill="#111318">the outside into the back of the</text>
+<text x="331" y="680" font-size="12" fill="#111318">wedge.</text>
+<text x="297" y="698" font-size="12" font-weight="700" fill="#111318">QB</text>
+<text x="331" y="698" font-size="12" fill="#111318">Snap and hand to the tailback</text>
+<text x="331" y="714" font-size="12" fill="#111318">immediately, then stay out of his</text>
+<text x="331" y="732" font-size="12" fill="#111318">way. Never ride the handoff.</text>
+<text x="297" y="748" font-size="12" font-weight="700" fill="#111318">FB</text>
+<text x="331" y="748" font-size="12" fill="#111318">Shoulder to shoulder with the man</text>
+<text x="331" y="766" font-size="12" fill="#111318">beside you, and push. Low pads —</text>
+<text x="331" y="782" font-size="12" fill="#111318">never look for a man. Both hands on</text>
+<text x="331" y="800" font-size="12" fill="#111318">the tailback's back and drive. You</text>
+<text x="331" y="816" font-size="12" fill="#111318">are pushing, not blocking.</text>
+<text x="297" y="834" font-size="12" font-weight="700" fill="#111318">TB</text>
+<text x="331" y="834" font-size="12" fill="#111318">Hand on the center's back, pads low,</text>
+<text x="331" y="850" font-size="12" fill="#111318">follow the wedge. Never cut or bounce</text>
+<text x="331" y="868" font-size="12" fill="#111318">— the hole moves with you.</text>
+<line x1="18" y1="908" x2="576" y2="908" stroke="#c8cdd6" stroke-width="1"/>
+<text x="18" y="926" font-size="11" font-weight="700" fill="#5b6472" letter-spacing="1">COACHING POINTS</text>
+<text x="18" y="946" font-size="12" fill="#111318">Two yards is a good wedge. Do not call it needing four.</text>
+<text x="18" y="964" font-size="12" fill="#111318">Expect the heaviest front the league allows inside the five. It does not change</text>
+<text x="18" y="980" font-size="12" fill="#111318">the call — nobody is picking a man anyway.</text>
+<text x="18" y="998" font-size="12" fill="#111318">Nothing in the league rulebook prohibits wedge blocking for 11-man play, but it</text>
+<text x="18" y="1014" font-size="12" fill="#111318">is the first thing leagues take away. Re-check it every season before you install</text>
+<text x="18" y="1032" font-size="12" fill="#111318">it.</text>
+<text x="18" y="1048" font-size="12" fill="#111318">Coach the shoulders, not the feet. If there is daylight between two linemen the</text>
+<text x="18" y="1066" font-size="12" fill="#111318">wedge is a line of five men getting pushed backwards instead of one thing moving</text>
+<text x="18" y="1082" font-size="12" fill="#111318">forward.</text>
+<text x="18" y="1100" font-size="12" fill="#111318">Low pads win this and nothing else does. The team that stands up loses.</text>
 </svg>
