@@ -628,14 +628,19 @@ table.xl th {
 @media print {
   /* Two across, so each strong-left sheet prints beside its strong-right one. */
   .xl-sheets { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px; margin: 4px 0 0; }
-  table.xl { font-size: 9px; }
-  table.xl td, table.xl th { padding: 1px 2px; }
-  .xl-title { padding: 3px 6px; font-size: 13px; }
+  /* Two rows of two fill the landscape sheet, so everything is sized up to use it:
+     taller cells to write in and names a coach can read at arm's length. */
+  table.xl { font-size: 11px; }
+  table.xl td, table.xl th { padding: 2px 3px; }
+  table.xl th { font-size: 11px; }
+  .xl-title { padding: 4px 8px; font-size: 16px; }
   /* A name is one line on paper: small enough to fit its cell, and never wrapping
      into a second line that makes the row taller. */
-  .xl-lineup td { height: 24px; padding: 1px 0; }
-  .xl-pos { font-size: 7px; }
-  .xl-name { font-size: 7px; white-space: nowrap; letter-spacing: -.1px; }
+  .xl-lineup td { height: 44px; padding: 2px 0; vertical-align: middle; }
+  .xl-pos { font-size: 10px; }
+  .xl-name { font-size: 11px; white-space: nowrap; }
+  .xl-plays td { height: 40px; vertical-align: middle; }
+  .xl-plays td a { font-size: 12px; }
 }
 
 .plist { display: grid; gap: 12px; grid-template-columns: 1fr; }
