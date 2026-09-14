@@ -626,7 +626,8 @@ table.xl th {
 .xl-plays td a { color: var(--ink); font-weight: 700; text-decoration: none; }
 .xl-plays td a:hover { text-decoration: underline; }
 @media print {
-  .xl-sheets { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; margin: 4px 0 0; }
+  /* Two across, so each strong-left sheet prints beside its strong-right one. */
+  .xl-sheets { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px; margin: 4px 0 0; }
   table.xl { font-size: 9px; }
   table.xl td, table.xl th { padding: 1px 2px; }
   .xl-title { padding: 3px 6px; font-size: 13px; }
@@ -2977,7 +2978,8 @@ def write_calls(formations: list[dict], defenses: dict, root: Path) -> str:
     quarterback are column one of the depth chart; the fullback, tailback and slot
     are the package, which is the only thing that changes between them. The first two
     sheets are the Split formation from package 1, strong left and then strong right,
-    each the mirror of the other; from package 3 on they line up in the I.
+    each the mirror of the other; the next two are the I formation, strong left from
+    package 3 and strong right from package 4.
 
     Under it, blank Left, Middle and Right columns to write the plays into.
     """
@@ -3071,7 +3073,11 @@ def write_calls(formations: list[dict], defenses: dict, root: Path) -> str:
         order += [("Split formation - Strong left", packages[0], "split-left",
                    {"Left": ["sb-pitch-l"]}),
                   ("Split formation - Strong right", packages[0], "split-right", {})]
-    order += [(f"Package {n}", p, "i", {}) for n, p in enumerate(packages[2:], start=3)]
+    # Then the I from packages 3 and 4, strong left and strong right, on the same sides.
+    # Packages 5 and 6 are on the depth chart but not the call sheet.
+    i_titles = {3: "I formation - Strong left", 4: "I formation - Strong right"}
+    order += [(title, packages[n - 1], "i", {})
+              for n, title in i_titles.items() if len(packages) >= n]
     sheets = "".join(
         f'<section class="xl-sheet"><p class="xl-title">{esc(title)}</p>'
         f'{lineup_table(package, layout)}{plays_table(title, placed)}</section>'

@@ -580,7 +580,8 @@ table.xl th {
 .xl-plays td a { color: var(--ink); font-weight: 700; text-decoration: none; }
 .xl-plays td a:hover { text-decoration: underline; }
 @media print {
-  .xl-sheets { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; margin: 4px 0 0; }
+  /* Two across, so each strong-left sheet prints beside its strong-right one. */
+  .xl-sheets { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px; margin: 4px 0 0; }
   table.xl { font-size: 9px; }
   table.xl td, table.xl th { padding: 1px 2px; }
   .xl-title { padding: 3px 6px; font-size: 13px; }
