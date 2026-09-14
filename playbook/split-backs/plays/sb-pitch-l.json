@@ -2,12 +2,23 @@
   "id": "sb-pitch-l",
   "order": 10,
   "formation": "split-backs",
-  "name": "Split formation - Strong right - Quick pitch left",
-  "call": "Split SL Right 39 Pitch",
+  "name": "Split formation - Strong left - Quick pitch left",
+  "call": "Split SL Left 39 Pitch",
   "type": "run",
   "direction": "left",
   "ball_carrier": "RH",
-  "purpose": "Get outside in a hurry. The far back trails the quarterback, takes the pitch on the run and turns up inside the block out in front of him. Away from the split man there is nobody out there to make that block, so the near back leaves early and takes the first man outside our end himself — which is why this side has no dive fake. That man is their corner only against the 5-3. Against a four-linebacker front he is the outside linebacker, and against the 4-4 that leaves their corner standing right where the ball turns up with nobody on him.",
+  "pitch": {
+    "from": "QB",
+    "to": "RH",
+    "at": 1
+  },
+  "alignment": {
+    "SL": [
+      -8.0,
+      -1.2
+    ]
+  },
+  "purpose": "Get outside in a hurry. The far back trails the quarterback, takes the pitch on the run and turns up inside the block out on the edge. The split man makes that block — their corner, or their outside linebacker against the 5-4-2, which has no corners — and that is what frees both backs to stay in the backfield where the fake lives.",
   "assignments": {
     "RTE": {
       "block": "cutoff"
@@ -33,29 +44,26 @@
       "drive": "in"
     },
     "SL": {
-      "block": "cutoff"
+      "block": "screen"
     },
     "QB": {
-      "rule": "Open left, attack the edge, and pitch to the trailing back before you get touched. No dive fake here.",
-      "type": "fake",
+      "rule": "Quick pitch to the right halfback, then run the other way, to the right, like you still have it.",
+      "type": "rollout",
       "path": [
         [
-          -1.4,
-          -0.5
+          0.8,
+          -0.3
         ],
         [
-          -4.0,
-          -0.4
-        ],
-        [
-          -5.6,
-          0.4
+          4.6,
+          -0.1
         ]
       ]
     },
     "LH": {
       "block": "lead",
-      "target": "force"
+      "target": "force",
+      "note": "Step at the dive first to hold their linebackers."
     },
     "RH": {
       "rule": "Run flat, outside and behind the quarterback, and catch the pitch on the run. Ahead of him is a fumble.",
@@ -84,9 +92,61 @@
       ]
     }
   },
+  "fronts": {
+    "4-4": {
+      "RTE": {
+        "block": "man",
+        "man": "RE"
+      },
+      "RT": {
+        "block": "man",
+        "man": "S"
+      },
+      "RG": {
+        "block": "man",
+        "man": "RT"
+      },
+      "C": {
+        "block": "man",
+        "man": "M",
+        "help": "LT"
+      },
+      "LG": {
+        "block": "man",
+        "man": "LT"
+      },
+      "LT": {
+        "block": "man",
+        "man": "M"
+      },
+      "LTE": {
+        "block": "man",
+        "man": "LE"
+      },
+      "SL": {
+        "block": "man",
+        "man": "LC"
+      },
+      "LH": {
+        "block": "man",
+        "man": "W",
+        "how": "Bubble around the left tight end",
+        "via": [
+          [
+            -3.4,
+            2.0
+          ],
+          [
+            -3.6,
+            4.2
+          ]
+        ]
+      }
+    }
+  },
   "coaching_points": [
     "The pitch goes early. A quarterback who waits to be tackled first will pitch it on the ground.",
     "This is not a read at this age — tell him before the snap that he is pitching it.",
-    "Everything depends on the edge being blocked and there is no receiver on this side to help, so the near back leaves early and there is no fake to hold anybody. Against the 4-4 their corner is unblocked at the spot the ball turns up — if he is quick, call it to the other side instead."
+    "Everything depends on the edge being blocked, and out here the split man does it — which is what frees both backs to fake and lead. Drill him on beating that man to the spot without holding."
   ]
 }

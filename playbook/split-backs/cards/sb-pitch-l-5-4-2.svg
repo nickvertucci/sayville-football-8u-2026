@@ -1,10 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="594" height="980" viewBox="0 0 594 980" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" width="594" height="962" viewBox="0 0 594 962" font-family="Segoe UI, Helvetica, Arial, sans-serif">
 <rect width="100%" height="100%" fill="#ffffff"/>
 <rect x="0" y="0" width="594" height="58" fill="#14213d"/>
-<text x="18" y="26" font-size="13.5" font-weight="700" fill="#ffffff">Split formation - Strong right - Quick pitch left</text>
+<text x="18" y="26" font-size="14.2" font-weight="700" fill="#ffffff">Split formation - Strong left - Quick pitch left</text>
 <text x="18" y="45" font-size="11.5" fill="#a9b4c7">RUN  •  Split Backs  •  vs 5-4-2</text>
-<rect x="342.4" y="13" width="233.6" height="31" rx="6" fill="#ffffff" fill-opacity="0.12" stroke="#8593ad" stroke-width="1"/>
-<text x="459.2" y="34" text-anchor="middle" font-size="14.5" font-weight="700" fill="#ffffff" letter-spacing="0.5">Split SL Right 39 Pitch</text>
+<rect x="351.6" y="13" width="224.4" height="31" rx="6" fill="#ffffff" fill-opacity="0.12" stroke="#8593ad" stroke-width="1"/>
+<text x="463.8" y="34" text-anchor="middle" font-size="14.5" font-weight="700" fill="#ffffff" letter-spacing="0.5">Split SL Left 39 Pitch</text>
 <clipPath id="fieldclip"><rect x="0" y="58" width="594" height="472"/></clipPath>
 <g clip-path="url(#fieldclip)"><g transform="translate(-54.0,31.0)">
 <rect x="0" y="0" width="702" height="513" fill="#ffffff"/>
@@ -48,15 +48,15 @@
 <line x1="273.9" y1="311.3" x2="291.5" y2="316.7" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 <path d="M237.6,337.5 L237.6,314.6" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
 <line x1="228.4" y1="314.6" x2="246.8" y2="314.6" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
-<path d="M567.0,356.4 L487.9,318.6 L401.8,249.5" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-<line x1="396.0" y1="256.6" x2="407.5" y2="242.3" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
-<path d="M351.0,364.5 L313.2,378.0 L243.0,375.3 L199.8,353.7" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 5"/>
-<polygon points="199.8,353.7 211.1,354.2 207.0,362.5" fill="#14213d"/>
+<path d="M135.0,356.4 L198.7,253.3" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="190.9" y1="248.4" x2="206.5" y2="258.1" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
+<path d="M351.0,364.5 L372.6,372.6 L475.2,367.2" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="0.1 7"/>
+<polygon points="475.2,367.2 465.1,372.4 464.6,363.1" fill="#14213d"/>
 <path d="M291.6,426.6 L236.0,307.8 L210.3,254.1" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
 <line x1="202.0" y1="258.0" x2="218.6" y2="250.1" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 <path d="M410.4,426.6 L318.6,437.4 L178.2,432.0 L102.6,383.4 L97.2,313.2 L97.2,248.4" fill="none" stroke="#b3001b" stroke-width="4.6" stroke-linecap="round" stroke-linejoin="round"/>
 <polygon points="97.2,248.4 103.4,262.2 91.0,262.2" fill="#b3001b"/>
-
+<path d="M351.0,364.5 L318.6,437.4" fill="none" stroke="#b3001b" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="0.1 7"/>
 <rect x="224.1" y="324.0" width="27.0" height="27.0" rx="3" fill="#ffffff" stroke="#14213d" stroke-width="2.6"/>
 <text x="237.6" y="342.0" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">LTE</text>
 <rect x="261.9" y="324.0" width="27.0" height="27.0" rx="3" fill="#ffffff" stroke="#14213d" stroke-width="2.6"/>
@@ -71,8 +71,8 @@
 <text x="426.6" y="342.0" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">RT</text>
 <rect x="450.9" y="324.0" width="27.0" height="27.0" rx="3" fill="#ffffff" stroke="#14213d" stroke-width="2.6"/>
 <text x="464.4" y="342.0" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">RTE</text>
-<circle cx="567.0" cy="356.4" r="13.5" fill="#ffffff" stroke="#14213d" stroke-width="2.6"/>
-<text x="567.0" y="360.9" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">SL</text>
+<circle cx="135.0" cy="356.4" r="13.5" fill="#ffffff" stroke="#14213d" stroke-width="2.6"/>
+<text x="135.0" y="360.9" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">SL</text>
 <circle cx="351.0" cy="364.5" r="13.5" fill="#ffffff" stroke="#14213d" stroke-width="2.6"/>
 <text x="351.0" y="369.0" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">QB</text>
 <circle cx="291.6" cy="426.6" r="13.5" fill="#ffffff" stroke="#14213d" stroke-width="2.6"/>
@@ -106,27 +106,27 @@
 <text x="331" y="578" font-size="12" fill="#111318">End head up on you. Cut him off — get</text>
 <text x="331" y="596" font-size="12" fill="#111318">between him and the ball.</text>
 <text x="297" y="612" font-size="12" font-weight="700" fill="#111318">SL</text>
-<text x="331" y="612" font-size="12" fill="#111318">Cut off the backside. Never quit on</text>
-<text x="331" y="630" font-size="12" fill="#111318">the play.</text>
+<text x="331" y="612" font-size="12" fill="#111318">Run at the outside linebacker and</text>
+<text x="331" y="630" font-size="12" fill="#111318">screen him off. Stay in his way.</text>
 <text x="297" y="646" font-size="12" font-weight="700" fill="#111318">QB</text>
-<text x="331" y="646" font-size="12" fill="#111318">Open left, attack the edge, and pitch</text>
-<text x="331" y="664" font-size="12" fill="#111318">to the trailing back before you get</text>
-<text x="331" y="680" font-size="12" fill="#111318">touched. No dive fake here.</text>
+<text x="331" y="646" font-size="12" fill="#111318">Quick pitch to the right halfback,</text>
+<text x="331" y="664" font-size="12" fill="#111318">then run the other way, to the right,</text>
+<text x="331" y="680" font-size="12" fill="#111318">like you still have it.</text>
 <text x="297" y="698" font-size="12" font-weight="700" fill="#111318">LH</text>
 <text x="331" y="698" font-size="12" fill="#111318">Lead outside our end. Block the first</text>
 <text x="331" y="714" font-size="12" fill="#111318">man out there — here it is the</text>
-<text x="331" y="732" font-size="12" fill="#111318">linebacker.</text>
-<text x="297" y="748" font-size="12" font-weight="700" fill="#111318">RH</text>
-<text x="331" y="748" font-size="12" fill="#111318">Run flat, outside and behind the</text>
-<text x="331" y="766" font-size="12" fill="#111318">quarterback, and catch the pitch on</text>
-<text x="331" y="782" font-size="12" fill="#111318">the run. Ahead of him is a fumble.</text>
+<text x="331" y="732" font-size="12" fill="#111318">linebacker. Step at the dive first to</text>
+<text x="331" y="748" font-size="12" fill="#111318">hold their linebackers.</text>
+<text x="297" y="766" font-size="12" font-weight="700" fill="#111318">RH</text>
+<text x="331" y="766" font-size="12" fill="#111318">Run flat, outside and behind the</text>
+<text x="331" y="782" font-size="12" fill="#111318">quarterback, and catch the pitch on</text>
+<text x="331" y="800" font-size="12" fill="#111318">the run. Ahead of him is a fumble.</text>
 <line x1="18" y1="806" x2="576" y2="806" stroke="#c8cdd6" stroke-width="1"/>
 <text x="18" y="824" font-size="11" font-weight="700" fill="#5b6472" letter-spacing="1">COACHING POINTS</text>
 <text x="18" y="844" font-size="12" fill="#111318">The pitch goes early. A quarterback who waits to be tackled first will pitch it</text>
 <text x="18" y="862" font-size="12" fill="#111318">on the ground.</text>
 <text x="18" y="878" font-size="12" fill="#111318">This is not a read at this age — tell him before the snap that he is pitching it.</text>
-<text x="18" y="896" font-size="12" fill="#111318">Everything depends on the edge being blocked and there is no receiver on this</text>
-<text x="18" y="912" font-size="12" fill="#111318">side to help, so the near back leaves early and there is no fake to hold anybody.</text>
-<text x="18" y="930" font-size="12" fill="#111318">Against the 4-4 their corner is unblocked at the spot the ball turns up — if he</text>
-<text x="18" y="946" font-size="12" fill="#111318">is quick, call it to the other side instead.</text>
+<text x="18" y="896" font-size="12" fill="#111318">Everything depends on the edge being blocked, and out here the split man does it</text>
+<text x="18" y="912" font-size="12" fill="#111318">— which is what frees both backs to fake and lead. Drill him on beating that man</text>
+<text x="18" y="930" font-size="12" fill="#111318">to the spot without holding.</text>
 </svg>
