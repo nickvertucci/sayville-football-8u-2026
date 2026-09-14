@@ -623,6 +623,8 @@ table.xl th {
 .xl-name { display: block; font-size: 10.5px; }
 .xl-open { color: var(--muted); font-style: italic; }
 .xl-plays td { height: 22px; }
+.xl-plays td a { color: var(--ink); font-weight: 700; text-decoration: none; }
+.xl-plays td a:hover { text-decoration: underline; }
 @media print {
   .xl-sheets { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; margin: 4px 0 0; }
   table.xl { font-size: 9px; }
@@ -3031,28 +3033,49 @@ def write_calls(formations: list[dict], defenses: dict, root: Path) -> str:
             rows.append(f'<tr>{"".join(tds)}</tr>')
         return f'<table class="xl xl-lineup">{"".join(rows)}</table>'
 
-    # Blank, to be filled in: the columns stay so a coach writes each play on the side
-    # it goes.
-    blank_row = "<tr>" + "<td></td>" * 3 + "</tr>"
-    plays_table = (
-        '<table class="xl xl-plays"><thead><tr>'
-        + "".join(f"<th>{side}</th>" for side in ("Left", "Middle", "Right"))
-        + f'</tr></thead><tbody>{blank_row * 3}</tbody></table>'
-    )
+    plays_by_id = {p["id"]: p for f in formations for p in f["_plays"]}
+    sides = ("Left", "Middle", "Right")
+
+    def plays_table(title: str, placed: dict) -> str:
+        """Left, Middle and Right, three rows, with any play placed on this sheet at the
+        top of its side and the rest blank to be written in. A play is named without
+        the formation the sheet's heading already says, and links to its page."""
+        cols = []
+        for side in sides:
+            cells = []
+            for pid in placed.get(side, []):
+                if pid not in plays_by_id:
+                    raise SystemExit(f"call sheet '{title}': no such play '{pid}'")
+                play = plays_by_id[pid]
+                name = play["name"]
+                if name.lower().startswith(title.lower() + " - "):
+                    name = name[len(title) + 3:]
+                cells.append(f'<a href="{p_href(play)}">{esc(name)}</a>')
+            cols.append(cells)
+        depth = max([3] + [len(c) for c in cols])
+        rows = "".join(
+            "<tr>" + "".join(f"<td>{c[i] if i < len(c) else ''}</td>" for c in cols) + "</tr>"
+            for i in range(depth)
+        )
+        return ('<table class="xl xl-plays"><thead><tr>'
+                + "".join(f"<th>{side}</th>" for side in sides)
+                + f'</tr></thead><tbody>{rows}</tbody></table>')
 
     # The Split formation leads, both strengths from package 1's players: strong left on
     # the left of the page and strong right on the right, so each sits on the side it
     # runs to. Package 2 is not on the sheet. From package 3 on, each is its number in
     # the I.
+    # Plays placed on a sheet, by the side of the table they go in.
     order = []
     if packages:
-        order += [("Split formation - Strong left", packages[0], "split-left"),
-                  ("Split formation - Strong right", packages[0], "split-right")]
-    order += [(f"Package {n}", p, "i") for n, p in enumerate(packages[2:], start=3)]
+        order += [("Split formation - Strong left", packages[0], "split-left",
+                   {"Left": ["sb-pitch-l"]}),
+                  ("Split formation - Strong right", packages[0], "split-right", {})]
+    order += [(f"Package {n}", p, "i", {}) for n, p in enumerate(packages[2:], start=3)]
     sheets = "".join(
         f'<section class="xl-sheet"><p class="xl-title">{esc(title)}</p>'
-        f'{lineup_table(package, layout)}{plays_table}</section>'
-        for title, package, layout in order
+        f'{lineup_table(package, layout)}{plays_table(title, placed)}</section>'
+        for title, package, layout, placed in order
     ) or '<p class="lede">No offensive packages in roster.json yet.</p>'
 
     body = f"""<h1 class="page">Call sheet</h1>

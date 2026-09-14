@@ -577,6 +577,8 @@ table.xl th {
 .xl-name { display: block; font-size: 10.5px; }
 .xl-open { color: var(--muted); font-style: italic; }
 .xl-plays td { height: 22px; }
+.xl-plays td a { color: var(--ink); font-weight: 700; text-decoration: none; }
+.xl-plays td a:hover { text-decoration: underline; }
 @media print {
   .xl-sheets { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; margin: 4px 0 0; }
   table.xl { font-size: 9px; }
