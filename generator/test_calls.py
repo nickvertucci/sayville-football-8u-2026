@@ -36,17 +36,12 @@ CASES = [
     # describe the quarterback, while the ball carrier is the slot he throws to.
     ("boot, quarterback at the 6",    "i-form",   "i-boot-r",   "I SL Right 16 Boot",  False),
     ("boot, called too wide",         "i-form",   "i-boot-r",   "I SL Right 18 Boot",  True),
-    ("split power right",             "split-backs", "sb-power-r", "Split SL Right 24 Power",  False),
-    ("split power, called a pitch",   "split-backs", "sb-power-r", "Split SL Right 28 Power",  True),
-    ("split power, credited to the SL", "split-backs", "sb-power-r", "Split SL Right 44 Power", True),
+    ("split pitch right",             "split-backs", "sb-pitch-r", "Split SL Right 28 Pitch",  False),
     ("split pitch, called off tackle", "split-backs", "sb-pitch-r", "Split SL Right 24 Pitch", True),
-    ("split dive right, numbered left", "split-backs", "sb-dive-r", "Split SL Right 31 Dive",  True),
-    ("split waggle, quarterback at 6", "split-backs", "sb-waggle-r", "Split SL Right 16 Waggle", False),
-    ("split waggle, called too wide",  "split-backs", "sb-waggle-r", "Split SL Right 18 Waggle", True),
-    # Counter Left hands to the right back; the left one runs the pitch fake and never
-    # crosses the line at all, so crediting him cannot be checked against a hole.
-    ("split counter left",            "split-backs", "sb-counter-l", "Split SL Right 35 Counter", False),
-    ("split counter left, wrong back", "split-backs", "sb-counter-l", "Split SL Right 24 Counter", True),
+    ("split pitch, credited to the SL", "split-backs", "sb-pitch-r", "Split SL Right 48 Pitch", True),
+    ("split pitch right, numbered left", "split-backs", "sb-pitch-r", "Split SL Right 29 Pitch", True),
+    ("split pitch left",              "split-backs", "sb-pitch-l", "Split SL Right 39 Pitch",  False),
+    ("split pitch left, wrong back",  "split-backs", "sb-pitch-l", "Split SL Right 29 Pitch",  True),
 ]
 
 

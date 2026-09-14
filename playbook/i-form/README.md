@@ -717,7 +717,7 @@ Off the tight end. Our end seals their end inside and the fullback leads around 
 
 **Coaching points**
 
-- Do not teach this as Split Power. Power's end kicks their end out and the ball goes inside him; here our end turns him in and the ball goes around behind him. Same down blocks, opposite edge — say that difference out loud or they will block it the way they blocked Power.
+- Do not teach this as Power. Power's end kicks their end out and the ball goes inside him; here our end turns him in and the ball goes around behind him. Same down blocks, opposite edge — say that difference out loud or they will block it the way they blocked Power.
 - The tailback starts deeper than a split back does, so the seal block has to hold a beat longer. Drill it on a count.
 - The fullback stays tight to our end's block. Bellying out wide is what makes this play late.
 - If the fullback cannot get outside in time, run I Iso instead — it hits straight ahead.
