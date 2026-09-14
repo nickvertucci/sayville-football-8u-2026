@@ -1396,6 +1396,13 @@ footer.site a { color: var(--accent-ink); }
      printed book keeps them. */
   main.play-page article.play > header, main.play-page .block-title,
   main.play-page dl.assign, main.play-page ul.coach { display: none !important; }
+  /* And the graphic fills the sheet. The rule above only lets a diagram shrink to fit,
+     never grow, so on its own it printed at screen size in the middle of the paper.
+     Sized to the page box instead, contained so it keeps its shape. */
+  main.play-page figure.diagram { margin: 0; }
+  main.play-page figure.diagram img {
+    width: 100%; height: 97vh; max-height: none; object-fit: contain;
+  }
 
   /* A practice plan is one sheet, held on the field.
 
@@ -2330,6 +2337,19 @@ def asset_url(name: str, content: str) -> str:
     return f"assets/{name}?v={digest}"
 
 
+def versioned(path: str) -> str:
+    """A generated card's URL, stamped with its content hash for the same reason.
+
+    The cards had no fingerprint, and a browser kept them while the page around them
+    changed: after the Z became the SL, a coach printed a play page titled SL with a
+    card that still said Z. A changed card is now a different URL.
+    """
+    file = Path(__file__).resolve().parent.parent / path
+    if not file.is_file():
+        return path
+    return f"{path}?v={hashlib.sha256(file.read_bytes()).hexdigest()[:10]}"
+
+
 def css_url() -> str:
     return asset_url("site.css", SITE_CSS.strip() + "\n")
 
@@ -2370,13 +2390,13 @@ def d_href(front: dict) -> str:
 
 
 def def_src(front: dict) -> str:
-    return f"defense/cards/{front['id']}-field.svg"
+    return versioned(f"defense/cards/{front['id']}-field.svg")
 
 
 def card_src(form: dict, play: dict, front: str = blocking.DEFAULT_FRONT,
              full: bool = False) -> str:
     suffix = "" if full else "-field"
-    return f"playbook/{form['id']}/cards/{play['id']}-{front}{suffix}.svg"
+    return versioned(f"playbook/{form['id']}/cards/{play['id']}-{front}{suffix}.svg")
 
 
 def resolved(play: dict, front: str) -> dict:
@@ -2395,7 +2415,7 @@ def our_fronts(defenses: dict) -> dict:
 
 
 def formation_icon_src(form: dict) -> str:
-    return f"playbook/{form['id']}/cards/{form['id']}-icon.svg"
+    return versioned(f"playbook/{form['id']}/cards/{form['id']}-icon.svg")
 
 
 def defense_menu(defenses: dict, active_def: str) -> str:
@@ -3127,7 +3147,9 @@ def write_play_page(
         active_form=form["id"],
         active_play=play["id"],
         description=play.get("purpose", "")[:160],
-        landscape=True,
+        # The graphic alone on a letter sheet, turned to fit a diagram that is wider
+        # than it is deep, with the margins as thin as a home printer allows.
+        page_rule="size: letter landscape; margin: 0.25in;",
         main_attrs=attrs,
     )
 
