@@ -25,7 +25,7 @@ Both ends are tight on the line. The two backs sit four yards deep and just over
 | Play | Call | Type | Ball |
 |---|---|---|---|
 | [Split formation - Strong right - Quick pitch right](#split-formation---strong-right---quick-pitch-right) | `Split SL Right 28 Pitch` | run | LH |
-| [Split formation - Strong right - Quick pitch left](#split-formation---strong-right---quick-pitch-left) | `Split SL Right 39 Pitch` | run | RH |
+| [Split formation - Strong left - Quick pitch left](#split-formation---strong-left---quick-pitch-left) | `Split SL Left 39 Pitch` | run | RH |
 
 ---
 
@@ -59,13 +59,13 @@ Get outside in a hurry. The far back trails the quarterback, takes the pitch on 
 
 ---
 
-## Split formation - Strong right - Quick pitch left
+## Split formation - Strong left - Quick pitch left
 
-**Call it:** `Split SL Right 39 Pitch`
+**Call it:** `Split SL Left 39 Pitch`
 
-![Split formation - Strong right - Quick pitch left](cards/sb-pitch-l-5-3.svg)
+![Split formation - Strong left - Quick pitch left](cards/sb-pitch-l-5-3.svg)
 
-Get outside in a hurry. The far back trails the quarterback, takes the pitch on the run and turns up inside the block out in front of him. Away from the split man there is nobody out there to make that block, so the near back leaves early and takes the first man outside our end himself — which is why this side has no dive fake. That man is their corner only against the 5-3. Against a four-linebacker front he is the outside linebacker, and against the 4-4 that leaves their corner standing right where the ball turns up with nobody on him.
+Get outside in a hurry. The far back trails the quarterback, takes the pitch on the run and turns up inside the block out on the edge. The split man makes that block — their corner, or their outside linebacker against the 5-4-2, which has no corners — and that is what frees both backs to stay in the backfield where the fake lives.
 
 | Position | Assignment |
 |---|---|
@@ -76,14 +76,14 @@ Get outside in a hurry. The far back trails the quarterback, takes the pitch on 
 | **RG** | Nobody on you. Cut off the backside. Never quit on the play. |
 | **RT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
 | **RTE** | End head up on you. Cut him off — get between him and the ball. |
-| **SL** | Cut off the backside. Never quit on the play. |
-| **QB** | Open left, attack the edge, and pitch to the trailing back before you get touched. No dive fake here. |
-| **LH** | Lead outside our end. Block the first man out there — here it is the corner. |
+| **SL** | Run at the corner and screen him off. Stay in his way. |
+| **QB** | Quick pitch to the right halfback, then run the other way, to the right, like you still have it. |
+| **LH** | Lead outside our end. Block the first man out there — here it is the corner. Step at the dive first to hold their linebackers. |
 | **RH** **(ball)** | Run flat, outside and behind the quarterback, and catch the pitch on the run. Ahead of him is a fumble. |
 
 **Coaching points**
 
 - The pitch goes early. A quarterback who waits to be tackled first will pitch it on the ground.
 - This is not a read at this age — tell him before the snap that he is pitching it.
-- Everything depends on the edge being blocked and there is no receiver on this side to help, so the near back leaves early and there is no fake to hold anybody. Against the 4-4 their corner is unblocked at the spot the ball turns up — if he is quick, call it to the other side instead.
+- Everything depends on the edge being blocked, and out here the split man does it — which is what frees both backs to fake and lead. Drill him on beating that man to the spot without holding.
 

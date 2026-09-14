@@ -102,7 +102,7 @@ both I looks.
 
 | Call | Play | Reads as |
 |---|---|---|
-| `Split SL Right 39 Pitch` / `28 Pitch` | Split formation - Strong right - Quick pitch left / right | the far back, all the way outside |
+| `Split SL Left 39 Pitch` / `Split SL Right 28 Pitch` | Split formation - Strong left - Quick pitch left / Strong right - Quick pitch right | the far back, all the way outside |
 
 **The Keep and the Reverse are the plays that move the SL.** The Keep runs to whichever
 side he is on, so `Split SL Left 17 Keep` really does line him up on the left. The Reverse
@@ -146,10 +146,9 @@ the jet and the power; the Split Backs carries only the Quick pitch.
 
 **Neither formation is symmetric, so every left-handed play is written by hand.** The SL
 sits split to the right on every snap, so flipping a play would flip his path while
-leaving him aligned on the same side. In the Split Backs that is not busywork: the two
-directions are genuinely different plays, because only the right one has a receiver out
-there to crack the linebacker or block the corner. The two calls that do move him —
-`SL Left 35 Power` and `SL Left 48 Jet` — say so in the call.
+leaving him aligned on the same side. The calls that do move him — `SL Left 35 Power`,
+`SL Left 48 Jet`, and the Split Backs' `SL Left 39 Pitch`, which mirrors the right-hand
+pitch so there is a receiver out there to block the corner both ways — say so in the call.
 
 ## Defense
 

@@ -40,8 +40,8 @@ CASES = [
     ("split pitch, called off tackle", "split-backs", "sb-pitch-r", "Split SL Right 24 Pitch", True),
     ("split pitch, credited to the SL", "split-backs", "sb-pitch-r", "Split SL Right 48 Pitch", True),
     ("split pitch right, numbered left", "split-backs", "sb-pitch-r", "Split SL Right 29 Pitch", True),
-    ("split pitch left",              "split-backs", "sb-pitch-l", "Split SL Right 39 Pitch",  False),
-    ("split pitch left, wrong back",  "split-backs", "sb-pitch-l", "Split SL Right 29 Pitch",  True),
+    ("split pitch left",              "split-backs", "sb-pitch-l", "Split SL Left 39 Pitch",   False),
+    ("split pitch left, wrong back",  "split-backs", "sb-pitch-l", "Split SL Left 29 Pitch",   True),
 ]
 
 
