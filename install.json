@@ -27,7 +27,7 @@
         "i-form"
       ],
       "emphasis": "Install the formation itself — alignment only, no plays. Every kid knows his spot, and we count seven on the line every single snap until it is boring.",
-      "finisher": "Gold vs. Purple sprint relay race.",
+      "finisher": "First unit vs. second unit sprint relay race.",
       "finisher_time": "6:45–6:55",
       "huddle": "Review the practice.",
       "huddle_time": "6:55–7:00"
@@ -48,7 +48,7 @@
         "i-form"
       ],
       "emphasis": "The same formation install. Reps on alignment and the seven-on-the-line count until they can do it without thinking — then we are ready to hand somebody the ball.",
-      "finisher": "Gold vs. Purple sprint relay race.",
+      "finisher": "First unit vs. second unit sprint relay race.",
       "finisher_time": "6:45–6:55",
       "huddle": "Review the practice.",
       "huddle_time": "6:55–7:00"
@@ -72,7 +72,7 @@
         "i-wedge-l"
       ],
       "emphasis": "Two runs, two different jobs. Dive hits fast off the double team before the linebackers can read it — snap to handoff under a second. Wedge is short yardage: nobody blocks a man, the whole line squeezes to the center's back and pushes. Same formation, same snap count — first time somebody besides the coach is naming who gets the ball.",
-      "finisher": "Gold vs. Purple sprint relay race.",
+      "finisher": "First unit vs. second unit sprint relay race.",
       "finisher_time": "6:45–6:55",
       "huddle": "Review the practice.",
       "huddle_time": "6:55–7:00"
@@ -177,7 +177,7 @@
           "title": "Offensive install",
           "time": "6:00–6:30",
           "notes": [
-            "Rotating through the Purple, Gold, White and Jumbo lineups",
+            "Rotating through the first, second, third and fourth units",
             "No defense",
             "In and out of the huddle"
           ]
@@ -234,9 +234,16 @@
             {
               "name": "QB / FB / TB / Z",
               "drills": [
-                "Handoff timing at the guard-tackle gap",
-                "Fullback lead through the hole",
-                "Ball security in traffic"
+                "One group, handoff walkthrough — the quarterback gives the ball every rep",
+                "Rotate the quarterbacks, fullbacks, tailbacks and the Z after every handoff",
+                {
+                  "drill": "Start with handoffs up the middle",
+                  "then": [
+                    "Move to slant handoffs",
+                    "Move to pitches",
+                    "Move to Z sweeps"
+                  ]
+                }
               ]
             }
           ]
@@ -270,7 +277,7 @@
           "title": "Offensive install",
           "time": "5:58–6:28",
           "notes": [
-            "Rotating through Purple, Gold, White and Jumbo",
+            "Rotating through the first, second, third and fourth units",
             "No defense for the first ten minutes, then air-to-bags",
             "In and out of the huddle every rep"
           ]
@@ -363,7 +370,7 @@
           "notes": [
             "Power first, three reps, so the fake has something to copy",
             "Then Counter to the same side off the identical first step",
-            "Rotating through Purple, Gold and White"
+            "Rotating through the first, second and third units"
           ]
         },
         {

@@ -1067,6 +1067,11 @@ table.cal tbody tr:last-child .cal-cell { border-bottom: 0; }
 }
 .ins-drills { margin: 0; padding-left: 18px; font-size: 13.5px; color: var(--ink-2); line-height: 1.6; }
 .ins-drills li { margin-bottom: 2px; }
+/* A progression inside a drill. Tighter and quieter than its parent, because it is
+   part of that drill rather than three more things to get through. */
+.ins-drills .ins-drills {
+  margin: 2px 0 4px; padding-left: 16px; font-size: 12.5px; color: var(--muted);
+}
 .ins-blk .ins-em:first-of-type { margin-top: 0; }
 /* Two position groups running side by side in one block — offense splitting off
    from defense, or linemen from backs — need their own small heading or the drill
@@ -1369,6 +1374,7 @@ footer.site a { color: var(--accent-ink); }
   .ins-em { font-size: 9.5pt; line-height: 1.4; }
   .ins-drills { font-size: 9.5pt; line-height: 1.45; padding-left: 15px; }
   .ins-drills li { margin-bottom: 0; }
+  .ins-drills .ins-drills { font-size: 8.5pt; padding-left: 13px; margin: 0 0 1px; }
   .ins-req { font-size: 8.5pt; margin-top: 4px; }
 
   /* Position groups run side by side. They are two independent lists that happen on
@@ -3234,6 +3240,30 @@ def requires_html(pr: dict, plays: dict, defenses: dict) -> str:
     return f'<p class="ins-req">Needs {names} working first</p>'
 
 
+def drills_html(drills: list) -> str:
+    """A drill list, where a drill may carry a progression under it.
+
+    A drill is a string, or an object with a `then` — the steps you work through
+    inside that drill, in order:
+
+        {"drill": "Start with up-the-middle handoffs",
+         "then": ["Move to slant handoffs", "Move to pitches"]}
+
+    The nesting is the content, not decoration: "start here, then move to this" is one
+    drill that grows, and flattening it into four bullets of equal weight loses the
+    order and reads as four separate things to get through.
+    """
+    if not drills:
+        return ""
+    out = []
+    for d in drills:
+        if isinstance(d, dict):
+            out.append(f'<li>{esc(d.get("drill", ""))}{drills_html(d.get("then"))}</li>')
+        else:
+            out.append(f"<li>{esc(d)}</li>")
+    return f'<ul class="ins-drills">{"".join(out)}</ul>'
+
+
 def practice_blocks_html(pr: dict, items: list[str], needs: str) -> str:
     """The run of practice, block by block, in the order it happens."""
     if not items:
@@ -3250,15 +3280,11 @@ def practice_blocks_html(pr: dict, items: list[str], needs: str) -> str:
         if kind == "note":
             body = f'<p class="ins-em">{esc(blk.get("note", ""))}</p>'
         elif kind == "drills":
-            body = ('<ul class="ins-drills">'
-                    + "".join(f"<li>{esc(d)}</li>" for d in blk.get("drills", []))
-                    + "</ul>")
+            body = drills_html(blk.get("drills", []))
         elif kind == "groups":
             body = "".join(
                 f'<div class="ins-grp"><p class="ins-grp-h">{esc(g.get("name", ""))}</p>'
-                f'<ul class="ins-drills">'
-                f'{"".join(f"<li>{esc(d)}</li>" for d in g.get("drills", []))}'
-                f'</ul></div>'
+                f'{drills_html(g.get("drills", []))}</div>'
                 for g in blk.get("groups", [])
             )
         elif kind == "install":
