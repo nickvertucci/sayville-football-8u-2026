@@ -127,7 +127,7 @@ The left tight end comes all the way across at the snap on an end-around, takes 
 
 - No motion before the snap. The end stays down in his stance, so the play is legal and nothing tips it off.
 - The handoff is the whole play: the quarterback opens right and puts the ball in the end's belly at full speed, then carries out his fake.
-- Both backs bubble out to the right ahead of the end — the fullback takes the outside linebacker, the tailback the corner or the free safety, whoever comes first.
+- Both backs bubble out to the right ahead of the end — the fullback takes the outside linebacker, and the tailback goes out with him and up to the free safety.
 
 ---
 
@@ -157,5 +157,5 @@ The right tight end comes all the way across at the snap on an end-around, takes
 
 - No motion before the snap. The end stays down in his stance, so the play is legal and nothing tips it off.
 - The handoff is the whole play: the quarterback opens left and puts the ball in the end's belly at full speed, then carries out his fake.
-- Both backs bubble out to the left ahead of the end — the fullback takes the outside linebacker, the tailback the corner or the free safety, whoever comes first.
+- Both backs bubble out to the left ahead of the end — the fullback takes the outside linebacker, and the tailback goes out with him and up to the free safety.
 
