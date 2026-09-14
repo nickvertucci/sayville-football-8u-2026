@@ -1335,7 +1335,9 @@ footer.site a { color: var(--accent-ink); }
      the field at the same time, so stacking them was only ever a phone compromise. */
   .ins-grp { margin: 0; break-inside: avoid; page-break-inside: avoid; }
   .ins-grp-h { font-size: 9.5pt; margin: 0 0 2px; }
-  .ins-blk:has(.ins-grp + .ins-grp) > .ins-grp { display: inline-block; width: 49%; vertical-align: top; }
+  .ins-grps {
+    display: grid; grid-auto-flow: column; grid-auto-columns: 1fr; gap: 10px;
+  }
 
   .ins-list { gap: 4px; margin-bottom: 5px; }
   .ins-play { padding: 1px 6px; background: none; }

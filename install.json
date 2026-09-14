@@ -263,10 +263,20 @@
               ]
             },
             {
-              "name": "LB / CB / S",
+              "name": "Linebackers",
               "drills": [
                 "Read the back nearest you",
                 "Fill the first open gap",
+                "Meet the blocker in the hole, not behind it",
+                "Tackle drill"
+              ]
+            },
+            {
+              "name": "Corners and safeties",
+              "drills": [
+                "Force everything back inside — nothing outside you",
+                "Nobody gets behind you",
+                "Cut-off angle, not the chase",
                 "Tackle drill"
               ]
             }

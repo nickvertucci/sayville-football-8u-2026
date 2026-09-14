@@ -1381,7 +1381,9 @@ footer.site a { color: var(--accent-ink); }
      the field at the same time, so stacking them was only ever a phone compromise. */
   .ins-grp { margin: 0; break-inside: avoid; page-break-inside: avoid; }
   .ins-grp-h { font-size: 9.5pt; margin: 0 0 2px; }
-  .ins-blk:has(.ins-grp + .ins-grp) > .ins-grp { display: inline-block; width: 49%; vertical-align: top; }
+  .ins-grps {
+    display: grid; grid-auto-flow: column; grid-auto-columns: 1fr; gap: 10px;
+  }
 
   .ins-list { gap: 4px; margin-bottom: 5px; }
   .ins-play { padding: 1px 6px; background: none; }
@@ -3282,11 +3284,11 @@ def practice_blocks_html(pr: dict, items: list[str], needs: str) -> str:
         elif kind == "drills":
             body = drills_html(blk.get("drills", []))
         elif kind == "groups":
-            body = "".join(
+            body = ('<div class="ins-grps">' + "".join(
                 f'<div class="ins-grp"><p class="ins-grp-h">{esc(g.get("name", ""))}</p>'
                 f'{drills_html(g.get("drills", []))}</div>'
                 for g in blk.get("groups", [])
-            )
+            ) + '</div>')
         elif kind == "install":
             emphasis = pr.get("emphasis", "")
             emphasis_html = f'<p class="ins-em">{esc(emphasis)}</p>' if emphasis else ""
