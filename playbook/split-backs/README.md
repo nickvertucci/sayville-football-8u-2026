@@ -41,8 +41,8 @@ Both ends are tight on the line. The two backs sit four yards deep and just over
 | [Split Counter Left](#split-counter-left) | `Split SL Right 35 Counter` | run | RH |
 | [Split Waggle Right](#split-waggle-right) | `Split SL Right 16 Waggle` | pass | RTE |
 | [Split Waggle Left](#split-waggle-left) | `Split SL Right 17 Waggle` | pass | LTE |
-| [Split Pitch Right](#split-pitch-right) | `Split SL Right 28 Pitch` | run | LH |
-| [Split Pitch Left](#split-pitch-left) | `Split SL Right 39 Pitch` | run | RH |
+| [Split formation - Strong right - Quick pitch right](#split-formation---strong-right---quick-pitch-right) | `Split SL Right 28 Pitch` | run | LH |
+| [Split formation - Strong right - Quick pitch left](#split-formation---strong-right---quick-pitch-left) | `Split SL Right 39 Pitch` | run | RH |
 | [Split QB Keep Right](#split-qb-keep-right) | `Split SL Right 16 Keep` | run | QB |
 | [Split QB Keep Left](#split-qb-keep-left) | `Split SL Left 17 Keep` | run | QB |
 | [Split SL Left SL Reverse Right](#split-sl-left-sl-reverse-right) | `Split SL Left 46 SL Reverse Right` | run | SL |
@@ -308,11 +308,11 @@ Waggle Right to the other edge, and the harder of the two. The quarterback's fir
 
 ---
 
-## Split Pitch Right
+## Split formation - Strong right - Quick pitch right
 
 **Call it:** `Split SL Right 28 Pitch`
 
-![Split Pitch Right](cards/sb-pitch-r-5-3.svg)
+![Split formation - Strong right - Quick pitch right](cards/sb-pitch-r-5-3.svg)
 
 Get outside in a hurry. The far back trails the quarterback, takes the pitch on the run and turns up inside the block out on the edge. The split man makes that block — their corner, or their outside linebacker against the 5-4-2, which has no corners — and that is what frees both backs to stay in the backfield where the fake lives.
 
@@ -338,11 +338,11 @@ Get outside in a hurry. The far back trails the quarterback, takes the pitch on 
 
 ---
 
-## Split Pitch Left
+## Split formation - Strong right - Quick pitch left
 
 **Call it:** `Split SL Right 39 Pitch`
 
-![Split Pitch Left](cards/sb-pitch-l-5-3.svg)
+![Split formation - Strong right - Quick pitch left](cards/sb-pitch-l-5-3.svg)
 
 Get outside in a hurry. The far back trails the quarterback, takes the pitch on the run and turns up inside the block out in front of him. Away from the split man there is nobody out there to make that block, so the near back leaves early and takes the first man outside our end himself — which is why this side has no dive fake. That man is their corner only against the 5-3. Against a four-linebacker front he is the outside linebacker, and against the 4-4 that leaves their corner standing right where the ball turns up with nobody on him.
 

@@ -2,7 +2,7 @@
   "id": "sb-pitch-l",
   "order": 10,
   "formation": "split-backs",
-  "name": "Split Pitch Left",
+  "name": "Split formation - Strong right - Quick pitch left",
   "call": "Split SL Right 39 Pitch",
   "type": "run",
   "direction": "left",
