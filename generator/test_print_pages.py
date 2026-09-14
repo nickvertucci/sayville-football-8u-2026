@@ -223,6 +223,17 @@ def main(argv=None) -> int:
                 "defense must be one sheet each"
             )
 
+        # The call sheet is one landscape sheet with every package on it. It grows a
+        # sheet with every package added to roster.json, which is how it went to two
+        # pages the day the depth chart went from three packages to five.
+        calls = render(chrome, ROOT / "calls.html", tmp / "calls.pdf", profile)
+        print(f"calls.html: {calls} pages (expected 1)")
+        if calls != 1:
+            failures.append(
+                f"calls.html renders {calls} pages, expected 1 — every package must fit "
+                "on one landscape sheet"
+            )
+
         if not args.quick:
             for page in plays + fronts + practices:
                 n = render(chrome, page, tmp / f"{page.stem}.pdf", profile)
