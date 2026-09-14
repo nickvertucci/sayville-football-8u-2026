@@ -3625,10 +3625,12 @@ DEFENSE_POSITION_NAMES = {
 # per-side column list and nothing has to ask which side it is building.
 ROTATIONS = [str(n) for n in range(1, 7)]
 
-# Packages: five pairs per side, above the squad. A pair rather than a list because
-# that is the thing being named — two kids who go on and come off together.
+# Packages: five per side, above the squad, three deep. A fixed group rather than a
+# list because the group is the thing being named — the kids who go on and come off
+# together. The size is here and nowhere else: the markup, the roster round-trip and
+# the print sheet all take their shape from it.
 PACKAGE_COUNT = 5
-PACKAGE_SIZE = 2
+PACKAGE_SIZE = 3
 
 
 def rotations_for(side: str) -> list[tuple[str, str, str]]:
