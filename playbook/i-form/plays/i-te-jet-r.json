@@ -1,0 +1,108 @@
+{
+  "id": "i-te-jet-r",
+  "order": 11,
+  "formation": "i-form",
+  "name": "I Formation - Strong Right - LTE jet right",
+  "call": "Regular I SL Right LTE Jet",
+  "word_call": true,
+  "type": "run",
+  "direction": "right",
+  "ball_carrier": "LTE",
+  "purpose": "The left tight end comes all the way across at the snap on an end-around, takes the handoff at full speed and gets to the right edge before the defense can turn, while the tailback's fake the other way holds the linebackers.",
+  "assignments": {
+    "LTE": {
+      "rule": "Stay down in your stance — no motion. At the snap run flat behind the quarterback, take the handoff at full speed and get to the right edge. Turn up outside the fullback.",
+      "type": "run",
+      "path": [
+        [
+          2.2,
+          -1.9
+        ],
+        [
+          5.2,
+          -2.1
+        ],
+        [
+          10.7,
+          -1.5
+        ],
+        [
+          12.8,
+          0.7
+        ],
+        [
+          13.2,
+          4.1
+        ],
+        [
+          13.4,
+          7.5
+        ]
+      ]
+    },
+    "LT": {
+      "block": "cutoff"
+    },
+    "LG": {
+      "block": "cutoff"
+    },
+    "C": {
+      "block": "reach"
+    },
+    "RG": {
+      "block": "climb",
+      "target": "playside"
+    },
+    "RT": {
+      "block": "down"
+    },
+    "RTE": {
+      "block": "base",
+      "drive": "in"
+    },
+    "SL": {
+      "block": "screen"
+    },
+    "QB": {
+      "rule": "Open right and hand the ball to the left tight end as he comes across behind you, then fake a run to the left.",
+      "type": "fake",
+      "path": [
+        [
+          0.9,
+          -0.8
+        ],
+        [
+          -0.8,
+          -1.0
+        ],
+        [
+          -3.6,
+          -0.8
+        ]
+      ]
+    },
+    "FB": {
+      "block": "lead",
+      "target": "force"
+    },
+    "TB": {
+      "rule": "Take a fake handoff and run hard at the left side, off tackle, to pull the linebackers with you.",
+      "type": "fake",
+      "path": [
+        [
+          -1.4,
+          1.8
+        ],
+        [
+          -3.0,
+          4.4
+        ]
+      ]
+    }
+  },
+  "coaching_points": [
+    "No motion before the snap. The end stays down in his stance, so the play is legal and nothing tips it off.",
+    "The handoff is the whole play: the quarterback opens right and puts the ball in the end's belly at full speed, then carries out his fake.",
+    "The tailback's fake to the left has to be hard. It is what keeps the backside linebackers from chasing the end down."
+  ]
+}
