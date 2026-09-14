@@ -1098,17 +1098,6 @@ table.cal tbody tr:last-child .cal-cell { border-bottom: 0; }
 .ins-day h1.page { margin: 2px 0 6px; }
 .ins-day-when { margin: 0; font-size: 14.5px; font-weight: 600; color: var(--accent-ink); }
 .ins-day-when.undated { color: var(--muted); font-weight: 500; font-style: italic; }
-.ins-day .rb-facts { margin: 14px 0 0; }
-.ins-day-new {
-  margin: 16px 0 0; padding: 11px 14px; border-radius: 10px; font-size: 14px;
-  line-height: 1.55; color: var(--ink-2);
-  background: var(--panel); border: 1px solid var(--line);
-  border-left: 4px solid var(--accent-solid); box-shadow: var(--shadow);
-}
-.ins-day-new.review { border-left-color: var(--line); }
-.ins-day-new b { color: var(--ink); }
-.ins-day-new a { color: var(--accent-ink); font-weight: 600; }
-.ins-day-phase { margin: 10px 0 0; font-size: 13px; color: var(--muted); max-width: 74ch; }
 .ins-day-h {
   display: flex; align-items: center; gap: 12px; margin: 24px 0 10px;
   padding-bottom: 8px; border-bottom: 2px solid var(--accent-solid);
@@ -1437,24 +1426,14 @@ footer.site a { color: var(--accent-ink); }
      coach standing on a field is holding one piece of paper, and anything that spills
      onto a second sheet is something he is not going to see. Practices 1-4 fitted by
      luck — they are the short ones. The three that carry position groups, an install
-     block and a scrimmage did not, and nothing was checking.
-
-     What the sheet drops is the planning context. The phase note explains WHY a play
-     is going in this week, which is a thing to read while writing the schedule, not
-     while running it. The facts strip is worse than redundant: "Blocks 5" sits above
-     a list of five numbered blocks, and "New today 4 things" above the four plays it
-     is counting. Both stay on the website, which is where you plan. */
-  .ins-day-phase, .ins-day .rb-facts, .ins-todo { display: none !important; }
+     block and a scrimmage did not, and nothing was checking. */
+  .ins-todo { display: none !important; }
 
   .ins-day, .ins-day-plan { padding-right: 10px; }
   .ins-day { margin-bottom: 10px; }
   .ins-day h1.page { font-size: 16pt; margin: 0 0 2px; }
   .rb-eyebrow { font-size: 8.5pt; margin: 0 0 1px; }
   .ins-day-when { font-size: 9.5pt; }
-  .ins-day-new {
-    margin: 6px 0 0; padding: 5px 8px; font-size: 9.5pt; line-height: 1.4;
-    background: none; border: 1px solid var(--line); border-radius: 0;
-  }
   .ins-day-h { margin: 10px 0 6px; padding-bottom: 3px; border-bottom-width: 1.5px; }
   .ins-day-h h2 { font-size: 12pt; }
 
@@ -3691,7 +3670,6 @@ def write_install_day(
     needs = requires_html(pr, plays, defenses)
     day = practice_date(pr)
     when = date_label(day, long=True) if day else str(pr.get("date", ""))
-    window = practice_window(pr)
     phase = phases.get(pr.get("phase"), {})
 
     crumbs = ('<nav class="crumbs"><a href="index.html">Home</a><span>/</span>'
@@ -3708,70 +3686,28 @@ def write_install_day(
     )
     bar = f'<div class="playbar nums">\n    {others}\n  </div>' if others else ""
 
-    facts = []
-    if window:
-        facts.append(f"<div><dt>On the field</dt><dd>{esc(window)}</dd></div>")
-    n_new = install_count(pr)
-    facts.append('<div><dt>New today</dt><dd>{}</dd></div>'.format(
-        f"{n_new} {'thing' if n_new == 1 else 'things'}" if n_new else "Review day"))
-    blocks_n = len(practice_agenda(pr))
-    facts.append(f"<div><dt>Blocks</dt><dd>{blocks_n}</dd></div>")
-    facts_html = f'<dl class="rb-facts">{"".join(facts)}</dl>'
-
-    # The one-line answer to "what are we putting in tonight?", above the agenda so it
-    # is readable at arm's length. The chips themselves live down in the install block,
-    # where the time they happen at is.
-    if items:
-        names = []
-        for pid in pr.get("plays", []):
-            names.append(f'<a href="{p_href(plays[pid][0])}">{esc(plays[pid][0]["name"])}</a>')
-        for fid in pr.get("fronts", []):
-            names.append(f'<a href="{d_href(defenses[fid])}">{esc(defenses[fid]["name"])} defence</a>')
-        for fmid in pr.get("formations", []):
-            names.append(f'<a href="{f_href(forms_by_id[fmid])}">'
-                         f'{esc(form_label(forms_by_id[fmid]))} formation</a>')
-        summary = (f'<p class="ins-day-new"><b>Installing today.</b> '
-                   f'{", ".join(names)}</p>')
-    else:
-        summary = ('<p class="ins-day-new review"><b>No new install.</b> '
-                   'Everything already in goes live &mdash; this is a rep day.</p>')
-
-    phase_note = (f'<p class="ins-day-phase">{esc(phase.get("note", ""))}</p>'
-                  if phase.get("note") else "")
     # A practice whose date is not settled yet says so rather than leaving a gap where
     # the date goes — the schedule is built out one practice at a time.
     when_html = (f'<p class="ins-day-when">{esc(when)}</p>' if when else
                  '<p class="ins-day-when undated">Date not set yet</p>')
 
-    pager = ['<div class="pager">']
-    pager.append(
-        f'<a href="{install_href(prev)}"><span class="dir">&larr; Previous</span>'
-        f'Practice {prev["n"]}</a>' if prev else "<span></span>")
-    pager.append('<a class="mid" href="install.html">'
-                 '<span class="dir">Schedule</span>All practices</a>')
-    pager.append(
-        f'<a class="nxt" href="{install_href(nxt)}">'
-        f'<span class="dir">Next &rarr;</span>Practice {nxt["n"]}</a>'
-        if nxt else "<span></span>")
-    pager.append("</div>")
-
+    # The page is the practice: what it is, when, and the run of it. The facts strip,
+    # the "Installing today" line, the phase note and the previous/next buttons each
+    # repeated something the plan or the practice bar above already says, so they are
+    # gone and the plan starts right under the date.
     body = f"""{crumbs}
 {bar}
 <div class="ins-day">
   <p class="rb-eyebrow">Practice {pr["n"]}{" &middot; " + esc(phase.get("label", "")) if phase.get("label") else ""}</p>
   <h1 class="page">{esc(pr.get("focus", ""))}</h1>
   {when_html}
-  {facts_html}
-  {summary}
-  {phase_note}
   <div class="ins-day-h"><h2>The run of practice</h2>
     <div class="play-actions">
       <button type="button" class="btn solid" onclick="window.print()">Print</button>
     </div>
   </div>
   <div class="ins-day-plan">{practice_blocks_html(pr, items, needs)}</div>
-</div>
-{chr(10).join(pager)}"""
+</div>"""
 
     attrs = ""
     if prev:

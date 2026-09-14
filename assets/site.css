@@ -1052,17 +1052,6 @@ table.cal tbody tr:last-child .cal-cell { border-bottom: 0; }
 .ins-day h1.page { margin: 2px 0 6px; }
 .ins-day-when { margin: 0; font-size: 14.5px; font-weight: 600; color: var(--accent-ink); }
 .ins-day-when.undated { color: var(--muted); font-weight: 500; font-style: italic; }
-.ins-day .rb-facts { margin: 14px 0 0; }
-.ins-day-new {
-  margin: 16px 0 0; padding: 11px 14px; border-radius: 10px; font-size: 14px;
-  line-height: 1.55; color: var(--ink-2);
-  background: var(--panel); border: 1px solid var(--line);
-  border-left: 4px solid var(--accent-solid); box-shadow: var(--shadow);
-}
-.ins-day-new.review { border-left-color: var(--line); }
-.ins-day-new b { color: var(--ink); }
-.ins-day-new a { color: var(--accent-ink); font-weight: 600; }
-.ins-day-phase { margin: 10px 0 0; font-size: 13px; color: var(--muted); max-width: 74ch; }
 .ins-day-h {
   display: flex; align-items: center; gap: 12px; margin: 24px 0 10px;
   padding-bottom: 8px; border-bottom: 2px solid var(--accent-solid);
@@ -1391,24 +1380,14 @@ footer.site a { color: var(--accent-ink); }
      coach standing on a field is holding one piece of paper, and anything that spills
      onto a second sheet is something he is not going to see. Practices 1-4 fitted by
      luck — they are the short ones. The three that carry position groups, an install
-     block and a scrimmage did not, and nothing was checking.
-
-     What the sheet drops is the planning context. The phase note explains WHY a play
-     is going in this week, which is a thing to read while writing the schedule, not
-     while running it. The facts strip is worse than redundant: "Blocks 5" sits above
-     a list of five numbered blocks, and "New today 4 things" above the four plays it
-     is counting. Both stay on the website, which is where you plan. */
-  .ins-day-phase, .ins-day .rb-facts, .ins-todo { display: none !important; }
+     block and a scrimmage did not, and nothing was checking. */
+  .ins-todo { display: none !important; }
 
   .ins-day, .ins-day-plan { padding-right: 10px; }
   .ins-day { margin-bottom: 10px; }
   .ins-day h1.page { font-size: 16pt; margin: 0 0 2px; }
   .rb-eyebrow { font-size: 8.5pt; margin: 0 0 1px; }
   .ins-day-when { font-size: 9.5pt; }
-  .ins-day-new {
-    margin: 6px 0 0; padding: 5px 8px; font-size: 9.5pt; line-height: 1.4;
-    background: none; border: 1px solid var(--line); border-radius: 0;
-  }
   .ins-day-h { margin: 10px 0 6px; padding-bottom: 3px; border-bottom-width: 1.5px; }
   .ins-day-h h2 { font-size: 12pt; }
 
