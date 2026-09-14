@@ -384,6 +384,14 @@ def validate_call(play: dict, form: dict, defenses: dict) -> list[str]:
                 "the numbering in those calls cannot be checked"]
 
     m = CALL_DIGITS.search(call)
+    # A word call: the ball goes to somebody the numbering has no digit for (a tight end
+    # on an end-around), so the call names him instead of a hole. The play has to opt in,
+    # so a forgotten number on any other play still fails, and it has to say its
+    # direction, because with no hole digit that is where its playside comes from.
+    if not m and play.get("word_call"):
+        if play.get("direction") not in ("left", "right"):
+            return [f"{pid}: word call '{call}' needs a direction, left or right"]
+        return []
     if not m:
         return [f"{pid}: call '{call}' has no two-digit back-and-hole number"]
     back_digit, hole_digit = m.group(1), m.group(2)

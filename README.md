@@ -62,6 +62,11 @@ The digits describe the back the first digit names, not necessarily the ball car
 | Call | Play | Where it hits |
 |---|---|---|
 | `Regular I SL Right 34 Power` / `SL Left 35 Power` | I Formation - Strong Right - Off tackle right / Strong Left - Off tackle left | tailback, tackle–end |
+| `Regular I SL Right LTE Jet` / `SL Left RTE Jet` | I Formation - Strong Right - LTE jet right / Strong Left - RTE jet left | the backside tight end on an end-around, all the way outside |
+
+The tight-end jet is a **word call** — no digits, because the tight end is not a numbered
+back. It names him instead. A play has to opt in with `word_call`, so any other play
+missing its number still fails the build.
 
 Every play has a left and a right.
 

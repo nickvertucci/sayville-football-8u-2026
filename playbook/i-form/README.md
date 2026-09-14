@@ -34,6 +34,8 @@ Normal line splits, about a foot. Both ends are on the line; the SL is off it, a
 |---|---|---|---|
 | [I Formation - Strong Right - Off tackle right](#i-formation---strong-right---off-tackle-right) | `Regular I SL Right 34 Power` | run | TB |
 | [I Formation - Strong Left - Off tackle left](#i-formation---strong-left---off-tackle-left) | `Regular I SL Left 35 Power` | run | TB |
+| [I Formation - Strong Right - LTE jet right](#i-formation---strong-right---lte-jet-right) | `Regular I SL Right LTE Jet` | run | LTE |
+| [I Formation - Strong Left - RTE jet left](#i-formation---strong-left---rte-jet-left) | `Regular I SL Left RTE Jet` | run | RTE |
 
 ---
 
@@ -96,4 +98,64 @@ Our best downhill run. Everybody blocks down inside, the SL kicks the end out, a
 - Drill the SL's kick-out on its own. If he blocks the end with his shoulders square, the end slides underneath and makes the tackle for a loss — he has to attack the outside hip.
 - The fullback's man is whoever shows in the hole, not a man he picks before the snap. Tell him that every time.
 - The tailback's most common mistake is bouncing it wide looking for green grass. The yards are inside the SL's block. Make him run it tight in practice until it is automatic.
+
+---
+
+## I Formation - Strong Right - LTE jet right
+
+**Call it:** `Regular I SL Right LTE Jet`
+
+![I Formation - Strong Right - LTE jet right](cards/i-te-jet-r-5-3.svg)
+
+The left tight end comes all the way across at the snap on an end-around, takes the handoff at full speed and gets to the right edge before the defense can turn, while the tailback's fake the other way holds the linebackers.
+
+| Position | Assignment |
+|---|---|
+| **LTE** **(ball)** | Stay down in your stance — no motion. At the snap run flat behind the quarterback, take the handoff at full speed and get to the right edge. Turn up outside the fullback. |
+| **LT** | Tackle on your inside shoulder. Cut him off — get between him and the ball. |
+| **LG** | Nobody on you. Cut off the backside. Never quit on the play. |
+| **C** | Reach the nose to your right. Head across his playside shoulder. |
+| **RG** | Nobody on you. Climb to the playside linebacker. Head across him. |
+| **RT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
+| **RTE** | End head up on you. Turn him inside. The ball goes around behind you. |
+| **SL** | Run at the corner and screen him off. Stay in his way. |
+| **QB** | Open right and hand the ball to the left tight end as he comes across behind you, then fake a run to the left. |
+| **FB** | Lead outside our end, then turn up inside — the playside linebacker is the man who shows. Head across him. |
+| **TB** | Take a fake handoff and run hard at the left side, off tackle, to pull the linebackers with you. |
+
+**Coaching points**
+
+- No motion before the snap. The end stays down in his stance, so the play is legal and nothing tips it off.
+- The handoff is the whole play: the quarterback opens right and puts the ball in the end's belly at full speed, then carries out his fake.
+- The tailback's fake to the left has to be hard. It is what keeps the backside linebackers from chasing the end down.
+
+---
+
+## I Formation - Strong Left - RTE jet left
+
+**Call it:** `Regular I SL Left RTE Jet`
+
+![I Formation - Strong Left - RTE jet left](cards/i-te-jet-l-5-3.svg)
+
+The right tight end comes all the way across at the snap on an end-around, takes the handoff at full speed and gets to the left edge before the defense can turn, while the tailback's fake the other way holds the linebackers.
+
+| Position | Assignment |
+|---|---|
+| **LTE** | End head up on you. Turn him inside. The ball goes around behind you. |
+| **LT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
+| **LG** | Nobody on you. Climb to the playside linebacker. Head across him. |
+| **C** | Reach the nose to your left. Head across his playside shoulder. |
+| **RG** | Nobody on you. Cut off the backside. Never quit on the play. |
+| **RT** | Tackle on your inside shoulder. Cut him off — get between him and the ball. |
+| **RTE** **(ball)** | Stay down in your stance — no motion. At the snap run flat behind the quarterback, take the handoff at full speed and get to the left edge. Turn up outside the fullback. |
+| **SL** | Run at the corner and screen him off. Stay in his way. |
+| **QB** | Open left and hand the ball to the right tight end as he comes across behind you, then fake a run to the right. |
+| **FB** | Lead outside our end, then turn up inside — the playside linebacker is the man who shows. Head across him. |
+| **TB** | Take a fake handoff and run hard at the right side, off tackle, to pull the linebackers with you. |
+
+**Coaching points**
+
+- No motion before the snap. The end stays down in his stance, so the play is legal and nothing tips it off.
+- The handoff is the whole play: the quarterback opens left and puts the ball in the end's belly at full speed, then carries out his fake.
+- The tailback's fake to the right has to be hard. It is what keeps the backside linebackers from chasing the end down.
 

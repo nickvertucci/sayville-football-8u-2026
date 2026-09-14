@@ -160,6 +160,12 @@ ball carrier. On a play-action pass they follow the quarterback's path, while
 Inventing a nickname instead of a call defeats the point of having a language, and now
 also fails `--check`.
 
+**The one exception is a word call**, for a ball carrier the numbering has no digit for —
+a tight end on an end-around. Set `"word_call": true` and name him in the call
+(`Regular I SL Right LTE Jet`); the play must also have `direction`, which is where its
+playside comes from with no hole digit. Only a play that opts in is exempt, and digits
+added to a word call are still checked.
+
 Formations carry an `order` field too, which is teaching order, not the alphabet.
 Both control the sequence on the site and in `PLAYBOOK.md`.
 
