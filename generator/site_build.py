@@ -582,23 +582,6 @@ td.dc-cell.over, .dc-pool.over { background: var(--accent-soft) !important; }
 .rot-h .rot-count { text-transform: none; font-weight: 700; }
 
 
-/* ------------------------------------------------------------------- lineup --
-   The offense seen from behind. Eight columns: seven for the line and an eighth on
-   the right, because the flanker stands out past the end rather than on anybody's
-   shoulder. Cells are placed by column and row rather than flowed, so the grid keeps
-   the shape of the formation and an empty column stays empty. */
-.lineup {
-  display: grid; grid-template-columns: repeat(8, minmax(0, 1fr));
-  gap: 8px; margin: 10px 0 24px; align-items: start;
-}
-.lu {
-  background: var(--panel); border: 1px solid var(--line); border-radius: 10px;
-  padding: 10px 8px; box-shadow: var(--shadow); min-height: 58px;
-  display: flex; flex-direction: column; gap: 2px; text-align: center;
-}
-.lu-pos { font-size: 15px; font-weight: 800; color: var(--accent-ink); }
-.lu-name { font-size: 11px; color: var(--muted); line-height: 1.25; }
-
 .plist { display: grid; gap: 12px; grid-template-columns: 1fr; }
 @media (min-width: 620px) { .plist { grid-template-columns: repeat(2, minmax(0,1fr)); } }
 @media (min-width: 900px) { .plist { grid-template-columns: repeat(3, minmax(0,1fr)); } }
@@ -2893,48 +2876,113 @@ def strip_direction(name: str) -> str:
 
 
 def write_calls(formations: list[dict], defenses: dict, root: Path) -> str:
-    """The call sheet: the offense laid out where it stands, not a list of plays.
+    plays_by_id = {p["id"]: (p, f) for f in formations for p in f["_plays"]}
+    favorites = {}
+    fav_path = root / "favorites.json"
+    if fav_path.is_file():
+        import json as _json
+        favorites = _json.loads(fav_path.read_text(encoding="utf-8"))
 
-    This used to be Favorite Plays over a searchable table of all forty. The table
-    answered "which plays exist", which is a question the formation pages and the
-    printed book already answer, and it answered it in a shape you cannot hold on a
-    sideline. What a coach actually does with a call sheet is swap plays in and out of
-    a lineup, so the sheet is now the lineup.
-
-    The grid is eight columns wide: seven for the line, and an eighth on the right
-    because the flanker stands out there rather than on anybody's shoulder. A cell
-    names where somebody stands, so the grid reads as the formation seen from behind.
-    """
-    line = ("LTE", "LT", "LG", "C", "RG", "RT", "RTE")
-    cells = []
-    for col, pos in enumerate(line, start=1):
-        cells.append(
-            f'<div class="lu" style="grid-column:{col};grid-row:1">'
-            f'<span class="lu-pos">{esc(pos)}</span>'
-            f'<span class="lu-name">{esc(position_name(pos))}</span></div>'
+    fav_cards = []
+    for entry in favorites.get("plays", []):
+        rp, rf = plays_by_id[entry["right"]]
+        lp, _lf = plays_by_id[entry["left"]]
+        fav_cards.append(
+            f'<div class="favcard">'
+            f'<a class="thumb" href="{p_href(rp)}" tabindex="-1">'
+            f'<img loading="lazy" src="{card_src(rf, rp)}" '
+            f'alt="{esc(strip_direction(rp["name"]))} diagram"></a>'
+            f'<div class="body">'
+            f'<h4><a href="{p_href(rp)}">{esc(strip_direction(rp["name"]))}</a></h4>'
+            f'<span class="fmeta">{esc(form_label(rf))}</span>'
+            f'<div class="sides">'
+            f'<a class="side" href="{p_href(rp)}">Right</a>'
+            f'<a class="side" href="{p_href(lp)}">Left</a>'
+            f'</div></div></div>'
         )
-    # The flanker, out on his own past the end — the reason there is an eighth column
-    # at all.
-    cells.append(
-        '<div class="lu" style="grid-column:8;grid-row:2">'
-        '<span class="lu-pos">Z</span>'
-        f'<span class="lu-name">{esc(position_name("Z"))}</span></div>'
+    fav_section = ""
+    if fav_cards:
+        intro = esc(favorites.get("intro", ""))
+        fav_section = f"""<p class="hero-head">Favorite Plays</p>
+<p class="lede">{intro}</p>
+<div class="favgrid" data-count="{len(fav_cards)}">
+  {chr(10).join('  ' + c for c in fav_cards).strip()}
+</div>
+
+"""
+
+    rows, carriers = [], []
+    for f in formations:
+        for p in f["_plays"]:
+            zone, direction = call_digits(p.get("call", ""))
+            carrier = p.get("ball_carrier", "")
+            if carrier and carrier not in carriers:
+                carriers.append(carrier)
+            search = " ".join(
+                str(x).lower()
+                for x in (p["name"], p.get("call", ""), f["name"], f.get("family", ""),
+                          p.get("type", ""), carrier, position_name(carrier), zone,
+                          direction)
+            )
+            rows.append(
+                f'<tr data-form="{esc(f["id"])}" data-type="{esc(p.get("type", ""))}" '
+                f'data-zone="{esc(zone)}" data-dir="{esc(direction)}" '
+                f'data-carrier="{esc(carrier)}" data-search="{esc(search)}">'
+                f'<td class="c" data-label="Call">'
+                f'<span class="call">{esc(p.get("call", ""))}</span></td>'
+                f'<td data-label="Play"><a href="{p_href(p)}">{esc(p["name"])}</a></td>'
+                f'<td data-label="Formation">{esc(form_label(f))}</td>'
+                f'<td class="c" data-label="Type">{esc(p.get("type", ""))}</td>'
+                f'<td class="c" data-label="Ball" '
+                f'title="{esc(position_name(carrier))}">{esc(carrier or "—")}</td></tr>'
+            )
+
+    primary = (
+        filter_group("Formation",
+                     [chip("form", f["id"], form_label(f), "Formation")
+                      for f in formations])
+        + filter_group("Type", [chip("type", t, t.capitalize(), "Type")
+                                for t in ("run", "pass")])
     )
-    # Two backs, off the third and fifth columns rather than behind the centre.
-    for col, pos in ((3, "LH"), (5, "RH")):
-        cells.append(
-            f'<div class="lu" style="grid-column:{col};grid-row:3">'
-            f'<span class="lu-pos">{esc(pos)}</span>'
-            f'<span class="lu-name">{esc(position_name(pos))}</span></div>'
-        )
+    more = (
+        filter_group("Where it hits",
+                     [chip("zone", key, label, "Where") for key, label in HOLE_ZONES])
+        + filter_group("Direction",
+                       [chip("dir", d, d.capitalize(), "Direction")
+                        for d in ("right", "left")])
+        + filter_group("Who touches it",
+                       [chip("carrier", c, c, "Ball", position_name(c))
+                        for c in sorted(carriers, key=lambda k: (
+                            CARD_ORDER.index(k) if k in CARD_ORDER else 99, k))])
+    )
 
     body = f"""<h1 class="page">Call sheet</h1>
-<p class="lede">The offense where it stands. A cell is a spot on the field; the plays
-that spot runs hang off it, so swapping one in and out is done where you are already
-looking rather than in a list somewhere else.</p>
-<p class="hero-head">Offense</p>
-<div class="lineup">
-  {chr(10).join('  ' + c for c in cells).strip()}
+{fav_section}<p class="hero-head">All Plays</p>
+<p class="lede">Every play in the book. Pick as many filters as you like — choices inside a
+group widen the list, choices across groups narrow it. Press <kbd>/</kbd> to jump to the
+search box.</p>
+<div class="searchbar">
+  <input id="q" type="search" placeholder="Search plays, calls, formations…"
+         autocomplete="off" aria-label="Search plays">
+</div>
+{primary}
+<button type="button" class="morebtn" id="morebtn" aria-expanded="false"
+        aria-controls="morefilters">More filters<span class="badge" id="morebadge"
+        hidden></span></button>
+<div id="morefilters" hidden>{more}</div>
+<div class="activefilters" id="activefilters" hidden></div>
+<p class="countline"><span id="count"></span>
+  <button type="button" class="clearbtn" id="clear" hidden>Clear filters</button></p>
+<div class="tablewrap">
+  <table class="calls" id="calls">
+    <thead><tr>
+      <th>Call</th><th>Play</th><th>Formation</th><th>Type</th><th>Ball</th>
+    </tr></thead>
+    <tbody>
+      {chr(10).join('      ' + r for r in rows).strip()}
+    </tbody>
+  </table>
+  <p class="empty" id="empty" hidden>No plays match those filters.</p>
 </div>"""
     return page(
         f"Call sheet — {SITE_TITLE}",
@@ -2942,8 +2990,7 @@ looking rather than in a list somewhere else.</p>
         formations,
         defenses=defenses,
         active_nav="calls",
-        description="The offensive lineup, and the plays each spot runs.",
-        landscape=True,
+        description="Searchable list of every play and its huddle call.",
     )
 
 

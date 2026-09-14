@@ -192,7 +192,7 @@ someone a link to exactly the play you mean.
 | Page | What it is |
 |---|---|
 | `index.html` | Home: the formations, the install advice, the calling language |
-| `calls.html` | **Call sheet** — the offensive lineup, and the plays each spot runs |
+| `calls.html` | **Call sheet** — every play, searchable, filterable by formation, run/pass, where it hits, direction and who touches it |
 | `f-<formation>.html` | One formation: its notes and its plays |
 | `install.html` | **Install schedule** — a month calendar of the practices, generated from `install.json` |
 | `install-<n>.html` | One practice: what goes in, and the run of practice block by block |
@@ -356,6 +356,7 @@ drop one into a practice plan. Two versions of each:
 python generator/render.py            # rebuild cards, site, READMEs, PLAYBOOK.md
 python generator/render.py --check    # validate the JSON only, write nothing
 python generator/test_calls.py        # prove the call check still rejects a wrong call
+python generator/test_call_sheet.py   # prove the call sheet filters show the right plays
 python generator/test_print_pages.py  # prove every card still prints on one sheet
 python generator/test_rulebook.py     # prove the rules page still quotes the rulebook exactly
 python generator/test_blocking.py     # prove every block is drawn to the right side of its man
