@@ -86,23 +86,39 @@
       "target": "force"
     },
     "TB": {
-      "rule": "Take a fake handoff and run hard at the left side, off tackle, to pull the linebackers with you.",
-      "type": "fake",
-      "path": [
-        [
-          -1.4,
-          1.8
-        ],
-        [
-          -3.0,
-          4.4
+      "block": "screen"
+    }
+  },
+  "fronts": {
+    "4-4": {
+      "FB": {
+        "block": "man",
+        "man": "R",
+        "how": "Bubble out around the right end",
+        "via": [
+          [
+            5.6,
+            1.3
+          ]
         ]
-      ]
+      },
+      "TB": {
+        "block": "man",
+        "man": "RC",
+        "or": "FS",
+        "how": "Bubble out around the right end",
+        "via": [
+          [
+            6.4,
+            2.9
+          ]
+        ]
+      }
     }
   },
   "coaching_points": [
     "No motion before the snap. The end stays down in his stance, so the play is legal and nothing tips it off.",
     "The handoff is the whole play: the quarterback opens right and puts the ball in the end's belly at full speed, then carries out his fake.",
-    "The tailback's fake to the left has to be hard. It is what keeps the backside linebackers from chasing the end down."
+    "Both backs bubble out to the right ahead of the end — the fullback takes the outside linebacker, the tailback the corner or the free safety, whoever comes first."
   ]
 }

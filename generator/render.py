@@ -738,7 +738,7 @@ def validate(formations: list[dict], defenses: dict) -> list[str]:
                                       f"'{spec['block']}'")
                     if spec.get("block") == "man" and not spec.get("man"):
                         errors.append(f"{pid} vs {fid}: {pos} blocks a man but names nobody")
-                    for k in ("man", "help"):
+                    for k in ("man", "help", "or"):
                         if spec.get(k) and spec[k] not in labels:
                             errors.append(f"{pid} vs {fid}: {pos} blocks '{spec[k]}', who "
                                           f"is not in the {fid}")

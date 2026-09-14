@@ -103,13 +103,13 @@ The left tight end comes all the way across at the snap on an end-around, takes 
 | **SL** | Run at the corner and screen him off. Stay in his way. |
 | **QB** | Open right and hand the ball to the left tight end as he comes across behind you, then fake a run to the left. |
 | **FB** | Lead outside our end, then turn up inside — the playside linebacker is the man who shows. Head across him. |
-| **TB** | Take a fake handoff and run hard at the left side, off tackle, to pull the linebackers with you. |
+| **TB** | Run at the outside linebacker and screen him off. Stay in his way. |
 
 **Coaching points**
 
 - No motion before the snap. The end stays down in his stance, so the play is legal and nothing tips it off.
 - The handoff is the whole play: the quarterback opens right and puts the ball in the end's belly at full speed, then carries out his fake.
-- The tailback's fake to the left has to be hard. It is what keeps the backside linebackers from chasing the end down.
+- Both backs bubble out to the right ahead of the end — the fullback takes the outside linebacker, the tailback the corner or the free safety, whoever comes first.
 
 ---
 
@@ -133,13 +133,13 @@ The right tight end comes all the way across at the snap on an end-around, takes
 | **SL** | Run at the corner and screen him off. Stay in his way. |
 | **QB** | Open left and hand the ball to the right tight end as he comes across behind you, then fake a run to the right. |
 | **FB** | Lead outside our end, then turn up inside — the playside linebacker is the man who shows. Head across him. |
-| **TB** | Take a fake handoff and run hard at the right side, off tackle, to pull the linebackers with you. |
+| **TB** | Run at the outside linebacker and screen him off. Stay in his way. |
 
 **Coaching points**
 
 - No motion before the snap. The end stays down in his stance, so the play is legal and nothing tips it off.
 - The handoff is the whole play: the quarterback opens left and puts the ball in the end's belly at full speed, then carries out his fake.
-- The tailback's fake to the right has to be hard. It is what keeps the backside linebackers from chasing the end down.
+- Both backs bubble out to the left ahead of the end — the fullback takes the outside linebacker, the tailback the corner or the free safety, whoever comes first.
 
 # Split Backs
 
