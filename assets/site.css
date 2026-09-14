@@ -536,23 +536,6 @@ td.dc-cell.over, .dc-pool.over { background: var(--accent-soft) !important; }
 .rot-h .rot-count { text-transform: none; font-weight: 700; }
 
 
-/* ------------------------------------------------------------------- lineup --
-   The offense seen from behind. Eight columns: seven for the line and an eighth on
-   the right, because the flanker stands out past the end rather than on anybody's
-   shoulder. Cells are placed by column and row rather than flowed, so the grid keeps
-   the shape of the formation and an empty column stays empty. */
-.lineup {
-  display: grid; grid-template-columns: repeat(8, minmax(0, 1fr));
-  gap: 8px; margin: 10px 0 24px; align-items: start;
-}
-.lu {
-  background: var(--panel); border: 1px solid var(--line); border-radius: 10px;
-  padding: 10px 8px; box-shadow: var(--shadow); min-height: 58px;
-  display: flex; flex-direction: column; gap: 2px; text-align: center;
-}
-.lu-pos { font-size: 15px; font-weight: 800; color: var(--accent-ink); }
-.lu-name { font-size: 11px; color: var(--muted); line-height: 1.25; }
-
 .plist { display: grid; gap: 12px; grid-template-columns: 1fr; }
 @media (min-width: 620px) { .plist { grid-template-columns: repeat(2, minmax(0,1fr)); } }
 @media (min-width: 900px) { .plist { grid-template-columns: repeat(3, minmax(0,1fr)); } }
