@@ -84,6 +84,21 @@
       ]
     }
   },
+  "fronts": {
+    "4-4": {
+      "RH": {
+        "block": "man",
+        "man": "R",
+        "how": "Bubble out around the right end",
+        "via": [
+          [
+            4.0,
+            2.4
+          ]
+        ]
+      }
+    }
+  },
   "coaching_points": [
     "The quarterback keeps it every time — tell him before the snap, there is no read.",
     "The left halfback's fake is the play. If he jogs, nobody follows him and the defense is waiting at the edge.",
