@@ -93,7 +93,7 @@ unchanged, and the player's `path` is still relative to wherever he ends up, so 
 assignment does not have to know which look it is in.
 
 **Say it in the call.** `Regular I SL Left 35 Power` tells the huddle which side the SL is
-on, the same way `Regular I SL Right 20 Dive` does. A play that moves
+on, the same way `Regular I SL Right 34 Power` does. A play that moves
 somebody silently is a play nobody can call.
 
 An override may only move a player the formation already has, and the coordinates must be
@@ -139,8 +139,8 @@ so there is one copy of the numbering rather than three that can disagree.
 
 ### `name` and `call` are different on purpose
 
-Both are printed at the top of every card. `name` is the teaching name (*Regular I Power
-Right*); `call` is the huddle call in the team's play-calling language
+Both are printed at the top of every card. `name` is the teaching name (*I Formation -
+Strong Right - Off Tackle Handoff*); `call` is the huddle call in the team's play-calling language
 (`Regular I SL Right 34 Power` — formation, the SL's side, then **two digits: who carries
 it and where it goes**, then the play word).
 The numbering system is documented in the top-level [README](../README.md).
@@ -153,9 +153,9 @@ The numbering system is documented in the top-level [README](../README.md).
   center. The generator measures where that back's path crosses the line of scrimmage and
   fails the build if it does not land in the hole the call names.
 
-That means the digits describe **the back the first digit names**, not the ball carrier.
-On `I SL Right 16 Boot` the `1` is the quarterback going through the 6 hole; `ball_carrier`
-is the SL he throws to, which is a different thing.
+That means the digits describe **the back the first digit names**, not necessarily the
+ball carrier. On a play-action pass they follow the quarterback's path, while
+`ball_carrier` is the receiver he throws to, which is a different thing.
 
 Inventing a nickname instead of a call defeats the point of having a language, and now
 also fails `--check`.
@@ -248,7 +248,7 @@ hole** (`lead`), and the **backside guard cuts off** behind the play (`cutoff`).
 ### `fakes` — what a play-action pass is pretending to be
 
 ```json
-{ "id": "i-boot-r", "type": "pass", "fakes": "i-toss-l", ... }
+{ "id": "i-power-boot-l", "type": "pass", "fakes": "i-power-r", ... }
 ```
 
 A play-action pass takes its **blocking side and hole from the run it names**, not from
@@ -295,16 +295,13 @@ Neither formation is symmetric — the SL is split to the right on every snap, s
 a play would flip his path and leave him aligned on the same side. There is no
 `mirror_of` and no mirroring machinery; a left-handed play is its own file.
 
-In the Split Backs that is not busywork. The two directions are genuinely different
-plays: only the right one has a receiver out there to crack the linebacker or block the
-corner, and `--audit` will tell you which left-handed plays are a blocker short because
-of it.
+A left-handed play that leaves the SL on the right is a different play, a blocker short
+on the side the ball goes, and `--audit` will tell you so.
 
 **A play that moves the SL says so in its call.** `Regular I SL Left 35 Power` and
-`Regular I SL Left 48 Jet` are the two that do — Power because it is built on his
-kick-out, Jet because a receiver cannot go in motion toward the sideline he is already
-standing on. Use `alignment` to move him and name his side in the call; a play that
-moves somebody silently is a play nobody can call.
+`Split SL Left 39 Pitch` both do, each mirroring its right-hand play so the SL is out
+there on the side the ball goes. Use `alignment` to move him and name his side in the
+call; a play that moves somebody silently is a play nobody can call.
 
 ## House style for rules
 

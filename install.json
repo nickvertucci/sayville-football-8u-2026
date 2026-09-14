@@ -65,12 +65,6 @@
         "Agility hurdles (15 min)"
       ],
       "install_time": "6:15–6:45",
-      "plays": [
-        "i-dive-r",
-        "i-dive-l",
-        "i-wedge",
-        "i-wedge-l"
-      ],
       "emphasis": "Two runs, two different jobs. Dive hits fast off the double team before the linebackers can read it — snap to handoff under a second. Wedge is short yardage: nobody blocks a man, the whole line squeezes to the center's back and pushes. Same formation, same snap count — first time somebody besides the coach is naming who gets the ball.",
       "finisher": "First unit vs. second unit sprint relay race.",
       "finisher_time": "6:45–6:55",
@@ -91,10 +85,6 @@
       ],
       "install_time": "6:10–6:50",
       "emphasis": "No new install. Everything we already have — Dive and Wedge, both ways out of the Regular I — goes live for the rest of practice, and the point is personnel, not plays. Run the same handful over and over against a real look and watch who moves people, who finds the hole without being told and who tackles in space. Nobody gets a spot on reputation: the kid who does it live is the kid who starts.",
-      "requires": [
-        "i-dive-r",
-        "i-wedge"
-      ],
       "huddle": "Name the first team out loud, and the first sub at every spot.",
       "huddle_time": "6:50–7:00"
     },
@@ -198,14 +188,7 @@
       "phase": "season",
       "water_break": 1,
       "focus": "Iso, Power and the Toss — inside, off-tackle and the edge",
-      "plays": [
-        "i-iso-r",
-        "i-iso-l",
-        "i-toss-r",
-        "i-toss-l"
-      ],
       "requires": [
-        "i-dive-r",
         "i-power-r"
       ],
       "emphasis": "Three calls, three places on the field. Iso hits the gap the line opens, Power hits off-tackle behind the kick-out, and the Toss goes round it all — same backfield, three answers.",
@@ -313,10 +296,6 @@
       "phase": "season",
       "water_break": 1,
       "focus": "Counter off the Power they have already seen",
-      "plays": [
-        "i-counter-r",
-        "i-counter-l"
-      ],
       "requires": [
         "i-power-r",
         "i-power-l"

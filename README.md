@@ -17,27 +17,18 @@ in [rulebook/](rulebook/), reproduced word for word, as the **Rules** page.
 Every play has two names, and both are printed on every card.
 
 - The **name** is what you say while teaching it: *I Slant Right*.
-- The **call** is what you yell on Saturday: `I SL Right 36 Slant`.
+- The **call** is what you yell on Saturday: `I SL Right 34 Power`.
 
 ### Regular I: formation + SL + back + hole + play word
 
 The call names the formation, then `SL Right` — where the SL lines up — then two
 digits: the first says **who carries it**, the second says **where it goes**. So
-`Regular I SL Right 20 Dive` is the Regular I, SL on the right, the fullback through
-the 0 hole.
+`Regular I SL Right 34 Power` is the Regular I, SL on the right, the tailback between the
+tackle and the end.
 
-Every Regular I play is `SL Right` except two, and naming his side in every call is what
-makes those two free — it is also what let the Split Backs add a `SL Left` look later
-without changing how a single play is called.
-
-- **`Regular I SL Left 35 Power`** — Power depends on the SL's kick-out block, so he
-  lines up on the side it has to happen.
-- **`Regular I SL Left 48 Jet`** — Jet is motion, and a receiver cannot go in motion
-  toward the sideline he is already standing on. Jet Right starts him on the weak side
-  so he has the whole formation to cross, which is the mirror of what Jet Left does.
-
-Both say so out loud, because a play that moves somebody silently is a play nobody can
-call.
+The Off Tackle Handoff depends on the SL's kick-out block, so he lines up on the side it
+has to happen: `Regular I SL Left 35 Power` puts him on the left. The call says so out
+loud, because a play that moves somebody silently is a play nobody can call.
 
 | Back | Who |
 |---|---|
@@ -64,33 +55,15 @@ measures where that back's path crosses the line of scrimmage, and fails the bui
 does not cross on the named side inside the hole the call names. A call sheet that lies is
 worse than no call sheet, so the build will not publish one.
 
-The digits describe the back the first digit names, not the ball carrier. On
-`Regular I SL Right 16 Boot` the `1` is the quarterback going through the 6 hole; the
-ball carrier is the SL he throws to.
-
-So `Regular I SL Right 20 Dive` is the fullback through the 0 hole; `21 Dive` is the same
-handoff through the 1 hole; and `Regular I SL Right 36 Slant` is the tailback outside the
-tight end.
+The digits describe the back the first digit names, not necessarily the ball carrier. So
+`Regular I SL Right 34 Power` is the tailback between the right tackle and end, and
+`Regular I SL Left 35 Power` is the same handoff to the left.
 
 | Call | Play | Where it hits |
 |---|---|---|
-| `Regular I SL Right 10 Sneak` / `11 Sneak` | Regular I Sneak Right / Left | quarterback, center–guard |
-| `Regular I SL Right 20 Dive` / `21 Dive` | Regular I Dive Right / Left | fullback, center–guard |
-| `Regular I SL Right 30 Wedge` / `31 Wedge` | Regular I Wedge Right / Left | tailback, up the middle |
-| `Regular I SL Right 32 Iso` / `33 Iso` | Regular I Iso Right / Left | guard–tackle |
-| `Regular I SL Right 34 Power` / `SL Left 35 Power` | Regular I Power Right / Left | tailback, tackle–end |
-| `Regular I SL Right 34 Counter` / `35 Counter` | Regular I Counter Right / Left | tailback, tackle–end |
-| `Regular I SL Right 16 Boot` / `17 Boot` | Regular I Boot Right / Left | quarterback, outside the tight end |
-| `Regular I SL Right 16 Waggle` / `17 Waggle` | Regular I Waggle Right / Left | quarterback, outside the tight end |
-| `Regular I SL Right 16 Jet Boot` / `17 Jet Boot` | Regular I Jet Boot Right / Left | quarterback, off the Jet fake |
-| `Regular I SL Right 16 Power Boot` / `17 Power Boot` | Regular I Power Boot Right / Left | quarterback, off the Power fake |
-| `Regular I SL Right 36 Slant` / `37 Slant` | Regular I Slant Right / Left | outside the tight end |
-| `Regular I SL Right 38 Toss` / `39 Toss` | Regular I Toss Right / Left | all the way outside |
-| `Regular I SL Left 48 Jet` / `SL Right 49 Jet` | Regular I Jet Right / Left | the SL in motion, all the way outside |
+| `Regular I SL Right 34 Power` / `SL Left 35 Power` | I Formation - Strong Right / Strong Left - Off Tackle Handoff | tailback, tackle–end |
 
-The plays are taught in that order on purpose — inside first and working out, and within
-each gap the quarterback (back 1), then the fullback (2), then the tailback (3), then the
-SL (4). Every play has a left and a right.
+Every play has a left and a right.
 
 ### Split Backs: formation + SL + back + hole + play word
 
@@ -104,51 +77,30 @@ both I looks.
 |---|---|---|
 | `Split SL Left 39 Pitch` / `Split SL Right 28 Pitch` | Split formation - Strong left - Quick pitch left / Strong right - Quick pitch right | the far back, all the way outside |
 
-**The Keep and the Reverse are the plays that move the SL.** The Keep runs to whichever
-side he is on, so `Split SL Left 17 Keep` really does line him up on the left. The Reverse
-starts as that same Keep and hands the ball back the other way, which means the SL starts
-on one side and finishes on the other — so its call names both, and that is the only
-reason it is longer than everything else in the book. `Split SL Left 46 SL Reverse Right`
-is the SL lined up left, carrying it back to the right. Every other play in the formation
-is `SL Right` and finishes on the side its name says, so nothing else needs two.
+The back digit follows whoever actually carries it. On the Quick pitch it is the far back,
+because the near one is busy bubbling out to block.
 
-The back digit follows whoever actually carries it. On Dive it is the back on the play
-side, going straight ahead off the double team; on Power, Counter and Pitch it is the far
-back, because the near one is busy leading through the hole or holding the linebackers
-with a fake.
-
-**Play word** — the Regular I carries `Dive`, `Iso`, `Slant`, `Toss`, `Counter`, `Sneak`,
-`Power`, `Wedge` and `Jet`, plus the play-action `Boot`, `Waggle`, `Jet Boot` and
-`Power Boot`; the Split Backs runs `Dive`, `Power`, `Counter`, `Pitch`, `Keep` and
-`Reverse`. Both formations carry at least one play-action pass, on the play word `Boot`
-or `Waggle`.
+**Play word** — the Regular I carries `Power`, the Off Tackle Handoff; the Split Backs
+carries `Pitch`, the Quick pitch. There is no pass in the book right now.
 
 ## Formations
 
-Two formations, 28 plays, in teaching order:
+Two formations, 4 plays, in teaching order:
 
 | # | Formation | Family | Plays | What it is for |
 |---|---|---|---|---|
-| 1 | **Regular I** | Regular I | 26 | Base offense. Fullback and tailback stacked, so the same look threatens the middle and both edges. Teaches a back to read a block, and carries the Power, Wedge and Jet package built around the SL. |
+| 1 | **Regular I** | Regular I | 2 | Base offense. Fullback and tailback stacked behind the quarterback. One play, both ways: the Off Tackle Handoff, the tailback between the tackle and the end behind the SL's kick-out. |
 | 2 | **Split Backs** | Split Backs | 2 | Two backs at even depth and a SL split out wide. One play, both ways: the Quick pitch, the far back all the way outside, with the receiver out there blocking the corner he has to get around. |
 
 Both are two-tight-end, downhill running formations, so the blocking language carries
 over: "block down on the first defender inside you" means the same thing in either. That
 is the reason to carry two related looks rather than two unrelated offenses.
 
-**Every pass is play-action, and run-first.** Each fakes one of that formation's best
-runs and boots the quarterback the other way, so it is the same first three steps the
-defense has already been punished for respecting. They exist so nobody can put nine in the
-box and forget the edge — not to throw the ball. Every one says *run first, throw second*,
-because no blitzing is allowed at this age (9.02) and the quarterback usually walks into
-ten yards before anybody finds him. They are all in the Regular I, off the toss, the dive,
-the jet and the power; the Split Backs carries only the Quick pitch.
-
 **Neither formation is symmetric, so every left-handed play is written by hand.** The SL
-sits split to the right on every snap, so flipping a play would flip his path while
-leaving him aligned on the same side. The calls that do move him — `SL Left 35 Power`,
-`SL Left 48 Jet`, and the Split Backs' `SL Left 39 Pitch`, which mirrors the right-hand
-pitch so there is a receiver out there to block the corner both ways — say so in the call.
+sits split to the right unless a play moves him, so flipping a play would flip his path
+while leaving him aligned on the same side. Both left-handed plays do move him — the
+Regular I's `SL Left 35 Power` and the Split Backs' `SL Left 39 Pitch`, each the mirror of
+its right-hand play — and say so in the call.
 
 ## Defense
 
@@ -312,7 +264,7 @@ something.
 
 ## Printing
 
-- **Print book** (top bar) → 32 landscape pages: 28 plays then 4 defensive fronts,
+- **Print book** (top bar) → 8 landscape pages: 4 plays then 4 defensive fronts,
   one per sheet.
 - **Print** (on any play or front page) → that one card, one landscape sheet.
 - **Print** (on the depth chart) → two portrait sheets, offense then defense, each with
