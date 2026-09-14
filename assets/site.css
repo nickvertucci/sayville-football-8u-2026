@@ -454,8 +454,18 @@ td.dc-cell.over, .dc-pool.over { background: var(--accent-soft) !important; }
 /* Same drop target as a board cell, and it has to look like one or nothing says it
    can be dropped into. */
 .dc-pkg-slot {
-  min-height: 30px; display: flex; align-items: center;
+  min-height: 30px; display: flex; align-items: center; gap: 7px;
   border-radius: 8px; padding: 2px;
+}
+/* Which spot this slot is, where the side has a fixed answer. Drawn from the
+   attribute rather than sitting in the slot as an element, because the slot's
+   contents are rewritten every time it empties or fills — an element would be gone
+   the first time a name came out. It also means an empty package still says which
+   three spots it is short of, instead of three identical Opens. */
+.dc-pkg-slot[data-spot]::before {
+  content: attr(data-spot);
+  flex: 0 0 22px; font-size: 10px; font-weight: 800; letter-spacing: .5px;
+  color: var(--muted); text-transform: uppercase;
 }
 .dc-pkg-slot + .dc-pkg-slot { margin-top: 4px; }
 .dc-pkg-slot .dc-chip { max-width: 100%; }

@@ -500,8 +500,18 @@ td.dc-cell.over, .dc-pool.over { background: var(--accent-soft) !important; }
 /* Same drop target as a board cell, and it has to look like one or nothing says it
    can be dropped into. */
 .dc-pkg-slot {
-  min-height: 30px; display: flex; align-items: center;
+  min-height: 30px; display: flex; align-items: center; gap: 7px;
   border-radius: 8px; padding: 2px;
+}
+/* Which spot this slot is, where the side has a fixed answer. Drawn from the
+   attribute rather than sitting in the slot as an element, because the slot's
+   contents are rewritten every time it empties or fills — an element would be gone
+   the first time a name came out. It also means an empty package still says which
+   three spots it is short of, instead of three identical Opens. */
+.dc-pkg-slot[data-spot]::before {
+  content: attr(data-spot);
+  flex: 0 0 22px; font-size: 10px; font-weight: 800; letter-spacing: .5px;
+  color: var(--muted); text-transform: uppercase;
 }
 .dc-pkg-slot + .dc-pkg-slot { margin-top: 4px; }
 .dc-pkg-slot .dc-chip { max-width: 100%; }
@@ -3641,6 +3651,16 @@ PACKAGE_TITLE = {
     "defense": "Packages",
 }
 
+# What each slot in a package is, where the side has a fixed answer. Offense does: the
+# line does not change between packages, so the three slots are the fullback, the
+# tailback and the flanker, in that order. Defense does not, and labelling its slots
+# would be inventing a structure it has not got.
+#
+# The label is drawn from this attribute in CSS rather than put in the slot as an
+# element, because the slot's contents are rewritten whenever it empties or fills —
+# a child element would be wiped the first time somebody took a name out of it.
+PACKAGE_SPOTS = {"offense": ("FB", "TB", "Z")}
+
 
 def rotations_for(side: str) -> list[tuple[str, str, str]]:
     """The columns, in depth order. Both sides run the same six."""
@@ -3730,6 +3750,11 @@ def side_board(side: str, order: list[str], alt_order: list[str],
     # plays left guard", and this answers "who am I sending in next".
     packs = packages or []
 
+    spots = PACKAGE_SPOTS.get(side, ())
+
+    def spot_attr(at: int) -> str:
+        return f' data-spot="{esc(spots[at])}"' if at < len(spots) else ""
+
     def in_slot(n: int, at: int) -> str:
         pair = packs[n - 1] if n - 1 < len(packs) else []
         name = pair[at] if isinstance(pair, list) and at < len(pair) else ""
@@ -3740,7 +3765,7 @@ def side_board(side: str, order: list[str], alt_order: list[str],
         f'<div class="dc-pkg"><p class="dc-pkg-h">Package {n}</p>'
         + "".join(
             f'<div class="dc-pkg-slot" data-side="{side}" data-pkg="{n}" '
-            f'data-at="{at}">{in_slot(n, at)}</div>'
+            f'data-at="{at}"{spot_attr(at)}>{in_slot(n, at)}</div>'
             for at in range(PACKAGE_SIZE))
         + '</div>'
         for n in range(1, PACKAGE_COUNT + 1)

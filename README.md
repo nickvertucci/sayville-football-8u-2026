@@ -247,8 +247,14 @@ and renders as *Open*.
 
 Five boxes of three above the squad on each board. The offense calls them
 **Offensive FB-TB-Z Packages**, because the line does not change between them — the
-package *is* the backfield, and naming the three spots in slot order turns a box of
-names into something a coach can check at a glance. A package is the group who go on and
+package *is* the backfield. Each slot is labelled with the spot it is, so an empty
+package says which three it is short of rather than showing three identical *Open*
+rows, and a name in the wrong slot is visible.
+
+The label is drawn from a data attribute in CSS rather than sitting in the slot as an
+element: the slot's contents are rewritten every time it empties or fills, so a child
+element would be gone the first time somebody took a name out. Defense has no fixed
+trio of spots, so its slots carry no labels. A package is the group who go on and
 come off together, which is the other question a coach asks at this age and the one the
 board could not answer: the columns say who plays left guard, and these say who you are
 sending in next.
