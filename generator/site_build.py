@@ -2983,8 +2983,8 @@ def write_calls(formations: list[dict], defenses: dict, root: Path) -> str:
     quarterback are column one of the depth chart; the fullback, tailback and slot
     are the package, which is the only thing that changes between them. The first two
     sheets are the Split formation from package 1, strong left and then strong right,
-    each the mirror of the other; the next two are the I formation, strong left from
-    package 3 and strong right from package 4.
+    each the mirror of the other; the next two are the I formation from package 4,
+    strong left and strong right, mirrored the same way.
 
     Under it, blank Left, Middle and Right columns to write the plays into.
     """
@@ -3003,14 +3003,14 @@ def write_calls(formations: list[dict], defenses: dict, root: Path) -> str:
     line = ("LTE", "LT", "LG", "C", "RG", "RT", "RTE")
 
     def lineup_table(package: list[str], layout: str) -> str:
-        """`layout` is "i", "split-right" or "split-left"."""
+        """`layout` is "i-right", "i-left", "split-right" or "split-left"."""
         backs = dict(zip(PACKAGE_SPOTS["offense"], package))
         # The line across and the quarterback under the center, with the SL just off the
         # line past one end: the right, unless the formation is strong left, when he is
         # past the left end and the line moves over a column to make room. In the I the
         # fullback and tailback stack behind the quarterback; in the Split formation they
-        # sit side by side a row deeper, and strong left is the mirror of strong right.
-        left = layout == "split-left"
+        # sit side by side a row deeper. Either way, strong left mirrors strong right.
+        left = layout.endswith("-left")
         first = 1 if left else 0
         center = first + 3
         grid = [[None] * 8 for _ in range(4)]
@@ -3019,7 +3019,7 @@ def write_calls(formations: list[dict], defenses: dict, root: Path) -> str:
             grid[0][col] = (pos, backs.get(pos) or starter(pos))
         grid[1][center] = ("QB", starter("QB"))
         grid[1][0 if left else 7] = ("SL", backs.get("SL", ""))
-        if layout == "i":
+        if layout.startswith("i-"):
             grid[2][center] = ("FB", backs.get("FB", ""))
             grid[3][center] = ("TB", backs.get("TB", ""))
         else:
@@ -3078,11 +3078,11 @@ def write_calls(formations: list[dict], defenses: dict, root: Path) -> str:
         order += [("Split formation - Strong left", packages[0], "split-left",
                    {"Left": ["sb-pitch-l"]}),
                   ("Split formation - Strong right", packages[0], "split-right", {})]
-    # Then the I from packages 3 and 4, strong left and strong right, on the same sides.
-    # Packages 5 and 6 are on the depth chart but not the call sheet.
-    i_titles = {3: "I formation - Strong left", 4: "I formation - Strong right"}
-    order += [(title, packages[n - 1], "i", {})
-              for n, title in i_titles.items() if len(packages) >= n]
+    # Then the I formation, both strengths from package 4's players and mirrored the same
+    # way, on the same sides. Packages 2, 3, 5 and 6 are on the depth chart but not here.
+    if len(packages) >= 4:
+        order += [("I formation - Strong left", packages[3], "i-left", {}),
+                  ("I formation - Strong right", packages[3], "i-right", {})]
     sheets = "".join(
         f'<section class="xl-sheet"><p class="xl-title">{esc(title)}</p>'
         f'{lineup_table(package, layout)}{plays_table(title, placed)}</section>'
