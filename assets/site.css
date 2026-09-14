@@ -536,22 +536,44 @@ td.dc-cell.over, .dc-pool.over { background: var(--accent-soft) !important; }
 .rot-h .rot-count { text-transform: none; font-weight: 700; }
 
 
-/* ------------------------------------------------------------------- lineup --
-   The offense seen from behind. Eight columns: seven for the line and an eighth on
-   the right, because the flanker stands out past the end rather than on anybody's
-   shoulder. Cells are placed by column and row rather than flowed, so the grid keeps
-   the shape of the formation and an empty column stays empty. */
-.lineup {
-  display: grid; grid-template-columns: repeat(8, minmax(0, 1fr));
-  gap: 8px; margin: 10px 0 24px; align-items: start;
+/* --------------------------------------------------------------- call sheet --
+   A spreadsheet, on purpose: ruled cells with no gaps, empty ones drawn too, so the
+   lineup keeps the formation's shape and the plays read straight down a column. One
+   sheet per package, side by side, stacking on a phone. */
+.xl-sheets {
+  display: grid; gap: 14px; margin: 10px 0 24px;
+  grid-template-columns: repeat(auto-fit, minmax(min(460px, 100%), 1fr));
 }
-.lu {
-  background: var(--panel); border: 1px solid var(--line); border-radius: 10px;
-  padding: 10px 8px; box-shadow: var(--shadow); min-height: 58px;
-  display: flex; flex-direction: column; gap: 2px; text-align: center;
+.xl-sheet { min-width: 0; }
+.xl-title {
+  margin: 0; padding: 6px 8px; font-size: 13px; font-weight: 800;
+  color: var(--on-accent); background: var(--accent-solid);
 }
-.lu-pos { font-size: 15px; font-weight: 800; color: var(--accent-ink); }
-.lu-name { font-size: 11px; color: var(--muted); line-height: 1.25; }
+table.xl {
+  width: 100%; border-collapse: collapse; table-layout: fixed;
+  background: var(--panel); font-size: 11.5px;
+}
+table.xl td, table.xl th {
+  border: 1px solid var(--line); padding: 3px 3px; vertical-align: top;
+  line-height: 1.25;
+}
+table.xl th {
+  background: var(--panel-2); font-size: 11px; text-transform: uppercase;
+  letter-spacing: .6px; color: var(--muted);
+}
+.xl-lineup { border-bottom: 2px solid var(--ink); }
+.xl-lineup td { height: 38px; text-align: center; }
+.xl-empty { background: var(--panel-2); }
+.xl-pos { display: block; font-size: 10px; font-weight: 800; color: var(--accent-ink); }
+.xl-name { display: block; font-size: 10.5px; }
+.xl-open { color: var(--muted); font-style: italic; }
+.xl-plays td a { color: var(--ink); text-decoration: none; }
+.xl-plays td a:hover { text-decoration: underline; }
+.xl-z { font-size: 9.5px; color: var(--muted); white-space: nowrap; }
+@media print {
+  .xl-sheets { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+  table.xl { font-size: 9px; }
+}
 
 .plist { display: grid; gap: 12px; grid-template-columns: 1fr; }
 @media (min-width: 620px) { .plist { grid-template-columns: repeat(2, minmax(0,1fr)); } }

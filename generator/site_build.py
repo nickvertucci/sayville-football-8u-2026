@@ -582,22 +582,44 @@ td.dc-cell.over, .dc-pool.over { background: var(--accent-soft) !important; }
 .rot-h .rot-count { text-transform: none; font-weight: 700; }
 
 
-/* ------------------------------------------------------------------- lineup --
-   The offense seen from behind. Eight columns: seven for the line and an eighth on
-   the right, because the flanker stands out past the end rather than on anybody's
-   shoulder. Cells are placed by column and row rather than flowed, so the grid keeps
-   the shape of the formation and an empty column stays empty. */
-.lineup {
-  display: grid; grid-template-columns: repeat(8, minmax(0, 1fr));
-  gap: 8px; margin: 10px 0 24px; align-items: start;
+/* --------------------------------------------------------------- call sheet --
+   A spreadsheet, on purpose: ruled cells with no gaps, empty ones drawn too, so the
+   lineup keeps the formation's shape and the plays read straight down a column. One
+   sheet per package, side by side, stacking on a phone. */
+.xl-sheets {
+  display: grid; gap: 14px; margin: 10px 0 24px;
+  grid-template-columns: repeat(auto-fit, minmax(min(460px, 100%), 1fr));
 }
-.lu {
-  background: var(--panel); border: 1px solid var(--line); border-radius: 10px;
-  padding: 10px 8px; box-shadow: var(--shadow); min-height: 58px;
-  display: flex; flex-direction: column; gap: 2px; text-align: center;
+.xl-sheet { min-width: 0; }
+.xl-title {
+  margin: 0; padding: 6px 8px; font-size: 13px; font-weight: 800;
+  color: var(--on-accent); background: var(--accent-solid);
 }
-.lu-pos { font-size: 15px; font-weight: 800; color: var(--accent-ink); }
-.lu-name { font-size: 11px; color: var(--muted); line-height: 1.25; }
+table.xl {
+  width: 100%; border-collapse: collapse; table-layout: fixed;
+  background: var(--panel); font-size: 11.5px;
+}
+table.xl td, table.xl th {
+  border: 1px solid var(--line); padding: 3px 3px; vertical-align: top;
+  line-height: 1.25;
+}
+table.xl th {
+  background: var(--panel-2); font-size: 11px; text-transform: uppercase;
+  letter-spacing: .6px; color: var(--muted);
+}
+.xl-lineup { border-bottom: 2px solid var(--ink); }
+.xl-lineup td { height: 38px; text-align: center; }
+.xl-empty { background: var(--panel-2); }
+.xl-pos { display: block; font-size: 10px; font-weight: 800; color: var(--accent-ink); }
+.xl-name { display: block; font-size: 10.5px; }
+.xl-open { color: var(--muted); font-style: italic; }
+.xl-plays td a { color: var(--ink); text-decoration: none; }
+.xl-plays td a:hover { text-decoration: underline; }
+.xl-z { font-size: 9.5px; color: var(--muted); white-space: nowrap; }
+@media print {
+  .xl-sheets { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+  table.xl { font-size: 9px; }
+}
 
 .plist { display: grid; gap: 12px; grid-template-columns: 1fr; }
 @media (min-width: 620px) { .plist { grid-template-columns: repeat(2, minmax(0,1fr)); } }
@@ -2901,48 +2923,100 @@ def write_calls(formations: list[dict], defenses: dict, root: Path) -> str:
     sideline. What a coach actually does with a call sheet is swap plays in and out of
     a lineup, so the sheet is now the lineup.
 
-    The grid is eight columns wide: seven for the line, and an eighth on the right
-    because the flanker stands out there rather than on anybody's shoulder. A cell
-    names where somebody stands, so the grid reads as the formation seen from behind.
+    One sheet per offensive package, side by side like a spreadsheet. The top table is
+    the lineup: eight columns, seven for the line and an eighth on the right because
+    the flanker stands out there rather than on anybody's shoulder. The line and the
+    quarterback are column one of the depth chart; the fullback, tailback and flanker
+    are the package, which is the only thing that changes between them.
+
+    Under it, the base formation's plays split Left, Middle and Right by the hole the
+    call already names: 0 to 3 is the middle, and past that even is right and odd is
+    left. Nothing is typed twice — change a package or a call and the sheet follows.
     """
+    roster = {}
+    path = root / "roster.json"
+    if path.is_file():
+        import json as _json
+        roster = _json.loads(path.read_text(encoding="utf-8"))
+    offense = roster.get("offense") or {}
+    packages = [p for p in (roster.get("packages") or {}).get("offense") or [] if any(p)]
+    base = min(formations, key=lambda f: f.get("order", 99))
+
+    def starter(pos: str) -> str:
+        names = offense.get(pos) or []
+        return names[0] if names else ""
+
     line = ("LTE", "LT", "LG", "C", "RG", "RT", "RTE")
-    cells = []
-    for col, pos in enumerate(line, start=1):
-        cells.append(
-            f'<div class="lu" style="grid-column:{col};grid-row:1">'
-            f'<span class="lu-pos">{esc(pos)}</span>'
-            f'<span class="lu-name">{esc(position_name(pos))}</span></div>'
-        )
-    # The flanker, out on his own past the end — the reason there is an eighth column
-    # at all.
-    cells.append(
-        '<div class="lu" style="grid-column:8;grid-row:2">'
-        '<span class="lu-pos">Z</span>'
-        f'<span class="lu-name">{esc(position_name("Z"))}</span></div>'
+
+    def lineup_table(package: list[str]) -> str:
+        backs = dict(zip(PACKAGE_SPOTS["offense"], package))
+        grid = [[None] * 8 for _ in range(3)]
+        for col, pos in enumerate(line):
+            grid[0][col] = (pos, starter(pos))
+        grid[1][3] = ("QB", starter("QB"))
+        grid[1][7] = ("Z", backs.get("Z", ""))
+        grid[2][2] = ("FB", backs.get("FB", ""))
+        grid[2][4] = ("TB", backs.get("TB", ""))
+        rows = []
+        for row in grid:
+            tds = []
+            for spot in row:
+                if spot is None:
+                    tds.append('<td class="xl-empty"></td>')
+                    continue
+                pos, name = spot
+                who = esc(name) if name else '<span class="xl-open">Open</span>'
+                tds.append(f'<td class="xl-spot"><span class="xl-pos">{esc(pos)}</span>'
+                           f'<span class="xl-name">{who}</span></td>')
+            rows.append(f'<tr>{"".join(tds)}</tr>')
+        return f'<table class="xl xl-lineup">{"".join(rows)}</table>'
+
+    sides = {"Left": [], "Middle": [], "Right": []}
+    for play in base.get("_plays", []):
+        m = re.search(r"\b(\d+)\s+(.+)$", play.get("call", ""))
+        if not m:
+            continue
+        number, name = int(m.group(1)), m.group(2)
+        hole = number % 10
+        side = "Middle" if hole <= 3 else ("Right" if hole % 2 == 0 else "Left")
+        z_left = " Z Left " in f' {play["call"]} '
+        sides[side].append((number, name, z_left, play))
+    for plays in sides.values():
+        plays.sort(key=lambda p: (p[0], p[1]))
+    depth = max((len(p) for p in sides.values()), default=0)
+    play_rows = []
+    for i in range(depth):
+        tds = []
+        for plays in sides.values():
+            if i >= len(plays):
+                tds.append('<td class="xl-empty"></td>')
+                continue
+            number, name, z_left, play = plays[i]
+            z = ' <span class="xl-z">Z Left</span>' if z_left else ""
+            tds.append(f'<td><a href="{p_href(play)}"><b>{number}</b> {esc(name)}</a>{z}</td>')
+        play_rows.append(f'<tr>{"".join(tds)}</tr>')
+    plays_table = (
+        '<table class="xl xl-plays"><thead><tr>'
+        + "".join(f"<th>{side}</th>" for side in sides)
+        + f'</tr></thead><tbody>{"".join(play_rows)}</tbody></table>'
     )
-    # Two backs, off the third and fifth columns rather than behind the centre.
-    for col, pos in ((3, "LH"), (5, "RH")):
-        cells.append(
-            f'<div class="lu" style="grid-column:{col};grid-row:3">'
-            f'<span class="lu-pos">{esc(pos)}</span>'
-            f'<span class="lu-name">{esc(position_name(pos))}</span></div>'
-        )
+
+    sheets = "".join(
+        f'<section class="xl-sheet"><p class="xl-title">Package {n}</p>'
+        f'{lineup_table(package)}{plays_table}</section>'
+        for n, package in enumerate(packages, start=1)
+    ) or '<p class="lede">No offensive packages in roster.json yet.</p>'
 
     body = f"""<h1 class="page">Call sheet</h1>
-<p class="lede">The offense where it stands. A cell is a spot on the field; the plays
-that spot runs hang off it, so swapping one in and out is done where you are already
-looking rather than in a list somewhere else.</p>
-<p class="hero-head">Offense</p>
-<div class="lineup">
-  {chr(10).join('  ' + c for c in cells).strip()}
-</div>"""
+<p class="hero-head">{esc(PACKAGE_TITLE["offense"])}</p>
+<div class="xl-sheets">{sheets}</div>"""
     return page(
         f"Call sheet — {SITE_TITLE}",
         body,
         formations,
         defenses=defenses,
         active_nav="calls",
-        description="The offensive lineup, and the plays each spot runs.",
+        description="Each offensive package with its lineup, and the plays by side.",
         landscape=True,
     )
 
