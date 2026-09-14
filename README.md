@@ -245,9 +245,11 @@ and renders as *Open*.
 
 ### Packages
 
-Five boxes of three above the squad on each board. The offense calls them
-**Offensive FB-TB-Z Packages**, because the line does not change between them — the
-package *is* the backfield. Each slot is labelled with the spot it is, so an empty
+Boxes above the squad on each board: six on offense, five on defense. The offense
+calls them **Offensive FB-TB-Z Packages**. Each offensive box is seven slots: FB, TB
+and Z, then LT, LG, RG and RT under a dashed rule, because a package can change the
+line too. The call sheet plays a package's linemen where they are set and the depth
+chart's starters where they are not. Each slot is labelled with the spot it is, so an empty
 package says which three it is short of rather than showing three identical *Open*
 rows, and a name in the wrong slot is visible.
 
@@ -259,8 +261,8 @@ come off together, which is the other question a coach asks at this age and the 
 board could not answer: the columns say who plays left guard, and these say who you are
 sending in next.
 
-They are a fixed three slots rather than a list because the group is the thing being
-named, and the size lives in one constant — the markup, the roster round-trip and the
+They are fixed slots rather than a list because the group is the thing being
+named, and the count and size live in one constant per side — the markup, the roster round-trip and the
 print sheet all take their shape from it. They
 take a name exactly the way a board cell does — same drag, same tap, same *Open* marker —
 because they are in the same drop-target list and not a second set of handlers that would

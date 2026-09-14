@@ -485,23 +485,25 @@ td.dc-cell.over, .dc-pool.over { background: var(--accent-soft) !important; }
    the layout is saying, which is that these five are the same kind of thing. */
 .dc-pkgs { margin: 14px 0 0; }
 .dc-pkgwrap { overflow-x: auto; overscroll-behavior-x: contain; }
+/* One column per package, however many the side has, so the count lives in the markup
+   and not here as well. */
 .dc-pkgrow {
-  display: grid; grid-template-columns: repeat(5, minmax(132px, 1fr));
-  gap: 8px; padding-bottom: 2px;
+  display: grid; grid-auto-flow: column; grid-auto-columns: minmax(112px, 1fr);
+  gap: 6px; padding-bottom: 2px;
 }
 .dc-pkg {
   background: var(--panel); border: 1px solid var(--line); border-radius: 10px;
-  padding: 8px 9px; box-shadow: var(--shadow);
+  padding: 6px; box-shadow: var(--shadow); min-width: 0;
 }
 .dc-pkg-h {
-  margin: 0 0 6px; font-size: 10.5px; font-weight: 800; letter-spacing: 1.1px;
+  margin: 0 0 4px; font-size: 10.5px; font-weight: 800; letter-spacing: 1.1px;
   text-transform: uppercase; color: var(--muted);
 }
 /* Same drop target as a board cell, and it has to look like one or nothing says it
    can be dropped into. */
 .dc-pkg-slot {
-  min-height: 30px; display: flex; align-items: center; gap: 7px;
-  border-radius: 8px; padding: 2px;
+  min-height: 26px; display: flex; align-items: center; gap: 4px;
+  border-radius: 7px; padding: 1px; min-width: 0;
 }
 /* Which spot this slot is, where the side has a fixed answer. Drawn from the
    attribute rather than sitting in the slot as an element, because the slot's
@@ -510,11 +512,17 @@ td.dc-cell.over, .dc-pool.over { background: var(--accent-soft) !important; }
    three spots it is short of, instead of three identical Opens. */
 .dc-pkg-slot[data-spot]::before {
   content: attr(data-spot);
-  flex: 0 0 22px; font-size: 10px; font-weight: 800; letter-spacing: .5px;
+  flex: 0 0 20px; font-size: 9.5px; font-weight: 800; letter-spacing: .3px;
   color: var(--muted); text-transform: uppercase;
 }
-.dc-pkg-slot + .dc-pkg-slot { margin-top: 4px; }
-.dc-pkg-slot .dc-chip { max-width: 100%; }
+.dc-pkg-slot + .dc-pkg-slot { margin-top: 2px; }
+/* The offense's line starts under its backs, and a rule says where. */
+.dc-pkg-slot[data-spot="LT"] {
+  margin-top: 5px; padding-top: 5px; border-top: 1px dashed var(--line);
+}
+.dc-pkg-slot .dc-chip {
+  max-width: 100%; min-width: 0; overflow: hidden; text-overflow: ellipsis;
+}
 
 .dc-bench { margin: 14px 0 6px; }
 .dc-pool {
@@ -2184,10 +2192,14 @@ SITE_JS = """
       if (!sec) return;
       var rows = [];
       all('.dc-pkg', sec).forEach(function (box) {
-        rows.push(all('.dc-pkg-slot', box).map(function (sl) {
+        var row = all('.dc-pkg-slot', box).map(function (sl) {
           var c = chipIn(sl);
           return c ? c.dataset.name : '';
-        }));
+        });
+        // Empty slots at the end are dropped too, so a package with only its backs
+        // set writes three names rather than three and four blanks.
+        while (row.length && !row[row.length - 1]) row.pop();
+        rows.push(row);
       });
       while (rows.length && !rows[rows.length - 1].join('')) rows.pop();
       if (rows.length) packs[side] = rows; else delete packs[side];
@@ -2952,8 +2964,9 @@ def write_calls(formations: list[dict], defenses: dict, root: Path) -> str:
         # The I: the line across, the Z just off it past the right end, and the
         # quarterback, fullback and tailback in one column behind the center.
         grid = [[None] * 8 for _ in range(4)]
+        # A package that sets a lineman plays him; otherwise it is the starter.
         for col, pos in enumerate(line):
-            grid[0][col] = (pos, starter(pos))
+            grid[0][col] = (pos, backs.get(pos) or starter(pos))
         grid[1][3] = ("QB", starter("QB"))
         grid[1][7] = ("Z", backs.get("Z", ""))
         grid[2][3] = ("FB", backs.get("FB", ""))
@@ -3687,12 +3700,14 @@ DEFENSE_POSITION_NAMES = {
 # per-side column list and nothing has to ask which side it is building.
 ROTATIONS = [str(n) for n in range(1, 7)]
 
-# Packages: five per side, above the squad, three deep. A fixed group rather than a
-# list because the group is the thing being named — the kids who go on and come off
-# together. The size is here and nowhere else: the markup, the roster round-trip and
-# the print sheet all take their shape from it.
-PACKAGE_COUNT = 5
-PACKAGE_SIZE = 3
+# Packages, above the squad. A fixed group rather than a list because the group is the
+# thing being named — the kids who go on and come off together. Count and size are per
+# side and here and nowhere else: the markup, the roster round-trip and the print sheet
+# all take their shape from them. Offense is six across, seven deep: the backfield and
+# then the four interior linemen, because a package can change the line too. Defense
+# is five of three.
+PACKAGE_COUNT = {"offense": 6, "defense": 5}
+PACKAGE_SIZE = {"offense": 7, "defense": 3}
 
 # What each side calls its packages. The offense heading names the three spots the
 # group is made of, in the order the slots sit in — the line does not change between
@@ -3704,14 +3719,14 @@ PACKAGE_TITLE = {
 }
 
 # What each slot in a package is, where the side has a fixed answer. Offense does: the
-# line does not change between packages, so the three slots are the fullback, the
-# tailback and the flanker, in that order. Defense does not, and labelling its slots
-# would be inventing a structure it has not got.
+# fullback, the tailback and the flanker, then the left tackle, left guard, right guard
+# and right tackle, in that order. Defense does not, and labelling its slots would be
+# inventing a structure it has not got.
 #
 # The label is drawn from this attribute in CSS rather than put in the slot as an
 # element, because the slot's contents are rewritten whenever it empties or fills —
 # a child element would be wiped the first time somebody took a name out of it.
-PACKAGE_SPOTS = {"offense": ("FB", "TB", "Z")}
+PACKAGE_SPOTS = {"offense": ("FB", "TB", "Z", "LT", "LG", "RG", "RT")}
 
 
 def rotations_for(side: str) -> list[tuple[str, str, str]]:
@@ -3797,9 +3812,9 @@ def side_board(side: str, order: list[str], alt_order: list[str],
     # board holds copies, and a kid can be in as many rotations as he can stand.
     pool = "".join(dc_chip(name, home)
                    for name, home in side_squad(order, names_by_pos))
-    # Five packages of two, above the squad. A package is a pair who go on and come
-    # off together, so it is two slots rather than a list: the board answers "who
-    # plays left guard", and this answers "who am I sending in next".
+    # The packages, above the squad. A package is the group who go on and come off
+    # together, so it is fixed slots rather than a list: the board answers "who plays
+    # left guard", and this answers "who am I sending in next".
     packs = packages or []
 
     spots = PACKAGE_SPOTS.get(side, ())
@@ -3818,9 +3833,9 @@ def side_board(side: str, order: list[str], alt_order: list[str],
         + "".join(
             f'<div class="dc-pkg-slot" data-side="{side}" data-pkg="{n}" '
             f'data-at="{at}"{spot_attr(at)}>{in_slot(n, at)}</div>'
-            for at in range(PACKAGE_SIZE))
+            for at in range(PACKAGE_SIZE[side]))
         + '</div>'
-        for n in range(1, PACKAGE_COUNT + 1)
+        for n in range(1, PACKAGE_COUNT[side] + 1)
     )
     return (
         f'<div class="tablewrap dc-board-wrap"><table class="dc-board">'
