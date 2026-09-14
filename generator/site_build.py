@@ -960,7 +960,6 @@ table.calls td.c { white-space: nowrap; }
 .ph h2 {
   font-size: clamp(17px, 3vw, 21px); color: var(--ink); margin: 0 0 6px; letter-spacing: -.2px;
 }
-.ph p { margin: 0; color: var(--muted); font-size: 14px; max-width: 68ch; }
 
 /* ---- the month grid ---- */
 /* "What are we doing Tuesday?" is a question about a month, not about a scroll. The
@@ -1020,19 +1019,13 @@ table.cal tbody tr:last-child .cal-cell { border-bottom: 0; }
   display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;
   overflow: hidden; font-size: 11px; line-height: 1.3; color: var(--ink-2);
 }
-.cal-ev-new {
-  display: inline-block; margin-top: 3px; font-size: 9.5px; font-weight: 800;
-  letter-spacing: .4px; text-transform: uppercase; border-radius: 999px;
-  padding: 1px 6px; background: var(--accent-solid); color: var(--on-accent);
-}
-.cal-ev-new.none { background: var(--line); color: var(--muted); }
 /* On a phone the month is still worth having — you can see the shape of the week —
    but the words do not fit. The cells shrink to the practice number and the list
    underneath carries the reading. */
 @media (max-width: 640px) {
   .cal-cell { height: 56px; padding: 3px 2px 4px; }
   .cal-ev { padding: 2px 3px; text-align: center; }
-  .cal-ev-t, .cal-ev-new { display: none; }
+  .cal-ev-t { display: none; }
   .cal-ev-n { font-size: 10.5px; }
 }
 @media (max-width: 480px) {
@@ -1082,8 +1075,6 @@ table.cal tbody tr:last-child .cal-cell { border-bottom: 0; }
 .ins-row-body { min-width: 0; }
 .ins-row-body time { display: block; font-size: 11.5px; font-weight: 700; color: var(--accent-ink); }
 .ins-row-body strong { display: block; font-size: 15px; color: var(--ink); margin: 1px 0 3px; }
-.ins-row-meta { display: flex; flex-wrap: wrap; gap: 4px 12px; font-size: 12px; color: var(--muted); }
-.ins-row-meta .new { color: var(--accent-ink); font-weight: 700; }
 .ins-row-go { color: var(--muted); font-size: 17px; text-align: right; }
 .ins-row:hover .ins-row-go { color: var(--accent-ink); }
 @media (max-width: 560px) {
@@ -1198,28 +1189,6 @@ table.cal tbody tr:last-child .cal-cell { border-bottom: 0; }
 
 /* What is in the book but not yet on the schedule. Deliberately quieter than the
    practices above it — it is a backlog, not a plan. */
-.ins-todo {
-  margin: 34px 0 0; padding: 18px 18px 14px; border: 1px dashed var(--line);
-  border-radius: 12px; background: var(--panel-2);
-}
-.ins-todo summary {
-  font-size: 17px; font-weight: 700; color: var(--ink); cursor: pointer;
-}
-.ins-todo summary::marker { color: var(--muted); }
-.ins-todo[open] summary { margin-bottom: 6px; }
-.ins-todo-count { margin-left: 8px; font-size: 12px; font-weight: 600; color: var(--muted); }
-.ins-todo > p { margin: 10px 0 14px; font-size: 14px; color: var(--muted); max-width: 66ch; }
-.ins-todo code { font-size: .92em; background: var(--panel); border-radius: 4px; padding: 1px 5px; }
-.ins-todo-grp { margin-bottom: 12px; }
-.ins-todo-grp h4 {
-  margin: 0 0 6px; font-size: 11px; text-transform: uppercase; letter-spacing: 1.2px;
-  color: var(--muted); display: flex; align-items: center; gap: 7px;
-}
-.ins-todo-grp h4 span {
-  background: var(--line); color: var(--ink-2); border-radius: 999px;
-  padding: 0 7px; font-size: 10.5px; letter-spacing: 0;
-}
-.ins-todo .ins-play { background: var(--panel); }
 
 /* ------------------------------------------------------------------ rulebook -- */
 /* The league's document, reproduced. Their line breaks, indents and runs of spaces are
@@ -1333,7 +1302,7 @@ footer.site a { color: var(--accent-ink); }
 @media print {
   header.site, .drawer, .scrim, .skip, footer.site, .pager, .play-actions, .searchbar,
   .chips, .fgroup, .morebtn, #morefilters, .countline, #count, .clearbtn, .activefilters,
-  .section-head, .btn, .print-intro, .cal-next, .cal-legend, .ins-todo,
+  .section-head, .btn, .print-intro, .cal-next, .cal-legend,
   .crumbs, .playbar, .fronts { display: none !important; }
   /* Print the front that is on screen, and only that one. A play page printed while
      you are looking at the 4-4 gives you the 4-4 sheet, which is the whole reason
@@ -1427,7 +1396,6 @@ footer.site a { color: var(--accent-ink); }
      onto a second sheet is something he is not going to see. Practices 1-4 fitted by
      luck — they are the short ones. The three that carry position groups, an install
      block and a scrimmage did not, and nothing was checking. */
-  .ins-todo { display: none !important; }
 
   .ins-day, .ins-day-plan { padding-right: 10px; }
   .ins-day { margin-bottom: 10px; }
@@ -3522,17 +3490,11 @@ def write_install(formations: list[dict], defenses: dict, root: Path) -> str:
     forms_by_id = {f["id"]: f for f in formations}
     phases = schedule.get("phases", {})
 
-    total_plays = sum(len(pr.get("plays", [])) for pr in practices)
-    total_fronts = sum(len(pr.get("fronts", [])) for pr in practices)
-
     # ---- the calendar -------------------------------------------------------
     days: dict = {}
     dated = [(practice_date(pr), pr) for pr in practices]
     dated = [(d, pr) for d, pr in dated if d]
     for day, pr in dated:
-        n_new = install_count(pr)
-        badge = (f'<span class="cal-ev-new">+{n_new}</span>' if n_new else
-                 '<span class="cal-ev-new none">rev</span>')
         # A square on a phone is barely wider than the word "Practice", so the word is
         # dropped below 480px and only the number is left. The link keeps its whole
         # name in aria-label, so what is dropped is pixels, not meaning.
@@ -3543,8 +3505,7 @@ def write_install(formations: list[dict], defenses: dict, root: Path) -> str:
             f'<a class="cal-ev" href="{install_href(pr)}" '
             f'data-phase="{esc(pr.get("phase", ""))}" aria-label="{esc(label)}">'
             f'<span class="cal-ev-n"><span class="cal-ev-w">Practice </span>{pr["n"]}</span>'
-            f'<span class="cal-ev-t">{esc(pr.get("focus", ""))}</span>'
-            f'{badge}</a>'
+            f'<span class="cal-ev-t">{esc(pr.get("focus", ""))}</span></a>'
         )
 
     cal_html = ""
@@ -3573,76 +3534,26 @@ def write_install(formations: list[dict], defenses: dict, root: Path) -> str:
             seen_phase = phase
             meta = phases.get(phase, {})
             rows.append(
-                f'<div class="ph"><h2>{esc(meta.get("label", phase or ""))}</h2>'
-                f'<p>{esc(meta.get("note", ""))}</p></div>'
+                f'<div class="ph"><h2>{esc(meta.get("label", phase or ""))}</h2></div>'
             )
         day = practice_date(pr)
         when = date_label(day) if day else esc(str(pr.get("date", "")))
-        window = practice_window(pr)
-        n_new = install_count(pr)
-        blocks_n = len(practice_agenda(pr))
-        meta_bits = [f'<span>{esc(window)}</span>'] if window else []
-        meta_bits.append(f"<span>{blocks_n} block{'' if blocks_n == 1 else 's'}</span>")
-        meta_bits.append(f'<span class="new">{n_new} new</span>' if n_new
-                         else "<span>Review day</span>")
         rows.append(
             f'<a class="ins-row" href="{install_href(pr)}">'
             f'<span class="ins-row-n"><small>Practice</small><b>{pr["n"]}</b></span>'
             f'<span class="ins-row-body"><time>{when}</time>'
-            f'<strong>{esc(pr.get("focus", ""))}</strong>'
-            f'<span class="ins-row-meta">{"".join(meta_bits)}</span></span>'
+            f'<strong>{esc(pr.get("focus", ""))}</strong></span>'
             f'<span class="ins-row-go" aria-hidden="true">&rarr;</span></a>'
         )
 
-    # ---- anything not on the schedule yet, so nothing goes missing quietly ----
-    scheduled = {pid for pr in practices for pid in pr.get("plays", [])}
-    todo = []
-    for form in formations:
-        rest = [p for p in form["_plays"] if p["id"] not in scheduled]
-        if rest:
-            links = "".join(
-                f'<a class="ins-play" href="{p_href(p)}">'
-                f'<span class="ins-call">{esc(p.get("call", ""))}</span>'
-                f'<span class="ins-name">{esc(p["name"])}</span></a>' for p in rest)
-            todo.append(f'<div class="ins-todo-grp"><h4>{esc(form_label(form))} '
-                        f'<span>{len(rest)}</span></h4>'
-                        f'<div class="ins-list">{links}</div></div>')
-    scheduled_fronts = {fid for pr in practices for fid in pr.get("fronts", [])}
-    rest_fronts = [f for fid, f in our_fronts(defenses).items()
-                   if fid not in scheduled_fronts]
-    if rest_fronts:
-        links = "".join(
-            f'<a class="ins-play def" href="{d_href(f)}">'
-            f'<span class="ins-call">{esc(f["call"])}</span>'
-            f'<span class="ins-name">{esc(f["name"])} defence</span></a>' for f in rest_fronts)
-        todo.append(f'<div class="ins-todo-grp"><h4>Defence '
-                    f'<span>{len(rest_fronts)}</span></h4>'
-                    f'<div class="ins-list">{links}</div></div>')
-
-    todo_block = ""
-    if todo:
-        left = sum(1 for f in formations for p in f["_plays"] if p["id"] not in scheduled)
-        front_word = "front" if len(rest_fronts) == 1 else "fronts"
-        todo_block = (
-            '<details class="ins-todo"><summary>Not scheduled yet'
-            f'<span class="ins-todo-count">{left} plays &middot; {len(rest_fronts)} '
-            f"{front_word}</span></summary>"
-            "<p>Add them to <code>install.json</code> as you go &mdash; the build "
-            "catches bad ordering.</p>"
-            f'{"".join(todo)}</details>'
-        )
-
+    # The page is the calendar and the list of practices under it. The intro paragraph,
+    # the counts strip, each phase's note, every practice's time / blocks / new-or-review
+    # line, the +N and REV badges on the calendar and the "Not scheduled yet" list all
+    # described the schedule rather than being it, so they are gone.
     body = f"""<h1 class="page">Install schedule</h1>
-<p class="lede">{esc(schedule.get("intro", ""))}</p>
-<dl class="rb-facts">
-  <div><dt>Practices planned</dt><dd>{len(practices)}</dd></div>
-  <div><dt>Plays scheduled</dt><dd>{total_plays} of {sum(len(f["_plays"]) for f in formations)}</dd></div>
-  <div><dt>Fronts scheduled</dt><dd>{total_fronts} of {len(our_fronts(defenses))}</dd></div>
-</dl>
 {cal_html}
 <div class="ins-wrap">
 {chr(10).join(rows)}
-{todo_block}
 </div>"""
     return page(
         f"Install schedule — {SITE_TITLE}",
