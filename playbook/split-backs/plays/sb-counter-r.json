@@ -3,7 +3,7 @@
   "order": 5,
   "formation": "split-backs",
   "name": "Split Counter Right",
-  "call": "Split Z Right 24 Counter",
+  "call": "Split SL Right 24 Counter",
   "type": "run",
   "direction": "right",
   "ball_carrier": "LH",
@@ -32,7 +32,7 @@
       "block": "base",
       "drive": "out"
     },
-    "Z": {
+    "SL": {
       "block": "climb",
       "target": "outside",
       "note": "Leave like it is a route so he never sees you. Not low."
@@ -95,8 +95,8 @@
   "coaching_points": [
     "Do not call this until the pitch has been working. It is the counter-punch.",
     "No lead blocker at all, so this hits faster than Power off exactly the same line rules. The line has to hold its blocks while the ball carrier crosses.",
-    "The Z's crack on their outside linebacker is what springs this one. Drill it on its own, and drill leaving flat and low-shouldered so it looks like a route until it is too late.",
+    "The SL's crack on their outside linebacker is what springs this one. Drill it on its own, and drill leaving flat and low-shouldered so it looks like a route until it is too late.",
     "Two hard steps toward the fake before he comes back. A shuffle fools nobody.",
-    "This is the side where everybody near the ball is accounted for — our end kicks their end out and the Z has their outside linebacker, in every front. So the whole edge is one block. If the Z cannot get there in time, run the Pitch, which goes outside that linebacker instead of at him."
+    "This is the side where everybody near the ball is accounted for — our end kicks their end out and the SL has their outside linebacker, in every front. So the whole edge is one block. If the SL cannot get there in time, run the Pitch, which goes outside that linebacker instead of at him."
   ]
 }

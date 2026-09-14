@@ -3,7 +3,7 @@
   "order": 21,
   "formation": "i-form",
   "name": "Regular I Slant Right",
-  "call": "Regular I Z Right 36 Slant",
+  "call": "Regular I SL Right 36 Slant",
   "type": "run",
   "direction": "right",
   "ball_carrier": "TB",
@@ -32,7 +32,7 @@
       "block": "base",
       "drive": "in"
     },
-    "Z": {
+    "SL": {
       "block": "screen"
     },
     "QB": {

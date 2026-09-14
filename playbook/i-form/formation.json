@@ -4,8 +4,8 @@
   "name": "Regular I",
   "family": "Regular I",
   "summary": "Fullback and tailback stacked behind the quarterback. Teaches a back to read a block instead of running to a spot.",
-  "personnel": "11 players, 2 tight ends, 1 Z, quarterback, fullback, tailback",
-  "notes": "Normal line splits, about a foot. Both ends are on the line; the Z is off it, a yard outside and a yard back — seven on the line every snap. Fullback at three yards, tailback stacked behind him at five and a half.",
+  "personnel": "11 players, 2 tight ends, 1 SL, quarterback, fullback, tailback",
+  "notes": "Normal line splits, about a foot. Both ends are on the line; the SL is off it, a yard outside and a yard back — seven on the line every snap. Fullback at three yards, tailback stacked behind him at five and a half.",
   "alignment": {
     "LTE": [-4.2, -0.5],
     "LT": [-2.8, -0.5],
@@ -14,7 +14,7 @@
     "RG": [1.4, -0.5],
     "RT": [2.8, -0.5],
     "RTE": [4.2, -0.5],
-    "Z": [7.0, -1.2],
+    "SL": [7.0, -1.2],
     "QB": [0.0, -1.5],
     "FB": [0.0, -3.3],
     "TB": [0.0, -5.5]
@@ -22,7 +22,7 @@
   "eligible": [
     "LTE",
     "RTE",
-    "Z",
+    "SL",
     "FB",
     "TB",
     "QB"
@@ -31,13 +31,13 @@
     "1": "QB",
     "2": "FB",
     "3": "TB",
-    "4": "Z"
+    "4": "SL"
   },
   "coaching_notes": [
     "The tailback picks his own hole here — reads the block and cuts off it, instead of the play deciding for him the way Dive does. The harder skill, which is why this formation gets the most practice time.",
-    "The Z lines up right every play, and the call says so — Z Right. Naming it now means a Z Left look can be added later without changing how plays are called.",
-    "Count seven on the line every snap — the Z creeping up onto it is the most common illegal-formation flag from this look.",
+    "The SL lines up right every play, and the call says so — SL Right. Naming it now means a SL Left look can be added later without changing how plays are called.",
+    "Count seven on the line every snap — the SL creeping up onto it is the most common illegal-formation flag from this look.",
     "Fullback and tailback must stay stacked. A drifting tailback tips the play before the snap.",
-    "The Z is back 4 — a receiver most snaps, but also the jet-motion man on Jet sweep and the fake on its boot. Same number he carries in the Power I backfield."
+    "The SL is back 4 — a receiver most snaps, but also the jet-motion man on Jet sweep and the fake on its boot. Same number he carries in the Power I backfield."
   ]
 }

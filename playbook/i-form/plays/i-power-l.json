@@ -3,17 +3,17 @@
   "order": 10,
   "formation": "i-form",
   "name": "Regular I Power Left",
-  "call": "Regular I Z Left 35 Power",
+  "call": "Regular I SL Left 35 Power",
   "type": "run",
   "direction": "left",
   "ball_carrier": "TB",
   "alignment": {
-    "Z": [
+    "SL": [
       -7.0,
       -1.2
     ]
   },
-  "purpose": "Power Right's exact mirror. The Z is fixed on the right in every other Regular I play, but Power depends on his kick-out block, so this is the one play in the book where he flips sides before the snap — lined up left, same job, same footwork, just facing the other way.",
+  "purpose": "Power Right's exact mirror. The SL is fixed on the right in every other Regular I play, but Power depends on his kick-out block, so this is the one play in the book where he flips sides before the snap — lined up left, same job, same footwork, just facing the other way.",
   "assignments": {
     "LTE": {
       "block": "release"
@@ -37,7 +37,7 @@
     "RTE": {
       "block": "cutoff"
     },
-    "Z": {
+    "SL": {
       "block": "kick"
     },
     "QB": {
@@ -86,10 +86,10 @@
   },
   "coaching_points": [
     "This is the most physical run in the book, mirrored. If it works going right, it works going left — the blocking is identical, just flipped.",
-    "The Z is used to lining up on the right. Make sure he actually moves before the snap on this call and does not just run the block from where he always stands.",
-    "Drill the Z's kick-out on its own, same as the other direction. If he blocks the end with his shoulders square, the end slides underneath and makes the tackle for a loss — he has to attack the outside hip.",
+    "The SL is used to lining up on the right. Make sure he actually moves before the snap on this call and does not just run the block from where he always stands.",
+    "Drill the SL's kick-out on its own, same as the other direction. If he blocks the end with his shoulders square, the end slides underneath and makes the tackle for a loss — he has to attack the outside hip.",
     "The fullback's man is whoever shows in the hole, not one he picks before the snap. Same as the other direction.",
-    "The tailback's most common mistake is bouncing it wide looking for green grass. The yards are inside the Z's block, same as Power Right. Make him run it tight in practice until it is automatic."
+    "The tailback's most common mistake is bouncing it wide looking for green grass. The yards are inside the SL's block, same as Power Right. Make him run it tight in practice until it is automatic."
   ],
   "z": "left"
 }

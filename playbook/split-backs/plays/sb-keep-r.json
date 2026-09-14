@@ -3,11 +3,11 @@
   "order": 11,
   "formation": "split-backs",
   "name": "Split QB Keep Right",
-  "call": "Split Z Right 16 Keep",
+  "call": "Split SL Right 16 Keep",
   "type": "run",
   "direction": "right",
   "ball_carrier": "QB",
-  "purpose": "The quarterback keeps it himself, and he runs to the side the split man is lined up on — so the Z moves right for this one and the call says so. Fake to the back going left, seal the end inside, and get outside behind two blockers: the near back on the first man outside our end and the split man on their corner, or on their outside linebacker against the 5-4-2, which has no corners. Blocked exactly like Pitch.",
+  "purpose": "The quarterback keeps it himself, and he runs to the side the split man is lined up on — so the SL moves right for this one and the call says so. Fake to the back going left, seal the end inside, and get outside behind two blockers: the near back on the first man outside our end and the split man on their corner, or on their outside linebacker against the 5-4-2, which has no corners. Blocked exactly like Pitch.",
   "assignments": {
     "LTE": {
       "block": "cutoff"
@@ -32,7 +32,7 @@
       "block": "base",
       "drive": "in"
     },
-    "Z": {
+    "SL": {
       "block": "screen"
     },
     "QB": {
@@ -82,7 +82,7 @@
   },
   "coaching_points": [
     "Blocked exactly like Pitch — the line does not learn a new rule, only a new name. Say that out loud when you install it.",
-    "This is the one play that moves the split man, so the huddle hears which side he is on: Z Right or Z Left. Count seven on the line before the snap like always.",
+    "This is the one play that moves the split man, so the huddle hears which side he is on: SL Right or SL Left. Count seven on the line before the snap like always.",
     "The fake is the play. If nobody looks at the back going the other way, the quarterback is running straight into a linebacker who never left.",
     "Do not call it until Pitch has been working. Their corner has to believe the ball is going wide before a keep inside him is worth anything."
   ]

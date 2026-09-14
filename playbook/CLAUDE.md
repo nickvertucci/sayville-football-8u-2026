@@ -74,16 +74,16 @@ A formation has one alignment, but a formation is not always one picture. A play
 move a player who has more than one legal spot in the same eleven-man look:
 
 ```json
-"alignment": { "Z": [-2.6, -3.3] }
+"alignment": { "SL": [-2.6, -3.3] }
 ```
 
-That is Power Left putting the Z on the side his kick-out has to happen on, instead of
+That is Power Left putting the SL on the side his kick-out has to happen on, instead of
 the right, where he lines up on every other snap. Everything else — the line rules, the other ten spots — is
 unchanged, and the player's `path` is still relative to wherever he ends up, so the
 assignment does not have to know which look it is in.
 
-**Say it in the call.** `Regular I Z Left 35 Power` tells the huddle which side the Z is
-on, the same way `Regular I Z Right 20 Dive` does. A play that moves
+**Say it in the call.** `Regular I SL Left 35 Power` tells the huddle which side the SL is
+on, the same way `Regular I SL Right 20 Dive` does. A play that moves
 somebody silently is a play nobody can call.
 
 An override may only move a player the formation already has, and the coordinates must be
@@ -120,7 +120,7 @@ exactly eleven players, and `backs` — the digit-to-position map its calls are 
 from:
 
 ```json
-"backs": { "1": "QB", "2": "FB", "3": "TB", "4": "Z" }
+"backs": { "1": "QB", "2": "FB", "3": "TB", "4": "SL" }
 ```
 
 `backs` is not documentation. It is what the generator resolves the first digit of every
@@ -131,7 +131,7 @@ so there is one copy of the numbering rather than three that can disagree.
 
 Both are printed at the top of every card. `name` is the teaching name (*Regular I Power
 Right*); `call` is the huddle call in the team's play-calling language
-(`Regular I Z Right 34 Power` — formation, the Z's side, then **two digits: who carries
+(`Regular I SL Right 34 Power` — formation, the SL's side, then **two digits: who carries
 it and where it goes**, then the play word).
 The numbering system is documented in the top-level [README](../README.md).
 
@@ -144,8 +144,8 @@ The numbering system is documented in the top-level [README](../README.md).
   fails the build if it does not land in the hole the call names.
 
 That means the digits describe **the back the first digit names**, not the ball carrier.
-On `I Z Right 16 Boot` the `1` is the quarterback going through the 6 hole; `ball_carrier`
-is the Z he throws to, which is a different thing.
+On `I SL Right 16 Boot` the `1` is the quarterback going through the 6 hole; `ball_carrier`
+is the SL he throws to, which is a different thing.
 
 Inventing a nickname instead of a call defeats the point of having a language, and now
 also fails `--check`.
@@ -159,7 +159,7 @@ A blocker's assignment is **a verb, not a sentence**:
 
 ```json
 "RT": { "block": "down" },
-"Z":  { "block": "kick" },
+"SL":  { "block": "kick" },
 "FB": { "block": "lead" },
 "RTE": { "block": "release", "note": "You are the widest man we have — if he beats you outside, it is a touchdown." }
 ```
@@ -261,7 +261,7 @@ exact bug this whole system exists to prevent, and it is invisible unless you lo
 
 ## Every left-handed play is written by hand
 
-Neither formation is symmetric — the Z is split to the right on every snap, so flipping
+Neither formation is symmetric — the SL is split to the right on every snap, so flipping
 a play would flip his path and leave him aligned on the same side. There is no
 `mirror_of` and no mirroring machinery; a left-handed play is its own file.
 
@@ -270,8 +270,8 @@ plays: only the right one has a receiver out there to crack the linebacker or bl
 corner, and `--audit` will tell you which left-handed plays are a blocker short because
 of it.
 
-**A play that moves the Z says so in its call.** `Regular I Z Left 35 Power` and
-`Regular I Z Left 48 Jet` are the two that do — Power because it is built on his
+**A play that moves the SL says so in its call.** `Regular I SL Left 35 Power` and
+`Regular I SL Left 48 Jet` are the two that do — Power because it is built on his
 kick-out, Jet because a receiver cannot go in motion toward the sideline he is already
 standing on. Use `alignment` to move him and name his side in the call; a play that
 moves somebody silently is a play nobody can call.

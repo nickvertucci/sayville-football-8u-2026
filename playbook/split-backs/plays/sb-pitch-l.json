@@ -3,7 +3,7 @@
   "order": 10,
   "formation": "split-backs",
   "name": "Split Pitch Left",
-  "call": "Split Z Right 39 Pitch",
+  "call": "Split SL Right 39 Pitch",
   "type": "run",
   "direction": "left",
   "ball_carrier": "RH",
@@ -32,7 +32,7 @@
       "block": "base",
       "drive": "in"
     },
-    "Z": {
+    "SL": {
       "block": "cutoff"
     },
     "QB": {

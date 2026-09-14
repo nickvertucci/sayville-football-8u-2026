@@ -313,6 +313,8 @@
   var data = JSON.parse(blob.textContent);
   var KEY = 'sayville-depth-chart-v1';
   var LEGACY_ROT = { purple: 'd1', gold: 'd2', white: 'd3' };
+  // The slot was the Z until the book renamed him SL.
+  var LEGACY_POS = { Z: 'SL' };
   var edited = document.getElementById('dc-edited');
   var resetBtn = document.getElementById('dc-reset');
   var copyBtn = document.getElementById('dc-copy');
@@ -459,7 +461,7 @@
       // Without this every record misses its cell, and the coach who rearranged his
       // line at halftime opens the page to the shipped roster and no explanation.
       var rot = LEGACY_ROT[rec[1]] || rec[1];
-      var td = byKey[rec[0] + '/' + rot + '/' + rec[2]];
+      var td = byKey[rec[0] + '/' + rot + '/' + (LEGACY_POS[rec[2]] || rec[2])];
       var src = template[rec[0] + '/' + rec[3]];
       // A spot or a kid that has left roster.json since this was saved. Dropping the
       // one record keeps the rest of the board, which is the point of naming spots.

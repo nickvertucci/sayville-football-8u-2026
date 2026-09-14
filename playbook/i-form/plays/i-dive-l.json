@@ -3,7 +3,7 @@
   "order": 4,
   "formation": "i-form",
   "name": "Regular I Dive Left",
-  "call": "Regular I Z Right 21 Dive",
+  "call": "Regular I SL Right 21 Dive",
   "type": "run",
   "direction": "left",
   "ball_carrier": "FB",
@@ -32,7 +32,7 @@
     "RTE": {
       "block": "cutoff"
     },
-    "Z": {
+    "SL": {
       "block": "cutoff"
     },
     "QB": {
@@ -86,7 +86,7 @@
     "Snap to handoff should be under a second. If the fullback is waiting on the ball, the play is already dead.",
     "Run it the same week you install the right-hand one. The whole value of having both is that their middle linebacker cannot lean.",
     "The fullback runs at a spot, not at a defender. Give him the outside hip of the center and let him go.",
-    "The Z is away from the play here, so he has further to travel to cut off the backside. He leaves on the snap."
+    "The SL is away from the play here, so he has further to travel to cut off the backside. He leaves on the snap."
   ],
   "z": "right"
 }

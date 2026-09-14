@@ -3,12 +3,12 @@
   "order": 14,
   "formation": "i-form",
   "name": "Regular I Boot Left",
-  "call": "Regular I Z Right 17 Boot",
+  "call": "Regular I SL Right 17 Boot",
   "type": "pass",
   "fakes": "i-toss-r",
   "direction": "left",
   "ball_carrier": "LTE",
-  "purpose": "Boot Left off the toss action. Everybody sells the toss going right and the quarterback keeps it to the left edge alone — the tight end in the flat in front of him, the Z coming all the way across behind. Run first, throw second.",
+  "purpose": "Boot Left off the toss action. Everybody sells the toss going right and the quarterback keeps it to the left edge alone — the tight end in the flat in front of him, the SL coming all the way across behind. Run first, throw second.",
   "assignments": {
     "LTE": {
       "rule": "Bump the end, then release to the flat at four yards in front of the quarterback.",
@@ -42,7 +42,7 @@
     "RTE": {
       "block": "down"
     },
-    "Z": {
+    "SL": {
       "rule": "Cross behind the line to eight yards on the far side. Second look, late on purpose.",
       "type": "pass",
       "path": [

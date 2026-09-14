@@ -3,8 +3,8 @@
 <rect x="0" y="0" width="621" height="58" fill="#14213d"/>
 <text x="18" y="26" font-size="19.0" font-weight="700" fill="#ffffff">Regular I Slant Left</text>
 <text x="18" y="45" font-size="11.5" fill="#a9b4c7">RUN  •  Regular I  •  vs 5-4-2</text>
-<rect x="341.8" y="13" width="261.2" height="31" rx="6" fill="#ffffff" fill-opacity="0.12" stroke="#8593ad" stroke-width="1"/>
-<text x="472.4" y="34" text-anchor="middle" font-size="14.5" font-weight="700" fill="#ffffff" letter-spacing="0.5">Regular I Z Right 37 Slant</text>
+<rect x="332.6" y="13" width="270.4" height="31" rx="6" fill="#ffffff" fill-opacity="0.12" stroke="#8593ad" stroke-width="1"/>
+<text x="467.8" y="34" text-anchor="middle" font-size="14.5" font-weight="700" fill="#ffffff" letter-spacing="0.5">Regular I SL Right 37 Slant</text>
 <clipPath id="fieldclip"><rect x="0" y="58" width="621" height="472"/></clipPath>
 <g clip-path="url(#fieldclip)"><g transform="translate(-40.5,31.0)">
 <rect x="0" y="0" width="702" height="513" fill="#ffffff"/>
@@ -71,7 +71,7 @@
 <rect x="452.5" y="325.6" width="23.8" height="23.8" rx="3" fill="#ffffff" stroke="#14213d" stroke-width="2.4"/>
 <text x="464.4" y="341.5" text-anchor="middle" font-size="11.5" font-weight="700" fill="#14213d">RTE</text>
 <circle cx="540.0" cy="356.4" r="12.4" fill="#ffffff" stroke="#14213d" stroke-width="2.4"/>
-<text x="540.0" y="360.4" text-anchor="middle" font-size="11.5" font-weight="700" fill="#14213d">Z</text>
+<text x="540.0" y="360.4" text-anchor="middle" font-size="11.5" font-weight="700" fill="#14213d">SL</text>
 <circle cx="351.0" cy="364.5" r="12.4" fill="#ffffff" stroke="#14213d" stroke-width="2.4"/>
 <text x="351.0" y="368.5" text-anchor="middle" font-size="11.5" font-weight="700" fill="#14213d">QB</text>
 <circle cx="351.0" cy="413.1" r="12.4" fill="#ffffff" stroke="#14213d" stroke-width="2.4"/>
@@ -104,7 +104,7 @@
 <text x="310" y="578" font-size="12" font-weight="700" fill="#111318">RTE</text>
 <text x="344" y="578" font-size="12" fill="#111318">End head up on you. Cut him off — get</text>
 <text x="344" y="596" font-size="12" fill="#111318">between him and the ball.</text>
-<text x="310" y="612" font-size="12" font-weight="700" fill="#111318">Z</text>
+<text x="310" y="612" font-size="12" font-weight="700" fill="#111318">SL</text>
 <text x="344" y="612" font-size="12" fill="#111318">Cut off the backside. Never quit on the</text>
 <text x="344" y="630" font-size="12" fill="#111318">play.</text>
 <text x="310" y="646" font-size="12" font-weight="700" fill="#111318">QB</text>
@@ -121,13 +121,13 @@
 <text x="344" y="782" font-size="12" fill="#111318">never inside.</text>
 <line x1="18" y1="806" x2="603" y2="806" stroke="#c8cdd6" stroke-width="1"/>
 <text x="18" y="824" font-size="11" font-weight="700" fill="#5b6472" letter-spacing="1">COACHING POINTS</text>
-<text x="18" y="844" font-size="12" fill="#111318">Check their alignment first. If they have shaded toward our Z, this is the call.</text>
-<text x="18" y="862" font-size="12" fill="#111318">The Z chases from the back side, and his man is the backside linebacker — not the</text>
+<text x="18" y="844" font-size="12" fill="#111318">Check their alignment first. If they have shaded toward our SL, this is the call.</text>
+<text x="18" y="862" font-size="12" fill="#111318">The SL chases from the back side, and his man is the backside linebacker — not the</text>
 <text x="18" y="878" font-size="12" fill="#111318">corner, who is on the far side of the field from him. Tell him he is not decoration:</text>
 <text x="18" y="896" font-size="12" fill="#111318">he is the reason nothing catches this from behind.</text>
 <text x="18" y="912" font-size="12" fill="#111318">Nobody is assigned to their playside corner. Against the 5-3 the fullback's lead</text>
 <text x="18" y="930" font-size="12" fill="#111318">block finds him anyway; against a four-linebacker front the fullback has the outside</text>
 <text x="18" y="946" font-size="12" fill="#111318">linebacker instead and the tailback beats the corner himself or gets caught.</text>
-<text x="18" y="964" font-size="12" fill="#111318">The line and the fullback are I Slant Right in a mirror. Only the Z is different,</text>
+<text x="18" y="964" font-size="12" fill="#111318">The line and the fullback are I Slant Right in a mirror. Only the SL is different,</text>
 <text x="18" y="980" font-size="12" fill="#111318">because he lines up on the right either way. Teach the pair together.</text>
 </svg>

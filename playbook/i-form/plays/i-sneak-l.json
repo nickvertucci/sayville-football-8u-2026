@@ -3,7 +3,7 @@
   "order": 2,
   "formation": "i-form",
   "name": "Regular I Sneak Left",
-  "call": "Regular I Z Right 11 Sneak",
+  "call": "Regular I SL Right 11 Sneak",
   "type": "run",
   "direction": "left",
   "ball_carrier": "QB",
@@ -31,7 +31,7 @@
     "RTE": {
       "block": "wedge"
     },
-    "Z": {
+    "SL": {
       "rule": "Release downfield and run the corner off. You will not get the ball, just his eyes.",
       "type": "pass",
       "path": [
@@ -46,7 +46,7 @@
       ]
     },
     "QB": {
-      "rule": "Go on the snap behind the guard's outside hip away from the Z. Low pads, ball tight, fall forward.",
+      "rule": "Go on the snap behind the guard's outside hip away from the SL. Low pads, ball tight, fall forward.",
       "type": "run",
       "path": [
         [

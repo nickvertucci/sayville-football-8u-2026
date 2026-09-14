@@ -3,7 +3,7 @@
   "order": 19,
   "formation": "i-form",
   "name": "Regular I Power Boot Right",
-  "call": "Regular I Z Right 16 Power Boot",
+  "call": "Regular I SL Right 16 Power Boot",
   "type": "pass",
   "fakes": "i-power-l",
   "direction": "right",
@@ -57,7 +57,7 @@
         ]
       ]
     },
-    "Z": {
+    "SL": {
       "rule": "Run downfield outside the end and take the corner with you. Deep shot if he sits.",
       "type": "pass",
       "path": [

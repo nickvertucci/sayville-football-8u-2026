@@ -3,11 +3,11 @@
   "order": 12,
   "formation": "i-form",
   "name": "Regular I Counter Left",
-  "call": "Regular I Z Right 35 Counter",
+  "call": "Regular I SL Right 35 Counter",
   "type": "run",
   "direction": "left",
   "ball_carrier": "TB",
-  "purpose": "Misdirection off the toss. We show them the toss to the Z side, their linebackers chase, and the tailback plants and comes back weak behind the tight end's kick-out.",
+  "purpose": "Misdirection off the toss. We show them the toss to the SL side, their linebackers chase, and the tailback plants and comes back weak behind the tight end's kick-out.",
   "assignments": {
     "LTE": {
       "block": "base",
@@ -32,7 +32,7 @@
     "RTE": {
       "block": "cutoff"
     },
-    "Z": {
+    "SL": {
       "block": "cutoff"
     },
     "QB": {
@@ -95,7 +95,7 @@
     "The tailback's counter steps must be full speed and full length. A shuffle fools nobody.",
     "The fullback selling the toss matters more than his block. Tell him he is the decoy and mean it.",
     "If their backside linebacker stops chasing the toss, go back to I Slant Left.",
-    "With nobody pulling, the tight end kicks the end out himself. Against a four-linebacker front that leaves their outside linebacker free, and going this way we have nobody out there to take him — the Z lines up on the other side and is cutting off behind the play. If that linebacker keeps making the tackle, run Toss Left at him, where the fullback leads out there, or run Counter Right, which does have the Z on the playside."
+    "With nobody pulling, the tight end kicks the end out himself. Against a four-linebacker front that leaves their outside linebacker free, and going this way we have nobody out there to take him — the SL lines up on the other side and is cutting off behind the play. If that linebacker keeps making the tackle, run Toss Left at him, where the fullback leads out there, or run Counter Right, which does have the SL on the playside."
   ],
   "z": "right"
 }

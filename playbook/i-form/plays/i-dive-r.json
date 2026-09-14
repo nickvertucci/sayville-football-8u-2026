@@ -3,7 +3,7 @@
   "order": 3,
   "formation": "i-form",
   "name": "Regular I Dive Right",
-  "call": "Regular I Z Right 20 Dive",
+  "call": "Regular I SL Right 20 Dive",
   "type": "run",
   "direction": "right",
   "ball_carrier": "FB",
@@ -32,7 +32,7 @@
       "block": "base",
       "drive": "out"
     },
-    "Z": {
+    "SL": {
       "block": "screen"
     },
     "QB": {
