@@ -615,8 +615,12 @@ table.xl th {
 .xl-open { color: var(--muted); font-style: italic; }
 .xl-plays td { height: 22px; }
 @media print {
-  .xl-sheets { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+  .xl-sheets { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; margin: 4px 0 0; }
   table.xl { font-size: 9px; }
+  table.xl td, table.xl th { padding: 1px 2px; }
+  .xl-title { padding: 2px 6px; font-size: 11px; }
+  .xl-lineup td { height: 24px; }
+  .xl-plays td { height: 14px; }
 }
 
 .plist { display: grid; gap: 12px; grid-template-columns: 1fr; }
