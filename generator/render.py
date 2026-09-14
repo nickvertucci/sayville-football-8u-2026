@@ -828,18 +828,18 @@ def draw_field() -> str:
 
 def draw_defense(defense: dict) -> str:
     out = []
-    r = 0.42 * SCALE
+    r = 0.55 * SCALE
     for label, (x, y) in defense["alignment"].items():
         cx, cy = fx(x), fy(y)
         a = r * 0.62
         out.append(
             f'<line x1="{cx-a:.1f}" y1="{cy-a:.1f}" x2="{cx+a:.1f}" y2="{cy+a:.1f}" '
-            f'stroke="{COLORS["defense"]}" stroke-width="3"/>'
+            f'stroke="{COLORS["defense"]}" stroke-width="3.6"/>'
             f'<line x1="{cx+a:.1f}" y1="{cy-a:.1f}" x2="{cx-a:.1f}" y2="{cy+a:.1f}" '
-            f'stroke="{COLORS["defense"]}" stroke-width="3"/>'
+            f'stroke="{COLORS["defense"]}" stroke-width="3.6"/>'
         )
         out.append(
-            f'<text x="{cx:.1f}" y="{cy - r - 4:.1f}" text-anchor="middle" font-size="10" '
+            f'<text x="{cx:.1f}" y="{cy - r - 3:.1f}" text-anchor="middle" font-size="12.5" '
             f'fill="{COLORS["defense"]}" font-weight="600">{esc(label.strip())}</text>'
         )
     return "\n".join(out)
@@ -872,19 +872,21 @@ def draw_offense(play: dict, alignment: dict) -> str:
     for pos, (x, y) in alignment.items():
         cx, cy = fx(x), fy(y)
         fill = COLORS["carrier"] if pos == carrier else COLORS["offense"]
+        # As big as the I allows: the quarterback stands a yard behind the centre, so
+        # the square's half and the circle's radius together have to stay under that.
         if pos in LINEMEN:
-            s = 0.44 * SCALE
+            s = 0.5 * SCALE
             out.append(
                 f'<rect x="{cx-s:.1f}" y="{cy-s:.1f}" width="{2*s:.1f}" height="{2*s:.1f}" '
-                f'rx="3" fill="#ffffff" stroke="{fill}" stroke-width="2.4"/>'
+                f'rx="3" fill="#ffffff" stroke="{fill}" stroke-width="2.6"/>'
             )
         else:
             out.append(
-                f'<circle cx="{cx:.1f}" cy="{cy:.1f}" r="{0.46*SCALE:.1f}" '
-                f'fill="#ffffff" stroke="{fill}" stroke-width="2.4"/>'
+                f'<circle cx="{cx:.1f}" cy="{cy:.1f}" r="{0.5*SCALE:.1f}" '
+                f'fill="#ffffff" stroke="{fill}" stroke-width="2.6"/>'
             )
         out.append(
-            f'<text x="{cx:.1f}" y="{cy+4:.1f}" text-anchor="middle" font-size="11.5" '
+            f'<text x="{cx:.1f}" y="{cy+4.5:.1f}" text-anchor="middle" font-size="13" '
             f'font-weight="700" fill="{fill}">{esc(pos)}</text>'
         )
     return "\n".join(out)
@@ -1018,14 +1020,14 @@ def draw_ghost_offense() -> str:
     for pos, (x, y) in GENERIC_OFFENSE.items():
         cx, cy = fx(x), fy(y)
         if pos in LINEMEN:
-            s = 0.42 * SCALE
+            s = 0.5 * SCALE
             out.append(
                 f'<rect x="{cx-s:.1f}" y="{cy-s:.1f}" width="{2*s:.1f}" height="{2*s:.1f}" '
                 f'rx="3" fill="#ffffff" stroke="{COLORS["ghost"]}" stroke-width="2"/>'
             )
         else:
             out.append(
-                f'<circle cx="{cx:.1f}" cy="{cy:.1f}" r="{0.44*SCALE:.1f}" '
+                f'<circle cx="{cx:.1f}" cy="{cy:.1f}" r="{0.5*SCALE:.1f}" '
                 f'fill="#ffffff" stroke="{COLORS["ghost"]}" stroke-width="2"/>'
             )
     return "\n".join(out)
@@ -1034,19 +1036,19 @@ def draw_ghost_offense() -> str:
 def draw_defenders(front: dict) -> str:
     """Our defenders: the subject of the card, so they are drawn solid and labelled."""
     out = []
-    r = 0.44 * SCALE
+    r = 0.57 * SCALE
     for pos, (x, y) in front["alignment"].items():
         cx, cy = fx(x), fy(y)
         a = r * 0.66
         color = COLORS["offense"]
         out.append(
             f'<line x1="{cx-a:.1f}" y1="{cy-a:.1f}" x2="{cx+a:.1f}" y2="{cy+a:.1f}" '
-            f'stroke="{color}" stroke-width="3.4" stroke-linecap="round"/>'
+            f'stroke="{color}" stroke-width="4" stroke-linecap="round"/>'
             f'<line x1="{cx+a:.1f}" y1="{cy-a:.1f}" x2="{cx-a:.1f}" y2="{cy+a:.1f}" '
-            f'stroke="{color}" stroke-width="3.4" stroke-linecap="round"/>'
+            f'stroke="{color}" stroke-width="4" stroke-linecap="round"/>'
         )
         out.append(
-            f'<text x="{cx:.1f}" y="{cy - r - 5:.1f}" text-anchor="middle" font-size="11.5" '
+            f'<text x="{cx:.1f}" y="{cy - r - 4:.1f}" text-anchor="middle" font-size="13.5" '
             f'font-weight="700" fill="{color}">{esc(pos)}</text>'
         )
     return "\n".join(out)
