@@ -3025,7 +3025,8 @@ def write_calls(formations: list[dict], defenses: dict, root: Path) -> str:
             grid[2][center] = ("FB", backs.get("FB", ""))
             grid[3][center] = ("TB", backs.get("TB", ""))
         else:
-            side = 1 if left else -1
+            # The fullback lines up on the SL's side, the tailback on the other.
+            side = -1 if left else 1
             grid[3][center + side] = ("FB", backs.get("FB", ""))
             grid[3][center - side] = ("TB", backs.get("TB", ""))
         rows = []
