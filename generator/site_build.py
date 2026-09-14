@@ -3106,8 +3106,8 @@ def write_calls(formations: list[dict], defenses: dict, root: Path) -> str:
                   ("Split formation - Strong right", p, "split-right", {"Right": ["sb-pitch-r", "sb-qb-sweep-r", "sb-fake-sweep-r"]}),
                   ("I formation - Strong left", p, "i-left", {"Left": ["i-power-l", "i-te-jet-l"]}),
                   ("I formation - Strong right", p, "i-right", {"Right": ["i-power-r", "i-te-jet-r"]}),
-                  ("Shotgun - Strong left", p, "sg-left", {"Left": ["sg-te-out-l"]}),
-                  ("Shotgun - Strong right", p, "sg-right", {"Right": ["sg-te-out-r"]})]
+                  ("Shotgun - Strong left", p, "sg-left", {"Left": ["sg-te-out-l", "sg-qb-sweep-l"]}),
+                  ("Shotgun - Strong right", p, "sg-right", {"Right": ["sg-te-out-r", "sg-qb-sweep-r"]})]
     sheets = "".join(
         f'<section class="xl-sheet"><p class="xl-title">{esc(title)}</p>'
         f'{lineup_table(package, layout)}{plays_table(title, placed)}</section>'

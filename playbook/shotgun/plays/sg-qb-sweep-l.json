@@ -1,0 +1,98 @@
+{
+  "id": "sg-qb-sweep-l",
+  "order": 3,
+  "formation": "shotgun",
+  "name": "Shotgun - Strong left - QB sweep left",
+  "call": "Shotgun SL Left 19 Sweep",
+  "type": "run",
+  "direction": "left",
+  "ball_carrier": "QB",
+  "alignment": {
+    "SL": [
+      -7.0,
+      -1.2
+    ]
+  },
+  "purpose": "The quarterback catches the snap and sweeps left behind the left halfback's lead block, while the right halfback fakes the other way to take the defense with him.",
+  "assignments": {
+    "LTE": {
+      "block": "base",
+      "drive": "in"
+    },
+    "LT": {
+      "block": "down"
+    },
+    "LG": {
+      "block": "climb",
+      "target": "playside"
+    },
+    "C": {
+      "block": "reach"
+    },
+    "RG": {
+      "block": "cutoff"
+    },
+    "RT": {
+      "block": "down"
+    },
+    "RTE": {
+      "block": "cutoff"
+    },
+    "SL": {
+      "block": "screen"
+    },
+    "QB": {
+      "rule": "Catch the snap and sweep left, flat and fast, behind the left halfback. Turn up outside his block.",
+      "type": "run",
+      "path": [
+        [
+          -1.8,
+          0.4
+        ],
+        [
+          -6.0,
+          1.2
+        ],
+        [
+          -9.0,
+          3.4
+        ],
+        [
+          -9.4,
+          6.0
+        ],
+        [
+          -9.6,
+          9.5
+        ],
+        [
+          -9.6,
+          12.0
+        ]
+      ]
+    },
+    "LH": {
+      "block": "lead",
+      "target": "force"
+    },
+    "RH": {
+      "rule": "Fake the handoff going right and run hard. Sell it all the way — you are the reason the defense goes the wrong way.",
+      "type": "fake",
+      "path": [
+        [
+          1.2,
+          0.8
+        ],
+        [
+          4.8,
+          1.6
+        ]
+      ]
+    }
+  },
+  "coaching_points": [
+    "The quarterback keeps it every time — tell him before the snap, there is no read.",
+    "The right halfback's fake is the play. If he jogs, nobody follows him and the defense is waiting at the edge.",
+    "The quarterback stays behind the left halfback until the block is made, then turns it up. Running past his blocker is how the sweep loses yards."
+  ]
+}
