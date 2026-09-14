@@ -85,17 +85,28 @@ both I looks.
 The back digit follows whoever actually carries it. On the Quick pitch it is the far back,
 because the near one is busy bubbling out to block.
 
-**Play word** — the Regular I carries `Power`, Off tackle right and left; the Split Backs
-carries `Pitch`, the Quick pitch. There is no pass in the book right now.
+### Shotgun: formation + SL + who catches it + route
+
+The Shotgun's pass names its receiver the way the tight-end jet names its runner — the
+tight end is not a numbered back, so it is a word call.
+
+| Call | Play | Reads as |
+|---|---|---|
+| `Shotgun SL Right RTE Out` / `SL Left LTE Out` | Shotgun - Strong right - RTE quick out / Strong left - LTE quick out | the play-side tight end, five yards and out to the sideline |
+
+**Play word** — the Regular I carries `Power` and the tight-end `Jet`; the Split Backs
+carries `Pitch`, `Sweep` and `Fake Sweep`; the Shotgun carries the tight end's `Out`, the
+only pass in the book, which fakes nothing.
 
 ## Formations
 
-Two formations, 4 plays, in teaching order:
+Three formations, 12 plays, in teaching order:
 
 | # | Formation | Family | Plays | What it is for |
 |---|---|---|---|---|
-| 1 | **Regular I** | Regular I | 2 | Base offense. Fullback and tailback stacked behind the quarterback. One play, both ways: Off tackle, the tailback between the tackle and the end behind the SL's kick-out. |
-| 2 | **Split Backs** | Split Backs | 2 | Two backs at even depth and a SL split out wide. One play, both ways: the Quick pitch, the far back all the way outside, with the receiver out there blocking the corner he has to get around. |
+| 1 | **Regular I** | Regular I | 4 | Base offense. Fullback and tailback stacked behind the quarterback. Off tackle, the tailback between the tackle and the end behind the SL's kick-out, and the tight-end jet, both ways. |
+| 2 | **Split Backs** | Split Backs | 6 | Two backs at even depth and a SL split out wide. The Quick pitch, the QB sweep and the fake-handoff QB sweep, both ways. |
+| 3 | **Shotgun** | Shotgun | 2 | The quarterback five yards deep with a back either side. The tight-end quick out, both ways, with everyone else but the SL in to block. |
 
 Both are two-tight-end, downhill running formations, so the blocking language carries
 over: "block down on the first defender inside you" means the same thing in either. That
@@ -269,7 +280,7 @@ something.
 
 ## Printing
 
-- **Print book** (top bar) → 8 landscape pages: 4 plays then 4 defensive fronts,
+- **Print book** (top bar) → 16 landscape pages: 12 plays then 4 defensive fronts,
   one per sheet.
 - **Print** (on any play or front page) → that one card, one landscape sheet.
 - **Print** (on the depth chart) → two portrait sheets, offense then defense, each with

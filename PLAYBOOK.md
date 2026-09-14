@@ -16,6 +16,8 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 | 8 | [Split formation - Strong left - QB sweep left](#split-formation---strong-left---qb-sweep-left) | `Split SL Left 19 Sweep` | run | Split Backs | QB |
 | 9 | [Split formation - Strong left - Fake handoff right QB sweep left](#split-formation---strong-left---fake-handoff-right-qb-sweep-left) | `Split SL Left 19 Fake Sweep` | run | Split Backs | QB |
 | 10 | [Split formation - Strong right - Fake handoff left QB sweep right](#split-formation---strong-right---fake-handoff-left-qb-sweep-right) | `Split SL Right 18 Fake Sweep` | run | Split Backs | QB |
+| 11 | [Shotgun - Strong right - RTE quick out](#shotgun---strong-right---rte-quick-out) | `Shotgun SL Right RTE Out` | pass | Shotgun | RTE |
+| 12 | [Shotgun - Strong left - LTE quick out](#shotgun---strong-left---lte-quick-out) | `Shotgun SL Left LTE Out` | pass | Shotgun | LTE |
 
 # Regular I
 
@@ -322,4 +324,66 @@ The quarterback fakes the handoff to the left halfback, who carries the fake har
 - The fake has to look real: the quarterback puts the ball at the left halfback's belly and pulls it back out.
 - The left halfback's fake is the play. If he jogs, nobody follows him and the defense is waiting on the right.
 - After the fake the quarterback gets back to the right fast, stays behind the right halfback until the block is made, then turns it up.
+
+# Shotgun
+
+---
+
+## Shotgun - Strong right - RTE quick out
+
+**Call it:** `Shotgun SL Right RTE Out`
+
+![Shotgun - Strong right - RTE quick out](playbook/shotgun/cards/sg-te-out-r-5-3.svg)
+
+A throw the quarterback can make before anybody gets to him: the right tight end runs five yards and breaks to the sideline, and everybody else but the SL stays in and blocks.
+
+| Position | Assignment |
+|---|---|
+| **LTE** | Pass block: step back, hands up, and stay between your man and the quarterback. |
+| **LT** | Pass block: step back, hands up, and stay between your man and the quarterback. |
+| **LG** | Pass block: step back, hands up, and stay between your man and the quarterback. |
+| **C** | Pass block: step back, hands up, and stay between your man and the quarterback. |
+| **RG** | Pass block: step back, hands up, and stay between your man and the quarterback. |
+| **RT** | Pass block: step back, hands up, and stay between your man and the quarterback. |
+| **RTE** **(ball)** | Run straight up five yards, then snap it out to the sideline and turn your eyes back to the quarterback. The ball is there when you turn. |
+| **SL** | Run at the corner and screen him off. Stay in his way. |
+| **QB** | Catch the snap, take one step and throw to the right tight end as he breaks out. If he is covered, tuck it and run. |
+| **LH** | Step up and out, hands up. Pick up anybody coming at the quarterback. |
+| **RH** | Step up and out, hands up. Pick up anybody coming at the quarterback. |
+
+**Coaching points**
+
+- Everybody but the tight end and the SL pass blocks: step back, hands up, stay between your man and the quarterback.
+- The tight end runs five hard yards and snaps it to the sideline. A soft break is a pick for the corner.
+- The quarterback throws the moment the tight end breaks. If he is covered, tuck it and run — no second look.
+
+---
+
+## Shotgun - Strong left - LTE quick out
+
+**Call it:** `Shotgun SL Left LTE Out`
+
+![Shotgun - Strong left - LTE quick out](playbook/shotgun/cards/sg-te-out-l-5-3.svg)
+
+A throw the quarterback can make before anybody gets to him: the left tight end runs five yards and breaks to the sideline, and everybody else but the SL stays in and blocks.
+
+| Position | Assignment |
+|---|---|
+| **LTE** **(ball)** | Run straight up five yards, then snap it out to the sideline and turn your eyes back to the quarterback. The ball is there when you turn. |
+| **LT** | Pass block: step back, hands up, and stay between your man and the quarterback. |
+| **LG** | Pass block: step back, hands up, and stay between your man and the quarterback. |
+| **C** | Pass block: step back, hands up, and stay between your man and the quarterback. |
+| **RG** | Pass block: step back, hands up, and stay between your man and the quarterback. |
+| **RT** | Pass block: step back, hands up, and stay between your man and the quarterback. |
+| **RTE** | Pass block: step back, hands up, and stay between your man and the quarterback. |
+| **SL** | Run at the corner and screen him off. Stay in his way. |
+| **QB** | Catch the snap, take one step and throw to the left tight end as he breaks out. If he is covered, tuck it and run. |
+| **LH** | Step up and out, hands up. Pick up anybody coming at the quarterback. |
+| **RH** | Step up and out, hands up. Pick up anybody coming at the quarterback. |
+
+**Coaching points**
+
+- Everybody but the tight end and the SL pass blocks: step back, hands up, stay between your man and the quarterback.
+- The tight end runs five hard yards and snaps it to the sideline. A soft break is a pick for the corner.
+- The quarterback throws the moment the tight end breaks. If he is covered, tuck it and run — no second look.
 

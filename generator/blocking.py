@@ -646,6 +646,21 @@ def v_man(front, spot, side, intent, taken=()):
     return text, path + to(spot, (label, x, y))
 
 
+def v_protect(front, spot, side, intent, taken=()):
+    """Pass block. Nobody picks a man before the snap: stay between whoever comes and
+    the quarterback.
+
+    A lineman steps back and sets. A back beside a shotgun quarterback steps up and out
+    to his own side, to meet the rush before it reaches the quarterback.
+    """
+    if spot[1] < -2.0:
+        out = 1 if spot[0] > 0 else (-1 if spot[0] < 0 else 0)
+        return ("Step up and out, hands up. Pick up anybody coming at the quarterback.",
+                [[round(0.6 * out, 2), 0.9]])
+    return ("Pass block: step back, hands up, and stay between your man and the "
+            "quarterback."), [[0.0, -0.7]]
+
+
 def v_decoy(front, spot, side, intent, taken=()):
     """Sell something that is not happening. The path is hand-drawn because the lie is
     the point — it copies another play's path, and that path is not derivable from
@@ -658,7 +673,7 @@ VERBS = {
     "base": v_base, "down": v_down, "reach": v_reach, "double": v_double,
     "climb": v_climb, "cutoff": v_cutoff, "hinge": v_hinge, "wedge": v_wedge,
     "kick": v_kick, "lead": v_lead, "screen": v_screen,
-    "release": v_release, "decoy": v_decoy, "man": v_man,
+    "release": v_release, "decoy": v_decoy, "man": v_man, "protect": v_protect,
 }
 
 
@@ -726,7 +741,7 @@ def claimed_lb(front: dict, spot, path):
 
 
 # Verbs that block a gap, a spot or a lie rather than a particular defender.
-SPACE_VERBS = {"cutoff", "hinge", "wedge", "decoy"}
+SPACE_VERBS = {"cutoff", "hinge", "wedge", "decoy", "protect"}
 
 
 def resolve_play(play: dict, alignment: dict, front: dict, side: int,
