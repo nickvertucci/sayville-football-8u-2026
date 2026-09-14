@@ -328,7 +328,7 @@ Get outside in a hurry. The far back trails the quarterback, takes the pitch on 
 | **Z** | Run at the corner and screen him off. Stay in his way. |
 | **QB** | Fake the dive to the near back, attack the outside, then pitch to the trailing back early, never late. |
 | **LH** **(ball)** | Run flat, outside and behind the quarterback, and catch the pitch on the run. Ahead of him is a fumble. |
-| **RH** | Lead outside our end, then turn up inside — the playside linebacker is the man who shows. Head across him. Step at the dive first to hold their linebackers. |
+| **RH** | Lead outside our end. Block the first man out there — here it is the corner. Step at the dive first to hold their linebackers. |
 
 **Coaching points**
 
@@ -388,7 +388,7 @@ The quarterback keeps it himself, and he runs to the side the split man is lined
 | **Z** | Run at the corner and screen him off. Stay in his way. |
 | **QB** **(ball)** | Fake to the back going left, hide the ball, get outside our end. Turn up the moment the edge seals. |
 | **LH** | Run the sweep path away full speed, arms tucked. Linebackers only leave if you are worth watching. |
-| **RH** | Lead outside our end, then turn up inside — the playside linebacker is the man who shows. Head across him. |
+| **RH** | Lead outside our end. Block the first man out there — here it is the corner. |
 
 **Coaching points**
 
@@ -418,7 +418,7 @@ The quarterback keeps it himself, and he runs to the side the split man is lined
 | **RTE** | End head up on you. Cut him off — get between him and the ball. |
 | **Z** | Run at the corner and screen him off. Stay in his way. |
 | **QB** **(ball)** | Fake to the back going right, hide the ball, get outside our end. Turn up the moment the edge seals. |
-| **LH** | Lead outside our end, then turn up inside — the playside linebacker is the man who shows. Head across him. |
+| **LH** | Lead outside our end. Block the first man out there — here it is the corner. |
 | **RH** | Run the sweep path away full speed, arms tucked. Linebackers only leave if you are worth watching. |
 
 **Coaching points**

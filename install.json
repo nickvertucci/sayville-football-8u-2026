@@ -197,18 +197,18 @@
       "date": "2026-09-15",
       "phase": "season",
       "water_break": 1,
-      "focus": "Iso and the Sneak — the two calls that need no edge",
+      "focus": "Iso, Power and the Toss — inside, off-tackle and the edge",
       "plays": [
         "i-iso-r",
         "i-iso-l",
-        "i-sneak",
-        "i-sneak-l"
+        "i-toss-r",
+        "i-toss-l"
       ],
       "requires": [
         "i-dive-r",
         "i-power-r"
       ],
-      "emphasis": "Both of today's calls win inside. Iso asks the fullback to find one linebacker in a gap the line has already opened; the Sneak asks for a yard and nothing more.",
+      "emphasis": "Three calls, three places on the field. Iso hits the gap the line opens, Power hits off-tackle behind the kick-out, and the Toss goes round it all — same backfield, three answers.",
       "blocks": [
         {
           "tag": "A",
@@ -298,10 +298,14 @@
           "kind": "note",
           "title": "Live scrimmage",
           "time": "6:29–6:59",
-          "note": "Offense vs. defense. Iso and Sneak only — make them earn the yard."
+          "note": "Offense vs. defense. Iso, Power and Toss only."
         }
       ],
-      "huddle": "Two calls that do not need the edge. Every yard today came from inside."
+      "huddle": "Inside, off-tackle and outside. Same three steps to start every one.",
+      "review": [
+        "i-power-r",
+        "i-power-l"
+      ]
     },
     {
       "n": 7,

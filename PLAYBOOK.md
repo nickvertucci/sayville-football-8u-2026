@@ -702,7 +702,7 @@ Off the tight end. Our end seals their end inside and the fullback leads around 
 | **RTE** | End head up on you. Turn him inside. The ball goes around behind you. |
 | **Z** | Run at the corner and screen him off. Stay in his way. |
 | **QB** | Reverse pivot, hand it deep to the tailback, then fake the bootleg away from the play. |
-| **FB** | Lead outside our end, then turn up inside — the playside linebacker is the man who shows. Head across him. |
+| **FB** | Lead outside our end. Block the first man out there — here it is the corner. |
 | **TB** **(ball)** | Take the handoff and press outside our end. Turn up off the fullback's block, never inside. |
 
 **Coaching points**
@@ -764,7 +764,7 @@ Get all the way outside. Wider than the Slant — the tailback takes the handoff
 | **RTE** | End head up on you. Turn him inside. The ball goes around behind you. |
 | **Z** | Run at the corner and screen him off. Stay in his way. |
 | **QB** | Reverse pivot, hand it deep to the tailback, then boot away and sell it. |
-| **FB** | Lead outside our end, then turn up inside — the playside linebacker is the man who shows. Head across him. Beat the tailback to the corner. |
+| **FB** | Lead outside our end. Block the first man out there — here it is the corner. Beat the tailback to the corner. |
 | **TB** **(ball)** | Take the handoff at full speed to the corner. Turn up when the fullback blocks somebody. |
 
 **Coaching points**
@@ -1152,7 +1152,7 @@ Get outside in a hurry. The far back trails the quarterback, takes the pitch on 
 | **Z** | Run at the corner and screen him off. Stay in his way. |
 | **QB** | Fake the dive to the near back, attack the outside, then pitch to the trailing back early, never late. |
 | **LH** **(ball)** | Run flat, outside and behind the quarterback, and catch the pitch on the run. Ahead of him is a fumble. |
-| **RH** | Lead outside our end, then turn up inside — the playside linebacker is the man who shows. Head across him. Step at the dive first to hold their linebackers. |
+| **RH** | Lead outside our end. Block the first man out there — here it is the corner. Step at the dive first to hold their linebackers. |
 
 **Coaching points**
 
@@ -1212,7 +1212,7 @@ The quarterback keeps it himself, and he runs to the side the split man is lined
 | **Z** | Run at the corner and screen him off. Stay in his way. |
 | **QB** **(ball)** | Fake to the back going left, hide the ball, get outside our end. Turn up the moment the edge seals. |
 | **LH** | Run the sweep path away full speed, arms tucked. Linebackers only leave if you are worth watching. |
-| **RH** | Lead outside our end, then turn up inside — the playside linebacker is the man who shows. Head across him. |
+| **RH** | Lead outside our end. Block the first man out there — here it is the corner. |
 
 **Coaching points**
 
@@ -1242,7 +1242,7 @@ The quarterback keeps it himself, and he runs to the side the split man is lined
 | **RTE** | End head up on you. Cut him off — get between him and the ball. |
 | **Z** | Run at the corner and screen him off. Stay in his way. |
 | **QB** **(ball)** | Fake to the back going right, hide the ball, get outside our end. Turn up the moment the edge seals. |
-| **LH** | Lead outside our end, then turn up inside — the playside linebacker is the man who shows. Head across him. |
+| **LH** | Lead outside our end. Block the first man out there — here it is the corner. |
 | **RH** | Run the sweep path away full speed, arms tucked. Linebackers only leave if you are worth watching. |
 
 **Coaching points**

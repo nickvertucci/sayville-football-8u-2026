@@ -52,8 +52,8 @@
 <line x1="465.1" y1="270.0" x2="479.9" y2="259.2" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 <path d="M351.0,364.5 L332.1,378.0 L275.4,369.9" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 5"/>
 <polygon points="275.4,369.9 286.3,366.8 285.0,375.9" fill="#14213d"/>
-<path d="M351.0,413.1 L336.7,307.8 L318.6,256.5" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-<line x1="309.9" y1="259.6" x2="327.3" y2="253.4" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
+<path d="M351.0,413.1 L439.3,307.8 L504.9,256.5" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="499.2" y1="249.3" x2="510.6" y2="263.7" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 <path d="M351.0,472.5 L410.4,418.5 L513.0,380.7 L588.6,310.5 L588.6,234.9" fill="none" stroke="#b3001b" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
 <polygon points="588.6,234.9 593.2,245.3 584.0,245.3" fill="#b3001b"/>
 <rect x="225.7" y="325.6" width="23.8" height="23.8" rx="3" fill="#ffffff" stroke="#14213d" stroke-width="2.4"/>
@@ -111,10 +111,10 @@
 <text x="344" y="646" font-size="12" fill="#111318">Reverse pivot, hand it deep to the</text>
 <text x="344" y="664" font-size="12" fill="#111318">tailback, then boot away and sell it.</text>
 <text x="310" y="680" font-size="12" font-weight="700" fill="#111318">FB</text>
-<text x="344" y="680" font-size="12" fill="#111318">Lead outside our end, then turn up</text>
-<text x="344" y="698" font-size="12" fill="#111318">inside — the playside linebacker is the</text>
-<text x="344" y="714" font-size="12" fill="#111318">man who shows. Head across him. Beat</text>
-<text x="344" y="732" font-size="12" fill="#111318">the tailback to the corner.</text>
+<text x="344" y="680" font-size="12" fill="#111318">Lead outside our end. Block the first</text>
+<text x="344" y="698" font-size="12" fill="#111318">man out there — here it is the</text>
+<text x="344" y="714" font-size="12" fill="#111318">linebacker. Beat the tailback to the</text>
+<text x="344" y="732" font-size="12" fill="#111318">corner.</text>
 <text x="310" y="748" font-size="12" font-weight="700" fill="#111318">TB</text>
 <text x="344" y="748" font-size="12" fill="#111318">Take the handoff at full speed to the</text>
 <text x="344" y="766" font-size="12" fill="#111318">corner. Turn up when the fullback</text>

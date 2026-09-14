@@ -553,7 +553,17 @@ def v_lead(front, spot, side, intent, taken=()):
     """
     if intent.get("target") == "force":
         man = force_defender(front, side, taken)
-        if man is not None and man[0] in taken:
+        # Is the ball going outside our own end? On a toss or a sweep it is, and then
+        # two blockers on the edge is not a waste — it is the play. The lead back's
+        # job is to be in front of the carrier out there, and turning him up inside
+        # leaves the man the ball is running at unblocked while he blocks somebody the
+        # carrier has already passed. On an inside run the opposite holds, which is
+        # what the fallback below is for.
+        edge = edge_defender(front, side)
+        hole = intent.get("_hole")
+        wide = (hole is not None and edge is not None
+                and abs(hole) > abs(edge[1]))
+        if man is not None and man[0] in taken and not wide:
             # Somebody is already on him and there is nobody further out. Turn up
             # inside rather than putting two blockers on one defender.
             inside = linebacker(front, side, "playside", taken)

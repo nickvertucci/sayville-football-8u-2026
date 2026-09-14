@@ -531,6 +531,19 @@ def validate_install(schedule: dict, formations: list[dict], defenses: dict) -> 
                               f"{installed_at[fid]} and {n}")
             else:
                 installed_at[fid] = n
+        # A review is a play this practice runs again rather than teaches. It has to
+        # exist, it has to have been installed at an EARLIER practice — reviewing
+        # something nobody has been taught is the mistake this is here to catch — and
+        # it may not also be installed today, which would be both at once.
+        for pid in practice.get("review", []):
+            if pid not in plays:
+                errors.append(f"install practice {n}: no such play '{pid}' to review")
+            elif pid in practice.get("plays", []):
+                errors.append(f"install practice {n}: '{pid}' is both installed and "
+                              "reviewed on the same day")
+            elif pid not in installed_at:
+                errors.append(f"install practice {n}: reviews '{pid}', which is not "
+                              "installed at any earlier practice")
         for fmid in practice.get("formations", []):
             if fmid not in form_ids:
                 errors.append(f"install practice {n}: no such formation '{fmid}'")

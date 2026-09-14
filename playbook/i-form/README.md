@@ -712,7 +712,7 @@ Off the tight end. Our end seals their end inside and the fullback leads around 
 | **RTE** | End head up on you. Turn him inside. The ball goes around behind you. |
 | **Z** | Run at the corner and screen him off. Stay in his way. |
 | **QB** | Reverse pivot, hand it deep to the tailback, then fake the bootleg away from the play. |
-| **FB** | Lead outside our end, then turn up inside — the playside linebacker is the man who shows. Head across him. |
+| **FB** | Lead outside our end. Block the first man out there — here it is the corner. |
 | **TB** **(ball)** | Take the handoff and press outside our end. Turn up off the fullback's block, never inside. |
 
 **Coaching points**
@@ -774,7 +774,7 @@ Get all the way outside. Wider than the Slant — the tailback takes the handoff
 | **RTE** | End head up on you. Turn him inside. The ball goes around behind you. |
 | **Z** | Run at the corner and screen him off. Stay in his way. |
 | **QB** | Reverse pivot, hand it deep to the tailback, then boot away and sell it. |
-| **FB** | Lead outside our end, then turn up inside — the playside linebacker is the man who shows. Head across him. Beat the tailback to the corner. |
+| **FB** | Lead outside our end. Block the first man out there — here it is the corner. Beat the tailback to the corner. |
 | **TB** **(ball)** | Take the handoff at full speed to the corner. Turn up when the fullback blocks somebody. |
 
 **Coaching points**

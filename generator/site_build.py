@@ -1087,6 +1087,11 @@ table.cal tbody tr:last-child .cal-cell { border-bottom: 0; }
 }
 .ins-play:hover { border-color: var(--accent); background: var(--panel); }
 .ins-play.def { border-left: 3px solid var(--red); }
+/* A play being run again rather than taught. Quieter than an install, because the
+   block is answering "what is new today" first and this is the honest answer to
+   "what else are we running". */
+.ins-play.again { border-left: 3px solid var(--line); }
+.ins-play.again .ins-call { color: var(--muted); }
 /* The water break between blocks. Deliberately quiet — it is punctuation in the run
    of practice, not a coaching block, and it appears after every one of them. */
 .ins-water {
@@ -1385,10 +1390,13 @@ footer.site a { color: var(--accent-ink); }
     display: grid; grid-auto-flow: column; grid-auto-columns: 1fr; gap: 10px;
   }
 
-  .ins-list { gap: 4px; margin-bottom: 5px; }
-  .ins-play { padding: 1px 6px; background: none; }
-  .ins-call { font-size: 9.5pt; }
-  .ins-name { font-size: 8.5pt; }
+  .ins-list { gap: 3px 6px; margin-bottom: 4px; }
+  .ins-play { padding: 0 5px; background: none; }
+  .ins-call { font-size: 9pt; }
+  /* The teaching name under the call is what a coach already knows by the time he is
+     holding the sheet — the call is the thing he reads out. On paper it goes, and the
+     chips fit a line instead of two. */
+  .ins-name { display: none; }
 
   /* The water break is punctuation. On screen it is a quiet line between blocks; on
      paper it is a run of five identical lines competing with the coaching, so it
@@ -3210,6 +3218,16 @@ def install_items(pr: dict, plays: dict, forms_by_id: dict, defenses: dict) -> l
             f'<a class="ins-play" href="{p_href(play)}">'
             f'<span class="ins-call">{esc(play.get("call", ""))}</span>'
             f'<span class="ins-name">{esc(play["name"])}</span></a>'
+        )
+    # A play this practice runs again rather than teaches. Marked, because the block
+    # answers "what is new today" first and this is the honest answer to "what else
+    # are we running".
+    for pid in pr.get("review", []):
+        play, _form = plays[pid]
+        items.append(
+            f'<a class="ins-play again" href="{p_href(play)}">'
+            f'<span class="ins-call">{esc(play.get("call", ""))}</span>'
+            f'<span class="ins-name">{esc(play["name"])} &middot; review</span></a>'
         )
     for fid in pr.get("fronts", []):
         front = defenses[fid]
