@@ -778,11 +778,26 @@ def validate(formations: list[dict], defenses: dict) -> list[str]:
 # ------------------------------------------------------------------ drawing --
 
 
-def polyline(points, color, width=2.6, dashed=False, dotted=False):
-    d = " ".join(
-        ("M" if i == 0 else "L") + f"{fx(p[0]):.1f},{fy(p[1]):.1f}"
-        for i, p in enumerate(points)
-    )
+def polyline(points, color, width=2.6, dashed=False, dotted=False, smooth=False):
+    if smooth and len(points) >= 3:
+        # One rounded curve through every point: each leg a cubic whose handles follow
+        # the neighbouring points (Catmull-Rom), so there is no corner at a waypoint.
+        # The last leg leaves along the last straight direction, which keeps a block's
+        # end bar square to where he arrives.
+        P = [(fx(x), fy(y)) for x, y in points]
+        d = f"M{P[0][0]:.1f},{P[0][1]:.1f}"
+        for i in range(len(P) - 1):
+            p0, p1, p2 = P[max(i - 1, 0)], P[i], P[i + 1]
+            p3 = P[min(i + 2, len(P) - 1)]
+            c1 = (p1[0] + (p2[0] - p0[0]) / 6, p1[1] + (p2[1] - p0[1]) / 6)
+            c2 = (p2[0] - (p3[0] - p1[0]) / 6, p2[1] - (p3[1] - p1[1]) / 6)
+            d += (f" C{c1[0]:.1f},{c1[1]:.1f} {c2[0]:.1f},{c2[1]:.1f} "
+                  f"{p2[0]:.1f},{p2[1]:.1f}")
+    else:
+        d = " ".join(
+            ("M" if i == 0 else "L") + f"{fx(p[0]):.1f},{fy(p[1]):.1f}"
+            for i, p in enumerate(points)
+        )
     # A near-zero dash with a round cap is a dot the width of the line.
     dash = (' stroke-dasharray="7 5"' if dashed
             else ' stroke-dasharray="0.1 7"' if dotted else "")
@@ -913,7 +928,7 @@ def draw_paths(assignments: dict, alignment: dict, carrier: str | None) -> str:
         # printout red is just another grey — so he is told apart by weight, not colour.
         width = 4.6 if is_carrier else 2.4
         out.append(polyline(pts, color, width=width, dashed=dashed,
-                            dotted=kind == "rollout"))
+                            dotted=kind == "rollout", smooth=spec.get("curve", False)))
         if kind == "block":
             out.append(block_cap(pts[-2], pts[-1], color, width=width))
         else:
