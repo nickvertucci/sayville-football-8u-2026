@@ -620,7 +620,6 @@ table.xl th {
   table.xl td, table.xl th { padding: 1px 2px; }
   .xl-title { padding: 2px 6px; font-size: 11px; }
   .xl-lineup td { height: 24px; }
-  .xl-plays td { height: 14px; }
 }
 
 .plist { display: grid; gap: 12px; grid-template-columns: 1fr; }
@@ -2979,7 +2978,7 @@ def write_calls(formations: list[dict], defenses: dict, root: Path) -> str:
     plays_table = (
         '<table class="xl xl-plays"><thead><tr>'
         + "".join(f"<th>{side}</th>" for side in ("Left", "Middle", "Right"))
-        + f'</tr></thead><tbody>{blank_row * 9}</tbody></table>'
+        + f'</tr></thead><tbody>{blank_row * 3}</tbody></table>'
     )
 
     sheets = "".join(
