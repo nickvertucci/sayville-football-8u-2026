@@ -86,6 +86,52 @@
       ]
     }
   },
+  "fronts": {
+    "4-4": {
+      "LT": {
+        "block": "man",
+        "man": "M",
+        "help": "LT"
+      },
+      "LG": {
+        "block": "man",
+        "man": "LT"
+      },
+      "C": {
+        "block": "man",
+        "man": "S",
+        "help": "RT"
+      },
+      "RG": {
+        "block": "man",
+        "man": "RT"
+      },
+      "RT": {
+        "block": "man",
+        "man": "R",
+        "help": "RE"
+      },
+      "RTE": {
+        "block": "man",
+        "man": "RE"
+      },
+      "LH": {
+        "block": "man",
+        "man": "W",
+        "how": "Bubble out around the left tight end",
+        "via": [
+          [
+            -3.4,
+            2.0
+          ],
+          [
+            -3.6,
+            4.2
+          ]
+        ]
+      }
+    }
+  },
   "coaching_points": [
     "The quarterback keeps it every time — tell him before the snap, there is no read.",
     "The right halfback's fake is the play. If he jogs, nobody follows him and the defense is waiting at the edge.",
