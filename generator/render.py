@@ -293,8 +293,14 @@ def resolved_assignments(play: dict, front: dict) -> dict:
         # the mirror image of the play it was selling. `fakes` names the run, and the
         # blockers take that run's side and its hole.
         run = faked_play(play) or play
+        # A play may name who blocks whom against one front. Those assignments replace
+        # the rule-derived ones for that front only; every other front still works its
+        # blocks out from the rules.
+        overrides = (play.get("fronts") or {}).get(key) or {}
+        subject = (dict(play, assignments={**play["assignments"], **overrides})
+                   if overrides else play)
         cache[key] = blocking.resolve_play(
-            play, play_alignment(form, play), front,
+            subject, play_alignment(form, play), front,
             play_side(run), play_hole(run)
         )
     return cache[key]
@@ -700,10 +706,34 @@ def validate(formations: list[dict], defenses: dict) -> list[str]:
                             f"{pid}: {pos} sells a fake but has no path — a decoy copies "
                             "another play's path, which cannot be derived from the front"
                         )
+                    if spec["block"] == "man":
+                        errors.append(
+                            f"{pid}: {pos} names a man to block, which only means "
+                            "something against one front — put it under `fronts`"
+                        )
                 elif not spec.get("rule"):
                     errors.append(
                         f"{pid}: {pos} has neither a blocking verb nor a written rule"
                     )
+            # Who blocks whom against one front. A named man has to be standing in that
+            # front, or the block resolves to nobody and the card is wrong in silence.
+            for fid, over in (play.get("fronts") or {}).items():
+                if fid not in defenses:
+                    errors.append(f"{pid}: blocks against unknown front '{fid}'")
+                    continue
+                labels = defenses[fid].get("alignment", {})
+                for pos, spec in over.items():
+                    if pos not in form.get("alignment", {}):
+                        errors.append(f"{pid} vs {fid}: assignment for unknown position {pos}")
+                    if spec.get("block") and spec["block"] not in blocking.VERBS:
+                        errors.append(f"{pid} vs {fid}: {pos} has unknown blocking verb "
+                                      f"'{spec['block']}'")
+                    if spec.get("block") == "man" and not spec.get("man"):
+                        errors.append(f"{pid} vs {fid}: {pos} blocks a man but names nobody")
+                    for k in ("man", "help"):
+                        if spec.get(k) and spec[k] not in labels:
+                            errors.append(f"{pid} vs {fid}: {pos} blocks '{spec[k]}', who "
+                                          f"is not in the {fid}")
             carrier = play.get("ball_carrier")
             if carrier and carrier not in form.get("alignment", {}):
                 errors.append(f"{pid}: ball_carrier '{carrier}' is not in the formation")
