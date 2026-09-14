@@ -3632,6 +3632,15 @@ ROTATIONS = [str(n) for n in range(1, 7)]
 PACKAGE_COUNT = 5
 PACKAGE_SIZE = 3
 
+# What each side calls its packages. The offense heading names the three spots the
+# group is made of, in the order the slots sit in — the line does not change between
+# packages, so the package IS the backfield, and saying which three it is turns a box
+# of names into something a coach can check at a glance.
+PACKAGE_TITLE = {
+    "offense": "Offensive FB-TB-Z Packages",
+    "defense": "Packages",
+}
+
 
 def rotations_for(side: str) -> list[tuple[str, str, str]]:
     """The columns, in depth order. Both sides run the same six."""
@@ -3740,7 +3749,8 @@ def side_board(side: str, order: list[str], alt_order: list[str],
         f'<div class="tablewrap dc-board-wrap"><table class="dc-board">'
         f'<thead><tr><th>Position</th>{head}</tr></thead>'
         f'<tbody>{"".join(rows)}</tbody></table></div>'
-        f'<div class="dc-pkgs"><p class="rot-h">Packages</p>'
+        f'<div class="dc-pkgs"><p class="rot-h">'
+        f'{esc(PACKAGE_TITLE.get(side, "Packages"))}</p>'
         f'<div class="dc-pkgwrap"><div class="dc-pkgrow">{pkgs}</div></div></div>'
         f'<div class="dc-bench"><p class="rot-h">Squad'
         f'<span class="rot-count" data-count="{side}-idle"></span></p>'

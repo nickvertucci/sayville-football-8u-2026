@@ -245,7 +245,10 @@ and renders as *Open*.
 
 ### Packages
 
-Five boxes of three above the squad on each board. A package is the group who go on and
+Five boxes of three above the squad on each board. The offense calls them
+**Offensive FB-TB-Z Packages**, because the line does not change between them — the
+package *is* the backfield, and naming the three spots in slot order turns a box of
+names into something a coach can check at a glance. A package is the group who go on and
 come off together, which is the other question a coach asks at this age and the one the
 board could not answer: the columns say who plays left guard, and these say who you are
 sending in next.
