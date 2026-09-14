@@ -651,6 +651,10 @@ table.xl.xl-plays td {
   /* A name is one line on paper: small enough to fit its cell, and never wrapping
      into a second line that makes the row taller. */
   .xl-lineup td { height: 30px; padding: 1px 0; vertical-align: middle; }
+  /* On paper the formation reads as players, not a spreadsheet: the grid behind them
+     is barely there, and an empty square has no fill, so only the named spots show. */
+  table.xl.xl-lineup td { border-color: #f1f2f5; }
+  .xl-lineup .xl-empty { background: none !important; }
   .xl-pos { font-size: 7.5px; }
   .xl-name { font-size: 8px; white-space: nowrap; letter-spacing: -.2px; }
   table.xl.xl-plays td { height: 32px; vertical-align: middle; }
