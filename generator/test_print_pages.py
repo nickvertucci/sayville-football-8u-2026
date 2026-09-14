@@ -231,7 +231,7 @@ def main(argv=None) -> int:
         if calls != 1:
             failures.append(
                 f"calls.html renders {calls} pages, expected 1 — every package must fit "
-                "on one landscape sheet"
+                "on one printed page"
             )
 
         if not args.quick:
