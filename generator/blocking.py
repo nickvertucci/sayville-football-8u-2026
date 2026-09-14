@@ -629,6 +629,10 @@ def v_man(front, spot, side, intent, taken=()):
     label = intent["man"]
     x, y = front["alignment"][label]
     n = named(front, label)
+    # `or` is the man he takes instead if the first one is not there first. The line is
+    # drawn to `man`, and the words give him both.
+    if intent.get("or"):
+        n = f"{n} or the {named(front, intent['or'])}, whoever comes first"
     path = [list(p) for p in intent.get("via", [])]
     if intent.get("help"):
         helped = intent["help"]
