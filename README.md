@@ -26,7 +26,7 @@ digits: the first says **who carries it**, the second says **where it goes**. So
 `Regular I SL Right 34 Power` is the Regular I, SL on the right, the tailback between the
 tackle and the end.
 
-The Off Tackle Handoff depends on the SL's kick-out block, so he lines up on the side it
+Off tackle depends on the SL's kick-out block, so he lines up on the side it
 has to happen: `Regular I SL Left 35 Power` puts him on the left. The call says so out
 loud, because a play that moves somebody silently is a play nobody can call.
 
@@ -61,7 +61,7 @@ The digits describe the back the first digit names, not necessarily the ball car
 
 | Call | Play | Where it hits |
 |---|---|---|
-| `Regular I SL Right 34 Power` / `SL Left 35 Power` | I Formation - Strong Right / Strong Left - Off Tackle Handoff | tailback, tackle–end |
+| `Regular I SL Right 34 Power` / `SL Left 35 Power` | I Formation - Strong Right - Off tackle right / Strong Left - Off tackle left | tailback, tackle–end |
 
 Every play has a left and a right.
 
@@ -80,7 +80,7 @@ both I looks.
 The back digit follows whoever actually carries it. On the Quick pitch it is the far back,
 because the near one is busy bubbling out to block.
 
-**Play word** — the Regular I carries `Power`, the Off Tackle Handoff; the Split Backs
+**Play word** — the Regular I carries `Power`, Off tackle right and left; the Split Backs
 carries `Pitch`, the Quick pitch. There is no pass in the book right now.
 
 ## Formations
@@ -89,7 +89,7 @@ Two formations, 4 plays, in teaching order:
 
 | # | Formation | Family | Plays | What it is for |
 |---|---|---|---|---|
-| 1 | **Regular I** | Regular I | 2 | Base offense. Fullback and tailback stacked behind the quarterback. One play, both ways: the Off Tackle Handoff, the tailback between the tackle and the end behind the SL's kick-out. |
+| 1 | **Regular I** | Regular I | 2 | Base offense. Fullback and tailback stacked behind the quarterback. One play, both ways: Off tackle, the tailback between the tackle and the end behind the SL's kick-out. |
 | 2 | **Split Backs** | Split Backs | 2 | Two backs at even depth and a SL split out wide. One play, both ways: the Quick pitch, the far back all the way outside, with the receiver out there blocking the corner he has to get around. |
 
 Both are two-tight-end, downhill running formations, so the blocking language carries
