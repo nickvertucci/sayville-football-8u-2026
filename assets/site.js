@@ -659,10 +659,14 @@
       if (!sec) return;
       var rows = [];
       all('.dc-pkg', sec).forEach(function (box) {
-        rows.push(all('.dc-pkg-slot', box).map(function (sl) {
+        var row = all('.dc-pkg-slot', box).map(function (sl) {
           var c = chipIn(sl);
           return c ? c.dataset.name : '';
-        }));
+        });
+        // Empty slots at the end are dropped too, so a package with only its backs
+        // set writes three names rather than three and four blanks.
+        while (row.length && !row[row.length - 1]) row.pop();
+        rows.push(row);
       });
       while (rows.length && !rows[rows.length - 1].join('')) rows.pop();
       if (rows.length) packs[side] = rows; else delete packs[side];
