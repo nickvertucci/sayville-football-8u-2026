@@ -1,10 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="594" height="1030" viewBox="0 0 594 1030" font-family="Segoe UI, Helvetica, Arial, sans-serif">
 <rect width="100%" height="100%" fill="#ffffff"/>
 <rect x="0" y="0" width="594" height="58" fill="#14213d"/>
-<text x="18" y="26" font-size="16.9" font-weight="700" fill="#ffffff">Shotgun - Strong right - RTE quick out</text>
+<text x="18" y="26" font-size="13.8" font-weight="700" fill="#ffffff">Shotgun - Strong right - RTE slant out</text>
 <text x="18" y="45" font-size="11.5" fill="#a9b4c7">PASS  •  Shotgun  •  vs 5-3</text>
-<rect x="333.2" y="13" width="242.8" height="31" rx="6" fill="#ffffff" fill-opacity="0.12" stroke="#8593ad" stroke-width="1"/>
-<text x="454.6" y="34" text-anchor="middle" font-size="14.5" font-weight="700" fill="#ffffff" letter-spacing="0.5">Shotgun SL Right RTE Out</text>
+<rect x="278.0" y="13" width="298.0" height="31" rx="6" fill="#ffffff" fill-opacity="0.12" stroke="#8593ad" stroke-width="1"/>
+<text x="427.0" y="34" text-anchor="middle" font-size="14.5" font-weight="700" fill="#ffffff" letter-spacing="0.5">Shotgun SL Right RTE Slant Out</text>
 <clipPath id="fieldclip"><rect x="0" y="58" width="594" height="472"/></clipPath>
 <g clip-path="url(#fieldclip)"><g transform="translate(-54.0,31.0)">
 <rect x="0" y="0" width="702" height="513" fill="#ffffff"/>
@@ -46,8 +46,8 @@
 <line x1="398.0" y1="356.4" x2="379.6" y2="356.4" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 <path d="M426.6,337.5 L426.6,356.4" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
 <line x1="435.8" y1="356.4" x2="417.4" y2="356.4" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
-<path d="M464.4,337.5 L469.8,216.0 L550.8,210.6" fill="none" stroke="#b3001b" stroke-width="4.6" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 5"/>
-<polygon points="550.8,210.6 537.4,217.7 536.6,205.4" fill="#b3001b"/>
+<path d="M464.4,337.5 L491.4,302.4 L583.2,256.5" fill="none" stroke="#b3001b" stroke-width="4.6" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 5"/>
+<polygon points="583.2,256.5 573.6,268.2 568.1,257.2" fill="#b3001b"/>
 <path d="M540.0,356.4 L588.9,254.1" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
 <line x1="580.6" y1="250.1" x2="597.2" y2="258.0" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 <path d="M351.0,459.0 L351.0,475.2" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 5"/>
@@ -107,17 +107,17 @@
 <text x="52" y="850" font-size="12" fill="#111318">stay between your man and the</text>
 <text x="52" y="868" font-size="12" fill="#111318">quarterback.</text>
 <text x="297" y="578" font-size="12" font-weight="700" fill="#111318">RTE</text>
-<text x="331" y="578" font-size="12" fill="#111318">Run straight up five yards, then snap</text>
-<text x="331" y="596" font-size="12" fill="#111318">it out to the sideline and turn your</text>
-<text x="331" y="612" font-size="12" fill="#111318">eyes back to the quarterback. The</text>
-<text x="331" y="630" font-size="12" fill="#111318">ball is there when you turn.</text>
+<text x="331" y="578" font-size="12" fill="#111318">Take two steps up, then slant out</text>
+<text x="331" y="596" font-size="12" fill="#111318">shallow toward the right sideline.</text>
+<text x="331" y="612" font-size="12" fill="#111318">Look for the ball as soon as you</text>
+<text x="331" y="630" font-size="12" fill="#111318">clear the end.</text>
 <text x="297" y="646" font-size="12" font-weight="700" fill="#111318">SL</text>
 <text x="331" y="646" font-size="12" fill="#111318">Run at the corner and screen him off.</text>
 <text x="331" y="664" font-size="12" fill="#111318">Stay in his way.</text>
 <text x="297" y="680" font-size="12" font-weight="700" fill="#111318">QB</text>
 <text x="331" y="680" font-size="12" fill="#111318">Catch the snap, take one step and</text>
 <text x="331" y="698" font-size="12" fill="#111318">throw to the right tight end as he</text>
-<text x="331" y="714" font-size="12" fill="#111318">breaks out. If he is covered, tuck it</text>
+<text x="331" y="714" font-size="12" fill="#111318">slants out. If he is covered, tuck it</text>
 <text x="331" y="732" font-size="12" fill="#111318">and run.</text>
 <text x="297" y="748" font-size="12" font-weight="700" fill="#111318">LH</text>
 <text x="331" y="748" font-size="12" fill="#111318">Step up and out, hands up. Pick up</text>
@@ -129,8 +129,8 @@
 <text x="18" y="892" font-size="11" font-weight="700" fill="#5b6472" letter-spacing="1">COACHING POINTS</text>
 <text x="18" y="912" font-size="12" fill="#111318">Everybody but the tight end and the SL pass blocks: step back, hands up, stay</text>
 <text x="18" y="930" font-size="12" fill="#111318">between your man and the quarterback.</text>
-<text x="18" y="946" font-size="12" fill="#111318">The tight end runs five hard yards and snaps it to the sideline. A soft break is</text>
-<text x="18" y="964" font-size="12" fill="#111318">a pick for the corner.</text>
-<text x="18" y="980" font-size="12" fill="#111318">The quarterback throws the moment the tight end breaks. If he is covered, tuck it</text>
-<text x="18" y="998" font-size="12" fill="#111318">and run — no second look.</text>
+<text x="18" y="946" font-size="12" fill="#111318">The tight end's slant stays shallow — two steps up and angle out. Drifting deep</text>
+<text x="18" y="964" font-size="12" fill="#111318">takes him into the linebackers.</text>
+<text x="18" y="980" font-size="12" fill="#111318">The quarterback throws it as soon as the tight end clears the end. If he is</text>
+<text x="18" y="998" font-size="12" fill="#111318">covered, tuck it and run — no second look.</text>
 </svg>

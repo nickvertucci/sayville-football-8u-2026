@@ -2,13 +2,13 @@
   "id": "sg-te-out-r",
   "order": 1,
   "formation": "shotgun",
-  "name": "Shotgun - Strong right - RTE quick out",
-  "call": "Shotgun SL Right RTE Out",
+  "name": "Shotgun - Strong right - RTE slant out",
+  "call": "Shotgun SL Right RTE Slant Out",
   "word_call": true,
   "type": "pass",
   "direction": "right",
   "ball_carrier": "RTE",
-  "purpose": "A throw the quarterback can make before anybody gets to him: the right tight end runs five yards and breaks to the sideline, and everybody else but the SL stays in and blocks.",
+  "purpose": "A throw the quarterback can make before anybody gets to him: the right tight end slants out shallow toward the right sideline, and everybody else but the SL stays in and blocks.",
   "assignments": {
     "LTE": {
       "block": "protect"
@@ -29,16 +29,16 @@
       "block": "protect"
     },
     "RTE": {
-      "rule": "Run straight up five yards, then snap it out to the sideline and turn your eyes back to the quarterback. The ball is there when you turn.",
+      "rule": "Take two steps up, then slant out shallow toward the right sideline. Look for the ball as soon as you clear the end.",
       "type": "pass",
       "path": [
         [
-          0.2,
-          4.5
+          1.0,
+          1.3
         ],
         [
-          3.2,
-          4.7
+          4.4,
+          3.0
         ]
       ]
     },
@@ -46,7 +46,7 @@
       "block": "screen"
     },
     "QB": {
-      "rule": "Catch the snap, take one step and throw to the right tight end as he breaks out. If he is covered, tuck it and run.",
+      "rule": "Catch the snap, take one step and throw to the right tight end as he slants out. If he is covered, tuck it and run.",
       "type": "pass",
       "path": [
         [
@@ -72,7 +72,7 @@
   },
   "coaching_points": [
     "Everybody but the tight end and the SL pass blocks: step back, hands up, stay between your man and the quarterback.",
-    "The tight end runs five hard yards and snaps it to the sideline. A soft break is a pick for the corner.",
-    "The quarterback throws the moment the tight end breaks. If he is covered, tuck it and run — no second look."
+    "The tight end's slant stays shallow — two steps up and angle out. Drifting deep takes him into the linebackers.",
+    "The quarterback throws it as soon as the tight end clears the end. If he is covered, tuck it and run — no second look."
   ]
 }

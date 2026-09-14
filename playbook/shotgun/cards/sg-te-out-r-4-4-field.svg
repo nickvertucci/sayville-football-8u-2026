@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="594" height="472" viewBox="54 27 594 472" font-family="Segoe UI, Helvetica, Arial, sans-serif" role="img">
-<title>Shotgun - Strong right - RTE quick out — Shotgun SL Right RTE Out vs 4-4</title>
+<title>Shotgun - Strong right - RTE slant out — Shotgun SL Right RTE Slant Out vs 4-4</title>
 <rect x="0" y="0" width="702" height="513" fill="#ffffff"/>
 <line x1="0" y1="459.0" x2="702" y2="459.0" stroke="#c8cdd6" stroke-width="1"/>
 <line x1="0" y1="189.0" x2="702" y2="189.0" stroke="#c8cdd6" stroke-width="1"/>
@@ -39,8 +39,8 @@
 <line x1="398.0" y1="356.4" x2="379.6" y2="356.4" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 <path d="M426.6,337.5 L426.6,356.4" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
 <line x1="435.8" y1="356.4" x2="417.4" y2="356.4" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
-<path d="M464.4,337.5 L469.8,216.0 L550.8,210.6" fill="none" stroke="#b3001b" stroke-width="4.6" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 5"/>
-<polygon points="550.8,210.6 537.4,217.7 536.6,205.4" fill="#b3001b"/>
+<path d="M464.4,337.5 L491.4,302.4 L583.2,256.5" fill="none" stroke="#b3001b" stroke-width="4.6" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 5"/>
+<polygon points="583.2,256.5 573.6,268.2 568.1,257.2" fill="#b3001b"/>
 <path d="M540.0,356.4 L601.3,253.5" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
 <line x1="593.4" y1="248.8" x2="609.2" y2="258.2" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 <path d="M351.0,459.0 L351.0,475.2" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 5"/>
