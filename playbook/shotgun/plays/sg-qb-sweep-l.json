@@ -92,6 +92,33 @@
   },
   "fronts": {
     "4-4": {
+      "LTE": {
+        "block": "man",
+        "man": "LE"
+      },
+      "LT": {
+        "block": "man",
+        "man": "M",
+        "help": "LT"
+      },
+      "C": {
+        "block": "man",
+        "man": "S",
+        "help": "RT"
+      },
+      "RG": {
+        "block": "man",
+        "man": "RT"
+      },
+      "RT": {
+        "block": "man",
+        "man": "R",
+        "help": "RE"
+      },
+      "RTE": {
+        "block": "man",
+        "man": "RE"
+      },
       "LH": {
         "block": "man",
         "man": "W",
