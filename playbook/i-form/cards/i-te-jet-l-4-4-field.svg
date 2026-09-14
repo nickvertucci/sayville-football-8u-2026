@@ -29,16 +29,16 @@
 <text x="351.0" y="90.2" text-anchor="middle" font-size="12.5" fill="#9aa2ae" font-weight="600">FS</text>
 <path d="M464.4,337.5 L405.0,388.8 L324.0,394.2 L175.5,378.0 L118.8,318.6 L108.0,226.8 L102.6,135.0" fill="none" stroke="#b3001b" stroke-width="4.6" stroke-linecap="round" stroke-linejoin="round"/>
 <polygon points="102.6,135.0 109.6,148.4 97.3,149.1" fill="#b3001b"/>
-<path d="M426.6,337.5 L448.5,318.6 L469.5,253.8" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-<line x1="460.8" y1="251.0" x2="478.3" y2="256.6" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
+<path d="M426.6,337.5 L446.3,312.1" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="439.1" y1="306.5" x2="453.6" y2="317.8" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 <path d="M388.8,337.5 L388.8,314.6" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
 <line x1="379.6" y1="314.6" x2="398.0" y2="314.6" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
-<path d="M351.0,337.5 L384.2,254.3" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-<line x1="375.7" y1="250.9" x2="392.7" y2="257.7" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
-<path d="M313.2,337.5 L313.2,255.1" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-<line x1="304.0" y1="255.1" x2="322.4" y2="255.1" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
-<path d="M275.4,337.5 L304.3,310.8" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-<line x1="298.1" y1="304.0" x2="310.5" y2="317.5" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
+<path d="M351.0,337.5 L379.9,310.8 L384.2,254.3" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="375.1" y1="253.6" x2="393.4" y2="255.0" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
+<path d="M313.2,337.5 L313.2,314.6" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="304.0" y1="314.6" x2="322.4" y2="314.6" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
+<path d="M275.4,337.5 L304.3,310.8 L308.6,254.3" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="299.5" y1="253.6" x2="317.8" y2="255.0" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 <path d="M237.6,337.5 L244.9,314.0" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
 <line x1="236.1" y1="311.3" x2="253.7" y2="316.7" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 <path d="M162.0,356.4 L100.7,253.5" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
