@@ -92,7 +92,7 @@ tight end is not a numbered back, so it is a word call.
 
 | Call | Play | Reads as |
 |---|---|---|
-| `Shotgun SL Right RTE Slant Out` / `SL Left LTE Slant Out` | Shotgun - Strong right - RTE slant out / Strong left - LTE slant out | the play-side tight end, a shallow slant out toward the sideline |
+| `Shotgun SL Right RTE Slant Out` / `SL Left LTE Slant Out` | Shotgun - Strong right - RTE slant out / Strong left - LTE slant out | the play-side tight end, a flat slant out almost on the line of scrimmage |
 
 **Play word** — the Regular I carries `Power` and the tight-end `Jet`; the Split Backs
 carries `Pitch`, `Sweep` and `Fake Sweep`; the Shotgun carries the tight end's `Slant Out`, the

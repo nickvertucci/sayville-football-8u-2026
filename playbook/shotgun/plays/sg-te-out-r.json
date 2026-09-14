@@ -8,7 +8,7 @@
   "type": "pass",
   "direction": "right",
   "ball_carrier": "RTE",
-  "purpose": "A throw the quarterback can make before anybody gets to him: the right tight end slants out shallow toward the right sideline, and everybody else but the SL stays in and blocks.",
+  "purpose": "A throw the quarterback can make before anybody gets to him: the right tight end slants out flat toward the right sideline, almost on the line of scrimmage, and everybody else but the SL stays in and blocks.",
   "assignments": {
     "LTE": {
       "block": "protect"
@@ -29,16 +29,16 @@
       "block": "protect"
     },
     "RTE": {
-      "rule": "Take two steps up, then slant out shallow toward the right sideline. Look for the ball as soon as you clear the end.",
+      "rule": "Take one step up, then slant out flat toward the right sideline, almost along the line of scrimmage. Look for the ball right away.",
       "type": "pass",
       "path": [
         [
-          1.0,
-          1.3
+          0.8,
+          0.6
         ],
         [
-          4.4,
-          3.0
+          4.6,
+          1.1
         ]
       ]
     },
@@ -72,7 +72,7 @@
   },
   "coaching_points": [
     "Everybody but the tight end and the SL pass blocks: step back, hands up, stay between your man and the quarterback.",
-    "The tight end's slant stays shallow — two steps up and angle out. Drifting deep takes him into the linebackers.",
+    "The slant stays flat — one step up and out, almost on the line of scrimmage. Any deeper and he runs into the linebackers.",
     "The quarterback throws it as soon as the tight end clears the end. If he is covered, tuck it and run — no second look."
   ]
 }
