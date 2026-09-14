@@ -6,8 +6,8 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 | # | Play | Call | Type | Formation | Ball |
 |---|---|---|---|---|---|
-| 1 | [I Formation - Strong Right - Off Tackle Handoff](#i-formation---strong-right---off-tackle-handoff) | `Regular I SL Right 34 Power` | run | Regular I | TB |
-| 2 | [I Formation - Strong Left - Off Tackle Handoff](#i-formation---strong-left---off-tackle-handoff) | `Regular I SL Left 35 Power` | run | Regular I | TB |
+| 1 | [I Formation - Strong Right - Off tackle right](#i-formation---strong-right---off-tackle-right) | `Regular I SL Right 34 Power` | run | Regular I | TB |
+| 2 | [I Formation - Strong Left - Off tackle left](#i-formation---strong-left---off-tackle-left) | `Regular I SL Left 35 Power` | run | Regular I | TB |
 | 3 | [Split formation - Strong right - Quick pitch right](#split-formation---strong-right---quick-pitch-right) | `Split SL Right 28 Pitch` | run | Split Backs | LH |
 | 4 | [Split formation - Strong left - Quick pitch left](#split-formation---strong-left---quick-pitch-left) | `Split SL Left 39 Pitch` | run | Split Backs | RH |
 | 5 | [Split formation - Strong right - QB sweep right](#split-formation---strong-right---qb-sweep-right) | `Split SL Right 18 Sweep` | run | Split Backs | QB |
@@ -17,11 +17,11 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## I Formation - Strong Right - Off Tackle Handoff
+## I Formation - Strong Right - Off tackle right
 
 **Call it:** `Regular I SL Right 34 Power`
 
-![I Formation - Strong Right - Off Tackle Handoff](playbook/i-form/cards/i-power-r-5-3.svg)
+![I Formation - Strong Right - Off tackle right](playbook/i-form/cards/i-power-r-5-3.svg)
 
 Our best downhill run. Everybody blocks down inside, the SL kicks the end out, and the fullback leads through the hole in front of the tailback. Nobody leaves his spot — every block on the card is made by the kid already standing there.
 
@@ -48,11 +48,11 @@ Our best downhill run. Everybody blocks down inside, the SL kicks the end out, a
 
 ---
 
-## I Formation - Strong Left - Off Tackle Handoff
+## I Formation - Strong Left - Off tackle left
 
 **Call it:** `Regular I SL Left 35 Power`
 
-![I Formation - Strong Left - Off Tackle Handoff](playbook/i-form/cards/i-power-l-5-3.svg)
+![I Formation - Strong Left - Off tackle left](playbook/i-form/cards/i-power-l-5-3.svg)
 
 Our best downhill run. Everybody blocks down inside, the SL kicks the end out, and the fullback leads through the hole in front of the tailback. Nobody leaves his spot — every block on the card is made by the kid already standing there.
 

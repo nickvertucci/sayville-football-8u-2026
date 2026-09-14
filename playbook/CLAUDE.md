@@ -140,7 +140,7 @@ so there is one copy of the numbering rather than three that can disagree.
 ### `name` and `call` are different on purpose
 
 Both are printed at the top of every card. `name` is the teaching name (*I Formation -
-Strong Right - Off Tackle Handoff*); `call` is the huddle call in the team's play-calling language
+Strong Right - Off tackle right*); `call` is the huddle call in the team's play-calling language
 (`Regular I SL Right 34 Power` — formation, the SL's side, then **two digits: who carries
 it and where it goes**, then the play word).
 The numbering system is documented in the top-level [README](../README.md).

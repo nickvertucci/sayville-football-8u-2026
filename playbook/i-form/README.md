@@ -32,16 +32,16 @@ Normal line splits, about a foot. Both ends are on the line; the SL is off it, a
 
 | Play | Call | Type | Ball |
 |---|---|---|---|
-| [I Formation - Strong Right - Off Tackle Handoff](#i-formation---strong-right---off-tackle-handoff) | `Regular I SL Right 34 Power` | run | TB |
-| [I Formation - Strong Left - Off Tackle Handoff](#i-formation---strong-left---off-tackle-handoff) | `Regular I SL Left 35 Power` | run | TB |
+| [I Formation - Strong Right - Off tackle right](#i-formation---strong-right---off-tackle-right) | `Regular I SL Right 34 Power` | run | TB |
+| [I Formation - Strong Left - Off tackle left](#i-formation---strong-left---off-tackle-left) | `Regular I SL Left 35 Power` | run | TB |
 
 ---
 
-## I Formation - Strong Right - Off Tackle Handoff
+## I Formation - Strong Right - Off tackle right
 
 **Call it:** `Regular I SL Right 34 Power`
 
-![I Formation - Strong Right - Off Tackle Handoff](cards/i-power-r-5-3.svg)
+![I Formation - Strong Right - Off tackle right](cards/i-power-r-5-3.svg)
 
 Our best downhill run. Everybody blocks down inside, the SL kicks the end out, and the fullback leads through the hole in front of the tailback. Nobody leaves his spot — every block on the card is made by the kid already standing there.
 
@@ -68,11 +68,11 @@ Our best downhill run. Everybody blocks down inside, the SL kicks the end out, a
 
 ---
 
-## I Formation - Strong Left - Off Tackle Handoff
+## I Formation - Strong Left - Off tackle left
 
 **Call it:** `Regular I SL Left 35 Power`
 
-![I Formation - Strong Left - Off Tackle Handoff](cards/i-power-l-5-3.svg)
+![I Formation - Strong Left - Off tackle left](cards/i-power-l-5-3.svg)
 
 Our best downhill run. Everybody blocks down inside, the SL kicks the end out, and the fullback leads through the hole in front of the tailback. Nobody leaves his spot — every block on the card is made by the kid already standing there.
 
