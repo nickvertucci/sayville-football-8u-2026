@@ -2982,21 +2982,20 @@ def write_calls(formations: list[dict], defenses: dict, root: Path) -> str:
         grid[1][0 if left else 7] = ("SL", backs.get("SL", ""))
         if layout.startswith("sg-"):
             # The Shotgun: the quarterback five yards deep in the last row, a halfback
-            # either side of him. The fullback is the back on the SL's side, as in the
-            # Split formation, and each is labelled by the side he stands on.
+            # either side of him — the fullback always on his left and the tailback on
+            # his right, whichever side the SL is on.
             grid[1][center] = None
             grid[3][center] = ("QB", starter("QB"))
-            near, far = (center - 1, center + 1) if left else (center + 1, center - 1)
-            grid[3][near] = ("LH" if left else "RH", backs.get("FB", ""))
-            grid[3][far] = ("RH" if left else "LH", backs.get("TB", ""))
+            grid[3][center - 1] = ("LH", backs.get("FB", ""))
+            grid[3][center + 1] = ("RH", backs.get("TB", ""))
         elif layout.startswith("i-"):
             grid[2][center] = ("FB", backs.get("FB", ""))
             grid[3][center] = ("TB", backs.get("TB", ""))
         else:
-            # The fullback lines up on the SL's side, the tailback on the other.
-            side = -1 if left else 1
-            grid[3][center + side] = ("FB", backs.get("FB", ""))
-            grid[3][center - side] = ("TB", backs.get("TB", ""))
+            # The fullback always lines up left of center and the tailback right of
+            # it, whichever side the SL is on.
+            grid[3][center - 1] = ("FB", backs.get("FB", ""))
+            grid[3][center + 1] = ("TB", backs.get("TB", ""))
         rows = []
         for row in grid:
             tds = []
