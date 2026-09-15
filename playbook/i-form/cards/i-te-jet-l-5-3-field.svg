@@ -73,4 +73,5 @@
 <circle cx="351.0" cy="472.5" r="13.5" fill="#ffffff" stroke="#14213d" stroke-width="2.6"/>
 <text x="351.0" y="477.0" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">TB</text>
 <rect x="520.8" y="35.0" width="119.2" height="52.0" rx="8" fill="#ffffff" stroke="#111318" stroke-width="3"/><text x="580.4" y="75.0" text-anchor="middle" font-size="40" font-weight="800" fill="#111318">#I-4</text>
+<text x="66.0" y="67.0" font-size="17.0" font-weight="700" fill="#111318">I Formation - Strong Left - RTE jet left</text>
 </svg>
