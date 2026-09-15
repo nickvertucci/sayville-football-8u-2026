@@ -10,18 +10,20 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 | 2 | [I Formation - Strong Left - Off tackle left](#i-formation---strong-left---off-tackle-left) | `Regular I SL Left 35 Power` | run | Regular I | TB |
 | 3 | [I Formation - Strong Right - LTE jet right](#i-formation---strong-right---lte-jet-right) | `Regular I SL Right LTE Jet` | run | Regular I | LTE |
 | 4 | [I Formation - Strong Left - RTE jet left](#i-formation---strong-left---rte-jet-left) | `Regular I SL Left RTE Jet` | run | Regular I | RTE |
-| 5 | [Split formation - Strong right - Quick pitch right](#split-formation---strong-right---quick-pitch-right) | `Split SL Right 28 Pitch` | run | Split Backs | LH |
-| 6 | [Split formation - Strong left - Quick pitch left](#split-formation---strong-left---quick-pitch-left) | `Split SL Left 39 Pitch` | run | Split Backs | RH |
-| 7 | [Split formation - Strong right - QB sweep right](#split-formation---strong-right---qb-sweep-right) | `Split SL Right 18 Sweep` | run | Split Backs | QB |
-| 8 | [Split formation - Strong left - QB sweep left](#split-formation---strong-left---qb-sweep-left) | `Split SL Left 19 Sweep` | run | Split Backs | QB |
-| 9 | [Split formation - Strong left - Fake handoff right QB sweep left](#split-formation---strong-left---fake-handoff-right-qb-sweep-left) | `Split SL Left 19 Fake Sweep` | run | Split Backs | QB |
-| 10 | [Split formation - Strong right - Fake handoff left QB sweep right](#split-formation---strong-right---fake-handoff-left-qb-sweep-right) | `Split SL Right 18 Fake Sweep` | run | Split Backs | QB |
-| 11 | [Shotgun - Strong right - RTE slant out](#shotgun---strong-right---rte-slant-out) | `Shotgun SL Right RTE Slant Out` | pass | Shotgun | RTE |
-| 12 | [Shotgun - Strong left - LTE slant out](#shotgun---strong-left---lte-slant-out) | `Shotgun SL Left LTE Slant Out` | pass | Shotgun | LTE |
-| 13 | [Shotgun - Strong left - QB sweep left](#shotgun---strong-left---qb-sweep-left) | `Shotgun SL Left 19 Sweep` | run | Shotgun | QB |
-| 14 | [Shotgun - Strong right - QB sweep right](#shotgun---strong-right---qb-sweep-right) | `Shotgun SL Right 18 Sweep` | run | Shotgun | QB |
-| 15 | [Shotgun - Strong right - RB sweep right](#shotgun---strong-right---rb-sweep-right) | `Shotgun SL Right 28 Sweep` | run | Shotgun | LH |
-| 16 | [Shotgun - Strong left - RB sweep left](#shotgun---strong-left---rb-sweep-left) | `Shotgun SL Left 39 Sweep` | run | Shotgun | RH |
+| 5 | [I Formation - Strong Right - Slot jet left](#i-formation---strong-right---slot-jet-left) | `Regular I SL Right 49 Jet` | run | Regular I | SL |
+| 6 | [I Formation - Strong Left - Slot jet right](#i-formation---strong-left---slot-jet-right) | `Regular I SL Left 48 Jet` | run | Regular I | SL |
+| 7 | [Split formation - Strong right - Quick pitch right](#split-formation---strong-right---quick-pitch-right) | `Split SL Right 28 Pitch` | run | Split Backs | LH |
+| 8 | [Split formation - Strong left - Quick pitch left](#split-formation---strong-left---quick-pitch-left) | `Split SL Left 39 Pitch` | run | Split Backs | RH |
+| 9 | [Split formation - Strong right - QB sweep right](#split-formation---strong-right---qb-sweep-right) | `Split SL Right 18 Sweep` | run | Split Backs | QB |
+| 10 | [Split formation - Strong left - QB sweep left](#split-formation---strong-left---qb-sweep-left) | `Split SL Left 19 Sweep` | run | Split Backs | QB |
+| 11 | [Split formation - Strong left - Fake handoff right QB sweep left](#split-formation---strong-left---fake-handoff-right-qb-sweep-left) | `Split SL Left 19 Fake Sweep` | run | Split Backs | QB |
+| 12 | [Split formation - Strong right - Fake handoff left QB sweep right](#split-formation---strong-right---fake-handoff-left-qb-sweep-right) | `Split SL Right 18 Fake Sweep` | run | Split Backs | QB |
+| 13 | [Shotgun - Strong right - RTE slant out](#shotgun---strong-right---rte-slant-out) | `Shotgun SL Right RTE Slant Out` | pass | Shotgun | RTE |
+| 14 | [Shotgun - Strong left - LTE slant out](#shotgun---strong-left---lte-slant-out) | `Shotgun SL Left LTE Slant Out` | pass | Shotgun | LTE |
+| 15 | [Shotgun - Strong left - QB sweep left](#shotgun---strong-left---qb-sweep-left) | `Shotgun SL Left 19 Sweep` | run | Shotgun | QB |
+| 16 | [Shotgun - Strong right - QB sweep right](#shotgun---strong-right---qb-sweep-right) | `Shotgun SL Right 18 Sweep` | run | Shotgun | QB |
+| 17 | [Shotgun - Strong right - RB sweep right](#shotgun---strong-right---rb-sweep-right) | `Shotgun SL Right 28 Sweep` | run | Shotgun | LH |
+| 18 | [Shotgun - Strong left - RB sweep left](#shotgun---strong-left---rb-sweep-left) | `Shotgun SL Left 39 Sweep` | run | Shotgun | RH |
 
 # Regular I
 
@@ -138,6 +140,62 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 - No motion before the snap. The end stays down in his stance, so the play is legal and nothing tips it off.
 - The handoff is the whole play: the quarterback opens left and puts the ball in the end's belly at full speed, then carries out his fake.
 - Both backs bubble out to the left ahead of the end and double team the outside linebacker together. Two of them on him is what gets the end around the corner.
+
+---
+
+## I Formation - Strong Right - Slot jet left
+
+**Call it:** `Regular I SL Right 49 Jet`
+
+![I Formation - Strong Right - Slot jet left](playbook/i-form/cards/i-sl-jet-l-5-3.svg)
+
+| Position | Assignment |
+|---|---|
+| **LTE** | End head up on you. Turn him inside. The ball goes around behind you. |
+| **LT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
+| **LG** | Nobody on you. Climb to the playside linebacker. Head across him. |
+| **C** | Reach the nose to your left. Head across his playside shoulder. |
+| **RG** | Nobody on you. Cut off the backside. Never quit on the play. |
+| **RT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
+| **RTE** | End head up on you. Cut him off — get between him and the ball. |
+| **SL** **(ball)** | At the snap run flat across the backfield, take the handoff at full speed and get to the left edge. Turn up in the alley behind the fullback. |
+| **QB** | Hand the ball to the slot as he runs past you, then fake the handoff to the tailback going right. |
+| **FB** | Lead outside our end. Block the first man out there — here it is the corner. |
+| **TB** | Take the fake handoff and run hard to the right. You are what holds the backside. |
+
+**Coaching points**
+
+- The slot runs flat and fast across the backfield. The handoff is at full speed, so the quarterback just puts it in his belly.
+- After the handoff the quarterback carries out his fake to the tailback going right. It is what holds the backside.
+- The fullback bubbles out ahead of the slot and takes the corner. The slot stays behind him and turns up in the alley.
+
+---
+
+## I Formation - Strong Left - Slot jet right
+
+**Call it:** `Regular I SL Left 48 Jet`
+
+![I Formation - Strong Left - Slot jet right](playbook/i-form/cards/i-sl-jet-r-5-3.svg)
+
+| Position | Assignment |
+|---|---|
+| **LTE** | End head up on you. Cut him off — get between him and the ball. |
+| **LT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
+| **LG** | Nobody on you. Cut off the backside. Never quit on the play. |
+| **C** | Reach the nose to your right. Head across his playside shoulder. |
+| **RG** | Nobody on you. Climb to the playside linebacker. Head across him. |
+| **RT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
+| **RTE** | End head up on you. Turn him inside. The ball goes around behind you. |
+| **SL** **(ball)** | At the snap run flat across the backfield, take the handoff at full speed and get to the right edge. Turn up in the alley behind the fullback. |
+| **QB** | Hand the ball to the slot as he runs past you, then fake the handoff to the tailback going left. |
+| **FB** | Lead outside our end. Block the first man out there — here it is the corner. |
+| **TB** | Take the fake handoff and run hard to the left. You are what holds the backside. |
+
+**Coaching points**
+
+- The slot runs flat and fast across the backfield. The handoff is at full speed, so the quarterback just puts it in his belly.
+- After the handoff the quarterback carries out his fake to the tailback going left. It is what holds the backside.
+- The fullback bubbles out ahead of the slot and takes the corner. The slot stays behind him and turns up in the alley.
 
 # Split Backs
 

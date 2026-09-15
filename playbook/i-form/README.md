@@ -36,6 +36,8 @@ Normal line splits, about a foot. Both ends are on the line; the SL is off it, a
 | [I Formation - Strong Left - Off tackle left](#i-formation---strong-left---off-tackle-left) | `Regular I SL Left 35 Power` | run | TB |
 | [I Formation - Strong Right - LTE jet right](#i-formation---strong-right---lte-jet-right) | `Regular I SL Right LTE Jet` | run | LTE |
 | [I Formation - Strong Left - RTE jet left](#i-formation---strong-left---rte-jet-left) | `Regular I SL Left RTE Jet` | run | RTE |
+| [I Formation - Strong Right - Slot jet left](#i-formation---strong-right---slot-jet-left) | `Regular I SL Right 49 Jet` | run | SL |
+| [I Formation - Strong Left - Slot jet right](#i-formation---strong-left---slot-jet-right) | `Regular I SL Left 48 Jet` | run | SL |
 
 ---
 
@@ -150,4 +152,60 @@ Normal line splits, about a foot. Both ends are on the line; the SL is off it, a
 - No motion before the snap. The end stays down in his stance, so the play is legal and nothing tips it off.
 - The handoff is the whole play: the quarterback opens left and puts the ball in the end's belly at full speed, then carries out his fake.
 - Both backs bubble out to the left ahead of the end and double team the outside linebacker together. Two of them on him is what gets the end around the corner.
+
+---
+
+## I Formation - Strong Right - Slot jet left
+
+**Call it:** `Regular I SL Right 49 Jet`
+
+![I Formation - Strong Right - Slot jet left](cards/i-sl-jet-l-5-3.svg)
+
+| Position | Assignment |
+|---|---|
+| **LTE** | End head up on you. Turn him inside. The ball goes around behind you. |
+| **LT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
+| **LG** | Nobody on you. Climb to the playside linebacker. Head across him. |
+| **C** | Reach the nose to your left. Head across his playside shoulder. |
+| **RG** | Nobody on you. Cut off the backside. Never quit on the play. |
+| **RT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
+| **RTE** | End head up on you. Cut him off — get between him and the ball. |
+| **SL** **(ball)** | At the snap run flat across the backfield, take the handoff at full speed and get to the left edge. Turn up in the alley behind the fullback. |
+| **QB** | Hand the ball to the slot as he runs past you, then fake the handoff to the tailback going right. |
+| **FB** | Lead outside our end. Block the first man out there — here it is the corner. |
+| **TB** | Take the fake handoff and run hard to the right. You are what holds the backside. |
+
+**Coaching points**
+
+- The slot runs flat and fast across the backfield. The handoff is at full speed, so the quarterback just puts it in his belly.
+- After the handoff the quarterback carries out his fake to the tailback going right. It is what holds the backside.
+- The fullback bubbles out ahead of the slot and takes the corner. The slot stays behind him and turns up in the alley.
+
+---
+
+## I Formation - Strong Left - Slot jet right
+
+**Call it:** `Regular I SL Left 48 Jet`
+
+![I Formation - Strong Left - Slot jet right](cards/i-sl-jet-r-5-3.svg)
+
+| Position | Assignment |
+|---|---|
+| **LTE** | End head up on you. Cut him off — get between him and the ball. |
+| **LT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
+| **LG** | Nobody on you. Cut off the backside. Never quit on the play. |
+| **C** | Reach the nose to your right. Head across his playside shoulder. |
+| **RG** | Nobody on you. Climb to the playside linebacker. Head across him. |
+| **RT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
+| **RTE** | End head up on you. Turn him inside. The ball goes around behind you. |
+| **SL** **(ball)** | At the snap run flat across the backfield, take the handoff at full speed and get to the right edge. Turn up in the alley behind the fullback. |
+| **QB** | Hand the ball to the slot as he runs past you, then fake the handoff to the tailback going left. |
+| **FB** | Lead outside our end. Block the first man out there — here it is the corner. |
+| **TB** | Take the fake handoff and run hard to the left. You are what holds the backside. |
+
+**Coaching points**
+
+- The slot runs flat and fast across the backfield. The handoff is at full speed, so the quarterback just puts it in his belly.
+- After the handoff the quarterback carries out his fake to the tailback going left. It is what holds the backside.
+- The fullback bubbles out ahead of the slot and takes the corner. The slot stays behind him and turns up in the alley.
 
