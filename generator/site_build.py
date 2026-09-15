@@ -4080,6 +4080,11 @@ def write_defense_page(front: dict, formations: list[dict], defenses: dict) -> s
     )
 
 
+# The front the printed playbook is drawn against: the 4-4, the look the plays' blocking
+# was written for.
+PRINT_BOOK_FRONT = "4-4"
+
+
 def write_print_book(formations: list[dict], defenses: dict) -> str:
     # The whole playbook the way a single play prints from its own page: each play's
     # diagram alone, filling a letter sheet turned landscape. Same `play-page` class, so
@@ -4089,12 +4094,12 @@ def write_print_book(formations: list[dict], defenses: dict) -> str:
     # Every diagram loads up front. A lazy image only loads as it scrolls near the screen,
     # and a browser's print preview does not scroll: it printed the first four plays —
     # the ones close enough to have loaded — and blank space for the other fourteen.
-    arts = [play_article(f, p, defenses, single=blocking.DEFAULT_FRONT)
+    arts = [play_article(f, p, defenses, single=PRINT_BOOK_FRONT)
             .replace('loading="lazy"', 'loading="eager"')
             for f in formations for p in f["_plays"]]
     body = f"""<div class="print-intro">
   <h1 class="page">Print the playbook</h1>
-  <p class="lede">All {total} plays, one per landscape sheet.</p>
+  <p class="lede">All {total} plays against the 4-4, one per landscape sheet.</p>
   <p><button type="button" class="btn solid"
      onclick="window.print()">Print {total} plays</button></p>
 </div>
