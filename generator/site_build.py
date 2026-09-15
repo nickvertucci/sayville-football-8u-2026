@@ -1508,14 +1508,13 @@ table.dc-board thead th { background: none; color: #000; border-bottom: 2px soli
     background: none; border: 0; padding: 0; font-size: 10pt; font-weight: 800;
     color: #000; border-radius: 0;
   }
-  .dc-pool {
-    display: flex; flex-wrap: wrap; gap: 2px 12px; border: 0; padding: 0;
-    min-height: 0; background: none;
-  }
-  .dc-bench { margin: 6px 0 0; }
-  /* Packages on paper: one row, not two — two rows of boxes push each side of the ball
-     onto a second sheet — with the same in/out notes, packed tight. */
-  .dc-pkgrow { grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 4px; }
+  /* The squad list is for building the board on screen. On paper it is a second copy
+     of names already in the columns and packages, so it goes and the space is the
+     packages'. */
+  .dc-bench { display: none; }
+  /* Packages on paper: two rows of three, as on screen, with the in/out notes, packed
+     tight enough that each side of the ball still fits its one sheet. */
+  .dc-pkgrow { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 4px; }
   .dc-pkg { padding: 2px 5px; box-shadow: none; border-radius: 0; }
   .dc-pkg-h { margin: 0; font-size: 7pt; }
   .dc-pkg-slot { min-height: 0; padding: 0; }
@@ -1523,8 +1522,6 @@ table.dc-board thead th { background: none; color: #000; border-bottom: 2px soli
   .dc-pkg-slot[data-spot="LT"] { margin-top: 1px; padding-top: 1px; }
   .dc-pkg .dc-chip { font-size: 8pt; }
   .dc-pkg-note { margin: 2px 0 0; padding-top: 2px; font-size: 7pt; line-height: 1.25; }
-  /* Worth its ink on a clipboard: it answers "who do I still have" without counting.
-     Tighter than on screen, because it is the one row that can run to eleven names. */
   /* Buttons and the local-edits banner are screen furniture. */
   .dc-tools, .dc-edited { display: none; }
   .dc-bar { margin: 0 0 6px; display: block; }
