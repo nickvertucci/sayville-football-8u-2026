@@ -4078,7 +4078,11 @@ def write_print_book(formations: list[dict], defenses: dict) -> str:
     # the same print rules hide the words, and a coach printing the book gets exactly
     # the sheets he would get printing every play one at a time.
     total = sum(len(f["_plays"]) for f in formations)
+    # Every diagram loads up front. A lazy image only loads as it scrolls near the screen,
+    # and a browser's print preview does not scroll: it printed the first four plays —
+    # the ones close enough to have loaded — and blank space for the other fourteen.
     arts = [play_article(f, p, defenses, single=blocking.DEFAULT_FRONT)
+            .replace('loading="lazy"', 'loading="eager"')
             for f in formations for p in f["_plays"]]
     body = f"""<div class="print-intro">
   <h1 class="page">Print the playbook</h1>
