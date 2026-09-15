@@ -3346,6 +3346,12 @@ def practice_window(pr: dict) -> str:
     return f"{start}–{end}" if end and end != start else start
 
 
+def code_prefix(play: dict) -> str:
+    """"( I-1 ) " ahead of the call on a practice's install chip. The call is the part
+    that prints — the name is screen-only — so the code goes with the call."""
+    return f"( {play['code']} ) " if play.get("code") else ""
+
+
 def install_items(pr: dict, plays: dict, forms_by_id: dict, defenses: dict) -> list[str]:
     """The play, front and formation chips a practice installs."""
     items = []
@@ -3353,7 +3359,7 @@ def install_items(pr: dict, plays: dict, forms_by_id: dict, defenses: dict) -> l
         play, _form = plays[pid]
         items.append(
             f'<a class="ins-play" href="{p_href(play)}">'
-            f'<span class="ins-call">{esc(play.get("call", ""))}</span>'
+            f'<span class="ins-call">{esc(code_prefix(play))}{esc(play.get("call", ""))}</span>'
             f'<span class="ins-name">{esc(play["name"])}</span></a>'
         )
     # A play this practice runs again rather than teaches. Marked, because the block
@@ -3363,7 +3369,7 @@ def install_items(pr: dict, plays: dict, forms_by_id: dict, defenses: dict) -> l
         play, _form = plays[pid]
         items.append(
             f'<a class="ins-play again" href="{p_href(play)}">'
-            f'<span class="ins-call">{esc(play.get("call", ""))}</span>'
+            f'<span class="ins-call">{esc(code_prefix(play))}{esc(play.get("call", ""))}</span>'
             f'<span class="ins-name">{esc(play["name"])} &middot; review</span></a>'
         )
     for fid in pr.get("fronts", []):
