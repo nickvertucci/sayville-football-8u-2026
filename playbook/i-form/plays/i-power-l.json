@@ -3,6 +3,7 @@
   "order": 10,
   "formation": "i-form",
   "name": "I Formation - Strong Left - Off tackle left",
+  "code": "I-2",
   "call": "Regular I SL Left 35 Power",
   "type": "run",
   "direction": "left",

@@ -3,6 +3,7 @@
   "order": 23,
   "formation": "split-backs",
   "name": "Split formation - Strong left - Fake handoff right QB sweep left",
+  "code": "S-5",
   "call": "Split SL Left 19 Fake Sweep",
   "type": "run",
   "direction": "left",

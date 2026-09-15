@@ -3,6 +3,7 @@
   "order": 14,
   "formation": "i-form",
   "name": "I Formation - Strong Left - Slot jet right",
+  "code": "I-6",
   "call": "Regular I SL Left 48 Jet",
   "type": "run",
   "direction": "right",
