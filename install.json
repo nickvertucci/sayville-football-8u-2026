@@ -197,8 +197,9 @@
           "tag": "A",
           "kind": "note",
           "title": "Warm-up",
-          "time": "5:30–5:35",
-          "note": "Five minutes, moving the whole time."
+          "time": "5:30–5:36",
+          "water_break": 0,
+          "note": "Six minutes, moving the whole time."
         },
         {
           "tag": "B",
@@ -287,7 +288,9 @@
       "huddle": "Inside, off-tackle and outside. Same three steps to start every one.",
       "review": [
         "i-power-r",
-        "i-power-l"
+        "i-power-l",
+        "sb-pitch-r",
+        "sb-pitch-l"
       ]
     },
     {
@@ -295,40 +298,48 @@
       "date": "2026-09-17",
       "phase": "season",
       "water_break": 1,
-      "focus": "Counter off the Power they have already seen",
+      "focus": "Iso, Power and the Toss — inside, off-tackle and the edge",
       "requires": [
-        "i-power-r",
-        "i-power-l"
+        "i-power-r"
       ],
-      "emphasis": "Counter only works because Power has hurt them. The two hard steps toward the fake are the whole play — a back who leaves early has run Power slowly.",
+      "emphasis": "Three calls, three places on the field. Iso hits the gap the line opens, Power hits off-tackle behind the kick-out, and the Toss goes round it all — same backfield, three answers.",
       "blocks": [
         {
           "tag": "A",
           "kind": "note",
           "title": "Warm-up",
-          "time": "5:30–5:35",
-          "note": "Five minutes, moving the whole time."
+          "time": "5:30–5:36",
+          "water_break": 0,
+          "note": "Six minutes, moving the whole time."
         },
         {
           "tag": "B",
           "kind": "groups",
           "title": "Offensive position groups",
-          "time": "5:36–5:46",
+          "time": "5:36–5:56",
           "groups": [
             {
               "name": "Offensive line / TE",
               "drills": [
-                "Down block both ways",
-                "The end's kick-out on the counter",
-                "Holding a block while the ball crosses"
+                "Down blocking",
+                "Firing out low",
+                "Lineup and stance footwork",
+                "Getting to the line and pointing to who you are blocking"
               ]
             },
             {
               "name": "QB / FB / TB / SL",
               "drills": [
-                "Two hard steps and plant",
-                "Deep handoff on the counter path",
-                "Selling the fake at full speed"
+                "One group, handoff walkthrough — the quarterback gives the ball every rep",
+                "Rotate the quarterbacks, fullbacks, tailbacks and the SL after every handoff",
+                {
+                  "drill": "Start with handoffs up the middle",
+                  "then": [
+                    "Move to slant handoffs",
+                    "Move to pitches",
+                    "Move to SL sweeps"
+                  ]
+                }
               ]
             }
           ]
@@ -337,20 +348,30 @@
           "tag": "C",
           "kind": "groups",
           "title": "Defensive position groups",
-          "time": "5:47–5:57",
+          "time": "5:57–6:17",
           "groups": [
             {
               "name": "Defensive line",
               "drills": [
-                "Stay in your gap when the back crosses",
-                "Do not chase the first step"
+                "Gap control, one gap each",
+                "Hands inside, pads under"
               ]
             },
             {
-              "name": "LB / CB / S",
+              "name": "Linebackers",
               "drills": [
-                "Read the back, not the ball",
-                "Flow, then stop your feet",
+                "Read the back nearest you",
+                "Fill the first open gap",
+                "Meet the blocker in the hole, not behind it",
+                "Tackle drill"
+              ]
+            },
+            {
+              "name": "Corners and safeties",
+              "drills": [
+                "Force everything back inside — nothing outside you",
+                "Nobody gets behind you",
+                "Cut-off angle, not the chase",
                 "Tackle drill"
               ]
             }
@@ -360,22 +381,28 @@
           "tag": "D",
           "kind": "install",
           "title": "Offensive install",
-          "time": "5:58–6:28",
+          "time": "6:18–6:38",
           "notes": [
-            "Power first, three reps, so the fake has something to copy",
-            "Then Counter to the same side off the identical first step",
-            "Rotating through the first, second and third units"
+            "Rotating through the first, second, third and fourth units",
+            "No defense for the first ten minutes, then air-to-bags",
+            "In and out of the huddle every rep"
           ]
         },
         {
           "tag": "E",
           "kind": "note",
           "title": "Live scrimmage",
-          "time": "6:29–6:59",
-          "note": "Offense vs. defense. Call Power until they cheat, then Counter."
+          "time": "6:39–6:59",
+          "note": "Offense vs. defense. Iso, Power and Toss only."
         }
       ],
-      "huddle": "Power is why Counter works. Run the first two steps the same every time."
+      "huddle": "Inside, off-tackle and outside. Same three steps to start every one.",
+      "plays": [
+        "i-te-jet-r",
+        "i-te-jet-l",
+        "sb-qb-sweep-r",
+        "sb-qb-sweep-l"
+      ]
     }
   ]
 }
