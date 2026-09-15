@@ -50,7 +50,7 @@
 <line x1="455.2" y1="314.6" x2="473.6" y2="314.6" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 <path d="M567.0,356.4 L503.3,253.3" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
 <line x1="495.5" y1="258.1" x2="511.1" y2="248.4" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
-<path d="M351.0,364.5 L394.2,380.7 L513.0,386.1 L540.0,359.1 L540.0,294.3 L540.0,202.5" fill="none" stroke="#b3001b" stroke-width="4.6" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M351.0,364.5 C358.2,367.2 367.2,377.1 394.2,380.7 C421.2,384.3 488.7,389.7 513.0,386.1 C537.3,382.5 535.5,374.4 540.0,359.1 C544.5,343.8 540.0,320.4 540.0,294.3 C540.0,268.2 540.0,217.8 540.0,202.5" fill="none" stroke="#b3001b" stroke-width="4.6" stroke-linecap="round" stroke-linejoin="round"/>
 <polygon points="540.0,202.5 546.2,216.3 533.8,216.3" fill="#b3001b"/>
 <path d="M410.4,426.6 L466.0,307.8 L491.7,254.1" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
 <line x1="483.4" y1="250.1" x2="500.0" y2="258.0" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>

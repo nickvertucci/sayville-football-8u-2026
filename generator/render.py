@@ -931,8 +931,11 @@ def draw_paths(assignments: dict, alignment: dict, carrier: str | None) -> str:
         # The man with the ball is the line to find first, and on a black-and-white
         # printout red is just another grey — so he is told apart by weight, not colour.
         width = 4.6 if is_carrier else 2.4
+        # A bubble block and a ball carrier's run both draw as one rounded curve: a
+        # runner bends round a corner, he does not stop and turn ninety degrees.
         out.append(polyline(pts, color, width=width, dashed=dashed,
-                            dotted=kind == "rollout", smooth=spec.get("curve", False)))
+                            dotted=kind == "rollout",
+                            smooth=spec.get("curve", False) or kind == "run"))
         if kind == "block":
             out.append(block_cap(pts[-2], pts[-1], color, width=width))
         else:
