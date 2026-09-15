@@ -23,7 +23,7 @@ Normal line splits, about a foot. Both ends are on the line; the SL is off it, a
 **Formation coaching notes**
 
 - The tailback picks his own hole here — reads the block and cuts off it, instead of the play deciding for him the way Dive does. The harder skill, which is why this formation gets the most practice time.
-- The SL lines up right every play, and the call says so — SL Right. Naming it now means a SL Left look can be added later without changing how plays are called.
+- The slot lines up right every play, and the call says so — Slot Right. Naming it now means a Slot Left look can be added later without changing how plays are called.
 - Count seven on the line every snap — the SL creeping up onto it is the most common illegal-formation flag from this look.
 - Fullback and tailback must stay stacked. A drifting tailback tips the play before the snap.
 - The SL is back 4 — a receiver most snaps, but also the jet-motion man on Jet sweep and the fake on its boot. Same number he carries in the Power I backfield.
@@ -32,20 +32,20 @@ Normal line splits, about a foot. Both ends are on the line; the SL is off it, a
 
 | Play | Call | Type | Ball |
 |---|---|---|---|
-| [I Formation - Strong Right - Off tackle right](#i-formation---strong-right---off-tackle-right) | `Regular I SL Right 34 Power` | run | TB |
-| [I Formation - Strong Left - Off tackle left](#i-formation---strong-left---off-tackle-left) | `Regular I SL Left 35 Power` | run | TB |
-| [I Formation - Strong Right - LTE jet right](#i-formation---strong-right---lte-jet-right) | `Regular I SL Right LTE Jet` | run | LTE |
-| [I Formation - Strong Left - RTE jet left](#i-formation---strong-left---rte-jet-left) | `Regular I SL Left RTE Jet` | run | RTE |
-| [I Formation - Strong Right - Slot jet left](#i-formation---strong-right---slot-jet-left) | `Regular I SL Right 49 Jet` | run | SL |
-| [I Formation - Strong Left - Slot jet right](#i-formation---strong-left---slot-jet-right) | `Regular I SL Left 48 Jet` | run | SL |
+| [Regular I - Slot Right - 34 Power](#regular-i---slot-right---34-power) | `Regular I Slot Right 34 Power` | run | TB |
+| [Regular I - Slot Left - 35 Power](#regular-i---slot-left---35-power) | `Regular I Slot Left 35 Power` | run | TB |
+| [Regular I - Slot Right - LTE Jet](#regular-i---slot-right---lte-jet) | `Regular I Slot Right LTE Jet` | run | LTE |
+| [Regular I - Slot Left - RTE Jet](#regular-i---slot-left---rte-jet) | `Regular I Slot Left RTE Jet` | run | RTE |
+| [Regular I - Slot Right - 49 Jet](#regular-i---slot-right---49-jet) | `Regular I Slot Right 49 Jet` | run | SL |
+| [Regular I - Slot Left - 48 Jet](#regular-i---slot-left---48-jet) | `Regular I Slot Left 48 Jet` | run | SL |
 
 ---
 
-## I Formation - Strong Right - Off tackle right
+## Regular I - Slot Right - 34 Power
 
-**Call it:** `Regular I SL Right 34 Power`
+**Call it:** `Regular I Slot Right 34 Power`
 
-![I Formation - Strong Right - Off tackle right](cards/i-power-r-5-3.svg)
+![Regular I - Slot Right - 34 Power](cards/i-power-r-5-3.svg)
 
 | Position | Assignment |
 |---|---|
@@ -70,11 +70,11 @@ Normal line splits, about a foot. Both ends are on the line; the SL is off it, a
 
 ---
 
-## I Formation - Strong Left - Off tackle left
+## Regular I - Slot Left - 35 Power
 
-**Call it:** `Regular I SL Left 35 Power`
+**Call it:** `Regular I Slot Left 35 Power`
 
-![I Formation - Strong Left - Off tackle left](cards/i-power-l-5-3.svg)
+![Regular I - Slot Left - 35 Power](cards/i-power-l-5-3.svg)
 
 | Position | Assignment |
 |---|---|
@@ -99,11 +99,11 @@ Normal line splits, about a foot. Both ends are on the line; the SL is off it, a
 
 ---
 
-## I Formation - Strong Right - LTE jet right
+## Regular I - Slot Right - LTE Jet
 
-**Call it:** `Regular I SL Right LTE Jet`
+**Call it:** `Regular I Slot Right LTE Jet`
 
-![I Formation - Strong Right - LTE jet right](cards/i-te-jet-r-5-3.svg)
+![Regular I - Slot Right - LTE Jet](cards/i-te-jet-r-5-3.svg)
 
 | Position | Assignment |
 |---|---|
@@ -127,11 +127,11 @@ Normal line splits, about a foot. Both ends are on the line; the SL is off it, a
 
 ---
 
-## I Formation - Strong Left - RTE jet left
+## Regular I - Slot Left - RTE Jet
 
-**Call it:** `Regular I SL Left RTE Jet`
+**Call it:** `Regular I Slot Left RTE Jet`
 
-![I Formation - Strong Left - RTE jet left](cards/i-te-jet-l-5-3.svg)
+![Regular I - Slot Left - RTE Jet](cards/i-te-jet-l-5-3.svg)
 
 | Position | Assignment |
 |---|---|
@@ -155,11 +155,11 @@ Normal line splits, about a foot. Both ends are on the line; the SL is off it, a
 
 ---
 
-## I Formation - Strong Right - Slot jet left
+## Regular I - Slot Right - 49 Jet
 
-**Call it:** `Regular I SL Right 49 Jet`
+**Call it:** `Regular I Slot Right 49 Jet`
 
-![I Formation - Strong Right - Slot jet left](cards/i-sl-jet-l-5-3.svg)
+![Regular I - Slot Right - 49 Jet](cards/i-sl-jet-l-5-3.svg)
 
 | Position | Assignment |
 |---|---|
@@ -183,11 +183,11 @@ Normal line splits, about a foot. Both ends are on the line; the SL is off it, a
 
 ---
 
-## I Formation - Strong Left - Slot jet right
+## Regular I - Slot Left - 48 Jet
 
-**Call it:** `Regular I SL Left 48 Jet`
+**Call it:** `Regular I Slot Left 48 Jet`
 
-![I Formation - Strong Left - Slot jet right](cards/i-sl-jet-r-5-3.svg)
+![Regular I - Slot Left - 48 Jet](cards/i-sl-jet-r-5-3.svg)
 
 | Position | Assignment |
 |---|---|

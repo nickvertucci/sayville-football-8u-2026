@@ -6,7 +6,7 @@
   "family": "Split Backs",
   "summary": "Two backs split behind the quarterback and the SL out wide. One fewer back than a three-back look, and the receiver out there blocks the corner the pitch has to get around.",
   "personnel": "11 players, 2 tight ends, quarterback, 2 halfbacks, 1 SL split out",
-  "notes": "Both ends are tight on the line. The two backs sit four yards deep and just over two yards either side of the quarterback, one behind each guard–tackle gap — same depth, same split, so the alignment gives nothing away. The SL is off the line and split out wide, which keeps seven on the line. He is on the right on twelve of the fourteen; the Keep takes him to the side it runs to and the Reverse starts him on that same side, and the call names where he is every time — SL Right or SL Left.",
+  "notes": "Both ends are tight on the line. The two backs sit four yards deep and just over two yards either side of the quarterback, one behind each guard–tackle gap — same depth, same split, so the alignment gives nothing away. The slot is off the line and split out wide, which keeps seven on the line. The 3-back is always the left halfback (odd holes) and the 2-back is always the right halfback (even holes). The call names the slot's side every time — Slot Right or Slot Left.",
   "alignment": {
     "LTE": [
       -4.2,
@@ -63,8 +63,8 @@
   ],
   "backs": {
     "1": "QB",
-    "2": "LH",
-    "3": "RH",
+    "2": "RH",
+    "3": "LH",
     "4": "SL"
   }
 }

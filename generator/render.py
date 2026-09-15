@@ -312,7 +312,7 @@ def play_alignment(form: dict, play: dict) -> dict:
     A formation has one alignment, but a formation is not always one picture. The
     The SL is split right on almost every snap, but Power is built on his kick-out and
     Jet needs him with a formation to cross, so those two move him. A play may say
-    which, and the call says it out loud — `Regular I SL Left 35 Power` — so nobody is
+    which, and the call says it out loud — `Regular I Slot Left 35 Power` — so nobody is
     moved silently.
 
     An override may only move somebody the formation already has. It cannot add a
