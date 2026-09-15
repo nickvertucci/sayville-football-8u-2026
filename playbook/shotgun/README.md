@@ -37,8 +37,6 @@ Both ends are tight on the line and the SL is off it and split out wide, which k
 
 ![Shotgun - Strong right - RTE slant out](cards/sg-te-out-r-5-3.svg)
 
-A throw the quarterback can make before anybody gets to him: the right tight end slants out flat toward the right sideline, almost on the line of scrimmage, and everybody else but the SL stays in and blocks.
-
 | Position | Assignment |
 |---|---|
 | **LTE** | Pass block: step back, hands up, and stay between your man and the quarterback. |
@@ -66,8 +64,6 @@ A throw the quarterback can make before anybody gets to him: the right tight end
 **Call it:** `Shotgun SL Left LTE Slant Out`
 
 ![Shotgun - Strong left - LTE slant out](cards/sg-te-out-l-5-3.svg)
-
-A throw the quarterback can make before anybody gets to him: the left tight end slants out flat toward the left sideline, almost on the line of scrimmage, and everybody else but the SL stays in and blocks.
 
 | Position | Assignment |
 |---|---|
@@ -97,8 +93,6 @@ A throw the quarterback can make before anybody gets to him: the left tight end 
 
 ![Shotgun - Strong left - QB sweep left](cards/sg-qb-sweep-l-5-3.svg)
 
-The quarterback catches the snap and sweeps left behind the left halfback's lead block, while the right halfback fakes the other way to take the defense with him.
-
 | Position | Assignment |
 |---|---|
 | **LTE** | End head up on you. Turn him inside. The ball goes around behind you. |
@@ -126,8 +120,6 @@ The quarterback catches the snap and sweeps left behind the left halfback's lead
 **Call it:** `Shotgun SL Right 18 Sweep`
 
 ![Shotgun - Strong right - QB sweep right](cards/sg-qb-sweep-r-5-3.svg)
-
-The quarterback catches the snap and sweeps right behind the right halfback's lead block, while the left halfback fakes the other way to take the defense with him.
 
 | Position | Assignment |
 |---|---|

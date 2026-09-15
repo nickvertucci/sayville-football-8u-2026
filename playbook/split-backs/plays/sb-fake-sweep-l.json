@@ -13,7 +13,6 @@
       -1.2
     ]
   },
-  "purpose": "The quarterback fakes the handoff to the right halfback, who carries the fake hard to the right, then rolls back and sweeps it left behind the left halfback.",
   "assignments": {
     "RTE": {
       "block": "cutoff"

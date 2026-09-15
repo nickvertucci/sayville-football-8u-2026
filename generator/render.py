@@ -1303,8 +1303,6 @@ def play_section(play: dict, card_rel: str, defenses: dict) -> list[str]:
     if play.get("call"):
         out += [f"**Call it:** `{play['call']}`", ""]
     out += [f"![{title}]({card_rel})", ""]
-    if play.get("purpose"):
-        out += [play["purpose"], ""]
     out += ["| Position | Assignment |", "|---|---|"]
     assignments = resolved_assignments(play, defenses[blocking.DEFAULT_FRONT])
     ordered = [x for x in CARD_ORDER if x in assignments]

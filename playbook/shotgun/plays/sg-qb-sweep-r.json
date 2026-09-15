@@ -7,7 +7,6 @@
   "type": "run",
   "direction": "right",
   "ball_carrier": "QB",
-  "purpose": "The quarterback catches the snap and sweeps right behind the right halfback's lead block, while the left halfback fakes the other way to take the defense with him.",
   "assignments": {
     "RTE": {
       "block": "base",
