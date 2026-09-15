@@ -34,7 +34,7 @@
 <text x="607.5" y="225.2" text-anchor="middle" font-size="12.5" fill="#9aa2ae" font-weight="600">RC</text>
 <line x1="341.8" y1="98.8" x2="360.2" y2="117.2" stroke="#9aa2ae" stroke-width="3.6"/><line x1="360.2" y1="98.8" x2="341.8" y2="117.2" stroke="#9aa2ae" stroke-width="3.6"/>
 <text x="351.0" y="90.2" text-anchor="middle" font-size="12.5" fill="#9aa2ae" font-weight="600">FS</text>
-<path d="M237.6,337.5 L297.0,388.8 L378.0,394.2 L526.5,378.0 L540.0,318.6 L540.0,226.8 L540.0,135.0" fill="none" stroke="#b3001b" stroke-width="4.6" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M237.6,337.5 C247.5,346.1 273.6,379.4 297.0,388.8 C320.4,398.2 339.8,396.0 378.0,394.2 C416.2,392.4 499.5,390.6 526.5,378.0 C553.5,365.4 537.8,343.8 540.0,318.6 C542.2,293.4 540.0,257.4 540.0,226.8 C540.0,196.2 540.0,150.3 540.0,135.0" fill="none" stroke="#b3001b" stroke-width="4.6" stroke-linecap="round" stroke-linejoin="round"/>
 <polygon points="540.0,135.0 546.2,148.8 533.8,148.8" fill="#b3001b"/>
 <path d="M275.4,337.5 L255.7,312.1" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
 <line x1="248.4" y1="317.8" x2="262.9" y2="306.5" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
