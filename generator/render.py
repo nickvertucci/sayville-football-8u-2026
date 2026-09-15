@@ -1038,6 +1038,24 @@ def draw_code(play: dict, half: float, top: float) -> str:
     )
 
 
+def draw_name(play: dict, half: float, top: float) -> str:
+    """The play's name, small in the top-left corner, across from its code.
+
+    A printed diagram gets separated from its page, so it carries its own name. It gives
+    way to the code: the name shrinks before it is allowed to run under the code's box.
+    """
+    name = play.get("name", "")
+    if not name:
+        return ""
+    code_w = 0.62 * 40 * (len(play.get("code", "")) + 1) + 20 if play.get("code") else 0
+    room = fx(half) - fx(-half) - code_w - 60
+    fs = min(17.0, room / (0.54 * len(name)))  # bold runs wider than NAME_CHAR_W
+    return (
+        f'<text x="{fx(-half) + 12:.1f}" y="{fy(top) + 40:.1f}" font-size="{fs:.1f}" '
+        f'font-weight="700" fill="{COLORS["ink"]}">{esc(name)}</text>'
+    )
+
+
 def render_card(play: dict, defense: dict, frame: tuple[float, float, float]) -> str:
     form = play["_formation"]
     alignment = play_alignment(form, play)
@@ -1330,6 +1348,7 @@ def render_diagram(play: dict, defense: dict, frame: tuple[float, float, float])
     svg.append(draw_pitch(play, alignment))
     svg.append(draw_offense(play, alignment))
     svg.append(draw_code(play, half, y_top))
+    svg.append(draw_name(play, half, y_top))
     svg.append("</svg>")
     return "\n".join(svg)
 
