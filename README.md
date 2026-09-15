@@ -94,6 +94,7 @@ tight end is not a numbered back, so it is a word call.
 |---|---|---|
 | `Shotgun SL Right RTE Slant Out` / `SL Left LTE Slant Out` | Shotgun - Strong right - RTE slant out / Strong left - LTE slant out | the play-side tight end, a flat slant out almost on the line of scrimmage |
 | `Shotgun SL Left 19 Sweep` / `SL Right 18 Sweep` | Shotgun - Strong left - QB sweep left / Strong right - QB sweep right | the quarterback, all the way outside behind the near halfback |
+| `Shotgun SL Left 39 Sweep` / `SL Right 28 Sweep` | Shotgun - Strong left - RB sweep left / Strong right - RB sweep right | the far halfback, across in front of the quarterback and all the way outside |
 
 **Play word** — the Regular I carries `Power` and the tight-end `Jet`; the Split Backs
 carries `Pitch`, `Sweep` and `Fake Sweep`; the Shotgun carries the tight end's `Slant Out`, the
@@ -101,13 +102,13 @@ only pass in the book, which fakes nothing, and the quarterback `Sweep`.
 
 ## Formations
 
-Three formations, 14 plays, in teaching order:
+Three formations, 16 plays, in teaching order:
 
 | # | Formation | Family | Plays | What it is for |
 |---|---|---|---|---|
 | 1 | **Regular I** | Regular I | 4 | Base offense. Fullback and tailback stacked behind the quarterback. Off tackle, the tailback between the tackle and the end behind the SL's kick-out, and the tight-end jet, both ways. |
 | 2 | **Split Backs** | Split Backs | 6 | Two backs at even depth and a SL split out wide. The Quick pitch, the QB sweep and the fake-handoff QB sweep, both ways. |
-| 3 | **Shotgun** | Shotgun | 4 | The quarterback five yards deep with a back either side. The tight-end slant out and the QB sweep, both ways. |
+| 3 | **Shotgun** | Shotgun | 6 | The quarterback five yards deep with a back either side. The tight-end slant out, the QB sweep and the RB sweep, both ways. |
 
 Both are two-tight-end, downhill running formations, so the blocking language carries
 over: "block down on the first defender inside you" means the same thing in either. That
@@ -281,7 +282,7 @@ something.
 
 ## Printing
 
-- **Print book** (top bar) → 18 landscape pages: 14 plays then 4 defensive fronts,
+- **Print book** (top bar) → 20 landscape pages: 16 plays then 4 defensive fronts,
   one per sheet.
 - **Print** (on any play or front page) → that one card, one landscape sheet.
 - **Print** (on the depth chart) → two portrait sheets, offense then defense, each with
