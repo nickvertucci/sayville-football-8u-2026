@@ -3082,7 +3082,7 @@ def write_calls(formations: list[dict], defenses: dict, root: Path) -> str:
                 name = play["name"]
                 if name.lower().startswith(title.lower() + " - "):
                     name = name[len(title) + 3:]
-                cells.append(f'<a href="{p_href(play)}">{esc(name)}</a>')
+                cells.append(f'<a href="{p_href(play)}">{esc(code_prefix(play))}{esc(name)}</a>')
             cols.append(cells)
         depth = max([3] + [len(c) for c in cols])
         rows = "".join(
@@ -3347,8 +3347,8 @@ def practice_window(pr: dict) -> str:
 
 
 def code_prefix(play: dict) -> str:
-    """"( I-1 ) " ahead of the call on a practice's install chip. The call is the part
-    that prints — the name is screen-only — so the code goes with the call."""
+    """"( I-1 ) " ahead of a play wherever a sheet lists it — the call sheet's cells and a
+    practice's install chips — so paper uses the same codes the diagrams do."""
     return f"( {play['code']} ) " if play.get("code") else ""
 
 
