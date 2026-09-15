@@ -63,6 +63,7 @@ The digits describe the back the first digit names, not necessarily the ball car
 |---|---|---|
 | `Regular I SL Right 34 Power` / `SL Left 35 Power` | I Formation - Strong Right - Off tackle right / Strong Left - Off tackle left | tailback, tackle–end |
 | `Regular I SL Right LTE Jet` / `SL Left RTE Jet` | I Formation - Strong Right - LTE jet right / Strong Left - RTE jet left | the backside tight end on an end-around, all the way outside |
+| `Regular I SL Right 49 Jet` / `SL Left 48 Jet` | I Formation - Strong Right - Slot jet left / Strong Left - Slot jet right | the SL, flat across the backfield and outside the other way |
 
 The tight-end jet is a **word call** — no digits, because the tight end is not a numbered
 back. It names him instead. A play has to opt in with `word_call`, so any other play
@@ -96,17 +97,17 @@ tight end is not a numbered back, so it is a word call.
 | `Shotgun SL Left 19 Sweep` / `SL Right 18 Sweep` | Shotgun - Strong left - QB sweep left / Strong right - QB sweep right | the quarterback, all the way outside behind the near halfback |
 | `Shotgun SL Left 39 Sweep` / `SL Right 28 Sweep` | Shotgun - Strong left - RB sweep left / Strong right - RB sweep right | the far halfback, across in front of the quarterback and all the way outside |
 
-**Play word** — the Regular I carries `Power` and the tight-end `Jet`; the Split Backs
+**Play word** — the Regular I carries `Power` and the tight-end and slot `Jet`; the Split Backs
 carries `Pitch`, `Sweep` and `Fake Sweep`; the Shotgun carries the tight end's `Slant Out`, the
 only pass in the book, which fakes nothing, and the quarterback `Sweep`.
 
 ## Formations
 
-Three formations, 16 plays, in teaching order:
+Three formations, 18 plays, in teaching order:
 
 | # | Formation | Family | Plays | What it is for |
 |---|---|---|---|---|
-| 1 | **Regular I** | Regular I | 4 | Base offense. Fullback and tailback stacked behind the quarterback. Off tackle, the tailback between the tackle and the end behind the SL's kick-out, and the tight-end jet, both ways. |
+| 1 | **Regular I** | Regular I | 6 | Base offense. Fullback and tailback stacked behind the quarterback. Off tackle, the tailback between the tackle and the end behind the SL's kick-out, the tight-end jet and the slot jet, both ways. |
 | 2 | **Split Backs** | Split Backs | 6 | Two backs at even depth and a SL split out wide. The Quick pitch, the QB sweep and the fake-handoff QB sweep, both ways. |
 | 3 | **Shotgun** | Shotgun | 6 | The quarterback five yards deep with a back either side. The tight-end slant out, the QB sweep and the RB sweep, both ways. |
 
@@ -284,7 +285,7 @@ something.
 
 ## Printing
 
-- **Print book** (top bar) → 20 landscape pages: 16 plays then 4 defensive fronts,
+- **Print book** (top bar) → 22 landscape pages: 18 plays then 4 defensive fronts,
   one per sheet.
 - **Print** (on any play or front page) → that one card, one landscape sheet.
 - **Print** (on the depth chart) → two portrait sheets, offense then defense, each with

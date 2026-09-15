@@ -1,0 +1,158 @@
+{
+  "id": "i-sl-jet-r",
+  "order": 14,
+  "formation": "i-form",
+  "name": "I Formation - Strong Left - Slot jet right",
+  "call": "Regular I SL Left 48 Jet",
+  "type": "run",
+  "direction": "right",
+  "ball_carrier": "SL",
+  "alignment": {
+    "SL": [
+      -7.0,
+      -1.2
+    ]
+  },
+  "assignments": {
+    "RTE": {
+      "block": "base",
+      "drive": "in"
+    },
+    "RT": {
+      "block": "down"
+    },
+    "RG": {
+      "block": "climb",
+      "target": "playside"
+    },
+    "C": {
+      "block": "reach"
+    },
+    "LG": {
+      "block": "cutoff"
+    },
+    "LT": {
+      "block": "down"
+    },
+    "LTE": {
+      "block": "cutoff"
+    },
+    "SL": {
+      "rule": "At the snap run flat across the backfield, take the handoff at full speed and get to the right edge. Turn up in the alley behind the fullback.",
+      "type": "run",
+      "path": [
+        [
+          4.0,
+          -0.8
+        ],
+        [
+          7.0,
+          -1.0
+        ],
+        [
+          11.5,
+          -0.8
+        ],
+        [
+          13.6,
+          0.6
+        ],
+        [
+          14.0,
+          2.2
+        ],
+        [
+          14.0,
+          5.2
+        ],
+        [
+          14.0,
+          8.2
+        ]
+      ]
+    },
+    "QB": {
+      "rule": "Hand the ball to the slot as he runs past you, then fake the handoff to the tailback going left.",
+      "type": "fake",
+      "path": [
+        [
+          -0.4,
+          -0.5
+        ],
+        [
+          -1.2,
+          -1.4
+        ]
+      ]
+    },
+    "FB": {
+      "block": "lead",
+      "target": "force"
+    },
+    "TB": {
+      "rule": "Take the fake handoff and run hard to the left. You are what holds the backside.",
+      "type": "fake",
+      "path": [
+        [
+          -1.2,
+          1.5
+        ],
+        [
+          -3.2,
+          4.0
+        ]
+      ]
+    }
+  },
+  "fronts": {
+    "4-4": {
+      "RTE": {
+        "block": "man",
+        "man": "RE"
+      },
+      "RT": {
+        "block": "man",
+        "man": "R",
+        "help": "RE"
+      },
+      "RG": {
+        "block": "man",
+        "man": "RT"
+      },
+      "C": {
+        "block": "man",
+        "man": "S",
+        "help": "RT"
+      },
+      "LG": {
+        "block": "man",
+        "man": "LT"
+      },
+      "LT": {
+        "block": "man",
+        "man": "M",
+        "help": "LT"
+      },
+      "LTE": {
+        "block": "man",
+        "man": "LE"
+      },
+      "FB": {
+        "block": "man",
+        "man": "RC",
+        "how": "Bubble out around the right end",
+        "via": [
+          [
+            5.0,
+            1.8
+          ]
+        ]
+      }
+    }
+  },
+  "coaching_points": [
+    "The slot runs flat and fast across the backfield. The handoff is at full speed, so the quarterback just puts it in his belly.",
+    "After the handoff the quarterback carries out his fake to the tailback going left. It is what holds the backside.",
+    "The fullback bubbles out ahead of the slot and takes the corner. The slot stays behind him and turns up in the alley."
+  ]
+}
