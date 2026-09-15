@@ -108,7 +108,7 @@ Three formations, 18 plays, in teaching order:
 | # | Formation | Family | Plays | What it is for |
 |---|---|---|---|---|
 | 1 | **Regular I** | Regular I | 6 | Base offense. Fullback and tailback stacked behind the quarterback. Off tackle, the tailback between the tackle and the end behind the SL's kick-out, the tight-end jet and the slot jet, both ways. |
-| 2 | **Split Backs** | Split Backs | 6 | Two backs at even depth and a slot split out wide. 38/29 Pitch, the QB sweep and the fake-handoff QB sweep, both ways. |
+| 2 | **Split Backs** | Split Backs | 6 | Two backs at even depth and a slot just outside the tight end. 38/29 Pitch, the QB sweep and the fake-handoff QB sweep, both ways. |
 | 3 | **Shotgun** | Shotgun | 6 | The quarterback five yards deep with a back either side. The tight-end slant out, the QB sweep and the RB sweep, both ways. |
 
 Both are two-tight-end, downhill running formations, so the blocking language carries

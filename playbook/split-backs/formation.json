@@ -4,9 +4,9 @@
   "name": "Split Backs",
   "code_prefix": "S",
   "family": "Split Backs",
-  "summary": "Two backs split behind the quarterback and the SL out wide. One fewer back than a three-back look, and the receiver out there blocks the corner the pitch has to get around.",
-  "personnel": "11 players, 2 tight ends, quarterback, 2 halfbacks, 1 SL split out",
-  "notes": "Both ends are tight on the line. The two backs sit four yards deep and just over two yards either side of the quarterback, one behind each guard–tackle gap — same depth, same split, so the alignment gives nothing away. The slot is off the line and split out wide, which keeps seven on the line. The 3-back is always the left halfback (odd holes) and the 2-back is always the right halfback (even holes). The call names the slot's side every time — Slot Right or Slot Left.",
+  "summary": "Two backs split behind the quarterback and the slot just outside the tight end. One fewer back than a three-back look, and the receiver out there blocks the corner the pitch has to get around.",
+  "personnel": "11 players, 2 tight ends, quarterback, 2 halfbacks, 1 slot",
+  "notes": "Both ends are tight on the line. The two backs sit four yards deep and just over two yards either side of the quarterback, one behind each guard–tackle gap — same depth, same split, so the alignment gives nothing away. The slot is just outside the tight end, one step off the line, which keeps seven on the line. The 3-back is always the left halfback (odd holes) and the 2-back is always the right halfback (even holes). The call names the slot's side every time — Slot Right or Slot Left.",
   "alignment": {
     "LTE": [
       -4.2,
@@ -37,8 +37,8 @@
       -0.5
     ],
     "SL": [
-      8.0,
-      -1.2
+      5.6,
+      -1.5
     ],
     "QB": [
       0.0,

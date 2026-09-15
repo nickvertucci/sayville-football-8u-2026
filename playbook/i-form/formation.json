@@ -6,7 +6,7 @@
   "family": "Regular I",
   "summary": "Fullback and tailback stacked behind the quarterback. Teaches a back to read a block instead of running to a spot.",
   "personnel": "11 players, 2 tight ends, 1 SL, quarterback, fullback, tailback",
-  "notes": "Normal line splits, about a foot. Both ends are on the line; the SL is off it, a yard outside and a yard back — seven on the line every snap. Fullback at three yards, tailback stacked behind him at five and a half.",
+  "notes": "Normal line splits, about a foot. Both ends are on the line; the slot is just outside the tight end, one step off the line — seven on the line every snap. Fullback at three yards, tailback stacked behind him at five and a half.",
   "alignment": {
     "LTE": [-4.2, -0.5],
     "LT": [-2.8, -0.5],
@@ -15,7 +15,7 @@
     "RG": [1.4, -0.5],
     "RT": [2.8, -0.5],
     "RTE": [4.2, -0.5],
-    "SL": [7.0, -1.2],
+    "SL": [5.6, -1.5],
     "QB": [0.0, -1.5],
     "FB": [0.0, -3.3],
     "TB": [0.0, -5.5]

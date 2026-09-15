@@ -41,8 +41,8 @@
 <line x1="273.9" y1="311.3" x2="291.5" y2="316.7" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 <path d="M237.6,337.5 L209.2,254.6" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
 <line x1="200.6" y1="257.6" x2="217.9" y2="251.6" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
-<path d="M162.0,356.4 L227.6,309.4" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-<line x1="222.3" y1="302.0" x2="233.0" y2="316.9" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
+<path d="M199.8,364.5 L231.4,312.7" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="223.6" y1="307.9" x2="239.2" y2="317.4" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 <path d="M351.0,364.5 L318.6,378.0 L270.0,396.9 L226.8,407.7" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 5"/>
 <polygon points="226.8,407.7 235.7,400.7 238.0,409.7" fill="#14213d"/>
 <path d="M351.0,413.1 L288.9,313.2 L256.5,259.2" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
@@ -64,8 +64,8 @@
 <text x="426.6" y="342.0" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">RT</text>
 <rect x="450.9" y="324.0" width="27.0" height="27.0" rx="3" fill="#ffffff" stroke="#14213d" stroke-width="2.6"/>
 <text x="464.4" y="342.0" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">RTE</text>
-<circle cx="162.0" cy="356.4" r="13.5" fill="#ffffff" stroke="#14213d" stroke-width="2.6"/>
-<text x="162.0" y="360.9" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">SL</text>
+<circle cx="199.8" cy="364.5" r="13.5" fill="#ffffff" stroke="#14213d" stroke-width="2.6"/>
+<text x="199.8" y="369.0" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">SL</text>
 <circle cx="351.0" cy="364.5" r="13.5" fill="#ffffff" stroke="#14213d" stroke-width="2.6"/>
 <text x="351.0" y="369.0" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">QB</text>
 <circle cx="351.0" cy="413.1" r="13.5" fill="#ffffff" stroke="#14213d" stroke-width="2.6"/>
