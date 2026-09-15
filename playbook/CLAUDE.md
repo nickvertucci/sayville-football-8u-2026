@@ -90,7 +90,7 @@ A formation has one alignment, but a formation is not always one picture. A play
 move a player who has more than one legal spot in the same eleven-man look:
 
 ```json
-"alignment": { "SL": [-2.6, -3.3] }
+"alignment": { "SL": [-5.6, -1.5] }
 ```
 
 That is Power Left putting the SL on the side his kick-out has to happen on, instead of

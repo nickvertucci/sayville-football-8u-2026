@@ -41,8 +41,8 @@
 <line x1="410.5" y1="316.7" x2="428.1" y2="311.3" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 <path d="M464.4,337.5 L464.4,314.6" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
 <line x1="455.2" y1="314.6" x2="473.6" y2="314.6" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
-<path d="M540.0,356.4 C522.0,360.0 463.5,373.5 432.0,378.0 C400.5,382.5 384.8,383.4 351.0,383.4 C317.2,383.4 259.2,385.2 229.5,378.0 C199.8,370.8 184.1,353.7 172.8,340.2 C161.6,326.7 163.8,317.7 162.0,297.0 C160.2,276.3 162.0,243.0 162.0,216.0 C162.0,189.0 162.0,148.5 162.0,135.0" fill="none" stroke="#b3001b" stroke-width="4.6" stroke-linecap="round" stroke-linejoin="round"/>
-<polygon points="162.0,135.0 168.2,148.8 155.8,148.8" fill="#b3001b"/>
+<path d="M502.2,364.5 C484.2,368.1 425.7,381.6 394.2,386.1 C362.7,390.6 346.9,391.5 313.2,391.5 C279.4,391.5 221.4,393.3 191.7,386.1 C162.0,378.9 146.2,361.8 135.0,348.3 C123.8,334.8 126.0,325.8 124.2,305.1 C122.4,284.4 124.2,251.1 124.2,224.1 C124.2,197.1 124.2,156.6 124.2,143.1" fill="none" stroke="#b3001b" stroke-width="4.6" stroke-linecap="round" stroke-linejoin="round"/>
+<polygon points="124.2,143.1 130.4,156.9 118.0,156.9" fill="#b3001b"/>
 <path d="M351.0,364.5 L361.8,378.0 L383.4,402.3" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 5"/>
 <polygon points="383.4,402.3 373.1,397.6 380.0,391.5" fill="#14213d"/>
 <path d="M351.0,413.1 L262.7,307.8 L213.0,252.2" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
@@ -64,8 +64,8 @@
 <text x="426.6" y="342.0" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">RT</text>
 <rect x="450.9" y="324.0" width="27.0" height="27.0" rx="3" fill="#ffffff" stroke="#14213d" stroke-width="2.6"/>
 <text x="464.4" y="342.0" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">RTE</text>
-<circle cx="540.0" cy="356.4" r="13.5" fill="#ffffff" stroke="#b3001b" stroke-width="2.6"/>
-<text x="540.0" y="360.9" text-anchor="middle" font-size="13" font-weight="700" fill="#b3001b">SL</text>
+<circle cx="502.2" cy="364.5" r="13.5" fill="#ffffff" stroke="#b3001b" stroke-width="2.6"/>
+<text x="502.2" y="369.0" text-anchor="middle" font-size="13" font-weight="700" fill="#b3001b">SL</text>
 <circle cx="351.0" cy="364.5" r="13.5" fill="#ffffff" stroke="#14213d" stroke-width="2.6"/>
 <text x="351.0" y="369.0" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">QB</text>
 <circle cx="351.0" cy="413.1" r="13.5" fill="#ffffff" stroke="#14213d" stroke-width="2.6"/>
