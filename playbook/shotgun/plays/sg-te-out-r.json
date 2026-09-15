@@ -3,6 +3,7 @@
   "order": 1,
   "formation": "shotgun",
   "name": "Shotgun - Strong right - RTE slant out",
+  "code": "G-1",
   "call": "Shotgun SL Right RTE Slant Out",
   "word_call": true,
   "type": "pass",

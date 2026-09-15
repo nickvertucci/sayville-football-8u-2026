@@ -3,6 +3,7 @@
   "order": 21,
   "formation": "split-backs",
   "name": "Split formation - Strong left - QB sweep left",
+  "code": "S-4",
   "call": "Split SL Left 19 Sweep",
   "type": "run",
   "direction": "left",

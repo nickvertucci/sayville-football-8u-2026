@@ -76,7 +76,12 @@ build checks the receiver's path is that long.
 `--check` fails the build if one is missing.
 
 Optional: `call`, `type`, `defense` (must match a file in `defense/`),
-`order`, `direction`, `coaching_points`, `alignment`. There is no introductory
+`order`, `direction`, `coaching_points`, `alignment`, `code`.
+
+`code` is the play's short name, printed big in the top-right corner of its diagram:
+the formation's `code_prefix` (I, S, G), a dash and a number — `I-1`. The build rejects a
+code with the wrong letter or one another play already has. A new play takes the next
+number in its formation; codes are never renumbered, so a coach's I-3 stays I-3. There is no introductory
 paragraph: a play is its name, call, diagram, assignments and coaching points.
 
 ### `alignment` — moving somebody for one play

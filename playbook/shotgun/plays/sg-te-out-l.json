@@ -3,6 +3,7 @@
   "order": 2,
   "formation": "shotgun",
   "name": "Shotgun - Strong left - LTE slant out",
+  "code": "G-2",
   "call": "Shotgun SL Left LTE Slant Out",
   "word_call": true,
   "type": "pass",

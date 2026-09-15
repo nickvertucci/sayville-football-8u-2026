@@ -3,6 +3,7 @@
   "order": 5,
   "formation": "shotgun",
   "name": "Shotgun - Strong right - RB sweep right",
+  "code": "G-5",
   "call": "Shotgun SL Right 28 Sweep",
   "type": "run",
   "direction": "right",

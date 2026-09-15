@@ -334,6 +334,11 @@ Edit the JSON under `playbook/`, then re-run the generator. Do not edit `PLAYBOO
 `index.html`, the `README.md` inside a formation folder, or anything in `cards/` — they
 are overwritten on every build.
 
+Every play also has a short **code**, printed big in the top-right corner of its diagram:
+the formation letter, then its number — `#I-1` is the first I formation play, `#S-1` the
+first Split Backs play, `#G-1` the first Shotgun play. A new play takes the next number in
+its formation; the build rejects a code with the wrong letter or one already taken.
+
 Full authoring rules, the blocking verbs, the coordinate system and the house style:
 [playbook/CLAUDE.md](playbook/CLAUDE.md).
 

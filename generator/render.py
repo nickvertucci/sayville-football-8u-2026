@@ -609,6 +609,7 @@ def validate(formations: list[dict], defenses: dict) -> list[str]:
     # Play ids must be unique across the whole book: each one becomes a flat p-<id>.html
     # page, so a collision between two formations would silently overwrite a play.
     seen: dict[str, str] = {}
+    codes: dict[str, str] = {}
     for form in formations:
         for play in form["_plays"]:
             pid = play.get("id", "")
@@ -758,6 +759,18 @@ def validate(formations: list[dict], defenses: dict) -> list[str]:
                 if len(receiver.get("path") or []) < pitch.get("at", 1):
                     errors.append(f"{pid}: pitch is caught at waypoint {pitch.get('at', 1)} "
                                   f"of {pitch.get('to')}'s path, which is not that long")
+            # The play's code — "I-1", "S-3" — is what a coach calls it by and what is
+            # printed big on its card, so it has to belong to its formation and be one of a
+            # kind across the whole book.
+            code = play.get("code")
+            if code:
+                letter = form.get("code_prefix")
+                if not letter or not re.fullmatch(rf"{re.escape(letter)}-\d+", code):
+                    errors.append(f"{pid}: code '{code}' should be '{letter}-<number>' "
+                                  f"for the {form.get('name')} formation")
+                if code in codes:
+                    errors.append(f"{pid}: code '{code}' is already {codes[code]}'s")
+                codes.setdefault(code, pid)
             carrier = play.get("ball_carrier")
             if carrier and carrier not in form.get("alignment", {}):
                 errors.append(f"{pid}: ball_carrier '{carrier}' is not in the formation")
@@ -1002,6 +1015,29 @@ def wrap(text, width: int) -> list[str]:
     return lines or [""]
 
 
+def draw_code(play: dict, half: float, top: float) -> str:
+    """The play's code — "#I-1" — big in the top-right corner of the field.
+
+    It is what a coach points at on a printed sheet and shouts across the practice
+    field, so it is sized to read from arm's length on paper. A white plate behind it
+    keeps the yard lines from cutting through the letters.
+    """
+    code = play.get("code")
+    if not code:
+        return ""
+    label = f"#{code}"
+    fs = 40.0
+    w = 0.62 * fs * len(label) + 20
+    h = fs + 12
+    x1, y0 = fx(half) - 8, fy(top) + 8
+    return (
+        f'<rect x="{x1 - w:.1f}" y="{y0:.1f}" width="{w:.1f}" height="{h:.1f}" rx="8" '
+        f'fill="#ffffff" stroke="{COLORS["ink"]}" stroke-width="3"/>'
+        f'<text x="{x1 - w / 2:.1f}" y="{y0 + h / 2 + fs * 0.35:.1f}" text-anchor="middle" '
+        f'font-size="{fs:.0f}" font-weight="800" fill="{COLORS["ink"]}">{esc(label)}</text>'
+    )
+
+
 def render_card(play: dict, defense: dict, frame: tuple[float, float, float]) -> str:
     form = play["_formation"]
     alignment = play_alignment(form, play)
@@ -1053,6 +1089,7 @@ def render_card(play: dict, defense: dict, frame: tuple[float, float, float]) ->
     svg.append(draw_paths(assignments, alignment, play.get("ball_carrier")))
     svg.append(draw_pitch(play, alignment))
     svg.append(draw_offense(play, alignment))
+    svg.append(draw_code(play, fr_half, fr_top))
     svg.append("</g></g>")
 
     y0 = TITLE_H + field_h
@@ -1292,6 +1329,7 @@ def render_diagram(play: dict, defense: dict, frame: tuple[float, float, float])
     svg.append(draw_paths(assignments, alignment, play.get("ball_carrier")))
     svg.append(draw_pitch(play, alignment))
     svg.append(draw_offense(play, alignment))
+    svg.append(draw_code(play, half, y_top))
     svg.append("</svg>")
     return "\n".join(svg)
 
