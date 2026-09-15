@@ -480,17 +480,23 @@ td.dc-cell.over, .dc-pool.over { background: var(--accent-soft) !important; }
    comes off together, so the two slots sit one above the other inside a box and the
    box is the unit your eye picks up — not ten loose slots in a row.
 
-   On a phone the five stay on their line and the row scrolls sideways, the same
-   idiom the board itself uses. Wrapping them to two rows would break the one thing
-   the layout is saying, which is that these five are the same kind of thing. */
+   Three to a row, so six offensive packages are two rows of three: each box is wide
+   enough for its names and for the note under it saying who comes in and who goes
+   out. On a phone they stack one to a row. */
 .dc-pkgs { margin: 14px 0 0; }
-.dc-pkgwrap { overflow-x: auto; overscroll-behavior-x: contain; }
-/* One column per package, however many the side has, so the count lives in the markup
-   and not here as well. */
 .dc-pkgrow {
-  display: grid; grid-auto-flow: column; grid-auto-columns: minmax(112px, 1fr);
-  gap: 6px; padding-bottom: 2px;
+  display: grid; grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px; padding-bottom: 2px;
 }
+@media (max-width: 620px) { .dc-pkgrow { grid-template-columns: 1fr; } }
+/* In and out against package 1, under the names, so the swap is read in one place. */
+.dc-pkg-note {
+  margin: 6px 0 0; padding-top: 5px; border-top: 1px solid var(--line);
+  font-size: 12px; line-height: 1.4; color: var(--ink-2);
+}
+.dc-pkg-note:empty { display: none; }
+.dc-pkg-note span { display: block; }
+.dc-pkg-note b { color: var(--ink); }
 .dc-pkg {
   background: var(--panel); border: 1px solid var(--line); border-radius: 10px;
   padding: 6px; box-shadow: var(--shadow); min-width: 0;
@@ -1507,17 +1513,23 @@ table.dc-board thead th { background: none; color: #000; border-bottom: 2px soli
     min-height: 0; background: none;
   }
   .dc-bench { margin: 6px 0 0; }
+  /* Packages on paper: one row, not two — two rows of boxes push each side of the ball
+     onto a second sheet — with the same in/out notes, packed tight. */
+  .dc-pkgrow { grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 4px; }
+  .dc-pkg { padding: 2px 5px; box-shadow: none; border-radius: 0; }
+  .dc-pkg-h { margin: 0; font-size: 7pt; }
+  .dc-pkg-slot { min-height: 0; padding: 0; }
+  .dc-pkg-slot + .dc-pkg-slot { margin-top: 0; }
+  .dc-pkg-slot[data-spot="LT"] { margin-top: 1px; padding-top: 1px; }
+  .dc-pkg .dc-chip { font-size: 8pt; }
+  .dc-pkg-note { margin: 2px 0 0; padding-top: 2px; font-size: 7pt; line-height: 1.25; }
   /* Worth its ink on a clipboard: it answers "who do I still have" without counting.
      Tighter than on screen, because it is the one row that can run to eleven names. */
   /* Buttons and the local-edits banner are screen furniture. */
   .dc-tools, .dc-edited { display: none; }
   .dc-bar { margin: 0 0 6px; display: block; }
-  /* The title block is the price of the first sheet and it is paid in rows, so the
-     lede goes. It is the note out of roster.json, which explains how the file is
-     structured to whoever edits it — that is a reader sitting at a keyboard, not a
-     coach holding the paper, and the paper is the thing with a page limit. */
+  /* The title block is the price of the first sheet and it is paid in rows. */
   h1.page { font-size: 18pt; margin: 0 0 3px; }
-  .dc-note { display: none; }
 }
 """
 
@@ -1946,6 +1958,48 @@ SITE_JS = """
 
   var pristine = JSON.stringify(snapshot());
 
+  // Who comes in and who goes out for each package, against package 1 — the
+  // starters. Worked out from the boxes every time the board changes, so a note can
+  // never disagree with the names above it.
+  function packageNotes() {
+    all('.dc-side').forEach(function (sec) {
+      var boxes = all('.dc-pkg', sec);
+      function group(box) {
+        return all('.dc-pkg-slot', box).map(function (sl) {
+          var c = chipIn(sl);
+          return c ? { name: c.dataset.name, spot: sl.dataset.spot || '' } : null;
+        }).filter(Boolean);
+      }
+      var starters = boxes.length
+        ? group(boxes[0]).map(function (p) { return p.name; }) : [];
+      boxes.forEach(function (box, i) {
+        var note = box.querySelector('.dc-pkg-note');
+        if (!note) return;
+        var here = group(box);
+        note.textContent = '';
+        if (!here.length) return;
+        if (i === 0) { note.textContent = 'Starters'; return; }
+        var names = here.map(function (p) { return p.name; });
+        var ins = here.filter(function (p) { return starters.indexOf(p.name) < 0; })
+          .map(function (p) { return p.spot ? p.name + ' (' + p.spot + ')' : p.name; });
+        var outs = starters.filter(function (n) { return names.indexOf(n) < 0; });
+        if (!ins.length && !outs.length) {
+          note.textContent = 'Same players as package 1';
+          return;
+        }
+        [['In', ins], ['Out', outs]].forEach(function (row) {
+          if (!row[1].length) return;
+          var line = document.createElement('span');
+          var label = document.createElement('b');
+          label.textContent = row[0] + ': ';
+          line.appendChild(label);
+          line.appendChild(document.createTextNode(row[1].join(', ')));
+          note.appendChild(line);
+        });
+      });
+    });
+  }
+
   function persist() {
     var now = JSON.stringify(snapshot());
     var dirty = now !== pristine;
@@ -1958,6 +2012,7 @@ SITE_JS = """
     } catch (e) { /* private mode: the board still works, it just will not keep */ }
     if (edited) edited.hidden = !dirty;
     if (resetBtn) resetBtn.hidden = !dirty;
+    packageNotes();
   }
 
   function restore() {
@@ -2289,6 +2344,7 @@ SITE_JS = """
 
   restore();
   refresh();
+  packageNotes();
 })();
 """
 
@@ -3797,7 +3853,9 @@ def side_board(side: str, order: list[str], alt_order: list[str],
             f'<div class="dc-pkg-slot" data-side="{side}" data-pkg="{n}" '
             f'data-at="{at}"{spot_attr(at)}>{in_slot(n, at)}</div>'
             for at in range(PACKAGE_SIZE[side]))
-        + '</div>'
+        # Who is in and out against package 1, filled in by the board script so it
+        # follows every name a coach drags.
+        + '<p class="dc-pkg-note" aria-live="polite"></p></div>'
         for n in range(1, PACKAGE_COUNT[side] + 1)
     )
     return (
@@ -3897,10 +3955,8 @@ def write_depth_chart(formations: list[dict], defenses: dict, root: Path) -> str
                        for side in ("offense", "defense")}},
         ensure_ascii=False).replace("<", "\\u003c")
 
-    note = roster.get("note") or "Who plays where, one and two deep."
     # One side per sheet — see the .dc-side rules in the print stylesheet.
     body = f"""<h1 class="page">Depth Chart</h1>
-<p class="lede dc-note">{esc(note)}</p>
 <script type="application/json" id="dc-data">{data}</script>
 <div class="dc-bar" id="dc-bar">
   <div class="dc-tools">

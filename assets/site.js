@@ -422,6 +422,48 @@
 
   var pristine = JSON.stringify(snapshot());
 
+  // Who comes in and who goes out for each package, against package 1 — the
+  // starters. Worked out from the boxes every time the board changes, so a note can
+  // never disagree with the names above it.
+  function packageNotes() {
+    all('.dc-side').forEach(function (sec) {
+      var boxes = all('.dc-pkg', sec);
+      function group(box) {
+        return all('.dc-pkg-slot', box).map(function (sl) {
+          var c = chipIn(sl);
+          return c ? { name: c.dataset.name, spot: sl.dataset.spot || '' } : null;
+        }).filter(Boolean);
+      }
+      var starters = boxes.length
+        ? group(boxes[0]).map(function (p) { return p.name; }) : [];
+      boxes.forEach(function (box, i) {
+        var note = box.querySelector('.dc-pkg-note');
+        if (!note) return;
+        var here = group(box);
+        note.textContent = '';
+        if (!here.length) return;
+        if (i === 0) { note.textContent = 'Starters'; return; }
+        var names = here.map(function (p) { return p.name; });
+        var ins = here.filter(function (p) { return starters.indexOf(p.name) < 0; })
+          .map(function (p) { return p.spot ? p.name + ' (' + p.spot + ')' : p.name; });
+        var outs = starters.filter(function (n) { return names.indexOf(n) < 0; });
+        if (!ins.length && !outs.length) {
+          note.textContent = 'Same players as package 1';
+          return;
+        }
+        [['In', ins], ['Out', outs]].forEach(function (row) {
+          if (!row[1].length) return;
+          var line = document.createElement('span');
+          var label = document.createElement('b');
+          label.textContent = row[0] + ': ';
+          line.appendChild(label);
+          line.appendChild(document.createTextNode(row[1].join(', ')));
+          note.appendChild(line);
+        });
+      });
+    });
+  }
+
   function persist() {
     var now = JSON.stringify(snapshot());
     var dirty = now !== pristine;
@@ -434,6 +476,7 @@
     } catch (e) { /* private mode: the board still works, it just will not keep */ }
     if (edited) edited.hidden = !dirty;
     if (resetBtn) resetBtn.hidden = !dirty;
+    packageNotes();
   }
 
   function restore() {
@@ -765,4 +808,5 @@
 
   restore();
   refresh();
+  packageNotes();
 })();
