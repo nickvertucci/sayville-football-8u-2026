@@ -1360,8 +1360,8 @@ footer.site a { color: var(--accent-ink); }
     display: flex; align-items: center; justify-content: center;
   }
   figure.diagram img { width: auto; height: auto; max-width: 100%; max-height: 100%; }
-  /* The purpose is why you'd call the play — useful when planning, not when holding
-     the card on a sideline. Dropping it is what buys the diagram its height. */
+  /* A defensive front's notes paragraph is for planning, not for holding the card on a
+     sideline, and dropping it is what buys the diagram its height. */
   .purpose, .legalblock { display: none; }
   /* Defensive rules run longer than offensive ones. Nothing to special-case any
      more: their assignments simply claim more of the column and the diagram keeps
@@ -2579,15 +2579,12 @@ def play_article(form: dict, play: dict, defenses: dict, heading: str = "h2",
             '<p class="block-title">Coaching points</p>\n'
             f'  <ul class="coach">\n    {items}\n  </ul>'
         )
-    purpose = f'<p class="purpose">{esc(play["purpose"])}</p>' if play.get("purpose") else ""
-
     return f"""<article class="play" id="{esc(play['id'])}">
   <header>
     <{heading}>{esc(play['name'])}</{heading}>
     <div class="tags">{''.join(tags)}</div>
     {actions}
   </header>
-  {purpose}
   {front_panels(form, play, defenses, single)}
   {coach}
 </article>"""
@@ -3177,7 +3174,7 @@ def write_play_page(
         defenses=defenses,
         active_form=form["id"],
         active_play=play["id"],
-        description=play.get("purpose", "")[:160],
+        description=f"{play['name']} — {play.get('call', '')}"[:160],
         # The graphic alone on a letter sheet, turned to fit a diagram that is wider
         # than it is deep, with the margins as thin as a home printer allows.
         page_rule="size: letter landscape; margin: 0.25in;",

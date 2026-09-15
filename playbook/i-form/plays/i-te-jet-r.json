@@ -8,7 +8,6 @@
   "type": "run",
   "direction": "right",
   "ball_carrier": "LTE",
-  "purpose": "The left tight end comes all the way across at the snap on an end-around, takes the handoff at full speed and gets to the right edge before the defense can turn, while the tailback's fake the other way holds the linebackers.",
   "assignments": {
     "LTE": {
       "rule": "Stay down in your stance — no motion. At the snap run flat behind the quarterback, take the handoff at full speed and get to the right edge. Turn up outside the fullback.",

@@ -302,10 +302,6 @@ left. A play with four coaching points therefore gets a bigger picture than one 
 and no card can push past the page, because the only thing on it that can stretch is the
 part that can afford to shrink.
 
-The one thing the printed sheet drops is the play's "purpose" paragraph. That is context
-for planning, not for holding on a sideline, and cutting it is what buys the diagram its
-height. It is still on the website.
-
 Individual cards are standalone SVGs under `playbook/<formation>/cards/` if you want to
 drop one into a practice plan. Two versions of each:
 

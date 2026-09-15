@@ -31,8 +31,6 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ![I Formation - Strong Right - Off tackle right](playbook/i-form/cards/i-power-r-5-3.svg)
 
-Our best downhill run. Everybody blocks down inside, the SL kicks the end out, and the fullback leads through the hole in front of the tailback. Nobody leaves his spot — every block on the card is made by the kid already standing there.
-
 | Position | Assignment |
 |---|---|
 | **LTE** | End head up on you. Cut him off — get between him and the ball. |
@@ -61,8 +59,6 @@ Our best downhill run. Everybody blocks down inside, the SL kicks the end out, a
 **Call it:** `Regular I SL Left 35 Power`
 
 ![I Formation - Strong Left - Off tackle left](playbook/i-form/cards/i-power-l-5-3.svg)
-
-Our best downhill run. Everybody blocks down inside, the SL kicks the end out, and the fullback leads through the hole in front of the tailback. Nobody leaves his spot — every block on the card is made by the kid already standing there.
 
 | Position | Assignment |
 |---|---|
@@ -93,8 +89,6 @@ Our best downhill run. Everybody blocks down inside, the SL kicks the end out, a
 
 ![I Formation - Strong Right - LTE jet right](playbook/i-form/cards/i-te-jet-r-5-3.svg)
 
-The left tight end comes all the way across at the snap on an end-around, takes the handoff at full speed and gets to the right edge before the defense can turn, while the tailback's fake the other way holds the linebackers.
-
 | Position | Assignment |
 |---|---|
 | **LTE** **(ball)** | Stay down in your stance — no motion. At the snap run flat behind the quarterback, take the handoff at full speed and get to the right edge. Turn up outside the fullback. |
@@ -122,8 +116,6 @@ The left tight end comes all the way across at the snap on an end-around, takes 
 **Call it:** `Regular I SL Left RTE Jet`
 
 ![I Formation - Strong Left - RTE jet left](playbook/i-form/cards/i-te-jet-l-5-3.svg)
-
-The right tight end comes all the way across at the snap on an end-around, takes the handoff at full speed and gets to the left edge before the defense can turn, while the tailback's fake the other way holds the linebackers.
 
 | Position | Assignment |
 |---|---|
@@ -155,8 +147,6 @@ The right tight end comes all the way across at the snap on an end-around, takes
 
 ![Split formation - Strong right - Quick pitch right](playbook/split-backs/cards/sb-pitch-r-5-3.svg)
 
-Get outside in a hurry. The far back trails the quarterback, takes the pitch on the run and turns up inside the block out on the edge. The split man makes that block — their corner, or their outside linebacker against the 5-4-2, which has no corners — and that is what frees both backs to stay in the backfield where the fake lives.
-
 | Position | Assignment |
 |---|---|
 | **LTE** | End head up on you. Cut him off — get between him and the ball. |
@@ -184,8 +174,6 @@ Get outside in a hurry. The far back trails the quarterback, takes the pitch on 
 **Call it:** `Split SL Left 39 Pitch`
 
 ![Split formation - Strong left - Quick pitch left](playbook/split-backs/cards/sb-pitch-l-5-3.svg)
-
-Get outside in a hurry. The far back trails the quarterback, takes the pitch on the run and turns up inside the block out on the edge. The split man makes that block — their corner, or their outside linebacker against the 5-4-2, which has no corners — and that is what frees both backs to stay in the backfield where the fake lives.
 
 | Position | Assignment |
 |---|---|
@@ -215,8 +203,6 @@ Get outside in a hurry. The far back trails the quarterback, takes the pitch on 
 
 ![Split formation - Strong right - QB sweep right](playbook/split-backs/cards/sb-qb-sweep-r-5-3.svg)
 
-The quarterback keeps it and gets to the edge in a hurry behind the near back, while the far back runs hard the other way to take the defense with him.
-
 | Position | Assignment |
 |---|---|
 | **LTE** | End head up on you. Cut him off — get between him and the ball. |
@@ -244,8 +230,6 @@ The quarterback keeps it and gets to the edge in a hurry behind the near back, w
 **Call it:** `Split SL Left 19 Sweep`
 
 ![Split formation - Strong left - QB sweep left](playbook/split-backs/cards/sb-qb-sweep-l-5-3.svg)
-
-The quarterback keeps it and gets to the edge in a hurry behind the near back, while the far back runs hard the other way to take the defense with him.
 
 | Position | Assignment |
 |---|---|
@@ -275,8 +259,6 @@ The quarterback keeps it and gets to the edge in a hurry behind the near back, w
 
 ![Split formation - Strong left - Fake handoff right QB sweep left](playbook/split-backs/cards/sb-fake-sweep-l-5-3.svg)
 
-The quarterback fakes the handoff to the right halfback, who carries the fake hard to the right, then rolls back and sweeps it left behind the left halfback.
-
 | Position | Assignment |
 |---|---|
 | **LTE** | End head up on you. Turn him inside. The ball goes around behind you. |
@@ -304,8 +286,6 @@ The quarterback fakes the handoff to the right halfback, who carries the fake ha
 **Call it:** `Split SL Right 18 Fake Sweep`
 
 ![Split formation - Strong right - Fake handoff left QB sweep right](playbook/split-backs/cards/sb-fake-sweep-r-5-3.svg)
-
-The quarterback fakes the handoff to the left halfback, who carries the fake hard to the left, then rolls back and sweeps it right behind the right halfback.
 
 | Position | Assignment |
 |---|---|
@@ -337,8 +317,6 @@ The quarterback fakes the handoff to the left halfback, who carries the fake har
 
 ![Shotgun - Strong right - RTE slant out](playbook/shotgun/cards/sg-te-out-r-5-3.svg)
 
-A throw the quarterback can make before anybody gets to him: the right tight end slants out flat toward the right sideline, almost on the line of scrimmage, and everybody else but the SL stays in and blocks.
-
 | Position | Assignment |
 |---|---|
 | **LTE** | Pass block: step back, hands up, and stay between your man and the quarterback. |
@@ -366,8 +344,6 @@ A throw the quarterback can make before anybody gets to him: the right tight end
 **Call it:** `Shotgun SL Left LTE Slant Out`
 
 ![Shotgun - Strong left - LTE slant out](playbook/shotgun/cards/sg-te-out-l-5-3.svg)
-
-A throw the quarterback can make before anybody gets to him: the left tight end slants out flat toward the left sideline, almost on the line of scrimmage, and everybody else but the SL stays in and blocks.
 
 | Position | Assignment |
 |---|---|
@@ -397,8 +373,6 @@ A throw the quarterback can make before anybody gets to him: the left tight end 
 
 ![Shotgun - Strong left - QB sweep left](playbook/shotgun/cards/sg-qb-sweep-l-5-3.svg)
 
-The quarterback catches the snap and sweeps left behind the left halfback's lead block, while the right halfback fakes the other way to take the defense with him.
-
 | Position | Assignment |
 |---|---|
 | **LTE** | End head up on you. Turn him inside. The ball goes around behind you. |
@@ -426,8 +400,6 @@ The quarterback catches the snap and sweeps left behind the left halfback's lead
 **Call it:** `Shotgun SL Right 18 Sweep`
 
 ![Shotgun - Strong right - QB sweep right](playbook/shotgun/cards/sg-qb-sweep-r-5-3.svg)
-
-The quarterback catches the snap and sweeps right behind the right halfback's lead block, while the left halfback fakes the other way to take the defense with him.
 
 | Position | Assignment |
 |---|---|

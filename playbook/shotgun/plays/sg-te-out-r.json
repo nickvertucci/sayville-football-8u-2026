@@ -8,7 +8,6 @@
   "type": "pass",
   "direction": "right",
   "ball_carrier": "RTE",
-  "purpose": "A throw the quarterback can make before anybody gets to him: the right tight end slants out flat toward the right sideline, almost on the line of scrimmage, and everybody else but the SL stays in and blocks.",
   "assignments": {
     "LTE": {
       "block": "protect"

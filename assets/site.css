@@ -1314,8 +1314,8 @@ footer.site a { color: var(--accent-ink); }
     display: flex; align-items: center; justify-content: center;
   }
   figure.diagram img { width: auto; height: auto; max-width: 100%; max-height: 100%; }
-  /* The purpose is why you'd call the play — useful when planning, not when holding
-     the card on a sideline. Dropping it is what buys the diagram its height. */
+  /* A defensive front's notes paragraph is for planning, not for holding the card on a
+     sideline, and dropping it is what buys the diagram its height. */
   .purpose, .legalblock { display: none; }
   /* Defensive rules run longer than offensive ones. Nothing to special-case any
      more: their assignments simply claim more of the column and the diagram keeps

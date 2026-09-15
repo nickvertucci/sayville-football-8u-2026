@@ -45,8 +45,6 @@ Normal line splits, about a foot. Both ends are on the line; the SL is off it, a
 
 ![I Formation - Strong Right - Off tackle right](cards/i-power-r-5-3.svg)
 
-Our best downhill run. Everybody blocks down inside, the SL kicks the end out, and the fullback leads through the hole in front of the tailback. Nobody leaves his spot — every block on the card is made by the kid already standing there.
-
 | Position | Assignment |
 |---|---|
 | **LTE** | End head up on you. Cut him off — get between him and the ball. |
@@ -75,8 +73,6 @@ Our best downhill run. Everybody blocks down inside, the SL kicks the end out, a
 **Call it:** `Regular I SL Left 35 Power`
 
 ![I Formation - Strong Left - Off tackle left](cards/i-power-l-5-3.svg)
-
-Our best downhill run. Everybody blocks down inside, the SL kicks the end out, and the fullback leads through the hole in front of the tailback. Nobody leaves his spot — every block on the card is made by the kid already standing there.
 
 | Position | Assignment |
 |---|---|
@@ -107,8 +103,6 @@ Our best downhill run. Everybody blocks down inside, the SL kicks the end out, a
 
 ![I Formation - Strong Right - LTE jet right](cards/i-te-jet-r-5-3.svg)
 
-The left tight end comes all the way across at the snap on an end-around, takes the handoff at full speed and gets to the right edge before the defense can turn, while the tailback's fake the other way holds the linebackers.
-
 | Position | Assignment |
 |---|---|
 | **LTE** **(ball)** | Stay down in your stance — no motion. At the snap run flat behind the quarterback, take the handoff at full speed and get to the right edge. Turn up outside the fullback. |
@@ -136,8 +130,6 @@ The left tight end comes all the way across at the snap on an end-around, takes 
 **Call it:** `Regular I SL Left RTE Jet`
 
 ![I Formation - Strong Left - RTE jet left](cards/i-te-jet-l-5-3.svg)
-
-The right tight end comes all the way across at the snap on an end-around, takes the handoff at full speed and gets to the left edge before the defense can turn, while the tailback's fake the other way holds the linebackers.
 
 | Position | Assignment |
 |---|---|

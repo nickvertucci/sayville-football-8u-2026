@@ -13,7 +13,6 @@
       -1.2
     ]
   },
-  "purpose": "The quarterback catches the snap and sweeps left behind the left halfback's lead block, while the right halfback fakes the other way to take the defense with him.",
   "assignments": {
     "LTE": {
       "block": "base",

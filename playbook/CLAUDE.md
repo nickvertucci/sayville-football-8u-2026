@@ -76,7 +76,8 @@ build checks the receiver's path is that long.
 `--check` fails the build if one is missing.
 
 Optional: `call`, `type`, `defense` (must match a file in `defense/`),
-`order`, `direction`, `purpose`, `coaching_points`, `alignment`.
+`order`, `direction`, `coaching_points`, `alignment`. There is no introductory
+paragraph: a play is its name, call, diagram, assignments and coaching points.
 
 ### `alignment` — moving somebody for one play
 

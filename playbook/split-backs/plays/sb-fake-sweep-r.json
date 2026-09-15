@@ -7,7 +7,6 @@
   "type": "run",
   "direction": "right",
   "ball_carrier": "QB",
-  "purpose": "The quarterback fakes the handoff to the left halfback, who carries the fake hard to the left, then rolls back and sweeps it right behind the right halfback.",
   "assignments": {
     "LTE": {
       "block": "cutoff"

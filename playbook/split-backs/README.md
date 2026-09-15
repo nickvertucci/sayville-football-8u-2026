@@ -39,8 +39,6 @@ Both ends are tight on the line. The two backs sit four yards deep and just over
 
 ![Split formation - Strong right - Quick pitch right](cards/sb-pitch-r-5-3.svg)
 
-Get outside in a hurry. The far back trails the quarterback, takes the pitch on the run and turns up inside the block out on the edge. The split man makes that block — their corner, or their outside linebacker against the 5-4-2, which has no corners — and that is what frees both backs to stay in the backfield where the fake lives.
-
 | Position | Assignment |
 |---|---|
 | **LTE** | End head up on you. Cut him off — get between him and the ball. |
@@ -68,8 +66,6 @@ Get outside in a hurry. The far back trails the quarterback, takes the pitch on 
 **Call it:** `Split SL Left 39 Pitch`
 
 ![Split formation - Strong left - Quick pitch left](cards/sb-pitch-l-5-3.svg)
-
-Get outside in a hurry. The far back trails the quarterback, takes the pitch on the run and turns up inside the block out on the edge. The split man makes that block — their corner, or their outside linebacker against the 5-4-2, which has no corners — and that is what frees both backs to stay in the backfield where the fake lives.
 
 | Position | Assignment |
 |---|---|
@@ -99,8 +95,6 @@ Get outside in a hurry. The far back trails the quarterback, takes the pitch on 
 
 ![Split formation - Strong right - QB sweep right](cards/sb-qb-sweep-r-5-3.svg)
 
-The quarterback keeps it and gets to the edge in a hurry behind the near back, while the far back runs hard the other way to take the defense with him.
-
 | Position | Assignment |
 |---|---|
 | **LTE** | End head up on you. Cut him off — get between him and the ball. |
@@ -128,8 +122,6 @@ The quarterback keeps it and gets to the edge in a hurry behind the near back, w
 **Call it:** `Split SL Left 19 Sweep`
 
 ![Split formation - Strong left - QB sweep left](cards/sb-qb-sweep-l-5-3.svg)
-
-The quarterback keeps it and gets to the edge in a hurry behind the near back, while the far back runs hard the other way to take the defense with him.
 
 | Position | Assignment |
 |---|---|
@@ -159,8 +151,6 @@ The quarterback keeps it and gets to the edge in a hurry behind the near back, w
 
 ![Split formation - Strong left - Fake handoff right QB sweep left](cards/sb-fake-sweep-l-5-3.svg)
 
-The quarterback fakes the handoff to the right halfback, who carries the fake hard to the right, then rolls back and sweeps it left behind the left halfback.
-
 | Position | Assignment |
 |---|---|
 | **LTE** | End head up on you. Turn him inside. The ball goes around behind you. |
@@ -188,8 +178,6 @@ The quarterback fakes the handoff to the right halfback, who carries the fake ha
 **Call it:** `Split SL Right 18 Fake Sweep`
 
 ![Split formation - Strong right - Fake handoff left QB sweep right](cards/sb-fake-sweep-r-5-3.svg)
-
-The quarterback fakes the handoff to the left halfback, who carries the fake hard to the left, then rolls back and sweeps it right behind the right halfback.
 
 | Position | Assignment |
 |---|---|
