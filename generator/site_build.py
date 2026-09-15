@@ -2836,7 +2836,7 @@ def backs_table(formations: list[dict]) -> list[tuple[str, str]]:
             rows.append((digit, f"{esc(position_name(pos))} &mdash; {esc(where)}"))
         else:
             # A digit can mean the same spot in several formations and a different one
-            # elsewhere — 3 is the tailback in both I looks and the right halfback in the
+            # elsewhere — 3 is the tailback in the Regular I and the left halfback in the
             # Split Backs. Name every formation, or the table quietly drops one.
             parts = []
             for pos, forms_with in spots.items():
@@ -3047,10 +3047,12 @@ def write_calls(formations: list[dict], defenses: dict, root: Path) -> str:
             grid[2][center] = ("FB", backs.get("FB", ""))
             grid[3][center] = ("TB", backs.get("TB", ""))
         else:
-            # The fullback always lines up left of center and the tailback right of
-            # it, whichever side the SL is on.
-            grid[3][center - 1] = ("FB", backs.get("FB", ""))
-            grid[3][center + 1] = ("TB", backs.get("TB", ""))
+            # Split Backs: 3-back (left halfback) left of the quarterback, 2-back
+            # (right halfback) right of him. Package FB is the left back and package
+            # TB the right back — Jake always left, Nico always right — whichever
+            # side the slot is on.
+            grid[3][center - 1] = ("LH", backs.get("FB", ""))
+            grid[3][center + 1] = ("RH", backs.get("TB", ""))
         rows = []
         for row in grid:
             tds = []
@@ -3100,12 +3102,12 @@ def write_calls(formations: list[dict], defenses: dict, root: Path) -> str:
     order = []
     if packages:
         p = packages[0]
-        order += [("Split formation - Strong left", p, "split-left", {"Left": ["sb-pitch-l", "sb-qb-sweep-l", "sb-fake-sweep-l"]}),
-                  ("Split formation - Strong right", p, "split-right", {"Right": ["sb-pitch-r", "sb-qb-sweep-r", "sb-fake-sweep-r"]}),
-                  ("I formation - Strong left", p, "i-left", {"Left": ["i-power-l", "i-te-jet-l"], "Right": ["i-sl-jet-r"]}),
-                  ("I formation - Strong right", p, "i-right", {"Left": ["i-sl-jet-l"], "Right": ["i-power-r", "i-te-jet-r"]}),
-                  ("Shotgun - Strong left", p, "sg-left", {"Left": ["sg-te-out-l", "sg-qb-sweep-l", "sg-rb-sweep-l"]}),
-                  ("Shotgun - Strong right", p, "sg-right", {"Right": ["sg-te-out-r", "sg-qb-sweep-r", "sg-rb-sweep-r"]})]
+        order += [("Split Backs - Slot Left", p, "split-left", {"Left": ["sb-pitch-l", "sb-qb-sweep-l", "sb-fake-sweep-l"]}),
+                  ("Split Backs - Slot Right", p, "split-right", {"Right": ["sb-pitch-r", "sb-qb-sweep-r", "sb-fake-sweep-r"]}),
+                  ("Regular I - Slot Left", p, "i-left", {"Left": ["i-power-l", "i-te-jet-l"], "Right": ["i-sl-jet-r"]}),
+                  ("Regular I - Slot Right", p, "i-right", {"Left": ["i-sl-jet-l"], "Right": ["i-power-r", "i-te-jet-r"]}),
+                  ("Shotgun - Slot Left", p, "sg-left", {"Left": ["sg-te-out-l", "sg-qb-sweep-l", "sg-rb-sweep-l"]}),
+                  ("Shotgun - Slot Right", p, "sg-right", {"Right": ["sg-te-out-r", "sg-qb-sweep-r", "sg-rb-sweep-r"]})]
     sheets = "".join(
         f'<section class="xl-sheet"><p class="xl-title">{esc(title)}</p>'
         f'{lineup_table(package, layout)}{plays_table(title, placed)}</section>'

@@ -98,8 +98,8 @@ the right, where he lines up on every other snap. Everything else — the line r
 unchanged, and the player's `path` is still relative to wherever he ends up, so the
 assignment does not have to know which look it is in.
 
-**Say it in the call.** `Regular I SL Left 35 Power` tells the huddle which side the SL is
-on, the same way `Regular I SL Right 34 Power` does. A play that moves
+**Say it in the call.** `Regular I Slot Left 35 Power` tells the huddle which side the slot is
+on, the same way `Regular I Slot Right 34 Power` does. A play that moves
 somebody silently is a play nobody can call.
 
 An override may only move a player the formation already has, and the coordinates must be
@@ -143,12 +143,12 @@ from:
 call against, and it is what the calling-language table on the home page is built from,
 so there is one copy of the numbering rather than three that can disagree.
 
-### `name` and `call` are different on purpose
+### `name` and `call` are the numbering
 
-Both are printed at the top of every card. `name` is the teaching name (*I Formation -
-Strong Right - Off tackle right*); `call` is the huddle call in the team's play-calling language
-(`Regular I SL Right 34 Power` — formation, the SL's side, then **two digits: who carries
-it and where it goes**, then the play word).
+Both are printed at the top of every card. `name` is `{formation} - Slot {Left|Right} -
+{digits} {word}` (*Regular I - Slot Right - 34 Power*); `call` is the same language
+yelled in the huddle (`Regular I Slot Right 34 Power` — formation, the slot's side,
+then **two digits: who carries it and where it goes**, then the play word).
 The numbering system is documented in the top-level [README](../README.md).
 
 **The build checks the call against the diagram**, so a call is not free text:
@@ -168,7 +168,7 @@ also fails `--check`.
 
 **The one exception is a word call**, for a ball carrier the numbering has no digit for —
 a tight end on an end-around. Set `"word_call": true` and name him in the call
-(`Regular I SL Right LTE Jet`); the play must also have `direction`, which is where its
+(`Regular I Slot Right LTE Jet`); the play must also have `direction`, which is where its
 playside comes from with no hole digit. Only a play that opts in is exempt, and digits
 added to a word call are still checked.
 
@@ -312,8 +312,8 @@ a play would flip his path and leave him aligned on the same side. There is no
 A left-handed play that leaves the SL on the right is a different play, a blocker short
 on the side the ball goes, and `--audit` will tell you so.
 
-**A play that moves the SL says so in its call.** `Regular I SL Left 35 Power` and
-`Split SL Left 39 Pitch` both do, each mirroring its right-hand play so the SL is out
+**A play that moves the slot says so in its call.** `Regular I Slot Left 35 Power` and
+`Split Backs Slot Left 29 Pitch` both do, each mirroring its right-hand play so the slot is out
 there on the side the ball goes. Use `alignment` to move him and name his side in the
 call; a play that moves somebody silently is a play nobody can call.
 

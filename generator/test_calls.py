@@ -35,14 +35,14 @@ CASES = [
     # The tight-end jet is a word call: it opts in, so no digits is right for it — while
     # "no number at all" above still fails on a play that did not opt in. Digits added
     # to a word call are checked like any other, and there is no back 5.
-    ("tight-end jet, word call",      "i-form",   "i-te-jet-r", "Regular I SL Right LTE Jet", False),
-    ("tight-end jet, numbered anyway", "i-form",  "i-te-jet-r", "Regular I SL Right 58 LTE Jet", True),
-    ("split pitch right",             "split-backs", "sb-pitch-r", "Split SL Right 28 Pitch",  False),
-    ("split pitch, called off tackle", "split-backs", "sb-pitch-r", "Split SL Right 24 Pitch", True),
-    ("split pitch, credited to the SL", "split-backs", "sb-pitch-r", "Split SL Right 48 Pitch", True),
-    ("split pitch right, numbered left", "split-backs", "sb-pitch-r", "Split SL Right 29 Pitch", True),
-    ("split pitch left",              "split-backs", "sb-pitch-l", "Split SL Left 39 Pitch",   False),
-    ("split pitch left, wrong back",  "split-backs", "sb-pitch-l", "Split SL Left 29 Pitch",   True),
+    ("tight-end jet, word call",      "i-form",   "i-te-jet-r", "Regular I Slot Right LTE Jet", False),
+    ("tight-end jet, numbered anyway", "i-form",  "i-te-jet-r", "Regular I Slot Right 58 LTE Jet", True),
+    ("split pitch right",             "split-backs", "sb-pitch-r", "Split Backs Slot Right 38 Pitch",  False),
+    ("split pitch, called off tackle", "split-backs", "sb-pitch-r", "Split Backs Slot Right 34 Pitch", True),
+    ("split pitch, credited to the SL", "split-backs", "sb-pitch-r", "Split Backs Slot Right 48 Pitch", True),
+    ("split pitch right, numbered left", "split-backs", "sb-pitch-r", "Split Backs Slot Right 39 Pitch", True),
+    ("split pitch left",              "split-backs", "sb-pitch-l", "Split Backs Slot Left 29 Pitch",   False),
+    ("split pitch left, wrong back",  "split-backs", "sb-pitch-l", "Split Backs Slot Left 39 Pitch",   True),
 ]
 
 

@@ -14,28 +14,27 @@ in [rulebook/](rulebook/), reproduced word for word, as the **Rules** page.
 
 ## Play calling language
 
-Every play has two names, and both are printed on every card.
+Every play is named the same way it is called. The **name** on the card is
+`{formation} - Slot {Left|Right} - {digits} {word}`; the **call** is that same language
+without the dashes, what you yell on Saturday.
 
-- The **name** is what you say while teaching it: *I Slant Right*.
-- The **call** is what you yell on Saturday: `I SL Right 34 Power`.
+### Regular I: formation + Slot + back + hole + play word
 
-### Regular I: formation + SL + back + hole + play word
-
-The call names the formation, then `SL Right` — where the SL lines up — then two
+The call names the formation, then `Slot Right` — where the slot lines up — then two
 digits: the first says **who carries it**, the second says **where it goes**. So
-`Regular I SL Right 34 Power` is the Regular I, SL on the right, the tailback between the
+`Regular I Slot Right 34 Power` is the Regular I, slot on the right, the tailback between the
 tackle and the end.
 
-Off tackle depends on the SL's kick-out block, so he lines up on the side it
-has to happen: `Regular I SL Left 35 Power` puts him on the left. The call says so out
+Off tackle depends on the slot's kick-out block, so he lines up on the side it
+has to happen: `Regular I Slot Left 35 Power` puts him on the left. The call says so out
 loud, because a play that moves somebody silently is a play nobody can call.
 
 | Back | Who |
 |---|---|
 | **1** | Quarterback — every formation |
-| **2** | The fullback in the Regular I; the left back (LH) in the Split Backs |
-| **3** | The tailback (TB) — behind the fullback in the Regular I; the right back (RH) in the Split Backs |
-| **4** | The SL — the slot, split wide in both formations |
+| **2** | The fullback in the Regular I; the right back (RH) in the Split Backs and Shotgun — even-numbered holes |
+| **3** | The tailback (TB) in the Regular I; the left back (LH) in the Split Backs and Shotgun — odd-numbered holes |
+| **4** | The slot, split wide in every formation |
 
 | Hole | Where |
 |---|---|
@@ -56,14 +55,14 @@ does not cross on the named side inside the hole the call names. A call sheet th
 worse than no call sheet, so the build will not publish one.
 
 The digits describe the back the first digit names, not necessarily the ball carrier. So
-`Regular I SL Right 34 Power` is the tailback between the right tackle and end, and
-`Regular I SL Left 35 Power` is the same handoff to the left.
+`Regular I Slot Right 34 Power` is the tailback between the right tackle and end, and
+`Regular I Slot Left 35 Power` is the same handoff to the left.
 
 | Call | Play | Where it hits |
 |---|---|---|
-| `Regular I SL Right 34 Power` / `SL Left 35 Power` | I Formation - Strong Right - Off tackle right / Strong Left - Off tackle left | tailback, tackle–end |
-| `Regular I SL Right LTE Jet` / `SL Left RTE Jet` | I Formation - Strong Right - LTE jet right / Strong Left - RTE jet left | the backside tight end on an end-around, all the way outside |
-| `Regular I SL Right 49 Jet` / `SL Left 48 Jet` | I Formation - Strong Right - Slot jet left / Strong Left - Slot jet right | the SL, flat across the backfield and outside the other way |
+| `Regular I Slot Right 34 Power` / `Slot Left 35 Power` | Regular I - Slot Right - 34 Power / Slot Left - 35 Power | tailback, tackle–end |
+| `Regular I Slot Right LTE Jet` / `Slot Left RTE Jet` | Regular I - Slot Right - LTE Jet / Slot Left - RTE Jet | the backside tight end on an end-around, all the way outside |
+| `Regular I Slot Right 49 Jet` / `Slot Left 48 Jet` | Regular I - Slot Right - 49 Jet / Slot Left - 48 Jet | the slot, flat across the backfield and outside the other way |
 
 The tight-end jet is a **word call** — no digits, because the tight end is not a numbered
 back. It names him instead. A play has to opt in with `word_call`, so any other play
@@ -71,31 +70,32 @@ missing its number still fails the build.
 
 Every play has a left and a right.
 
-### Split Backs: formation + SL + back + hole + play word
+### Split Backs: formation + Slot + back + hole + play word
 
-Two backs to number instead of three, and a SL out wide to declare — so the call reads
-like the Regular I's. `Split SL Right 28 Pitch` is the Split Backs, SL on the right, the
-left back all the way outside at the 8 hole. The two halfbacks are back **2** (LH, the left one) and
-back **3** (RH, the right one); the SL out wide keeps **4**, the number he carries in
-both I looks.
+Two backs to number instead of three, and a slot out wide to declare — so the call reads
+like the Regular I's. `Split Backs Slot Right 38 Pitch` is the Split Backs, slot on the right, the
+3-back (left halfback) all the way outside at the 8 hole. In this formation the **3-back is
+always the left back** (odd-numbered holes) and the **2-back is always the right back**
+(even-numbered holes); the slot out wide keeps **4**, the number he carries in every look.
 
 | Call | Play | Reads as |
 |---|---|---|
-| `Split SL Left 39 Pitch` / `Split SL Right 28 Pitch` | Split formation - Strong left - Quick pitch left / Strong right - Quick pitch right | the far back, all the way outside |
+| `Split Backs Slot Left 29 Pitch` / `Slot Right 38 Pitch` | Split Backs - Slot Left - 29 Pitch / Slot Right - 38 Pitch | the far back, all the way outside |
 
-The back digit follows whoever actually carries it. On the Quick pitch it is the far back,
+The back digit follows whoever actually carries it. On the pitch it is the far back,
 because the near one is busy bubbling out to block.
 
-### Shotgun: formation + SL + who catches it + route
+### Shotgun: formation + Slot + who catches it + route
 
 The Shotgun's pass names its receiver the way the tight-end jet names its runner — the
-tight end is not a numbered back, so it is a word call.
+tight end is not a numbered back, so it is a word call. Its halfbacks number the same way
+the Split Backs do: 3 is left, 2 is right.
 
 | Call | Play | Reads as |
 |---|---|---|
-| `Shotgun SL Right RTE Slant Out` / `SL Left LTE Slant Out` | Shotgun - Strong right - RTE slant out / Strong left - LTE slant out | the play-side tight end, a flat slant out almost on the line of scrimmage |
-| `Shotgun SL Left 19 Sweep` / `SL Right 18 Sweep` | Shotgun - Strong left - QB sweep left / Strong right - QB sweep right | the quarterback, all the way outside behind the near halfback |
-| `Shotgun SL Left 39 Sweep` / `SL Right 28 Sweep` | Shotgun - Strong left - RB sweep left / Strong right - RB sweep right | the far halfback, across in front of the quarterback and all the way outside |
+| `Shotgun Slot Right RTE Slant Out` / `Slot Left LTE Slant Out` | Shotgun - Slot Right - RTE Slant Out / Slot Left - LTE Slant Out | the play-side tight end, a flat slant out almost on the line of scrimmage |
+| `Shotgun Slot Left 19 Sweep` / `Slot Right 18 Sweep` | Shotgun - Slot Left - 19 Sweep / Slot Right - 18 Sweep | the quarterback, all the way outside behind the near halfback |
+| `Shotgun Slot Left 29 Sweep` / `Slot Right 38 Sweep` | Shotgun - Slot Left - 29 Sweep / Slot Right - 38 Sweep | the far halfback, across in front of the quarterback and all the way outside |
 
 **Play word** — the Regular I carries `Power` and the tight-end and slot `Jet`; the Split Backs
 carries `Pitch`, `Sweep` and `Fake Sweep`; the Shotgun carries the tight end's `Slant Out`, the
@@ -108,17 +108,17 @@ Three formations, 18 plays, in teaching order:
 | # | Formation | Family | Plays | What it is for |
 |---|---|---|---|---|
 | 1 | **Regular I** | Regular I | 6 | Base offense. Fullback and tailback stacked behind the quarterback. Off tackle, the tailback between the tackle and the end behind the SL's kick-out, the tight-end jet and the slot jet, both ways. |
-| 2 | **Split Backs** | Split Backs | 6 | Two backs at even depth and a SL split out wide. The Quick pitch, the QB sweep and the fake-handoff QB sweep, both ways. |
+| 2 | **Split Backs** | Split Backs | 6 | Two backs at even depth and a slot split out wide. 38/29 Pitch, the QB sweep and the fake-handoff QB sweep, both ways. |
 | 3 | **Shotgun** | Shotgun | 6 | The quarterback five yards deep with a back either side. The tight-end slant out, the QB sweep and the RB sweep, both ways. |
 
 Both are two-tight-end, downhill running formations, so the blocking language carries
 over: "block down on the first defender inside you" means the same thing in either. That
 is the reason to carry two related looks rather than two unrelated offenses.
 
-**Neither formation is symmetric, so every left-handed play is written by hand.** The SL
+**Neither formation is symmetric, so every left-handed play is written by hand.** The slot
 sits split to the right unless a play moves him, so flipping a play would flip his path
 while leaving him aligned on the same side. Both left-handed plays do move him — the
-Regular I's `SL Left 35 Power` and the Split Backs' `SL Left 39 Pitch`, each the mirror of
+Regular I's `Slot Left 35 Power` and the Split Backs' `Slot Left 29 Pitch`, each the mirror of
 its right-hand play — and say so in the call.
 
 ## Defense

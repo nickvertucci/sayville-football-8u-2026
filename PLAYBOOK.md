@@ -6,34 +6,34 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 | # | Play | Call | Type | Formation | Ball |
 |---|---|---|---|---|---|
-| 1 | [I Formation - Strong Right - Off tackle right](#i-formation---strong-right---off-tackle-right) | `Regular I SL Right 34 Power` | run | Regular I | TB |
-| 2 | [I Formation - Strong Left - Off tackle left](#i-formation---strong-left---off-tackle-left) | `Regular I SL Left 35 Power` | run | Regular I | TB |
-| 3 | [I Formation - Strong Right - LTE jet right](#i-formation---strong-right---lte-jet-right) | `Regular I SL Right LTE Jet` | run | Regular I | LTE |
-| 4 | [I Formation - Strong Left - RTE jet left](#i-formation---strong-left---rte-jet-left) | `Regular I SL Left RTE Jet` | run | Regular I | RTE |
-| 5 | [I Formation - Strong Right - Slot jet left](#i-formation---strong-right---slot-jet-left) | `Regular I SL Right 49 Jet` | run | Regular I | SL |
-| 6 | [I Formation - Strong Left - Slot jet right](#i-formation---strong-left---slot-jet-right) | `Regular I SL Left 48 Jet` | run | Regular I | SL |
-| 7 | [Split formation - Strong right - Quick pitch right](#split-formation---strong-right---quick-pitch-right) | `Split SL Right 28 Pitch` | run | Split Backs | LH |
-| 8 | [Split formation - Strong left - Quick pitch left](#split-formation---strong-left---quick-pitch-left) | `Split SL Left 39 Pitch` | run | Split Backs | RH |
-| 9 | [Split formation - Strong right - QB sweep right](#split-formation---strong-right---qb-sweep-right) | `Split SL Right 18 Sweep` | run | Split Backs | QB |
-| 10 | [Split formation - Strong left - QB sweep left](#split-formation---strong-left---qb-sweep-left) | `Split SL Left 19 Sweep` | run | Split Backs | QB |
-| 11 | [Split formation - Strong left - Fake handoff right QB sweep left](#split-formation---strong-left---fake-handoff-right-qb-sweep-left) | `Split SL Left 19 Fake Sweep` | run | Split Backs | QB |
-| 12 | [Split formation - Strong right - Fake handoff left QB sweep right](#split-formation---strong-right---fake-handoff-left-qb-sweep-right) | `Split SL Right 18 Fake Sweep` | run | Split Backs | QB |
-| 13 | [Shotgun - Strong right - RTE slant out](#shotgun---strong-right---rte-slant-out) | `Shotgun SL Right RTE Slant Out` | pass | Shotgun | RTE |
-| 14 | [Shotgun - Strong left - LTE slant out](#shotgun---strong-left---lte-slant-out) | `Shotgun SL Left LTE Slant Out` | pass | Shotgun | LTE |
-| 15 | [Shotgun - Strong left - QB sweep left](#shotgun---strong-left---qb-sweep-left) | `Shotgun SL Left 19 Sweep` | run | Shotgun | QB |
-| 16 | [Shotgun - Strong right - QB sweep right](#shotgun---strong-right---qb-sweep-right) | `Shotgun SL Right 18 Sweep` | run | Shotgun | QB |
-| 17 | [Shotgun - Strong right - RB sweep right](#shotgun---strong-right---rb-sweep-right) | `Shotgun SL Right 28 Sweep` | run | Shotgun | LH |
-| 18 | [Shotgun - Strong left - RB sweep left](#shotgun---strong-left---rb-sweep-left) | `Shotgun SL Left 39 Sweep` | run | Shotgun | RH |
+| 1 | [Regular I - Slot Right - 34 Power](#regular-i---slot-right---34-power) | `Regular I Slot Right 34 Power` | run | Regular I | TB |
+| 2 | [Regular I - Slot Left - 35 Power](#regular-i---slot-left---35-power) | `Regular I Slot Left 35 Power` | run | Regular I | TB |
+| 3 | [Regular I - Slot Right - LTE Jet](#regular-i---slot-right---lte-jet) | `Regular I Slot Right LTE Jet` | run | Regular I | LTE |
+| 4 | [Regular I - Slot Left - RTE Jet](#regular-i---slot-left---rte-jet) | `Regular I Slot Left RTE Jet` | run | Regular I | RTE |
+| 5 | [Regular I - Slot Right - 49 Jet](#regular-i---slot-right---49-jet) | `Regular I Slot Right 49 Jet` | run | Regular I | SL |
+| 6 | [Regular I - Slot Left - 48 Jet](#regular-i---slot-left---48-jet) | `Regular I Slot Left 48 Jet` | run | Regular I | SL |
+| 7 | [Split Backs - Slot Right - 38 Pitch](#split-backs---slot-right---38-pitch) | `Split Backs Slot Right 38 Pitch` | run | Split Backs | LH |
+| 8 | [Split Backs - Slot Left - 29 Pitch](#split-backs---slot-left---29-pitch) | `Split Backs Slot Left 29 Pitch` | run | Split Backs | RH |
+| 9 | [Split Backs - Slot Right - 18 Sweep](#split-backs---slot-right---18-sweep) | `Split Backs Slot Right 18 Sweep` | run | Split Backs | QB |
+| 10 | [Split Backs - Slot Left - 19 Sweep](#split-backs---slot-left---19-sweep) | `Split Backs Slot Left 19 Sweep` | run | Split Backs | QB |
+| 11 | [Split Backs - Slot Left - 19 Fake Sweep](#split-backs---slot-left---19-fake-sweep) | `Split Backs Slot Left 19 Fake Sweep` | run | Split Backs | QB |
+| 12 | [Split Backs - Slot Right - 18 Fake Sweep](#split-backs---slot-right---18-fake-sweep) | `Split Backs Slot Right 18 Fake Sweep` | run | Split Backs | QB |
+| 13 | [Shotgun - Slot Right - RTE Slant Out](#shotgun---slot-right---rte-slant-out) | `Shotgun Slot Right RTE Slant Out` | pass | Shotgun | RTE |
+| 14 | [Shotgun - Slot Left - LTE Slant Out](#shotgun---slot-left---lte-slant-out) | `Shotgun Slot Left LTE Slant Out` | pass | Shotgun | LTE |
+| 15 | [Shotgun - Slot Left - 19 Sweep](#shotgun---slot-left---19-sweep) | `Shotgun Slot Left 19 Sweep` | run | Shotgun | QB |
+| 16 | [Shotgun - Slot Right - 18 Sweep](#shotgun---slot-right---18-sweep) | `Shotgun Slot Right 18 Sweep` | run | Shotgun | QB |
+| 17 | [Shotgun - Slot Right - 38 Sweep](#shotgun---slot-right---38-sweep) | `Shotgun Slot Right 38 Sweep` | run | Shotgun | LH |
+| 18 | [Shotgun - Slot Left - 29 Sweep](#shotgun---slot-left---29-sweep) | `Shotgun Slot Left 29 Sweep` | run | Shotgun | RH |
 
 # Regular I
 
 ---
 
-## I Formation - Strong Right - Off tackle right
+## Regular I - Slot Right - 34 Power
 
-**Call it:** `Regular I SL Right 34 Power`
+**Call it:** `Regular I Slot Right 34 Power`
 
-![I Formation - Strong Right - Off tackle right](playbook/i-form/cards/i-power-r-5-3.svg)
+![Regular I - Slot Right - 34 Power](playbook/i-form/cards/i-power-r-5-3.svg)
 
 | Position | Assignment |
 |---|---|
@@ -58,11 +58,11 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## I Formation - Strong Left - Off tackle left
+## Regular I - Slot Left - 35 Power
 
-**Call it:** `Regular I SL Left 35 Power`
+**Call it:** `Regular I Slot Left 35 Power`
 
-![I Formation - Strong Left - Off tackle left](playbook/i-form/cards/i-power-l-5-3.svg)
+![Regular I - Slot Left - 35 Power](playbook/i-form/cards/i-power-l-5-3.svg)
 
 | Position | Assignment |
 |---|---|
@@ -87,11 +87,11 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## I Formation - Strong Right - LTE jet right
+## Regular I - Slot Right - LTE Jet
 
-**Call it:** `Regular I SL Right LTE Jet`
+**Call it:** `Regular I Slot Right LTE Jet`
 
-![I Formation - Strong Right - LTE jet right](playbook/i-form/cards/i-te-jet-r-5-3.svg)
+![Regular I - Slot Right - LTE Jet](playbook/i-form/cards/i-te-jet-r-5-3.svg)
 
 | Position | Assignment |
 |---|---|
@@ -115,11 +115,11 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## I Formation - Strong Left - RTE jet left
+## Regular I - Slot Left - RTE Jet
 
-**Call it:** `Regular I SL Left RTE Jet`
+**Call it:** `Regular I Slot Left RTE Jet`
 
-![I Formation - Strong Left - RTE jet left](playbook/i-form/cards/i-te-jet-l-5-3.svg)
+![Regular I - Slot Left - RTE Jet](playbook/i-form/cards/i-te-jet-l-5-3.svg)
 
 | Position | Assignment |
 |---|---|
@@ -143,11 +143,11 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## I Formation - Strong Right - Slot jet left
+## Regular I - Slot Right - 49 Jet
 
-**Call it:** `Regular I SL Right 49 Jet`
+**Call it:** `Regular I Slot Right 49 Jet`
 
-![I Formation - Strong Right - Slot jet left](playbook/i-form/cards/i-sl-jet-l-5-3.svg)
+![Regular I - Slot Right - 49 Jet](playbook/i-form/cards/i-sl-jet-l-5-3.svg)
 
 | Position | Assignment |
 |---|---|
@@ -171,11 +171,11 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## I Formation - Strong Left - Slot jet right
+## Regular I - Slot Left - 48 Jet
 
-**Call it:** `Regular I SL Left 48 Jet`
+**Call it:** `Regular I Slot Left 48 Jet`
 
-![I Formation - Strong Left - Slot jet right](playbook/i-form/cards/i-sl-jet-r-5-3.svg)
+![Regular I - Slot Left - 48 Jet](playbook/i-form/cards/i-sl-jet-r-5-3.svg)
 
 | Position | Assignment |
 |---|---|
@@ -201,11 +201,11 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Split formation - Strong right - Quick pitch right
+## Split Backs - Slot Right - 38 Pitch
 
-**Call it:** `Split SL Right 28 Pitch`
+**Call it:** `Split Backs Slot Right 38 Pitch`
 
-![Split formation - Strong right - Quick pitch right](playbook/split-backs/cards/sb-pitch-r-5-3.svg)
+![Split Backs - Slot Right - 38 Pitch](playbook/split-backs/cards/sb-pitch-r-5-3.svg)
 
 | Position | Assignment |
 |---|---|
@@ -229,11 +229,11 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Split formation - Strong left - Quick pitch left
+## Split Backs - Slot Left - 29 Pitch
 
-**Call it:** `Split SL Left 39 Pitch`
+**Call it:** `Split Backs Slot Left 29 Pitch`
 
-![Split formation - Strong left - Quick pitch left](playbook/split-backs/cards/sb-pitch-l-5-3.svg)
+![Split Backs - Slot Left - 29 Pitch](playbook/split-backs/cards/sb-pitch-l-5-3.svg)
 
 | Position | Assignment |
 |---|---|
@@ -257,11 +257,11 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Split formation - Strong right - QB sweep right
+## Split Backs - Slot Right - 18 Sweep
 
-**Call it:** `Split SL Right 18 Sweep`
+**Call it:** `Split Backs Slot Right 18 Sweep`
 
-![Split formation - Strong right - QB sweep right](playbook/split-backs/cards/sb-qb-sweep-r-5-3.svg)
+![Split Backs - Slot Right - 18 Sweep](playbook/split-backs/cards/sb-qb-sweep-r-5-3.svg)
 
 | Position | Assignment |
 |---|---|
@@ -285,11 +285,11 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Split formation - Strong left - QB sweep left
+## Split Backs - Slot Left - 19 Sweep
 
-**Call it:** `Split SL Left 19 Sweep`
+**Call it:** `Split Backs Slot Left 19 Sweep`
 
-![Split formation - Strong left - QB sweep left](playbook/split-backs/cards/sb-qb-sweep-l-5-3.svg)
+![Split Backs - Slot Left - 19 Sweep](playbook/split-backs/cards/sb-qb-sweep-l-5-3.svg)
 
 | Position | Assignment |
 |---|---|
@@ -313,11 +313,11 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Split formation - Strong left - Fake handoff right QB sweep left
+## Split Backs - Slot Left - 19 Fake Sweep
 
-**Call it:** `Split SL Left 19 Fake Sweep`
+**Call it:** `Split Backs Slot Left 19 Fake Sweep`
 
-![Split formation - Strong left - Fake handoff right QB sweep left](playbook/split-backs/cards/sb-fake-sweep-l-5-3.svg)
+![Split Backs - Slot Left - 19 Fake Sweep](playbook/split-backs/cards/sb-fake-sweep-l-5-3.svg)
 
 | Position | Assignment |
 |---|---|
@@ -341,11 +341,11 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Split formation - Strong right - Fake handoff left QB sweep right
+## Split Backs - Slot Right - 18 Fake Sweep
 
-**Call it:** `Split SL Right 18 Fake Sweep`
+**Call it:** `Split Backs Slot Right 18 Fake Sweep`
 
-![Split formation - Strong right - Fake handoff left QB sweep right](playbook/split-backs/cards/sb-fake-sweep-r-5-3.svg)
+![Split Backs - Slot Right - 18 Fake Sweep](playbook/split-backs/cards/sb-fake-sweep-r-5-3.svg)
 
 | Position | Assignment |
 |---|---|
@@ -371,11 +371,11 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Shotgun - Strong right - RTE slant out
+## Shotgun - Slot Right - RTE Slant Out
 
-**Call it:** `Shotgun SL Right RTE Slant Out`
+**Call it:** `Shotgun Slot Right RTE Slant Out`
 
-![Shotgun - Strong right - RTE slant out](playbook/shotgun/cards/sg-te-out-r-5-3.svg)
+![Shotgun - Slot Right - RTE Slant Out](playbook/shotgun/cards/sg-te-out-r-5-3.svg)
 
 | Position | Assignment |
 |---|---|
@@ -399,11 +399,11 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Shotgun - Strong left - LTE slant out
+## Shotgun - Slot Left - LTE Slant Out
 
-**Call it:** `Shotgun SL Left LTE Slant Out`
+**Call it:** `Shotgun Slot Left LTE Slant Out`
 
-![Shotgun - Strong left - LTE slant out](playbook/shotgun/cards/sg-te-out-l-5-3.svg)
+![Shotgun - Slot Left - LTE Slant Out](playbook/shotgun/cards/sg-te-out-l-5-3.svg)
 
 | Position | Assignment |
 |---|---|
@@ -427,11 +427,11 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Shotgun - Strong left - QB sweep left
+## Shotgun - Slot Left - 19 Sweep
 
-**Call it:** `Shotgun SL Left 19 Sweep`
+**Call it:** `Shotgun Slot Left 19 Sweep`
 
-![Shotgun - Strong left - QB sweep left](playbook/shotgun/cards/sg-qb-sweep-l-5-3.svg)
+![Shotgun - Slot Left - 19 Sweep](playbook/shotgun/cards/sg-qb-sweep-l-5-3.svg)
 
 | Position | Assignment |
 |---|---|
@@ -455,11 +455,11 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Shotgun - Strong right - QB sweep right
+## Shotgun - Slot Right - 18 Sweep
 
-**Call it:** `Shotgun SL Right 18 Sweep`
+**Call it:** `Shotgun Slot Right 18 Sweep`
 
-![Shotgun - Strong right - QB sweep right](playbook/shotgun/cards/sg-qb-sweep-r-5-3.svg)
+![Shotgun - Slot Right - 18 Sweep](playbook/shotgun/cards/sg-qb-sweep-r-5-3.svg)
 
 | Position | Assignment |
 |---|---|
@@ -483,11 +483,11 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Shotgun - Strong right - RB sweep right
+## Shotgun - Slot Right - 38 Sweep
 
-**Call it:** `Shotgun SL Right 28 Sweep`
+**Call it:** `Shotgun Slot Right 38 Sweep`
 
-![Shotgun - Strong right - RB sweep right](playbook/shotgun/cards/sg-rb-sweep-r-5-3.svg)
+![Shotgun - Slot Right - 38 Sweep](playbook/shotgun/cards/sg-rb-sweep-r-5-3.svg)
 
 | Position | Assignment |
 |---|---|
@@ -511,11 +511,11 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Shotgun - Strong left - RB sweep left
+## Shotgun - Slot Left - 29 Sweep
 
-**Call it:** `Shotgun SL Left 39 Sweep`
+**Call it:** `Shotgun Slot Left 29 Sweep`
 
-![Shotgun - Strong left - RB sweep left](playbook/shotgun/cards/sg-rb-sweep-l-5-3.svg)
+![Shotgun - Slot Left - 29 Sweep](playbook/shotgun/cards/sg-rb-sweep-l-5-3.svg)
 
 | Position | Assignment |
 |---|---|
