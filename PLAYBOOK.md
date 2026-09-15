@@ -20,6 +20,8 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 | 12 | [Shotgun - Strong left - LTE slant out](#shotgun---strong-left---lte-slant-out) | `Shotgun SL Left LTE Slant Out` | pass | Shotgun | LTE |
 | 13 | [Shotgun - Strong left - QB sweep left](#shotgun---strong-left---qb-sweep-left) | `Shotgun SL Left 19 Sweep` | run | Shotgun | QB |
 | 14 | [Shotgun - Strong right - QB sweep right](#shotgun---strong-right---qb-sweep-right) | `Shotgun SL Right 18 Sweep` | run | Shotgun | QB |
+| 15 | [Shotgun - Strong right - RB sweep right](#shotgun---strong-right---rb-sweep-right) | `Shotgun SL Right 28 Sweep` | run | Shotgun | LH |
+| 16 | [Shotgun - Strong left - RB sweep left](#shotgun---strong-left---rb-sweep-left) | `Shotgun SL Left 39 Sweep` | run | Shotgun | RH |
 
 # Regular I
 
@@ -420,4 +422,60 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 - The quarterback keeps it every time — tell him before the snap, there is no read.
 - The left halfback's fake is the play. If he jogs, nobody follows him and the defense is waiting at the edge.
 - The quarterback stays behind the right halfback until the block is made, then turns it up. Running past his blocker is how the sweep loses yards.
+
+---
+
+## Shotgun - Strong right - RB sweep right
+
+**Call it:** `Shotgun SL Right 28 Sweep`
+
+![Shotgun - Strong right - RB sweep right](playbook/shotgun/cards/sg-rb-sweep-r-5-3.svg)
+
+| Position | Assignment |
+|---|---|
+| **LTE** | End head up on you. Cut him off — get between him and the ball. |
+| **LT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
+| **LG** | Nobody on you. Cut off the backside. Never quit on the play. |
+| **C** | Reach the nose to your right. Head across his playside shoulder. |
+| **RG** | Nobody on you. Climb to the playside linebacker. Head across him. |
+| **RT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
+| **RTE** | End head up on you. Turn him inside. The ball goes around behind you. |
+| **SL** | Run at the corner and screen him off. Stay in his way. |
+| **QB** | Hand the ball to the left halfback as he crosses in front of you, then fake a run to the left. |
+| **LH** **(ball)** | Cross in front of the quarterback, take the handoff going right and get to the edge behind the right halfback. Turn up outside his block. |
+| **RH** | Lead outside our end. Block the first man out there — here it is the corner. |
+
+**Coaching points**
+
+- The handoff happens in front of the quarterback: the left halfback crosses close and flat, and the quarterback puts it in his belly.
+- The left halfback stays behind the right halfback until the block is made, then turns it up. Running past his blocker is how the sweep loses yards.
+- The quarterback's fake to the left has to be real. It is what holds the backside.
+
+---
+
+## Shotgun - Strong left - RB sweep left
+
+**Call it:** `Shotgun SL Left 39 Sweep`
+
+![Shotgun - Strong left - RB sweep left](playbook/shotgun/cards/sg-rb-sweep-l-5-3.svg)
+
+| Position | Assignment |
+|---|---|
+| **LTE** | End head up on you. Turn him inside. The ball goes around behind you. |
+| **LT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
+| **LG** | Nobody on you. Climb to the playside linebacker. Head across him. |
+| **C** | Reach the nose to your left. Head across his playside shoulder. |
+| **RG** | Nobody on you. Cut off the backside. Never quit on the play. |
+| **RT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
+| **RTE** | End head up on you. Cut him off — get between him and the ball. |
+| **SL** | Run at the corner and screen him off. Stay in his way. |
+| **QB** | Hand the ball to the right halfback as he crosses in front of you, then fake a run to the right. |
+| **LH** | Lead outside our end. Block the first man out there — here it is the corner. |
+| **RH** **(ball)** | Cross in front of the quarterback, take the handoff going left and get to the edge behind the left halfback. Turn up outside his block. |
+
+**Coaching points**
+
+- The handoff happens in front of the quarterback: the right halfback crosses close and flat, and the quarterback puts it in his belly.
+- The right halfback stays behind the left halfback until the block is made, then turns it up. Running past his blocker is how the sweep loses yards.
+- The quarterback's fake to the right has to be real. It is what holds the backside.
 
