@@ -192,6 +192,12 @@ def main(argv=None) -> int:
     expected_book = len(plays)  # the book is the plays; fronts print from their own pages
 
     failures = []
+    # Headless Chrome loads every image before it prints, so the page count below cannot
+    # see a lazy image. A real browser's print preview can: it leaves every diagram that
+    # has not scrolled near the screen unloaded, and the book printed four plays of 18.
+    if 'loading="lazy"' in (ROOT / "print.html").read_text(encoding="utf-8"):
+        failures.append("print.html has lazy-loaded images — print preview skips them")
+
     with tempfile.TemporaryDirectory() as tmp:
         tmp = Path(tmp)
         profile = tmp
