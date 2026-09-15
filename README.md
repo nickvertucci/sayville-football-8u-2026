@@ -230,7 +230,9 @@ because they are in the same drop-target list and not a second set of handlers t
 have to be kept in step.
 
 `roster.json` carries them under `packages`, one array of groups per side, and **Copy
-roster.json** writes them back. Trailing empty packages are dropped, so an untouched board
+roster.json** writes them back. A package can have a name under `package_names`, in the
+same order — the offense's are Shifty, Fortnite, Total Recall, Maverick, Bigshow and Tiny —
+and a package without one is shown by its number. Trailing empty packages are dropped, so an untouched board
 adds nothing to the file rather than a page of empty groups. Offense package one ships
 named; the squad rail is how you fill the rest.
 

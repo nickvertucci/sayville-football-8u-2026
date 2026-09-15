@@ -1981,7 +1981,8 @@ SITE_JS = """
           .map(function (p) { return p.spot ? p.name + ' (' + p.spot + ')' : p.name; });
         var outs = starters.filter(function (n) { return names.indexOf(n) < 0; });
         if (!ins.length && !outs.length) {
-          note.textContent = 'Same players as package 1';
+          var first = boxes[0].querySelector('.dc-pkg-h');
+          note.textContent = 'Same players as ' + (first ? first.textContent : 'package 1');
           return;
         }
         [['In', ins], ['Out', outs]].forEach(function (row) {
@@ -3785,7 +3786,8 @@ def side_squad(order: list[str], names_by_pos: dict) -> list[tuple[str, str]]:
 
 
 def side_board(side: str, order: list[str], alt_order: list[str],
-               names_by_pos: dict, label_fn, packages: list | None = None) -> str:
+               names_by_pos: dict, label_fn, packages: list | None = None,
+               package_names: list | None = None) -> str:
     """One side of the ball, every rotation, as columns of one grid.
 
     Rotation belongs on the X axis. The question this page exists to answer is "the
@@ -3845,7 +3847,9 @@ def side_board(side: str, order: list[str], alt_order: list[str],
                 else '<button type="button" class="dc-open">Open</button>')
 
     pkgs = "".join(
-        f'<div class="dc-pkg"><p class="dc-pkg-h">Package {n}</p>'
+        # A package the coach has named is called by its name; the rest by number.
+        f'<div class="dc-pkg"><p class="dc-pkg-h">'
+        f'{esc((package_names or [])[n - 1] if n - 1 < len(package_names or []) else f"Package {n}")}</p>'
         + "".join(
             f'<div class="dc-pkg-slot" data-side="{side}" data-pkg="{n}" '
             f'data-at="{at}"{spot_attr(at)}>{in_slot(n, at)}</div>'
@@ -3929,7 +3933,7 @@ def write_depth_chart(formations: list[dict], defenses: dict, root: Path) -> str
             f'<section class="dc-side" data-side="{side}">'
             f'<p class="hero-head">{esc(heading)}'
             f'<span class="rot-sub">{esc(sub)}</span></p>'
-            f'{side_board(side, order, alts, roster.get(side, {}), label, packs)}'
+            f'{side_board(side, order, alts, roster.get(side, {}), label, packs, (roster.get("package_names") or {}).get(side))}'
             f'</section>'
         )
 
