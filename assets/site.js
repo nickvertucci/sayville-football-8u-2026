@@ -448,7 +448,8 @@
           .map(function (p) { return p.spot ? p.name + ' (' + p.spot + ')' : p.name; });
         var outs = starters.filter(function (n) { return names.indexOf(n) < 0; });
         if (!ins.length && !outs.length) {
-          note.textContent = 'Same players as package 1';
+          var first = boxes[0].querySelector('.dc-pkg-h');
+          note.textContent = 'Same players as ' + (first ? first.textContent : 'package 1');
           return;
         }
         [['In', ins], ['Out', outs]].forEach(function (row) {
