@@ -285,8 +285,8 @@ something.
 
 ## Printing
 
-- **Print book** (top bar) → 22 landscape pages: 18 plays then 4 defensive fronts,
-  one per sheet.
+- **Print playbook** (home page) → every play, one diagram
+  per landscape letter sheet — 18 pages, the same sheet each play prints from its own page.
 - **Print** (on any play or front page) → that one card, one landscape sheet.
 - **Print** (on the depth chart) → two portrait sheets, offense then defense, each with
   every column on it. One goes in each coordinator's pocket. Whatever the board

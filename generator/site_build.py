@@ -8,7 +8,7 @@ to the card SVGs, and so GitHub Pages can serve from "/" with no build step:
     f-<formation>.html  one formation: its notes and its plays
     p-<play>.html       one play, deep-linkable, prints to a single landscape sheet
     rules.html          the league rulebook, verbatim, from rulebook/*.txt
-    print.html          the whole book, one play per landscape sheet
+    print.html          the whole playbook, one play diagram per landscape sheet
     assets/site.css     one stylesheet for all of it
     assets/site.js      play switcher, arrow-key paging, call sheet filtering
 
@@ -1381,10 +1381,10 @@ footer.site a { color: var(--accent-ink); }
   ul.coach { columns: 3; column-gap: 18px; margin-top: 3px; }
   ul.coach li { font-size: 8pt; line-height: 1.32; margin-bottom: 2px; }
   a[href]::after { content: ""; }
-  /* A play printed from its own page is the graphic and nothing else. The card already
-     carries the play's name and call in its header strip, so the page's header, the
-     assignments and the coaching points all go, and the diagram takes the sheet. The
-     printed book keeps them. */
+  /* A play printed from its own page — or from the print book, which prints every play
+     the same way — is the graphic and nothing else. The diagram carries the play's name
+     and code in its corners, so the page's header, the assignments and the coaching
+     points all go, and the diagram takes the sheet. */
   main.play-page article.play > header, main.play-page .block-title,
   main.play-page dl.assign, main.play-page ul.coach { display: none !important; }
   /* And the graphic fills the sheet. The rule above only lets a diagram shrink to fit,
@@ -2890,6 +2890,7 @@ def write_home(formations: list[dict], defenses: dict) -> str:
 <div class="quicklinks">
   <a class="qlink" href="calls.html">{icon('search')}<span>Call sheet</span></a>
   <a class="qlink" href="install.html">{icon('calendar')}<span>Install</span></a>
+  <a class="qlink" href="print.html">{icon('printer')}<span>Print playbook</span></a>
 </div>
 
 <p class="hero-head">Formations</p>
@@ -4072,15 +4073,16 @@ def write_defense_page(front: dict, formations: list[dict], defenses: dict) -> s
 
 
 def write_print_book(formations: list[dict], defenses: dict) -> str:
-    total = sum(len(f["_plays"]) for f in formations) + len(our_fronts(defenses))
+    # The whole playbook the way a single play prints from its own page: each play's
+    # diagram alone, filling a letter sheet turned landscape. Same `play-page` class, so
+    # the same print rules hide the words, and a coach printing the book gets exactly
+    # the sheets he would get printing every play one at a time.
+    total = sum(len(f["_plays"]) for f in formations)
     arts = [play_article(f, p, defenses, single=blocking.DEFAULT_FRONT)
             for f in formations for p in f["_plays"]]
-    arts += [defense_article(d) for d in our_fronts(defenses).values()]
     body = f"""<div class="print-intro">
-  <h1 class="page">Print the whole book</h1>
-  <p class="lede">{total} plays, one per landscape sheet, diagram first. Hit the button
-  (or your browser's print command) and print to PDF for a binder. To print a single
-  play instead, open that play and use the Print button there.</p>
+  <h1 class="page">Print the playbook</h1>
+  <p class="lede">All {total} plays, one per landscape sheet.</p>
   <p><button type="button" class="btn solid"
      onclick="window.print()">Print {total} plays</button></p>
 </div>
@@ -4091,8 +4093,9 @@ def write_print_book(formations: list[dict], defenses: dict) -> str:
         formations,
         defenses=defenses,
         active_nav="print",
-        description=f"All {total} plays formatted one per landscape page.",
-        landscape=True,
+        description=f"All {total} plays, one per landscape page.",
+        page_rule="size: letter landscape; margin: 0.25in;",
+        main_attrs=' class="play-page"',
     )
 
 

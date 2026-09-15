@@ -1335,10 +1335,10 @@ footer.site a { color: var(--accent-ink); }
   ul.coach { columns: 3; column-gap: 18px; margin-top: 3px; }
   ul.coach li { font-size: 8pt; line-height: 1.32; margin-bottom: 2px; }
   a[href]::after { content: ""; }
-  /* A play printed from its own page is the graphic and nothing else. The card already
-     carries the play's name and call in its header strip, so the page's header, the
-     assignments and the coaching points all go, and the diagram takes the sheet. The
-     printed book keeps them. */
+  /* A play printed from its own page — or from the print book, which prints every play
+     the same way — is the graphic and nothing else. The diagram carries the play's name
+     and code in its corners, so the page's header, the assignments and the coaching
+     points all go, and the diagram takes the sheet. */
   main.play-page article.play > header, main.play-page .block-title,
   main.play-page dl.assign, main.play-page ul.coach { display: none !important; }
   /* And the graphic fills the sheet. The rule above only lets a diagram shrink to fit,
