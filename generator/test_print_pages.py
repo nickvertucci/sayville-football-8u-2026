@@ -189,7 +189,7 @@ def main(argv=None) -> int:
     # already spilling: practices 1-4 fitted because they are the short ones, and the
     # three carrying position groups, an install block and a scrimmage did not.
     practices = sorted(ROOT.glob("install-*.html"))
-    expected_book = len(plays) + len(fronts)
+    expected_book = len(plays)  # the book is the plays; fronts print from their own pages
 
     failures = []
     with tempfile.TemporaryDirectory() as tmp:
