@@ -97,7 +97,7 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 **Call it:** `Regular I Slot Right LTE Sweep`
 
-![Regular I - Slot Right - LTE Sweep](playbook/i-form/cards/i-te-jet-r-4-4.svg)
+![Regular I - Slot Right - LTE Sweep](playbook/i-form/cards/i-te-sweep-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -125,7 +125,7 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 **Call it:** `Regular I Slot Left RTE Sweep`
 
-![Regular I - Slot Left - RTE Sweep](playbook/i-form/cards/i-te-jet-l-4-4.svg)
+![Regular I - Slot Left - RTE Sweep](playbook/i-form/cards/i-te-sweep-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -153,7 +153,7 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 **Call it:** `Regular I Slot Right 49 Sweep`
 
-![Regular I - Slot Right - 49 Sweep](playbook/i-form/cards/i-sl-jet-l-4-4.svg)
+![Regular I - Slot Right - 49 Sweep](playbook/i-form/cards/i-sl-sweep-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -181,7 +181,7 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 **Call it:** `Regular I Slot Left 48 Sweep`
 
-![Regular I - Slot Left - 48 Sweep](playbook/i-form/cards/i-sl-jet-r-4-4.svg)
+![Regular I - Slot Left - 48 Sweep](playbook/i-form/cards/i-sl-sweep-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
