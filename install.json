@@ -225,8 +225,8 @@
       "n": 7,
       "date": "2026-09-17",
       "phase": "season",
-      "focus": "Split Backs: slot jet and TE jet",
-      "emphasis": "Same long block as Tuesday. Review S-1 and S-2, then the jets: S-7 and S-8 (slot jet) and S-9 and S-10 (TE jet). The runner stays down until the snap, comes across, takes the handoff at full speed, and turns up behind the halfbacks.",
+      "focus": "Split Backs: 19 Fake Sweep, plus Tuesday's jets",
+      "emphasis": "One long block after the warm-up. Review Tuesday — S-1, S-2, the slot jet and the TE jet — then install S-5, Slot Left 19 Fake Sweep. Fake the handoff to the right halfback, then the quarterback keeps it left behind the left halfback.",
       "blocks": [
         {
           "tag": "A",
@@ -242,14 +242,16 @@
           "time": "5:35–6:45",
           "notes": [
             "One group, the rest of practice",
-            "S-1 and S-2 first, then S-7 and S-8 (49 Jet, 48 Jet), then S-9 and S-10 (LTE Jet, RTE Jet)",
+            "Tuesday first — S-1, S-2, S-7, S-8, S-9, S-10 — then S-5, 19 Fake Sweep",
             "In and out of the huddle every rep. Slot Right or Slot Left, then the number and the word — or LTE Jet / RTE Jet"
           ]
         }
       ],
-      "huddle": "S-7 and S-8 are the slot jet. S-9 is LTE Jet, S-10 is RTE Jet. Stay down, come across, handoff at full speed.",
+      "huddle": "S-5 is 19 Fake Sweep. Fake to the right halfback, keep it left.",
       "huddle_time": "6:45–7:00",
-      "plays": [],
+      "plays": [
+        "sb-fake-sweep-l"
+      ],
       "review": [
         "sb-pitch-r",
         "sb-pitch-l",
