@@ -465,10 +465,10 @@ table.dc-sub thead th {
   min-height: 18px; display: flex; align-items: center; gap: 6px;
   padding: 1px 0; min-width: 0; font-size: 13px; font-weight: 700; color: var(--ink);
 }
-.dc-pkg-slot[data-spot]::before {
-  content: attr(data-spot);
-  flex: 0 0 28px; font-size: 9.5px; font-weight: 800; letter-spacing: .3px;
-  color: var(--muted); text-transform: uppercase;
+.dc-pkg-slot[data-n]::before {
+  content: "#" attr(data-n);
+  flex: 0 0 2.4em; font-size: 9.5px; font-weight: 800; letter-spacing: .3px;
+  color: var(--muted);
 }
 .dc-pkg-slot + .dc-pkg-slot { margin-top: 1px; }
 .dc-pkg-slot[data-spot="LTE"],
@@ -3184,12 +3184,11 @@ ROTATIONS = [str(n) for n in range(1, 7)]
 PACKAGE_COUNT = {"offense": 6, "defense": 5}
 PACKAGE_SIZE = {"offense": 11, "defense": 3}
 
-# What each side calls its packages. The offense heading names the spots the group is
-# made of, in the order the slots sit in — the line does not change between packages,
-# so the package IS the backfield, and saying which four it is turns a box of names
-# into something a coach can check at a glance.
+# What each side calls its packages. Slots on the card are numbered, not named —
+# the same eleven every package, #1 through #11 — so the heading does not have to
+# list QB-FB-TB-SL to explain the box.
 PACKAGE_TITLE = {
-    "offense": "Offensive QB-FB-TB-SL Packages",
+    "offense": "Offensive Packages",
     "defense": "Packages",
 }
 
@@ -3294,7 +3293,12 @@ def side_board(side: str, order: list[str], alt_order: list[str],
         pair = packs[n - 1] if n - 1 < len(packs) else []
         name = pair[at] if isinstance(pair, list) and at < len(pair) else ""
         label = spots[at] if at < len(spots) else ""
-        attr = f' data-spot="{esc(label)}"' if label else ""
+        # Numbered on the card (#1, #2, …). data-spot stays the real position so
+        # the dashed breaks at the tight ends and the line still fire, and the
+        # sub card can still say Joseph P. (RTE).
+        attr = f' data-n="{at + 1}"'
+        if label:
+            attr += f' data-spot="{esc(label)}"'
         who = esc(name) if name else ""
         return f'<div class="dc-pkg-slot"{attr}>{who}</div>'
 
