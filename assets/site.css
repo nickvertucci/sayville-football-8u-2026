@@ -399,14 +399,15 @@ table.dc-sub tbody th {
 }
 .dc-pkg-slot[data-spot]::before {
   content: attr(data-spot);
-  flex: 0 0 22px; font-size: 9.5px; font-weight: 800; letter-spacing: .3px;
+  flex: 0 0 28px; font-size: 9.5px; font-weight: 800; letter-spacing: .3px;
   color: var(--muted); text-transform: uppercase;
 }
 .dc-pkg-slot + .dc-pkg-slot { margin-top: 1px; }
-.dc-pkg-slot[data-spot="LTE"],
-.dc-pkg-slot[data-spot="LT"] {
+.dc-pkg-pair {
+  display: grid; grid-template-columns: 1fr 1fr; column-gap: 8px;
   margin-top: 5px; padding-top: 5px; border-top: 1px dashed var(--line);
 }
+.dc-pkg-pair .dc-pkg-slot { margin-top: 0; padding-top: 0; }
 
 .dc-bar {
   display: flex; align-items: center; justify-content: flex-end; gap: 14px;
@@ -1345,8 +1346,7 @@ table.dc-board thead th { background: none; color: #000; border-bottom: 2px soli
   .dc-pkg-h { margin: 0; font-size: 6.5pt; }
   .dc-pkg-slot { min-height: 0; padding: 0; font-size: 7pt; line-height: 1.15; }
   .dc-pkg-slot + .dc-pkg-slot { margin-top: 0; }
-  .dc-pkg-slot[data-spot="LTE"],
-  .dc-pkg-slot[data-spot="LT"] { margin-top: 1px; padding-top: 1px; }
+  .dc-pkg-pair { column-gap: 4px; margin-top: 2px; padding-top: 2px; }
   .dc-subcard { flex-basis: 44%; min-width: 90px; max-width: none; padding: 2px 3px; border-radius: 0; }
   .dc-subcard-h { font-size: 6.5pt; margin: 0 0 1px; }
   .dc-sub-empty { font-size: 7pt; }
