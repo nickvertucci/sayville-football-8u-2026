@@ -428,8 +428,11 @@ table.dc-sub {
   font-size: 14.5px; line-height: 1.3;
 }
 table.dc-sub th, table.dc-sub td {
-  padding: 1px 6px 1px 0; text-align: left; vertical-align: top;
+  padding: 1px 7px 1px 0; text-align: left; vertical-align: top;
   font-weight: 700; color: var(--ink); white-space: nowrap;
+}
+table.dc-sub th:last-child, table.dc-sub td:last-child {
+  border-left: 1px solid var(--line); padding-left: 7px;
 }
 table.dc-sub thead th {
   font-size: 10.5px; font-weight: 800; letter-spacing: .4px;
@@ -1397,7 +1400,8 @@ table.dc-board thead th { background: none; color: #000; border-bottom: 2px soli
   .dc-subcard-h { font-size: 8pt; margin: 0 0 1px; }
   .dc-sub-empty { font-size: 8pt; }
   table.dc-sub { font-size: 9pt; }
-  table.dc-sub th, table.dc-sub td { padding: 0 2px 0 0; }
+  table.dc-sub th, table.dc-sub td { padding: 0 4px 0 0; }
+  table.dc-sub th:last-child, table.dc-sub td:last-child { padding-left: 4px; }
   table.dc-sub thead th { font-size: 6pt; }
   .dc-sub-pos { font-size: 7pt; }
   .dc-tools { display: none; }
