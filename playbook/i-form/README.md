@@ -45,20 +45,20 @@ Normal line splits, about a foot. Both ends are on the line; the slot is just ou
 
 **Call it:** `Regular I Slot Right 34 Power`
 
-![Regular I - Slot Right - 34 Power](cards/i-power-r-5-3.svg)
+![Regular I - Slot Right - 34 Power](cards/i-power-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
-| **LTE** | End head up on you. Cut him off — get between him and the ball. |
-| **LT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
-| **LG** | Nobody on you. Cut off the backside. Never quit on the play. |
-| **C** | Reach the nose to your right. Head across his playside shoulder. |
-| **RG** | Nobody on you. Help on the nose, then take the middle linebacker. |
-| **RT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
-| **RTE** | Leave the end — he is kicked out. Go take the outside linebacker. |
-| **SL** | Kick the end out. Aim at his outside hip. Never let him come underneath you. |
+| **LTE** | Block the left end. |
+| **LT** | Block the left outside linebacker. |
+| **LG** | Block the left tackle. |
+| **C** | Help on the left tackle, then block the left inside linebacker. |
+| **RG** | Block the right tackle. |
+| **RT** | Help on the right tackle, then block the right inside linebacker. |
+| **RTE** | Block the right end. |
+| **SL** | Block the right corner. |
 | **QB** | Open right, hand deep to the tailback, then fake the boot. It holds the backside end. |
-| **FB** | Lead through the hole. Block the first man who shows in it. |
+| **FB** | Lead through the hole, then block the right outside linebacker. |
 | **TB** **(ball)** | Take the handoff downhill at our tackle's outside hip, following the fullback. Never bounce it outside. |
 
 **Coaching points**
@@ -74,20 +74,20 @@ Normal line splits, about a foot. Both ends are on the line; the slot is just ou
 
 **Call it:** `Regular I Slot Left 35 Power`
 
-![Regular I - Slot Left - 35 Power](cards/i-power-l-5-3.svg)
+![Regular I - Slot Left - 35 Power](cards/i-power-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
-| **LTE** | Leave the end — he is kicked out. Go take the outside linebacker. |
-| **LT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
-| **LG** | Nobody on you. Help on the nose, then take the middle linebacker. |
-| **C** | Reach the nose to your left. Head across his playside shoulder. |
-| **RG** | Nobody on you. Cut off the backside. Never quit on the play. |
-| **RT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
-| **RTE** | End head up on you. Cut him off — get between him and the ball. |
-| **SL** | Kick the end out. Aim at his outside hip. Never let him come underneath you. |
+| **LTE** | Block the left end. |
+| **LT** | Help on the left tackle, then block the left inside linebacker. |
+| **LG** | Block the left tackle. |
+| **C** | Help on the right tackle, then block the right inside linebacker. |
+| **RG** | Block the right tackle. |
+| **RT** | Block the right outside linebacker. |
+| **RTE** | Block the right end. |
+| **SL** | Block the left corner. |
 | **QB** | Open left, hand deep to the tailback, then fake the boot. It holds the backside end. |
-| **FB** | Lead through the hole. Block the first man who shows in it. |
+| **FB** | Lead through the hole, then block the left outside linebacker. |
 | **TB** **(ball)** | Take the handoff downhill at our tackle's outside hip, following the fullback. Never bounce it outside. |
 
 **Coaching points**
@@ -103,21 +103,21 @@ Normal line splits, about a foot. Both ends are on the line; the slot is just ou
 
 **Call it:** `Regular I Slot Right LTE Jet`
 
-![Regular I - Slot Right - LTE Jet](cards/i-te-jet-r-5-3.svg)
+![Regular I - Slot Right - LTE Jet](cards/i-te-jet-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
 | **LTE** **(ball)** | Stay down in your stance — no motion. At the snap run flat behind the quarterback, take the handoff at full speed and get to the right edge. Turn up outside the fullback. |
-| **LT** | Tackle on your inside shoulder. Cut him off — get between him and the ball. |
-| **LG** | Nobody on you. Cut off the backside. Never quit on the play. |
-| **C** | Reach the nose to your right. Head across his playside shoulder. |
-| **RG** | Nobody on you. Climb to the playside linebacker. Head across him. |
-| **RT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
-| **RTE** | End head up on you. Turn him inside. The ball goes around behind you. |
+| **LT** | Block the left end. |
+| **LG** | Block the left tackle. |
+| **C** | Help on the left tackle, then block the left inside linebacker. |
+| **RG** | Block the right tackle. |
+| **RT** | Help on the right tackle, then block the right inside linebacker. |
+| **RTE** | Block the right end. |
 | **SL** | Run at the corner and screen him off. Stay in his way. |
 | **QB** | Open right and hand the ball to the left tight end as he comes across behind you, then fake a run to the left. |
-| **FB** | Lead outside our end, then turn up inside — the playside linebacker is the man who shows. Head across him. |
-| **TB** | Run at the outside linebacker and screen him off. Stay in his way. |
+| **FB** | Bubble out around the right end, then double team the right outside linebacker with the tailback. |
+| **TB** | Bubble out around the right end, then double team the right outside linebacker with the fullback. |
 
 **Coaching points**
 
@@ -131,21 +131,21 @@ Normal line splits, about a foot. Both ends are on the line; the slot is just ou
 
 **Call it:** `Regular I Slot Left RTE Jet`
 
-![Regular I - Slot Left - RTE Jet](cards/i-te-jet-l-5-3.svg)
+![Regular I - Slot Left - RTE Jet](cards/i-te-jet-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
-| **LTE** | End head up on you. Turn him inside. The ball goes around behind you. |
-| **LT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
-| **LG** | Nobody on you. Climb to the playside linebacker. Head across him. |
-| **C** | Reach the nose to your left. Head across his playside shoulder. |
-| **RG** | Nobody on you. Cut off the backside. Never quit on the play. |
-| **RT** | Tackle on your inside shoulder. Cut him off — get between him and the ball. |
+| **LTE** | Block the left end. |
+| **LT** | Help on the left tackle, then block the left inside linebacker. |
+| **LG** | Block the left tackle. |
+| **C** | Help on the right tackle, then block the right inside linebacker. |
+| **RG** | Block the right tackle. |
+| **RT** | Block the right end. |
 | **RTE** **(ball)** | Stay down in your stance — no motion. At the snap run flat behind the quarterback, take the handoff at full speed and get to the left edge. Turn up outside the fullback. |
 | **SL** | Run at the corner and screen him off. Stay in his way. |
 | **QB** | Open left and hand the ball to the right tight end as he comes across behind you, then fake a run to the right. |
-| **FB** | Lead outside our end, then turn up inside — the playside linebacker is the man who shows. Head across him. |
-| **TB** | Run at the outside linebacker and screen him off. Stay in his way. |
+| **FB** | Bubble out around the left end, then double team the left outside linebacker with the tailback. |
+| **TB** | Bubble out around the left end, then double team the left outside linebacker with the fullback. |
 
 **Coaching points**
 
@@ -159,20 +159,20 @@ Normal line splits, about a foot. Both ends are on the line; the slot is just ou
 
 **Call it:** `Regular I Slot Right 49 Jet`
 
-![Regular I - Slot Right - 49 Jet](cards/i-sl-jet-l-5-3.svg)
+![Regular I - Slot Right - 49 Jet](cards/i-sl-jet-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
-| **LTE** | End head up on you. Turn him inside. The ball goes around behind you. |
-| **LT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
-| **LG** | Nobody on you. Climb to the playside linebacker. Head across him. |
-| **C** | Reach the nose to your left. Head across his playside shoulder. |
-| **RG** | Nobody on you. Cut off the backside. Never quit on the play. |
-| **RT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
-| **RTE** | End head up on you. Cut him off — get between him and the ball. |
+| **LTE** | Block the left end. |
+| **LT** | Help on the left end, then block the left outside linebacker. |
+| **LG** | Block the left tackle. |
+| **C** | Help on the left tackle, then block the left inside linebacker. |
+| **RG** | Block the right tackle. |
+| **RT** | Help on the right tackle, then block the right inside linebacker. |
+| **RTE** | Block the right end. |
 | **SL** **(ball)** | At the snap run flat across the backfield, take the handoff at full speed and get to the left edge. Turn up in the alley behind the fullback. |
 | **QB** | Hand the ball to the slot as he runs past you, then fake the handoff to the tailback going right. |
-| **FB** | Lead outside our end. Block the first man out there — here it is the corner. |
+| **FB** | Bubble out around the left end, then block the left corner. |
 | **TB** | Take the fake handoff and run hard to the right. You are what holds the backside. |
 
 **Coaching points**
@@ -187,20 +187,20 @@ Normal line splits, about a foot. Both ends are on the line; the slot is just ou
 
 **Call it:** `Regular I Slot Left 48 Jet`
 
-![Regular I - Slot Left - 48 Jet](cards/i-sl-jet-r-5-3.svg)
+![Regular I - Slot Left - 48 Jet](cards/i-sl-jet-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
-| **LTE** | End head up on you. Cut him off — get between him and the ball. |
-| **LT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
-| **LG** | Nobody on you. Cut off the backside. Never quit on the play. |
-| **C** | Reach the nose to your right. Head across his playside shoulder. |
-| **RG** | Nobody on you. Climb to the playside linebacker. Head across him. |
-| **RT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
-| **RTE** | End head up on you. Turn him inside. The ball goes around behind you. |
+| **LTE** | Block the left end. |
+| **LT** | Help on the left tackle, then block the left inside linebacker. |
+| **LG** | Block the left tackle. |
+| **C** | Help on the right tackle, then block the right inside linebacker. |
+| **RG** | Block the right tackle. |
+| **RT** | Help on the right end, then block the right outside linebacker. |
+| **RTE** | Block the right end. |
 | **SL** **(ball)** | At the snap run flat across the backfield, take the handoff at full speed and get to the right edge. Turn up in the alley behind the fullback. |
 | **QB** | Hand the ball to the slot as he runs past you, then fake the handoff to the tailback going left. |
-| **FB** | Lead outside our end. Block the first man out there — here it is the corner. |
+| **FB** | Bubble out around the right end, then block the right corner. |
 | **TB** | Take the fake handoff and run hard to the left. You are what holds the backside. |
 
 **Coaching points**

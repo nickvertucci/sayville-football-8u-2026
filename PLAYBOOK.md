@@ -35,20 +35,20 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 **Call it:** `Regular I Slot Right 34 Power`
 
-![Regular I - Slot Right - 34 Power](playbook/i-form/cards/i-power-r-5-3.svg)
+![Regular I - Slot Right - 34 Power](playbook/i-form/cards/i-power-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
-| **LTE** | End head up on you. Cut him off — get between him and the ball. |
-| **LT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
-| **LG** | Nobody on you. Cut off the backside. Never quit on the play. |
-| **C** | Reach the nose to your right. Head across his playside shoulder. |
-| **RG** | Nobody on you. Help on the nose, then take the middle linebacker. |
-| **RT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
-| **RTE** | Leave the end — he is kicked out. Go take the outside linebacker. |
-| **SL** | Kick the end out. Aim at his outside hip. Never let him come underneath you. |
+| **LTE** | Block the left end. |
+| **LT** | Block the left outside linebacker. |
+| **LG** | Block the left tackle. |
+| **C** | Help on the left tackle, then block the left inside linebacker. |
+| **RG** | Block the right tackle. |
+| **RT** | Help on the right tackle, then block the right inside linebacker. |
+| **RTE** | Block the right end. |
+| **SL** | Block the right corner. |
 | **QB** | Open right, hand deep to the tailback, then fake the boot. It holds the backside end. |
-| **FB** | Lead through the hole. Block the first man who shows in it. |
+| **FB** | Lead through the hole, then block the right outside linebacker. |
 | **TB** **(ball)** | Take the handoff downhill at our tackle's outside hip, following the fullback. Never bounce it outside. |
 
 **Coaching points**
@@ -64,20 +64,20 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 **Call it:** `Regular I Slot Left 35 Power`
 
-![Regular I - Slot Left - 35 Power](playbook/i-form/cards/i-power-l-5-3.svg)
+![Regular I - Slot Left - 35 Power](playbook/i-form/cards/i-power-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
-| **LTE** | Leave the end — he is kicked out. Go take the outside linebacker. |
-| **LT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
-| **LG** | Nobody on you. Help on the nose, then take the middle linebacker. |
-| **C** | Reach the nose to your left. Head across his playside shoulder. |
-| **RG** | Nobody on you. Cut off the backside. Never quit on the play. |
-| **RT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
-| **RTE** | End head up on you. Cut him off — get between him and the ball. |
-| **SL** | Kick the end out. Aim at his outside hip. Never let him come underneath you. |
+| **LTE** | Block the left end. |
+| **LT** | Help on the left tackle, then block the left inside linebacker. |
+| **LG** | Block the left tackle. |
+| **C** | Help on the right tackle, then block the right inside linebacker. |
+| **RG** | Block the right tackle. |
+| **RT** | Block the right outside linebacker. |
+| **RTE** | Block the right end. |
+| **SL** | Block the left corner. |
 | **QB** | Open left, hand deep to the tailback, then fake the boot. It holds the backside end. |
-| **FB** | Lead through the hole. Block the first man who shows in it. |
+| **FB** | Lead through the hole, then block the left outside linebacker. |
 | **TB** **(ball)** | Take the handoff downhill at our tackle's outside hip, following the fullback. Never bounce it outside. |
 
 **Coaching points**
@@ -93,21 +93,21 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 **Call it:** `Regular I Slot Right LTE Jet`
 
-![Regular I - Slot Right - LTE Jet](playbook/i-form/cards/i-te-jet-r-5-3.svg)
+![Regular I - Slot Right - LTE Jet](playbook/i-form/cards/i-te-jet-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
 | **LTE** **(ball)** | Stay down in your stance — no motion. At the snap run flat behind the quarterback, take the handoff at full speed and get to the right edge. Turn up outside the fullback. |
-| **LT** | Tackle on your inside shoulder. Cut him off — get between him and the ball. |
-| **LG** | Nobody on you. Cut off the backside. Never quit on the play. |
-| **C** | Reach the nose to your right. Head across his playside shoulder. |
-| **RG** | Nobody on you. Climb to the playside linebacker. Head across him. |
-| **RT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
-| **RTE** | End head up on you. Turn him inside. The ball goes around behind you. |
+| **LT** | Block the left end. |
+| **LG** | Block the left tackle. |
+| **C** | Help on the left tackle, then block the left inside linebacker. |
+| **RG** | Block the right tackle. |
+| **RT** | Help on the right tackle, then block the right inside linebacker. |
+| **RTE** | Block the right end. |
 | **SL** | Run at the corner and screen him off. Stay in his way. |
 | **QB** | Open right and hand the ball to the left tight end as he comes across behind you, then fake a run to the left. |
-| **FB** | Lead outside our end, then turn up inside — the playside linebacker is the man who shows. Head across him. |
-| **TB** | Run at the outside linebacker and screen him off. Stay in his way. |
+| **FB** | Bubble out around the right end, then double team the right outside linebacker with the tailback. |
+| **TB** | Bubble out around the right end, then double team the right outside linebacker with the fullback. |
 
 **Coaching points**
 
@@ -121,21 +121,21 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 **Call it:** `Regular I Slot Left RTE Jet`
 
-![Regular I - Slot Left - RTE Jet](playbook/i-form/cards/i-te-jet-l-5-3.svg)
+![Regular I - Slot Left - RTE Jet](playbook/i-form/cards/i-te-jet-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
-| **LTE** | End head up on you. Turn him inside. The ball goes around behind you. |
-| **LT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
-| **LG** | Nobody on you. Climb to the playside linebacker. Head across him. |
-| **C** | Reach the nose to your left. Head across his playside shoulder. |
-| **RG** | Nobody on you. Cut off the backside. Never quit on the play. |
-| **RT** | Tackle on your inside shoulder. Cut him off — get between him and the ball. |
+| **LTE** | Block the left end. |
+| **LT** | Help on the left tackle, then block the left inside linebacker. |
+| **LG** | Block the left tackle. |
+| **C** | Help on the right tackle, then block the right inside linebacker. |
+| **RG** | Block the right tackle. |
+| **RT** | Block the right end. |
 | **RTE** **(ball)** | Stay down in your stance — no motion. At the snap run flat behind the quarterback, take the handoff at full speed and get to the left edge. Turn up outside the fullback. |
 | **SL** | Run at the corner and screen him off. Stay in his way. |
 | **QB** | Open left and hand the ball to the right tight end as he comes across behind you, then fake a run to the right. |
-| **FB** | Lead outside our end, then turn up inside — the playside linebacker is the man who shows. Head across him. |
-| **TB** | Run at the outside linebacker and screen him off. Stay in his way. |
+| **FB** | Bubble out around the left end, then double team the left outside linebacker with the tailback. |
+| **TB** | Bubble out around the left end, then double team the left outside linebacker with the fullback. |
 
 **Coaching points**
 
@@ -149,20 +149,20 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 **Call it:** `Regular I Slot Right 49 Jet`
 
-![Regular I - Slot Right - 49 Jet](playbook/i-form/cards/i-sl-jet-l-5-3.svg)
+![Regular I - Slot Right - 49 Jet](playbook/i-form/cards/i-sl-jet-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
-| **LTE** | End head up on you. Turn him inside. The ball goes around behind you. |
-| **LT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
-| **LG** | Nobody on you. Climb to the playside linebacker. Head across him. |
-| **C** | Reach the nose to your left. Head across his playside shoulder. |
-| **RG** | Nobody on you. Cut off the backside. Never quit on the play. |
-| **RT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
-| **RTE** | End head up on you. Cut him off — get between him and the ball. |
+| **LTE** | Block the left end. |
+| **LT** | Help on the left end, then block the left outside linebacker. |
+| **LG** | Block the left tackle. |
+| **C** | Help on the left tackle, then block the left inside linebacker. |
+| **RG** | Block the right tackle. |
+| **RT** | Help on the right tackle, then block the right inside linebacker. |
+| **RTE** | Block the right end. |
 | **SL** **(ball)** | At the snap run flat across the backfield, take the handoff at full speed and get to the left edge. Turn up in the alley behind the fullback. |
 | **QB** | Hand the ball to the slot as he runs past you, then fake the handoff to the tailback going right. |
-| **FB** | Lead outside our end. Block the first man out there — here it is the corner. |
+| **FB** | Bubble out around the left end, then block the left corner. |
 | **TB** | Take the fake handoff and run hard to the right. You are what holds the backside. |
 
 **Coaching points**
@@ -177,20 +177,20 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 **Call it:** `Regular I Slot Left 48 Jet`
 
-![Regular I - Slot Left - 48 Jet](playbook/i-form/cards/i-sl-jet-r-5-3.svg)
+![Regular I - Slot Left - 48 Jet](playbook/i-form/cards/i-sl-jet-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
-| **LTE** | End head up on you. Cut him off — get between him and the ball. |
-| **LT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
-| **LG** | Nobody on you. Cut off the backside. Never quit on the play. |
-| **C** | Reach the nose to your right. Head across his playside shoulder. |
-| **RG** | Nobody on you. Climb to the playside linebacker. Head across him. |
-| **RT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
-| **RTE** | End head up on you. Turn him inside. The ball goes around behind you. |
+| **LTE** | Block the left end. |
+| **LT** | Help on the left tackle, then block the left inside linebacker. |
+| **LG** | Block the left tackle. |
+| **C** | Help on the right tackle, then block the right inside linebacker. |
+| **RG** | Block the right tackle. |
+| **RT** | Help on the right end, then block the right outside linebacker. |
+| **RTE** | Block the right end. |
 | **SL** **(ball)** | At the snap run flat across the backfield, take the handoff at full speed and get to the right edge. Turn up in the alley behind the fullback. |
 | **QB** | Hand the ball to the slot as he runs past you, then fake the handoff to the tailback going left. |
-| **FB** | Lead outside our end. Block the first man out there — here it is the corner. |
+| **FB** | Bubble out around the right end, then block the right corner. |
 | **TB** | Take the fake handoff and run hard to the left. You are what holds the backside. |
 
 **Coaching points**
@@ -207,21 +207,21 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 **Call it:** `Split Backs Slot Right 38 Pitch`
 
-![Split Backs - Slot Right - 38 Pitch](playbook/split-backs/cards/sb-pitch-r-5-3.svg)
+![Split Backs - Slot Right - 38 Pitch](playbook/split-backs/cards/sb-pitch-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
-| **LTE** | End head up on you. Cut him off — get between him and the ball. |
-| **LT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
-| **LG** | Nobody on you. Cut off the backside. Never quit on the play. |
-| **C** | Reach the nose to your right. Head across his playside shoulder. |
-| **RG** | Nobody on you. Climb to the playside linebacker. Head across him. |
-| **RT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
-| **RTE** | End head up on you. Turn him inside. The ball goes around behind you. |
-| **SL** | Run at the corner and screen him off. Stay in his way. |
+| **LTE** | Block the left end. |
+| **LT** | Block the left inside linebacker. |
+| **LG** | Block the left tackle. |
+| **C** | Help on the right tackle, then block the right inside linebacker. |
+| **RG** | Block the right tackle. |
+| **RT** | Block the right inside linebacker. |
+| **RTE** | Block the right end. |
+| **SL** | Block the right corner. |
 | **QB** | Quick pitch to the left halfback, then run the other way, to the left, like you still have it. |
 | **LH** **(ball)** | Run flat, outside and behind the quarterback, and catch the pitch on the run. Ahead of him is a fumble. |
-| **RH** | Lead outside our end. Block the first man out there — here it is the corner. Step at the dive first to hold their linebackers. |
+| **RH** | Bubble around the right tight end, then block the right outside linebacker. |
 
 **Coaching points**
 
@@ -235,20 +235,20 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 **Call it:** `Split Backs Slot Left 29 Pitch`
 
-![Split Backs - Slot Left - 29 Pitch](playbook/split-backs/cards/sb-pitch-l-5-3.svg)
+![Split Backs - Slot Left - 29 Pitch](playbook/split-backs/cards/sb-pitch-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
-| **LTE** | End head up on you. Turn him inside. The ball goes around behind you. |
-| **LT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
-| **LG** | Nobody on you. Climb to the playside linebacker. Head across him. |
-| **C** | Reach the nose to your left. Head across his playside shoulder. |
-| **RG** | Nobody on you. Cut off the backside. Never quit on the play. |
-| **RT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
-| **RTE** | End head up on you. Cut him off — get between him and the ball. |
-| **SL** | Run at the corner and screen him off. Stay in his way. |
+| **LTE** | Block the left end. |
+| **LT** | Block the left inside linebacker. |
+| **LG** | Block the left tackle. |
+| **C** | Help on the left tackle, then block the left inside linebacker. |
+| **RG** | Block the right tackle. |
+| **RT** | Block the right inside linebacker. |
+| **RTE** | Block the right end. |
+| **SL** | Block the left corner. |
 | **QB** | Quick pitch to the right halfback, then run the other way, to the right, like you still have it. |
-| **LH** | Lead outside our end. Block the first man out there — here it is the corner. Step at the dive first to hold their linebackers. |
+| **LH** | Bubble around the left tight end, then block the left outside linebacker. |
 | **RH** **(ball)** | Run flat, outside and behind the quarterback, and catch the pitch on the run. Ahead of him is a fumble. |
 
 **Coaching points**
@@ -263,21 +263,21 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 **Call it:** `Split Backs Slot Right 18 Sweep`
 
-![Split Backs - Slot Right - 18 Sweep](playbook/split-backs/cards/sb-qb-sweep-r-5-3.svg)
+![Split Backs - Slot Right - 18 Sweep](playbook/split-backs/cards/sb-qb-sweep-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
-| **LTE** | End head up on you. Cut him off — get between him and the ball. |
+| **LTE** | End on your inside shoulder. Cut him off — get between him and the ball. |
 | **LT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
-| **LG** | Nobody on you. Cut off the backside. Never quit on the play. |
-| **C** | Reach the nose to your right. Head across his playside shoulder. |
-| **RG** | Nobody on you. Climb to the playside linebacker. Head across him. |
+| **LG** | Tackle head up on you. Cut him off — get between him and the ball. |
+| **C** | Nobody on you. Climb to the playside linebacker. Head across him. |
+| **RG** | Tackle head up on you. Step past him. Climb to the playside linebacker. Head across him. |
 | **RT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
-| **RTE** | End head up on you. Turn him inside. The ball goes around behind you. |
+| **RTE** | End on your inside shoulder. Turn him inside. The ball goes around behind you. |
 | **SL** | Run at the corner and screen him off. Stay in his way. |
 | **QB** **(ball)** | Take the snap and sweep right, flat and fast, behind the right halfback. Turn up outside his block. |
 | **LH** | Run hard to the left like you have the ball. Sell it all the way — you are the reason the defense goes the wrong way. |
-| **RH** | Lead outside our end. Block the first man out there — here it is the corner. |
+| **RH** | Lead outside our end. Block the first man out there — here it is the linebacker. |
 
 **Coaching points**
 
@@ -291,20 +291,20 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 **Call it:** `Split Backs Slot Left 19 Sweep`
 
-![Split Backs - Slot Left - 19 Sweep](playbook/split-backs/cards/sb-qb-sweep-l-5-3.svg)
+![Split Backs - Slot Left - 19 Sweep](playbook/split-backs/cards/sb-qb-sweep-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
-| **LTE** | End head up on you. Turn him inside. The ball goes around behind you. |
-| **LT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
-| **LG** | Nobody on you. Climb to the playside linebacker. Head across him. |
-| **C** | Reach the nose to your left. Head across his playside shoulder. |
-| **RG** | Nobody on you. Cut off the backside. Never quit on the play. |
-| **RT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
-| **RTE** | End head up on you. Cut him off — get between him and the ball. |
+| **LTE** | End on your inside shoulder. Turn him inside. The ball goes around behind you. |
+| **LT** | Help on the left tackle, then block the left inside linebacker. |
+| **LG** | Block the left tackle. |
+| **C** | Help on the right tackle, then block the right inside linebacker. |
+| **RG** | Block the right tackle. |
+| **RT** | Help on the right end, then block the right outside linebacker. |
+| **RTE** | Block the right end. |
 | **SL** | Run at the corner and screen him off. Stay in his way. |
 | **QB** **(ball)** | Take the snap and sweep left, flat and fast, behind the left halfback. Turn up outside his block. |
-| **LH** | Lead outside our end. Block the first man out there — here it is the corner. |
+| **LH** | Bubble out around the left tight end, then block the left outside linebacker. |
 | **RH** | Run hard to the right like you have the ball. Sell it all the way — you are the reason the defense goes the wrong way. |
 
 **Coaching points**
@@ -319,20 +319,20 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 **Call it:** `Split Backs Slot Left 19 Fake Sweep`
 
-![Split Backs - Slot Left - 19 Fake Sweep](playbook/split-backs/cards/sb-fake-sweep-l-5-3.svg)
+![Split Backs - Slot Left - 19 Fake Sweep](playbook/split-backs/cards/sb-fake-sweep-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
-| **LTE** | End head up on you. Turn him inside. The ball goes around behind you. |
-| **LT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
-| **LG** | Nobody on you. Climb to the playside linebacker. Head across him. |
-| **C** | Reach the nose to your left. Head across his playside shoulder. |
-| **RG** | Nobody on you. Cut off the backside. Never quit on the play. |
-| **RT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
-| **RTE** | End head up on you. Cut him off — get between him and the ball. |
+| **LTE** | End on your inside shoulder. Turn him inside. The ball goes around behind you. |
+| **LT** | Help on the left tackle, then block the left inside linebacker. |
+| **LG** | Block the left tackle. |
+| **C** | Help on the right tackle, then block the right inside linebacker. |
+| **RG** | Block the right tackle. |
+| **RT** | Help on the right end, then block the right outside linebacker. |
+| **RTE** | Block the right end. |
 | **SL** | Run at the corner and screen him off. Stay in his way. |
 | **QB** **(ball)** | Fake the handoff to the right halfback, then roll back left and sweep it, flat and fast, behind the left halfback. Turn up outside his block. |
-| **LH** | Lead outside our end. Block the first man out there — here it is the corner. |
+| **LH** | Bubble out around the left tight end, then block the left outside linebacker. |
 | **RH** | Take the fake from the quarterback and run hard to the right like you have the ball. Sell it all the way — you are the reason the defense goes the wrong way. |
 
 **Coaching points**
@@ -347,21 +347,21 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 **Call it:** `Split Backs Slot Right 18 Fake Sweep`
 
-![Split Backs - Slot Right - 18 Fake Sweep](playbook/split-backs/cards/sb-fake-sweep-r-5-3.svg)
+![Split Backs - Slot Right - 18 Fake Sweep](playbook/split-backs/cards/sb-fake-sweep-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
-| **LTE** | End head up on you. Cut him off — get between him and the ball. |
-| **LT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
-| **LG** | Nobody on you. Cut off the backside. Never quit on the play. |
-| **C** | Reach the nose to your right. Head across his playside shoulder. |
-| **RG** | Nobody on you. Climb to the playside linebacker. Head across him. |
-| **RT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
-| **RTE** | End head up on you. Turn him inside. The ball goes around behind you. |
+| **LTE** | Block the left end. |
+| **LT** | Help on the left end, then block the left outside linebacker. |
+| **LG** | Block the left tackle. |
+| **C** | Help on the left tackle, then block the left inside linebacker. |
+| **RG** | Block the right tackle. |
+| **RT** | Help on the right tackle, then block the right inside linebacker. |
+| **RTE** | End on your inside shoulder. Turn him inside. The ball goes around behind you. |
 | **SL** | Run at the corner and screen him off. Stay in his way. |
 | **QB** **(ball)** | Fake the handoff to the left halfback, then roll back right and sweep it, flat and fast, behind the right halfback. Turn up outside his block. |
 | **LH** | Take the fake from the quarterback and run hard to the left like you have the ball. Sell it all the way — you are the reason the defense goes the wrong way. |
-| **RH** | Lead outside our end. Block the first man out there — here it is the corner. |
+| **RH** | Bubble out around the right tight end, then block the right outside linebacker. |
 
 **Coaching points**
 
@@ -375,20 +375,20 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 **Call it:** `Split Backs Slot Right 49 Jet`
 
-![Split Backs - Slot Right - 49 Jet](playbook/split-backs/cards/sb-sl-jet-l-5-3.svg)
+![Split Backs - Slot Right - 49 Jet](playbook/split-backs/cards/sb-sl-jet-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
-| **LTE** | End head up on you. Turn him inside. The ball goes around behind you. |
-| **LT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
-| **LG** | Nobody on you. Climb to the playside linebacker. Head across him. |
-| **C** | Reach the nose to your left. Head across his playside shoulder. |
-| **RG** | Nobody on you. Cut off the backside. Never quit on the play. |
-| **RT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
-| **RTE** | End head up on you. Cut him off — get between him and the ball. |
+| **LTE** | Block the left end. |
+| **LT** | Help on the left end, then block the left outside linebacker. |
+| **LG** | Block the left tackle. |
+| **C** | Help on the left tackle, then block the left inside linebacker. |
+| **RG** | Block the right tackle. |
+| **RT** | Help on the right tackle, then block the right inside linebacker. |
+| **RTE** | Block the right end. |
 | **SL** **(ball)** | At the snap run flat across the backfield, take the handoff at full speed and get to the left edge. Turn up in the alley behind the left halfback. |
 | **QB** | Hand the ball to the slot as he runs past you, then fake the handoff to the right halfback going right. |
-| **LH** | Lead outside our end. Block the first man out there — here it is the corner. |
+| **LH** | Bubble out around the left end, then block the left corner. |
 | **RH** | Take the fake handoff and run hard to the right. You are what holds the backside. |
 
 **Coaching points**
@@ -403,21 +403,21 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 **Call it:** `Split Backs Slot Left 48 Jet`
 
-![Split Backs - Slot Left - 48 Jet](playbook/split-backs/cards/sb-sl-jet-r-5-3.svg)
+![Split Backs - Slot Left - 48 Jet](playbook/split-backs/cards/sb-sl-jet-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
-| **LTE** | End head up on you. Cut him off — get between him and the ball. |
-| **LT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
-| **LG** | Nobody on you. Cut off the backside. Never quit on the play. |
-| **C** | Reach the nose to your right. Head across his playside shoulder. |
-| **RG** | Nobody on you. Climb to the playside linebacker. Head across him. |
-| **RT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
-| **RTE** | End head up on you. Turn him inside. The ball goes around behind you. |
+| **LTE** | Block the left end. |
+| **LT** | Help on the left tackle, then block the left inside linebacker. |
+| **LG** | Block the left tackle. |
+| **C** | Help on the right tackle, then block the right inside linebacker. |
+| **RG** | Block the right tackle. |
+| **RT** | Help on the right end, then block the right outside linebacker. |
+| **RTE** | Block the right end. |
 | **SL** **(ball)** | At the snap run flat across the backfield, take the handoff at full speed and get to the right edge. Turn up in the alley behind the right halfback. |
 | **QB** | Hand the ball to the slot as he runs past you, then fake the handoff to the left halfback going left. |
 | **LH** | Take the fake handoff and run hard to the left. You are what holds the backside. |
-| **RH** | Lead outside our end. Block the first man out there — here it is the corner. |
+| **RH** | Bubble out around the right end, then block the right corner. |
 
 **Coaching points**
 
@@ -433,7 +433,7 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 **Call it:** `Shotgun Slot Right RTE Slant Out`
 
-![Shotgun - Slot Right - RTE Slant Out](playbook/shotgun/cards/sg-te-out-r-5-3.svg)
+![Shotgun - Slot Right - RTE Slant Out](playbook/shotgun/cards/sg-te-out-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -444,7 +444,7 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 | **RG** | Pass block: step back, hands up, and stay between your man and the quarterback. |
 | **RT** | Pass block: step back, hands up, and stay between your man and the quarterback. |
 | **RTE** **(ball)** | Take one step up, then slant out flat toward the right sideline, almost along the line of scrimmage. Look for the ball right away. |
-| **SL** | Run at the corner and screen him off. Stay in his way. |
+| **SL** | Block the right corner. |
 | **QB** | Catch the snap, take one step and throw to the right tight end as he slants out. If he is covered, tuck it and run. |
 | **LH** | Step up and out, hands up. Pick up anybody coming at the quarterback. |
 | **RH** | Step up and out, hands up. Pick up anybody coming at the quarterback. |
@@ -461,7 +461,7 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 **Call it:** `Shotgun Slot Left LTE Slant Out`
 
-![Shotgun - Slot Left - LTE Slant Out](playbook/shotgun/cards/sg-te-out-l-5-3.svg)
+![Shotgun - Slot Left - LTE Slant Out](playbook/shotgun/cards/sg-te-out-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -472,7 +472,7 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 | **RG** | Pass block: step back, hands up, and stay between your man and the quarterback. |
 | **RT** | Pass block: step back, hands up, and stay between your man and the quarterback. |
 | **RTE** | Pass block: step back, hands up, and stay between your man and the quarterback. |
-| **SL** | Run at the corner and screen him off. Stay in his way. |
+| **SL** | Block the left corner. |
 | **QB** | Catch the snap, take one step and throw to the left tight end as he slants out. If he is covered, tuck it and run. |
 | **LH** | Step up and out, hands up. Pick up anybody coming at the quarterback. |
 | **RH** | Step up and out, hands up. Pick up anybody coming at the quarterback. |
@@ -489,20 +489,20 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 **Call it:** `Shotgun Slot Left 19 Sweep`
 
-![Shotgun - Slot Left - 19 Sweep](playbook/shotgun/cards/sg-qb-sweep-l-5-3.svg)
+![Shotgun - Slot Left - 19 Sweep](playbook/shotgun/cards/sg-qb-sweep-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
-| **LTE** | End head up on you. Turn him inside. The ball goes around behind you. |
-| **LT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
-| **LG** | Nobody on you. Climb to the playside linebacker. Head across him. |
-| **C** | Reach the nose to your left. Head across his playside shoulder. |
-| **RG** | Nobody on you. Cut off the backside. Never quit on the play. |
-| **RT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
-| **RTE** | End head up on you. Cut him off — get between him and the ball. |
+| **LTE** | Block the left end. |
+| **LT** | Help on the left tackle, then block the left inside linebacker. |
+| **LG** | Block the left tackle. |
+| **C** | Help on the right tackle, then block the right inside linebacker. |
+| **RG** | Block the right tackle. |
+| **RT** | Help on the right end, then block the right outside linebacker. |
+| **RTE** | Block the right end. |
 | **SL** | Run at the corner and screen him off. Stay in his way. |
 | **QB** **(ball)** | Catch the snap and sweep left, flat and fast, behind the left halfback. Turn up outside his block. |
-| **LH** | Lead outside our end. Block the first man out there — here it is the corner. |
+| **LH** | Bubble out around the left end, then block the left outside linebacker. |
 | **RH** | Fake the handoff going right and run hard. Sell it all the way — you are the reason the defense goes the wrong way. |
 
 **Coaching points**
@@ -517,21 +517,21 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 **Call it:** `Shotgun Slot Right 18 Sweep`
 
-![Shotgun - Slot Right - 18 Sweep](playbook/shotgun/cards/sg-qb-sweep-r-5-3.svg)
+![Shotgun - Slot Right - 18 Sweep](playbook/shotgun/cards/sg-qb-sweep-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
-| **LTE** | End head up on you. Cut him off — get between him and the ball. |
-| **LT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
-| **LG** | Nobody on you. Cut off the backside. Never quit on the play. |
-| **C** | Reach the nose to your right. Head across his playside shoulder. |
-| **RG** | Nobody on you. Climb to the playside linebacker. Head across him. |
-| **RT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
-| **RTE** | End head up on you. Turn him inside. The ball goes around behind you. |
+| **LTE** | Block the left end. |
+| **LT** | Help on the left end, then block the left outside linebacker. |
+| **LG** | Block the left tackle. |
+| **C** | Help on the left tackle, then block the left inside linebacker. |
+| **RG** | Block the right tackle. |
+| **RT** | Help on the right tackle, then block the right inside linebacker. |
+| **RTE** | Block the right end. |
 | **SL** | Run at the corner and screen him off. Stay in his way. |
 | **QB** **(ball)** | Catch the snap and sweep right, flat and fast, behind the right halfback. Turn up outside his block. |
 | **LH** | Fake the handoff going left and run hard. Sell it all the way — you are the reason the defense goes the wrong way. |
-| **RH** | Lead outside our end. Block the first man out there — here it is the corner. |
+| **RH** | Bubble out around the right end, then block the right outside linebacker. |
 
 **Coaching points**
 
@@ -545,21 +545,21 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 **Call it:** `Shotgun Slot Right 38 Sweep`
 
-![Shotgun - Slot Right - 38 Sweep](playbook/shotgun/cards/sg-rb-sweep-r-5-3.svg)
+![Shotgun - Slot Right - 38 Sweep](playbook/shotgun/cards/sg-rb-sweep-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
-| **LTE** | End head up on you. Cut him off — get between him and the ball. |
-| **LT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
-| **LG** | Nobody on you. Cut off the backside. Never quit on the play. |
-| **C** | Reach the nose to your right. Head across his playside shoulder. |
-| **RG** | Nobody on you. Climb to the playside linebacker. Head across him. |
-| **RT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
-| **RTE** | End head up on you. Turn him inside. The ball goes around behind you. |
+| **LTE** | Block the left end. |
+| **LT** | Help on the left end, then block the left outside linebacker. |
+| **LG** | Block the left tackle. |
+| **C** | Help on the left tackle, then block the left inside linebacker. |
+| **RG** | Block the right tackle. |
+| **RT** | Help on the right tackle, then block the right inside linebacker. |
+| **RTE** | Block the right end. |
 | **SL** | Run at the corner and screen him off. Stay in his way. |
 | **QB** | Hand the ball to the left halfback as he crosses in front of you, then fake a run to the left. |
 | **LH** **(ball)** | Cross in front of the quarterback, take the handoff going right and get to the edge behind the right halfback. Turn up outside his block. |
-| **RH** | Lead outside our end. Block the first man out there — here it is the corner. |
+| **RH** | Bubble out around the right end, then block the right outside linebacker. |
 
 **Coaching points**
 
@@ -573,20 +573,20 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 **Call it:** `Shotgun Slot Left 29 Sweep`
 
-![Shotgun - Slot Left - 29 Sweep](playbook/shotgun/cards/sg-rb-sweep-l-5-3.svg)
+![Shotgun - Slot Left - 29 Sweep](playbook/shotgun/cards/sg-rb-sweep-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
-| **LTE** | End head up on you. Turn him inside. The ball goes around behind you. |
-| **LT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
-| **LG** | Nobody on you. Climb to the playside linebacker. Head across him. |
-| **C** | Reach the nose to your left. Head across his playside shoulder. |
-| **RG** | Nobody on you. Cut off the backside. Never quit on the play. |
-| **RT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
-| **RTE** | End head up on you. Cut him off — get between him and the ball. |
+| **LTE** | Block the left end. |
+| **LT** | Help on the left tackle, then block the left inside linebacker. |
+| **LG** | Block the left tackle. |
+| **C** | Help on the right tackle, then block the right inside linebacker. |
+| **RG** | Block the right tackle. |
+| **RT** | Help on the right end, then block the right outside linebacker. |
+| **RTE** | Block the right end. |
 | **SL** | Run at the corner and screen him off. Stay in his way. |
 | **QB** | Hand the ball to the right halfback as he crosses in front of you, then fake a run to the right. |
-| **LH** | Lead outside our end. Block the first man out there — here it is the corner. |
+| **LH** | Bubble out around the left end, then block the left outside linebacker. |
 | **RH** **(ball)** | Cross in front of the quarterback, take the handoff going left and get to the edge behind the left halfback. Turn up outside his block. |
 
 **Coaching points**

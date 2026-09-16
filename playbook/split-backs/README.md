@@ -39,21 +39,21 @@ Both ends are tight on the line. The two backs sit four yards deep and just over
 
 **Call it:** `Split Backs Slot Right 38 Pitch`
 
-![Split Backs - Slot Right - 38 Pitch](cards/sb-pitch-r-5-3.svg)
+![Split Backs - Slot Right - 38 Pitch](cards/sb-pitch-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
-| **LTE** | End head up on you. Cut him off — get between him and the ball. |
-| **LT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
-| **LG** | Nobody on you. Cut off the backside. Never quit on the play. |
-| **C** | Reach the nose to your right. Head across his playside shoulder. |
-| **RG** | Nobody on you. Climb to the playside linebacker. Head across him. |
-| **RT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
-| **RTE** | End head up on you. Turn him inside. The ball goes around behind you. |
-| **SL** | Run at the corner and screen him off. Stay in his way. |
+| **LTE** | Block the left end. |
+| **LT** | Block the left inside linebacker. |
+| **LG** | Block the left tackle. |
+| **C** | Help on the right tackle, then block the right inside linebacker. |
+| **RG** | Block the right tackle. |
+| **RT** | Block the right inside linebacker. |
+| **RTE** | Block the right end. |
+| **SL** | Block the right corner. |
 | **QB** | Quick pitch to the left halfback, then run the other way, to the left, like you still have it. |
 | **LH** **(ball)** | Run flat, outside and behind the quarterback, and catch the pitch on the run. Ahead of him is a fumble. |
-| **RH** | Lead outside our end. Block the first man out there — here it is the corner. Step at the dive first to hold their linebackers. |
+| **RH** | Bubble around the right tight end, then block the right outside linebacker. |
 
 **Coaching points**
 
@@ -67,20 +67,20 @@ Both ends are tight on the line. The two backs sit four yards deep and just over
 
 **Call it:** `Split Backs Slot Left 29 Pitch`
 
-![Split Backs - Slot Left - 29 Pitch](cards/sb-pitch-l-5-3.svg)
+![Split Backs - Slot Left - 29 Pitch](cards/sb-pitch-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
-| **LTE** | End head up on you. Turn him inside. The ball goes around behind you. |
-| **LT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
-| **LG** | Nobody on you. Climb to the playside linebacker. Head across him. |
-| **C** | Reach the nose to your left. Head across his playside shoulder. |
-| **RG** | Nobody on you. Cut off the backside. Never quit on the play. |
-| **RT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
-| **RTE** | End head up on you. Cut him off — get between him and the ball. |
-| **SL** | Run at the corner and screen him off. Stay in his way. |
+| **LTE** | Block the left end. |
+| **LT** | Block the left inside linebacker. |
+| **LG** | Block the left tackle. |
+| **C** | Help on the left tackle, then block the left inside linebacker. |
+| **RG** | Block the right tackle. |
+| **RT** | Block the right inside linebacker. |
+| **RTE** | Block the right end. |
+| **SL** | Block the left corner. |
 | **QB** | Quick pitch to the right halfback, then run the other way, to the right, like you still have it. |
-| **LH** | Lead outside our end. Block the first man out there — here it is the corner. Step at the dive first to hold their linebackers. |
+| **LH** | Bubble around the left tight end, then block the left outside linebacker. |
 | **RH** **(ball)** | Run flat, outside and behind the quarterback, and catch the pitch on the run. Ahead of him is a fumble. |
 
 **Coaching points**
@@ -95,21 +95,21 @@ Both ends are tight on the line. The two backs sit four yards deep and just over
 
 **Call it:** `Split Backs Slot Right 18 Sweep`
 
-![Split Backs - Slot Right - 18 Sweep](cards/sb-qb-sweep-r-5-3.svg)
+![Split Backs - Slot Right - 18 Sweep](cards/sb-qb-sweep-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
-| **LTE** | End head up on you. Cut him off — get between him and the ball. |
+| **LTE** | End on your inside shoulder. Cut him off — get between him and the ball. |
 | **LT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
-| **LG** | Nobody on you. Cut off the backside. Never quit on the play. |
-| **C** | Reach the nose to your right. Head across his playside shoulder. |
-| **RG** | Nobody on you. Climb to the playside linebacker. Head across him. |
+| **LG** | Tackle head up on you. Cut him off — get between him and the ball. |
+| **C** | Nobody on you. Climb to the playside linebacker. Head across him. |
+| **RG** | Tackle head up on you. Step past him. Climb to the playside linebacker. Head across him. |
 | **RT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
-| **RTE** | End head up on you. Turn him inside. The ball goes around behind you. |
+| **RTE** | End on your inside shoulder. Turn him inside. The ball goes around behind you. |
 | **SL** | Run at the corner and screen him off. Stay in his way. |
 | **QB** **(ball)** | Take the snap and sweep right, flat and fast, behind the right halfback. Turn up outside his block. |
 | **LH** | Run hard to the left like you have the ball. Sell it all the way — you are the reason the defense goes the wrong way. |
-| **RH** | Lead outside our end. Block the first man out there — here it is the corner. |
+| **RH** | Lead outside our end. Block the first man out there — here it is the linebacker. |
 
 **Coaching points**
 
@@ -123,20 +123,20 @@ Both ends are tight on the line. The two backs sit four yards deep and just over
 
 **Call it:** `Split Backs Slot Left 19 Sweep`
 
-![Split Backs - Slot Left - 19 Sweep](cards/sb-qb-sweep-l-5-3.svg)
+![Split Backs - Slot Left - 19 Sweep](cards/sb-qb-sweep-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
-| **LTE** | End head up on you. Turn him inside. The ball goes around behind you. |
-| **LT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
-| **LG** | Nobody on you. Climb to the playside linebacker. Head across him. |
-| **C** | Reach the nose to your left. Head across his playside shoulder. |
-| **RG** | Nobody on you. Cut off the backside. Never quit on the play. |
-| **RT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
-| **RTE** | End head up on you. Cut him off — get between him and the ball. |
+| **LTE** | End on your inside shoulder. Turn him inside. The ball goes around behind you. |
+| **LT** | Help on the left tackle, then block the left inside linebacker. |
+| **LG** | Block the left tackle. |
+| **C** | Help on the right tackle, then block the right inside linebacker. |
+| **RG** | Block the right tackle. |
+| **RT** | Help on the right end, then block the right outside linebacker. |
+| **RTE** | Block the right end. |
 | **SL** | Run at the corner and screen him off. Stay in his way. |
 | **QB** **(ball)** | Take the snap and sweep left, flat and fast, behind the left halfback. Turn up outside his block. |
-| **LH** | Lead outside our end. Block the first man out there — here it is the corner. |
+| **LH** | Bubble out around the left tight end, then block the left outside linebacker. |
 | **RH** | Run hard to the right like you have the ball. Sell it all the way — you are the reason the defense goes the wrong way. |
 
 **Coaching points**
@@ -151,20 +151,20 @@ Both ends are tight on the line. The two backs sit four yards deep and just over
 
 **Call it:** `Split Backs Slot Left 19 Fake Sweep`
 
-![Split Backs - Slot Left - 19 Fake Sweep](cards/sb-fake-sweep-l-5-3.svg)
+![Split Backs - Slot Left - 19 Fake Sweep](cards/sb-fake-sweep-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
-| **LTE** | End head up on you. Turn him inside. The ball goes around behind you. |
-| **LT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
-| **LG** | Nobody on you. Climb to the playside linebacker. Head across him. |
-| **C** | Reach the nose to your left. Head across his playside shoulder. |
-| **RG** | Nobody on you. Cut off the backside. Never quit on the play. |
-| **RT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
-| **RTE** | End head up on you. Cut him off — get between him and the ball. |
+| **LTE** | End on your inside shoulder. Turn him inside. The ball goes around behind you. |
+| **LT** | Help on the left tackle, then block the left inside linebacker. |
+| **LG** | Block the left tackle. |
+| **C** | Help on the right tackle, then block the right inside linebacker. |
+| **RG** | Block the right tackle. |
+| **RT** | Help on the right end, then block the right outside linebacker. |
+| **RTE** | Block the right end. |
 | **SL** | Run at the corner and screen him off. Stay in his way. |
 | **QB** **(ball)** | Fake the handoff to the right halfback, then roll back left and sweep it, flat and fast, behind the left halfback. Turn up outside his block. |
-| **LH** | Lead outside our end. Block the first man out there — here it is the corner. |
+| **LH** | Bubble out around the left tight end, then block the left outside linebacker. |
 | **RH** | Take the fake from the quarterback and run hard to the right like you have the ball. Sell it all the way — you are the reason the defense goes the wrong way. |
 
 **Coaching points**
@@ -179,21 +179,21 @@ Both ends are tight on the line. The two backs sit four yards deep and just over
 
 **Call it:** `Split Backs Slot Right 18 Fake Sweep`
 
-![Split Backs - Slot Right - 18 Fake Sweep](cards/sb-fake-sweep-r-5-3.svg)
+![Split Backs - Slot Right - 18 Fake Sweep](cards/sb-fake-sweep-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
-| **LTE** | End head up on you. Cut him off — get between him and the ball. |
-| **LT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
-| **LG** | Nobody on you. Cut off the backside. Never quit on the play. |
-| **C** | Reach the nose to your right. Head across his playside shoulder. |
-| **RG** | Nobody on you. Climb to the playside linebacker. Head across him. |
-| **RT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
-| **RTE** | End head up on you. Turn him inside. The ball goes around behind you. |
+| **LTE** | Block the left end. |
+| **LT** | Help on the left end, then block the left outside linebacker. |
+| **LG** | Block the left tackle. |
+| **C** | Help on the left tackle, then block the left inside linebacker. |
+| **RG** | Block the right tackle. |
+| **RT** | Help on the right tackle, then block the right inside linebacker. |
+| **RTE** | End on your inside shoulder. Turn him inside. The ball goes around behind you. |
 | **SL** | Run at the corner and screen him off. Stay in his way. |
 | **QB** **(ball)** | Fake the handoff to the left halfback, then roll back right and sweep it, flat and fast, behind the right halfback. Turn up outside his block. |
 | **LH** | Take the fake from the quarterback and run hard to the left like you have the ball. Sell it all the way — you are the reason the defense goes the wrong way. |
-| **RH** | Lead outside our end. Block the first man out there — here it is the corner. |
+| **RH** | Bubble out around the right tight end, then block the right outside linebacker. |
 
 **Coaching points**
 
@@ -207,20 +207,20 @@ Both ends are tight on the line. The two backs sit four yards deep and just over
 
 **Call it:** `Split Backs Slot Right 49 Jet`
 
-![Split Backs - Slot Right - 49 Jet](cards/sb-sl-jet-l-5-3.svg)
+![Split Backs - Slot Right - 49 Jet](cards/sb-sl-jet-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
-| **LTE** | End head up on you. Turn him inside. The ball goes around behind you. |
-| **LT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
-| **LG** | Nobody on you. Climb to the playside linebacker. Head across him. |
-| **C** | Reach the nose to your left. Head across his playside shoulder. |
-| **RG** | Nobody on you. Cut off the backside. Never quit on the play. |
-| **RT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
-| **RTE** | End head up on you. Cut him off — get between him and the ball. |
+| **LTE** | Block the left end. |
+| **LT** | Help on the left end, then block the left outside linebacker. |
+| **LG** | Block the left tackle. |
+| **C** | Help on the left tackle, then block the left inside linebacker. |
+| **RG** | Block the right tackle. |
+| **RT** | Help on the right tackle, then block the right inside linebacker. |
+| **RTE** | Block the right end. |
 | **SL** **(ball)** | At the snap run flat across the backfield, take the handoff at full speed and get to the left edge. Turn up in the alley behind the left halfback. |
 | **QB** | Hand the ball to the slot as he runs past you, then fake the handoff to the right halfback going right. |
-| **LH** | Lead outside our end. Block the first man out there — here it is the corner. |
+| **LH** | Bubble out around the left end, then block the left corner. |
 | **RH** | Take the fake handoff and run hard to the right. You are what holds the backside. |
 
 **Coaching points**
@@ -235,21 +235,21 @@ Both ends are tight on the line. The two backs sit four yards deep and just over
 
 **Call it:** `Split Backs Slot Left 48 Jet`
 
-![Split Backs - Slot Left - 48 Jet](cards/sb-sl-jet-r-5-3.svg)
+![Split Backs - Slot Left - 48 Jet](cards/sb-sl-jet-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
-| **LTE** | End head up on you. Cut him off — get between him and the ball. |
-| **LT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
-| **LG** | Nobody on you. Cut off the backside. Never quit on the play. |
-| **C** | Reach the nose to your right. Head across his playside shoulder. |
-| **RG** | Nobody on you. Climb to the playside linebacker. Head across him. |
-| **RT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
-| **RTE** | End head up on you. Turn him inside. The ball goes around behind you. |
+| **LTE** | Block the left end. |
+| **LT** | Help on the left tackle, then block the left inside linebacker. |
+| **LG** | Block the left tackle. |
+| **C** | Help on the right tackle, then block the right inside linebacker. |
+| **RG** | Block the right tackle. |
+| **RT** | Help on the right end, then block the right outside linebacker. |
+| **RTE** | Block the right end. |
 | **SL** **(ball)** | At the snap run flat across the backfield, take the handoff at full speed and get to the right edge. Turn up in the alley behind the right halfback. |
 | **QB** | Hand the ball to the slot as he runs past you, then fake the handoff to the left halfback going left. |
 | **LH** | Take the fake handoff and run hard to the left. You are what holds the backside. |
-| **RH** | Lead outside our end. Block the first man out there — here it is the corner. |
+| **RH** | Bubble out around the right end, then block the right corner. |
 
 **Coaching points**
 

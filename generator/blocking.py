@@ -50,9 +50,9 @@ from __future__ import annotations
 SCOUT_FRONTS = ("4-4", "5-3", "5-4-2")
 
 # The front a card is drawn against when nothing says otherwise, and the one the
-# printed book uses. The 5-3 is what an 8U team lines up in against us once the 6-2 is
-# off the table, so it is the picture worth putting in a coach's pocket.
-DEFAULT_FRONT = "5-3"
+# printed book uses. The 4-4 is our everyday front, so it is the picture that opens
+# on every play and the one that goes in a coach's pocket.
+DEFAULT_FRONT = "4-4"
 
 # Our line, from the middle out. Used to find a blocker's neighbour.
 LINE = ("LTE", "LT", "LG", "C", "RG", "RT", "RTE")

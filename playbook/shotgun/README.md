@@ -37,7 +37,7 @@ Both ends are tight on the line and the slot is just outside the tight end, one 
 
 **Call it:** `Shotgun Slot Right RTE Slant Out`
 
-![Shotgun - Slot Right - RTE Slant Out](cards/sg-te-out-r-5-3.svg)
+![Shotgun - Slot Right - RTE Slant Out](cards/sg-te-out-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -48,7 +48,7 @@ Both ends are tight on the line and the slot is just outside the tight end, one 
 | **RG** | Pass block: step back, hands up, and stay between your man and the quarterback. |
 | **RT** | Pass block: step back, hands up, and stay between your man and the quarterback. |
 | **RTE** **(ball)** | Take one step up, then slant out flat toward the right sideline, almost along the line of scrimmage. Look for the ball right away. |
-| **SL** | Run at the corner and screen him off. Stay in his way. |
+| **SL** | Block the right corner. |
 | **QB** | Catch the snap, take one step and throw to the right tight end as he slants out. If he is covered, tuck it and run. |
 | **LH** | Step up and out, hands up. Pick up anybody coming at the quarterback. |
 | **RH** | Step up and out, hands up. Pick up anybody coming at the quarterback. |
@@ -65,7 +65,7 @@ Both ends are tight on the line and the slot is just outside the tight end, one 
 
 **Call it:** `Shotgun Slot Left LTE Slant Out`
 
-![Shotgun - Slot Left - LTE Slant Out](cards/sg-te-out-l-5-3.svg)
+![Shotgun - Slot Left - LTE Slant Out](cards/sg-te-out-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -76,7 +76,7 @@ Both ends are tight on the line and the slot is just outside the tight end, one 
 | **RG** | Pass block: step back, hands up, and stay between your man and the quarterback. |
 | **RT** | Pass block: step back, hands up, and stay between your man and the quarterback. |
 | **RTE** | Pass block: step back, hands up, and stay between your man and the quarterback. |
-| **SL** | Run at the corner and screen him off. Stay in his way. |
+| **SL** | Block the left corner. |
 | **QB** | Catch the snap, take one step and throw to the left tight end as he slants out. If he is covered, tuck it and run. |
 | **LH** | Step up and out, hands up. Pick up anybody coming at the quarterback. |
 | **RH** | Step up and out, hands up. Pick up anybody coming at the quarterback. |
@@ -93,20 +93,20 @@ Both ends are tight on the line and the slot is just outside the tight end, one 
 
 **Call it:** `Shotgun Slot Left 19 Sweep`
 
-![Shotgun - Slot Left - 19 Sweep](cards/sg-qb-sweep-l-5-3.svg)
+![Shotgun - Slot Left - 19 Sweep](cards/sg-qb-sweep-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
-| **LTE** | End head up on you. Turn him inside. The ball goes around behind you. |
-| **LT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
-| **LG** | Nobody on you. Climb to the playside linebacker. Head across him. |
-| **C** | Reach the nose to your left. Head across his playside shoulder. |
-| **RG** | Nobody on you. Cut off the backside. Never quit on the play. |
-| **RT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
-| **RTE** | End head up on you. Cut him off — get between him and the ball. |
+| **LTE** | Block the left end. |
+| **LT** | Help on the left tackle, then block the left inside linebacker. |
+| **LG** | Block the left tackle. |
+| **C** | Help on the right tackle, then block the right inside linebacker. |
+| **RG** | Block the right tackle. |
+| **RT** | Help on the right end, then block the right outside linebacker. |
+| **RTE** | Block the right end. |
 | **SL** | Run at the corner and screen him off. Stay in his way. |
 | **QB** **(ball)** | Catch the snap and sweep left, flat and fast, behind the left halfback. Turn up outside his block. |
-| **LH** | Lead outside our end. Block the first man out there — here it is the corner. |
+| **LH** | Bubble out around the left end, then block the left outside linebacker. |
 | **RH** | Fake the handoff going right and run hard. Sell it all the way — you are the reason the defense goes the wrong way. |
 
 **Coaching points**
@@ -121,21 +121,21 @@ Both ends are tight on the line and the slot is just outside the tight end, one 
 
 **Call it:** `Shotgun Slot Right 18 Sweep`
 
-![Shotgun - Slot Right - 18 Sweep](cards/sg-qb-sweep-r-5-3.svg)
+![Shotgun - Slot Right - 18 Sweep](cards/sg-qb-sweep-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
-| **LTE** | End head up on you. Cut him off — get between him and the ball. |
-| **LT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
-| **LG** | Nobody on you. Cut off the backside. Never quit on the play. |
-| **C** | Reach the nose to your right. Head across his playside shoulder. |
-| **RG** | Nobody on you. Climb to the playside linebacker. Head across him. |
-| **RT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
-| **RTE** | End head up on you. Turn him inside. The ball goes around behind you. |
+| **LTE** | Block the left end. |
+| **LT** | Help on the left end, then block the left outside linebacker. |
+| **LG** | Block the left tackle. |
+| **C** | Help on the left tackle, then block the left inside linebacker. |
+| **RG** | Block the right tackle. |
+| **RT** | Help on the right tackle, then block the right inside linebacker. |
+| **RTE** | Block the right end. |
 | **SL** | Run at the corner and screen him off. Stay in his way. |
 | **QB** **(ball)** | Catch the snap and sweep right, flat and fast, behind the right halfback. Turn up outside his block. |
 | **LH** | Fake the handoff going left and run hard. Sell it all the way — you are the reason the defense goes the wrong way. |
-| **RH** | Lead outside our end. Block the first man out there — here it is the corner. |
+| **RH** | Bubble out around the right end, then block the right outside linebacker. |
 
 **Coaching points**
 
@@ -149,21 +149,21 @@ Both ends are tight on the line and the slot is just outside the tight end, one 
 
 **Call it:** `Shotgun Slot Right 38 Sweep`
 
-![Shotgun - Slot Right - 38 Sweep](cards/sg-rb-sweep-r-5-3.svg)
+![Shotgun - Slot Right - 38 Sweep](cards/sg-rb-sweep-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
-| **LTE** | End head up on you. Cut him off — get between him and the ball. |
-| **LT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
-| **LG** | Nobody on you. Cut off the backside. Never quit on the play. |
-| **C** | Reach the nose to your right. Head across his playside shoulder. |
-| **RG** | Nobody on you. Climb to the playside linebacker. Head across him. |
-| **RT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
-| **RTE** | End head up on you. Turn him inside. The ball goes around behind you. |
+| **LTE** | Block the left end. |
+| **LT** | Help on the left end, then block the left outside linebacker. |
+| **LG** | Block the left tackle. |
+| **C** | Help on the left tackle, then block the left inside linebacker. |
+| **RG** | Block the right tackle. |
+| **RT** | Help on the right tackle, then block the right inside linebacker. |
+| **RTE** | Block the right end. |
 | **SL** | Run at the corner and screen him off. Stay in his way. |
 | **QB** | Hand the ball to the left halfback as he crosses in front of you, then fake a run to the left. |
 | **LH** **(ball)** | Cross in front of the quarterback, take the handoff going right and get to the edge behind the right halfback. Turn up outside his block. |
-| **RH** | Lead outside our end. Block the first man out there — here it is the corner. |
+| **RH** | Bubble out around the right end, then block the right outside linebacker. |
 
 **Coaching points**
 
@@ -177,20 +177,20 @@ Both ends are tight on the line and the slot is just outside the tight end, one 
 
 **Call it:** `Shotgun Slot Left 29 Sweep`
 
-![Shotgun - Slot Left - 29 Sweep](cards/sg-rb-sweep-l-5-3.svg)
+![Shotgun - Slot Left - 29 Sweep](cards/sg-rb-sweep-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
-| **LTE** | End head up on you. Turn him inside. The ball goes around behind you. |
-| **LT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
-| **LG** | Nobody on you. Climb to the playside linebacker. Head across him. |
-| **C** | Reach the nose to your left. Head across his playside shoulder. |
-| **RG** | Nobody on you. Cut off the backside. Never quit on the play. |
-| **RT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
-| **RTE** | End head up on you. Cut him off — get between him and the ball. |
+| **LTE** | Block the left end. |
+| **LT** | Help on the left tackle, then block the left inside linebacker. |
+| **LG** | Block the left tackle. |
+| **C** | Help on the right tackle, then block the right inside linebacker. |
+| **RG** | Block the right tackle. |
+| **RT** | Help on the right end, then block the right outside linebacker. |
+| **RTE** | Block the right end. |
 | **SL** | Run at the corner and screen him off. Stay in his way. |
 | **QB** | Hand the ball to the right halfback as he crosses in front of you, then fake a run to the right. |
-| **LH** | Lead outside our end. Block the first man out there — here it is the corner. |
+| **LH** | Bubble out around the left end, then block the left outside linebacker. |
 | **RH** **(ball)** | Cross in front of the quarterback, take the handoff going left and get to the edge behind the left halfback. Turn up outside his block. |
 
 **Coaching points**
