@@ -1,0 +1,48 @@
+{
+  "id": "sb-te-out-r",
+  "order": 29,
+  "formation": "split-backs",
+  "name": "Split Backs - Slot Right - RTE Slant Out",
+  "code": "S-11",
+  "call": "Split Backs Slot Right RTE Slant Out",
+  "word_call": true,
+  "type": "pass",
+  "direction": "right",
+  "ball_carrier": "RTE",
+  "assignments": {
+    "LTE": { "block": "protect" },
+    "LT": { "block": "protect" },
+    "LG": { "block": "protect" },
+    "C": { "block": "protect" },
+    "RG": { "block": "protect" },
+    "RT": { "block": "protect" },
+    "RTE": {
+      "rule": "Take one step up, then slant out flat toward the right sideline, almost along the line of scrimmage. Look for the ball right away.",
+      "type": "pass",
+      "path": [
+        [0.8, 0.6],
+        [4.6, 1.1]
+      ]
+    },
+    "SL": { "block": "screen" },
+    "QB": {
+      "rule": "Take the snap, take one step and throw to the right tight end as he slants out. If he is covered, tuck it and run.",
+      "type": "pass",
+      "path": [
+        [0.0, -0.6]
+      ]
+    },
+    "LH": { "block": "protect" },
+    "RH": { "block": "protect" }
+  },
+  "fronts": {
+    "4-4": {
+      "SL": { "block": "man", "man": "RC" }
+    }
+  },
+  "coaching_points": [
+    "Everybody but the tight end and the SL pass blocks: step back, hands up, stay between your man and the quarterback.",
+    "The slant stays flat — one step up and out, almost on the line of scrimmage. Any deeper and he runs into the linebackers.",
+    "The quarterback throws it as soon as the tight end clears the end. If he is covered, tuck it and run — no second look."
+  ]
+}

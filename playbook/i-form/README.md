@@ -40,6 +40,8 @@ Normal line splits, about a foot. Both ends are on the line; the slot is just ou
 | [Regular I - Slot Left - 48 Sweep](#regular-i---slot-left---48-sweep) | `Regular I Slot Left 48 Sweep` | run | SL |
 | [Regular I - Slot Right - 30 Smash](#regular-i---slot-right---30-smash) | `Regular I Slot Right 30 Smash` | run | TB |
 | [Regular I - Slot Left - 31 Smash](#regular-i---slot-left---31-smash) | `Regular I Slot Left 31 Smash` | run | TB |
+| [Regular I - Slot Right - RTE Slant Out](#regular-i---slot-right---rte-slant-out) | `Regular I Slot Right RTE Slant Out` | pass | RTE |
+| [Regular I - Slot Left - LTE Slant Out](#regular-i---slot-left---lte-slant-out) | `Regular I Slot Left LTE Slant Out` | pass | LTE |
 
 ---
 
@@ -266,4 +268,60 @@ Normal line splits, about a foot. Both ends are on the line; the slot is just ou
 - This is the iso: the fullback smashes the linebacker in the hole, the tailback runs right off his hip.
 - The hole is the A-gap — between the center and the left guard. If the tailback bounces, the play is dead.
 - The fullback's man is whoever shows in that gap, not a man he picks before the snap.
+
+---
+
+## Regular I - Slot Right - RTE Slant Out
+
+**Call it:** `Regular I Slot Right RTE Slant Out`
+
+![Regular I - Slot Right - RTE Slant Out](cards/i-te-out-r-4-4.svg)
+
+| Position | Assignment |
+|---|---|
+| **LTE** | Pass block: step back, hands up, and stay between your man and the quarterback. |
+| **LT** | Pass block: step back, hands up, and stay between your man and the quarterback. |
+| **LG** | Pass block: step back, hands up, and stay between your man and the quarterback. |
+| **C** | Pass block: step back, hands up, and stay between your man and the quarterback. |
+| **RG** | Pass block: step back, hands up, and stay between your man and the quarterback. |
+| **RT** | Pass block: step back, hands up, and stay between your man and the quarterback. |
+| **RTE** **(ball)** | Take one step up, then slant out flat toward the right sideline, almost along the line of scrimmage. Look for the ball right away. |
+| **SL** | Block the right corner. |
+| **QB** | Take the snap, take one step and throw to the right tight end as he slants out. If he is covered, tuck it and run. |
+| **FB** | Step up and out, hands up. Pick up anybody coming at the quarterback. |
+| **TB** | Step up and out, hands up. Pick up anybody coming at the quarterback. |
+
+**Coaching points**
+
+- Everybody but the tight end and the SL pass blocks: step back, hands up, stay between your man and the quarterback.
+- The slant stays flat — one step up and out, almost on the line of scrimmage. Any deeper and he runs into the linebackers.
+- The quarterback throws it as soon as the tight end clears the end. If he is covered, tuck it and run — no second look.
+
+---
+
+## Regular I - Slot Left - LTE Slant Out
+
+**Call it:** `Regular I Slot Left LTE Slant Out`
+
+![Regular I - Slot Left - LTE Slant Out](cards/i-te-out-l-4-4.svg)
+
+| Position | Assignment |
+|---|---|
+| **LTE** **(ball)** | Take one step up, then slant out flat toward the left sideline, almost along the line of scrimmage. Look for the ball right away. |
+| **LT** | Pass block: step back, hands up, and stay between your man and the quarterback. |
+| **LG** | Pass block: step back, hands up, and stay between your man and the quarterback. |
+| **C** | Pass block: step back, hands up, and stay between your man and the quarterback. |
+| **RG** | Pass block: step back, hands up, and stay between your man and the quarterback. |
+| **RT** | Pass block: step back, hands up, and stay between your man and the quarterback. |
+| **RTE** | Pass block: step back, hands up, and stay between your man and the quarterback. |
+| **SL** | Block the left corner. |
+| **QB** | Take the snap, take one step and throw to the left tight end as he slants out. If he is covered, tuck it and run. |
+| **FB** | Step up and out, hands up. Pick up anybody coming at the quarterback. |
+| **TB** | Step up and out, hands up. Pick up anybody coming at the quarterback. |
+
+**Coaching points**
+
+- Everybody but the tight end and the SL pass blocks: step back, hands up, stay between your man and the quarterback.
+- The slant stays flat — one step up and out, almost on the line of scrimmage. Any deeper and he runs into the linebackers.
+- The quarterback throws it as soon as the tight end clears the end. If he is covered, tuck it and run — no second look.
 
