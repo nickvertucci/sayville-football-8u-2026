@@ -1,5 +1,5 @@
 {
-  "note": "Coach-editable. Depth is the column — 1 through 6; anybody past that is on the squad but in nothing. A name may repeat, both down a column and across one: the same left tackle at three depths is that name three times, and a backup can be second in line at two positions. Offense covers every spot both formations use; defense is the 4-4, our everyday front.",
+  "note": "The depth chart. Depth is the column — 1 through 6; anybody past that is on the squad but in nothing. A name may repeat, both down a column and across one: the same left tackle at three depths is that name three times, and a backup can be second in line at two positions. Offense covers every spot both formations use; defense is the 4-4, our everyday front. Edit this file and rebuild — the page is the file, not a board you rearrange in the browser.",
   "offense": {
     "LTE": [
       "Ryan S.",

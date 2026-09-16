@@ -162,7 +162,7 @@ someone a link to exactly the play you mean.
 | `p-<play>.html` | One play. Deep-linkable, and prints to a single sheet |
 | `defense.html` | The defensive playbook index |
 | `d-<front>.html` | One defensive front, with every assignment |
-| `depth-chart.html` | **Depth chart** — six columns deep, offense and defense, drag-and-drop |
+| `depth-chart.html` | **Depth chart** — six columns deep, offense and defense, generated from `roster.json` |
 | `print.html` | The whole book for printing |
 
 On every page the diagram is the main attraction — full width of the card, edge to edge
@@ -176,112 +176,26 @@ prints whichever one is on screen.
 
 ## The depth chart
 
-Two boards, offense and defense, and both run the same six numbered columns. Six is
-room to name a rotation deep at every spot without editing the file first; the columns
-nobody has reached yet sit empty and are there to be filled.
+Two boards, offense and defense, both the same six numbered columns, generated from
+[`roster.json`](roster.json). It is a published chart — names on a grid, like Ourlads —
+not a board you rearrange in the browser. Edit the file and rebuild.
 
-The sixth used to be **Jumbo**, a short-yardage package rather than a depth, and it was
-the last thing on the page that had to be explained before it could be read. It is
-column six now.
+Depth **is** the column: the first name at a position is the starter, the second is
+second string, and so on to the sixth. Anybody past that is on the squad but in
+nothing. A gap is written as a blank, not closed up, so deleting a third-string
+fullback does not silently promote everybody below him.
 
-They were called Purple, Gold and White until the page stopped being readable. A colour
-is a fine name for a practice jersey and a poor one for a column: it carries no order,
-so "who is behind him" needed a key nobody had, and once the header had scrolled off the
-top the board was a row of anonymous columns of names. A depth chart numbers its columns,
-because the number is the one label that answers the question the page exists to
-answer — and the ids changed with it, so a board saved under the old names is migrated
-rather than silently dropped. Rotation is on the across axis because the question the page
-exists to answer is *"the left tackle just came off — who goes in"*, and the answer should
-be the next cell over rather than a scroll away.
-
-`roster.json` is the chart. Depth in it **is** the column — the first name at a position
-is the starter, the second is second string, and so on to the fifth; on offense the sixth
-and so on to the sixth, and anybody past that is on the squad but in nothing. One
-ordered list per position stays the thing a coach edits, and nothing has to be kept
-agreeing with anything else.
-
-**A gap is written as a blank, not closed up.** Depth is the index, so deleting a name
-from the middle of a list promotes everybody below it — which is how removing a third-string
-fullback would quietly promote everybody below him. An empty string holds the spot
-and renders as *Open*.
+**Column 2 is not the second eleven. It is "second in line here."** The same backup can
+be second at left tackle and second at right tackle. A name may repeat, down a column
+and across one.
 
 ### Packages
 
-Boxes above the squad on each board: six on offense, five on defense. The offense
-calls them **Offensive FB-TB-SL Packages**. Each offensive box is seven slots: FB, TB
-and SL, then LT, LG, RG and RT under a dashed rule, because a package can change the
-line too. The call sheet plays a package's linemen where they are set and the depth
-chart's starters where they are not. Each slot is labelled with the spot it is, so an empty
-package says which three it is short of rather than showing three identical *Open*
-rows, and a name in the wrong slot is visible.
-
-The label is drawn from a data attribute in CSS rather than sitting in the slot as an
-element: the slot's contents are rewritten every time it empties or fills, so a child
-element would be gone the first time somebody took a name out. Defense has no fixed
-trio of spots, so its slots carry no labels. A package is the group who go on and
-come off together, which is the other question a coach asks at this age and the one the
-board could not answer: the columns say who plays left guard, and these say who you are
-sending in next.
-
-They are fixed slots rather than a list because the group is the thing being
-named, and the count and size live in one constant per side — the markup, the roster round-trip and the
-print sheet all take their shape from it. They
-take a name exactly the way a board cell does — same drag, same tap, same *Open* marker —
-because they are in the same drop-target list and not a second set of handlers that would
-have to be kept in step.
-
-`roster.json` carries them under `packages`, one array of groups per side, and **Copy
-roster.json** writes them back. A package can have a name under `package_names`, in the
-same order — the offense's are Shifty, Fortnite, Total Recall, Maverick, Bigshow and Tiny —
-and a package without one is shown by its number. Trailing empty packages are dropped, so an untouched board
-adds nothing to the file rather than a page of empty groups. Offense package one ships
-named; the squad rail is how you fill the rest.
-
-**A name may repeat, down a column and across one.** The same left tackle at three
-depths is that name three times in the list — the normal case for a kid you never take
-off. And the same backup can be second in line at two different positions, because a
-column is "second here", not "the second eleven". Both round-trip through the page
-without a second concept to learn.
-
-**You can rearrange it in the browser.** Under each board is the squad — everybody on that
-side of the ball, always. It is a *source*, not a pile of leftovers: drag a name onto a spot
-and he goes there while staying in the squad, so putting one kid on all three units is
-three drags rather than a special mode. Tap works too, and a name tapped in the squad
-stays picked after it lands — tap him once, then tap all three spots. Drag a name from the
-board back to the squad to take him out of that spot.
-
-Names already on the board are dimmed in the squad rail and carry the number of rotations
-they hold, which leaves the bright ones — the kids nobody has given a job — as the thing
-your eye lands on. The heading counts them.
-
-Moving a name that is already on the board is a move, swapping with whoever is there. A
-kid may hold as many spots as you like, including more than one in the same column. The
-board used to forbid that on the grounds that he cannot be at left tackle and centre at
-the same time — which is true of a unit that takes the field together and false of a
-depth chart. **Column 2 is not the second eleven. It is "second in line here."** The same
-backup can be second at left tackle and second at right tackle and never play both at
-once.
-
-Everything works with a finger; on a phone, hold a moment before dragging, or the swipe
-scrolls the page instead. Every spot is a button, so the whole board works from a keyboard
-too.
-
-Those edits live in that one browser's `localStorage` and nowhere else. Nobody else sees
-them, they do not touch `roster.json`, and a banner says so whenever the board on screen is
-not the board in the repo. Two things close the loop:
-
-- **Reset** puts the shipped roster back. It only appears once you have changed something,
-  and takes two taps.
-- **Copy roster.json** hands back the whole file with your board written into it, to paste
-  into the repo when a halftime rearrangement turns out to be the real answer. It rewrites
-  only `offense` and `defense` and carries the note through untouched, and it writes each
-  side to its own depth — six slots for offense, five for defense.
-
-The column headers used to carry a live filled-of-eleven count. It went with the
-Jumbo column: a depth chart is not eleven deep at every spot and is not meant to be, so
-"0/11" over a column nobody has filled yet was reporting a shortfall that is not one. The
-squad rail still counts the kids in no spot at all, which is the number that does mean
-something.
+Six on offense, five on defense, under each board. The offense calls them **Offensive
+FB-TB-SL Packages**: FB, TB and SL, then LT, LG, RG and RT, because a package can
+change the line too. The call sheet plays a package's linemen where they are set and
+the depth chart's starters where they are not. A package without a name under
+`package_names` is shown by its number.
 
 ## Printing
 
@@ -289,8 +203,7 @@ something.
   per landscape letter sheet — 18 pages, the same sheet each play prints from its own page.
 - **Print** (on any play or front page) → that one card, one landscape sheet.
 - **Print** (on the depth chart) → two portrait sheets, offense then defense, each with
-  every column on it. One goes in each coordinator's pocket. Whatever the board
-  says when you print is what comes out, local edits included.
+  every column on it. One goes in each coordinator's pocket.
 
 Both are already set to landscape, so there is no page setup to fiddle with. Print to PDF
 for a binder, or print the single sheet you need for tonight's practice.
