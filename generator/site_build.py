@@ -2753,9 +2753,9 @@ def practice_window(pr: dict) -> str:
 
 
 def code_prefix(play: dict) -> str:
-    """"( I-1 ) " ahead of a play wherever a sheet lists it — the call sheet's cells and a
+    """"#S-2  " ahead of a play wherever a sheet lists it — the call sheet's cells and a
     practice's install chips — so paper uses the same codes the diagrams do."""
-    return f"( {play['code']} ) " if play.get("code") else ""
+    return f"#{play['code']}  " if play.get("code") else ""
 
 
 def install_items(pr: dict, plays: dict, forms_by_id: dict, defenses: dict) -> list[str]:
