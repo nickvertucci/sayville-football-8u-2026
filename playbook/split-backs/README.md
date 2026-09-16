@@ -32,6 +32,8 @@ Both ends are tight on the line. The two backs sit four yards deep and just over
 | [Split Backs - Slot Right - 18 Fake Sweep](#split-backs---slot-right---18-fake-sweep) | `Split Backs Slot Right 18 Fake Sweep` | run | QB |
 | [Split Backs - Slot Right - 49 Jet](#split-backs---slot-right---49-jet) | `Split Backs Slot Right 49 Jet` | run | SL |
 | [Split Backs - Slot Left - 48 Jet](#split-backs---slot-left---48-jet) | `Split Backs Slot Left 48 Jet` | run | SL |
+| [Split Backs - Slot Right - LTE Jet](#split-backs---slot-right---lte-jet) | `Split Backs Slot Right LTE Jet` | run | LTE |
+| [Split Backs - Slot Left - RTE Jet](#split-backs---slot-left---rte-jet) | `Split Backs Slot Left RTE Jet` | run | RTE |
 
 ---
 
@@ -256,4 +258,60 @@ Both ends are tight on the line. The two backs sit four yards deep and just over
 - The slot runs flat and fast across the backfield. The handoff is at full speed, so the quarterback just puts it in his belly.
 - After the handoff the quarterback carries out his fake to the left halfback going left. It is what holds the backside.
 - The right halfback bubbles out ahead of the slot and takes the corner. The slot stays behind him and turns up in the alley.
+
+---
+
+## Split Backs - Slot Right - LTE Jet
+
+**Call it:** `Split Backs Slot Right LTE Jet`
+
+![Split Backs - Slot Right - LTE Jet](cards/sb-te-jet-r-4-4.svg)
+
+| Position | Assignment |
+|---|---|
+| **LTE** **(ball)** | Stay down in your stance — no motion. At the snap run flat behind the quarterback, take the handoff at full speed and get to the right edge. Turn up outside the halfbacks. |
+| **LT** | Block the left end. |
+| **LG** | Block the left tackle. |
+| **C** | Help on the left tackle, then block the left inside linebacker. |
+| **RG** | Block the right tackle. |
+| **RT** | Help on the right tackle, then block the right inside linebacker. |
+| **RTE** | Block the right end. |
+| **SL** | Run at the corner and screen him off. Stay in his way. |
+| **QB** | Open right and hand the ball to the left tight end as he comes across behind you, then fake a run to the left. |
+| **LH** | Bubble out around the right end, then double team the right outside linebacker with the right halfback. |
+| **RH** | Bubble out around the right end, then double team the right outside linebacker with the left halfback. |
+
+**Coaching points**
+
+- No motion before the snap. The end stays down in his stance, so the play is legal and nothing tips it off.
+- The handoff is the whole play: the quarterback opens right and puts the ball in the end's belly at full speed, then carries out his fake.
+- Both halfbacks bubble out to the right ahead of the end and double team the outside linebacker together. Two of them on him is what gets the end around the corner.
+
+---
+
+## Split Backs - Slot Left - RTE Jet
+
+**Call it:** `Split Backs Slot Left RTE Jet`
+
+![Split Backs - Slot Left - RTE Jet](cards/sb-te-jet-l-4-4.svg)
+
+| Position | Assignment |
+|---|---|
+| **LTE** | Block the left end. |
+| **LT** | Help on the left tackle, then block the left inside linebacker. |
+| **LG** | Block the left tackle. |
+| **C** | Help on the right tackle, then block the right inside linebacker. |
+| **RG** | Block the right tackle. |
+| **RT** | Block the right end. |
+| **RTE** **(ball)** | Stay down in your stance — no motion. At the snap run flat behind the quarterback, take the handoff at full speed and get to the left edge. Turn up outside the halfbacks. |
+| **SL** | Run at the corner and screen him off. Stay in his way. |
+| **QB** | Open left and hand the ball to the right tight end as he comes across behind you, then fake a run to the right. |
+| **LH** | Bubble out around the left end, then double team the left outside linebacker with the right halfback. |
+| **RH** | Bubble out around the left end, then double team the left outside linebacker with the left halfback. |
+
+**Coaching points**
+
+- No motion before the snap. The end stays down in his stance, so the play is legal and nothing tips it off.
+- The handoff is the whole play: the quarterback opens left and puts the ball in the end's belly at full speed, then carries out his fake.
+- Both halfbacks bubble out to the left ahead of the end and double team the outside linebacker together. Two of them on him is what gets the end around the corner.
 

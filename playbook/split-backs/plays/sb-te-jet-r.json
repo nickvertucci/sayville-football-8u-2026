@@ -1,0 +1,121 @@
+{
+  "id": "sb-te-jet-r",
+  "order": 27,
+  "formation": "split-backs",
+  "name": "Split Backs - Slot Right - LTE Jet",
+  "code": "S-9",
+  "call": "Split Backs Slot Right LTE Jet",
+  "word_call": true,
+  "type": "run",
+  "direction": "right",
+  "ball_carrier": "LTE",
+  "assignments": {
+    "LTE": {
+      "rule": "Stay down in your stance — no motion. At the snap run flat behind the quarterback, take the handoff at full speed and get to the right edge. Turn up outside the halfbacks.",
+      "type": "run",
+      "path": [
+        [2.2, -1.9],
+        [5.2, -2.1],
+        [10.7, -1.5],
+        [11.2, 0.7],
+        [11.2, 4.1],
+        [11.2, 7.5]
+      ]
+    },
+    "LT": {
+      "block": "cutoff"
+    },
+    "LG": {
+      "block": "cutoff"
+    },
+    "C": {
+      "block": "reach"
+    },
+    "RG": {
+      "block": "climb",
+      "target": "playside"
+    },
+    "RT": {
+      "block": "down"
+    },
+    "RTE": {
+      "block": "base",
+      "drive": "in"
+    },
+    "SL": {
+      "block": "screen"
+    },
+    "QB": {
+      "rule": "Open right and hand the ball to the left tight end as he comes across behind you, then fake a run to the left.",
+      "type": "fake",
+      "path": [
+        [0.9, -0.8],
+        [-0.8, -1.0],
+        [-3.6, -0.8]
+      ]
+    },
+    "RH": {
+      "block": "lead",
+      "target": "force"
+    },
+    "LH": {
+      "block": "lead",
+      "target": "force"
+    }
+  },
+  "fronts": {
+    "4-4": {
+      "LT": {
+        "block": "man",
+        "man": "LE"
+      },
+      "LG": {
+        "block": "man",
+        "man": "LT"
+      },
+      "C": {
+        "block": "man",
+        "man": "M",
+        "help": "LT"
+      },
+      "RG": {
+        "block": "man",
+        "man": "RT"
+      },
+      "RT": {
+        "block": "man",
+        "man": "S",
+        "help": "RT"
+      },
+      "RTE": {
+        "block": "man",
+        "man": "RE"
+      },
+      "RH": {
+        "block": "man",
+        "man": "R",
+        "with": "left halfback",
+        "how": "Bubble out around the right end",
+        "via": [
+          [3.4, 2.0],
+          [3.6, 4.2]
+        ]
+      },
+      "LH": {
+        "block": "man",
+        "man": "R",
+        "with": "right halfback",
+        "how": "Bubble out around the right end",
+        "via": [
+          [5.6, 1.3],
+          [6.4, 2.9]
+        ]
+      }
+    }
+  },
+  "coaching_points": [
+    "No motion before the snap. The end stays down in his stance, so the play is legal and nothing tips it off.",
+    "The handoff is the whole play: the quarterback opens right and puts the ball in the end's belly at full speed, then carries out his fake.",
+    "Both halfbacks bubble out to the right ahead of the end and double team the outside linebacker together. Two of them on him is what gets the end around the corner."
+  ]
+}
