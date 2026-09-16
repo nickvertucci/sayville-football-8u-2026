@@ -3096,11 +3096,11 @@ ROTATIONS = [str(n) for n in range(1, 7)]
 # Packages, above the squad. A fixed group rather than a list because the group is the
 # thing being named — the kids who go on and come off together. Count and size are per
 # side and here and nowhere else: the markup, the roster round-trip and the print sheet
-# all take their shape from them. Offense is six across, ten deep: the quarterback and
-# the backfield, the two tight ends, then the four interior linemen. Defense is five
-# of three.
+# all take their shape from them. Offense is six across, eleven deep: the quarterback
+# and the backfield, the two tight ends, then the five interior linemen. Defense is
+# five of three.
 PACKAGE_COUNT = {"offense": 6, "defense": 5}
-PACKAGE_SIZE = {"offense": 10, "defense": 3}
+PACKAGE_SIZE = {"offense": 11, "defense": 3}
 
 # What each side calls its packages. The offense heading names the spots the group is
 # made of, in the order the slots sit in — the line does not change between packages,
@@ -3113,9 +3113,9 @@ PACKAGE_TITLE = {
 
 # What each slot in a package is, where the side has a fixed answer. Offense does: the
 # quarterback, the fullback, the tailback and the slot, then the two tight ends, then
-# the left tackle, left guard, right guard and right tackle. Defense does not, and
-# labelling its slots would be inventing a structure it has not got.
-PACKAGE_SPOTS = {"offense": ("QB", "FB", "TB", "SL", "LTE", "RTE", "LT", "LG", "RG", "RT")}
+# the left tackle, left guard, center, right guard and right tackle. Defense does not,
+# and labelling its slots would be inventing a structure it has not got.
+PACKAGE_SPOTS = {"offense": ("QB", "FB", "TB", "SL", "LTE", "RTE", "LT", "LG", "C", "RG", "RT")}
 
 
 def rotations_for(side: str) -> list[tuple[str, str, str]]:
