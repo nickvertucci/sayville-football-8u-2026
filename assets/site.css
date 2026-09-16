@@ -406,10 +406,15 @@ table.dc-sub thead th {
   min-height: 18px; display: flex; align-items: center; gap: 6px;
   padding: 1px 0; min-width: 0; font-size: 13px; font-weight: 700; color: var(--ink);
 }
+.dc-pkg-slot[data-spot]::before {
+  content: attr(data-spot);
+  flex: 0 0 28px; font-size: 9.5px; font-weight: 800; letter-spacing: .3px;
+  color: var(--muted); text-transform: uppercase;
+}
 .dc-pkg-slot[data-n]::before {
   content: "#" attr(data-n);
-  flex: 0 0 2.4em; font-size: 9.5px; font-weight: 800; letter-spacing: .3px;
-  color: var(--muted);
+  flex: 0 0 1.8em; font-size: 9.5px; font-weight: 800; letter-spacing: .3px;
+  color: var(--muted); text-transform: none;
 }
 .dc-pkg-slot + .dc-pkg-slot { margin-top: 1px; }
 .dc-pkg-slot[data-spot="LTE"],

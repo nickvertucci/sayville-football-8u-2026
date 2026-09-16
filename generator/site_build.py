@@ -465,10 +465,15 @@ table.dc-sub thead th {
   min-height: 18px; display: flex; align-items: center; gap: 6px;
   padding: 1px 0; min-width: 0; font-size: 13px; font-weight: 700; color: var(--ink);
 }
+.dc-pkg-slot[data-spot]::before {
+  content: attr(data-spot);
+  flex: 0 0 28px; font-size: 9.5px; font-weight: 800; letter-spacing: .3px;
+  color: var(--muted); text-transform: uppercase;
+}
 .dc-pkg-slot[data-n]::before {
   content: "#" attr(data-n);
-  flex: 0 0 2.4em; font-size: 9.5px; font-weight: 800; letter-spacing: .3px;
-  color: var(--muted);
+  flex: 0 0 1.8em; font-size: 9.5px; font-weight: 800; letter-spacing: .3px;
+  color: var(--muted); text-transform: none;
 }
 .dc-pkg-slot + .dc-pkg-slot { margin-top: 1px; }
 .dc-pkg-slot[data-spot="LTE"],
@@ -3184,11 +3189,10 @@ ROTATIONS = [str(n) for n in range(1, 7)]
 PACKAGE_COUNT = {"offense": 6, "defense": 5}
 PACKAGE_SIZE = {"offense": 11, "defense": 3}
 
-# What each side calls its packages. Slots on the card are numbered, not named —
-# the same eleven every package, #1 through #11 — so the heading does not have to
-# list QB-FB-TB-SL to explain the box.
+# What each side calls its packages. The offense heading names the backfield the
+# group is made of, in the order those four sit in the box as #1 through #4.
 PACKAGE_TITLE = {
-    "offense": "Offensive Packages",
+    "offense": "Offensive QB-FB-TB-SL Packages",
     "defense": "Packages",
 }
 
@@ -3197,6 +3201,11 @@ PACKAGE_TITLE = {
 # the left tackle, left guard, center, right guard and right tackle. Defense does not,
 # and labelling its slots would be inventing a structure it has not got.
 PACKAGE_SPOTS = {"offense": ("QB", "FB", "TB", "SL", "LTE", "RTE", "LT", "LG", "C", "RG", "RT")}
+
+# Only the backfield is numbered on the package card. The ends and the line keep
+# their position names — LTE, RT — because those do not change meaning between
+# packages the way the four backs do.
+PACKAGE_NUMBERED = ("QB", "FB", "TB", "SL")
 
 
 def rotations_for(side: str) -> list[tuple[str, str, str]]:
@@ -3293,10 +3302,9 @@ def side_board(side: str, order: list[str], alt_order: list[str],
         pair = packs[n - 1] if n - 1 < len(packs) else []
         name = pair[at] if isinstance(pair, list) and at < len(pair) else ""
         label = spots[at] if at < len(spots) else ""
-        # Numbered on the card (#1, #2, …). data-spot stays the real position so
-        # the dashed breaks at the tight ends and the line still fire, and the
-        # sub card can still say Joseph P. (RTE).
-        attr = f' data-n="{at + 1}"'
+        attr = ""
+        if label in PACKAGE_NUMBERED:
+            attr += f' data-n="{PACKAGE_NUMBERED.index(label) + 1}"'
         if label:
             attr += f' data-spot="{esc(label)}"'
         who = esc(name) if name else ""
