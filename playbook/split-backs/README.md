@@ -32,8 +32,8 @@ Both ends are tight on the line. The two backs sit four yards deep and just over
 | [Split Backs - Slot Right - 18 Fake Sweep](#split-backs---slot-right---18-fake-sweep) | `Split Backs Slot Right 18 Fake Sweep` | run | QB |
 | [Split Backs - Slot Right - 49 Jet](#split-backs---slot-right---49-jet) | `Split Backs Slot Right 49 Jet` | run | SL |
 | [Split Backs - Slot Left - 48 Jet](#split-backs---slot-left---48-jet) | `Split Backs Slot Left 48 Jet` | run | SL |
-| [Split Backs - Slot Right - LTE Jet](#split-backs---slot-right---lte-jet) | `Split Backs Slot Right LTE Jet` | run | LTE |
-| [Split Backs - Slot Left - RTE Jet](#split-backs---slot-left---rte-jet) | `Split Backs Slot Left RTE Jet` | run | RTE |
+| [Split Backs - Slot Right - LTE Sweep](#split-backs---slot-right---lte-sweep) | `Split Backs Slot Right LTE Sweep` | run | LTE |
+| [Split Backs - Slot Left - RTE Sweep](#split-backs---slot-left---rte-sweep) | `Split Backs Slot Left RTE Sweep` | run | RTE |
 
 ---
 
@@ -261,11 +261,11 @@ Both ends are tight on the line. The two backs sit four yards deep and just over
 
 ---
 
-## Split Backs - Slot Right - LTE Jet
+## Split Backs - Slot Right - LTE Sweep
 
-**Call it:** `Split Backs Slot Right LTE Jet`
+**Call it:** `Split Backs Slot Right LTE Sweep`
 
-![Split Backs - Slot Right - LTE Jet](cards/sb-te-jet-r-4-4.svg)
+![Split Backs - Slot Right - LTE Sweep](cards/sb-te-jet-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -289,11 +289,11 @@ Both ends are tight on the line. The two backs sit four yards deep and just over
 
 ---
 
-## Split Backs - Slot Left - RTE Jet
+## Split Backs - Slot Left - RTE Sweep
 
-**Call it:** `Split Backs Slot Left RTE Jet`
+**Call it:** `Split Backs Slot Left RTE Sweep`
 
-![Split Backs - Slot Left - RTE Jet](cards/sb-te-jet-l-4-4.svg)
+![Split Backs - Slot Left - RTE Sweep](cards/sb-te-jet-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|

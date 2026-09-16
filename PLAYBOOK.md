@@ -22,8 +22,8 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 | 14 | [Split Backs - Slot Right - 18 Fake Sweep](#split-backs---slot-right---18-fake-sweep) | `Split Backs Slot Right 18 Fake Sweep` | run | Split Backs | QB |
 | 15 | [Split Backs - Slot Right - 49 Jet](#split-backs---slot-right---49-jet) | `Split Backs Slot Right 49 Jet` | run | Split Backs | SL |
 | 16 | [Split Backs - Slot Left - 48 Jet](#split-backs---slot-left---48-jet) | `Split Backs Slot Left 48 Jet` | run | Split Backs | SL |
-| 17 | [Split Backs - Slot Right - LTE Jet](#split-backs---slot-right---lte-jet) | `Split Backs Slot Right LTE Jet` | run | Split Backs | LTE |
-| 18 | [Split Backs - Slot Left - RTE Jet](#split-backs---slot-left---rte-jet) | `Split Backs Slot Left RTE Jet` | run | Split Backs | RTE |
+| 17 | [Split Backs - Slot Right - LTE Sweep](#split-backs---slot-right---lte-sweep) | `Split Backs Slot Right LTE Sweep` | run | Split Backs | LTE |
+| 18 | [Split Backs - Slot Left - RTE Sweep](#split-backs---slot-left---rte-sweep) | `Split Backs Slot Left RTE Sweep` | run | Split Backs | RTE |
 | 19 | [Shotgun - Slot Right - RTE Slant Out](#shotgun---slot-right---rte-slant-out) | `Shotgun Slot Right RTE Slant Out` | pass | Shotgun | RTE |
 | 20 | [Shotgun - Slot Left - LTE Slant Out](#shotgun---slot-left---lte-slant-out) | `Shotgun Slot Left LTE Slant Out` | pass | Shotgun | LTE |
 | 21 | [Shotgun - Slot Left - 19 Sweep](#shotgun---slot-left---19-sweep) | `Shotgun Slot Left 19 Sweep` | run | Shotgun | QB |
@@ -487,11 +487,11 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Split Backs - Slot Right - LTE Jet
+## Split Backs - Slot Right - LTE Sweep
 
-**Call it:** `Split Backs Slot Right LTE Jet`
+**Call it:** `Split Backs Slot Right LTE Sweep`
 
-![Split Backs - Slot Right - LTE Jet](playbook/split-backs/cards/sb-te-jet-r-4-4.svg)
+![Split Backs - Slot Right - LTE Sweep](playbook/split-backs/cards/sb-te-jet-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -515,11 +515,11 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Split Backs - Slot Left - RTE Jet
+## Split Backs - Slot Left - RTE Sweep
 
-**Call it:** `Split Backs Slot Left RTE Jet`
+**Call it:** `Split Backs Slot Left RTE Sweep`
 
-![Split Backs - Slot Left - RTE Jet](playbook/split-backs/cards/sb-te-jet-l-4-4.svg)
+![Split Backs - Slot Left - RTE Sweep](playbook/split-backs/cards/sb-te-jet-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
