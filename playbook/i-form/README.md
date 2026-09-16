@@ -38,6 +38,8 @@ Normal line splits, about a foot. Both ends are on the line; the slot is just ou
 | [Regular I - Slot Left - RTE Jet](#regular-i---slot-left---rte-jet) | `Regular I Slot Left RTE Jet` | run | RTE |
 | [Regular I - Slot Right - 49 Jet](#regular-i---slot-right---49-jet) | `Regular I Slot Right 49 Jet` | run | SL |
 | [Regular I - Slot Left - 48 Jet](#regular-i---slot-left---48-jet) | `Regular I Slot Left 48 Jet` | run | SL |
+| [Regular I - Slot Right - 30 Smash](#regular-i---slot-right---30-smash) | `Regular I Slot Right 30 Smash` | run | TB |
+| [Regular I - Slot Left - 31 Smash](#regular-i---slot-left---31-smash) | `Regular I Slot Left 31 Smash` | run | TB |
 
 ---
 
@@ -208,4 +210,60 @@ Normal line splits, about a foot. Both ends are on the line; the slot is just ou
 - The slot runs flat and fast across the backfield. The handoff is at full speed, so the quarterback just puts it in his belly.
 - After the handoff the quarterback carries out his fake to the tailback going left. It is what holds the backside.
 - The fullback bubbles out ahead of the slot and takes the corner. The slot stays behind him and turns up in the alley.
+
+---
+
+## Regular I - Slot Right - 30 Smash
+
+**Call it:** `Regular I Slot Right 30 Smash`
+
+![Regular I - Slot Right - 30 Smash](cards/i-smash-r-4-4.svg)
+
+| Position | Assignment |
+|---|---|
+| **LTE** | Block the left end. |
+| **LT** | Block the left outside linebacker. |
+| **LG** | Block the left tackle. |
+| **C** | Help on the left tackle, then block the left inside linebacker. |
+| **RG** | Block the right tackle. |
+| **RT** | Block the right end. |
+| **RTE** | Block the right outside linebacker. |
+| **SL** | Block the right corner. |
+| **QB** | Open right, hand to the tailback, then fake the boot left. It holds the backside end. |
+| **FB** | Lead through the hole, then block the right inside linebacker. |
+| **TB** **(ball)** | Take the handoff downhill between the center and the right guard, following the fullback. Do not bounce it. |
+
+**Coaching points**
+
+- This is the iso: the fullback smashes the linebacker in the hole, the tailback runs right off his hip.
+- The hole is the A-gap — between the center and the right guard. If the tailback bounces, the play is dead.
+- The fullback's man is whoever shows in that gap, not a man he picks before the snap.
+
+---
+
+## Regular I - Slot Left - 31 Smash
+
+**Call it:** `Regular I Slot Left 31 Smash`
+
+![Regular I - Slot Left - 31 Smash](cards/i-smash-l-4-4.svg)
+
+| Position | Assignment |
+|---|---|
+| **LTE** | Block the left outside linebacker. |
+| **LT** | Block the left end. |
+| **LG** | Block the left tackle. |
+| **C** | Help on the right tackle, then block the right inside linebacker. |
+| **RG** | Block the right tackle. |
+| **RT** | Block the right outside linebacker. |
+| **RTE** | Block the right end. |
+| **SL** | Block the left corner. |
+| **QB** | Open left, hand to the tailback, then fake the boot right. It holds the backside end. |
+| **FB** | Lead through the hole, then block the left inside linebacker. |
+| **TB** **(ball)** | Take the handoff downhill between the center and the left guard, following the fullback. Do not bounce it. |
+
+**Coaching points**
+
+- This is the iso: the fullback smashes the linebacker in the hole, the tailback runs right off his hip.
+- The hole is the A-gap — between the center and the left guard. If the tailback bounces, the play is dead.
+- The fullback's man is whoever shows in that gap, not a man he picks before the snap.
 

@@ -1,0 +1,115 @@
+{
+  "id": "i-smash-l",
+  "order": 16,
+  "formation": "i-form",
+  "name": "Regular I - Slot Left - 31 Smash",
+  "code": "I-8",
+  "call": "Regular I Slot Left 31 Smash",
+  "type": "run",
+  "direction": "left",
+  "ball_carrier": "TB",
+  "alignment": {
+    "SL": [-5.6, -1.5]
+  },
+  "assignments": {
+    "RTE": {
+      "block": "cutoff"
+    },
+    "RT": {
+      "block": "down"
+    },
+    "RG": {
+      "block": "cutoff"
+    },
+    "C": {
+      "block": "reach"
+    },
+    "LG": {
+      "block": "double",
+      "target": "playside"
+    },
+    "LT": {
+      "block": "down"
+    },
+    "LTE": {
+      "block": "cutoff"
+    },
+    "SL": {
+      "block": "screen"
+    },
+    "QB": {
+      "rule": "Open left, hand to the tailback, then fake the boot right. It holds the backside end.",
+      "type": "fake",
+      "path": [
+        [-0.8, -0.4],
+        [-2.2, -1.0],
+        [-3.6, -1.4]
+      ]
+    },
+    "FB": {
+      "block": "lead"
+    },
+    "TB": {
+      "rule": "Take the handoff downhill between the center and the left guard, following the fullback. Do not bounce it.",
+      "type": "run",
+      "path": [
+        [-0.5, 2.5],
+        [-0.7, 5.0],
+        [-0.7, 6.0],
+        [-0.8, 8.5],
+        [-0.9, 11.0]
+      ]
+    }
+  },
+  "fronts": {
+    "4-4": {
+      "RTE": {
+        "block": "man",
+        "man": "RE"
+      },
+      "RT": {
+        "block": "man",
+        "man": "R"
+      },
+      "RG": {
+        "block": "man",
+        "man": "RT"
+      },
+      "C": {
+        "block": "man",
+        "man": "S",
+        "help": "RT"
+      },
+      "LG": {
+        "block": "man",
+        "man": "LT"
+      },
+      "LT": {
+        "block": "man",
+        "man": "LE"
+      },
+      "LTE": {
+        "block": "man",
+        "man": "W"
+      },
+      "SL": {
+        "block": "man",
+        "man": "LC"
+      },
+      "FB": {
+        "block": "man",
+        "man": "M",
+        "how": "Lead through the hole",
+        "via": [
+          [-0.8, 3.6]
+        ]
+      }
+    }
+  },
+  "coaching_points": [
+    "This is the iso: the fullback smashes the linebacker in the hole, the tailback runs right off his hip.",
+    "The hole is the A-gap — between the center and the left guard. If the tailback bounces, the play is dead.",
+    "The fullback's man is whoever shows in that gap, not a man he picks before the snap."
+  ],
+  "z": "left"
+}
