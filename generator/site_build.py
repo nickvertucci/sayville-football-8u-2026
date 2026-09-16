@@ -2467,8 +2467,8 @@ def write_calls(formations: list[dict], defenses: dict, root: Path) -> str:
     order = []
     if packages:
         p = packages[0]
-        order += [("Split Backs - Slot Left", p, "split-left", {"Left": ["sb-pitch-l", "sb-qb-sweep-l", "sb-fake-sweep-l"]}),
-                  ("Split Backs - Slot Right", p, "split-right", {"Right": ["sb-pitch-r", "sb-qb-sweep-r", "sb-fake-sweep-r"]}),
+        order += [("Split Backs - Slot Left", p, "split-left", {"Left": ["sb-pitch-l", "sb-qb-sweep-l", "sb-fake-sweep-l"], "Right": ["sb-sl-jet-r"]}),
+                  ("Split Backs - Slot Right", p, "split-right", {"Left": ["sb-sl-jet-l"], "Right": ["sb-pitch-r", "sb-qb-sweep-r", "sb-fake-sweep-r"]}),
                   ("Regular I - Slot Left", p, "i-left", {"Left": ["i-power-l", "i-te-jet-l"], "Right": ["i-sl-jet-r"]}),
                   ("Regular I - Slot Right", p, "i-right", {"Left": ["i-sl-jet-l"], "Right": ["i-power-r", "i-te-jet-r"]}),
                   ("Shotgun - Slot Left", p, "sg-left", {"Left": ["sg-te-out-l", "sg-qb-sweep-l", "sg-rb-sweep-l"]}),
