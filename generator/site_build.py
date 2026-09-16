@@ -449,11 +449,10 @@ table.dc-sub tbody th {
   color: var(--muted); text-transform: uppercase;
 }
 .dc-pkg-slot + .dc-pkg-slot { margin-top: 1px; }
-.dc-pkg-pair {
-  display: grid; grid-template-columns: 1fr 1fr; column-gap: 8px;
+.dc-pkg-slot[data-spot="LTE"],
+.dc-pkg-slot[data-spot="LT"] {
   margin-top: 5px; padding-top: 5px; border-top: 1px dashed var(--line);
 }
-.dc-pkg-pair .dc-pkg-slot { margin-top: 0; padding-top: 0; }
 
 .dc-bar {
   display: flex; align-items: center; justify-content: flex-end; gap: 14px;
@@ -1392,7 +1391,8 @@ table.dc-board thead th { background: none; color: #000; border-bottom: 2px soli
   .dc-pkg-h { margin: 0; font-size: 8pt; }
   .dc-pkg-slot { min-height: 0; padding: 0; font-size: 7pt; line-height: 1.15; }
   .dc-pkg-slot + .dc-pkg-slot { margin-top: 0; }
-  .dc-pkg-pair { column-gap: 4px; margin-top: 2px; padding-top: 2px; }
+  .dc-pkg-slot[data-spot="LTE"],
+  .dc-pkg-slot[data-spot="LT"] { margin-top: 1px; padding-top: 1px; }
   .dc-subcard { flex-basis: 56%; min-width: 120px; max-width: none; padding: 2px 4px; border-radius: 0; }
   .dc-subcard-h { font-size: 8pt; margin: 0 0 1px; }
   .dc-sub-empty { font-size: 8pt; }
@@ -3112,17 +3112,6 @@ PACKAGE_TITLE = {
 # would be inventing a structure it has not got.
 PACKAGE_SPOTS = {"offense": ("FB", "TB", "SL", "LTE", "RTE", "LT", "LG", "RG", "RT")}
 
-# How those slots are drawn. The backfield stays one name per line; the two tight
-# ends share a row and the four interior linemen share two — two lines saved in
-# each package, which is the room the Sub card sits in.
-PACKAGE_GROUPS = {
-    "offense": (
-        ("stack", ("FB", "TB", "SL")),
-        ("pair", ("LTE", "RTE")),
-        ("pair", ("LT", "LG", "RG", "RT")),
-    ),
-}
-
 
 def rotations_for(side: str) -> list[tuple[str, str, str]]:
     """The columns, in depth order. Both sides run the same six."""
@@ -3200,30 +3189,13 @@ def side_board(side: str, order: list[str], alt_order: list[str],
     pkg_names = package_names or []
     spots = PACKAGE_SPOTS.get(side, ())
 
-    def slot_html(n: int, at: int, spot: str = "") -> str:
+    def slot_html(n: int, at: int) -> str:
         pair = packs[n - 1] if n - 1 < len(packs) else []
         name = pair[at] if isinstance(pair, list) and at < len(pair) else ""
-        label = spot or (spots[at] if at < len(spots) else "")
+        label = spots[at] if at < len(spots) else ""
         attr = f' data-spot="{esc(label)}"' if label else ""
         who = esc(name) if name else ""
         return f'<div class="dc-pkg-slot"{attr}>{who}</div>'
-
-    def slots_html(n: int) -> str:
-        groups = PACKAGE_GROUPS.get(side)
-        if not groups:
-            return "".join(slot_html(n, at) for at in range(PACKAGE_SIZE[side]))
-        chunks = []
-        for kind, group in groups:
-            cells = []
-            for spot in group:
-                at = spots.index(spot) if spot in spots else -1
-                cells.append(slot_html(n, at, spot) if at >= 0 else
-                             f'<div class="dc-pkg-slot" data-spot="{esc(spot)}"></div>')
-            if kind == "pair":
-                chunks.append(f'<div class="dc-pkg-pair">{"".join(cells)}</div>')
-            else:
-                chunks.append("".join(cells))
-        return "".join(chunks)
 
     filled = [
         n for n in range(1, PACKAGE_COUNT[side] + 1)
@@ -3232,7 +3204,7 @@ def side_board(side: str, order: list[str], alt_order: list[str],
     pkgs = "".join(
         f'<div class="dc-pkg"><div class="dc-pkg-body"><p class="dc-pkg-h">'
         f'{esc(pkg_names[n - 1] if n - 1 < len(pkg_names) else f"Package {n}")}</p>'
-        + slots_html(n)
+        + "".join(slot_html(n, at) for at in range(PACKAGE_SIZE[side]))
         + "</div>"
         + package_sub_card_html(packs, n, spots)
         + "</div>"
