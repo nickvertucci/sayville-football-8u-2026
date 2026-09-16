@@ -32,11 +32,11 @@ CASES = [
     ("no number at all",              "i-form",   "i-power-r",  "I SL Right Power",    True),
     ("off tackle left",               "i-form",   "i-power-l",  "I SL Left 35 Power",  False),
     ("off tackle left, numbered right", "i-form", "i-power-l",  "I SL Left 34 Power",  True),
-    # The tight-end jet is a word call: it opts in, so no digits is right for it — while
+    # The tight-end sweep is a word call: it opts in, so no digits is right for it — while
     # "no number at all" above still fails on a play that did not opt in. Digits added
     # to a word call are checked like any other, and there is no back 5.
-    ("tight-end jet, word call",      "i-form",   "i-te-jet-r", "Regular I Slot Right LTE Jet", False),
-    ("tight-end jet, numbered anyway", "i-form",  "i-te-jet-r", "Regular I Slot Right 58 LTE Jet", True),
+    ("tight-end sweep, word call",      "i-form",   "i-te-jet-r", "Regular I Slot Right LTE Sweep", False),
+    ("tight-end sweep, numbered anyway", "i-form",  "i-te-jet-r", "Regular I Slot Right 58 LTE Sweep", True),
     ("split pitch right",             "split-backs", "sb-pitch-r", "Split Backs Slot Right 38 Pitch",  False),
     ("split pitch, called off tackle", "split-backs", "sb-pitch-r", "Split Backs Slot Right 34 Pitch", True),
     ("split pitch, credited to the SL", "split-backs", "sb-pitch-r", "Split Backs Slot Right 48 Pitch", True),

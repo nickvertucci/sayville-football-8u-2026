@@ -61,10 +61,10 @@ The digits describe the back the first digit names, not necessarily the ball car
 | Call | Play | Where it hits |
 |---|---|---|
 | `Regular I Slot Right 34 Power` / `Slot Left 35 Power` | Regular I - Slot Right - 34 Power / Slot Left - 35 Power | tailback, tackle–end |
-| `Regular I Slot Right LTE Jet` / `Slot Left RTE Jet` | Regular I - Slot Right - LTE Jet / Slot Left - RTE Jet | the backside tight end on an end-around, all the way outside |
-| `Regular I Slot Right 49 Jet` / `Slot Left 48 Jet` | Regular I - Slot Right - 49 Jet / Slot Left - 48 Jet | the slot, flat across the backfield and outside the other way |
+| `Regular I Slot Right LTE Sweep` / `Slot Left RTE Sweep` | Regular I - Slot Right - LTE Sweep / Slot Left - RTE Sweep | the backside tight end on an end-around, all the way outside |
+| `Regular I Slot Right 49 Sweep` / `Slot Left 48 Sweep` | Regular I - Slot Right - 49 Sweep / Slot Left - 48 Sweep | the slot, flat across the backfield and outside the other way |
 
-The tight-end jet is a **word call** — no digits, because the tight end is not a numbered
+The tight-end sweep is a **word call** — no digits, because the tight end is not a numbered
 back. It names him instead. A play has to opt in with `word_call`, so any other play
 missing its number still fails the build.
 
@@ -87,7 +87,7 @@ because the near one is busy bubbling out to block.
 
 ### Shotgun: formation + Slot + who catches it + route
 
-The Shotgun's pass names its receiver the way the tight-end jet names its runner — the
+The Shotgun's pass names its receiver the way the tight-end sweep names its runner — the
 tight end is not a numbered back, so it is a word call. Its halfbacks number the same way
 the Split Backs do: 3 is left, 2 is right.
 
@@ -97,7 +97,7 @@ the Split Backs do: 3 is left, 2 is right.
 | `Shotgun Slot Left 19 Sweep` / `Slot Right 18 Sweep` | Shotgun - Slot Left - 19 Sweep / Slot Right - 18 Sweep | the quarterback, all the way outside behind the near halfback |
 | `Shotgun Slot Left 29 Sweep` / `Slot Right 38 Sweep` | Shotgun - Slot Left - 29 Sweep / Slot Right - 38 Sweep | the far halfback, across in front of the quarterback and all the way outside |
 
-**Play word** — the Regular I carries `Power` and the tight-end and slot `Jet`; the Split Backs
+**Play word** — the Regular I carries `Power` and the tight-end and slot `Sweep`; the Split Backs
 carries `Pitch`, `Sweep` and `Fake Sweep`; the Shotgun carries the tight end's `Slant Out`, the
 only pass in the book, which fakes nothing, and the quarterback `Sweep`.
 
@@ -107,7 +107,7 @@ Three formations, 18 plays, in teaching order:
 
 | # | Formation | Family | Plays | What it is for |
 |---|---|---|---|---|
-| 1 | **Regular I** | Regular I | 6 | Base offense. Fullback and tailback stacked behind the quarterback. Off tackle, the tailback between the tackle and the end behind the SL's kick-out, the tight-end jet and the slot jet, both ways. |
+| 1 | **Regular I** | Regular I | 6 | Base offense. Fullback and tailback stacked behind the quarterback. Off tackle, the tailback between the tackle and the end behind the SL's kick-out, the tight-end sweep and the slot sweep, both ways. |
 | 2 | **Split Backs** | Split Backs | 6 | Two backs at even depth and a slot just outside the tight end. 38/29 Pitch, the QB sweep and the fake-handoff QB sweep, both ways. |
 | 3 | **Shotgun** | Shotgun | 6 | The quarterback five yards deep with a back either side. The tight-end slant out, the QB sweep and the RB sweep, both ways. |
 

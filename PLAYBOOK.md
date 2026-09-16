@@ -8,10 +8,10 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 |---|---|---|---|---|---|
 | 1 | [Regular I - Slot Right - 34 Power](#regular-i---slot-right---34-power) | `Regular I Slot Right 34 Power` | run | Regular I | TB |
 | 2 | [Regular I - Slot Left - 35 Power](#regular-i---slot-left---35-power) | `Regular I Slot Left 35 Power` | run | Regular I | TB |
-| 3 | [Regular I - Slot Right - LTE Jet](#regular-i---slot-right---lte-jet) | `Regular I Slot Right LTE Jet` | run | Regular I | LTE |
-| 4 | [Regular I - Slot Left - RTE Jet](#regular-i---slot-left---rte-jet) | `Regular I Slot Left RTE Jet` | run | Regular I | RTE |
-| 5 | [Regular I - Slot Right - 49 Jet](#regular-i---slot-right---49-jet) | `Regular I Slot Right 49 Jet` | run | Regular I | SL |
-| 6 | [Regular I - Slot Left - 48 Jet](#regular-i---slot-left---48-jet) | `Regular I Slot Left 48 Jet` | run | Regular I | SL |
+| 3 | [Regular I - Slot Right - LTE Sweep](#regular-i---slot-right---lte-sweep) | `Regular I Slot Right LTE Sweep` | run | Regular I | LTE |
+| 4 | [Regular I - Slot Left - RTE Sweep](#regular-i---slot-left---rte-sweep) | `Regular I Slot Left RTE Sweep` | run | Regular I | RTE |
+| 5 | [Regular I - Slot Right - 49 Sweep](#regular-i---slot-right---49-sweep) | `Regular I Slot Right 49 Sweep` | run | Regular I | SL |
+| 6 | [Regular I - Slot Left - 48 Sweep](#regular-i---slot-left---48-sweep) | `Regular I Slot Left 48 Sweep` | run | Regular I | SL |
 | 7 | [Regular I - Slot Right - 30 Smash](#regular-i---slot-right---30-smash) | `Regular I Slot Right 30 Smash` | run | Regular I | TB |
 | 8 | [Regular I - Slot Left - 31 Smash](#regular-i---slot-left---31-smash) | `Regular I Slot Left 31 Smash` | run | Regular I | TB |
 | 9 | [Split Backs - Slot Right - 38 Pitch](#split-backs---slot-right---38-pitch) | `Split Backs Slot Right 38 Pitch` | run | Split Backs | LH |
@@ -20,8 +20,8 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 | 12 | [Split Backs - Slot Left - 19 Sweep](#split-backs---slot-left---19-sweep) | `Split Backs Slot Left 19 Sweep` | run | Split Backs | QB |
 | 13 | [Split Backs - Slot Left - 19 Fake Sweep](#split-backs---slot-left---19-fake-sweep) | `Split Backs Slot Left 19 Fake Sweep` | run | Split Backs | QB |
 | 14 | [Split Backs - Slot Right - 18 Fake Sweep](#split-backs---slot-right---18-fake-sweep) | `Split Backs Slot Right 18 Fake Sweep` | run | Split Backs | QB |
-| 15 | [Split Backs - Slot Right - 49 Jet](#split-backs---slot-right---49-jet) | `Split Backs Slot Right 49 Jet` | run | Split Backs | SL |
-| 16 | [Split Backs - Slot Left - 48 Jet](#split-backs---slot-left---48-jet) | `Split Backs Slot Left 48 Jet` | run | Split Backs | SL |
+| 15 | [Split Backs - Slot Right - 49 Sweep](#split-backs---slot-right---49-sweep) | `Split Backs Slot Right 49 Sweep` | run | Split Backs | SL |
+| 16 | [Split Backs - Slot Left - 48 Sweep](#split-backs---slot-left---48-sweep) | `Split Backs Slot Left 48 Sweep` | run | Split Backs | SL |
 | 17 | [Split Backs - Slot Right - LTE Sweep](#split-backs---slot-right---lte-sweep) | `Split Backs Slot Right LTE Sweep` | run | Split Backs | LTE |
 | 18 | [Split Backs - Slot Left - RTE Sweep](#split-backs---slot-left---rte-sweep) | `Split Backs Slot Left RTE Sweep` | run | Split Backs | RTE |
 | 19 | [Shotgun - Slot Right - RTE Slant Out](#shotgun---slot-right---rte-slant-out) | `Shotgun Slot Right RTE Slant Out` | pass | Shotgun | RTE |
@@ -93,11 +93,11 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Regular I - Slot Right - LTE Jet
+## Regular I - Slot Right - LTE Sweep
 
-**Call it:** `Regular I Slot Right LTE Jet`
+**Call it:** `Regular I Slot Right LTE Sweep`
 
-![Regular I - Slot Right - LTE Jet](playbook/i-form/cards/i-te-jet-r-4-4.svg)
+![Regular I - Slot Right - LTE Sweep](playbook/i-form/cards/i-te-jet-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -121,11 +121,11 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Regular I - Slot Left - RTE Jet
+## Regular I - Slot Left - RTE Sweep
 
-**Call it:** `Regular I Slot Left RTE Jet`
+**Call it:** `Regular I Slot Left RTE Sweep`
 
-![Regular I - Slot Left - RTE Jet](playbook/i-form/cards/i-te-jet-l-4-4.svg)
+![Regular I - Slot Left - RTE Sweep](playbook/i-form/cards/i-te-jet-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -149,11 +149,11 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Regular I - Slot Right - 49 Jet
+## Regular I - Slot Right - 49 Sweep
 
-**Call it:** `Regular I Slot Right 49 Jet`
+**Call it:** `Regular I Slot Right 49 Sweep`
 
-![Regular I - Slot Right - 49 Jet](playbook/i-form/cards/i-sl-jet-l-4-4.svg)
+![Regular I - Slot Right - 49 Sweep](playbook/i-form/cards/i-sl-jet-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -177,11 +177,11 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Regular I - Slot Left - 48 Jet
+## Regular I - Slot Left - 48 Sweep
 
-**Call it:** `Regular I Slot Left 48 Jet`
+**Call it:** `Regular I Slot Left 48 Sweep`
 
-![Regular I - Slot Left - 48 Jet](playbook/i-form/cards/i-sl-jet-r-4-4.svg)
+![Regular I - Slot Left - 48 Sweep](playbook/i-form/cards/i-sl-jet-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -431,11 +431,11 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Split Backs - Slot Right - 49 Jet
+## Split Backs - Slot Right - 49 Sweep
 
-**Call it:** `Split Backs Slot Right 49 Jet`
+**Call it:** `Split Backs Slot Right 49 Sweep`
 
-![Split Backs - Slot Right - 49 Jet](playbook/split-backs/cards/sb-sl-jet-l-4-4.svg)
+![Split Backs - Slot Right - 49 Sweep](playbook/split-backs/cards/sb-sl-jet-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -459,11 +459,11 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Split Backs - Slot Left - 48 Jet
+## Split Backs - Slot Left - 48 Sweep
 
-**Call it:** `Split Backs Slot Left 48 Jet`
+**Call it:** `Split Backs Slot Left 48 Sweep`
 
-![Split Backs - Slot Left - 48 Jet](playbook/split-backs/cards/sb-sl-jet-r-4-4.svg)
+![Split Backs - Slot Left - 48 Sweep](playbook/split-backs/cards/sb-sl-jet-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|

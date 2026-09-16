@@ -30,8 +30,8 @@ Both ends are tight on the line. The two backs sit four yards deep and just over
 | [Split Backs - Slot Left - 19 Sweep](#split-backs---slot-left---19-sweep) | `Split Backs Slot Left 19 Sweep` | run | QB |
 | [Split Backs - Slot Left - 19 Fake Sweep](#split-backs---slot-left---19-fake-sweep) | `Split Backs Slot Left 19 Fake Sweep` | run | QB |
 | [Split Backs - Slot Right - 18 Fake Sweep](#split-backs---slot-right---18-fake-sweep) | `Split Backs Slot Right 18 Fake Sweep` | run | QB |
-| [Split Backs - Slot Right - 49 Jet](#split-backs---slot-right---49-jet) | `Split Backs Slot Right 49 Jet` | run | SL |
-| [Split Backs - Slot Left - 48 Jet](#split-backs---slot-left---48-jet) | `Split Backs Slot Left 48 Jet` | run | SL |
+| [Split Backs - Slot Right - 49 Sweep](#split-backs---slot-right---49-sweep) | `Split Backs Slot Right 49 Sweep` | run | SL |
+| [Split Backs - Slot Left - 48 Sweep](#split-backs---slot-left---48-sweep) | `Split Backs Slot Left 48 Sweep` | run | SL |
 | [Split Backs - Slot Right - LTE Sweep](#split-backs---slot-right---lte-sweep) | `Split Backs Slot Right LTE Sweep` | run | LTE |
 | [Split Backs - Slot Left - RTE Sweep](#split-backs---slot-left---rte-sweep) | `Split Backs Slot Left RTE Sweep` | run | RTE |
 
@@ -205,11 +205,11 @@ Both ends are tight on the line. The two backs sit four yards deep and just over
 
 ---
 
-## Split Backs - Slot Right - 49 Jet
+## Split Backs - Slot Right - 49 Sweep
 
-**Call it:** `Split Backs Slot Right 49 Jet`
+**Call it:** `Split Backs Slot Right 49 Sweep`
 
-![Split Backs - Slot Right - 49 Jet](cards/sb-sl-jet-l-4-4.svg)
+![Split Backs - Slot Right - 49 Sweep](cards/sb-sl-jet-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -233,11 +233,11 @@ Both ends are tight on the line. The two backs sit four yards deep and just over
 
 ---
 
-## Split Backs - Slot Left - 48 Jet
+## Split Backs - Slot Left - 48 Sweep
 
-**Call it:** `Split Backs Slot Left 48 Jet`
+**Call it:** `Split Backs Slot Left 48 Sweep`
 
-![Split Backs - Slot Left - 48 Jet](cards/sb-sl-jet-r-4-4.svg)
+![Split Backs - Slot Left - 48 Sweep](cards/sb-sl-jet-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|

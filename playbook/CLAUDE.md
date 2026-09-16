@@ -168,7 +168,7 @@ also fails `--check`.
 
 **The one exception is a word call**, for a ball carrier the numbering has no digit for —
 a tight end on an end-around. Set `"word_call": true` and name him in the call
-(`Regular I Slot Right LTE Jet`); the play must also have `direction`, which is where its
+(`Regular I Slot Right LTE Sweep`); the play must also have `direction`, which is where its
 playside comes from with no hole digit. Only a play that opts in is exempt, and digits
 added to a word call are still checked.
 

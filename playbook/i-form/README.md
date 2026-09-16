@@ -26,7 +26,7 @@ Normal line splits, about a foot. Both ends are on the line; the slot is just ou
 - The slot lines up right every play, and the call says so — Slot Right. Naming it now means a Slot Left look can be added later without changing how plays are called.
 - Count seven on the line every snap — the SL creeping up onto it is the most common illegal-formation flag from this look.
 - Fullback and tailback must stay stacked. A drifting tailback tips the play before the snap.
-- The SL is back 4 — a receiver most snaps, but also the jet-motion man on Jet sweep and the fake on its boot. Same number he carries in the Power I backfield.
+- The SL is back 4 — a receiver most snaps, but also the motion man on Sweep and the fake on its boot. Same number he carries in the Power I backfield.
 
 ## Plays
 
@@ -34,10 +34,10 @@ Normal line splits, about a foot. Both ends are on the line; the slot is just ou
 |---|---|---|---|
 | [Regular I - Slot Right - 34 Power](#regular-i---slot-right---34-power) | `Regular I Slot Right 34 Power` | run | TB |
 | [Regular I - Slot Left - 35 Power](#regular-i---slot-left---35-power) | `Regular I Slot Left 35 Power` | run | TB |
-| [Regular I - Slot Right - LTE Jet](#regular-i---slot-right---lte-jet) | `Regular I Slot Right LTE Jet` | run | LTE |
-| [Regular I - Slot Left - RTE Jet](#regular-i---slot-left---rte-jet) | `Regular I Slot Left RTE Jet` | run | RTE |
-| [Regular I - Slot Right - 49 Jet](#regular-i---slot-right---49-jet) | `Regular I Slot Right 49 Jet` | run | SL |
-| [Regular I - Slot Left - 48 Jet](#regular-i---slot-left---48-jet) | `Regular I Slot Left 48 Jet` | run | SL |
+| [Regular I - Slot Right - LTE Sweep](#regular-i---slot-right---lte-sweep) | `Regular I Slot Right LTE Sweep` | run | LTE |
+| [Regular I - Slot Left - RTE Sweep](#regular-i---slot-left---rte-sweep) | `Regular I Slot Left RTE Sweep` | run | RTE |
+| [Regular I - Slot Right - 49 Sweep](#regular-i---slot-right---49-sweep) | `Regular I Slot Right 49 Sweep` | run | SL |
+| [Regular I - Slot Left - 48 Sweep](#regular-i---slot-left---48-sweep) | `Regular I Slot Left 48 Sweep` | run | SL |
 | [Regular I - Slot Right - 30 Smash](#regular-i---slot-right---30-smash) | `Regular I Slot Right 30 Smash` | run | TB |
 | [Regular I - Slot Left - 31 Smash](#regular-i---slot-left---31-smash) | `Regular I Slot Left 31 Smash` | run | TB |
 
@@ -101,11 +101,11 @@ Normal line splits, about a foot. Both ends are on the line; the slot is just ou
 
 ---
 
-## Regular I - Slot Right - LTE Jet
+## Regular I - Slot Right - LTE Sweep
 
-**Call it:** `Regular I Slot Right LTE Jet`
+**Call it:** `Regular I Slot Right LTE Sweep`
 
-![Regular I - Slot Right - LTE Jet](cards/i-te-jet-r-4-4.svg)
+![Regular I - Slot Right - LTE Sweep](cards/i-te-jet-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -129,11 +129,11 @@ Normal line splits, about a foot. Both ends are on the line; the slot is just ou
 
 ---
 
-## Regular I - Slot Left - RTE Jet
+## Regular I - Slot Left - RTE Sweep
 
-**Call it:** `Regular I Slot Left RTE Jet`
+**Call it:** `Regular I Slot Left RTE Sweep`
 
-![Regular I - Slot Left - RTE Jet](cards/i-te-jet-l-4-4.svg)
+![Regular I - Slot Left - RTE Sweep](cards/i-te-jet-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -157,11 +157,11 @@ Normal line splits, about a foot. Both ends are on the line; the slot is just ou
 
 ---
 
-## Regular I - Slot Right - 49 Jet
+## Regular I - Slot Right - 49 Sweep
 
-**Call it:** `Regular I Slot Right 49 Jet`
+**Call it:** `Regular I Slot Right 49 Sweep`
 
-![Regular I - Slot Right - 49 Jet](cards/i-sl-jet-l-4-4.svg)
+![Regular I - Slot Right - 49 Sweep](cards/i-sl-jet-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -185,11 +185,11 @@ Normal line splits, about a foot. Both ends are on the line; the slot is just ou
 
 ---
 
-## Regular I - Slot Left - 48 Jet
+## Regular I - Slot Left - 48 Sweep
 
-**Call it:** `Regular I Slot Left 48 Jet`
+**Call it:** `Regular I Slot Left 48 Sweep`
 
-![Regular I - Slot Left - 48 Jet](cards/i-sl-jet-r-4-4.svg)
+![Regular I - Slot Left - 48 Sweep](cards/i-sl-jet-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
