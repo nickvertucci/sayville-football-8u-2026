@@ -435,10 +435,6 @@ table.dc-sub thead th {
   font-size: 10.5px; font-weight: 800; letter-spacing: .4px;
   text-transform: uppercase; color: var(--muted);
 }
-table.dc-sub tbody th {
-  width: 28px; font-size: 9.5px; font-weight: 800; letter-spacing: .2px;
-  text-transform: uppercase; color: var(--muted);
-}
 .dc-pkg-slot {
   min-height: 18px; display: flex; align-items: center; gap: 6px;
   padding: 1px 0; min-width: 0; font-size: 13px; font-weight: 700; color: var(--ink);
@@ -1399,7 +1395,6 @@ table.dc-board thead th { background: none; color: #000; border-bottom: 2px soli
   table.dc-sub { font-size: 8pt; }
   table.dc-sub th, table.dc-sub td { padding: 0 2px 0 0; }
   table.dc-sub thead th { font-size: 6pt; }
-  table.dc-sub tbody th { width: 18px; font-size: 6pt; }
   .dc-tools { display: none; }
   .dc-bar { margin: 0 0 3px; display: block; }
   /* The title block is the price of the first sheet and it is paid in rows. */
@@ -3118,34 +3113,36 @@ def rotations_for(side: str) -> list[tuple[str, str, str]]:
     return [(n, "d" + n, "") for n in ROTATIONS]
 
 
-def package_sub_card_html(packs: list, n: int, spots: tuple) -> str:
-    """Who comes off and who goes on versus package 1, by spot.
+def package_sub_card_html(packs: list, n: int) -> str:
+    """Who comes off and who goes on versus package 1, by name.
 
-    A set of names is the wrong answer here: two kids swapping FB and SL would
-    vanish from an In/Out list, and a coach holding the card needs the spot.
+    A kid already in the base package stays off this card even if they move
+    spots — Philip in Shifty is still Philip in Fortnite, just at a different
+    slot, so he is not a substitution. Only names that leave the eleven (Out)
+    or join it (In) belong here.
     """
-    first = packs[0] if packs else []
-    here = packs[n - 1] if n - 1 < len(packs) else []
-    width = max(len(first), len(here), len(spots))
-    rows = []
-    for i in range(width):
-        out = first[i] if i < len(first) else ""
-        inn = here[i] if i < len(here) else ""
-        if (out or inn) and out != inn:
-            spot = spots[i] if i < len(spots) else ""
-            rows.append((spot, out, inn))
-    if n <= 1 or not rows:
+    first = [name for name in (packs[0] if packs else []) if name]
+    here = [name for name in (packs[n - 1] if n - 1 < len(packs) else []) if name]
+    first_set, here_set = set(first), set(here)
+    out = [name for name in first if name not in here_set]
+    inn = [name for name in here if name not in first_set]
+    width = max(len(out), len(inn), 0)
+    if n <= 1 or not width:
         body = '<p class="dc-sub-empty">Base</p>' if n <= 1 else \
             '<p class="dc-sub-empty">Same as base</p>'
     else:
+        rows = []
+        for i in range(width):
+            leaving = out[i] if i < len(out) else ""
+            entering = inn[i] if i < len(inn) else ""
+            rows.append(
+                f'<tr><td>{esc(leaving) if leaving else "—"}</td>'
+                f'<td>{esc(entering) if entering else "—"}</td></tr>'
+            )
         body = (
-            '<table class="dc-sub"><thead><tr><th></th><th>Out</th><th>In</th></tr>'
+            '<table class="dc-sub"><thead><tr><th>Out</th><th>In</th></tr>'
             '</thead><tbody>'
-            + "".join(
-                f'<tr><th>{esc(spot)}</th>'
-                f'<td>{esc(out) if out else "—"}</td>'
-                f'<td>{esc(inn) if inn else "—"}</td></tr>'
-                for spot, out, inn in rows)
+            + "".join(rows)
             + "</tbody></table>"
         )
     return f'<aside class="dc-subcard"><p class="dc-subcard-h">Sub card</p>{body}</aside>'
@@ -3206,7 +3203,7 @@ def side_board(side: str, order: list[str], alt_order: list[str],
         f'{esc(pkg_names[n - 1] if n - 1 < len(pkg_names) else f"Package {n}")}</p>'
         + "".join(slot_html(n, at) for at in range(PACKAGE_SIZE[side]))
         + "</div>"
-        + package_sub_card_html(packs, n, spots)
+        + package_sub_card_html(packs, n)
         + "</div>"
         for n in filled
     )
