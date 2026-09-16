@@ -2350,6 +2350,35 @@ def strip_direction(name: str) -> str:
     return re.sub(r"\s+(Right|Left)$", "", name)
 
 
+def _slot_side(play: dict) -> str | None:
+    """Which call-sheet the play belongs on, from Slot Left / Slot Right in its name."""
+    name = play.get("name") or ""
+    if " - Slot Left - " in name:
+        return "Left"
+    if " - Slot Right - " in name:
+        return "Right"
+    return None
+
+
+def _call_column(play: dict) -> str:
+    """Left, Middle or Right from the hole the call names, else from direction.
+
+    Holes 0 and 1 are the A-gap, so Smash sits in Middle instead of being stacked
+    with Power on the edge. Even holes go right, odd holes go left. A word call
+    has no hole, so its `direction` is the column.
+    """
+    m = re.search(r"\b(\d)(\d)\b", play.get("call") or "")
+    if m:
+        hole = int(m.group(2))
+        if hole in (0, 1):
+            return "Middle"
+        return "Right" if hole % 2 == 0 else "Left"
+    d = play.get("direction")
+    if d in ("left", "right"):
+        return d.capitalize()
+    return "Middle"
+
+
 def write_calls(formations: list[dict], defenses: dict, root: Path) -> str:
     """The call sheet: the offense laid out where it stands, not a list of plays.
 
@@ -2434,6 +2463,7 @@ def write_calls(formations: list[dict], defenses: dict, root: Path) -> str:
 
     plays_by_id = {p["id"]: p for f in formations for p in f["_plays"]}
     sides = ("Left", "Middle", "Right")
+    forms_by_id = {f["id"]: f for f in formations}
 
     def plays_table(title: str, placed: dict) -> str:
         """Left, Middle and Right, three rows, with any play placed on this sheet at the
@@ -2460,19 +2490,28 @@ def write_calls(formations: list[dict], defenses: dict, root: Path) -> str:
                 + "".join(f"<th>{side}</th>" for side in sides)
                 + f'</tr></thead><tbody>{rows}</tbody></table>')
 
-    # Every sheet is the same personnel, package 1's: the Split formation and then the I,
-    # each with strong left on the left of the page and strong right on the right, so a
-    # sheet sits on the side it runs to. The other packages stay on the depth chart.
-    # The last item of each is the plays placed on it, by the side of the table.
+    # Every sheet is the same personnel, package 1's. Split, then I, then Shotgun,
+    # each with Slot Left on the left of the page and Slot Right on the right.
+    # Plays land in Left / Middle / Right from the hole they name, so a new play
+    # is on the sheet as soon as it is in the book.
+    layout_prefix = {"split-backs": "split", "i-form": "i", "shotgun": "sg"}
     order = []
     if packages:
         p = packages[0]
-        order += [("Split Backs - Slot Left", p, "split-left", {"Left": ["sb-pitch-l", "sb-qb-sweep-l", "sb-fake-sweep-l", "sb-te-jet-l"], "Right": ["sb-sl-jet-r"]}),
-                  ("Split Backs - Slot Right", p, "split-right", {"Left": ["sb-sl-jet-l"], "Right": ["sb-pitch-r", "sb-qb-sweep-r", "sb-fake-sweep-r", "sb-te-jet-r"]}),
-                  ("Regular I - Slot Left", p, "i-left", {"Left": ["i-power-l", "i-te-jet-l", "i-smash-l"], "Right": ["i-sl-jet-r"]}),
-                  ("Regular I - Slot Right", p, "i-right", {"Left": ["i-sl-jet-l"], "Right": ["i-power-r", "i-te-jet-r", "i-smash-r"]}),
-                  ("Shotgun - Slot Left", p, "sg-left", {"Left": ["sg-te-out-l", "sg-qb-sweep-l", "sg-rb-sweep-l"]}),
-                  ("Shotgun - Slot Right", p, "sg-right", {"Right": ["sg-te-out-r", "sg-qb-sweep-r", "sg-rb-sweep-r"]})]
+        for fid in ("split-backs", "i-form", "shotgun"):
+            form = forms_by_id.get(fid)
+            if not form:
+                continue
+            label = form_label(form)
+            prefix = layout_prefix[fid]
+            for slot in ("Left", "Right"):
+                placed = {"Left": [], "Middle": [], "Right": []}
+                for play in form["_plays"]:
+                    if _slot_side(play) != slot:
+                        continue
+                    placed[_call_column(play)].append(play["id"])
+                layout = f"{prefix}-{'left' if slot == 'Left' else 'right'}"
+                order.append((f"{label} - Slot {slot}", p, layout, placed))
     sheets = "".join(
         f'<section class="xl-sheet"><p class="xl-title">{esc(title)}</p>'
         f'{lineup_table(package, layout)}{plays_table(title, placed)}</section>'
