@@ -2469,8 +2469,8 @@ def write_calls(formations: list[dict], defenses: dict, root: Path) -> str:
         p = packages[0]
         order += [("Split Backs - Slot Left", p, "split-left", {"Left": ["sb-pitch-l", "sb-qb-sweep-l", "sb-fake-sweep-l", "sb-te-jet-l"], "Right": ["sb-sl-jet-r"]}),
                   ("Split Backs - Slot Right", p, "split-right", {"Left": ["sb-sl-jet-l"], "Right": ["sb-pitch-r", "sb-qb-sweep-r", "sb-fake-sweep-r", "sb-te-jet-r"]}),
-                  ("Regular I - Slot Left", p, "i-left", {"Left": ["i-power-l", "i-te-jet-l"], "Right": ["i-sl-jet-r"]}),
-                  ("Regular I - Slot Right", p, "i-right", {"Left": ["i-sl-jet-l"], "Right": ["i-power-r", "i-te-jet-r"]}),
+                  ("Regular I - Slot Left", p, "i-left", {"Left": ["i-power-l", "i-te-jet-l", "i-smash-l"], "Right": ["i-sl-jet-r"]}),
+                  ("Regular I - Slot Right", p, "i-right", {"Left": ["i-sl-jet-l"], "Right": ["i-power-r", "i-te-jet-r", "i-smash-r"]}),
                   ("Shotgun - Slot Left", p, "sg-left", {"Left": ["sg-te-out-l", "sg-qb-sweep-l", "sg-rb-sweep-l"]}),
                   ("Shotgun - Slot Right", p, "sg-right", {"Right": ["sg-te-out-r", "sg-qb-sweep-r", "sg-rb-sweep-r"]})]
     sheets = "".join(

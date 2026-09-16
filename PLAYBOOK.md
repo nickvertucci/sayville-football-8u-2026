@@ -12,22 +12,24 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 | 4 | [Regular I - Slot Left - RTE Jet](#regular-i---slot-left---rte-jet) | `Regular I Slot Left RTE Jet` | run | Regular I | RTE |
 | 5 | [Regular I - Slot Right - 49 Jet](#regular-i---slot-right---49-jet) | `Regular I Slot Right 49 Jet` | run | Regular I | SL |
 | 6 | [Regular I - Slot Left - 48 Jet](#regular-i---slot-left---48-jet) | `Regular I Slot Left 48 Jet` | run | Regular I | SL |
-| 7 | [Split Backs - Slot Right - 38 Pitch](#split-backs---slot-right---38-pitch) | `Split Backs Slot Right 38 Pitch` | run | Split Backs | LH |
-| 8 | [Split Backs - Slot Left - 29 Pitch](#split-backs---slot-left---29-pitch) | `Split Backs Slot Left 29 Pitch` | run | Split Backs | RH |
-| 9 | [Split Backs - Slot Right - 18 Sweep](#split-backs---slot-right---18-sweep) | `Split Backs Slot Right 18 Sweep` | run | Split Backs | QB |
-| 10 | [Split Backs - Slot Left - 19 Sweep](#split-backs---slot-left---19-sweep) | `Split Backs Slot Left 19 Sweep` | run | Split Backs | QB |
-| 11 | [Split Backs - Slot Left - 19 Fake Sweep](#split-backs---slot-left---19-fake-sweep) | `Split Backs Slot Left 19 Fake Sweep` | run | Split Backs | QB |
-| 12 | [Split Backs - Slot Right - 18 Fake Sweep](#split-backs---slot-right---18-fake-sweep) | `Split Backs Slot Right 18 Fake Sweep` | run | Split Backs | QB |
-| 13 | [Split Backs - Slot Right - 49 Jet](#split-backs---slot-right---49-jet) | `Split Backs Slot Right 49 Jet` | run | Split Backs | SL |
-| 14 | [Split Backs - Slot Left - 48 Jet](#split-backs---slot-left---48-jet) | `Split Backs Slot Left 48 Jet` | run | Split Backs | SL |
-| 15 | [Split Backs - Slot Right - LTE Jet](#split-backs---slot-right---lte-jet) | `Split Backs Slot Right LTE Jet` | run | Split Backs | LTE |
-| 16 | [Split Backs - Slot Left - RTE Jet](#split-backs---slot-left---rte-jet) | `Split Backs Slot Left RTE Jet` | run | Split Backs | RTE |
-| 17 | [Shotgun - Slot Right - RTE Slant Out](#shotgun---slot-right---rte-slant-out) | `Shotgun Slot Right RTE Slant Out` | pass | Shotgun | RTE |
-| 18 | [Shotgun - Slot Left - LTE Slant Out](#shotgun---slot-left---lte-slant-out) | `Shotgun Slot Left LTE Slant Out` | pass | Shotgun | LTE |
-| 19 | [Shotgun - Slot Left - 19 Sweep](#shotgun---slot-left---19-sweep) | `Shotgun Slot Left 19 Sweep` | run | Shotgun | QB |
-| 20 | [Shotgun - Slot Right - 18 Sweep](#shotgun---slot-right---18-sweep) | `Shotgun Slot Right 18 Sweep` | run | Shotgun | QB |
-| 21 | [Shotgun - Slot Right - 38 Sweep](#shotgun---slot-right---38-sweep) | `Shotgun Slot Right 38 Sweep` | run | Shotgun | LH |
-| 22 | [Shotgun - Slot Left - 29 Sweep](#shotgun---slot-left---29-sweep) | `Shotgun Slot Left 29 Sweep` | run | Shotgun | RH |
+| 7 | [Regular I - Slot Right - 30 Smash](#regular-i---slot-right---30-smash) | `Regular I Slot Right 30 Smash` | run | Regular I | TB |
+| 8 | [Regular I - Slot Left - 31 Smash](#regular-i---slot-left---31-smash) | `Regular I Slot Left 31 Smash` | run | Regular I | TB |
+| 9 | [Split Backs - Slot Right - 38 Pitch](#split-backs---slot-right---38-pitch) | `Split Backs Slot Right 38 Pitch` | run | Split Backs | LH |
+| 10 | [Split Backs - Slot Left - 29 Pitch](#split-backs---slot-left---29-pitch) | `Split Backs Slot Left 29 Pitch` | run | Split Backs | RH |
+| 11 | [Split Backs - Slot Right - 18 Sweep](#split-backs---slot-right---18-sweep) | `Split Backs Slot Right 18 Sweep` | run | Split Backs | QB |
+| 12 | [Split Backs - Slot Left - 19 Sweep](#split-backs---slot-left---19-sweep) | `Split Backs Slot Left 19 Sweep` | run | Split Backs | QB |
+| 13 | [Split Backs - Slot Left - 19 Fake Sweep](#split-backs---slot-left---19-fake-sweep) | `Split Backs Slot Left 19 Fake Sweep` | run | Split Backs | QB |
+| 14 | [Split Backs - Slot Right - 18 Fake Sweep](#split-backs---slot-right---18-fake-sweep) | `Split Backs Slot Right 18 Fake Sweep` | run | Split Backs | QB |
+| 15 | [Split Backs - Slot Right - 49 Jet](#split-backs---slot-right---49-jet) | `Split Backs Slot Right 49 Jet` | run | Split Backs | SL |
+| 16 | [Split Backs - Slot Left - 48 Jet](#split-backs---slot-left---48-jet) | `Split Backs Slot Left 48 Jet` | run | Split Backs | SL |
+| 17 | [Split Backs - Slot Right - LTE Jet](#split-backs---slot-right---lte-jet) | `Split Backs Slot Right LTE Jet` | run | Split Backs | LTE |
+| 18 | [Split Backs - Slot Left - RTE Jet](#split-backs---slot-left---rte-jet) | `Split Backs Slot Left RTE Jet` | run | Split Backs | RTE |
+| 19 | [Shotgun - Slot Right - RTE Slant Out](#shotgun---slot-right---rte-slant-out) | `Shotgun Slot Right RTE Slant Out` | pass | Shotgun | RTE |
+| 20 | [Shotgun - Slot Left - LTE Slant Out](#shotgun---slot-left---lte-slant-out) | `Shotgun Slot Left LTE Slant Out` | pass | Shotgun | LTE |
+| 21 | [Shotgun - Slot Left - 19 Sweep](#shotgun---slot-left---19-sweep) | `Shotgun Slot Left 19 Sweep` | run | Shotgun | QB |
+| 22 | [Shotgun - Slot Right - 18 Sweep](#shotgun---slot-right---18-sweep) | `Shotgun Slot Right 18 Sweep` | run | Shotgun | QB |
+| 23 | [Shotgun - Slot Right - 38 Sweep](#shotgun---slot-right---38-sweep) | `Shotgun Slot Right 38 Sweep` | run | Shotgun | LH |
+| 24 | [Shotgun - Slot Left - 29 Sweep](#shotgun---slot-left---29-sweep) | `Shotgun Slot Left 29 Sweep` | run | Shotgun | RH |
 
 # Regular I
 
@@ -200,6 +202,62 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 - The slot runs flat and fast across the backfield. The handoff is at full speed, so the quarterback just puts it in his belly.
 - After the handoff the quarterback carries out his fake to the tailback going left. It is what holds the backside.
 - The fullback bubbles out ahead of the slot and takes the corner. The slot stays behind him and turns up in the alley.
+
+---
+
+## Regular I - Slot Right - 30 Smash
+
+**Call it:** `Regular I Slot Right 30 Smash`
+
+![Regular I - Slot Right - 30 Smash](playbook/i-form/cards/i-smash-r-4-4.svg)
+
+| Position | Assignment |
+|---|---|
+| **LTE** | Block the left end. |
+| **LT** | Block the left outside linebacker. |
+| **LG** | Block the left tackle. |
+| **C** | Help on the left tackle, then block the left inside linebacker. |
+| **RG** | Block the right tackle. |
+| **RT** | Block the right end. |
+| **RTE** | Block the right outside linebacker. |
+| **SL** | Block the right corner. |
+| **QB** | Open right, hand to the tailback, then fake the boot left. It holds the backside end. |
+| **FB** | Lead through the hole, then block the right inside linebacker. |
+| **TB** **(ball)** | Take the handoff downhill between the center and the right guard, following the fullback. Do not bounce it. |
+
+**Coaching points**
+
+- This is the iso: the fullback smashes the linebacker in the hole, the tailback runs right off his hip.
+- The hole is the A-gap — between the center and the right guard. If the tailback bounces, the play is dead.
+- The fullback's man is whoever shows in that gap, not a man he picks before the snap.
+
+---
+
+## Regular I - Slot Left - 31 Smash
+
+**Call it:** `Regular I Slot Left 31 Smash`
+
+![Regular I - Slot Left - 31 Smash](playbook/i-form/cards/i-smash-l-4-4.svg)
+
+| Position | Assignment |
+|---|---|
+| **LTE** | Block the left outside linebacker. |
+| **LT** | Block the left end. |
+| **LG** | Block the left tackle. |
+| **C** | Help on the right tackle, then block the right inside linebacker. |
+| **RG** | Block the right tackle. |
+| **RT** | Block the right outside linebacker. |
+| **RTE** | Block the right end. |
+| **SL** | Block the left corner. |
+| **QB** | Open left, hand to the tailback, then fake the boot right. It holds the backside end. |
+| **FB** | Lead through the hole, then block the left inside linebacker. |
+| **TB** **(ball)** | Take the handoff downhill between the center and the left guard, following the fullback. Do not bounce it. |
+
+**Coaching points**
+
+- This is the iso: the fullback smashes the linebacker in the hole, the tailback runs right off his hip.
+- The hole is the A-gap — between the center and the left guard. If the tailback bounces, the play is dead.
+- The fullback's man is whoever shows in that gap, not a man he picks before the snap.
 
 # Split Backs
 
