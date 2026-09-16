@@ -204,11 +204,11 @@
           "notes": [
             "One group, the rest of practice",
             "S-1 and S-2 first, then S-7 and S-8 (49 Jet, 48 Jet), then S-9 and S-10 (LTE Jet, RTE Jet)",
-            "In and out of the huddle every rep. Call it Slot Right or Slot Left, then the number, then the word"
+            "In and out of the huddle every rep. Slot Right or Slot Left, then the number and the word — or LTE Jet / RTE Jet"
           ]
         }
       ],
-      "huddle": "S-9 is LTE Jet, S-10 is RTE Jet. End stays down, comes across, handoff at full speed.",
+      "huddle": "S-7 and S-8 are the slot jet. S-9 is LTE Jet, S-10 is RTE Jet. Stay down, come across, handoff at full speed.",
       "huddle_time": "6:45–7:00",
       "plays": [
         "sb-sl-jet-l",
@@ -225,113 +225,38 @@
       "n": 7,
       "date": "2026-09-17",
       "phase": "season",
-      "water_break": 1,
-      "focus": "Iso, Power and the Toss — inside, off-tackle and the edge",
-      "requires": [
-        "i-power-r"
-      ],
-      "emphasis": "Three calls, three places on the field. Iso hits the gap the line opens, Power hits off-tackle behind the kick-out, and the Toss goes round it all — same backfield, three answers.",
+      "focus": "Split Backs: slot jet and TE jet",
+      "emphasis": "Same long block as Tuesday. Review S-1 and S-2, then the jets: S-7 and S-8 (slot jet) and S-9 and S-10 (TE jet). The runner stays down until the snap, comes across, takes the handoff at full speed, and turns up behind the halfbacks.",
       "blocks": [
         {
           "tag": "A",
           "kind": "note",
           "title": "Warm-up",
-          "time": "5:30–5:36",
-          "water_break": 0,
-          "note": "Six minutes, moving the whole time."
+          "time": "5:30–5:35",
+          "note": "Five minutes, moving the whole time."
         },
         {
           "tag": "B",
-          "kind": "groups",
-          "title": "Offensive position groups",
-          "time": "5:36–5:56",
-          "groups": [
-            {
-              "name": "Offensive line / TE",
-              "drills": [
-                "Down blocking",
-                "Firing out low",
-                "Lineup and stance footwork",
-                "Getting to the line and pointing to who you are blocking"
-              ]
-            },
-            {
-              "name": "QB / FB / TB / SL",
-              "drills": [
-                "One group, handoff walkthrough — the quarterback gives the ball every rep",
-                "Rotate the quarterbacks, fullbacks, tailbacks and the SL after every handoff",
-                {
-                  "drill": "Start with handoffs up the middle",
-                  "then": [
-                    "Move to slant handoffs",
-                    "Move to pitches",
-                    "Move to SL sweeps"
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "tag": "C",
-          "kind": "groups",
-          "title": "Defensive position groups",
-          "time": "5:57–6:17",
-          "groups": [
-            {
-              "name": "Defensive line",
-              "drills": [
-                "Gap control, one gap each",
-                "Hands inside, pads under"
-              ]
-            },
-            {
-              "name": "Linebackers",
-              "drills": [
-                "Read the back nearest you",
-                "Fill the first open gap",
-                "Meet the blocker in the hole, not behind it",
-                "Tackle drill"
-              ]
-            },
-            {
-              "name": "Corners and safeties",
-              "drills": [
-                "Force everything back inside — nothing outside you",
-                "Nobody gets behind you",
-                "Cut-off angle, not the chase",
-                "Tackle drill"
-              ]
-            }
-          ]
-        },
-        {
-          "tag": "D",
           "kind": "install",
-          "title": "Offensive install",
-          "time": "6:18–6:38",
+          "title": "Split Backs install",
+          "time": "5:35–6:45",
           "notes": [
-            "Rotating through the first, second, third and fourth units",
-            "No defense for the first ten minutes, then air-to-bags",
-            "In and out of the huddle every rep"
+            "One group, the rest of practice",
+            "S-1 and S-2 first, then S-7 and S-8 (49 Jet, 48 Jet), then S-9 and S-10 (LTE Jet, RTE Jet)",
+            "In and out of the huddle every rep. Slot Right or Slot Left, then the number and the word — or LTE Jet / RTE Jet"
           ]
-        },
-        {
-          "tag": "E",
-          "kind": "note",
-          "title": "Live scrimmage",
-          "time": "6:39–6:59",
-          "note": "Offense vs. defense. Iso, Power and Toss only."
         }
       ],
-      "huddle": "Inside, off-tackle and outside. Same three steps to start every one.",
-      "plays": [
-        "i-te-jet-r",
-        "i-te-jet-l"
-      ],
+      "huddle": "S-7 and S-8 are the slot jet. S-9 is LTE Jet, S-10 is RTE Jet. Stay down, come across, handoff at full speed.",
+      "huddle_time": "6:45–7:00",
+      "plays": [],
       "review": [
         "sb-pitch-r",
-        "sb-pitch-l"
+        "sb-pitch-l",
+        "sb-sl-jet-l",
+        "sb-sl-jet-r",
+        "sb-te-jet-r",
+        "sb-te-jet-l"
       ]
     }
   ]
