@@ -194,8 +194,10 @@ and across one.
 Six on offense, five on defense, under each board. The offense calls them **Offensive
 FB-TB-SL Packages**: FB, TB and SL, then LTE and RTE, then LT, LG, RG and RT, because a
 package can change the ends and the interior line too. The call sheet plays a package's
-linemen where they are set and the depth chart's starters where they are not. A package
-without a name under `package_names` is shown by its number.
+linemen where they are set and the depth chart's starters where they are not. Each box
+carries a **Sub card** in the upper right: who comes off and who goes on versus the
+base package, by spot. A package without a name under `package_names` is shown by its
+number.
 
 ## Printing
 
