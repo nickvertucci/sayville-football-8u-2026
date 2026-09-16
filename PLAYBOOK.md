@@ -20,12 +20,14 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 | 12 | [Split Backs - Slot Right - 18 Fake Sweep](#split-backs---slot-right---18-fake-sweep) | `Split Backs Slot Right 18 Fake Sweep` | run | Split Backs | QB |
 | 13 | [Split Backs - Slot Right - 49 Jet](#split-backs---slot-right---49-jet) | `Split Backs Slot Right 49 Jet` | run | Split Backs | SL |
 | 14 | [Split Backs - Slot Left - 48 Jet](#split-backs---slot-left---48-jet) | `Split Backs Slot Left 48 Jet` | run | Split Backs | SL |
-| 15 | [Shotgun - Slot Right - RTE Slant Out](#shotgun---slot-right---rte-slant-out) | `Shotgun Slot Right RTE Slant Out` | pass | Shotgun | RTE |
-| 16 | [Shotgun - Slot Left - LTE Slant Out](#shotgun---slot-left---lte-slant-out) | `Shotgun Slot Left LTE Slant Out` | pass | Shotgun | LTE |
-| 17 | [Shotgun - Slot Left - 19 Sweep](#shotgun---slot-left---19-sweep) | `Shotgun Slot Left 19 Sweep` | run | Shotgun | QB |
-| 18 | [Shotgun - Slot Right - 18 Sweep](#shotgun---slot-right---18-sweep) | `Shotgun Slot Right 18 Sweep` | run | Shotgun | QB |
-| 19 | [Shotgun - Slot Right - 38 Sweep](#shotgun---slot-right---38-sweep) | `Shotgun Slot Right 38 Sweep` | run | Shotgun | LH |
-| 20 | [Shotgun - Slot Left - 29 Sweep](#shotgun---slot-left---29-sweep) | `Shotgun Slot Left 29 Sweep` | run | Shotgun | RH |
+| 15 | [Split Backs - Slot Right - LTE Jet](#split-backs---slot-right---lte-jet) | `Split Backs Slot Right LTE Jet` | run | Split Backs | LTE |
+| 16 | [Split Backs - Slot Left - RTE Jet](#split-backs---slot-left---rte-jet) | `Split Backs Slot Left RTE Jet` | run | Split Backs | RTE |
+| 17 | [Shotgun - Slot Right - RTE Slant Out](#shotgun---slot-right---rte-slant-out) | `Shotgun Slot Right RTE Slant Out` | pass | Shotgun | RTE |
+| 18 | [Shotgun - Slot Left - LTE Slant Out](#shotgun---slot-left---lte-slant-out) | `Shotgun Slot Left LTE Slant Out` | pass | Shotgun | LTE |
+| 19 | [Shotgun - Slot Left - 19 Sweep](#shotgun---slot-left---19-sweep) | `Shotgun Slot Left 19 Sweep` | run | Shotgun | QB |
+| 20 | [Shotgun - Slot Right - 18 Sweep](#shotgun---slot-right---18-sweep) | `Shotgun Slot Right 18 Sweep` | run | Shotgun | QB |
+| 21 | [Shotgun - Slot Right - 38 Sweep](#shotgun---slot-right---38-sweep) | `Shotgun Slot Right 38 Sweep` | run | Shotgun | LH |
+| 22 | [Shotgun - Slot Left - 29 Sweep](#shotgun---slot-left---29-sweep) | `Shotgun Slot Left 29 Sweep` | run | Shotgun | RH |
 
 # Regular I
 
@@ -424,6 +426,62 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 - The slot runs flat and fast across the backfield. The handoff is at full speed, so the quarterback just puts it in his belly.
 - After the handoff the quarterback carries out his fake to the left halfback going left. It is what holds the backside.
 - The right halfback bubbles out ahead of the slot and takes the corner. The slot stays behind him and turns up in the alley.
+
+---
+
+## Split Backs - Slot Right - LTE Jet
+
+**Call it:** `Split Backs Slot Right LTE Jet`
+
+![Split Backs - Slot Right - LTE Jet](playbook/split-backs/cards/sb-te-jet-r-4-4.svg)
+
+| Position | Assignment |
+|---|---|
+| **LTE** **(ball)** | Stay down in your stance — no motion. At the snap run flat behind the quarterback, take the handoff at full speed and get to the right edge. Turn up outside the halfbacks. |
+| **LT** | Block the left end. |
+| **LG** | Block the left tackle. |
+| **C** | Help on the left tackle, then block the left inside linebacker. |
+| **RG** | Block the right tackle. |
+| **RT** | Help on the right tackle, then block the right inside linebacker. |
+| **RTE** | Block the right end. |
+| **SL** | Run at the corner and screen him off. Stay in his way. |
+| **QB** | Open right and hand the ball to the left tight end as he comes across behind you, then fake a run to the left. |
+| **LH** | Bubble out around the right end, then double team the right outside linebacker with the right halfback. |
+| **RH** | Bubble out around the right end, then double team the right outside linebacker with the left halfback. |
+
+**Coaching points**
+
+- No motion before the snap. The end stays down in his stance, so the play is legal and nothing tips it off.
+- The handoff is the whole play: the quarterback opens right and puts the ball in the end's belly at full speed, then carries out his fake.
+- Both halfbacks bubble out to the right ahead of the end and double team the outside linebacker together. Two of them on him is what gets the end around the corner.
+
+---
+
+## Split Backs - Slot Left - RTE Jet
+
+**Call it:** `Split Backs Slot Left RTE Jet`
+
+![Split Backs - Slot Left - RTE Jet](playbook/split-backs/cards/sb-te-jet-l-4-4.svg)
+
+| Position | Assignment |
+|---|---|
+| **LTE** | Block the left end. |
+| **LT** | Help on the left tackle, then block the left inside linebacker. |
+| **LG** | Block the left tackle. |
+| **C** | Help on the right tackle, then block the right inside linebacker. |
+| **RG** | Block the right tackle. |
+| **RT** | Block the right end. |
+| **RTE** **(ball)** | Stay down in your stance — no motion. At the snap run flat behind the quarterback, take the handoff at full speed and get to the left edge. Turn up outside the halfbacks. |
+| **SL** | Run at the corner and screen him off. Stay in his way. |
+| **QB** | Open left and hand the ball to the right tight end as he comes across behind you, then fake a run to the right. |
+| **LH** | Bubble out around the left end, then double team the left outside linebacker with the right halfback. |
+| **RH** | Bubble out around the left end, then double team the left outside linebacker with the left halfback. |
+
+**Coaching points**
+
+- No motion before the snap. The end stays down in his stance, so the play is legal and nothing tips it off.
+- The handoff is the whole play: the quarterback opens left and puts the ball in the end's belly at full speed, then carries out his fake.
+- Both halfbacks bubble out to the left ahead of the end and double team the outside linebacker together. Two of them on him is what gets the end around the corner.
 
 # Shotgun
 
