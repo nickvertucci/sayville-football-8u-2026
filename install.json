@@ -186,8 +186,8 @@
       "n": 6,
       "date": "2026-09-15",
       "phase": "season",
-      "focus": "Split Backs: S-1 and S-2",
-      "emphasis": "One long block after the warm-up. Review S-1 and S-2 — Slot Right 38 Pitch and Slot Left 29 Pitch. The 3-back is always the left back (odd holes); the 2-back is always the right back (even holes).",
+      "focus": "Split Backs: S-7 and S-8, the slot jet",
+      "emphasis": "One long block after the warm-up. Review S-1 and S-2 — Slot Right 38 Pitch and Slot Left 29 Pitch — then install S-7 and S-8, Slot Right 49 Jet and Slot Left 48 Jet. The slot runs across, takes the handoff at full speed, and turns up behind the playside halfback.",
       "blocks": [
         {
           "tag": "A",
@@ -203,14 +203,17 @@
           "time": "5:35–6:45",
           "notes": [
             "One group, the rest of practice",
-            "S-1 and S-2 — 38 Pitch and 29 Pitch",
+            "S-1 and S-2 first — 38 Pitch and 29 Pitch — then S-7 and S-8, 49 Jet and 48 Jet",
             "In and out of the huddle every rep. Call it Slot Right or Slot Left, then the number, then the word"
           ]
         }
       ],
-      "huddle": "3-back left, 2-back right. S-1 is 38 Pitch, S-2 is 29 Pitch.",
+      "huddle": "S-7 is 49 Jet, S-8 is 48 Jet. Slot comes across, handoff at full speed.",
       "huddle_time": "6:45–7:00",
-      "plays": [],
+      "plays": [
+        "sb-sl-jet-l",
+        "sb-sl-jet-r"
+      ],
       "review": [
         "sb-pitch-r",
         "sb-pitch-l"
