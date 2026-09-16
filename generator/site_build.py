@@ -36,6 +36,19 @@ SITE_TITLE = "Sayville 8U Tackle Football"
 # allowed backslashes there from 3.12, and this generator should run on 3.11 too.
 ACTIVE_ATTR = ' class="active"'
 
+# Same Print control on every page a coach might take off a screen. Hidden by the
+# print stylesheet, so it never lands on the paper.
+PRINT_BTN = (
+    '<div class="play-actions">'
+    '<button type="button" class="btn solid" onclick="window.print()">Print</button>'
+    "</div>"
+)
+
+
+def page_head(title: str) -> str:
+    """Page title with a Print button on the right."""
+    return f'<div class="page-head"><h1 class="page">{esc(title)}</h1>{PRINT_BTN}</div>'
+
 # The league's own document, and the verbatim text pulled out of it by
 # generator/extract_rulebook.py. Both live in rulebook/.
 RULEBOOK_DOCX = "2025-PAL-RULE-BOOK-updated-2025-10-05.docx"
@@ -271,6 +284,12 @@ body.locked { overflow: hidden; }
 
 main { padding-bottom: 56px; }
 h1.page { font-size: clamp(23px, 5vw, 33px); letter-spacing: -.5px; margin: 22px 0 6px; }
+.page-head {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 12px; flex-wrap: wrap; margin: 22px 0 6px;
+}
+.page-head h1.page { margin: 0; }
+.rb-hero .page-head { margin: 0 0 10px; }
 .lede { color: var(--ink-2); max-width: 68ch; margin: 0 0 8px; }
 .sub { color: var(--muted); font-size: 14px; margin: 0 0 20px; }
 .section-head {
@@ -1191,7 +1210,7 @@ footer.site a { color: var(--accent-ink); }
 @media print {
   header.site, .drawer, .scrim, .skip, footer.site, .pager, .play-actions, .searchbar,
   .chips, .fgroup, .morebtn, #morefilters, .countline, #count, .clearbtn, .activefilters,
-  .section-head, .btn, .print-intro, .cal-next, .cal-legend,
+  .btn, .print-intro, .cal-next, .cal-legend, .quicklinks, .ins-row-go, .rb-top,
   .crumbs, .playbar, .fronts { display: none !important; }
   /* Print the front that is on screen, and only that one. A play page printed while
      you are looking at the 4-4 gives you the 4-4 sheet, which is the whole reason
@@ -1261,7 +1280,7 @@ footer.site a { color: var(--accent-ink); }
     padding: 1px 0; grid-template-columns: 28px minmax(0,1fr); gap: 5px; border: 0;
   }
   dl.assign dd, dl.assign dt { font-size: 8pt; line-height: 1.32; }
-  ul.coach { columns: 3; column-gap: 18px; margin-top: 3px; }
+  article.play ul.coach { columns: 3; column-gap: 18px; margin-top: 3px; }
   ul.coach li { font-size: 8pt; line-height: 1.32; margin-bottom: 2px; }
   a[href]::after { content: ""; }
   /* A play printed from its own page — or from the print book, which prints every play
@@ -1353,11 +1372,15 @@ footer.site a { color: var(--accent-ink); }
      page first. Measured: it turned a two-page overflow into a three. */
   .dc-side { margin: 0; }
   /* Background fills are a print-settings gamble; the heading is already spelled
-     out, so print it as plain text with a rule under it. */
-  .dc-side .hero-head {
-    background: none; color: #000; padding: 0 0 2px; margin: 0 0 4px;
+     out, so print it as plain text with a rule under it. Home, defense and the
+     depth chart all use .hero-head, and white-on-navy vanished whenever the
+     browser left background graphics off. */
+  .hero-head {
+    background: none; color: #000; padding: 0 0 2px; margin: 8px 0 6px;
     border-bottom: 2px solid #000; border-radius: 0; display: block; font-size: 14pt;
+    break-after: avoid; page-break-after: avoid;
   }
+  .dc-side .hero-head { margin: 0 0 4px; }
   .rot-sub { font-size: 8pt; opacity: 1; }
   .rot-h { font-size: 7pt; margin: 4px 0 2px; }
   /* Screen scrolls the wide board sideways; paper has nowhere to scroll to, and
@@ -1383,8 +1406,11 @@ table.dc-board thead th { padding: 3px 6px; font-size: 7.5pt; }
      Both selectors are needed. The screen rules that colour these headers carry an
      attribute and a second class, so a plain `thead th` here loses to them on
      specificity no matter that it comes later in the file, and the fills print. */
-table.dc-board thead th { background: none; color: #000; border-bottom: 2px solid #000; }
-  table.dc-board thead th.rot-th[data-rot] { background: none; color: #000; }
+table.dc-board thead th,
+  table.dc-board thead th:first-child,
+  table.dc-board thead th.rot-th[data-rot] {
+    background: none !important; color: #000 !important; border-bottom: 2px solid #000;
+  }
   table.dc-board td.dc-cell { font-size: 8.5pt; font-weight: 700; color: #000; }
   table.dc-board td.dc-cell.starter { font-weight: 800; }
   /* Packages on paper: two rows of three, packed tight enough that each side of the
@@ -1408,6 +1434,29 @@ table.dc-board thead th { background: none; color: #000; border-bottom: 2px soli
   .dc-bar { margin: 0 0 3px; display: block; }
   /* The title block is the price of the first sheet and it is paid in rows. */
   h1.page { font-size: 14pt; margin: 0 0 2px; }
+  .page-head { display: block; margin: 0 0 4px; }
+
+  /* Listing pages: cards and schedule rows as ink, not panels, and never split
+     down the middle of a card. The same background-graphics gamble as the depth
+     chart headings — white-on-navy chips become black type. */
+  .pcard, .fcard, .ins-row, .callout, .rb-facts > div, .rb-toc {
+    box-shadow: none; break-inside: avoid; page-break-inside: avoid;
+  }
+  .pcard, .fcard, .ins-row { border-radius: 0; }
+  .ins-row-n {
+    background: none !important; color: #000;
+    border: 1px solid #000; border-radius: 0;
+  }
+  .fcard .fcall code, .rb-toc b, .rb-num, .call, .tag, .ins-blk-tag {
+    background: none; color: #000; padding: 0 4px; border: 1px solid #000;
+  }
+  .pcard .call { display: none; }
+  .section-head, .ph {
+    color: #000; border-bottom-color: #000; margin: 12px 0 8px;
+    break-after: avoid; page-break-after: avoid;
+  }
+  table.cal caption { background: none; color: #000; }
+  .cal-cell { height: auto; min-height: 28px; }
 }
 """
 
@@ -2126,7 +2175,7 @@ def write_rulebook(formations: list[dict], defenses: dict, root: Path) -> str:
     sections = len(re.findall(r'id="section-\d+"', rulebook_html(text)))
     body = f"""<header class="rb-hero" id="top">
   <p class="rb-eyebrow">Suffolk County P.A.L. &middot; Junior Football</p>
-  <h1 class="page">The rulebook</h1>
+  {page_head("The rulebook")}
   <p class="lede">Reproduced word for word from the league's own document. Nothing is
   paraphrased and nothing is corrected &mdash; their spelling and their spacing stand as
   written, so anything on this page can be read aloud to an official.</p>
@@ -2232,7 +2281,7 @@ def write_home(formations: list[dict], defenses: dict) -> str:
         blurb = first_sentence(f.get("summary") or f.get("notes", ""))
         cards.append(
             f'<a class="fcard imgcard" href="{f_href(f)}">'
-            f'<div class="thumb"><img loading="lazy" src="{formation_icon_src(f)}" '
+            f'<div class="thumb"><img src="{formation_icon_src(f)}" '
             f'alt="{esc(form_label(f))} alignment"></div>'
             f'<div class="body"><div class="ftop"><h3>{esc(form_label(f))}</h3>'
             f'<span class="n">{len(f["_plays"])} plays</span></div>'
@@ -2241,14 +2290,14 @@ def write_home(formations: list[dict], defenses: dict) -> str:
         )
     defcards = "".join(
         f'<a class="fcard imgcard" href="{d_href(f)}">'
-        f'<div class="thumb"><img loading="lazy" src="{def_src(f)}" '
+        f'<div class="thumb"><img src="{def_src(f)}" '
         f'alt="{esc(f["name"])} front"></div>'
         f'<div class="body"><div class="ftop"><h3>{esc(f["call"])}</h3>'
         f'<span class="n">{esc(f["name"])}</span></div>'
         f'<p>{esc(first_sentence(f.get("summary", "")))}</p></div></a>'
         for f in our_fronts(defenses).values()
     )
-    body = f"""<h1 class="page">The 2026 Playbook</h1>
+    body = f"""{page_head("The 2026 Playbook")}
 <p class="lede">{_count(len(formations)).capitalize()} formations &middot; {total} plays
 &middot; {_count(len(our_fronts(defenses)))} fronts.</p>
 
@@ -2518,7 +2567,7 @@ def write_calls(formations: list[dict], defenses: dict, root: Path) -> str:
         for title, package, layout, placed in order
     ) or '<p class="lede">No offensive packages in roster.json yet.</p>'
 
-    body = f"""<h1 class="page">Call sheet</h1>
+    body = f"""{page_head("Call sheet")}
 <div class="xl-sheets">{sheets}</div>"""
     return page(
         f"Call sheet — {SITE_TITLE}",
@@ -2538,7 +2587,7 @@ def write_formation_page(form: dict, formations: list[dict], defenses: dict) -> 
     for p in form["_plays"]:
         cards.append(
             f'<a class="pcard" href="{p_href(p)}">'
-            f'<div class="thumb"><img loading="lazy" src="{card_src(form, p)}" '
+            f'<div class="thumb"><img src="{card_src(form, p)}" '
             f'alt="{esc(p["name"])} diagram"></div>'
             f'<div class="body"><h4>{esc(p["name"])}</h4>'
             f'<span class="call">{esc(p.get("call", ""))}</span></div></a>'
@@ -2554,7 +2603,7 @@ def write_formation_page(form: dict, formations: list[dict], defenses: dict) -> 
             f'<ul class="coach">\n    {items}\n  </ul>'
         )
 
-    body = f"""<h1 class="page">{esc(form_label(form))}</h1>
+    body = f"""{page_head(form_label(form))}
 <p class="sub">{len(form['_plays'])} plays
 &nbsp;·&nbsp; {esc(form.get('personnel', ''))}</p>
 <p class="lede">{esc(form.get('notes', ''))}</p>
@@ -2574,11 +2623,7 @@ def write_play_page(
     form: dict, play: dict, prev: dict | None, nxt: dict | None,
     formations: list[dict], defenses: dict,
 ) -> str:
-    actions = (
-        '<div class="play-actions">'
-        '<button type="button" class="btn solid" onclick="window.print()">Print</button>'
-        "</div>"
-    )
+    actions = PRINT_BTN
 
     # Every play in this formation, so moving between them is one tap and you can see
     # where the play you are looking at sits in the install.
@@ -3015,7 +3060,7 @@ def write_install(formations: list[dict], defenses: dict, root: Path) -> str:
     # the counts strip, each phase's note, every practice's time / blocks / new-or-review
     # line, the +N and REV badges on the calendar and the "Not scheduled yet" list all
     # described the schedule rather than being it, so they are gone.
-    body = f"""<h1 class="page">Install schedule</h1>
+    body = f"""{page_head("Install schedule")}
 {cal_html}
 <div class="ins-wrap">
 {chr(10).join(rows)}
@@ -3078,9 +3123,7 @@ def write_install_day(
   <h1 class="page">{esc(pr.get("focus", ""))}</h1>
   {when_html}
   <div class="ins-day-h"><h2>The run of practice</h2>
-    <div class="play-actions">
-      <button type="button" class="btn solid" onclick="window.print()">Print</button>
-    </div>
+    {PRINT_BTN}
   </div>
   <div class="ins-day-plan">{practice_blocks_html(pr, items, needs)}</div>
 </div>"""
@@ -3351,7 +3394,7 @@ def write_depth_chart(formations: list[dict], defenses: dict, root: Path) -> str
     body = f"""<h1 class="page">Depth Chart</h1>
 <div class="dc-bar">
   <div class="dc-tools">
-    <button type="button" class="btn solid" onclick="window.print()">Print</button>
+    {PRINT_BTN}
   </div>
 </div>
 <div id="dc-board">
@@ -3379,7 +3422,7 @@ def write_defense_index(formations: list[dict], defenses: dict) -> str:
             counts[r] = counts.get(r, 0) + 1
         cards.append(
             f'<a class="fcard imgcard" href="{d_href(f)}">'
-            f'<div class="thumb"><img loading="lazy" src="{def_src(f)}" '
+            f'<div class="thumb"><img src="{def_src(f)}" '
             f'alt="{esc(f["name"])} front"></div>'
             f'<div class="body"><div class="ftop"><h3>{esc(f["call"])}</h3>'
             f'<span class="n">{esc(f["name"])}</span></div>'
@@ -3388,7 +3431,7 @@ def write_defense_index(formations: list[dict], defenses: dict) -> str:
             f'{counts.get("LB", 0)} linebackers &nbsp;&middot;&nbsp; '
             f'{counts.get("DB", 0)} defensive backs</span></div></a>'
         )
-    body = f"""<h1 class="page">Defensive playbook</h1>
+    body = f"""{page_head("Defensive playbook")}
 <p class="lede">{_count(len(our_fronts(defenses))).capitalize()} fronts, each checked against the
 league rulebook by the generator &mdash; an illegal front fails the build.</p>
 
@@ -3416,9 +3459,7 @@ def write_defense_page(front: dict, formations: list[dict], defenses: dict) -> s
     prev = defenses[ids[i - 1]] if i else None
     nxt = defenses[ids[i + 1]] if i + 1 < len(ids) else None
 
-    actions = ('<div class="play-actions">'
-               '<button type="button" class="btn solid" onclick="window.print()">Print</button>'
-               "</div>")
+    actions = PRINT_BTN
     siblings = "".join(
         f'<a href="{d_href(f)}"{ACTIVE_ATTR if fid == front["id"] else ""}>{esc(f["call"])}</a>'
         for fid, f in our_fronts(defenses).items()
