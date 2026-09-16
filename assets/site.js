@@ -6,7 +6,7 @@
    that front and not to press a button fifty-six times; and it works on the print
    page too, where several plays are on one document at once. */
 (function () {
-  var KEY = 'sayville.front';
+  var KEY = 'sayville.front.v2';
   var groups = [].slice.call(document.querySelectorAll('.play'));
   if (!groups.length) return;
 

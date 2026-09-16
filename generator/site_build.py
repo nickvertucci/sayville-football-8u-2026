@@ -1420,7 +1420,7 @@ SITE_JS = """
    that front and not to press a button fifty-six times; and it works on the print
    page too, where several plays are on one document at once. */
 (function () {
-  var KEY = 'sayville.front';
+  var KEY = 'sayville.front.v2';
   var groups = [].slice.call(document.querySelectorAll('.play'));
   if (!groups.length) return;
 
@@ -1949,9 +1949,9 @@ def front_panels(form: dict, play: dict, defenses: dict,
     fronts = [single] if single else list(blocking.SCOUT_FRONTS)
     for fid in fronts:
         front = defenses[fid]
-        # The 5-3 is the tab that starts on, not whichever front sorts first. It is
-        # what an 8U team actually lines up in against us, so it is the answer to the
-        # question the page is usually being opened to ask.
+        # The 4-4 is the tab that starts on, not whichever front sorts first. It is
+        # our everyday front, so it is the answer to the question the page is usually
+        # being opened to ask.
         first = " on" if fid == blocking.DEFAULT_FRONT or single else ""
         tabs.append(
             f'<button type="button" class="dtab{first}" data-front="{esc(fid)}" '
