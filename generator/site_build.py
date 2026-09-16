@@ -401,19 +401,42 @@ table.dc-board td.dc-cell.starter { font-weight: 800; }
   gap: 8px; padding-bottom: 2px;
 }
 @media (max-width: 620px) { .dc-pkgrow { grid-template-columns: 1fr; } }
-.dc-pkg-note {
-  margin: 6px 0 0; padding-top: 5px; border-top: 1px solid var(--line);
-  font-size: 12px; line-height: 1.4; color: var(--ink-2);
-}
-.dc-pkg-note:empty { display: none; }
-.dc-pkg-note span { display: block; }
-.dc-pkg-note b { color: var(--ink); }
 .dc-pkg {
+  display: flex; gap: 8px; align-items: flex-start;
   background: var(--panel); border: 1px solid var(--line); border-radius: 10px;
   padding: 6px 8px; box-shadow: var(--shadow); min-width: 0;
 }
+.dc-pkg-body { flex: 1 1 auto; min-width: 0; }
 .dc-pkg-h {
   margin: 0 0 4px; font-size: 10.5px; font-weight: 800; letter-spacing: 1.1px;
+  text-transform: uppercase; color: var(--muted);
+}
+.dc-subcard {
+  flex: 0 0 46%; min-width: 118px; max-width: 180px;
+  border: 1px solid var(--line); border-radius: 8px; padding: 5px 6px;
+  background: var(--panel-2); align-self: start;
+}
+.dc-subcard-h {
+  margin: 0 0 4px; font-size: 9.5px; font-weight: 800; letter-spacing: 1.1px;
+  text-transform: uppercase; color: var(--muted);
+}
+.dc-sub-empty {
+  margin: 0; font-size: 12px; font-weight: 700; color: var(--ink-2);
+}
+table.dc-sub {
+  width: 100%; border-collapse: collapse; table-layout: fixed;
+  font-size: 11px; line-height: 1.25;
+}
+table.dc-sub th, table.dc-sub td {
+  padding: 1px 3px 1px 0; text-align: left; vertical-align: top;
+  font-weight: 700; color: var(--ink);
+}
+table.dc-sub thead th {
+  font-size: 9px; font-weight: 800; letter-spacing: .4px;
+  text-transform: uppercase; color: var(--muted);
+}
+table.dc-sub tbody th {
+  width: 28px; font-size: 9.5px; font-weight: 800; letter-spacing: .2px;
   text-transform: uppercase; color: var(--muted);
 }
 .dc-pkg-slot {
@@ -1364,13 +1387,19 @@ table.dc-board thead th { background: none; color: #000; border-bottom: 2px soli
   /* Packages on paper: two rows of three, packed tight enough that each side of the
      ball still fits its one sheet after the tight ends joined the box. */
   .dc-pkgrow { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 3px; }
-  .dc-pkg { padding: 1px 4px; box-shadow: none; border-radius: 0; }
+  .dc-pkg { gap: 4px; padding: 1px 3px; box-shadow: none; border-radius: 0; }
   .dc-pkg-h { margin: 0; font-size: 6.5pt; }
   .dc-pkg-slot { min-height: 0; padding: 0; font-size: 7pt; line-height: 1.15; }
   .dc-pkg-slot + .dc-pkg-slot { margin-top: 0; }
   .dc-pkg-slot[data-spot="LTE"],
   .dc-pkg-slot[data-spot="LT"] { margin-top: 1px; padding-top: 1px; }
-  .dc-pkg-note { display: none; }
+  .dc-subcard { flex-basis: 44%; min-width: 90px; max-width: none; padding: 2px 3px; border-radius: 0; }
+  .dc-subcard-h { font-size: 6.5pt; margin: 0 0 1px; }
+  .dc-sub-empty { font-size: 7pt; }
+  table.dc-sub { font-size: 6.5pt; }
+  table.dc-sub th, table.dc-sub td { padding: 0 2px 0 0; }
+  table.dc-sub thead th { font-size: 6pt; }
+  table.dc-sub tbody th { width: 18px; font-size: 6pt; }
   .dc-tools { display: none; }
   .dc-bar { margin: 0 0 3px; display: block; }
   /* The title block is the price of the first sheet and it is paid in rows. */
@@ -3089,23 +3118,37 @@ def rotations_for(side: str) -> list[tuple[str, str, str]]:
     return [(n, "d" + n, "") for n in ROTATIONS]
 
 
-def package_note_html(packs: list, names: list, n: int) -> str:
-    """Who comes in and who goes out against package 1, as a static note."""
-    if n <= 1 or not packs:
-        return ""
-    first = [x for x in (packs[0] if packs else []) if x]
-    here = [x for x in (packs[n - 1] if n - 1 < len(packs) else []) if x]
-    ins = [x for x in here if x not in first]
-    outs = [x for x in first if x not in here]
-    if not ins and not outs:
-        title = names[0] if names else "package 1"
-        return f'<p class="dc-pkg-note">Same players as {esc(title)}</p>'
-    bits = []
-    if ins:
-        bits.append(f'<span><b>In: </b>{esc(", ".join(ins))}</span>')
-    if outs:
-        bits.append(f'<span><b>Out: </b>{esc(", ".join(outs))}</span>')
-    return f'<p class="dc-pkg-note">{"".join(bits)}</p>'
+def package_sub_card_html(packs: list, n: int, spots: tuple) -> str:
+    """Who comes off and who goes on versus package 1, by spot.
+
+    A set of names is the wrong answer here: two kids swapping FB and SL would
+    vanish from an In/Out list, and a coach holding the card needs the spot.
+    """
+    first = packs[0] if packs else []
+    here = packs[n - 1] if n - 1 < len(packs) else []
+    width = max(len(first), len(here), len(spots))
+    rows = []
+    for i in range(width):
+        out = first[i] if i < len(first) else ""
+        inn = here[i] if i < len(here) else ""
+        if (out or inn) and out != inn:
+            spot = spots[i] if i < len(spots) else ""
+            rows.append((spot, out, inn))
+    if n <= 1 or not rows:
+        body = '<p class="dc-sub-empty">Base</p>' if n <= 1 else \
+            '<p class="dc-sub-empty">Same as base</p>'
+    else:
+        body = (
+            '<table class="dc-sub"><thead><tr><th></th><th>Out</th><th>In</th></tr>'
+            '</thead><tbody>'
+            + "".join(
+                f'<tr><th>{esc(spot)}</th>'
+                f'<td>{esc(out) if out else "—"}</td>'
+                f'<td>{esc(inn) if inn else "—"}</td></tr>'
+                for spot, out, inn in rows)
+            + "</tbody></table>"
+        )
+    return f'<aside class="dc-subcard"><p class="dc-subcard-h">Sub card</p>{body}</aside>'
 
 
 def side_board(side: str, order: list[str], alt_order: list[str],
@@ -3158,10 +3201,11 @@ def side_board(side: str, order: list[str], alt_order: list[str],
         if any(packs[n - 1] if n - 1 < len(packs) else [])
     ]
     pkgs = "".join(
-        f'<div class="dc-pkg"><p class="dc-pkg-h">'
+        f'<div class="dc-pkg"><div class="dc-pkg-body"><p class="dc-pkg-h">'
         f'{esc(pkg_names[n - 1] if n - 1 < len(pkg_names) else f"Package {n}")}</p>'
         + "".join(slot_html(n, at) for at in range(PACKAGE_SIZE[side]))
-        + package_note_html(packs, pkg_names, n)
+        + "</div>"
+        + package_sub_card_html(packs, n, spots)
         + "</div>"
         for n in filled
     )
