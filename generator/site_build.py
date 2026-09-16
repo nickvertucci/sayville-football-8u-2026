@@ -412,8 +412,8 @@ table.dc-board td.dc-cell.starter { font-weight: 800; }
   text-transform: uppercase; color: var(--muted);
 }
 .dc-subcard {
-  flex: 0 0 46%; min-width: 118px; max-width: 180px;
-  border: 1px solid var(--line); border-radius: 8px; padding: 5px 6px;
+  flex: 0 0 58%; min-width: 168px; max-width: 250px;
+  border: 1px solid var(--line); border-radius: 8px; padding: 5px 7px;
   background: var(--panel-2); align-self: start;
 }
 .dc-subcard-h {
@@ -424,12 +424,12 @@ table.dc-board td.dc-cell.starter { font-weight: 800; }
   margin: 0; font-size: 12px; font-weight: 700; color: var(--ink-2);
 }
 table.dc-sub {
-  width: 100%; border-collapse: collapse; table-layout: fixed;
-  font-size: 11px; line-height: 1.25;
+  width: 100%; border-collapse: collapse;
+  font-size: 11.5px; line-height: 1.3;
 }
 table.dc-sub th, table.dc-sub td {
-  padding: 1px 3px 1px 0; text-align: left; vertical-align: top;
-  font-weight: 700; color: var(--ink);
+  padding: 1px 6px 1px 0; text-align: left; vertical-align: top;
+  font-weight: 700; color: var(--ink); white-space: nowrap;
 }
 table.dc-sub thead th {
   font-size: 9px; font-weight: 800; letter-spacing: .4px;
@@ -1393,7 +1393,7 @@ table.dc-board thead th { background: none; color: #000; border-bottom: 2px soli
   .dc-pkg-slot { min-height: 0; padding: 0; font-size: 7pt; line-height: 1.15; }
   .dc-pkg-slot + .dc-pkg-slot { margin-top: 0; }
   .dc-pkg-pair { column-gap: 4px; margin-top: 2px; padding-top: 2px; }
-  .dc-subcard { flex-basis: 44%; min-width: 90px; max-width: none; padding: 2px 3px; border-radius: 0; }
+  .dc-subcard { flex-basis: 56%; min-width: 120px; max-width: none; padding: 2px 4px; border-radius: 0; }
   .dc-subcard-h { font-size: 6.5pt; margin: 0 0 1px; }
   .dc-sub-empty { font-size: 7pt; }
   table.dc-sub { font-size: 6.5pt; }
