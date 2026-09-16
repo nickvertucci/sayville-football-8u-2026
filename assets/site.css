@@ -389,10 +389,6 @@ table.dc-sub thead th {
   font-size: 10.5px; font-weight: 800; letter-spacing: .4px;
   text-transform: uppercase; color: var(--muted);
 }
-table.dc-sub tbody th {
-  width: 28px; font-size: 9.5px; font-weight: 800; letter-spacing: .2px;
-  text-transform: uppercase; color: var(--muted);
-}
 .dc-pkg-slot {
   min-height: 18px; display: flex; align-items: center; gap: 6px;
   padding: 1px 0; min-width: 0; font-size: 13px; font-weight: 700; color: var(--ink);
@@ -1353,7 +1349,6 @@ table.dc-board thead th { background: none; color: #000; border-bottom: 2px soli
   table.dc-sub { font-size: 8pt; }
   table.dc-sub th, table.dc-sub td { padding: 0 2px 0 0; }
   table.dc-sub thead th { font-size: 6pt; }
-  table.dc-sub tbody th { width: 18px; font-size: 6pt; }
   .dc-tools { display: none; }
   .dc-bar { margin: 0 0 3px; display: block; }
   /* The title block is the price of the first sheet and it is paid in rows. */
