@@ -18,12 +18,14 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 | 10 | [Split Backs - Slot Left - 19 Sweep](#split-backs---slot-left---19-sweep) | `Split Backs Slot Left 19 Sweep` | run | Split Backs | QB |
 | 11 | [Split Backs - Slot Left - 19 Fake Sweep](#split-backs---slot-left---19-fake-sweep) | `Split Backs Slot Left 19 Fake Sweep` | run | Split Backs | QB |
 | 12 | [Split Backs - Slot Right - 18 Fake Sweep](#split-backs---slot-right---18-fake-sweep) | `Split Backs Slot Right 18 Fake Sweep` | run | Split Backs | QB |
-| 13 | [Shotgun - Slot Right - RTE Slant Out](#shotgun---slot-right---rte-slant-out) | `Shotgun Slot Right RTE Slant Out` | pass | Shotgun | RTE |
-| 14 | [Shotgun - Slot Left - LTE Slant Out](#shotgun---slot-left---lte-slant-out) | `Shotgun Slot Left LTE Slant Out` | pass | Shotgun | LTE |
-| 15 | [Shotgun - Slot Left - 19 Sweep](#shotgun---slot-left---19-sweep) | `Shotgun Slot Left 19 Sweep` | run | Shotgun | QB |
-| 16 | [Shotgun - Slot Right - 18 Sweep](#shotgun---slot-right---18-sweep) | `Shotgun Slot Right 18 Sweep` | run | Shotgun | QB |
-| 17 | [Shotgun - Slot Right - 38 Sweep](#shotgun---slot-right---38-sweep) | `Shotgun Slot Right 38 Sweep` | run | Shotgun | LH |
-| 18 | [Shotgun - Slot Left - 29 Sweep](#shotgun---slot-left---29-sweep) | `Shotgun Slot Left 29 Sweep` | run | Shotgun | RH |
+| 13 | [Split Backs - Slot Right - 49 Jet](#split-backs---slot-right---49-jet) | `Split Backs Slot Right 49 Jet` | run | Split Backs | SL |
+| 14 | [Split Backs - Slot Left - 48 Jet](#split-backs---slot-left---48-jet) | `Split Backs Slot Left 48 Jet` | run | Split Backs | SL |
+| 15 | [Shotgun - Slot Right - RTE Slant Out](#shotgun---slot-right---rte-slant-out) | `Shotgun Slot Right RTE Slant Out` | pass | Shotgun | RTE |
+| 16 | [Shotgun - Slot Left - LTE Slant Out](#shotgun---slot-left---lte-slant-out) | `Shotgun Slot Left LTE Slant Out` | pass | Shotgun | LTE |
+| 17 | [Shotgun - Slot Left - 19 Sweep](#shotgun---slot-left---19-sweep) | `Shotgun Slot Left 19 Sweep` | run | Shotgun | QB |
+| 18 | [Shotgun - Slot Right - 18 Sweep](#shotgun---slot-right---18-sweep) | `Shotgun Slot Right 18 Sweep` | run | Shotgun | QB |
+| 19 | [Shotgun - Slot Right - 38 Sweep](#shotgun---slot-right---38-sweep) | `Shotgun Slot Right 38 Sweep` | run | Shotgun | LH |
+| 20 | [Shotgun - Slot Left - 29 Sweep](#shotgun---slot-left---29-sweep) | `Shotgun Slot Left 29 Sweep` | run | Shotgun | RH |
 
 # Regular I
 
@@ -366,6 +368,62 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 - The fake has to look real: the quarterback puts the ball at the left halfback's belly and pulls it back out.
 - The left halfback's fake is the play. If he jogs, nobody follows him and the defense is waiting on the right.
 - After the fake the quarterback gets back to the right fast, stays behind the right halfback until the block is made, then turns it up.
+
+---
+
+## Split Backs - Slot Right - 49 Jet
+
+**Call it:** `Split Backs Slot Right 49 Jet`
+
+![Split Backs - Slot Right - 49 Jet](playbook/split-backs/cards/sb-sl-jet-l-5-3.svg)
+
+| Position | Assignment |
+|---|---|
+| **LTE** | End head up on you. Turn him inside. The ball goes around behind you. |
+| **LT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
+| **LG** | Nobody on you. Climb to the playside linebacker. Head across him. |
+| **C** | Reach the nose to your left. Head across his playside shoulder. |
+| **RG** | Nobody on you. Cut off the backside. Never quit on the play. |
+| **RT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
+| **RTE** | End head up on you. Cut him off — get between him and the ball. |
+| **SL** **(ball)** | At the snap run flat across the backfield, take the handoff at full speed and get to the left edge. Turn up in the alley behind the left halfback. |
+| **QB** | Hand the ball to the slot as he runs past you, then fake the handoff to the right halfback going right. |
+| **LH** | Lead outside our end. Block the first man out there — here it is the corner. |
+| **RH** | Take the fake handoff and run hard to the right. You are what holds the backside. |
+
+**Coaching points**
+
+- The slot runs flat and fast across the backfield. The handoff is at full speed, so the quarterback just puts it in his belly.
+- After the handoff the quarterback carries out his fake to the right halfback going right. It is what holds the backside.
+- The left halfback bubbles out ahead of the slot and takes the corner. The slot stays behind him and turns up in the alley.
+
+---
+
+## Split Backs - Slot Left - 48 Jet
+
+**Call it:** `Split Backs Slot Left 48 Jet`
+
+![Split Backs - Slot Left - 48 Jet](playbook/split-backs/cards/sb-sl-jet-r-5-3.svg)
+
+| Position | Assignment |
+|---|---|
+| **LTE** | End head up on you. Cut him off — get between him and the ball. |
+| **LT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
+| **LG** | Nobody on you. Cut off the backside. Never quit on the play. |
+| **C** | Reach the nose to your right. Head across his playside shoulder. |
+| **RG** | Nobody on you. Climb to the playside linebacker. Head across him. |
+| **RT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
+| **RTE** | End head up on you. Turn him inside. The ball goes around behind you. |
+| **SL** **(ball)** | At the snap run flat across the backfield, take the handoff at full speed and get to the right edge. Turn up in the alley behind the right halfback. |
+| **QB** | Hand the ball to the slot as he runs past you, then fake the handoff to the left halfback going left. |
+| **LH** | Take the fake handoff and run hard to the left. You are what holds the backside. |
+| **RH** | Lead outside our end. Block the first man out there — here it is the corner. |
+
+**Coaching points**
+
+- The slot runs flat and fast across the backfield. The handoff is at full speed, so the quarterback just puts it in his belly.
+- After the handoff the quarterback carries out his fake to the left halfback going left. It is what holds the backside.
+- The right halfback bubbles out ahead of the slot and takes the corner. The slot stays behind him and turns up in the alley.
 
 # Shotgun
 
