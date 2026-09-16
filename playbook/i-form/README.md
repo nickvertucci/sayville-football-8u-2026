@@ -105,7 +105,7 @@ Normal line splits, about a foot. Both ends are on the line; the slot is just ou
 
 **Call it:** `Regular I Slot Right LTE Sweep`
 
-![Regular I - Slot Right - LTE Sweep](cards/i-te-jet-r-4-4.svg)
+![Regular I - Slot Right - LTE Sweep](cards/i-te-sweep-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -133,7 +133,7 @@ Normal line splits, about a foot. Both ends are on the line; the slot is just ou
 
 **Call it:** `Regular I Slot Left RTE Sweep`
 
-![Regular I - Slot Left - RTE Sweep](cards/i-te-jet-l-4-4.svg)
+![Regular I - Slot Left - RTE Sweep](cards/i-te-sweep-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -161,7 +161,7 @@ Normal line splits, about a foot. Both ends are on the line; the slot is just ou
 
 **Call it:** `Regular I Slot Right 49 Sweep`
 
-![Regular I - Slot Right - 49 Sweep](cards/i-sl-jet-l-4-4.svg)
+![Regular I - Slot Right - 49 Sweep](cards/i-sl-sweep-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -189,7 +189,7 @@ Normal line splits, about a foot. Both ends are on the line; the slot is just ou
 
 **Call it:** `Regular I Slot Left 48 Sweep`
 
-![Regular I - Slot Left - 48 Sweep](cards/i-sl-jet-r-4-4.svg)
+![Regular I - Slot Left - 48 Sweep](cards/i-sl-sweep-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|

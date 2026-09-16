@@ -1,62 +1,68 @@
 {
-  "id": "i-te-jet-r",
-  "order": 11,
+  "id": "i-te-sweep-l",
+  "order": 12,
   "formation": "i-form",
-  "name": "Regular I - Slot Right - LTE Sweep",
-  "code": "I-3",
-  "call": "Regular I Slot Right LTE Sweep",
+  "name": "Regular I - Slot Left - RTE Sweep",
+  "code": "I-4",
+  "call": "Regular I Slot Left RTE Sweep",
   "word_call": true,
   "type": "run",
-  "direction": "right",
-  "ball_carrier": "LTE",
+  "direction": "left",
+  "ball_carrier": "RTE",
+  "alignment": {
+    "SL": [
+      -5.6,
+      -1.5
+    ]
+  },
   "assignments": {
-    "LTE": {
-      "rule": "Stay down in your stance — no motion. At the snap run flat behind the quarterback, take the handoff at full speed and get to the right edge. Turn up outside the fullback.",
+    "RTE": {
+      "rule": "Stay down in your stance — no motion. At the snap run flat behind the quarterback, take the handoff at full speed and get to the left edge. Turn up outside the fullback.",
       "type": "run",
       "path": [
         [
-          2.2,
+          -2.2,
           -1.9
         ],
         [
-          5.2,
+          -5.2,
           -2.1
         ],
         [
-          10.7,
+          -10.7,
           -1.5
         ],
         [
-          11.2,
+          -11.2,
           0.7
         ],
         [
-          11.2,
+          -11.2,
           4.1
         ],
         [
-          11.2,
+          -11.2,
           7.5
         ]
       ]
     },
-    "LT": {
+    "RT": {
       "block": "cutoff"
     },
-    "LG": {
+    "RG": {
       "block": "cutoff"
     },
     "C": {
       "block": "reach"
     },
-    "RG": {
+    "LG": {
       "block": "climb",
       "target": "playside"
     },
-    "RT": {
+    "LT": {
       "block": "down"
     },
-    "RTE": {
+    "LTE": {
       "block": "base",
       "drive": "in"
     },
@@ -64,19 +70,19 @@
       "block": "screen"
     },
     "QB": {
-      "rule": "Open right and hand the ball to the left tight end as he comes across behind you, then fake a run to the left.",
+      "rule": "Open left and hand the ball to the right tight end as he comes across behind you, then fake a run to the right.",
       "type": "fake",
       "path": [
         [
-          0.9,
+          -0.9,
           -0.8
         ],
         [
-          -0.8,
+          0.8,
           -1.0
         ],
         [
-          -3.6,
+          3.6,
           -0.8
         ]
       ]
@@ -91,9 +97,14 @@
   },
   "fronts": {
     "4-4": {
-      "LT": {
+      "LTE": {
         "block": "man",
         "man": "LE"
+      },
+      "LT": {
+        "block": "man",
+        "man": "M",
+        "help": "LT"
       },
       "LG": {
         "block": "man",
@@ -101,8 +112,8 @@
       },
       "C": {
         "block": "man",
-        "man": "M",
-        "help": "LT"
+        "man": "S",
+        "help": "RT"
       },
       "RG": {
         "block": "man",
@@ -110,33 +121,28 @@
       },
       "RT": {
         "block": "man",
-        "man": "S",
-        "help": "RT"
-      },
-      "RTE": {
-        "block": "man",
         "man": "RE"
       },
       "FB": {
         "block": "man",
-        "man": "R",
+        "man": "W",
         "with": "tailback",
-        "how": "Bubble out around the right end",
+        "how": "Bubble out around the left end",
         "via": [
           [
-            5.6,
+            -5.6,
             1.3
           ]
         ]
       },
       "TB": {
         "block": "man",
-        "man": "R",
+        "man": "W",
         "with": "fullback",
-        "how": "Bubble out around the right end",
+        "how": "Bubble out around the left end",
         "via": [
           [
-            6.4,
+            -6.4,
             2.9
           ]
         ]
@@ -145,7 +151,7 @@
   },
   "coaching_points": [
     "No motion before the snap. The end stays down in his stance, so the play is legal and nothing tips it off.",
-    "The handoff is the whole play: the quarterback opens right and puts the ball in the end's belly at full speed, then carries out his fake.",
-    "Both backs bubble out to the right ahead of the end and double team the outside linebacker together. Two of them on him is what gets the end around the corner."
+    "The handoff is the whole play: the quarterback opens left and puts the ball in the end's belly at full speed, then carries out his fake.",
+    "Both backs bubble out to the left ahead of the end and double team the outside linebacker together. Two of them on him is what gets the end around the corner."
   ]
 }
