@@ -69,57 +69,33 @@
   },
   "defense": {
     "LE": [
-      "Brogan A.",
-      "Brayden S.",
       "Brogan A."
     ],
     "LT": [
-      "Gavin P.",
-      "Brooks A.",
-      "Brooks A."
-    ],
-    "RT": [
-      "Ace A.",
-      "Mason A.",
-      "Ace A."
-    ],
-    "RE": [
       "Jaxon E."
     ],
-    "W": [
-      "Luca D.",
-      "Clark J.",
+    "RT": [
+      "Elias F."
+    ],
+    "RE": [
       "Luca D."
     ],
+    "W": [
+      "Michael M."
+    ],
     "M": [
-      "Jake G.",
-      "Jake G.",
       "Jake G."
     ],
     "S": [
-      "Camden G.",
-      "Michael M.",
       "Camden G."
     ],
-    "R": [
-      "Elias F.",
-      "Brayden H.",
-      "Brayden H."
-    ],
-    "LC": [
-      "Philip A.",
-      "Joseph P.",
-      "Joseph P."
-    ],
+    "R": [],
+    "LC": [],
     "RC": [
-      "Nico V.",
-      "Liam M.",
-      "Nico V."
+      "Philip A."
     ],
     "FS": [
-      "Ryan S.",
-      "Thomas D.",
-      "Kilian F."
+      "Ryan S."
     ]
   },
   "packages": {
