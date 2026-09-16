@@ -2361,9 +2361,9 @@ def write_calls(formations: list[dict], defenses: dict, root: Path) -> str:
 
     One sheet per offensive package, side by side like a spreadsheet. The top table is
     the lineup: eight columns, seven for the line and an eighth on the right because
-    the slot stands out there rather than on anybody's shoulder. The line and the
-    quarterback are column one of the depth chart; the fullback, tailback and slot
-    are the package. Every sheet is package 1's personnel: the Split formation, strong
+    the slot stands out there rather than on anybody's shoulder. The line is column
+    one of the depth chart; the quarterback, fullback, tailback and slot are the
+    package. Every sheet is package 1's personnel: the Split formation, strong
     left and then strong right, each the mirror of the other, and then the I formation,
     strong left and strong right, mirrored the same way.
 
@@ -2398,14 +2398,14 @@ def write_calls(formations: list[dict], defenses: dict, root: Path) -> str:
         # A package that sets a lineman plays him; otherwise it is the starter.
         for col, pos in enumerate(line, start=first):
             grid[0][col] = (pos, backs.get(pos) or starter(pos))
-        grid[1][center] = ("QB", starter("QB"))
+        grid[1][center] = ("QB", backs.get("QB") or starter("QB"))
         grid[1][0 if left else 7] = ("SL", backs.get("SL", ""))
         if layout.startswith("sg-"):
             # The Shotgun: the quarterback five yards deep in the last row, a halfback
             # either side of him — the fullback always on his left and the tailback on
             # his right, whichever side the SL is on.
             grid[1][center] = None
-            grid[3][center] = ("QB", starter("QB"))
+            grid[3][center] = ("QB", backs.get("QB") or starter("QB"))
             grid[3][center - 1] = ("LH", backs.get("FB", ""))
             grid[3][center + 1] = ("RH", backs.get("TB", ""))
         elif layout.startswith("i-"):
@@ -3096,25 +3096,26 @@ ROTATIONS = [str(n) for n in range(1, 7)]
 # Packages, above the squad. A fixed group rather than a list because the group is the
 # thing being named — the kids who go on and come off together. Count and size are per
 # side and here and nowhere else: the markup, the roster round-trip and the print sheet
-# all take their shape from them. Offense is six across, nine deep: the backfield, the
-# two tight ends, then the four interior linemen. Defense is five of three.
+# all take their shape from them. Offense is six across, ten deep: the quarterback and
+# the backfield, the two tight ends, then the four interior linemen. Defense is five
+# of three.
 PACKAGE_COUNT = {"offense": 6, "defense": 5}
-PACKAGE_SIZE = {"offense": 9, "defense": 3}
+PACKAGE_SIZE = {"offense": 10, "defense": 3}
 
-# What each side calls its packages. The offense heading names the three spots the
-# group is made of, in the order the slots sit in — the line does not change between
-# packages, so the package IS the backfield, and saying which three it is turns a box
-# of names into something a coach can check at a glance.
+# What each side calls its packages. The offense heading names the spots the group is
+# made of, in the order the slots sit in — the line does not change between packages,
+# so the package IS the backfield, and saying which four it is turns a box of names
+# into something a coach can check at a glance.
 PACKAGE_TITLE = {
-    "offense": "Offensive FB-TB-SL Packages",
+    "offense": "Offensive QB-FB-TB-SL Packages",
     "defense": "Packages",
 }
 
 # What each slot in a package is, where the side has a fixed answer. Offense does: the
-# fullback, the tailback and the slot, then the two tight ends, then the left tackle,
-# left guard, right guard and right tackle. Defense does not, and labelling its slots
-# would be inventing a structure it has not got.
-PACKAGE_SPOTS = {"offense": ("FB", "TB", "SL", "LTE", "RTE", "LT", "LG", "RG", "RT")}
+# quarterback, the fullback, the tailback and the slot, then the two tight ends, then
+# the left tackle, left guard, right guard and right tackle. Defense does not, and
+# labelling its slots would be inventing a structure it has not got.
+PACKAGE_SPOTS = {"offense": ("QB", "FB", "TB", "SL", "LTE", "RTE", "LT", "LG", "RG", "RT")}
 
 
 def rotations_for(side: str) -> list[tuple[str, str, str]]:
