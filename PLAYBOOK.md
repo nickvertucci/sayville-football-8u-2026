@@ -44,20 +44,22 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 | 36 | [Split Backs - Slot Left - RTE Sweep](#split-backs---slot-left---rte-sweep) | `Split Backs Slot Left RTE Sweep` | Sweep | run | Split Backs | RTE |
 | 37 | [Split Backs - Slot Right - RTE Slant Out](#split-backs---slot-right---rte-slant-out) | `Split Backs Slot Right RTE Slant Out` | Protect | pass | Split Backs | RTE |
 | 38 | [Split Backs - Slot Left - LTE Slant Out](#split-backs---slot-left---lte-slant-out) | `Split Backs Slot Left LTE Slant Out` | Protect | pass | Split Backs | LTE |
-| 39 | [Shotgun - Slot Right - RTE Slant Out](#shotgun---slot-right---rte-slant-out) | `Shotgun Slot Right RTE Slant Out` | Protect | pass | Shotgun | RTE |
-| 40 | [Shotgun - Slot Left - LTE Slant Out](#shotgun---slot-left---lte-slant-out) | `Shotgun Slot Left LTE Slant Out` | Protect | pass | Shotgun | LTE |
-| 41 | [Shotgun - Slot Left - 19 Sweep](#shotgun---slot-left---19-sweep) | `Shotgun Slot Left 19 Sweep` | Sweep | run | Shotgun | QB |
-| 42 | [Shotgun - Slot Right - 18 Sweep](#shotgun---slot-right---18-sweep) | `Shotgun Slot Right 18 Sweep` | Sweep | run | Shotgun | QB |
-| 43 | [Shotgun - Slot Right - 38 Toss](#shotgun---slot-right---38-toss) | `Shotgun Slot Right 38 Toss` | Toss | run | Shotgun | LH |
-| 44 | [Shotgun - Slot Left - 29 Toss](#shotgun---slot-left---29-toss) | `Shotgun Slot Left 29 Toss` | Toss | run | Shotgun | RH |
-| 45 | [Trips - Right - LTE Sweep](#trips---right---lte-sweep) | `Trips Right LTE Sweep` | Sweep | run | Trips | LTE |
-| 46 | [Trips - Left - RTE Sweep](#trips---left---rte-sweep) | `Trips Left RTE Sweep` | Sweep | run | Trips | RTE |
-| 47 | [Trips - Right - 38 Quick Pass](#trips---right---38-quick-pass) | `Trips Right 38 Quick Pass` | Protect | pass | Trips | TB |
-| 48 | [Trips - Left - 39 Quick Pass](#trips---left---39-quick-pass) | `Trips Left 39 Quick Pass` | Protect | pass | Trips | TB |
-| 49 | [Trips - Right - 18 Sweep](#trips---right---18-sweep) | `Trips Right 18 Sweep` | Sweep | run | Trips | QB |
-| 50 | [Trips - Left - 19 Sweep](#trips---left---19-sweep) | `Trips Left 19 Sweep` | Sweep | run | Trips | QB |
-| 51 | [Trips - Right - RTE Slant Out](#trips---right---rte-slant-out) | `Trips Right RTE Slant Out` | Protect | pass | Trips | RTE |
-| 52 | [Trips - Left - LTE Slant Out](#trips---left---lte-slant-out) | `Trips Left LTE Slant Out` | Protect | pass | Trips | LTE |
+| 39 | [Split Backs - Slot Right - 34 Power](#split-backs---slot-right---34-power) | `Split Backs Slot Right 34 Power` | Power | run | Split Backs | LH |
+| 40 | [Split Backs - Slot Left - 25 Power](#split-backs---slot-left---25-power) | `Split Backs Slot Left 25 Power` | Power | run | Split Backs | RH |
+| 41 | [Shotgun - Slot Right - RTE Slant Out](#shotgun---slot-right---rte-slant-out) | `Shotgun Slot Right RTE Slant Out` | Protect | pass | Shotgun | RTE |
+| 42 | [Shotgun - Slot Left - LTE Slant Out](#shotgun---slot-left---lte-slant-out) | `Shotgun Slot Left LTE Slant Out` | Protect | pass | Shotgun | LTE |
+| 43 | [Shotgun - Slot Left - 19 Sweep](#shotgun---slot-left---19-sweep) | `Shotgun Slot Left 19 Sweep` | Sweep | run | Shotgun | QB |
+| 44 | [Shotgun - Slot Right - 18 Sweep](#shotgun---slot-right---18-sweep) | `Shotgun Slot Right 18 Sweep` | Sweep | run | Shotgun | QB |
+| 45 | [Shotgun - Slot Right - 38 Toss](#shotgun---slot-right---38-toss) | `Shotgun Slot Right 38 Toss` | Toss | run | Shotgun | LH |
+| 46 | [Shotgun - Slot Left - 29 Toss](#shotgun---slot-left---29-toss) | `Shotgun Slot Left 29 Toss` | Toss | run | Shotgun | RH |
+| 47 | [Trips - Right - LTE Sweep](#trips---right---lte-sweep) | `Trips Right LTE Sweep` | Sweep | run | Trips | LTE |
+| 48 | [Trips - Left - RTE Sweep](#trips---left---rte-sweep) | `Trips Left RTE Sweep` | Sweep | run | Trips | RTE |
+| 49 | [Trips - Right - 38 Quick Pass](#trips---right---38-quick-pass) | `Trips Right 38 Quick Pass` | Protect | pass | Trips | TB |
+| 50 | [Trips - Left - 39 Quick Pass](#trips---left---39-quick-pass) | `Trips Left 39 Quick Pass` | Protect | pass | Trips | TB |
+| 51 | [Trips - Right - 18 Sweep](#trips---right---18-sweep) | `Trips Right 18 Sweep` | Sweep | run | Trips | QB |
+| 52 | [Trips - Left - 19 Sweep](#trips---left---19-sweep) | `Trips Left 19 Sweep` | Sweep | run | Trips | QB |
+| 53 | [Trips - Right - RTE Slant Out](#trips---right---rte-slant-out) | `Trips Right RTE Slant Out` | Protect | pass | Trips | RTE |
+| 54 | [Trips - Left - LTE Slant Out](#trips---left---lte-slant-out) | `Trips Left LTE Slant Out` | Protect | pass | Trips | LTE |
 
 # Regular I
 
@@ -1204,6 +1206,66 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 - Everybody but the tight end and the SL pass blocks: step back, hands up, stay between your man and the quarterback.
 - The slant stays flat — one step up and out, almost on the line of scrimmage. Any deeper and he runs into the linebackers.
 - The quarterback throws it as soon as the tight end clears the end. If he is covered, tuck it and run — no second look.
+
+---
+
+## Split Backs - Slot Right - 34 Power
+
+**Call it:** `Split Backs Slot Right 34 Power`
+
+**Scheme:** Power
+
+![Split Backs - Slot Right - 34 Power](playbook/split-backs/cards/sb-power-r-4-4.svg)
+
+| Position | Assignment |
+|---|---|
+| **LTE** | End on your inside shoulder. Cut him off — get between him and the ball. |
+| **LT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
+| **LG** | Tackle head up on you. Cut him off — get between him and the ball. |
+| **C** | Nobody on you. Climb to the playside linebacker. Head across him. |
+| **RG** | Tackle head up on you. Hands inside, pads under his, drive him back. |
+| **RT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
+| **RTE** | Leave the end — he is kicked out. Go take the outside linebacker. |
+| **SL** | Kick the end out. Aim at his outside hip. Never let him come underneath you. |
+| **QB** | Open right and hand deep to the left halfback as he crosses, then fake the boot. It holds the backside end. |
+| **LH** **(ball)** | Cross behind the quarterback, take the handoff and hit it downhill at our tackle's outside hip. Never bounce it outside. |
+| **RH** | Lead through the hole. Block the first man who shows in it. |
+
+**Coaching points**
+
+- The same Power as the Regular I, run from two backs instead of a stack. The slot kicks the end out and the right halfback leads through the hole.
+- The runner is the back on the far side. He has further to travel, so he has to start on the snap -- no false step, no waiting to see the hole.
+- The yards are inside the slot's kick-out. If the halfback bounces it wide looking for grass, the play is dead.
+
+---
+
+## Split Backs - Slot Left - 25 Power
+
+**Call it:** `Split Backs Slot Left 25 Power`
+
+**Scheme:** Power
+
+![Split Backs - Slot Left - 25 Power](playbook/split-backs/cards/sb-power-l-4-4.svg)
+
+| Position | Assignment |
+|---|---|
+| **LTE** | Leave the end — he is kicked out. Go take the outside linebacker. |
+| **LT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
+| **LG** | Tackle head up on you. Hands inside, pads under his, drive him back. |
+| **C** | Nobody on you. Climb to the playside linebacker. Head across him. |
+| **RG** | Tackle head up on you. Cut him off — get between him and the ball. |
+| **RT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
+| **RTE** | End on your inside shoulder. Cut him off — get between him and the ball. |
+| **SL** | Kick the end out. Aim at his outside hip. Never let him come underneath you. |
+| **QB** | Open left and hand deep to the right halfback as he crosses, then fake the boot. It holds the backside end. |
+| **LH** | Lead through the hole. Block the first man who shows in it. |
+| **RH** **(ball)** | Cross behind the quarterback, take the handoff and hit it downhill at our tackle's outside hip. Never bounce it outside. |
+
+**Coaching points**
+
+- The same Power as the Regular I, run from two backs instead of a stack. The slot kicks the end out and the left halfback leads through the hole.
+- The runner is the back on the far side. He has further to travel, so he has to start on the snap -- no false step, no waiting to see the hole.
+- The yards are inside the slot's kick-out. If the halfback bounces it wide looking for grass, the play is dead.
 
 # Shotgun
 

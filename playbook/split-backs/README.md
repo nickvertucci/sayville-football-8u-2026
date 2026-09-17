@@ -36,6 +36,8 @@ Both ends are tight on the line. The two backs sit four yards deep and just over
 | [Split Backs - Slot Left - RTE Sweep](#split-backs---slot-left---rte-sweep) | `Split Backs Slot Left RTE Sweep` | Sweep | run | RTE |
 | [Split Backs - Slot Right - RTE Slant Out](#split-backs---slot-right---rte-slant-out) | `Split Backs Slot Right RTE Slant Out` | Protect | pass | RTE |
 | [Split Backs - Slot Left - LTE Slant Out](#split-backs---slot-left---lte-slant-out) | `Split Backs Slot Left LTE Slant Out` | Protect | pass | LTE |
+| [Split Backs - Slot Right - 34 Power](#split-backs---slot-right---34-power) | `Split Backs Slot Right 34 Power` | Power | run | LH |
+| [Split Backs - Slot Left - 25 Power](#split-backs---slot-left---25-power) | `Split Backs Slot Left 25 Power` | Power | run | RH |
 
 ---
 
@@ -396,4 +398,64 @@ Both ends are tight on the line. The two backs sit four yards deep and just over
 - Everybody but the tight end and the SL pass blocks: step back, hands up, stay between your man and the quarterback.
 - The slant stays flat — one step up and out, almost on the line of scrimmage. Any deeper and he runs into the linebackers.
 - The quarterback throws it as soon as the tight end clears the end. If he is covered, tuck it and run — no second look.
+
+---
+
+## Split Backs - Slot Right - 34 Power
+
+**Call it:** `Split Backs Slot Right 34 Power`
+
+**Scheme:** Power
+
+![Split Backs - Slot Right - 34 Power](cards/sb-power-r-4-4.svg)
+
+| Position | Assignment |
+|---|---|
+| **LTE** | End on your inside shoulder. Cut him off — get between him and the ball. |
+| **LT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
+| **LG** | Tackle head up on you. Cut him off — get between him and the ball. |
+| **C** | Nobody on you. Climb to the playside linebacker. Head across him. |
+| **RG** | Tackle head up on you. Hands inside, pads under his, drive him back. |
+| **RT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
+| **RTE** | Leave the end — he is kicked out. Go take the outside linebacker. |
+| **SL** | Kick the end out. Aim at his outside hip. Never let him come underneath you. |
+| **QB** | Open right and hand deep to the left halfback as he crosses, then fake the boot. It holds the backside end. |
+| **LH** **(ball)** | Cross behind the quarterback, take the handoff and hit it downhill at our tackle's outside hip. Never bounce it outside. |
+| **RH** | Lead through the hole. Block the first man who shows in it. |
+
+**Coaching points**
+
+- The same Power as the Regular I, run from two backs instead of a stack. The slot kicks the end out and the right halfback leads through the hole.
+- The runner is the back on the far side. He has further to travel, so he has to start on the snap -- no false step, no waiting to see the hole.
+- The yards are inside the slot's kick-out. If the halfback bounces it wide looking for grass, the play is dead.
+
+---
+
+## Split Backs - Slot Left - 25 Power
+
+**Call it:** `Split Backs Slot Left 25 Power`
+
+**Scheme:** Power
+
+![Split Backs - Slot Left - 25 Power](cards/sb-power-l-4-4.svg)
+
+| Position | Assignment |
+|---|---|
+| **LTE** | Leave the end — he is kicked out. Go take the outside linebacker. |
+| **LT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
+| **LG** | Tackle head up on you. Hands inside, pads under his, drive him back. |
+| **C** | Nobody on you. Climb to the playside linebacker. Head across him. |
+| **RG** | Tackle head up on you. Cut him off — get between him and the ball. |
+| **RT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
+| **RTE** | End on your inside shoulder. Cut him off — get between him and the ball. |
+| **SL** | Kick the end out. Aim at his outside hip. Never let him come underneath you. |
+| **QB** | Open left and hand deep to the right halfback as he crosses, then fake the boot. It holds the backside end. |
+| **LH** | Lead through the hole. Block the first man who shows in it. |
+| **RH** **(ball)** | Cross behind the quarterback, take the handoff and hit it downhill at our tackle's outside hip. Never bounce it outside. |
+
+**Coaching points**
+
+- The same Power as the Regular I, run from two backs instead of a stack. The slot kicks the end out and the left halfback leads through the hole.
+- The runner is the back on the far side. He has further to travel, so he has to start on the snap -- no false step, no waiting to see the hole.
+- The yards are inside the slot's kick-out. If the halfback bounces it wide looking for grass, the play is dead.
 
