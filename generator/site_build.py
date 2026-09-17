@@ -613,20 +613,26 @@ table.xl.pk-plays td {
   /* Black text on no background. The screen's white-on-navy title printed as pale grey
      on paper whenever the browser left background graphics off. */
   .xl-title {
-    padding: 0 0 1px; font-size: 11px; font-weight: 900;
+    padding: 0; font-size: 10px; font-weight: 900; line-height: 1.25;
     color: #000 !important; background: none !important;
   }
   table.xl.xl-plays td { height: auto; vertical-align: middle; }
   /* A call is one line on paper: small enough to fit its cell, and never wrapping
      into a second line that makes the row taller. */
-  .xl-plays td a { font-size: 9px; white-space: nowrap; letter-spacing: -.2px; padding: 0; }
+  .xl-plays td a { font-size: 9px; white-space: nowrap; letter-spacing: -.2px;
+                   padding: 0; line-height: 1.2; }
+  table.xl.xl-plays td { line-height: 1.2; }
+  .xl-scheme { line-height: 1.2; }
   .xl-code { font-size: 8px; margin-right: 3px; color: #555; }
   .xl-scheme { font-size: 8.5px; background: none !important; color: #000 !important; }
   .xl-none { color: #ccc; }
   .xl-n { display: none; }
-  /* The strip stays on the sheet with the blocks: three across, and never split
-     over a page break. */
-  .pk-head { margin: 4px 0 0; font-size: 10px; }
+  /* The strip stays on the sheet with the blocks: three across, never split over a
+     page break. CSS columns were tried here to pack the cards by height and came out
+     18px WORSE than the grid -- balancing put Total Recall's four and Maverick's six
+     in the same column and the other two ran short, so the ragged bottom cost more
+     than the grid's even rows. Measure before believing that one. */
+  .pk-head { margin: 3px 0 0; font-size: 10px; }
   .pk-sub { display: none; }
   .pk-grid { gap: 0 6px; margin: 2px 0 0; break-inside: avoid; }
   .pk { break-inside: avoid; }
