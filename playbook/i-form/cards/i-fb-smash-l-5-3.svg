@@ -48,10 +48,10 @@
 <line x1="410.5" y1="316.7" x2="428.1" y2="311.3" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 <path d="M464.4,337.5 L464.4,314.6" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
 <line x1="455.2" y1="314.6" x2="473.6" y2="314.6" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
-<path d="M502.2,364.5 L586.7,252.7" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-<line x1="579.4" y1="247.2" x2="594.0" y2="258.3" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
-<path d="M351.0,364.5 L329.4,375.3 L291.6,391.5 L253.8,402.3" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 5"/>
-<polygon points="253.8,402.3 262.5,395.0 265.0,403.9" fill="#14213d"/>
+<path d="M199.8,364.5 L115.3,252.7" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="108.0" y1="258.3" x2="122.6" y2="247.2" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
+<path d="M351.0,364.5 L372.6,375.3 L410.4,391.5 L448.2,402.3" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 5"/>
+<polygon points="448.2,402.3 437.0,403.9 439.5,395.0" fill="#14213d"/>
 <path d="M351.0,413.1 C348.8,401.9 340.6,368.1 337.5,345.6 C334.4,323.1 333.0,293.9 332.1,278.1 C331.2,262.4 332.6,266.9 332.1,251.1 C331.7,235.4 330.3,206.1 329.4,183.6 C328.5,161.1 327.1,127.3 326.7,116.1" fill="none" stroke="#b3001b" stroke-width="4.6" stroke-linecap="round" stroke-linejoin="round"/>
 <polygon points="326.7,116.1 333.4,129.6 321.1,130.1" fill="#b3001b"/>
 <path d="M351.0,472.5 L399.6,461.7 L486.0,450.9" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 5"/>
@@ -71,8 +71,8 @@
 <text x="426.6" y="342.0" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">RT</text>
 <rect x="450.9" y="324.0" width="27.0" height="27.0" rx="3" fill="#ffffff" stroke="#14213d" stroke-width="2.6"/>
 <text x="464.4" y="342.0" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">RTE</text>
-<circle cx="502.2" cy="364.5" r="13.5" fill="#ffffff" stroke="#14213d" stroke-width="2.6"/>
-<text x="502.2" y="369.0" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">SL</text>
+<circle cx="199.8" cy="364.5" r="13.5" fill="#ffffff" stroke="#14213d" stroke-width="2.6"/>
+<text x="199.8" y="369.0" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">SL</text>
 <circle cx="351.0" cy="364.5" r="13.5" fill="#ffffff" stroke="#14213d" stroke-width="2.6"/>
 <text x="351.0" y="369.0" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">QB</text>
 <circle cx="351.0" cy="413.1" r="13.5" fill="#ffffff" stroke="#b3001b" stroke-width="2.6"/>

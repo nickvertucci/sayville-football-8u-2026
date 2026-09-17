@@ -387,6 +387,25 @@ def validate_call(play: dict, form: dict, defenses: dict) -> list[str]:
         return [f"formation {form.get('id')}: has plays with calls but no 'backs' map, so "
                 "the numbering in those calls cannot be checked"]
 
+    # The call says where the slot stands, so the diagram has to agree. This is not
+    # implied by anything else: the slot is a blocker on most plays, so moving him to
+    # the wrong side leaves every geometry check happy and only the picture wrong. It
+    # is also the easy mistake to make, because a Slot Right play carries no alignment
+    # override at all -- it takes the formation's -- so mirroring one to the left means
+    # *adding* a key rather than flipping one, which is easy to forget.
+    side_word = re.search(r"\bSlot (Left|Right)\b", call)
+    if side_word:
+        where = play_alignment(form, play).get("SL")
+        if where is None:
+            return [f"{pid}: call '{call}' says Slot {side_word.group(1)}, but this "
+                    "formation has no slot"]
+        wanted = -1 if side_word.group(1) == "Left" else 1
+        if (where[0] < 0) != (wanted < 0):
+            stood = "left" if where[0] < 0 else "right"
+            return [f"{pid}: call '{call}' says Slot {side_word.group(1)}, but the slot "
+                    f"lines up on the {stood} (x = {where[0]:+.1f}) -- give the play an "
+                    f'"alignment" override for SL, or fix the call']
+
     m = CALL_DIGITS.search(call)
     # A word call: the ball goes to somebody the numbering has no digit for (a tight end
     # on an end-around), so the call names him instead of a hole. The play has to opt in,

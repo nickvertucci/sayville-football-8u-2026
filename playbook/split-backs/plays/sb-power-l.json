@@ -1,0 +1,70 @@
+{
+  "id": "sb-power-l",
+  "order": 32,
+  "formation": "split-backs",
+  "name": "Split Backs - Slot Left - 25 Power",
+  "code": "S-14",
+  "call": "Split Backs Slot Left 25 Power",
+  "type": "run",
+  "scheme": "Power",
+  "direction": "left",
+  "ball_carrier": "RH",
+  "assignments": {
+    "QB": {
+      "rule": "Open left and hand deep to the right halfback as he crosses, then fake the boot. It holds the backside end.",
+      "type": "fake",
+      "path": [
+        [
+          -1.2,
+          -0.5
+        ],
+        [
+          -3.0,
+          -1.2
+        ],
+        [
+          -4.6,
+          -1.6
+        ]
+      ]
+    },
+    "RH": {
+      "rule": "Cross behind the quarterback, take the handoff and hit it downhill at our tackle's outside hip. Never bounce it outside.",
+      "type": "run",
+      "path": [
+        [
+          -1.2,
+          1.0
+        ],
+        [
+          -4.2,
+          2.6
+        ],
+        [
+          -6.0,
+          4.2
+        ],
+        [
+          -6.3,
+          6.6
+        ],
+        [
+          -6.4,
+          9.0
+        ]
+      ]
+    }
+  },
+  "coaching_points": [
+    "The same Power as the Regular I, run from two backs instead of a stack. The slot kicks the end out and the left halfback leads through the hole.",
+    "The runner is the back on the far side. He has further to travel, so he has to start on the snap -- no false step, no waiting to see the hole.",
+    "The yards are inside the slot's kick-out. If the halfback bounces it wide looking for grass, the play is dead."
+  ],
+  "z": "left",
+  "alignment": {
+    "SL": [
+      -5.6,
+      -1.5
+    ]
+  }
+}
