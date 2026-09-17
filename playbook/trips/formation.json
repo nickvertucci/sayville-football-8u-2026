@@ -4,7 +4,7 @@
   "name": "Trips",
   "code_prefix": "T",
   "family": "Trips",
-  "summary": "Empty backfield. Backs 2, 3 and 4 bunched to one side outside the tight end — slot and fullback up front, tailback behind and between them. The quarterback is alone.",
+  "summary": "Empty backfield. Backs 2, 3 and 4 bunched to one side outside the tight end — slot and fullback up front, tailback behind and between them. The quarterback is alone, and everything goes outside.",
   "personnel": "11 players, 2 tight ends, quarterback, fullback, tailback, slot — no one behind the quarterback",
   "notes": "Same line as the Regular I — both ends tight, seven on the line every snap. Nobody behind the quarterback. The bunch is a triangle: the slot just outside the tight end and the fullback outside him, both up front, with the tailback a yard back splitting the two of them. The call names the bunch — Trips Right or Trips Left — and moves all three.",
   "alignment": {
@@ -39,6 +39,6 @@
     "Nobody in the backfield. The quarterback is alone. The bunch is a triangle: slot inside and fullback outside up front, tailback behind, splitting them.",
     "The tailback lines up in the gap between the slot and the fullback, one yard back. He should be able to see daylight between their inside shoulders.",
     "Trips Right is all three on the right; Trips Left moves all three. A play that moves them says so in the call.",
-    "Same numbers as the Regular I: 2 is the fullback, 3 the tailback, 4 the slot. 34 Power is still the tailback at the 4 hole — he just starts behind the bunch and comes inside."
+    "Same numbers as the Regular I: 2 is the fullback, 3 the tailback, 4 the slot. Trips does not run inside — no Power, no Smash, no Dive. Three men to a side is an edge look, and everything off it goes outside or into the air."
   ]
 }

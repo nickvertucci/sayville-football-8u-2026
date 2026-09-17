@@ -546,7 +546,7 @@ table.xl.xl-plays td {
    as their own lines rather than wrapping into each other. */
 .xl-plays td a {
   display: block; color: var(--ink); font-weight: 700; text-decoration: none;
-  padding: 1px 0;
+  padding: 1px 0; font-size: 10.5px;
 }
 .xl-plays td a + a { border-top: 1px dotted var(--line); }
 .xl-plays td a:hover { text-decoration: underline; }
@@ -612,7 +612,7 @@ table.xl.pk-plays td {
   table.xl.xl-plays td { height: auto; vertical-align: middle; }
   /* A call is one line on paper: small enough to fit its cell, and never wrapping
      into a second line that makes the row taller. */
-  .xl-plays td a { font-size: 9.5px; white-space: nowrap; letter-spacing: -.2px; }
+  .xl-plays td a { font-size: 8.5px; white-space: nowrap; letter-spacing: -.2px; }
   .xl-code { font-size: 8px; margin-right: 3px; color: #555; }
   .xl-scheme { font-size: 8.5px; background: none !important; color: #000 !important; }
   .xl-none { color: #ccc; }
@@ -2489,17 +2489,30 @@ SCHEME_LABEL = {"Protect": "Pass"}
 
 
 def _sheet_name(play: dict, form: dict) -> str:
-    """The play as you say it once the block and the column have said the rest.
+    """The play as you call it, minus only the formation the block already names.
 
-    "Regular I - Slot Left - 35 Power", in the Regular I block under Left, is
-    "35 Power". The heading already names the formation and the column already
-    names the side, so what is left in the cell is the call itself.
+    "Regular I - Slot Left - 35 Power" in the Regular I block is "Slot L - 35
+    Power". The alignment stays: the column is where the ball goes, which is not
+    where the slot stands, and the two come apart often enough to matter --
+    Trips Right 49 Sweep is a Right bunch running into the Left column. Dropping
+    the alignment made those two cells read identically.
+
+    The word is whatever the call puts in front of Left or Right, with the side
+    shortened to its initial: "Slot Right" becomes "Slot R", "Trips Left"
+    becomes "Trips L". This reads off the call rather than the play name,
+    because in Trips the strength word IS the formation name -- stripping the
+    heading off "Trips - Right - LTE Sweep" left a bare "R -". A formation with
+    no strength word, like the Wishbone, keeps nothing.
     """
-    name = play.get("name") or ""
+    call = play.get("call") or ""
+    m = re.search(r"\b(\w+)\s+(Left|Right)\s+(.*)$", call)
+    if m:
+        return f"{m.group(1)} {m.group(2)[0]} - {m.group(3)}"
+    # No strength word at all (the Wishbone): drop the formation, keep the call.
     label = form_label(form)
-    if name.lower().startswith(label.lower() + " - "):
-        name = name[len(label) + 3:]
-    return re.sub(r"^(?:Slot\s+)?(?:Left|Right)\s+-\s+", "", name)
+    if call.lower().startswith(label.lower() + " "):
+        return call[len(label) + 1:]
+    return call
 
 
 def _package_strip(root: Path, formations: list[dict]) -> str:

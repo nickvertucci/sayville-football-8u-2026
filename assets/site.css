@@ -486,7 +486,7 @@ table.xl.xl-plays td {
    as their own lines rather than wrapping into each other. */
 .xl-plays td a {
   display: block; color: var(--ink); font-weight: 700; text-decoration: none;
-  padding: 1px 0;
+  padding: 1px 0; font-size: 10.5px;
 }
 .xl-plays td a + a { border-top: 1px dotted var(--line); }
 .xl-plays td a:hover { text-decoration: underline; }
@@ -552,7 +552,7 @@ table.xl.pk-plays td {
   table.xl.xl-plays td { height: auto; vertical-align: middle; }
   /* A call is one line on paper: small enough to fit its cell, and never wrapping
      into a second line that makes the row taller. */
-  .xl-plays td a { font-size: 9.5px; white-space: nowrap; letter-spacing: -.2px; }
+  .xl-plays td a { font-size: 8.5px; white-space: nowrap; letter-spacing: -.2px; }
   .xl-code { font-size: 8px; margin-right: 3px; color: #555; }
   .xl-scheme { font-size: 8.5px; background: none !important; color: #000 !important; }
   .xl-none { color: #ccc; }
