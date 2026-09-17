@@ -10,30 +10,30 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 | 2 | [Regular I - Slot Left - 35 Power](#regular-i---slot-left---35-power) | `Regular I Slot Left 35 Power` | run | Regular I | TB |
 | 3 | [Regular I - Slot Right - LTE Sweep](#regular-i---slot-right---lte-sweep) | `Regular I Slot Right LTE Sweep` | run | Regular I | LTE |
 | 4 | [Regular I - Slot Left - RTE Sweep](#regular-i---slot-left---rte-sweep) | `Regular I Slot Left RTE Sweep` | run | Regular I | RTE |
-| 5 | [Regular I - Slot Right - 49 Sweep](#regular-i---slot-right---49-sweep) | `Regular I Slot Right 49 Sweep` | run | Regular I | SL |
-| 6 | [Regular I - Slot Left - 48 Sweep](#regular-i---slot-left---48-sweep) | `Regular I Slot Left 48 Sweep` | run | Regular I | SL |
+| 5 | [Regular I - Slot Right - 49 Toss](#regular-i---slot-right---49-toss) | `Regular I Slot Right 49 Toss` | run | Regular I | SL |
+| 6 | [Regular I - Slot Left - 48 Toss](#regular-i---slot-left---48-toss) | `Regular I Slot Left 48 Toss` | run | Regular I | SL |
 | 7 | [Regular I - Slot Right - 30 Smash](#regular-i---slot-right---30-smash) | `Regular I Slot Right 30 Smash` | run | Regular I | TB |
 | 8 | [Regular I - Slot Left - 31 Smash](#regular-i---slot-left---31-smash) | `Regular I Slot Left 31 Smash` | run | Regular I | TB |
 | 9 | [Regular I - Slot Right - RTE Slant Out](#regular-i---slot-right---rte-slant-out) | `Regular I Slot Right RTE Slant Out` | pass | Regular I | RTE |
 | 10 | [Regular I - Slot Left - LTE Slant Out](#regular-i---slot-left---lte-slant-out) | `Regular I Slot Left LTE Slant Out` | pass | Regular I | LTE |
-| 11 | [Split Backs - Slot Right - 38 Pitch](#split-backs---slot-right---38-pitch) | `Split Backs Slot Right 38 Pitch` | run | Split Backs | LH |
-| 12 | [Split Backs - Slot Left - 29 Pitch](#split-backs---slot-left---29-pitch) | `Split Backs Slot Left 29 Pitch` | run | Split Backs | RH |
-| 13 | [Split Backs - Slot Right - 18 Sweep](#split-backs---slot-right---18-sweep) | `Split Backs Slot Right 18 Sweep` | run | Split Backs | QB |
-| 14 | [Split Backs - Slot Left - 19 Sweep](#split-backs---slot-left---19-sweep) | `Split Backs Slot Left 19 Sweep` | run | Split Backs | QB |
-| 15 | [Split Backs - Slot Left - 19 Fake Sweep](#split-backs---slot-left---19-fake-sweep) | `Split Backs Slot Left 19 Fake Sweep` | run | Split Backs | QB |
-| 16 | [Split Backs - Slot Right - 18 Fake Sweep](#split-backs---slot-right---18-fake-sweep) | `Split Backs Slot Right 18 Fake Sweep` | run | Split Backs | QB |
-| 17 | [Split Backs - Slot Right - 49 Sweep](#split-backs---slot-right---49-sweep) | `Split Backs Slot Right 49 Sweep` | run | Split Backs | SL |
-| 18 | [Split Backs - Slot Left - 48 Sweep](#split-backs---slot-left---48-sweep) | `Split Backs Slot Left 48 Sweep` | run | Split Backs | SL |
+| 11 | [Split Backs - Slot Right - 38 Toss](#split-backs---slot-right---38-toss) | `Split Backs Slot Right 38 Toss` | run | Split Backs | LH |
+| 12 | [Split Backs - Slot Left - 29 Toss](#split-backs---slot-left---29-toss) | `Split Backs Slot Left 29 Toss` | run | Split Backs | RH |
+| 13 | [Split Backs - Slot Right - 18 Toss](#split-backs---slot-right---18-toss) | `Split Backs Slot Right 18 Toss` | run | Split Backs | QB |
+| 14 | [Split Backs - Slot Left - 19 Toss](#split-backs---slot-left---19-toss) | `Split Backs Slot Left 19 Toss` | run | Split Backs | QB |
+| 15 | [Split Backs - Slot Left - 19 Fake Toss](#split-backs---slot-left---19-fake-toss) | `Split Backs Slot Left 19 Fake Toss` | run | Split Backs | QB |
+| 16 | [Split Backs - Slot Right - 18 Fake Toss](#split-backs---slot-right---18-fake-toss) | `Split Backs Slot Right 18 Fake Toss` | run | Split Backs | QB |
+| 17 | [Split Backs - Slot Right - 49 Toss](#split-backs---slot-right---49-toss) | `Split Backs Slot Right 49 Toss` | run | Split Backs | SL |
+| 18 | [Split Backs - Slot Left - 48 Toss](#split-backs---slot-left---48-toss) | `Split Backs Slot Left 48 Toss` | run | Split Backs | SL |
 | 19 | [Split Backs - Slot Right - LTE Sweep](#split-backs---slot-right---lte-sweep) | `Split Backs Slot Right LTE Sweep` | run | Split Backs | LTE |
 | 20 | [Split Backs - Slot Left - RTE Sweep](#split-backs---slot-left---rte-sweep) | `Split Backs Slot Left RTE Sweep` | run | Split Backs | RTE |
 | 21 | [Split Backs - Slot Right - RTE Slant Out](#split-backs---slot-right---rte-slant-out) | `Split Backs Slot Right RTE Slant Out` | pass | Split Backs | RTE |
 | 22 | [Split Backs - Slot Left - LTE Slant Out](#split-backs---slot-left---lte-slant-out) | `Split Backs Slot Left LTE Slant Out` | pass | Split Backs | LTE |
 | 23 | [Shotgun - Slot Right - RTE Slant Out](#shotgun---slot-right---rte-slant-out) | `Shotgun Slot Right RTE Slant Out` | pass | Shotgun | RTE |
 | 24 | [Shotgun - Slot Left - LTE Slant Out](#shotgun---slot-left---lte-slant-out) | `Shotgun Slot Left LTE Slant Out` | pass | Shotgun | LTE |
-| 25 | [Shotgun - Slot Left - 19 Sweep](#shotgun---slot-left---19-sweep) | `Shotgun Slot Left 19 Sweep` | run | Shotgun | QB |
-| 26 | [Shotgun - Slot Right - 18 Sweep](#shotgun---slot-right---18-sweep) | `Shotgun Slot Right 18 Sweep` | run | Shotgun | QB |
-| 27 | [Shotgun - Slot Right - 38 Sweep](#shotgun---slot-right---38-sweep) | `Shotgun Slot Right 38 Sweep` | run | Shotgun | LH |
-| 28 | [Shotgun - Slot Left - 29 Sweep](#shotgun---slot-left---29-sweep) | `Shotgun Slot Left 29 Sweep` | run | Shotgun | RH |
+| 25 | [Shotgun - Slot Left - 19 Toss](#shotgun---slot-left---19-toss) | `Shotgun Slot Left 19 Toss` | run | Shotgun | QB |
+| 26 | [Shotgun - Slot Right - 18 Toss](#shotgun---slot-right---18-toss) | `Shotgun Slot Right 18 Toss` | run | Shotgun | QB |
+| 27 | [Shotgun - Slot Right - 38 Toss](#shotgun---slot-right---38-toss) | `Shotgun Slot Right 38 Toss` | run | Shotgun | LH |
+| 28 | [Shotgun - Slot Left - 29 Toss](#shotgun---slot-left---29-toss) | `Shotgun Slot Left 29 Toss` | run | Shotgun | RH |
 
 # Regular I
 
@@ -153,11 +153,11 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Regular I - Slot Right - 49 Sweep
+## Regular I - Slot Right - 49 Toss
 
-**Call it:** `Regular I Slot Right 49 Sweep`
+**Call it:** `Regular I Slot Right 49 Toss`
 
-![Regular I - Slot Right - 49 Sweep](playbook/i-form/cards/i-sl-sweep-l-4-4.svg)
+![Regular I - Slot Right - 49 Toss](playbook/i-form/cards/i-sl-toss-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -181,11 +181,11 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Regular I - Slot Left - 48 Sweep
+## Regular I - Slot Left - 48 Toss
 
-**Call it:** `Regular I Slot Left 48 Sweep`
+**Call it:** `Regular I Slot Left 48 Toss`
 
-![Regular I - Slot Left - 48 Sweep](playbook/i-form/cards/i-sl-sweep-r-4-4.svg)
+![Regular I - Slot Left - 48 Toss](playbook/i-form/cards/i-sl-toss-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -323,11 +323,11 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Split Backs - Slot Right - 38 Pitch
+## Split Backs - Slot Right - 38 Toss
 
-**Call it:** `Split Backs Slot Right 38 Pitch`
+**Call it:** `Split Backs Slot Right 38 Toss`
 
-![Split Backs - Slot Right - 38 Pitch](playbook/split-backs/cards/sb-pitch-r-4-4.svg)
+![Split Backs - Slot Right - 38 Toss](playbook/split-backs/cards/sb-toss-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -351,11 +351,11 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Split Backs - Slot Left - 29 Pitch
+## Split Backs - Slot Left - 29 Toss
 
-**Call it:** `Split Backs Slot Left 29 Pitch`
+**Call it:** `Split Backs Slot Left 29 Toss`
 
-![Split Backs - Slot Left - 29 Pitch](playbook/split-backs/cards/sb-pitch-l-4-4.svg)
+![Split Backs - Slot Left - 29 Toss](playbook/split-backs/cards/sb-toss-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -379,11 +379,11 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Split Backs - Slot Right - 18 Sweep
+## Split Backs - Slot Right - 18 Toss
 
-**Call it:** `Split Backs Slot Right 18 Sweep`
+**Call it:** `Split Backs Slot Right 18 Toss`
 
-![Split Backs - Slot Right - 18 Sweep](playbook/split-backs/cards/sb-qb-sweep-r-4-4.svg)
+![Split Backs - Slot Right - 18 Toss](playbook/split-backs/cards/sb-qb-toss-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -407,11 +407,11 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Split Backs - Slot Left - 19 Sweep
+## Split Backs - Slot Left - 19 Toss
 
-**Call it:** `Split Backs Slot Left 19 Sweep`
+**Call it:** `Split Backs Slot Left 19 Toss`
 
-![Split Backs - Slot Left - 19 Sweep](playbook/split-backs/cards/sb-qb-sweep-l-4-4.svg)
+![Split Backs - Slot Left - 19 Toss](playbook/split-backs/cards/sb-qb-toss-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -435,11 +435,11 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Split Backs - Slot Left - 19 Fake Sweep
+## Split Backs - Slot Left - 19 Fake Toss
 
-**Call it:** `Split Backs Slot Left 19 Fake Sweep`
+**Call it:** `Split Backs Slot Left 19 Fake Toss`
 
-![Split Backs - Slot Left - 19 Fake Sweep](playbook/split-backs/cards/sb-fake-sweep-l-4-4.svg)
+![Split Backs - Slot Left - 19 Fake Toss](playbook/split-backs/cards/sb-fake-toss-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -463,11 +463,11 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Split Backs - Slot Right - 18 Fake Sweep
+## Split Backs - Slot Right - 18 Fake Toss
 
-**Call it:** `Split Backs Slot Right 18 Fake Sweep`
+**Call it:** `Split Backs Slot Right 18 Fake Toss`
 
-![Split Backs - Slot Right - 18 Fake Sweep](playbook/split-backs/cards/sb-fake-sweep-r-4-4.svg)
+![Split Backs - Slot Right - 18 Fake Toss](playbook/split-backs/cards/sb-fake-toss-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -491,11 +491,11 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Split Backs - Slot Right - 49 Sweep
+## Split Backs - Slot Right - 49 Toss
 
-**Call it:** `Split Backs Slot Right 49 Sweep`
+**Call it:** `Split Backs Slot Right 49 Toss`
 
-![Split Backs - Slot Right - 49 Sweep](playbook/split-backs/cards/sb-sl-jet-l-4-4.svg)
+![Split Backs - Slot Right - 49 Toss](playbook/split-backs/cards/sb-sl-toss-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -519,11 +519,11 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Split Backs - Slot Left - 48 Sweep
+## Split Backs - Slot Left - 48 Toss
 
-**Call it:** `Split Backs Slot Left 48 Sweep`
+**Call it:** `Split Backs Slot Left 48 Toss`
 
-![Split Backs - Slot Left - 48 Sweep](playbook/split-backs/cards/sb-sl-jet-r-4-4.svg)
+![Split Backs - Slot Left - 48 Toss](playbook/split-backs/cards/sb-sl-toss-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -717,11 +717,11 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Shotgun - Slot Left - 19 Sweep
+## Shotgun - Slot Left - 19 Toss
 
-**Call it:** `Shotgun Slot Left 19 Sweep`
+**Call it:** `Shotgun Slot Left 19 Toss`
 
-![Shotgun - Slot Left - 19 Sweep](playbook/shotgun/cards/sg-qb-sweep-l-4-4.svg)
+![Shotgun - Slot Left - 19 Toss](playbook/shotgun/cards/sg-qb-toss-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -745,11 +745,11 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Shotgun - Slot Right - 18 Sweep
+## Shotgun - Slot Right - 18 Toss
 
-**Call it:** `Shotgun Slot Right 18 Sweep`
+**Call it:** `Shotgun Slot Right 18 Toss`
 
-![Shotgun - Slot Right - 18 Sweep](playbook/shotgun/cards/sg-qb-sweep-r-4-4.svg)
+![Shotgun - Slot Right - 18 Toss](playbook/shotgun/cards/sg-qb-toss-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -773,11 +773,11 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Shotgun - Slot Right - 38 Sweep
+## Shotgun - Slot Right - 38 Toss
 
-**Call it:** `Shotgun Slot Right 38 Sweep`
+**Call it:** `Shotgun Slot Right 38 Toss`
 
-![Shotgun - Slot Right - 38 Sweep](playbook/shotgun/cards/sg-rb-sweep-r-4-4.svg)
+![Shotgun - Slot Right - 38 Toss](playbook/shotgun/cards/sg-rb-toss-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -801,11 +801,11 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Shotgun - Slot Left - 29 Sweep
+## Shotgun - Slot Left - 29 Toss
 
-**Call it:** `Shotgun Slot Left 29 Sweep`
+**Call it:** `Shotgun Slot Left 29 Toss`
 
-![Shotgun - Slot Left - 29 Sweep](playbook/shotgun/cards/sg-rb-sweep-l-4-4.svg)
+![Shotgun - Slot Left - 29 Toss](playbook/shotgun/cards/sg-rb-toss-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|

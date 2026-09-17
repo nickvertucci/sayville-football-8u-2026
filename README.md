@@ -36,13 +36,13 @@ loud, because a play that moves somebody silently is a play nobody can call.
 | **3** | The tailback (TB) in the Regular I; the left back (LH) in the Split Backs and Shotgun — odd-numbered holes |
 | **4** | The slot, split wide in every formation |
 
-| Hole | Where |
-|---|---|
-| **0 / 1** | Between the center and the guard |
-| **2 / 3** | Between the guard and the tackle |
-| **4 / 5** | Between the tackle and the end |
-| **6 / 7** | Outside the tight end |
-| **8 / 9** | Wider still — all the way outside |
+| Hole | Word | Where |
+|---|---|---|
+| **0 / 1** | Smash | Between the center and the guard |
+| **2 / 3** | Dive | Between the guard and the tackle |
+| **4 / 5** | Power | Between the tackle and the end |
+| **6 / 7** | Slant | Outside the tight end |
+| **8 / 9** | Toss | Wider still — all the way outside |
 
 Even numbers go right (0, 2, 4, 6, 8), odd numbers go left (1, 3, 5, 7, 9), counting
 outward from the center.
@@ -62,7 +62,7 @@ The digits describe the back the first digit names, not necessarily the ball car
 |---|---|---|
 | `Regular I Slot Right 34 Power` / `Slot Left 35 Power` | Regular I - Slot Right - 34 Power / Slot Left - 35 Power | tailback, tackle–end |
 | `Regular I Slot Right LTE Sweep` / `Slot Left RTE Sweep` | Regular I - Slot Right - LTE Sweep / Slot Left - RTE Sweep | the backside tight end on an end-around, all the way outside |
-| `Regular I Slot Right 49 Sweep` / `Slot Left 48 Sweep` | Regular I - Slot Right - 49 Sweep / Slot Left - 48 Sweep | the slot, flat across the backfield and outside the other way |
+| `Regular I Slot Right 49 Toss` / `Slot Left 48 Toss` | Regular I - Slot Right - 49 Toss / Slot Left - 48 Toss | the slot, flat across the backfield and outside the other way |
 
 The tight-end sweep is a **word call** — no digits, because the tight end is not a numbered
 back. It names him instead. A play has to opt in with `word_call`, so any other play
@@ -73,16 +73,16 @@ Every play has a left and a right.
 ### Split Backs: formation + Slot + back + hole + play word
 
 Two backs to number instead of three, and a slot out wide to declare — so the call reads
-like the Regular I's. `Split Backs Slot Right 38 Pitch` is the Split Backs, slot on the right, the
+like the Regular I's. `Split Backs Slot Right 38 Toss` is the Split Backs, slot on the right, the
 3-back (left halfback) all the way outside at the 8 hole. In this formation the **3-back is
 always the left back** (odd-numbered holes) and the **2-back is always the right back**
 (even-numbered holes); the slot out wide keeps **4**, the number he carries in every look.
 
 | Call | Play | Reads as |
 |---|---|---|
-| `Split Backs Slot Left 29 Pitch` / `Slot Right 38 Pitch` | Split Backs - Slot Left - 29 Pitch / Slot Right - 38 Pitch | the far back, all the way outside |
+| `Split Backs Slot Left 29 Toss` / `Slot Right 38 Toss` | Split Backs - Slot Left - 29 Toss / Slot Right - 38 Toss | the far back, all the way outside |
 
-The back digit follows whoever actually carries it. On the pitch it is the far back,
+The back digit follows whoever actually carries it. On the toss it is the far back,
 because the near one is busy bubbling out to block.
 
 ### Shotgun: formation + Slot + who catches it + route
@@ -94,12 +94,11 @@ the Split Backs do: 3 is left, 2 is right.
 | Call | Play | Reads as |
 |---|---|---|
 | `Shotgun Slot Right RTE Slant Out` / `Slot Left LTE Slant Out` | Shotgun - Slot Right - RTE Slant Out / Slot Left - LTE Slant Out | the play-side tight end, a flat slant out almost on the line of scrimmage |
-| `Shotgun Slot Left 19 Sweep` / `Slot Right 18 Sweep` | Shotgun - Slot Left - 19 Sweep / Slot Right - 18 Sweep | the quarterback, all the way outside behind the near halfback |
-| `Shotgun Slot Left 29 Sweep` / `Slot Right 38 Sweep` | Shotgun - Slot Left - 29 Sweep / Slot Right - 38 Sweep | the far halfback, across in front of the quarterback and all the way outside |
+| `Shotgun Slot Left 19 Toss` / `Slot Right 18 Toss` | Shotgun - Slot Left - 19 Toss / Slot Right - 18 Toss | the quarterback, all the way outside behind the near halfback |
+| `Shotgun Slot Left 29 Toss` / `Slot Right 38 Toss` | Shotgun - Slot Left - 29 Toss / Slot Right - 38 Toss | the far halfback, across in front of the quarterback and all the way outside |
 
-**Play word** — the Regular I carries `Power` and the tight-end and slot `Sweep`; the Split Backs
-carries `Pitch`, `Sweep` and `Fake Sweep`; the Shotgun carries the tight end's `Slant Out`, the
-only pass in the book, which fakes nothing, and the quarterback `Sweep`.
+**Play word** — a numbered run's word is the hole: Smash, Dive, Power, Slant, Toss.
+The tight-end `Sweep` and the tight-end `Slant Out` are word calls, no hole digit.
 
 ## Formations
 
@@ -107,9 +106,9 @@ Three formations, 18 plays, in teaching order:
 
 | # | Formation | Family | Plays | What it is for |
 |---|---|---|---|---|
-| 1 | **Regular I** | Regular I | 6 | Base offense. Fullback and tailback stacked behind the quarterback. Off tackle, the tailback between the tackle and the end behind the SL's kick-out, the tight-end sweep and the slot sweep, both ways. |
-| 2 | **Split Backs** | Split Backs | 6 | Two backs at even depth and a slot just outside the tight end. 38/29 Pitch, the QB sweep and the fake-handoff QB sweep, both ways. |
-| 3 | **Shotgun** | Shotgun | 6 | The quarterback five yards deep with a back either side. The tight-end slant out, the QB sweep and the RB sweep, both ways. |
+| 1 | **Regular I** | Regular I | 6 | Base offense. Fullback and tailback stacked behind the quarterback. Off tackle, the tailback between the tackle and the end behind the SL's kick-out, the tight-end sweep and the slot toss, both ways. |
+| 2 | **Split Backs** | Split Backs | 6 | Two backs at even depth and a slot just outside the tight end. 38/29 Toss, the QB toss and the fake-handoff QB toss, both ways. |
+| 3 | **Shotgun** | Shotgun | 6 | The quarterback five yards deep with a back either side. The tight-end slant out, the QB toss and the RB toss, both ways. |
 
 Both are two-tight-end, downhill running formations, so the blocking language carries
 over: "block down on the first defender inside you" means the same thing in either. That
@@ -118,7 +117,7 @@ is the reason to carry two related looks rather than two unrelated offenses.
 **Neither formation is symmetric, so every left-handed play is written by hand.** The slot
 sits split to the right unless a play moves him, so flipping a play would flip his path
 while leaving him aligned on the same side. Both left-handed plays do move him — the
-Regular I's `Slot Left 35 Power` and the Split Backs' `Slot Left 29 Pitch`, each the mirror of
+Regular I's `Slot Left 35 Power` and the Split Backs' `Slot Left 29 Toss`, each the mirror of
 its right-hand play — and say so in the call.
 
 ## Defense

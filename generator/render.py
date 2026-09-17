@@ -438,6 +438,17 @@ def validate_call(play: dict, form: dict, defenses: dict) -> list[str]:
         return [f"{pid}: call '{call}' says the {hole_digit} hole, which is {window} "
                 f"out from the middle, but {pos} crosses the line at "
                 f"{abs(crossing):.2f}"]
+
+    # A numbered run's play word is the hole: Smash at 0/1, Dive at 2/3, Power at
+    # 4/5, Slant at 6/7, Toss at 8/9. "Fake Toss" is still Toss. Word calls and
+    # passes do not use this — they have no hole family.
+    if play.get("type") == "run":
+        rest = call[m.end():].strip()
+        allowed = blocking.scheme_words(hole)
+        if allowed and rest not in allowed:
+            word = blocking.scheme_for_hole(hole)
+            return [f"{pid}: call '{call}' runs the {hole} hole, which is {word} "
+                    f"— the play word has to be {word}, not {rest!r}"]
     return []
 
 

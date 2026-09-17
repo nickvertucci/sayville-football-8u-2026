@@ -54,6 +54,32 @@ SCOUT_FRONTS = ("4-4", "5-3", "5-4-2")
 # on every play and the one that goes in a coach's pocket.
 DEFAULT_FRONT = "4-4"
 
+# The play word IS the hole. Even right, odd left. A numbered run's call has to
+# say this word — 34 Power, 30 Smash, 38 Toss — so the huddle and the diagram
+# name the same family. Word calls (a tight end sweep, a slant-out pass) opt out
+# because they have no hole digit.
+HOLE_SCHEME = {
+    0: "Smash", 1: "Smash",  # A gap: center–guard
+    2: "Dive",  3: "Dive",   # B gap: guard–tackle
+    4: "Power", 5: "Power",  # C gap: tackle–end
+    6: "Slant", 7: "Slant",  # outside the tight end
+    8: "Toss",  9: "Toss",   # all the way outside
+}
+
+
+def scheme_for_hole(hole: int) -> str | None:
+    """The play word a numbered run at this hole has to carry."""
+    return HOLE_SCHEME.get(hole)
+
+
+def scheme_words(hole: int) -> tuple[str, ...]:
+    """Allowed play words at this hole: the scheme, or Fake plus the scheme."""
+    word = scheme_for_hole(hole)
+    if not word:
+        return ()
+    return (word, f"Fake {word}")
+
+
 # Our line, from the middle out. Used to find a blocker's neighbour.
 LINE = ("LTE", "LT", "LG", "C", "RG", "RT", "RTE")
 
