@@ -11,7 +11,7 @@
   "ball_carrier": "QB",
   "assignments": {
     "QB": {
-      "rule": "Take the snap and sweep left, flat and fast, behind the split end. Turn up outside his block.",
+      "rule": "Take the snap and sweep left, flat and fast, behind the trips. Turn up outside the fullback.",
       "type": "run",
       "path": [
         [
@@ -23,33 +23,33 @@
           -0.8
         ],
         [
-          -7.0,
+          -8.5,
           0.2
         ],
         [
-          -7.0,
+          -8.8,
           2.6
         ],
         [
-          -7.0,
+          -8.8,
           6.0
         ]
       ]
     },
-    "X": {
+    "FB": {
       "block": "lead",
       "target": "force"
     },
     "TB": {
-      "rule": "Run hard to the right like you have the ball. Sell it all the way — you are the reason the defense goes the wrong way.",
+      "rule": "Run hard to the right like you have the ball. Sell it all the way.",
       "type": "fake",
       "path": [
         [
-          1.8,
+          4.0,
           0.2
         ],
         [
-          5.6,
+          8.0,
           0.6
         ]
       ]
@@ -57,7 +57,7 @@
   },
   "coaching_points": [
     "The quarterback keeps it every time — tell him before the snap, there is no read.",
-    "The tailback's fake is the play. The split end takes the force man; the slot screens the corner."
+    "He stays behind the trips until the fullback's block is made, then turns it up."
   ],
   "z": "left",
   "alignment": {
@@ -65,8 +65,12 @@
       -5.6,
       -1.5
     ],
-    "X": [
+    "TB": [
       -6.8,
+      -2.5
+    ],
+    "FB": [
+      -8.0,
       -1.5
     ]
   }

@@ -11,7 +11,7 @@
   "ball_carrier": "SL",
   "assignments": {
     "SL": {
-      "rule": "At the snap run flat across the backfield, take the handoff at full speed and get to the left edge. Turn up in the alley behind the tailback.",
+      "rule": "At the snap run flat across the backfield, take the handoff at full speed and get to the left edge. Turn up in the alley.",
       "type": "run",
       "path": [
         [
@@ -45,7 +45,7 @@
       ]
     },
     "QB": {
-      "rule": "Hand the ball to the slot as he runs past you, then fake the handoff to the tailback going right.",
+      "rule": "Hand the ball to the slot as he runs past you, then fake a run to the right.",
       "type": "fake",
       "path": [
         [
@@ -62,7 +62,7 @@
       "block": "lead",
       "target": "force"
     },
-    "X": {
+    "FB": {
       "block": "cutoff"
     }
   },
@@ -72,13 +72,18 @@
         "block": "man",
         "man": "LC",
         "how": "Bubble out around the left end",
-        "via": [[-5.0, 1.8]]
+        "via": [
+          [
+            -5.0,
+            1.8
+          ]
+        ]
       }
     }
   },
   "coaching_points": [
-    "The slot and the split end start right together. The slot comes across; the split end cuts off behind him.",
-    "The tailback leads out to the left and takes the corner. The slot stays behind him and turns up in the alley."
+    "2, 3 and 4 start right together. The slot (4) comes across; the fullback cuts off behind him.",
+    "The tailback leads out to the left and takes the corner."
   ],
   "z": "left"
 }

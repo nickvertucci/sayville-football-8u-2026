@@ -1,12 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="594" height="980" viewBox="0 0 594 980" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" width="648" height="962" viewBox="0 0 648 962" font-family="Segoe UI, Helvetica, Arial, sans-serif">
 <rect width="100%" height="100%" fill="#ffffff"/>
-<rect x="0" y="0" width="594" height="58" fill="#14213d"/>
+<rect x="0" y="0" width="648" height="58" fill="#14213d"/>
 <text x="18" y="26" font-size="19.0" font-weight="700" fill="#ffffff">Wishbone - 38 Toss</text>
 <text x="18" y="45" font-size="11.5" fill="#a9b4c7">RUN  •  Wishbone  •  vs 4-4</text>
-<rect x="406.8" y="13" width="169.2" height="31" rx="6" fill="#ffffff" fill-opacity="0.12" stroke="#8593ad" stroke-width="1"/>
-<text x="491.4" y="34" text-anchor="middle" font-size="14.5" font-weight="700" fill="#ffffff" letter-spacing="0.5">Wishbone 38 Toss</text>
-<clipPath id="fieldclip"><rect x="0" y="58" width="594" height="472"/></clipPath>
-<g clip-path="url(#fieldclip)"><g transform="translate(-54.0,31.0)">
+<rect x="460.8" y="13" width="169.2" height="31" rx="6" fill="#ffffff" fill-opacity="0.12" stroke="#8593ad" stroke-width="1"/>
+<text x="545.4" y="34" text-anchor="middle" font-size="14.5" font-weight="700" fill="#ffffff" letter-spacing="0.5">Wishbone 38 Toss</text>
+<clipPath id="fieldclip"><rect x="0" y="58" width="648" height="472"/></clipPath>
+<g clip-path="url(#fieldclip)"><g transform="translate(-27.0,31.0)">
 <rect x="0" y="0" width="702" height="513" fill="#ffffff"/>
 <line x1="0" y1="459.0" x2="702" y2="459.0" stroke="#c8cdd6" stroke-width="1"/>
 <line x1="0" y1="189.0" x2="702" y2="189.0" stroke="#c8cdd6" stroke-width="1"/>
@@ -79,57 +79,55 @@
 <text x="291.6" y="450.0" text-anchor="middle" font-size="13" font-weight="700" fill="#b3001b">LH</text>
 <circle cx="410.4" cy="445.5" r="13.5" fill="#ffffff" stroke="#14213d" stroke-width="2.6"/>
 <text x="410.4" y="450.0" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">RH</text>
-<rect x="520.8" y="35.0" width="119.2" height="52.0" rx="8" fill="#ffffff" stroke="#111318" stroke-width="3"/><text x="580.4" y="75.0" text-anchor="middle" font-size="40" font-weight="800" fill="#111318">#W-9</text>
+<rect x="547.8" y="35.0" width="119.2" height="52.0" rx="8" fill="#ffffff" stroke="#111318" stroke-width="3"/><text x="607.4" y="75.0" text-anchor="middle" font-size="40" font-weight="800" fill="#111318">#W-9</text>
 </g></g>
-<line x1="18" y1="540" x2="576" y2="540" stroke="#c8cdd6" stroke-width="1"/>
+<line x1="18" y1="540" x2="630" y2="540" stroke="#c8cdd6" stroke-width="1"/>
 <text x="18" y="560" font-size="11" font-weight="700" fill="#5b6472" letter-spacing="1">ASSIGNMENTS</text>
 <text x="18" y="578" font-size="12" font-weight="700" fill="#111318">LTE</text>
-<text x="52" y="578" font-size="12" fill="#111318">End on your inside shoulder. Cut him</text>
-<text x="52" y="596" font-size="12" fill="#111318">off — get between him and the ball.</text>
+<text x="52" y="578" font-size="12" fill="#111318">End on your inside shoulder. Cut him off</text>
+<text x="52" y="596" font-size="12" fill="#111318">— get between him and the ball.</text>
 <text x="18" y="612" font-size="12" font-weight="700" fill="#111318">LT</text>
 <text x="52" y="612" font-size="12" fill="#111318">Block down on the tackle, inside</text>
 <text x="52" y="630" font-size="12" fill="#111318">shoulder. Head across him — nobody</text>
 <text x="52" y="646" font-size="12" fill="#111318">crosses your face.</text>
 <text x="18" y="664" font-size="12" font-weight="700" fill="#111318">LG</text>
-<text x="52" y="664" font-size="12" fill="#111318">Tackle head up on you. Cut him off —</text>
-<text x="52" y="680" font-size="12" fill="#111318">get between him and the ball.</text>
+<text x="52" y="664" font-size="12" fill="#111318">Tackle head up on you. Cut him off — get</text>
+<text x="52" y="680" font-size="12" fill="#111318">between him and the ball.</text>
 <text x="18" y="698" font-size="12" font-weight="700" fill="#111318">C</text>
 <text x="52" y="698" font-size="12" fill="#111318">Nobody on you. Climb to the playside</text>
 <text x="52" y="714" font-size="12" fill="#111318">linebacker. Head across him.</text>
 <text x="18" y="732" font-size="12" font-weight="700" fill="#111318">RG</text>
 <text x="52" y="732" font-size="12" fill="#111318">Tackle head up on you. Step past him.</text>
-<text x="52" y="748" font-size="12" fill="#111318">Climb to the playside linebacker.</text>
-<text x="52" y="766" font-size="12" fill="#111318">Head across him.</text>
+<text x="52" y="748" font-size="12" fill="#111318">Climb to the playside linebacker. Head</text>
+<text x="52" y="766" font-size="12" fill="#111318">across him.</text>
 <text x="18" y="782" font-size="12" font-weight="700" fill="#111318">RT</text>
 <text x="52" y="782" font-size="12" fill="#111318">Block down on the tackle, inside</text>
 <text x="52" y="800" font-size="12" fill="#111318">shoulder. Head across him — nobody</text>
 <text x="52" y="816" font-size="12" fill="#111318">crosses your face.</text>
-<text x="297" y="578" font-size="12" font-weight="700" fill="#111318">RTE</text>
-<text x="331" y="578" font-size="12" fill="#111318">End on your inside shoulder. Turn him</text>
-<text x="331" y="596" font-size="12" fill="#111318">inside. The ball goes around behind</text>
-<text x="331" y="612" font-size="12" fill="#111318">you.</text>
-<text x="297" y="630" font-size="12" font-weight="700" fill="#111318">QB</text>
-<text x="331" y="630" font-size="12" fill="#111318">Quick pitch to the left halfback,</text>
-<text x="331" y="646" font-size="12" fill="#111318">then run the other way, to the left,</text>
-<text x="331" y="664" font-size="12" fill="#111318">like you still have it.</text>
-<text x="297" y="680" font-size="12" font-weight="700" fill="#111318">FB</text>
-<text x="331" y="680" font-size="12" fill="#111318">Lead outside our end. Block the first</text>
-<text x="331" y="698" font-size="12" fill="#111318">man out there — here it is the</text>
-<text x="331" y="714" font-size="12" fill="#111318">linebacker.</text>
-<text x="297" y="732" font-size="12" font-weight="700" fill="#111318">LH</text>
-<text x="331" y="732" font-size="12" fill="#111318">Run flat, outside and behind the</text>
-<text x="331" y="748" font-size="12" fill="#111318">quarterback, and catch the pitch on</text>
-<text x="331" y="766" font-size="12" fill="#111318">the run. Ahead of him is a fumble.</text>
-<text x="297" y="782" font-size="12" font-weight="700" fill="#111318">RH</text>
-<text x="331" y="782" font-size="12" fill="#111318">Lead outside our end. Block the first</text>
-<text x="331" y="800" font-size="12" fill="#111318">man out there — here it is the</text>
-<text x="331" y="816" font-size="12" fill="#111318">corner. Step at the dive first to</text>
-<text x="331" y="834" font-size="12" fill="#111318">hold their linebackers.</text>
-<line x1="18" y1="840" x2="576" y2="840" stroke="#c8cdd6" stroke-width="1"/>
-<text x="18" y="858" font-size="11" font-weight="700" fill="#5b6472" letter-spacing="1">COACHING POINTS</text>
-<text x="18" y="878" font-size="12" fill="#111318">The pitch goes early. A quarterback who waits to be tackled first will pitch it</text>
-<text x="18" y="896" font-size="12" fill="#111318">on the ground.</text>
-<text x="18" y="912" font-size="12" fill="#111318">This is not a read at this age — tell him before the snap that he is pitching it.</text>
-<text x="18" y="930" font-size="12" fill="#111318">The fullback and the right halfback both go to the edge. The left halfback stays</text>
-<text x="18" y="946" font-size="12" fill="#111318">behind them and turns up in the alley.</text>
+<text x="324" y="578" font-size="12" font-weight="700" fill="#111318">RTE</text>
+<text x="358" y="578" font-size="12" fill="#111318">End on your inside shoulder. Turn him</text>
+<text x="358" y="596" font-size="12" fill="#111318">inside. The ball goes around behind you.</text>
+<text x="324" y="612" font-size="12" font-weight="700" fill="#111318">QB</text>
+<text x="358" y="612" font-size="12" fill="#111318">Quick pitch to the left halfback, then</text>
+<text x="358" y="630" font-size="12" fill="#111318">run the other way, to the left, like you</text>
+<text x="358" y="646" font-size="12" fill="#111318">still have it.</text>
+<text x="324" y="664" font-size="12" font-weight="700" fill="#111318">FB</text>
+<text x="358" y="664" font-size="12" fill="#111318">Lead outside our end. Block the first man</text>
+<text x="358" y="680" font-size="12" fill="#111318">out there — here it is the linebacker.</text>
+<text x="324" y="698" font-size="12" font-weight="700" fill="#111318">LH</text>
+<text x="358" y="698" font-size="12" fill="#111318">Run flat, outside and behind the</text>
+<text x="358" y="714" font-size="12" fill="#111318">quarterback, and catch the pitch on the</text>
+<text x="358" y="732" font-size="12" fill="#111318">run. Ahead of him is a fumble.</text>
+<text x="324" y="748" font-size="12" font-weight="700" fill="#111318">RH</text>
+<text x="358" y="748" font-size="12" fill="#111318">Lead outside our end. Block the first man</text>
+<text x="358" y="766" font-size="12" fill="#111318">out there — here it is the corner. Step</text>
+<text x="358" y="782" font-size="12" fill="#111318">at the dive first to hold their</text>
+<text x="358" y="800" font-size="12" fill="#111318">linebackers.</text>
+<line x1="18" y1="824" x2="630" y2="824" stroke="#c8cdd6" stroke-width="1"/>
+<text x="18" y="842" font-size="11" font-weight="700" fill="#5b6472" letter-spacing="1">COACHING POINTS</text>
+<text x="18" y="862" font-size="12" fill="#111318">The pitch goes early. A quarterback who waits to be tackled first will pitch it on the</text>
+<text x="18" y="878" font-size="12" fill="#111318">ground.</text>
+<text x="18" y="896" font-size="12" fill="#111318">This is not a read at this age — tell him before the snap that he is pitching it.</text>
+<text x="18" y="912" font-size="12" fill="#111318">The fullback and the right halfback both go to the edge. The left halfback stays behind</text>
+<text x="18" y="930" font-size="12" fill="#111318">them and turns up in the alley.</text>
 </svg>

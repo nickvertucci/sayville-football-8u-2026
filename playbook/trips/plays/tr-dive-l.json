@@ -11,7 +11,7 @@
   "ball_carrier": "TB",
   "assignments": {
     "QB": {
-      "rule": "Open left, hand to the tailback, then fake the boot right. It holds the backside end.",
+      "rule": "Open left and hand to the tailback as he comes inside from the trips, then fake the boot right.",
       "type": "fake",
       "path": [
         [
@@ -29,38 +29,37 @@
       ]
     },
     "TB": {
-      "rule": "Take the handoff downhill between the left guard and the left tackle. One cut, then get north. Do not bounce it.",
+      "rule": "Come inside off the bunch, take the handoff between the left guard and the left tackle. One cut, then get north.",
       "type": "run",
       "path": [
         [
-          -1.2,
-          2.5
+          2.4,
+          0.6
         ],
         [
-          -1.8,
-          4.5
+          4.2,
+          1.4
         ],
         [
-          -2.1,
-          6.5
+          4.7,
+          3.0
         ],
         [
-          -2.2,
+          4.6,
+          6.0
+        ],
+        [
+          4.5,
           9.0
-        ],
-        [
-          -2.3,
-          11.0
         ]
       ]
     },
-    "X": {
+    "FB": {
       "block": "screen"
     }
   },
   "coaching_points": [
-    "Dive is the B-gap — between the guard and the tackle. Faster than Power, wider than Smash.",
-    "The tailback takes it downhill and gets north. One cut off the double team, never a bounce."
+    "Dive is the B-gap — between the guard and the tackle. The tailback comes inside from the bunch and gets north."
   ],
   "z": "left",
   "alignment": {
@@ -68,8 +67,12 @@
       -5.6,
       -1.5
     ],
-    "X": [
+    "TB": [
       -6.8,
+      -2.5
+    ],
+    "FB": [
+      -8.0,
       -1.5
     ]
   }

@@ -98,9 +98,11 @@ def check_roles(formations) -> list[str]:
     trips = by_id["trips"]
     tr = blocking.scheme_roles(trips, 1)
     if "lead" in tr:
-        problems.append(f"Trips has no fullback; lead should be empty, got {tr.get('lead')}")
-    if tr.get("slot") != "SL" or tr.get("trail") != "TB":
-        problems.append(f"Trips slot/trail is {tr.get('slot')}/{tr.get('trail')}, expected SL/TB")
+        problems.append(f"Trips is empty; lead should be empty, got {tr.get('lead')}")
+    if tr.get("slot") != "SL":
+        problems.append(f"Trips slot is {tr.get('slot')}, expected SL")
+    if tr.get("trail"):
+        problems.append(f"Trips 2/3/4 are in the bunch, not a backfield trail ({tr.get('trail')})")
     return problems
 
 

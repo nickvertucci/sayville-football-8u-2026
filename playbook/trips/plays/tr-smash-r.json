@@ -11,7 +11,7 @@
   "ball_carrier": "TB",
   "assignments": {
     "QB": {
-      "rule": "Open right, hand to the tailback, then fake the boot left. It holds the backside end.",
+      "rule": "Open right and hand to the tailback as he comes inside from the trips, then fake the boot left.",
       "type": "fake",
       "path": [
         [
@@ -29,38 +29,38 @@
       ]
     },
     "TB": {
-      "rule": "Take the handoff downhill between the center and the right guard. Do not bounce it.",
+      "rule": "Come inside off the bunch, take the handoff downhill between the center and the right guard. Do not bounce it.",
       "type": "run",
       "path": [
         [
-          0.5,
+          -3.0,
+          0.5
+        ],
+        [
+          -5.0,
+          1.2
+        ],
+        [
+          -6.0,
           2.5
         ],
         [
-          0.7,
-          5.0
+          -6.0,
+          5.5
         ],
         [
-          0.7,
-          6.0
-        ],
-        [
-          0.8,
+          -5.9,
           8.5
-        ],
-        [
-          0.9,
-          11.0
         ]
       ]
     },
-    "X": {
+    "FB": {
       "block": "screen"
     }
   },
   "coaching_points": [
-    "There is no fullback iso. The tailback is the runner, downhill in the A-gap.",
-    "The slot and the split end both screen the perimeter. If the tailback bounces, the play is dead."
+    "The tailback starts in the trips and comes all the way inside to the A-gap.",
+    "If he bounces back toward the bunch, the play is dead."
   ],
   "z": "right"
 }

@@ -1,12 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="594" height="1030" viewBox="0 0 594 1030" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" width="648" height="996" viewBox="0 0 648 996" font-family="Segoe UI, Helvetica, Arial, sans-serif">
 <rect width="100%" height="100%" fill="#ffffff"/>
-<rect x="0" y="0" width="594" height="58" fill="#14213d"/>
-<text x="18" y="26" font-size="13.5" font-weight="700" fill="#ffffff">Split Backs - Slot Right - LTE Sweep</text>
+<rect x="0" y="0" width="648" height="58" fill="#14213d"/>
+<text x="18" y="26" font-size="16.6" font-weight="700" fill="#ffffff">Split Backs - Slot Right - LTE Sweep</text>
 <text x="18" y="45" font-size="11.5" fill="#a9b4c7">RUN  •  Split Backs  •  vs 5-4-2</text>
-<rect x="259.6" y="13" width="316.4" height="31" rx="6" fill="#ffffff" fill-opacity="0.12" stroke="#8593ad" stroke-width="1"/>
-<text x="417.8" y="34" text-anchor="middle" font-size="14.5" font-weight="700" fill="#ffffff" letter-spacing="0.5">Split Backs Slot Right LTE Sweep</text>
-<clipPath id="fieldclip"><rect x="0" y="58" width="594" height="472"/></clipPath>
-<g clip-path="url(#fieldclip)"><g transform="translate(-54.0,31.0)">
+<rect x="313.6" y="13" width="316.4" height="31" rx="6" fill="#ffffff" fill-opacity="0.12" stroke="#8593ad" stroke-width="1"/>
+<text x="471.8" y="34" text-anchor="middle" font-size="14.5" font-weight="700" fill="#ffffff" letter-spacing="0.5">Split Backs Slot Right LTE Sweep</text>
+<clipPath id="fieldclip"><rect x="0" y="58" width="648" height="472"/></clipPath>
+<g clip-path="url(#fieldclip)"><g transform="translate(-27.0,31.0)">
 <rect x="0" y="0" width="702" height="513" fill="#ffffff"/>
 <line x1="0" y1="459.0" x2="702" y2="459.0" stroke="#c8cdd6" stroke-width="1"/>
 <line x1="0" y1="189.0" x2="702" y2="189.0" stroke="#c8cdd6" stroke-width="1"/>
@@ -79,59 +79,56 @@
 <text x="291.6" y="431.1" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">LH</text>
 <circle cx="410.4" cy="426.6" r="13.5" fill="#ffffff" stroke="#14213d" stroke-width="2.6"/>
 <text x="410.4" y="431.1" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">RH</text>
-<rect x="520.8" y="35.0" width="119.2" height="52.0" rx="8" fill="#ffffff" stroke="#111318" stroke-width="3"/><text x="580.4" y="75.0" text-anchor="middle" font-size="40" font-weight="800" fill="#111318">#S-9</text>
+<rect x="547.8" y="35.0" width="119.2" height="52.0" rx="8" fill="#ffffff" stroke="#111318" stroke-width="3"/><text x="607.4" y="75.0" text-anchor="middle" font-size="40" font-weight="800" fill="#111318">#S-9</text>
 </g></g>
-<line x1="18" y1="540" x2="576" y2="540" stroke="#c8cdd6" stroke-width="1"/>
+<line x1="18" y1="540" x2="630" y2="540" stroke="#c8cdd6" stroke-width="1"/>
 <text x="18" y="560" font-size="11" font-weight="700" fill="#5b6472" letter-spacing="1">ASSIGNMENTS</text>
 <text x="18" y="578" font-size="12" font-weight="700" fill="#111318">LTE</text>
-<text x="52" y="578" font-size="12" fill="#111318">Stay down in your stance — no motion.</text>
-<text x="52" y="596" font-size="12" fill="#111318">At the snap run flat behind the</text>
-<text x="52" y="612" font-size="12" fill="#111318">quarterback, take the handoff at full</text>
-<text x="52" y="630" font-size="12" fill="#111318">speed and get to the right edge. Turn</text>
-<text x="52" y="646" font-size="12" fill="#111318">up outside the halfbacks.</text>
+<text x="52" y="578" font-size="12" fill="#111318">Stay down in your stance — no motion. At</text>
+<text x="52" y="596" font-size="12" fill="#111318">the snap run flat behind the quarterback,</text>
+<text x="52" y="612" font-size="12" fill="#111318">take the handoff at full speed and get to</text>
+<text x="52" y="630" font-size="12" fill="#111318">the right edge. Turn up outside the</text>
+<text x="52" y="646" font-size="12" fill="#111318">halfbacks.</text>
 <text x="18" y="664" font-size="12" font-weight="700" fill="#111318">LT</text>
-<text x="52" y="664" font-size="12" fill="#111318">Tackle on your inside shoulder. Cut</text>
-<text x="52" y="680" font-size="12" fill="#111318">him off — get between him and the</text>
-<text x="52" y="698" font-size="12" fill="#111318">ball.</text>
-<text x="18" y="714" font-size="12" font-weight="700" fill="#111318">LG</text>
-<text x="52" y="714" font-size="12" fill="#111318">Nobody on you. Cut off the backside.</text>
-<text x="52" y="732" font-size="12" fill="#111318">Never quit on the play.</text>
-<text x="18" y="748" font-size="12" font-weight="700" fill="#111318">C</text>
-<text x="52" y="748" font-size="12" fill="#111318">Reach the nose to your right. Head</text>
-<text x="52" y="766" font-size="12" fill="#111318">across his playside shoulder.</text>
-<text x="18" y="782" font-size="12" font-weight="700" fill="#111318">RG</text>
-<text x="52" y="782" font-size="12" fill="#111318">Nobody on you. Climb to the playside</text>
-<text x="52" y="800" font-size="12" fill="#111318">linebacker. Head across him.</text>
-<text x="18" y="816" font-size="12" font-weight="700" fill="#111318">RT</text>
-<text x="52" y="816" font-size="12" fill="#111318">Block down on the tackle, inside</text>
-<text x="52" y="834" font-size="12" fill="#111318">shoulder. Head across him — nobody</text>
-<text x="52" y="850" font-size="12" fill="#111318">crosses your face.</text>
-<text x="297" y="578" font-size="12" font-weight="700" fill="#111318">RTE</text>
-<text x="331" y="578" font-size="12" fill="#111318">End head up on you. Turn him inside.</text>
-<text x="331" y="596" font-size="12" fill="#111318">The ball goes around behind you.</text>
-<text x="297" y="612" font-size="12" font-weight="700" fill="#111318">SL</text>
-<text x="331" y="612" font-size="12" fill="#111318">Run at the outside linebacker and</text>
-<text x="331" y="630" font-size="12" fill="#111318">screen him off. Stay in his way.</text>
-<text x="297" y="646" font-size="12" font-weight="700" fill="#111318">QB</text>
-<text x="331" y="646" font-size="12" fill="#111318">Open right and hand the ball to the</text>
-<text x="331" y="664" font-size="12" fill="#111318">left tight end as he comes across</text>
-<text x="331" y="680" font-size="12" fill="#111318">behind you, then fake a run to the</text>
-<text x="331" y="698" font-size="12" fill="#111318">left.</text>
-<text x="297" y="714" font-size="12" font-weight="700" fill="#111318">LH</text>
-<text x="331" y="714" font-size="12" fill="#111318">Lead outside our end, then turn up</text>
-<text x="331" y="732" font-size="12" fill="#111318">inside — the playside linebacker is</text>
-<text x="331" y="748" font-size="12" fill="#111318">the man who shows. Head across him.</text>
-<text x="297" y="766" font-size="12" font-weight="700" fill="#111318">RH</text>
-<text x="331" y="766" font-size="12" fill="#111318">Lead outside our end, then turn up</text>
-<text x="331" y="782" font-size="12" fill="#111318">inside — the playside linebacker is</text>
-<text x="331" y="800" font-size="12" fill="#111318">the man who shows. Head across him.</text>
-<line x1="18" y1="858" x2="576" y2="858" stroke="#c8cdd6" stroke-width="1"/>
-<text x="18" y="876" font-size="11" font-weight="700" fill="#5b6472" letter-spacing="1">COACHING POINTS</text>
-<text x="18" y="896" font-size="12" fill="#111318">No motion before the snap. The end stays down in his stance, so the play is legal</text>
-<text x="18" y="912" font-size="12" fill="#111318">and nothing tips it off.</text>
-<text x="18" y="930" font-size="12" fill="#111318">The handoff is the whole play: the quarterback opens right and puts the ball in</text>
-<text x="18" y="946" font-size="12" fill="#111318">the end's belly at full speed, then carries out his fake.</text>
-<text x="18" y="964" font-size="12" fill="#111318">Both halfbacks bubble out to the right ahead of the end and double team the</text>
-<text x="18" y="980" font-size="12" fill="#111318">outside linebacker together. Two of them on him is what gets the end around the</text>
-<text x="18" y="998" font-size="12" fill="#111318">corner.</text>
+<text x="52" y="664" font-size="12" fill="#111318">Tackle on your inside shoulder. Cut him</text>
+<text x="52" y="680" font-size="12" fill="#111318">off — get between him and the ball.</text>
+<text x="18" y="698" font-size="12" font-weight="700" fill="#111318">LG</text>
+<text x="52" y="698" font-size="12" fill="#111318">Nobody on you. Cut off the backside.</text>
+<text x="52" y="714" font-size="12" fill="#111318">Never quit on the play.</text>
+<text x="18" y="732" font-size="12" font-weight="700" fill="#111318">C</text>
+<text x="52" y="732" font-size="12" fill="#111318">Reach the nose to your right. Head across</text>
+<text x="52" y="748" font-size="12" fill="#111318">his playside shoulder.</text>
+<text x="18" y="766" font-size="12" font-weight="700" fill="#111318">RG</text>
+<text x="52" y="766" font-size="12" fill="#111318">Nobody on you. Climb to the playside</text>
+<text x="52" y="782" font-size="12" fill="#111318">linebacker. Head across him.</text>
+<text x="18" y="800" font-size="12" font-weight="700" fill="#111318">RT</text>
+<text x="52" y="800" font-size="12" fill="#111318">Block down on the tackle, inside</text>
+<text x="52" y="816" font-size="12" fill="#111318">shoulder. Head across him — nobody</text>
+<text x="52" y="834" font-size="12" fill="#111318">crosses your face.</text>
+<text x="324" y="578" font-size="12" font-weight="700" fill="#111318">RTE</text>
+<text x="358" y="578" font-size="12" fill="#111318">End head up on you. Turn him inside. The</text>
+<text x="358" y="596" font-size="12" fill="#111318">ball goes around behind you.</text>
+<text x="324" y="612" font-size="12" font-weight="700" fill="#111318">SL</text>
+<text x="358" y="612" font-size="12" fill="#111318">Run at the outside linebacker and screen</text>
+<text x="358" y="630" font-size="12" fill="#111318">him off. Stay in his way.</text>
+<text x="324" y="646" font-size="12" font-weight="700" fill="#111318">QB</text>
+<text x="358" y="646" font-size="12" fill="#111318">Open right and hand the ball to the left</text>
+<text x="358" y="664" font-size="12" fill="#111318">tight end as he comes across behind you,</text>
+<text x="358" y="680" font-size="12" fill="#111318">then fake a run to the left.</text>
+<text x="324" y="698" font-size="12" font-weight="700" fill="#111318">LH</text>
+<text x="358" y="698" font-size="12" fill="#111318">Lead outside our end, then turn up inside</text>
+<text x="358" y="714" font-size="12" fill="#111318">— the playside linebacker is the man who</text>
+<text x="358" y="732" font-size="12" fill="#111318">shows. Head across him.</text>
+<text x="324" y="748" font-size="12" font-weight="700" fill="#111318">RH</text>
+<text x="358" y="748" font-size="12" fill="#111318">Lead outside our end, then turn up inside</text>
+<text x="358" y="766" font-size="12" fill="#111318">— the playside linebacker is the man who</text>
+<text x="358" y="782" font-size="12" fill="#111318">shows. Head across him.</text>
+<line x1="18" y1="840" x2="630" y2="840" stroke="#c8cdd6" stroke-width="1"/>
+<text x="18" y="858" font-size="11" font-weight="700" fill="#5b6472" letter-spacing="1">COACHING POINTS</text>
+<text x="18" y="878" font-size="12" fill="#111318">No motion before the snap. The end stays down in his stance, so the play is legal and</text>
+<text x="18" y="896" font-size="12" fill="#111318">nothing tips it off.</text>
+<text x="18" y="912" font-size="12" fill="#111318">The handoff is the whole play: the quarterback opens right and puts the ball in the end's</text>
+<text x="18" y="930" font-size="12" fill="#111318">belly at full speed, then carries out his fake.</text>
+<text x="18" y="946" font-size="12" fill="#111318">Both halfbacks bubble out to the right ahead of the end and double team the outside</text>
+<text x="18" y="964" font-size="12" fill="#111318">linebacker together. Two of them on him is what gets the end around the corner.</text>
 </svg>

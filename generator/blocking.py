@@ -225,13 +225,22 @@ def line_roles(side: int) -> dict[str, str]:
     return dict(LINE_ROLES_RIGHT if side > 0 else LINE_ROLES_LEFT)
 
 
+def _stacked(form: dict, pos: str) -> bool:
+    """True if this back is in the backfield, not split out in the trips."""
+    spot = (form.get("alignment") or {}).get(pos)
+    if not spot:
+        return False
+    x, y = spot
+    return abs(x) < 2.5 and y <= -2.5
+
+
 def backfield_roles(form: dict, side: int) -> dict[str, str]:
     """Slot, quarterback, lead and trail for this formation and direction.
 
-    A stacked I (FB + TB) always leads with the fullback. Wishbone (FB + LH +
-    RH) does too — the fullback is still the lead, the halfbacks are leftover
-    on the play. Two halfbacks alone lead with the playside one — the right
-    halfback on a right-handed play, the left halfback on a left-handed one.
+    A stacked I (FB + TB behind the quarterback) always leads with the
+    fullback. Wishbone (FB + LH + RH) does too. Two halfbacks alone lead with
+    the playside one. Trips puts 2, 3 and 4 on the perimeter — they are not
+    a backfield, so nobody leads from the scheme.
     """
     keys = set(form.get("alignment") or {})
     out: dict[str, str] = {}
@@ -242,15 +251,13 @@ def backfield_roles(form: dict, side: int) -> dict[str, str]:
     if "FB" in keys and "LH" in keys and "RH" in keys:
         out["lead"] = "FB"
         out["trail"] = "LH" if side > 0 else "RH"
-    elif "FB" in keys and "TB" in keys:
+    elif "FB" in keys and "TB" in keys and _stacked(form, "FB") and _stacked(form, "TB"):
         out["lead"] = "FB"
         out["trail"] = "TB"
     elif "LH" in keys and "RH" in keys:
         out["lead"] = "RH" if side > 0 else "LH"
         out["trail"] = "LH" if side > 0 else "RH"
-    elif "TB" in keys:
-        # One-back (Trips, Single back): nobody leads from the scheme. The
-        # tailback is the runner; leftover X or the slot does the extra job.
+    elif "TB" in keys and _stacked(form, "TB"):
         out["trail"] = "TB"
     return out
 

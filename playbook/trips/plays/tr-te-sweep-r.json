@@ -12,7 +12,7 @@
   "ball_carrier": "LTE",
   "assignments": {
     "LTE": {
-      "rule": "Stay down in your stance — no motion. At the snap run flat behind the quarterback, take the handoff at full speed and get to the right edge. Turn up outside the split end.",
+      "rule": "Stay down in your stance — no motion. At the snap run flat behind the quarterback, take the handoff at full speed and get to the right edge. Turn up outside the trips.",
       "type": "run",
       "path": [
         [
@@ -59,7 +59,7 @@
         ]
       ]
     },
-    "X": {
+    "FB": {
       "block": "lead",
       "target": "force"
     },
@@ -68,8 +68,8 @@
     }
   },
   "coaching_points": [
-    "No motion before the snap. The end stays down in his stance, so the play is legal and nothing tips it off.",
-    "The split end and the tailback bubble out to the right ahead of the end. The slot screens the corner."
+    "No motion before the snap. The end stays down in his stance.",
+    "He turns up outside the trips. The fullback takes the force man; the slot screens."
   ],
   "z": "right"
 }
