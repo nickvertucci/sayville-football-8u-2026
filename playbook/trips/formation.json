@@ -1,0 +1,42 @@
+{
+  "id": "trips",
+  "order": 5,
+  "name": "Trips",
+  "code_prefix": "T",
+  "family": "Trips",
+  "summary": "One tailback and three to a side: the tight end, the slot and the split end bunched. Same blocking families as the Regular I, with the extra receiver on the edge.",
+  "personnel": "11 players, 2 tight ends, 1 slot, 1 split end, quarterback, tailback",
+  "notes": "Same line as the Regular I — both ends tight, seven on the line every snap. The slot is just outside the tight end, one step off the line, and the split end is a step outside him: those three are the trips. Tailback at five yards. The call names the bunch — Trips Right or Trips Left — every time.",
+  "alignment": {
+    "LTE": [-4.2, -0.5],
+    "LT": [-2.8, -0.5],
+    "LG": [-1.4, -0.5],
+    "C": [0.0, -0.5],
+    "RG": [1.4, -0.5],
+    "RT": [2.8, -0.5],
+    "RTE": [4.2, -0.5],
+    "SL": [5.6, -1.5],
+    "X": [6.8, -1.5],
+    "QB": [0.0, -1.5],
+    "TB": [0.0, -5.0]
+  },
+  "eligible": [
+    "LTE",
+    "RTE",
+    "SL",
+    "X",
+    "TB",
+    "QB"
+  ],
+  "backs": {
+    "1": "QB",
+    "3": "TB",
+    "4": "SL"
+  },
+  "coaching_notes": [
+    "Count seven on the line every snap — both ends stay down. The slot and the split end are off the line; either one creeping up is an illegal-formation flag.",
+    "The three stay together. Trips Right is the tight end, slot and split end on the right; Trips Left moves the slot and the split end. A play that moves them says so in the call.",
+    "There is no fullback. Power still kicks with the slot; the tailback runs it without a lead iso. Toss and Sweep put the split end on the force man.",
+    "The tailback is back 3, both ways — 34 Power and 35 Power, 38 Toss and 39 Toss. The slot is still 4."
+  ]
+}

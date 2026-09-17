@@ -1,0 +1,66 @@
+{
+  "id": "tr-smash-r",
+  "order": 7,
+  "formation": "trips",
+  "name": "Trips - Right - 30 Smash",
+  "code": "T-7",
+  "call": "Trips Right 30 Smash",
+  "type": "run",
+  "scheme": "Smash",
+  "direction": "right",
+  "ball_carrier": "TB",
+  "assignments": {
+    "QB": {
+      "rule": "Open right, hand to the tailback, then fake the boot left. It holds the backside end.",
+      "type": "fake",
+      "path": [
+        [
+          0.8,
+          -0.4
+        ],
+        [
+          2.2,
+          -1.0
+        ],
+        [
+          3.6,
+          -1.4
+        ]
+      ]
+    },
+    "TB": {
+      "rule": "Take the handoff downhill between the center and the right guard. Do not bounce it.",
+      "type": "run",
+      "path": [
+        [
+          0.5,
+          2.5
+        ],
+        [
+          0.7,
+          5.0
+        ],
+        [
+          0.7,
+          6.0
+        ],
+        [
+          0.8,
+          8.5
+        ],
+        [
+          0.9,
+          11.0
+        ]
+      ]
+    },
+    "X": {
+      "block": "screen"
+    }
+  },
+  "coaching_points": [
+    "There is no fullback iso. The tailback is the runner, downhill in the A-gap.",
+    "The slot and the split end both screen the perimeter. If the tailback bounces, the play is dead."
+  ],
+  "z": "right"
+}

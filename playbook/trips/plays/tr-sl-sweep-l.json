@@ -1,0 +1,84 @@
+{
+  "id": "tr-sl-sweep-l",
+  "order": 5,
+  "formation": "trips",
+  "name": "Trips - Right - 49 Sweep",
+  "code": "T-5",
+  "call": "Trips Right 49 Sweep",
+  "type": "run",
+  "scheme": "Sweep",
+  "direction": "left",
+  "ball_carrier": "SL",
+  "assignments": {
+    "SL": {
+      "rule": "At the snap run flat across the backfield, take the handoff at full speed and get to the left edge. Turn up in the alley behind the tailback.",
+      "type": "run",
+      "path": [
+        [
+          -4.0,
+          -0.8
+        ],
+        [
+          -7.0,
+          -1.0
+        ],
+        [
+          -11.5,
+          -0.8
+        ],
+        [
+          -13.6,
+          0.6
+        ],
+        [
+          -14.0,
+          2.2
+        ],
+        [
+          -14.0,
+          5.2
+        ],
+        [
+          -14.0,
+          8.2
+        ]
+      ]
+    },
+    "QB": {
+      "rule": "Hand the ball to the slot as he runs past you, then fake the handoff to the tailback going right.",
+      "type": "fake",
+      "path": [
+        [
+          0.4,
+          -0.5
+        ],
+        [
+          1.2,
+          -1.4
+        ]
+      ]
+    },
+    "TB": {
+      "block": "lead",
+      "target": "force"
+    },
+    "X": {
+      "block": "cutoff"
+    }
+  },
+  "fronts": {
+    "4-4": {
+      "TB": {
+        "block": "man",
+        "man": "LC",
+        "how": "Bubble out around the left end",
+        "via": [[-5.0, 1.8]]
+      }
+    }
+  },
+  "coaching_points": [
+    "The slot and the split end start right together. The slot comes across; the split end cuts off behind him.",
+    "The tailback leads out to the left and takes the corner. The slot stays behind him and turns up in the alley."
+  ],
+  "z": "left"
+}

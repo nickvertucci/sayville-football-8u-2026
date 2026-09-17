@@ -1,0 +1,69 @@
+{
+  "id": "tr-toss-r",
+  "order": 11,
+  "formation": "trips",
+  "name": "Trips - Right - 38 Toss",
+  "code": "T-11",
+  "call": "Trips Right 38 Toss",
+  "type": "run",
+  "scheme": "Toss",
+  "direction": "right",
+  "ball_carrier": "TB",
+  "pitch": {
+    "from": "QB",
+    "to": "TB",
+    "at": 1
+  },
+  "assignments": {
+    "QB": {
+      "rule": "Quick pitch to the tailback, then run the other way, to the left, like you still have it.",
+      "type": "rollout",
+      "path": [
+        [
+          -0.8,
+          -0.3
+        ],
+        [
+          -4.6,
+          -0.1
+        ]
+      ]
+    },
+    "TB": {
+      "rule": "Run flat, outside and behind the quarterback, and catch the pitch on the run. Ahead of him is a fumble.",
+      "type": "run",
+      "path": [
+        [
+          2.8,
+          -0.2
+        ],
+        [
+          6.5,
+          -0.3
+        ],
+        [
+          8.5,
+          0.8
+        ],
+        [
+          8.8,
+          3.0
+        ],
+        [
+          8.8,
+          6.0
+        ]
+      ]
+    },
+    "X": {
+      "block": "lead",
+      "target": "force"
+    }
+  },
+  "coaching_points": [
+    "The pitch goes early. A quarterback who waits to be tackled first will pitch it on the ground.",
+    "There is no second back to lead, so the split end takes the force man. The slot screens the corner.",
+    "The tailback stays behind the split end and turns up in the alley."
+  ],
+  "z": "right"
+}

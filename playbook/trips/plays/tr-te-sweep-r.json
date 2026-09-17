@@ -1,0 +1,75 @@
+{
+  "id": "tr-te-sweep-r",
+  "order": 3,
+  "formation": "trips",
+  "name": "Trips - Right - LTE Sweep",
+  "code": "T-3",
+  "call": "Trips Right LTE Sweep",
+  "word_call": true,
+  "type": "run",
+  "scheme": "Sweep",
+  "direction": "right",
+  "ball_carrier": "LTE",
+  "assignments": {
+    "LTE": {
+      "rule": "Stay down in your stance — no motion. At the snap run flat behind the quarterback, take the handoff at full speed and get to the right edge. Turn up outside the split end.",
+      "type": "run",
+      "path": [
+        [
+          2.2,
+          -1.9
+        ],
+        [
+          5.2,
+          -2.1
+        ],
+        [
+          10.7,
+          -1.5
+        ],
+        [
+          11.2,
+          0.7
+        ],
+        [
+          11.2,
+          4.1
+        ],
+        [
+          11.2,
+          7.5
+        ]
+      ]
+    },
+    "QB": {
+      "rule": "Open right and hand the ball to the left tight end as he comes across behind you, then fake a run to the left.",
+      "type": "fake",
+      "path": [
+        [
+          0.9,
+          -0.8
+        ],
+        [
+          -0.8,
+          -1.0
+        ],
+        [
+          -3.6,
+          -0.8
+        ]
+      ]
+    },
+    "X": {
+      "block": "lead",
+      "target": "force"
+    },
+    "TB": {
+      "block": "screen"
+    }
+  },
+  "coaching_points": [
+    "No motion before the snap. The end stays down in his stance, so the play is legal and nothing tips it off.",
+    "The split end and the tailback bubble out to the right ahead of the end. The slot screens the corner."
+  ],
+  "z": "right"
+}

@@ -1,0 +1,73 @@
+{
+  "id": "tr-qb-sweep-l",
+  "order": 14,
+  "formation": "trips",
+  "name": "Trips - Left - 19 Sweep",
+  "code": "T-14",
+  "call": "Trips Left 19 Sweep",
+  "type": "run",
+  "scheme": "Sweep",
+  "direction": "left",
+  "ball_carrier": "QB",
+  "assignments": {
+    "QB": {
+      "rule": "Take the snap and sweep left, flat and fast, behind the split end. Turn up outside his block.",
+      "type": "run",
+      "path": [
+        [
+          -1.6,
+          -0.6
+        ],
+        [
+          -6.0,
+          -0.8
+        ],
+        [
+          -7.0,
+          0.2
+        ],
+        [
+          -7.0,
+          2.6
+        ],
+        [
+          -7.0,
+          6.0
+        ]
+      ]
+    },
+    "X": {
+      "block": "lead",
+      "target": "force"
+    },
+    "TB": {
+      "rule": "Run hard to the right like you have the ball. Sell it all the way — you are the reason the defense goes the wrong way.",
+      "type": "fake",
+      "path": [
+        [
+          1.8,
+          0.2
+        ],
+        [
+          5.6,
+          0.6
+        ]
+      ]
+    }
+  },
+  "coaching_points": [
+    "The quarterback keeps it every time — tell him before the snap, there is no read.",
+    "The tailback's fake is the play. The split end takes the force man; the slot screens the corner."
+  ],
+  "z": "left",
+  "alignment": {
+    "SL": [
+      -5.6,
+      -1.5
+    ],
+    "X": [
+      -6.8,
+      -1.5
+    ]
+  }
+}
