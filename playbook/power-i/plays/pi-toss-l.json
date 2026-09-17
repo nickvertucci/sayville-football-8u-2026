@@ -1,0 +1,97 @@
+{
+  "id": "pi-toss-l",
+  "order": 4,
+  "formation": "power-i",
+  "name": "Power I - Slot Left - 39 Toss",
+  "code": "P-4",
+  "call": "Power I Slot Left 39 Toss",
+  "type": "run",
+  "scheme": "Toss",
+  "direction": "left",
+  "ball_carrier": "TB",
+  "pitch": {
+    "from": "QB",
+    "to": "TB",
+    "at": 1
+  },
+  "assignments": {
+    "QB": {
+      "rule": "Quick pitch to the tailback, then run the other way, to the right, like you still have it.",
+      "type": "rollout",
+      "path": [
+        [
+          0.8,
+          -0.3
+        ],
+        [
+          4.6,
+          -0.1
+        ]
+      ]
+    },
+    "TB": {
+      "rule": "Take the pitch on the run and get to the left edge behind your two blockers. Ahead of the quarterback is a fumble.",
+      "type": "run",
+      "path": [
+        [
+          -2.2,
+          0.0
+        ],
+        [
+          -5.0,
+          0.6
+        ],
+        [
+          -7.2,
+          1.6
+        ],
+        [
+          -7.6,
+          4.0
+        ],
+        [
+          -7.8,
+          7.0
+        ]
+      ]
+    },
+    "SL": {
+      "block": "screen",
+      "note": "Get outside the fullback and find the corner. You are the last man between the ball and the sideline."
+    }
+  },
+  "coaching_points": [
+    "The pitch goes early. The tailback is seven yards deep and the edge is a long way away — every count he waits is a yard he loses.",
+    "Two blockers out there and they are not the same block: the fullback takes the force man, the slot goes past him for the corner.",
+    "The slot is in the backfield, so he has further to run than a split slot does. He leaves on the snap."
+  ],
+  "alignment": {
+    "SL": [
+      -1.4,
+      -4.4
+    ]
+  },
+  "fronts": {
+    "4-4": {
+      "SL": {
+        "block": "man",
+        "man": "LC",
+        "how": "Get outside the fullback, then take him"
+      }
+    },
+    "5-3": {
+      "SL": {
+        "block": "man",
+        "man": "LC",
+        "how": "Get outside the fullback, then take him"
+      }
+    },
+    "5-4-2": {
+      "SL": {
+        "block": "man",
+        "man": "LS",
+        "how": "Get outside the fullback, then take him"
+      }
+    }
+  }
+}

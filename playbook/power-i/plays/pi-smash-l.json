@@ -1,0 +1,73 @@
+{
+  "id": "pi-smash-l",
+  "order": 2,
+  "formation": "power-i",
+  "name": "Power I - Slot Left - 31 Smash",
+  "code": "P-2",
+  "call": "Power I Slot Left 31 Smash",
+  "type": "run",
+  "scheme": "Smash",
+  "direction": "left",
+  "ball_carrier": "TB",
+  "assignments": {
+    "QB": {
+      "rule": "Open left, hand to the tailback, then fake the boot right. It holds the backside end.",
+      "type": "fake",
+      "path": [
+        [
+          0.8,
+          -0.4
+        ],
+        [
+          2.2,
+          -1.0
+        ],
+        [
+          3.6,
+          -1.4
+        ]
+      ]
+    },
+    "TB": {
+      "rule": "Take the handoff downhill between the center and the left guard, right off the fullback's hip. Do not bounce it.",
+      "type": "run",
+      "path": [
+        [
+          -0.5,
+          2.5
+        ],
+        [
+          -0.7,
+          5.0
+        ],
+        [
+          -0.7,
+          6.0
+        ],
+        [
+          -0.8,
+          8.5
+        ],
+        [
+          -0.9,
+          11.0
+        ]
+      ]
+    },
+    "SL": {
+      "block": "lead",
+      "note": "You are the second man through. Go after the fullback, take whoever he did not."
+    }
+  },
+  "coaching_points": [
+    "Two lead blockers in the same gap is the whole point of this formation. The fullback hits it first, the slot is right behind him and takes the next man who shows.",
+    "The hole is the A-gap, between the center and the left guard. If the tailback bounces it, the play is dead and both his blockers are wasted.",
+    "Neither lead picks a man before the snap. First one shows, first one gets blocked."
+  ],
+  "alignment": {
+    "SL": [
+      -1.4,
+      -4.4
+    ]
+  }
+}
