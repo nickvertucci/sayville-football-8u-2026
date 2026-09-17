@@ -43,6 +43,9 @@ the hole, and the backside guard cuts off behind the play.
 
 from __future__ import annotations
 
+import copy
+import re
+
 # The three fronts every offensive play is drawn and blocked against. An 8U team lines
 # up in one of these against us; the toggle on a play page is these in this order.
 # The 6-3 goal line and the 6-2-3 prevent are our own calls, not looks we expect to
@@ -72,6 +75,8 @@ HOLE_SCHEME = {
 
 SWEEP_BACKS = ("1", "4")  # QB and slot. Tight ends are word calls.
 
+CALL_DIGITS = re.compile(r"\b(\d)(\d)\b")
+
 
 def scheme_for_hole(hole: int) -> str | None:
     """The play word a numbered run at this hole has to carry."""
@@ -89,6 +94,263 @@ def scheme_words(hole: int, back_digit: str | None = None) -> tuple[str, ...]:
     if not word:
         return ()
     return (word, f"Fake {word}")
+
+
+# --------------------------------------------------------------- named schemes --
+#
+# The huddle word is also the blocking family. Smash, Dive, Power, Slant, Toss
+# and Sweep each name eleven jobs by *role* — playside end, playside guard, lead
+# back — not by LTE/RTE, so the same scheme fills a Regular I, a Split Backs
+# and whatever formation comes next. Protect is the dropback: everybody pass
+# blocks except the receiver and the slot, who screens the corner.
+#
+# A play names its scheme and writes the paths that are the play itself (the
+# handoff, the fake, the route). The line, the slot and the lead come from the
+# scheme. Leftover backs — a trailing halfback who also leads on a tight-end
+# sweep, a note on the toss lead — stay on the play because they are the play,
+# not the family.
+
+# The seven line spots, middle out. Playside is the last three when the play
+# goes right, the first three reversed when it goes left.
+LINE_ROLES_RIGHT = {
+    "playside_te": "RTE", "playside_t": "RT", "playside_g": "RG",
+    "center": "C",
+    "backside_g": "LG", "backside_t": "LT", "backside_te": "LTE",
+}
+LINE_ROLES_LEFT = {
+    "playside_te": "LTE", "playside_t": "LT", "playside_g": "LG",
+    "center": "C",
+    "backside_g": "RG", "backside_t": "RT", "backside_te": "RTE",
+}
+
+# Shared interior: both ends cut off, uncovered guard doubles, fullback (or the
+# playside halfback) leads through the hole. Smash and Dive differ only on
+# which uncovered lineman climbs — the guard on Smash (A-gap), the tackle on
+# Dive (B-gap).
+_INSIDE_LINE = {
+    "playside_t": {"block": "down"},
+    "center": {"block": "reach"},
+    "backside_g": {"block": "cutoff"},
+    "backside_t": {"block": "down"},
+    "backside_te": {"block": "cutoff"},
+    "playside_te": {"block": "cutoff"},
+    "slot": {"block": "screen"},
+    "lead": {"block": "lead"},
+}
+
+# Shared perimeter: the playside end turns the man inside, the uncovered guard
+# climbs, the lead back takes the force man. Toss and Sweep share this line;
+# who carries it is what the huddle word is for.
+_OUTSIDE_LINE = {
+    "playside_te": {"block": "base", "drive": "in"},
+    "playside_t": {"block": "down"},
+    "playside_g": {"block": "climb", "target": "playside"},
+    "center": {"block": "reach"},
+    "backside_g": {"block": "cutoff"},
+    "backside_t": {"block": "down"},
+    "backside_te": {"block": "cutoff"},
+    "slot": {"block": "screen"},
+    "lead": {"block": "lead", "target": "force"},
+}
+
+_PROTECT_LINE = {
+    "playside_te": {"block": "protect"},
+    "playside_t": {"block": "protect"},
+    "playside_g": {"block": "protect"},
+    "center": {"block": "protect"},
+    "backside_g": {"block": "protect"},
+    "backside_t": {"block": "protect"},
+    "backside_te": {"block": "protect"},
+    "slot": {"block": "screen"},
+    "lead": {"block": "protect"},
+    "trail": {"block": "protect"},
+    "qb": {"block": "protect"},
+}
+
+SCHEMES: dict[str, dict[str, dict]] = {
+    "Smash": {
+        **_INSIDE_LINE,
+        "playside_g": {"block": "double", "target": "playside"},
+    },
+    "Dive": {
+        **_INSIDE_LINE,
+        "playside_g": {"block": "down"},
+        "playside_t": {"block": "double", "target": "playside"},
+    },
+    "Power": {
+        "playside_te": {"block": "release"},
+        "playside_t": {"block": "down"},
+        "playside_g": {"block": "double", "target": "middle"},
+        "center": {"block": "reach"},
+        "backside_g": {"block": "cutoff"},
+        "backside_t": {"block": "down"},
+        "backside_te": {"block": "cutoff"},
+        "slot": {"block": "kick"},
+        "lead": {"block": "lead"},
+    },
+    # Outside the tight end, not as wide as a toss: same seal as the perimeter
+    # family, but the lead back aims at the 6/7 hole rather than the force man.
+    "Slant": {
+        **{k: v for k, v in _OUTSIDE_LINE.items() if k != "lead"},
+        "lead": {"block": "lead"},
+    },
+    "Toss": dict(_OUTSIDE_LINE),
+    "Sweep": dict(_OUTSIDE_LINE),
+    "Protect": dict(_PROTECT_LINE),
+}
+
+
+def line_roles(side: int) -> dict[str, str]:
+    """Playside / backside line keys for this direction."""
+    return dict(LINE_ROLES_RIGHT if side > 0 else LINE_ROLES_LEFT)
+
+
+def backfield_roles(form: dict, side: int) -> dict[str, str]:
+    """Slot, quarterback, lead and trail for this formation and direction.
+
+    A stacked I (FB + TB) always leads with the fullback. Two halfbacks (LH +
+    RH) lead with the playside one — the right halfback on a right-handed play,
+    the left halfback on a left-handed one — which is how Toss, Sweep and a
+    future Split Power all put a body in front of the ball without each play
+    naming him.
+    """
+    keys = set(form.get("alignment") or {})
+    out: dict[str, str] = {}
+    if "SL" in keys:
+        out["slot"] = "SL"
+    if "QB" in keys:
+        out["qb"] = "QB"
+    if "FB" in keys and "TB" in keys:
+        out["lead"] = "FB"
+        out["trail"] = "TB"
+    elif "LH" in keys and "RH" in keys:
+        out["lead"] = "RH" if side > 0 else "LH"
+        out["trail"] = "LH" if side > 0 else "RH"
+    return out
+
+
+def scheme_roles(form: dict, side: int) -> dict[str, str]:
+    """Every scheme role this formation can fill, mapped to a position key."""
+    return {**line_roles(side), **backfield_roles(form, side)}
+
+
+def scheme_intents(play: dict, form: dict, side: int) -> dict[str, dict]:
+    """The scheme's role → verb map, with the one Sweep adjustment that is the play.
+
+    A tight-end sweep still *is* Sweep — same outside line, same lead at the
+    force man — but the backside end is the ball carrier, so he is not there
+    to cut off. The backside tackle is the new edge and takes that cutoff.
+    """
+    name = play.get("scheme")
+    if name not in SCHEMES:
+        return {}
+    intents = {role: copy.deepcopy(spec) for role, spec in SCHEMES[name].items()}
+    if name == "Sweep":
+        roles = scheme_roles(form, side)
+        if play.get("ball_carrier") == roles.get("backside_te"):
+            intents["backside_t"] = {"block": "cutoff"}
+    return intents
+
+
+def intent_core(spec: dict) -> tuple:
+    """The verb and its options, ignoring notes and paths."""
+    return (spec.get("block"), spec.get("target"), spec.get("drive"))
+
+
+def expected_scheme(play: dict) -> str | None:
+    """The scheme this play's call requires, or None if the call does not name one.
+
+    Numbered runs take the hole word (Sweep when the quarterback or slot is
+    coming across at 8/9). A dropback is Protect. A tight-end sweep is Sweep.
+    Play-action takes the run it fakes — the caller checks that, because the
+    run lives in another file.
+    """
+    if play.get("type") == "pass" and not play.get("fakes"):
+        return "Protect"
+    call = play.get("call") or ""
+    m = CALL_DIGITS.search(call)
+    if m:
+        words = scheme_words(int(m.group(2)), m.group(1))
+        if words:
+            return words[0]
+    if play.get("word_call") and re.search(r"\bSweep\b", call):
+        return "Sweep"
+    if play.get("word_call") and play.get("type") == "pass":
+        return "Protect"
+    return None
+
+
+def scheme_conflicts(play: dict, form: dict, side: int) -> list[str]:
+    """Written blocks that disagree with the named scheme.
+
+    A leftover back the scheme does not name is fine — that is how a tight-end
+    sweep puts two halfbacks on the edge. Restating the scheme is fine too (the
+    fill just ignores the copy). Changing the playside end from `release` to
+    `cutoff` on a Power is not: that is a different family.
+    """
+    name = play.get("scheme")
+    if name not in SCHEMES:
+        return []
+    written = play.get("_written") or play.get("assignments") or {}
+    roles = scheme_roles(form, side)
+    pid = play.get("id", "<no id>")
+    msgs = []
+    for role, intent in scheme_intents(play, form, side).items():
+        pos = roles.get(role)
+        if not pos:
+            continue
+        spec = written.get(pos) or {}
+        if "block" not in spec:
+            continue
+        if intent_core(spec) != intent_core(intent):
+            msgs.append(
+                f"{pid}: {pos} blocks '{spec.get('block')}' but scheme {name} "
+                f"gives {role} '{intent.get('block')}' — the line, the slot and "
+                "the lead come from the scheme; leftover backs stay on the play"
+            )
+    return msgs
+
+
+def fill_assignments(play: dict, form: dict, side: int) -> dict:
+    """Scheme verbs plus whatever the play wrote (paths, leftover backs, notes).
+
+    A position the play already gave a path — the ball carrier, a fake, a
+    route — is left alone. A note with no verb is merged onto the scheme
+    intent, which is how Toss keeps "step at the dive first" on the lead
+    without restating `lead: force`. Everything else the scheme names is
+    filled. Positions the scheme does not name stay exactly as written.
+    """
+    written = play.get("assignments") or {}
+    name = play.get("scheme")
+    if name not in SCHEMES:
+        return {pos: dict(spec) for pos, spec in written.items()}
+    roles = scheme_roles(form, side)
+    out: dict[str, dict] = {}
+    for role, intent in scheme_intents(play, form, side).items():
+        pos = roles.get(role)
+        if not pos:
+            continue
+        spec = written.get(pos)
+        if spec is None:
+            out[pos] = copy.deepcopy(intent)
+            continue
+        if "block" not in spec and spec.get("rule"):
+            out[pos] = dict(spec)
+            continue
+        if "block" not in spec:
+            merged = copy.deepcopy(intent)
+            merged.update(spec)
+            out[pos] = merged
+            continue
+        out[pos] = dict(spec)
+    for pos, spec in written.items():
+        if pos not in out:
+            out[pos] = dict(spec)
+    # Card order, so the diagram paints the line left-to-right the way the
+    # JSON used to, instead of scheme-role order (playside first).
+    ordered = {pos: out[pos] for pos in CARD_ORDER if pos in out}
+    ordered.update((pos, spec) for pos, spec in out.items() if pos not in ordered)
+    return ordered
 
 
 # Our line, from the middle out. Used to find a blocker's neighbour.

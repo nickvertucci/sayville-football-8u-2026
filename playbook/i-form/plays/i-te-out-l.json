@@ -7,40 +7,47 @@
   "call": "Regular I Slot Left LTE Slant Out",
   "word_call": true,
   "type": "pass",
+  "scheme": "Protect",
   "direction": "left",
   "ball_carrier": "LTE",
   "alignment": {
-    "SL": [-5.6, -1.5]
+    "SL": [
+      -5.6,
+      -1.5
+    ]
   },
   "assignments": {
-    "RTE": { "block": "protect" },
-    "RT": { "block": "protect" },
-    "RG": { "block": "protect" },
-    "C": { "block": "protect" },
-    "LG": { "block": "protect" },
-    "LT": { "block": "protect" },
     "LTE": {
       "rule": "Take one step up, then slant out flat toward the left sideline, almost along the line of scrimmage. Look for the ball right away.",
       "type": "pass",
       "path": [
-        [-0.8, 0.6],
-        [-4.6, 1.1]
+        [
+          -0.8,
+          0.6
+        ],
+        [
+          -4.6,
+          1.1
+        ]
       ]
     },
-    "SL": { "block": "screen" },
     "QB": {
       "rule": "Take the snap, take one step and throw to the left tight end as he slants out. If he is covered, tuck it and run.",
       "type": "pass",
       "path": [
-        [0.0, -0.6]
+        [
+          0.0,
+          -0.6
+        ]
       ]
-    },
-    "FB": { "block": "protect" },
-    "TB": { "block": "protect" }
+    }
   },
   "fronts": {
     "4-4": {
-      "SL": { "block": "man", "man": "LC" }
+      "SL": {
+        "block": "man",
+        "man": "LC"
+      }
     }
   },
   "coaching_points": [

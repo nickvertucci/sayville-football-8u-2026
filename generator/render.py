@@ -214,6 +214,10 @@ def resolve_plays(plays_dir: Path, form: dict) -> list[dict]:
     plays = list(raw.values())
     for p in plays:
         p["_formation"] = form
+        # Keep the JSON the author wrote, then fill the line / slot / lead from
+        # the named scheme. Validation compares the two; resolve reads the fill.
+        p["_written"] = {k: dict(v) for k, v in (p.get("assignments") or {}).items()}
+        p["assignments"] = blocking.fill_assignments(p, form, play_side(p))
         _PLAYS_BY_ID[p["id"]] = p
     plays.sort(key=lambda p: (p.get("order", 99), p.get("name", ""), p.get("id", "")))
     return plays
@@ -671,9 +675,30 @@ def validate(formations: list[dict], defenses: dict) -> list[str]:
             )
         for play in form["_plays"]:
             pid = play.get("id", "<no id>")
-            for field in ("id", "name", "assignments"):
+            for field in ("id", "name", "scheme", "assignments"):
                 if field not in play:
                     errors.append(f"{pid}: missing required field '{field}'")
+            scheme = play.get("scheme")
+            if scheme and scheme not in blocking.SCHEMES:
+                errors.append(
+                    f"{pid}: unknown scheme '{scheme}' — the schemes are "
+                    f"{', '.join(blocking.SCHEMES)}"
+                )
+            expected = blocking.expected_scheme(play)
+            if expected and scheme and scheme != expected:
+                errors.append(
+                    f"{pid}: scheme '{scheme}' does not match the call "
+                    f"({expected})"
+                )
+            run = faked_play(play)
+            if run is not None and scheme and run.get("scheme") \
+                    and scheme != run["scheme"]:
+                errors.append(
+                    f"{pid}: fakes {run['id']}, which is {run['scheme']}, but "
+                    f"this play is scheme '{scheme}' — play-action blocks like "
+                    "the run it sells"
+                )
+            errors.extend(blocking.scheme_conflicts(play, form, play_side(play)))
             if play.get("formation") and play["formation"] != form.get("id"):
                 errors.append(
                     f"{pid}: formation '{play['formation']}' does not match its folder "
@@ -699,10 +724,21 @@ def validate(formations: list[dict], defenses: dict) -> list[str]:
                 errors.append(f"{pid}: unknown defense '{play['defense']}'")
             missing = set(form.get("alignment", {})) - set(play.get("assignments", {}))
             if missing:
-                errors.append(f"{pid}: no assignment for {', '.join(sorted(missing))}")
+                errors.append(
+                    f"{pid}: no assignment for {', '.join(sorted(missing))} "
+                    "(the scheme fills the line, the slot and the lead; "
+                    "ball carriers, fakes and leftover backs stay on the play)"
+                )
             extra = set(play.get("assignments", {})) - set(form.get("alignment", {}))
             if extra:
                 errors.append(f"{pid}: assignment for unknown position {', '.join(sorted(extra))}")
+            written = play.get("_written") or {}
+            extra_written = set(written) - set(form.get("alignment", {}))
+            if extra_written:
+                errors.append(
+                    f"{pid}: assignment for unknown position "
+                    f"{', '.join(sorted(extra_written))}"
+                )
             # An assignment is either a blocking intent this build knows how to
             # resolve, or a hand-drawn path. Anything else is a card with a blank spot
             # on it, which is worse than no card.
@@ -1375,6 +1411,8 @@ def play_section(play: dict, card_rel: str, defenses: dict) -> list[str]:
     out = ["---", "", f"## {title}", ""]
     if play.get("call"):
         out += [f"**Call it:** `{play['call']}`", ""]
+    if play.get("scheme"):
+        out += [f"**Scheme:** {play['scheme']}", ""]
     out += [f"![{title}]({card_rel})", ""]
     out += ["| Position | Assignment |", "|---|---|"]
     assignments = resolved_assignments(play, defenses[blocking.DEFAULT_FRONT])
@@ -1411,12 +1449,14 @@ def write_formation_readme(form: dict, defenses: dict) -> str:
         out += ["**Formation coaching notes**", ""]
         out += [f"- {c}" for c in form["coaching_notes"]]
         out.append("")
-    out += ["## Plays", "", "| Play | Call | Type | Ball |", "|---|---|---|---|"]
+    out += ["## Plays", "",
+            "| Play | Call | Scheme | Type | Ball |", "|---|---|---|---|---|"]
     for p in form["_plays"]:
         title = p["name"]
         out.append(
-            f"| [{title}](#{slug(title)}) | `{p.get('call', '')}` | {p.get('type', '')} "
-f"| {p.get('ball_carrier', '—')} |"
+            f"| [{title}](#{slug(title)}) | `{p.get('call', '')}` "
+            f"| {p.get('scheme', '—')} | {p.get('type', '')} "
+            f"| {p.get('ball_carrier', '—')} |"
         )
     out.append("")
     for p in form["_plays"]:
@@ -1433,8 +1473,8 @@ def write_playbook(formations: list[dict], defenses: dict) -> str:
         "",
         "Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)",
         "",
-        "| # | Play | Call | Type | Formation | Ball |",
-        "|---|---|---|---|---|---|",
+        "| # | Play | Call | Scheme | Type | Formation | Ball |",
+        "|---|---|---|---|---|---|---|",
     ]
     n = 0
     for form in formations:
@@ -1443,7 +1483,7 @@ def write_playbook(formations: list[dict], defenses: dict) -> str:
             title = p["name"]
             out.append(
                 f"| {n} | [{title}](#{slug(title)}) | `{p.get('call', '')}` "
-                f"| {p.get('type', '')} | {form['name']} "
+                f"| {p.get('scheme', '—')} | {p.get('type', '')} | {form['name']} "
                 f"| {p.get('ball_carrier', '—')} |"
             )
     out.append("")

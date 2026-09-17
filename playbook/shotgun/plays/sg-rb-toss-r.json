@@ -6,35 +6,10 @@
   "code": "G-5",
   "call": "Shotgun Slot Right 38 Toss",
   "type": "run",
+  "scheme": "Toss",
   "direction": "right",
   "ball_carrier": "LH",
   "assignments": {
-    "RTE": {
-      "block": "base",
-      "drive": "in"
-    },
-    "RT": {
-      "block": "down"
-    },
-    "RG": {
-      "block": "climb",
-      "target": "playside"
-    },
-    "C": {
-      "block": "reach"
-    },
-    "LG": {
-      "block": "cutoff"
-    },
-    "LT": {
-      "block": "down"
-    },
-    "LTE": {
-      "block": "cutoff"
-    },
-    "SL": {
-      "block": "screen"
-    },
     "QB": {
       "rule": "Hand the ball to the left halfback as he crosses in front of you, then fake a run to the left.",
       "type": "fake",
@@ -48,10 +23,6 @@
           0.2
         ]
       ]
-    },
-    "RH": {
-      "block": "lead",
-      "target": "force"
     },
     "LH": {
       "rule": "Cross in front of the quarterback, take the handoff going right and get to the edge behind the right halfback. Turn up outside his block.",

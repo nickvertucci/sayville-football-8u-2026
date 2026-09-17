@@ -30,24 +30,26 @@ Normal line splits, about a foot. Both ends are on the line; the slot is just ou
 
 ## Plays
 
-| Play | Call | Type | Ball |
-|---|---|---|---|
-| [Regular I - Slot Right - 34 Power](#regular-i---slot-right---34-power) | `Regular I Slot Right 34 Power` | run | TB |
-| [Regular I - Slot Left - 35 Power](#regular-i---slot-left---35-power) | `Regular I Slot Left 35 Power` | run | TB |
-| [Regular I - Slot Right - LTE Sweep](#regular-i---slot-right---lte-sweep) | `Regular I Slot Right LTE Sweep` | run | LTE |
-| [Regular I - Slot Left - RTE Sweep](#regular-i---slot-left---rte-sweep) | `Regular I Slot Left RTE Sweep` | run | RTE |
-| [Regular I - Slot Right - 49 Sweep](#regular-i---slot-right---49-sweep) | `Regular I Slot Right 49 Sweep` | run | SL |
-| [Regular I - Slot Left - 48 Sweep](#regular-i---slot-left---48-sweep) | `Regular I Slot Left 48 Sweep` | run | SL |
-| [Regular I - Slot Right - 30 Smash](#regular-i---slot-right---30-smash) | `Regular I Slot Right 30 Smash` | run | TB |
-| [Regular I - Slot Left - 31 Smash](#regular-i---slot-left---31-smash) | `Regular I Slot Left 31 Smash` | run | TB |
-| [Regular I - Slot Right - RTE Slant Out](#regular-i---slot-right---rte-slant-out) | `Regular I Slot Right RTE Slant Out` | pass | RTE |
-| [Regular I - Slot Left - LTE Slant Out](#regular-i---slot-left---lte-slant-out) | `Regular I Slot Left LTE Slant Out` | pass | LTE |
+| Play | Call | Scheme | Type | Ball |
+|---|---|---|---|---|
+| [Regular I - Slot Right - 34 Power](#regular-i---slot-right---34-power) | `Regular I Slot Right 34 Power` | Power | run | TB |
+| [Regular I - Slot Left - 35 Power](#regular-i---slot-left---35-power) | `Regular I Slot Left 35 Power` | Power | run | TB |
+| [Regular I - Slot Right - LTE Sweep](#regular-i---slot-right---lte-sweep) | `Regular I Slot Right LTE Sweep` | Sweep | run | LTE |
+| [Regular I - Slot Left - RTE Sweep](#regular-i---slot-left---rte-sweep) | `Regular I Slot Left RTE Sweep` | Sweep | run | RTE |
+| [Regular I - Slot Right - 49 Sweep](#regular-i---slot-right---49-sweep) | `Regular I Slot Right 49 Sweep` | Sweep | run | SL |
+| [Regular I - Slot Left - 48 Sweep](#regular-i---slot-left---48-sweep) | `Regular I Slot Left 48 Sweep` | Sweep | run | SL |
+| [Regular I - Slot Right - 30 Smash](#regular-i---slot-right---30-smash) | `Regular I Slot Right 30 Smash` | Smash | run | TB |
+| [Regular I - Slot Left - 31 Smash](#regular-i---slot-left---31-smash) | `Regular I Slot Left 31 Smash` | Smash | run | TB |
+| [Regular I - Slot Right - RTE Slant Out](#regular-i---slot-right---rte-slant-out) | `Regular I Slot Right RTE Slant Out` | Protect | pass | RTE |
+| [Regular I - Slot Left - LTE Slant Out](#regular-i---slot-left---lte-slant-out) | `Regular I Slot Left LTE Slant Out` | Protect | pass | LTE |
 
 ---
 
 ## Regular I - Slot Right - 34 Power
 
 **Call it:** `Regular I Slot Right 34 Power`
+
+**Scheme:** Power
 
 ![Regular I - Slot Right - 34 Power](cards/i-power-r-4-4.svg)
 
@@ -78,6 +80,8 @@ Normal line splits, about a foot. Both ends are on the line; the slot is just ou
 
 **Call it:** `Regular I Slot Left 35 Power`
 
+**Scheme:** Power
+
 ![Regular I - Slot Left - 35 Power](cards/i-power-l-4-4.svg)
 
 | Position | Assignment |
@@ -107,6 +111,8 @@ Normal line splits, about a foot. Both ends are on the line; the slot is just ou
 
 **Call it:** `Regular I Slot Right LTE Sweep`
 
+**Scheme:** Sweep
+
 ![Regular I - Slot Right - LTE Sweep](cards/i-te-sweep-r-4-4.svg)
 
 | Position | Assignment |
@@ -134,6 +140,8 @@ Normal line splits, about a foot. Both ends are on the line; the slot is just ou
 ## Regular I - Slot Left - RTE Sweep
 
 **Call it:** `Regular I Slot Left RTE Sweep`
+
+**Scheme:** Sweep
 
 ![Regular I - Slot Left - RTE Sweep](cards/i-te-sweep-l-4-4.svg)
 
@@ -163,6 +171,8 @@ Normal line splits, about a foot. Both ends are on the line; the slot is just ou
 
 **Call it:** `Regular I Slot Right 49 Sweep`
 
+**Scheme:** Sweep
+
 ![Regular I - Slot Right - 49 Sweep](cards/i-sl-sweep-l-4-4.svg)
 
 | Position | Assignment |
@@ -190,6 +200,8 @@ Normal line splits, about a foot. Both ends are on the line; the slot is just ou
 ## Regular I - Slot Left - 48 Sweep
 
 **Call it:** `Regular I Slot Left 48 Sweep`
+
+**Scheme:** Sweep
 
 ![Regular I - Slot Left - 48 Sweep](cards/i-sl-sweep-r-4-4.svg)
 
@@ -219,6 +231,8 @@ Normal line splits, about a foot. Both ends are on the line; the slot is just ou
 
 **Call it:** `Regular I Slot Right 30 Smash`
 
+**Scheme:** Smash
+
 ![Regular I - Slot Right - 30 Smash](cards/i-smash-r-4-4.svg)
 
 | Position | Assignment |
@@ -246,6 +260,8 @@ Normal line splits, about a foot. Both ends are on the line; the slot is just ou
 ## Regular I - Slot Left - 31 Smash
 
 **Call it:** `Regular I Slot Left 31 Smash`
+
+**Scheme:** Smash
 
 ![Regular I - Slot Left - 31 Smash](cards/i-smash-l-4-4.svg)
 
@@ -275,6 +291,8 @@ Normal line splits, about a foot. Both ends are on the line; the slot is just ou
 
 **Call it:** `Regular I Slot Right RTE Slant Out`
 
+**Scheme:** Protect
+
 ![Regular I - Slot Right - RTE Slant Out](cards/i-te-out-r-4-4.svg)
 
 | Position | Assignment |
@@ -302,6 +320,8 @@ Normal line splits, about a foot. Both ends are on the line; the slot is just ou
 ## Regular I - Slot Left - LTE Slant Out
 
 **Call it:** `Regular I Slot Left LTE Slant Out`
+
+**Scheme:** Protect
 
 ![Regular I - Slot Left - LTE Slant Out](cards/i-te-out-l-4-4.svg)
 

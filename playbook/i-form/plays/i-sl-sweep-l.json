@@ -6,32 +6,10 @@
   "code": "I-5",
   "call": "Regular I Slot Right 49 Sweep",
   "type": "run",
+  "scheme": "Sweep",
   "direction": "left",
   "ball_carrier": "SL",
   "assignments": {
-    "LTE": {
-      "block": "base",
-      "drive": "in"
-    },
-    "LT": {
-      "block": "down"
-    },
-    "LG": {
-      "block": "climb",
-      "target": "playside"
-    },
-    "C": {
-      "block": "reach"
-    },
-    "RG": {
-      "block": "cutoff"
-    },
-    "RT": {
-      "block": "down"
-    },
-    "RTE": {
-      "block": "cutoff"
-    },
     "SL": {
       "rule": "At the snap run flat across the backfield, take the handoff at full speed and get to the left edge. Turn up in the alley behind the fullback.",
       "type": "run",
@@ -79,10 +57,6 @@
           -1.4
         ]
       ]
-    },
-    "FB": {
-      "block": "lead",
-      "target": "force"
     },
     "TB": {
       "rule": "Take the fake handoff and run hard to the right. You are what holds the backside.",

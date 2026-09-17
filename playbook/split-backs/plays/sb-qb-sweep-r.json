@@ -6,35 +6,10 @@
   "code": "S-3",
   "call": "Split Backs Slot Right 18 Sweep",
   "type": "run",
+  "scheme": "Sweep",
   "direction": "right",
   "ball_carrier": "QB",
   "assignments": {
-    "LTE": {
-      "block": "cutoff"
-    },
-    "LT": {
-      "block": "down"
-    },
-    "LG": {
-      "block": "cutoff"
-    },
-    "C": {
-      "block": "reach"
-    },
-    "RG": {
-      "block": "climb",
-      "target": "playside"
-    },
-    "RT": {
-      "block": "down"
-    },
-    "RTE": {
-      "block": "base",
-      "drive": "in"
-    },
-    "SL": {
-      "block": "screen"
-    },
     "QB": {
       "rule": "Take the snap and sweep right, flat and fast, behind the right halfback. Turn up outside his block.",
       "type": "run",
@@ -61,10 +36,6 @@
         ]
       ]
     },
-    "RH": {
-      "block": "lead",
-      "target": "force"
-    },
     "LH": {
       "rule": "Run hard to the left like you have the ball. Sell it all the way — you are the reason the defense goes the wrong way.",
       "type": "fake",
@@ -78,6 +49,52 @@
           0.6
         ]
       ]
+    }
+  },
+  "fronts": {
+    "4-4": {
+      "RT": {
+        "block": "man",
+        "man": "S",
+        "help": "RT"
+      },
+      "RG": {
+        "block": "man",
+        "man": "RT"
+      },
+      "C": {
+        "block": "man",
+        "man": "M",
+        "help": "LT"
+      },
+      "LG": {
+        "block": "man",
+        "man": "LT"
+      },
+      "LT": {
+        "block": "man",
+        "man": "W",
+        "help": "LE"
+      },
+      "LTE": {
+        "block": "man",
+        "man": "LE"
+      },
+      "RH": {
+        "block": "man",
+        "man": "R",
+        "how": "Bubble out around the right tight end",
+        "via": [
+          [
+            3.4,
+            2.0
+          ],
+          [
+            3.6,
+            4.2
+          ]
+        ]
+      }
     }
   },
   "coaching_points": [

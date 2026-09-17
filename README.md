@@ -104,12 +104,14 @@ or a tight end on an end-around (a word call, no hole digit). The tight-end
 
 ## Formations
 
-Three formations, 18 plays, in teaching order:
+Three formations, 28 plays, in teaching order. Every numbered run is one of five
+blocking families — Smash, Dive, Power, Slant, Toss — plus Sweep when the
+quarterback, the slot or a tight end is coming across, and Protect on a dropback.
 
 | # | Formation | Family | Plays | What it is for |
 |---|---|---|---|---|
-| 1 | **Regular I** | Regular I | 6 | Base offense. Fullback and tailback stacked behind the quarterback. Off tackle, the tailback between the tackle and the end behind the SL's kick-out, the tight-end sweep and the slot sweep, both ways. |
-| 2 | **Split Backs** | Split Backs | 6 | Two backs at even depth and a slot just outside the tight end. 38/29 Toss, the QB sweep and the fake-handoff QB sweep, both ways. |
+| 1 | **Regular I** | Regular I | 10 | Base offense. Fullback and tailback stacked behind the quarterback. Power, Smash, the tight-end sweep, the slot sweep, and the tight-end slant out, both ways. |
+| 2 | **Split Backs** | Split Backs | 12 | Two backs at even depth and a slot just outside the tight end. Toss, QB sweep, fake sweep, slot sweep, TE sweep, and the tight-end slant out, both ways. |
 | 3 | **Shotgun** | Shotgun | 6 | The quarterback five yards deep with a back either side. The tight-end slant out, the QB sweep and the RB toss, both ways. |
 
 Both are two-tight-end, downhill running formations, so the blocking language carries

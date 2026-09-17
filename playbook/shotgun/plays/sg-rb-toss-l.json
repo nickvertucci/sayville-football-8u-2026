@@ -6,6 +6,7 @@
   "code": "G-6",
   "call": "Shotgun Slot Left 29 Toss",
   "type": "run",
+  "scheme": "Toss",
   "direction": "left",
   "ball_carrier": "RH",
   "alignment": {
@@ -15,32 +16,6 @@
     ]
   },
   "assignments": {
-    "LTE": {
-      "block": "base",
-      "drive": "in"
-    },
-    "LT": {
-      "block": "down"
-    },
-    "LG": {
-      "block": "climb",
-      "target": "playside"
-    },
-    "C": {
-      "block": "reach"
-    },
-    "RG": {
-      "block": "cutoff"
-    },
-    "RT": {
-      "block": "down"
-    },
-    "RTE": {
-      "block": "cutoff"
-    },
-    "SL": {
-      "block": "screen"
-    },
     "QB": {
       "rule": "Hand the ball to the right halfback as he crosses in front of you, then fake a run to the right.",
       "type": "fake",
@@ -54,10 +29,6 @@
           0.2
         ]
       ]
-    },
-    "LH": {
-      "block": "lead",
-      "target": "force"
     },
     "RH": {
       "rule": "Cross in front of the quarterback, take the handoff going left and get to the edge behind the left halfback. Turn up outside his block.",

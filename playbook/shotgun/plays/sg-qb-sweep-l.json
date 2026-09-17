@@ -6,6 +6,7 @@
   "code": "G-3",
   "call": "Shotgun Slot Left 19 Sweep",
   "type": "run",
+  "scheme": "Sweep",
   "direction": "left",
   "ball_carrier": "QB",
   "alignment": {
@@ -15,32 +16,6 @@
     ]
   },
   "assignments": {
-    "LTE": {
-      "block": "base",
-      "drive": "in"
-    },
-    "LT": {
-      "block": "down"
-    },
-    "LG": {
-      "block": "climb",
-      "target": "playside"
-    },
-    "C": {
-      "block": "reach"
-    },
-    "RG": {
-      "block": "cutoff"
-    },
-    "RT": {
-      "block": "down"
-    },
-    "RTE": {
-      "block": "cutoff"
-    },
-    "SL": {
-      "block": "screen"
-    },
     "QB": {
       "rule": "Catch the snap and sweep left, flat and fast, behind the left halfback. Turn up outside his block.",
       "type": "run",
@@ -70,10 +45,6 @@
           12.0
         ]
       ]
-    },
-    "LH": {
-      "block": "lead",
-      "target": "force"
     },
     "RH": {
       "rule": "Fake the handoff going right and run hard. Sell it all the way — you are the reason the defense goes the wrong way.",

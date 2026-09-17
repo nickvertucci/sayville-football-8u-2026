@@ -2275,7 +2275,7 @@ HOLES = [
     ("2 / 3", "Dive — between the guard and the tackle"),
     ("4 / 5", "Power — between the tackle and the end"),
     ("6 / 7", "Slant — outside the tight end"),
-    ("8 / 9", "Toss — wider still, all the way outside"),
+    ("8 / 9", "Toss — all the way outside. Sweep if the quarterback or the slot is coming across"),
 ]
 
 

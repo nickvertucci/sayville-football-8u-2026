@@ -6,58 +6,58 @@
   "code": "I-8",
   "call": "Regular I Slot Left 31 Smash",
   "type": "run",
+  "scheme": "Smash",
   "direction": "left",
   "ball_carrier": "TB",
   "alignment": {
-    "SL": [-5.6, -1.5]
+    "SL": [
+      -5.6,
+      -1.5
+    ]
   },
   "assignments": {
-    "RTE": {
-      "block": "cutoff"
-    },
-    "RT": {
-      "block": "down"
-    },
-    "RG": {
-      "block": "cutoff"
-    },
-    "C": {
-      "block": "reach"
-    },
-    "LG": {
-      "block": "double",
-      "target": "playside"
-    },
-    "LT": {
-      "block": "down"
-    },
-    "LTE": {
-      "block": "cutoff"
-    },
-    "SL": {
-      "block": "screen"
-    },
     "QB": {
       "rule": "Open left, hand to the tailback, then fake the boot right. It holds the backside end.",
       "type": "fake",
       "path": [
-        [-0.8, -0.4],
-        [-2.2, -1.0],
-        [-3.6, -1.4]
+        [
+          -0.8,
+          -0.4
+        ],
+        [
+          -2.2,
+          -1.0
+        ],
+        [
+          -3.6,
+          -1.4
+        ]
       ]
-    },
-    "FB": {
-      "block": "lead"
     },
     "TB": {
       "rule": "Take the handoff downhill between the center and the left guard, following the fullback. Do not bounce it.",
       "type": "run",
       "path": [
-        [-0.5, 2.5],
-        [-0.7, 5.0],
-        [-0.7, 6.0],
-        [-0.8, 8.5],
-        [-0.9, 11.0]
+        [
+          -0.5,
+          2.5
+        ],
+        [
+          -0.7,
+          5.0
+        ],
+        [
+          -0.7,
+          6.0
+        ],
+        [
+          -0.8,
+          8.5
+        ],
+        [
+          -0.9,
+          11.0
+        ]
       ]
     }
   },
@@ -101,7 +101,10 @@
         "man": "M",
         "how": "Lead through the hole",
         "via": [
-          [-0.8, 3.6]
+          [
+            -0.8,
+            3.6
+          ]
         ]
       }
     }
