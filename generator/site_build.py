@@ -631,13 +631,20 @@ table.xl.pk-plays td {
   .pk-grid { gap: 0 6px; margin: 2px 0 0; break-inside: avoid; }
   .pk { break-inside: avoid; }
   .pk-name {
-    padding: 0 0 2px; font-size: 10px; font-weight: 900;
+    padding: 0 0 1px; font-size: 9px; font-weight: 900; line-height: 1.2;
     color: #000 !important; background: none !important;
   }
   .pk-n { display: none; }
-  table.xl.pk-plays td { height: auto; vertical-align: middle; }
-  .pk-plays td a { font-size: 7.5px; white-space: nowrap; letter-spacing: -.2px; }
-  .pk-any { font-size: 7.5px; }
+  table.xl.pk-plays td { height: auto; vertical-align: middle; line-height: 1.15; }
+  .pk-plays td a { font-size: 7.5px; white-space: nowrap; letter-spacing: -.2px;
+                   line-height: 1.15; padding: 0; }
+  .pk-any { font-size: 7.5px; line-height: 1.15; }
+  /* The heading is a title on paper, not a banner. On screen it is a 29px h1 over a
+     sub-line with a 20px gap under it -- most of half an inch of the one sheet, spent
+     before the first call. Scoped to this page so the rest of the book keeps its
+     headings. */
+  .calls-page h1 { font-size: 15px; line-height: 1.2; }
+  .calls-page .sub { font-size: 8px; margin-bottom: 4px; line-height: 1.3; }
 }
 
 .plist { display: grid; gap: 12px; grid-template-columns: 1fr; }
@@ -2669,6 +2676,7 @@ def write_calls(formations: list[dict], defenses: dict, root: Path) -> str:
         formations,
         defenses=defenses,
         active_nav="calls",
+        main_attrs=' class="calls-page"',
         description="Every play in the book, by formation, scheme and side.",
         # Portrait, two blocks across: with no lineup grid a block is a handful of
         # rows, so all five formations fit one sheet of paper.
