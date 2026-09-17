@@ -440,15 +440,16 @@ def validate_call(play: dict, form: dict, defenses: dict) -> list[str]:
                 f"{abs(crossing):.2f}"]
 
     # A numbered run's play word is the hole: Smash at 0/1, Dive at 2/3, Power at
-    # 4/5, Slant at 6/7, Toss at 8/9 — except the slot (4) coming across at 8/9,
-    # which is Sweep, the same word as a tight-end end-around.
+    # 4/5, Slant at 6/7, Toss at 8/9 — except the quarterback (1) or slot (4)
+    # coming across at 8/9, which is Sweep, the same word as a tight-end
+    # end-around.
     if play.get("type") == "run":
         rest = call[m.end():].strip()
         allowed = blocking.scheme_words(hole, back_digit)
         if allowed and rest not in allowed:
             word = allowed[0]
             return [f"{pid}: call '{call}' runs the {hole} hole"
-                    + (" with the slot" if back_digit == blocking.SWEEP_BACK else "")
+                    + (" as a sweep" if back_digit in blocking.SWEEP_BACKS else "")
                     + f", which is {word} — the play word has to be {word}, "
                     f"not {rest!r}"]
     return []

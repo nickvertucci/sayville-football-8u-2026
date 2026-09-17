@@ -47,6 +47,8 @@ CASES = [
     ("outside called Pitch",          "split-backs", "sb-toss-r", "Split Backs Slot Right 38 Pitch", True),
     ("slot sweep at 8/9",             "i-form", "i-sl-sweep-l", "Regular I Slot Right 49 Sweep", False),
     ("slot sweep called Toss",        "i-form", "i-sl-sweep-l", "Regular I Slot Right 49 Toss", True),
+    ("QB sweep at 8/9",               "split-backs", "sb-qb-sweep-r", "Split Backs Slot Right 18 Sweep", False),
+    ("QB sweep called Toss",          "split-backs", "sb-qb-sweep-r", "Split Backs Slot Right 18 Toss", True),
 ]
 
 
