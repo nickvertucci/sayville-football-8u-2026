@@ -36,8 +36,8 @@ Both ends are tight on the line. The two backs sit four yards deep and just over
 | [Split Backs - Slot Left - RTE Sweep](#split-backs---slot-left---rte-sweep) | `Split Backs Slot Left RTE Sweep` | Sweep | run | RTE |
 | [Split Backs - Slot Right - RTE Slant Out](#split-backs---slot-right---rte-slant-out) | `Split Backs Slot Right RTE Slant Out` | Protect | pass | RTE |
 | [Split Backs - Slot Left - LTE Slant Out](#split-backs---slot-left---lte-slant-out) | `Split Backs Slot Left LTE Slant Out` | Protect | pass | LTE |
-| [Split Backs - Slot Right - 34 Power](#split-backs---slot-right---34-power) | `Split Backs Slot Right 34 Power` | Power | run | LH |
-| [Split Backs - Slot Left - 25 Power](#split-backs---slot-left---25-power) | `Split Backs Slot Left 25 Power` | Power | run | RH |
+| [Split Backs - Slot Right - 36 Power](#split-backs---slot-right---36-power) | `Split Backs Slot Right 36 Power` | Power | run | LH |
+| [Split Backs - Slot Left - 27 Power](#split-backs---slot-left---27-power) | `Split Backs Slot Left 27 Power` | Power | run | RH |
 
 ---
 
@@ -401,13 +401,13 @@ Both ends are tight on the line. The two backs sit four yards deep and just over
 
 ---
 
-## Split Backs - Slot Right - 34 Power
+## Split Backs - Slot Right - 36 Power
 
-**Call it:** `Split Backs Slot Right 34 Power`
+**Call it:** `Split Backs Slot Right 36 Power`
 
 **Scheme:** Power
 
-![Split Backs - Slot Right - 34 Power](cards/sb-power-r-4-4.svg)
+![Split Backs - Slot Right - 36 Power](cards/sb-power-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -431,13 +431,13 @@ Both ends are tight on the line. The two backs sit four yards deep and just over
 
 ---
 
-## Split Backs - Slot Left - 25 Power
+## Split Backs - Slot Left - 27 Power
 
-**Call it:** `Split Backs Slot Left 25 Power`
+**Call it:** `Split Backs Slot Left 27 Power`
 
 **Scheme:** Power
 
-![Split Backs - Slot Left - 25 Power](cards/sb-power-l-4-4.svg)
+![Split Backs - Slot Left - 27 Power](cards/sb-power-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|

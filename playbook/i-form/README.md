@@ -32,28 +32,28 @@ Normal line splits, about a foot. Both ends are on the line; the slot is just ou
 
 | Play | Call | Scheme | Type | Ball |
 |---|---|---|---|---|
-| [Regular I - Slot Right - 34 Power](#regular-i---slot-right---34-power) | `Regular I Slot Right 34 Power` | Power | run | TB |
-| [Regular I - Slot Left - 35 Power](#regular-i---slot-left---35-power) | `Regular I Slot Left 35 Power` | Power | run | TB |
+| [Regular I - Slot Right - 36 Power](#regular-i---slot-right---36-power) | `Regular I Slot Right 36 Power` | Power | run | TB |
+| [Regular I - Slot Left - 37 Power](#regular-i---slot-left---37-power) | `Regular I Slot Left 37 Power` | Power | run | TB |
 | [Regular I - Slot Right - LTE Sweep](#regular-i---slot-right---lte-sweep) | `Regular I Slot Right LTE Sweep` | Sweep | run | LTE |
 | [Regular I - Slot Left - RTE Sweep](#regular-i---slot-left---rte-sweep) | `Regular I Slot Left RTE Sweep` | Sweep | run | RTE |
 | [Regular I - Slot Right - 49 Sweep](#regular-i---slot-right---49-sweep) | `Regular I Slot Right 49 Sweep` | Sweep | run | SL |
 | [Regular I - Slot Left - 48 Sweep](#regular-i---slot-left---48-sweep) | `Regular I Slot Left 48 Sweep` | Sweep | run | SL |
-| [Regular I - Slot Right - 30 Smash](#regular-i---slot-right---30-smash) | `Regular I Slot Right 30 Smash` | Smash | run | TB |
-| [Regular I - Slot Left - 31 Smash](#regular-i---slot-left---31-smash) | `Regular I Slot Left 31 Smash` | Smash | run | TB |
+| [Regular I - Slot Right - 32 Smash](#regular-i---slot-right---32-smash) | `Regular I Slot Right 32 Smash` | Smash | run | TB |
+| [Regular I - Slot Left - 33 Smash](#regular-i---slot-left---33-smash) | `Regular I Slot Left 33 Smash` | Smash | run | TB |
 | [Regular I - Slot Right - RTE Slant Out](#regular-i---slot-right---rte-slant-out) | `Regular I Slot Right RTE Slant Out` | Protect | pass | RTE |
 | [Regular I - Slot Left - LTE Slant Out](#regular-i---slot-left---lte-slant-out) | `Regular I Slot Left LTE Slant Out` | Protect | pass | LTE |
-| [Regular I - Slot Right - 20 Smash](#regular-i---slot-right---20-smash) | `Regular I Slot Right 20 Smash` | Smash | run | FB |
-| [Regular I - Slot Left - 21 Smash](#regular-i---slot-left---21-smash) | `Regular I Slot Left 21 Smash` | Smash | run | FB |
+| [Regular I - Slot Right - 22 Smash](#regular-i---slot-right---22-smash) | `Regular I Slot Right 22 Smash` | Smash | run | FB |
+| [Regular I - Slot Left - 23 Smash](#regular-i---slot-left---23-smash) | `Regular I Slot Left 23 Smash` | Smash | run | FB |
 
 ---
 
-## Regular I - Slot Right - 34 Power
+## Regular I - Slot Right - 36 Power
 
-**Call it:** `Regular I Slot Right 34 Power`
+**Call it:** `Regular I Slot Right 36 Power`
 
 **Scheme:** Power
 
-![Regular I - Slot Right - 34 Power](cards/i-power-r-4-4.svg)
+![Regular I - Slot Right - 36 Power](cards/i-power-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -78,13 +78,13 @@ Normal line splits, about a foot. Both ends are on the line; the slot is just ou
 
 ---
 
-## Regular I - Slot Left - 35 Power
+## Regular I - Slot Left - 37 Power
 
-**Call it:** `Regular I Slot Left 35 Power`
+**Call it:** `Regular I Slot Left 37 Power`
 
 **Scheme:** Power
 
-![Regular I - Slot Left - 35 Power](cards/i-power-l-4-4.svg)
+![Regular I - Slot Left - 37 Power](cards/i-power-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -229,13 +229,13 @@ Normal line splits, about a foot. Both ends are on the line; the slot is just ou
 
 ---
 
-## Regular I - Slot Right - 30 Smash
+## Regular I - Slot Right - 32 Smash
 
-**Call it:** `Regular I Slot Right 30 Smash`
+**Call it:** `Regular I Slot Right 32 Smash`
 
 **Scheme:** Smash
 
-![Regular I - Slot Right - 30 Smash](cards/i-smash-r-4-4.svg)
+![Regular I - Slot Right - 32 Smash](cards/i-smash-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -259,13 +259,13 @@ Normal line splits, about a foot. Both ends are on the line; the slot is just ou
 
 ---
 
-## Regular I - Slot Left - 31 Smash
+## Regular I - Slot Left - 33 Smash
 
-**Call it:** `Regular I Slot Left 31 Smash`
+**Call it:** `Regular I Slot Left 33 Smash`
 
 **Scheme:** Smash
 
-![Regular I - Slot Left - 31 Smash](cards/i-smash-l-4-4.svg)
+![Regular I - Slot Left - 33 Smash](cards/i-smash-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -349,13 +349,13 @@ Normal line splits, about a foot. Both ends are on the line; the slot is just ou
 
 ---
 
-## Regular I - Slot Right - 20 Smash
+## Regular I - Slot Right - 22 Smash
 
-**Call it:** `Regular I Slot Right 20 Smash`
+**Call it:** `Regular I Slot Right 22 Smash`
 
 **Scheme:** Smash
 
-![Regular I - Slot Right - 20 Smash](cards/i-fb-smash-r-4-4.svg)
+![Regular I - Slot Right - 22 Smash](cards/i-fb-smash-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -379,13 +379,13 @@ Normal line splits, about a foot. Both ends are on the line; the slot is just ou
 
 ---
 
-## Regular I - Slot Left - 21 Smash
+## Regular I - Slot Left - 23 Smash
 
-**Call it:** `Regular I Slot Left 21 Smash`
+**Call it:** `Regular I Slot Left 23 Smash`
 
 **Scheme:** Smash
 
-![Regular I - Slot Left - 21 Smash](cards/i-fb-smash-l-4-4.svg)
+![Regular I - Slot Left - 23 Smash](cards/i-fb-smash-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|

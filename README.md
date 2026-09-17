@@ -22,11 +22,11 @@ without the dashes, what you yell on Saturday.
 
 The call names the formation, then `Slot Right` — where the slot lines up — then two
 digits: the first says **who carries it**, the second says **where it goes**. So
-`Regular I Slot Right 34 Power` is the Regular I, slot on the right, the tailback between the
-tackle and the end.
+`Regular I Slot Right 36 Power` is the Regular I, slot on the right, the tailback between the
+tackle and the tight end.
 
 Off tackle depends on the slot's kick-out block, so he lines up on the side it
-has to happen: `Regular I Slot Left 35 Power` puts him on the left. The call says so out
+has to happen: `Regular I Slot Left 37 Power` puts him on the left. The call says so out
 loud, because a play that moves somebody silently is a play nobody can call.
 
 | Back | Who |
@@ -38,14 +38,22 @@ loud, because a play that moves somebody silently is a play nobody can call.
 
 | Hole | Word | Where |
 |---|---|---|
-| **0 / 1** | Smash | Between the center and the guard |
-| **2 / 3** | Dive | Between the guard and the tackle |
-| **4 / 5** | Power | Between the tackle and the end |
-| **6 / 7** | Slant | Outside the tight end |
-| **8 / 9** | Toss | Wider still — all the way outside |
+| **0** | Smash | Straight over the center |
+| **2 / 3** | Smash | Between the center and the guard |
+| **4 / 5** | Dive | Between the guard and the tackle |
+| **6 / 7** | Power | Between the tackle and the tight end |
+| **8 / 9** | Toss | Outside the tight end |
 
-Even numbers go right (0, 2, 4, 6, 8), odd numbers go left (1, 3, 5, 7, 9), counting
-outward from the center.
+```
+   9  |  7  |  5  |  3  | 0 |  2  |  4  |  6  |  8
+     LTE    LT    LG     C     RG    RT   RTE
+```
+
+**0 is the middle.** From there the holes count outward, even to the right (2, 4, 6, 8)
+and odd to the left (3, 5, 7, 9) — one number per gap in the line, and one for the
+center himself. **There is no 1 hole**: the middle is one place, not two, and a number
+that names the same place twice is a number nobody can call. The build rejects a call
+that says 1.
 
 The holes are anchored to the linemen, not to abstract gaps, so a call tells you which
 two blockers the ball is going between. **Every play in the book is checked against
@@ -55,12 +63,14 @@ does not cross on the named side inside the hole the call names. A call sheet th
 worse than no call sheet, so the build will not publish one.
 
 The digits describe the back the first digit names, not necessarily the ball carrier. So
-`Regular I Slot Right 34 Power` is the tailback between the right tackle and end, and
-`Regular I Slot Left 35 Power` is the same handoff to the left.
+`Regular I Slot Right 36 Power` is the tailback between the right tackle and tight end,
+and `Regular I Slot Left 37 Power` is the same handoff to the left.
 
 | Call | Play | Where it hits |
 |---|---|---|
-| `Regular I Slot Right 34 Power` / `Slot Left 35 Power` | Regular I - Slot Right - 34 Power / Slot Left - 35 Power | tailback, tackle–end |
+| `Regular I Slot Right 36 Power` / `Slot Left 37 Power` | Regular I - Slot Right - 36 Power / Slot Left - 37 Power | tailback, tackle–tight end |
+| `Regular I Slot Right 32 Smash` / `Slot Left 33 Smash` | Regular I - Slot Right - 32 Smash / Slot Left - 33 Smash | tailback, A gap, fullback leading |
+| `Regular I Slot Right 22 Smash` / `Slot Left 23 Smash` | Regular I - Slot Right - 22 Smash / Slot Left - 23 Smash | fullback, A gap, on the snap |
 | `Regular I Slot Right LTE Sweep` / `Slot Left RTE Sweep` | Regular I - Slot Right - LTE Sweep / Slot Left - RTE Sweep | the backside tight end on an end-around, all the way outside |
 | `Regular I Slot Right 49 Sweep` / `Slot Left 48 Sweep` | Regular I - Slot Right - 49 Sweep / Slot Left - 48 Sweep | the slot, flat across the backfield and outside the other way |
 
@@ -97,7 +107,8 @@ the Split Backs do: 3 is left, 2 is right.
 | `Shotgun Slot Left 19 Sweep` / `Slot Right 18 Sweep` | Shotgun - Slot Left - 19 Sweep / Slot Right - 18 Sweep | the quarterback, all the way outside behind the near halfback |
 | `Shotgun Slot Left 29 Toss` / `Slot Right 38 Toss` | Shotgun - Slot Left - 29 Toss / Slot Right - 38 Toss | the far halfback, across in front of the quarterback and all the way outside |
 
-**Play word** — a numbered run's word is the hole: Smash, Dive, Power, Slant, Toss.
+**Play word** — a numbered run's word is the hole: Smash at 0 and 2/3, Dive at 4/5,
+Power at 6/7, Toss at 8/9.
 **Sweep** is the quarterback (`18` / `19`) or the slot coming across at 8/9,
 or a tight end on an end-around (a word call, no hole digit). Digit 4 is the
 slot only in looks that have one — Wishbone's 4 is the right halfback, so
@@ -105,55 +116,56 @@ slot only in looks that have one — Wishbone's 4 is the right halfback, so
 
 ### Wishbone: formation + back + hole + play word
 
-Three backs and no slot, so the call drops Slot Right/Left. `Wishbone 20 Smash`
-is the fullback between the center and the right guard. `44 Power` is the right
+Three backs and no slot, so the call drops Slot Right/Left. `Wishbone 22 Smash`
+is the fullback between the center and the right guard. `46 Power` is the right
 halfback off tackle; `38 Toss` is the left halfback all the way outside.
 
 | Call | Play | Reads as |
 |---|---|---|
-| `Wishbone 20 Smash` / `21 Smash` | Wishbone - 20 Smash / 21 Smash | the fullback, A-gap |
-| `Wishbone 22 Dive` / `23 Dive` | Wishbone - 22 Dive / 23 Dive | the fullback, guard–tackle |
-| `Wishbone 44 Power` / `35 Power` | Wishbone - 44 Power / 35 Power | the playside halfback, tackle–end |
-| `Wishbone 38 Toss` / `49 Toss` | Wishbone - 38 Toss / 49 Toss | the far halfback, all the way outside |
+| `Wishbone 22 Smash` / `23 Smash` | Wishbone - 22 Smash / 23 Smash | the fullback, A gap |
+| `Wishbone 24 Dive` / `25 Dive` | Wishbone - 24 Dive / 25 Dive | the fullback, guard–tackle |
+| `Wishbone 46 Power` / `37 Power` | Wishbone - 46 Power / 37 Power | the playside halfback, tackle–tight end |
+| `Wishbone 38 Toss` / `49 Toss` | Wishbone - 38 Toss / 49 Toss | the far halfback, outside the tight end |
 
-### Trips: formation + bunch + back + hole + play word
+### Trips: formation + bunch + who + play word
 
 Empty backfield. Backs **2, 3 and 4** (fullback, tailback, slot) bunched
-outside the tight end; the quarterback is alone. The call names the bunch:
-`Trips Right 34 Power` is the tailback coming *inside* from the trips to the
-4 hole. Same numbers as the Regular I.
+outside the tight end; the quarterback is alone. The call names the bunch —
+`Trips Right`, `Trips Left` — then who gets it. With nobody in the backfield
+to hand to, everything here goes outside or in the air, so the only numbers
+that come up are 8s and 9s and the rest are word calls.
 
 | Call | Play | Reads as |
 |---|---|---|
-| `Trips Right 34 Power` / `Trips Left 35 Power` | Trips - Right - 34 Power / Left - 35 Power | tailback, from the bunch into tackle–end |
-| `Trips Right 30 Smash` / `31 Smash` | Trips - Right - 30 Smash / Left - 31 Smash | tailback, from the bunch into the A-gap |
-| `Trips Right 32 Dive` / `33 Dive` | Trips - Right - 32 Dive / Left - 33 Dive | tailback, from the bunch into guard–tackle |
-| `Trips Right 38 Toss` / `Trips Left 39 Toss` | Trips - Right - 38 Toss / Left - 39 Toss | tailback, pitch outside the bunch |
-| `Trips Right 49 Sweep` / `Trips Left 48 Sweep` | Trips - Right - 49 Sweep / Left - 48 Sweep | the slot, across from the bunch |
+| `Trips Right 18 Sweep` / `Trips Left 19 Sweep` | Trips - Right - 18 Sweep / Left - 19 Sweep | the quarterback, alone in the backfield, outside the bunch |
+| `Trips Right 38 Quick Pass` / `Trips Left 39 Quick Pass` | Trips - Right - 38 Quick Pass / Left - 39 Quick Pass | the tailback out of the bunch, thrown to outside the tight end |
+| `Trips Right LTE Sweep` / `Trips Left RTE Sweep` | Trips - Right - LTE Sweep / Left - RTE Sweep | the backside tight end on an end-around |
+| `Trips Right RTE Slant Out` / `Trips Left LTE Slant Out` | Trips - Right - RTE Slant Out / Left - LTE Slant Out | the play-side tight end, flat out on the line |
 
 ## Formations
 
-Five formations, 58 plays, in teaching order. Every numbered run is one of five
-blocking families — Smash, Dive, Power, Slant, Toss — plus Sweep when the
+Six formations, 52 plays, in teaching order. Every numbered run is one of four
+blocking families — Smash, Dive, Power, Toss — plus Sweep when the
 quarterback, the slot or a tight end is coming across, and Protect on a dropback.
 
-| # | Formation | Family | Plays | What it is for |
-|---|---|---|---|---|
-| 1 | **Regular I** | Regular I | 10 | Base offense. Fullback and tailback stacked behind the quarterback. Power, Smash, the tight-end sweep, the slot sweep, and the tight-end slant out, both ways. |
-| 2 | **Wishbone** | Wishbone | 14 | Three backs, no slot. Fullback Smash and Dive, halfback Power and Toss, QB sweep, TE sweep, slant out, both ways. |
-| 3 | **Split Backs** | Split Backs | 12 | Two backs at even depth and a slot just outside the tight end. Toss, QB sweep, fake sweep, slot sweep, TE sweep, and the tight-end slant out, both ways. |
-| 4 | **Shotgun** | Shotgun | 6 | The quarterback five yards deep with a back either side. The tight-end slant out, the QB sweep and the RB toss, both ways. |
-| 5 | **Trips** | Trips | 16 | Empty backfield. Backs 2, 3 and 4 bunched to one side (fullback, tailback, slot). Power, Smash, Dive, Toss, slot sweep, QB sweep, TE sweep, slant out, both ways. |
+| # | Formation | Plays | What it is for |
+|---|---|---|---|
+| 1 | **Regular I** | 12 | Base offense. Fullback and tailback stacked behind the quarterback. Power, both Smashes, the tight-end sweep, the slot sweep and the tight-end slant out, both ways. |
+| 2 | **Wishbone** | 8 | Three backs, no slot. Fullback Smash and Dive, halfback Power and Toss, both ways. |
+| 3 | **Split Backs** | 14 | Two backs at even depth and a slot just outside the tight end. Toss, Power, QB sweep, fake sweep, slot sweep, TE sweep and the tight-end slant out, both ways. |
+| 4 | **Shotgun** | 6 | The quarterback five yards deep with a back either side. The tight-end slant out, the QB sweep and the RB toss, both ways. |
+| 5 | **Trips** | 8 | Empty backfield. Backs 2, 3 and 4 bunched to one side (fullback, tailback, slot). QB sweep, the quick pass, TE sweep and slant out, both ways. |
+| 6 | **Power I** | 4 | The Regular I with the slot brought in behind the fullback. Smash with two lead blockers in the same gap, and Toss, both ways. |
 
-Both are two-tight-end, downhill running formations, so the blocking language carries
-over: "block down on the first defender inside you" means the same thing in either. That
-is the reason to carry two related looks rather than two unrelated offenses.
+Every one of them is two-tight-end and downhill, so the blocking language carries
+across: "block down on the first defender inside you" means the same thing in all six.
+That is the reason to carry related looks rather than unrelated offenses.
 
-**Neither formation is symmetric, so every left-handed play is written by hand.** The slot
+**None of them is symmetric, so every left-handed play is written by hand.** The slot
 sits split to the right unless a play moves him, so flipping a play would flip his path
-while leaving him aligned on the same side. Both left-handed plays do move him — the
-Regular I's `Slot Left 35 Power` and the Split Backs' `Slot Left 29 Toss`, each the mirror of
-its right-hand play — and say so in the call.
+while leaving him aligned on the same side. A left-handed play that needs him on the
+left moves him and says so in the call — the Regular I's `Slot Left 37 Power`, the
+Split Backs' `Slot Left 29 Toss` — each the mirror of its right-hand play.
 
 ## Defense
 
