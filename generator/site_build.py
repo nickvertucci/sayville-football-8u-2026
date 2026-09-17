@@ -20,6 +20,7 @@ from __future__ import annotations
 
 import calendar
 import hashlib
+import json
 import re
 
 import blocking
@@ -559,6 +560,32 @@ table.xl.xl-plays td {
 .xl-n {
   float: right; font-weight: 700; opacity: .75;
 }
+
+/* The packages along the bottom: three to a row, each a name over the two calls it
+   comes on to run. Narrow cards on purpose — this is a strip under the sheet, not a
+   second sheet. */
+.pk-head { margin-top: 20px; }
+.pk-sub {
+  font-weight: 500; text-transform: none; letter-spacing: 0; color: var(--muted);
+  font-size: 12.5px; margin-left: 8px;
+}
+.pk-grid {
+  display: grid; gap: 10px; margin: 8px 0 24px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+@media (max-width: 560px) { .pk-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.pk { min-width: 0; }
+.pk-name {
+  margin: 0; padding: 5px 8px; font-size: 12.5px; font-weight: 800;
+  text-transform: uppercase; letter-spacing: .5px;
+  color: var(--on-accent); background: var(--accent-solid);
+}
+.pk-n { float: right; font-weight: 700; opacity: .75; }
+table.xl.pk-plays td {
+  height: 22px; text-align: center; vertical-align: middle; padding: 4px 5px;
+}
+.pk-plays td a { display: block; color: var(--ink); font-weight: 700; text-decoration: none; }
+.pk-plays td a:hover { text-decoration: underline; }
 @media print {
   /* Two across, so each strong-left sheet prints beside its strong-right one. */
   .xl-sheets { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0; margin: 2px 0 0; }
@@ -590,6 +617,19 @@ table.xl.xl-plays td {
   .xl-scheme { font-size: 8.5px; background: none !important; color: #000 !important; }
   .xl-none { color: #ccc; }
   .xl-n { display: none; }
+  /* The strip stays on the sheet with the blocks: three across, and never split
+     over a page break. */
+  .pk-head { margin: 6px 0 0; font-size: 12px; }
+  .pk-sub { display: none; }
+  .pk-grid { gap: 0 6px; margin: 2px 0 0; break-inside: avoid; }
+  .pk { break-inside: avoid; }
+  .pk-name {
+    padding: 0 0 2px; font-size: 10px; font-weight: 900;
+    color: #000 !important; background: none !important;
+  }
+  .pk-n { display: none; }
+  table.xl.pk-plays td { height: auto; vertical-align: middle; }
+  .pk-plays td a { font-size: 9px; white-space: nowrap; letter-spacing: -.2px; }
 }
 
 .plist { display: grid; gap: 12px; grid-template-columns: 1fr; }
@@ -2462,6 +2502,61 @@ def _sheet_name(play: dict, form: dict) -> str:
     return re.sub(r"^(?:Slot\s+)?(?:Left|Right)\s+-\s+", "", name)
 
 
+def _package_strip(root: Path, formations: list[dict]) -> str:
+    """The packages along the bottom, three to a row, with the plays each one runs.
+
+    A package is eleven names that come on together, and the ones that are not the
+    base eleven come on to do something in particular. That "something" was only
+    ever in somebody's head: the sheet named the package and stopped. So each card
+    names the package and the two Split Backs runs it is in the game to call.
+
+    The pairing lives in `roster.json` under `package_plays`, beside the packages
+    themselves, because it is a coaching decision and not something the generator
+    can work out. Each entry is a play's full call. A call that names no play, or
+    names one that is not a Split Backs run, stops the build rather than printing
+    a play nobody can run.
+    """
+    path = root / "roster.json"
+    if not path.is_file():
+        return ""
+    roster = json.loads(path.read_text(encoding="utf-8"))
+    names = (roster.get("package_names") or {}).get("offense") or []
+    assigned = (roster.get("package_plays") or {}).get("offense") or []
+    if not assigned:
+        return ""
+
+    runs = {p["call"]: p
+            for f in formations if f["id"] == "split-backs"
+            for p in f["_plays"] if p.get("type") == "run"}
+
+    cards = []
+    for i, calls in enumerate(assigned):
+        label = names[i] if i < len(names) else f"Package {i + 1}"
+        rows = []
+        for call in calls:
+            play = runs.get(call)
+            if play is None:
+                raise SystemExit(
+                    f"roster.json package_plays: '{call}' is not a Split Backs run. "
+                    f"Known: {', '.join(sorted(runs))}"
+                )
+            rows.append(
+                f'<tr><td><a href="{p_href(play)}">'
+                f'<span class="xl-code">{esc(play["code"])}</span>'
+                f'{esc(_sheet_name(play, next(f for f in formations if f["id"] == "split-backs")))}'
+                f'</a></td></tr>'
+            )
+        cards.append(
+            f'<section class="pk"><p class="pk-name">{esc(label)}'
+            f'<span class="pk-n">{i + 1}</span></p>'
+            f'<table class="xl pk-plays"><tbody>{"".join(rows)}</tbody></table></section>'
+        )
+
+    return ('<p class="section-head pk-head">Packages '
+            '<span class="pk-sub">Split Backs runs each one comes on to call</span></p>'
+            f'<div class="pk-grid">{"".join(cards)}</div>')
+
+
 def write_calls(formations: list[dict], defenses: dict, root: Path) -> str:
     """The call sheet: every formation's plays, by scheme and by side.
 
@@ -2515,10 +2610,13 @@ def write_calls(formations: list[dict], defenses: dict, root: Path) -> str:
         for form in formations if form.get("_plays")
     ) or '<p class="lede">No plays in the book yet.</p>'
 
+    packages = _package_strip(root, formations)
+
     body = f"""{page_head("Call sheet")}
 <p class="sub">Every play in the book, by formation and scheme.
 &nbsp;·&nbsp; Even holes right, odd holes left; the A gap is Middle.</p>
-<div class="xl-sheets">{sheets}</div>"""
+<div class="xl-sheets">{sheets}</div>
+{packages}"""
     return page(
         f"Call sheet — {SITE_TITLE}",
         body,

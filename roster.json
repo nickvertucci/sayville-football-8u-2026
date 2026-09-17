@@ -204,5 +204,33 @@
       "Bigshow",
       "Tiny"
     ]
+  },
+  "package_plays": {
+    "offense": [
+      [
+        "Split Backs Slot Right 18 Sweep",
+        "Split Backs Slot Left 19 Sweep"
+      ],
+      [
+        "Split Backs Slot Right 49 Sweep",
+        "Split Backs Slot Left 48 Sweep"
+      ],
+      [
+        "Split Backs Slot Right 18 Fake Sweep",
+        "Split Backs Slot Left 19 Fake Sweep"
+      ],
+      [
+        "Split Backs Slot Right LTE Sweep",
+        "Split Backs Slot Left RTE Sweep"
+      ],
+      [
+        "Split Backs Slot Right 38 Toss",
+        "Split Backs Slot Left 29 Toss"
+      ],
+      [
+        "Split Backs Slot Right 49 Sweep",
+        "Split Backs Slot Left 19 Sweep"
+      ]
+    ]
   }
 }
