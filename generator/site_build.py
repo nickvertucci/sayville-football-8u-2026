@@ -634,8 +634,17 @@ table.xl.pk-plays td {
      than the grid's even rows. Measure before believing that one. */
   .pk-head { margin: 3px 0 0; font-size: 10px; }
   .pk-sub { display: none; }
-  .pk-grid { gap: 0 6px; margin: 2px 0 0; break-inside: avoid; }
-  .pk { break-inside: avoid; }
+  .pk-grid { gap: 0 8px; margin: 2px 0 0; break-inside: avoid; }
+  /* Hairlines between the cards. On screen the navy name bars are the separation; on
+     paper those print as plain black text (see .pk-name below), which ran six lists of
+     calls together into one block of small type. The rules are the cheapest fix that
+     survives background-graphics being off -- borders always print. The 3n counts the
+     three columns .pk-grid sets above: a left rule on every card that is not starting a
+     row, a top rule on every card past the first row. */
+  .pk { break-inside: avoid; padding: 0 5px; }
+  .pk:not(:nth-child(3n + 1)) { border-left: 1px solid #bbb; }
+  .pk:nth-child(n + 4) { border-top: 1px solid #bbb; padding-top: 4px; }
+  .pk:nth-child(-n + 3) { padding-bottom: 4px; }
   .pk-name {
     padding: 0 0 1px; font-size: 9px; font-weight: 900; line-height: 1.2;
     color: #000 !important; background: none !important;
@@ -645,12 +654,11 @@ table.xl.pk-plays td {
   .pk-plays td a { font-size: 7.5px; white-space: nowrap; letter-spacing: -.2px;
                    line-height: 1.15; padding: 0; }
   .pk-any { font-size: 7.5px; line-height: 1.15; }
-  /* The heading is a title on paper, not a banner. On screen it is a 29px h1 over a
-     sub-line with a 20px gap under it -- most of half an inch of the one sheet, spent
-     before the first call. Scoped to this page so the rest of the book keeps its
-     headings. */
-  .calls-page h1 { font-size: 15px; line-height: 1.2; }
-  .calls-page .sub { font-size: 8px; margin-bottom: 4px; line-height: 1.3; }
+  /* The heading is a title on paper, not a banner: a 29px h1 and its margin is most of
+     half an inch of the one sheet, spent before the first call. The sub-line under it
+     is gone entirely now (see write_calls), which is the rest of that half inch.
+     Scoped to this page so the rest of the book keeps its headings. */
+  .calls-page h1 { font-size: 15px; line-height: 1.2; margin-bottom: 2px; }
 }
 
 .plist { display: grid; gap: 12px; grid-template-columns: 1fr; }
@@ -2616,6 +2624,33 @@ def _package_strip(root: Path, formations: list[dict]) -> str:
             f'<div class="pk-grid">{"".join(cards)}</div>')
 
 
+# The call sheet is the one page that lays the formations out two across instead of
+# one after another, so its order is a seating chart rather than the teaching order the
+# rest of the book runs on. Regular I keeps the top row, the Wishbone drops to the
+# bottom next to Power I, and Trips comes up into the middle. Everything else -- the
+# nav, the install, the formation pages -- still reads `order` out of formation.json,
+# which is why this list lives here and not there.
+CALL_SHEET_ORDER = (
+    "i-form", "split-backs",
+    "trips", "shotgun",
+    "wishbone", "power-i",
+)
+
+
+def _call_sheet_order(formations: list[dict]) -> list[dict]:
+    """`formations` seated for the call sheet grid, teaching order for anything new.
+
+    A formation this list has never heard of sorts to the end by its own `order`,
+    so adding a playbook/<dir> puts it on the sheet without editing this file.
+    """
+    rank = {fid: i for i, fid in enumerate(CALL_SHEET_ORDER)}
+    return sorted(
+        formations,
+        key=lambda f: (rank.get(f.get("id"), len(rank)), f.get("order", 99),
+                       f.get("name", "")),
+    )
+
+
 def write_calls(formations: list[dict], defenses: dict, root: Path) -> str:
     """The call sheet: every formation's plays, by scheme and by side.
 
@@ -2634,6 +2669,8 @@ def write_calls(formations: list[dict], defenses: dict, root: Path) -> str:
     """
     sides = ("Left", "Middle", "Right")
     none_cell = '<td><span class="xl-none">&mdash;</span></td>'
+
+    sheet_forms = _call_sheet_order(formations)
 
     def plays_table(form: dict) -> str:
         placed: dict[tuple[str, str], list[dict]] = {}
@@ -2666,14 +2703,16 @@ def write_calls(formations: list[dict], defenses: dict, root: Path) -> str:
     sheets = "".join(
         f'<section class="xl-sheet"><p class="xl-title">{esc(form_label(form))}'
         f'<span class="xl-n">{len(form["_plays"])}</span></p>{plays_table(form)}</section>'
-        for form in formations if form.get("_plays")
+        for form in sheet_forms if form.get("_plays")
     ) or '<p class="lede">No plays in the book yet.</p>'
 
     packages = _package_strip(root, formations)
 
+    # No sub-line under the heading. "Every play in the book, by formation and scheme"
+    # restates the title, and the holes rule is on the play cards and in the book where
+    # somebody learning it will actually be looking. On paper the line cost a row of
+    # calls; the page description below still carries the same words for search.
     body = f"""{page_head("Call sheet")}
-<p class="sub">Every play in the book, by formation and scheme.
-&nbsp;·&nbsp; Even holes right, odd holes left; the A gap is Middle.</p>
 <div class="xl-sheets">{sheets}</div>
 {packages}"""
     return page(
