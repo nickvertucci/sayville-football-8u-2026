@@ -169,11 +169,12 @@ The numbering system is documented in the top-level [README](../README.md).
   | **6 / 7** | Slant |
   | **8 / 9** | Toss |
 
-  **Sweep** is who, not a hole: the slot (back 4) coming across at 8/9 is `49 Sweep` /
-  `48 Sweep`, and a tight end on an end-around is a word call (`LTE Sweep`). So
-  `34 Power` is right, `34 Smash` fails, and `49 Toss` fails because the 4-back
-  sweeping is Sweep. Word calls (a tight-end sweep, a slant-out pass) opt out of the
-  hole table because they have no hole digit.
+  **Sweep** is who, not a hole: the quarterback at 8/9 is `18 Sweep` / `19 Sweep`,
+  the slot coming across is `49 Sweep` / `48 Sweep`, and a tight end on an
+  end-around is a word call (`LTE Sweep`). So `34 Power` is right, `34 Smash`
+  fails, and `18 Toss` fails because the quarterback sweeping is Sweep. Word
+  calls (a tight-end sweep, a slant-out pass) opt out of the hole table because
+  they have no hole digit.
 
 That means the digits describe **the back the first digit names**, not necessarily the
 ball carrier. On a play-action pass they follow the quarterback's path, while

@@ -225,8 +225,8 @@
       "n": 7,
       "date": "2026-09-17",
       "phase": "season",
-      "focus": "Split Backs: 19 Fake Toss, plus Tuesday's tosses",
-      "emphasis": "One long block after the warm-up. Review Tuesday — S-1, S-2, the slot sweep and the TE sweep — then install S-5, Slot Left 19 Fake Toss. Fake the handoff to the right halfback, then the quarterback keeps it left behind the left halfback.",
+      "focus": "Split Backs: 19 Fake Sweep, plus Tuesday's sweeps",
+      "emphasis": "One long block after the warm-up. Review Tuesday — S-1, S-2, the slot sweep and the TE sweep — then install S-5, Slot Left 19 Fake Sweep. Fake the handoff to the right halfback, then the quarterback keeps it left behind the left halfback.",
       "blocks": [
         {
           "tag": "A",
@@ -242,15 +242,15 @@
           "time": "5:35–6:45",
           "notes": [
             "One group, the rest of practice",
-            "Tuesday first — S-1, S-2, S-7, S-8, S-9, S-10 — then S-5, 19 Fake Toss",
+            "Tuesday first — S-1, S-2, S-7, S-8, S-9, S-10 — then S-5, 19 Fake Sweep",
             "In and out of the huddle every rep. Slot Right or Slot Left, then the number and the word — or LTE Sweep / RTE Sweep"
           ]
         }
       ],
-      "huddle": "S-5 is 19 Fake Toss. Fake to the right halfback, keep it left.",
+      "huddle": "S-5 is 19 Fake Sweep. Fake to the right halfback, keep it left.",
       "huddle_time": "6:45–7:00",
       "plays": [
-        "sb-fake-toss-l"
+        "sb-fake-sweep-l"
       ],
       "review": [
         "sb-toss-r",

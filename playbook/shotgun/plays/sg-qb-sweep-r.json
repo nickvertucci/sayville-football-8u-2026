@@ -1,0 +1,138 @@
+{
+  "id": "sg-qb-sweep-r",
+  "order": 4,
+  "formation": "shotgun",
+  "name": "Shotgun - Slot Right - 18 Sweep",
+  "code": "G-4",
+  "call": "Shotgun Slot Right 18 Sweep",
+  "type": "run",
+  "direction": "right",
+  "ball_carrier": "QB",
+  "assignments": {
+    "RTE": {
+      "block": "base",
+      "drive": "in"
+    },
+    "RT": {
+      "block": "down"
+    },
+    "RG": {
+      "block": "climb",
+      "target": "playside"
+    },
+    "C": {
+      "block": "reach"
+    },
+    "LG": {
+      "block": "cutoff"
+    },
+    "LT": {
+      "block": "down"
+    },
+    "LTE": {
+      "block": "cutoff"
+    },
+    "SL": {
+      "block": "screen"
+    },
+    "QB": {
+      "rule": "Catch the snap and sweep right, flat and fast, behind the right halfback. Turn up outside his block.",
+      "type": "run",
+      "path": [
+        [
+          1.8,
+          0.4
+        ],
+        [
+          6.0,
+          1.2
+        ],
+        [
+          7.0,
+          3.4
+        ],
+        [
+          7.0,
+          6.0
+        ],
+        [
+          7.0,
+          9.5
+        ],
+        [
+          7.0,
+          12.0
+        ]
+      ]
+    },
+    "RH": {
+      "block": "lead",
+      "target": "force"
+    },
+    "LH": {
+      "rule": "Fake the handoff going left and run hard. Sell it all the way — you are the reason the defense goes the wrong way.",
+      "type": "fake",
+      "path": [
+        [
+          -1.2,
+          0.8
+        ],
+        [
+          -4.8,
+          1.6
+        ]
+      ]
+    }
+  },
+  "fronts": {
+    "4-4": {
+      "LTE": {
+        "block": "man",
+        "man": "LE"
+      },
+      "LT": {
+        "block": "man",
+        "man": "W",
+        "help": "LE"
+      },
+      "LG": {
+        "block": "man",
+        "man": "LT"
+      },
+      "C": {
+        "block": "man",
+        "man": "M",
+        "help": "LT"
+      },
+      "RG": {
+        "block": "man",
+        "man": "RT"
+      },
+      "RT": {
+        "block": "man",
+        "man": "S",
+        "help": "RT"
+      },
+      "RTE": {
+        "block": "man",
+        "man": "RE"
+      },
+      "RH": {
+        "block": "man",
+        "man": "R",
+        "how": "Bubble out around the right end",
+        "via": [
+          [
+            4.0,
+            2.4
+          ]
+        ]
+      }
+    }
+  },
+  "coaching_points": [
+    "The quarterback keeps it every time — tell him before the snap, there is no read.",
+    "The left halfback's fake is the play. If he jogs, nobody follows him and the defense is waiting at the edge.",
+    "The quarterback stays behind the right halfback until the block is made, then turns it up. Running past his blocker is how the sweep loses yards."
+  ]
+}

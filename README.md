@@ -94,12 +94,13 @@ the Split Backs do: 3 is left, 2 is right.
 | Call | Play | Reads as |
 |---|---|---|
 | `Shotgun Slot Right RTE Slant Out` / `Slot Left LTE Slant Out` | Shotgun - Slot Right - RTE Slant Out / Slot Left - LTE Slant Out | the play-side tight end, a flat slant out almost on the line of scrimmage |
-| `Shotgun Slot Left 19 Toss` / `Slot Right 18 Toss` | Shotgun - Slot Left - 19 Toss / Slot Right - 18 Toss | the quarterback, all the way outside behind the near halfback |
+| `Shotgun Slot Left 19 Sweep` / `Slot Right 18 Sweep` | Shotgun - Slot Left - 19 Sweep / Slot Right - 18 Sweep | the quarterback, all the way outside behind the near halfback |
 | `Shotgun Slot Left 29 Toss` / `Slot Right 38 Toss` | Shotgun - Slot Left - 29 Toss / Slot Right - 38 Toss | the far halfback, across in front of the quarterback and all the way outside |
 
 **Play word** — a numbered run's word is the hole: Smash, Dive, Power, Slant, Toss.
-**Sweep** is the slot (back 4) coming across at 8/9, or a tight end on an end-around
-(a word call, no hole digit). The tight-end `Slant Out` is a word call too.
+**Sweep** is the quarterback (`18` / `19`) or the slot (back 4) coming across at 8/9,
+or a tight end on an end-around (a word call, no hole digit). The tight-end
+`Slant Out` is a word call too.
 
 ## Formations
 
@@ -108,8 +109,8 @@ Three formations, 18 plays, in teaching order:
 | # | Formation | Family | Plays | What it is for |
 |---|---|---|---|---|
 | 1 | **Regular I** | Regular I | 6 | Base offense. Fullback and tailback stacked behind the quarterback. Off tackle, the tailback between the tackle and the end behind the SL's kick-out, the tight-end sweep and the slot sweep, both ways. |
-| 2 | **Split Backs** | Split Backs | 6 | Two backs at even depth and a slot just outside the tight end. 38/29 Toss, the QB toss and the fake-handoff QB toss, both ways. |
-| 3 | **Shotgun** | Shotgun | 6 | The quarterback five yards deep with a back either side. The tight-end slant out, the QB toss and the RB toss, both ways. |
+| 2 | **Split Backs** | Split Backs | 6 | Two backs at even depth and a slot just outside the tight end. 38/29 Toss, the QB sweep and the fake-handoff QB sweep, both ways. |
+| 3 | **Shotgun** | Shotgun | 6 | The quarterback five yards deep with a back either side. The tight-end slant out, the QB sweep and the RB toss, both ways. |
 
 Both are two-tight-end, downhill running formations, so the blocking language carries
 over: "block down on the first defender inside you" means the same thing in either. That
