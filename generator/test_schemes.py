@@ -2,8 +2,9 @@
 """Named blocking schemes: templates, role mapping, fill, and the book.
 
 A new formation drops in when its alignment uses the same seven line keys and
-either FB+TB or LH+RH. These tests hold that contract so a play that only
-names Power still gets a playside end who releases and a slot who kicks.
+either FB+TB, LH+RH, or Wishbone's FB+LH+RH. These tests hold that contract so
+a play that only names Power still gets a playside end who releases (or, with
+no slot, who kicks) and a lead back in front of the ball.
 
     python generator/test_schemes.py
 """
@@ -88,6 +89,12 @@ def check_roles(formations) -> list[str]:
     sg = blocking.scheme_roles(shotgun, 1)
     if sg.get("lead") != "RH":
         problems.append("Shotgun uses the same two-halfback roles as Split Backs")
+    bone = by_id["wishbone"]
+    wb_right = blocking.scheme_roles(bone, 1)
+    if "slot" in wb_right:
+        problems.append("Wishbone has no slot")
+    if wb_right.get("lead") != "FB":
+        problems.append(f"Wishbone lead is {wb_right.get('lead')}, expected FB")
     return problems
 
 
@@ -125,6 +132,30 @@ def check_fill(formations) -> list[str]:
     if sl["assignments"].get("LT", {}).get("block") != "down":
         problems.append(
             f"slot Sweep backside tackle should down, got {sl['assignments'].get('LT')}"
+        )
+    bone = next(f for f in formations if f["id"] == "wishbone")
+    wb_power = {
+        "id": "x-wb-power",
+        "scheme": "Power",
+        "call": "Wishbone 44 Power",
+        "direction": "right",
+        "assignments": {
+            "QB": {"rule": "Hand it.", "type": "fake", "path": [[1.0, -0.5]]},
+            "RH": {"rule": "Run it.", "type": "run", "path": [[0.6, 1.8], [1.4, 5.6]]},
+            "LH": {"rule": "Fake it.", "type": "fake", "path": [[-1.8, 0.2]]},
+        },
+    }
+    wb_filled = blocking.fill_assignments(wb_power, bone, 1)
+    if (wb_filled.get("RTE", {}).get("block") != "base"
+            or wb_filled.get("RTE", {}).get("drive") != "out"):
+        problems.append(
+            f"Wishbone Power must kick with the playside end, got {wb_filled.get('RTE')}"
+        )
+    if "SL" in wb_filled:
+        problems.append("Wishbone Power filled a slot the formation does not have")
+    if wb_filled.get("FB", {}).get("block") != "lead":
+        problems.append(
+            f"Wishbone Power must lead with the fullback, got {wb_filled.get('FB')}"
         )
     # A note on the lead merges; a leftover trail stays.
     noted = copy.deepcopy(play)

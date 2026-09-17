@@ -1,0 +1,43 @@
+{
+  "id": "wishbone",
+  "order": 2,
+  "name": "Wishbone",
+  "code_prefix": "W",
+  "family": "Wishbone",
+  "summary": "Fullback on the ball and a halfback either side. The three-back run game: the fullback hits Smash and Dive, the halfbacks run Power and Toss, and there is no slot.",
+  "personnel": "11 players, 2 tight ends, quarterback, fullback, 2 halfbacks",
+  "notes": "Same line as the Regular I — both ends tight, seven on the line every snap. Fullback at three yards on the ball. The halfbacks sit a yard deeper, just outside him, one behind each tackle, same depth so the alignment gives nothing away. There is no slot: the call is the formation, the number and the word.",
+  "alignment": {
+    "LTE": [-4.2, -0.5],
+    "LT": [-2.8, -0.5],
+    "LG": [-1.4, -0.5],
+    "C": [0.0, -0.5],
+    "RG": [1.4, -0.5],
+    "RT": [2.8, -0.5],
+    "RTE": [4.2, -0.5],
+    "QB": [0.0, -1.5],
+    "FB": [0.0, -3.3],
+    "LH": [-2.2, -4.5],
+    "RH": [2.2, -4.5]
+  },
+  "eligible": [
+    "LTE",
+    "RTE",
+    "FB",
+    "LH",
+    "RH",
+    "QB"
+  ],
+  "backs": {
+    "1": "QB",
+    "2": "FB",
+    "3": "LH",
+    "4": "RH"
+  },
+  "coaching_notes": [
+    "Count seven on the line every snap — both ends stay down. There is no slot to creep up, so the flag here is an end who stands up before the snap.",
+    "The fullback is back 2, both ways: 20 Smash and 21 Smash, 22 Dive and 23 Dive. He is the inside runner the Regular I gives to the tailback.",
+    "The 3-back is the left halfback (odd holes) and the 4-back is the right halfback (even holes). 44 Power is the right halfback off tackle; 35 Power is the left halfback the other way. 4 is not the slot in this look, so 49 Toss is Toss, not Sweep.",
+    "The fullback and the two halfbacks must stay in their spots. A drifting halfback tips Power and Toss before the snap."
+  ]
+}

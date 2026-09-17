@@ -1,0 +1,80 @@
+{
+  "id": "wb-smash-r",
+  "order": 5,
+  "formation": "wishbone",
+  "name": "Wishbone - 20 Smash",
+  "code": "W-5",
+  "call": "Wishbone 20 Smash",
+  "type": "run",
+  "scheme": "Smash",
+  "direction": "right",
+  "ball_carrier": "FB",
+  "assignments": {
+    "QB": {
+      "rule": "Open right, hand to the fullback, then fake the boot left. It holds the backside end.",
+      "type": "fake",
+      "path": [
+        [
+          0.8,
+          -0.4
+        ],
+        [
+          2.2,
+          -1.0
+        ],
+        [
+          3.6,
+          -1.4
+        ]
+      ]
+    },
+    "FB": {
+      "rule": "Take the handoff downhill between the center and the right guard. Do not bounce it.",
+      "type": "run",
+      "path": [
+        [
+          0.5,
+          2.5
+        ],
+        [
+          0.7,
+          5.0
+        ],
+        [
+          0.7,
+          6.0
+        ],
+        [
+          0.8,
+          8.5
+        ],
+        [
+          0.9,
+          11.0
+        ]
+      ]
+    },
+    "RH": {
+      "block": "lead"
+    },
+    "LH": {
+      "rule": "Run hard to the left like you have the ball. You are what holds the backside.",
+      "type": "fake",
+      "path": [
+        [
+          -1.8,
+          0.2
+        ],
+        [
+          -5.6,
+          0.6
+        ]
+      ]
+    }
+  },
+  "coaching_points": [
+    "The fullback is the runner here, not the lead. The hole is the A-gap — between the center and the right guard.",
+    "The right halfback leads through that gap. If the fullback bounces, the play is dead."
+  ],
+  "z": "right"
+}

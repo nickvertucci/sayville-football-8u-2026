@@ -449,11 +449,11 @@ def validate_call(play: dict, form: dict, defenses: dict) -> list[str]:
     # end-around.
     if play.get("type") == "run":
         rest = call[m.end():].strip()
-        allowed = blocking.scheme_words(hole, back_digit)
+        allowed = blocking.scheme_words(hole, back_digit, form)
         if allowed and rest not in allowed:
             word = allowed[0]
             return [f"{pid}: call '{call}' runs the {hole} hole"
-                    + (" as a sweep" if back_digit in blocking.SWEEP_BACKS else "")
+                    + (" as a sweep" if blocking.is_sweep_back(back_digit, form) else "")
                     + f", which is {word} — the play word has to be {word}, "
                     f"not {rest!r}"]
     return []

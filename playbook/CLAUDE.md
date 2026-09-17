@@ -174,10 +174,11 @@ The numbering system is documented in the top-level [README](../README.md).
 
   **Sweep** is who, not a hole: the quarterback at 8/9 is `18 Sweep` / `19 Sweep`,
   the slot coming across is `49 Sweep` / `48 Sweep`, and a tight end on an
-  end-around is a word call (`LTE Sweep`). So `34 Power` is right, `34 Smash`
-  fails, and `18 Toss` fails because the quarterback sweeping is Sweep. Word
-  calls (a tight-end sweep, a slant-out pass) opt out of the hole table because
-  they have no hole digit.
+  end-around is a word call (`LTE Sweep`). Digit 4 is the slot only in looks
+  that have one — Wishbone's 4 is the right halfback, so `49 Toss` is Toss.
+  So `34 Power` is right, `34 Smash` fails, and `18 Toss` fails because the
+  quarterback sweeping is Sweep. Word calls (a tight-end sweep, a slant-out
+  pass) opt out of the hole table because they have no hole digit.
 
 The play word **is** the blocking scheme. `34 Power` fills Power; `18 Sweep`
 fills Sweep; a dropback `RTE Slant Out` fills Protect. Dive and Slant are
@@ -400,11 +401,14 @@ call; a play that moves somebody silently is a play nobody can call.
 
 ## Before adding a formation or a play
 
-The system is the seven-man line (`LTE` … `RTE`), a slot (`SL`), a quarterback,
-and either a stacked I (`FB` + `TB`) or two halfbacks (`LH` + `RH`). A new
-formation that keeps those keys drops in: give it `formation.json` (alignment,
-`backs`, `code_prefix`) and plays that name a scheme and write the paths. Power
-in the new look is `"scheme": "Power"` plus the handoff — not eleven new verbs.
+The system is the seven-man line (`LTE` … `RTE`), a quarterback, and a
+backfield of either a stacked I (`FB` + `TB`), two halfbacks (`LH` + `RH`),
+or Wishbone (`FB` + `LH` + `RH`). A slot (`SL`) is the split man when the
+look has one; Wishbone does not, so Power kicks with the playside end and
+the call has no Slot Right/Left. A new formation that keeps those keys
+drops in: give it `formation.json` (alignment, `backs`, `code_prefix`) and
+plays that name a scheme and write the paths. Power in the new look is
+`"scheme": "Power"` plus the handoff — not eleven new verbs.
 
 A new play in an existing formation is the same: `scheme`, `call`, the carrier's
 path, leftover backs if the family does not name them. Dive (2/3) and Slant

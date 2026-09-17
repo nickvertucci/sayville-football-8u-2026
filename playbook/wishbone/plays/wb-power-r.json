@@ -1,0 +1,74 @@
+{
+  "id": "wb-power-r",
+  "order": 1,
+  "formation": "wishbone",
+  "name": "Wishbone - 44 Power",
+  "code": "W-1",
+  "call": "Wishbone 44 Power",
+  "type": "run",
+  "scheme": "Power",
+  "direction": "right",
+  "ball_carrier": "RH",
+  "assignments": {
+    "QB": {
+      "rule": "Open right, hand to the right halfback, then fake the boot. It holds the backside end.",
+      "type": "fake",
+      "path": [
+        [
+          1.2,
+          -0.5
+        ],
+        [
+          3.0,
+          -1.2
+        ],
+        [
+          4.6,
+          -1.6
+        ]
+      ]
+    },
+    "RH": {
+      "rule": "Take the handoff downhill at our tackle's outside hip, following the fullback. Never bounce it outside.",
+      "type": "run",
+      "path": [
+        [
+          0.6,
+          1.8
+        ],
+        [
+          1.2,
+          3.6
+        ],
+        [
+          1.4,
+          5.6
+        ],
+        [
+          1.5,
+          8.0
+        ]
+      ]
+    },
+    "LH": {
+      "rule": "Run hard to the left like you have the ball. You are what holds the backside.",
+      "type": "fake",
+      "path": [
+        [
+          -1.8,
+          0.2
+        ],
+        [
+          -5.6,
+          0.6
+        ]
+      ]
+    }
+  },
+  "coaching_points": [
+    "This is Power without a slot: the right tight end kicks the end out. The yards are inside that block.",
+    "The fullback leads through the hole. His man is whoever shows, not a man he picks before the snap — including the outside linebacker if that is who fills.",
+    "The right halfback's most common mistake is bouncing it wide. Make him run it tight until it is automatic."
+  ],
+  "z": "right"
+}

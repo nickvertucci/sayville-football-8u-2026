@@ -73,7 +73,10 @@ HOLE_SCHEME = {
     8: "Toss",  9: "Toss",   # all the way outside
 }
 
-SWEEP_BACKS = ("1", "4")  # QB and slot. Tight ends are word calls.
+# Digit 1 is always the quarterback. Digit 4 is the slot in every look that
+# has one — Sweep is who, so a formation that puts a halfback on 4 (Wishbone)
+# does not turn 48/49 into Sweep.
+SWEEP_BACKS = ("1", "4")  # used only when the formation is unknown
 
 CALL_DIGITS = re.compile(r"\b(\d)(\d)\b")
 
@@ -83,12 +86,29 @@ def scheme_for_hole(hole: int) -> str | None:
     return HOLE_SCHEME.get(hole)
 
 
-def scheme_words(hole: int, back_digit: str | None = None) -> tuple[str, ...]:
+def is_sweep_back(back_digit: str | None, form: dict | None = None) -> bool:
+    """True when this numbered back sweeping at 8/9 is Sweep, not Toss.
+
+    The quarterback (1) always is. The slot is too — and the slot is whoever
+    `backs` maps to `SL`, not whichever digit happens to be 4. Wishbone's 4 is
+    the right halfback; 49 Toss is a toss.
+    """
+    if not back_digit:
+        return False
+    if back_digit == "1":
+        return True
+    if form:
+        return (form.get("backs") or {}).get(back_digit) == "SL"
+    return back_digit in SWEEP_BACKS
+
+
+def scheme_words(hole: int, back_digit: str | None = None,
+                 form: dict | None = None) -> tuple[str, ...]:
     """Allowed play words at this hole: the scheme, or Fake plus the scheme.
 
     The quarterback (18/19) or slot (48/49) sweeping across at 8/9 is Sweep, not Toss.
     """
-    if hole in (8, 9) and back_digit in SWEEP_BACKS:
+    if hole in (8, 9) and is_sweep_back(back_digit, form):
         return ("Sweep", "Fake Sweep")
     word = scheme_for_hole(hole)
     if not word:
@@ -208,11 +228,10 @@ def line_roles(side: int) -> dict[str, str]:
 def backfield_roles(form: dict, side: int) -> dict[str, str]:
     """Slot, quarterback, lead and trail for this formation and direction.
 
-    A stacked I (FB + TB) always leads with the fullback. Two halfbacks (LH +
-    RH) lead with the playside one — the right halfback on a right-handed play,
-    the left halfback on a left-handed one — which is how Toss, Sweep and a
-    future Split Power all put a body in front of the ball without each play
-    naming him.
+    A stacked I (FB + TB) always leads with the fullback. Wishbone (FB + LH +
+    RH) does too — the fullback is still the lead, the halfbacks are leftover
+    on the play. Two halfbacks alone lead with the playside one — the right
+    halfback on a right-handed play, the left halfback on a left-handed one.
     """
     keys = set(form.get("alignment") or {})
     out: dict[str, str] = {}
@@ -220,7 +239,10 @@ def backfield_roles(form: dict, side: int) -> dict[str, str]:
         out["slot"] = "SL"
     if "QB" in keys:
         out["qb"] = "QB"
-    if "FB" in keys and "TB" in keys:
+    if "FB" in keys and "LH" in keys and "RH" in keys:
+        out["lead"] = "FB"
+        out["trail"] = "LH" if side > 0 else "RH"
+    elif "FB" in keys and "TB" in keys:
         out["lead"] = "FB"
         out["trail"] = "TB"
     elif "LH" in keys and "RH" in keys:
@@ -245,8 +267,14 @@ def scheme_intents(play: dict, form: dict, side: int) -> dict[str, dict]:
     if name not in SCHEMES:
         return {}
     intents = {role: copy.deepcopy(spec) for role, spec in SCHEMES[name].items()}
+    roles = scheme_roles(form, side)
+    if "slot" not in roles:
+        intents.pop("slot", None)
+        # Power's kick-out is the slot. Nobody there: the playside end kicks
+        # the end out himself, which is the no-pull rule without a split man.
+        if name == "Power":
+            intents["playside_te"] = {"block": "base", "drive": "out"}
     if name == "Sweep":
-        roles = scheme_roles(form, side)
         if play.get("ball_carrier") == roles.get("backside_te"):
             intents["backside_t"] = {"block": "cutoff"}
     return intents
@@ -270,7 +298,7 @@ def expected_scheme(play: dict) -> str | None:
     call = play.get("call") or ""
     m = CALL_DIGITS.search(call)
     if m:
-        words = scheme_words(int(m.group(2)), m.group(1))
+        words = scheme_words(int(m.group(2)), m.group(1), play.get("_formation"))
         if words:
             return words[0]
     if play.get("word_call") and re.search(r"\bSweep\b", call):
@@ -346,6 +374,12 @@ def fill_assignments(play: dict, form: dict, side: int) -> dict:
     for pos, spec in written.items():
         if pos not in out:
             out[pos] = dict(spec)
+    # A dropback with no slot still has two halfbacks (or a fullback) who were
+    # not in the huddle as the receiver — they pass block.
+    if name == "Protect":
+        for pos in form.get("alignment") or {}:
+            if pos not in out:
+                out[pos] = {"block": "protect"}
     # Card order, so the diagram paints the line left-to-right the way the
     # JSON used to, instead of scheme-role order (playside first).
     ordered = {pos: out[pos] for pos in CARD_ORDER if pos in out}
