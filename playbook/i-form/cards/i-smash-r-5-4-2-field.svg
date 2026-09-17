@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="594" height="472" viewBox="54 27 594 472" font-family="Segoe UI, Helvetica, Arial, sans-serif" role="img">
+<svg xmlns="http://www.w3.org/2000/svg" width="648" height="472" viewBox="27 27 648 472" font-family="Segoe UI, Helvetica, Arial, sans-serif" role="img">
 <title>Regular I - Slot Right - 30 Smash — Regular I Slot Right 30 Smash vs 5-4-2</title>
 <rect x="0" y="0" width="702" height="513" fill="#ffffff"/>
 <line x1="0" y1="459.0" x2="702" y2="459.0" stroke="#c8cdd6" stroke-width="1"/>
@@ -72,6 +72,6 @@
 <text x="351.0" y="417.6" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">FB</text>
 <circle cx="351.0" cy="472.5" r="13.5" fill="#ffffff" stroke="#b3001b" stroke-width="2.6"/>
 <text x="351.0" y="477.0" text-anchor="middle" font-size="13" font-weight="700" fill="#b3001b">TB</text>
-<rect x="520.8" y="35.0" width="119.2" height="52.0" rx="8" fill="#ffffff" stroke="#111318" stroke-width="3"/><text x="580.4" y="75.0" text-anchor="middle" font-size="40" font-weight="800" fill="#111318">#I-7</text>
-<text x="66.0" y="45.0" font-size="4.3" font-weight="700" fill="#111318">Regular I - Slot Right - 30 Smash</text>
+<rect x="547.8" y="35.0" width="119.2" height="52.0" rx="8" fill="#ffffff" stroke="#111318" stroke-width="3"/><text x="607.4" y="75.0" text-anchor="middle" font-size="40" font-weight="800" fill="#111318">#I-7</text>
+<text x="39.0" y="45.0" font-size="4.3" font-weight="700" fill="#111318">Regular I - Slot Right - 30 Smash</text>
 </svg>

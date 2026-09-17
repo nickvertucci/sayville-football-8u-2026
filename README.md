@@ -118,20 +118,18 @@ halfback off tackle; `38 Toss` is the left halfback all the way outside.
 
 ### Trips: formation + bunch + back + hole + play word
 
-One tailback and three to a side. The call names the bunch the way the other
-looks name the slot: `Trips Right 34 Power` is the tailback off tackle with
-the tight end, slot and split end bunched right. There is no fullback, so
-Power has no iso lead — the slot kicks and the tailback runs it. Toss and
-Sweep put the split end on the force man. `39 Toss` is the tailback (back 3)
-all the way left; there is no 2-back.
+Empty backfield. Backs **2, 3 and 4** (fullback, tailback, slot) bunched
+outside the tight end; the quarterback is alone. The call names the bunch:
+`Trips Right 34 Power` is the tailback coming *inside* from the trips to the
+4 hole. Same numbers as the Regular I.
 
 | Call | Play | Reads as |
 |---|---|---|
-| `Trips Right 34 Power` / `Trips Left 35 Power` | Trips - Right - 34 Power / Left - 35 Power | tailback, tackle–end |
-| `Trips Right 30 Smash` / `31 Smash` | Trips - Right - 30 Smash / Left - 31 Smash | tailback, A-gap |
-| `Trips Right 32 Dive` / `33 Dive` | Trips - Right - 32 Dive / Left - 33 Dive | tailback, guard–tackle |
-| `Trips Right 38 Toss` / `Trips Left 39 Toss` | Trips - Right - 38 Toss / Left - 39 Toss | tailback, all the way outside |
-| `Trips Right 49 Sweep` / `Trips Left 48 Sweep` | Trips - Right - 49 Sweep / Left - 48 Sweep | the slot, across and outside |
+| `Trips Right 34 Power` / `Trips Left 35 Power` | Trips - Right - 34 Power / Left - 35 Power | tailback, from the bunch into tackle–end |
+| `Trips Right 30 Smash` / `31 Smash` | Trips - Right - 30 Smash / Left - 31 Smash | tailback, from the bunch into the A-gap |
+| `Trips Right 32 Dive` / `33 Dive` | Trips - Right - 32 Dive / Left - 33 Dive | tailback, from the bunch into guard–tackle |
+| `Trips Right 38 Toss` / `Trips Left 39 Toss` | Trips - Right - 38 Toss / Left - 39 Toss | tailback, pitch outside the bunch |
+| `Trips Right 49 Sweep` / `Trips Left 48 Sweep` | Trips - Right - 49 Sweep / Left - 48 Sweep | the slot, across from the bunch |
 
 ## Formations
 
@@ -145,7 +143,7 @@ quarterback, the slot or a tight end is coming across, and Protect on a dropback
 | 2 | **Wishbone** | Wishbone | 14 | Three backs, no slot. Fullback Smash and Dive, halfback Power and Toss, QB sweep, TE sweep, slant out, both ways. |
 | 3 | **Split Backs** | Split Backs | 12 | Two backs at even depth and a slot just outside the tight end. Toss, QB sweep, fake sweep, slot sweep, TE sweep, and the tight-end slant out, both ways. |
 | 4 | **Shotgun** | Shotgun | 6 | The quarterback five yards deep with a back either side. The tight-end slant out, the QB sweep and the RB toss, both ways. |
-| 5 | **Trips** | Trips | 16 | One tailback, three to a side (tight end, slot, split end). Power, Smash, Dive, Toss, slot sweep, QB sweep, TE sweep, slant out, both ways. |
+| 5 | **Trips** | Trips | 16 | Empty backfield. Backs 2, 3 and 4 bunched to one side (fullback, tailback, slot). Power, Smash, Dive, Toss, slot sweep, QB sweep, TE sweep, slant out, both ways. |
 
 Both are two-tight-end, downhill running formations, so the blocking language carries
 over: "block down on the first defender inside you" means the same thing in either. That

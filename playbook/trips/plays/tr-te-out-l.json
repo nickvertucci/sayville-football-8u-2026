@@ -25,7 +25,7 @@
         ]
       ]
     },
-    "X": {
+    "FB": {
       "rule": "Release straight up the field. You are clearing the corner so the slant has room.",
       "type": "pass",
       "path": [
@@ -55,9 +55,8 @@
     }
   },
   "coaching_points": [
-    "The split end goes vertical and takes the corner with him. The slant stays flat underneath.",
-    "The slot screens. Everybody else pass blocks.",
-    "The quarterback throws it as soon as the tight end clears the end. If he is covered, tuck it and run — no second look."
+    "The fullback, widest, goes vertical and takes the corner with him. The slant stays flat underneath.",
+    "The slot screens. The tailback pass blocks. If the tight end is covered, tuck it and run."
   ],
   "z": "left",
   "alignment": {
@@ -65,8 +64,12 @@
       -5.6,
       -1.5
     ],
-    "X": [
+    "TB": [
       -6.8,
+      -2.5
+    ],
+    "FB": [
+      -8.0,
       -1.5
     ]
   }

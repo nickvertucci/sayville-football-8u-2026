@@ -470,18 +470,36 @@ table.xl th {
   background: var(--panel-2); font-size: 11px; text-transform: uppercase;
   letter-spacing: .6px; color: var(--muted);
 }
-.xl-lineup { border-bottom: 2px solid var(--ink); }
-.xl-lineup td { height: 38px; text-align: center; }
-.xl-empty { background: var(--panel-2); }
-.xl-pos { display: block; font-size: 10px; font-weight: 800; color: var(--accent-ink); }
-.xl-name { display: block; font-size: 10.5px; }
-.xl-open { color: var(--muted); font-style: italic; }
+/* The scheme names run down the left edge as row headings, so a cell is read by the
+   row it is in and the column it is under, not by anything repeated inside it. */
+.xl-scheme {
+  text-align: left !important; font-size: 10.5px; font-weight: 800;
+  text-transform: uppercase; letter-spacing: .5px; color: var(--accent-ink);
+  background: var(--panel-2); vertical-align: middle !important; white-space: nowrap;
+}
+col.xl-c0 { width: 4.6em; }
 /* Specific enough to beat `table.xl td`, whose top alignment would otherwise win. */
 table.xl.xl-plays td {
-  height: 22px; text-align: center; vertical-align: middle; padding: 4px 6px;
+  height: 22px; text-align: center; vertical-align: middle; padding: 4px 5px;
 }
-.xl-plays td a { color: var(--ink); font-weight: 700; text-decoration: none; }
+/* A cell can hold four calls — Split Backs has four Sweeps to a side — so they stack
+   as their own lines rather than wrapping into each other. */
+.xl-plays td a {
+  display: block; color: var(--ink); font-weight: 700; text-decoration: none;
+  padding: 1px 0;
+}
+.xl-plays td a + a { border-top: 1px dotted var(--line); }
 .xl-plays td a:hover { text-decoration: underline; }
+/* The code is how the card, the book and the install chips name the play; small and
+   quiet here so the words of the call carry the cell. */
+.xl-code {
+  display: inline-block; margin-right: 5px; font-size: 9.5px; font-weight: 800;
+  color: var(--muted); letter-spacing: .3px;
+}
+.xl-none { color: var(--line); }
+.xl-n {
+  float: right; font-weight: 700; opacity: .75;
+}
 @media print {
   /* Two across, so each strong-left sheet prints beside its strong-right one. */
   .xl-sheets { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0; margin: 2px 0 0; }
@@ -489,8 +507,11 @@ table.xl.xl-plays td {
      browser's background-graphics setting is: a thick black rule down the middle and
      one across, with room inside each so no table touches a rule. */
   .xl-sheet { padding: 6px 8px; }
-  .xl-sheet:nth-child(odd) { border-right: 10px solid #000; }
+  .xl-sheet:nth-child(odd):not(:last-child) { border-right: 10px solid #000; }
   .xl-sheet:nth-last-child(n+3) { border-bottom: 10px solid #000; }
+  /* An odd count leaves a last block alone on its row: give it both columns so the
+     sheet ends on a full-width block instead of a half-empty one. */
+  .xl-sheet:last-child:nth-child(odd) { grid-column: 1 / -1; }
   /* Two rows of two fill the landscape sheet, so everything is sized up to use it:
      taller cells to write in and names a coach can read at arm's length. */
   table.xl { font-size: 9px; }
@@ -502,17 +523,14 @@ table.xl.xl-plays td {
     padding: 0 0 3px; font-size: 14px; font-weight: 900;
     color: #000 !important; background: none !important;
   }
-  /* A name is one line on paper: small enough to fit its cell, and never wrapping
+  table.xl.xl-plays td { height: auto; vertical-align: middle; }
+  /* A call is one line on paper: small enough to fit its cell, and never wrapping
      into a second line that makes the row taller. */
-  .xl-lineup td { height: 30px; padding: 1px 0; vertical-align: middle; }
-  /* On paper the formation reads as players, not a spreadsheet: the grid behind them
-     is barely there, and an empty square has no fill, so only the named spots show. */
-  table.xl.xl-lineup td { border-color: #f9fafb; }
-  .xl-lineup .xl-empty { background: none !important; }
-  .xl-pos { font-size: 7.5px; }
-  .xl-name { font-size: 8px; white-space: nowrap; letter-spacing: -.2px; }
-  table.xl.xl-plays td { height: 32px; vertical-align: middle; }
-  .xl-plays td a { font-size: 9.5px; }
+  .xl-plays td a { font-size: 9.5px; white-space: nowrap; letter-spacing: -.2px; }
+  .xl-code { font-size: 8px; margin-right: 3px; color: #555; }
+  .xl-scheme { font-size: 8.5px; background: none !important; color: #000 !important; }
+  .xl-none { color: #ccc; }
+  .xl-n { display: none; }
 }
 
 .plist { display: grid; gap: 12px; grid-template-columns: 1fr; }

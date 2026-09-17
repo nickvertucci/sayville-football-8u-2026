@@ -529,18 +529,36 @@ table.xl th {
   background: var(--panel-2); font-size: 11px; text-transform: uppercase;
   letter-spacing: .6px; color: var(--muted);
 }
-.xl-lineup { border-bottom: 2px solid var(--ink); }
-.xl-lineup td { height: 38px; text-align: center; }
-.xl-empty { background: var(--panel-2); }
-.xl-pos { display: block; font-size: 10px; font-weight: 800; color: var(--accent-ink); }
-.xl-name { display: block; font-size: 10.5px; }
-.xl-open { color: var(--muted); font-style: italic; }
+/* The scheme names run down the left edge as row headings, so a cell is read by the
+   row it is in and the column it is under, not by anything repeated inside it. */
+.xl-scheme {
+  text-align: left !important; font-size: 10.5px; font-weight: 800;
+  text-transform: uppercase; letter-spacing: .5px; color: var(--accent-ink);
+  background: var(--panel-2); vertical-align: middle !important; white-space: nowrap;
+}
+col.xl-c0 { width: 4.6em; }
 /* Specific enough to beat `table.xl td`, whose top alignment would otherwise win. */
 table.xl.xl-plays td {
-  height: 22px; text-align: center; vertical-align: middle; padding: 4px 6px;
+  height: 22px; text-align: center; vertical-align: middle; padding: 4px 5px;
 }
-.xl-plays td a { color: var(--ink); font-weight: 700; text-decoration: none; }
+/* A cell can hold four calls — Split Backs has four Sweeps to a side — so they stack
+   as their own lines rather than wrapping into each other. */
+.xl-plays td a {
+  display: block; color: var(--ink); font-weight: 700; text-decoration: none;
+  padding: 1px 0;
+}
+.xl-plays td a + a { border-top: 1px dotted var(--line); }
 .xl-plays td a:hover { text-decoration: underline; }
+/* The code is how the card, the book and the install chips name the play; small and
+   quiet here so the words of the call carry the cell. */
+.xl-code {
+  display: inline-block; margin-right: 5px; font-size: 9.5px; font-weight: 800;
+  color: var(--muted); letter-spacing: .3px;
+}
+.xl-none { color: var(--line); }
+.xl-n {
+  float: right; font-weight: 700; opacity: .75;
+}
 @media print {
   /* Two across, so each strong-left sheet prints beside its strong-right one. */
   .xl-sheets { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0; margin: 2px 0 0; }
@@ -548,8 +566,11 @@ table.xl.xl-plays td {
      browser's background-graphics setting is: a thick black rule down the middle and
      one across, with room inside each so no table touches a rule. */
   .xl-sheet { padding: 6px 8px; }
-  .xl-sheet:nth-child(odd) { border-right: 10px solid #000; }
+  .xl-sheet:nth-child(odd):not(:last-child) { border-right: 10px solid #000; }
   .xl-sheet:nth-last-child(n+3) { border-bottom: 10px solid #000; }
+  /* An odd count leaves a last block alone on its row: give it both columns so the
+     sheet ends on a full-width block instead of a half-empty one. */
+  .xl-sheet:last-child:nth-child(odd) { grid-column: 1 / -1; }
   /* Two rows of two fill the landscape sheet, so everything is sized up to use it:
      taller cells to write in and names a coach can read at arm's length. */
   table.xl { font-size: 9px; }
@@ -561,17 +582,14 @@ table.xl.xl-plays td {
     padding: 0 0 3px; font-size: 14px; font-weight: 900;
     color: #000 !important; background: none !important;
   }
-  /* A name is one line on paper: small enough to fit its cell, and never wrapping
+  table.xl.xl-plays td { height: auto; vertical-align: middle; }
+  /* A call is one line on paper: small enough to fit its cell, and never wrapping
      into a second line that makes the row taller. */
-  .xl-lineup td { height: 30px; padding: 1px 0; vertical-align: middle; }
-  /* On paper the formation reads as players, not a spreadsheet: the grid behind them
-     is barely there, and an empty square has no fill, so only the named spots show. */
-  table.xl.xl-lineup td { border-color: #f9fafb; }
-  .xl-lineup .xl-empty { background: none !important; }
-  .xl-pos { font-size: 7.5px; }
-  .xl-name { font-size: 8px; white-space: nowrap; letter-spacing: -.2px; }
-  table.xl.xl-plays td { height: 32px; vertical-align: middle; }
-  .xl-plays td a { font-size: 9.5px; }
+  .xl-plays td a { font-size: 9.5px; white-space: nowrap; letter-spacing: -.2px; }
+  .xl-code { font-size: 8px; margin-right: 3px; color: #555; }
+  .xl-scheme { font-size: 8.5px; background: none !important; color: #000 !important; }
+  .xl-none { color: #ccc; }
+  .xl-n { display: none; }
 }
 
 .plist { display: grid; gap: 12px; grid-template-columns: 1fr; }
@@ -2404,16 +2422,6 @@ def strip_direction(name: str) -> str:
     return re.sub(r"\s+(Right|Left)$", "", name)
 
 
-def _slot_side(play: dict) -> str | None:
-    """Which call-sheet the play belongs on, from Slot Left / Slot Right in its name."""
-    name = play.get("name") or ""
-    if " - Slot Left - " in name:
-        return "Left"
-    if " - Slot Right - " in name:
-        return "Right"
-    return None
-
-
 def _call_column(play: dict) -> str:
     """Left, Middle or Right from the hole the call names, else from direction.
 
@@ -2433,146 +2441,83 @@ def _call_column(play: dict) -> str:
     return "Middle"
 
 
-def write_calls(formations: list[dict], defenses: dict, root: Path) -> str:
-    """The call sheet: the offense laid out where it stands, not a list of plays.
+# Inside out, then the ball in the air: the A gap, the B gap, the C gap, outside
+# the end, all the way outside, and finally the pass. Same order the book
+# installs them, and the order HOLE_SCHEME walks the gaps.
+SCHEME_ORDER = ("Smash", "Dive", "Power", "Slant", "Sweep", "Toss", "Protect")
+SCHEME_LABEL = {"Protect": "Pass"}
 
-    This used to be Favorite Plays over a searchable table of all forty. The table
-    answered "which plays exist", which is a question the formation pages and the
-    printed book already answer, and it answered it in a shape you cannot hold on a
-    sideline. What a coach actually does with a call sheet is swap plays in and out of
-    a lineup, so the sheet is now the lineup.
 
-    One sheet per offensive package, side by side like a spreadsheet. The top table is
-    the lineup: eight columns, seven for the line and an eighth on the right because
-    the slot stands out there rather than on anybody's shoulder. The line is column
-    one of the depth chart; the quarterback, fullback, tailback and slot are the
-    package. Every sheet is package 1's personnel: the Split formation, strong
-    left and then strong right, each the mirror of the other, and then the I formation,
-    strong left and strong right, mirrored the same way.
+def _sheet_name(play: dict, form: dict) -> str:
+    """The play as you say it once the block and the column have said the rest.
 
-    Under it, blank Left, Middle and Right columns to write the plays into.
+    "Regular I - Slot Left - 35 Power", in the Regular I block under Left, is
+    "35 Power". The heading already names the formation and the column already
+    names the side, so what is left in the cell is the call itself.
     """
-    roster = {}
-    path = root / "roster.json"
-    if path.is_file():
-        import json as _json
-        roster = _json.loads(path.read_text(encoding="utf-8"))
-    offense = roster.get("offense") or {}
-    packages = [p for p in (roster.get("packages") or {}).get("offense") or [] if any(p)]
+    name = play.get("name") or ""
+    label = form_label(form)
+    if name.lower().startswith(label.lower() + " - "):
+        name = name[len(label) + 3:]
+    return re.sub(r"^(?:Slot\s+)?(?:Left|Right)\s+-\s+", "", name)
 
-    def starter(pos: str) -> str:
-        names = offense.get(pos) or []
-        return names[0] if names else ""
 
-    line = ("LTE", "LT", "LG", "C", "RG", "RT", "RTE")
+def write_calls(formations: list[dict], defenses: dict, root: Path) -> str:
+    """The call sheet: every formation's plays, by scheme and by side.
 
-    def lineup_table(package: list[str], layout: str) -> str:
-        """`layout` is "i-", "split-" or "sg-" (Shotgun), then "right" or "left"."""
-        backs = dict(zip(PACKAGE_SPOTS["offense"], package))
-        # The line across and the quarterback under the center, with the SL just off the
-        # line past one end: the right, unless the formation is strong left, when he is
-        # past the left end and the line moves over a column to make room. In the I the
-        # fullback and tailback stack behind the quarterback; in the Split formation they
-        # sit side by side a row deeper. Either way, strong left mirrors strong right.
-        left = layout.endswith("-left")
-        first = 1 if left else 0
-        center = first + 3
-        grid = [[None] * 8 for _ in range(4)]
-        # A package that sets a lineman plays him; otherwise it is the starter.
-        for col, pos in enumerate(line, start=first):
-            grid[0][col] = (pos, backs.get(pos) or starter(pos))
-        grid[1][center] = ("QB", backs.get("QB") or starter("QB"))
-        grid[1][0 if left else 7] = ("SL", backs.get("SL", ""))
-        if layout.startswith("sg-"):
-            # The Shotgun: the quarterback five yards deep in the last row, a halfback
-            # either side of him — the fullback always on his left and the tailback on
-            # his right, whichever side the SL is on.
-            grid[1][center] = None
-            grid[3][center] = ("QB", backs.get("QB") or starter("QB"))
-            grid[3][center - 1] = ("LH", backs.get("FB", ""))
-            grid[3][center + 1] = ("RH", backs.get("TB", ""))
-        elif layout.startswith("i-"):
-            grid[2][center] = ("FB", backs.get("FB", ""))
-            grid[3][center] = ("TB", backs.get("TB", ""))
-        else:
-            # Split Backs: 3-back (left halfback) left of the quarterback, 2-back
-            # (right halfback) right of him. Package FB is the left back and package
-            # TB the right back — Jake always left, Nico always right — whichever
-            # side the slot is on.
-            grid[3][center - 1] = ("LH", backs.get("FB", ""))
-            grid[3][center + 1] = ("RH", backs.get("TB", ""))
-        rows = []
-        for row in grid:
-            tds = []
-            for spot in row:
-                if spot is None:
-                    tds.append('<td class="xl-empty"></td>')
-                    continue
-                pos, name = spot
-                who = esc(name) if name else '<span class="xl-open">Open</span>'
-                tds.append(f'<td class="xl-spot"><span class="xl-pos">{esc(pos)}</span>'
-                           f'<span class="xl-name">{who}</span></td>')
-            rows.append(f'<tr>{"".join(tds)}</tr>')
-        return f'<table class="xl xl-lineup">{"".join(rows)}</table>'
+    This used to be one sheet per package, each an eight-column grid of player
+    names above three mostly blank columns to write plays into. The lineup took
+    half of every sheet to say what the Depth Chart page already says, it only
+    ever reached three of the five formations — Trips and the Wishbone were
+    nowhere on it — and it answered "who is in" on a page whose job is "what do
+    we call".
 
-    plays_by_id = {p["id"]: p for f in formations for p in f["_plays"]}
+    So the sheet is the book now, laid out the way a call sheet lays one out: a
+    block per formation, the schemes down the side inside-out, and Left, Middle
+    and Right across. Every play is in the cell its own call puts it in, so a
+    play is on the sheet the moment it is authored — nothing here is a list
+    anybody has to keep in step by hand.
+    """
     sides = ("Left", "Middle", "Right")
-    forms_by_id = {f["id"]: f for f in formations}
+    none_cell = '<td><span class="xl-none">&mdash;</span></td>'
 
-    def plays_table(title: str, placed: dict) -> str:
-        """Left, Middle and Right, three rows, with any play placed on this sheet at the
-        top of its side and the rest blank to be written in. A play is named without
-        the formation the sheet's heading already says, and links to its page."""
-        cols = []
-        for side in sides:
-            cells = []
-            for pid in placed.get(side, []):
-                if pid not in plays_by_id:
-                    raise SystemExit(f"call sheet '{title}': no such play '{pid}'")
-                play = plays_by_id[pid]
-                name = play["name"]
-                if name.lower().startswith(title.lower() + " - "):
-                    name = name[len(title) + 3:]
-                cells.append(f'<a href="{p_href(play)}">{esc(code_prefix(play))}{esc(name)}</a>')
-            cols.append(cells)
-        depth = max([3] + [len(c) for c in cols])
-        rows = "".join(
-            "<tr>" + "".join(f"<td>{c[i] if i < len(c) else ''}</td>" for c in cols) + "</tr>"
-            for i in range(depth)
-        )
-        return ('<table class="xl xl-plays"><thead><tr>'
+    def plays_table(form: dict) -> str:
+        placed: dict[tuple[str, str], list[dict]] = {}
+        for play in form["_plays"]:
+            placed.setdefault((play["scheme"], _call_column(play)), []).append(play)
+
+        schemes = [s for s in SCHEME_ORDER if any(k[0] == s for k in placed)]
+        schemes += sorted({k[0] for k in placed} - set(SCHEME_ORDER))
+
+        rows = []
+        for scheme in schemes:
+            tds = []
+            for side in sides:
+                cell = "".join(
+                    f'<a href="{p_href(p)}"><span class="xl-code">{esc(p["code"])}</span>'
+                    f'{esc(_sheet_name(p, form))}</a>'
+                    for p in placed.get((scheme, side), [])
+                )
+                tds.append(f"<td>{cell}</td>" if cell else none_cell)
+            label = SCHEME_LABEL.get(scheme, scheme)
+            rows.append(f'<tr><th scope="row" class="xl-scheme">{esc(label)}</th>'
+                        f'{"".join(tds)}</tr>')
+
+        return ('<table class="xl xl-plays">'
+                '<colgroup><col class="xl-c0"><col><col><col></colgroup>'
+                '<thead><tr><th class="xl-scheme"></th>'
                 + "".join(f"<th>{side}</th>" for side in sides)
-                + f'</tr></thead><tbody>{rows}</tbody></table>')
+                + f'</tr></thead><tbody>{"".join(rows)}</tbody></table>')
 
-    # Every sheet is the same personnel, package 1's. Split, then I, then Shotgun,
-    # each with Slot Left on the left of the page and Slot Right on the right.
-    # Plays land in Left / Middle / Right from the hole they name, so a new play
-    # is on the sheet as soon as it is in the book.
-    layout_prefix = {"split-backs": "split", "i-form": "i", "shotgun": "sg"}
-    order = []
-    if packages:
-        p = packages[0]
-        for fid in ("split-backs", "i-form", "shotgun"):
-            form = forms_by_id.get(fid)
-            if not form:
-                continue
-            label = form_label(form)
-            prefix = layout_prefix[fid]
-            for slot in ("Left", "Right"):
-                placed = {"Left": [], "Middle": [], "Right": []}
-                for play in form["_plays"]:
-                    if _slot_side(play) != slot:
-                        continue
-                    placed[_call_column(play)].append(play["id"])
-                layout = f"{prefix}-{'left' if slot == 'Left' else 'right'}"
-                order.append((f"{label} - Slot {slot}", p, layout, placed))
     sheets = "".join(
-        f'<section class="xl-sheet"><p class="xl-title">{esc(title)}</p>'
-        f'{lineup_table(package, layout)}{plays_table(title, placed)}</section>'
-        for title, package, layout, placed in order
-    ) or '<p class="lede">No offensive packages in roster.json yet.</p>'
+        f'<section class="xl-sheet"><p class="xl-title">{esc(form_label(form))}'
+        f'<span class="xl-n">{len(form["_plays"])}</span></p>{plays_table(form)}</section>'
+        for form in formations if form.get("_plays")
+    ) or '<p class="lede">No plays in the book yet.</p>'
 
     body = f"""{page_head("Call sheet")}
+<p class="sub">Every play in the book, by formation and scheme.
+&nbsp;·&nbsp; Even holes right, odd holes left; the A gap is Middle.</p>
 <div class="xl-sheets">{sheets}</div>"""
     return page(
         f"Call sheet — {SITE_TITLE}",
@@ -2580,9 +2525,9 @@ def write_calls(formations: list[dict], defenses: dict, root: Path) -> str:
         formations,
         defenses=defenses,
         active_nav="calls",
-        description="Each offensive package with its lineup, and the plays by side.",
-        # Portrait: two sheets across and three rows down, so all six formations fit
-        # one page with each strength beside its mirror.
+        description="Every play in the book, by formation, scheme and side.",
+        # Portrait, two blocks across: with no lineup grid a block is a handful of
+        # rows, so all five formations fit one sheet of paper.
         page_rule="size: letter portrait; margin: 0.3in;",
     )
 

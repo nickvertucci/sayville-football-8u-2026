@@ -16,7 +16,7 @@
   },
   "assignments": {
     "QB": {
-      "rule": "Quick pitch to the tailback, then run the other way, to the left, like you still have it.",
+      "rule": "Quick pitch to the tailback in the trips, then run the other way, to the left, like you still have it.",
       "type": "rollout",
       "path": [
         [
@@ -30,40 +30,35 @@
       ]
     },
     "TB": {
-      "rule": "Run flat, outside and behind the quarterback, and catch the pitch on the run. Ahead of him is a fumble.",
+      "rule": "Take the pitch on the run and get to the edge behind the fullback. Ahead of the quarterback is a fumble.",
       "type": "run",
       "path": [
         [
-          2.8,
-          -0.2
-        ],
-        [
-          6.5,
+          1.5,
           -0.3
         ],
         [
-          8.5,
-          0.8
+          3.5,
+          0.5
         ],
         [
-          8.8,
-          3.0
+          4.0,
+          2.5
         ],
         [
-          8.8,
-          6.0
+          4.2,
+          5.5
         ]
       ]
     },
-    "X": {
+    "FB": {
       "block": "lead",
       "target": "force"
     }
   },
   "coaching_points": [
-    "The pitch goes early. A quarterback who waits to be tackled first will pitch it on the ground.",
-    "There is no second back to lead, so the split end takes the force man. The slot screens the corner.",
-    "The tailback stays behind the split end and turns up in the alley."
+    "The pitch goes early, to the tailback already in the trips. Do not wait.",
+    "The fullback, widest, takes the force man. The slot screens. The tailback turns up outside the fullback."
   ],
   "z": "right"
 }
