@@ -241,10 +241,18 @@ def backfield_roles(form: dict, side: int) -> dict[str, str]:
     fullback. Wishbone (FB + LH + RH) does too. Two halfbacks alone lead with
     the playside one. Trips puts 2, 3 and 4 on the perimeter — they are not
     a backfield, so nobody leads from the scheme.
+
+    The slot is a role, not a key: an SL standing in the backfield is a back,
+    and the scheme gives him nothing.
     """
     keys = set(form.get("alignment") or {})
     out: dict[str, str] = {}
-    if "SL" in keys:
+    # The `slot` role is the split man's job -- screen the corner, kick the end. A
+    # formation may keep the SL key and stand him in the backfield instead (Power I
+    # puts him behind a guard), and there he is a back, not a slot: he gets no scheme
+    # job and the play writes him, the same way Wishbone's playside halfback is
+    # written. Trips keeps the role, because its SL is still outside the tight end.
+    if "SL" in keys and not _stacked(form, "SL"):
         out["slot"] = "SL"
     if "QB" in keys:
         out["qb"] = "QB"
