@@ -537,6 +537,14 @@ table.xl th {
   text-transform: uppercase; letter-spacing: .5px; color: var(--accent-ink);
   background: var(--panel-2); vertical-align: middle !important; white-space: nowrap;
 }
+/* LEFT / MIDDLE / RIGHT is a solid black band across the top of every formation
+   block. The sheet is five blocks of near-identical small type, and the bar is what
+   breaks them apart -- you find the block you want by the rule, then read down from
+   the column heading, instead of counting rows. The empty corner cell is in the band
+   too: a white notch at the left end would read as a missing cell. */
+table.xl.xl-plays thead th {
+  background: #000; color: #fff; border-color: #000; font-weight: 800;
+}
 col.xl-c0 { width: 4.6em; }
 /* Specific enough to beat `table.xl td`, whose top alignment would otherwise win. */
 table.xl.xl-plays td {
@@ -616,6 +624,17 @@ table.xl.pk-plays td {
     padding: 0; font-size: 10px; font-weight: 900; line-height: 1.25;
     color: #000 !important; background: none !important;
   }
+  /* The black band prints. `print-color-adjust: exact` is the whole reason it can:
+     it tells the browser this fill is content, not decoration, so it survives the
+     print dialog's background-graphics setting being off -- which is exactly what
+     turned the old navy title bars into pale grey (see .xl-title above). Without it
+     the white type would print white on white and the headings would vanish.
+     Scoped to the head row, so .xl-scheme's own print rule below still strips the
+     background off the scheme labels down the side. */
+  table.xl.xl-plays thead th {
+    background: #000 !important; color: #fff !important; border-color: #000 !important;
+    -webkit-print-color-adjust: exact; print-color-adjust: exact;
+  }
   table.xl.xl-plays td { height: auto; vertical-align: middle; }
   /* A call is one line on paper: small enough to fit its cell, and never wrapping
      into a second line that makes the row taller. */
@@ -624,7 +643,8 @@ table.xl.pk-plays td {
   table.xl.xl-plays td { line-height: 1.2; }
   .xl-scheme { line-height: 1.2; }
   .xl-code { font-size: 8px; margin-right: 3px; color: #555; }
-  .xl-scheme { font-size: 8.5px; background: none !important; color: #000 !important; }
+  tbody .xl-scheme { font-size: 8.5px; background: none !important; color: #000 !important; }
+  thead .xl-scheme { font-size: 8.5px; }
   .xl-none { color: #ccc; }
   .xl-n { display: none; }
   /* The strip stays on the sheet with the blocks: three across, never split over a
@@ -2357,12 +2377,14 @@ def backs_table(formations: list[dict]) -> list[tuple[str, str]]:
             rows.append((digit, text[0].upper() + text[1:]))
     return rows
 
+# Off the nomenclature card: 0 over the center, then outward, even right and odd left.
+# There is no 1 — the middle is one hole.
 HOLES = [
-    ("0 / 1", "Smash — between the center and the guard"),
-    ("2 / 3", "Dive — between the guard and the tackle"),
-    ("4 / 5", "Power — between the tackle and the end"),
-    ("6 / 7", "Slant — outside the tight end"),
-    ("8 / 9", "Toss — all the way outside. Sweep if the quarterback or the slot is coming across"),
+    ("0", "Smash — straight over the center"),
+    ("2 / 3", "Smash — between the center and the guard"),
+    ("4 / 5", "Dive — between the guard and the tackle"),
+    ("6 / 7", "Power — between the tackle and the tight end"),
+    ("8 / 9", "Toss — outside the tight end. Sweep if the quarterback or the slot is coming across"),
 ]
 
 
@@ -2417,7 +2439,7 @@ def write_home(formations: list[dict], defenses: dict) -> str:
     </dl>
   </div>
   <div>
-    <p class="numcap">Where it goes &mdash; even right, odd left</p>
+    <p class="numcap">Where it goes &mdash; 0 is the middle, then even right, odd left</p>
     <dl class="assign holes">
       {chr(10).join(f'      <div class="row"><dt>{esc(n)}</dt><dd>{esc(d)}</dd></div>'
                     for n, d in HOLES).strip()}
@@ -2441,28 +2463,6 @@ def write_home(formations: list[dict], defenses: dict) -> str:
     )
 
 
-# Where a play hits, in the same five bands the calling language uses. The zone comes
-# out of the hole digit, which render.py has already checked against the play's own
-# diagram — so filtering by "off-tackle" cannot disagree with the card.
-HOLE_ZONES = [
-    ("inside", "Inside 0/1"),
-    ("guard-tackle", "Guard–tackle 2/3"),
-    ("off-tackle", "Off-tackle 4/5"),
-    ("outside", "Outside 6/7"),
-    ("wide", "Wide 8/9"),
-]
-ZONE_KEYS = [key for key, _ in HOLE_ZONES]
-
-
-def call_digits(call: str) -> tuple[str, str]:
-    """(zone, direction) for a call, or ("", "") if it has no two-digit number."""
-    m = re.search(r"\b(\d)(\d)\b", call or "")
-    if not m:
-        return "", ""
-    hole = int(m.group(2))
-    return ZONE_KEYS[hole // 2], ("right" if hole % 2 == 0 else "left")
-
-
 def chip(group: str, value: str, label: str, glabel: str, title: str = "") -> str:
     """One filter chip. `glabel` rides along so the active-filter summary can say
     "Direction: Right" rather than a bare "Right" that could be three things."""
@@ -2479,7 +2479,7 @@ def filter_group(label: str, chips: list[str]) -> str:
 
 def strip_direction(name: str) -> str:
     """The favorites cards show one image for both sides of a play, so the caption
-    should not claim to be just the right (or just the left) — "Slant", not "Slant
+    should not claim to be just the right (or just the left) — "Power", not "Power
     Right".
 
     The SL's alignment goes the same way. A reverse starts him on the side its own
@@ -2491,17 +2491,23 @@ def strip_direction(name: str) -> str:
     return re.sub(r"\s+(Right|Left)$", "", name)
 
 
+# The middle of the line, and the A gap either side of the center: one column on the
+# sheet, because a call that goes straight ahead has no side to pick.
+MIDDLE_HOLES = (0, 2, 3)
+
+
 def _call_column(play: dict) -> str:
     """Left, Middle or Right from the hole the call names, else from direction.
 
-    Holes 0 and 1 are the A-gap, so Smash sits in Middle instead of being stacked
-    with Power on the edge. Even holes go right, odd holes go left. A word call
-    has no hole, so its `direction` is the column.
+    Hole 0 is over the center and 2/3 are the A-gap either side of him, so Smash
+    sits in Middle instead of being stacked with Power on the edge. Everything
+    wider takes its side from the digit: even right, odd left. A word call has no
+    hole, so its `direction` is the column.
     """
     m = re.search(r"\b(\d)(\d)\b", play.get("call") or "")
     if m:
         hole = int(m.group(2))
-        if hole in (0, 1):
+        if hole in MIDDLE_HOLES:
             return "Middle"
         return "Right" if hole % 2 == 0 else "Left"
     d = play.get("direction")
@@ -2510,17 +2516,17 @@ def _call_column(play: dict) -> str:
     return "Middle"
 
 
-# Inside out, then the ball in the air: the A gap, the B gap, the C gap, outside
-# the end, all the way outside, and finally the pass. Same order the book
-# installs them, and the order HOLE_SCHEME walks the gaps.
-SCHEME_ORDER = ("Smash", "Dive", "Power", "Slant", "Sweep", "Toss", "Protect")
+# Inside out, then the ball in the air: the center and the A gap, the B gap, the C
+# gap, outside the end, and finally the pass. Same order the book installs them,
+# and the order HOLE_SCHEME walks the gaps.
+SCHEME_ORDER = ("Smash", "Dive", "Power", "Sweep", "Toss", "Protect")
 SCHEME_LABEL = {"Protect": "Pass"}
 
 
 def _sheet_name(play: dict, form: dict) -> str:
     """The play as you call it, minus only the formation the block already names.
 
-    "Regular I - Slot Left - 35 Power" in the Regular I block is "Slot L - 35
+    "Regular I - Slot Left - 37 Power" in the Regular I block is "Slot L - 37
     Power". The alignment stays: the column is where the ball goes, which is not
     where the slot stands, and the two come apart often enough to matter --
     Trips Right 49 Sweep is a Right bunch running into the Left column. Dropping

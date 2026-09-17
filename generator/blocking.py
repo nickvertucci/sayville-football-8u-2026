@@ -57,21 +57,35 @@ SCOUT_FRONTS = ("4-4", "5-3", "5-4-2")
 # on every play and the one that goes in a coach's pocket.
 DEFAULT_FRONT = "4-4"
 
-# The play word IS the hole. Even right, odd left. A numbered run's call has to
-# say this word — 34 Power, 30 Smash, 38 Toss — so the huddle and the diagram
-# name the same family. Word calls (a tight end sweep, a slant-out pass) opt out
-# because they have no hole digit.
+# The holes, off the nomenclature card: 0 is straight over the center, and from
+# there they count outward, even to the right and odd to the left.
+#
+#     9  |  7  |  5  |  3  | 0 |  2  |  4  |  6  |  8
+#       LTE    LT    LG     C     RG    RT   RTE
+#
+# There is no 1. The middle is one hole, not two, because a back aimed at the
+# center's back is aimed at one place, and a number that names the same place
+# twice is a number nobody can call.
+#
+# The play word IS the hole. A numbered run's call has to say this word — 36
+# Power, 32 Smash, 38 Toss — so the huddle and the diagram name the same family.
+# Word calls (a tight end sweep, a slant-out pass) opt out because they have no
+# hole digit.
 #
 # Sweep is the exception: the quarterback (1) or the slot (4) coming across, or
 # a tight end on an end-around. Those still hit the 8/9 hole, but the word is
 # who is sweeping, not Toss. 38 Toss is still Toss — that is a pitch, not a sweep.
 HOLE_SCHEME = {
-    0: "Smash", 1: "Smash",  # A gap: center–guard
-    2: "Dive",  3: "Dive",   # B gap: guard–tackle
-    4: "Power", 5: "Power",  # C gap: tackle–end
-    6: "Slant", 7: "Slant",  # outside the tight end
-    8: "Toss",  9: "Toss",   # all the way outside
+    0: "Smash",              # over the center
+    2: "Smash", 3: "Smash",  # A gap: center–guard
+    4: "Dive",  5: "Dive",   # B gap: guard–tackle
+    6: "Power", 7: "Power",  # C gap: tackle–tight end
+    8: "Toss",  9: "Toss",   # outside the tight end
 }
+
+# The one hole number the card does not have. Spelled out so the build can say
+# so by name rather than failing on geometry nobody can read.
+NO_SUCH_HOLE = 1
 
 # Digit 1 is always the quarterback. Digit 4 is the slot in every look that
 # has one — Sweep is who, so a formation that puts a halfback on 4 (Wishbone)
@@ -118,8 +132,8 @@ def scheme_words(hole: int, back_digit: str | None = None,
 
 # --------------------------------------------------------------- named schemes --
 #
-# The huddle word is also the blocking family. Smash, Dive, Power, Slant, Toss
-# and Sweep each name eleven jobs by *role* — playside end, playside guard, lead
+# The huddle word is also the blocking family. Smash, Dive, Power, Toss and
+# Sweep each name eleven jobs by *role* — playside end, playside guard, lead
 # back — not by LTE/RTE, so the same scheme fills a Regular I, a Split Backs
 # and whatever formation comes next. Protect is the dropback: everybody pass
 # blocks except the receiver and the slot, who screens the corner.
@@ -206,12 +220,6 @@ SCHEMES: dict[str, dict[str, dict]] = {
         "backside_t": {"block": "down"},
         "backside_te": {"block": "cutoff"},
         "slot": {"block": "kick"},
-        "lead": {"block": "lead"},
-    },
-    # Outside the tight end, not as wide as a toss: same seal as the perimeter
-    # family, but the lead back aims at the 6/7 hole rather than the force man.
-    "Slant": {
-        **{k: v for k, v in _OUTSIDE_LINE.items() if k != "lead"},
         "lead": {"block": "lead"},
     },
     "Toss": dict(_OUTSIDE_LINE),

@@ -266,9 +266,16 @@ def play_hole(play: dict) -> float:
     if not m:
         return 1.5 * play_side(play)
     hole = int(m.group(2))
-    low, high = hole_bounds(alignment, "R" if hole % 2 == 0 else "L", hole // 2)
+    side = "R" if hole % 2 == 0 else "L"
+    low, high = hole_bounds(alignment, hole)
     if high == float("inf"):
-        high = low + 2.0
+        # 8/9 is open-ended, and the midpoint of an open-ended window is not a place.
+        # The ball on a perimeter play goes about two line splits past the tight end,
+        # so that is what the blockers told to take "whoever shows" are aimed at. The
+        # window is the *check* on a call; this is where the play actually goes, and
+        # the two are different questions.
+        edges = line_edges(alignment, side)
+        high = edges[3] + 2 * (edges[3] - edges[0]) / 3.0 + HOLE_TOLERANCE
     return (low + high) / 2 * (1 if hole % 2 == 0 else -1)
 
 
@@ -316,7 +323,7 @@ def play_alignment(form: dict, play: dict) -> dict:
     A formation has one alignment, but a formation is not always one picture. The
     The SL is split right on almost every snap, but Power is built on his kick-out and
     Jet needs him with a formation to cross, so those two move him. A play may say
-    which, and the call says it out loud — `Regular I Slot Left 35 Power` — so nobody is
+    which, and the call says it out loud — `Regular I Slot Left 37 Power` — so nobody is
     moved silently.
 
     An override may only move somebody the formation already has. It cannot add a
@@ -328,10 +335,12 @@ def play_alignment(form: dict, play: dict) -> dict:
             alignment[pos] = list(spot)
     return alignment
 
-# Holes 0/1 sit between the center and the guard, 2/3 guard to tackle, 4/5 tackle to end,
-# 6/7 outside the end and 8/9 wider still. The first three zones are the real gaps in the
+# Hole 0 is the center himself — straight over the ball. From there the holes count
+# outward, even to the right and odd to the left: 2/3 between the center and the guard,
+# 4/5 guard to tackle, 6/7 tackle to tight end, 8/9 outside the tight end. There is no
+# 1 hole (see blocking.NO_SUCH_HOLE). The three interior zones are the real gaps in the
 # line, so they are measured off the formation's own alignment and follow its splits.
-HOLE_INTERIOR = [("C", "G"), ("G", "T"), ("T", "TE")]
+HOLE_GAPS = [("C", "G"), ("G", "T"), ("T", "TE")]
 
 # The line from the middle out, as position-key suffixes after the side letter. Spelled
 # out rather than built from the hole names, because the tight end's key is LTE/RTE while
@@ -344,24 +353,27 @@ LINE_OUT = ("G", "T", "TE")
 HOLE_TOLERANCE = 0.4
 
 
-def hole_bounds(alignment: dict, side: str, pair: int) -> tuple[float, float]:
+def line_edges(alignment: dict, side: str) -> list[float]:
+    """|x| of the center, guard, tackle and tight end on one side of this alignment."""
+    return [abs(alignment["C"][0])] + [abs(alignment[side + s][0]) for s in LINE_OUT]
+
+
+def hole_bounds(alignment: dict, hole: int) -> tuple[float, float]:
     """The |x| window a carrier must cross in to have hit this hole.
 
-    `pair` is the hole number halved: 0 is the center-guard gap, 3 is outside the end,
-    4 is everything wider than that.
+    The hole number is all it takes: parity says which side of the line to measure,
+    and the digit says which gap. 0 is the center's own body; 2/3, 4/5 and 6/7 are
+    the three gaps in the line, off this formation's splits; 8/9 is everything
+    outside the tight end, which has no next lineman to measure against and so is
+    open-ended rather than a second, wider zone.
     """
-    edges = [abs(alignment["C"][0])]
-    for suffix in LINE_OUT:
-        edges.append(abs(alignment[side + suffix][0]))
-    split = (edges[3] - edges[0]) / 3.0
-    if pair < len(HOLE_INTERIOR):
-        return edges[pair] - HOLE_TOLERANCE, edges[pair + 1] + HOLE_TOLERANCE
-    # Outside the end there is no next lineman to measure against, so the two outer
-    # zones are one and two line splits wide.
-    outside = edges[3] + 2 * split
-    if pair == 3:
-        return edges[3] - HOLE_TOLERANCE, outside + HOLE_TOLERANCE
-    return outside - HOLE_TOLERANCE, float("inf")
+    edges = line_edges(alignment, "R" if hole % 2 == 0 else "L")
+    if hole == 0:
+        return max(0.0, edges[0] - HOLE_TOLERANCE), edges[0] + HOLE_TOLERANCE
+    gap = hole // 2 - 1
+    if gap < len(HOLE_GAPS):
+        return edges[gap] - HOLE_TOLERANCE, edges[gap + 1] + HOLE_TOLERANCE
+    return edges[3] - HOLE_TOLERANCE, float("inf")
 
 
 def los_crossing(alignment: dict, pos: str, spec: dict) -> float | None:
@@ -446,7 +458,10 @@ def validate_call(play: dict, form: dict, defenses: dict) -> list[str]:
                 "never crosses the line of scrimmage"]
 
     hole = int(hole_digit)
-    side = "R" if hole % 2 == 0 else "L"
+    if hole == blocking.NO_SUCH_HOLE:
+        return [f"{pid}: call '{call}' says the {hole} hole, and there is no {hole} "
+                "hole — the middle is 0, and the holes count outward from there "
+                "(2/3 center–guard, 4/5 guard–tackle, 6/7 tackle–end, 8/9 outside)"]
     going_right = hole % 2 == 0
     if (crossing > 0) != going_right:
         where = "right" if crossing > 0 else "left"
@@ -454,7 +469,7 @@ def validate_call(play: dict, form: dict, defenses: dict) -> list[str]:
                 f"{'right' if going_right else 'left'}, but {pos} crosses to the {where} "
                 f"(x = {crossing:+.1f})"]
 
-    low, high = hole_bounds(alignment, side, hole // 2)
+    low, high = hole_bounds(alignment, hole)
     if not (low <= abs(crossing) <= high):
         window = (f"anything wider than {low:.2f} yards" if high == float("inf")
                   else f"{low:.2f} to {high:.2f} yards")
@@ -462,8 +477,8 @@ def validate_call(play: dict, form: dict, defenses: dict) -> list[str]:
                 f"out from the middle, but {pos} crosses the line at "
                 f"{abs(crossing):.2f}"]
 
-    # A numbered run's play word is the hole: Smash at 0/1, Dive at 2/3, Power at
-    # 4/5, Slant at 6/7, Toss at 8/9 — except the quarterback (1) or slot (4)
+    # A numbered run's play word is the hole: Smash at 0 and 2/3, Dive at 4/5,
+    # Power at 6/7, Toss at 8/9 — except the quarterback (1) or slot (4)
     # coming across at 8/9, which is Sweep, the same word as a tight-end
     # end-around.
     if play.get("type") == "run":

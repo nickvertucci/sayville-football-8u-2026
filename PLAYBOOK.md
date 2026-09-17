@@ -6,24 +6,24 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 | # | Play | Call | Scheme | Type | Formation | Ball |
 |---|---|---|---|---|---|---|
-| 1 | [Regular I - Slot Right - 34 Power](#regular-i---slot-right---34-power) | `Regular I Slot Right 34 Power` | Power | run | Regular I | TB |
-| 2 | [Regular I - Slot Left - 35 Power](#regular-i---slot-left---35-power) | `Regular I Slot Left 35 Power` | Power | run | Regular I | TB |
+| 1 | [Regular I - Slot Right - 36 Power](#regular-i---slot-right---36-power) | `Regular I Slot Right 36 Power` | Power | run | Regular I | TB |
+| 2 | [Regular I - Slot Left - 37 Power](#regular-i---slot-left---37-power) | `Regular I Slot Left 37 Power` | Power | run | Regular I | TB |
 | 3 | [Regular I - Slot Right - LTE Sweep](#regular-i---slot-right---lte-sweep) | `Regular I Slot Right LTE Sweep` | Sweep | run | Regular I | LTE |
 | 4 | [Regular I - Slot Left - RTE Sweep](#regular-i---slot-left---rte-sweep) | `Regular I Slot Left RTE Sweep` | Sweep | run | Regular I | RTE |
 | 5 | [Regular I - Slot Right - 49 Sweep](#regular-i---slot-right---49-sweep) | `Regular I Slot Right 49 Sweep` | Sweep | run | Regular I | SL |
 | 6 | [Regular I - Slot Left - 48 Sweep](#regular-i---slot-left---48-sweep) | `Regular I Slot Left 48 Sweep` | Sweep | run | Regular I | SL |
-| 7 | [Regular I - Slot Right - 30 Smash](#regular-i---slot-right---30-smash) | `Regular I Slot Right 30 Smash` | Smash | run | Regular I | TB |
-| 8 | [Regular I - Slot Left - 31 Smash](#regular-i---slot-left---31-smash) | `Regular I Slot Left 31 Smash` | Smash | run | Regular I | TB |
+| 7 | [Regular I - Slot Right - 32 Smash](#regular-i---slot-right---32-smash) | `Regular I Slot Right 32 Smash` | Smash | run | Regular I | TB |
+| 8 | [Regular I - Slot Left - 33 Smash](#regular-i---slot-left---33-smash) | `Regular I Slot Left 33 Smash` | Smash | run | Regular I | TB |
 | 9 | [Regular I - Slot Right - RTE Slant Out](#regular-i---slot-right---rte-slant-out) | `Regular I Slot Right RTE Slant Out` | Protect | pass | Regular I | RTE |
 | 10 | [Regular I - Slot Left - LTE Slant Out](#regular-i---slot-left---lte-slant-out) | `Regular I Slot Left LTE Slant Out` | Protect | pass | Regular I | LTE |
-| 11 | [Regular I - Slot Right - 20 Smash](#regular-i---slot-right---20-smash) | `Regular I Slot Right 20 Smash` | Smash | run | Regular I | FB |
-| 12 | [Regular I - Slot Left - 21 Smash](#regular-i---slot-left---21-smash) | `Regular I Slot Left 21 Smash` | Smash | run | Regular I | FB |
-| 13 | [Wishbone - 44 Power](#wishbone---44-power) | `Wishbone 44 Power` | Power | run | Wishbone | RH |
-| 14 | [Wishbone - 35 Power](#wishbone---35-power) | `Wishbone 35 Power` | Power | run | Wishbone | LH |
-| 15 | [Wishbone - 20 Smash](#wishbone---20-smash) | `Wishbone 20 Smash` | Smash | run | Wishbone | FB |
-| 16 | [Wishbone - 21 Smash](#wishbone---21-smash) | `Wishbone 21 Smash` | Smash | run | Wishbone | FB |
-| 17 | [Wishbone - 22 Dive](#wishbone---22-dive) | `Wishbone 22 Dive` | Dive | run | Wishbone | FB |
-| 18 | [Wishbone - 23 Dive](#wishbone---23-dive) | `Wishbone 23 Dive` | Dive | run | Wishbone | FB |
+| 11 | [Regular I - Slot Right - 22 Smash](#regular-i---slot-right---22-smash) | `Regular I Slot Right 22 Smash` | Smash | run | Regular I | FB |
+| 12 | [Regular I - Slot Left - 23 Smash](#regular-i---slot-left---23-smash) | `Regular I Slot Left 23 Smash` | Smash | run | Regular I | FB |
+| 13 | [Wishbone - 46 Power](#wishbone---46-power) | `Wishbone 46 Power` | Power | run | Wishbone | RH |
+| 14 | [Wishbone - 37 Power](#wishbone---37-power) | `Wishbone 37 Power` | Power | run | Wishbone | LH |
+| 15 | [Wishbone - 22 Smash](#wishbone---22-smash) | `Wishbone 22 Smash` | Smash | run | Wishbone | FB |
+| 16 | [Wishbone - 23 Smash](#wishbone---23-smash) | `Wishbone 23 Smash` | Smash | run | Wishbone | FB |
+| 17 | [Wishbone - 24 Dive](#wishbone---24-dive) | `Wishbone 24 Dive` | Dive | run | Wishbone | FB |
+| 18 | [Wishbone - 25 Dive](#wishbone---25-dive) | `Wishbone 25 Dive` | Dive | run | Wishbone | FB |
 | 19 | [Wishbone - 38 Toss](#wishbone---38-toss) | `Wishbone 38 Toss` | Toss | run | Wishbone | LH |
 | 20 | [Wishbone - 49 Toss](#wishbone---49-toss) | `Wishbone 49 Toss` | Toss | run | Wishbone | RH |
 | 21 | [Split Backs - Slot Right - 38 Toss](#split-backs---slot-right---38-toss) | `Split Backs Slot Right 38 Toss` | Toss | run | Split Backs | LH |
@@ -38,8 +38,8 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 | 30 | [Split Backs - Slot Left - RTE Sweep](#split-backs---slot-left---rte-sweep) | `Split Backs Slot Left RTE Sweep` | Sweep | run | Split Backs | RTE |
 | 31 | [Split Backs - Slot Right - RTE Slant Out](#split-backs---slot-right---rte-slant-out) | `Split Backs Slot Right RTE Slant Out` | Protect | pass | Split Backs | RTE |
 | 32 | [Split Backs - Slot Left - LTE Slant Out](#split-backs---slot-left---lte-slant-out) | `Split Backs Slot Left LTE Slant Out` | Protect | pass | Split Backs | LTE |
-| 33 | [Split Backs - Slot Right - 34 Power](#split-backs---slot-right---34-power) | `Split Backs Slot Right 34 Power` | Power | run | Split Backs | LH |
-| 34 | [Split Backs - Slot Left - 25 Power](#split-backs---slot-left---25-power) | `Split Backs Slot Left 25 Power` | Power | run | Split Backs | RH |
+| 33 | [Split Backs - Slot Right - 36 Power](#split-backs---slot-right---36-power) | `Split Backs Slot Right 36 Power` | Power | run | Split Backs | LH |
+| 34 | [Split Backs - Slot Left - 27 Power](#split-backs---slot-left---27-power) | `Split Backs Slot Left 27 Power` | Power | run | Split Backs | RH |
 | 35 | [Shotgun - Slot Right - RTE Slant Out](#shotgun---slot-right---rte-slant-out) | `Shotgun Slot Right RTE Slant Out` | Protect | pass | Shotgun | RTE |
 | 36 | [Shotgun - Slot Left - LTE Slant Out](#shotgun---slot-left---lte-slant-out) | `Shotgun Slot Left LTE Slant Out` | Protect | pass | Shotgun | LTE |
 | 37 | [Shotgun - Slot Left - 19 Sweep](#shotgun---slot-left---19-sweep) | `Shotgun Slot Left 19 Sweep` | Sweep | run | Shotgun | QB |
@@ -54,8 +54,8 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 | 46 | [Trips - Left - 19 Sweep](#trips---left---19-sweep) | `Trips Left 19 Sweep` | Sweep | run | Trips | QB |
 | 47 | [Trips - Right - RTE Slant Out](#trips---right---rte-slant-out) | `Trips Right RTE Slant Out` | Protect | pass | Trips | RTE |
 | 48 | [Trips - Left - LTE Slant Out](#trips---left---lte-slant-out) | `Trips Left LTE Slant Out` | Protect | pass | Trips | LTE |
-| 49 | [Power I - Slot Right - 30 Smash](#power-i---slot-right---30-smash) | `Power I Slot Right 30 Smash` | Smash | run | Power I | TB |
-| 50 | [Power I - Slot Left - 31 Smash](#power-i---slot-left---31-smash) | `Power I Slot Left 31 Smash` | Smash | run | Power I | TB |
+| 49 | [Power I - Slot Right - 32 Smash](#power-i---slot-right---32-smash) | `Power I Slot Right 32 Smash` | Smash | run | Power I | TB |
+| 50 | [Power I - Slot Left - 33 Smash](#power-i---slot-left---33-smash) | `Power I Slot Left 33 Smash` | Smash | run | Power I | TB |
 | 51 | [Power I - Slot Right - 38 Toss](#power-i---slot-right---38-toss) | `Power I Slot Right 38 Toss` | Toss | run | Power I | TB |
 | 52 | [Power I - Slot Left - 39 Toss](#power-i---slot-left---39-toss) | `Power I Slot Left 39 Toss` | Toss | run | Power I | TB |
 
@@ -63,13 +63,13 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Regular I - Slot Right - 34 Power
+## Regular I - Slot Right - 36 Power
 
-**Call it:** `Regular I Slot Right 34 Power`
+**Call it:** `Regular I Slot Right 36 Power`
 
 **Scheme:** Power
 
-![Regular I - Slot Right - 34 Power](playbook/i-form/cards/i-power-r-4-4.svg)
+![Regular I - Slot Right - 36 Power](playbook/i-form/cards/i-power-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -94,13 +94,13 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Regular I - Slot Left - 35 Power
+## Regular I - Slot Left - 37 Power
 
-**Call it:** `Regular I Slot Left 35 Power`
+**Call it:** `Regular I Slot Left 37 Power`
 
 **Scheme:** Power
 
-![Regular I - Slot Left - 35 Power](playbook/i-form/cards/i-power-l-4-4.svg)
+![Regular I - Slot Left - 37 Power](playbook/i-form/cards/i-power-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -245,13 +245,13 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Regular I - Slot Right - 30 Smash
+## Regular I - Slot Right - 32 Smash
 
-**Call it:** `Regular I Slot Right 30 Smash`
+**Call it:** `Regular I Slot Right 32 Smash`
 
 **Scheme:** Smash
 
-![Regular I - Slot Right - 30 Smash](playbook/i-form/cards/i-smash-r-4-4.svg)
+![Regular I - Slot Right - 32 Smash](playbook/i-form/cards/i-smash-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -275,13 +275,13 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Regular I - Slot Left - 31 Smash
+## Regular I - Slot Left - 33 Smash
 
-**Call it:** `Regular I Slot Left 31 Smash`
+**Call it:** `Regular I Slot Left 33 Smash`
 
 **Scheme:** Smash
 
-![Regular I - Slot Left - 31 Smash](playbook/i-form/cards/i-smash-l-4-4.svg)
+![Regular I - Slot Left - 33 Smash](playbook/i-form/cards/i-smash-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -365,13 +365,13 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Regular I - Slot Right - 20 Smash
+## Regular I - Slot Right - 22 Smash
 
-**Call it:** `Regular I Slot Right 20 Smash`
+**Call it:** `Regular I Slot Right 22 Smash`
 
 **Scheme:** Smash
 
-![Regular I - Slot Right - 20 Smash](playbook/i-form/cards/i-fb-smash-r-4-4.svg)
+![Regular I - Slot Right - 22 Smash](playbook/i-form/cards/i-fb-smash-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -395,13 +395,13 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Regular I - Slot Left - 21 Smash
+## Regular I - Slot Left - 23 Smash
 
-**Call it:** `Regular I Slot Left 21 Smash`
+**Call it:** `Regular I Slot Left 23 Smash`
 
 **Scheme:** Smash
 
-![Regular I - Slot Left - 21 Smash](playbook/i-form/cards/i-fb-smash-l-4-4.svg)
+![Regular I - Slot Left - 23 Smash](playbook/i-form/cards/i-fb-smash-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -427,13 +427,13 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Wishbone - 44 Power
+## Wishbone - 46 Power
 
-**Call it:** `Wishbone 44 Power`
+**Call it:** `Wishbone 46 Power`
 
 **Scheme:** Power
 
-![Wishbone - 44 Power](playbook/wishbone/cards/wb-power-r-4-4.svg)
+![Wishbone - 46 Power](playbook/wishbone/cards/wb-power-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -457,13 +457,13 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Wishbone - 35 Power
+## Wishbone - 37 Power
 
-**Call it:** `Wishbone 35 Power`
+**Call it:** `Wishbone 37 Power`
 
 **Scheme:** Power
 
-![Wishbone - 35 Power](playbook/wishbone/cards/wb-power-l-4-4.svg)
+![Wishbone - 37 Power](playbook/wishbone/cards/wb-power-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -487,13 +487,13 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Wishbone - 20 Smash
+## Wishbone - 22 Smash
 
-**Call it:** `Wishbone 20 Smash`
+**Call it:** `Wishbone 22 Smash`
 
 **Scheme:** Smash
 
-![Wishbone - 20 Smash](playbook/wishbone/cards/wb-smash-r-4-4.svg)
+![Wishbone - 22 Smash](playbook/wishbone/cards/wb-smash-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -516,13 +516,13 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Wishbone - 21 Smash
+## Wishbone - 23 Smash
 
-**Call it:** `Wishbone 21 Smash`
+**Call it:** `Wishbone 23 Smash`
 
 **Scheme:** Smash
 
-![Wishbone - 21 Smash](playbook/wishbone/cards/wb-smash-l-4-4.svg)
+![Wishbone - 23 Smash](playbook/wishbone/cards/wb-smash-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -545,13 +545,13 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Wishbone - 22 Dive
+## Wishbone - 24 Dive
 
-**Call it:** `Wishbone 22 Dive`
+**Call it:** `Wishbone 24 Dive`
 
 **Scheme:** Dive
 
-![Wishbone - 22 Dive](playbook/wishbone/cards/wb-dive-r-4-4.svg)
+![Wishbone - 24 Dive](playbook/wishbone/cards/wb-dive-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -574,13 +574,13 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Wishbone - 23 Dive
+## Wishbone - 25 Dive
 
-**Call it:** `Wishbone 23 Dive`
+**Call it:** `Wishbone 25 Dive`
 
 **Scheme:** Dive
 
-![Wishbone - 23 Dive](playbook/wishbone/cards/wb-dive-l-4-4.svg)
+![Wishbone - 25 Dive](playbook/wishbone/cards/wb-dive-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -1025,13 +1025,13 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Split Backs - Slot Right - 34 Power
+## Split Backs - Slot Right - 36 Power
 
-**Call it:** `Split Backs Slot Right 34 Power`
+**Call it:** `Split Backs Slot Right 36 Power`
 
 **Scheme:** Power
 
-![Split Backs - Slot Right - 34 Power](playbook/split-backs/cards/sb-power-r-4-4.svg)
+![Split Backs - Slot Right - 36 Power](playbook/split-backs/cards/sb-power-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -1055,13 +1055,13 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Split Backs - Slot Left - 25 Power
+## Split Backs - Slot Left - 27 Power
 
-**Call it:** `Split Backs Slot Left 25 Power`
+**Call it:** `Split Backs Slot Left 27 Power`
 
 **Scheme:** Power
 
-![Split Backs - Slot Left - 25 Power](playbook/split-backs/cards/sb-power-l-4-4.svg)
+![Split Backs - Slot Left - 27 Power](playbook/split-backs/cards/sb-power-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -1505,13 +1505,13 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Power I - Slot Right - 30 Smash
+## Power I - Slot Right - 32 Smash
 
-**Call it:** `Power I Slot Right 30 Smash`
+**Call it:** `Power I Slot Right 32 Smash`
 
 **Scheme:** Smash
 
-![Power I - Slot Right - 30 Smash](playbook/power-i/cards/pi-smash-r-4-4.svg)
+![Power I - Slot Right - 32 Smash](playbook/power-i/cards/pi-smash-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -1535,13 +1535,13 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Power I - Slot Left - 31 Smash
+## Power I - Slot Left - 33 Smash
 
-**Call it:** `Power I Slot Left 31 Smash`
+**Call it:** `Power I Slot Left 33 Smash`
 
 **Scheme:** Smash
 
-![Power I - Slot Left - 31 Smash](playbook/power-i/cards/pi-smash-l-4-4.svg)
+![Power I - Slot Left - 33 Smash](playbook/power-i/cards/pi-smash-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|

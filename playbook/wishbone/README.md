@@ -23,8 +23,8 @@ Same line as the Regular I — both ends tight, seven on the line every snap. Fu
 **Formation coaching notes**
 
 - Count seven on the line every snap — both ends stay down. There is no slot to creep up, so the flag here is an end who stands up before the snap.
-- The fullback is back 2, both ways: 20 Smash and 21 Smash, 22 Dive and 23 Dive. He is the inside runner the Regular I gives to the tailback.
-- The 3-back is the left halfback (odd holes) and the 4-back is the right halfback (even holes). 44 Power is the right halfback off tackle; 35 Power is the left halfback the other way. 4 is not the slot in this look, so 49 Toss is Toss, not Sweep.
+- The fullback is back 2, both ways: 22 Smash and 23 Smash, 24 Dive and 25 Dive. He is the inside runner the Regular I gives to the tailback.
+- The 3-back is the left halfback (odd holes) and the 4-back is the right halfback (even holes). 46 Power is the right halfback off tackle; 37 Power is the left halfback the other way. 4 is not the slot in this look, so 49 Toss is Toss, not Sweep.
 - The fullback and the two halfbacks must stay in their spots. A drifting halfback tips Power and Toss before the snap.
 - Eight plays, all runs. There is no pass and no sweep out of this look — three backs packed in tight is a downhill formation, so when we need the edge or the air we are in another one.
 
@@ -32,24 +32,24 @@ Same line as the Regular I — both ends tight, seven on the line every snap. Fu
 
 | Play | Call | Scheme | Type | Ball |
 |---|---|---|---|---|
-| [Wishbone - 44 Power](#wishbone---44-power) | `Wishbone 44 Power` | Power | run | RH |
-| [Wishbone - 35 Power](#wishbone---35-power) | `Wishbone 35 Power` | Power | run | LH |
-| [Wishbone - 20 Smash](#wishbone---20-smash) | `Wishbone 20 Smash` | Smash | run | FB |
-| [Wishbone - 21 Smash](#wishbone---21-smash) | `Wishbone 21 Smash` | Smash | run | FB |
-| [Wishbone - 22 Dive](#wishbone---22-dive) | `Wishbone 22 Dive` | Dive | run | FB |
-| [Wishbone - 23 Dive](#wishbone---23-dive) | `Wishbone 23 Dive` | Dive | run | FB |
+| [Wishbone - 46 Power](#wishbone---46-power) | `Wishbone 46 Power` | Power | run | RH |
+| [Wishbone - 37 Power](#wishbone---37-power) | `Wishbone 37 Power` | Power | run | LH |
+| [Wishbone - 22 Smash](#wishbone---22-smash) | `Wishbone 22 Smash` | Smash | run | FB |
+| [Wishbone - 23 Smash](#wishbone---23-smash) | `Wishbone 23 Smash` | Smash | run | FB |
+| [Wishbone - 24 Dive](#wishbone---24-dive) | `Wishbone 24 Dive` | Dive | run | FB |
+| [Wishbone - 25 Dive](#wishbone---25-dive) | `Wishbone 25 Dive` | Dive | run | FB |
 | [Wishbone - 38 Toss](#wishbone---38-toss) | `Wishbone 38 Toss` | Toss | run | LH |
 | [Wishbone - 49 Toss](#wishbone---49-toss) | `Wishbone 49 Toss` | Toss | run | RH |
 
 ---
 
-## Wishbone - 44 Power
+## Wishbone - 46 Power
 
-**Call it:** `Wishbone 44 Power`
+**Call it:** `Wishbone 46 Power`
 
 **Scheme:** Power
 
-![Wishbone - 44 Power](cards/wb-power-r-4-4.svg)
+![Wishbone - 46 Power](cards/wb-power-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -73,13 +73,13 @@ Same line as the Regular I — both ends tight, seven on the line every snap. Fu
 
 ---
 
-## Wishbone - 35 Power
+## Wishbone - 37 Power
 
-**Call it:** `Wishbone 35 Power`
+**Call it:** `Wishbone 37 Power`
 
 **Scheme:** Power
 
-![Wishbone - 35 Power](cards/wb-power-l-4-4.svg)
+![Wishbone - 37 Power](cards/wb-power-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -103,13 +103,13 @@ Same line as the Regular I — both ends tight, seven on the line every snap. Fu
 
 ---
 
-## Wishbone - 20 Smash
+## Wishbone - 22 Smash
 
-**Call it:** `Wishbone 20 Smash`
+**Call it:** `Wishbone 22 Smash`
 
 **Scheme:** Smash
 
-![Wishbone - 20 Smash](cards/wb-smash-r-4-4.svg)
+![Wishbone - 22 Smash](cards/wb-smash-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -132,13 +132,13 @@ Same line as the Regular I — both ends tight, seven on the line every snap. Fu
 
 ---
 
-## Wishbone - 21 Smash
+## Wishbone - 23 Smash
 
-**Call it:** `Wishbone 21 Smash`
+**Call it:** `Wishbone 23 Smash`
 
 **Scheme:** Smash
 
-![Wishbone - 21 Smash](cards/wb-smash-l-4-4.svg)
+![Wishbone - 23 Smash](cards/wb-smash-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -161,13 +161,13 @@ Same line as the Regular I — both ends tight, seven on the line every snap. Fu
 
 ---
 
-## Wishbone - 22 Dive
+## Wishbone - 24 Dive
 
-**Call it:** `Wishbone 22 Dive`
+**Call it:** `Wishbone 24 Dive`
 
 **Scheme:** Dive
 
-![Wishbone - 22 Dive](cards/wb-dive-r-4-4.svg)
+![Wishbone - 24 Dive](cards/wb-dive-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -190,13 +190,13 @@ Same line as the Regular I — both ends tight, seven on the line every snap. Fu
 
 ---
 
-## Wishbone - 23 Dive
+## Wishbone - 25 Dive
 
-**Call it:** `Wishbone 23 Dive`
+**Call it:** `Wishbone 25 Dive`
 
 **Scheme:** Dive
 
-![Wishbone - 23 Dive](cards/wb-dive-l-4-4.svg)
+![Wishbone - 25 Dive](cards/wb-dive-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|

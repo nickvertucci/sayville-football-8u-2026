@@ -72,7 +72,7 @@ build checks the receiver's path is that long.
 ## Required fields
 
 **A play** needs `id` (must equal the filename, and be unique across every formation),
-`name`, `scheme` (Smash, Dive, Power, Slant, Toss, Sweep or Protect), and
+`name`, `scheme` (Smash, Dive, Power, Toss, Sweep or Protect), and
 `assignments` for the ball carrier, fakes and routes. The line, the slot and the
 lead come from the scheme — do not restate them. `--check` fails the build if a
 position still has no job after the fill, or if a written block disagrees with
@@ -101,8 +101,8 @@ the right, where he lines up on every other snap. Everything else — the line r
 unchanged, and the player's `path` is still relative to wherever he ends up, so the
 assignment does not have to know which look it is in.
 
-**Say it in the call.** `Regular I Slot Left 35 Power` tells the huddle which side the slot is
-on, the same way `Regular I Slot Right 34 Power` does. A play that moves
+**Say it in the call.** `Regular I Slot Left 37 Power` tells the huddle which side the slot is
+on, the same way `Regular I Slot Right 36 Power` does. A play that moves
 somebody silently is a play nobody can call.
 
 An override may only move a player the formation already has, and the coordinates must be
@@ -149,8 +149,8 @@ so there is one copy of the numbering rather than three that can disagree.
 ### `name` and `call` are the numbering
 
 Both are printed at the top of every card. `name` is `{formation} - Slot {Left|Right} -
-{digits} {word}` (*Regular I - Slot Right - 34 Power*); `call` is the same language
-yelled in the huddle (`Regular I Slot Right 34 Power` — formation, the slot's side,
+{digits} {word}` (*Regular I - Slot Right - 36 Power*); `call` is the same language
+yelled in the huddle (`Regular I Slot Right 36 Power` — formation, the slot's side,
 then **two digits: who carries it and where it goes**, then the play word).
 The numbering system is documented in the top-level [README](../README.md).
 
@@ -158,31 +158,34 @@ The numbering system is documented in the top-level [README](../README.md).
 
 - The first digit is a back number from the formation's `backs` map, so it has to be one
   the formation actually defines.
-- The second digit is the hole. Even is right, odd is left, counting outward from the
-  center. The generator measures where that back's path crosses the line of scrimmage and
+- The second digit is the hole. 0 is straight over the center; from there they count
+  outward, even right and odd left. The generator measures where that back's path crosses the line of scrimmage and
   fails the build if it does not land in the hole the call names.
 - **The play word is the hole.** A numbered run has to say this word, or `Fake` plus
   this word:
 
-  | Hole | Word |
-  |---|---|
-  | **0 / 1** | Smash |
-  | **2 / 3** | Dive |
-  | **4 / 5** | Power |
-  | **6 / 7** | Slant |
-  | **8 / 9** | Toss |
+  | Hole | Where | Word |
+  |---|---|---|
+  | **0** | over the center | Smash |
+  | **2 / 3** | center–guard | Smash |
+  | **4 / 5** | guard–tackle | Dive |
+  | **6 / 7** | tackle–tight end | Power |
+  | **8 / 9** | outside the tight end | Toss |
+
+  **There is no 1 hole.** The middle is one hole, not two, and `--check` rejects
+  a call that names 1 by name rather than failing on geometry.
 
   **Sweep** is who, not a hole: the quarterback at 8/9 is `18 Sweep` / `19 Sweep`,
   the slot coming across is `49 Sweep` / `48 Sweep`, and a tight end on an
   end-around is a word call (`LTE Sweep`). Digit 4 is the slot only in looks
   that have one — Wishbone's 4 is the right halfback, so `49 Toss` is Toss.
-  So `34 Power` is right, `34 Smash` fails, and `18 Toss` fails because the
+  So `36 Power` is right, `36 Smash` fails, and `18 Toss` fails because the
   quarterback sweeping is Sweep. Word calls (a tight-end sweep, a slant-out
   pass) opt out of the hole table because they have no hole digit.
 
-The play word **is** the blocking scheme. `34 Power` fills Power; `18 Sweep`
-fills Sweep; a dropback `RTE Slant Out` fills Protect. Dive and Slant are
-named and ready — there is just no play in the book at those holes yet.
+The play word **is** the blocking scheme. `36 Power` fills Power; `18 Sweep`
+fills Sweep; a dropback `RTE Slant Out` fills Protect. Hole 0, straight over
+the center, is Smash too — there is just no play in the book there yet.
 
 That means the digits describe **the back the first digit names**, not necessarily the
 ball carrier. On a play-action pass they follow the quarterback's path, while
@@ -225,11 +228,10 @@ with the one on the playside.
 
 | Scheme | Playside end | Slot | Lead | Where |
 |---|---|---|---|---|
-| **Smash** | cutoff | screen | through the hole | A-gap (0/1) |
-| **Dive** | cutoff | screen | through the hole | B-gap (2/3) |
-| **Power** | release | kick | through the hole | C-gap (4/5) |
-| **Slant** | base inside | screen | through the hole | outside the end (6/7) |
-| **Toss** | base inside | screen | force man | all the way outside (8/9) |
+| **Smash** | cutoff | screen | through the hole | the center and the A gap (0, 2/3) |
+| **Dive** | cutoff | screen | through the hole | B-gap (4/5) |
+| **Power** | release | kick | through the hole | C-gap (6/7) |
+| **Toss** | base inside | screen | force man | outside the tight end (8/9) |
 | **Sweep** | base inside | screen | force man | 8/9, QB or slot or a tight end |
 | **Protect** | protect | screen | protect | dropback pass |
 
@@ -243,8 +245,9 @@ playside end cuts off, because that is Smash. A `note` with no verb is merged
 onto the scheme job.
 
 A dropback is `{who} {route}` (`RTE Slant Out`) and scheme **Protect**. Do not
-number it with a hole word — Slant is the 6/7 run. Play-action (none in the
-book yet) takes the run's scheme and its digits; `ball_carrier` is the receiver.
+number it with a hole word — "Slant Out" is a route, not a hole. Play-action
+(none in the book yet) takes the run's scheme and its digits; `ball_carrier`
+is the receiver.
 
 ### Blocking intents
 
@@ -385,7 +388,7 @@ a play would flip his path and leave him aligned on the same side. There is no
 A left-handed play that leaves the SL on the right is a different play, a blocker short
 on the side the ball goes, and `--audit` will tell you so.
 
-**A play that moves the slot says so in its call.** `Regular I Slot Left 35 Power` and
+**A play that moves the slot says so in its call.** `Regular I Slot Left 37 Power` and
 `Split Backs Slot Left 29 Toss` both do, each mirroring its right-hand play so the slot is out
 there on the side the ball goes. Use `alignment` to move him and name his side in the
 call; a play that moves somebody silently is a play nobody can call.
@@ -414,8 +417,9 @@ the paths. Power in the new look is `"scheme": "Power"` plus the handoff —
 not eleven new verbs.
 
 A new play in an existing formation is the same: `scheme`, `call`, the carrier's
-path, leftover backs if the family does not name them. Dive (2/3) and Slant
-(6/7) are reserved and empty; use those words when the hole is those holes.
+path, leftover backs if the family does not name them. Hole 0 — straight over
+the center, and Smash like the A gap either side of it — is empty; use that
+number when that is where the ball goes.
 
 Check it against [RULES.md](../RULES.md). The league mandates a minimum of three
 linebackers and bans blitzing at this age, caps the defensive line at six, and requires

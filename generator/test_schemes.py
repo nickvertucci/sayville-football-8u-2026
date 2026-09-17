@@ -18,7 +18,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import blocking  # noqa: E402
 import render  # noqa: E402
 
-FAMILIES = ("Smash", "Dive", "Power", "Slant", "Toss", "Sweep", "Protect")
+FAMILIES = ("Smash", "Dive", "Power", "Toss", "Sweep", "Protect")
 
 
 def check_templates() -> list[str]:
@@ -43,8 +43,6 @@ def check_templates() -> list[str]:
         ("Smash", "slot", "block"): "screen",
         ("Dive", "playside_t", "block"): "double",
         ("Dive", "playside_g", "block"): "down",
-        ("Slant", "playside_te", "drive"): "in",
-        ("Slant", "lead", "block"): "lead",
         ("Toss", "lead", "target"): "force",
         ("Sweep", "lead", "target"): "force",
         ("Toss", "playside_te", "drive"): "in",
@@ -55,8 +53,6 @@ def check_templates() -> list[str]:
         got = blocking.SCHEMES[name].get(role, {}).get(key)
         if got != value:
             problems.append(f"{name}.{role}.{key} is {got!r}, expected {value!r}")
-    if blocking.SCHEMES["Slant"]["lead"].get("target") == "force":
-        problems.append("Slant lead must aim at the hole, not the force man")
     if blocking.intent_core(blocking.SCHEMES["Toss"]["playside_te"]) != \
             blocking.intent_core(blocking.SCHEMES["Sweep"]["playside_te"]):
         problems.append("Toss and Sweep must share the outside line")
@@ -112,7 +108,7 @@ def check_fill(formations) -> list[str]:
     play = {
         "id": "x-power-r",
         "scheme": "Power",
-        "call": "Regular I Slot Right 34 Power",
+        "call": "Regular I Slot Right 36 Power",
         "direction": "right",
         "assignments": {
             "QB": {"rule": "Hand it.", "type": "fake", "path": [[1.0, -0.5]]},
@@ -206,7 +202,7 @@ def check_validate_rejects_wrong_scheme(formations) -> list[str]:
     errors = render.validate([form], defenses)
     if not any("does not match the call" in e and "i-power-r" in e for e in errors):
         problems.append(
-            "validate did not reject Power numbered 34 with scheme Smash: "
+            "validate did not reject Power numbered 36 with scheme Smash: "
             + "; ".join(errors[:5])
         )
     return problems
@@ -227,7 +223,7 @@ def main() -> int:
         return 1
     n = sum(len(f["_plays"]) for f in formations)
     print(f"{len(FAMILIES)} schemes, {n} plays filled from them, "
-          "and a 34 Smash scheme is rejected.")
+          "and a 36 Smash scheme is rejected.")
     return 0
 
 

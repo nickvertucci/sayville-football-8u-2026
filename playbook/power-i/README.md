@@ -32,20 +32,20 @@ Same line as the Regular I — both ends tight, seven on the line every snap. Th
 
 | Play | Call | Scheme | Type | Ball |
 |---|---|---|---|---|
-| [Power I - Slot Right - 30 Smash](#power-i---slot-right---30-smash) | `Power I Slot Right 30 Smash` | Smash | run | TB |
-| [Power I - Slot Left - 31 Smash](#power-i---slot-left---31-smash) | `Power I Slot Left 31 Smash` | Smash | run | TB |
+| [Power I - Slot Right - 32 Smash](#power-i---slot-right---32-smash) | `Power I Slot Right 32 Smash` | Smash | run | TB |
+| [Power I - Slot Left - 33 Smash](#power-i---slot-left---33-smash) | `Power I Slot Left 33 Smash` | Smash | run | TB |
 | [Power I - Slot Right - 38 Toss](#power-i---slot-right---38-toss) | `Power I Slot Right 38 Toss` | Toss | run | TB |
 | [Power I - Slot Left - 39 Toss](#power-i---slot-left---39-toss) | `Power I Slot Left 39 Toss` | Toss | run | TB |
 
 ---
 
-## Power I - Slot Right - 30 Smash
+## Power I - Slot Right - 32 Smash
 
-**Call it:** `Power I Slot Right 30 Smash`
+**Call it:** `Power I Slot Right 32 Smash`
 
 **Scheme:** Smash
 
-![Power I - Slot Right - 30 Smash](cards/pi-smash-r-4-4.svg)
+![Power I - Slot Right - 32 Smash](cards/pi-smash-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -69,13 +69,13 @@ Same line as the Regular I — both ends tight, seven on the line every snap. Th
 
 ---
 
-## Power I - Slot Left - 31 Smash
+## Power I - Slot Left - 33 Smash
 
-**Call it:** `Power I Slot Left 31 Smash`
+**Call it:** `Power I Slot Left 33 Smash`
 
 **Scheme:** Smash
 
-![Power I - Slot Left - 31 Smash](cards/pi-smash-l-4-4.svg)
+![Power I - Slot Left - 33 Smash](cards/pi-smash-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
