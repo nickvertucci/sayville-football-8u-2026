@@ -50,8 +50,8 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 | 42 | [Shotgun - Slot Left - 29 Toss](#shotgun---slot-left---29-toss) | `Shotgun Slot Left 29 Toss` | Toss | run | Shotgun | RH |
 | 43 | [Trips - Right - LTE Sweep](#trips---right---lte-sweep) | `Trips Right LTE Sweep` | Sweep | run | Trips | LTE |
 | 44 | [Trips - Left - RTE Sweep](#trips---left---rte-sweep) | `Trips Left RTE Sweep` | Sweep | run | Trips | RTE |
-| 45 | [Trips - Right - 38 Toss](#trips---right---38-toss) | `Trips Right 38 Toss` | Toss | run | Trips | TB |
-| 46 | [Trips - Left - 39 Toss](#trips---left---39-toss) | `Trips Left 39 Toss` | Toss | run | Trips | TB |
+| 45 | [Trips - Right - 38 Quick Pass](#trips---right---38-quick-pass) | `Trips Right 38 Quick Pass` | Protect | pass | Trips | TB |
+| 46 | [Trips - Left - 39 Quick Pass](#trips---left---39-quick-pass) | `Trips Left 39 Quick Pass` | Protect | pass | Trips | TB |
 | 47 | [Trips - Right - 18 Sweep](#trips---right---18-sweep) | `Trips Right 18 Sweep` | Sweep | run | Trips | QB |
 | 48 | [Trips - Left - 19 Sweep](#trips---left---19-sweep) | `Trips Left 19 Sweep` | Sweep | run | Trips | QB |
 | 49 | [Trips - Right - RTE Slant Out](#trips---right---rte-slant-out) | `Trips Right RTE Slant Out` | Protect | pass | Trips | RTE |
@@ -1387,61 +1387,63 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Trips - Right - 38 Toss
+## Trips - Right - 38 Quick Pass
 
-**Call it:** `Trips Right 38 Toss`
+**Call it:** `Trips Right 38 Quick Pass`
 
-**Scheme:** Toss
+**Scheme:** Protect
 
-![Trips - Right - 38 Toss](playbook/trips/cards/tr-toss-r-4-4.svg)
+![Trips - Right - 38 Quick Pass](playbook/trips/cards/tr-quick-pass-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
-| **LTE** | End on your inside shoulder. Cut him off — get between him and the ball. |
-| **LT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
-| **LG** | Tackle head up on you. Cut him off — get between him and the ball. |
-| **C** | Nobody on you. Climb to the playside linebacker. Head across him. |
-| **RG** | Tackle head up on you. Step past him. Climb to the playside linebacker. Head across him. |
-| **RT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
-| **RTE** | End on your inside shoulder. Turn him inside. The ball goes around behind you. |
+| **LTE** | Pass block: step back, hands up, and stay between your man and the quarterback. |
+| **LT** | Pass block: step back, hands up, and stay between your man and the quarterback. |
+| **LG** | Pass block: step back, hands up, and stay between your man and the quarterback. |
+| **C** | Pass block: step back, hands up, and stay between your man and the quarterback. |
+| **RG** | Pass block: step back, hands up, and stay between your man and the quarterback. |
+| **RT** | Pass block: step back, hands up, and stay between your man and the quarterback. |
+| **RTE** | Pass block: step back, hands up, and stay between your man and the quarterback. |
 | **SL** | Run at the corner and screen him off. Stay in his way. |
-| **QB** | Quick pitch to the tailback in the trips, then run the other way, to the left, like you still have it. |
+| **QB** | Take the snap and throw it to the tailback right now, out in the flat. One step, no drop. If he is covered, throw it at his feet. |
 | **FB** | Lead outside our end. Block the first man out there — here it is the linebacker. |
-| **TB** **(ball)** | Take the pitch on the run and get to the edge behind the fullback. Ahead of the quarterback is a fumble. |
+| **TB** **(ball)** | Slide out behind the bunch, catch it standing still, then get north off your two blockers. Do not run backwards to get around. |
 
 **Coaching points**
 
-- The pitch goes early, to the tailback already in the trips. Do not wait.
-- The fullback, widest, takes the force man. The slot screens. The tailback turns up outside the fullback.
+- This is a screen, not a route. The tailback does not run a pattern -- he slides out behind the bunch and catches it where he stands.
+- The two men up front are the play: the slot screens the corner, the fullback takes the force man. The tailback runs off them.
+- The ball comes out on the first step. If the quarterback holds it, there is nothing here -- throw it at his feet and take the next down.
 
 ---
 
-## Trips - Left - 39 Toss
+## Trips - Left - 39 Quick Pass
 
-**Call it:** `Trips Left 39 Toss`
+**Call it:** `Trips Left 39 Quick Pass`
 
-**Scheme:** Toss
+**Scheme:** Protect
 
-![Trips - Left - 39 Toss](playbook/trips/cards/tr-toss-l-4-4.svg)
+![Trips - Left - 39 Quick Pass](playbook/trips/cards/tr-quick-pass-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
-| **LTE** | End on your inside shoulder. Turn him inside. The ball goes around behind you. |
-| **LT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
-| **LG** | Tackle head up on you. Step past him. Climb to the playside linebacker. Head across him. |
-| **C** | Nobody on you. Climb to the playside linebacker. Head across him. |
-| **RG** | Tackle head up on you. Cut him off — get between him and the ball. |
-| **RT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
-| **RTE** | End on your inside shoulder. Cut him off — get between him and the ball. |
+| **LTE** | Pass block: step back, hands up, and stay between your man and the quarterback. |
+| **LT** | Pass block: step back, hands up, and stay between your man and the quarterback. |
+| **LG** | Pass block: step back, hands up, and stay between your man and the quarterback. |
+| **C** | Pass block: step back, hands up, and stay between your man and the quarterback. |
+| **RG** | Pass block: step back, hands up, and stay between your man and the quarterback. |
+| **RT** | Pass block: step back, hands up, and stay between your man and the quarterback. |
+| **RTE** | Pass block: step back, hands up, and stay between your man and the quarterback. |
 | **SL** | Run at the corner and screen him off. Stay in his way. |
-| **QB** | Quick pitch to the tailback in the trips, then run the other way, to the right, like you still have it. |
+| **QB** | Take the snap and throw it to the tailback right now, out in the flat. One step, no drop. If he is covered, throw it at his feet. |
 | **FB** | Lead outside our end. Block the first man out there — here it is the linebacker. |
-| **TB** **(ball)** | Take the pitch on the run and get to the edge behind the fullback. Ahead of the quarterback is a fumble. |
+| **TB** **(ball)** | Slide out behind the bunch, catch it standing still, then get north off your two blockers. Do not run backwards to get around. |
 
 **Coaching points**
 
-- The pitch goes early, to the tailback already in the trips. Do not wait.
-- The fullback, widest, takes the force man. The slot screens. The tailback turns up outside the fullback.
+- This is a screen, not a route. The tailback does not run a pattern -- he slides out behind the bunch and catches it where he stands.
+- The two men up front are the play: the slot screens the corner, the fullback takes the force man. The tailback runs off them.
+- The ball comes out on the first step. If the quarterback holds it, there is nothing here -- throw it at his feet and take the next down.
 
 ---
 

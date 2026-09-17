@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="648" height="472" viewBox="27 27 648 472" font-family="Segoe UI, Helvetica, Arial, sans-serif" role="img">
-<title>Trips - Left - 39 Toss — Trips Left 39 Toss vs 4-4</title>
+<svg xmlns="http://www.w3.org/2000/svg" width="621" height="472" viewBox="40 27 621 472" font-family="Segoe UI, Helvetica, Arial, sans-serif" role="img">
+<title>Trips - Left - 39 Quick Pass — Trips Left 39 Quick Pass vs 4-4</title>
 <rect x="0" y="0" width="702" height="513" fill="#ffffff"/>
 <line x1="0" y1="459.0" x2="702" y2="459.0" stroke="#c8cdd6" stroke-width="1"/>
 <line x1="0" y1="189.0" x2="702" y2="189.0" stroke="#c8cdd6" stroke-width="1"/>
@@ -27,29 +27,29 @@
 <text x="607.5" y="225.2" text-anchor="middle" font-size="12.5" fill="#9aa2ae" font-weight="600">RC</text>
 <line x1="341.8" y1="98.8" x2="360.2" y2="117.2" stroke="#9aa2ae" stroke-width="3.6"/><line x1="360.2" y1="98.8" x2="341.8" y2="117.2" stroke="#9aa2ae" stroke-width="3.6"/>
 <text x="351.0" y="90.2" text-anchor="middle" font-size="12.5" fill="#9aa2ae" font-weight="600">FS</text>
-<path d="M237.6,337.5 L244.9,314.0" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-<line x1="236.1" y1="311.3" x2="253.7" y2="316.7" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
-<path d="M275.4,337.5 L304.3,310.8" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-<line x1="298.1" y1="304.0" x2="310.5" y2="317.5" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
-<path d="M313.2,337.5 L313.2,255.1" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-<line x1="304.0" y1="255.1" x2="322.4" y2="255.1" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
-<path d="M351.0,337.5 L384.2,254.3" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-<line x1="375.7" y1="250.9" x2="392.7" y2="257.7" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
-<path d="M388.8,337.5 L388.8,314.6" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-<line x1="379.6" y1="314.6" x2="398.0" y2="314.6" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
-<path d="M426.6,337.5 L397.7,310.8" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-<line x1="391.5" y1="317.5" x2="403.9" y2="304.0" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
-<path d="M464.4,337.5 L457.1,314.0" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-<line x1="448.3" y1="316.7" x2="465.9" y2="311.3" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
+<path d="M237.6,337.5 L237.6,356.4" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="246.8" y1="356.4" x2="228.4" y2="356.4" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
+<path d="M275.4,337.5 L275.4,356.4" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="284.6" y1="356.4" x2="266.2" y2="356.4" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
+<path d="M313.2,337.5 L313.2,356.4" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="322.4" y1="356.4" x2="304.0" y2="356.4" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
+<path d="M351.0,337.5 L351.0,356.4" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="360.2" y1="356.4" x2="341.8" y2="356.4" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
+<path d="M388.8,337.5 L388.8,356.4" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="398.0" y1="356.4" x2="379.6" y2="356.4" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
+<path d="M426.6,337.5 L426.6,356.4" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="435.8" y1="356.4" x2="417.4" y2="356.4" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
+<path d="M464.4,337.5 L464.4,356.4" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="473.6" y1="356.4" x2="455.2" y2="356.4" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 <path d="M199.8,364.5 L102.3,252.2" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
 <line x1="95.4" y1="258.2" x2="109.3" y2="246.2" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
-<path d="M351.0,364.5 L372.6,372.6 L475.2,367.2" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="0.1 7"/>
-<polygon points="475.2,367.2 465.1,372.4 464.6,363.1" fill="#14213d"/>
+<path d="M351.0,364.5 L351.0,380.7" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 5"/>
+<polygon points="351.0,380.7 346.4,370.3 355.6,370.3" fill="#14213d"/>
 <path d="M135.0,364.5 L177.4,307.8 L219.5,252.7" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
 <line x1="212.2" y1="247.1" x2="226.8" y2="258.3" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
-<path d="M167.4,391.5 C160.7,392.9 142.6,401.9 126.9,399.6 C111.1,397.4 84.1,390.6 72.9,378.0 C61.6,365.4 62.5,346.5 59.4,324.0 C56.2,301.5 54.9,256.5 54.0,243.0" fill="none" stroke="#b3001b" stroke-width="4.6" stroke-linecap="round" stroke-linejoin="round"/>
-<polygon points="54.0,243.0 61.1,256.4 48.8,257.2" fill="#b3001b"/>
-<path d="M351.0,364.5 L126.9,399.6" fill="none" stroke="#b3001b" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="0.1 7"/>
+<path d="M167.4,391.5 L140.4,405.0 L97.2,386.1 L70.2,337.5 L64.8,256.5" fill="none" stroke="#b3001b" stroke-width="4.6" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 5"/>
+<polygon points="64.8,256.5 71.9,269.9 59.6,270.7" fill="#b3001b"/>
+
 <rect x="224.1" y="324.0" width="27.0" height="27.0" rx="3" fill="#ffffff" stroke="#14213d" stroke-width="2.6"/>
 <text x="237.6" y="342.0" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">LTE</text>
 <rect x="261.9" y="324.0" width="27.0" height="27.0" rx="3" fill="#ffffff" stroke="#14213d" stroke-width="2.6"/>
@@ -72,6 +72,6 @@
 <text x="135.0" y="369.0" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">FB</text>
 <circle cx="351.0" cy="364.5" r="13.5" fill="#ffffff" stroke="#14213d" stroke-width="2.6"/>
 <text x="351.0" y="369.0" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">QB</text>
-<rect x="523.0" y="35.0" width="144.0" height="52.0" rx="8" fill="#ffffff" stroke="#111318" stroke-width="3"/><text x="595.0" y="75.0" text-anchor="middle" font-size="40" font-weight="800" fill="#111318">#T-12</text>
-<text x="39.0" y="45.0" font-size="4.3" font-weight="700" fill="#111318">Trips - Left - 39 Toss</text>
+<rect x="509.5" y="35.0" width="144.0" height="52.0" rx="8" fill="#ffffff" stroke="#111318" stroke-width="3"/><text x="581.5" y="75.0" text-anchor="middle" font-size="40" font-weight="800" fill="#111318">#T-12</text>
+<text x="52.5" y="45.0" font-size="4.3" font-weight="700" fill="#111318">Trips - Left - 39 Quick Pass</text>
 </svg>

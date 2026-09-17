@@ -1,0 +1,56 @@
+{
+  "id": "tr-quick-pass-r",
+  "order": 11,
+  "formation": "trips",
+  "name": "Trips - Right - 38 Quick Pass",
+  "code": "T-11",
+  "call": "Trips Right 38 Quick Pass",
+  "type": "pass",
+  "scheme": "Protect",
+  "direction": "right",
+  "ball_carrier": "TB",
+  "assignments": {
+    "QB": {
+      "rule": "Take the snap and throw it to the tailback right now, out in the flat. One step, no drop. If he is covered, throw it at his feet.",
+      "type": "pass",
+      "path": [
+        [
+          0.0,
+          -0.6
+        ]
+      ]
+    },
+    "TB": {
+      "rule": "Slide out behind the bunch, catch it standing still, then get north off your two blockers. Do not run backwards to get around.",
+      "type": "pass",
+      "path": [
+        [
+          1.0,
+          -0.5
+        ],
+        [
+          2.6,
+          0.2
+        ],
+        [
+          3.6,
+          2.0
+        ],
+        [
+          3.8,
+          5.0
+        ]
+      ]
+    },
+    "FB": {
+      "block": "lead",
+      "target": "force"
+    }
+  },
+  "coaching_points": [
+    "This is a screen, not a route. The tailback does not run a pattern -- he slides out behind the bunch and catches it where he stands.",
+    "The two men up front are the play: the slot screens the corner, the fullback takes the force man. The tailback runs off them.",
+    "The ball comes out on the first step. If the quarterback holds it, there is nothing here -- throw it at his feet and take the next down."
+  ],
+  "z": "right"
+}

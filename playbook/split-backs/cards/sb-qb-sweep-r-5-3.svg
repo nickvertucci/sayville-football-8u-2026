@@ -1,12 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="648" height="946" viewBox="0 0 648 946" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" width="621" height="946" viewBox="0 0 621 946" font-family="Segoe UI, Helvetica, Arial, sans-serif">
 <rect width="100%" height="100%" fill="#ffffff"/>
-<rect x="0" y="0" width="648" height="58" fill="#14213d"/>
-<text x="18" y="26" font-size="17.7" font-weight="700" fill="#ffffff">Split Backs - Slot Right - 18 Sweep</text>
+<rect x="0" y="0" width="621" height="58" fill="#14213d"/>
+<text x="18" y="26" font-size="16.0" font-weight="700" fill="#ffffff">Split Backs - Slot Right - 18 Sweep</text>
 <text x="18" y="45" font-size="11.5" fill="#a9b4c7">RUN  •  Split Backs  •  vs 5-3</text>
-<rect x="322.8" y="13" width="307.2" height="31" rx="6" fill="#ffffff" fill-opacity="0.12" stroke="#8593ad" stroke-width="1"/>
-<text x="476.4" y="34" text-anchor="middle" font-size="14.5" font-weight="700" fill="#ffffff" letter-spacing="0.5">Split Backs Slot Right 18 Sweep</text>
-<clipPath id="fieldclip"><rect x="0" y="58" width="648" height="472"/></clipPath>
-<g clip-path="url(#fieldclip)"><g transform="translate(-27.0,31.0)">
+<rect x="295.8" y="13" width="307.2" height="31" rx="6" fill="#ffffff" fill-opacity="0.12" stroke="#8593ad" stroke-width="1"/>
+<text x="449.4" y="34" text-anchor="middle" font-size="14.5" font-weight="700" fill="#ffffff" letter-spacing="0.5">Split Backs Slot Right 18 Sweep</text>
+<clipPath id="fieldclip"><rect x="0" y="58" width="621" height="472"/></clipPath>
+<g clip-path="url(#fieldclip)"><g transform="translate(-40.5,31.0)">
 <rect x="0" y="0" width="702" height="513" fill="#ffffff"/>
 <line x1="0" y1="459.0" x2="702" y2="459.0" stroke="#c8cdd6" stroke-width="1"/>
 <line x1="0" y1="189.0" x2="702" y2="189.0" stroke="#c8cdd6" stroke-width="1"/>
@@ -79,9 +79,9 @@
 <text x="291.6" y="431.1" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">LH</text>
 <circle cx="410.4" cy="426.6" r="13.5" fill="#ffffff" stroke="#14213d" stroke-width="2.6"/>
 <text x="410.4" y="431.1" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">RH</text>
-<rect x="547.8" y="35.0" width="119.2" height="52.0" rx="8" fill="#ffffff" stroke="#111318" stroke-width="3"/><text x="607.4" y="75.0" text-anchor="middle" font-size="40" font-weight="800" fill="#111318">#S-3</text>
+<rect x="534.3" y="35.0" width="119.2" height="52.0" rx="8" fill="#ffffff" stroke="#111318" stroke-width="3"/><text x="593.9" y="75.0" text-anchor="middle" font-size="40" font-weight="800" fill="#111318">#S-3</text>
 </g></g>
-<line x1="18" y1="540" x2="630" y2="540" stroke="#c8cdd6" stroke-width="1"/>
+<line x1="18" y1="540" x2="603" y2="540" stroke="#c8cdd6" stroke-width="1"/>
 <text x="18" y="560" font-size="11" font-weight="700" fill="#5b6472" letter-spacing="1">ASSIGNMENTS</text>
 <text x="18" y="578" font-size="12" font-weight="700" fill="#111318">LTE</text>
 <text x="52" y="578" font-size="12" fill="#111318">End head up on you. Cut him off — get</text>
@@ -94,8 +94,8 @@
 <text x="52" y="664" font-size="12" fill="#111318">Nobody on you. Cut off the backside.</text>
 <text x="52" y="680" font-size="12" fill="#111318">Never quit on the play.</text>
 <text x="18" y="698" font-size="12" font-weight="700" fill="#111318">C</text>
-<text x="52" y="698" font-size="12" fill="#111318">Reach the nose to your right. Head across</text>
-<text x="52" y="714" font-size="12" fill="#111318">his playside shoulder.</text>
+<text x="52" y="698" font-size="12" fill="#111318">Reach the nose to your right. Head</text>
+<text x="52" y="714" font-size="12" fill="#111318">across his playside shoulder.</text>
 <text x="18" y="732" font-size="12" font-weight="700" fill="#111318">RG</text>
 <text x="52" y="732" font-size="12" fill="#111318">Nobody on you. Climb to the playside</text>
 <text x="52" y="748" font-size="12" fill="#111318">linebacker. Head across him.</text>
@@ -103,28 +103,28 @@
 <text x="52" y="766" font-size="12" fill="#111318">Block down on the tackle, inside</text>
 <text x="52" y="782" font-size="12" fill="#111318">shoulder. Head across him — nobody</text>
 <text x="52" y="800" font-size="12" fill="#111318">crosses your face.</text>
-<text x="324" y="578" font-size="12" font-weight="700" fill="#111318">RTE</text>
-<text x="358" y="578" font-size="12" fill="#111318">End head up on you. Turn him inside. The</text>
-<text x="358" y="596" font-size="12" fill="#111318">ball goes around behind you.</text>
-<text x="324" y="612" font-size="12" font-weight="700" fill="#111318">SL</text>
-<text x="358" y="612" font-size="12" fill="#111318">Run at the corner and screen him off.</text>
-<text x="358" y="630" font-size="12" fill="#111318">Stay in his way.</text>
-<text x="324" y="646" font-size="12" font-weight="700" fill="#111318">QB</text>
-<text x="358" y="646" font-size="12" fill="#111318">Take the snap and sweep right, flat and</text>
-<text x="358" y="664" font-size="12" fill="#111318">fast, behind the right halfback. Turn up</text>
-<text x="358" y="680" font-size="12" fill="#111318">outside his block.</text>
-<text x="324" y="698" font-size="12" font-weight="700" fill="#111318">LH</text>
-<text x="358" y="698" font-size="12" fill="#111318">Run hard to the left like you have the</text>
-<text x="358" y="714" font-size="12" fill="#111318">ball. Sell it all the way — you are the</text>
-<text x="358" y="732" font-size="12" fill="#111318">reason the defense goes the wrong way.</text>
-<text x="324" y="748" font-size="12" font-weight="700" fill="#111318">RH</text>
-<text x="358" y="748" font-size="12" fill="#111318">Lead outside our end. Block the first man</text>
-<text x="358" y="766" font-size="12" fill="#111318">out there — here it is the corner.</text>
-<line x1="18" y1="806" x2="630" y2="806" stroke="#c8cdd6" stroke-width="1"/>
+<text x="310" y="578" font-size="12" font-weight="700" fill="#111318">RTE</text>
+<text x="344" y="578" font-size="12" fill="#111318">End head up on you. Turn him inside.</text>
+<text x="344" y="596" font-size="12" fill="#111318">The ball goes around behind you.</text>
+<text x="310" y="612" font-size="12" font-weight="700" fill="#111318">SL</text>
+<text x="344" y="612" font-size="12" fill="#111318">Run at the corner and screen him off.</text>
+<text x="344" y="630" font-size="12" fill="#111318">Stay in his way.</text>
+<text x="310" y="646" font-size="12" font-weight="700" fill="#111318">QB</text>
+<text x="344" y="646" font-size="12" fill="#111318">Take the snap and sweep right, flat and</text>
+<text x="344" y="664" font-size="12" fill="#111318">fast, behind the right halfback. Turn</text>
+<text x="344" y="680" font-size="12" fill="#111318">up outside his block.</text>
+<text x="310" y="698" font-size="12" font-weight="700" fill="#111318">LH</text>
+<text x="344" y="698" font-size="12" fill="#111318">Run hard to the left like you have the</text>
+<text x="344" y="714" font-size="12" fill="#111318">ball. Sell it all the way — you are the</text>
+<text x="344" y="732" font-size="12" fill="#111318">reason the defense goes the wrong way.</text>
+<text x="310" y="748" font-size="12" font-weight="700" fill="#111318">RH</text>
+<text x="344" y="748" font-size="12" fill="#111318">Lead outside our end. Block the first</text>
+<text x="344" y="766" font-size="12" fill="#111318">man out there — here it is the corner.</text>
+<line x1="18" y1="806" x2="603" y2="806" stroke="#c8cdd6" stroke-width="1"/>
 <text x="18" y="824" font-size="11" font-weight="700" fill="#5b6472" letter-spacing="1">COACHING POINTS</text>
 <text x="18" y="844" font-size="12" fill="#111318">The quarterback keeps it every time — tell him before the snap, there is no read.</text>
-<text x="18" y="862" font-size="12" fill="#111318">The left halfback's fake is the play. If he jogs, nobody follows him and the defense is</text>
-<text x="18" y="878" font-size="12" fill="#111318">waiting at the edge.</text>
-<text x="18" y="896" font-size="12" fill="#111318">The quarterback stays behind the right halfback until the block is made, then turns it up.</text>
-<text x="18" y="912" font-size="12" fill="#111318">Running past his blocker is how the sweep loses yards.</text>
+<text x="18" y="862" font-size="12" fill="#111318">The left halfback's fake is the play. If he jogs, nobody follows him and the defense</text>
+<text x="18" y="878" font-size="12" fill="#111318">is waiting at the edge.</text>
+<text x="18" y="896" font-size="12" fill="#111318">The quarterback stays behind the right halfback until the block is made, then turns</text>
+<text x="18" y="912" font-size="12" fill="#111318">it up. Running past his blocker is how the sweep loses yards.</text>
 </svg>
