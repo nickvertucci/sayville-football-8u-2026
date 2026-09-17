@@ -533,39 +533,40 @@ table.xl.pk-plays td {
 .pk-any { color: var(--muted); font-style: italic; font-size: 11px; }
 .pk-plays td a:hover { text-decoration: underline; }
 @media print {
-  /* Two across, so each strong-left sheet prints beside its strong-right one. */
-  .xl-sheets { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0; margin: 2px 0 0; }
-  /* Quadrants, drawn with borders rather than a background so they print whatever the
-     browser's background-graphics setting is: a thick black rule down the middle and
-     one across, with room inside each so no table touches a rule. */
-  .xl-sheet { padding: 6px 8px; }
-  .xl-sheet:nth-child(odd):not(:last-child) { border-right: 10px solid #000; }
-  .xl-sheet:nth-last-child(n+3) { border-bottom: 10px solid #000; }
-  /* An odd count leaves a last block alone on its row: give it both columns so the
-     sheet ends on a full-width block instead of a half-empty one. */
-  .xl-sheet:last-child:nth-child(odd) { grid-column: 1 / -1; }
-  /* Two rows of two fill the landscape sheet, so everything is sized up to use it:
-     taller cells to write in and names a coach can read at arm's length. */
+  /* One formation to a row, full width. Two across put a formation in half a page,
+     which is where the long calls wrapped -- "Trips R - RTE Slant Out" over two lines
+     in a cell an inch wide. The full width is the fix: the same rows, the same type
+     size, but each cell three inches instead of one and a half, so nothing wraps and
+     the block is *shorter* than it was at half width. Five of them still fit the one
+     sheet because of it, not in spite of it. */
+  .xl-sheets { grid-template-columns: 1fr; gap: 0; margin: 2px 0 0; }
+  /* A rule under each block instead of the old quadrant cross -- borders rather than a
+     background, so it prints whatever the browser's background-graphics setting is. */
+  .xl-sheet { padding: 2px 0 3px; break-inside: avoid; }
+  .xl-sheet:not(:last-child) { border-bottom: 3px solid #000; }
   table.xl { font-size: 9px; }
-  table.xl td, table.xl th { padding: 1px 1px; }
-  table.xl th { font-size: 9px; }
+  table.xl td, table.xl th { padding: 0 2px; }
+  table.xl th { font-size: 8px; }
+  /* The scheme column is a label, not a share of the page: at full width an even
+     quarter each would leave three inches of white beside the word "Sweep". */
+  col.xl-c0 { width: 62px; }
   /* Black text on no background. The screen's white-on-navy title printed as pale grey
      on paper whenever the browser left background graphics off. */
   .xl-title {
-    padding: 0 0 3px; font-size: 14px; font-weight: 900;
+    padding: 0 0 1px; font-size: 11px; font-weight: 900;
     color: #000 !important; background: none !important;
   }
   table.xl.xl-plays td { height: auto; vertical-align: middle; }
   /* A call is one line on paper: small enough to fit its cell, and never wrapping
      into a second line that makes the row taller. */
-  .xl-plays td a { font-size: 8.5px; white-space: nowrap; letter-spacing: -.2px; }
+  .xl-plays td a { font-size: 9px; white-space: nowrap; letter-spacing: -.2px; padding: 0; }
   .xl-code { font-size: 8px; margin-right: 3px; color: #555; }
   .xl-scheme { font-size: 8.5px; background: none !important; color: #000 !important; }
   .xl-none { color: #ccc; }
   .xl-n { display: none; }
   /* The strip stays on the sheet with the blocks: three across, and never split
      over a page break. */
-  .pk-head { margin: 6px 0 0; font-size: 12px; }
+  .pk-head { margin: 4px 0 0; font-size: 10px; }
   .pk-sub { display: none; }
   .pk-grid { gap: 0 6px; margin: 2px 0 0; break-inside: avoid; }
   .pk { break-inside: avoid; }
