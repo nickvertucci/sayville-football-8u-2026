@@ -500,6 +500,32 @@ table.xl.xl-plays td {
 .xl-n {
   float: right; font-weight: 700; opacity: .75;
 }
+
+/* The packages along the bottom: three to a row, each a name over the two calls it
+   comes on to run. Narrow cards on purpose — this is a strip under the sheet, not a
+   second sheet. */
+.pk-head { margin-top: 20px; }
+.pk-sub {
+  font-weight: 500; text-transform: none; letter-spacing: 0; color: var(--muted);
+  font-size: 12.5px; margin-left: 8px;
+}
+.pk-grid {
+  display: grid; gap: 10px; margin: 8px 0 24px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+@media (max-width: 560px) { .pk-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.pk { min-width: 0; }
+.pk-name {
+  margin: 0; padding: 5px 8px; font-size: 12.5px; font-weight: 800;
+  text-transform: uppercase; letter-spacing: .5px;
+  color: var(--on-accent); background: var(--accent-solid);
+}
+.pk-n { float: right; font-weight: 700; opacity: .75; }
+table.xl.pk-plays td {
+  height: 22px; text-align: center; vertical-align: middle; padding: 4px 5px;
+}
+.pk-plays td a { display: block; color: var(--ink); font-weight: 700; text-decoration: none; }
+.pk-plays td a:hover { text-decoration: underline; }
 @media print {
   /* Two across, so each strong-left sheet prints beside its strong-right one. */
   .xl-sheets { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0; margin: 2px 0 0; }
@@ -531,6 +557,19 @@ table.xl.xl-plays td {
   .xl-scheme { font-size: 8.5px; background: none !important; color: #000 !important; }
   .xl-none { color: #ccc; }
   .xl-n { display: none; }
+  /* The strip stays on the sheet with the blocks: three across, and never split
+     over a page break. */
+  .pk-head { margin: 6px 0 0; font-size: 12px; }
+  .pk-sub { display: none; }
+  .pk-grid { gap: 0 6px; margin: 2px 0 0; break-inside: avoid; }
+  .pk { break-inside: avoid; }
+  .pk-name {
+    padding: 0 0 2px; font-size: 10px; font-weight: 900;
+    color: #000 !important; background: none !important;
+  }
+  .pk-n { display: none; }
+  table.xl.pk-plays td { height: auto; vertical-align: middle; }
+  .pk-plays td a { font-size: 9px; white-space: nowrap; letter-spacing: -.2px; }
 }
 
 .plist { display: grid; gap: 12px; grid-template-columns: 1fr; }
