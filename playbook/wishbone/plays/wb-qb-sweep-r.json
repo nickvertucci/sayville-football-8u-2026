@@ -1,0 +1,64 @@
+{
+  "id": "wb-qb-sweep-r",
+  "order": 11,
+  "formation": "wishbone",
+  "name": "Wishbone - 18 Sweep",
+  "code": "W-11",
+  "call": "Wishbone 18 Sweep",
+  "type": "run",
+  "scheme": "Sweep",
+  "direction": "right",
+  "ball_carrier": "QB",
+  "assignments": {
+    "QB": {
+      "rule": "Take the snap and sweep right, flat and fast, behind the fullback. Turn up outside his block.",
+      "type": "run",
+      "path": [
+        [
+          1.6,
+          -0.6
+        ],
+        [
+          6.0,
+          -0.8
+        ],
+        [
+          7.0,
+          0.2
+        ],
+        [
+          7.0,
+          2.6
+        ],
+        [
+          7.0,
+          6.0
+        ]
+      ]
+    },
+    "RH": {
+      "block": "lead",
+      "target": "force"
+    },
+    "LH": {
+      "rule": "Run hard to the left like you have the ball. Sell it all the way — you are the reason the defense goes the wrong way.",
+      "type": "fake",
+      "path": [
+        [
+          -1.8,
+          0.2
+        ],
+        [
+          -5.6,
+          0.6
+        ]
+      ]
+    }
+  },
+  "coaching_points": [
+    "The quarterback keeps it every time — tell him before the snap, there is no read.",
+    "The left halfback's fake is the play. If he jogs, nobody follows him and the defense is waiting at the edge.",
+    "The quarterback stays behind the fullback until the block is made, then turns it up."
+  ],
+  "z": "right"
+}

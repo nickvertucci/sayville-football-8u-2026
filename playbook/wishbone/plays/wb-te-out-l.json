@@ -1,0 +1,49 @@
+{
+  "id": "wb-te-out-l",
+  "order": 14,
+  "formation": "wishbone",
+  "name": "Wishbone - LTE Slant Out",
+  "code": "W-14",
+  "call": "Wishbone LTE Slant Out",
+  "word_call": true,
+  "type": "pass",
+  "scheme": "Protect",
+  "direction": "left",
+  "ball_carrier": "LTE",
+  "assignments": {
+    "LTE": {
+      "rule": "Take one step up, then slant out flat toward the left sideline, almost along the line of scrimmage. Look for the ball left away.",
+      "type": "pass",
+      "path": [
+        [
+          -0.8,
+          0.6
+        ],
+        [
+          -4.6,
+          1.1
+        ]
+      ]
+    },
+    "QB": {
+      "rule": "Take the snap, take one step and throw to the left tight end as he slants out. If he is covered, tuck it and run.",
+      "type": "pass",
+      "path": [
+        [
+          -0.0,
+          -0.6
+        ]
+      ]
+    },
+    "LH": {
+      "block": "screen"
+    }
+  },
+  "coaching_points": [
+    "Everybody but the tight end pass blocks: step back, hands up, stay between your man and the quarterback.",
+    "There is no slot, so the left halfback screens the corner.",
+    "The slant stays flat — one step up and out, almost on the line of scrimmage. Any deeper and he runs into the linebackers.",
+    "The quarterback throws it as soon as the tight end clears the end. If he is covered, tuck it and run — no second look."
+  ],
+  "z": "left"
+}

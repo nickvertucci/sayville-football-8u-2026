@@ -49,6 +49,12 @@ CASES = [
     ("slot sweep called Toss",        "i-form", "i-sl-sweep-l", "Regular I Slot Right 49 Toss", True),
     ("QB sweep at 8/9",               "split-backs", "sb-qb-sweep-r", "Split Backs Slot Right 18 Sweep", False),
     ("QB sweep called Toss",          "split-backs", "sb-qb-sweep-r", "Split Backs Slot Right 18 Toss", True),
+    ("wishbone power",                "wishbone", "wb-power-r", "Wishbone 44 Power", False),
+    ("wishbone power on the 3-back",  "wishbone", "wb-power-r", "Wishbone 34 Power", True),
+    ("wishbone smash",                "wishbone", "wb-smash-r", "Wishbone 20 Smash", False),
+    ("wishbone dive",                 "wishbone", "wb-dive-r",  "Wishbone 22 Dive", False),
+    ("wishbone toss at 4",            "wishbone", "wb-toss-l",  "Wishbone 49 Toss", False),
+    ("wishbone 49 called Sweep",      "wishbone", "wb-toss-l",  "Wishbone 49 Sweep", True),
 ]
 
 

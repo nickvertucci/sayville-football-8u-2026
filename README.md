@@ -98,21 +98,36 @@ the Split Backs do: 3 is left, 2 is right.
 | `Shotgun Slot Left 29 Toss` / `Slot Right 38 Toss` | Shotgun - Slot Left - 29 Toss / Slot Right - 38 Toss | the far halfback, across in front of the quarterback and all the way outside |
 
 **Play word** — a numbered run's word is the hole: Smash, Dive, Power, Slant, Toss.
-**Sweep** is the quarterback (`18` / `19`) or the slot (back 4) coming across at 8/9,
-or a tight end on an end-around (a word call, no hole digit). The tight-end
-`Slant Out` is a word call too.
+**Sweep** is the quarterback (`18` / `19`) or the slot coming across at 8/9,
+or a tight end on an end-around (a word call, no hole digit). Digit 4 is the
+slot only in looks that have one — Wishbone's 4 is the right halfback, so
+`49 Toss` is Toss. The tight-end `Slant Out` is a word call too.
+
+### Wishbone: formation + back + hole + play word
+
+Three backs and no slot, so the call drops Slot Right/Left. `Wishbone 20 Smash`
+is the fullback between the center and the right guard. `44 Power` is the right
+halfback off tackle; `38 Toss` is the left halfback all the way outside.
+
+| Call | Play | Reads as |
+|---|---|---|
+| `Wishbone 20 Smash` / `21 Smash` | Wishbone - 20 Smash / 21 Smash | the fullback, A-gap |
+| `Wishbone 22 Dive` / `23 Dive` | Wishbone - 22 Dive / 23 Dive | the fullback, guard–tackle |
+| `Wishbone 44 Power` / `35 Power` | Wishbone - 44 Power / 35 Power | the playside halfback, tackle–end |
+| `Wishbone 38 Toss` / `49 Toss` | Wishbone - 38 Toss / 49 Toss | the far halfback, all the way outside |
 
 ## Formations
 
-Three formations, 28 plays, in teaching order. Every numbered run is one of five
+Four formations, 42 plays, in teaching order. Every numbered run is one of five
 blocking families — Smash, Dive, Power, Slant, Toss — plus Sweep when the
 quarterback, the slot or a tight end is coming across, and Protect on a dropback.
 
 | # | Formation | Family | Plays | What it is for |
 |---|---|---|---|---|
 | 1 | **Regular I** | Regular I | 10 | Base offense. Fullback and tailback stacked behind the quarterback. Power, Smash, the tight-end sweep, the slot sweep, and the tight-end slant out, both ways. |
-| 2 | **Split Backs** | Split Backs | 12 | Two backs at even depth and a slot just outside the tight end. Toss, QB sweep, fake sweep, slot sweep, TE sweep, and the tight-end slant out, both ways. |
-| 3 | **Shotgun** | Shotgun | 6 | The quarterback five yards deep with a back either side. The tight-end slant out, the QB sweep and the RB toss, both ways. |
+| 2 | **Wishbone** | Wishbone | 14 | Three backs, no slot. Fullback Smash and the book's first Dive, halfback Power and Toss, QB sweep, TE sweep, slant out, both ways. |
+| 3 | **Split Backs** | Split Backs | 12 | Two backs at even depth and a slot just outside the tight end. Toss, QB sweep, fake sweep, slot sweep, TE sweep, and the tight-end slant out, both ways. |
+| 4 | **Shotgun** | Shotgun | 6 | The quarterback five yards deep with a back either side. The tight-end slant out, the QB sweep and the RB toss, both ways. |
 
 Both are two-tight-end, downhill running formations, so the blocking language carries
 over: "block down on the first defender inside you" means the same thing in either. That

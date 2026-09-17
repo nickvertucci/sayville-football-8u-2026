@@ -1,0 +1,70 @@
+{
+  "id": "wb-toss-l",
+  "order": 10,
+  "formation": "wishbone",
+  "name": "Wishbone - 49 Toss",
+  "code": "W-10",
+  "call": "Wishbone 49 Toss",
+  "type": "run",
+  "scheme": "Toss",
+  "direction": "left",
+  "ball_carrier": "RH",
+  "pitch": {
+    "from": "QB",
+    "to": "RH",
+    "at": 1
+  },
+  "assignments": {
+    "QB": {
+      "rule": "Quick pitch to the right halfback, then run the other way, to the right, like you still have it.",
+      "type": "rollout",
+      "path": [
+        [
+          0.8,
+          -0.3
+        ],
+        [
+          4.6,
+          -0.1
+        ]
+      ]
+    },
+    "LH": {
+      "block": "lead",
+      "target": "force",
+      "note": "Step at the dive first to hold their linebackers."
+    },
+    "RH": {
+      "rule": "Run flat, outside and behind the quarterback, and catch the pitch on the run. Ahead of him is a fumble.",
+      "type": "run",
+      "path": [
+        [
+          -3.4,
+          -0.4
+        ],
+        [
+          -8.6,
+          -0.2
+        ],
+        [
+          -9.2,
+          1.6
+        ],
+        [
+          -9.2,
+          4.2
+        ],
+        [
+          -9.2,
+          6.6
+        ]
+      ]
+    }
+  },
+  "coaching_points": [
+    "The pitch goes early. A quarterback who waits to be tackled first will pitch it on the ground.",
+    "This is not a read at this age — tell him before the snap that he is pitching it.",
+    "The fullback and the left halfback both go to the edge. The right halfback stays behind them and turns up in the alley."
+  ],
+  "z": "left"
+}

@@ -1,0 +1,80 @@
+{
+  "id": "wb-dive-l",
+  "order": 8,
+  "formation": "wishbone",
+  "name": "Wishbone - 23 Dive",
+  "code": "W-8",
+  "call": "Wishbone 23 Dive",
+  "type": "run",
+  "scheme": "Dive",
+  "direction": "left",
+  "ball_carrier": "FB",
+  "assignments": {
+    "QB": {
+      "rule": "Open left, hand to the fullback, then fake the boot right. It holds the backside end.",
+      "type": "fake",
+      "path": [
+        [
+          -0.8,
+          -0.4
+        ],
+        [
+          -2.2,
+          -1.0
+        ],
+        [
+          -3.6,
+          -1.4
+        ]
+      ]
+    },
+    "FB": {
+      "rule": "Take the handoff downhill between the left guard and the left tackle. One cut, then get north. Do not bounce it.",
+      "type": "run",
+      "path": [
+        [
+          -1.2,
+          1.8
+        ],
+        [
+          -1.8,
+          3.2
+        ],
+        [
+          -2.1,
+          5.0
+        ],
+        [
+          -2.2,
+          8.0
+        ],
+        [
+          -2.3,
+          11.0
+        ]
+      ]
+    },
+    "LH": {
+      "block": "lead"
+    },
+    "RH": {
+      "rule": "Run hard to the right like you have the ball. You are what holds the backside.",
+      "type": "fake",
+      "path": [
+        [
+          1.8,
+          0.2
+        ],
+        [
+          5.6,
+          0.6
+        ]
+      ]
+    }
+  },
+  "coaching_points": [
+    "Dive is the B-gap — between the guard and the tackle. Faster than Power, wider than Smash.",
+    "The fullback takes it downhill and gets north. One cut off the double team, never a bounce."
+  ],
+  "z": "left"
+}

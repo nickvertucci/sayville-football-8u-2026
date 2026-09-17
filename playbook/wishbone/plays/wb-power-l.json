@@ -1,0 +1,74 @@
+{
+  "id": "wb-power-l",
+  "order": 2,
+  "formation": "wishbone",
+  "name": "Wishbone - 35 Power",
+  "code": "W-2",
+  "call": "Wishbone 35 Power",
+  "type": "run",
+  "scheme": "Power",
+  "direction": "left",
+  "ball_carrier": "LH",
+  "assignments": {
+    "QB": {
+      "rule": "Open left, hand to the left halfback, then fake the boot. It holds the backside end.",
+      "type": "fake",
+      "path": [
+        [
+          -1.2,
+          -0.5
+        ],
+        [
+          -3.0,
+          -1.2
+        ],
+        [
+          -4.6,
+          -1.6
+        ]
+      ]
+    },
+    "LH": {
+      "rule": "Take the handoff downhill at our tackle's outside hip, following the fullback. Never bounce it outside.",
+      "type": "run",
+      "path": [
+        [
+          -0.6,
+          1.8
+        ],
+        [
+          -1.2,
+          3.6
+        ],
+        [
+          -1.4,
+          5.6
+        ],
+        [
+          -1.5,
+          8.0
+        ]
+      ]
+    },
+    "RH": {
+      "rule": "Run hard to the right like you have the ball. You are what holds the backside.",
+      "type": "fake",
+      "path": [
+        [
+          1.8,
+          0.2
+        ],
+        [
+          5.6,
+          0.6
+        ]
+      ]
+    }
+  },
+  "coaching_points": [
+    "This is Power without a slot: the left tight end kicks the end out. The yards are inside that block.",
+    "The fullback leads through the hole. His man is whoever shows, not a man he picks before the snap — including the outside linebacker if that is who fills.",
+    "The left halfback's most common mistake is bouncing it wide. Make him run it tight until it is automatic."
+  ],
+  "z": "left"
+}
