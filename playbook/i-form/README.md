@@ -42,6 +42,8 @@ Normal line splits, about a foot. Both ends are on the line; the slot is just ou
 | [Regular I - Slot Left - 31 Smash](#regular-i---slot-left---31-smash) | `Regular I Slot Left 31 Smash` | Smash | run | TB |
 | [Regular I - Slot Right - RTE Slant Out](#regular-i---slot-right---rte-slant-out) | `Regular I Slot Right RTE Slant Out` | Protect | pass | RTE |
 | [Regular I - Slot Left - LTE Slant Out](#regular-i---slot-left---lte-slant-out) | `Regular I Slot Left LTE Slant Out` | Protect | pass | LTE |
+| [Regular I - Slot Right - 20 Smash](#regular-i---slot-right---20-smash) | `Regular I Slot Right 20 Smash` | Smash | run | FB |
+| [Regular I - Slot Left - 21 Smash](#regular-i---slot-left---21-smash) | `Regular I Slot Left 21 Smash` | Smash | run | FB |
 
 ---
 
@@ -344,4 +346,64 @@ Normal line splits, about a foot. Both ends are on the line; the slot is just ou
 - Everybody but the tight end and the SL pass blocks: step back, hands up, stay between your man and the quarterback.
 - The slant stays flat — one step up and out, almost on the line of scrimmage. Any deeper and he runs into the linebackers.
 - The quarterback throws it as soon as the tight end clears the end. If he is covered, tuck it and run — no second look.
+
+---
+
+## Regular I - Slot Right - 20 Smash
+
+**Call it:** `Regular I Slot Right 20 Smash`
+
+**Scheme:** Smash
+
+![Regular I - Slot Right - 20 Smash](cards/i-fb-smash-r-4-4.svg)
+
+| Position | Assignment |
+|---|---|
+| **LTE** | End on your inside shoulder. Cut him off — get between him and the ball. |
+| **LT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
+| **LG** | Tackle head up on you. Cut him off — get between him and the ball. |
+| **C** | Nobody on you. Climb to the playside linebacker. Head across him. |
+| **RG** | Tackle head up on you. Hands inside, pads under his, drive him back. |
+| **RT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
+| **RTE** | End on your inside shoulder. Cut him off — get between him and the ball. |
+| **SL** | Run at the corner and screen him off. Stay in his way. |
+| **QB** | Open right, hand to the fullback right now, then fake the boot left. It holds the backside end. |
+| **FB** **(ball)** | Take the handoff downhill between the center and the right guard. You are the runner on this one, not the lead. Straight ahead, do not bounce it. |
+| **TB** | Run hard to the left like you have the ball. You are what holds the backside linebacker. |
+
+**Coaching points**
+
+- This is the quick one. The fullback is only two yards from the hole -- he has the ball before the linebackers have moved.
+- The hole is the A-gap, between the center and the right guard. Nobody leads him through it; his speed is the lead.
+- The tailback's fake is the play as much as the handoff. If he jogs, the backside linebacker is in the hole.
+
+---
+
+## Regular I - Slot Left - 21 Smash
+
+**Call it:** `Regular I Slot Left 21 Smash`
+
+**Scheme:** Smash
+
+![Regular I - Slot Left - 21 Smash](cards/i-fb-smash-l-4-4.svg)
+
+| Position | Assignment |
+|---|---|
+| **LTE** | End on your inside shoulder. Cut him off — get between him and the ball. |
+| **LT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
+| **LG** | Tackle head up on you. Hands inside, pads under his, drive him back. |
+| **C** | Nobody on you. Climb to the playside linebacker. Head across him. |
+| **RG** | Tackle head up on you. Cut him off — get between him and the ball. |
+| **RT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
+| **RTE** | End on your inside shoulder. Cut him off — get between him and the ball. |
+| **SL** | Run at the corner and screen him off. Stay in his way. |
+| **QB** | Open left, hand to the fullback right now, then fake the boot right. It holds the backside end. |
+| **FB** **(ball)** | Take the handoff downhill between the center and the left guard. You are the runner on this one, not the lead. Straight ahead, do not bounce it. |
+| **TB** | Run hard to the right like you have the ball. You are what holds the backside linebacker. |
+
+**Coaching points**
+
+- This is the quick one. The fullback is only two yards from the hole -- he has the ball before the linebackers have moved.
+- The hole is the A-gap, between the center and the left guard. Nobody leads him through it; his speed is the lead.
+- The tailback's fake is the play as much as the handoff. If he jogs, the backside linebacker is in the hole.
 

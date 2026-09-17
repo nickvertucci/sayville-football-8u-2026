@@ -570,7 +570,7 @@ table.xl.xl-plays td {
   font-size: 12.5px; margin-left: 8px;
 }
 .pk-grid {
-  display: grid; gap: 10px; margin: 8px 0 24px;
+  display: grid; gap: 10px; margin: 8px 0 24px; align-items: start;
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 @media (max-width: 560px) { .pk-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
@@ -582,9 +582,15 @@ table.xl.xl-plays td {
 }
 .pk-n { float: right; font-weight: 700; opacity: .75; }
 table.xl.pk-plays td {
-  height: 22px; text-align: center; vertical-align: middle; padding: 4px 5px;
+  height: 22px; text-align: center; vertical-align: middle; padding: 3px 5px;
 }
-.pk-plays td a { display: block; color: var(--ink); font-weight: 700; text-decoration: none; }
+/* A package row carries the formation as well as the call, so it is a size down
+   from a sheet cell and left-aligned -- these read as a list, not a grid. */
+.pk-plays td a {
+  display: block; color: var(--ink); font-weight: 700; text-decoration: none;
+  font-size: 10px;
+}
+.pk-any { color: var(--muted); font-style: italic; font-size: 11px; }
 .pk-plays td a:hover { text-decoration: underline; }
 @media print {
   /* Two across, so each strong-left sheet prints beside its strong-right one. */
@@ -629,7 +635,8 @@ table.xl.pk-plays td {
   }
   .pk-n { display: none; }
   table.xl.pk-plays td { height: auto; vertical-align: middle; }
-  .pk-plays td a { font-size: 9px; white-space: nowrap; letter-spacing: -.2px; }
+  .pk-plays td a { font-size: 7.5px; white-space: nowrap; letter-spacing: -.2px; }
+  .pk-any { font-size: 7.5px; }
 }
 
 .plist { display: grid; gap: 12px; grid-template-columns: 1fr; }
@@ -2515,19 +2522,40 @@ def _sheet_name(play: dict, form: dict) -> str:
     return call
 
 
+def _package_row(play: dict, form: dict) -> str:
+    """A package card names the formation too, because a package crosses them.
+
+    On the sheet proper the block heading says the formation, so a cell only has
+    to say the alignment and the call. A package card has no such heading -- it
+    is a list of calls from wherever -- so the formation goes back in front:
+    "Split Backs - Slot R - LTE Sweep".
+
+    Trips is the exception, because its strength word IS its name. Saying it
+    twice reads as a stutter, so "Trips - Trips R - 38 Quick Pass" comes out
+    "Trips - R - 38 Quick Pass".
+    """
+    label = form_label(form)
+    tail = _sheet_name(play, form)
+    if tail.startswith(label + " "):
+        tail = tail[len(label) + 1:]
+    return f"{label} - {tail}"
+
+
 def _package_strip(root: Path, formations: list[dict]) -> str:
     """The packages along the bottom, three to a row, with the plays each one runs.
 
     A package is eleven names that come on together, and the ones that are not the
     base eleven come on to do something in particular. That "something" was only
-    ever in somebody's head: the sheet named the package and stopped. So each card
-    names the package and the two Split Backs runs it is in the game to call.
+    ever in somebody's head: the sheet named the package and stopped.
+
+    So each card names the package and lists what it is in the game to call --
+    however many plays that is, from whichever formations. A package that runs the
+    whole book says so instead: `["any"]` in the JSON, "Any play" on the card.
 
     The pairing lives in `roster.json` under `package_plays`, beside the packages
     themselves, because it is a coaching decision and not something the generator
-    can work out. Each entry is a play's full call. A call that names no play, or
-    names one that is not a Split Backs run, stops the build rather than printing
-    a play nobody can run.
+    can work out. Each entry is a play's full call. A call that names no play stops
+    the build rather than printing a play nobody can run.
     """
     path = root / "roster.json"
     if not path.is_file():
@@ -2538,35 +2566,39 @@ def _package_strip(root: Path, formations: list[dict]) -> str:
     if not assigned:
         return ""
 
-    runs = {p["call"]: p
-            for f in formations if f["id"] == "split-backs"
-            for p in f["_plays"] if p.get("type") == "run"}
+    # Every play in the book, by its call. Packages are not limited to one
+    # formation, so this is the whole book and not just the Split Backs.
+    plays = {p["call"]: (p, f) for f in formations for p in f["_plays"]}
 
     cards = []
     for i, calls in enumerate(assigned):
         label = names[i] if i < len(names) else f"Package {i + 1}"
-        rows = []
-        for call in calls:
-            play = runs.get(call)
-            if play is None:
-                raise SystemExit(
-                    f"roster.json package_plays: '{call}' is not a Split Backs run. "
-                    f"Known: {', '.join(sorted(runs))}"
+        if list(calls) == ["any"]:
+            rows = '<tr><td class="pk-any">Any play</td></tr>'
+        else:
+            cells = []
+            for call in calls:
+                found = plays.get(call)
+                if found is None:
+                    raise SystemExit(
+                        f"roster.json package_plays, {label}: '{call}' is not a play in "
+                        f"the book. Use a play's full call, or \"any\" on its own."
+                    )
+                play, form = found
+                cells.append(
+                    f'<tr><td><a href="{p_href(play)}">'
+                    f'<span class="xl-code">{esc(play["code"])}</span>'
+                    f'{esc(_package_row(play, form))}</a></td></tr>'
                 )
-            rows.append(
-                f'<tr><td><a href="{p_href(play)}">'
-                f'<span class="xl-code">{esc(play["code"])}</span>'
-                f'{esc(_sheet_name(play, next(f for f in formations if f["id"] == "split-backs")))}'
-                f'</a></td></tr>'
-            )
+            rows = "".join(cells)
         cards.append(
             f'<section class="pk"><p class="pk-name">{esc(label)}'
             f'<span class="pk-n">{i + 1}</span></p>'
-            f'<table class="xl pk-plays"><tbody>{"".join(rows)}</tbody></table></section>'
+            f'<table class="xl pk-plays"><tbody>{rows}</tbody></table></section>'
         )
 
     return ('<p class="section-head pk-head">Packages '
-            '<span class="pk-sub">Split Backs runs each one comes on to call</span></p>'
+            '<span class="pk-sub">what each one comes on to call</span></p>'
             f'<div class="pk-grid">{"".join(cards)}</div>')
 
 

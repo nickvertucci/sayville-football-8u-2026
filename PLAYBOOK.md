@@ -16,46 +16,48 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 | 8 | [Regular I - Slot Left - 31 Smash](#regular-i---slot-left---31-smash) | `Regular I Slot Left 31 Smash` | Smash | run | Regular I | TB |
 | 9 | [Regular I - Slot Right - RTE Slant Out](#regular-i---slot-right---rte-slant-out) | `Regular I Slot Right RTE Slant Out` | Protect | pass | Regular I | RTE |
 | 10 | [Regular I - Slot Left - LTE Slant Out](#regular-i---slot-left---lte-slant-out) | `Regular I Slot Left LTE Slant Out` | Protect | pass | Regular I | LTE |
-| 11 | [Wishbone - 44 Power](#wishbone---44-power) | `Wishbone 44 Power` | Power | run | Wishbone | RH |
-| 12 | [Wishbone - 35 Power](#wishbone---35-power) | `Wishbone 35 Power` | Power | run | Wishbone | LH |
-| 13 | [Wishbone - LTE Sweep](#wishbone---lte-sweep) | `Wishbone LTE Sweep` | Sweep | run | Wishbone | LTE |
-| 14 | [Wishbone - RTE Sweep](#wishbone---rte-sweep) | `Wishbone RTE Sweep` | Sweep | run | Wishbone | RTE |
-| 15 | [Wishbone - 20 Smash](#wishbone---20-smash) | `Wishbone 20 Smash` | Smash | run | Wishbone | FB |
-| 16 | [Wishbone - 21 Smash](#wishbone---21-smash) | `Wishbone 21 Smash` | Smash | run | Wishbone | FB |
-| 17 | [Wishbone - 22 Dive](#wishbone---22-dive) | `Wishbone 22 Dive` | Dive | run | Wishbone | FB |
-| 18 | [Wishbone - 23 Dive](#wishbone---23-dive) | `Wishbone 23 Dive` | Dive | run | Wishbone | FB |
-| 19 | [Wishbone - 38 Toss](#wishbone---38-toss) | `Wishbone 38 Toss` | Toss | run | Wishbone | LH |
-| 20 | [Wishbone - 49 Toss](#wishbone---49-toss) | `Wishbone 49 Toss` | Toss | run | Wishbone | RH |
-| 21 | [Wishbone - 18 Sweep](#wishbone---18-sweep) | `Wishbone 18 Sweep` | Sweep | run | Wishbone | QB |
-| 22 | [Wishbone - 19 Sweep](#wishbone---19-sweep) | `Wishbone 19 Sweep` | Sweep | run | Wishbone | QB |
-| 23 | [Wishbone - RTE Slant Out](#wishbone---rte-slant-out) | `Wishbone RTE Slant Out` | Protect | pass | Wishbone | RTE |
-| 24 | [Wishbone - LTE Slant Out](#wishbone---lte-slant-out) | `Wishbone LTE Slant Out` | Protect | pass | Wishbone | LTE |
-| 25 | [Split Backs - Slot Right - 38 Toss](#split-backs---slot-right---38-toss) | `Split Backs Slot Right 38 Toss` | Toss | run | Split Backs | LH |
-| 26 | [Split Backs - Slot Left - 29 Toss](#split-backs---slot-left---29-toss) | `Split Backs Slot Left 29 Toss` | Toss | run | Split Backs | RH |
-| 27 | [Split Backs - Slot Right - 18 Sweep](#split-backs---slot-right---18-sweep) | `Split Backs Slot Right 18 Sweep` | Sweep | run | Split Backs | QB |
-| 28 | [Split Backs - Slot Left - 19 Sweep](#split-backs---slot-left---19-sweep) | `Split Backs Slot Left 19 Sweep` | Sweep | run | Split Backs | QB |
-| 29 | [Split Backs - Slot Left - 19 Fake Sweep](#split-backs---slot-left---19-fake-sweep) | `Split Backs Slot Left 19 Fake Sweep` | Sweep | run | Split Backs | QB |
-| 30 | [Split Backs - Slot Right - 18 Fake Sweep](#split-backs---slot-right---18-fake-sweep) | `Split Backs Slot Right 18 Fake Sweep` | Sweep | run | Split Backs | QB |
-| 31 | [Split Backs - Slot Right - 49 Sweep](#split-backs---slot-right---49-sweep) | `Split Backs Slot Right 49 Sweep` | Sweep | run | Split Backs | SL |
-| 32 | [Split Backs - Slot Left - 48 Sweep](#split-backs---slot-left---48-sweep) | `Split Backs Slot Left 48 Sweep` | Sweep | run | Split Backs | SL |
-| 33 | [Split Backs - Slot Right - LTE Sweep](#split-backs---slot-right---lte-sweep) | `Split Backs Slot Right LTE Sweep` | Sweep | run | Split Backs | LTE |
-| 34 | [Split Backs - Slot Left - RTE Sweep](#split-backs---slot-left---rte-sweep) | `Split Backs Slot Left RTE Sweep` | Sweep | run | Split Backs | RTE |
-| 35 | [Split Backs - Slot Right - RTE Slant Out](#split-backs---slot-right---rte-slant-out) | `Split Backs Slot Right RTE Slant Out` | Protect | pass | Split Backs | RTE |
-| 36 | [Split Backs - Slot Left - LTE Slant Out](#split-backs---slot-left---lte-slant-out) | `Split Backs Slot Left LTE Slant Out` | Protect | pass | Split Backs | LTE |
-| 37 | [Shotgun - Slot Right - RTE Slant Out](#shotgun---slot-right---rte-slant-out) | `Shotgun Slot Right RTE Slant Out` | Protect | pass | Shotgun | RTE |
-| 38 | [Shotgun - Slot Left - LTE Slant Out](#shotgun---slot-left---lte-slant-out) | `Shotgun Slot Left LTE Slant Out` | Protect | pass | Shotgun | LTE |
-| 39 | [Shotgun - Slot Left - 19 Sweep](#shotgun---slot-left---19-sweep) | `Shotgun Slot Left 19 Sweep` | Sweep | run | Shotgun | QB |
-| 40 | [Shotgun - Slot Right - 18 Sweep](#shotgun---slot-right---18-sweep) | `Shotgun Slot Right 18 Sweep` | Sweep | run | Shotgun | QB |
-| 41 | [Shotgun - Slot Right - 38 Toss](#shotgun---slot-right---38-toss) | `Shotgun Slot Right 38 Toss` | Toss | run | Shotgun | LH |
-| 42 | [Shotgun - Slot Left - 29 Toss](#shotgun---slot-left---29-toss) | `Shotgun Slot Left 29 Toss` | Toss | run | Shotgun | RH |
-| 43 | [Trips - Right - LTE Sweep](#trips---right---lte-sweep) | `Trips Right LTE Sweep` | Sweep | run | Trips | LTE |
-| 44 | [Trips - Left - RTE Sweep](#trips---left---rte-sweep) | `Trips Left RTE Sweep` | Sweep | run | Trips | RTE |
-| 45 | [Trips - Right - 38 Quick Pass](#trips---right---38-quick-pass) | `Trips Right 38 Quick Pass` | Protect | pass | Trips | TB |
-| 46 | [Trips - Left - 39 Quick Pass](#trips---left---39-quick-pass) | `Trips Left 39 Quick Pass` | Protect | pass | Trips | TB |
-| 47 | [Trips - Right - 18 Sweep](#trips---right---18-sweep) | `Trips Right 18 Sweep` | Sweep | run | Trips | QB |
-| 48 | [Trips - Left - 19 Sweep](#trips---left---19-sweep) | `Trips Left 19 Sweep` | Sweep | run | Trips | QB |
-| 49 | [Trips - Right - RTE Slant Out](#trips---right---rte-slant-out) | `Trips Right RTE Slant Out` | Protect | pass | Trips | RTE |
-| 50 | [Trips - Left - LTE Slant Out](#trips---left---lte-slant-out) | `Trips Left LTE Slant Out` | Protect | pass | Trips | LTE |
+| 11 | [Regular I - Slot Right - 20 Smash](#regular-i---slot-right---20-smash) | `Regular I Slot Right 20 Smash` | Smash | run | Regular I | FB |
+| 12 | [Regular I - Slot Left - 21 Smash](#regular-i---slot-left---21-smash) | `Regular I Slot Left 21 Smash` | Smash | run | Regular I | FB |
+| 13 | [Wishbone - 44 Power](#wishbone---44-power) | `Wishbone 44 Power` | Power | run | Wishbone | RH |
+| 14 | [Wishbone - 35 Power](#wishbone---35-power) | `Wishbone 35 Power` | Power | run | Wishbone | LH |
+| 15 | [Wishbone - LTE Sweep](#wishbone---lte-sweep) | `Wishbone LTE Sweep` | Sweep | run | Wishbone | LTE |
+| 16 | [Wishbone - RTE Sweep](#wishbone---rte-sweep) | `Wishbone RTE Sweep` | Sweep | run | Wishbone | RTE |
+| 17 | [Wishbone - 20 Smash](#wishbone---20-smash) | `Wishbone 20 Smash` | Smash | run | Wishbone | FB |
+| 18 | [Wishbone - 21 Smash](#wishbone---21-smash) | `Wishbone 21 Smash` | Smash | run | Wishbone | FB |
+| 19 | [Wishbone - 22 Dive](#wishbone---22-dive) | `Wishbone 22 Dive` | Dive | run | Wishbone | FB |
+| 20 | [Wishbone - 23 Dive](#wishbone---23-dive) | `Wishbone 23 Dive` | Dive | run | Wishbone | FB |
+| 21 | [Wishbone - 38 Toss](#wishbone---38-toss) | `Wishbone 38 Toss` | Toss | run | Wishbone | LH |
+| 22 | [Wishbone - 49 Toss](#wishbone---49-toss) | `Wishbone 49 Toss` | Toss | run | Wishbone | RH |
+| 23 | [Wishbone - 18 Sweep](#wishbone---18-sweep) | `Wishbone 18 Sweep` | Sweep | run | Wishbone | QB |
+| 24 | [Wishbone - 19 Sweep](#wishbone---19-sweep) | `Wishbone 19 Sweep` | Sweep | run | Wishbone | QB |
+| 25 | [Wishbone - RTE Slant Out](#wishbone---rte-slant-out) | `Wishbone RTE Slant Out` | Protect | pass | Wishbone | RTE |
+| 26 | [Wishbone - LTE Slant Out](#wishbone---lte-slant-out) | `Wishbone LTE Slant Out` | Protect | pass | Wishbone | LTE |
+| 27 | [Split Backs - Slot Right - 38 Toss](#split-backs---slot-right---38-toss) | `Split Backs Slot Right 38 Toss` | Toss | run | Split Backs | LH |
+| 28 | [Split Backs - Slot Left - 29 Toss](#split-backs---slot-left---29-toss) | `Split Backs Slot Left 29 Toss` | Toss | run | Split Backs | RH |
+| 29 | [Split Backs - Slot Right - 18 Sweep](#split-backs---slot-right---18-sweep) | `Split Backs Slot Right 18 Sweep` | Sweep | run | Split Backs | QB |
+| 30 | [Split Backs - Slot Left - 19 Sweep](#split-backs---slot-left---19-sweep) | `Split Backs Slot Left 19 Sweep` | Sweep | run | Split Backs | QB |
+| 31 | [Split Backs - Slot Left - 19 Fake Sweep](#split-backs---slot-left---19-fake-sweep) | `Split Backs Slot Left 19 Fake Sweep` | Sweep | run | Split Backs | QB |
+| 32 | [Split Backs - Slot Right - 18 Fake Sweep](#split-backs---slot-right---18-fake-sweep) | `Split Backs Slot Right 18 Fake Sweep` | Sweep | run | Split Backs | QB |
+| 33 | [Split Backs - Slot Right - 49 Sweep](#split-backs---slot-right---49-sweep) | `Split Backs Slot Right 49 Sweep` | Sweep | run | Split Backs | SL |
+| 34 | [Split Backs - Slot Left - 48 Sweep](#split-backs---slot-left---48-sweep) | `Split Backs Slot Left 48 Sweep` | Sweep | run | Split Backs | SL |
+| 35 | [Split Backs - Slot Right - LTE Sweep](#split-backs---slot-right---lte-sweep) | `Split Backs Slot Right LTE Sweep` | Sweep | run | Split Backs | LTE |
+| 36 | [Split Backs - Slot Left - RTE Sweep](#split-backs---slot-left---rte-sweep) | `Split Backs Slot Left RTE Sweep` | Sweep | run | Split Backs | RTE |
+| 37 | [Split Backs - Slot Right - RTE Slant Out](#split-backs---slot-right---rte-slant-out) | `Split Backs Slot Right RTE Slant Out` | Protect | pass | Split Backs | RTE |
+| 38 | [Split Backs - Slot Left - LTE Slant Out](#split-backs---slot-left---lte-slant-out) | `Split Backs Slot Left LTE Slant Out` | Protect | pass | Split Backs | LTE |
+| 39 | [Shotgun - Slot Right - RTE Slant Out](#shotgun---slot-right---rte-slant-out) | `Shotgun Slot Right RTE Slant Out` | Protect | pass | Shotgun | RTE |
+| 40 | [Shotgun - Slot Left - LTE Slant Out](#shotgun---slot-left---lte-slant-out) | `Shotgun Slot Left LTE Slant Out` | Protect | pass | Shotgun | LTE |
+| 41 | [Shotgun - Slot Left - 19 Sweep](#shotgun---slot-left---19-sweep) | `Shotgun Slot Left 19 Sweep` | Sweep | run | Shotgun | QB |
+| 42 | [Shotgun - Slot Right - 18 Sweep](#shotgun---slot-right---18-sweep) | `Shotgun Slot Right 18 Sweep` | Sweep | run | Shotgun | QB |
+| 43 | [Shotgun - Slot Right - 38 Toss](#shotgun---slot-right---38-toss) | `Shotgun Slot Right 38 Toss` | Toss | run | Shotgun | LH |
+| 44 | [Shotgun - Slot Left - 29 Toss](#shotgun---slot-left---29-toss) | `Shotgun Slot Left 29 Toss` | Toss | run | Shotgun | RH |
+| 45 | [Trips - Right - LTE Sweep](#trips---right---lte-sweep) | `Trips Right LTE Sweep` | Sweep | run | Trips | LTE |
+| 46 | [Trips - Left - RTE Sweep](#trips---left---rte-sweep) | `Trips Left RTE Sweep` | Sweep | run | Trips | RTE |
+| 47 | [Trips - Right - 38 Quick Pass](#trips---right---38-quick-pass) | `Trips Right 38 Quick Pass` | Protect | pass | Trips | TB |
+| 48 | [Trips - Left - 39 Quick Pass](#trips---left---39-quick-pass) | `Trips Left 39 Quick Pass` | Protect | pass | Trips | TB |
+| 49 | [Trips - Right - 18 Sweep](#trips---right---18-sweep) | `Trips Right 18 Sweep` | Sweep | run | Trips | QB |
+| 50 | [Trips - Left - 19 Sweep](#trips---left---19-sweep) | `Trips Left 19 Sweep` | Sweep | run | Trips | QB |
+| 51 | [Trips - Right - RTE Slant Out](#trips---right---rte-slant-out) | `Trips Right RTE Slant Out` | Protect | pass | Trips | RTE |
+| 52 | [Trips - Left - LTE Slant Out](#trips---left---lte-slant-out) | `Trips Left LTE Slant Out` | Protect | pass | Trips | LTE |
 
 # Regular I
 
@@ -360,6 +362,66 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 - Everybody but the tight end and the SL pass blocks: step back, hands up, stay between your man and the quarterback.
 - The slant stays flat — one step up and out, almost on the line of scrimmage. Any deeper and he runs into the linebackers.
 - The quarterback throws it as soon as the tight end clears the end. If he is covered, tuck it and run — no second look.
+
+---
+
+## Regular I - Slot Right - 20 Smash
+
+**Call it:** `Regular I Slot Right 20 Smash`
+
+**Scheme:** Smash
+
+![Regular I - Slot Right - 20 Smash](playbook/i-form/cards/i-fb-smash-r-4-4.svg)
+
+| Position | Assignment |
+|---|---|
+| **LTE** | End on your inside shoulder. Cut him off — get between him and the ball. |
+| **LT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
+| **LG** | Tackle head up on you. Cut him off — get between him and the ball. |
+| **C** | Nobody on you. Climb to the playside linebacker. Head across him. |
+| **RG** | Tackle head up on you. Hands inside, pads under his, drive him back. |
+| **RT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
+| **RTE** | End on your inside shoulder. Cut him off — get between him and the ball. |
+| **SL** | Run at the corner and screen him off. Stay in his way. |
+| **QB** | Open right, hand to the fullback right now, then fake the boot left. It holds the backside end. |
+| **FB** **(ball)** | Take the handoff downhill between the center and the right guard. You are the runner on this one, not the lead. Straight ahead, do not bounce it. |
+| **TB** | Run hard to the left like you have the ball. You are what holds the backside linebacker. |
+
+**Coaching points**
+
+- This is the quick one. The fullback is only two yards from the hole -- he has the ball before the linebackers have moved.
+- The hole is the A-gap, between the center and the right guard. Nobody leads him through it; his speed is the lead.
+- The tailback's fake is the play as much as the handoff. If he jogs, the backside linebacker is in the hole.
+
+---
+
+## Regular I - Slot Left - 21 Smash
+
+**Call it:** `Regular I Slot Left 21 Smash`
+
+**Scheme:** Smash
+
+![Regular I - Slot Left - 21 Smash](playbook/i-form/cards/i-fb-smash-l-4-4.svg)
+
+| Position | Assignment |
+|---|---|
+| **LTE** | End on your inside shoulder. Cut him off — get between him and the ball. |
+| **LT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
+| **LG** | Tackle head up on you. Hands inside, pads under his, drive him back. |
+| **C** | Nobody on you. Climb to the playside linebacker. Head across him. |
+| **RG** | Tackle head up on you. Cut him off — get between him and the ball. |
+| **RT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
+| **RTE** | End on your inside shoulder. Cut him off — get between him and the ball. |
+| **SL** | Run at the corner and screen him off. Stay in his way. |
+| **QB** | Open left, hand to the fullback right now, then fake the boot right. It holds the backside end. |
+| **FB** **(ball)** | Take the handoff downhill between the center and the left guard. You are the runner on this one, not the lead. Straight ahead, do not bounce it. |
+| **TB** | Run hard to the right like you have the ball. You are what holds the backside linebacker. |
+
+**Coaching points**
+
+- This is the quick one. The fullback is only two yards from the hole -- he has the ball before the linebackers have moved.
+- The hole is the A-gap, between the center and the left guard. Nobody leads him through it; his speed is the lead.
+- The tailback's fake is the play as much as the handoff. If he jogs, the backside linebacker is in the hole.
 
 # Wishbone
 
