@@ -58,6 +58,10 @@ DEFAULT_FRONT = "4-4"
 # say this word — 34 Power, 30 Smash, 38 Toss — so the huddle and the diagram
 # name the same family. Word calls (a tight end sweep, a slant-out pass) opt out
 # because they have no hole digit.
+#
+# Sweep is the exception: the 4-back (slot) coming across the formation, or a
+# tight end on an end-around. Those still hit the 8/9 hole, but the word is who
+# is sweeping, not Toss.
 HOLE_SCHEME = {
     0: "Smash", 1: "Smash",  # A gap: center–guard
     2: "Dive",  3: "Dive",   # B gap: guard–tackle
@@ -66,14 +70,21 @@ HOLE_SCHEME = {
     8: "Toss",  9: "Toss",   # all the way outside
 }
 
+SWEEP_BACK = "4"  # the slot — numbered Sweep. Tight ends are word calls.
+
 
 def scheme_for_hole(hole: int) -> str | None:
     """The play word a numbered run at this hole has to carry."""
     return HOLE_SCHEME.get(hole)
 
 
-def scheme_words(hole: int) -> tuple[str, ...]:
-    """Allowed play words at this hole: the scheme, or Fake plus the scheme."""
+def scheme_words(hole: int, back_digit: str | None = None) -> tuple[str, ...]:
+    """Allowed play words at this hole: the scheme, or Fake plus the scheme.
+
+    The slot sweeping across at 8/9 is Sweep, not Toss.
+    """
+    if hole in (8, 9) and back_digit == SWEEP_BACK:
+        return ("Sweep", "Fake Sweep")
     word = scheme_for_hole(hole)
     if not word:
         return ()

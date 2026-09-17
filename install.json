@@ -186,8 +186,8 @@
       "n": 6,
       "date": "2026-09-15",
       "phase": "season",
-      "focus": "Split Backs: slot toss and TE sweep",
-      "emphasis": "One long block after the warm-up. Review S-1 and S-2, then install the tosses: S-7 and S-8 (slot toss) and S-9 and S-10 (TE sweep). The runner stays down until the snap, comes across, takes the handoff at full speed, and turns up behind the halfbacks.",
+      "focus": "Split Backs: slot sweep and TE sweep",
+      "emphasis": "One long block after the warm-up. Review S-1 and S-2, then install the sweeps: S-7 and S-8 (slot sweep) and S-9 and S-10 (TE sweep). The runner stays down until the snap, comes across, takes the handoff at full speed, and turns up behind the halfbacks.",
       "blocks": [
         {
           "tag": "A",
@@ -203,16 +203,16 @@
           "time": "5:35–6:45",
           "notes": [
             "One group, the rest of practice",
-            "S-1 and S-2 first, then S-7 and S-8 (49 Toss, 48 Toss), then S-9 and S-10 (LTE Sweep, RTE Sweep)",
+            "S-1 and S-2 first, then S-7 and S-8 (49 Sweep, 48 Sweep), then S-9 and S-10 (LTE Sweep, RTE Sweep)",
             "In and out of the huddle every rep. Slot Right or Slot Left, then the number and the word — or LTE Sweep / RTE Sweep"
           ]
         }
       ],
-      "huddle": "S-7 and S-8 are the slot toss. S-9 is LTE Sweep, S-10 is RTE Sweep. Stay down, come across, handoff at full speed.",
+      "huddle": "S-7 and S-8 are the slot sweep. S-9 is LTE Sweep, S-10 is RTE Sweep. Stay down, come across, handoff at full speed.",
       "huddle_time": "6:45–7:00",
       "plays": [
-        "sb-sl-toss-l",
-        "sb-sl-toss-r",
+        "sb-sl-sweep-l",
+        "sb-sl-sweep-r",
         "sb-te-jet-r",
         "sb-te-jet-l"
       ],
@@ -226,7 +226,7 @@
       "date": "2026-09-17",
       "phase": "season",
       "focus": "Split Backs: 19 Fake Toss, plus Tuesday's tosses",
-      "emphasis": "One long block after the warm-up. Review Tuesday — S-1, S-2, the slot toss and the TE sweep — then install S-5, Slot Left 19 Fake Toss. Fake the handoff to the right halfback, then the quarterback keeps it left behind the left halfback.",
+      "emphasis": "One long block after the warm-up. Review Tuesday — S-1, S-2, the slot sweep and the TE sweep — then install S-5, Slot Left 19 Fake Toss. Fake the handoff to the right halfback, then the quarterback keeps it left behind the left halfback.",
       "blocks": [
         {
           "tag": "A",
@@ -255,8 +255,8 @@
       "review": [
         "sb-toss-r",
         "sb-toss-l",
-        "sb-sl-toss-l",
-        "sb-sl-toss-r",
+        "sb-sl-sweep-l",
+        "sb-sl-sweep-r",
         "sb-te-jet-r",
         "sb-te-jet-l"
       ]

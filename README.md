@@ -62,7 +62,7 @@ The digits describe the back the first digit names, not necessarily the ball car
 |---|---|---|
 | `Regular I Slot Right 34 Power` / `Slot Left 35 Power` | Regular I - Slot Right - 34 Power / Slot Left - 35 Power | tailback, tackle–end |
 | `Regular I Slot Right LTE Sweep` / `Slot Left RTE Sweep` | Regular I - Slot Right - LTE Sweep / Slot Left - RTE Sweep | the backside tight end on an end-around, all the way outside |
-| `Regular I Slot Right 49 Toss` / `Slot Left 48 Toss` | Regular I - Slot Right - 49 Toss / Slot Left - 48 Toss | the slot, flat across the backfield and outside the other way |
+| `Regular I Slot Right 49 Sweep` / `Slot Left 48 Sweep` | Regular I - Slot Right - 49 Sweep / Slot Left - 48 Sweep | the slot, flat across the backfield and outside the other way |
 
 The tight-end sweep is a **word call** — no digits, because the tight end is not a numbered
 back. It names him instead. A play has to opt in with `word_call`, so any other play
@@ -98,7 +98,8 @@ the Split Backs do: 3 is left, 2 is right.
 | `Shotgun Slot Left 29 Toss` / `Slot Right 38 Toss` | Shotgun - Slot Left - 29 Toss / Slot Right - 38 Toss | the far halfback, across in front of the quarterback and all the way outside |
 
 **Play word** — a numbered run's word is the hole: Smash, Dive, Power, Slant, Toss.
-The tight-end `Sweep` and the tight-end `Slant Out` are word calls, no hole digit.
+**Sweep** is the slot (back 4) coming across at 8/9, or a tight end on an end-around
+(a word call, no hole digit). The tight-end `Slant Out` is a word call too.
 
 ## Formations
 
@@ -106,7 +107,7 @@ Three formations, 18 plays, in teaching order:
 
 | # | Formation | Family | Plays | What it is for |
 |---|---|---|---|---|
-| 1 | **Regular I** | Regular I | 6 | Base offense. Fullback and tailback stacked behind the quarterback. Off tackle, the tailback between the tackle and the end behind the SL's kick-out, the tight-end sweep and the slot toss, both ways. |
+| 1 | **Regular I** | Regular I | 6 | Base offense. Fullback and tailback stacked behind the quarterback. Off tackle, the tailback between the tackle and the end behind the SL's kick-out, the tight-end sweep and the slot sweep, both ways. |
 | 2 | **Split Backs** | Split Backs | 6 | Two backs at even depth and a slot just outside the tight end. 38/29 Toss, the QB toss and the fake-handoff QB toss, both ways. |
 | 3 | **Shotgun** | Shotgun | 6 | The quarterback five yards deep with a back either side. The tight-end slant out, the QB toss and the RB toss, both ways. |
 
