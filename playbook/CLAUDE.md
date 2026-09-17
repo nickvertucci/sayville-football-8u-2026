@@ -403,12 +403,15 @@ call; a play that moves somebody silently is a play nobody can call.
 
 The system is the seven-man line (`LTE` … `RTE`), a quarterback, and a
 backfield of either a stacked I (`FB` + `TB`), two halfbacks (`LH` + `RH`),
-or Wishbone (`FB` + `LH` + `RH`). A slot (`SL`) is the split man when the
-look has one; Wishbone does not, so Power kicks with the playside end and
-the call has no Slot Right/Left. A new formation that keeps those keys
-drops in: give it `formation.json` (alignment, `backs`, `code_prefix`) and
-plays that name a scheme and write the paths. Power in the new look is
-`"scheme": "Power"` plus the handoff — not eleven new verbs.
+Wishbone (`FB` + `LH` + `RH`), or one tailback (`TB`) with a slot and a
+split end (`X`) — Trips and Single back. A slot (`SL`) is the split man
+when the look has one; Wishbone does not, so Power kicks with the playside
+end and the call has no Slot Right/Left. Trips names the bunch instead
+(`Trips Right` / `Trips Left`) and moves both the slot and `X`. A new
+formation that keeps those keys drops in: give it `formation.json`
+(alignment, `backs`, `code_prefix`) and plays that name a scheme and write
+the paths. Power in the new look is `"scheme": "Power"` plus the handoff —
+not eleven new verbs.
 
 A new play in an existing formation is the same: `scheme`, `call`, the carrier's
 path, leftover backs if the family does not name them. Dive (2/3) and Slant

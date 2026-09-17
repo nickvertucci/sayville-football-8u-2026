@@ -55,6 +55,11 @@ CASES = [
     ("wishbone dive",                 "wishbone", "wb-dive-r",  "Wishbone 22 Dive", False),
     ("wishbone toss at 4",            "wishbone", "wb-toss-l",  "Wishbone 49 Toss", False),
     ("wishbone 49 called Sweep",      "wishbone", "wb-toss-l",  "Wishbone 49 Sweep", True),
+    ("trips power",                   "trips", "tr-power-r", "Trips Right 34 Power", False),
+    ("trips toss",                    "trips", "tr-toss-l",  "Trips Left 39 Toss", False),
+    ("trips toss called Sweep",       "trips", "tr-toss-l",  "Trips Left 39 Sweep", True),
+    ("trips slot sweep",              "trips", "tr-sl-sweep-l", "Trips Right 49 Sweep", False),
+    ("trips dive",                    "trips", "tr-dive-r", "Trips Right 32 Dive", False),
 ]
 
 

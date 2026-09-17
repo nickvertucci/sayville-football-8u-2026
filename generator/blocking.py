@@ -248,6 +248,10 @@ def backfield_roles(form: dict, side: int) -> dict[str, str]:
     elif "LH" in keys and "RH" in keys:
         out["lead"] = "RH" if side > 0 else "LH"
         out["trail"] = "LH" if side > 0 else "RH"
+    elif "TB" in keys:
+        # One-back (Trips, Single back): nobody leads from the scheme. The
+        # tailback is the runner; leftover X or the slot does the extra job.
+        out["trail"] = "TB"
     return out
 
 

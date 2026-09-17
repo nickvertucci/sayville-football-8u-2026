@@ -95,6 +95,12 @@ def check_roles(formations) -> list[str]:
         problems.append("Wishbone has no slot")
     if wb_right.get("lead") != "FB":
         problems.append(f"Wishbone lead is {wb_right.get('lead')}, expected FB")
+    trips = by_id["trips"]
+    tr = blocking.scheme_roles(trips, 1)
+    if "lead" in tr:
+        problems.append(f"Trips has no fullback; lead should be empty, got {tr.get('lead')}")
+    if tr.get("slot") != "SL" or tr.get("trail") != "TB":
+        problems.append(f"Trips slot/trail is {tr.get('slot')}/{tr.get('trail')}, expected SL/TB")
     return problems
 
 

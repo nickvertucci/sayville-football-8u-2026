@@ -1,0 +1,76 @@
+{
+  "id": "tr-smash-l",
+  "order": 8,
+  "formation": "trips",
+  "name": "Trips - Left - 31 Smash",
+  "code": "T-8",
+  "call": "Trips Left 31 Smash",
+  "type": "run",
+  "scheme": "Smash",
+  "direction": "left",
+  "ball_carrier": "TB",
+  "assignments": {
+    "QB": {
+      "rule": "Open left, hand to the tailback, then fake the boot right. It holds the backside end.",
+      "type": "fake",
+      "path": [
+        [
+          -0.8,
+          -0.4
+        ],
+        [
+          -2.2,
+          -1.0
+        ],
+        [
+          -3.6,
+          -1.4
+        ]
+      ]
+    },
+    "TB": {
+      "rule": "Take the handoff downhill between the center and the left guard. Do not bounce it.",
+      "type": "run",
+      "path": [
+        [
+          -0.5,
+          2.5
+        ],
+        [
+          -0.7,
+          5.0
+        ],
+        [
+          -0.7,
+          6.0
+        ],
+        [
+          -0.8,
+          8.5
+        ],
+        [
+          -0.9,
+          11.0
+        ]
+      ]
+    },
+    "X": {
+      "block": "screen"
+    }
+  },
+  "coaching_points": [
+    "There is no fullback iso. The tailback is the runner, downhill in the A-gap.",
+    "The slot and the split end both screen the perimeter. If the tailback bounces, the play is dead."
+  ],
+  "z": "left",
+  "alignment": {
+    "SL": [
+      -5.6,
+      -1.5
+    ],
+    "X": [
+      -6.8,
+      -1.5
+    ]
+  }
+}
