@@ -608,21 +608,28 @@ table.xl.pk-plays td {
      the block is *shorter* than it was at half width. Five of them still fit the one
      sheet because of it, not in spite of it. */
   .xl-sheets { grid-template-columns: 1fr; gap: 0; margin: 2px 0 0; }
-  /* A rule under each block instead of the old quadrant cross -- borders rather than a
-     background, so it prints whatever the browser's background-graphics setting is. */
+  /* No rule between blocks any more: the formation's own black bar below is the
+     separator, and a 3px rule under the block as well was two fences for one fence's
+     job. Dropping five of them also pays for the bar's padding, which is the only
+     reason the sheet is still one sheet -- it was within a third of an inch of
+     spilling before either change. */
   .xl-sheet { padding: 2px 0 3px; break-inside: avoid; }
-  .xl-sheet:not(:last-child) { border-bottom: 3px solid #000; }
   table.xl { font-size: 9px; }
   table.xl td, table.xl th { padding: 0 2px; }
   table.xl th { font-size: 8px; }
   /* The scheme column is a label, not a share of the page: at full width an even
      quarter each would leave three inches of white beside the word "Sweep". */
   col.xl-c0 { width: 62px; }
-  /* Black text on no background. The screen's white-on-navy title printed as pale grey
-     on paper whenever the browser left background graphics off. */
+  /* The formation name is a full-width black bar with white type, the same treatment
+     as the LEFT/MIDDLE/RIGHT row below it, so a block reads as one thing with a
+     header on it rather than six similar tables in a column. It used to print as
+     plain black text because the screen's white-on-navy bar came out pale grey
+     whenever the browser left background graphics off; `print-color-adjust: exact`
+     is what fixed that, so the bar can be a bar on paper now. */
   .xl-title {
-    padding: 0; font-size: 10px; font-weight: 900; line-height: 1.25;
-    color: #000 !important; background: none !important;
+    padding: 1px 4px; font-size: 10px; font-weight: 900; line-height: 1.3;
+    color: #fff !important; background: #000 !important;
+    -webkit-print-color-adjust: exact; print-color-adjust: exact;
   }
   /* The black band prints. `print-color-adjust: exact` is the whole reason it can:
      it tells the browser this fill is content, not decoration, so it survives the
