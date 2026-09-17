@@ -55,8 +55,11 @@ CASES = [
     ("wishbone dive",                 "wishbone", "wb-dive-r",  "Wishbone 22 Dive", False),
     ("wishbone toss at 4",            "wishbone", "wb-toss-l",  "Wishbone 49 Toss", False),
     ("wishbone 49 called Sweep",      "wishbone", "wb-toss-l",  "Wishbone 49 Sweep", True),
-    ("trips toss",                    "trips", "tr-toss-l",  "Trips Left 39 Toss", False),
-    ("trips toss called Sweep",       "trips", "tr-toss-l",  "Trips Left 39 Sweep", True),
+    # Trips has no numbered run left -- the bunch throws at 8/9 instead. A pass skips
+    # the play-word check (it is not a hole word), so what still has to hold is the
+    # geometry: 39 is left, and the tailback has to be the one going there.
+    ("trips quick pass",              "trips", "tr-quick-pass-l", "Trips Left 39 Quick Pass", False),
+    ("trips quick pass wrong side",   "trips", "tr-quick-pass-l", "Trips Left 38 Quick Pass", True),
 ]
 
 

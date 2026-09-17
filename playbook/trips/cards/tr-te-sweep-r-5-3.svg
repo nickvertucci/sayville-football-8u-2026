@@ -1,12 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="648" height="928" viewBox="0 0 648 928" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" width="621" height="928" viewBox="0 0 621 928" font-family="Segoe UI, Helvetica, Arial, sans-serif">
 <rect width="100%" height="100%" fill="#ffffff"/>
-<rect x="0" y="0" width="648" height="58" fill="#14213d"/>
+<rect x="0" y="0" width="621" height="58" fill="#14213d"/>
 <text x="18" y="26" font-size="19.0" font-weight="700" fill="#ffffff">Trips - Right - LTE Sweep</text>
 <text x="18" y="45" font-size="11.5" fill="#a9b4c7">RUN  •  Trips  •  vs 5-3</text>
-<rect x="414.8" y="13" width="215.2" height="31" rx="6" fill="#ffffff" fill-opacity="0.12" stroke="#8593ad" stroke-width="1"/>
-<text x="522.4" y="34" text-anchor="middle" font-size="14.5" font-weight="700" fill="#ffffff" letter-spacing="0.5">Trips Right LTE Sweep</text>
-<clipPath id="fieldclip"><rect x="0" y="58" width="648" height="472"/></clipPath>
-<g clip-path="url(#fieldclip)"><g transform="translate(-27.0,31.0)">
+<rect x="387.8" y="13" width="215.2" height="31" rx="6" fill="#ffffff" fill-opacity="0.12" stroke="#8593ad" stroke-width="1"/>
+<text x="495.4" y="34" text-anchor="middle" font-size="14.5" font-weight="700" fill="#ffffff" letter-spacing="0.5">Trips Right LTE Sweep</text>
+<clipPath id="fieldclip"><rect x="0" y="58" width="621" height="472"/></clipPath>
+<g clip-path="url(#fieldclip)"><g transform="translate(-40.5,31.0)">
 <rect x="0" y="0" width="702" height="513" fill="#ffffff"/>
 <line x1="0" y1="459.0" x2="702" y2="459.0" stroke="#c8cdd6" stroke-width="1"/>
 <line x1="0" y1="189.0" x2="702" y2="189.0" stroke="#c8cdd6" stroke-width="1"/>
@@ -79,16 +79,16 @@
 <text x="567.0" y="369.0" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">FB</text>
 <circle cx="351.0" cy="364.5" r="13.5" fill="#ffffff" stroke="#14213d" stroke-width="2.6"/>
 <text x="351.0" y="369.0" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">QB</text>
-<rect x="547.8" y="35.0" width="119.2" height="52.0" rx="8" fill="#ffffff" stroke="#111318" stroke-width="3"/><text x="607.4" y="75.0" text-anchor="middle" font-size="40" font-weight="800" fill="#111318">#T-3</text>
+<rect x="534.3" y="35.0" width="119.2" height="52.0" rx="8" fill="#ffffff" stroke="#111318" stroke-width="3"/><text x="593.9" y="75.0" text-anchor="middle" font-size="40" font-weight="800" fill="#111318">#T-3</text>
 </g></g>
-<line x1="18" y1="540" x2="630" y2="540" stroke="#c8cdd6" stroke-width="1"/>
+<line x1="18" y1="540" x2="603" y2="540" stroke="#c8cdd6" stroke-width="1"/>
 <text x="18" y="560" font-size="11" font-weight="700" fill="#5b6472" letter-spacing="1">ASSIGNMENTS</text>
 <text x="18" y="578" font-size="12" font-weight="700" fill="#111318">LTE</text>
-<text x="52" y="578" font-size="12" fill="#111318">Stay down in your stance — no motion. At</text>
-<text x="52" y="596" font-size="12" fill="#111318">the snap run flat behind the quarterback,</text>
-<text x="52" y="612" font-size="12" fill="#111318">take the handoff at full speed and get to</text>
-<text x="52" y="630" font-size="12" fill="#111318">the right edge. Turn up outside the</text>
-<text x="52" y="646" font-size="12" fill="#111318">trips.</text>
+<text x="52" y="578" font-size="12" fill="#111318">Stay down in your stance — no motion.</text>
+<text x="52" y="596" font-size="12" fill="#111318">At the snap run flat behind the</text>
+<text x="52" y="612" font-size="12" fill="#111318">quarterback, take the handoff at full</text>
+<text x="52" y="630" font-size="12" fill="#111318">speed and get to the right edge. Turn</text>
+<text x="52" y="646" font-size="12" fill="#111318">up outside the trips.</text>
 <text x="18" y="664" font-size="12" font-weight="700" fill="#111318">LT</text>
 <text x="52" y="664" font-size="12" fill="#111318">Tackle on your inside shoulder. Cut him</text>
 <text x="52" y="680" font-size="12" fill="#111318">off — get between him and the ball.</text>
@@ -96,8 +96,8 @@
 <text x="52" y="698" font-size="12" fill="#111318">Nobody on you. Cut off the backside.</text>
 <text x="52" y="714" font-size="12" fill="#111318">Never quit on the play.</text>
 <text x="18" y="732" font-size="12" font-weight="700" fill="#111318">C</text>
-<text x="52" y="732" font-size="12" fill="#111318">Reach the nose to your right. Head across</text>
-<text x="52" y="748" font-size="12" fill="#111318">his playside shoulder.</text>
+<text x="52" y="732" font-size="12" fill="#111318">Reach the nose to your right. Head</text>
+<text x="52" y="748" font-size="12" fill="#111318">across his playside shoulder.</text>
 <text x="18" y="766" font-size="12" font-weight="700" fill="#111318">RG</text>
 <text x="52" y="766" font-size="12" fill="#111318">Nobody on you. Climb to the playside</text>
 <text x="52" y="782" font-size="12" fill="#111318">linebacker. Head across him.</text>
@@ -105,24 +105,25 @@
 <text x="52" y="800" font-size="12" fill="#111318">Block down on the tackle, inside</text>
 <text x="52" y="816" font-size="12" fill="#111318">shoulder. Head across him — nobody</text>
 <text x="52" y="834" font-size="12" fill="#111318">crosses your face.</text>
-<text x="324" y="578" font-size="12" font-weight="700" fill="#111318">RTE</text>
-<text x="358" y="578" font-size="12" fill="#111318">End head up on you. Turn him inside. The</text>
-<text x="358" y="596" font-size="12" fill="#111318">ball goes around behind you.</text>
-<text x="324" y="612" font-size="12" font-weight="700" fill="#111318">SL</text>
-<text x="358" y="612" font-size="12" fill="#111318">Run at the corner and screen him off.</text>
-<text x="358" y="630" font-size="12" fill="#111318">Stay in his way.</text>
-<text x="324" y="646" font-size="12" font-weight="700" fill="#111318">QB</text>
-<text x="358" y="646" font-size="12" fill="#111318">Open right and hand the ball to the left</text>
-<text x="358" y="664" font-size="12" fill="#111318">tight end as he comes across behind you,</text>
-<text x="358" y="680" font-size="12" fill="#111318">then fake a run to the left.</text>
-<text x="324" y="698" font-size="12" font-weight="700" fill="#111318">FB</text>
-<text x="358" y="698" font-size="12" fill="#111318">Lead outside our end, then turn up inside</text>
-<text x="358" y="714" font-size="12" fill="#111318">— the playside linebacker is the man who</text>
-<text x="358" y="732" font-size="12" fill="#111318">shows. Head across him.</text>
-<text x="324" y="748" font-size="12" font-weight="700" fill="#111318">TB</text>
-<text x="358" y="748" font-size="12" fill="#111318">Run at the corner and screen him off.</text>
-<text x="358" y="766" font-size="12" fill="#111318">Stay in his way.</text>
-<line x1="18" y1="840" x2="630" y2="840" stroke="#c8cdd6" stroke-width="1"/>
+<text x="310" y="578" font-size="12" font-weight="700" fill="#111318">RTE</text>
+<text x="344" y="578" font-size="12" fill="#111318">End head up on you. Turn him inside.</text>
+<text x="344" y="596" font-size="12" fill="#111318">The ball goes around behind you.</text>
+<text x="310" y="612" font-size="12" font-weight="700" fill="#111318">SL</text>
+<text x="344" y="612" font-size="12" fill="#111318">Run at the corner and screen him off.</text>
+<text x="344" y="630" font-size="12" fill="#111318">Stay in his way.</text>
+<text x="310" y="646" font-size="12" font-weight="700" fill="#111318">QB</text>
+<text x="344" y="646" font-size="12" fill="#111318">Open right and hand the ball to the</text>
+<text x="344" y="664" font-size="12" fill="#111318">left tight end as he comes across</text>
+<text x="344" y="680" font-size="12" fill="#111318">behind you, then fake a run to the</text>
+<text x="344" y="698" font-size="12" fill="#111318">left.</text>
+<text x="310" y="714" font-size="12" font-weight="700" fill="#111318">FB</text>
+<text x="344" y="714" font-size="12" fill="#111318">Lead outside our end, then turn up</text>
+<text x="344" y="732" font-size="12" fill="#111318">inside — the playside linebacker is the</text>
+<text x="344" y="748" font-size="12" fill="#111318">man who shows. Head across him.</text>
+<text x="310" y="766" font-size="12" font-weight="700" fill="#111318">TB</text>
+<text x="344" y="766" font-size="12" fill="#111318">Run at the corner and screen him off.</text>
+<text x="344" y="782" font-size="12" fill="#111318">Stay in his way.</text>
+<line x1="18" y1="840" x2="603" y2="840" stroke="#c8cdd6" stroke-width="1"/>
 <text x="18" y="858" font-size="11" font-weight="700" fill="#5b6472" letter-spacing="1">COACHING POINTS</text>
 <text x="18" y="878" font-size="12" fill="#111318">No motion before the snap. The end stays down in his stance.</text>
 <text x="18" y="896" font-size="12" fill="#111318">He turns up outside the trips. The fullback takes the force man; the slot screens.</text>
