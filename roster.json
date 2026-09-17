@@ -2,6 +2,7 @@
   "note": "The depth chart. Depth is the column — 1 through 6; anybody past that is on the squad but in nothing. A name may repeat, both down a column and across one: the same left tackle at three depths is that name three times, and a backup can be second in line at two positions. Offense covers every spot both formations use; defense is the 4-4, our everyday front. Edit this file and rebuild — the page is the file, not a board you rearrange in the browser.",
   "offense": {
     "LTE": [
+      "Camden G.",
       "Ryan S.",
       "Brogan A.",
       "Joseph P.",
@@ -21,7 +22,7 @@
       "Mason A."
     ],
     "C": [
-      "Camden G.",
+      "Brayden H.",
       "Brayden S."
     ],
     "RG": [
@@ -120,11 +121,11 @@
         "Jake G.",
         "Nico V.",
         "Philip A.",
-        "Ryan S.",
+        "Camden G.",
         "Ace A.",
         "Michael M.",
         "Luca D.",
-        "Camden G.",
+        "Brayden H.",
         "Elias F.",
         "Brayden S."
       ],
@@ -132,12 +133,12 @@
         "Brogan A.",
         "Luca D.",
         "Philip A.",
-        "Nico V.",
         "Ryan S.",
+        "Camden G.",
         "Joseph P.",
         "Michael M.",
+        "Brooks A.",
         "Brayden H.",
-        "Camden G.",
         "Elias F.",
         "Gavin P."
       ],
@@ -145,12 +146,12 @@
         "Brogan A.",
         "Luca D.",
         "Liam M.",
-        "Philip A.",
         "Ryan S.",
+        "Camden G.",
         "Ace A.",
         "Jaxon E.",
+        "Brooks A.",
         "Brayden H.",
-        "Camden G.",
         "Elias F.",
         "Brayden S."
       ],
@@ -159,11 +160,11 @@
         "Jake G.",
         "Thomas D.",
         "Kilian F.",
-        "Ryan S.",
+        "Camden G.",
         "Joseph P.",
         "Michael M.",
         "Luca D.",
-        "Camden G.",
+        "Brayden H.",
         "Elias F.",
         "Brayden S."
       ],
@@ -172,24 +173,24 @@
         "Jake G.",
         "Liam M.",
         "Joseph P.",
-        "Ryan S.",
+        "Camden G.",
         "Ace A.",
         "Jaxon E.",
         "Luca D.",
-        "Camden G.",
+        "Brayden H.",
         "Elias F.",
         "Brayden S."
       ],
       [
         "Brogan A.",
-        "Brayden H.",
-        "Elias F.",
         "Jake G.",
+        "Elias F.",
         "Ryan S.",
+        "Camden G.",
         "Ace A.",
         "Michael M.",
         "Luca D.",
-        "Camden G.",
+        "Brayden H.",
         "Mason A.",
         "Brooks A."
       ]
