@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="594" height="472" viewBox="54 27 594 472" font-family="Segoe UI, Helvetica, Arial, sans-serif" role="img">
-<title>Split Backs - Slot Right - LTE Sweep — Split Backs Slot Right LTE Sweep vs 4-4</title>
+<title>Split Backs - Slot Left - RTE Sweep — Split Backs Slot Left RTE Sweep vs 4-4</title>
 <rect x="0" y="0" width="702" height="513" fill="#ffffff"/>
 <line x1="0" y1="459.0" x2="702" y2="459.0" stroke="#c8cdd6" stroke-width="1"/>
 <line x1="0" y1="189.0" x2="702" y2="189.0" stroke="#c8cdd6" stroke-width="1"/>
@@ -27,31 +27,31 @@
 <text x="607.5" y="225.2" text-anchor="middle" font-size="12.5" fill="#9aa2ae" font-weight="600">RC</text>
 <line x1="341.8" y1="98.8" x2="360.2" y2="117.2" stroke="#9aa2ae" stroke-width="3.6"/><line x1="360.2" y1="98.8" x2="341.8" y2="117.2" stroke="#9aa2ae" stroke-width="3.6"/>
 <text x="351.0" y="90.2" text-anchor="middle" font-size="12.5" fill="#9aa2ae" font-weight="600">FS</text>
-<path d="M237.6,337.5 C247.5,346.1 273.6,379.4 297.0,388.8 C320.4,398.2 339.8,396.0 378.0,394.2 C416.2,392.4 499.5,390.6 526.5,378.0 C553.5,365.4 537.8,343.8 540.0,318.6 C542.2,293.4 540.0,257.4 540.0,226.8 C540.0,196.2 540.0,150.3 540.0,135.0" fill="none" stroke="#b3001b" stroke-width="4.6" stroke-linecap="round" stroke-linejoin="round"/>
-<polygon points="540.0,135.0 546.2,148.8 533.8,148.8" fill="#b3001b"/>
-<path d="M275.4,337.5 L255.7,312.1" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-<line x1="248.4" y1="317.8" x2="262.9" y2="306.5" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
+<path d="M237.6,337.5 L244.9,314.0" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="236.1" y1="311.3" x2="253.7" y2="316.7" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
+<path d="M275.4,337.5 L304.3,310.8 L308.6,254.3" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="299.5" y1="253.6" x2="317.8" y2="255.0" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 <path d="M313.2,337.5 L313.2,314.6" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
 <line x1="304.0" y1="314.6" x2="322.4" y2="314.6" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
-<path d="M351.0,337.5 L322.1,310.8 L317.8,254.3" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-<line x1="308.6" y1="255.0" x2="326.9" y2="253.6" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
+<path d="M351.0,337.5 L379.9,310.8 L384.2,254.3" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="375.1" y1="253.6" x2="393.4" y2="255.0" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 <path d="M388.8,337.5 L388.8,314.6" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
 <line x1="379.6" y1="314.6" x2="398.0" y2="314.6" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
-<path d="M426.6,337.5 L397.7,310.8 L393.4,254.3" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-<line x1="384.2" y1="255.0" x2="402.5" y2="253.6" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
-<path d="M464.4,337.5 L457.1,314.0" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-<line x1="448.3" y1="316.7" x2="465.9" y2="311.3" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
-<path d="M502.2,364.5 L599.7,252.2" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-<line x1="592.7" y1="246.2" x2="606.6" y2="258.2" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
-<path d="M351.0,364.5 L375.3,386.1 L329.4,391.5 L253.8,386.1" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 5"/>
-<polygon points="253.8,386.1 264.5,382.2 263.8,391.4" fill="#14213d"/>
-<path d="M410.4,426.6 C425.7,417.6 486.0,391.5 502.2,372.6 C518.4,353.7 512.8,332.9 507.6,313.2 C502.4,293.5 477.2,264.1 471.1,254.3" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-<line x1="463.3" y1="259.2" x2="479.0" y2="249.5" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
-<path d="M291.6,426.6 C316.8,420.8 414.0,404.6 442.8,391.5 C471.6,378.4 460.4,371.6 464.4,348.3 C468.4,325.0 466.2,267.8 466.6,251.6" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-<line x1="457.4" y1="251.4" x2="475.7" y2="251.8" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
+<path d="M426.6,337.5 L446.3,312.1" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="439.1" y1="306.5" x2="453.6" y2="317.8" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
+<path d="M464.4,337.5 C454.5,346.1 428.4,379.4 405.0,388.8 C381.6,398.2 362.2,396.0 324.0,394.2 C285.8,392.4 202.5,390.6 175.5,378.0 C148.5,365.4 164.3,343.8 162.0,318.6 C159.8,293.4 162.0,257.4 162.0,226.8 C162.0,196.2 162.0,150.3 162.0,135.0" fill="none" stroke="#b3001b" stroke-width="4.6" stroke-linecap="round" stroke-linejoin="round"/>
+<polygon points="162.0,135.0 168.2,148.8 155.8,148.8" fill="#b3001b"/>
+<path d="M199.8,364.5 L102.3,252.2" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="95.4" y1="258.2" x2="109.3" y2="246.2" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
+<path d="M351.0,364.5 L326.7,386.1 L372.6,391.5 L448.2,386.1" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 5"/>
+<polygon points="448.2,386.1 438.2,391.4 437.5,382.2" fill="#14213d"/>
+<path d="M291.6,426.6 C276.3,417.6 216.0,391.5 199.8,372.6 C183.6,353.7 189.2,332.9 194.4,313.2 C199.6,293.5 224.8,264.1 230.9,254.3" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="223.0" y1="249.5" x2="238.7" y2="259.2" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
+<path d="M410.4,426.6 C385.2,420.8 288.0,404.6 259.2,391.5 C230.4,378.4 241.6,371.6 237.6,348.3 C233.6,325.0 235.8,267.8 235.4,251.6" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="226.3" y1="251.8" x2="244.6" y2="251.4" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 
-<rect x="224.1" y="324.0" width="27.0" height="27.0" rx="3" fill="#ffffff" stroke="#b3001b" stroke-width="2.6"/>
-<text x="237.6" y="342.0" text-anchor="middle" font-size="13" font-weight="700" fill="#b3001b">LTE</text>
+<rect x="224.1" y="324.0" width="27.0" height="27.0" rx="3" fill="#ffffff" stroke="#14213d" stroke-width="2.6"/>
+<text x="237.6" y="342.0" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">LTE</text>
 <rect x="261.9" y="324.0" width="27.0" height="27.0" rx="3" fill="#ffffff" stroke="#14213d" stroke-width="2.6"/>
 <text x="275.4" y="342.0" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">LT</text>
 <rect x="299.7" y="324.0" width="27.0" height="27.0" rx="3" fill="#ffffff" stroke="#14213d" stroke-width="2.6"/>
@@ -62,16 +62,16 @@
 <text x="388.8" y="342.0" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">RG</text>
 <rect x="413.1" y="324.0" width="27.0" height="27.0" rx="3" fill="#ffffff" stroke="#14213d" stroke-width="2.6"/>
 <text x="426.6" y="342.0" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">RT</text>
-<rect x="450.9" y="324.0" width="27.0" height="27.0" rx="3" fill="#ffffff" stroke="#14213d" stroke-width="2.6"/>
-<text x="464.4" y="342.0" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">RTE</text>
-<circle cx="502.2" cy="364.5" r="13.5" fill="#ffffff" stroke="#14213d" stroke-width="2.6"/>
-<text x="502.2" y="369.0" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">SL</text>
+<rect x="450.9" y="324.0" width="27.0" height="27.0" rx="3" fill="#ffffff" stroke="#b3001b" stroke-width="2.6"/>
+<text x="464.4" y="342.0" text-anchor="middle" font-size="13" font-weight="700" fill="#b3001b">RTE</text>
+<circle cx="199.8" cy="364.5" r="13.5" fill="#ffffff" stroke="#14213d" stroke-width="2.6"/>
+<text x="199.8" y="369.0" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">SL</text>
 <circle cx="351.0" cy="364.5" r="13.5" fill="#ffffff" stroke="#14213d" stroke-width="2.6"/>
 <text x="351.0" y="369.0" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">QB</text>
 <circle cx="291.6" cy="426.6" r="13.5" fill="#ffffff" stroke="#14213d" stroke-width="2.6"/>
 <text x="291.6" y="431.1" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">LH</text>
 <circle cx="410.4" cy="426.6" r="13.5" fill="#ffffff" stroke="#14213d" stroke-width="2.6"/>
 <text x="410.4" y="431.1" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">RH</text>
-<rect x="520.8" y="35.0" width="119.2" height="52.0" rx="8" fill="#ffffff" stroke="#111318" stroke-width="3"/><text x="580.4" y="75.0" text-anchor="middle" font-size="40" font-weight="800" fill="#111318">#S-9</text>
-<text x="66.0" y="45.0" font-size="4.3" font-weight="700" fill="#111318">Split Backs - Slot Right - LTE Sweep</text>
+<rect x="496.0" y="35.0" width="144.0" height="52.0" rx="8" fill="#ffffff" stroke="#111318" stroke-width="3"/><text x="568.0" y="75.0" text-anchor="middle" font-size="40" font-weight="800" fill="#111318">#S-10</text>
+<text x="66.0" y="45.0" font-size="4.3" font-weight="700" fill="#111318">Split Backs - Slot Left - RTE Sweep</text>
 </svg>

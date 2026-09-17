@@ -6,35 +6,10 @@
   "code": "G-4",
   "call": "Shotgun Slot Right 18 Sweep",
   "type": "run",
+  "scheme": "Sweep",
   "direction": "right",
   "ball_carrier": "QB",
   "assignments": {
-    "RTE": {
-      "block": "base",
-      "drive": "in"
-    },
-    "RT": {
-      "block": "down"
-    },
-    "RG": {
-      "block": "climb",
-      "target": "playside"
-    },
-    "C": {
-      "block": "reach"
-    },
-    "LG": {
-      "block": "cutoff"
-    },
-    "LT": {
-      "block": "down"
-    },
-    "LTE": {
-      "block": "cutoff"
-    },
-    "SL": {
-      "block": "screen"
-    },
     "QB": {
       "rule": "Catch the snap and sweep right, flat and fast, behind the right halfback. Turn up outside his block.",
       "type": "run",
@@ -64,10 +39,6 @@
           12.0
         ]
       ]
-    },
-    "RH": {
-      "block": "lead",
-      "target": "force"
     },
     "LH": {
       "rule": "Fake the handoff going left and run hard. Sell it all the way — you are the reason the defense goes the wrong way.",

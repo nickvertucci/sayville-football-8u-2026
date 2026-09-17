@@ -213,8 +213,8 @@
       "plays": [
         "sb-sl-sweep-l",
         "sb-sl-sweep-r",
-        "sb-te-jet-r",
-        "sb-te-jet-l"
+        "sb-te-sweep-r",
+        "sb-te-sweep-l"
       ],
       "review": [
         "sb-toss-r",
@@ -257,8 +257,8 @@
         "sb-toss-l",
         "sb-sl-sweep-l",
         "sb-sl-sweep-r",
-        "sb-te-jet-r",
-        "sb-te-jet-l"
+        "sb-te-sweep-r",
+        "sb-te-sweep-l"
       ]
     }
   ]

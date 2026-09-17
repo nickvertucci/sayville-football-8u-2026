@@ -72,8 +72,11 @@ build checks the receiver's path is that long.
 ## Required fields
 
 **A play** needs `id` (must equal the filename, and be unique across every formation),
-`name`, and `assignments` with an entry for **all eleven** positions in the formation.
-`--check` fails the build if one is missing.
+`name`, `scheme` (Smash, Dive, Power, Slant, Toss, Sweep or Protect), and
+`assignments` for the ball carrier, fakes and routes. The line, the slot and the
+lead come from the scheme — do not restate them. `--check` fails the build if a
+position still has no job after the fill, or if a written block disagrees with
+the scheme.
 
 Optional: `call`, `type`, `defense` (must match a file in `defense/`),
 `order`, `direction`, `coaching_points`, `alignment`, `code`.
@@ -176,6 +179,10 @@ The numbering system is documented in the top-level [README](../README.md).
   calls (a tight-end sweep, a slant-out pass) opt out of the hole table because
   they have no hole digit.
 
+The play word **is** the blocking scheme. `34 Power` fills Power; `18 Sweep`
+fills Sweep; a dropback `RTE Slant Out` fills Protect. Dive and Slant are
+named and ready — there is just no play in the book at those holes yet.
+
 That means the digits describe **the back the first digit names**, not necessarily the
 ball carrier. On a play-action pass they follow the quarterback's path, while
 `ball_carrier` is the receiver he throws to, which is a different thing.
@@ -192,9 +199,56 @@ added to a word call are still checked.
 Formations carry an `order` field too, which is teaching order, not the alphabet.
 Both control the sequence on the site and in `PLAYBOOK.md`.
 
-### Do not write blocking rules. Write blocking intents.
+### Name the scheme. Write the paths that are the play.
 
-A blocker's assignment is **a verb, not a sentence**:
+A play does not list eleven blocking verbs. It names the family, and the generator
+fills the line, the slot and the lead from `SCHEMES` in `generator/blocking.py`:
+
+```json
+{
+  "scheme": "Power",
+  "ball_carrier": "TB",
+  "assignments": {
+    "QB": { "rule": "Open right, hand deep to the tailback, then fake the boot.",
+            "type": "fake", "path": [[1.2, -0.5], [4.6, -1.6]] },
+    "TB": { "rule": "Take the handoff downhill at our tackle's outside hip.",
+            "type": "run", "path": [[1.2, 1.5], [3.4, 5.6]] }
+  }
+}
+```
+
+Roles, not position keys, so Regular I, Split Backs and the next formation all
+get the same Power: playside end releases, slot kicks, fullback (or the playside
+halfback) leads. A stacked I always leads with the fullback. Two halfbacks lead
+with the one on the playside.
+
+| Scheme | Playside end | Slot | Lead | Where |
+|---|---|---|---|---|
+| **Smash** | cutoff | screen | through the hole | A-gap (0/1) |
+| **Dive** | cutoff | screen | through the hole | B-gap (2/3) |
+| **Power** | release | kick | through the hole | C-gap (4/5) |
+| **Slant** | base inside | screen | through the hole | outside the end (6/7) |
+| **Toss** | base inside | screen | force man | all the way outside (8/9) |
+| **Sweep** | base inside | screen | force man | 8/9, QB or slot or a tight end |
+| **Protect** | protect | screen | protect | dropback pass |
+
+A leftover back the scheme does not name stays on the play — the trailing
+halfback who also leads on a tight-end sweep, a `note` on the toss lead. A
+tight-end sweep is still Sweep: the backside end is gone, so the backside
+tackle cuts off instead of blocking down.
+
+Do not restate a scheme verb on the play. `--check` rejects a Power whose
+playside end cuts off, because that is Smash. A `note` with no verb is merged
+onto the scheme job.
+
+A dropback is `{who} {route}` (`RTE Slant Out`) and scheme **Protect**. Do not
+number it with a hole word — Slant is the 6/7 run. Play-action (none in the
+book yet) takes the run's scheme and its digits; `ball_carrier` is the receiver.
+
+### Blocking intents
+
+What the scheme fills, and what a leftover back writes, is **a verb, not a
+sentence**:
 
 ```json
 "RT": { "block": "down" },
@@ -313,6 +367,7 @@ none of those depend on where the defence lines up. Only blocking is resolved.
 ```
 python generator/preview.py i-power-r          # all three fronts, side by side
 python generator/preview.py --formation i-form --audit
+python generator/test_schemes.py               # templates, role mapping, fill
 ```
 
 `--audit` is the one that catches a badly chosen verb: it flags a defender on the
@@ -344,6 +399,16 @@ call; a play that moves somebody silently is a play nobody can call.
   what it looks like when it goes wrong.
 
 ## Before adding a formation or a play
+
+The system is the seven-man line (`LTE` … `RTE`), a slot (`SL`), a quarterback,
+and either a stacked I (`FB` + `TB`) or two halfbacks (`LH` + `RH`). A new
+formation that keeps those keys drops in: give it `formation.json` (alignment,
+`backs`, `code_prefix`) and plays that name a scheme and write the paths. Power
+in the new look is `"scheme": "Power"` plus the handoff — not eleven new verbs.
+
+A new play in an existing formation is the same: `scheme`, `call`, the carrier's
+path, leftover backs if the family does not name them. Dive (2/3) and Slant
+(6/7) are reserved and empty; use those words when the hole is those holes.
 
 Check it against [RULES.md](../RULES.md). The league mandates a minimum of three
 linebackers and bans blitzing at this age, caps the defensive line at six, and requires

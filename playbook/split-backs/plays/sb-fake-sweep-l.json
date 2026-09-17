@@ -6,6 +6,7 @@
   "code": "S-5",
   "call": "Split Backs Slot Left 19 Fake Sweep",
   "type": "run",
+  "scheme": "Sweep",
   "direction": "left",
   "ball_carrier": "QB",
   "alignment": {
@@ -15,32 +16,6 @@
     ]
   },
   "assignments": {
-    "RTE": {
-      "block": "cutoff"
-    },
-    "RT": {
-      "block": "down"
-    },
-    "RG": {
-      "block": "cutoff"
-    },
-    "C": {
-      "block": "reach"
-    },
-    "LG": {
-      "block": "climb",
-      "target": "playside"
-    },
-    "LT": {
-      "block": "down"
-    },
-    "LTE": {
-      "block": "base",
-      "drive": "in"
-    },
-    "SL": {
-      "block": "screen"
-    },
     "QB": {
       "rule": "Fake the handoff to the right halfback, then roll back left and sweep it, flat and fast, behind the left halfback. Turn up outside his block.",
       "type": "run",
@@ -70,10 +45,6 @@
           6.0
         ]
       ]
-    },
-    "LH": {
-      "block": "lead",
-      "target": "force"
     },
     "RH": {
       "rule": "Take the fake from the quarterback and run hard to the right like you have the ball. Sell it all the way — you are the reason the defense goes the wrong way.",

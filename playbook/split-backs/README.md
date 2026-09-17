@@ -22,26 +22,28 @@ Both ends are tight on the line. The two backs sit four yards deep and just over
 
 ## Plays
 
-| Play | Call | Type | Ball |
-|---|---|---|---|
-| [Split Backs - Slot Right - 38 Toss](#split-backs---slot-right---38-toss) | `Split Backs Slot Right 38 Toss` | run | LH |
-| [Split Backs - Slot Left - 29 Toss](#split-backs---slot-left---29-toss) | `Split Backs Slot Left 29 Toss` | run | RH |
-| [Split Backs - Slot Right - 18 Sweep](#split-backs---slot-right---18-sweep) | `Split Backs Slot Right 18 Sweep` | run | QB |
-| [Split Backs - Slot Left - 19 Sweep](#split-backs---slot-left---19-sweep) | `Split Backs Slot Left 19 Sweep` | run | QB |
-| [Split Backs - Slot Left - 19 Fake Sweep](#split-backs---slot-left---19-fake-sweep) | `Split Backs Slot Left 19 Fake Sweep` | run | QB |
-| [Split Backs - Slot Right - 18 Fake Sweep](#split-backs---slot-right---18-fake-sweep) | `Split Backs Slot Right 18 Fake Sweep` | run | QB |
-| [Split Backs - Slot Right - 49 Sweep](#split-backs---slot-right---49-sweep) | `Split Backs Slot Right 49 Sweep` | run | SL |
-| [Split Backs - Slot Left - 48 Sweep](#split-backs---slot-left---48-sweep) | `Split Backs Slot Left 48 Sweep` | run | SL |
-| [Split Backs - Slot Right - LTE Sweep](#split-backs---slot-right---lte-sweep) | `Split Backs Slot Right LTE Sweep` | run | LTE |
-| [Split Backs - Slot Left - RTE Sweep](#split-backs---slot-left---rte-sweep) | `Split Backs Slot Left RTE Sweep` | run | RTE |
-| [Split Backs - Slot Right - RTE Slant Out](#split-backs---slot-right---rte-slant-out) | `Split Backs Slot Right RTE Slant Out` | pass | RTE |
-| [Split Backs - Slot Left - LTE Slant Out](#split-backs---slot-left---lte-slant-out) | `Split Backs Slot Left LTE Slant Out` | pass | LTE |
+| Play | Call | Scheme | Type | Ball |
+|---|---|---|---|---|
+| [Split Backs - Slot Right - 38 Toss](#split-backs---slot-right---38-toss) | `Split Backs Slot Right 38 Toss` | Toss | run | LH |
+| [Split Backs - Slot Left - 29 Toss](#split-backs---slot-left---29-toss) | `Split Backs Slot Left 29 Toss` | Toss | run | RH |
+| [Split Backs - Slot Right - 18 Sweep](#split-backs---slot-right---18-sweep) | `Split Backs Slot Right 18 Sweep` | Sweep | run | QB |
+| [Split Backs - Slot Left - 19 Sweep](#split-backs---slot-left---19-sweep) | `Split Backs Slot Left 19 Sweep` | Sweep | run | QB |
+| [Split Backs - Slot Left - 19 Fake Sweep](#split-backs---slot-left---19-fake-sweep) | `Split Backs Slot Left 19 Fake Sweep` | Sweep | run | QB |
+| [Split Backs - Slot Right - 18 Fake Sweep](#split-backs---slot-right---18-fake-sweep) | `Split Backs Slot Right 18 Fake Sweep` | Sweep | run | QB |
+| [Split Backs - Slot Right - 49 Sweep](#split-backs---slot-right---49-sweep) | `Split Backs Slot Right 49 Sweep` | Sweep | run | SL |
+| [Split Backs - Slot Left - 48 Sweep](#split-backs---slot-left---48-sweep) | `Split Backs Slot Left 48 Sweep` | Sweep | run | SL |
+| [Split Backs - Slot Right - LTE Sweep](#split-backs---slot-right---lte-sweep) | `Split Backs Slot Right LTE Sweep` | Sweep | run | LTE |
+| [Split Backs - Slot Left - RTE Sweep](#split-backs---slot-left---rte-sweep) | `Split Backs Slot Left RTE Sweep` | Sweep | run | RTE |
+| [Split Backs - Slot Right - RTE Slant Out](#split-backs---slot-right---rte-slant-out) | `Split Backs Slot Right RTE Slant Out` | Protect | pass | RTE |
+| [Split Backs - Slot Left - LTE Slant Out](#split-backs---slot-left---lte-slant-out) | `Split Backs Slot Left LTE Slant Out` | Protect | pass | LTE |
 
 ---
 
 ## Split Backs - Slot Right - 38 Toss
 
 **Call it:** `Split Backs Slot Right 38 Toss`
+
+**Scheme:** Toss
 
 ![Split Backs - Slot Right - 38 Toss](cards/sb-toss-r-4-4.svg)
 
@@ -71,6 +73,8 @@ Both ends are tight on the line. The two backs sit four yards deep and just over
 
 **Call it:** `Split Backs Slot Left 29 Toss`
 
+**Scheme:** Toss
+
 ![Split Backs - Slot Left - 29 Toss](cards/sb-toss-l-4-4.svg)
 
 | Position | Assignment |
@@ -99,21 +103,23 @@ Both ends are tight on the line. The two backs sit four yards deep and just over
 
 **Call it:** `Split Backs Slot Right 18 Sweep`
 
+**Scheme:** Sweep
+
 ![Split Backs - Slot Right - 18 Sweep](cards/sb-qb-sweep-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
-| **LTE** | End on your inside shoulder. Cut him off — get between him and the ball. |
-| **LT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
-| **LG** | Tackle head up on you. Cut him off — get between him and the ball. |
-| **C** | Nobody on you. Climb to the playside linebacker. Head across him. |
-| **RG** | Tackle head up on you. Step past him. Climb to the playside linebacker. Head across him. |
-| **RT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
+| **LTE** | Block the left end. |
+| **LT** | Help on the left end, then block the left outside linebacker. |
+| **LG** | Block the left tackle. |
+| **C** | Help on the left tackle, then block the left inside linebacker. |
+| **RG** | Block the right tackle. |
+| **RT** | Help on the right tackle, then block the right inside linebacker. |
 | **RTE** | End on your inside shoulder. Turn him inside. The ball goes around behind you. |
 | **SL** | Run at the corner and screen him off. Stay in his way. |
 | **QB** **(ball)** | Take the snap and sweep right, flat and fast, behind the right halfback. Turn up outside his block. |
 | **LH** | Run hard to the left like you have the ball. Sell it all the way — you are the reason the defense goes the wrong way. |
-| **RH** | Lead outside our end. Block the first man out there — here it is the linebacker. |
+| **RH** | Bubble out around the right tight end, then block the right outside linebacker. |
 
 **Coaching points**
 
@@ -126,6 +132,8 @@ Both ends are tight on the line. The two backs sit four yards deep and just over
 ## Split Backs - Slot Left - 19 Sweep
 
 **Call it:** `Split Backs Slot Left 19 Sweep`
+
+**Scheme:** Sweep
 
 ![Split Backs - Slot Left - 19 Sweep](cards/sb-qb-sweep-l-4-4.svg)
 
@@ -155,6 +163,8 @@ Both ends are tight on the line. The two backs sit four yards deep and just over
 
 **Call it:** `Split Backs Slot Left 19 Fake Sweep`
 
+**Scheme:** Sweep
+
 ![Split Backs - Slot Left - 19 Fake Sweep](cards/sb-fake-sweep-l-4-4.svg)
 
 | Position | Assignment |
@@ -182,6 +192,8 @@ Both ends are tight on the line. The two backs sit four yards deep and just over
 ## Split Backs - Slot Right - 18 Fake Sweep
 
 **Call it:** `Split Backs Slot Right 18 Fake Sweep`
+
+**Scheme:** Sweep
 
 ![Split Backs - Slot Right - 18 Fake Sweep](cards/sb-fake-sweep-r-4-4.svg)
 
@@ -211,6 +223,8 @@ Both ends are tight on the line. The two backs sit four yards deep and just over
 
 **Call it:** `Split Backs Slot Right 49 Sweep`
 
+**Scheme:** Sweep
+
 ![Split Backs - Slot Right - 49 Sweep](cards/sb-sl-sweep-l-4-4.svg)
 
 | Position | Assignment |
@@ -238,6 +252,8 @@ Both ends are tight on the line. The two backs sit four yards deep and just over
 ## Split Backs - Slot Left - 48 Sweep
 
 **Call it:** `Split Backs Slot Left 48 Sweep`
+
+**Scheme:** Sweep
 
 ![Split Backs - Slot Left - 48 Sweep](cards/sb-sl-sweep-r-4-4.svg)
 
@@ -267,7 +283,9 @@ Both ends are tight on the line. The two backs sit four yards deep and just over
 
 **Call it:** `Split Backs Slot Right LTE Sweep`
 
-![Split Backs - Slot Right - LTE Sweep](cards/sb-te-jet-r-4-4.svg)
+**Scheme:** Sweep
+
+![Split Backs - Slot Right - LTE Sweep](cards/sb-te-sweep-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -295,7 +313,9 @@ Both ends are tight on the line. The two backs sit four yards deep and just over
 
 **Call it:** `Split Backs Slot Left RTE Sweep`
 
-![Split Backs - Slot Left - RTE Sweep](cards/sb-te-jet-l-4-4.svg)
+**Scheme:** Sweep
+
+![Split Backs - Slot Left - RTE Sweep](cards/sb-te-sweep-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -322,6 +342,8 @@ Both ends are tight on the line. The two backs sit four yards deep and just over
 ## Split Backs - Slot Right - RTE Slant Out
 
 **Call it:** `Split Backs Slot Right RTE Slant Out`
+
+**Scheme:** Protect
 
 ![Split Backs - Slot Right - RTE Slant Out](cards/sb-te-out-r-4-4.svg)
 
@@ -350,6 +372,8 @@ Both ends are tight on the line. The two backs sit four yards deep and just over
 ## Split Backs - Slot Left - LTE Slant Out
 
 **Call it:** `Split Backs Slot Left LTE Slant Out`
+
+**Scheme:** Protect
 
 ![Split Backs - Slot Left - LTE Slant Out](cards/sb-te-out-l-4-4.svg)
 

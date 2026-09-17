@@ -7,27 +7,10 @@
   "call": "Shotgun Slot Right RTE Slant Out",
   "word_call": true,
   "type": "pass",
+  "scheme": "Protect",
   "direction": "right",
   "ball_carrier": "RTE",
   "assignments": {
-    "LTE": {
-      "block": "protect"
-    },
-    "LT": {
-      "block": "protect"
-    },
-    "LG": {
-      "block": "protect"
-    },
-    "C": {
-      "block": "protect"
-    },
-    "RG": {
-      "block": "protect"
-    },
-    "RT": {
-      "block": "protect"
-    },
     "RTE": {
       "rule": "Take one step up, then slant out flat toward the right sideline, almost along the line of scrimmage. Look for the ball right away.",
       "type": "pass",
@@ -42,9 +25,6 @@
         ]
       ]
     },
-    "SL": {
-      "block": "screen"
-    },
     "QB": {
       "rule": "Catch the snap, take one step and throw to the right tight end as he slants out. If he is covered, tuck it and run.",
       "type": "pass",
@@ -54,12 +34,6 @@
           -0.6
         ]
       ]
-    },
-    "LH": {
-      "block": "protect"
-    },
-    "RH": {
-      "block": "protect"
     }
   },
   "fronts": {

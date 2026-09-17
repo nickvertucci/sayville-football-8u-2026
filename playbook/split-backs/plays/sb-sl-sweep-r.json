@@ -6,66 +6,76 @@
   "code": "S-8",
   "call": "Split Backs Slot Left 48 Sweep",
   "type": "run",
+  "scheme": "Sweep",
   "direction": "right",
   "ball_carrier": "SL",
   "alignment": {
-    "SL": [-5.6, -1.5]
+    "SL": [
+      -5.6,
+      -1.5
+    ]
   },
   "assignments": {
-    "RTE": {
-      "block": "base",
-      "drive": "in"
-    },
-    "RT": {
-      "block": "down"
-    },
-    "RG": {
-      "block": "climb",
-      "target": "playside"
-    },
-    "C": {
-      "block": "reach"
-    },
-    "LG": {
-      "block": "cutoff"
-    },
-    "LT": {
-      "block": "down"
-    },
-    "LTE": {
-      "block": "cutoff"
-    },
     "SL": {
       "rule": "At the snap run flat across the backfield, take the handoff at full speed and get to the right edge. Turn up in the alley behind the right halfback.",
       "type": "run",
       "path": [
-        [4.0, -0.8],
-        [7.0, -1.0],
-        [11.5, -0.8],
-        [13.6, 0.6],
-        [14.0, 2.2],
-        [14.0, 5.2],
-        [14.0, 8.2]
+        [
+          4.0,
+          -0.8
+        ],
+        [
+          7.0,
+          -1.0
+        ],
+        [
+          11.5,
+          -0.8
+        ],
+        [
+          13.6,
+          0.6
+        ],
+        [
+          14.0,
+          2.2
+        ],
+        [
+          14.0,
+          5.2
+        ],
+        [
+          14.0,
+          8.2
+        ]
       ]
     },
     "QB": {
       "rule": "Hand the ball to the slot as he runs past you, then fake the handoff to the left halfback going left.",
       "type": "fake",
       "path": [
-        [-0.4, -0.5],
-        [-1.2, -1.4]
+        [
+          -0.4,
+          -0.5
+        ],
+        [
+          -1.2,
+          -1.4
+        ]
       ]
-    },
-    "RH": {
-      "block": "lead",
-      "target": "force"
     },
     "LH": {
       "rule": "Take the fake handoff and run hard to the left. You are what holds the backside.",
       "type": "fake",
       "path": [
-        [-1.8, 0.2],
-        [-5.6, 0.6]
+        [
+          -1.8,
+          0.2
+        ],
+        [
+          -5.6,
+          0.6
+        ]
       ]
     }
   },
@@ -107,8 +117,14 @@
         "man": "RC",
         "how": "Bubble out around the right end",
         "via": [
-          [3.4, 2.0],
-          [3.6, 4.2]
+          [
+            3.4,
+            2.0
+          ],
+          [
+            3.6,
+            4.2
+          ]
         ]
       }
     }

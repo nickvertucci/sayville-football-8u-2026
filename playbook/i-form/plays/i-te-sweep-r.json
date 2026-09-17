@@ -7,6 +7,7 @@
   "call": "Regular I Slot Right LTE Sweep",
   "word_call": true,
   "type": "run",
+  "scheme": "Sweep",
   "direction": "right",
   "ball_carrier": "LTE",
   "assignments": {
@@ -40,29 +41,6 @@
         ]
       ]
     },
-    "LT": {
-      "block": "cutoff"
-    },
-    "LG": {
-      "block": "cutoff"
-    },
-    "C": {
-      "block": "reach"
-    },
-    "RG": {
-      "block": "climb",
-      "target": "playside"
-    },
-    "RT": {
-      "block": "down"
-    },
-    "RTE": {
-      "block": "base",
-      "drive": "in"
-    },
-    "SL": {
-      "block": "screen"
-    },
     "QB": {
       "rule": "Open right and hand the ball to the left tight end as he comes across behind you, then fake a run to the left.",
       "type": "fake",
@@ -80,10 +58,6 @@
           -0.8
         ]
       ]
-    },
-    "FB": {
-      "block": "lead",
-      "target": "force"
     },
     "TB": {
       "block": "screen"

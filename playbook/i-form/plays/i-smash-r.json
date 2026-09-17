@@ -6,55 +6,52 @@
   "code": "I-7",
   "call": "Regular I Slot Right 30 Smash",
   "type": "run",
+  "scheme": "Smash",
   "direction": "right",
   "ball_carrier": "TB",
   "assignments": {
-    "LTE": {
-      "block": "cutoff"
-    },
-    "LT": {
-      "block": "down"
-    },
-    "LG": {
-      "block": "cutoff"
-    },
-    "C": {
-      "block": "reach"
-    },
-    "RG": {
-      "block": "double",
-      "target": "playside"
-    },
-    "RT": {
-      "block": "down"
-    },
-    "RTE": {
-      "block": "cutoff"
-    },
-    "SL": {
-      "block": "screen"
-    },
     "QB": {
       "rule": "Open right, hand to the tailback, then fake the boot left. It holds the backside end.",
       "type": "fake",
       "path": [
-        [0.8, -0.4],
-        [2.2, -1.0],
-        [3.6, -1.4]
+        [
+          0.8,
+          -0.4
+        ],
+        [
+          2.2,
+          -1.0
+        ],
+        [
+          3.6,
+          -1.4
+        ]
       ]
-    },
-    "FB": {
-      "block": "lead"
     },
     "TB": {
       "rule": "Take the handoff downhill between the center and the right guard, following the fullback. Do not bounce it.",
       "type": "run",
       "path": [
-        [0.5, 2.5],
-        [0.7, 5.0],
-        [0.7, 6.0],
-        [0.8, 8.5],
-        [0.9, 11.0]
+        [
+          0.5,
+          2.5
+        ],
+        [
+          0.7,
+          5.0
+        ],
+        [
+          0.7,
+          6.0
+        ],
+        [
+          0.8,
+          8.5
+        ],
+        [
+          0.9,
+          11.0
+        ]
       ]
     }
   },
@@ -98,7 +95,10 @@
         "man": "S",
         "how": "Lead through the hole",
         "via": [
-          [0.8, 3.6]
+          [
+            0.8,
+            3.6
+          ]
         ]
       }
     }

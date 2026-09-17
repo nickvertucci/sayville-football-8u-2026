@@ -6,6 +6,7 @@
   "code": "I-2",
   "call": "Regular I Slot Left 35 Power",
   "type": "run",
+  "scheme": "Power",
   "direction": "left",
   "ball_carrier": "TB",
   "alignment": {
@@ -15,31 +16,6 @@
     ]
   },
   "assignments": {
-    "RTE": {
-      "block": "cutoff"
-    },
-    "RT": {
-      "block": "down"
-    },
-    "RG": {
-      "block": "cutoff"
-    },
-    "C": {
-      "block": "reach"
-    },
-    "LG": {
-      "block": "double",
-      "target": "middle"
-    },
-    "LT": {
-      "block": "down"
-    },
-    "LTE": {
-      "block": "release"
-    },
-    "SL": {
-      "block": "kick"
-    },
     "QB": {
       "rule": "Open left, hand deep to the tailback, then fake the boot. It holds the backside end.",
       "type": "fake",
@@ -57,9 +33,6 @@
           -1.6
         ]
       ]
-    },
-    "FB": {
-      "block": "lead"
     },
     "TB": {
       "rule": "Take the handoff downhill at our tackle's outside hip, following the fullback. Never bounce it outside.",

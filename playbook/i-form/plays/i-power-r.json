@@ -6,34 +6,10 @@
   "code": "I-1",
   "call": "Regular I Slot Right 34 Power",
   "type": "run",
+  "scheme": "Power",
   "direction": "right",
   "ball_carrier": "TB",
   "assignments": {
-    "LTE": {
-      "block": "cutoff"
-    },
-    "LT": {
-      "block": "down"
-    },
-    "LG": {
-      "block": "cutoff"
-    },
-    "C": {
-      "block": "reach"
-    },
-    "RG": {
-      "block": "double",
-      "target": "middle"
-    },
-    "RT": {
-      "block": "down"
-    },
-    "RTE": {
-      "block": "release"
-    },
-    "SL": {
-      "block": "kick"
-    },
     "QB": {
       "rule": "Open right, hand deep to the tailback, then fake the boot. It holds the backside end.",
       "type": "fake",
@@ -51,9 +27,6 @@
           -1.6
         ]
       ]
-    },
-    "FB": {
-      "block": "lead"
     },
     "TB": {
       "rule": "Take the handoff downhill at our tackle's outside hip, following the fullback. Never bounce it outside.",

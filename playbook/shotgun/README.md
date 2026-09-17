@@ -22,20 +22,22 @@ Both ends are tight on the line and the slot is just outside the tight end, one 
 
 ## Plays
 
-| Play | Call | Type | Ball |
-|---|---|---|---|
-| [Shotgun - Slot Right - RTE Slant Out](#shotgun---slot-right---rte-slant-out) | `Shotgun Slot Right RTE Slant Out` | pass | RTE |
-| [Shotgun - Slot Left - LTE Slant Out](#shotgun---slot-left---lte-slant-out) | `Shotgun Slot Left LTE Slant Out` | pass | LTE |
-| [Shotgun - Slot Left - 19 Sweep](#shotgun---slot-left---19-sweep) | `Shotgun Slot Left 19 Sweep` | run | QB |
-| [Shotgun - Slot Right - 18 Sweep](#shotgun---slot-right---18-sweep) | `Shotgun Slot Right 18 Sweep` | run | QB |
-| [Shotgun - Slot Right - 38 Toss](#shotgun---slot-right---38-toss) | `Shotgun Slot Right 38 Toss` | run | LH |
-| [Shotgun - Slot Left - 29 Toss](#shotgun---slot-left---29-toss) | `Shotgun Slot Left 29 Toss` | run | RH |
+| Play | Call | Scheme | Type | Ball |
+|---|---|---|---|---|
+| [Shotgun - Slot Right - RTE Slant Out](#shotgun---slot-right---rte-slant-out) | `Shotgun Slot Right RTE Slant Out` | Protect | pass | RTE |
+| [Shotgun - Slot Left - LTE Slant Out](#shotgun---slot-left---lte-slant-out) | `Shotgun Slot Left LTE Slant Out` | Protect | pass | LTE |
+| [Shotgun - Slot Left - 19 Sweep](#shotgun---slot-left---19-sweep) | `Shotgun Slot Left 19 Sweep` | Sweep | run | QB |
+| [Shotgun - Slot Right - 18 Sweep](#shotgun---slot-right---18-sweep) | `Shotgun Slot Right 18 Sweep` | Sweep | run | QB |
+| [Shotgun - Slot Right - 38 Toss](#shotgun---slot-right---38-toss) | `Shotgun Slot Right 38 Toss` | Toss | run | LH |
+| [Shotgun - Slot Left - 29 Toss](#shotgun---slot-left---29-toss) | `Shotgun Slot Left 29 Toss` | Toss | run | RH |
 
 ---
 
 ## Shotgun - Slot Right - RTE Slant Out
 
 **Call it:** `Shotgun Slot Right RTE Slant Out`
+
+**Scheme:** Protect
 
 ![Shotgun - Slot Right - RTE Slant Out](cards/sg-te-out-r-4-4.svg)
 
@@ -65,6 +67,8 @@ Both ends are tight on the line and the slot is just outside the tight end, one 
 
 **Call it:** `Shotgun Slot Left LTE Slant Out`
 
+**Scheme:** Protect
+
 ![Shotgun - Slot Left - LTE Slant Out](cards/sg-te-out-l-4-4.svg)
 
 | Position | Assignment |
@@ -92,6 +96,8 @@ Both ends are tight on the line and the slot is just outside the tight end, one 
 ## Shotgun - Slot Left - 19 Sweep
 
 **Call it:** `Shotgun Slot Left 19 Sweep`
+
+**Scheme:** Sweep
 
 ![Shotgun - Slot Left - 19 Sweep](cards/sg-qb-sweep-l-4-4.svg)
 
@@ -121,6 +127,8 @@ Both ends are tight on the line and the slot is just outside the tight end, one 
 
 **Call it:** `Shotgun Slot Right 18 Sweep`
 
+**Scheme:** Sweep
+
 ![Shotgun - Slot Right - 18 Sweep](cards/sg-qb-sweep-r-4-4.svg)
 
 | Position | Assignment |
@@ -149,6 +157,8 @@ Both ends are tight on the line and the slot is just outside the tight end, one 
 
 **Call it:** `Shotgun Slot Right 38 Toss`
 
+**Scheme:** Toss
+
 ![Shotgun - Slot Right - 38 Toss](cards/sg-rb-toss-r-4-4.svg)
 
 | Position | Assignment |
@@ -176,6 +186,8 @@ Both ends are tight on the line and the slot is just outside the tight end, one 
 ## Shotgun - Slot Left - 29 Toss
 
 **Call it:** `Shotgun Slot Left 29 Toss`
+
+**Scheme:** Toss
 
 ![Shotgun - Slot Left - 29 Toss](cards/sg-rb-toss-l-4-4.svg)
 

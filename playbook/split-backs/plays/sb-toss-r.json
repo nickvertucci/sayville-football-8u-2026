@@ -6,6 +6,7 @@
   "code": "S-1",
   "call": "Split Backs Slot Right 38 Toss",
   "type": "run",
+  "scheme": "Toss",
   "direction": "right",
   "ball_carrier": "LH",
   "pitch": {
@@ -14,32 +15,6 @@
     "at": 1
   },
   "assignments": {
-    "LTE": {
-      "block": "cutoff"
-    },
-    "LT": {
-      "block": "down"
-    },
-    "LG": {
-      "block": "cutoff"
-    },
-    "C": {
-      "block": "reach"
-    },
-    "RG": {
-      "block": "climb",
-      "target": "playside"
-    },
-    "RT": {
-      "block": "down"
-    },
-    "RTE": {
-      "block": "base",
-      "drive": "in"
-    },
-    "SL": {
-      "block": "screen"
-    },
     "QB": {
       "rule": "Quick pitch to the left halfback, then run the other way, to the left, like you still have it.",
       "type": "rollout",
@@ -55,8 +30,6 @@
       ]
     },
     "RH": {
-      "block": "lead",
-      "target": "force",
       "note": "Step at the dive first to hold their linebackers."
     },
     "LH": {

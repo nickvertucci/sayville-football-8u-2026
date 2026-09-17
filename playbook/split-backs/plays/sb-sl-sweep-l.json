@@ -6,63 +6,70 @@
   "code": "S-7",
   "call": "Split Backs Slot Right 49 Sweep",
   "type": "run",
+  "scheme": "Sweep",
   "direction": "left",
   "ball_carrier": "SL",
   "assignments": {
-    "LTE": {
-      "block": "base",
-      "drive": "in"
-    },
-    "LT": {
-      "block": "down"
-    },
-    "LG": {
-      "block": "climb",
-      "target": "playside"
-    },
-    "C": {
-      "block": "reach"
-    },
-    "RG": {
-      "block": "cutoff"
-    },
-    "RT": {
-      "block": "down"
-    },
-    "RTE": {
-      "block": "cutoff"
-    },
     "SL": {
       "rule": "At the snap run flat across the backfield, take the handoff at full speed and get to the left edge. Turn up in the alley behind the left halfback.",
       "type": "run",
       "path": [
-        [-4.0, -0.8],
-        [-7.0, -1.0],
-        [-11.5, -0.8],
-        [-13.6, 0.6],
-        [-14.0, 2.2],
-        [-14.0, 5.2],
-        [-14.0, 8.2]
+        [
+          -4.0,
+          -0.8
+        ],
+        [
+          -7.0,
+          -1.0
+        ],
+        [
+          -11.5,
+          -0.8
+        ],
+        [
+          -13.6,
+          0.6
+        ],
+        [
+          -14.0,
+          2.2
+        ],
+        [
+          -14.0,
+          5.2
+        ],
+        [
+          -14.0,
+          8.2
+        ]
       ]
     },
     "QB": {
       "rule": "Hand the ball to the slot as he runs past you, then fake the handoff to the right halfback going right.",
       "type": "fake",
       "path": [
-        [0.4, -0.5],
-        [1.2, -1.4]
+        [
+          0.4,
+          -0.5
+        ],
+        [
+          1.2,
+          -1.4
+        ]
       ]
-    },
-    "LH": {
-      "block": "lead",
-      "target": "force"
     },
     "RH": {
       "rule": "Take the fake handoff and run hard to the right. You are what holds the backside.",
       "type": "fake",
       "path": [
-        [1.8, 0.2],
-        [5.6, 0.6]
+        [
+          1.8,
+          0.2
+        ],
+        [
+          5.6,
+          0.6
+        ]
       ]
     }
   },
@@ -104,8 +111,14 @@
         "man": "LC",
         "how": "Bubble out around the left end",
         "via": [
-          [-3.4, 2.0],
-          [-3.6, 4.2]
+          [
+            -3.4,
+            2.0
+          ],
+          [
+            -3.6,
+            4.2
+          ]
         ]
       }
     }

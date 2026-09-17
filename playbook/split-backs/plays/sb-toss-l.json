@@ -6,46 +6,21 @@
   "code": "S-2",
   "call": "Split Backs Slot Left 29 Toss",
   "type": "run",
+  "scheme": "Toss",
   "direction": "left",
   "ball_carrier": "RH",
-  "pitch": {
-    "from": "QB",
-    "to": "RH",
-    "at": 1
-  },
   "alignment": {
     "SL": [
       -5.6,
       -1.5
     ]
   },
+  "pitch": {
+    "from": "QB",
+    "to": "RH",
+    "at": 1
+  },
   "assignments": {
-    "RTE": {
-      "block": "cutoff"
-    },
-    "RT": {
-      "block": "down"
-    },
-    "RG": {
-      "block": "cutoff"
-    },
-    "C": {
-      "block": "reach"
-    },
-    "LG": {
-      "block": "climb",
-      "target": "playside"
-    },
-    "LT": {
-      "block": "down"
-    },
-    "LTE": {
-      "block": "base",
-      "drive": "in"
-    },
-    "SL": {
-      "block": "screen"
-    },
     "QB": {
       "rule": "Quick pitch to the right halfback, then run the other way, to the right, like you still have it.",
       "type": "rollout",
@@ -61,8 +36,6 @@
       ]
     },
     "LH": {
-      "block": "lead",
-      "target": "force",
       "note": "Step at the dive first to hold their linebackers."
     },
     "RH": {
