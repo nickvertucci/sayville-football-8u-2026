@@ -1,13 +1,13 @@
 {
-  "intro": "Two plays. If practice time is short, these are the ones that cannot slip — 34/35 Power out of the Regular I, and 38/29 Pitch out of the Split Backs, each of them both ways off the same rules. Every other play in the book exists to set one of these up or to keep a defense from selling out against it.",
+  "intro": "Two plays. If practice time is short, these are the ones that cannot slip — 34/35 Power out of the Regular I, and 38/29 Toss out of the Split Backs, each of them both ways off the same rules. Every other play in the book exists to set one of these up or to keep a defense from selling out against it.",
   "plays": [
     {
       "right": "i-power-r",
       "left": "i-power-l"
     },
     {
-      "right": "sb-pitch-r",
-      "left": "sb-pitch-l"
+      "right": "sb-toss-r",
+      "left": "sb-toss-l"
     }
   ]
 }

@@ -1,0 +1,148 @@
+{
+  "id": "sb-fake-toss-l",
+  "order": 23,
+  "formation": "split-backs",
+  "name": "Split Backs - Slot Left - 19 Fake Toss",
+  "code": "S-5",
+  "call": "Split Backs Slot Left 19 Fake Toss",
+  "type": "run",
+  "direction": "left",
+  "ball_carrier": "QB",
+  "alignment": {
+    "SL": [
+      -5.6,
+      -1.5
+    ]
+  },
+  "assignments": {
+    "RTE": {
+      "block": "cutoff"
+    },
+    "RT": {
+      "block": "down"
+    },
+    "RG": {
+      "block": "cutoff"
+    },
+    "C": {
+      "block": "reach"
+    },
+    "LG": {
+      "block": "climb",
+      "target": "playside"
+    },
+    "LT": {
+      "block": "down"
+    },
+    "LTE": {
+      "block": "base",
+      "drive": "in"
+    },
+    "SL": {
+      "block": "screen"
+    },
+    "QB": {
+      "rule": "Fake the handoff to the right halfback, then roll back left and sweep it, flat and fast, behind the left halfback. Turn up outside his block.",
+      "type": "run",
+      "path": [
+        [
+          1.4,
+          -0.9
+        ],
+        [
+          0.0,
+          -1.5
+        ],
+        [
+          -4.2,
+          -1.3
+        ],
+        [
+          -7.0,
+          0.2
+        ],
+        [
+          -7.0,
+          2.6
+        ],
+        [
+          -7.0,
+          6.0
+        ]
+      ]
+    },
+    "LH": {
+      "block": "lead",
+      "target": "force"
+    },
+    "RH": {
+      "rule": "Take the fake from the quarterback and run hard to the right like you have the ball. Sell it all the way — you are the reason the defense goes the wrong way.",
+      "type": "fake",
+      "path": [
+        [
+          -0.6,
+          1.3
+        ],
+        [
+          1.8,
+          1.6
+        ],
+        [
+          5.6,
+          2.0
+        ]
+      ]
+    }
+  },
+  "fronts": {
+    "4-4": {
+      "LT": {
+        "block": "man",
+        "man": "M",
+        "help": "LT"
+      },
+      "LG": {
+        "block": "man",
+        "man": "LT"
+      },
+      "C": {
+        "block": "man",
+        "man": "S",
+        "help": "RT"
+      },
+      "RG": {
+        "block": "man",
+        "man": "RT"
+      },
+      "RT": {
+        "block": "man",
+        "man": "R",
+        "help": "RE"
+      },
+      "RTE": {
+        "block": "man",
+        "man": "RE"
+      },
+      "LH": {
+        "block": "man",
+        "man": "W",
+        "how": "Bubble out around the left tight end",
+        "via": [
+          [
+            -3.4,
+            2.0
+          ],
+          [
+            -3.6,
+            4.2
+          ]
+        ]
+      }
+    }
+  },
+  "coaching_points": [
+    "The fake has to look real: the quarterback puts the ball at the right halfback's belly and pulls it back out.",
+    "The right halfback's fake is the play. If he jogs, nobody follows him and the defense is waiting on the left.",
+    "After the fake the quarterback gets back to the left fast, stays behind the left halfback until the block is made, then turns it up."
+  ]
+}

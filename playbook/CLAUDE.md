@@ -158,6 +158,19 @@ The numbering system is documented in the top-level [README](../README.md).
 - The second digit is the hole. Even is right, odd is left, counting outward from the
   center. The generator measures where that back's path crosses the line of scrimmage and
   fails the build if it does not land in the hole the call names.
+- **The play word is the hole.** A numbered run has to say this word, or `Fake` plus
+  this word:
+
+  | Hole | Word |
+  |---|---|
+  | **0 / 1** | Smash |
+  | **2 / 3** | Dive |
+  | **4 / 5** | Power |
+  | **6 / 7** | Slant |
+  | **8 / 9** | Toss |
+
+  So `34 Power` is right and `34 Smash` fails the build. Word calls (a tight-end sweep,
+  a slant-out pass) opt out because they have no hole digit.
 
 That means the digits describe **the back the first digit names**, not necessarily the
 ball carrier. On a play-action pass they follow the quarterback's path, while
@@ -313,7 +326,7 @@ A left-handed play that leaves the SL on the right is a different play, a blocke
 on the side the ball goes, and `--audit` will tell you so.
 
 **A play that moves the slot says so in its call.** `Regular I Slot Left 35 Power` and
-`Split Backs Slot Left 29 Pitch` both do, each mirroring its right-hand play so the slot is out
+`Split Backs Slot Left 29 Toss` both do, each mirroring its right-hand play so the slot is out
 there on the side the ball goes. Use `alignment` to move him and name his side in the
 call; a play that moves somebody silently is a play nobody can call.
 

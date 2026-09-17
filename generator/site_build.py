@@ -2271,11 +2271,11 @@ def backs_table(formations: list[dict]) -> list[tuple[str, str]]:
     return rows
 
 HOLES = [
-    ("0 / 1", "Between the center and the guard"),
-    ("2 / 3", "Between the guard and the tackle"),
-    ("4 / 5", "Between the tackle and the end"),
-    ("6 / 7", "Outside the tight end"),
-    ("8 / 9", "Wider still — all the way outside"),
+    ("0 / 1", "Smash — between the center and the guard"),
+    ("2 / 3", "Dive — between the guard and the tackle"),
+    ("4 / 5", "Power — between the tackle and the end"),
+    ("6 / 7", "Slant — outside the tight end"),
+    ("8 / 9", "Toss — wider still, all the way outside"),
 ]
 
 

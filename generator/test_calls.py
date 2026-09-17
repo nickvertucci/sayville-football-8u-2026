@@ -37,12 +37,14 @@ CASES = [
     # to a word call are checked like any other, and there is no back 5.
     ("tight-end sweep, word call",      "i-form",   "i-te-sweep-r", "Regular I Slot Right LTE Sweep", False),
     ("tight-end sweep, numbered anyway", "i-form",  "i-te-sweep-r", "Regular I Slot Right 58 LTE Sweep", True),
-    ("split pitch right",             "split-backs", "sb-pitch-r", "Split Backs Slot Right 38 Pitch",  False),
-    ("split pitch, called off tackle", "split-backs", "sb-pitch-r", "Split Backs Slot Right 34 Pitch", True),
-    ("split pitch, credited to the SL", "split-backs", "sb-pitch-r", "Split Backs Slot Right 48 Pitch", True),
-    ("split pitch right, numbered left", "split-backs", "sb-pitch-r", "Split Backs Slot Right 39 Pitch", True),
-    ("split pitch left",              "split-backs", "sb-pitch-l", "Split Backs Slot Left 29 Pitch",   False),
-    ("split pitch left, wrong back",  "split-backs", "sb-pitch-l", "Split Backs Slot Left 39 Pitch",   True),
+    ("split toss right",              "split-backs", "sb-toss-r", "Split Backs Slot Right 38 Toss",  False),
+    ("split toss, called off tackle", "split-backs", "sb-toss-r", "Split Backs Slot Right 34 Toss", True),
+    ("split toss, credited to the SL", "split-backs", "sb-toss-r", "Split Backs Slot Right 48 Toss", True),
+    ("split toss right, numbered left", "split-backs", "sb-toss-r", "Split Backs Slot Right 39 Toss", True),
+    ("split toss left",               "split-backs", "sb-toss-l", "Split Backs Slot Left 29 Toss",   False),
+    ("split toss left, wrong back",   "split-backs", "sb-toss-l", "Split Backs Slot Left 39 Toss",   True),
+    ("off tackle called Smash",       "i-form", "i-power-r", "Regular I Slot Right 34 Smash", True),
+    ("outside called Pitch",          "split-backs", "sb-toss-r", "Split Backs Slot Right 38 Pitch", True),
 ]
 
 

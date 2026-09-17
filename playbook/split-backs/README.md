@@ -24,14 +24,14 @@ Both ends are tight on the line. The two backs sit four yards deep and just over
 
 | Play | Call | Type | Ball |
 |---|---|---|---|
-| [Split Backs - Slot Right - 38 Pitch](#split-backs---slot-right---38-pitch) | `Split Backs Slot Right 38 Pitch` | run | LH |
-| [Split Backs - Slot Left - 29 Pitch](#split-backs---slot-left---29-pitch) | `Split Backs Slot Left 29 Pitch` | run | RH |
-| [Split Backs - Slot Right - 18 Sweep](#split-backs---slot-right---18-sweep) | `Split Backs Slot Right 18 Sweep` | run | QB |
-| [Split Backs - Slot Left - 19 Sweep](#split-backs---slot-left---19-sweep) | `Split Backs Slot Left 19 Sweep` | run | QB |
-| [Split Backs - Slot Left - 19 Fake Sweep](#split-backs---slot-left---19-fake-sweep) | `Split Backs Slot Left 19 Fake Sweep` | run | QB |
-| [Split Backs - Slot Right - 18 Fake Sweep](#split-backs---slot-right---18-fake-sweep) | `Split Backs Slot Right 18 Fake Sweep` | run | QB |
-| [Split Backs - Slot Right - 49 Sweep](#split-backs---slot-right---49-sweep) | `Split Backs Slot Right 49 Sweep` | run | SL |
-| [Split Backs - Slot Left - 48 Sweep](#split-backs---slot-left---48-sweep) | `Split Backs Slot Left 48 Sweep` | run | SL |
+| [Split Backs - Slot Right - 38 Toss](#split-backs---slot-right---38-toss) | `Split Backs Slot Right 38 Toss` | run | LH |
+| [Split Backs - Slot Left - 29 Toss](#split-backs---slot-left---29-toss) | `Split Backs Slot Left 29 Toss` | run | RH |
+| [Split Backs - Slot Right - 18 Toss](#split-backs---slot-right---18-toss) | `Split Backs Slot Right 18 Toss` | run | QB |
+| [Split Backs - Slot Left - 19 Toss](#split-backs---slot-left---19-toss) | `Split Backs Slot Left 19 Toss` | run | QB |
+| [Split Backs - Slot Left - 19 Fake Toss](#split-backs---slot-left---19-fake-toss) | `Split Backs Slot Left 19 Fake Toss` | run | QB |
+| [Split Backs - Slot Right - 18 Fake Toss](#split-backs---slot-right---18-fake-toss) | `Split Backs Slot Right 18 Fake Toss` | run | QB |
+| [Split Backs - Slot Right - 49 Toss](#split-backs---slot-right---49-toss) | `Split Backs Slot Right 49 Toss` | run | SL |
+| [Split Backs - Slot Left - 48 Toss](#split-backs---slot-left---48-toss) | `Split Backs Slot Left 48 Toss` | run | SL |
 | [Split Backs - Slot Right - LTE Sweep](#split-backs---slot-right---lte-sweep) | `Split Backs Slot Right LTE Sweep` | run | LTE |
 | [Split Backs - Slot Left - RTE Sweep](#split-backs---slot-left---rte-sweep) | `Split Backs Slot Left RTE Sweep` | run | RTE |
 | [Split Backs - Slot Right - RTE Slant Out](#split-backs---slot-right---rte-slant-out) | `Split Backs Slot Right RTE Slant Out` | pass | RTE |
@@ -39,11 +39,11 @@ Both ends are tight on the line. The two backs sit four yards deep and just over
 
 ---
 
-## Split Backs - Slot Right - 38 Pitch
+## Split Backs - Slot Right - 38 Toss
 
-**Call it:** `Split Backs Slot Right 38 Pitch`
+**Call it:** `Split Backs Slot Right 38 Toss`
 
-![Split Backs - Slot Right - 38 Pitch](cards/sb-pitch-r-4-4.svg)
+![Split Backs - Slot Right - 38 Toss](cards/sb-toss-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -67,11 +67,11 @@ Both ends are tight on the line. The two backs sit four yards deep and just over
 
 ---
 
-## Split Backs - Slot Left - 29 Pitch
+## Split Backs - Slot Left - 29 Toss
 
-**Call it:** `Split Backs Slot Left 29 Pitch`
+**Call it:** `Split Backs Slot Left 29 Toss`
 
-![Split Backs - Slot Left - 29 Pitch](cards/sb-pitch-l-4-4.svg)
+![Split Backs - Slot Left - 29 Toss](cards/sb-toss-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -95,11 +95,11 @@ Both ends are tight on the line. The two backs sit four yards deep and just over
 
 ---
 
-## Split Backs - Slot Right - 18 Sweep
+## Split Backs - Slot Right - 18 Toss
 
-**Call it:** `Split Backs Slot Right 18 Sweep`
+**Call it:** `Split Backs Slot Right 18 Toss`
 
-![Split Backs - Slot Right - 18 Sweep](cards/sb-qb-sweep-r-4-4.svg)
+![Split Backs - Slot Right - 18 Toss](cards/sb-qb-toss-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -123,11 +123,11 @@ Both ends are tight on the line. The two backs sit four yards deep and just over
 
 ---
 
-## Split Backs - Slot Left - 19 Sweep
+## Split Backs - Slot Left - 19 Toss
 
-**Call it:** `Split Backs Slot Left 19 Sweep`
+**Call it:** `Split Backs Slot Left 19 Toss`
 
-![Split Backs - Slot Left - 19 Sweep](cards/sb-qb-sweep-l-4-4.svg)
+![Split Backs - Slot Left - 19 Toss](cards/sb-qb-toss-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -151,11 +151,11 @@ Both ends are tight on the line. The two backs sit four yards deep and just over
 
 ---
 
-## Split Backs - Slot Left - 19 Fake Sweep
+## Split Backs - Slot Left - 19 Fake Toss
 
-**Call it:** `Split Backs Slot Left 19 Fake Sweep`
+**Call it:** `Split Backs Slot Left 19 Fake Toss`
 
-![Split Backs - Slot Left - 19 Fake Sweep](cards/sb-fake-sweep-l-4-4.svg)
+![Split Backs - Slot Left - 19 Fake Toss](cards/sb-fake-toss-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -179,11 +179,11 @@ Both ends are tight on the line. The two backs sit four yards deep and just over
 
 ---
 
-## Split Backs - Slot Right - 18 Fake Sweep
+## Split Backs - Slot Right - 18 Fake Toss
 
-**Call it:** `Split Backs Slot Right 18 Fake Sweep`
+**Call it:** `Split Backs Slot Right 18 Fake Toss`
 
-![Split Backs - Slot Right - 18 Fake Sweep](cards/sb-fake-sweep-r-4-4.svg)
+![Split Backs - Slot Right - 18 Fake Toss](cards/sb-fake-toss-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -207,11 +207,11 @@ Both ends are tight on the line. The two backs sit four yards deep and just over
 
 ---
 
-## Split Backs - Slot Right - 49 Sweep
+## Split Backs - Slot Right - 49 Toss
 
-**Call it:** `Split Backs Slot Right 49 Sweep`
+**Call it:** `Split Backs Slot Right 49 Toss`
 
-![Split Backs - Slot Right - 49 Sweep](cards/sb-sl-jet-l-4-4.svg)
+![Split Backs - Slot Right - 49 Toss](cards/sb-sl-toss-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -235,11 +235,11 @@ Both ends are tight on the line. The two backs sit four yards deep and just over
 
 ---
 
-## Split Backs - Slot Left - 48 Sweep
+## Split Backs - Slot Left - 48 Toss
 
-**Call it:** `Split Backs Slot Left 48 Sweep`
+**Call it:** `Split Backs Slot Left 48 Toss`
 
-![Split Backs - Slot Left - 48 Sweep](cards/sb-sl-jet-r-4-4.svg)
+![Split Backs - Slot Left - 48 Toss](cards/sb-sl-toss-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
