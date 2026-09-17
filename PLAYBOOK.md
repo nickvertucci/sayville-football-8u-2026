@@ -10,8 +10,8 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 | 2 | [Regular I - Slot Left - 35 Power](#regular-i---slot-left---35-power) | `Regular I Slot Left 35 Power` | run | Regular I | TB |
 | 3 | [Regular I - Slot Right - LTE Sweep](#regular-i---slot-right---lte-sweep) | `Regular I Slot Right LTE Sweep` | run | Regular I | LTE |
 | 4 | [Regular I - Slot Left - RTE Sweep](#regular-i---slot-left---rte-sweep) | `Regular I Slot Left RTE Sweep` | run | Regular I | RTE |
-| 5 | [Regular I - Slot Right - 49 Toss](#regular-i---slot-right---49-toss) | `Regular I Slot Right 49 Toss` | run | Regular I | SL |
-| 6 | [Regular I - Slot Left - 48 Toss](#regular-i---slot-left---48-toss) | `Regular I Slot Left 48 Toss` | run | Regular I | SL |
+| 5 | [Regular I - Slot Right - 49 Sweep](#regular-i---slot-right---49-sweep) | `Regular I Slot Right 49 Sweep` | run | Regular I | SL |
+| 6 | [Regular I - Slot Left - 48 Sweep](#regular-i---slot-left---48-sweep) | `Regular I Slot Left 48 Sweep` | run | Regular I | SL |
 | 7 | [Regular I - Slot Right - 30 Smash](#regular-i---slot-right---30-smash) | `Regular I Slot Right 30 Smash` | run | Regular I | TB |
 | 8 | [Regular I - Slot Left - 31 Smash](#regular-i---slot-left---31-smash) | `Regular I Slot Left 31 Smash` | run | Regular I | TB |
 | 9 | [Regular I - Slot Right - RTE Slant Out](#regular-i---slot-right---rte-slant-out) | `Regular I Slot Right RTE Slant Out` | pass | Regular I | RTE |
@@ -22,8 +22,8 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 | 14 | [Split Backs - Slot Left - 19 Toss](#split-backs---slot-left---19-toss) | `Split Backs Slot Left 19 Toss` | run | Split Backs | QB |
 | 15 | [Split Backs - Slot Left - 19 Fake Toss](#split-backs---slot-left---19-fake-toss) | `Split Backs Slot Left 19 Fake Toss` | run | Split Backs | QB |
 | 16 | [Split Backs - Slot Right - 18 Fake Toss](#split-backs---slot-right---18-fake-toss) | `Split Backs Slot Right 18 Fake Toss` | run | Split Backs | QB |
-| 17 | [Split Backs - Slot Right - 49 Toss](#split-backs---slot-right---49-toss) | `Split Backs Slot Right 49 Toss` | run | Split Backs | SL |
-| 18 | [Split Backs - Slot Left - 48 Toss](#split-backs---slot-left---48-toss) | `Split Backs Slot Left 48 Toss` | run | Split Backs | SL |
+| 17 | [Split Backs - Slot Right - 49 Sweep](#split-backs---slot-right---49-sweep) | `Split Backs Slot Right 49 Sweep` | run | Split Backs | SL |
+| 18 | [Split Backs - Slot Left - 48 Sweep](#split-backs---slot-left---48-sweep) | `Split Backs Slot Left 48 Sweep` | run | Split Backs | SL |
 | 19 | [Split Backs - Slot Right - LTE Sweep](#split-backs---slot-right---lte-sweep) | `Split Backs Slot Right LTE Sweep` | run | Split Backs | LTE |
 | 20 | [Split Backs - Slot Left - RTE Sweep](#split-backs---slot-left---rte-sweep) | `Split Backs Slot Left RTE Sweep` | run | Split Backs | RTE |
 | 21 | [Split Backs - Slot Right - RTE Slant Out](#split-backs---slot-right---rte-slant-out) | `Split Backs Slot Right RTE Slant Out` | pass | Split Backs | RTE |
@@ -153,11 +153,11 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Regular I - Slot Right - 49 Toss
+## Regular I - Slot Right - 49 Sweep
 
-**Call it:** `Regular I Slot Right 49 Toss`
+**Call it:** `Regular I Slot Right 49 Sweep`
 
-![Regular I - Slot Right - 49 Toss](playbook/i-form/cards/i-sl-toss-l-4-4.svg)
+![Regular I - Slot Right - 49 Sweep](playbook/i-form/cards/i-sl-sweep-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -181,11 +181,11 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Regular I - Slot Left - 48 Toss
+## Regular I - Slot Left - 48 Sweep
 
-**Call it:** `Regular I Slot Left 48 Toss`
+**Call it:** `Regular I Slot Left 48 Sweep`
 
-![Regular I - Slot Left - 48 Toss](playbook/i-form/cards/i-sl-toss-r-4-4.svg)
+![Regular I - Slot Left - 48 Sweep](playbook/i-form/cards/i-sl-sweep-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -491,11 +491,11 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Split Backs - Slot Right - 49 Toss
+## Split Backs - Slot Right - 49 Sweep
 
-**Call it:** `Split Backs Slot Right 49 Toss`
+**Call it:** `Split Backs Slot Right 49 Sweep`
 
-![Split Backs - Slot Right - 49 Toss](playbook/split-backs/cards/sb-sl-toss-l-4-4.svg)
+![Split Backs - Slot Right - 49 Sweep](playbook/split-backs/cards/sb-sl-sweep-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -519,11 +519,11 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Split Backs - Slot Left - 48 Toss
+## Split Backs - Slot Left - 48 Sweep
 
-**Call it:** `Split Backs Slot Left 48 Toss`
+**Call it:** `Split Backs Slot Left 48 Sweep`
 
-![Split Backs - Slot Left - 48 Toss](playbook/split-backs/cards/sb-sl-toss-r-4-4.svg)
+![Split Backs - Slot Left - 48 Sweep](playbook/split-backs/cards/sb-sl-sweep-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
