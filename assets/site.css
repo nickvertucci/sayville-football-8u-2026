@@ -604,11 +604,12 @@ table.xl.pk-plays td {
 }
 /* The room to draw in: the backfield, below the line. */
 /* The field below the line: as deep as the sheet has room for, which is whatever the
-   rest of it leaves. 62 points of drawing space to start, 200 and then 260 as
-   formations came off the sheet, and 155 now that the down-and-distance board has a
-   band of its own under the field. Two calls to a situation rather than three is
-   what buys back the 35 over the three-deep version. */
-.pk-draw .pad { grid-column: 1 / -1; height: 184px; }
+   rest of it leaves. 62 points of drawing space to start, then 200 and 260 as
+   formations came off the sheet, 120 when the down-and-distance board went in, 155
+   once the board went to two calls, and 185 now that a package card is five rows
+   instead of six. Every one of those numbers was measured against the page, not
+   chosen. */
+.pk-draw .pad { grid-column: 1 / -1; height: 220px; }
 .pk-plays td a:hover { text-decoration: underline; }
 @media print {
   /* One formation to a row, full width. Two across put a formation in half a page,
@@ -694,7 +695,7 @@ table.xl.pk-plays td {
   .pk-draw .o { border-width: 10px; border-color: #000; }
   .pk-draw .ball { width: 19px; height: 11px; border-color: #000; }
   .pk-draw .ball::after { border-top-color: #000; }
-  .pk-draw .pad { height: 155px; }
+  .pk-draw .pad { height: 185px; }
   /* Hairlines between the cards. These went in when the name bars printed as plain
      black text and six lists of calls ran together into one block of small type. The
      bars are bars on paper now (see .pk-name below), so they do most of that work
