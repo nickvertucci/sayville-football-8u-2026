@@ -641,13 +641,13 @@ table.xl.pk-plays td {
 /* The numbers sit in the gaps, on the same line as the men, because that is where the
    hole is -- a row of digits above the line is a key, this is the thing itself. */
 .pk-draw .hn { font-size: 11px; font-weight: 800; color: var(--muted); }
+/* Solid discs, the centre included. Made entirely of border rather than given a
+   background: a background needs print-color-adjust and the browser's cooperation,
+   while a border prints whatever the print dialog is set to -- which is the rule this
+   whole strip already had to learn the hard way. Zero box, thick border, round. */
 .pk-draw .o {
-  width: 23px; height: 23px; border: 2px solid var(--ink); border-radius: 50%;
-  display: flex; align-items: center; justify-content: center;
+  width: 0; height: 0; border: 11.5px solid var(--ink); border-radius: 50%;
 }
-/* The middle is not a gap, so its number goes inside the centre rather than beside
-   him, small enough to sit in the circle without crowding it. */
-.pk-draw .o .hn { font-size: 7.5px; letter-spacing: -.4px; font-weight: 700; }
 /* The ball in front of the centre: an oval with a seam across it. */
 .pk-draw .ball {
   width: 22px; height: 13px; border: 2px solid var(--ink); border-radius: 50%;
@@ -735,8 +735,7 @@ table.xl.pk-plays td {
              grid-template-columns: 72px 30px 19px 30px 19px 30px 19px 30px
                                     19px 30px 19px 30px 19px 30px 72px; }
   .pk-draw .hn { font-size: 8px; color: #000; }
-  .pk-draw .o { width: 20px; height: 20px; border-color: #000; }
-  .pk-draw .o .hn { font-size: 6px; letter-spacing: -.4px; }
+  .pk-draw .o { border-width: 10px; border-color: #000; }
   .pk-draw .ball { width: 19px; height: 11px; border-color: #000; }
   .pk-draw .ball::after { border-top-color: #000; }
   .pk-draw .pad { height: 62px; }
@@ -2742,11 +2741,7 @@ def _package_strip(root: Path, formations: list[dict]) -> str:
 HOLE_COLUMNS = ((1, "9"), (3, "7"), (5, "5"), (7, "3"),
                 (9, "2"), (11, "4"), (13, "6"), (15, "8"))
 MAN_COLUMNS = (2, 4, 6, 8, 10, 12, 14)
-BALL_COLUMN = CENTRE_COLUMN = 8
-
-# What goes inside the centre's own circle. The middle is not a gap between two men, so
-# its number cannot sit beside one; it goes on the centre himself.
-CENTRE_HOLE = "0/1"
+BALL_COLUMN = 8
 
 # Where the hash marks sit down each sideline, as a percentage of the field's height.
 HASH_MARKS = (14, 32, 50, 68, 86)
@@ -2770,9 +2765,7 @@ def _blank_line() -> str:
     )
     ball = f'<span class="ball" style="grid-column:{BALL_COLUMN};grid-row:1"></span>'
     men = "".join(
-        f'<span class="o" style="grid-column:{col};grid-row:2">'
-        + (f'<span class="hn">{esc(CENTRE_HOLE)}</span>' if col == CENTRE_COLUMN else "")
-        + "</span>"
+        f'<span class="o" style="grid-column:{col};grid-row:2"></span>'
         for col in MAN_COLUMNS
     )
     hashes = "".join(
