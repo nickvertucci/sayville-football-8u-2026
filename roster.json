@@ -213,7 +213,7 @@
     ]
   },
   "package_plays": {
-    "note": "What each offensive package comes on to call, in package order. An entry is a play's full call and has to name a real play, or the build stops. The string \"any\" on its own means the package runs the whole book, so the card says Any play instead of listing it. A package may name as many plays as it likes, from any formation.",
+    "note": "What each offensive package comes on to call, in package order. An entry is a play's full call and has to name a real play, or the build stops. The string \"any\" on its own means the package runs the whole book, so the card says Any play instead of listing it. A package may name plays from any formation, up to five -- five rows is what the card is allowed to be tall, because the blank field below the packages is sized against it.",
     "offense": [
       [
         "Split Backs Slot Right 18 Sweep",
@@ -227,32 +227,28 @@
         "Split Backs Slot Left RTE Sweep",
         "Split Backs Slot Right 49 Sweep",
         "Split Backs Slot Left 48 Sweep",
-        "Regular I Slot Right 22 Smash",
-        "Regular I Slot Left 23 Smash"
+        "Regular I Slot Right 22 Smash"
       ],
       [
         "Regular I Slot Right 32 Smash",
         "Regular I Slot Left 33 Smash",
         "Regular I Slot Right 36 Power",
         "Regular I Slot Left 37 Power",
-        "Regular I Slot Right LTE Sweep",
-        "Regular I Slot Left 48 Sweep"
+        "Regular I Slot Right LTE Sweep"
       ],
       [
         "Split Backs Slot Right 36 Power",
         "Split Backs Slot Left 27 Power",
         "Split Backs Slot Right 38 Toss",
         "Split Backs Slot Left 29 Toss",
-        "Split Backs Slot Right LTE Sweep",
-        "Split Backs Slot Left RTE Sweep"
+        "Split Backs Slot Right LTE Sweep"
       ],
       [
         "Split Backs Slot Right LTE Sweep",
         "Split Backs Slot Left RTE Sweep",
         "Split Backs Slot Right 49 Sweep",
         "Split Backs Slot Left 48 Sweep",
-        "Regular I Slot Right 22 Smash",
-        "Regular I Slot Left 23 Smash"
+        "Regular I Slot Right 22 Smash"
       ],
       [
         "Power I Slot Right 32 Smash",

@@ -664,11 +664,12 @@ table.xl.pk-plays td {
 }
 /* The room to draw in: the backfield, below the line. */
 /* The field below the line: as deep as the sheet has room for, which is whatever the
-   rest of it leaves. 62 points of drawing space to start, 200 and then 260 as
-   formations came off the sheet, and 155 now that the down-and-distance board has a
-   band of its own under the field. Two calls to a situation rather than three is
-   what buys back the 35 over the three-deep version. */
-.pk-draw .pad { grid-column: 1 / -1; height: 184px; }
+   rest of it leaves. 62 points of drawing space to start, then 200 and 260 as
+   formations came off the sheet, 120 when the down-and-distance board went in, 155
+   once the board went to two calls, and 185 now that a package card is five rows
+   instead of six. Every one of those numbers was measured against the page, not
+   chosen. */
+.pk-draw .pad { grid-column: 1 / -1; height: 220px; }
 .pk-plays td a:hover { text-decoration: underline; }
 @media print {
   /* One formation to a row, full width. Two across put a formation in half a page,
@@ -754,7 +755,7 @@ table.xl.pk-plays td {
   .pk-draw .o { border-width: 10px; border-color: #000; }
   .pk-draw .ball { width: 19px; height: 11px; border-color: #000; }
   .pk-draw .ball::after { border-top-color: #000; }
-  .pk-draw .pad { height: 155px; }
+  .pk-draw .pad { height: 185px; }
   /* Hairlines between the cards. These went in when the name bars printed as plain
      black text and six lists of calls ran together into one block of small type. The
      bars are bars on paper now (see .pk-name below), so they do most of that work
@@ -2682,9 +2683,11 @@ def _package_row(play: dict, form: dict) -> str:
     return f"{label} - {tail}"
 
 
-# How many calls a package may carry. The strip is the last thing on the sheet before
-# the blank line, so its height has to be predictable.
-PACKAGE_PLAY_CAP = 6
+# How many calls a package may carry. The packages sit directly above the blank field,
+# so their height is what the field's height is measured against -- a taller card is
+# field taken away. Five, not six: the sixth row across four of the six packages was
+# most of a quarter inch of the sheet.
+PACKAGE_PLAY_CAP = 5
 
 
 def _package_strip(root: Path, formations: list[dict]) -> str:
@@ -2719,13 +2722,15 @@ def _package_strip(root: Path, formations: list[dict]) -> str:
     cards = []
     for i, calls in enumerate(assigned):
         label = names[i] if i < len(names) else f"Package {i + 1}"
-        # Six is the cap, so the height of the strip is known and the blank line below
-        # it always has the same room. A seventh call would quietly eat that space.
+        # The cap is what makes the strip's height known, so the field below always has
+        # the same room. A call past it would quietly eat that space, so the build stops
+        # instead of printing a card nobody measured for.
         if list(calls) != ["any"] and len(calls) > PACKAGE_PLAY_CAP:
             raise SystemExit(
                 f"roster.json package_plays, {label}: {len(calls)} plays, and a package "
-                f"is capped at {PACKAGE_PLAY_CAP} — the call sheet's blank line needs "
-                "the space below the strip to stay the same size."
+                f"is capped at {PACKAGE_PLAY_CAP} — the call sheet's blank field is "
+                "sized against the height of these cards. Drop a call, or re-measure "
+                "the field."
             )
         if list(calls) == ["any"]:
             rows = '<tr><td class="pk-any">Any play</td></tr>'
