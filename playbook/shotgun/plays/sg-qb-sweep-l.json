@@ -45,20 +45,6 @@
           12.0
         ]
       ]
-    },
-    "RH": {
-      "rule": "Fake the handoff going right and run hard. Sell it all the way — you are the reason the defense goes the wrong way.",
-      "type": "fake",
-      "path": [
-        [
-          1.2,
-          0.8
-        ],
-        [
-          4.8,
-          1.6
-        ]
-      ]
     }
   },
   "fronts": {
@@ -93,17 +79,6 @@
       "RTE": {
         "block": "man",
         "man": "RE"
-      },
-      "LH": {
-        "block": "man",
-        "man": "W",
-        "how": "Bubble out around the left end",
-        "via": [
-          [
-            -4.0,
-            2.4
-          ]
-        ]
       }
     }
   },

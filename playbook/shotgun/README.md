@@ -112,8 +112,8 @@ Both ends are tight on the line and the slot is just outside the tight end, one 
 | **RTE** | Block the right end. |
 | **SL** | Run at the corner and screen him off. Stay in his way. |
 | **QB** **(ball)** | Catch the snap and sweep left, flat and fast, behind the left halfback. Turn up outside his block. |
-| **LH** | Bubble out around the left end, then block the left outside linebacker. |
-| **RH** | Fake the handoff going right and run hard. Sell it all the way — you are the reason the defense goes the wrong way. |
+| **LH** | Bubble out around our end, then double team the linebacker with the right halfback. |
+| **RH** | Bubble out around our end, then double team the linebacker with the left halfback. |
 
 **Coaching points**
 
@@ -142,8 +142,8 @@ Both ends are tight on the line and the slot is just outside the tight end, one 
 | **RTE** | Block the right end. |
 | **SL** | Run at the corner and screen him off. Stay in his way. |
 | **QB** **(ball)** | Catch the snap and sweep right, flat and fast, behind the right halfback. Turn up outside his block. |
-| **LH** | Fake the handoff going left and run hard. Sell it all the way — you are the reason the defense goes the wrong way. |
-| **RH** | Bubble out around the right end, then block the right outside linebacker. |
+| **LH** | Bubble out around our end, then double team the linebacker with the right halfback. |
+| **RH** | Bubble out around our end, then double team the linebacker with the left halfback. |
 
 **Coaching points**
 

@@ -47,8 +47,8 @@
 <polygon points="162.0,135.0 168.2,148.8 155.8,148.8" fill="#b3001b"/>
 <path d="M297.0,459.0 L238.4,307.8 L210.1,254.1" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
 <line x1="201.9" y1="258.4" x2="218.2" y2="249.8" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
-<path d="M405.0,459.0 L437.4,437.4 L534.6,415.8" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 5"/>
-<polygon points="534.6,415.8 525.5,422.6 523.5,413.5" fill="#14213d"/>
+<path d="M405.0,459.0 L287.0,307.8 L213.6,251.9" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="208.0" y1="259.2" x2="219.1" y2="244.6" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 
 <rect x="224.1" y="324.0" width="27.0" height="27.0" rx="3" fill="#ffffff" stroke="#14213d" stroke-width="2.6"/>
 <text x="237.6" y="342.0" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">LTE</text>

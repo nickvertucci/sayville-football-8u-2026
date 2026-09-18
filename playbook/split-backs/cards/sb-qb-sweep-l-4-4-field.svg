@@ -45,10 +45,10 @@
 <line x1="95.4" y1="258.2" x2="109.3" y2="246.2" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 <path d="M351.0,364.5 C343.8,367.2 334.8,377.1 307.8,380.7 C280.8,384.3 213.3,389.7 189.0,386.1 C164.7,382.5 166.5,374.4 162.0,359.1 C157.5,343.8 162.0,320.4 162.0,294.3 C162.0,268.2 162.0,217.8 162.0,202.5" fill="none" stroke="#b3001b" stroke-width="4.6" stroke-linecap="round" stroke-linejoin="round"/>
 <polygon points="162.0,202.5 168.2,216.3 155.8,216.3" fill="#b3001b"/>
-<path d="M291.6,426.6 C276.3,417.6 216.0,391.5 199.8,372.6 C183.6,353.7 189.2,332.9 194.4,313.2 C199.6,293.5 224.8,264.1 230.9,254.3" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-<line x1="223.0" y1="249.5" x2="238.7" y2="259.2" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
-<path d="M410.4,426.6 L459.0,421.2 L561.6,410.4" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 5"/>
-<polygon points="561.6,410.4 551.8,416.1 550.8,406.9" fill="#14213d"/>
+<path d="M291.6,426.6 L247.9,307.8 L230.9,254.3" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="222.1" y1="257.1" x2="239.6" y2="251.6" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
+<path d="M410.4,426.6 L301.3,307.8 L235.4,251.6" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="229.5" y1="258.6" x2="241.4" y2="244.7" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 
 <rect x="224.1" y="324.0" width="27.0" height="27.0" rx="3" fill="#ffffff" stroke="#14213d" stroke-width="2.6"/>
 <text x="237.6" y="342.0" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">LTE</text>

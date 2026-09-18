@@ -263,9 +263,12 @@ def play_hole(play: dict) -> float:
     form = play["_formation"]
     alignment = play_alignment(form, play)
     m = CALL_DIGITS.search(play.get("call", "") or "")
-    if not m:
-        return 1.5 * play_side(play)
-    hole = int(m.group(2))
+    # A word call has no hole digit, and the only kind in the book is a tight-end
+    # end-around, which goes all the way outside. It used to fall back to 1.5 yards --
+    # an inside aiming point on a play that runs round the end, which told the lead
+    # back the play was not wide and sent him up inside instead of out to the force
+    # man. Aim it where 8 and 9 aim, which is where the ball actually goes.
+    hole = int(m.group(2)) if m else (8 if play_side(play) > 0 else 9)
     side = "R" if hole % 2 == 0 else "L"
     low, high = hole_bounds(alignment, hole)
     if high == float("inf"):
