@@ -528,9 +528,10 @@ table.dc-sub thead th {
 }
 .script { margin: 10px 0 24px; }
 .script-t { border: 2px solid var(--ink); }
-.script-t td { height: 26px; padding: 2px 5px; vertical-align: middle; }
+.script-t td { height: 26px; padding: 2px 5px; vertical-align: middle;
+               text-align: center; }
 .script-t td.sn {
-  width: 24px; text-align: center; font-weight: 800; color: var(--muted);
+  width: 26px; text-align: center; font-weight: 800; color: var(--muted);
 }
 .xl-sheet { min-width: 0; }
 .xl-title {
@@ -719,9 +720,14 @@ table.xl.pk-plays td {
      measured against the page, not picked, and tuned until the foot of this column and
      the foot of the Power I block land on the same line. It is also what lets the type
      go up to 9px, the same size a call is in the blocks beside it. */
+  /* Both columns centred: the number in its own box and the play in the rest of the
+     row, which is how a call reads everywhere else on this sheet. The number column is
+     20 points rather than 15 so the centring is visible in it -- at 15 a digit sat a
+     hair off the left border and read as left-aligned whatever the rule said, and two
+     digits filled it edge to edge. */
   .script-t td { height: 20.4px; padding: 0 3px; line-height: 1.15; font-size: 9px;
-                 font-weight: 700; vertical-align: middle; }
-  .script-t td.sn { width: 15px; text-align: center; font-size: 8px; font-weight: 800;
+                 font-weight: 700; vertical-align: middle; text-align: center; }
+  .script-t td.sn { width: 20px; text-align: center; font-size: 8px; font-weight: 800;
                     color: #000; }
   /* No rule between blocks any more: the formation's own black bar below is the
      separator, and a 3px rule under the block as well was two fences for one fence's
