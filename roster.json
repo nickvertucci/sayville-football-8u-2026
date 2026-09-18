@@ -214,7 +214,11 @@
     "note": "What each offensive package comes on to call, in package order. An entry is a play's full call and has to name a real play, or the build stops. The string \"any\" on its own means the package runs the whole book, so the card says Any play instead of listing it. A package may name as many plays as it likes, from any formation.",
     "offense": [
       [
-        "any"
+        "Split Backs Slot Right 18 Sweep",
+        "Split Backs Slot Right LTE Sweep",
+        "Split Backs Slot Right 38 Toss",
+        "Split Backs Slot Right 36 Power",
+        "Split Backs Slot Right 49 Sweep"
       ],
       [
         "Split Backs Slot Right LTE Sweep",
