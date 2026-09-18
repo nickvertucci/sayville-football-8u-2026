@@ -648,11 +648,13 @@ table.xl.pk-plays td {
      size, but each cell three inches instead of one and a half, so nothing wraps and
      the block is *shorter* than it was at half width. Five of them still fit the one
      sheet because of it, not in spite of it. */
-  /* Four blocks down the left, the script down the right. The script is 150 points
-     because that is what is left once a formation block is narrow enough to still fit
-     "Split Backs - Slot R - LTE (50) Sweep" on one line -- the blocks were full width
-     and had room to give, which is what made this column possible at all. */
-  .xl-top { display: grid; grid-template-columns: 1fr 150px; gap: 0 6px;
+  /* Four blocks down the left, the script down the right. 245 points is what the
+     longest call in the script needs to sit on one line at 9px -- "Split Backs - Slot R
+     - LTE (50) Sweep" -- and it is affordable because the blocks still do not wrap at
+     what is left: their widest, "S-10 Slot L - RTE (60) Sweep", has room to spare in a
+     148-point column. Checked at 200, where the script clipped, and at 245, where
+     neither side does. */
+  .xl-top { display: grid; grid-template-columns: 1fr 245px; gap: 0 6px;
             align-items: start; }
   .xl-sheets { grid-template-columns: 1fr; gap: 0; margin: 2px 0 0; }
   .script { margin: 2px 0 0; break-inside: avoid; }
@@ -660,6 +662,7 @@ table.xl.pk-plays td {
      as one object rather than twenty loose boxes. The cells keep the hairline the rest
      of the sheet's tables use. */
   .script-t { border: 2px solid #000; }
+  .script-t td a { color: #000; text-decoration: none; }
   /* 20.4 points a row is the height of the four formation blocks divided by twenty --
      measured against the page, not picked, and tuned until the foot of this column and
      the foot of the Power I block land on the same line. It is also what lets the type
@@ -672,8 +675,13 @@ table.xl.pk-plays td {
   /* Qualified with table.xl for the same reason as the screen rule: the print block's
      own `table.xl td` comes after this and would otherwise take back the padding, and
      the base rule's vertical-align: top would take back the centring. */
+  /* nowrap is load-bearing, not cosmetic. A name that wraps makes its row two lines
+     tall, and twenty rows growing a line each is most of an inch -- it took the sheet
+     to two pages the first time the script was filled in. The column is sized so
+     nothing needs to wrap; this makes a name that somehow did overflow visibly rather
+     than silently push the field and the board off the page. */
   table.xl.script-t td { height: 20.4px; padding: 0 3px; line-height: 1.15;
-                         font-size: 9px; font-weight: 700;
+                         font-size: 9px; font-weight: 700; white-space: nowrap;
                          vertical-align: middle; text-align: center; }
   table.xl.script-t td.sn { width: 20px; text-align: center; font-size: 8px;
                             font-weight: 800; color: #000; }

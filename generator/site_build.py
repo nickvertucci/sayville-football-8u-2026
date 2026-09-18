@@ -708,11 +708,13 @@ table.xl.pk-plays td {
      size, but each cell three inches instead of one and a half, so nothing wraps and
      the block is *shorter* than it was at half width. Five of them still fit the one
      sheet because of it, not in spite of it. */
-  /* Four blocks down the left, the script down the right. The script is 150 points
-     because that is what is left once a formation block is narrow enough to still fit
-     "Split Backs - Slot R - LTE (50) Sweep" on one line -- the blocks were full width
-     and had room to give, which is what made this column possible at all. */
-  .xl-top { display: grid; grid-template-columns: 1fr 150px; gap: 0 6px;
+  /* Four blocks down the left, the script down the right. 245 points is what the
+     longest call in the script needs to sit on one line at 9px -- "Split Backs - Slot R
+     - LTE (50) Sweep" -- and it is affordable because the blocks still do not wrap at
+     what is left: their widest, "S-10 Slot L - RTE (60) Sweep", has room to spare in a
+     148-point column. Checked at 200, where the script clipped, and at 245, where
+     neither side does. */
+  .xl-top { display: grid; grid-template-columns: 1fr 245px; gap: 0 6px;
             align-items: start; }
   .xl-sheets { grid-template-columns: 1fr; gap: 0; margin: 2px 0 0; }
   .script { margin: 2px 0 0; break-inside: avoid; }
@@ -720,6 +722,7 @@ table.xl.pk-plays td {
      as one object rather than twenty loose boxes. The cells keep the hairline the rest
      of the sheet's tables use. */
   .script-t { border: 2px solid #000; }
+  .script-t td a { color: #000; text-decoration: none; }
   /* 20.4 points a row is the height of the four formation blocks divided by twenty --
      measured against the page, not picked, and tuned until the foot of this column and
      the foot of the Power I block land on the same line. It is also what lets the type
@@ -732,8 +735,13 @@ table.xl.pk-plays td {
   /* Qualified with table.xl for the same reason as the screen rule: the print block's
      own `table.xl td` comes after this and would otherwise take back the padding, and
      the base rule's vertical-align: top would take back the centring. */
+  /* nowrap is load-bearing, not cosmetic. A name that wraps makes its row two lines
+     tall, and twenty rows growing a line each is most of an inch -- it took the sheet
+     to two pages the first time the script was filled in. The column is sized so
+     nothing needs to wrap; this makes a name that somehow did overflow visibly rather
+     than silently push the field and the board off the page. */
   table.xl.script-t td { height: 20.4px; padding: 0 3px; line-height: 1.15;
-                         font-size: 9px; font-weight: 700;
+                         font-size: 9px; font-weight: 700; white-space: nowrap;
                          vertical-align: middle; text-align: center; }
   table.xl.script-t td.sn { width: 20px; text-align: center; font-size: 8px;
                             font-weight: 800; color: #000; }
@@ -2741,6 +2749,25 @@ def _package_row(play: dict, form: dict) -> str:
     return f"{label} - {tail}"
 
 
+def _roster_and_plays(root: Path, formations: list[dict]) -> tuple[dict, dict]:
+    """`roster.json`, and every play in the book keyed by its call.
+
+    The three lists on this sheet -- the packages, the down-and-distance board and the
+    script -- all name plays the same way and all check them the same way, so they read
+    the file and build the index once here rather than three times each with its own
+    idea of what counts as a play.
+
+    The index is the whole book, not one formation's plays: any of the three may name a
+    play from anywhere, including a formation whose block is not on the sheet.
+    """
+    path = root / "roster.json"
+    if not path.is_file():
+        return {}, {}
+    roster = json.loads(path.read_text(encoding="utf-8"))
+    plays = {p["call"]: (p, f) for f in formations for p in f["_plays"]}
+    return roster, plays
+
+
 # How many calls a package may carry. The packages sit directly above the blank field,
 # so their height is what the field's height is measured against -- a taller card is
 # field taken away. Five, not six: the sixth row across four of the six packages was
@@ -2764,18 +2791,11 @@ def _package_strip(root: Path, formations: list[dict]) -> str:
     can work out. Each entry is a play's full call. A call that names no play stops
     the build rather than printing a play nobody can run.
     """
-    path = root / "roster.json"
-    if not path.is_file():
-        return ""
-    roster = json.loads(path.read_text(encoding="utf-8"))
+    roster, plays = _roster_and_plays(root, formations)
     names = (roster.get("package_names") or {}).get("offense") or []
     assigned = (roster.get("package_plays") or {}).get("offense") or []
     if not assigned:
         return ""
-
-    # Every play in the book, by its call. Packages are not limited to one
-    # formation, so this is the whole book and not just the Split Backs.
-    plays = {p["call"]: (p, f) for f in formations for p in f["_plays"]}
 
     cards = []
     for i, calls in enumerate(assigned):
@@ -2944,23 +2964,50 @@ def _blank_line() -> str:
 SCRIPT_ROWS = 20
 
 
-def _script_column() -> str:
+def _script_strip(root: Path, formations: list[dict]) -> str:
     """The numbered column down the right of the formation blocks.
 
-    Blank on purpose, for now. It is the possession script -- the plays called in
-    order -- and the sheet cannot work that out: which play goes first is a decision
-    made against an opponent, not against the book. The rows are sized to take a play
-    name at the size the formation blocks use, so a call written here reads like a call
-    anywhere else on the sheet.
+    The plays in the order they are called, from roster.json under `script_plays`,
+    beside package_plays and situation_plays and under the same rule: a full call that
+    has to name a real play or the build stops.
 
-    Numbers only and no heading: twenty rows sharing the height is the point, and a
-    heading would take a row's worth of it.
+    A play may appear more than once -- a script repeats on purpose, and this one calls
+    22 Smash three times. Short of the twenty rows is fine and the rest print blank;
+    past twenty stops the build, because the column's height is what the field and the
+    board below it were measured against.
+
+    No heading: twenty rows sharing the height is the point, and a heading would take a
+    row's worth of it.
     """
+    roster, plays = _roster_and_plays(root, formations)
+    assigned = (roster.get("script_plays") or {}).get("offense") or []
+    if len(assigned) > SCRIPT_ROWS:
+        raise SystemExit(
+            f"roster.json script_plays: {len(assigned)} plays, and the script column "
+            f"holds {SCRIPT_ROWS} — the call sheet's field and board are sized against "
+            "its height."
+        )
+
+    cells = []
+    for call in assigned:
+        found = plays.get(call)
+        if found is None:
+            raise SystemExit(
+                f"roster.json script_plays: '{call}' is not a play in the book. "
+                "Use a play's full call."
+            )
+        play, form = found
+        cells.append(f'<a href="{p_href(play)}">'
+                     f'<span class="xl-code">{esc(play["code"])}</span>'
+                     f'{esc(_package_row(play, form))}</a>')
+    cells += [""] * (SCRIPT_ROWS - len(cells))
+
     rows = "".join(
-        f'<tr><td class="sn">{i}</td><td></td></tr>' for i in range(1, SCRIPT_ROWS + 1)
+        f'<tr><td class="sn">{i}</td><td>{cell}</td></tr>'
+        for i, cell in enumerate(cells, 1)
     )
-    return ('<section class="script" role="img" aria-label="Blank numbered script, '
-            f'{SCRIPT_ROWS} rows, to write a possession\'s plays in order">'
+    return ('<section class="script" role="img" aria-label="The possession script, '
+            f'{SCRIPT_ROWS} numbered rows of plays in the order they are called">'
             f'<table class="xl script-t"><tbody>{rows}</tbody></table></section>')
 
 
@@ -3071,13 +3118,14 @@ def write_calls(formations: list[dict], defenses: dict, root: Path) -> str:
     ) or '<p class="lede">No plays in the book yet.</p>'
 
     packages = _package_strip(root, formations)
+    script = _script_strip(root, formations)
 
     # No sub-line under the heading. "Every play in the book, by formation and scheme"
     # restates the title, and the holes rule is on the play cards and in the book where
     # somebody learning it will actually be looking. On paper the line cost a row of
     # calls; the page description below still carries the same words for search.
     body = f"""{page_head("Call sheet")}
-<div class="xl-top"><div class="xl-sheets">{sheets}</div>{_script_column()}</div>
+<div class="xl-top"><div class="xl-sheets">{sheets}</div>{script}</div>
 {packages}"""
     return page(
         f"Call sheet — {SITE_TITLE}",
