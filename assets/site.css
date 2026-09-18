@@ -599,9 +599,9 @@ table.xl.pk-plays td {
 }
 /* The room to draw in: the backfield, below the line. */
 /* The field below the line: the whole reason the strip is here. It is as deep as
-   the sheet has room for, which grew by a formation block when the Wishbone came
-   off (see SHEET_OMIT) -- 62 points of drawing space became 200. */
-.pk-draw .pad { grid-column: 1 / -1; height: 238px; }
+   the sheet has room for, which grew by a formation block each time one came off
+   (see SHEET_OMIT) -- 62 points of drawing space, then 200, now 260. */
+.pk-draw .pad { grid-column: 1 / -1; height: 310px; }
 .pk-plays td a:hover { text-decoration: underline; }
 @media print {
   /* One formation to a row, full width. Two across put a formation in half a page,
@@ -681,7 +681,7 @@ table.xl.pk-plays td {
   .pk-draw .o { border-width: 10px; border-color: #000; }
   .pk-draw .ball { width: 19px; height: 11px; border-color: #000; }
   .pk-draw .ball::after { border-top-color: #000; }
-  .pk-draw .pad { height: 200px; }
+  .pk-draw .pad { height: 260px; }
   /* Hairlines between the cards. On screen the navy name bars are the separation; on
      paper those print as plain black text (see .pk-name below), which ran six lists of
      calls together into one block of small type. The rules are the cheapest fix that

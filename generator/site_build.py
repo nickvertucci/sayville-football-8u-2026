@@ -659,9 +659,9 @@ table.xl.pk-plays td {
 }
 /* The room to draw in: the backfield, below the line. */
 /* The field below the line: the whole reason the strip is here. It is as deep as
-   the sheet has room for, which grew by a formation block when the Wishbone came
-   off (see SHEET_OMIT) -- 62 points of drawing space became 200. */
-.pk-draw .pad { grid-column: 1 / -1; height: 238px; }
+   the sheet has room for, which grew by a formation block each time one came off
+   (see SHEET_OMIT) -- 62 points of drawing space, then 200, now 260. */
+.pk-draw .pad { grid-column: 1 / -1; height: 310px; }
 .pk-plays td a:hover { text-decoration: underline; }
 @media print {
   /* One formation to a row, full width. Two across put a formation in half a page,
@@ -741,7 +741,7 @@ table.xl.pk-plays td {
   .pk-draw .o { border-width: 10px; border-color: #000; }
   .pk-draw .ball { width: 19px; height: 11px; border-color: #000; }
   .pk-draw .ball::after { border-top-color: #000; }
-  .pk-draw .pad { height: 200px; }
+  .pk-draw .pad { height: 260px; }
   /* Hairlines between the cards. On screen the navy name bars are the separation; on
      paper those print as plain black text (see .pk-name below), which ran six lists of
      calls together into one block of small type. The rules are the cheapest fix that
@@ -2793,15 +2793,15 @@ CALL_SHEET_ORDER = (
     "wishbone", "power-i",
 )
 
-# Formations that stay in the book but come off the call sheet. The Wishbone is a
-# teaching formation here -- it is on its own page, in the printed book and in
-# PLAYBOOK.md, and its plays are authored and checked like every other -- but it is
-# not what anybody reaches for on a Sunday, and its block was the last one on the
-# sheet. Off the sheet, everything above it moves up and the field below the line of
-# scrimmage grows by the height of the block, which is the point: that space gets
-# drawn on with a marker. Same shape as sheet_plays dropping the passes -- a filter
-# here, not a deletion anywhere, so it comes back by emptying this set.
-SHEET_OMIT = frozenset({"wishbone"})
+# Formations that stay in the book but come off the call sheet. The Wishbone and
+# Trips are teaching formations here -- each has its own page, its cards, its place
+# in the printed book and in PLAYBOOK.md, and its plays are authored and checked
+# like every other -- but neither is what anybody reaches for on a Sunday. Off the
+# sheet, the blocks below them move up and the field below the line of scrimmage
+# grows by their height, which is the point: that space gets drawn on with a marker.
+# Same shape as sheet_plays dropping the passes -- a filter here, not a deletion
+# anywhere, so a formation comes back by taking it out of this set.
+SHEET_OMIT = frozenset({"wishbone", "trips"})
 
 
 def _call_sheet_order(formations: list[dict]) -> list[dict]:
