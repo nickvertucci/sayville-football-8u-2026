@@ -8,14 +8,14 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 |---|---|---|---|---|---|---|
 | 1 | [Regular I - Slot Right - 36 Power](#regular-i---slot-right---36-power) | `Regular I Slot Right 36 Power` | Power | run | Regular I | TB |
 | 2 | [Regular I - Slot Left - 37 Power](#regular-i---slot-left---37-power) | `Regular I Slot Left 37 Power` | Power | run | Regular I | TB |
-| 3 | [Regular I - Slot Right - LTE Sweep](#regular-i---slot-right---lte-sweep) | `Regular I Slot Right LTE Sweep` | Sweep | run | Regular I | LTE |
-| 4 | [Regular I - Slot Left - RTE Sweep](#regular-i---slot-left---rte-sweep) | `Regular I Slot Left RTE Sweep` | Sweep | run | Regular I | RTE |
+| 3 | [Regular I - Slot Right - LTE (50) Sweep](#regular-i---slot-right---lte-50-sweep) | `Regular I Slot Right LTE Sweep` | Sweep | run | Regular I | LTE |
+| 4 | [Regular I - Slot Left - RTE (60) Sweep](#regular-i---slot-left---rte-60-sweep) | `Regular I Slot Left RTE Sweep` | Sweep | run | Regular I | RTE |
 | 5 | [Regular I - Slot Right - 49 Sweep](#regular-i---slot-right---49-sweep) | `Regular I Slot Right 49 Sweep` | Sweep | run | Regular I | SL |
 | 6 | [Regular I - Slot Left - 48 Sweep](#regular-i---slot-left---48-sweep) | `Regular I Slot Left 48 Sweep` | Sweep | run | Regular I | SL |
 | 7 | [Regular I - Slot Right - 32 Smash](#regular-i---slot-right---32-smash) | `Regular I Slot Right 32 Smash` | Smash | run | Regular I | TB |
 | 8 | [Regular I - Slot Left - 33 Smash](#regular-i---slot-left---33-smash) | `Regular I Slot Left 33 Smash` | Smash | run | Regular I | TB |
-| 9 | [Regular I - Slot Right - RTE Slant Out](#regular-i---slot-right---rte-slant-out) | `Regular I Slot Right RTE Slant Out` | Protect | pass | Regular I | RTE |
-| 10 | [Regular I - Slot Left - LTE Slant Out](#regular-i---slot-left---lte-slant-out) | `Regular I Slot Left LTE Slant Out` | Protect | pass | Regular I | LTE |
+| 9 | [Regular I - Slot Right - RTE (60) Slant Out](#regular-i---slot-right---rte-60-slant-out) | `Regular I Slot Right RTE Slant Out` | Protect | pass | Regular I | RTE |
+| 10 | [Regular I - Slot Left - LTE (50) Slant Out](#regular-i---slot-left---lte-50-slant-out) | `Regular I Slot Left LTE Slant Out` | Protect | pass | Regular I | LTE |
 | 11 | [Regular I - Slot Right - 22 Smash](#regular-i---slot-right---22-smash) | `Regular I Slot Right 22 Smash` | Smash | run | Regular I | FB |
 | 12 | [Regular I - Slot Left - 23 Smash](#regular-i---slot-left---23-smash) | `Regular I Slot Left 23 Smash` | Smash | run | Regular I | FB |
 | 13 | [Wishbone - 46 Power](#wishbone---46-power) | `Wishbone 46 Power` | Power | run | Wishbone | RH |
@@ -34,26 +34,26 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 | 26 | [Split Backs - Slot Right - 18 Fake Sweep](#split-backs---slot-right---18-fake-sweep) | `Split Backs Slot Right 18 Fake Sweep` | Sweep | run | Split Backs | QB |
 | 27 | [Split Backs - Slot Right - 49 Sweep](#split-backs---slot-right---49-sweep) | `Split Backs Slot Right 49 Sweep` | Sweep | run | Split Backs | SL |
 | 28 | [Split Backs - Slot Left - 48 Sweep](#split-backs---slot-left---48-sweep) | `Split Backs Slot Left 48 Sweep` | Sweep | run | Split Backs | SL |
-| 29 | [Split Backs - Slot Right - LTE Sweep](#split-backs---slot-right---lte-sweep) | `Split Backs Slot Right LTE Sweep` | Sweep | run | Split Backs | LTE |
-| 30 | [Split Backs - Slot Left - RTE Sweep](#split-backs---slot-left---rte-sweep) | `Split Backs Slot Left RTE Sweep` | Sweep | run | Split Backs | RTE |
-| 31 | [Split Backs - Slot Right - RTE Slant Out](#split-backs---slot-right---rte-slant-out) | `Split Backs Slot Right RTE Slant Out` | Protect | pass | Split Backs | RTE |
-| 32 | [Split Backs - Slot Left - LTE Slant Out](#split-backs---slot-left---lte-slant-out) | `Split Backs Slot Left LTE Slant Out` | Protect | pass | Split Backs | LTE |
+| 29 | [Split Backs - Slot Right - LTE (50) Sweep](#split-backs---slot-right---lte-50-sweep) | `Split Backs Slot Right LTE Sweep` | Sweep | run | Split Backs | LTE |
+| 30 | [Split Backs - Slot Left - RTE (60) Sweep](#split-backs---slot-left---rte-60-sweep) | `Split Backs Slot Left RTE Sweep` | Sweep | run | Split Backs | RTE |
+| 31 | [Split Backs - Slot Right - RTE (60) Slant Out](#split-backs---slot-right---rte-60-slant-out) | `Split Backs Slot Right RTE Slant Out` | Protect | pass | Split Backs | RTE |
+| 32 | [Split Backs - Slot Left - LTE (50) Slant Out](#split-backs---slot-left---lte-50-slant-out) | `Split Backs Slot Left LTE Slant Out` | Protect | pass | Split Backs | LTE |
 | 33 | [Split Backs - Slot Right - 36 Power](#split-backs---slot-right---36-power) | `Split Backs Slot Right 36 Power` | Power | run | Split Backs | LH |
 | 34 | [Split Backs - Slot Left - 27 Power](#split-backs---slot-left---27-power) | `Split Backs Slot Left 27 Power` | Power | run | Split Backs | RH |
-| 35 | [Shotgun - Slot Right - RTE Slant Out](#shotgun---slot-right---rte-slant-out) | `Shotgun Slot Right RTE Slant Out` | Protect | pass | Shotgun | RTE |
-| 36 | [Shotgun - Slot Left - LTE Slant Out](#shotgun---slot-left---lte-slant-out) | `Shotgun Slot Left LTE Slant Out` | Protect | pass | Shotgun | LTE |
+| 35 | [Shotgun - Slot Right - RTE (60) Slant Out](#shotgun---slot-right---rte-60-slant-out) | `Shotgun Slot Right RTE Slant Out` | Protect | pass | Shotgun | RTE |
+| 36 | [Shotgun - Slot Left - LTE (50) Slant Out](#shotgun---slot-left---lte-50-slant-out) | `Shotgun Slot Left LTE Slant Out` | Protect | pass | Shotgun | LTE |
 | 37 | [Shotgun - Slot Left - 19 Sweep](#shotgun---slot-left---19-sweep) | `Shotgun Slot Left 19 Sweep` | Sweep | run | Shotgun | QB |
 | 38 | [Shotgun - Slot Right - 18 Sweep](#shotgun---slot-right---18-sweep) | `Shotgun Slot Right 18 Sweep` | Sweep | run | Shotgun | QB |
 | 39 | [Shotgun - Slot Right - 38 Toss](#shotgun---slot-right---38-toss) | `Shotgun Slot Right 38 Toss` | Toss | run | Shotgun | LH |
 | 40 | [Shotgun - Slot Left - 29 Toss](#shotgun---slot-left---29-toss) | `Shotgun Slot Left 29 Toss` | Toss | run | Shotgun | RH |
-| 41 | [Trips - Right - LTE Sweep](#trips---right---lte-sweep) | `Trips Right LTE Sweep` | Sweep | run | Trips | LTE |
-| 42 | [Trips - Left - RTE Sweep](#trips---left---rte-sweep) | `Trips Left RTE Sweep` | Sweep | run | Trips | RTE |
+| 41 | [Trips - Right - LTE (50) Sweep](#trips---right---lte-50-sweep) | `Trips Right LTE Sweep` | Sweep | run | Trips | LTE |
+| 42 | [Trips - Left - RTE (60) Sweep](#trips---left---rte-60-sweep) | `Trips Left RTE Sweep` | Sweep | run | Trips | RTE |
 | 43 | [Trips - Right - 38 Quick Pass](#trips---right---38-quick-pass) | `Trips Right 38 Quick Pass` | Protect | pass | Trips | TB |
 | 44 | [Trips - Left - 39 Quick Pass](#trips---left---39-quick-pass) | `Trips Left 39 Quick Pass` | Protect | pass | Trips | TB |
 | 45 | [Trips - Right - 18 Sweep](#trips---right---18-sweep) | `Trips Right 18 Sweep` | Sweep | run | Trips | QB |
 | 46 | [Trips - Left - 19 Sweep](#trips---left---19-sweep) | `Trips Left 19 Sweep` | Sweep | run | Trips | QB |
-| 47 | [Trips - Right - RTE Slant Out](#trips---right---rte-slant-out) | `Trips Right RTE Slant Out` | Protect | pass | Trips | RTE |
-| 48 | [Trips - Left - LTE Slant Out](#trips---left---lte-slant-out) | `Trips Left LTE Slant Out` | Protect | pass | Trips | LTE |
+| 47 | [Trips - Right - RTE (60) Slant Out](#trips---right---rte-60-slant-out) | `Trips Right RTE Slant Out` | Protect | pass | Trips | RTE |
+| 48 | [Trips - Left - LTE (50) Slant Out](#trips---left---lte-50-slant-out) | `Trips Left LTE Slant Out` | Protect | pass | Trips | LTE |
 | 49 | [Power I - Slot Right - 32 Smash](#power-i---slot-right---32-smash) | `Power I Slot Right 32 Smash` | Smash | run | Power I | TB |
 | 50 | [Power I - Slot Left - 33 Smash](#power-i---slot-left---33-smash) | `Power I Slot Left 33 Smash` | Smash | run | Power I | TB |
 | 51 | [Power I - Slot Right - 38 Toss](#power-i---slot-right---38-toss) | `Power I Slot Right 38 Toss` | Toss | run | Power I | TB |
@@ -125,13 +125,13 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Regular I - Slot Right - LTE Sweep
+## Regular I - Slot Right - LTE (50) Sweep
 
 **Call it:** `Regular I Slot Right LTE Sweep`
 
 **Scheme:** Sweep
 
-![Regular I - Slot Right - LTE Sweep](playbook/i-form/cards/i-te-sweep-r-4-4.svg)
+![Regular I - Slot Right - LTE (50) Sweep](playbook/i-form/cards/i-te-sweep-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -155,13 +155,13 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Regular I - Slot Left - RTE Sweep
+## Regular I - Slot Left - RTE (60) Sweep
 
 **Call it:** `Regular I Slot Left RTE Sweep`
 
 **Scheme:** Sweep
 
-![Regular I - Slot Left - RTE Sweep](playbook/i-form/cards/i-te-sweep-l-4-4.svg)
+![Regular I - Slot Left - RTE (60) Sweep](playbook/i-form/cards/i-te-sweep-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -305,13 +305,13 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Regular I - Slot Right - RTE Slant Out
+## Regular I - Slot Right - RTE (60) Slant Out
 
 **Call it:** `Regular I Slot Right RTE Slant Out`
 
 **Scheme:** Protect
 
-![Regular I - Slot Right - RTE Slant Out](playbook/i-form/cards/i-te-out-r-4-4.svg)
+![Regular I - Slot Right - RTE (60) Slant Out](playbook/i-form/cards/i-te-out-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -335,13 +335,13 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Regular I - Slot Left - LTE Slant Out
+## Regular I - Slot Left - LTE (50) Slant Out
 
 **Call it:** `Regular I Slot Left LTE Slant Out`
 
 **Scheme:** Protect
 
-![Regular I - Slot Left - LTE Slant Out](playbook/i-form/cards/i-te-out-l-4-4.svg)
+![Regular I - Slot Left - LTE (50) Slant Out](playbook/i-form/cards/i-te-out-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -905,13 +905,13 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Split Backs - Slot Right - LTE Sweep
+## Split Backs - Slot Right - LTE (50) Sweep
 
 **Call it:** `Split Backs Slot Right LTE Sweep`
 
 **Scheme:** Sweep
 
-![Split Backs - Slot Right - LTE Sweep](playbook/split-backs/cards/sb-te-sweep-r-4-4.svg)
+![Split Backs - Slot Right - LTE (50) Sweep](playbook/split-backs/cards/sb-te-sweep-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -935,13 +935,13 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Split Backs - Slot Left - RTE Sweep
+## Split Backs - Slot Left - RTE (60) Sweep
 
 **Call it:** `Split Backs Slot Left RTE Sweep`
 
 **Scheme:** Sweep
 
-![Split Backs - Slot Left - RTE Sweep](playbook/split-backs/cards/sb-te-sweep-l-4-4.svg)
+![Split Backs - Slot Left - RTE (60) Sweep](playbook/split-backs/cards/sb-te-sweep-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -965,13 +965,13 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Split Backs - Slot Right - RTE Slant Out
+## Split Backs - Slot Right - RTE (60) Slant Out
 
 **Call it:** `Split Backs Slot Right RTE Slant Out`
 
 **Scheme:** Protect
 
-![Split Backs - Slot Right - RTE Slant Out](playbook/split-backs/cards/sb-te-out-r-4-4.svg)
+![Split Backs - Slot Right - RTE (60) Slant Out](playbook/split-backs/cards/sb-te-out-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -995,13 +995,13 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Split Backs - Slot Left - LTE Slant Out
+## Split Backs - Slot Left - LTE (50) Slant Out
 
 **Call it:** `Split Backs Slot Left LTE Slant Out`
 
 **Scheme:** Protect
 
-![Split Backs - Slot Left - LTE Slant Out](playbook/split-backs/cards/sb-te-out-l-4-4.svg)
+![Split Backs - Slot Left - LTE (50) Slant Out](playbook/split-backs/cards/sb-te-out-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -1087,13 +1087,13 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Shotgun - Slot Right - RTE Slant Out
+## Shotgun - Slot Right - RTE (60) Slant Out
 
 **Call it:** `Shotgun Slot Right RTE Slant Out`
 
 **Scheme:** Protect
 
-![Shotgun - Slot Right - RTE Slant Out](playbook/shotgun/cards/sg-te-out-r-4-4.svg)
+![Shotgun - Slot Right - RTE (60) Slant Out](playbook/shotgun/cards/sg-te-out-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -1117,13 +1117,13 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Shotgun - Slot Left - LTE Slant Out
+## Shotgun - Slot Left - LTE (50) Slant Out
 
 **Call it:** `Shotgun Slot Left LTE Slant Out`
 
 **Scheme:** Protect
 
-![Shotgun - Slot Left - LTE Slant Out](playbook/shotgun/cards/sg-te-out-l-4-4.svg)
+![Shotgun - Slot Left - LTE (50) Slant Out](playbook/shotgun/cards/sg-te-out-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -1269,13 +1269,13 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Trips - Right - LTE Sweep
+## Trips - Right - LTE (50) Sweep
 
 **Call it:** `Trips Right LTE Sweep`
 
 **Scheme:** Sweep
 
-![Trips - Right - LTE Sweep](playbook/trips/cards/tr-te-sweep-r-4-4.svg)
+![Trips - Right - LTE (50) Sweep](playbook/trips/cards/tr-te-sweep-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -1298,13 +1298,13 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Trips - Left - RTE Sweep
+## Trips - Left - RTE (60) Sweep
 
 **Call it:** `Trips Left RTE Sweep`
 
 **Scheme:** Sweep
 
-![Trips - Left - RTE Sweep](playbook/trips/cards/tr-te-sweep-l-4-4.svg)
+![Trips - Left - RTE (60) Sweep](playbook/trips/cards/tr-te-sweep-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -1445,13 +1445,13 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Trips - Right - RTE Slant Out
+## Trips - Right - RTE (60) Slant Out
 
 **Call it:** `Trips Right RTE Slant Out`
 
 **Scheme:** Protect
 
-![Trips - Right - RTE Slant Out](playbook/trips/cards/tr-te-out-r-4-4.svg)
+![Trips - Right - RTE (60) Slant Out](playbook/trips/cards/tr-te-out-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -1474,13 +1474,13 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Trips - Left - LTE Slant Out
+## Trips - Left - LTE (50) Slant Out
 
 **Call it:** `Trips Left LTE Slant Out`
 
 **Scheme:** Protect
 
-![Trips - Left - LTE Slant Out](playbook/trips/cards/tr-te-out-l-4-4.svg)
+![Trips - Left - LTE (50) Slant Out](playbook/trips/cards/tr-te-out-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
