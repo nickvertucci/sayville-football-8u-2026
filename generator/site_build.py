@@ -513,9 +513,23 @@ table.dc-sub thead th {
    A spreadsheet, on purpose: ruled cells with no gaps, empty ones drawn too, so the
    lineup keeps the formation's shape and the plays read straight down a column. One
    sheet per package, side by side, stacking on a phone. */
+/* The formation blocks and the script column side by side. The script is a fixed
+   width because it is ruled space to write in, not content that wants to breathe --
+   giving it a share of the page would make its boxes wider as the window grows, which
+   is the opposite of useful. */
+.xl-top {
+  display: grid; gap: 14px; align-items: start;
+  grid-template-columns: minmax(0, 1fr) 200px;
+}
+@media (max-width: 860px) { .xl-top { grid-template-columns: 1fr; } }
 .xl-sheets {
   display: grid; gap: 14px; margin: 10px 0 24px;
   grid-template-columns: repeat(auto-fit, minmax(min(460px, 100%), 1fr));
+}
+.script { margin: 10px 0 24px; }
+.script-t td { height: 20px; padding: 2px 4px; }
+.script-t td.sn {
+  width: 22px; text-align: center; font-weight: 800; color: var(--muted);
 }
 .xl-sheet { min-width: 0; }
 .xl-title {
@@ -688,7 +702,19 @@ table.xl.pk-plays td {
      size, but each cell three inches instead of one and a half, so nothing wraps and
      the block is *shorter* than it was at half width. Five of them still fit the one
      sheet because of it, not in spite of it. */
+  /* Four blocks down the left, the script down the right. The script is 150 points
+     because that is what is left once a formation block is narrow enough to still fit
+     "Split Backs - Slot R - LTE (50) Sweep" on one line -- the blocks were full width
+     and had room to give, which is what made this column possible at all. */
+  .xl-top { display: grid; grid-template-columns: 1fr 150px; gap: 0 6px;
+            align-items: start; }
   .xl-sheets { grid-template-columns: 1fr; gap: 0; margin: 2px 0 0; }
+  .script { margin: 2px 0 0; break-inside: avoid; }
+  /* Rows as short as the type allows: every point saved here is another numbered row,
+     and rows are what this column is for. */
+  .script-t td { height: 8px; padding: 0 2px; line-height: 1.1; }
+  .script-t td.sn { width: 13px; text-align: center; font-size: 7px; font-weight: 800;
+                    color: #000; }
   /* No rule between blocks any more: the formation's own black bar below is the
      separator, and a 3px rule under the block as well was two fences for one fence's
      job. Dropping five of them also pays for the bar's padding, which is the only
@@ -2888,6 +2914,33 @@ def _blank_line() -> str:
             f'<span class="pad" style="grid-row:3"></span></div></div>')
 
 
+# How many numbered rows fit beside the formation blocks. Measured, not chosen: the
+# script column is as tall as the four blocks next to it, and a row past that pushes the
+# packages, the field and the board down far enough to spill onto a second sheet. One
+# page at 43 rows, two at 44.
+SCRIPT_ROWS = 43
+
+
+def _script_column() -> str:
+    """The numbered column down the right of the formation blocks.
+
+    Blank on purpose. It is the possession script -- the plays called in order, written
+    on the lamination with a marker before the game or between series. The sheet cannot
+    generate that: which play goes first is a decision made against an opponent, not
+    against the book.
+
+    Numbers only, and no heading, because both cost rows and rows are the whole point of
+    this column. It is the same trade the blank field makes: the sheet gives you ruled
+    space and gets out of the way.
+    """
+    rows = "".join(
+        f'<tr><td class="sn">{i}</td><td></td></tr>' for i in range(1, SCRIPT_ROWS + 1)
+    )
+    return ('<section class="script" role="img" aria-label="Blank numbered script, '
+            f'{SCRIPT_ROWS} rows, to write a possession\'s plays in order">'
+            f'<table class="xl script-t"><tbody>{rows}</tbody></table></section>')
+
+
 # The call sheet is the one page that lays the formations out two across instead of
 # one after another, so its order is a seating chart rather than the teaching order the
 # rest of the book runs on. Regular I keeps the top row, the Wishbone drops to the
@@ -3001,7 +3054,7 @@ def write_calls(formations: list[dict], defenses: dict, root: Path) -> str:
     # somebody learning it will actually be looking. On paper the line cost a row of
     # calls; the page description below still carries the same words for search.
     body = f"""{page_head("Call sheet")}
-<div class="xl-sheets">{sheets}</div>
+<div class="xl-top"><div class="xl-sheets">{sheets}</div>{_script_column()}</div>
 {packages}"""
     return page(
         f"Call sheet — {SITE_TITLE}",
