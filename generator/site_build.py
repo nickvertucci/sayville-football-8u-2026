@@ -604,6 +604,15 @@ table.xl.pk-plays td {
   font-size: 10px;
 }
 .pk-any { color: var(--muted); font-style: italic; font-size: 11px; }
+/* The blank line at the bottom of the sheet. Seven circles and a ball, nothing else:
+   the sheet is laminated and drawn on with a marker, so what belongs here is the part
+   that never changes -- the centre, three men either side, and the ball in front of
+   him. Everything that makes it a play gets drawn in on the sideline and wiped off
+   after. */
+.pk-draw { margin: 12px 0 0; }
+.pk-draw svg { display: block; width: 100%; height: auto; }
+.pk-draw .o { fill: none; stroke: var(--ink); stroke-width: 2.4; }
+.pk-draw .ball { fill: none; stroke: var(--ink); stroke-width: 2.2; }
 .pk-plays td a:hover { text-decoration: underline; }
 @media print {
   /* One formation to a row, full width. Two across put a formation in half a page,
@@ -664,9 +673,17 @@ table.xl.pk-plays td {
      18px WORSE than the grid -- balancing put Total Recall's four and Maverick's six
      in the same column and the other two ran short, so the ragged bottom cost more
      than the grid's even rows. Measure before believing that one. */
-  .pk-head { margin: 3px 0 0; font-size: 10px; }
+  /* Laminated and called from, not read. The page title and the word "Packages" are
+     both things you know by the time you are holding it, and between them they were
+     most of an inch of the one sheet. The rule under the heading stays -- it is what
+     separates the packages from the formation blocks -- so it moves onto the grid. */
+  .calls-page .page-head { display: none; }
+  .pk-head { display: none; }
   .pk-sub { display: none; }
-  .pk-grid { gap: 0 8px; margin: 2px 0 0; break-inside: avoid; }
+  .pk-grid { gap: 0 8px; margin: 0; padding-top: 4px; break-inside: avoid;
+             border-top: 1px solid #000; }
+  .pk-draw { margin: 6px 0 0; break-inside: avoid; }
+  .pk-draw .o, .pk-draw .ball { stroke: #000; }
   /* Hairlines between the cards. On screen the navy name bars are the separation; on
      paper those print as plain black text (see .pk-name below), which ran six lists of
      calls together into one block of small type. The rules are the cheapest fix that
@@ -2585,6 +2602,11 @@ def _package_row(play: dict, form: dict) -> str:
     return f"{label} - {tail}"
 
 
+# How many calls a package may carry. The strip is the last thing on the sheet before
+# the blank line, so its height has to be predictable.
+PACKAGE_PLAY_CAP = 6
+
+
 def _package_strip(root: Path, formations: list[dict]) -> str:
     """The packages along the bottom, three to a row, with the plays each one runs.
 
@@ -2617,6 +2639,14 @@ def _package_strip(root: Path, formations: list[dict]) -> str:
     cards = []
     for i, calls in enumerate(assigned):
         label = names[i] if i < len(names) else f"Package {i + 1}"
+        # Six is the cap, so the height of the strip is known and the blank line below
+        # it always has the same room. A seventh call would quietly eat that space.
+        if list(calls) != ["any"] and len(calls) > PACKAGE_PLAY_CAP:
+            raise SystemExit(
+                f"roster.json package_plays, {label}: {len(calls)} plays, and a package "
+                f"is capped at {PACKAGE_PLAY_CAP} — the call sheet's blank line needs "
+                "the space below the strip to stay the same size."
+            )
         if list(calls) == ["any"]:
             rows = '<tr><td class="pk-any">Any play</td></tr>'
         else:
@@ -2643,7 +2673,39 @@ def _package_strip(root: Path, formations: list[dict]) -> str:
 
     return ('<p class="section-head pk-head">Packages '
             '<span class="pk-sub">what each one comes on to call</span></p>'
-            f'<div class="pk-grid">{"".join(cards)}</div>')
+            f'<div class="pk-grid">{"".join(cards)}</div>'
+            f'{_blank_line()}')
+
+
+# Seven men and the ball, centred. The spacing is wide enough to write a name or a
+# number inside a circle with a marker, which is the whole reason the strip exists.
+# The height is what the sheet has left once the packages are on it, measured from
+# the generated PDF rather than guessed: any taller and the sheet is two pages.
+DRAW_W, DRAW_H = 760, 128
+DRAW_R, DRAW_GAP, DRAW_Y = 17, 70, 86
+
+
+def _blank_line() -> str:
+    """A blank line of scrimmage to draw a play on, at the foot of the call sheet.
+
+    The sheet is laminated, so the bottom of it is worth more as somewhere to invent a
+    play than as more print. What is drawn is only the part that is the same on every
+    snap: the centre, three men either side of him, and the ball in front. The backs,
+    the routes and the blocks are the coach's, in marker, and come off again.
+    """
+    mid = DRAW_W / 2
+    men = "".join(
+        f'<circle class="o" cx="{mid + k * DRAW_GAP:.0f}" cy="{DRAW_Y}" r="{DRAW_R}"/>'
+        for k in range(-3, 4)
+    )
+    # A pointed oval rather than an ellipse, so it reads as a ball and not another man.
+    by = DRAW_Y - DRAW_R - 20
+    ball = (f'<path class="ball" d="M {mid - 15:.0f} {by} Q {mid:.0f} {by - 13} '
+            f'{mid + 15:.0f} {by} Q {mid:.0f} {by + 13} {mid - 15:.0f} {by} Z"/>'
+            f'<path class="ball" d="M {mid - 7:.0f} {by} H {mid + 7:.0f}"/>')
+    return (f'<div class="pk-draw"><svg viewBox="0 0 {DRAW_W} {DRAW_H}" '
+            f'role="img" aria-label="Blank line of scrimmage to draw a play on">'
+            f'{ball}{men}</svg></div>')
 
 
 # The call sheet is the one page that lays the formations out two across instead of
