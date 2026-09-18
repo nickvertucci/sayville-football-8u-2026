@@ -527,9 +527,10 @@ table.dc-sub thead th {
   grid-template-columns: repeat(auto-fit, minmax(min(460px, 100%), 1fr));
 }
 .script { margin: 10px 0 24px; }
-.script-t td { height: 20px; padding: 2px 4px; }
+.script-t { border: 2px solid var(--ink); }
+.script-t td { height: 26px; padding: 2px 5px; vertical-align: middle; }
 .script-t td.sn {
-  width: 22px; text-align: center; font-weight: 800; color: var(--muted);
+  width: 24px; text-align: center; font-weight: 800; color: var(--muted);
 }
 .xl-sheet { min-width: 0; }
 .xl-title {
@@ -710,10 +711,17 @@ table.xl.pk-plays td {
             align-items: start; }
   .xl-sheets { grid-template-columns: 1fr; gap: 0; margin: 2px 0 0; }
   .script { margin: 2px 0 0; break-inside: avoid; }
-  /* Rows as short as the type allows: every point saved here is another numbered row,
-     and rows are what this column is for. */
-  .script-t td { height: 8px; padding: 0 2px; line-height: 1.1; }
-  .script-t td.sn { width: 13px; text-align: center; font-size: 7px; font-weight: 800;
+  /* A block border round the whole column, 2px like the field's sidelines, so it reads
+     as one object rather than twenty loose boxes. The cells keep the hairline the rest
+     of the sheet's tables use. */
+  .script-t { border: 2px solid #000; }
+  /* 20.4 points a row is the height of the four formation blocks divided by twenty --
+     measured against the page, not picked, and tuned until the foot of this column and
+     the foot of the Power I block land on the same line. It is also what lets the type
+     go up to 9px, the same size a call is in the blocks beside it. */
+  .script-t td { height: 20.4px; padding: 0 3px; line-height: 1.15; font-size: 9px;
+                 font-weight: 700; vertical-align: middle; }
+  .script-t td.sn { width: 15px; text-align: center; font-size: 8px; font-weight: 800;
                     color: #000; }
   /* No rule between blocks any more: the formation's own black bar below is the
      separator, and a 3px rule under the block as well was two fences for one fence's
@@ -2914,24 +2922,25 @@ def _blank_line() -> str:
             f'<span class="pad" style="grid-row:3"></span></div></div>')
 
 
-# How many numbered rows fit beside the formation blocks. Measured, not chosen: the
-# script column is as tall as the four blocks next to it, and a row past that pushes the
-# packages, the field and the board down far enough to spill onto a second sheet. One
-# page at 43 rows, two at 44.
-SCRIPT_ROWS = 43
+# The script is twenty plays, and the twenty share the whole height beside the four
+# formation blocks rather than sitting small at the top of it. So the row height is not
+# a constant here: it is that height divided by twenty, which is what `.script-t td`
+# sets in the print CSS. Change this number and that height has to be re-measured with
+# it, which is why the two carry each other's name.
+SCRIPT_ROWS = 20
 
 
 def _script_column() -> str:
     """The numbered column down the right of the formation blocks.
 
-    Blank on purpose. It is the possession script -- the plays called in order, written
-    on the lamination with a marker before the game or between series. The sheet cannot
-    generate that: which play goes first is a decision made against an opponent, not
-    against the book.
+    Blank on purpose, for now. It is the possession script -- the plays called in
+    order -- and the sheet cannot work that out: which play goes first is a decision
+    made against an opponent, not against the book. The rows are sized to take a play
+    name at the size the formation blocks use, so a call written here reads like a call
+    anywhere else on the sheet.
 
-    Numbers only, and no heading, because both cost rows and rows are the whole point of
-    this column. It is the same trade the blank field makes: the sheet gives you ruled
-    space and gets out of the way.
+    Numbers only and no heading: twenty rows sharing the height is the point, and a
+    heading would take a row's worth of it.
     """
     rows = "".join(
         f'<tr><td class="sn">{i}</td><td></td></tr>' for i in range(1, SCRIPT_ROWS + 1)
