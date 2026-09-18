@@ -411,13 +411,15 @@ table.dc-sub thead th {
   flex: 0 0 38px; font-size: 9px; font-weight: 800; letter-spacing: 0;
   color: var(--muted); text-transform: uppercase; white-space: nowrap;
 }
-/* The four backs carry the position and the number together -- QB (#1), FB (#2) -- not
-   the number alone. The digit is what a call says and the position is what the kid
-   knows he is, and a card that prints only "#2" makes the reader hold the mapping in
-   his head. One label column width for every slot, so the names line up under each
+/* The four backs carry the position and the number together -- QB (10), FB (20) -- not
+   the number alone. The position is what the kid knows he is and the number is what a
+   call says, and a card that prints only the number makes the reader hold the mapping
+   in his head. The numbers are the ones on the nomenclature card: the back digit with
+   the hole digit 0 behind it, 10 20 30 40, which is what the diagram labels those
+   four with. One label column width for every slot, so the names line up under each
    other whether the label is three characters or seven. */
 .dc-pkg-slot[data-n]::before {
-  content: attr(data-spot) " (#" attr(data-n) ")";
+  content: attr(data-spot) " (" attr(data-n) ")";
 }
 .dc-pkg-slot + .dc-pkg-slot { margin-top: 1px; }
 .dc-pkg-slot[data-spot="LTE"],
