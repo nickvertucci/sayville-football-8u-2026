@@ -659,11 +659,12 @@ table.xl.pk-plays td {
   border-top: 2px solid var(--ink);
 }
 /* The room to draw in: the backfield, below the line. */
-/* The field below the line: as deep as the sheet has room for, which is whatever
-   the blocks above it leave. 62 points of drawing space to start, 200 and then 260
-   as formations came off the sheet, and 120 now that the down-and-distance board
-   sits between the packages and the line. Still about twice what it started as. */
-.pk-draw .pad { grid-column: 1 / -1; height: 143px; }
+/* The field below the line: as deep as the sheet has room for, which is whatever the
+   rest of it leaves. 62 points of drawing space to start, 200 and then 260 as
+   formations came off the sheet, and 155 now that the down-and-distance board has a
+   band of its own under the field. Two calls to a situation rather than three is
+   what buys back the 35 over the three-deep version. */
+.pk-draw .pad { grid-column: 1 / -1; height: 184px; }
 .pk-plays td a:hover { text-decoration: underline; }
 @media print {
   /* One formation to a row, full width. Two across put a formation in half a page,
@@ -734,9 +735,11 @@ table.xl.pk-plays td {
   .pk-grid { gap: 0 8px; margin: 0; padding-top: 4px; break-inside: avoid;
              border-top: 1px solid #000; }
   /* The down-and-distance board is a second .pk-grid, so it takes the same rule above
-     and gets its own divider for free -- which is the line asked for between it and the
-     packages. It only needs the gap that stops the two blocks reading as one. */
-  .sit-grid { margin-top: 5px; }
+     and gets its top rule for free. Sitting under the blank field, that rule is also
+     what closes the field off at the bottom -- the field has sidelines and a top, and
+     this is its goal line. No gap above it for that reason: a margin would leave the
+     field hanging open with a stray rule below it. */
+  .sit-grid { margin-top: 0; }
   .pk-field { margin: 5px 0 0; padding-top: 13px; border-top-color: #000;
               border-left-color: #000; border-right-color: #000; }
   .pk-field .hash { width: 11px; border-top-color: #000; }
@@ -747,7 +750,7 @@ table.xl.pk-plays td {
   .pk-draw .o { border-width: 10px; border-color: #000; }
   .pk-draw .ball { width: 19px; height: 11px; border-color: #000; }
   .pk-draw .ball::after { border-top-color: #000; }
-  .pk-draw .pad { height: 120px; }
+  .pk-draw .pad { height: 155px; }
   /* Hairlines between the cards. On screen the navy name bars are the separation; on
      paper those print as plain black text (see .pk-name below), which ran six lists of
      calls together into one block of small type. The rules are the cheapest fix that
@@ -2738,8 +2741,8 @@ def _package_strip(root: Path, formations: list[dict]) -> str:
     return ('<p class="section-head pk-head">Packages '
             '<span class="pk-sub">what each one comes on to call</span></p>'
             f'<div class="pk-grid">{"".join(cards)}</div>'
-            f'{_situation_strip(roster, plays)}'
-            f'{_blank_line()}')
+            f'{_blank_line()}'
+            f'{_situation_strip(roster, plays)}')
 
 
 # The down-and-distance board, in the order the situations come up. The names are here
@@ -2750,10 +2753,11 @@ SITUATIONS = (
     "1st down", "2nd & Short", "2nd & Long",
     "3rd & Short", "3rd & Long", "4th down",
 )
-# Exactly three, not up to three. Three is what fits a glance at a laminated sheet, and
-# a fixed count means the board's height is known, which is what keeps the field below
-# it the size it was measured at.
-SITUATION_PLAY_CAP = 3
+# Exactly two, not up to two: one call to the right and one to the left. That is a
+# strength choice rather than a list to read down, which is what you actually want at
+# the line. A fixed count also means the board's height is known, which is what keeps
+# the field above it the size it was measured at.
+SITUATION_PLAY_CAP = 2
 
 
 def _situation_strip(roster: dict, plays: dict) -> str:
@@ -2764,10 +2768,14 @@ def _situation_strip(roster: dict, plays: dict) -> str:
     and both print as the same card, so this reuses the package grid rather than
     inventing a second look for the same thing.
 
+    It sits under the blank field rather than above it, so the sheet reads in the order
+    a drive does: the book, then who comes on, then the space to invent something, and
+    the board last as the thing you look down at when there is no time to invent.
+
     `plays` is the whole book by call, as the packages use it, so a situation may
     name a play from any formation -- including one whose block is not on the sheet.
-    That is deliberate: the board IS the sheet for these eighteen, and a call here is
-    a call whether or not its table prints.
+    That is deliberate: the board IS the sheet for these twelve, and a call here is a
+    call whether or not its table prints.
     """
     assigned = (roster.get("situation_plays") or {}).get("offense") or []
     if not assigned:
@@ -2780,7 +2788,7 @@ def _situation_strip(roster: dict, plays: dict) -> str:
             raise SystemExit(
                 f"roster.json situation_plays, {label}: {len(calls)} plays, and a "
                 f"situation carries exactly {SITUATION_PLAY_CAP} — the board's height "
-                "is what keeps the blank field below it the size it was measured at."
+                "is what keeps the blank field above it the size it was measured at."
             )
         rows = []
         for call in calls:
