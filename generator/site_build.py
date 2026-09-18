@@ -622,8 +622,12 @@ table.xl.pk-plays td {
    and a sideline down each edge with hash marks on it, so the blank space reads as a
    piece of field rather than as the bottom of the page. All borders, which is the only
    thing that prints reliably. */
+/* The padding above the line is the strip's own drop: the line of scrimmage sits that
+   far below the rule that starts the field, which leaves somewhere to draw a defender
+   or a motion arrow in front of the ball rather than the line being flush with the top
+   edge of the box. */
 .pk-field {
-  position: relative; margin: 10px 0 0; padding: 18px 0 0;
+  position: relative; margin: 10px 0 0; padding: 27px 0 0;
   border-top: 1px solid var(--ink);
   border-left: 2px solid var(--ink); border-right: 2px solid var(--ink);
   break-inside: avoid;
@@ -666,10 +670,13 @@ table.xl.pk-plays td {
 /* The field below the line: as deep as the sheet has room for, which is whatever the
    rest of it leaves. 62 points of drawing space to start, then 200 and 260 as
    formations came off the sheet, 120 when the down-and-distance board went in, 155
-   once the board went to two calls, and 185 now that a package card is five rows
-   instead of six. Every one of those numbers was measured against the page, not
-   chosen. */
-.pk-draw .pad { grid-column: 1 / -1; height: 220px; }
+   once the board went to two calls, 185 when a package card went to five rows, and
+   196 now that the last of the bottom margin has gone into it too. Every one of
+   those numbers was measured against the page, not chosen -- and this one sits
+   about four points under the two-page cliff rather than the twenty-odd the
+   others kept, which is deliberate and is the thing to undo first if a printer
+   ever spills this sheet onto a second sheet. */
+.pk-draw .pad { grid-column: 1 / -1; height: 233px; }
 .pk-plays td a:hover { text-decoration: underline; }
 @media print {
   /* One formation to a row, full width. Two across put a formation in half a page,
@@ -745,7 +752,7 @@ table.xl.pk-plays td {
      this is its goal line. No gap above it for that reason: a margin would leave the
      field hanging open with a stray rule below it. */
   .sit-grid { margin-top: 0; }
-  .pk-field { margin: 5px 0 0; padding-top: 13px; border-top-color: #000;
+  .pk-field { margin: 5px 0 0; padding-top: 22px; border-top-color: #000;
               border-left-color: #000; border-right-color: #000; }
   .pk-field .hash { width: 11px; border-top-color: #000; }
   .pk-draw { margin: 0; row-gap: 1px;
@@ -755,7 +762,7 @@ table.xl.pk-plays td {
   .pk-draw .o { border-width: 10px; border-color: #000; }
   .pk-draw .ball { width: 19px; height: 11px; border-color: #000; }
   .pk-draw .ball::after { border-top-color: #000; }
-  .pk-draw .pad { height: 185px; }
+  .pk-draw .pad { height: 196px; }
   /* Hairlines between the cards. These went in when the name bars printed as plain
      black text and six lists of calls ran together into one block of small type. The
      bars are bars on paper now (see .pk-name below), so they do most of that work
