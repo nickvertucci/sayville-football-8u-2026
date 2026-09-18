@@ -531,10 +531,14 @@ table.xl.xl-plays td {
 .pk { min-width: 0; }
 .pk-name {
   margin: 0; padding: 5px 8px; font-size: 12.5px; font-weight: 800;
-  text-transform: uppercase; letter-spacing: .5px;
+  text-transform: uppercase; letter-spacing: .5px; text-align: center;
+  position: relative;
   color: var(--on-accent); background: var(--accent-solid);
 }
-.pk-n { float: right; font-weight: 700; opacity: .75; }
+/* The package number is pinned to the right edge rather than floated, because a float
+   sits inside the line box and would push the centred name off centre by its own
+   width. Out of flow, the name centres on the card. */
+.pk-n { position: absolute; right: 8px; top: 5px; font-weight: 700; opacity: .75; }
 table.xl.pk-plays td {
   height: 22px; text-align: center; vertical-align: middle; padding: 3px 5px;
 }
@@ -691,19 +695,28 @@ table.xl.pk-plays td {
   .pk-draw .ball { width: 19px; height: 11px; border-color: #000; }
   .pk-draw .ball::after { border-top-color: #000; }
   .pk-draw .pad { height: 155px; }
-  /* Hairlines between the cards. On screen the navy name bars are the separation; on
-     paper those print as plain black text (see .pk-name below), which ran six lists of
-     calls together into one block of small type. The rules are the cheapest fix that
-     survives background-graphics being off -- borders always print. The 3n counts the
-     three columns .pk-grid sets above: a left rule on every card that is not starting a
-     row, a top rule on every card past the first row. */
+  /* Hairlines between the cards. These went in when the name bars printed as plain
+     black text and six lists of calls ran together into one block of small type. The
+     bars are bars on paper now (see .pk-name below), so they do most of that work
+     themselves -- but the rules are what separates the SECOND row of cards from the
+     first, which a heading at the top of a card cannot do, and they cost nothing. The
+     3n counts the three columns .pk-grid sets above: a left rule on every card that is
+     not starting a row, a top rule on every card past the first row. */
   .pk { break-inside: avoid; padding: 0 5px; }
   .pk:not(:nth-child(3n + 1)) { border-left: 1px solid #bbb; }
   .pk:nth-child(n + 4) { border-top: 1px solid #bbb; padding-top: 4px; }
   .pk:nth-child(-n + 3) { padding-bottom: 4px; }
+  /* A black bar with white type, centred -- the same treatment as .xl-title and the
+     LEFT/MIDDLE/RIGHT row, so a package card and a formation block read as the same
+     kind of object. It used to print as plain black text on white; `print-color-adjust:
+     exact` is what lets the fill survive the print dialog's background-graphics setting,
+     and without it the white type would print white on white and the heading would
+     vanish. Same lesson as .xl-title, applied to the same problem. */
   .pk-name {
-    padding: 0 0 1px; font-size: 9px; font-weight: 900; line-height: 1.2;
-    color: #000 !important; background: none !important;
+    padding: 1px 3px; font-size: 9px; font-weight: 900; line-height: 1.2;
+    text-align: center;
+    color: #fff !important; background: #000 !important;
+    -webkit-print-color-adjust: exact; print-color-adjust: exact;
   }
   .pk-n { display: none; }
   table.xl.pk-plays td { height: auto; vertical-align: middle; line-height: 1.15; }
