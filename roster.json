@@ -261,5 +261,40 @@
         "Power I Slot Left 39 Toss"
       ]
     ]
+  },
+  "situation_plays": {
+    "note": "The down-and-distance board on the call sheet: what to call when, in the order the situations come up. Six situations, exactly three calls each -- three is what a coach can read off a laminated sheet without hunting. Same rules as package_plays: an entry is a play's full call and has to name a real play, or the build stops. The situation names are fixed in site_build.py; only the calls live here, because which play beats 3rd and short is a coaching decision.",
+    "offense": [
+      [
+        "Regular I Slot Right 36 Power",
+        "Split Backs Slot Right 38 Toss",
+        "Regular I Slot Left 48 Sweep"
+      ],
+      [
+        "Regular I Slot Right 22 Smash",
+        "Regular I Slot Left 23 Smash",
+        "Regular I Slot Right 32 Smash"
+      ],
+      [
+        "Split Backs Slot Right 18 Sweep",
+        "Split Backs Slot Left 48 Sweep",
+        "Split Backs Slot Right 18 Fake Sweep"
+      ],
+      [
+        "Power I Slot Right 32 Smash",
+        "Power I Slot Left 33 Smash",
+        "Regular I Slot Left 37 Power"
+      ],
+      [
+        "Shotgun Slot Right 18 Sweep",
+        "Shotgun Slot Left 19 Sweep",
+        "Split Backs Slot Right 49 Sweep"
+      ],
+      [
+        "Split Backs Slot Right 36 Power",
+        "Split Backs Slot Left 27 Power",
+        "Regular I Slot Left 33 Smash"
+      ]
+    ]
   }
 }
