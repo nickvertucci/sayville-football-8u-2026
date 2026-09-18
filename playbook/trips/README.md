@@ -32,24 +32,24 @@ Same line as the Regular I — both ends tight, seven on the line every snap. No
 
 | Play | Call | Scheme | Type | Ball |
 |---|---|---|---|---|
-| [Trips - Right - LTE Sweep](#trips---right---lte-sweep) | `Trips Right LTE Sweep` | Sweep | run | LTE |
-| [Trips - Left - RTE Sweep](#trips---left---rte-sweep) | `Trips Left RTE Sweep` | Sweep | run | RTE |
+| [Trips - Right - LTE (50) Sweep](#trips---right---lte-50-sweep) | `Trips Right LTE Sweep` | Sweep | run | LTE |
+| [Trips - Left - RTE (60) Sweep](#trips---left---rte-60-sweep) | `Trips Left RTE Sweep` | Sweep | run | RTE |
 | [Trips - Right - 38 Quick Pass](#trips---right---38-quick-pass) | `Trips Right 38 Quick Pass` | Protect | pass | TB |
 | [Trips - Left - 39 Quick Pass](#trips---left---39-quick-pass) | `Trips Left 39 Quick Pass` | Protect | pass | TB |
 | [Trips - Right - 18 Sweep](#trips---right---18-sweep) | `Trips Right 18 Sweep` | Sweep | run | QB |
 | [Trips - Left - 19 Sweep](#trips---left---19-sweep) | `Trips Left 19 Sweep` | Sweep | run | QB |
-| [Trips - Right - RTE Slant Out](#trips---right---rte-slant-out) | `Trips Right RTE Slant Out` | Protect | pass | RTE |
-| [Trips - Left - LTE Slant Out](#trips---left---lte-slant-out) | `Trips Left LTE Slant Out` | Protect | pass | LTE |
+| [Trips - Right - RTE (60) Slant Out](#trips---right---rte-60-slant-out) | `Trips Right RTE Slant Out` | Protect | pass | RTE |
+| [Trips - Left - LTE (50) Slant Out](#trips---left---lte-50-slant-out) | `Trips Left LTE Slant Out` | Protect | pass | LTE |
 
 ---
 
-## Trips - Right - LTE Sweep
+## Trips - Right - LTE (50) Sweep
 
 **Call it:** `Trips Right LTE Sweep`
 
 **Scheme:** Sweep
 
-![Trips - Right - LTE Sweep](cards/tr-te-sweep-r-4-4.svg)
+![Trips - Right - LTE (50) Sweep](cards/tr-te-sweep-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -72,13 +72,13 @@ Same line as the Regular I — both ends tight, seven on the line every snap. No
 
 ---
 
-## Trips - Left - RTE Sweep
+## Trips - Left - RTE (60) Sweep
 
 **Call it:** `Trips Left RTE Sweep`
 
 **Scheme:** Sweep
 
-![Trips - Left - RTE Sweep](cards/tr-te-sweep-l-4-4.svg)
+![Trips - Left - RTE (60) Sweep](cards/tr-te-sweep-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -219,13 +219,13 @@ Same line as the Regular I — both ends tight, seven on the line every snap. No
 
 ---
 
-## Trips - Right - RTE Slant Out
+## Trips - Right - RTE (60) Slant Out
 
 **Call it:** `Trips Right RTE Slant Out`
 
 **Scheme:** Protect
 
-![Trips - Right - RTE Slant Out](cards/tr-te-out-r-4-4.svg)
+![Trips - Right - RTE (60) Slant Out](cards/tr-te-out-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -248,13 +248,13 @@ Same line as the Regular I — both ends tight, seven on the line every snap. No
 
 ---
 
-## Trips - Left - LTE Slant Out
+## Trips - Left - LTE (50) Slant Out
 
 **Call it:** `Trips Left LTE Slant Out`
 
 **Scheme:** Protect
 
-![Trips - Left - LTE Slant Out](cards/tr-te-out-l-4-4.svg)
+![Trips - Left - LTE (50) Slant Out](cards/tr-te-out-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|

@@ -46,7 +46,8 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 import blocking  # noqa: E402
 import site_build  # noqa: E402
-from common import CARD_ORDER, esc, form_label, ordered_positions, slug  # noqa: E402
+from common import (CARD_ORDER, esc, form_label, number_tes,  # noqa: E402
+                    ordered_positions, slug)
 
 ROOT = Path(__file__).resolve().parent.parent
 PLAYBOOK_DIR = ROOT / "playbook"
@@ -214,6 +215,10 @@ def resolve_plays(plays_dir: Path, form: dict) -> list[dict]:
     plays = list(raw.values())
     for p in plays:
         p["_formation"] = form
+        # The name is what a card, the book and the sheet print; the call is what is
+        # yelled. Only the name gets the tight end's number.
+        if p.get("name"):
+            p["name"] = number_tes(p["name"])
         # Keep the JSON the author wrote, then fill the line / slot / lead from
         # the named scheme. Validation compares the two; resolve reads the fill.
         p["_written"] = {k: dict(v) for k, v in (p.get("assignments") or {}).items()}

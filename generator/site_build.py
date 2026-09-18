@@ -27,8 +27,8 @@ import blocking
 from datetime import date as _date
 from pathlib import Path
 
-from common import (CARD_ORDER, call_prefix, esc, form_label, ordered_positions,
-                    position_name)
+from common import (CARD_ORDER, call_prefix, esc, form_label, number_tes,
+                    ordered_positions, position_name)
 
 SITE_TITLE = "Sayville 8U Tackle Football"
 
@@ -2553,7 +2553,9 @@ def _sheet_name(play: dict, form: dict) -> str:
     heading off "Trips - Right - LTE Sweep" left a bare "R -". A formation with
     no strength word, like the Wishbone, keeps nothing.
     """
-    call = play.get("call") or ""
+    # Off the call rather than the name (see above), so the tight end's number has to
+    # go back on here -- the name already carries it, the call never does.
+    call = number_tes(play.get("call") or "")
     m = re.search(r"\b(\w+)\s+(Left|Right)\s+(.*)$", call)
     if m:
         return f"{m.group(1)} {m.group(2)[0]} - {m.group(3)}"
@@ -3383,7 +3385,7 @@ PACKAGE_SPOTS = {"offense": ("QB", "FB", "TB", "SL", "LTE", "RTE", "LT", "LG", "
 #
 # The number is the back's digit with a 0 behind it — 10, 20, 30, 40 — the way the
 # nomenclature card labels those four, so the card and the diagram agree.
-PACKAGE_NUMBERED = ("QB", "FB", "TB", "SL")
+PACKAGE_NUMBERED = ("QB", "FB", "TB", "SL", "LTE", "RTE")
 
 
 def rotations_for(side: str) -> list[tuple[str, str, str]]:
