@@ -432,7 +432,7 @@ table.dc-board td.dc-cell.starter { font-weight: 800; }
   text-transform: uppercase; color: var(--muted);
 }
 .dc-subcard {
-  flex: 0 0 58%; min-width: 168px; max-width: 250px;
+  flex: 0 0 54%; min-width: 168px; max-width: 250px;
   border: 1px solid var(--line); border-radius: 8px; padding: 5px 7px;
   background: var(--panel-2); align-self: start;
 }
@@ -468,13 +468,16 @@ table.dc-sub thead th {
 }
 .dc-pkg-slot[data-spot]::before {
   content: attr(data-spot);
-  flex: 0 0 28px; font-size: 9.5px; font-weight: 800; letter-spacing: .3px;
-  color: var(--muted); text-transform: uppercase;
+  flex: 0 0 38px; font-size: 9px; font-weight: 800; letter-spacing: 0;
+  color: var(--muted); text-transform: uppercase; white-space: nowrap;
 }
+/* The four backs carry the position and the number together -- QB (#1), FB (#2) -- not
+   the number alone. The digit is what a call says and the position is what the kid
+   knows he is, and a card that prints only "#2" makes the reader hold the mapping in
+   his head. One label column width for every slot, so the names line up under each
+   other whether the label is three characters or seven. */
 .dc-pkg-slot[data-n]::before {
-  content: "#" attr(data-n);
-  flex: 0 0 1.8em; font-size: 9.5px; font-weight: 800; letter-spacing: .3px;
-  color: var(--muted); text-transform: none;
+  content: attr(data-spot) " (#" attr(data-n) ")";
 }
 .dc-pkg-slot + .dc-pkg-slot { margin-top: 1px; }
 .dc-pkg-slot[data-spot="LTE"],
@@ -1538,6 +1541,7 @@ table.dc-board thead th,
   .dc-pkg { gap: 4px; padding: 1px 3px; box-shadow: none; border-radius: 0; }
   .dc-pkg-h { margin: 0; font-size: 8pt; }
   .dc-pkg-slot { min-height: 0; padding: 0; font-size: 7pt; line-height: 1.15; }
+  .dc-pkg-slot[data-spot]::before { flex-basis: 36px; font-size: 6.5pt; letter-spacing: 0; }
   .dc-pkg-slot + .dc-pkg-slot { margin-top: 0; }
   .dc-pkg-slot[data-spot="LTE"],
   .dc-pkg-slot[data-spot="LT"] { margin-top: 1px; padding-top: 1px; }
