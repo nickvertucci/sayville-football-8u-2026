@@ -471,13 +471,15 @@ table.dc-sub thead th {
   flex: 0 0 38px; font-size: 9px; font-weight: 800; letter-spacing: 0;
   color: var(--muted); text-transform: uppercase; white-space: nowrap;
 }
-/* The four backs carry the position and the number together -- QB (#1), FB (#2) -- not
-   the number alone. The digit is what a call says and the position is what the kid
-   knows he is, and a card that prints only "#2" makes the reader hold the mapping in
-   his head. One label column width for every slot, so the names line up under each
+/* The four backs carry the position and the number together -- QB (10), FB (20) -- not
+   the number alone. The position is what the kid knows he is and the number is what a
+   call says, and a card that prints only the number makes the reader hold the mapping
+   in his head. The numbers are the ones on the nomenclature card: the back digit with
+   the hole digit 0 behind it, 10 20 30 40, which is what the diagram labels those
+   four with. One label column width for every slot, so the names line up under each
    other whether the label is three characters or seven. */
 .dc-pkg-slot[data-n]::before {
-  content: attr(data-spot) " (#" attr(data-n) ")";
+  content: attr(data-spot) " (" attr(data-n) ")";
 }
 .dc-pkg-slot + .dc-pkg-slot { margin-top: 1px; }
 .dc-pkg-slot[data-spot="LTE"],
@@ -2527,11 +2529,12 @@ def _call_column(play: dict) -> str:
     return "Middle"
 
 
-# Inside out, then the ball in the air: the center and the A gap, the B gap, the C
-# gap, outside the end, and finally the pass. Same order the book installs them,
-# and the order HOLE_SCHEME walks the gaps.
-SCHEME_ORDER = ("Smash", "Dive", "Power", "Sweep", "Toss", "Protect")
-SCHEME_LABEL = {"Protect": "Pass"}
+# Inside out: the center and the A gap, the B gap, the C gap, outside the end, all
+# the way outside. Same order the book installs them, and the order HOLE_SCHEME walks
+# the gaps. Protect is not in it because the sheet is runs only now (see
+# sheet_plays) -- a scheme that does get through anyway still prints, under its own
+# name at the end of the block, which is how a leak would show itself.
+SCHEME_ORDER = ("Smash", "Dive", "Power", "Sweep", "Toss")
 
 
 def _sheet_name(play: dict, form: dict) -> str:
@@ -2689,9 +2692,20 @@ def write_calls(formations: list[dict], defenses: dict, root: Path) -> str:
 
     sheet_forms = _call_sheet_order(formations)
 
+    def sheet_plays(form: dict) -> list[dict]:
+        """The plays this sheet carries: the runs.
+
+        The passes stay in the book — their cards, their pages and the printed
+        playbook are untouched — they are just not what anybody reaches for this
+        sheet to call. Filtering here rather than dropping the plays keeps one
+        source of truth: a pass is still authored, checked and installed like
+        anything else, and comes back to the sheet by deleting this function.
+        """
+        return [p for p in form["_plays"] if p.get("type") == "run"]
+
     def plays_table(form: dict) -> str:
         placed: dict[tuple[str, str], list[dict]] = {}
-        for play in form["_plays"]:
+        for play in sheet_plays(form):
             placed.setdefault((play["scheme"], _call_column(play)), []).append(play)
 
         schemes = [s for s in SCHEME_ORDER if any(k[0] == s for k in placed)]
@@ -2707,8 +2721,7 @@ def write_calls(formations: list[dict], defenses: dict, root: Path) -> str:
                     for p in placed.get((scheme, side), [])
                 )
                 tds.append(f"<td>{cell}</td>" if cell else none_cell)
-            label = SCHEME_LABEL.get(scheme, scheme)
-            rows.append(f'<tr><th scope="row" class="xl-scheme">{esc(label)}</th>'
+            rows.append(f'<tr><th scope="row" class="xl-scheme">{esc(scheme)}</th>'
                         f'{"".join(tds)}</tr>')
 
         return ('<table class="xl xl-plays">'
@@ -2717,10 +2730,13 @@ def write_calls(formations: list[dict], defenses: dict, root: Path) -> str:
                 + "".join(f"<th>{side}</th>" for side in sides)
                 + f'</tr></thead><tbody>{"".join(rows)}</tbody></table>')
 
+    # The count and the block itself both come off the filtered list, not the
+    # formation's own: a header reading 12 over a table of 10 is a sheet that lies,
+    # and a formation whose plays are all passes would otherwise print an empty block.
     sheets = "".join(
         f'<section class="xl-sheet"><p class="xl-title">{esc(form_label(form))}'
-        f'<span class="xl-n">{len(form["_plays"])}</span></p>{plays_table(form)}</section>'
-        for form in sheet_forms if form.get("_plays")
+        f'<span class="xl-n">{len(sheet_plays(form))}</span></p>{plays_table(form)}</section>'
+        for form in sheet_forms if sheet_plays(form)
     ) or '<p class="lede">No plays in the book yet.</p>'
 
     packages = _package_strip(root, formations)
@@ -2739,7 +2755,7 @@ def write_calls(formations: list[dict], defenses: dict, root: Path) -> str:
         defenses=defenses,
         active_nav="calls",
         main_attrs=' class="calls-page"',
-        description="Every play in the book, by formation, scheme and side.",
+        description="Every run in the book, by formation, scheme and side.",
         # Portrait, two blocks across: with no lineup grid a block is a handful of
         # rows, so all five formations fit one sheet of paper.
         page_rule="size: letter portrait; margin: 0.3in;",
@@ -3364,6 +3380,9 @@ PACKAGE_SPOTS = {"offense": ("QB", "FB", "TB", "SL", "LTE", "RTE", "LT", "LG", "
 # Only the backfield is numbered on the package card. The ends and the line keep
 # their position names — LTE, RT — because those do not change meaning between
 # packages the way the four backs do.
+#
+# The number is the back's digit with a 0 behind it — 10, 20, 30, 40 — the way the
+# nomenclature card labels those four, so the card and the diagram agree.
 PACKAGE_NUMBERED = ("QB", "FB", "TB", "SL")
 
 
@@ -3463,7 +3482,7 @@ def side_board(side: str, order: list[str], alt_order: list[str],
         label = spots[at] if at < len(spots) else ""
         attr = ""
         if label in PACKAGE_NUMBERED:
-            attr += f' data-n="{PACKAGE_NUMBERED.index(label) + 1}"'
+            attr += f' data-n="{(PACKAGE_NUMBERED.index(label) + 1) * 10}"'
         if label:
             attr += f' data-spot="{esc(label)}"'
         who = esc(name) if name else ""
