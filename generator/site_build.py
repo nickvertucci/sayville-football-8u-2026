@@ -658,7 +658,10 @@ table.xl.pk-plays td {
   border-top: 2px solid var(--ink);
 }
 /* The room to draw in: the backfield, below the line. */
-.pk-draw .pad { grid-column: 1 / -1; height: 74px; }
+/* The field below the line: the whole reason the strip is here. It is as deep as
+   the sheet has room for, which grew by a formation block when the Wishbone came
+   off (see SHEET_OMIT) -- 62 points of drawing space became 200. */
+.pk-draw .pad { grid-column: 1 / -1; height: 238px; }
 .pk-plays td a:hover { text-decoration: underline; }
 @media print {
   /* One formation to a row, full width. Two across put a formation in half a page,
@@ -738,7 +741,7 @@ table.xl.pk-plays td {
   .pk-draw .o { border-width: 10px; border-color: #000; }
   .pk-draw .ball { width: 19px; height: 11px; border-color: #000; }
   .pk-draw .ball::after { border-top-color: #000; }
-  .pk-draw .pad { height: 62px; }
+  .pk-draw .pad { height: 200px; }
   /* Hairlines between the cards. On screen the navy name bars are the separation; on
      paper those print as plain black text (see .pk-name below), which ran six lists of
      calls together into one block of small type. The rules are the cheapest fix that
@@ -2790,6 +2793,16 @@ CALL_SHEET_ORDER = (
     "wishbone", "power-i",
 )
 
+# Formations that stay in the book but come off the call sheet. The Wishbone is a
+# teaching formation here -- it is on its own page, in the printed book and in
+# PLAYBOOK.md, and its plays are authored and checked like every other -- but it is
+# not what anybody reaches for on a Sunday, and its block was the last one on the
+# sheet. Off the sheet, everything above it moves up and the field below the line of
+# scrimmage grows by the height of the block, which is the point: that space gets
+# drawn on with a marker. Same shape as sheet_plays dropping the passes -- a filter
+# here, not a deletion anywhere, so it comes back by emptying this set.
+SHEET_OMIT = frozenset({"wishbone"})
+
 
 def _call_sheet_order(formations: list[dict]) -> list[dict]:
     """`formations` seated for the call sheet grid, teaching order for anything new.
@@ -2824,7 +2837,8 @@ def write_calls(formations: list[dict], defenses: dict, root: Path) -> str:
     sides = ("Left", "Middle", "Right")
     none_cell = '<td><span class="xl-none">&mdash;</span></td>'
 
-    sheet_forms = _call_sheet_order(formations)
+    sheet_forms = [f for f in _call_sheet_order(formations)
+                   if f.get("id") not in SHEET_OMIT]
 
     def sheet_plays(form: dict) -> list[dict]:
         """The plays this sheet carries: the runs.
