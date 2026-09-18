@@ -549,10 +549,36 @@ table.xl.pk-plays td {
    that never changes -- the centre, three men either side, and the ball in front of
    him. Everything that makes it a play gets drawn in on the sideline and wiped off
    after. */
-.pk-draw { margin: 12px 0 0; }
-.pk-draw svg { display: block; width: 100%; height: auto; }
-.pk-draw .o { fill: none; stroke: var(--ink); stroke-width: 2.4; }
-.pk-draw .ball { fill: none; stroke: var(--ink); stroke-width: 2.2; }
+/* Borders, not an SVG. An inline SVG here rendered perfectly on screen and was simply
+   absent from the printed sheet at every size tried -- the same lesson the title bars
+   taught earlier in this file: what always prints is a border. Fifteen columns, so the
+   hole numbers sit over the gaps they name and 0 sits over the centre. */
+.pk-draw {
+  display: grid; grid-template-rows: auto auto auto;
+  align-items: center; justify-items: center; justify-content: center;
+  margin: 14px 0 0; row-gap: 3px;
+  /* Fifteen columns, alternating a man and the gap beside him, so the numbers land
+     over the holes they name. The widths are a line, not a spread: a man is 34, a
+     split is 22, and the two outside columns are wide because 8 and 9 are outside the
+     end rather than in a gap. Centred, so the sheet keeps its side margins. */
+  grid-template-columns: 58px 34px 22px 34px 22px 34px 22px 34px
+                         22px 34px 22px 34px 22px 34px 58px;
+}
+.pk-draw .hn { font-size: 11px; font-weight: 800; color: var(--muted); }
+.pk-draw .o {
+  width: 26px; height: 26px; border: 2px solid var(--ink); border-radius: 50%;
+}
+/* The ball in front of the centre: an oval with a seam across it. */
+.pk-draw .ball {
+  width: 22px; height: 13px; border: 2px solid var(--ink); border-radius: 50%;
+  position: relative;
+}
+.pk-draw .ball::after {
+  content: ""; position: absolute; left: 4px; right: 4px; top: 50%;
+  border-top: 2px solid var(--ink);
+}
+/* The room to draw in: the backfield, below the line. */
+.pk-draw .pad { grid-column: 1 / -1; height: 74px; }
 .pk-plays td a:hover { text-decoration: underline; }
 @media print {
   /* One formation to a row, full width. Two across put a formation in half a page,
@@ -622,8 +648,14 @@ table.xl.pk-plays td {
   .pk-sub { display: none; }
   .pk-grid { gap: 0 8px; margin: 0; padding-top: 4px; break-inside: avoid;
              border-top: 1px solid #000; }
-  .pk-draw { margin: 6px 0 0; break-inside: avoid; }
-  .pk-draw .o, .pk-draw .ball { stroke: #000; }
+  .pk-draw { margin: 7px 0 0; break-inside: avoid; row-gap: 2px;
+             grid-template-columns: 50px 30px 19px 30px 19px 30px 19px 30px
+                                    19px 30px 19px 30px 19px 30px 50px; }
+  .pk-draw .hn { font-size: 8px; color: #000; }
+  .pk-draw .o { width: 22px; height: 22px; border-color: #000; }
+  .pk-draw .ball { width: 19px; height: 11px; border-color: #000; }
+  .pk-draw .ball::after { border-top-color: #000; }
+  .pk-draw .pad { height: 62px; }
   /* Hairlines between the cards. On screen the navy name bars are the separation; on
      paper those print as plain black text (see .pk-name below), which ran six lists of
      calls together into one block of small type. The rules are the cheapest fix that

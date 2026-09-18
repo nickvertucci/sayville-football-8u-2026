@@ -609,10 +609,36 @@ table.xl.pk-plays td {
    that never changes -- the centre, three men either side, and the ball in front of
    him. Everything that makes it a play gets drawn in on the sideline and wiped off
    after. */
-.pk-draw { margin: 12px 0 0; }
-.pk-draw svg { display: block; width: 100%; height: auto; }
-.pk-draw .o { fill: none; stroke: var(--ink); stroke-width: 2.4; }
-.pk-draw .ball { fill: none; stroke: var(--ink); stroke-width: 2.2; }
+/* Borders, not an SVG. An inline SVG here rendered perfectly on screen and was simply
+   absent from the printed sheet at every size tried -- the same lesson the title bars
+   taught earlier in this file: what always prints is a border. Fifteen columns, so the
+   hole numbers sit over the gaps they name and 0 sits over the centre. */
+.pk-draw {
+  display: grid; grid-template-rows: auto auto auto;
+  align-items: center; justify-items: center; justify-content: center;
+  margin: 14px 0 0; row-gap: 3px;
+  /* Fifteen columns, alternating a man and the gap beside him, so the numbers land
+     over the holes they name. The widths are a line, not a spread: a man is 34, a
+     split is 22, and the two outside columns are wide because 8 and 9 are outside the
+     end rather than in a gap. Centred, so the sheet keeps its side margins. */
+  grid-template-columns: 58px 34px 22px 34px 22px 34px 22px 34px
+                         22px 34px 22px 34px 22px 34px 58px;
+}
+.pk-draw .hn { font-size: 11px; font-weight: 800; color: var(--muted); }
+.pk-draw .o {
+  width: 26px; height: 26px; border: 2px solid var(--ink); border-radius: 50%;
+}
+/* The ball in front of the centre: an oval with a seam across it. */
+.pk-draw .ball {
+  width: 22px; height: 13px; border: 2px solid var(--ink); border-radius: 50%;
+  position: relative;
+}
+.pk-draw .ball::after {
+  content: ""; position: absolute; left: 4px; right: 4px; top: 50%;
+  border-top: 2px solid var(--ink);
+}
+/* The room to draw in: the backfield, below the line. */
+.pk-draw .pad { grid-column: 1 / -1; height: 74px; }
 .pk-plays td a:hover { text-decoration: underline; }
 @media print {
   /* One formation to a row, full width. Two across put a formation in half a page,
@@ -682,8 +708,14 @@ table.xl.pk-plays td {
   .pk-sub { display: none; }
   .pk-grid { gap: 0 8px; margin: 0; padding-top: 4px; break-inside: avoid;
              border-top: 1px solid #000; }
-  .pk-draw { margin: 6px 0 0; break-inside: avoid; }
-  .pk-draw .o, .pk-draw .ball { stroke: #000; }
+  .pk-draw { margin: 7px 0 0; break-inside: avoid; row-gap: 2px;
+             grid-template-columns: 50px 30px 19px 30px 19px 30px 19px 30px
+                                    19px 30px 19px 30px 19px 30px 50px; }
+  .pk-draw .hn { font-size: 8px; color: #000; }
+  .pk-draw .o { width: 22px; height: 22px; border-color: #000; }
+  .pk-draw .ball { width: 19px; height: 11px; border-color: #000; }
+  .pk-draw .ball::after { border-top-color: #000; }
+  .pk-draw .pad { height: 62px; }
   /* Hairlines between the cards. On screen the navy name bars are the separation; on
      paper those print as plain black text (see .pk-name below), which ran six lists of
      calls together into one block of small type. The rules are the cheapest fix that
@@ -2677,12 +2709,16 @@ def _package_strip(root: Path, formations: list[dict]) -> str:
             f'{_blank_line()}')
 
 
-# Seven men and the ball, centred. The spacing is wide enough to write a name or a
-# number inside a circle with a marker, which is the whole reason the strip exists.
-# The height is what the sheet has left once the packages are on it, measured from
-# the generated PDF rather than guessed: any taller and the sheet is two pages.
-DRAW_W, DRAW_H = 760, 128
-DRAW_R, DRAW_GAP, DRAW_Y = 17, 70, 86
+# The line, as fifteen grid columns: a number, a man, a number, a man ... so the hole
+# numbers land over the gaps they name and 0 lands over the centre. Same numbering as
+# the nomenclature card, which is what the coach and the kids already read.
+#
+#     9  |  7  |  5  |  3  | 0 |  2  |  4  |  6  |  8
+#       LTE    LT    LG     C    RG    RT   RTE
+HOLE_COLUMNS = ((1, "9"), (3, "7"), (5, "5"), (7, "3"), (8, "0"),
+                (9, "2"), (11, "4"), (13, "6"), (15, "8"))
+MAN_COLUMNS = (2, 4, 6, 8, 10, 12, 14)
+BALL_COLUMN = 8
 
 
 def _blank_line() -> str:
@@ -2690,22 +2726,25 @@ def _blank_line() -> str:
 
     The sheet is laminated, so the bottom of it is worth more as somewhere to invent a
     play than as more print. What is drawn is only the part that is the same on every
-    snap: the centre, three men either side of him, and the ball in front. The backs,
-    the routes and the blocks are the coach's, in marker, and come off again.
+    snap: the hole numbers, the centre with three men either side, and the ball in
+    front of him. The backs, the routes and the blocks are the coach's, in marker.
+
+    Built from bordered elements rather than an inline SVG. The SVG version rendered
+    on screen and was absent from the printed sheet at every size tried; a border
+    always prints, which is the same rule the black title bars in this file follow.
     """
-    mid = DRAW_W / 2
-    men = "".join(
-        f'<circle class="o" cx="{mid + k * DRAW_GAP:.0f}" cy="{DRAW_Y}" r="{DRAW_R}"/>'
-        for k in range(-3, 4)
+    holes = "".join(
+        f'<span class="hn" style="grid-column:{col};grid-row:1">{esc(n)}</span>'
+        for col, n in HOLE_COLUMNS
     )
-    # A pointed oval rather than an ellipse, so it reads as a ball and not another man.
-    by = DRAW_Y - DRAW_R - 20
-    ball = (f'<path class="ball" d="M {mid - 15:.0f} {by} Q {mid:.0f} {by - 13} '
-            f'{mid + 15:.0f} {by} Q {mid:.0f} {by + 13} {mid - 15:.0f} {by} Z"/>'
-            f'<path class="ball" d="M {mid - 7:.0f} {by} H {mid + 7:.0f}"/>')
-    return (f'<div class="pk-draw"><svg viewBox="0 0 {DRAW_W} {DRAW_H}" '
-            f'role="img" aria-label="Blank line of scrimmage to draw a play on">'
-            f'{ball}{men}</svg></div>')
+    ball = f'<span class="ball" style="grid-column:{BALL_COLUMN};grid-row:2"></span>'
+    men = "".join(
+        f'<span class="o" style="grid-column:{col};grid-row:3"></span>'
+        for col in MAN_COLUMNS
+    )
+    return (f'<div class="pk-draw" role="img" aria-label="Blank line of scrimmage with '
+            f'the hole numbers, to draw a play on">{holes}{ball}{men}'
+            f'<span class="pad" style="grid-row:4"></span></div>')
 
 
 # The call sheet is the one page that lays the formations out two across instead of
