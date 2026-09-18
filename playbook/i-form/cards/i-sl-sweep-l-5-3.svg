@@ -54,8 +54,8 @@
 <polygon points="383.4,402.3 373.1,397.6 380.0,391.5" fill="#14213d"/>
 <path d="M351.0,413.1 L209.2,307.8 L118.0,250.0" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
 <line x1="113.1" y1="257.8" x2="122.9" y2="242.3" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
-<path d="M351.0,472.5 L383.4,432.0 L437.4,364.5" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 5"/>
-<polygon points="437.4,364.5 434.5,375.5 427.3,369.7" fill="#14213d"/>
+<path d="M351.0,472.5 L209.2,307.8 L116.9,251.4" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="112.1" y1="259.2" x2="121.7" y2="243.5" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 
 <rect x="224.1" y="324.0" width="27.0" height="27.0" rx="3" fill="#ffffff" stroke="#14213d" stroke-width="2.6"/>
 <text x="237.6" y="342.0" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">LTE</text>
@@ -116,12 +116,11 @@
 <text x="344" y="698" font-size="12" fill="#111318">past you, then fake the handoff to the</text>
 <text x="344" y="714" font-size="12" fill="#111318">tailback going right.</text>
 <text x="310" y="732" font-size="12" font-weight="700" fill="#111318">FB</text>
-<text x="344" y="732" font-size="12" fill="#111318">Lead outside our end. Block the first</text>
-<text x="344" y="748" font-size="12" fill="#111318">man out there — here it is the corner.</text>
+<text x="344" y="732" font-size="12" fill="#111318">Bubble out around our end, then double</text>
+<text x="344" y="748" font-size="12" fill="#111318">team the corner with the tailback.</text>
 <text x="310" y="766" font-size="12" font-weight="700" fill="#111318">TB</text>
-<text x="344" y="766" font-size="12" fill="#111318">Take the fake handoff and run hard to</text>
-<text x="344" y="782" font-size="12" fill="#111318">the right. You are what holds the</text>
-<text x="344" y="800" font-size="12" fill="#111318">backside.</text>
+<text x="344" y="766" font-size="12" fill="#111318">Bubble out around our end, then double</text>
+<text x="344" y="782" font-size="12" fill="#111318">team the corner with the fullback.</text>
 <line x1="18" y1="806" x2="603" y2="806" stroke="#c8cdd6" stroke-width="1"/>
 <text x="18" y="824" font-size="11" font-weight="700" fill="#5b6472" letter-spacing="1">COACHING POINTS</text>
 <text x="18" y="844" font-size="12" fill="#111318">The slot runs flat and fast across the backfield. The handoff is at full speed, so</text>

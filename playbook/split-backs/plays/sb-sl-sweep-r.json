@@ -63,20 +63,6 @@
           -1.4
         ]
       ]
-    },
-    "LH": {
-      "rule": "Take the fake handoff and run hard to the left. You are what holds the backside.",
-      "type": "fake",
-      "path": [
-        [
-          -1.8,
-          0.2
-        ],
-        [
-          -5.6,
-          0.6
-        ]
-      ]
     }
   },
   "fronts": {
@@ -111,21 +97,6 @@
       "LTE": {
         "block": "man",
         "man": "LE"
-      },
-      "RH": {
-        "block": "man",
-        "man": "RC",
-        "how": "Bubble out around the right end",
-        "via": [
-          [
-            3.4,
-            2.0
-          ],
-          [
-            3.6,
-            4.2
-          ]
-        ]
       }
     }
   },

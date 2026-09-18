@@ -46,6 +46,8 @@ from __future__ import annotations
 import copy
 import re
 
+from common import position_name
+
 # The three fronts every offensive play is drawn and blocked against. An 8U team lines
 # up in one of these against us; the toggle on a play page is these in this order.
 # The 6-3 goal line and the 6-2-3 prevent are our own calls, not looks we expect to
@@ -295,6 +297,19 @@ def scheme_intents(play: dict, form: dict, side: int) -> dict[str, dict]:
         return {}
     intents = {role: copy.deepcopy(spec) for role, spec in SCHEMES[name].items()}
     roles = scheme_roles(form, side)
+    # A sweep is won or lost on the edge, so both backs go there and double the force
+    # man -- the outside linebacker in the 4-4, the corner in the 5-3. One back on him
+    # and the other selling a fake left the man the ball is actually running at with a
+    # single blocker. Each is told who he is doubling with, by name.
+    #
+    # Only a formation that maps both roles gets it: Trips splits its 2 and 3 out in
+    # the bunch and maps neither, so it keeps the blocks its plays write. A back the
+    # play itself gives a path to -- the Fake Sweeps' halfback -- also keeps it, since
+    # fill_assignments lets what a play wrote win over the scheme.
+    if name == "Sweep" and roles.get("lead") and roles.get("trail"):
+        for role, other in (("lead", "trail"), ("trail", "lead")):
+            intents[role] = {"block": "lead", "target": "force",
+                             "with": position_name(roles[other]).lower()}
     if "slot" not in roles:
         intents.pop("slot", None)
         # Power's kick-out is the slot. Nobody there: the playside end kicks
@@ -945,6 +960,13 @@ def v_lead(front, spot, side, intent, taken=()):
         hole = intent.get("_hole")
         wide = (hole is not None and edge is not None
                 and abs(hole) > abs(edge[1]))
+        # `with` names the other back on the same man. That is a double team the
+        # coach asked for, so it never turns up inside just because the first back
+        # got there first -- being on him already is the point.
+        if man is not None and intent.get("with"):
+            text = (f"Bubble out around our end, then double team the "
+                    f"{noun(front, man[0])} with the {intent['with']}.")
+            return text, through_hole(spot, man, side), man
         if man is not None and man[0] in taken and not wide:
             # Somebody is already on him and there is nobody further out. Turn up
             # inside rather than putting two blockers on one defender.

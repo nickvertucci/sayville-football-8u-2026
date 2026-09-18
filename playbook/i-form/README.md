@@ -128,8 +128,8 @@ Normal line splits, about a foot. Both ends are on the line; the slot is just ou
 | **RTE** | Block the right end. |
 | **SL** | Run at the corner and screen him off. Stay in his way. |
 | **QB** | Open right and hand the ball to the left tight end as he comes across behind you, then fake a run to the left. |
-| **FB** | Bubble out around the right end, then double team the right outside linebacker with the tailback. |
-| **TB** | Bubble out around the right end, then double team the right outside linebacker with the fullback. |
+| **FB** | Bubble out around our end, then double team the linebacker with the tailback. |
+| **TB** | Bubble out around our end, then double team the linebacker with the fullback. |
 
 **Coaching points**
 
@@ -158,8 +158,8 @@ Normal line splits, about a foot. Both ends are on the line; the slot is just ou
 | **RTE** **(ball)** | Stay down in your stance — no motion. At the snap run flat behind the quarterback, take the handoff at full speed and get to the left edge. Turn up outside the fullback. |
 | **SL** | Run at the corner and screen him off. Stay in his way. |
 | **QB** | Open left and hand the ball to the right tight end as he comes across behind you, then fake a run to the right. |
-| **FB** | Bubble out around the left end, then double team the left outside linebacker with the tailback. |
-| **TB** | Bubble out around the left end, then double team the left outside linebacker with the fullback. |
+| **FB** | Bubble out around our end, then double team the linebacker with the tailback. |
+| **TB** | Bubble out around our end, then double team the linebacker with the fullback. |
 
 **Coaching points**
 
@@ -188,8 +188,8 @@ Normal line splits, about a foot. Both ends are on the line; the slot is just ou
 | **RTE** | Block the right end. |
 | **SL** **(ball)** | At the snap run flat across the backfield, take the handoff at full speed and get to the left edge. Turn up in the alley behind the fullback. |
 | **QB** | Hand the ball to the slot as he runs past you, then fake the handoff to the tailback going right. |
-| **FB** | Bubble out around the left end, then block the left corner. |
-| **TB** | Take the fake handoff and run hard to the right. You are what holds the backside. |
+| **FB** | Bubble out around our end, then double team the corner with the tailback. |
+| **TB** | Bubble out around our end, then double team the linebacker with the fullback. |
 
 **Coaching points**
 
@@ -218,8 +218,8 @@ Normal line splits, about a foot. Both ends are on the line; the slot is just ou
 | **RTE** | Block the right end. |
 | **SL** **(ball)** | At the snap run flat across the backfield, take the handoff at full speed and get to the right edge. Turn up in the alley behind the fullback. |
 | **QB** | Hand the ball to the slot as he runs past you, then fake the handoff to the tailback going left. |
-| **FB** | Bubble out around the right end, then block the right corner. |
-| **TB** | Take the fake handoff and run hard to the left. You are what holds the backside. |
+| **FB** | Bubble out around our end, then double team the corner with the tailback. |
+| **TB** | Bubble out around our end, then double team the linebacker with the fullback. |
 
 **Coaching points**
 

@@ -52,8 +52,8 @@
 <line x1="195.5" y1="254.7" x2="213.8" y2="255.6" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 <path d="M351.0,364.5 L326.7,386.1 L372.6,391.5 L448.2,386.1" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 5"/>
 <polygon points="448.2,386.1 438.2,391.4 437.5,382.2" fill="#14213d"/>
-<path d="M135.0,364.5 L268.1,307.8 L380.4,248.1" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-<line x1="376.1" y1="240.0" x2="384.7" y2="256.2" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
+<path d="M135.0,364.5 L165.5,307.8 L199.0,253.5" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="191.2" y1="248.7" x2="206.8" y2="258.3" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 <path d="M167.4,391.5 L202.2,254.9" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
 <line x1="193.3" y1="252.6" x2="211.1" y2="257.1" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 
@@ -117,9 +117,9 @@
 <text x="344" y="732" font-size="12" fill="#111318">behind you, then fake a run to the</text>
 <text x="344" y="748" font-size="12" fill="#111318">right.</text>
 <text x="310" y="766" font-size="12" font-weight="700" fill="#111318">FB</text>
-<text x="344" y="766" font-size="12" fill="#111318">Lead outside our end, then turn up</text>
-<text x="344" y="782" font-size="12" fill="#111318">inside — the playside linebacker is the</text>
-<text x="344" y="800" font-size="12" fill="#111318">man who shows. Head across him.</text>
+<text x="344" y="766" font-size="12" fill="#111318">Lead outside our end. Block the first</text>
+<text x="344" y="782" font-size="12" fill="#111318">man out there — here it is the</text>
+<text x="344" y="800" font-size="12" fill="#111318">linebacker.</text>
 <text x="310" y="816" font-size="12" font-weight="700" fill="#111318">TB</text>
 <text x="344" y="816" font-size="12" fill="#111318">Run at the outside linebacker and</text>
 <text x="344" y="834" font-size="12" fill="#111318">screen him off. Stay in his way.</text>

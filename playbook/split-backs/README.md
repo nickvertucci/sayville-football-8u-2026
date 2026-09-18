@@ -120,8 +120,8 @@ Both ends are tight on the line. The two backs sit four yards deep and just over
 | **RTE** | End on your inside shoulder. Turn him inside. The ball goes around behind you. |
 | **SL** | Run at the corner and screen him off. Stay in his way. |
 | **QB** **(ball)** | Take the snap and sweep right, flat and fast, behind the right halfback. Turn up outside his block. |
-| **LH** | Run hard to the left like you have the ball. Sell it all the way — you are the reason the defense goes the wrong way. |
-| **RH** | Bubble out around the right tight end, then block the right outside linebacker. |
+| **LH** | Bubble out around our end, then double team the linebacker with the right halfback. |
+| **RH** | Bubble out around our end, then double team the linebacker with the left halfback. |
 
 **Coaching points**
 
@@ -150,8 +150,8 @@ Both ends are tight on the line. The two backs sit four yards deep and just over
 | **RTE** | Block the right end. |
 | **SL** | Run at the corner and screen him off. Stay in his way. |
 | **QB** **(ball)** | Take the snap and sweep left, flat and fast, behind the left halfback. Turn up outside his block. |
-| **LH** | Bubble out around the left tight end, then block the left outside linebacker. |
-| **RH** | Run hard to the right like you have the ball. Sell it all the way — you are the reason the defense goes the wrong way. |
+| **LH** | Bubble out around our end, then double team the linebacker with the right halfback. |
+| **RH** | Bubble out around our end, then double team the linebacker with the left halfback. |
 
 **Coaching points**
 
@@ -240,8 +240,8 @@ Both ends are tight on the line. The two backs sit four yards deep and just over
 | **RTE** | Block the right end. |
 | **SL** **(ball)** | At the snap run flat across the backfield, take the handoff at full speed and get to the left edge. Turn up in the alley behind the left halfback. |
 | **QB** | Hand the ball to the slot as he runs past you, then fake the handoff to the right halfback going right. |
-| **LH** | Bubble out around the left end, then block the left corner. |
-| **RH** | Take the fake handoff and run hard to the right. You are what holds the backside. |
+| **LH** | Bubble out around our end, then double team the corner with the right halfback. |
+| **RH** | Bubble out around our end, then double team the linebacker with the left halfback. |
 
 **Coaching points**
 
@@ -270,8 +270,8 @@ Both ends are tight on the line. The two backs sit four yards deep and just over
 | **RTE** | Block the right end. |
 | **SL** **(ball)** | At the snap run flat across the backfield, take the handoff at full speed and get to the right edge. Turn up in the alley behind the right halfback. |
 | **QB** | Hand the ball to the slot as he runs past you, then fake the handoff to the left halfback going left. |
-| **LH** | Take the fake handoff and run hard to the left. You are what holds the backside. |
-| **RH** | Bubble out around the right end, then block the right corner. |
+| **LH** | Bubble out around our end, then double team the corner with the right halfback. |
+| **RH** | Bubble out around our end, then double team the linebacker with the left halfback. |
 
 **Coaching points**
 
@@ -300,8 +300,8 @@ Both ends are tight on the line. The two backs sit four yards deep and just over
 | **RTE** | Block the right end. |
 | **SL** | Run at the corner and screen him off. Stay in his way. |
 | **QB** | Open right and hand the ball to the left tight end as he comes across behind you, then fake a run to the left. |
-| **LH** | Bubble out around the right end, then double team the right outside linebacker with the right halfback. |
-| **RH** | Bubble out around the right end, then double team the right outside linebacker with the left halfback. |
+| **LH** | Bubble out around our end, then double team the linebacker with the right halfback. |
+| **RH** | Bubble out around our end, then double team the linebacker with the left halfback. |
 
 **Coaching points**
 
@@ -330,8 +330,8 @@ Both ends are tight on the line. The two backs sit four yards deep and just over
 | **RTE** **(ball)** | Stay down in your stance — no motion. At the snap run flat behind the quarterback, take the handoff at full speed and get to the left edge. Turn up outside the halfbacks. |
 | **SL** | Run at the corner and screen him off. Stay in his way. |
 | **QB** | Open left and hand the ball to the right tight end as he comes across behind you, then fake a run to the right. |
-| **LH** | Bubble out around the left end, then double team the left outside linebacker with the right halfback. |
-| **RH** | Bubble out around the left end, then double team the left outside linebacker with the left halfback. |
+| **LH** | Bubble out around our end, then double team the linebacker with the right halfback. |
+| **RH** | Bubble out around our end, then double team the linebacker with the left halfback. |
 
 **Coaching points**
 

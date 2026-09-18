@@ -35,20 +35,6 @@
           6.0
         ]
       ]
-    },
-    "LH": {
-      "rule": "Run hard to the left like you have the ball. Sell it all the way — you are the reason the defense goes the wrong way.",
-      "type": "fake",
-      "path": [
-        [
-          -1.8,
-          0.2
-        ],
-        [
-          -5.6,
-          0.6
-        ]
-      ]
     }
   },
   "fronts": {
@@ -79,21 +65,6 @@
       "LTE": {
         "block": "man",
         "man": "LE"
-      },
-      "RH": {
-        "block": "man",
-        "man": "R",
-        "how": "Bubble out around the right tight end",
-        "via": [
-          [
-            3.4,
-            2.0
-          ],
-          [
-            3.6,
-            4.2
-          ]
-        ]
       }
     }
   },
