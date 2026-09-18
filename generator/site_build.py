@@ -613,16 +613,30 @@ table.xl.pk-plays td {
    absent from the printed sheet at every size tried -- the same lesson the title bars
    taught earlier in this file: what always prints is a border. Fifteen columns, so the
    hole numbers sit over the gaps they name and 0 sits over the centre. */
+/* The field the line stands on: a rule across the top to part it from the packages,
+   and a sideline down each edge with hash marks on it, so the blank space reads as a
+   piece of field rather than as the bottom of the page. All borders, which is the only
+   thing that prints reliably. */
+.pk-field {
+  position: relative; margin: 10px 0 0; padding: 18px 0 0;
+  border-top: 1px solid var(--ink);
+  border-left: 2px solid var(--ink); border-right: 2px solid var(--ink);
+  break-inside: avoid;
+}
+.pk-field .hash {
+  position: absolute; left: 0; width: 13px; border-top: 2px solid var(--ink);
+}
+.pk-field .hash.r { left: auto; right: 0; }
 .pk-draw {
   display: grid; grid-template-rows: auto auto;
   align-items: center; justify-items: center; justify-content: center;
-  margin: 6px 0 0; row-gap: 2px;
+  margin: 0; row-gap: 2px;
   /* Fifteen columns, alternating a man and the gap beside him, so the numbers land
      over the holes they name. The widths are a line, not a spread: a man is 34, a
      split is 22, and the two outside columns are wide because 8 and 9 are outside the
      end rather than in a gap. Centred, so the sheet keeps its side margins. */
-  grid-template-columns: 58px 34px 22px 34px 22px 34px 22px 34px
-                         22px 34px 22px 34px 22px 34px 58px;
+  grid-template-columns: 84px 34px 22px 34px 22px 34px 22px 34px
+                         22px 34px 22px 34px 22px 34px 84px;
 }
 /* The numbers sit in the gaps, on the same line as the men, because that is where the
    hole is -- a row of digits above the line is a key, this is the thing itself. */
@@ -714,9 +728,12 @@ table.xl.pk-plays td {
   .pk-sub { display: none; }
   .pk-grid { gap: 0 8px; margin: 0; padding-top: 4px; break-inside: avoid;
              border-top: 1px solid #000; }
-  .pk-draw { margin: 3px 0 0; break-inside: avoid; row-gap: 1px;
-             grid-template-columns: 50px 30px 19px 30px 19px 30px 19px 30px
-                                    19px 30px 19px 30px 19px 30px 50px; }
+  .pk-field { margin: 5px 0 0; padding-top: 13px; border-top-color: #000;
+              border-left-color: #000; border-right-color: #000; }
+  .pk-field .hash { width: 11px; border-top-color: #000; }
+  .pk-draw { margin: 0; row-gap: 1px;
+             grid-template-columns: 72px 30px 19px 30px 19px 30px 19px 30px
+                                    19px 30px 19px 30px 19px 30px 72px; }
   .pk-draw .hn { font-size: 8px; color: #000; }
   .pk-draw .o { width: 20px; height: 20px; border-color: #000; }
   .pk-draw .o .hn { font-size: 6px; letter-spacing: -.4px; }
@@ -2731,6 +2748,9 @@ BALL_COLUMN = CENTRE_COLUMN = 8
 # its number cannot sit beside one; it goes on the centre himself.
 CENTRE_HOLE = "0/1"
 
+# Where the hash marks sit down each sideline, as a percentage of the field's height.
+HASH_MARKS = (14, 32, 50, 68, 86)
+
 
 def _blank_line() -> str:
     """A blank line of scrimmage to draw a play on, at the foot of the call sheet.
@@ -2755,9 +2775,14 @@ def _blank_line() -> str:
         + "</span>"
         for col in MAN_COLUMNS
     )
-    return (f'<div class="pk-draw" role="img" aria-label="Blank line of scrimmage with '
-            f'the hole numbers, to draw a play on">{holes}{ball}{men}'
-            f'<span class="pad" style="grid-row:3"></span></div>')
+    hashes = "".join(
+        f'<span class="hash{side}" style="top:{pct}%"></span>'
+        for pct in HASH_MARKS for side in ("", " r")
+    )
+    return (f'<div class="pk-field" role="img" aria-label="Blank line of scrimmage with '
+            f'the hole numbers and sidelines, to draw a play on">{hashes}'
+            f'<div class="pk-draw">{holes}{ball}{men}'
+            f'<span class="pad" style="grid-row:3"></span></div></div>')
 
 
 # The call sheet is the one page that lays the formations out two across instead of
