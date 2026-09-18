@@ -587,6 +587,7 @@ table.xl.xl-plays td {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 @media (max-width: 560px) { .pk-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.sit-grid { margin-top: 18px; }
 .pk { min-width: 0; }
 .pk-name {
   margin: 0; padding: 5px 8px; font-size: 12.5px; font-weight: 800;
@@ -658,10 +659,11 @@ table.xl.pk-plays td {
   border-top: 2px solid var(--ink);
 }
 /* The room to draw in: the backfield, below the line. */
-/* The field below the line: the whole reason the strip is here. It is as deep as
-   the sheet has room for, which grew by a formation block each time one came off
-   (see SHEET_OMIT) -- 62 points of drawing space, then 200, now 260. */
-.pk-draw .pad { grid-column: 1 / -1; height: 310px; }
+/* The field below the line: as deep as the sheet has room for, which is whatever
+   the blocks above it leave. 62 points of drawing space to start, 200 and then 260
+   as formations came off the sheet, and 120 now that the down-and-distance board
+   sits between the packages and the line. Still about twice what it started as. */
+.pk-draw .pad { grid-column: 1 / -1; height: 143px; }
 .pk-plays td a:hover { text-decoration: underline; }
 @media print {
   /* One formation to a row, full width. Two across put a formation in half a page,
@@ -731,6 +733,10 @@ table.xl.pk-plays td {
   .pk-sub { display: none; }
   .pk-grid { gap: 0 8px; margin: 0; padding-top: 4px; break-inside: avoid;
              border-top: 1px solid #000; }
+  /* The down-and-distance board is a second .pk-grid, so it takes the same rule above
+     and gets its own divider for free -- which is the line asked for between it and the
+     packages. It only needs the gap that stops the two blocks reading as one. */
+  .sit-grid { margin-top: 5px; }
   .pk-field { margin: 5px 0 0; padding-top: 13px; border-top-color: #000;
               border-left-color: #000; border-right-color: #000; }
   .pk-field .hash { width: 11px; border-top-color: #000; }
@@ -741,7 +747,7 @@ table.xl.pk-plays td {
   .pk-draw .o { border-width: 10px; border-color: #000; }
   .pk-draw .ball { width: 19px; height: 11px; border-color: #000; }
   .pk-draw .ball::after { border-top-color: #000; }
-  .pk-draw .pad { height: 260px; }
+  .pk-draw .pad { height: 120px; }
   /* Hairlines between the cards. On screen the navy name bars are the separation; on
      paper those print as plain black text (see .pk-name below), which ran six lists of
      calls together into one block of small type. The rules are the cheapest fix that
@@ -2732,7 +2738,72 @@ def _package_strip(root: Path, formations: list[dict]) -> str:
     return ('<p class="section-head pk-head">Packages '
             '<span class="pk-sub">what each one comes on to call</span></p>'
             f'<div class="pk-grid">{"".join(cards)}</div>'
+            f'{_situation_strip(roster, plays)}'
             f'{_blank_line()}')
+
+
+# The down-and-distance board, in the order the situations come up. The names are here
+# rather than in the JSON because they are the six situations of a football game and
+# not a coaching preference -- what to CALL in each one is the preference, and that is
+# what roster.json holds.
+SITUATIONS = (
+    "1st down", "2nd & Short", "2nd & Long",
+    "3rd & Short", "3rd & Long", "4th down",
+)
+# Exactly three, not up to three. Three is what fits a glance at a laminated sheet, and
+# a fixed count means the board's height is known, which is what keeps the field below
+# it the size it was measured at.
+SITUATION_PLAY_CAP = 3
+
+
+def _situation_strip(roster: dict, plays: dict) -> str:
+    """The down-and-distance board: six situations, three calls each.
+
+    The packages answer "who is on the field"; this answers "what do we call now",
+    which is the question actually being asked on 3rd and 2. Both are lists of plays
+    and both print as the same card, so this reuses the package grid rather than
+    inventing a second look for the same thing.
+
+    `plays` is the whole book by call, as the packages use it, so a situation may
+    name a play from any formation -- including one whose block is not on the sheet.
+    That is deliberate: the board IS the sheet for these eighteen, and a call here is
+    a call whether or not its table prints.
+    """
+    assigned = (roster.get("situation_plays") or {}).get("offense") or []
+    if not assigned:
+        return ""
+
+    cards = []
+    for i, label in enumerate(SITUATIONS):
+        calls = list(assigned[i]) if i < len(assigned) else []
+        if len(calls) != SITUATION_PLAY_CAP:
+            raise SystemExit(
+                f"roster.json situation_plays, {label}: {len(calls)} plays, and a "
+                f"situation carries exactly {SITUATION_PLAY_CAP} — the board's height "
+                "is what keeps the blank field below it the size it was measured at."
+            )
+        rows = []
+        for call in calls:
+            found = plays.get(call)
+            if found is None:
+                raise SystemExit(
+                    f"roster.json situation_plays, {label}: '{call}' is not a play in "
+                    "the book. Use a play's full call."
+                )
+            play, form = found
+            rows.append(
+                f'<tr><td><a href="{p_href(play)}">'
+                f'<span class="xl-code">{esc(play["code"])}</span>'
+                f'{esc(_package_row(play, form))}</a></td></tr>'
+            )
+        cards.append(
+            f'<section class="pk"><p class="pk-name">{esc(label)}</p>'
+            f'<table class="xl pk-plays"><tbody>{"".join(rows)}</tbody></table></section>'
+        )
+
+    return ('<p class="section-head pk-head">Down and distance '
+            '<span class="pk-sub">what we call when</span></p>'
+            f'<div class="pk-grid sit-grid">{"".join(cards)}</div>')
 
 
 # The line, as fifteen grid columns: a number, a man, a number, a man ... so the hole
