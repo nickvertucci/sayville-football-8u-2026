@@ -653,6 +653,44 @@ table.xl.xl-plays td {
   font-weight: 500; text-transform: none; letter-spacing: 0; color: var(--muted);
   font-size: 12.5px; margin-left: 8px;
 }
+/* ------------------------------------------------------- call sheet tabs --
+   Two radios and two labels. No script, so the tabs survive JavaScript being off,
+   and the checked radio drives which pane shows through a sibling selector. */
+.sheet-tabs > input { position: absolute; opacity: 0; pointer-events: none; }
+.tabrow {
+  display: flex; gap: 6px; margin: 10px 0 14px;
+  border-bottom: 2px solid var(--line);
+}
+.tab {
+  padding: 7px 18px; font-weight: 800; font-size: 13px; letter-spacing: 1.1px;
+  text-transform: uppercase; color: var(--muted); cursor: pointer;
+  border: 2px solid transparent; border-bottom: 0; border-radius: 8px 8px 0 0;
+  margin-bottom: -2px;
+}
+.tab:hover { color: var(--ink); }
+#tab-off:checked ~ .tabrow .tab[for="tab-off"],
+#tab-def:checked ~ .tabrow .tab[for="tab-def"] {
+  color: var(--ink); border-color: var(--line); background: var(--panel);
+  border-bottom: 2px solid var(--panel);
+}
+#tab-off:focus-visible ~ .tabrow .tab[for="tab-off"],
+#tab-def:focus-visible ~ .tabrow .tab[for="tab-def"] { outline: 2px solid var(--accent-solid); }
+.tabpane { display: none; }
+#tab-off:checked ~ .pane-off, #tab-def:checked ~ .pane-def { display: block; }
+
+/* ------------------------------------------------- defensive call sheet --
+   One table per front, positions down the side and packages across, so a cell is
+   the boy who plays that spot in that package. The offensive sheet's title bar and
+   table furniture are reused rather than reinvented: both are call sheets. */
+.df-fronts { display: grid; gap: 16px; margin: 10px 0 20px; }
+table.xl.df-grid { table-layout: auto; }
+table.xl.df-grid td, table.xl.df-grid th { text-align: center; }
+table.xl.df-grid .df-pos {
+  width: 58px; text-align: left; font-weight: 800; font-size: 11px;
+  letter-spacing: .4px; color: var(--muted); background: var(--panel-2);
+}
+table.xl.df-grid tbody td { font-weight: 700; }
+
 .pk-grid {
   display: grid; gap: 10px; margin: 8px 0 24px; align-items: start;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -851,6 +889,22 @@ table.xl.pk-plays td {
      both things you know by the time you are holding it, and between them they were
      most of an inch of the one sheet. The rule under the heading stays -- it is what
      separates the packages from the formation blocks -- so it moves onto the grid. */
+  /* Tabs are a screen affordance; on paper both panes print, a sheet each. The row
+     itself has to go as well as being redundant -- its margins alone were enough to
+     push the offensive sheet onto a second page. */
+  .tabrow { display: none; }
+  .tabpane { display: block !important; }
+  .pane-def { page-break-before: always; break-before: page; }
+  /* The defensive sheet: three fronts, eleven rows and six packages each, then the
+     blank front under them. Small enough that the whole thing is one sheet, the way
+     the offensive side is. */
+  .df-fronts { gap: 5px; margin: 0; }
+  .df-front { break-inside: avoid; }
+  table.xl.df-grid { font-size: 8px; }
+  table.xl.df-grid td, table.xl.df-grid th { padding: 0 2px; height: auto;
+                                             line-height: 1.25; }
+  table.xl.df-grid thead th { font-size: 7px; }
+  table.xl.df-grid .df-pos { width: 30px; font-size: 7px; background: none; }
   .calls-page .page-head { display: none; }
   .pk-head { display: none; }
   .pk-sub { display: none; }
@@ -3078,6 +3132,114 @@ def _script_strip(root: Path, formations: list[dict]) -> str:
             f'<table class="xl script-t"><tbody>{rows}</tbody></table></section>')
 
 
+# The fronts the defensive sheet carries, in the order a coach reaches for them: the
+# everyday one, the heavy one, and the one for the two-yard line. The other two fronts
+# in the book (the 5-3 and Prevent) are in the defensive playbook; this is a call sheet,
+# not the book.
+DEF_SHEET_FRONTS = ("4-4", "5-4-2", "6-3")
+
+
+def _def_eleven(front_id: str, spots: list[str], slides: dict,
+                pack: list[str], base_spots: tuple) -> list[str]:
+    """One package's eleven, arranged in `front_id`'s spots.
+
+    A package is stored against the base front, so every other front needs to know
+    which base man takes which of its spots -- the guard who slides out to tackle, the
+    safety who walks up to nose. That is a coaching decision, so it lives in
+    roster.json under front_slides rather than being guessed from the coordinates here.
+    """
+    by_spot = dict(zip(base_spots, pack))
+    if front_id == blocking.DEFAULT_FRONT:
+        return [by_spot.get(sp, "") for sp in spots]
+    slide = slides.get(front_id) or {}
+    return [by_spot.get(slide.get(sp, ""), "") for sp in spots]
+
+
+def _defense_sheet(root: Path, defenses: dict) -> str:
+    """The defensive call sheet: a table per front, a package per column.
+
+    Rows are the front's own spots, columns are the six packages, and a cell is the
+    boy who plays there. That is the question this sheet answers -- "Goal Line
+    Wolfpack, who is on the field and where" -- which on the offensive side is a
+    play's name and on this side is eleven names.
+    """
+    roster, _ = _roster_and_plays(root, [])
+    packs = (roster.get("packages") or {}).get("defense") or []
+    names = (roster.get("package_names") or {}).get("defense") or []
+    slides = {k: v for k, v in (roster.get("front_slides") or {}).items()
+              if isinstance(v, dict)}
+    if not packs:
+        return ""
+
+    base_spots = PACKAGE_SPOTS["defense"]
+    by_id = {f["id"]: f for f in defenses.values()} if defenses else {}
+    tables = []
+    for fid in DEF_SHEET_FRONTS:
+        front = by_id.get(fid)
+        if front is None:
+            continue
+        spots = list(front["alignment"])
+        slide = slides.get(fid)
+        if fid != blocking.DEFAULT_FRONT:
+            if slide is None:
+                raise SystemExit(
+                    f"roster.json front_slides: no entry for '{fid}', which the "
+                    "defensive call sheet needs to know where the base eleven goes."
+                )
+            if sorted(slide) != sorted(spots):
+                raise SystemExit(
+                    f"roster.json front_slides, {fid}: names {sorted(slide)} but the "
+                    f"front's spots are {sorted(spots)}."
+                )
+            if sorted(slide.values()) != sorted(base_spots):
+                raise SystemExit(
+                    f"roster.json front_slides, {fid}: the base men it uses are "
+                    f"{sorted(slide.values())}, which is not the base eleven. "
+                    "Eleven on the field either way."
+                )
+        elevens = [_def_eleven(fid, spots, slides, pk, base_spots) for pk in packs]
+        head = "".join(f"<th>{esc(n)}</th>"
+                       for n in (names or [f"Package {i+1}" for i in range(len(packs))]))
+        rows = []
+        for i, sp in enumerate(spots):
+            cells = "".join(f'<td>{esc(e[i])}</td>' for e in elevens)
+            rows.append(f'<tr><td class="df-pos">{esc(sp)}</td>{cells}</tr>')
+        label = front.get("call") or front["name"]
+        tables.append(
+            f'<section class="df-front"><p class="xl-title">{esc(label)}'
+            f'<span class="xl-n">{esc(front["name"])}</span></p>'
+            f'<table class="xl df-grid"><thead><tr><th class="df-pos"></th>{head}'
+            f'</tr></thead><tbody>{"".join(rows)}</tbody></table></section>'
+        )
+    return f'<div class="df-fronts">{"".join(tables)}</div>{_def_blank_line()}'
+
+
+# Two down linemen either side of the ball, and the rest of the front is the coach's
+# to draw. Columns 4, 6, 10 and 12 of the same fifteen-column line the offensive strip
+# uses, which is how the two strips end up the same size with the same spacing: this
+# one is that one with the outer men and the numbers taken off. The offensive strip
+# names its holes because the calling language depends on them; this one names nothing,
+# because what goes on it changes with every opponent.
+DEF_MAN_COLUMNS = (4, 6, 10, 12)
+
+
+def _def_blank_line() -> str:
+    """The blank front: a ball, and two down linemen either side of it."""
+    ball = f'<span class="ball" style="grid-column:{BALL_COLUMN};grid-row:1"></span>'
+    men = "".join(
+        f'<span class="o" style="grid-column:{col};grid-row:2"></span>'
+        for col in DEF_MAN_COLUMNS
+    )
+    hashes = "".join(
+        f'<span class="hash{side}" style="top:{pct}%"></span>'
+        for pct in HASH_MARKS for side in ("", " r")
+    )
+    return ('<div class="pk-field" role="img" aria-label="Blank line of scrimmage with '
+            f'the ball and four down linemen, to draw a front on">{hashes}'
+            f'<div class="pk-draw">{ball}{men}'
+            '<span class="pad" style="grid-row:3"></span></div></div>')
+
+
 # The call sheet is the one page that lays the formations out two across instead of
 # one after another, so its order is a seating chart rather than the teaching order the
 # rest of the book runs on. Regular I keeps the top row, the Wishbone drops to the
@@ -3191,9 +3353,27 @@ def write_calls(formations: list[dict], defenses: dict, root: Path) -> str:
     # restates the title, and the holes rule is on the play cards and in the book where
     # somebody learning it will actually be looking. On paper the line cost a row of
     # calls; the page description below still carries the same words for search.
+    # Two sheets on one page, behind a pair of tabs. The offensive sheet is the page
+    # it always was; the defensive one answers a different question with the same
+    # furniture. Radios rather than script, so the tabs work with
+    # JavaScript off. On paper the tabs are not a choice at all: both panes print,
+    # offense then defense, a sheet each, because a coach who hits Print wants the
+    # whole call sheet and not whichever half he happened to be looking at.
+    defense = _defense_sheet(root, defenses)
     body = f"""{page_head("Call sheet")}
-<div class="xl-top"><div class="xl-sheets">{sheets}</div>{script}</div>
-{packages}"""
+<div class="sheet-tabs">
+  <input type="radio" name="sheet" id="tab-off" checked>
+  <input type="radio" name="sheet" id="tab-def">
+  <nav class="tabrow" role="tablist">
+    <label class="tab" for="tab-off">Offense</label>
+    <label class="tab" for="tab-def">Defense</label>
+  </nav>
+  <section class="tabpane pane-off">
+    <div class="xl-top"><div class="xl-sheets">{sheets}</div>{script}</div>
+    {packages}
+  </section>
+  <section class="tabpane pane-def">{defense}</section>
+</div>"""
     return page(
         f"Call sheet — {SITE_TITLE}",
         body,

@@ -411,5 +411,34 @@
       "Split Backs Slot Left 29 Toss",
       "Regular I Slot Right 22 Smash"
     ]
+  },
+  "front_slides": {
+    "note": "Where each man of the base eleven goes when we change front. The key is the front's id, then that front's spot, and the value is the 4-4 spot whose player fills it. Every spot in the front must appear exactly once and no 4-4 man twice, or the build stops -- eleven on the field either way. Only fronts that differ from the 4-4 need an entry; the 4-4 is itself.",
+    "5-4-2": {
+      "LDE": "LDE",
+      "LDT": "LDG",
+      "NT": "FS",
+      "RDT": "RDG",
+      "RDE": "RDE",
+      "LOLB": "LOLB",
+      "LILB": "LILB",
+      "RILB": "RILB",
+      "ROLB": "ROLB",
+      "LS": "LC",
+      "RS": "RC"
+    },
+    "6-3": {
+      "LDE": "LDE",
+      "LDT": "LOLB",
+      "LDG": "LDG",
+      "RDG": "RDG",
+      "RDT": "ROLB",
+      "RDE": "RDE",
+      "LOLB": "LILB",
+      "MLB": "FS",
+      "ROLB": "RILB",
+      "LC": "LC",
+      "RC": "RC"
+    }
   }
 }
