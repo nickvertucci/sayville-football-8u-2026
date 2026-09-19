@@ -3,7 +3,7 @@
   "order": 11,
   "formation": "i-form",
   "name": "Regular I - Slot Right - LTE Sweep",
-  "code": "I-3",
+  "code": "3",
   "call": "Regular I Slot Right LTE Sweep",
   "word_call": true,
   "type": "run",

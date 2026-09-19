@@ -3,7 +3,7 @@
   "order": 28,
   "formation": "split-backs",
   "name": "Split Backs - Slot Left - RTE Sweep",
-  "code": "S-10",
+  "code": "26",
   "call": "Split Backs Slot Left RTE Sweep",
   "word_call": true,
   "type": "run",

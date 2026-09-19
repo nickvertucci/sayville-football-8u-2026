@@ -3,7 +3,7 @@
   "order": 1,
   "formation": "power-i",
   "name": "Power I - Slot Right - 32 Smash",
-  "code": "P-1",
+  "code": "39",
   "call": "Power I Slot Right 32 Smash",
   "type": "run",
   "scheme": "Smash",

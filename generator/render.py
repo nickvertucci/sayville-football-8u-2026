@@ -888,15 +888,18 @@ def validate(formations: list[dict], defenses: dict) -> list[str]:
                 if len(receiver.get("path") or []) < pitch.get("at", 1):
                     errors.append(f"{pid}: pitch is caught at waypoint {pitch.get('at', 1)} "
                                   f"of {pitch.get('to')}'s path, which is not that long")
-            # The play's code — "I-1", "S-3" — is what a coach calls it by and what is
-            # printed big on its card, so it has to belong to its formation and be one of a
-            # kind across the whole book.
+            # The play's number — 1, 7, 42 — is what a coach calls it by, what is
+            # printed big on its card and what goes on a boy's wristband. One number
+            # per play across the whole book, and no letters: a child reading a band
+            # through a facemask should not have to know which formation he is in
+            # before he can find the row. Gaps are fine and renumbering is not: a play
+            # that has been learned keeps its number, and a new one takes the next free
+            # one, or every wristband printed so far is wrong.
             code = play.get("code")
             if code:
-                letter = form.get("code_prefix")
-                if not letter or not re.fullmatch(rf"{re.escape(letter)}-\d+", code):
-                    errors.append(f"{pid}: code '{code}' should be '{letter}-<number>' "
-                                  f"for the {form.get('name')} formation")
+                if not re.fullmatch(r"[1-9]\d*", code):
+                    errors.append(f"{pid}: code '{code}' should be a plain play number, "
+                                  "like '7' — the letter-and-dash codes are gone")
                 if code in codes:
                     errors.append(f"{pid}: code '{code}' is already {codes[code]}'s")
                 codes.setdefault(code, pid)
@@ -1145,11 +1148,11 @@ def wrap(text, width: int) -> list[str]:
 
 
 def draw_code(play: dict, half: float, top: float) -> str:
-    """The play's code — "#I-1" — big in the top-right corner of the field.
+    """The play's number — "#7" — big in the top-right corner of the field.
 
-    It is what a coach points at on a printed sheet and shouts across the practice
-    field, so it is sized to read from arm's length on paper. A white plate behind it
-    keeps the yard lines from cutting through the letters.
+    It is what a coach points at on a printed sheet, what he shouts across the practice
+    field and what is on the boys' wristbands, so it is sized to read from arm's length
+    on paper. A white plate behind it keeps the yard lines from cutting through it.
     """
     code = play.get("code")
     if not code:

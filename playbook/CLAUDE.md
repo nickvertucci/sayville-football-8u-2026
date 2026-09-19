@@ -103,11 +103,21 @@ the scheme.
 Optional: `call`, `type`, `defense` (must match a file in `defense/`),
 `order`, `direction`, `coaching_points`, `alignment`, `code`.
 
-`code` is the play's short name, printed big in the top-right corner of its diagram:
-the formation's `code_prefix` (I, S, G), a dash and a number — `I-1`. The build rejects a
-code with the wrong letter or one another play already has. A new play takes the next
-number in its formation; codes are never renumbered, so a coach's I-3 stays I-3. There is no introductory
-paragraph: a play is its name, call, diagram, assignments and coaching points.
+`code` is the play's **number**, printed big in the top-right corner of its diagram and
+written on the boys' wristbands: `"code": "7"`. One plain number per play across the
+whole book — no formation letter, because a child reading a band through a facemask
+should not have to know which formation he is in before he can find the row. The build
+rejects anything that is not a whole number, and one another play already has.
+
+**Numbers are never renumbered.** A play that has been learned keeps its number for
+good, and a new play takes the next free one — the next number nothing in the book is
+using, not the next number in its formation. Gaps are fine; a renumber is not, because
+every wristband already printed would be wrong. The one-time assignment ran in call
+sheet order, which is why Regular I is 1–16, Split Backs 17–32, Shotgun 33–38, Power I
+39–42, and the two teaching formations sit at the end: Trips 43–50, Wishbone 51–58.
+
+There is no introductory paragraph: a play is its name, call, diagram, assignments and
+coaching points.
 
 ### `alignment` — moving somebody for one play
 
@@ -434,7 +444,7 @@ look has one; Wishbone does not, so Power kicks with the playside end and
 the call has no Slot Right/Left. Trips names the bunch (`Trips Right` /
 `Trips Left`) and moves 2, 3 and 4 together. A new formation that keeps
 those keys drops in: give it `formation.json`
-(alignment, `backs`, `code_prefix`) and plays that name a scheme and write
+(alignment, `backs`) and plays that name a scheme and write
 the paths. Power in the new look is `"scheme": "Power"` plus the handoff —
 not eleven new verbs.
 

@@ -3,7 +3,7 @@
   "order": 16,
   "formation": "trips",
   "name": "Trips - Left - LTE Slant Out",
-  "code": "T-16",
+  "code": "50",
   "call": "Trips Left LTE Slant Out",
   "word_call": true,
   "type": "pass",

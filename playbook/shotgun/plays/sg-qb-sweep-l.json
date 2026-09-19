@@ -3,7 +3,7 @@
   "order": 3,
   "formation": "shotgun",
   "name": "Shotgun - Slot Left - 19 Sweep",
-  "code": "G-3",
+  "code": "35",
   "call": "Shotgun Slot Left 19 Sweep",
   "type": "run",
   "scheme": "Sweep",

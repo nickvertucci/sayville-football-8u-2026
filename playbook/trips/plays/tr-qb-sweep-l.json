@@ -3,7 +3,7 @@
   "order": 14,
   "formation": "trips",
   "name": "Trips - Left - 19 Sweep",
-  "code": "T-14",
+  "code": "48",
   "call": "Trips Left 19 Sweep",
   "type": "run",
   "scheme": "Sweep",

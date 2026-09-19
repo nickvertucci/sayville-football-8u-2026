@@ -303,10 +303,27 @@ Edit the JSON under `playbook/`, then re-run the generator. Do not edit `PLAYBOO
 `index.html`, the `README.md` inside a formation folder, or anything in `cards/` — they
 are overwritten on every build.
 
-Every play also has a short **code**, printed big in the top-right corner of its diagram:
-the formation letter, then its number — `#I-1` is the first I formation play, `#S-1` the
-first Split Backs play, `#G-1` the first Shotgun play. A new play takes the next number in
-its formation; the build rejects a code with the wrong letter or one already taken.
+Every play also has a **number**, printed big in the top-right corner of its diagram,
+down the left of every cell on the call sheet, and on the boys' wristbands. One plain
+number per play across the whole book — `#7`, not `#I-7` — because a child reading a
+band through a facemask should not have to work out which formation he is in before he
+can find the row.
+
+They run in call sheet order, so everything called on a Saturday is 1–42:
+
+| Numbers | Formation |
+|---|---|
+| **1–16** | Regular I |
+| **17–32** | Split Backs |
+| **33–38** | Shotgun |
+| **39–42** | Power I |
+| 43–50 | Trips — a teaching formation, not on the call sheet |
+| 51–58 | Wishbone — the same |
+
+**A number is never reused and never renumbered.** A play that has been learned keeps
+its number, and a new play takes the next free one; gaps where a play was retired stay
+gaps. Renumbering would make every wristband already printed wrong, so the build only
+checks that a number is a whole number and that no two plays share one.
 
 Full authoring rules, the blocking verbs, the coordinate system and the house style:
 [playbook/CLAUDE.md](playbook/CLAUDE.md).
