@@ -48,8 +48,8 @@
 <line x1="391.5" y1="317.5" x2="403.9" y2="304.0" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 <path d="M464.4,337.5 L453.3,313.5" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
 <line x1="445.0" y1="317.3" x2="461.7" y2="309.6" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
-<path d="M502.2,364.5 L477.4,217.1" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-<line x1="468.3" y1="218.6" x2="486.4" y2="215.6" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
+<path d="M502.2,364.5 L600.8,215.5" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="593.1" y1="210.4" x2="608.4" y2="220.5" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 <path d="M351.0,364.5 L329.4,375.3 L291.6,391.5 L253.8,402.3" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 5"/>
 <polygon points="253.8,402.3 262.5,395.0 265.0,403.9" fill="#14213d"/>
 <path d="M351.0,413.1 C353.2,401.9 361.4,368.1 364.5,345.6 C367.6,323.1 369.0,293.9 369.9,278.1 C370.8,262.4 369.4,266.9 369.9,251.1 C370.3,235.4 371.7,206.1 372.6,183.6 C373.5,161.1 374.9,127.3 375.3,116.1" fill="none" stroke="#b3001b" stroke-width="4.6" stroke-linecap="round" stroke-linejoin="round"/>
@@ -109,8 +109,8 @@
 <text x="344" y="596" font-size="12" fill="#111318">Cut him off — get between him and the</text>
 <text x="344" y="612" font-size="12" fill="#111318">ball.</text>
 <text x="310" y="630" font-size="12" font-weight="700" fill="#111318">SL</text>
-<text x="344" y="630" font-size="12" fill="#111318">Run at the outside linebacker and</text>
-<text x="344" y="646" font-size="12" fill="#111318">screen him off. Stay in his way.</text>
+<text x="344" y="630" font-size="12" fill="#111318">Run at the corner and screen him off.</text>
+<text x="344" y="646" font-size="12" fill="#111318">Stay in his way.</text>
 <text x="310" y="664" font-size="12" font-weight="700" fill="#111318">QB</text>
 <text x="344" y="664" font-size="12" fill="#111318">Open right, hand to the fullback right</text>
 <text x="344" y="680" font-size="12" fill="#111318">now, then fake the boot left. It holds</text>

@@ -110,9 +110,9 @@ Both ends are tight on the line and the slot is just outside the tight end, one 
 | **RG** | Block the right defensive guard. |
 | **RT** | Help on the right defensive end, then block the right outside linebacker. |
 | **RTE** | Block the right defensive end. |
-| **SL** | Run at the outside linebacker and screen him off. Stay in his way. |
+| **SL** | Run at the corner and screen him off. Stay in his way. |
 | **QB** **(ball)** | Catch the snap and sweep left, flat and fast, behind the left halfback. Turn up outside his block. |
-| **LH** | Bubble out around our end, then double team the corner with the right halfback. |
+| **LH** | Bubble out around our end, then double team the linebacker with the right halfback. |
 | **RH** | Bubble out around our end, then double team the linebacker with the left halfback. |
 
 **Coaching points**
@@ -140,9 +140,9 @@ Both ends are tight on the line and the slot is just outside the tight end, one 
 | **RG** | Block the right defensive guard. |
 | **RT** | Help on the right defensive guard, then block the right inside linebacker. |
 | **RTE** | Block the right defensive end. |
-| **SL** | Run at the outside linebacker and screen him off. Stay in his way. |
+| **SL** | Run at the corner and screen him off. Stay in his way. |
 | **QB** **(ball)** | Catch the snap and sweep right, flat and fast, behind the right halfback. Turn up outside his block. |
-| **LH** | Bubble out around our end, then double team the corner with the right halfback. |
+| **LH** | Bubble out around our end, then double team the linebacker with the right halfback. |
 | **RH** | Bubble out around our end, then double team the linebacker with the left halfback. |
 
 **Coaching points**
@@ -170,7 +170,7 @@ Both ends are tight on the line and the slot is just outside the tight end, one 
 | **RG** | Block the right defensive guard. |
 | **RT** | Help on the right defensive guard, then block the right inside linebacker. |
 | **RTE** | Block the right defensive end. |
-| **SL** | Run at the outside linebacker and screen him off. Stay in his way. |
+| **SL** | Run at the corner and screen him off. Stay in his way. |
 | **QB** | Hand the ball to the left halfback as he crosses in front of you, then fake a run to the left. |
 | **LH** **(ball)** | Cross in front of the quarterback, take the handoff going right and get to the edge behind the right halfback. Turn up outside his block. |
 | **RH** | Bubble out around the right end, then block the right outside linebacker. |
@@ -200,7 +200,7 @@ Both ends are tight on the line and the slot is just outside the tight end, one 
 | **RG** | Block the right defensive guard. |
 | **RT** | Help on the right defensive end, then block the right outside linebacker. |
 | **RTE** | Block the right defensive end. |
-| **SL** | Run at the outside linebacker and screen him off. Stay in his way. |
+| **SL** | Run at the corner and screen him off. Stay in his way. |
 | **QB** | Hand the ball to the right halfback as he crosses in front of you, then fake a run to the right. |
 | **LH** | Bubble out around the left end, then block the left outside linebacker. |
 | **RH** **(ball)** | Cross in front of the quarterback, take the handoff going left and get to the edge behind the left halfback. Turn up outside his block. |

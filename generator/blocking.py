@@ -652,8 +652,13 @@ def linebacker(front: dict, side: int, which: str = "playside", taken=()):
 
 
 # How far a receiver can realistically chase somebody down and still be blocking him.
-# Beyond this he is not stalking a man, he is jogging at one.
-MAX_STALK = 6.0
+# Beyond this he is not stalking a man, he is jogging at one. Seven yards, because the
+# 4-4 corner plays at four and a half now and the split man is still the one who blocks
+# him -- at six the corner fell a fifth of a yard outside reach and every screen in the
+# book quietly moved onto the outside linebacker instead. The number it has to stay
+# under is the 5-4-2 safety at nine and a half, which is the case this constant exists
+# for: the split man never runs infield at him.
+MAX_STALK = 7.0
 
 
 def perimeter_defender(front: dict, x: float, side: int, taken=()):

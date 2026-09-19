@@ -48,12 +48,12 @@
 <line x1="433.9" y1="307.9" x2="449.6" y2="317.4" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 <path d="M464.4,337.5 C454.5,346.1 428.4,379.4 405.0,388.8 C381.6,398.2 362.2,396.0 324.0,394.2 C285.8,392.4 202.5,390.6 175.5,378.0 C148.5,365.4 164.3,343.8 162.0,318.6 C159.8,293.4 162.0,257.4 162.0,226.8 C162.0,196.2 162.0,150.3 162.0,135.0" fill="none" stroke="#b3001b" stroke-width="4.6" stroke-linecap="round" stroke-linejoin="round"/>
 <polygon points="162.0,135.0 168.2,148.8 155.8,148.8" fill="#b3001b"/>
-<path d="M199.8,364.5 L224.6,217.1" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-<line x1="215.6" y1="215.6" x2="233.7" y2="218.6" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
+<path d="M199.8,364.5 L101.2,215.5" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="93.6" y1="220.5" x2="108.9" y2="210.4" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 <path d="M351.0,364.5 L326.7,386.1 L372.6,391.5 L448.2,386.1" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 5"/>
 <polygon points="448.2,386.1 438.2,391.4 437.5,382.2" fill="#14213d"/>
-<path d="M291.6,426.6 L175.0,307.8 L102.6,214.4" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-<line x1="95.3" y1="220.0" x2="109.9" y2="208.8" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
+<path d="M291.6,426.6 L247.9,307.8 L230.3,216.8" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="221.3" y1="218.5" x2="239.3" y2="215.1" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 <path d="M410.4,426.6 L301.3,307.8 L234.6,214.7" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
 <line x1="227.2" y1="220.0" x2="242.1" y2="209.3" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 
@@ -104,8 +104,8 @@
 <text x="344" y="630" font-size="12" fill="#111318">speed and get to the left edge. Turn up</text>
 <text x="344" y="646" font-size="12" fill="#111318">outside the halfbacks.</text>
 <text x="310" y="664" font-size="12" font-weight="700" fill="#111318">SL</text>
-<text x="344" y="664" font-size="12" fill="#111318">Run at the outside linebacker and</text>
-<text x="344" y="680" font-size="12" fill="#111318">screen him off. Stay in his way.</text>
+<text x="344" y="664" font-size="12" fill="#111318">Run at the corner and screen him off.</text>
+<text x="344" y="680" font-size="12" fill="#111318">Stay in his way.</text>
 <text x="310" y="698" font-size="12" font-weight="700" fill="#111318">QB</text>
 <text x="344" y="698" font-size="12" fill="#111318">Open left and hand the ball to the</text>
 <text x="344" y="714" font-size="12" fill="#111318">right tight end as he comes across</text>
@@ -113,7 +113,7 @@
 <text x="344" y="748" font-size="12" fill="#111318">right.</text>
 <text x="310" y="766" font-size="12" font-weight="700" fill="#111318">LH</text>
 <text x="344" y="766" font-size="12" fill="#111318">Bubble out around our end, then double</text>
-<text x="344" y="782" font-size="12" fill="#111318">team the corner with the right</text>
+<text x="344" y="782" font-size="12" fill="#111318">team the linebacker with the right</text>
 <text x="344" y="800" font-size="12" fill="#111318">halfback.</text>
 <text x="310" y="816" font-size="12" font-weight="700" fill="#111318">RH</text>
 <text x="344" y="816" font-size="12" fill="#111318">Bubble out around our end, then double</text>

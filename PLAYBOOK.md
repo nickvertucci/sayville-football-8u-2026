@@ -148,9 +148,9 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 | **RG** | Block the right defensive guard. |
 | **RT** | Help on the right defensive guard, then block the right inside linebacker. |
 | **RTE** | Block the right defensive end. |
-| **SL** | Run at the outside linebacker and screen him off. Stay in his way. |
+| **SL** | Run at the corner and screen him off. Stay in his way. |
 | **QB** | Open right and hand the ball to the left tight end as he comes across behind you, then fake a run to the left. |
-| **FB** | Bubble out around our end, then double team the corner with the tailback. |
+| **FB** | Bubble out around our end, then double team the linebacker with the tailback. |
 | **TB** | Bubble out around our end, then double team the linebacker with the fullback. |
 
 **Coaching points**
@@ -178,9 +178,9 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 | **RG** | Block the right defensive guard. |
 | **RT** | Block the right defensive end. |
 | **RTE** **(ball)** | Stay down in your stance — no motion. At the snap run flat behind the quarterback, take the handoff at full speed and get to the left edge. Turn up outside the fullback. |
-| **SL** | Run at the outside linebacker and screen him off. Stay in his way. |
+| **SL** | Run at the corner and screen him off. Stay in his way. |
 | **QB** | Open left and hand the ball to the right tight end as he comes across behind you, then fake a run to the right. |
-| **FB** | Bubble out around our end, then double team the corner with the tailback. |
+| **FB** | Bubble out around our end, then double team the linebacker with the tailback. |
 | **TB** | Bubble out around our end, then double team the linebacker with the fullback. |
 
 **Coaching points**
@@ -388,7 +388,7 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 | **RG** | Defensive guard head up on you. Hands inside, pads under his, drive him back. |
 | **RT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
 | **RTE** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
-| **SL** | Run at the outside linebacker and screen him off. Stay in his way. |
+| **SL** | Run at the corner and screen him off. Stay in his way. |
 | **QB** | Open right, hand to the fullback right now, then fake the boot left. It holds the backside end. |
 | **FB** **(ball)** | Take the handoff downhill between the center and the right guard. You are the runner on this one, not the lead. Straight ahead, do not bounce it. |
 | **TB** | Run hard to the left like you have the ball. You are what holds the backside linebacker. |
@@ -418,7 +418,7 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 | **RG** | Defensive guard head up on you. Cut him off — get between him and the ball. |
 | **RT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
 | **RTE** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
-| **SL** | Run at the outside linebacker and screen him off. Stay in his way. |
+| **SL** | Run at the corner and screen him off. Stay in his way. |
 | **QB** | Open left, hand to the fullback right now, then fake the boot right. It holds the backside end. |
 | **FB** **(ball)** | Take the handoff downhill between the center and the left guard. You are the runner on this one, not the lead. Straight ahead, do not bounce it. |
 | **TB** | Run hard to the right like you have the ball. You are what holds the backside linebacker. |
@@ -448,9 +448,9 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 | **RG** | Defensive guard head up on you. Step past him. Climb to the playside linebacker. Head across him. |
 | **RT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
 | **RTE** | Defensive end on your inside shoulder. Turn him inside. The ball goes around behind you. |
-| **SL** | Run at the outside linebacker and screen him off. Stay in his way. |
+| **SL** | Run at the corner and screen him off. Stay in his way. |
 | **QB** | Quick pitch to the tailback, then run the other way, to the left, like you still have it. |
-| **FB** | Lead outside our end. Block the first man out there — here it is the corner. You start two yards closer than he does. Be out there first. |
+| **FB** | Lead outside our end. Block the first man out there — here it is the linebacker. You start two yards closer than he does. Be out there first. |
 | **TB** **(ball)** | Run flat behind the quarterback and catch the pitch on the run, then get outside our end and turn up. Drifting forward for it is a fumble. |
 
 **Coaching points**
@@ -478,9 +478,9 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 | **RG** | Defensive guard head up on you. Cut him off — get between him and the ball. |
 | **RT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
 | **RTE** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
-| **SL** | Run at the outside linebacker and screen him off. Stay in his way. |
+| **SL** | Run at the corner and screen him off. Stay in his way. |
 | **QB** | Quick pitch to the tailback, then run the other way, to the right, like you still have it. |
-| **FB** | Lead outside our end. Block the first man out there — here it is the corner. You start two yards closer than he does. Be out there first. |
+| **FB** | Lead outside our end. Block the first man out there — here it is the linebacker. You start two yards closer than he does. Be out there first. |
 | **TB** **(ball)** | Run flat behind the quarterback and catch the pitch on the run, then get outside our end and turn up. Drifting forward for it is a fumble. |
 
 **Coaching points**
@@ -508,7 +508,7 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 | **RG** | Pass block: step back, hands up, and stay between your man and the quarterback. |
 | **RT** | Pass block: step back, hands up, and stay between your man and the quarterback. |
 | **RTE** **(ball)** | Block the end the way you do on the toss, then slant out flat toward the sideline, almost on the line. Look for the ball right away. |
-| **SL** | Run at the outside linebacker and screen him off. Stay in his way. |
+| **SL** | Run at the corner and screen him off. Stay in his way. |
 | **QB** | Pitch it exactly the way you pitch the toss, then run left like you still have it. Do not turn and watch the throw. |
 | **FB** | Bubble outside our end the same as the toss and take the first man out there. He is the one who gets to the thrower. |
 | **TB** | Catch the pitch and run the toss. At our tight end, pull up behind the line and throw it flat to the tight end in front of you. |
@@ -539,7 +539,7 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 | **RG** | Pass block: step back, hands up, and stay between your man and the quarterback. |
 | **RT** | Pass block: step back, hands up, and stay between your man and the quarterback. |
 | **RTE** | Pass block: step back, hands up, and stay between your man and the quarterback. |
-| **SL** | Run at the outside linebacker and screen him off. Stay in his way. |
+| **SL** | Run at the corner and screen him off. Stay in his way. |
 | **QB** | Pitch it exactly the way you pitch the toss, then run right like you still have it. Do not turn and watch the throw. |
 | **FB** | Bubble outside our end the same as the toss and take the first man out there. He is the one who gets to the thrower. |
 | **TB** | Catch the pitch and run the toss. At our tight end, pull up behind the line and throw it flat to the tight end in front of you. |
@@ -870,9 +870,9 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 | **RG** | Block the right defensive guard. |
 | **RT** | Help on the right defensive guard, then block the right inside linebacker. |
 | **RTE** | Defensive end on your inside shoulder. Turn him inside. The ball goes around behind you. |
-| **SL** | Run at the outside linebacker and screen him off. Stay in his way. |
+| **SL** | Run at the corner and screen him off. Stay in his way. |
 | **QB** **(ball)** | Take the snap and sweep right, flat and fast, behind the right halfback. Turn up outside his block. |
-| **LH** | Bubble out around our end, then double team the corner with the right halfback. |
+| **LH** | Bubble out around our end, then double team the linebacker with the right halfback. |
 | **RH** | Bubble out around our end, then double team the linebacker with the left halfback. |
 
 **Coaching points**
@@ -900,9 +900,9 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 | **RG** | Block the right defensive guard. |
 | **RT** | Help on the right defensive end, then block the right outside linebacker. |
 | **RTE** | Block the right defensive end. |
-| **SL** | Run at the outside linebacker and screen him off. Stay in his way. |
+| **SL** | Run at the corner and screen him off. Stay in his way. |
 | **QB** **(ball)** | Take the snap and sweep left, flat and fast, behind the left halfback. Turn up outside his block. |
-| **LH** | Bubble out around our end, then double team the corner with the right halfback. |
+| **LH** | Bubble out around our end, then double team the linebacker with the right halfback. |
 | **RH** | Bubble out around our end, then double team the linebacker with the left halfback. |
 
 **Coaching points**
@@ -930,7 +930,7 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 | **RG** | Block the right defensive guard. |
 | **RT** | Help on the right defensive end, then block the right outside linebacker. |
 | **RTE** | Block the right defensive end. |
-| **SL** | Run at the outside linebacker and screen him off. Stay in his way. |
+| **SL** | Run at the corner and screen him off. Stay in his way. |
 | **QB** **(ball)** | Fake the handoff to the right halfback, then roll back left and sweep it, flat and fast, behind the left halfback. Turn up outside his block. |
 | **LH** | Bubble out around the left tight end, then block the left outside linebacker. |
 | **RH** | Take the fake from the quarterback and run hard to the right like you have the ball. Sell it all the way — you are the reason the defense goes the wrong way. |
@@ -960,7 +960,7 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 | **RG** | Block the right defensive guard. |
 | **RT** | Help on the right defensive guard, then block the right inside linebacker. |
 | **RTE** | Defensive end on your inside shoulder. Turn him inside. The ball goes around behind you. |
-| **SL** | Run at the outside linebacker and screen him off. Stay in his way. |
+| **SL** | Run at the corner and screen him off. Stay in his way. |
 | **QB** **(ball)** | Fake the handoff to the left halfback, then roll back right and sweep it, flat and fast, behind the right halfback. Turn up outside his block. |
 | **LH** | Take the fake from the quarterback and run hard to the left like you have the ball. Sell it all the way — you are the reason the defense goes the wrong way. |
 | **RH** | Bubble out around the right tight end, then block the right outside linebacker. |
@@ -1050,9 +1050,9 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 | **RG** | Block the right defensive guard. |
 | **RT** | Help on the right defensive guard, then block the right inside linebacker. |
 | **RTE** | Block the right defensive end. |
-| **SL** | Run at the outside linebacker and screen him off. Stay in his way. |
+| **SL** | Run at the corner and screen him off. Stay in his way. |
 | **QB** | Open right and hand the ball to the left tight end as he comes across behind you, then fake a run to the left. |
-| **LH** | Bubble out around our end, then double team the corner with the right halfback. |
+| **LH** | Bubble out around our end, then double team the linebacker with the right halfback. |
 | **RH** | Bubble out around our end, then double team the linebacker with the left halfback. |
 
 **Coaching points**
@@ -1080,9 +1080,9 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 | **RG** | Block the right defensive guard. |
 | **RT** | Block the right defensive end. |
 | **RTE** **(ball)** | Stay down in your stance — no motion. At the snap run flat behind the quarterback, take the handoff at full speed and get to the left edge. Turn up outside the halfbacks. |
-| **SL** | Run at the outside linebacker and screen him off. Stay in his way. |
+| **SL** | Run at the corner and screen him off. Stay in his way. |
 | **QB** | Open left and hand the ball to the right tight end as he comes across behind you, then fake a run to the right. |
-| **LH** | Bubble out around our end, then double team the corner with the right halfback. |
+| **LH** | Bubble out around our end, then double team the linebacker with the right halfback. |
 | **RH** | Bubble out around our end, then double team the linebacker with the left halfback. |
 
 **Coaching points**
@@ -1230,7 +1230,7 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 | **RG** | Pass block: step back, hands up, and stay between your man and the quarterback. |
 | **RT** | Pass block: step back, hands up, and stay between your man and the quarterback. |
 | **RTE** **(ball)** | Block the end the way you do on the toss, then slant out flat toward the sideline, almost on the line. Look for the ball right away. |
-| **SL** | Run at the outside linebacker and screen him off. Stay in his way. |
+| **SL** | Run at the corner and screen him off. Stay in his way. |
 | **QB** | Pitch it exactly the way you pitch the toss, then run left like you still have it. Do not turn and watch the throw. |
 | **LH** | Catch the pitch and run the toss. At our tight end, pull up behind the line and throw it flat to the tight end in front of you. |
 | **RH** | Step at the dive, then bubble outside our end and take the first man out there. He is the one who gets to the thrower. |
@@ -1261,7 +1261,7 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 | **RG** | Pass block: step back, hands up, and stay between your man and the quarterback. |
 | **RT** | Pass block: step back, hands up, and stay between your man and the quarterback. |
 | **RTE** | Pass block: step back, hands up, and stay between your man and the quarterback. |
-| **SL** | Run at the outside linebacker and screen him off. Stay in his way. |
+| **SL** | Run at the corner and screen him off. Stay in his way. |
 | **QB** | Pitch it exactly the way you pitch the toss, then run right like you still have it. Do not turn and watch the throw. |
 | **LH** | Step at the dive, then bubble outside our end and take the first man out there. He is the one who gets to the thrower. |
 | **RH** | Catch the pitch and run the toss. At our tight end, pull up behind the line and throw it flat to the tight end in front of you. |
@@ -1354,9 +1354,9 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 | **RG** | Block the right defensive guard. |
 | **RT** | Help on the right defensive end, then block the right outside linebacker. |
 | **RTE** | Block the right defensive end. |
-| **SL** | Run at the outside linebacker and screen him off. Stay in his way. |
+| **SL** | Run at the corner and screen him off. Stay in his way. |
 | **QB** **(ball)** | Catch the snap and sweep left, flat and fast, behind the left halfback. Turn up outside his block. |
-| **LH** | Bubble out around our end, then double team the corner with the right halfback. |
+| **LH** | Bubble out around our end, then double team the linebacker with the right halfback. |
 | **RH** | Bubble out around our end, then double team the linebacker with the left halfback. |
 
 **Coaching points**
@@ -1384,9 +1384,9 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 | **RG** | Block the right defensive guard. |
 | **RT** | Help on the right defensive guard, then block the right inside linebacker. |
 | **RTE** | Block the right defensive end. |
-| **SL** | Run at the outside linebacker and screen him off. Stay in his way. |
+| **SL** | Run at the corner and screen him off. Stay in his way. |
 | **QB** **(ball)** | Catch the snap and sweep right, flat and fast, behind the right halfback. Turn up outside his block. |
-| **LH** | Bubble out around our end, then double team the corner with the right halfback. |
+| **LH** | Bubble out around our end, then double team the linebacker with the right halfback. |
 | **RH** | Bubble out around our end, then double team the linebacker with the left halfback. |
 
 **Coaching points**
@@ -1414,7 +1414,7 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 | **RG** | Block the right defensive guard. |
 | **RT** | Help on the right defensive guard, then block the right inside linebacker. |
 | **RTE** | Block the right defensive end. |
-| **SL** | Run at the outside linebacker and screen him off. Stay in his way. |
+| **SL** | Run at the corner and screen him off. Stay in his way. |
 | **QB** | Hand the ball to the left halfback as he crosses in front of you, then fake a run to the left. |
 | **LH** **(ball)** | Cross in front of the quarterback, take the handoff going right and get to the edge behind the right halfback. Turn up outside his block. |
 | **RH** | Bubble out around the right end, then block the right outside linebacker. |
@@ -1444,7 +1444,7 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 | **RG** | Block the right defensive guard. |
 | **RT** | Help on the right defensive end, then block the right outside linebacker. |
 | **RTE** | Block the right defensive end. |
-| **SL** | Run at the outside linebacker and screen him off. Stay in his way. |
+| **SL** | Run at the corner and screen him off. Stay in his way. |
 | **QB** | Hand the ball to the right halfback as he crosses in front of you, then fake a run to the right. |
 | **LH** | Bubble out around the left end, then block the left outside linebacker. |
 | **RH** **(ball)** | Cross in front of the quarterback, take the handoff going left and get to the edge behind the left halfback. Turn up outside his block. |
@@ -1476,10 +1476,10 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 | **RG** | Defensive guard head up on you. Step past him. Climb to the playside linebacker. Head across him. |
 | **RT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
 | **RTE** | Defensive end on your inside shoulder. Turn him inside. The ball goes around behind you. |
-| **SL** | Run at the outside linebacker and screen him off. Stay in his way. |
+| **SL** | Run at the corner and screen him off. Stay in his way. |
 | **QB** | Open right and hand the ball to the left tight end as he comes across behind you, then fake a run to the left. |
-| **FB** | Lead outside our end. Block the first man out there — here it is the corner. |
-| **TB** | Run at the outside linebacker and screen him off. Stay in his way. |
+| **FB** | Lead outside our end. Block the first man out there — here it is the linebacker. |
+| **TB** | Run at the corner and screen him off. Stay in his way. |
 
 **Coaching points**
 
@@ -1505,10 +1505,10 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 | **RG** | Defensive guard head up on you. Cut him off — get between him and the ball. |
 | **RT** | Defensive end on your outside shoulder. Cut him off — get between him and the ball. |
 | **RTE** **(ball)** | Stay down in your stance — no motion. At the snap run flat behind the quarterback, take the handoff at full speed and get to the left edge. Turn up outside the trips. |
-| **SL** | Run at the outside linebacker and screen him off. Stay in his way. |
+| **SL** | Run at the corner and screen him off. Stay in his way. |
 | **QB** | Open left and hand the ball to the right tight end as he comes across behind you, then fake a run to the right. |
-| **FB** | Lead outside our end. Block the first man out there — here it is the corner. |
-| **TB** | Run at the outside linebacker and screen him off. Stay in his way. |
+| **FB** | Lead outside our end. Block the first man out there — here it is the linebacker. |
+| **TB** | Run at the corner and screen him off. Stay in his way. |
 
 **Coaching points**
 
@@ -1534,9 +1534,9 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 | **RG** | Pass block: step back, hands up, and stay between your man and the quarterback. |
 | **RT** | Pass block: step back, hands up, and stay between your man and the quarterback. |
 | **RTE** | Pass block: step back, hands up, and stay between your man and the quarterback. |
-| **SL** | Run at the outside linebacker and screen him off. Stay in his way. |
+| **SL** | Run at the corner and screen him off. Stay in his way. |
 | **QB** | Take the snap and throw it to the tailback right now, out in the flat. One step, no drop. If he is covered, throw it at his feet. |
-| **FB** | Lead outside our end. Block the first man out there — here it is the corner. |
+| **FB** | Lead outside our end. Block the first man out there — here it is the linebacker. |
 | **TB** **(ball)** | Slide out behind the bunch, catch it standing still, then get north off your two blockers. Do not run backwards to get around. |
 
 **Coaching points**
@@ -1564,9 +1564,9 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 | **RG** | Pass block: step back, hands up, and stay between your man and the quarterback. |
 | **RT** | Pass block: step back, hands up, and stay between your man and the quarterback. |
 | **RTE** | Pass block: step back, hands up, and stay between your man and the quarterback. |
-| **SL** | Run at the outside linebacker and screen him off. Stay in his way. |
+| **SL** | Run at the corner and screen him off. Stay in his way. |
 | **QB** | Take the snap and throw it to the tailback right now, out in the flat. One step, no drop. If he is covered, throw it at his feet. |
-| **FB** | Lead outside our end. Block the first man out there — here it is the corner. |
+| **FB** | Lead outside our end. Block the first man out there — here it is the linebacker. |
 | **TB** **(ball)** | Slide out behind the bunch, catch it standing still, then get north off your two blockers. Do not run backwards to get around. |
 
 **Coaching points**
@@ -1594,9 +1594,9 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 | **RG** | Defensive guard head up on you. Step past him. Climb to the playside linebacker. Head across him. |
 | **RT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
 | **RTE** | Defensive end on your inside shoulder. Turn him inside. The ball goes around behind you. |
-| **SL** | Run at the outside linebacker and screen him off. Stay in his way. |
+| **SL** | Run at the corner and screen him off. Stay in his way. |
 | **QB** **(ball)** | Take the snap and sweep right, flat and fast, behind the trips. Turn up outside the fullback. |
-| **FB** | Lead outside our end. Block the first man out there — here it is the corner. |
+| **FB** | Lead outside our end. Block the first man out there — here it is the linebacker. |
 | **TB** | Run hard to the left like you have the ball. Sell it all the way. |
 
 **Coaching points**
@@ -1623,9 +1623,9 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 | **RG** | Defensive guard head up on you. Cut him off — get between him and the ball. |
 | **RT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
 | **RTE** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
-| **SL** | Run at the outside linebacker and screen him off. Stay in his way. |
+| **SL** | Run at the corner and screen him off. Stay in his way. |
 | **QB** **(ball)** | Take the snap and sweep left, flat and fast, behind the trips. Turn up outside the fullback. |
-| **FB** | Lead outside our end. Block the first man out there — here it is the corner. |
+| **FB** | Lead outside our end. Block the first man out there — here it is the linebacker. |
 | **TB** | Run hard to the right like you have the ball. Sell it all the way. |
 
 **Coaching points**
@@ -1652,7 +1652,7 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 | **RG** | Pass block: step back, hands up, and stay between your man and the quarterback. |
 | **RT** | Pass block: step back, hands up, and stay between your man and the quarterback. |
 | **RTE** **(ball)** | Take one step up, then slant out flat toward the right sideline, almost along the line of scrimmage. Look for the ball right away. |
-| **SL** | Run at the outside linebacker and screen him off. Stay in his way. |
+| **SL** | Run at the corner and screen him off. Stay in his way. |
 | **QB** | Take the snap, take one step and throw to the right tight end as he slants out. If he is covered, tuck it and run. |
 | **FB** | Release straight up the field. You are clearing the corner so the slant has room. |
 | **TB** | Step up and out, hands up. Pick up anybody coming at the quarterback. |
@@ -1681,7 +1681,7 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 | **RG** | Pass block: step back, hands up, and stay between your man and the quarterback. |
 | **RT** | Pass block: step back, hands up, and stay between your man and the quarterback. |
 | **RTE** | Pass block: step back, hands up, and stay between your man and the quarterback. |
-| **SL** | Run at the outside linebacker and screen him off. Stay in his way. |
+| **SL** | Run at the corner and screen him off. Stay in his way. |
 | **QB** | Take the snap, take one step and throw to the left tight end as he slants out. If he is covered, tuck it and run. |
 | **FB** | Release straight up the field. You are clearing the corner so the slant has room. |
 | **TB** | Step up and out, hands up. Pick up anybody coming at the quarterback. |
