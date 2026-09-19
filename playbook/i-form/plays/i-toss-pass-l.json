@@ -36,7 +36,7 @@
       ]
     },
     "TB": {
-      "rule": "Catch the pitch and run the toss. At our end, pull up behind the line and throw it up the sideline to the tight end.",
+      "rule": "Catch the pitch and run the toss. At our tight end, pull up behind the line and throw it flat to the tight end in front of you.",
       "type": "pass",
       "path": [
         [
@@ -44,34 +44,30 @@
           0.7
         ],
         [
-          -5.4,
+          -5.0,
           1.2
         ],
         [
-          -7.6,
-          2.8
+          -6.4,
+          2.6
         ],
         [
-          -8.2,
-          4.0
+          -6.6,
+          3.9
         ]
       ]
     },
     "LTE": {
-      "rule": "Block the end the way you do on the toss, then slip outside him and run up the sideline. Look back over your outside shoulder.",
+      "rule": "Block the end the way you do on the toss, then slant out flat toward the sideline, almost on the line. Look for the ball right away.",
       "type": "pass",
       "path": [
         [
-          -0.6,
-          1.6
+          -0.8,
+          0.6
         ],
         [
-          -2.2,
-          4.2
-        ],
-        [
-          -4.0,
-          6.4
+          -5.0,
+          1.2
         ]
       ]
     },
@@ -84,16 +80,16 @@
           0.6
         ],
         [
-          -5.6,
+          -5.0,
           1.6
         ],
         [
-          -7.6,
-          3.4
+          -6.6,
+          3.2
         ],
         [
-          -8.2,
-          4.8
+          -7.0,
+          4.4
         ]
       ]
     }
@@ -101,7 +97,7 @@
   "coaching_points": [
     "Everything is the toss until he pulls up. Same pitch, same path, same speed -- a tailback who slows down to throw has told them.",
     "He throws from behind the line. Crossing it is a penalty, so drill the pull-up, not the arm.",
-    "The tight end blocks the end first and then slips outside him. That block is what the toss shows them, and it is what gets him loose.",
+    "The tight end blocks the end first, then slants out flat, almost on the line. It is a three-yard throw and it should never be more than that.",
     "Call it after the toss has hurt them, on first or second down, where an incompletion costs nothing."
   ]
 }

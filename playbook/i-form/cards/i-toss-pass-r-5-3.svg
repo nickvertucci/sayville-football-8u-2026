@@ -46,16 +46,16 @@
 <line x1="398.0" y1="356.4" x2="379.6" y2="356.4" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 <path d="M426.6,337.5 L426.6,356.4" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
 <line x1="435.8" y1="356.4" x2="417.4" y2="356.4" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
-<path d="M464.4,337.5 L480.6,294.3 L523.8,224.1 L572.4,164.7" fill="none" stroke="#b3001b" stroke-width="4.6" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 5"/>
-<polygon points="572.4,164.7 568.4,179.3 558.9,171.5" fill="#b3001b"/>
+<path d="M464.4,337.5 L486.0,321.3 L599.4,305.1" fill="none" stroke="#b3001b" stroke-width="4.6" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 5"/>
+<polygon points="599.4,305.1 586.6,313.2 584.9,300.9" fill="#b3001b"/>
 <path d="M502.2,364.5 L586.7,252.7" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
 <line x1="579.4" y1="247.2" x2="594.0" y2="258.3" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 <path d="M351.0,364.5 L329.4,372.6 L226.8,367.2" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="0.1 7"/>
 <polygon points="226.8,367.2 237.4,363.1 236.9,372.4" fill="#14213d"/>
-<path d="M351.0,413.1 L421.2,396.9 L502.2,369.9 L556.2,321.3 L572.4,283.5" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-<line x1="564.0" y1="279.9" x2="580.8" y2="287.1" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
-<path d="M351.0,472.5 L410.4,453.6 L496.8,440.1 L556.2,396.9 L572.4,364.5" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 5"/>
-<polygon points="572.4,364.5 571.9,375.8 563.6,371.7" fill="#14213d"/>
+<path d="M351.0,413.1 L421.2,396.9 L486.0,369.9 L529.2,326.7 L540.0,294.3" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="531.3" y1="291.4" x2="548.7" y2="297.2" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
+<path d="M351.0,472.5 L410.4,453.6 L486.0,440.1 L523.8,402.3 L529.2,367.2" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 5"/>
+<polygon points="529.2,367.2 532.2,378.1 523.1,376.7" fill="#14213d"/>
 <path d="M351.0,364.5 L410.4,453.6" fill="none" stroke="#b3001b" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="0.1 7"/>
 <rect x="224.1" y="324.0" width="27.0" height="27.0" rx="3" fill="#ffffff" stroke="#14213d" stroke-width="2.6"/>
 <text x="237.6" y="342.0" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">LTE</text>
@@ -109,9 +109,9 @@
 <text x="52" y="868" font-size="12" fill="#111318">quarterback.</text>
 <text x="310" y="578" font-size="12" font-weight="700" fill="#111318">RTE</text>
 <text x="344" y="578" font-size="12" fill="#111318">Block the end the way you do on the</text>
-<text x="344" y="596" font-size="12" fill="#111318">toss, then slip outside him and run up</text>
-<text x="344" y="612" font-size="12" fill="#111318">the sideline. Look back over your</text>
-<text x="344" y="630" font-size="12" fill="#111318">outside shoulder.</text>
+<text x="344" y="596" font-size="12" fill="#111318">toss, then slant out flat toward the</text>
+<text x="344" y="612" font-size="12" fill="#111318">sideline, almost on the line. Look for</text>
+<text x="344" y="630" font-size="12" fill="#111318">the ball right away.</text>
 <text x="310" y="646" font-size="12" font-weight="700" fill="#111318">SL</text>
 <text x="344" y="646" font-size="12" fill="#111318">Run at the corner and screen him off.</text>
 <text x="344" y="664" font-size="12" fill="#111318">Stay in his way.</text>
@@ -125,17 +125,17 @@
 <text x="344" y="766" font-size="12" fill="#111318">He is the one who gets to the thrower.</text>
 <text x="310" y="782" font-size="12" font-weight="700" fill="#111318">TB</text>
 <text x="344" y="782" font-size="12" fill="#111318">Catch the pitch and run the toss. At</text>
-<text x="344" y="800" font-size="12" fill="#111318">our end, pull up behind the line and</text>
-<text x="344" y="816" font-size="12" fill="#111318">throw it up the sideline to the tight</text>
-<text x="344" y="834" font-size="12" fill="#111318">end.</text>
+<text x="344" y="800" font-size="12" fill="#111318">our tight end, pull up behind the line</text>
+<text x="344" y="816" font-size="12" fill="#111318">and throw it flat to the tight end in</text>
+<text x="344" y="834" font-size="12" fill="#111318">front of you.</text>
 <line x1="18" y1="874" x2="603" y2="874" stroke="#c8cdd6" stroke-width="1"/>
 <text x="18" y="892" font-size="11" font-weight="700" fill="#5b6472" letter-spacing="1">COACHING POINTS</text>
 <text x="18" y="912" font-size="12" fill="#111318">Everything is the toss until he pulls up. Same pitch, same path, same speed -- a</text>
 <text x="18" y="930" font-size="12" fill="#111318">tailback who slows down to throw has told them.</text>
 <text x="18" y="946" font-size="12" fill="#111318">He throws from behind the line. Crossing it is a penalty, so drill the pull-up, not</text>
 <text x="18" y="964" font-size="12" fill="#111318">the arm.</text>
-<text x="18" y="980" font-size="12" fill="#111318">The tight end blocks the end first and then slips outside him. That block is what the</text>
-<text x="18" y="998" font-size="12" fill="#111318">toss shows them, and it is what gets him loose.</text>
+<text x="18" y="980" font-size="12" fill="#111318">The tight end blocks the end first, then slants out flat, almost on the line. It is a</text>
+<text x="18" y="998" font-size="12" fill="#111318">three-yard throw and it should never be more than that.</text>
 <text x="18" y="1014" font-size="12" fill="#111318">Call it after the toss has hurt them, on first or second down, where an incompletion</text>
 <text x="18" y="1032" font-size="12" fill="#111318">costs nothing.</text>
 </svg>
