@@ -20,40 +20,40 @@
 <text x="388.8" y="284.5" text-anchor="middle" font-size="12.5" fill="#9aa2ae" font-weight="600">RDG</text>
 <line x1="439.0" y1="293.2" x2="457.4" y2="311.6" stroke="#9aa2ae" stroke-width="3.6"/><line x1="457.4" y1="293.2" x2="439.0" y2="311.6" stroke="#9aa2ae" stroke-width="3.6"/>
 <text x="448.2" y="284.5" text-anchor="middle" font-size="12.5" fill="#9aa2ae" font-weight="600">RDE</text>
-<line x1="217.6" y1="233.8" x2="236.0" y2="252.2" stroke="#9aa2ae" stroke-width="3.6"/><line x1="236.0" y1="233.8" x2="217.6" y2="252.2" stroke="#9aa2ae" stroke-width="3.6"/>
-<text x="226.8" y="225.2" text-anchor="middle" font-size="12.5" fill="#9aa2ae" font-weight="600">LOLB</text>
-<line x1="274.3" y1="233.8" x2="292.7" y2="252.2" stroke="#9aa2ae" stroke-width="3.6"/><line x1="292.7" y1="233.8" x2="274.3" y2="252.2" stroke="#9aa2ae" stroke-width="3.6"/>
-<text x="283.5" y="225.2" text-anchor="middle" font-size="12.5" fill="#9aa2ae" font-weight="600">LILB</text>
-<line x1="409.3" y1="233.8" x2="427.7" y2="252.2" stroke="#9aa2ae" stroke-width="3.6"/><line x1="427.7" y1="233.8" x2="409.3" y2="252.2" stroke="#9aa2ae" stroke-width="3.6"/>
-<text x="418.5" y="225.2" text-anchor="middle" font-size="12.5" fill="#9aa2ae" font-weight="600">RILB</text>
-<line x1="466.0" y1="233.8" x2="484.4" y2="252.2" stroke="#9aa2ae" stroke-width="3.6"/><line x1="484.4" y1="233.8" x2="466.0" y2="252.2" stroke="#9aa2ae" stroke-width="3.6"/>
-<text x="475.2" y="225.2" text-anchor="middle" font-size="12.5" fill="#9aa2ae" font-weight="600">ROLB</text>
-<line x1="85.3" y1="233.8" x2="103.7" y2="252.2" stroke="#9aa2ae" stroke-width="3.6"/><line x1="103.7" y1="233.8" x2="85.3" y2="252.2" stroke="#9aa2ae" stroke-width="3.6"/>
-<text x="94.5" y="225.2" text-anchor="middle" font-size="12.5" fill="#9aa2ae" font-weight="600">LC</text>
-<line x1="598.3" y1="233.8" x2="616.7" y2="252.2" stroke="#9aa2ae" stroke-width="3.6"/><line x1="616.7" y1="233.8" x2="598.3" y2="252.2" stroke="#9aa2ae" stroke-width="3.6"/>
-<text x="607.5" y="225.2" text-anchor="middle" font-size="12.5" fill="#9aa2ae" font-weight="600">RC</text>
+<line x1="217.6" y1="196.0" x2="236.0" y2="214.4" stroke="#9aa2ae" stroke-width="3.6"/><line x1="236.0" y1="196.0" x2="217.6" y2="214.4" stroke="#9aa2ae" stroke-width="3.6"/>
+<text x="226.8" y="187.3" text-anchor="middle" font-size="12.5" fill="#9aa2ae" font-weight="600">LOLB</text>
+<line x1="274.3" y1="196.0" x2="292.7" y2="214.4" stroke="#9aa2ae" stroke-width="3.6"/><line x1="292.7" y1="196.0" x2="274.3" y2="214.4" stroke="#9aa2ae" stroke-width="3.6"/>
+<text x="283.5" y="187.3" text-anchor="middle" font-size="12.5" fill="#9aa2ae" font-weight="600">LILB</text>
+<line x1="409.3" y1="196.0" x2="427.7" y2="214.4" stroke="#9aa2ae" stroke-width="3.6"/><line x1="427.7" y1="196.0" x2="409.3" y2="214.4" stroke="#9aa2ae" stroke-width="3.6"/>
+<text x="418.5" y="187.3" text-anchor="middle" font-size="12.5" fill="#9aa2ae" font-weight="600">RILB</text>
+<line x1="466.0" y1="196.0" x2="484.4" y2="214.4" stroke="#9aa2ae" stroke-width="3.6"/><line x1="484.4" y1="196.0" x2="466.0" y2="214.4" stroke="#9aa2ae" stroke-width="3.6"/>
+<text x="475.2" y="187.3" text-anchor="middle" font-size="12.5" fill="#9aa2ae" font-weight="600">ROLB</text>
+<line x1="85.3" y1="196.0" x2="103.7" y2="214.4" stroke="#9aa2ae" stroke-width="3.6"/><line x1="103.7" y1="196.0" x2="85.3" y2="214.4" stroke="#9aa2ae" stroke-width="3.6"/>
+<text x="94.5" y="187.3" text-anchor="middle" font-size="12.5" fill="#9aa2ae" font-weight="600">LC</text>
+<line x1="598.3" y1="196.0" x2="616.7" y2="214.4" stroke="#9aa2ae" stroke-width="3.6"/><line x1="616.7" y1="196.0" x2="598.3" y2="214.4" stroke="#9aa2ae" stroke-width="3.6"/>
+<text x="607.5" y="187.3" text-anchor="middle" font-size="12.5" fill="#9aa2ae" font-weight="600">RC</text>
 <line x1="341.8" y1="98.8" x2="360.2" y2="117.2" stroke="#9aa2ae" stroke-width="3.6"/><line x1="360.2" y1="98.8" x2="341.8" y2="117.2" stroke="#9aa2ae" stroke-width="3.6"/>
 <text x="351.0" y="90.2" text-anchor="middle" font-size="12.5" fill="#9aa2ae" font-weight="600">FS</text>
 <path d="M237.6,337.5 L248.7,313.5" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
 <line x1="240.3" y1="309.6" x2="257.0" y2="317.3" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
-<path d="M275.4,337.5 L304.3,310.8 L282.4,255.1" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-<line x1="273.9" y1="258.5" x2="291.0" y2="251.8" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
+<path d="M275.4,337.5 L304.3,310.8 L282.7,217.4" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="273.7" y1="219.4" x2="291.6" y2="215.3" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 <path d="M313.2,337.5 L313.2,314.6" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
 <line x1="304.0" y1="314.6" x2="322.4" y2="314.6" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
-<path d="M351.0,337.5 L379.9,310.8 L411.5,253.0" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-<line x1="403.4" y1="248.6" x2="419.5" y2="257.4" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
+<path d="M351.0,337.5 L379.9,310.8 L413.1,216.0" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="404.4" y1="213.0" x2="421.8" y2="219.0" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 <path d="M388.8,337.5 L388.8,314.6" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
 <line x1="379.6" y1="314.6" x2="398.0" y2="314.6" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
-<path d="M426.6,337.5 L441.7,312.7 L469.5,253.8" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-<line x1="461.2" y1="249.9" x2="477.8" y2="257.7" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
+<path d="M426.6,337.5 L441.7,312.7 L470.9,216.5" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="462.1" y1="213.9" x2="479.7" y2="219.2" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 <path d="M464.4,337.5 L453.3,313.5" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
 <line x1="445.0" y1="317.3" x2="461.7" y2="309.6" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
-<path d="M199.8,364.5 L102.3,252.2" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-<line x1="95.4" y1="258.2" x2="109.3" y2="246.2" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
+<path d="M199.8,364.5 L224.6,217.1" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="215.6" y1="215.6" x2="233.7" y2="218.6" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 <path d="M351.0,459.0 L372.6,464.4 L453.6,453.6" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 5"/>
 <polygon points="453.6,453.6 443.9,459.6 442.7,450.4" fill="#14213d"/>
-<path d="M297.0,459.0 C279.0,448.2 200.1,428.3 189.0,394.2 C177.9,360.1 223.6,277.9 230.6,254.6" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-<line x1="221.8" y1="252.0" x2="239.4" y2="257.2" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
+<path d="M297.0,459.0 C279.0,448.2 200.2,434.6 189.0,394.2 C177.8,353.8 223.2,246.4 230.0,216.8" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="221.1" y1="214.7" x2="239.0" y2="218.9" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 <path d="M405.0,459.0 C399.6,455.9 395.1,444.6 372.6,440.1 C350.1,435.6 305.1,441.4 270.0,432.0 C234.9,422.6 180.0,402.8 162.0,383.4 C144.0,364.0 162.0,341.5 162.0,315.9 C162.0,290.2 162.0,259.6 162.0,229.5 C162.0,199.3 162.0,150.8 162.0,135.0" fill="none" stroke="#b3001b" stroke-width="4.6" stroke-linecap="round" stroke-linejoin="round"/>
 <polygon points="162.0,135.0 168.2,148.8 155.8,148.8" fill="#b3001b"/>
 
@@ -101,8 +101,8 @@
 <text x="310" y="578" font-size="12" font-weight="700" fill="#111318">RTE</text>
 <text x="344" y="578" font-size="12" fill="#111318">Block the right defensive end.</text>
 <text x="310" y="596" font-size="12" font-weight="700" fill="#111318">SL</text>
-<text x="344" y="596" font-size="12" fill="#111318">Run at the corner and screen him off.</text>
-<text x="344" y="612" font-size="12" fill="#111318">Stay in his way.</text>
+<text x="344" y="596" font-size="12" fill="#111318">Run at the outside linebacker and</text>
+<text x="344" y="612" font-size="12" fill="#111318">screen him off. Stay in his way.</text>
 <text x="310" y="630" font-size="12" font-weight="700" fill="#111318">QB</text>
 <text x="344" y="630" font-size="12" fill="#111318">Hand the ball to the right halfback as</text>
 <text x="344" y="646" font-size="12" fill="#111318">he crosses in front of you, then fake a</text>
