@@ -369,14 +369,6 @@ table.dc-board td.dc-cell.starter { font-weight: 800; }
   display: grid; grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 8px; padding-bottom: 2px;
 }
-/* The defence gets two across where the offense takes three. Not a preference: its
-   spot labels are LOLB and RILB where the offense's are QB and C, and its sub card
-   prints those labels again after each incoming name. Three across left the body
-   about 116px for a label and a name, which wrapped "Brayden H." onto two lines.
-   Two across gives both halves the room their own content needs. */
-.dc-side[data-side="defense"] .dc-pkgrow {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-}
 @media (max-width: 620px) { .dc-pkgrow { grid-template-columns: 1fr; } }
 .dc-pkg {
   display: flex; gap: 8px; align-items: flex-start;
@@ -419,8 +411,11 @@ table.dc-sub thead th {
   font-size: 10.5px; font-weight: 800; letter-spacing: .4px;
   text-transform: uppercase; color: var(--muted);
 }
+/* The spot after an incoming name is an annotation, not the name, and it was set only
+   two points below it. Smaller is both truer and the cheapest width on the card --
+   which the defence needs, where the spot is LOLB rather than C. */
 .dc-sub-pos {
-  font-size: 11px; font-weight: 800; letter-spacing: .2px;
+  font-size: 9.5px; font-weight: 800; letter-spacing: .2px;
   text-transform: uppercase; color: var(--muted);
 }
 .dc-pkg-slot {
@@ -442,6 +437,23 @@ table.dc-sub thead th {
 .dc-pkg-slot[data-n]::before {
   content: attr(data-spot) " (" attr(data-n) ")";
 }
+/* The defence's two halves both carry longer strings than the offense's -- LOLB where
+   it has C, and that same label again after each incoming name on the sub card. So it
+   gets four more points of card and eight fewer of label column. Offense is left
+   exactly as it was; it has neither problem. */
+.dc-side[data-side="defense"] .dc-subcard { flex-basis: 58%; }
+.dc-side[data-side="defense"] .dc-pkg-slot[data-spot]::before { flex-basis: 30px; }
+/* And the table itself a size down. The widest row the defence prints is Rampage's
+   "Brayden S." against "Brooks A. (RILB)" -- two full names and a four-letter spot in
+   one row, which the offense never has to fit. */
+.dc-side[data-side="defense"] table.dc-sub { font-size: 11.5px; }
+/* The last few points come out of the gutter between Out and In rather than out of the
+   body beside it: the body has about seven points of slack left and the card has none.
+   Longest row on the board is Hammer's "Brayden H. (LDG)". */
+.dc-side[data-side="defense"] table.dc-sub th,
+.dc-side[data-side="defense"] table.dc-sub td { padding-right: 4px; }
+.dc-side[data-side="defense"] table.dc-sub th:last-child,
+.dc-side[data-side="defense"] table.dc-sub td:last-child { padding-left: 4px; }
 .dc-pkg-slot + .dc-pkg-slot { margin-top: 1px; }
 /* A rule where the unit changes, so an eleven reads as its groups rather than as a
    list of eleven names. Offense breaks before the tight ends and before the line;
