@@ -369,6 +369,14 @@ table.dc-board td.dc-cell.starter { font-weight: 800; }
   display: grid; grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 8px; padding-bottom: 2px;
 }
+/* The defence gets two across where the offense takes three. Not a preference: its
+   spot labels are LOLB and RILB where the offense's are QB and C, and its sub card
+   prints those labels again after each incoming name. Three across left the body
+   about 116px for a label and a name, which wrapped "Brayden H." onto two lines.
+   Two across gives both halves the room their own content needs. */
+.dc-side[data-side="defense"] .dc-pkgrow {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
 @media (max-width: 620px) { .dc-pkgrow { grid-template-columns: 1fr; } }
 .dc-pkg {
   display: flex; gap: 8px; align-items: flex-start;
@@ -380,8 +388,12 @@ table.dc-board td.dc-cell.starter { font-weight: 800; }
   margin: 0 0 4px; font-size: 13.5px; font-weight: 800; letter-spacing: 1.1px;
   text-transform: uppercase; color: var(--muted);
 }
+/* min-width stays at 168: it is what the offense's three-across cards can spare, and
+   raising it for the defence's longer labels squeezed the offense body until "Brogan
+   A." wrapped. The defence gets its room from being two across instead, so 54% of a
+   wider card clears the cap rather than the floor. */
 .dc-subcard {
-  flex: 0 0 54%; min-width: 168px; max-width: 250px;
+  flex: 0 0 54%; min-width: 168px; max-width: 272px;
   border: 1px solid var(--line); border-radius: 8px; padding: 5px 7px;
   background: var(--panel-2); align-self: start;
 }
