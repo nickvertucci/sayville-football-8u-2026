@@ -445,7 +445,7 @@ table.dc-board td.dc-cell.starter { font-weight: 800; }
    A." wrapped. The defence gets its room from being two across instead, so 54% of a
    wider card clears the cap rather than the floor. */
 .dc-subcard {
-  flex: 0 0 54%; min-width: 168px; max-width: 272px;
+  flex: 0 0 56%; min-width: 168px; max-width: 272px;
   border: 1px solid var(--line); border-radius: 8px; padding: 5px 7px;
   background: var(--panel-2); align-self: start;
 }
@@ -460,12 +460,16 @@ table.dc-sub {
   width: 100%; border-collapse: collapse;
   font-size: 13px; line-height: 1.3;
 }
+/* Four points of gutter, not seven. The cells are nowrap, so a row too wide for the
+   card does not wrap or shrink -- it runs out under the card's edge, which is what
+   "Thomas D. (TB)" has been doing in Maverick and "Liam M. (TB)" in Bigshow. Three
+   points either side of the rule is the cheapest fourteen the card can give back. */
 table.dc-sub th, table.dc-sub td {
-  padding: 1px 7px 1px 0; text-align: left; vertical-align: top;
+  padding: 1px 4px 1px 0; text-align: left; vertical-align: top;
   font-weight: 700; color: var(--ink); white-space: nowrap;
 }
 table.dc-sub th:last-child, table.dc-sub td:last-child {
-  border-left: 1px solid var(--line); padding-left: 7px;
+  border-left: 1px solid var(--line); padding-left: 4px;
 }
 table.dc-sub thead th {
   font-size: 10.5px; font-weight: 800; letter-spacing: .4px;
@@ -507,13 +511,7 @@ table.dc-sub thead th {
    "Brayden S." against "Brooks A. (RILB)" -- two full names and a four-letter spot in
    one row, which the offense never has to fit. */
 .dc-side[data-side="defense"] table.dc-sub { font-size: 11.5px; }
-/* The last few points come out of the gutter between Out and In rather than out of the
-   body beside it: the body has about seven points of slack left and the card has none.
-   Longest row on the board is Hammer's "Brayden H. (LDG)". */
-.dc-side[data-side="defense"] table.dc-sub th,
-.dc-side[data-side="defense"] table.dc-sub td { padding-right: 4px; }
-.dc-side[data-side="defense"] table.dc-sub th:last-child,
-.dc-side[data-side="defense"] table.dc-sub td:last-child { padding-left: 4px; }
+
 .dc-pkg-slot + .dc-pkg-slot { margin-top: 1px; }
 /* A rule where the unit changes, so an eleven reads as its groups rather than as a
    list of eleven names. Offense breaks before the tight ends and before the line;
@@ -1734,10 +1732,14 @@ footer.site a { color: var(--accent-ink); }
   }
   table.dc-board { min-width: 0; }
   /* Same again on paper: the header carries the width, the body cell only wraps.
-     38mm rather than 33 because the labels grew by a nickname. */
-  table.dc-board thead th:first-child { width: 38mm; }
-  table.dc-board .dc-poscell { white-space: normal; }
-  table.dc-board .dc-poscell .dc-label { display: block; margin-left: 0; }
+     The label sits beside the abbreviation, not under it, which is what turning the
+     sheet bought. Stacked, every one of the eleven rows was two lines tall and the
+     board alone ran 500 points -- more than the packages and the heading together.
+     Beside it, at 56mm of a landscape sheet's width, a row is one line and the board
+     is worth about 260. That is the whole reason both sides fit their sheet. */
+  table.dc-board thead th:first-child { width: 56mm; }
+  table.dc-board .dc-poscell { white-space: nowrap; }
+  table.dc-board .dc-poscell .dc-label { display: inline; margin-left: 5px; }
   table.dc-board th, table.dc-board td { padding: 1.5px 6px; }
   table.dc-board .dc-poscell .dc-abbr { font-size: 9pt; }
   table.dc-board .dc-poscell .dc-label { font-size: 7pt; }
@@ -4072,7 +4074,10 @@ def write_depth_chart(formations: list[dict], defenses: dict, root: Path) -> str
         # Pin the margin so a side cannot be pushed onto a second sheet by a print
         # dialog set to wide margins. Same 9mm the play-card book uses. The paper size
         # is deliberately not pinned: whatever is in the tray, Letter or A4, both fit.
-        page_rule="margin: 9mm;",
+        # Landscape. Seven columns of board and three package cards across are a
+        # wide thing on a tall sheet; turned, each side of the ball has room
+        # rather than having to be squeezed into it.
+        page_rule="size: letter landscape; margin: 9mm;",
     )
 
 
