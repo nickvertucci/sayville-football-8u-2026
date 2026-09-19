@@ -593,6 +593,44 @@ table.xl.xl-plays td {
   font-weight: 500; text-transform: none; letter-spacing: 0; color: var(--muted);
   font-size: 12.5px; margin-left: 8px;
 }
+/* ------------------------------------------------------- call sheet tabs --
+   Two radios and two labels. No script, so the tabs survive JavaScript being off,
+   and the checked radio drives which pane shows through a sibling selector. */
+.sheet-tabs > input { position: absolute; opacity: 0; pointer-events: none; }
+.tabrow {
+  display: flex; gap: 6px; margin: 10px 0 14px;
+  border-bottom: 2px solid var(--line);
+}
+.tab {
+  padding: 7px 18px; font-weight: 800; font-size: 13px; letter-spacing: 1.1px;
+  text-transform: uppercase; color: var(--muted); cursor: pointer;
+  border: 2px solid transparent; border-bottom: 0; border-radius: 8px 8px 0 0;
+  margin-bottom: -2px;
+}
+.tab:hover { color: var(--ink); }
+#tab-off:checked ~ .tabrow .tab[for="tab-off"],
+#tab-def:checked ~ .tabrow .tab[for="tab-def"] {
+  color: var(--ink); border-color: var(--line); background: var(--panel);
+  border-bottom: 2px solid var(--panel);
+}
+#tab-off:focus-visible ~ .tabrow .tab[for="tab-off"],
+#tab-def:focus-visible ~ .tabrow .tab[for="tab-def"] { outline: 2px solid var(--accent-solid); }
+.tabpane { display: none; }
+#tab-off:checked ~ .pane-off, #tab-def:checked ~ .pane-def { display: block; }
+
+/* ------------------------------------------------- defensive call sheet --
+   One table per front, positions down the side and packages across, so a cell is
+   the boy who plays that spot in that package. The offensive sheet's title bar and
+   table furniture are reused rather than reinvented: both are call sheets. */
+.df-fronts { display: grid; gap: 16px; margin: 10px 0 20px; }
+table.xl.df-grid { table-layout: auto; }
+table.xl.df-grid td, table.xl.df-grid th { text-align: center; }
+table.xl.df-grid .df-pos {
+  width: 58px; text-align: left; font-weight: 800; font-size: 11px;
+  letter-spacing: .4px; color: var(--muted); background: var(--panel-2);
+}
+table.xl.df-grid tbody td { font-weight: 700; }
+
 .pk-grid {
   display: grid; gap: 10px; margin: 8px 0 24px; align-items: start;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -791,6 +829,22 @@ table.xl.pk-plays td {
      both things you know by the time you are holding it, and between them they were
      most of an inch of the one sheet. The rule under the heading stays -- it is what
      separates the packages from the formation blocks -- so it moves onto the grid. */
+  /* Tabs are a screen affordance; on paper both panes print, a sheet each. The row
+     itself has to go as well as being redundant -- its margins alone were enough to
+     push the offensive sheet onto a second page. */
+  .tabrow { display: none; }
+  .tabpane { display: block !important; }
+  .pane-def { page-break-before: always; break-before: page; }
+  /* The defensive sheet: three fronts, eleven rows and six packages each, then the
+     blank front under them. Small enough that the whole thing is one sheet, the way
+     the offensive side is. */
+  .df-fronts { gap: 5px; margin: 0; }
+  .df-front { break-inside: avoid; }
+  table.xl.df-grid { font-size: 8px; }
+  table.xl.df-grid td, table.xl.df-grid th { padding: 0 2px; height: auto;
+                                             line-height: 1.25; }
+  table.xl.df-grid thead th { font-size: 7px; }
+  table.xl.df-grid .df-pos { width: 30px; font-size: 7px; background: none; }
   .calls-page .page-head { display: none; }
   .pk-head { display: none; }
   .pk-sub { display: none; }

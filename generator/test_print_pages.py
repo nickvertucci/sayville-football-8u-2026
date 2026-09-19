@@ -257,15 +257,19 @@ def main(argv=None) -> int:
                 "defense must be one sheet each"
             )
 
-        # The call sheet is one landscape sheet with every package on it. It grows a
-        # sheet with every package added to roster.json, which is how it went to two
-        # pages the day the depth chart went from three packages to five.
+        # The call sheet is two sheets now: the offensive one, then the defensive one.
+        # They are tabs on screen and pages on paper, so a coach who hits Print gets
+        # both rather than whichever half was showing. Each is one sheet and has to
+        # stay one -- the offensive side grows with every package added to
+        # roster.json, which is how it went to two pages the day the depth chart went
+        # from three packages to five, and the defensive side grows with every front
+        # on it.
         calls = render(chrome, ROOT / "calls.html", tmp / "calls.pdf", profile)
-        print(f"calls.html: {calls} pages (expected 1)")
-        if calls != 1:
+        print(f"calls.html: {calls} pages (expected 2)")
+        if calls != 2:
             failures.append(
-                f"calls.html renders {calls} pages, expected 1 — every package must fit "
-                "on one printed page"
+                f"calls.html renders {calls} pages, expected 2 — the offensive sheet "
+                "and the defensive sheet must be one printed page each"
             )
         for name, pdf in (("print.html", tmp / "book.pdf"),
                           ("depth-chart.html", tmp / "depth.pdf"),
