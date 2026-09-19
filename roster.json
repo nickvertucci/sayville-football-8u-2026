@@ -77,18 +77,22 @@
   },
   "defense": {
     "LE": [
+      "Philip A.",
       "Brogan A.",
       "Ace A."
     ],
     "LT": [
+      "Elias F.",
       "Jaxon E.",
       "Mason A."
     ],
     "RT": [
+      "Jaxon E.",
       "Elias F.",
       "Brooks A."
     ],
     "RE": [
+      "Brayden S.",
       "Luca D.",
       "Gavin P."
     ],
@@ -101,21 +105,26 @@
       "Brayden H."
     ],
     "S": [
+      "Brogan A.",
       "Camden G."
     ],
     "R": [
+      "Camden G.",
       "Brayden S.",
       "Joseph P."
     ],
     "LC": [
+      "Ryan S.",
       "Nico V.",
       "Kilian F."
     ],
     "RC": [
+      "Nico V.",
       "Philip A.",
       "Liam M."
     ],
     "FS": [
+      "Liam M.",
       "Ryan S.",
       "Thomas D."
     ]
