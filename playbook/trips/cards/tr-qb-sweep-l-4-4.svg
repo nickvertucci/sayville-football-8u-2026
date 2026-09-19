@@ -48,12 +48,12 @@
 <line x1="391.5" y1="317.5" x2="403.9" y2="304.0" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 <path d="M464.4,337.5 L453.3,313.5" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
 <line x1="445.0" y1="317.3" x2="461.7" y2="309.6" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
-<path d="M199.8,364.5 L224.6,217.1" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-<line x1="215.6" y1="215.6" x2="233.7" y2="218.6" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
+<path d="M199.8,364.5 L101.2,215.5" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="93.6" y1="220.5" x2="108.9" y2="210.4" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 <path d="M351.0,364.5 C343.8,367.2 334.8,377.1 307.8,380.7 C280.8,384.3 220.1,389.7 189.0,386.1 C157.9,382.5 134.1,374.4 121.5,359.1 C108.9,343.8 114.7,320.4 113.4,294.3 C112.0,268.2 113.4,217.8 113.4,202.5" fill="none" stroke="#b3001b" stroke-width="4.6" stroke-linecap="round" stroke-linejoin="round"/>
 <polygon points="113.4,202.5 119.6,216.3 107.2,216.3" fill="#b3001b"/>
-<path d="M135.0,364.5 L104.8,307.8 L97.5,217.1" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-<line x1="88.3" y1="217.8" x2="106.6" y2="216.3" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
+<path d="M135.0,364.5 L177.4,307.8 L220.9,215.7" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="212.6" y1="211.8" x2="229.2" y2="219.6" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 <path d="M167.4,391.5 L275.4,386.1 L383.4,375.3" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 5"/>
 <polygon points="383.4,375.3 373.6,380.9 372.6,371.7" fill="#14213d"/>
 
@@ -110,18 +110,19 @@
 <text x="344" y="596" font-size="12" fill="#111318">Cut him off — get between him and the</text>
 <text x="344" y="612" font-size="12" fill="#111318">ball.</text>
 <text x="310" y="630" font-size="12" font-weight="700" fill="#111318">SL</text>
-<text x="344" y="630" font-size="12" fill="#111318">Run at the outside linebacker and</text>
-<text x="344" y="646" font-size="12" fill="#111318">screen him off. Stay in his way.</text>
+<text x="344" y="630" font-size="12" fill="#111318">Run at the corner and screen him off.</text>
+<text x="344" y="646" font-size="12" fill="#111318">Stay in his way.</text>
 <text x="310" y="664" font-size="12" font-weight="700" fill="#111318">QB</text>
 <text x="344" y="664" font-size="12" fill="#111318">Take the snap and sweep left, flat and</text>
 <text x="344" y="680" font-size="12" fill="#111318">fast, behind the trips. Turn up outside</text>
 <text x="344" y="698" font-size="12" fill="#111318">the fullback.</text>
 <text x="310" y="714" font-size="12" font-weight="700" fill="#111318">FB</text>
 <text x="344" y="714" font-size="12" fill="#111318">Lead outside our end. Block the first</text>
-<text x="344" y="732" font-size="12" fill="#111318">man out there — here it is the corner.</text>
-<text x="310" y="748" font-size="12" font-weight="700" fill="#111318">TB</text>
-<text x="344" y="748" font-size="12" fill="#111318">Run hard to the right like you have the</text>
-<text x="344" y="766" font-size="12" fill="#111318">ball. Sell it all the way.</text>
+<text x="344" y="732" font-size="12" fill="#111318">man out there — here it is the</text>
+<text x="344" y="748" font-size="12" fill="#111318">linebacker.</text>
+<text x="310" y="766" font-size="12" font-weight="700" fill="#111318">TB</text>
+<text x="344" y="766" font-size="12" fill="#111318">Run hard to the right like you have the</text>
+<text x="344" y="782" font-size="12" fill="#111318">ball. Sell it all the way.</text>
 <line x1="18" y1="840" x2="603" y2="840" stroke="#c8cdd6" stroke-width="1"/>
 <text x="18" y="858" font-size="11" font-weight="700" fill="#5b6472" letter-spacing="1">COACHING POINTS</text>
 <text x="18" y="878" font-size="12" fill="#111318">The quarterback keeps it every time — tell him before the snap, there is no read.</text>

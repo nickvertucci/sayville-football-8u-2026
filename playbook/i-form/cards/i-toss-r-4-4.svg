@@ -48,12 +48,12 @@
 <line x1="391.5" y1="317.5" x2="403.9" y2="304.0" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 <path d="M464.4,337.5 L453.3,313.5" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
 <line x1="445.0" y1="317.3" x2="461.7" y2="309.6" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
-<path d="M502.2,364.5 L477.4,217.1" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-<line x1="468.3" y1="218.6" x2="486.4" y2="215.6" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
+<path d="M502.2,364.5 L600.8,215.5" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="593.1" y1="210.4" x2="608.4" y2="220.5" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 <path d="M351.0,364.5 L329.4,372.6 L226.8,367.2" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="0.1 7"/>
 <polygon points="226.8,367.2 237.4,363.1 236.9,372.4" fill="#14213d"/>
-<path d="M351.0,413.1 L500.3,307.8 L598.0,212.8" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-<line x1="591.7" y1="206.2" x2="604.4" y2="219.3" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
+<path d="M351.0,413.1 L427.4,307.8 L469.0,215.7" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="460.6" y1="212.0" x2="477.4" y2="219.5" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 <path d="M351.0,472.5 C360.9,469.4 386.1,459.0 410.4,453.6 C434.7,448.2 471.6,450.0 496.8,440.1 C522.0,430.2 547.6,410.9 561.6,394.2 C575.6,377.5 576.9,359.1 580.5,340.2 C584.1,321.3 582.8,302.4 583.2,280.8 C583.7,259.2 583.2,233.1 583.2,210.6 C583.2,188.1 583.2,156.6 583.2,145.8" fill="none" stroke="#b3001b" stroke-width="4.6" stroke-linecap="round" stroke-linejoin="round"/>
 <polygon points="583.2,145.8 589.4,159.6 577.0,159.6" fill="#b3001b"/>
 <path d="M351.0,364.5 L410.4,453.6" fill="none" stroke="#b3001b" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="0.1 7"/>
@@ -110,17 +110,17 @@
 <text x="344" y="596" font-size="12" fill="#111318">Turn him inside. The ball goes around</text>
 <text x="344" y="612" font-size="12" fill="#111318">behind you.</text>
 <text x="310" y="630" font-size="12" font-weight="700" fill="#111318">SL</text>
-<text x="344" y="630" font-size="12" fill="#111318">Run at the outside linebacker and</text>
-<text x="344" y="646" font-size="12" fill="#111318">screen him off. Stay in his way.</text>
+<text x="344" y="630" font-size="12" fill="#111318">Run at the corner and screen him off.</text>
+<text x="344" y="646" font-size="12" fill="#111318">Stay in his way.</text>
 <text x="310" y="664" font-size="12" font-weight="700" fill="#111318">QB</text>
 <text x="344" y="664" font-size="12" fill="#111318">Quick pitch to the tailback, then run</text>
 <text x="344" y="680" font-size="12" fill="#111318">the other way, to the left, like you</text>
 <text x="344" y="698" font-size="12" fill="#111318">still have it.</text>
 <text x="310" y="714" font-size="12" font-weight="700" fill="#111318">FB</text>
 <text x="344" y="714" font-size="12" fill="#111318">Lead outside our end. Block the first</text>
-<text x="344" y="732" font-size="12" fill="#111318">man out there — here it is the corner.</text>
-<text x="344" y="748" font-size="12" fill="#111318">You start two yards closer than he</text>
-<text x="344" y="766" font-size="12" fill="#111318">does. Be out there first.</text>
+<text x="344" y="732" font-size="12" fill="#111318">man out there — here it is the</text>
+<text x="344" y="748" font-size="12" fill="#111318">linebacker. You start two yards closer</text>
+<text x="344" y="766" font-size="12" fill="#111318">than he does. Be out there first.</text>
 <text x="310" y="782" font-size="12" font-weight="700" fill="#111318">TB</text>
 <text x="344" y="782" font-size="12" fill="#111318">Run flat behind the quarterback and</text>
 <text x="344" y="800" font-size="12" fill="#111318">catch the pitch on the run, then get</text>
