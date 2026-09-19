@@ -73,13 +73,13 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 | Position | Assignment |
 |---|---|
-| **LTE** | Block the left end. |
+| **LTE** | Block the left defensive end. |
 | **LT** | Block the left outside linebacker. |
-| **LG** | Block the left tackle. |
-| **C** | Help on the left tackle, then block the left inside linebacker. |
-| **RG** | Block the right tackle. |
-| **RT** | Help on the right tackle, then block the right inside linebacker. |
-| **RTE** | Block the right end. |
+| **LG** | Block the left defensive guard. |
+| **C** | Help on the left defensive guard, then block the left inside linebacker. |
+| **RG** | Block the right defensive guard. |
+| **RT** | Help on the right defensive guard, then block the right inside linebacker. |
+| **RTE** | Block the right defensive end. |
 | **SL** | Block the right corner. |
 | **QB** | Open right, hand deep to the tailback, then fake the boot. It holds the backside end. |
 | **FB** | Lead through the hole, then block the right outside linebacker. |
@@ -104,13 +104,13 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 | Position | Assignment |
 |---|---|
-| **LTE** | Block the left end. |
-| **LT** | Help on the left tackle, then block the left inside linebacker. |
-| **LG** | Block the left tackle. |
-| **C** | Help on the right tackle, then block the right inside linebacker. |
-| **RG** | Block the right tackle. |
+| **LTE** | Block the left defensive end. |
+| **LT** | Help on the left defensive guard, then block the left inside linebacker. |
+| **LG** | Block the left defensive guard. |
+| **C** | Help on the right defensive guard, then block the right inside linebacker. |
+| **RG** | Block the right defensive guard. |
 | **RT** | Block the right outside linebacker. |
-| **RTE** | Block the right end. |
+| **RTE** | Block the right defensive end. |
 | **SL** | Block the left corner. |
 | **QB** | Open left, hand deep to the tailback, then fake the boot. It holds the backside end. |
 | **FB** | Lead through the hole, then block the left outside linebacker. |
@@ -136,12 +136,12 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 | Position | Assignment |
 |---|---|
 | **LTE** **(ball)** | Stay down in your stance — no motion. At the snap run flat behind the quarterback, take the handoff at full speed and get to the right edge. Turn up outside the fullback. |
-| **LT** | Block the left end. |
-| **LG** | Block the left tackle. |
-| **C** | Help on the left tackle, then block the left inside linebacker. |
-| **RG** | Block the right tackle. |
-| **RT** | Help on the right tackle, then block the right inside linebacker. |
-| **RTE** | Block the right end. |
+| **LT** | Block the left defensive end. |
+| **LG** | Block the left defensive guard. |
+| **C** | Help on the left defensive guard, then block the left inside linebacker. |
+| **RG** | Block the right defensive guard. |
+| **RT** | Help on the right defensive guard, then block the right inside linebacker. |
+| **RTE** | Block the right defensive end. |
 | **SL** | Run at the corner and screen him off. Stay in his way. |
 | **QB** | Open right and hand the ball to the left tight end as he comes across behind you, then fake a run to the left. |
 | **FB** | Bubble out around our end, then double team the linebacker with the tailback. |
@@ -165,12 +165,12 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 | Position | Assignment |
 |---|---|
-| **LTE** | Block the left end. |
-| **LT** | Help on the left tackle, then block the left inside linebacker. |
-| **LG** | Block the left tackle. |
-| **C** | Help on the right tackle, then block the right inside linebacker. |
-| **RG** | Block the right tackle. |
-| **RT** | Block the right end. |
+| **LTE** | Block the left defensive end. |
+| **LT** | Help on the left defensive guard, then block the left inside linebacker. |
+| **LG** | Block the left defensive guard. |
+| **C** | Help on the right defensive guard, then block the right inside linebacker. |
+| **RG** | Block the right defensive guard. |
+| **RT** | Block the right defensive end. |
 | **RTE** **(ball)** | Stay down in your stance — no motion. At the snap run flat behind the quarterback, take the handoff at full speed and get to the left edge. Turn up outside the fullback. |
 | **SL** | Run at the corner and screen him off. Stay in his way. |
 | **QB** | Open left and hand the ball to the right tight end as he comes across behind you, then fake a run to the right. |
@@ -195,13 +195,13 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 | Position | Assignment |
 |---|---|
-| **LTE** | Block the left end. |
-| **LT** | Help on the left end, then block the left outside linebacker. |
-| **LG** | Block the left tackle. |
-| **C** | Help on the left tackle, then block the left inside linebacker. |
-| **RG** | Block the right tackle. |
-| **RT** | Help on the right tackle, then block the right inside linebacker. |
-| **RTE** | Block the right end. |
+| **LTE** | Block the left defensive end. |
+| **LT** | Help on the left defensive end, then block the left outside linebacker. |
+| **LG** | Block the left defensive guard. |
+| **C** | Help on the left defensive guard, then block the left inside linebacker. |
+| **RG** | Block the right defensive guard. |
+| **RT** | Help on the right defensive guard, then block the right inside linebacker. |
+| **RTE** | Block the right defensive end. |
 | **SL** **(ball)** | At the snap run flat across the backfield, take the handoff at full speed and get to the left edge. Turn up in the alley behind the fullback. |
 | **QB** | Hand the ball to the slot as he runs past you, then fake the handoff to the tailback going right. |
 | **FB** | Bubble out around our end, then double team the corner with the tailback. |
@@ -225,13 +225,13 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 | Position | Assignment |
 |---|---|
-| **LTE** | Block the left end. |
-| **LT** | Help on the left tackle, then block the left inside linebacker. |
-| **LG** | Block the left tackle. |
-| **C** | Help on the right tackle, then block the right inside linebacker. |
-| **RG** | Block the right tackle. |
-| **RT** | Help on the right end, then block the right outside linebacker. |
-| **RTE** | Block the right end. |
+| **LTE** | Block the left defensive end. |
+| **LT** | Help on the left defensive guard, then block the left inside linebacker. |
+| **LG** | Block the left defensive guard. |
+| **C** | Help on the right defensive guard, then block the right inside linebacker. |
+| **RG** | Block the right defensive guard. |
+| **RT** | Help on the right defensive end, then block the right outside linebacker. |
+| **RTE** | Block the right defensive end. |
 | **SL** **(ball)** | At the snap run flat across the backfield, take the handoff at full speed and get to the right edge. Turn up in the alley behind the fullback. |
 | **QB** | Hand the ball to the slot as he runs past you, then fake the handoff to the tailback going left. |
 | **FB** | Bubble out around our end, then double team the corner with the tailback. |
@@ -255,12 +255,12 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 | Position | Assignment |
 |---|---|
-| **LTE** | Block the left end. |
+| **LTE** | Block the left defensive end. |
 | **LT** | Block the left outside linebacker. |
-| **LG** | Block the left tackle. |
-| **C** | Help on the left tackle, then block the left inside linebacker. |
-| **RG** | Block the right tackle. |
-| **RT** | Block the right end. |
+| **LG** | Block the left defensive guard. |
+| **C** | Help on the left defensive guard, then block the left inside linebacker. |
+| **RG** | Block the right defensive guard. |
+| **RT** | Block the right defensive end. |
 | **RTE** | Block the right outside linebacker. |
 | **SL** | Block the right corner. |
 | **QB** | Open right, hand to the tailback, then fake the boot left. It holds the backside end. |
@@ -286,12 +286,12 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 | Position | Assignment |
 |---|---|
 | **LTE** | Block the left outside linebacker. |
-| **LT** | Block the left end. |
-| **LG** | Block the left tackle. |
-| **C** | Help on the right tackle, then block the right inside linebacker. |
-| **RG** | Block the right tackle. |
+| **LT** | Block the left defensive end. |
+| **LG** | Block the left defensive guard. |
+| **C** | Help on the right defensive guard, then block the right inside linebacker. |
+| **RG** | Block the right defensive guard. |
 | **RT** | Block the right outside linebacker. |
-| **RTE** | Block the right end. |
+| **RTE** | Block the right defensive end. |
 | **SL** | Block the left corner. |
 | **QB** | Open left, hand to the tailback, then fake the boot right. It holds the backside end. |
 | **FB** | Lead through the hole, then block the left inside linebacker. |
@@ -375,13 +375,13 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 | Position | Assignment |
 |---|---|
-| **LTE** | End on your inside shoulder. Cut him off — get between him and the ball. |
-| **LT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
-| **LG** | Tackle head up on you. Cut him off — get between him and the ball. |
+| **LTE** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
+| **LT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
+| **LG** | Defensive guard head up on you. Cut him off — get between him and the ball. |
 | **C** | Nobody on you. Climb to the playside linebacker. Head across him. |
-| **RG** | Tackle head up on you. Hands inside, pads under his, drive him back. |
-| **RT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
-| **RTE** | End on your inside shoulder. Cut him off — get between him and the ball. |
+| **RG** | Defensive guard head up on you. Hands inside, pads under his, drive him back. |
+| **RT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
+| **RTE** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
 | **SL** | Run at the corner and screen him off. Stay in his way. |
 | **QB** | Open right, hand to the fullback right now, then fake the boot left. It holds the backside end. |
 | **FB** **(ball)** | Take the handoff downhill between the center and the right guard. You are the runner on this one, not the lead. Straight ahead, do not bounce it. |
@@ -405,13 +405,13 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 | Position | Assignment |
 |---|---|
-| **LTE** | End on your inside shoulder. Cut him off — get between him and the ball. |
-| **LT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
-| **LG** | Tackle head up on you. Hands inside, pads under his, drive him back. |
+| **LTE** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
+| **LT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
+| **LG** | Defensive guard head up on you. Hands inside, pads under his, drive him back. |
 | **C** | Nobody on you. Climb to the playside linebacker. Head across him. |
-| **RG** | Tackle head up on you. Cut him off — get between him and the ball. |
-| **RT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
-| **RTE** | End on your inside shoulder. Cut him off — get between him and the ball. |
+| **RG** | Defensive guard head up on you. Cut him off — get between him and the ball. |
+| **RT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
+| **RTE** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
 | **SL** | Run at the corner and screen him off. Stay in his way. |
 | **QB** | Open left, hand to the fullback right now, then fake the boot right. It holds the backside end. |
 | **FB** **(ball)** | Take the handoff downhill between the center and the left guard. You are the runner on this one, not the lead. Straight ahead, do not bounce it. |
@@ -437,13 +437,13 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 | Position | Assignment |
 |---|---|
-| **LTE** | End on your inside shoulder. Cut him off — get between him and the ball. |
-| **LT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
-| **LG** | Tackle head up on you. Cut him off — get between him and the ball. |
+| **LTE** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
+| **LT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
+| **LG** | Defensive guard head up on you. Cut him off — get between him and the ball. |
 | **C** | Nobody on you. Climb to the playside linebacker. Head across him. |
-| **RG** | Tackle head up on you. Hands inside, pads under his, drive him back. |
-| **RT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
-| **RTE** | End on your inside shoulder. Drive him to the sideline. The ball goes inside you. |
+| **RG** | Defensive guard head up on you. Hands inside, pads under his, drive him back. |
+| **RT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
+| **RTE** | Defensive end on your inside shoulder. Drive him to the sideline. The ball goes inside you. |
 | **QB** | Open right, hand to the right halfback, then fake the boot. It holds the backside end. |
 | **FB** | Lead through the hole. Block the first man who shows in it. |
 | **LH** | Run hard to the left like you have the ball. You are what holds the backside. |
@@ -467,13 +467,13 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 | Position | Assignment |
 |---|---|
-| **LTE** | End on your inside shoulder. Drive him to the sideline. The ball goes inside you. |
-| **LT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
-| **LG** | Tackle head up on you. Hands inside, pads under his, drive him back. |
+| **LTE** | Defensive end on your inside shoulder. Drive him to the sideline. The ball goes inside you. |
+| **LT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
+| **LG** | Defensive guard head up on you. Hands inside, pads under his, drive him back. |
 | **C** | Nobody on you. Climb to the playside linebacker. Head across him. |
-| **RG** | Tackle head up on you. Cut him off — get between him and the ball. |
-| **RT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
-| **RTE** | End on your inside shoulder. Cut him off — get between him and the ball. |
+| **RG** | Defensive guard head up on you. Cut him off — get between him and the ball. |
+| **RT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
+| **RTE** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
 | **QB** | Open left, hand to the left halfback, then fake the boot. It holds the backside end. |
 | **FB** | Lead through the hole. Block the first man who shows in it. |
 | **LH** **(ball)** | Take the handoff downhill at our tackle's outside hip, following the fullback. Never bounce it outside. |
@@ -497,13 +497,13 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 | Position | Assignment |
 |---|---|
-| **LTE** | End on your inside shoulder. Cut him off — get between him and the ball. |
-| **LT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
-| **LG** | Tackle head up on you. Cut him off — get between him and the ball. |
+| **LTE** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
+| **LT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
+| **LG** | Defensive guard head up on you. Cut him off — get between him and the ball. |
 | **C** | Nobody on you. Climb to the playside linebacker. Head across him. |
-| **RG** | Tackle head up on you. Hands inside, pads under his, drive him back. |
-| **RT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
-| **RTE** | End on your inside shoulder. Cut him off — get between him and the ball. |
+| **RG** | Defensive guard head up on you. Hands inside, pads under his, drive him back. |
+| **RT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
+| **RTE** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
 | **QB** | Open right, hand to the fullback, then fake the boot left. It holds the backside end. |
 | **FB** **(ball)** | Take the handoff downhill between the center and the right guard. Do not bounce it. |
 | **LH** | Run hard to the left like you have the ball. You are what holds the backside. |
@@ -526,13 +526,13 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 | Position | Assignment |
 |---|---|
-| **LTE** | End on your inside shoulder. Cut him off — get between him and the ball. |
-| **LT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
-| **LG** | Tackle head up on you. Hands inside, pads under his, drive him back. |
+| **LTE** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
+| **LT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
+| **LG** | Defensive guard head up on you. Hands inside, pads under his, drive him back. |
 | **C** | Nobody on you. Climb to the playside linebacker. Head across him. |
-| **RG** | Tackle head up on you. Cut him off — get between him and the ball. |
-| **RT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
-| **RTE** | End on your inside shoulder. Cut him off — get between him and the ball. |
+| **RG** | Defensive guard head up on you. Cut him off — get between him and the ball. |
+| **RT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
+| **RTE** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
 | **QB** | Open left, hand to the fullback, then fake the boot right. It holds the backside end. |
 | **FB** **(ball)** | Take the handoff downhill between the center and the left guard. Do not bounce it. |
 | **LH** | Lead through the hole. Block the first man who shows in it. |
@@ -555,13 +555,13 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 | Position | Assignment |
 |---|---|
-| **LTE** | End on your inside shoulder. Cut him off — get between him and the ball. |
-| **LT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
-| **LG** | Tackle head up on you. Cut him off — get between him and the ball. |
+| **LTE** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
+| **LT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
+| **LG** | Defensive guard head up on you. Cut him off — get between him and the ball. |
 | **C** | Nobody on you. Climb to the playside linebacker. Head across him. |
-| **RG** | Block down on the tackle, head up. Head across him — nobody crosses your face. |
-| **RT** | Nobody on you. Help on the tackle, then take the playside linebacker. |
-| **RTE** | End on your inside shoulder. Cut him off — get between him and the ball. |
+| **RG** | Block down on the defensive guard, head up. Head across him — nobody crosses your face. |
+| **RT** | Nobody on you. Help on the defensive guard, then take the playside linebacker. |
+| **RTE** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
 | **QB** | Open right, hand to the fullback, then fake the boot left. It holds the backside end. |
 | **FB** **(ball)** | Take the handoff downhill between the right guard and the right tackle. One cut, then get north. Do not bounce it. |
 | **LH** | Run hard to the left like you have the ball. You are what holds the backside. |
@@ -584,13 +584,13 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 | Position | Assignment |
 |---|---|
-| **LTE** | End on your inside shoulder. Cut him off — get between him and the ball. |
-| **LT** | Nobody on you. Help on the tackle, then take the playside linebacker. |
-| **LG** | Block down on the tackle, head up. Head across him — nobody crosses your face. |
+| **LTE** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
+| **LT** | Nobody on you. Help on the defensive guard, then take the playside linebacker. |
+| **LG** | Block down on the defensive guard, head up. Head across him — nobody crosses your face. |
 | **C** | Nobody on you. Climb to the playside linebacker. Head across him. |
-| **RG** | Tackle head up on you. Cut him off — get between him and the ball. |
-| **RT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
-| **RTE** | End on your inside shoulder. Cut him off — get between him and the ball. |
+| **RG** | Defensive guard head up on you. Cut him off — get between him and the ball. |
+| **RT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
+| **RTE** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
 | **QB** | Open left, hand to the fullback, then fake the boot right. It holds the backside end. |
 | **FB** **(ball)** | Take the handoff downhill between the left guard and the left tackle. One cut, then get north. Do not bounce it. |
 | **LH** | Lead through the hole. Block the first man who shows in it. |
@@ -613,13 +613,13 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 | Position | Assignment |
 |---|---|
-| **LTE** | End on your inside shoulder. Cut him off — get between him and the ball. |
-| **LT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
-| **LG** | Tackle head up on you. Cut him off — get between him and the ball. |
+| **LTE** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
+| **LT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
+| **LG** | Defensive guard head up on you. Cut him off — get between him and the ball. |
 | **C** | Nobody on you. Climb to the playside linebacker. Head across him. |
-| **RG** | Tackle head up on you. Step past him. Climb to the playside linebacker. Head across him. |
-| **RT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
-| **RTE** | End on your inside shoulder. Turn him inside. The ball goes around behind you. |
+| **RG** | Defensive guard head up on you. Step past him. Climb to the playside linebacker. Head across him. |
+| **RT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
+| **RTE** | Defensive end on your inside shoulder. Turn him inside. The ball goes around behind you. |
 | **QB** | Quick pitch to the left halfback, then run the other way, to the left, like you still have it. |
 | **FB** | Lead outside our end. Block the first man out there — here it is the linebacker. |
 | **LH** **(ball)** | Run flat, outside and behind the quarterback, and catch the pitch on the run. Ahead of him is a fumble. |
@@ -643,13 +643,13 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 | Position | Assignment |
 |---|---|
-| **LTE** | End on your inside shoulder. Turn him inside. The ball goes around behind you. |
-| **LT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
-| **LG** | Tackle head up on you. Step past him. Climb to the playside linebacker. Head across him. |
+| **LTE** | Defensive end on your inside shoulder. Turn him inside. The ball goes around behind you. |
+| **LT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
+| **LG** | Defensive guard head up on you. Step past him. Climb to the playside linebacker. Head across him. |
 | **C** | Nobody on you. Climb to the playside linebacker. Head across him. |
-| **RG** | Tackle head up on you. Cut him off — get between him and the ball. |
-| **RT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
-| **RTE** | End on your inside shoulder. Cut him off — get between him and the ball. |
+| **RG** | Defensive guard head up on you. Cut him off — get between him and the ball. |
+| **RT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
+| **RTE** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
 | **QB** | Quick pitch to the right halfback, then run the other way, to the right, like you still have it. |
 | **FB** | Lead outside our end. Block the first man out there — here it is the linebacker. |
 | **LH** | Lead outside our end. Block the first man out there — here it is the corner. Step at the dive first to hold their linebackers. |
@@ -675,13 +675,13 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 | Position | Assignment |
 |---|---|
-| **LTE** | Block the left end. |
+| **LTE** | Block the left defensive end. |
 | **LT** | Block the left inside linebacker. |
-| **LG** | Block the left tackle. |
-| **C** | Help on the right tackle, then block the right inside linebacker. |
-| **RG** | Block the right tackle. |
+| **LG** | Block the left defensive guard. |
+| **C** | Help on the right defensive guard, then block the right inside linebacker. |
+| **RG** | Block the right defensive guard. |
 | **RT** | Block the right inside linebacker. |
-| **RTE** | Block the right end. |
+| **RTE** | Block the right defensive end. |
 | **SL** | Block the right corner. |
 | **QB** | Quick pitch to the left halfback, then run the other way, to the left, like you still have it. |
 | **LH** **(ball)** | Run flat, outside and behind the quarterback, and catch the pitch on the run. Ahead of him is a fumble. |
@@ -705,13 +705,13 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 | Position | Assignment |
 |---|---|
-| **LTE** | Block the left end. |
+| **LTE** | Block the left defensive end. |
 | **LT** | Block the left inside linebacker. |
-| **LG** | Block the left tackle. |
-| **C** | Help on the left tackle, then block the left inside linebacker. |
-| **RG** | Block the right tackle. |
+| **LG** | Block the left defensive guard. |
+| **C** | Help on the left defensive guard, then block the left inside linebacker. |
+| **RG** | Block the right defensive guard. |
 | **RT** | Block the right inside linebacker. |
-| **RTE** | Block the right end. |
+| **RTE** | Block the right defensive end. |
 | **SL** | Block the left corner. |
 | **QB** | Quick pitch to the right halfback, then run the other way, to the right, like you still have it. |
 | **LH** | Bubble around the left tight end, then block the left outside linebacker. |
@@ -735,13 +735,13 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 | Position | Assignment |
 |---|---|
-| **LTE** | Block the left end. |
-| **LT** | Help on the left end, then block the left outside linebacker. |
-| **LG** | Block the left tackle. |
-| **C** | Help on the left tackle, then block the left inside linebacker. |
-| **RG** | Block the right tackle. |
-| **RT** | Help on the right tackle, then block the right inside linebacker. |
-| **RTE** | End on your inside shoulder. Turn him inside. The ball goes around behind you. |
+| **LTE** | Block the left defensive end. |
+| **LT** | Help on the left defensive end, then block the left outside linebacker. |
+| **LG** | Block the left defensive guard. |
+| **C** | Help on the left defensive guard, then block the left inside linebacker. |
+| **RG** | Block the right defensive guard. |
+| **RT** | Help on the right defensive guard, then block the right inside linebacker. |
+| **RTE** | Defensive end on your inside shoulder. Turn him inside. The ball goes around behind you. |
 | **SL** | Run at the corner and screen him off. Stay in his way. |
 | **QB** **(ball)** | Take the snap and sweep right, flat and fast, behind the right halfback. Turn up outside his block. |
 | **LH** | Bubble out around our end, then double team the linebacker with the right halfback. |
@@ -765,13 +765,13 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 | Position | Assignment |
 |---|---|
-| **LTE** | End on your inside shoulder. Turn him inside. The ball goes around behind you. |
-| **LT** | Help on the left tackle, then block the left inside linebacker. |
-| **LG** | Block the left tackle. |
-| **C** | Help on the right tackle, then block the right inside linebacker. |
-| **RG** | Block the right tackle. |
-| **RT** | Help on the right end, then block the right outside linebacker. |
-| **RTE** | Block the right end. |
+| **LTE** | Defensive end on your inside shoulder. Turn him inside. The ball goes around behind you. |
+| **LT** | Help on the left defensive guard, then block the left inside linebacker. |
+| **LG** | Block the left defensive guard. |
+| **C** | Help on the right defensive guard, then block the right inside linebacker. |
+| **RG** | Block the right defensive guard. |
+| **RT** | Help on the right defensive end, then block the right outside linebacker. |
+| **RTE** | Block the right defensive end. |
 | **SL** | Run at the corner and screen him off. Stay in his way. |
 | **QB** **(ball)** | Take the snap and sweep left, flat and fast, behind the left halfback. Turn up outside his block. |
 | **LH** | Bubble out around our end, then double team the linebacker with the right halfback. |
@@ -795,13 +795,13 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 | Position | Assignment |
 |---|---|
-| **LTE** | End on your inside shoulder. Turn him inside. The ball goes around behind you. |
-| **LT** | Help on the left tackle, then block the left inside linebacker. |
-| **LG** | Block the left tackle. |
-| **C** | Help on the right tackle, then block the right inside linebacker. |
-| **RG** | Block the right tackle. |
-| **RT** | Help on the right end, then block the right outside linebacker. |
-| **RTE** | Block the right end. |
+| **LTE** | Defensive end on your inside shoulder. Turn him inside. The ball goes around behind you. |
+| **LT** | Help on the left defensive guard, then block the left inside linebacker. |
+| **LG** | Block the left defensive guard. |
+| **C** | Help on the right defensive guard, then block the right inside linebacker. |
+| **RG** | Block the right defensive guard. |
+| **RT** | Help on the right defensive end, then block the right outside linebacker. |
+| **RTE** | Block the right defensive end. |
 | **SL** | Run at the corner and screen him off. Stay in his way. |
 | **QB** **(ball)** | Fake the handoff to the right halfback, then roll back left and sweep it, flat and fast, behind the left halfback. Turn up outside his block. |
 | **LH** | Bubble out around the left tight end, then block the left outside linebacker. |
@@ -825,13 +825,13 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 | Position | Assignment |
 |---|---|
-| **LTE** | Block the left end. |
-| **LT** | Help on the left end, then block the left outside linebacker. |
-| **LG** | Block the left tackle. |
-| **C** | Help on the left tackle, then block the left inside linebacker. |
-| **RG** | Block the right tackle. |
-| **RT** | Help on the right tackle, then block the right inside linebacker. |
-| **RTE** | End on your inside shoulder. Turn him inside. The ball goes around behind you. |
+| **LTE** | Block the left defensive end. |
+| **LT** | Help on the left defensive end, then block the left outside linebacker. |
+| **LG** | Block the left defensive guard. |
+| **C** | Help on the left defensive guard, then block the left inside linebacker. |
+| **RG** | Block the right defensive guard. |
+| **RT** | Help on the right defensive guard, then block the right inside linebacker. |
+| **RTE** | Defensive end on your inside shoulder. Turn him inside. The ball goes around behind you. |
 | **SL** | Run at the corner and screen him off. Stay in his way. |
 | **QB** **(ball)** | Fake the handoff to the left halfback, then roll back right and sweep it, flat and fast, behind the right halfback. Turn up outside his block. |
 | **LH** | Take the fake from the quarterback and run hard to the left like you have the ball. Sell it all the way — you are the reason the defense goes the wrong way. |
@@ -855,13 +855,13 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 | Position | Assignment |
 |---|---|
-| **LTE** | Block the left end. |
-| **LT** | Help on the left end, then block the left outside linebacker. |
-| **LG** | Block the left tackle. |
-| **C** | Help on the left tackle, then block the left inside linebacker. |
-| **RG** | Block the right tackle. |
-| **RT** | Help on the right tackle, then block the right inside linebacker. |
-| **RTE** | Block the right end. |
+| **LTE** | Block the left defensive end. |
+| **LT** | Help on the left defensive end, then block the left outside linebacker. |
+| **LG** | Block the left defensive guard. |
+| **C** | Help on the left defensive guard, then block the left inside linebacker. |
+| **RG** | Block the right defensive guard. |
+| **RT** | Help on the right defensive guard, then block the right inside linebacker. |
+| **RTE** | Block the right defensive end. |
 | **SL** **(ball)** | At the snap run flat across the backfield, take the handoff at full speed and get to the left edge. Turn up in the alley behind the left halfback. |
 | **QB** | Hand the ball to the slot as he runs past you, then fake the handoff to the right halfback going right. |
 | **LH** | Bubble out around our end, then double team the corner with the right halfback. |
@@ -885,13 +885,13 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 | Position | Assignment |
 |---|---|
-| **LTE** | Block the left end. |
-| **LT** | Help on the left tackle, then block the left inside linebacker. |
-| **LG** | Block the left tackle. |
-| **C** | Help on the right tackle, then block the right inside linebacker. |
-| **RG** | Block the right tackle. |
-| **RT** | Help on the right end, then block the right outside linebacker. |
-| **RTE** | Block the right end. |
+| **LTE** | Block the left defensive end. |
+| **LT** | Help on the left defensive guard, then block the left inside linebacker. |
+| **LG** | Block the left defensive guard. |
+| **C** | Help on the right defensive guard, then block the right inside linebacker. |
+| **RG** | Block the right defensive guard. |
+| **RT** | Help on the right defensive end, then block the right outside linebacker. |
+| **RTE** | Block the right defensive end. |
 | **SL** **(ball)** | At the snap run flat across the backfield, take the handoff at full speed and get to the right edge. Turn up in the alley behind the right halfback. |
 | **QB** | Hand the ball to the slot as he runs past you, then fake the handoff to the left halfback going left. |
 | **LH** | Bubble out around our end, then double team the corner with the right halfback. |
@@ -916,12 +916,12 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 | Position | Assignment |
 |---|---|
 | **LTE** **(ball)** | Stay down in your stance — no motion. At the snap run flat behind the quarterback, take the handoff at full speed and get to the right edge. Turn up outside the halfbacks. |
-| **LT** | Block the left end. |
-| **LG** | Block the left tackle. |
-| **C** | Help on the left tackle, then block the left inside linebacker. |
-| **RG** | Block the right tackle. |
-| **RT** | Help on the right tackle, then block the right inside linebacker. |
-| **RTE** | Block the right end. |
+| **LT** | Block the left defensive end. |
+| **LG** | Block the left defensive guard. |
+| **C** | Help on the left defensive guard, then block the left inside linebacker. |
+| **RG** | Block the right defensive guard. |
+| **RT** | Help on the right defensive guard, then block the right inside linebacker. |
+| **RTE** | Block the right defensive end. |
 | **SL** | Run at the corner and screen him off. Stay in his way. |
 | **QB** | Open right and hand the ball to the left tight end as he comes across behind you, then fake a run to the left. |
 | **LH** | Bubble out around our end, then double team the linebacker with the right halfback. |
@@ -945,12 +945,12 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 | Position | Assignment |
 |---|---|
-| **LTE** | Block the left end. |
-| **LT** | Help on the left tackle, then block the left inside linebacker. |
-| **LG** | Block the left tackle. |
-| **C** | Help on the right tackle, then block the right inside linebacker. |
-| **RG** | Block the right tackle. |
-| **RT** | Block the right end. |
+| **LTE** | Block the left defensive end. |
+| **LT** | Help on the left defensive guard, then block the left inside linebacker. |
+| **LG** | Block the left defensive guard. |
+| **C** | Help on the right defensive guard, then block the right inside linebacker. |
+| **RG** | Block the right defensive guard. |
+| **RT** | Block the right defensive end. |
 | **RTE** **(ball)** | Stay down in your stance — no motion. At the snap run flat behind the quarterback, take the handoff at full speed and get to the left edge. Turn up outside the halfbacks. |
 | **SL** | Run at the corner and screen him off. Stay in his way. |
 | **QB** | Open left and hand the ball to the right tight end as he comes across behind you, then fake a run to the right. |
@@ -1035,14 +1035,14 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 | Position | Assignment |
 |---|---|
-| **LTE** | End on your inside shoulder. Cut him off — get between him and the ball. |
-| **LT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
-| **LG** | Tackle head up on you. Cut him off — get between him and the ball. |
+| **LTE** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
+| **LT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
+| **LG** | Defensive guard head up on you. Cut him off — get between him and the ball. |
 | **C** | Nobody on you. Climb to the playside linebacker. Head across him. |
-| **RG** | Tackle head up on you. Hands inside, pads under his, drive him back. |
-| **RT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
-| **RTE** | Leave the end — he is kicked out. Go take the outside linebacker. |
-| **SL** | Kick the end out. Aim at his outside hip. Never let him come underneath you. |
+| **RG** | Defensive guard head up on you. Hands inside, pads under his, drive him back. |
+| **RT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
+| **RTE** | Leave the defensive end — he is kicked out. Go take the outside linebacker. |
+| **SL** | Kick the defensive end out. Aim at his outside hip. Never let him come underneath you. |
 | **QB** | Open right and hand deep to the left halfback as he crosses, then fake the boot. It holds the backside end. |
 | **LH** **(ball)** | Cross behind the quarterback, take the handoff and hit it downhill at our tackle's outside hip. Never bounce it outside. |
 | **RH** | Lead through the hole. Block the first man who shows in it. |
@@ -1065,14 +1065,14 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 | Position | Assignment |
 |---|---|
-| **LTE** | Leave the end — he is kicked out. Go take the outside linebacker. |
-| **LT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
-| **LG** | Tackle head up on you. Hands inside, pads under his, drive him back. |
+| **LTE** | Leave the defensive end — he is kicked out. Go take the outside linebacker. |
+| **LT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
+| **LG** | Defensive guard head up on you. Hands inside, pads under his, drive him back. |
 | **C** | Nobody on you. Climb to the playside linebacker. Head across him. |
-| **RG** | Tackle head up on you. Cut him off — get between him and the ball. |
-| **RT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
-| **RTE** | End on your inside shoulder. Cut him off — get between him and the ball. |
-| **SL** | Kick the end out. Aim at his outside hip. Never let him come underneath you. |
+| **RG** | Defensive guard head up on you. Cut him off — get between him and the ball. |
+| **RT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
+| **RTE** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
+| **SL** | Kick the defensive end out. Aim at his outside hip. Never let him come underneath you. |
 | **QB** | Open left and hand deep to the right halfback as he crosses, then fake the boot. It holds the backside end. |
 | **LH** | Lead through the hole. Block the first man who shows in it. |
 | **RH** **(ball)** | Cross behind the quarterback, take the handoff and hit it downhill at our tackle's outside hip. Never bounce it outside. |
@@ -1157,13 +1157,13 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 | Position | Assignment |
 |---|---|
-| **LTE** | Block the left end. |
-| **LT** | Help on the left tackle, then block the left inside linebacker. |
-| **LG** | Block the left tackle. |
-| **C** | Help on the right tackle, then block the right inside linebacker. |
-| **RG** | Block the right tackle. |
-| **RT** | Help on the right end, then block the right outside linebacker. |
-| **RTE** | Block the right end. |
+| **LTE** | Block the left defensive end. |
+| **LT** | Help on the left defensive guard, then block the left inside linebacker. |
+| **LG** | Block the left defensive guard. |
+| **C** | Help on the right defensive guard, then block the right inside linebacker. |
+| **RG** | Block the right defensive guard. |
+| **RT** | Help on the right defensive end, then block the right outside linebacker. |
+| **RTE** | Block the right defensive end. |
 | **SL** | Run at the corner and screen him off. Stay in his way. |
 | **QB** **(ball)** | Catch the snap and sweep left, flat and fast, behind the left halfback. Turn up outside his block. |
 | **LH** | Bubble out around our end, then double team the linebacker with the right halfback. |
@@ -1187,13 +1187,13 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 | Position | Assignment |
 |---|---|
-| **LTE** | Block the left end. |
-| **LT** | Help on the left end, then block the left outside linebacker. |
-| **LG** | Block the left tackle. |
-| **C** | Help on the left tackle, then block the left inside linebacker. |
-| **RG** | Block the right tackle. |
-| **RT** | Help on the right tackle, then block the right inside linebacker. |
-| **RTE** | Block the right end. |
+| **LTE** | Block the left defensive end. |
+| **LT** | Help on the left defensive end, then block the left outside linebacker. |
+| **LG** | Block the left defensive guard. |
+| **C** | Help on the left defensive guard, then block the left inside linebacker. |
+| **RG** | Block the right defensive guard. |
+| **RT** | Help on the right defensive guard, then block the right inside linebacker. |
+| **RTE** | Block the right defensive end. |
 | **SL** | Run at the corner and screen him off. Stay in his way. |
 | **QB** **(ball)** | Catch the snap and sweep right, flat and fast, behind the right halfback. Turn up outside his block. |
 | **LH** | Bubble out around our end, then double team the linebacker with the right halfback. |
@@ -1217,13 +1217,13 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 | Position | Assignment |
 |---|---|
-| **LTE** | Block the left end. |
-| **LT** | Help on the left end, then block the left outside linebacker. |
-| **LG** | Block the left tackle. |
-| **C** | Help on the left tackle, then block the left inside linebacker. |
-| **RG** | Block the right tackle. |
-| **RT** | Help on the right tackle, then block the right inside linebacker. |
-| **RTE** | Block the right end. |
+| **LTE** | Block the left defensive end. |
+| **LT** | Help on the left defensive end, then block the left outside linebacker. |
+| **LG** | Block the left defensive guard. |
+| **C** | Help on the left defensive guard, then block the left inside linebacker. |
+| **RG** | Block the right defensive guard. |
+| **RT** | Help on the right defensive guard, then block the right inside linebacker. |
+| **RTE** | Block the right defensive end. |
 | **SL** | Run at the corner and screen him off. Stay in his way. |
 | **QB** | Hand the ball to the left halfback as he crosses in front of you, then fake a run to the left. |
 | **LH** **(ball)** | Cross in front of the quarterback, take the handoff going right and get to the edge behind the right halfback. Turn up outside his block. |
@@ -1247,13 +1247,13 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 | Position | Assignment |
 |---|---|
-| **LTE** | Block the left end. |
-| **LT** | Help on the left tackle, then block the left inside linebacker. |
-| **LG** | Block the left tackle. |
-| **C** | Help on the right tackle, then block the right inside linebacker. |
-| **RG** | Block the right tackle. |
-| **RT** | Help on the right end, then block the right outside linebacker. |
-| **RTE** | Block the right end. |
+| **LTE** | Block the left defensive end. |
+| **LT** | Help on the left defensive guard, then block the left inside linebacker. |
+| **LG** | Block the left defensive guard. |
+| **C** | Help on the right defensive guard, then block the right inside linebacker. |
+| **RG** | Block the right defensive guard. |
+| **RT** | Help on the right defensive end, then block the right outside linebacker. |
+| **RTE** | Block the right defensive end. |
 | **SL** | Run at the corner and screen him off. Stay in his way. |
 | **QB** | Hand the ball to the right halfback as he crosses in front of you, then fake a run to the right. |
 | **LH** | Bubble out around the left end, then block the left outside linebacker. |
@@ -1281,11 +1281,11 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 |---|---|
 | **LTE** **(ball)** | Stay down in your stance — no motion. At the snap run flat behind the quarterback, take the handoff at full speed and get to the right edge. Turn up outside the trips. |
 | **LT** | Nobody on you. Cut off the backside. Never quit on the play. |
-| **LG** | Tackle head up on you. Cut him off — get between him and the ball. |
+| **LG** | Defensive guard head up on you. Cut him off — get between him and the ball. |
 | **C** | Nobody on you. Climb to the playside linebacker. Head across him. |
-| **RG** | Tackle head up on you. Step past him. Climb to the playside linebacker. Head across him. |
-| **RT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
-| **RTE** | End on your inside shoulder. Turn him inside. The ball goes around behind you. |
+| **RG** | Defensive guard head up on you. Step past him. Climb to the playside linebacker. Head across him. |
+| **RT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
+| **RTE** | Defensive end on your inside shoulder. Turn him inside. The ball goes around behind you. |
 | **SL** | Run at the corner and screen him off. Stay in his way. |
 | **QB** | Open right and hand the ball to the left tight end as he comes across behind you, then fake a run to the left. |
 | **FB** | Lead outside our end. Block the first man out there — here it is the linebacker. |
@@ -1308,11 +1308,11 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 | Position | Assignment |
 |---|---|
-| **LTE** | End on your inside shoulder. Turn him inside. The ball goes around behind you. |
-| **LT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
-| **LG** | Tackle head up on you. Step past him. Climb to the playside linebacker. Head across him. |
+| **LTE** | Defensive end on your inside shoulder. Turn him inside. The ball goes around behind you. |
+| **LT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
+| **LG** | Defensive guard head up on you. Step past him. Climb to the playside linebacker. Head across him. |
 | **C** | Nobody on you. Climb to the playside linebacker. Head across him. |
-| **RG** | Tackle head up on you. Cut him off — get between him and the ball. |
+| **RG** | Defensive guard head up on you. Cut him off — get between him and the ball. |
 | **RT** | Nobody on you. Cut off the backside. Never quit on the play. |
 | **RTE** **(ball)** | Stay down in your stance — no motion. At the snap run flat behind the quarterback, take the handoff at full speed and get to the left edge. Turn up outside the trips. |
 | **SL** | Run at the corner and screen him off. Stay in his way. |
@@ -1397,13 +1397,13 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 | Position | Assignment |
 |---|---|
-| **LTE** | End on your inside shoulder. Cut him off — get between him and the ball. |
-| **LT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
-| **LG** | Tackle head up on you. Cut him off — get between him and the ball. |
+| **LTE** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
+| **LT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
+| **LG** | Defensive guard head up on you. Cut him off — get between him and the ball. |
 | **C** | Nobody on you. Climb to the playside linebacker. Head across him. |
-| **RG** | Tackle head up on you. Step past him. Climb to the playside linebacker. Head across him. |
-| **RT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
-| **RTE** | End on your inside shoulder. Turn him inside. The ball goes around behind you. |
+| **RG** | Defensive guard head up on you. Step past him. Climb to the playside linebacker. Head across him. |
+| **RT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
+| **RTE** | Defensive end on your inside shoulder. Turn him inside. The ball goes around behind you. |
 | **SL** | Run at the corner and screen him off. Stay in his way. |
 | **QB** **(ball)** | Take the snap and sweep right, flat and fast, behind the trips. Turn up outside the fullback. |
 | **FB** | Lead outside our end. Block the first man out there — here it is the linebacker. |
@@ -1426,13 +1426,13 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 | Position | Assignment |
 |---|---|
-| **LTE** | End on your inside shoulder. Turn him inside. The ball goes around behind you. |
-| **LT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
-| **LG** | Tackle head up on you. Step past him. Climb to the playside linebacker. Head across him. |
+| **LTE** | Defensive end on your inside shoulder. Turn him inside. The ball goes around behind you. |
+| **LT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
+| **LG** | Defensive guard head up on you. Step past him. Climb to the playside linebacker. Head across him. |
 | **C** | Nobody on you. Climb to the playside linebacker. Head across him. |
-| **RG** | Tackle head up on you. Cut him off — get between him and the ball. |
-| **RT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
-| **RTE** | End on your inside shoulder. Cut him off — get between him and the ball. |
+| **RG** | Defensive guard head up on you. Cut him off — get between him and the ball. |
+| **RT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
+| **RTE** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
 | **SL** | Run at the corner and screen him off. Stay in his way. |
 | **QB** **(ball)** | Take the snap and sweep left, flat and fast, behind the trips. Turn up outside the fullback. |
 | **FB** | Lead outside our end. Block the first man out there — here it is the linebacker. |
@@ -1515,13 +1515,13 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 | Position | Assignment |
 |---|---|
-| **LTE** | End on your inside shoulder. Cut him off — get between him and the ball. |
-| **LT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
-| **LG** | Tackle head up on you. Cut him off — get between him and the ball. |
+| **LTE** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
+| **LT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
+| **LG** | Defensive guard head up on you. Cut him off — get between him and the ball. |
 | **C** | Nobody on you. Climb to the playside linebacker. Head across him. |
-| **RG** | Tackle head up on you. Hands inside, pads under his, drive him back. |
-| **RT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
-| **RTE** | End on your inside shoulder. Cut him off — get between him and the ball. |
+| **RG** | Defensive guard head up on you. Hands inside, pads under his, drive him back. |
+| **RT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
+| **RTE** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
 | **SL** | Lead through the hole. Block the first man who shows in it. You are the second man through. Go after the fullback, take whoever he did not. |
 | **QB** | Open right, hand to the tailback, then fake the boot left. It holds the backside end. |
 | **FB** | Lead through the hole. Block the first man who shows in it. |
@@ -1545,13 +1545,13 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 | Position | Assignment |
 |---|---|
-| **LTE** | End on your inside shoulder. Cut him off — get between him and the ball. |
-| **LT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
-| **LG** | Tackle head up on you. Hands inside, pads under his, drive him back. |
+| **LTE** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
+| **LT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
+| **LG** | Defensive guard head up on you. Hands inside, pads under his, drive him back. |
 | **C** | Nobody on you. Climb to the playside linebacker. Head across him. |
-| **RG** | Tackle head up on you. Cut him off — get between him and the ball. |
-| **RT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
-| **RTE** | End on your inside shoulder. Cut him off — get between him and the ball. |
+| **RG** | Defensive guard head up on you. Cut him off — get between him and the ball. |
+| **RT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
+| **RTE** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
 | **SL** | Lead through the hole. Block the first man who shows in it. You are the second man through. Go after the fullback, take whoever he did not. |
 | **QB** | Open left, hand to the tailback, then fake the boot right. It holds the backside end. |
 | **FB** | Lead through the hole. Block the first man who shows in it. |
@@ -1575,13 +1575,13 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 | Position | Assignment |
 |---|---|
-| **LTE** | End on your inside shoulder. Cut him off — get between him and the ball. |
-| **LT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
-| **LG** | Tackle head up on you. Cut him off — get between him and the ball. |
+| **LTE** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
+| **LT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
+| **LG** | Defensive guard head up on you. Cut him off — get between him and the ball. |
 | **C** | Nobody on you. Climb to the playside linebacker. Head across him. |
-| **RG** | Tackle head up on you. Step past him. Climb to the playside linebacker. Head across him. |
-| **RT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
-| **RTE** | End on your inside shoulder. Turn him inside. The ball goes around behind you. |
+| **RG** | Defensive guard head up on you. Step past him. Climb to the playside linebacker. Head across him. |
+| **RT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
+| **RTE** | Defensive end on your inside shoulder. Turn him inside. The ball goes around behind you. |
 | **SL** | Get outside the fullback, then take him, then block the right corner. |
 | **QB** | Quick pitch to the tailback, then run the other way, to the left, like you still have it. |
 | **FB** | Lead outside our end. Block the first man out there — here it is the linebacker. |
@@ -1605,13 +1605,13 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 | Position | Assignment |
 |---|---|
-| **LTE** | End on your inside shoulder. Turn him inside. The ball goes around behind you. |
-| **LT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
-| **LG** | Tackle head up on you. Step past him. Climb to the playside linebacker. Head across him. |
+| **LTE** | Defensive end on your inside shoulder. Turn him inside. The ball goes around behind you. |
+| **LT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
+| **LG** | Defensive guard head up on you. Step past him. Climb to the playside linebacker. Head across him. |
 | **C** | Nobody on you. Climb to the playside linebacker. Head across him. |
-| **RG** | Tackle head up on you. Cut him off — get between him and the ball. |
-| **RT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
-| **RTE** | End on your inside shoulder. Cut him off — get between him and the ball. |
+| **RG** | Defensive guard head up on you. Cut him off — get between him and the ball. |
+| **RT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
+| **RTE** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
 | **SL** | Get outside the fullback, then take him, then block the left corner. |
 | **QB** | Quick pitch to the tailback, then run the other way, to the right, like you still have it. |
 | **FB** | Lead outside our end. Block the first man out there — here it is the linebacker. |

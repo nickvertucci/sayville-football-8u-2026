@@ -103,13 +103,13 @@ Both ends are tight on the line and the slot is just outside the tight end, one 
 
 | Position | Assignment |
 |---|---|
-| **LTE** | Block the left end. |
-| **LT** | Help on the left tackle, then block the left inside linebacker. |
-| **LG** | Block the left tackle. |
-| **C** | Help on the right tackle, then block the right inside linebacker. |
-| **RG** | Block the right tackle. |
-| **RT** | Help on the right end, then block the right outside linebacker. |
-| **RTE** | Block the right end. |
+| **LTE** | Block the left defensive end. |
+| **LT** | Help on the left defensive guard, then block the left inside linebacker. |
+| **LG** | Block the left defensive guard. |
+| **C** | Help on the right defensive guard, then block the right inside linebacker. |
+| **RG** | Block the right defensive guard. |
+| **RT** | Help on the right defensive end, then block the right outside linebacker. |
+| **RTE** | Block the right defensive end. |
 | **SL** | Run at the corner and screen him off. Stay in his way. |
 | **QB** **(ball)** | Catch the snap and sweep left, flat and fast, behind the left halfback. Turn up outside his block. |
 | **LH** | Bubble out around our end, then double team the linebacker with the right halfback. |
@@ -133,13 +133,13 @@ Both ends are tight on the line and the slot is just outside the tight end, one 
 
 | Position | Assignment |
 |---|---|
-| **LTE** | Block the left end. |
-| **LT** | Help on the left end, then block the left outside linebacker. |
-| **LG** | Block the left tackle. |
-| **C** | Help on the left tackle, then block the left inside linebacker. |
-| **RG** | Block the right tackle. |
-| **RT** | Help on the right tackle, then block the right inside linebacker. |
-| **RTE** | Block the right end. |
+| **LTE** | Block the left defensive end. |
+| **LT** | Help on the left defensive end, then block the left outside linebacker. |
+| **LG** | Block the left defensive guard. |
+| **C** | Help on the left defensive guard, then block the left inside linebacker. |
+| **RG** | Block the right defensive guard. |
+| **RT** | Help on the right defensive guard, then block the right inside linebacker. |
+| **RTE** | Block the right defensive end. |
 | **SL** | Run at the corner and screen him off. Stay in his way. |
 | **QB** **(ball)** | Catch the snap and sweep right, flat and fast, behind the right halfback. Turn up outside his block. |
 | **LH** | Bubble out around our end, then double team the linebacker with the right halfback. |
@@ -163,13 +163,13 @@ Both ends are tight on the line and the slot is just outside the tight end, one 
 
 | Position | Assignment |
 |---|---|
-| **LTE** | Block the left end. |
-| **LT** | Help on the left end, then block the left outside linebacker. |
-| **LG** | Block the left tackle. |
-| **C** | Help on the left tackle, then block the left inside linebacker. |
-| **RG** | Block the right tackle. |
-| **RT** | Help on the right tackle, then block the right inside linebacker. |
-| **RTE** | Block the right end. |
+| **LTE** | Block the left defensive end. |
+| **LT** | Help on the left defensive end, then block the left outside linebacker. |
+| **LG** | Block the left defensive guard. |
+| **C** | Help on the left defensive guard, then block the left inside linebacker. |
+| **RG** | Block the right defensive guard. |
+| **RT** | Help on the right defensive guard, then block the right inside linebacker. |
+| **RTE** | Block the right defensive end. |
 | **SL** | Run at the corner and screen him off. Stay in his way. |
 | **QB** | Hand the ball to the left halfback as he crosses in front of you, then fake a run to the left. |
 | **LH** **(ball)** | Cross in front of the quarterback, take the handoff going right and get to the edge behind the right halfback. Turn up outside his block. |
@@ -193,13 +193,13 @@ Both ends are tight on the line and the slot is just outside the tight end, one 
 
 | Position | Assignment |
 |---|---|
-| **LTE** | Block the left end. |
-| **LT** | Help on the left tackle, then block the left inside linebacker. |
-| **LG** | Block the left tackle. |
-| **C** | Help on the right tackle, then block the right inside linebacker. |
-| **RG** | Block the right tackle. |
-| **RT** | Help on the right end, then block the right outside linebacker. |
-| **RTE** | Block the right end. |
+| **LTE** | Block the left defensive end. |
+| **LT** | Help on the left defensive guard, then block the left inside linebacker. |
+| **LG** | Block the left defensive guard. |
+| **C** | Help on the right defensive guard, then block the right inside linebacker. |
+| **RG** | Block the right defensive guard. |
+| **RT** | Help on the right defensive end, then block the right outside linebacker. |
+| **RTE** | Block the right defensive end. |
 | **SL** | Run at the corner and screen him off. Stay in his way. |
 | **QB** | Hand the ball to the right halfback as he crosses in front of you, then fake a run to the right. |
 | **LH** | Bubble out around the left end, then block the left outside linebacker. |

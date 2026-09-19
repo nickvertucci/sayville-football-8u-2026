@@ -459,8 +459,9 @@ SHOULDER = 0.9
 # uses. The defence's own position keys (NT, W, M, S, R) are for the defensive book;
 # nobody yells "block the W".
 
-DL_NOUNS = {"NT": "nose", "LT": "tackle", "RT": "tackle",
-            "LE": "end", "RE": "end", "LG": "guard", "RG": "guard"}
+DL_NOUNS = {"NT": "nose", "LDT": "defensive tackle", "RDT": "defensive tackle",
+            "LDE": "defensive end", "RDE": "defensive end",
+            "LDG": "defensive guard", "RDG": "defensive guard"}
 
 
 def noun(front: dict, label: str) -> str:

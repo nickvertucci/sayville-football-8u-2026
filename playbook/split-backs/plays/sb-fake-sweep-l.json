@@ -70,29 +70,29 @@
       "LT": {
         "block": "man",
         "man": "M",
-        "help": "LT"
+        "help": "LDG"
       },
       "LG": {
         "block": "man",
-        "man": "LT"
+        "man": "LDG"
       },
       "C": {
         "block": "man",
         "man": "S",
-        "help": "RT"
+        "help": "RDG"
       },
       "RG": {
         "block": "man",
-        "man": "RT"
+        "man": "RDG"
       },
       "RT": {
         "block": "man",
         "man": "R",
-        "help": "RE"
+        "help": "RDE"
       },
       "RTE": {
         "block": "man",
-        "man": "RE"
+        "man": "RDE"
       },
       "LH": {
         "block": "man",

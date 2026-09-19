@@ -55,11 +55,11 @@ Same line as the Regular I — both ends tight, seven on the line every snap. No
 |---|---|
 | **LTE** **(ball)** | Stay down in your stance — no motion. At the snap run flat behind the quarterback, take the handoff at full speed and get to the right edge. Turn up outside the trips. |
 | **LT** | Nobody on you. Cut off the backside. Never quit on the play. |
-| **LG** | Tackle head up on you. Cut him off — get between him and the ball. |
+| **LG** | Defensive guard head up on you. Cut him off — get between him and the ball. |
 | **C** | Nobody on you. Climb to the playside linebacker. Head across him. |
-| **RG** | Tackle head up on you. Step past him. Climb to the playside linebacker. Head across him. |
-| **RT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
-| **RTE** | End on your inside shoulder. Turn him inside. The ball goes around behind you. |
+| **RG** | Defensive guard head up on you. Step past him. Climb to the playside linebacker. Head across him. |
+| **RT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
+| **RTE** | Defensive end on your inside shoulder. Turn him inside. The ball goes around behind you. |
 | **SL** | Run at the corner and screen him off. Stay in his way. |
 | **QB** | Open right and hand the ball to the left tight end as he comes across behind you, then fake a run to the left. |
 | **FB** | Lead outside our end. Block the first man out there — here it is the linebacker. |
@@ -82,11 +82,11 @@ Same line as the Regular I — both ends tight, seven on the line every snap. No
 
 | Position | Assignment |
 |---|---|
-| **LTE** | End on your inside shoulder. Turn him inside. The ball goes around behind you. |
-| **LT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
-| **LG** | Tackle head up on you. Step past him. Climb to the playside linebacker. Head across him. |
+| **LTE** | Defensive end on your inside shoulder. Turn him inside. The ball goes around behind you. |
+| **LT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
+| **LG** | Defensive guard head up on you. Step past him. Climb to the playside linebacker. Head across him. |
 | **C** | Nobody on you. Climb to the playside linebacker. Head across him. |
-| **RG** | Tackle head up on you. Cut him off — get between him and the ball. |
+| **RG** | Defensive guard head up on you. Cut him off — get between him and the ball. |
 | **RT** | Nobody on you. Cut off the backside. Never quit on the play. |
 | **RTE** **(ball)** | Stay down in your stance — no motion. At the snap run flat behind the quarterback, take the handoff at full speed and get to the left edge. Turn up outside the trips. |
 | **SL** | Run at the corner and screen him off. Stay in his way. |
@@ -171,13 +171,13 @@ Same line as the Regular I — both ends tight, seven on the line every snap. No
 
 | Position | Assignment |
 |---|---|
-| **LTE** | End on your inside shoulder. Cut him off — get between him and the ball. |
-| **LT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
-| **LG** | Tackle head up on you. Cut him off — get between him and the ball. |
+| **LTE** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
+| **LT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
+| **LG** | Defensive guard head up on you. Cut him off — get between him and the ball. |
 | **C** | Nobody on you. Climb to the playside linebacker. Head across him. |
-| **RG** | Tackle head up on you. Step past him. Climb to the playside linebacker. Head across him. |
-| **RT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
-| **RTE** | End on your inside shoulder. Turn him inside. The ball goes around behind you. |
+| **RG** | Defensive guard head up on you. Step past him. Climb to the playside linebacker. Head across him. |
+| **RT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
+| **RTE** | Defensive end on your inside shoulder. Turn him inside. The ball goes around behind you. |
 | **SL** | Run at the corner and screen him off. Stay in his way. |
 | **QB** **(ball)** | Take the snap and sweep right, flat and fast, behind the trips. Turn up outside the fullback. |
 | **FB** | Lead outside our end. Block the first man out there — here it is the linebacker. |
@@ -200,13 +200,13 @@ Same line as the Regular I — both ends tight, seven on the line every snap. No
 
 | Position | Assignment |
 |---|---|
-| **LTE** | End on your inside shoulder. Turn him inside. The ball goes around behind you. |
-| **LT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
-| **LG** | Tackle head up on you. Step past him. Climb to the playside linebacker. Head across him. |
+| **LTE** | Defensive end on your inside shoulder. Turn him inside. The ball goes around behind you. |
+| **LT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
+| **LG** | Defensive guard head up on you. Step past him. Climb to the playside linebacker. Head across him. |
 | **C** | Nobody on you. Climb to the playside linebacker. Head across him. |
-| **RG** | Tackle head up on you. Cut him off — get between him and the ball. |
-| **RT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
-| **RTE** | End on your inside shoulder. Cut him off — get between him and the ball. |
+| **RG** | Defensive guard head up on you. Cut him off — get between him and the ball. |
+| **RT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
+| **RTE** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
 | **SL** | Run at the corner and screen him off. Stay in his way. |
 | **QB** **(ball)** | Take the snap and sweep left, flat and fast, behind the trips. Turn up outside the fullback. |
 | **FB** | Lead outside our end. Block the first man out there — here it is the linebacker. |

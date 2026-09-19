@@ -39,17 +39,17 @@
 <path d="M567.0,270.0 L542.7,283.5" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 5"/>
 <polygon points="542.7,283.5 549.5,274.4 554.0,282.5" fill="#14213d"/>
 <line x1="222.0" y1="292.2" x2="242.4" y2="312.6" stroke="#14213d" stroke-width="4" stroke-linecap="round"/><line x1="242.4" y1="292.2" x2="222.0" y2="312.6" stroke="#14213d" stroke-width="4" stroke-linecap="round"/>
-<text x="232.2" y="283.0" text-anchor="middle" font-size="13.5" font-weight="700" fill="#14213d">LE</text>
+<text x="232.2" y="283.0" text-anchor="middle" font-size="13.5" font-weight="700" fill="#14213d">LDE</text>
 <line x1="276.0" y1="292.2" x2="296.4" y2="312.6" stroke="#14213d" stroke-width="4" stroke-linecap="round"/><line x1="296.4" y1="292.2" x2="276.0" y2="312.6" stroke="#14213d" stroke-width="4" stroke-linecap="round"/>
-<text x="286.2" y="283.0" text-anchor="middle" font-size="13.5" font-weight="700" fill="#14213d">LT</text>
+<text x="286.2" y="283.0" text-anchor="middle" font-size="13.5" font-weight="700" fill="#14213d">LDT</text>
 <line x1="308.4" y1="292.2" x2="328.8" y2="312.6" stroke="#14213d" stroke-width="4" stroke-linecap="round"/><line x1="328.8" y1="292.2" x2="308.4" y2="312.6" stroke="#14213d" stroke-width="4" stroke-linecap="round"/>
-<text x="318.6" y="283.0" text-anchor="middle" font-size="13.5" font-weight="700" fill="#14213d">LG</text>
+<text x="318.6" y="283.0" text-anchor="middle" font-size="13.5" font-weight="700" fill="#14213d">LDG</text>
 <line x1="373.2" y1="292.2" x2="393.6" y2="312.6" stroke="#14213d" stroke-width="4" stroke-linecap="round"/><line x1="393.6" y1="292.2" x2="373.2" y2="312.6" stroke="#14213d" stroke-width="4" stroke-linecap="round"/>
-<text x="383.4" y="283.0" text-anchor="middle" font-size="13.5" font-weight="700" fill="#14213d">RG</text>
+<text x="383.4" y="283.0" text-anchor="middle" font-size="13.5" font-weight="700" fill="#14213d">RDG</text>
 <line x1="405.6" y1="292.2" x2="426.0" y2="312.6" stroke="#14213d" stroke-width="4" stroke-linecap="round"/><line x1="426.0" y1="292.2" x2="405.6" y2="312.6" stroke="#14213d" stroke-width="4" stroke-linecap="round"/>
-<text x="415.8" y="283.0" text-anchor="middle" font-size="13.5" font-weight="700" fill="#14213d">RT</text>
+<text x="415.8" y="283.0" text-anchor="middle" font-size="13.5" font-weight="700" fill="#14213d">RDT</text>
 <line x1="459.6" y1="292.2" x2="480.0" y2="312.6" stroke="#14213d" stroke-width="4" stroke-linecap="round"/><line x1="480.0" y1="292.2" x2="459.6" y2="312.6" stroke="#14213d" stroke-width="4" stroke-linecap="round"/>
-<text x="469.8" y="283.0" text-anchor="middle" font-size="13.5" font-weight="700" fill="#14213d">RE</text>
+<text x="469.8" y="283.0" text-anchor="middle" font-size="13.5" font-weight="700" fill="#14213d">RDE</text>
 <line x1="270.6" y1="259.8" x2="291.0" y2="280.2" stroke="#14213d" stroke-width="4" stroke-linecap="round"/><line x1="291.0" y1="259.8" x2="270.6" y2="280.2" stroke="#14213d" stroke-width="4" stroke-linecap="round"/>
 <text x="280.8" y="250.6" text-anchor="middle" font-size="13.5" font-weight="700" fill="#14213d">W</text>
 <line x1="340.8" y1="259.8" x2="361.2" y2="280.2" stroke="#14213d" stroke-width="4" stroke-linecap="round"/><line x1="361.2" y1="259.8" x2="340.8" y2="280.2" stroke="#14213d" stroke-width="4" stroke-linecap="round"/>

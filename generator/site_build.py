@@ -3723,9 +3723,16 @@ def write_install_day(
 # names are specific to the calling language (see common.POSITION_NAMES) and mixing
 # defensive roles into that table would put "left end" in a place that answers a
 # different question. Kept local to the depth chart, the only page that needs it.
+#
+# Every line key carries a D. It is not decoration: LG and LT are offensive line
+# positions in this book, and a chart with both on it wants to say which one it
+# means without the reader working it out from context.
 DEFENSE_POSITION_NAMES = {
-    "LE": "Left end", "LT": "Left tackle", "NT": "Nose tackle", "RT": "Right tackle",
-    "RE": "Right end", "W": "Weak linebacker", "M": "Middle linebacker",
+    "LDE": "Left defensive end", "LDT": "Left defensive tackle",
+    "LDG": "Left defensive guard", "NT": "Nose tackle",
+    "RDG": "Right defensive guard", "RDT": "Right defensive tackle",
+    "RDE": "Right defensive end",
+    "W": "Weak linebacker", "M": "Middle linebacker",
     "S": "Strong linebacker", "R": "Rover", "LC": "Left corner", "RC": "Right corner",
     "FS": "Free safety",
 }

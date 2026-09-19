@@ -57,13 +57,13 @@ Normal line splits, about a foot. Both ends are on the line; the slot is just ou
 
 | Position | Assignment |
 |---|---|
-| **LTE** | Block the left end. |
+| **LTE** | Block the left defensive end. |
 | **LT** | Block the left outside linebacker. |
-| **LG** | Block the left tackle. |
-| **C** | Help on the left tackle, then block the left inside linebacker. |
-| **RG** | Block the right tackle. |
-| **RT** | Help on the right tackle, then block the right inside linebacker. |
-| **RTE** | Block the right end. |
+| **LG** | Block the left defensive guard. |
+| **C** | Help on the left defensive guard, then block the left inside linebacker. |
+| **RG** | Block the right defensive guard. |
+| **RT** | Help on the right defensive guard, then block the right inside linebacker. |
+| **RTE** | Block the right defensive end. |
 | **SL** | Block the right corner. |
 | **QB** | Open right, hand deep to the tailback, then fake the boot. It holds the backside end. |
 | **FB** | Lead through the hole, then block the right outside linebacker. |
@@ -88,13 +88,13 @@ Normal line splits, about a foot. Both ends are on the line; the slot is just ou
 
 | Position | Assignment |
 |---|---|
-| **LTE** | Block the left end. |
-| **LT** | Help on the left tackle, then block the left inside linebacker. |
-| **LG** | Block the left tackle. |
-| **C** | Help on the right tackle, then block the right inside linebacker. |
-| **RG** | Block the right tackle. |
+| **LTE** | Block the left defensive end. |
+| **LT** | Help on the left defensive guard, then block the left inside linebacker. |
+| **LG** | Block the left defensive guard. |
+| **C** | Help on the right defensive guard, then block the right inside linebacker. |
+| **RG** | Block the right defensive guard. |
 | **RT** | Block the right outside linebacker. |
-| **RTE** | Block the right end. |
+| **RTE** | Block the right defensive end. |
 | **SL** | Block the left corner. |
 | **QB** | Open left, hand deep to the tailback, then fake the boot. It holds the backside end. |
 | **FB** | Lead through the hole, then block the left outside linebacker. |
@@ -120,12 +120,12 @@ Normal line splits, about a foot. Both ends are on the line; the slot is just ou
 | Position | Assignment |
 |---|---|
 | **LTE** **(ball)** | Stay down in your stance — no motion. At the snap run flat behind the quarterback, take the handoff at full speed and get to the right edge. Turn up outside the fullback. |
-| **LT** | Block the left end. |
-| **LG** | Block the left tackle. |
-| **C** | Help on the left tackle, then block the left inside linebacker. |
-| **RG** | Block the right tackle. |
-| **RT** | Help on the right tackle, then block the right inside linebacker. |
-| **RTE** | Block the right end. |
+| **LT** | Block the left defensive end. |
+| **LG** | Block the left defensive guard. |
+| **C** | Help on the left defensive guard, then block the left inside linebacker. |
+| **RG** | Block the right defensive guard. |
+| **RT** | Help on the right defensive guard, then block the right inside linebacker. |
+| **RTE** | Block the right defensive end. |
 | **SL** | Run at the corner and screen him off. Stay in his way. |
 | **QB** | Open right and hand the ball to the left tight end as he comes across behind you, then fake a run to the left. |
 | **FB** | Bubble out around our end, then double team the linebacker with the tailback. |
@@ -149,12 +149,12 @@ Normal line splits, about a foot. Both ends are on the line; the slot is just ou
 
 | Position | Assignment |
 |---|---|
-| **LTE** | Block the left end. |
-| **LT** | Help on the left tackle, then block the left inside linebacker. |
-| **LG** | Block the left tackle. |
-| **C** | Help on the right tackle, then block the right inside linebacker. |
-| **RG** | Block the right tackle. |
-| **RT** | Block the right end. |
+| **LTE** | Block the left defensive end. |
+| **LT** | Help on the left defensive guard, then block the left inside linebacker. |
+| **LG** | Block the left defensive guard. |
+| **C** | Help on the right defensive guard, then block the right inside linebacker. |
+| **RG** | Block the right defensive guard. |
+| **RT** | Block the right defensive end. |
 | **RTE** **(ball)** | Stay down in your stance — no motion. At the snap run flat behind the quarterback, take the handoff at full speed and get to the left edge. Turn up outside the fullback. |
 | **SL** | Run at the corner and screen him off. Stay in his way. |
 | **QB** | Open left and hand the ball to the right tight end as he comes across behind you, then fake a run to the right. |
@@ -179,13 +179,13 @@ Normal line splits, about a foot. Both ends are on the line; the slot is just ou
 
 | Position | Assignment |
 |---|---|
-| **LTE** | Block the left end. |
-| **LT** | Help on the left end, then block the left outside linebacker. |
-| **LG** | Block the left tackle. |
-| **C** | Help on the left tackle, then block the left inside linebacker. |
-| **RG** | Block the right tackle. |
-| **RT** | Help on the right tackle, then block the right inside linebacker. |
-| **RTE** | Block the right end. |
+| **LTE** | Block the left defensive end. |
+| **LT** | Help on the left defensive end, then block the left outside linebacker. |
+| **LG** | Block the left defensive guard. |
+| **C** | Help on the left defensive guard, then block the left inside linebacker. |
+| **RG** | Block the right defensive guard. |
+| **RT** | Help on the right defensive guard, then block the right inside linebacker. |
+| **RTE** | Block the right defensive end. |
 | **SL** **(ball)** | At the snap run flat across the backfield, take the handoff at full speed and get to the left edge. Turn up in the alley behind the fullback. |
 | **QB** | Hand the ball to the slot as he runs past you, then fake the handoff to the tailback going right. |
 | **FB** | Bubble out around our end, then double team the corner with the tailback. |
@@ -209,13 +209,13 @@ Normal line splits, about a foot. Both ends are on the line; the slot is just ou
 
 | Position | Assignment |
 |---|---|
-| **LTE** | Block the left end. |
-| **LT** | Help on the left tackle, then block the left inside linebacker. |
-| **LG** | Block the left tackle. |
-| **C** | Help on the right tackle, then block the right inside linebacker. |
-| **RG** | Block the right tackle. |
-| **RT** | Help on the right end, then block the right outside linebacker. |
-| **RTE** | Block the right end. |
+| **LTE** | Block the left defensive end. |
+| **LT** | Help on the left defensive guard, then block the left inside linebacker. |
+| **LG** | Block the left defensive guard. |
+| **C** | Help on the right defensive guard, then block the right inside linebacker. |
+| **RG** | Block the right defensive guard. |
+| **RT** | Help on the right defensive end, then block the right outside linebacker. |
+| **RTE** | Block the right defensive end. |
 | **SL** **(ball)** | At the snap run flat across the backfield, take the handoff at full speed and get to the right edge. Turn up in the alley behind the fullback. |
 | **QB** | Hand the ball to the slot as he runs past you, then fake the handoff to the tailback going left. |
 | **FB** | Bubble out around our end, then double team the corner with the tailback. |
@@ -239,12 +239,12 @@ Normal line splits, about a foot. Both ends are on the line; the slot is just ou
 
 | Position | Assignment |
 |---|---|
-| **LTE** | Block the left end. |
+| **LTE** | Block the left defensive end. |
 | **LT** | Block the left outside linebacker. |
-| **LG** | Block the left tackle. |
-| **C** | Help on the left tackle, then block the left inside linebacker. |
-| **RG** | Block the right tackle. |
-| **RT** | Block the right end. |
+| **LG** | Block the left defensive guard. |
+| **C** | Help on the left defensive guard, then block the left inside linebacker. |
+| **RG** | Block the right defensive guard. |
+| **RT** | Block the right defensive end. |
 | **RTE** | Block the right outside linebacker. |
 | **SL** | Block the right corner. |
 | **QB** | Open right, hand to the tailback, then fake the boot left. It holds the backside end. |
@@ -270,12 +270,12 @@ Normal line splits, about a foot. Both ends are on the line; the slot is just ou
 | Position | Assignment |
 |---|---|
 | **LTE** | Block the left outside linebacker. |
-| **LT** | Block the left end. |
-| **LG** | Block the left tackle. |
-| **C** | Help on the right tackle, then block the right inside linebacker. |
-| **RG** | Block the right tackle. |
+| **LT** | Block the left defensive end. |
+| **LG** | Block the left defensive guard. |
+| **C** | Help on the right defensive guard, then block the right inside linebacker. |
+| **RG** | Block the right defensive guard. |
 | **RT** | Block the right outside linebacker. |
-| **RTE** | Block the right end. |
+| **RTE** | Block the right defensive end. |
 | **SL** | Block the left corner. |
 | **QB** | Open left, hand to the tailback, then fake the boot right. It holds the backside end. |
 | **FB** | Lead through the hole, then block the left inside linebacker. |
@@ -359,13 +359,13 @@ Normal line splits, about a foot. Both ends are on the line; the slot is just ou
 
 | Position | Assignment |
 |---|---|
-| **LTE** | End on your inside shoulder. Cut him off — get between him and the ball. |
-| **LT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
-| **LG** | Tackle head up on you. Cut him off — get between him and the ball. |
+| **LTE** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
+| **LT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
+| **LG** | Defensive guard head up on you. Cut him off — get between him and the ball. |
 | **C** | Nobody on you. Climb to the playside linebacker. Head across him. |
-| **RG** | Tackle head up on you. Hands inside, pads under his, drive him back. |
-| **RT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
-| **RTE** | End on your inside shoulder. Cut him off — get between him and the ball. |
+| **RG** | Defensive guard head up on you. Hands inside, pads under his, drive him back. |
+| **RT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
+| **RTE** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
 | **SL** | Run at the corner and screen him off. Stay in his way. |
 | **QB** | Open right, hand to the fullback right now, then fake the boot left. It holds the backside end. |
 | **FB** **(ball)** | Take the handoff downhill between the center and the right guard. You are the runner on this one, not the lead. Straight ahead, do not bounce it. |
@@ -389,13 +389,13 @@ Normal line splits, about a foot. Both ends are on the line; the slot is just ou
 
 | Position | Assignment |
 |---|---|
-| **LTE** | End on your inside shoulder. Cut him off — get between him and the ball. |
-| **LT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
-| **LG** | Tackle head up on you. Hands inside, pads under his, drive him back. |
+| **LTE** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
+| **LT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
+| **LG** | Defensive guard head up on you. Hands inside, pads under his, drive him back. |
 | **C** | Nobody on you. Climb to the playside linebacker. Head across him. |
-| **RG** | Tackle head up on you. Cut him off — get between him and the ball. |
-| **RT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
-| **RTE** | End on your inside shoulder. Cut him off — get between him and the ball. |
+| **RG** | Defensive guard head up on you. Cut him off — get between him and the ball. |
+| **RT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
+| **RTE** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
 | **SL** | Run at the corner and screen him off. Stay in his way. |
 | **QB** | Open left, hand to the fullback right now, then fake the boot right. It holds the backside end. |
 | **FB** **(ball)** | Take the handoff downhill between the center and the left guard. You are the runner on this one, not the lead. Straight ahead, do not bounce it. |

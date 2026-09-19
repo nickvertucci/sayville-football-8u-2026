@@ -7,11 +7,11 @@
   "summary": "The answer to a team running downhill at the middle. Five down linemen cover the offensive line, three linebackers fill, and a free safety cleans up anything that gets through.",
   "notes": "Five down linemen head up on the center, both guards' outside shoulders and both ends. Three linebackers at three yards. Two corners and a free safety. This is the Base 4-4 with the fourth linebacker traded back for a nose tackle, so nobody is uncovered inside.",
   "roles": {
-    "LE": "DL",
-    "LT": "DL",
+    "LDE": "DL",
+    "LDT": "DL",
     "NT": "DL",
-    "RT": "DL",
-    "RE": "DL",
+    "RDT": "DL",
+    "RDE": "DL",
     "W": "LB",
     "M": "LB",
     "S": "LB",
@@ -20,97 +20,179 @@
     "FS": "DB"
   },
   "alignment": {
-    "LE": [-4.2, 0.8],
-    "LT": [-2.4, 0.8],
-    "NT": [0.0, 0.8],
-    "RT": [2.4, 0.8],
-    "RE": [4.2, 0.8],
-    "W": [-3.2, 3.0],
-    "M": [0.0, 3.0],
-    "S": [3.2, 3.0],
-    "LC": [-9.0, 3.0],
-    "RC": [9.0, 3.0],
-    "FS": [0.0, 8.0]
+    "LDE": [
+      -4.2,
+      0.8
+    ],
+    "LDT": [
+      -2.4,
+      0.8
+    ],
+    "NT": [
+      0.0,
+      0.8
+    ],
+    "RDT": [
+      2.4,
+      0.8
+    ],
+    "RDE": [
+      4.2,
+      0.8
+    ],
+    "W": [
+      -3.2,
+      3.0
+    ],
+    "M": [
+      0.0,
+      3.0
+    ],
+    "S": [
+      3.2,
+      3.0
+    ],
+    "LC": [
+      -9.0,
+      3.0
+    ],
+    "RC": [
+      9.0,
+      3.0
+    ],
+    "FS": [
+      0.0,
+      8.0
+    ]
+  },
+  "position_names": {
+    "LDE": "Left defensive end",
+    "LDT": "Left defensive tackle",
+    "NT": "Nose tackle",
+    "RDT": "Right defensive tackle",
+    "RDE": "Right defensive end"
   },
   "assignments": {
-    "LE": {
+    "LDE": {
       "rule": "Contain. Rush his outside shoulder, keep your outside arm free. Nothing gets outside you.",
       "type": "attack",
       "path": [
-        [-0.5, -1.4]
+        [
+          -0.5,
+          -1.4
+        ]
       ]
     },
-    "LT": {
+    "LDT": {
       "rule": "Attack the inside shoulder of the man over you and squeeze the gap to your inside. Do not run around him.",
       "type": "attack",
       "path": [
-        [0.4, -1.4]
+        [
+          0.4,
+          -1.4
+        ]
       ]
     },
     "NT": {
       "rule": "Head up on the center. Two hands on his chest, get your pads under his, then work to whichever side the ball goes.",
       "type": "attack",
       "path": [
-        [0.0, -1.5]
+        [
+          0.0,
+          -1.5
+        ]
       ]
     },
-    "RT": {
+    "RDT": {
       "rule": "Attack the inside shoulder of the man over you and squeeze the gap to your inside. Do not run around him.",
       "type": "attack",
       "path": [
-        [-0.4, -1.4]
+        [
+          -0.4,
+          -1.4
+        ]
       ]
     },
-    "RE": {
+    "RDE": {
       "rule": "Contain. Rush his outside shoulder, keep your outside arm free. Nothing gets outside you.",
       "type": "attack",
       "path": [
-        [0.5, -1.4]
+        [
+          0.5,
+          -1.4
+        ]
       ]
     },
     "W": {
       "rule": "Three yards deep. Read the back on your side. Ball to you, fill the first open gap inside. Ball away, chase flat down the line and never quit.",
       "type": "read",
       "path": [
-        [-0.3, -0.6],
-        [-0.6, -2.0]
+        [
+          -0.3,
+          -0.6
+        ],
+        [
+          -0.6,
+          -2.0
+        ]
       ]
     },
     "M": {
       "rule": "Three yards deep over the center. You make the call and you fill the first open gap. Step downhill — do not drift sideways.",
       "type": "read",
       "path": [
-        [0.0, -0.6],
-        [0.0, -2.0]
+        [
+          0.0,
+          -0.6
+        ],
+        [
+          0.0,
+          -2.0
+        ]
       ]
     },
     "S": {
       "rule": "Three yards deep. Read the back on your side. Ball to you, fill the first open gap inside. Ball away, chase flat down the line and never quit.",
       "type": "read",
       "path": [
-        [0.3, -0.6],
-        [0.6, -2.0]
+        [
+          0.3,
+          -0.6
+        ],
+        [
+          0.6,
+          -2.0
+        ]
       ]
     },
     "LC": {
       "rule": "Three yards off, outside the end. Nothing outside you and nothing behind you. Force it back in.",
       "type": "read",
       "path": [
-        [0.8, -0.8]
+        [
+          0.8,
+          -0.8
+        ]
       ]
     },
     "RC": {
       "rule": "Three yards off, outside the end. Nothing outside you and nothing behind you. Force it back in.",
       "type": "read",
       "path": [
-        [-0.8, -0.8]
+        [
+          -0.8,
+          -0.8
+        ]
       ]
     },
     "FS": {
       "rule": "Eight yards deep. You are the last man — nobody gets behind you. Take the cut-off angle, not the chase.",
       "type": "read",
       "path": [
-        [0.0, -1.6]
+        [
+          0.0,
+          -1.6
+        ]
       ]
     }
   },
