@@ -118,9 +118,9 @@ Both ends are tight on the line. The two backs sit four yards deep and just over
 | **RG** | Block the right defensive guard. |
 | **RT** | Help on the right defensive guard, then block the right inside linebacker. |
 | **RTE** | Defensive end on your inside shoulder. Turn him inside. The ball goes around behind you. |
-| **SL** | Run at the corner and screen him off. Stay in his way. |
+| **SL** | Run at the outside linebacker and screen him off. Stay in his way. |
 | **QB** **(ball)** | Take the snap and sweep right, flat and fast, behind the right halfback. Turn up outside his block. |
-| **LH** | Bubble out around our end, then double team the linebacker with the right halfback. |
+| **LH** | Bubble out around our end, then double team the corner with the right halfback. |
 | **RH** | Bubble out around our end, then double team the linebacker with the left halfback. |
 
 **Coaching points**
@@ -148,9 +148,9 @@ Both ends are tight on the line. The two backs sit four yards deep and just over
 | **RG** | Block the right defensive guard. |
 | **RT** | Help on the right defensive end, then block the right outside linebacker. |
 | **RTE** | Block the right defensive end. |
-| **SL** | Run at the corner and screen him off. Stay in his way. |
+| **SL** | Run at the outside linebacker and screen him off. Stay in his way. |
 | **QB** **(ball)** | Take the snap and sweep left, flat and fast, behind the left halfback. Turn up outside his block. |
-| **LH** | Bubble out around our end, then double team the linebacker with the right halfback. |
+| **LH** | Bubble out around our end, then double team the corner with the right halfback. |
 | **RH** | Bubble out around our end, then double team the linebacker with the left halfback. |
 
 **Coaching points**
@@ -178,7 +178,7 @@ Both ends are tight on the line. The two backs sit four yards deep and just over
 | **RG** | Block the right defensive guard. |
 | **RT** | Help on the right defensive end, then block the right outside linebacker. |
 | **RTE** | Block the right defensive end. |
-| **SL** | Run at the corner and screen him off. Stay in his way. |
+| **SL** | Run at the outside linebacker and screen him off. Stay in his way. |
 | **QB** **(ball)** | Fake the handoff to the right halfback, then roll back left and sweep it, flat and fast, behind the left halfback. Turn up outside his block. |
 | **LH** | Bubble out around the left tight end, then block the left outside linebacker. |
 | **RH** | Take the fake from the quarterback and run hard to the right like you have the ball. Sell it all the way — you are the reason the defense goes the wrong way. |
@@ -208,7 +208,7 @@ Both ends are tight on the line. The two backs sit four yards deep and just over
 | **RG** | Block the right defensive guard. |
 | **RT** | Help on the right defensive guard, then block the right inside linebacker. |
 | **RTE** | Defensive end on your inside shoulder. Turn him inside. The ball goes around behind you. |
-| **SL** | Run at the corner and screen him off. Stay in his way. |
+| **SL** | Run at the outside linebacker and screen him off. Stay in his way. |
 | **QB** **(ball)** | Fake the handoff to the left halfback, then roll back right and sweep it, flat and fast, behind the right halfback. Turn up outside his block. |
 | **LH** | Take the fake from the quarterback and run hard to the left like you have the ball. Sell it all the way — you are the reason the defense goes the wrong way. |
 | **RH** | Bubble out around the right tight end, then block the right outside linebacker. |
@@ -298,9 +298,9 @@ Both ends are tight on the line. The two backs sit four yards deep and just over
 | **RG** | Block the right defensive guard. |
 | **RT** | Help on the right defensive guard, then block the right inside linebacker. |
 | **RTE** | Block the right defensive end. |
-| **SL** | Run at the corner and screen him off. Stay in his way. |
+| **SL** | Run at the outside linebacker and screen him off. Stay in his way. |
 | **QB** | Open right and hand the ball to the left tight end as he comes across behind you, then fake a run to the left. |
-| **LH** | Bubble out around our end, then double team the linebacker with the right halfback. |
+| **LH** | Bubble out around our end, then double team the corner with the right halfback. |
 | **RH** | Bubble out around our end, then double team the linebacker with the left halfback. |
 
 **Coaching points**
@@ -328,9 +328,9 @@ Both ends are tight on the line. The two backs sit four yards deep and just over
 | **RG** | Block the right defensive guard. |
 | **RT** | Block the right defensive end. |
 | **RTE** **(ball)** | Stay down in your stance — no motion. At the snap run flat behind the quarterback, take the handoff at full speed and get to the left edge. Turn up outside the halfbacks. |
-| **SL** | Run at the corner and screen him off. Stay in his way. |
+| **SL** | Run at the outside linebacker and screen him off. Stay in his way. |
 | **QB** | Open left and hand the ball to the right tight end as he comes across behind you, then fake a run to the right. |
-| **LH** | Bubble out around our end, then double team the linebacker with the right halfback. |
+| **LH** | Bubble out around our end, then double team the corner with the right halfback. |
 | **RH** | Bubble out around our end, then double team the linebacker with the left halfback. |
 
 **Coaching points**

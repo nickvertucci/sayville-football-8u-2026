@@ -20,42 +20,42 @@
 <text x="388.8" y="284.5" text-anchor="middle" font-size="12.5" fill="#9aa2ae" font-weight="600">RDG</text>
 <line x1="439.0" y1="293.2" x2="457.4" y2="311.6" stroke="#9aa2ae" stroke-width="3.6"/><line x1="457.4" y1="293.2" x2="439.0" y2="311.6" stroke="#9aa2ae" stroke-width="3.6"/>
 <text x="448.2" y="284.5" text-anchor="middle" font-size="12.5" fill="#9aa2ae" font-weight="600">RDE</text>
-<line x1="217.6" y1="233.8" x2="236.0" y2="252.2" stroke="#9aa2ae" stroke-width="3.6"/><line x1="236.0" y1="233.8" x2="217.6" y2="252.2" stroke="#9aa2ae" stroke-width="3.6"/>
-<text x="226.8" y="225.2" text-anchor="middle" font-size="12.5" fill="#9aa2ae" font-weight="600">LOLB</text>
-<line x1="274.3" y1="233.8" x2="292.7" y2="252.2" stroke="#9aa2ae" stroke-width="3.6"/><line x1="292.7" y1="233.8" x2="274.3" y2="252.2" stroke="#9aa2ae" stroke-width="3.6"/>
-<text x="283.5" y="225.2" text-anchor="middle" font-size="12.5" fill="#9aa2ae" font-weight="600">LILB</text>
-<line x1="409.3" y1="233.8" x2="427.7" y2="252.2" stroke="#9aa2ae" stroke-width="3.6"/><line x1="427.7" y1="233.8" x2="409.3" y2="252.2" stroke="#9aa2ae" stroke-width="3.6"/>
-<text x="418.5" y="225.2" text-anchor="middle" font-size="12.5" fill="#9aa2ae" font-weight="600">RILB</text>
-<line x1="466.0" y1="233.8" x2="484.4" y2="252.2" stroke="#9aa2ae" stroke-width="3.6"/><line x1="484.4" y1="233.8" x2="466.0" y2="252.2" stroke="#9aa2ae" stroke-width="3.6"/>
-<text x="475.2" y="225.2" text-anchor="middle" font-size="12.5" fill="#9aa2ae" font-weight="600">ROLB</text>
-<line x1="85.3" y1="233.8" x2="103.7" y2="252.2" stroke="#9aa2ae" stroke-width="3.6"/><line x1="103.7" y1="233.8" x2="85.3" y2="252.2" stroke="#9aa2ae" stroke-width="3.6"/>
-<text x="94.5" y="225.2" text-anchor="middle" font-size="12.5" fill="#9aa2ae" font-weight="600">LC</text>
-<line x1="598.3" y1="233.8" x2="616.7" y2="252.2" stroke="#9aa2ae" stroke-width="3.6"/><line x1="616.7" y1="233.8" x2="598.3" y2="252.2" stroke="#9aa2ae" stroke-width="3.6"/>
-<text x="607.5" y="225.2" text-anchor="middle" font-size="12.5" fill="#9aa2ae" font-weight="600">RC</text>
+<line x1="217.6" y1="196.0" x2="236.0" y2="214.4" stroke="#9aa2ae" stroke-width="3.6"/><line x1="236.0" y1="196.0" x2="217.6" y2="214.4" stroke="#9aa2ae" stroke-width="3.6"/>
+<text x="226.8" y="187.3" text-anchor="middle" font-size="12.5" fill="#9aa2ae" font-weight="600">LOLB</text>
+<line x1="274.3" y1="196.0" x2="292.7" y2="214.4" stroke="#9aa2ae" stroke-width="3.6"/><line x1="292.7" y1="196.0" x2="274.3" y2="214.4" stroke="#9aa2ae" stroke-width="3.6"/>
+<text x="283.5" y="187.3" text-anchor="middle" font-size="12.5" fill="#9aa2ae" font-weight="600">LILB</text>
+<line x1="409.3" y1="196.0" x2="427.7" y2="214.4" stroke="#9aa2ae" stroke-width="3.6"/><line x1="427.7" y1="196.0" x2="409.3" y2="214.4" stroke="#9aa2ae" stroke-width="3.6"/>
+<text x="418.5" y="187.3" text-anchor="middle" font-size="12.5" fill="#9aa2ae" font-weight="600">RILB</text>
+<line x1="466.0" y1="196.0" x2="484.4" y2="214.4" stroke="#9aa2ae" stroke-width="3.6"/><line x1="484.4" y1="196.0" x2="466.0" y2="214.4" stroke="#9aa2ae" stroke-width="3.6"/>
+<text x="475.2" y="187.3" text-anchor="middle" font-size="12.5" fill="#9aa2ae" font-weight="600">ROLB</text>
+<line x1="85.3" y1="196.0" x2="103.7" y2="214.4" stroke="#9aa2ae" stroke-width="3.6"/><line x1="103.7" y1="196.0" x2="85.3" y2="214.4" stroke="#9aa2ae" stroke-width="3.6"/>
+<text x="94.5" y="187.3" text-anchor="middle" font-size="12.5" fill="#9aa2ae" font-weight="600">LC</text>
+<line x1="598.3" y1="196.0" x2="616.7" y2="214.4" stroke="#9aa2ae" stroke-width="3.6"/><line x1="616.7" y1="196.0" x2="598.3" y2="214.4" stroke="#9aa2ae" stroke-width="3.6"/>
+<text x="607.5" y="187.3" text-anchor="middle" font-size="12.5" fill="#9aa2ae" font-weight="600">RC</text>
 <line x1="341.8" y1="98.8" x2="360.2" y2="117.2" stroke="#9aa2ae" stroke-width="3.6"/><line x1="360.2" y1="98.8" x2="341.8" y2="117.2" stroke="#9aa2ae" stroke-width="3.6"/>
 <text x="351.0" y="90.2" text-anchor="middle" font-size="12.5" fill="#9aa2ae" font-weight="600">FS</text>
 <path d="M237.6,337.5 L248.7,313.5" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
 <line x1="240.3" y1="309.6" x2="257.0" y2="317.3" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
-<path d="M275.4,337.5 L304.3,310.8 L282.4,255.1" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-<line x1="273.9" y1="258.5" x2="291.0" y2="251.8" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
+<path d="M275.4,337.5 L304.3,310.8 L282.7,217.4" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="273.7" y1="219.4" x2="291.6" y2="215.3" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 <path d="M313.2,337.5 L313.2,314.6" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
 <line x1="304.0" y1="314.6" x2="322.4" y2="314.6" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
-<path d="M351.0,337.5 L379.9,310.8 L411.5,253.0" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-<line x1="403.4" y1="248.6" x2="419.5" y2="257.4" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
+<path d="M351.0,337.5 L379.9,310.8 L413.1,216.0" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="404.4" y1="213.0" x2="421.8" y2="219.0" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 <path d="M388.8,337.5 L388.8,314.6" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
 <line x1="379.6" y1="314.6" x2="398.0" y2="314.6" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
-<path d="M426.6,337.5 L441.7,312.7 L469.5,253.8" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-<line x1="461.2" y1="249.9" x2="477.8" y2="257.7" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
+<path d="M426.6,337.5 L441.7,312.7 L470.9,216.5" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="462.1" y1="213.9" x2="479.7" y2="219.2" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 <path d="M464.4,337.5 L453.3,313.5" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
 <line x1="445.0" y1="317.3" x2="461.7" y2="309.6" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
-<path d="M199.8,364.5 L102.3,252.2" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-<line x1="95.4" y1="258.2" x2="109.3" y2="246.2" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
+<path d="M199.8,364.5 L224.6,217.1" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="215.6" y1="215.6" x2="233.7" y2="218.6" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 <path d="M351.0,459.0 C342.9,457.2 329.4,453.6 302.4,448.2 C275.4,442.8 212.4,440.1 189.0,426.6 C165.6,413.1 166.5,388.8 162.0,367.2 C157.5,345.6 162.0,324.4 162.0,297.0 C162.0,269.6 162.0,229.5 162.0,202.5 C162.0,175.5 162.0,146.2 162.0,135.0" fill="none" stroke="#b3001b" stroke-width="4.6" stroke-linecap="round" stroke-linejoin="round"/>
 <polygon points="162.0,135.0 168.2,148.8 155.8,148.8" fill="#b3001b"/>
-<path d="M297.0,459.0 L250.3,307.8 L230.6,254.6" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-<line x1="222.0" y1="257.8" x2="239.2" y2="251.4" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
-<path d="M405.0,459.0 L298.9,307.8 L234.6,252.4" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-<line x1="228.6" y1="259.4" x2="240.6" y2="245.5" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
+<path d="M297.0,459.0 L177.7,307.8 L102.1,214.6" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="94.9" y1="220.4" x2="109.2" y2="208.9" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
+<path d="M405.0,459.0 L298.9,307.8 L233.8,215.2" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="226.3" y1="220.5" x2="241.3" y2="209.9" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 
 <rect x="224.1" y="324.0" width="27.0" height="27.0" rx="3" fill="#ffffff" stroke="#14213d" stroke-width="2.6"/>
 <text x="237.6" y="342.0" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">LTE</text>
@@ -101,15 +101,15 @@
 <text x="310" y="578" font-size="12" font-weight="700" fill="#111318">RTE</text>
 <text x="344" y="578" font-size="12" fill="#111318">Block the right defensive end.</text>
 <text x="310" y="596" font-size="12" font-weight="700" fill="#111318">SL</text>
-<text x="344" y="596" font-size="12" fill="#111318">Run at the corner and screen him off.</text>
-<text x="344" y="612" font-size="12" fill="#111318">Stay in his way.</text>
+<text x="344" y="596" font-size="12" fill="#111318">Run at the outside linebacker and</text>
+<text x="344" y="612" font-size="12" fill="#111318">screen him off. Stay in his way.</text>
 <text x="310" y="630" font-size="12" font-weight="700" fill="#111318">QB</text>
 <text x="344" y="630" font-size="12" fill="#111318">Catch the snap and sweep left, flat and</text>
 <text x="344" y="646" font-size="12" fill="#111318">fast, behind the left halfback. Turn up</text>
 <text x="344" y="664" font-size="12" fill="#111318">outside his block.</text>
 <text x="310" y="680" font-size="12" font-weight="700" fill="#111318">LH</text>
 <text x="344" y="680" font-size="12" fill="#111318">Bubble out around our end, then double</text>
-<text x="344" y="698" font-size="12" fill="#111318">team the linebacker with the right</text>
+<text x="344" y="698" font-size="12" fill="#111318">team the corner with the right</text>
 <text x="344" y="714" font-size="12" fill="#111318">halfback.</text>
 <text x="310" y="732" font-size="12" font-weight="700" fill="#111318">RH</text>
 <text x="344" y="732" font-size="12" fill="#111318">Bubble out around our end, then double</text>

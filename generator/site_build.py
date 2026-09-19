@@ -686,12 +686,14 @@ table.xl.xl-plays td {
 /* The front as a picture, above its table. Discs made of border, positioned by the
    alignment's own yards -- see _front_picture for why not an SVG. */
 .front-pic {
-  position: relative; width: 340px; max-width: 100%; height: 116px;
+  --fd-scale: 11.5px; --fd-pad: 11px;
+  position: relative; width: 340px; max-width: 100%;
+  height: calc(var(--fd-deep) * var(--fd-scale) + 2 * var(--fd-pad));
   margin: 8px auto 6px; border: 1px solid var(--line); border-radius: 4px;
   background: var(--panel-2);
 }
 .front-pic .los {
-  position: absolute; left: 4%; right: 4%; top: 7%;
+  position: absolute; left: 4%; right: 4%; top: var(--fd-pad);
   border-top: 1px dashed var(--ink-2);
 }
 .front-pic .fd {
@@ -702,7 +704,7 @@ table.xl.xl-plays td {
    rule on the next one: the gap is the thing being asked for, and a row can carry it
    without the cell borders either side having to agree about it. */
 table.xl.df-grid tr.df-gap td {
-  height: 7px; padding: 0; border-left: 0; border-right: 0;
+  height: 13px; padding: 0; border-left: 0; border-right: 0;
   background: var(--panel-2);
 }
 table.xl.df-grid { table-layout: auto; }
@@ -921,7 +923,8 @@ table.xl.pk-plays td {
      blank front under them. Small enough that the whole thing is one sheet, the way
      the offensive side is. */
   .df-fronts { gap: 5px; margin: 0; }
-  .front-pic { width: 250px; height: 74px; margin: 3px auto 3px;
+  .front-pic { --fd-scale: 7.5px; --fd-pad: 8px;
+               width: 250px; margin: 3px auto 3px;
                border-color: #999; background: none; }
   .front-pic .fd { border-width: 4.5px; border-color: #000; }
   .front-pic .los { border-top-color: #000; }
@@ -930,7 +933,7 @@ table.xl.pk-plays td {
      room for both. The offensive sheet's .xl-n is a play count, which is why it
      is hidden up there and shown here. */
   .df-front .xl-n { display: inline; float: right; opacity: 1; font-weight: 900; }
-  table.xl.df-grid tr.df-gap td { height: 4px; background: none; }
+  table.xl.df-grid tr.df-gap td { height: 9px; background: none; }
   .df-front { break-inside: avoid; }
   table.xl.df-grid { font-size: 8px; }
   table.xl.df-grid td, table.xl.df-grid th { padding: 0 2px; height: auto;
@@ -3188,14 +3191,18 @@ def _def_eleven(front_id: str, spots: list[str], slides: dict,
 
 
 # The window every front picture is drawn in, in the same yards the alignment uses.
-# One window for all three, not one each: a 6-3 really is tighter than a 4-4, and a
+# One width for all three, not one each: a 6-3 really is tighter than a 4-4, and a
 # picture that rescaled per front would hide the only thing these pictures are for.
 # The dots are inset a little from the edges so the widest man -- a 4-4 corner, nine
 # and a half yards out -- sits inside the frame instead of half on top of it.
 FRONT_VIEW_X = 10.0
-FRONT_VIEW_Y = 8.5
 FRONT_PAD_X = 3.0
-FRONT_PAD_Y = 7.0
+# Depth is the other way round: yards to the inch, fixed, and the card is as tall as
+# its own deepest man needs. Sharing one depth for all three gave the goal line card
+# six yards of white under its linebackers, because a 6-3 has nobody behind them.
+# A fixed scale is what keeps the three comparable -- two yards of separation looks
+# the same on every card -- so only the height moves.
+FRONT_MIN_DEEP = 2.0
 
 
 def _front_picture(front: dict) -> str:
@@ -3209,18 +3216,22 @@ def _front_picture(front: dict) -> str:
     edge to edge, twenty yards of field across seven inches of paper put the eleven
     dots so far apart that they read as specks rather than as a front; at a third of
     that width the same eleven dots look like the picture a coach recognises.
+
+    Down the page the stylesheet owns the scale -- one --fd-scale per yard, screen and
+    print -- and this only says how deep the front goes, so the card can be exactly
+    that tall.
     """
+    deep = max([y for _, y in front["alignment"].values()] + [FRONT_MIN_DEEP])
     dots = []
     for label, (x, y) in front["alignment"].items():
         left = FRONT_PAD_X + (x + FRONT_VIEW_X) / (2 * FRONT_VIEW_X) * (
             100 - 2 * FRONT_PAD_X)
-        top = FRONT_PAD_Y + min(y, FRONT_VIEW_Y) / FRONT_VIEW_Y * (
-            100 - 2 * FRONT_PAD_Y)
         dots.append(
-            f'<span class="fd" style="left:{left:.1f}%;top:{top:.1f}%" '
+            f'<span class="fd" style="left:{left:.1f}%;'
+            f'top:calc(var(--fd-pad) + {y:g} * var(--fd-scale))" '
             f'title="{esc(label)}"></span>'
         )
-    return ('<div class="front-pic" role="img" '
+    return (f'<div class="front-pic" style="--fd-deep:{deep:g}" role="img" '
             f'aria-label="{esc(front["name"])} front, eleven defenders">'
             f'<span class="los"></span>{"".join(dots)}</div>')
 

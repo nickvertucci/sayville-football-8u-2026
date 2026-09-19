@@ -626,12 +626,14 @@ table.xl.xl-plays td {
 /* The front as a picture, above its table. Discs made of border, positioned by the
    alignment's own yards -- see _front_picture for why not an SVG. */
 .front-pic {
-  position: relative; width: 340px; max-width: 100%; height: 116px;
+  --fd-scale: 11.5px; --fd-pad: 11px;
+  position: relative; width: 340px; max-width: 100%;
+  height: calc(var(--fd-deep) * var(--fd-scale) + 2 * var(--fd-pad));
   margin: 8px auto 6px; border: 1px solid var(--line); border-radius: 4px;
   background: var(--panel-2);
 }
 .front-pic .los {
-  position: absolute; left: 4%; right: 4%; top: 7%;
+  position: absolute; left: 4%; right: 4%; top: var(--fd-pad);
   border-top: 1px dashed var(--ink-2);
 }
 .front-pic .fd {
@@ -642,7 +644,7 @@ table.xl.xl-plays td {
    rule on the next one: the gap is the thing being asked for, and a row can carry it
    without the cell borders either side having to agree about it. */
 table.xl.df-grid tr.df-gap td {
-  height: 7px; padding: 0; border-left: 0; border-right: 0;
+  height: 13px; padding: 0; border-left: 0; border-right: 0;
   background: var(--panel-2);
 }
 table.xl.df-grid { table-layout: auto; }
@@ -861,7 +863,8 @@ table.xl.pk-plays td {
      blank front under them. Small enough that the whole thing is one sheet, the way
      the offensive side is. */
   .df-fronts { gap: 5px; margin: 0; }
-  .front-pic { width: 250px; height: 74px; margin: 3px auto 3px;
+  .front-pic { --fd-scale: 7.5px; --fd-pad: 8px;
+               width: 250px; margin: 3px auto 3px;
                border-color: #999; background: none; }
   .front-pic .fd { border-width: 4.5px; border-color: #000; }
   .front-pic .los { border-top-color: #000; }
@@ -870,7 +873,7 @@ table.xl.pk-plays td {
      room for both. The offensive sheet's .xl-n is a play count, which is why it
      is hidden up there and shown here. */
   .df-front .xl-n { display: inline; float: right; opacity: 1; font-weight: 900; }
-  table.xl.df-grid tr.df-gap td { height: 4px; background: none; }
+  table.xl.df-grid tr.df-gap td { height: 9px; background: none; }
   .df-front { break-inside: avoid; }
   table.xl.df-grid { font-size: 8px; }
   table.xl.df-grid td, table.xl.df-grid th { padding: 0 2px; height: auto;

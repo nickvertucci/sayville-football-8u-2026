@@ -126,9 +126,9 @@ Normal line splits, about a foot. Both ends are on the line; the slot is just ou
 | **RG** | Block the right defensive guard. |
 | **RT** | Help on the right defensive guard, then block the right inside linebacker. |
 | **RTE** | Block the right defensive end. |
-| **SL** | Run at the corner and screen him off. Stay in his way. |
+| **SL** | Run at the outside linebacker and screen him off. Stay in his way. |
 | **QB** | Open right and hand the ball to the left tight end as he comes across behind you, then fake a run to the left. |
-| **FB** | Bubble out around our end, then double team the linebacker with the tailback. |
+| **FB** | Bubble out around our end, then double team the corner with the tailback. |
 | **TB** | Bubble out around our end, then double team the linebacker with the fullback. |
 
 **Coaching points**
@@ -156,9 +156,9 @@ Normal line splits, about a foot. Both ends are on the line; the slot is just ou
 | **RG** | Block the right defensive guard. |
 | **RT** | Block the right defensive end. |
 | **RTE** **(ball)** | Stay down in your stance — no motion. At the snap run flat behind the quarterback, take the handoff at full speed and get to the left edge. Turn up outside the fullback. |
-| **SL** | Run at the corner and screen him off. Stay in his way. |
+| **SL** | Run at the outside linebacker and screen him off. Stay in his way. |
 | **QB** | Open left and hand the ball to the right tight end as he comes across behind you, then fake a run to the right. |
-| **FB** | Bubble out around our end, then double team the linebacker with the tailback. |
+| **FB** | Bubble out around our end, then double team the corner with the tailback. |
 | **TB** | Bubble out around our end, then double team the linebacker with the fullback. |
 
 **Coaching points**
@@ -366,7 +366,7 @@ Normal line splits, about a foot. Both ends are on the line; the slot is just ou
 | **RG** | Defensive guard head up on you. Hands inside, pads under his, drive him back. |
 | **RT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
 | **RTE** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
-| **SL** | Run at the corner and screen him off. Stay in his way. |
+| **SL** | Run at the outside linebacker and screen him off. Stay in his way. |
 | **QB** | Open right, hand to the fullback right now, then fake the boot left. It holds the backside end. |
 | **FB** **(ball)** | Take the handoff downhill between the center and the right guard. You are the runner on this one, not the lead. Straight ahead, do not bounce it. |
 | **TB** | Run hard to the left like you have the ball. You are what holds the backside linebacker. |
@@ -396,7 +396,7 @@ Normal line splits, about a foot. Both ends are on the line; the slot is just ou
 | **RG** | Defensive guard head up on you. Cut him off — get between him and the ball. |
 | **RT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
 | **RTE** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
-| **SL** | Run at the corner and screen him off. Stay in his way. |
+| **SL** | Run at the outside linebacker and screen him off. Stay in his way. |
 | **QB** | Open left, hand to the fullback right now, then fake the boot right. It holds the backside end. |
 | **FB** **(ball)** | Take the handoff downhill between the center and the left guard. You are the runner on this one, not the lead. Straight ahead, do not bounce it. |
 | **TB** | Run hard to the right like you have the ball. You are what holds the backside linebacker. |
