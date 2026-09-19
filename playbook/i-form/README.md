@@ -34,14 +34,14 @@ Normal line splits, about a foot. Both ends are on the line; the slot is just ou
 |---|---|---|---|---|
 | [Regular I - Slot Right - 36 Power](#regular-i---slot-right---36-power) | `Regular I Slot Right 36 Power` | Power | run | TB |
 | [Regular I - Slot Left - 37 Power](#regular-i---slot-left---37-power) | `Regular I Slot Left 37 Power` | Power | run | TB |
-| [Regular I - Slot Right - LTE (50) Sweep](#regular-i---slot-right---lte-50-sweep) | `Regular I Slot Right LTE Sweep` | Sweep | run | LTE |
-| [Regular I - Slot Left - RTE (60) Sweep](#regular-i---slot-left---rte-60-sweep) | `Regular I Slot Left RTE Sweep` | Sweep | run | RTE |
+| [Regular I - Slot Right - 58 Sweep](#regular-i---slot-right---58-sweep) | `Regular I Slot Right 58 Sweep` | Sweep | run | LTE |
+| [Regular I - Slot Left - 69 Sweep](#regular-i---slot-left---69-sweep) | `Regular I Slot Left 69 Sweep` | Sweep | run | RTE |
 | [Regular I - Slot Right - 49 Sweep](#regular-i---slot-right---49-sweep) | `Regular I Slot Right 49 Sweep` | Sweep | run | SL |
 | [Regular I - Slot Left - 48 Sweep](#regular-i---slot-left---48-sweep) | `Regular I Slot Left 48 Sweep` | Sweep | run | SL |
 | [Regular I - Slot Right - 32 Smash](#regular-i---slot-right---32-smash) | `Regular I Slot Right 32 Smash` | Smash | run | TB |
 | [Regular I - Slot Left - 33 Smash](#regular-i---slot-left---33-smash) | `Regular I Slot Left 33 Smash` | Smash | run | TB |
-| [Regular I - Slot Right - RTE (60) Slant Out](#regular-i---slot-right---rte-60-slant-out) | `Regular I Slot Right RTE Slant Out` | Protect | pass | RTE |
-| [Regular I - Slot Left - LTE (50) Slant Out](#regular-i---slot-left---lte-50-slant-out) | `Regular I Slot Left LTE Slant Out` | Protect | pass | LTE |
+| [Regular I - Slot Right - 68 Slant Pass](#regular-i---slot-right---68-slant-pass) | `Regular I Slot Right 68 Slant Pass` | Protect | pass | RTE |
+| [Regular I - Slot Left - 59 Slant Pass](#regular-i---slot-left---59-slant-pass) | `Regular I Slot Left 59 Slant Pass` | Protect | pass | LTE |
 | [Regular I - Slot Right - 22 Smash](#regular-i---slot-right---22-smash) | `Regular I Slot Right 22 Smash` | Smash | run | FB |
 | [Regular I - Slot Left - 23 Smash](#regular-i---slot-left---23-smash) | `Regular I Slot Left 23 Smash` | Smash | run | FB |
 | [Regular I - Slot Right - 38 Toss](#regular-i---slot-right---38-toss) | `Regular I Slot Right 38 Toss` | Toss | run | TB |
@@ -113,13 +113,13 @@ Normal line splits, about a foot. Both ends are on the line; the slot is just ou
 
 ---
 
-## Regular I - Slot Right - LTE (50) Sweep
+## Regular I - Slot Right - 58 Sweep
 
-**Call it:** `Regular I Slot Right LTE Sweep`
+**Call it:** `Regular I Slot Right 58 Sweep`
 
 **Scheme:** Sweep
 
-![Regular I - Slot Right - LTE (50) Sweep](cards/i-te-sweep-r-4-4.svg)
+![Regular I - Slot Right - 58 Sweep](cards/i-te-sweep-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -143,13 +143,13 @@ Normal line splits, about a foot. Both ends are on the line; the slot is just ou
 
 ---
 
-## Regular I - Slot Left - RTE (60) Sweep
+## Regular I - Slot Left - 69 Sweep
 
-**Call it:** `Regular I Slot Left RTE Sweep`
+**Call it:** `Regular I Slot Left 69 Sweep`
 
 **Scheme:** Sweep
 
-![Regular I - Slot Left - RTE (60) Sweep](cards/i-te-sweep-l-4-4.svg)
+![Regular I - Slot Left - 69 Sweep](cards/i-te-sweep-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -293,13 +293,13 @@ Normal line splits, about a foot. Both ends are on the line; the slot is just ou
 
 ---
 
-## Regular I - Slot Right - RTE (60) Slant Out
+## Regular I - Slot Right - 68 Slant Pass
 
-**Call it:** `Regular I Slot Right RTE Slant Out`
+**Call it:** `Regular I Slot Right 68 Slant Pass`
 
 **Scheme:** Protect
 
-![Regular I - Slot Right - RTE (60) Slant Out](cards/i-te-out-r-4-4.svg)
+![Regular I - Slot Right - 68 Slant Pass](cards/i-te-out-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -323,13 +323,13 @@ Normal line splits, about a foot. Both ends are on the line; the slot is just ou
 
 ---
 
-## Regular I - Slot Left - LTE (50) Slant Out
+## Regular I - Slot Left - 59 Slant Pass
 
-**Call it:** `Regular I Slot Left LTE Slant Out`
+**Call it:** `Regular I Slot Left 59 Slant Pass`
 
 **Scheme:** Protect
 
-![Regular I - Slot Left - LTE (50) Slant Out](cards/i-te-out-l-4-4.svg)
+![Regular I - Slot Left - 59 Slant Pass](cards/i-te-out-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|

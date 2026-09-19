@@ -24,8 +24,8 @@ Both ends are tight on the line and the slot is just outside the tight end, one 
 
 | Play | Call | Scheme | Type | Ball |
 |---|---|---|---|---|
-| [Shotgun - Slot Right - RTE (60) Slant Out](#shotgun---slot-right---rte-60-slant-out) | `Shotgun Slot Right RTE Slant Out` | Protect | pass | RTE |
-| [Shotgun - Slot Left - LTE (50) Slant Out](#shotgun---slot-left---lte-50-slant-out) | `Shotgun Slot Left LTE Slant Out` | Protect | pass | LTE |
+| [Shotgun - Slot Right - 68 Slant Pass](#shotgun---slot-right---68-slant-pass) | `Shotgun Slot Right 68 Slant Pass` | Protect | pass | RTE |
+| [Shotgun - Slot Left - 59 Slant Pass](#shotgun---slot-left---59-slant-pass) | `Shotgun Slot Left 59 Slant Pass` | Protect | pass | LTE |
 | [Shotgun - Slot Left - 19 Sweep](#shotgun---slot-left---19-sweep) | `Shotgun Slot Left 19 Sweep` | Sweep | run | QB |
 | [Shotgun - Slot Right - 18 Sweep](#shotgun---slot-right---18-sweep) | `Shotgun Slot Right 18 Sweep` | Sweep | run | QB |
 | [Shotgun - Slot Right - 38 Toss](#shotgun---slot-right---38-toss) | `Shotgun Slot Right 38 Toss` | Toss | run | LH |
@@ -33,13 +33,13 @@ Both ends are tight on the line and the slot is just outside the tight end, one 
 
 ---
 
-## Shotgun - Slot Right - RTE (60) Slant Out
+## Shotgun - Slot Right - 68 Slant Pass
 
-**Call it:** `Shotgun Slot Right RTE Slant Out`
+**Call it:** `Shotgun Slot Right 68 Slant Pass`
 
 **Scheme:** Protect
 
-![Shotgun - Slot Right - RTE (60) Slant Out](cards/sg-te-out-r-4-4.svg)
+![Shotgun - Slot Right - 68 Slant Pass](cards/sg-te-out-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -63,13 +63,13 @@ Both ends are tight on the line and the slot is just outside the tight end, one 
 
 ---
 
-## Shotgun - Slot Left - LTE (50) Slant Out
+## Shotgun - Slot Left - 59 Slant Pass
 
-**Call it:** `Shotgun Slot Left LTE Slant Out`
+**Call it:** `Shotgun Slot Left 59 Slant Pass`
 
 **Scheme:** Protect
 
-![Shotgun - Slot Left - LTE (50) Slant Out](cards/sg-te-out-l-4-4.svg)
+![Shotgun - Slot Left - 59 Slant Pass](cards/sg-te-out-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|

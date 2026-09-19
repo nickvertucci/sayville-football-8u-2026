@@ -32,10 +32,10 @@ Both ends are tight on the line. The two backs sit four yards deep and just over
 | [Split Backs - Slot Right - 18 Fake Sweep](#split-backs---slot-right---18-fake-sweep) | `Split Backs Slot Right 18 Fake Sweep` | Sweep | run | QB |
 | [Split Backs - Slot Right - 49 Sweep](#split-backs---slot-right---49-sweep) | `Split Backs Slot Right 49 Sweep` | Sweep | run | SL |
 | [Split Backs - Slot Left - 48 Sweep](#split-backs---slot-left---48-sweep) | `Split Backs Slot Left 48 Sweep` | Sweep | run | SL |
-| [Split Backs - Slot Right - LTE (50) Sweep](#split-backs---slot-right---lte-50-sweep) | `Split Backs Slot Right LTE Sweep` | Sweep | run | LTE |
-| [Split Backs - Slot Left - RTE (60) Sweep](#split-backs---slot-left---rte-60-sweep) | `Split Backs Slot Left RTE Sweep` | Sweep | run | RTE |
-| [Split Backs - Slot Right - RTE (60) Slant Out](#split-backs---slot-right---rte-60-slant-out) | `Split Backs Slot Right RTE Slant Out` | Protect | pass | RTE |
-| [Split Backs - Slot Left - LTE (50) Slant Out](#split-backs---slot-left---lte-50-slant-out) | `Split Backs Slot Left LTE Slant Out` | Protect | pass | LTE |
+| [Split Backs - Slot Right - 58 Sweep](#split-backs---slot-right---58-sweep) | `Split Backs Slot Right 58 Sweep` | Sweep | run | LTE |
+| [Split Backs - Slot Left - 69 Sweep](#split-backs---slot-left---69-sweep) | `Split Backs Slot Left 69 Sweep` | Sweep | run | RTE |
+| [Split Backs - Slot Right - 68 Slant Pass](#split-backs---slot-right---68-slant-pass) | `Split Backs Slot Right 68 Slant Pass` | Protect | pass | RTE |
+| [Split Backs - Slot Left - 59 Slant Pass](#split-backs---slot-left---59-slant-pass) | `Split Backs Slot Left 59 Slant Pass` | Protect | pass | LTE |
 | [Split Backs - Slot Right - 36 Power](#split-backs---slot-right---36-power) | `Split Backs Slot Right 36 Power` | Power | run | LH |
 | [Split Backs - Slot Left - 27 Power](#split-backs---slot-left---27-power) | `Split Backs Slot Left 27 Power` | Power | run | RH |
 | [Split Backs - Slot Right - 38 Pitch Pass](#split-backs---slot-right---38-pitch-pass) | `Split Backs Slot Right 38 Pitch Pass` | Protect | pass | RTE |
@@ -283,13 +283,13 @@ Both ends are tight on the line. The two backs sit four yards deep and just over
 
 ---
 
-## Split Backs - Slot Right - LTE (50) Sweep
+## Split Backs - Slot Right - 58 Sweep
 
-**Call it:** `Split Backs Slot Right LTE Sweep`
+**Call it:** `Split Backs Slot Right 58 Sweep`
 
 **Scheme:** Sweep
 
-![Split Backs - Slot Right - LTE (50) Sweep](cards/sb-te-sweep-r-4-4.svg)
+![Split Backs - Slot Right - 58 Sweep](cards/sb-te-sweep-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -313,13 +313,13 @@ Both ends are tight on the line. The two backs sit four yards deep and just over
 
 ---
 
-## Split Backs - Slot Left - RTE (60) Sweep
+## Split Backs - Slot Left - 69 Sweep
 
-**Call it:** `Split Backs Slot Left RTE Sweep`
+**Call it:** `Split Backs Slot Left 69 Sweep`
 
 **Scheme:** Sweep
 
-![Split Backs - Slot Left - RTE (60) Sweep](cards/sb-te-sweep-l-4-4.svg)
+![Split Backs - Slot Left - 69 Sweep](cards/sb-te-sweep-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -343,13 +343,13 @@ Both ends are tight on the line. The two backs sit four yards deep and just over
 
 ---
 
-## Split Backs - Slot Right - RTE (60) Slant Out
+## Split Backs - Slot Right - 68 Slant Pass
 
-**Call it:** `Split Backs Slot Right RTE Slant Out`
+**Call it:** `Split Backs Slot Right 68 Slant Pass`
 
 **Scheme:** Protect
 
-![Split Backs - Slot Right - RTE (60) Slant Out](cards/sb-te-out-r-4-4.svg)
+![Split Backs - Slot Right - 68 Slant Pass](cards/sb-te-out-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -373,13 +373,13 @@ Both ends are tight on the line. The two backs sit four yards deep and just over
 
 ---
 
-## Split Backs - Slot Left - LTE (50) Slant Out
+## Split Backs - Slot Left - 59 Slant Pass
 
-**Call it:** `Split Backs Slot Left LTE Slant Out`
+**Call it:** `Split Backs Slot Left 59 Slant Pass`
 
 **Scheme:** Protect
 
-![Split Backs - Slot Left - LTE (50) Slant Out](cards/sb-te-out-l-4-4.svg)
+![Split Backs - Slot Left - 59 Slant Pass](cards/sb-te-out-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|

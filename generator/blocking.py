@@ -92,7 +92,9 @@ NO_SUCH_HOLE = 1
 # Digit 1 is always the quarterback. Digit 4 is the slot in every look that
 # has one — Sweep is who, so a formation that puts a halfback on 4 (Wishbone)
 # does not turn 48/49 into Sweep.
-SWEEP_BACKS = ("1", "4")  # used only when the formation is unknown
+# Used only when the formation is unknown: the quarterback and, by convention, the
+# slot and the two tight ends.
+SWEEP_BACKS = ("1", "4", "5", "6")
 
 CALL_DIGITS = re.compile(r"\b(\d)(\d)\b")
 
@@ -102,19 +104,23 @@ def scheme_for_hole(hole: int) -> str | None:
     return HOLE_SCHEME.get(hole)
 
 
-def is_sweep_back(back_digit: str | None, form: dict | None = None) -> bool:
-    """True when this numbered back sweeping at 8/9 is Sweep, not Toss.
+SWEEP_SPOTS = ("SL", "LTE", "RTE")
 
-    The quarterback (1) always is. The slot is too — and the slot is whoever
-    `backs` maps to `SL`, not whichever digit happens to be 4. Wishbone's 4 is
-    the right halfback; 49 Toss is a toss.
+
+def is_sweep_back(back_digit: str | None, form: dict | None = None) -> bool:
+    """True when this numbered man going wide at 8/9 is Sweep, not Toss.
+
+    The quarterback (1) always is. So is anyone coming across the formation to get
+    there — the slot and either tight end — because a sweep is who is carrying it,
+    not where it goes. And it is whoever `backs` maps to that spot, not whichever
+    digit happens to be 4: Wishbone's 4 is the right halfback, so 49 Toss is a toss.
     """
     if not back_digit:
         return False
     if back_digit == "1":
         return True
     if form:
-        return (form.get("backs") or {}).get(back_digit) == "SL"
+        return (form.get("backs") or {}).get(back_digit) in SWEEP_SPOTS
     return back_digit in SWEEP_BACKS
 
 
@@ -122,7 +128,8 @@ def scheme_words(hole: int, back_digit: str | None = None,
                  form: dict | None = None) -> tuple[str, ...]:
     """Allowed play words at this hole: the scheme, or Fake plus the scheme.
 
-    The quarterback (18/19) or slot (48/49) sweeping across at 8/9 is Sweep, not Toss.
+    The quarterback (18/19), the slot (48/49) or a tight end (58/59, 68/69) coming
+    across at 8/9 is Sweep, not Toss.
     """
     if hole in (8, 9) and is_sweep_back(back_digit, form):
         return ("Sweep", "Fake Sweep")
@@ -330,10 +337,10 @@ def intent_core(spec: dict) -> tuple:
 def expected_scheme(play: dict) -> str | None:
     """The scheme this play's call requires, or None if the call does not name one.
 
-    Numbered runs take the hole word (Sweep when the quarterback or slot is
-    coming across at 8/9). A dropback is Protect. A tight-end sweep is Sweep.
-    Play-action takes the run it fakes — the caller checks that, because the
-    run lives in another file.
+    Numbered runs take the hole word (Sweep when the quarterback, the slot or a
+    tight end is coming across at 8/9). A dropback is Protect. Play-action takes
+    the run it fakes — the caller checks that, because the run lives in another
+    file.
     """
     if play.get("type") == "pass" and not play.get("fakes"):
         return "Protect"
@@ -343,10 +350,6 @@ def expected_scheme(play: dict) -> str | None:
         words = scheme_words(int(m.group(2)), m.group(1), play.get("_formation"))
         if words:
             return words[0]
-    if play.get("word_call") and re.search(r"\bSweep\b", call):
-        return "Sweep"
-    if play.get("word_call") and play.get("type") == "pass":
-        return "Protect"
     return None
 
 

@@ -659,7 +659,7 @@ table.xl.xl-plays td {
 .band ol + .band-sub { margin-top: 5px; }
 .band li {
   display: flex; align-items: baseline; gap: 6px;
-  padding: 0 5px; font-size: 15.5px; font-weight: 700; line-height: 1.95;
+  padding: 0 5px; font-size: 13px; font-weight: 700; line-height: 2.25;
   color: var(--ink); white-space: nowrap;
 }
 /* Zebra rather than a rule between rows. A rule is a thing to read past; a band of
@@ -826,7 +826,7 @@ table.xl.pk-plays td {
      what is left: their widest, "S-10 Slot L - RTE (60) Sweep", has room to spare in a
      148-point column. Checked at 200, where the script clipped, and at 245, where
      neither side does. */
-  .xl-top { display: grid; grid-template-columns: 1fr 250px; gap: 0 6px;
+  .xl-top { display: grid; grid-template-columns: 1fr 230px; gap: 0 6px;
             align-items: start; }
   .xl-sheets { grid-template-columns: 1fr; gap: 0; margin: 2px 0 0; }
   .script { margin: 2px 0 0; break-inside: avoid; }
@@ -869,7 +869,7 @@ table.xl.pk-plays td {
   table.xl th { font-size: 8px; }
   /* The scheme column is a label, not a share of the page: at full width an even
      quarter each would leave three inches of white beside the word "Sweep". */
-  col.xl-c0 { width: 44px; }
+  col.xl-c0 { width: 50px; }
   /* The formation name is a full-width black bar with white type, the same treatment
      as the LEFT/MIDDLE/RIGHT row below it, so a block reads as one thing with a
      header on it rather than six similar tables in a column. It used to print as
@@ -898,7 +898,7 @@ table.xl.pk-plays td {
   table.xl.xl-plays td { height: auto; vertical-align: middle; padding: 2px 3px; }
   /* A call is one line on paper: small enough to fit its cell, and never wrapping
      into a second line that makes the row taller. */
-  .xl-plays td a { font-size: 9px; white-space: nowrap; letter-spacing: -.35px;
+  .xl-plays td a { font-size: 9px; white-space: nowrap; letter-spacing: -.2px;
                    padding: 0; line-height: 1.2; }
   /* Four calls stacked in one cell ran together on paper: the rule between them is
      var(--line), which is a hairline grey a screen can show and a printer cannot.
@@ -910,7 +910,7 @@ table.xl.pk-plays td {
   /* The number is the play now -- it is what goes on a wristband and what a boy
      is looking for -- so it reads as black type rather than the grey footnote a
      letter-and-dash code was. Losing the letter paid for the size. */
-  .xl-code { font-size: 9px; margin-right: 3px; color: #000; font-weight: 900; }
+  .xl-code { font-size: 10px; margin-right: 4px; color: #000; font-weight: 900; }
   tbody .xl-scheme { font-size: 8.5px; background: none !important; color: #000 !important; }
   thead .xl-scheme { font-size: 8.5px; }
   .xl-none { color: #ccc; }
@@ -951,7 +951,7 @@ table.xl.pk-plays td {
      row there is and it has half of five inches to fit in. Eight rows then have three
      inches to live in, which is why the leading is what it is -- the space was going
      spare, and a row a boy can keep his eye on is what to spend it on. */
-  .band li { font-size: 15.5px; line-height: 1.95; padding: 0 5px; gap: 6px; }
+  .band li { font-size: 13px; line-height: 2.25; padding: 0 5px; gap: 6px; }
   .band li:nth-child(even) { background: #eee !important;
                              -webkit-print-color-adjust: exact; print-color-adjust: exact; }
   .band li b { flex-basis: 26px; padding-right: 6px; border-right-color: #000; }

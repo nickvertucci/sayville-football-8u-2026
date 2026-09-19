@@ -46,7 +46,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 import blocking  # noqa: E402
 import site_build  # noqa: E402
-from common import (CARD_ORDER, esc, form_label, number_tes,  # noqa: E402
+from common import (CARD_ORDER, esc, form_label,  # noqa: E402
                     ordered_positions, slug)
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -215,10 +215,6 @@ def resolve_plays(plays_dir: Path, form: dict) -> list[dict]:
     plays = list(raw.values())
     for p in plays:
         p["_formation"] = form
-        # The name is what a card, the book and the sheet print; the call is what is
-        # yelled. Only the name gets the tight end's number.
-        if p.get("name"):
-            p["name"] = number_tes(p["name"])
         # Keep the JSON the author wrote, then fill the line / slot / lead from
         # the named scheme. Validation compares the two; resolve reads the fill.
         p["_written"] = {k: dict(v) for k, v in (p.get("assignments") or {}).items()}
@@ -448,14 +444,11 @@ def validate_call(play: dict, form: dict, defenses: dict) -> list[str]:
                     f'"alignment" override for SL, or fix the call']
 
     m = CALL_DIGITS.search(call)
-    # A word call: the ball goes to somebody the numbering has no digit for (a tight end
-    # on an end-around), so the call names him instead of a hole. The play has to opt in,
-    # so a forgotten number on any other play still fails, and it has to say its
-    # direction, because with no hole digit that is where its playside comes from.
-    if not m and play.get("word_call"):
-        if play.get("direction") not in ("left", "right"):
-            return [f"{pid}: word call '{call}' needs a direction, left or right"]
-        return []
+    # Every call is numbered. There used to be an opt-out for the one ball carrier the
+    # numbering had no digit for -- a tight end on an end-around -- and then the tight
+    # ends got digits, 5 for the left one and 6 for the right, so there is nobody left
+    # to opt out. A call with no number is a mistake again, which is what it should
+    # always have been: the number is the thing on the wristband.
     if not m:
         return [f"{pid}: call '{call}' has no two-digit back-and-hole number"]
     back_digit, hole_digit = m.group(1), m.group(2)
