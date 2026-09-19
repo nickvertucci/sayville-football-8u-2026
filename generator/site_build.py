@@ -429,6 +429,14 @@ table.dc-board td.dc-cell.starter { font-weight: 800; }
   display: grid; grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 8px; padding-bottom: 2px;
 }
+/* The defence gets two across where the offense takes three. Not a preference: its
+   spot labels are LOLB and RILB where the offense's are QB and C, and its sub card
+   prints those labels again after each incoming name. Three across left the body
+   about 116px for a label and a name, which wrapped "Brayden H." onto two lines.
+   Two across gives both halves the room their own content needs. */
+.dc-side[data-side="defense"] .dc-pkgrow {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
 @media (max-width: 620px) { .dc-pkgrow { grid-template-columns: 1fr; } }
 .dc-pkg {
   display: flex; gap: 8px; align-items: flex-start;
@@ -440,8 +448,12 @@ table.dc-board td.dc-cell.starter { font-weight: 800; }
   margin: 0 0 4px; font-size: 13.5px; font-weight: 800; letter-spacing: 1.1px;
   text-transform: uppercase; color: var(--muted);
 }
+/* min-width stays at 168: it is what the offense's three-across cards can spare, and
+   raising it for the defence's longer labels squeezed the offense body until "Brogan
+   A." wrapped. The defence gets its room from being two across instead, so 54% of a
+   wider card clears the cap rather than the floor. */
 .dc-subcard {
-  flex: 0 0 54%; min-width: 168px; max-width: 250px;
+  flex: 0 0 54%; min-width: 168px; max-width: 272px;
   border: 1px solid var(--line); border-radius: 8px; padding: 5px 7px;
   background: var(--panel-2); align-self: start;
 }
@@ -3785,11 +3797,11 @@ ROTATIONS = [str(n) for n in range(1, 7)]
 # The two sides mean different things by "package", which is why they are sized so
 # differently. An offensive package is a whole eleven: six of them, eleven deep, the
 # quarterback and the backfield, the two tight ends, then the five interior linemen.
-# A defensive package is a group of substitutes who go on together over the base
-# eleven: six of them, up to four deep. Four is the ceiling, not the count — a package
-# of three leaves its fourth slot unfilled and prints three names.
+# A defensive package is an eleven too. It is easier to think of as "the base with
+# three or four swapped", and that is what the sub card prints -- but what it holds is
+# the whole unit, because a card that says who came off has to know who is on.
 PACKAGE_COUNT = {"offense": 6, "defense": 6}
-PACKAGE_SIZE = {"offense": 11, "defense": 4}
+PACKAGE_SIZE = {"offense": 11, "defense": 11}
 
 # What each side calls its packages. The offense heading names the backfield the
 # group is made of, in the order those four sit in the box as #1 through #4.
@@ -3798,11 +3810,15 @@ PACKAGE_TITLE = {
     "defense": "Packages",
 }
 
-# What each slot in a package is, where the side has a fixed answer. Offense does: the
-# quarterback, the fullback, the tailback and the slot, then the two tight ends, then
-# the left tackle, left guard, center, right guard and right tackle. Defense does not,
-# and labelling its slots would be inventing a structure it has not got.
-PACKAGE_SPOTS = {"offense": ("QB", "FB", "TB", "SL", "LTE", "RTE", "LT", "LG", "C", "RG", "RT")}
+# What each slot in a package is. Offense: the quarterback, the fullback, the tailback
+# and the slot, then the two tight ends, then the left tackle, left guard, center, right
+# guard and right tackle. Defense: the base front's own eleven, line then backers then
+# secondary, so a name on the card carries the spot he plays — Gavin P. (LDE).
+PACKAGE_SPOTS = {
+    "offense": ("QB", "FB", "TB", "SL", "LTE", "RTE", "LT", "LG", "C", "RG", "RT"),
+    "defense": ("LDE", "LDG", "RDG", "RDE",
+                "LOLB", "LILB", "RILB", "ROLB", "LC", "RC", "FS"),
+}
 
 # Only the backfield is numbered on the package card. The ends and the line keep
 # their position names — LTE, RT — because those do not change meaning between
@@ -3818,16 +3834,25 @@ def rotations_for(side: str) -> list[tuple[str, str, str]]:
     return [(n, "d" + n, "") for n in ROTATIONS]
 
 
-def package_sub_card_html(packs: list, n: int, spots: tuple = ()) -> str:
-    """Who comes off and who goes on versus package 1, by name.
+def package_sub_card_html(packs: list, n: int, spots: tuple = (),
+                          base: list | None = None) -> str:
+    """Who comes off and who goes on versus the base eleven, by name.
 
-    A kid already in the base package stays off this card even if they move
-    spots — Philip in Shifty is still Philip in Fortnite, just at a different
-    slot, so he is not a substitution. Only names that leave the eleven (Out)
-    or join it (In) belong here. Incoming names carry the spot they play in
-    this package, so the card says Joseph P. (RTE) rather than just Joseph P.
+    A kid already in the base stays off this card even if they move spots — Philip
+    in Shifty is still Philip in Fortnite, just at a different slot, so he is not a
+    substitution. Only names that leave the eleven (Out) or join it (In) belong
+    here. Incoming names carry the spot they play in this package, so the card says
+    Joseph P. (RTE) rather than just Joseph P.
+
+    `base` is who to measure against. Offense does not pass one and measures against
+    its own package 1, which is what it has always done: Shifty IS the base there,
+    and the card under it reads "Base". Defense passes the depth chart's first
+    column instead, because its base is a column on the board rather than one of the
+    six — which is what lets all six defensive packages carry substitutes, rather
+    than spending one of them saying "nobody has come on yet".
     """
-    first = [name for name in (packs[0] if packs else []) if name]
+    first = [name for name in (base if base is not None
+                               else (packs[0] if packs else [])) if name]
     here = packs[n - 1] if n - 1 < len(packs) else []
     first_set = set(first)
     here_set = {name for name in here if name}
@@ -3838,9 +3863,13 @@ def package_sub_card_html(packs: list, n: int, spots: tuple = ()) -> str:
             spot = spots[i] if i < len(spots) else ""
             inn.append((name, spot))
     width = max(len(out), len(inn), 0)
-    if n <= 1 or not width:
-        body = '<p class="dc-sub-empty">Base</p>' if n <= 1 else \
-            '<p class="dc-sub-empty">Same as base</p>'
+    # "Base" belongs on package 1 only where package 1 is the base. Where the base is
+    # passed in, an unchanged package is unchanged, not the thing everything else is
+    # measured from.
+    if (n <= 1 and base is None) or not width:
+        body = ('<p class="dc-sub-empty">Base</p>'
+                if n <= 1 and base is None
+                else '<p class="dc-sub-empty">Same as base</p>')
     else:
         rows = []
         for i in range(width):
@@ -3865,9 +3894,27 @@ def package_sub_card_html(packs: list, n: int, spots: tuple = ()) -> str:
     return f'<aside class="dc-subcard"><p class="dc-subcard-h">Sub card</p>{body}</aside>'
 
 
+def package_base_for(side: str, order: list[str], roster: dict) -> list | None:
+    """The eleven a package's sub card is measured against, in package-slot order.
+
+    Only defense has one. Offense's base is its own package 1 and always has been;
+    handing it the board's first column instead would rewrite six sub cards nobody
+    asked to have rewritten — and would surface the fact that Shifty and the chart
+    have drifted apart at left guard, which is a coaching question, not a rendering
+    one.
+    """
+    spots = PACKAGE_SPOTS.get(side, ())
+    if side != "defense" or not spots:
+        return None
+    col1 = {pos: (names[0] if names else "")
+            for pos, names in (roster.get(side) or {}).items()}
+    return [col1.get(spot, "") for spot in spots]
+
+
 def side_board(side: str, order: list[str], alt_order: list[str],
                names_by_pos: dict, label_fn, packages: list | None = None,
-               package_names: list | None = None) -> str:
+               package_names: list | None = None,
+               package_base: list | None = None) -> str:
     """One side of the ball, every rotation, as columns of one grid.
 
     Rotation belongs on the X axis. The question this page exists to answer is "the
@@ -3902,6 +3949,7 @@ def side_board(side: str, order: list[str], alt_order: list[str],
     packs = packages or []
     pkg_names = package_names or []
     spots = PACKAGE_SPOTS.get(side, ())
+    base = package_base
 
     def slot_html(n: int, at: int) -> str:
         pair = packs[n - 1] if n - 1 < len(packs) else []
@@ -3912,10 +3960,6 @@ def side_board(side: str, order: list[str], alt_order: list[str],
             attr += f' data-n="{(PACKAGE_NUMBERED.index(label) + 1) * 10}"'
         if label:
             attr += f' data-spot="{esc(label)}"'
-        if not name and not spots:
-            # No fixed spots means no slot to hold open: a shorter package is just
-            # shorter. Offense keeps its blanks, because slot five is always the centre.
-            return ""
         who = esc(name) if name else ""
         return f'<div class="dc-pkg-slot"{attr}>{who}</div>'
 
@@ -3928,7 +3972,7 @@ def side_board(side: str, order: list[str], alt_order: list[str],
         f'{esc(pkg_names[n - 1] if n - 1 < len(pkg_names) else f"Package {n}")}</p>'
         + "".join(slot_html(n, at) for at in range(PACKAGE_SIZE[side]))
         + "</div>"
-        + (package_sub_card_html(packs, n, spots) if spots else "")
+        + package_sub_card_html(packs, n, spots, base)
         + "</div>"
         for n in filled
     )
@@ -4012,7 +4056,7 @@ def write_depth_chart(formations: list[dict], defenses: dict, root: Path) -> str
             f'<section class="dc-side" data-side="{side}">'
             f'<p class="hero-head">{esc(heading)}'
             f'<span class="rot-sub">{esc(sub)}</span></p>'
-            f'{side_board(side, order, alts, roster.get(side, {}), label, packs, (roster.get("package_names") or {}).get(side))}'
+            f'{side_board(side, order, alts, roster.get(side, {}), label, packs, (roster.get("package_names") or {}).get(side), package_base_for(side, order, roster))}'
             f'</section>'
         )
 
