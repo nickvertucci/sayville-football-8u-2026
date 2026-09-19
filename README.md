@@ -209,7 +209,7 @@ someone a link to exactly the play you mean.
 |---|---|
 | `index.html` | Home: the formations, the install advice, the calling language |
 | `calls.html` | **Call sheet** — one sheet per offensive package: the I-formation lineup with names, and blank Left, Middle and Right columns for plays |
-| `wristbands.html` | **Wristbands** — every callable play by number, eight inserts to one sheet, cut on the dashes |
+| `wristbands.html` | **Wristbands** — every callable play by number, three pouches to a band and three bands to a sheet, cut on the dashes |
 | `f-<formation>.html` | One formation: its notes and its plays |
 | `install.html` | **Install schedule** — a month calendar of the practices, generated from `install.json` |
 | `install-<n>.html` | One practice: what goes in, and the run of practice block by block |
@@ -326,11 +326,18 @@ its number, and a new play takes the next free one; gaps where a play was retire
 gaps. Renumbering would make every wristband already printed wrong, so the build only
 checks that a number is a whole number and that no two plays share one.
 
-The bands themselves are [`wristbands.html`](wristbands.html): the same 1–42, grouped
-under their formations, eight inserts on one sheet of paper. Print it, cut on the
-dashes, slide one into each band. It is generated like everything else, so adding a
-play adds a row — and because numbers never move, the bands already on wrists stay
-correct.
+The bands themselves are [`wristbands.html`](wristbands.html): the same 1–42, one
+formation to a pouch — Regular I, Split Backs, then Shotgun with Power I behind it.
+A row of the sheet is one boy's whole wristband, so one printed page kits out three of
+them. Cut on the dashes and load them left to right.
+
+Three panels instead of one is what pays for the type: forty-two plays in a single
+window is a column of nine-point rows, and fourteen in a panel is thirteen-point with
+the call spelled out — *Slot Right 36 Power*, not *R 36 Power*. The reader is nine
+years old, outdoors, and somebody is shouting a number at him.
+
+It is generated like everything else, so adding a play adds a row — and because
+numbers never move, the bands already on wrists stay correct.
 
 Full authoring rules, the blocking verbs, the coordinate system and the house style:
 [playbook/CLAUDE.md](playbook/CLAUDE.md).
