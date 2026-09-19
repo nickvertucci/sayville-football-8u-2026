@@ -560,7 +560,7 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 | **LG** | Defensive guard head up on you. Cut him off — get between him and the ball. |
 | **C** | Nobody on you. Climb to the playside linebacker. Head across him. |
 | **RG** | Block down on the defensive guard, head up. Head across him — nobody crosses your face. |
-| **RT** | Nobody on you. Help on the defensive guard, then take the playside linebacker. |
+| **RT** | Defensive end on your outside shoulder. Hands inside, pads under his, drive him back. |
 | **RTE** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
 | **QB** | Open right, hand to the fullback, then fake the boot left. It holds the backside end. |
 | **FB** **(ball)** | Take the handoff downhill between the right guard and the right tackle. One cut, then get north. Do not bounce it. |
@@ -585,7 +585,7 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 | Position | Assignment |
 |---|---|
 | **LTE** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
-| **LT** | Nobody on you. Help on the defensive guard, then take the playside linebacker. |
+| **LT** | Defensive end on your outside shoulder. Hands inside, pads under his, drive him back. |
 | **LG** | Block down on the defensive guard, head up. Head across him — nobody crosses your face. |
 | **C** | Nobody on you. Climb to the playside linebacker. Head across him. |
 | **RG** | Defensive guard head up on you. Cut him off — get between him and the ball. |
@@ -1280,7 +1280,7 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 | Position | Assignment |
 |---|---|
 | **LTE** **(ball)** | Stay down in your stance — no motion. At the snap run flat behind the quarterback, take the handoff at full speed and get to the right edge. Turn up outside the trips. |
-| **LT** | Nobody on you. Cut off the backside. Never quit on the play. |
+| **LT** | Defensive end on your outside shoulder. Cut him off — get between him and the ball. |
 | **LG** | Defensive guard head up on you. Cut him off — get between him and the ball. |
 | **C** | Nobody on you. Climb to the playside linebacker. Head across him. |
 | **RG** | Defensive guard head up on you. Step past him. Climb to the playside linebacker. Head across him. |
@@ -1313,7 +1313,7 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 | **LG** | Defensive guard head up on you. Step past him. Climb to the playside linebacker. Head across him. |
 | **C** | Nobody on you. Climb to the playside linebacker. Head across him. |
 | **RG** | Defensive guard head up on you. Cut him off — get between him and the ball. |
-| **RT** | Nobody on you. Cut off the backside. Never quit on the play. |
+| **RT** | Defensive end on your outside shoulder. Cut him off — get between him and the ball. |
 | **RTE** **(ball)** | Stay down in your stance — no motion. At the snap run flat behind the quarterback, take the handoff at full speed and get to the left edge. Turn up outside the trips. |
 | **SL** | Run at the corner and screen him off. Stay in his way. |
 | **QB** | Open left and hand the ball to the right tight end as he comes across behind you, then fake a run to the right. |

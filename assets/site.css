@@ -626,15 +626,16 @@ table.xl.xl-plays td {
 /* The front as a picture, above its table. Discs made of border, positioned by the
    alignment's own yards -- see _front_picture for why not an SVG. */
 .front-pic {
-  position: relative; height: 74px; margin: 6px 0 4px;
-  border-bottom: 1px solid var(--line);
+  position: relative; width: 340px; max-width: 100%; height: 116px;
+  margin: 8px auto 6px; border: 1px solid var(--line); border-radius: 4px;
+  background: var(--panel-2);
 }
 .front-pic .los {
-  position: absolute; left: 0; right: 0; top: 0;
+  position: absolute; left: 4%; right: 4%; top: 7%;
   border-top: 1px dashed var(--ink-2);
 }
 .front-pic .fd {
-  position: absolute; width: 0; height: 0; border: 4.5px solid var(--ink);
+  position: absolute; width: 0; height: 0; border: 6px solid var(--ink);
   border-radius: 50%; transform: translate(-50%, -50%);
 }
 /* The blank row between the line, the backers and the secondary. A row rather than a
@@ -860,9 +861,15 @@ table.xl.pk-plays td {
      blank front under them. Small enough that the whole thing is one sheet, the way
      the offensive side is. */
   .df-fronts { gap: 5px; margin: 0; }
-  .front-pic { height: 40px; margin: 2px 0 2px; }
-  .front-pic .fd { border-width: 3px; border-color: #000; }
+  .front-pic { width: 250px; height: 74px; margin: 3px auto 3px;
+               border-color: #999; background: none; }
+  .front-pic .fd { border-width: 4.5px; border-color: #000; }
   .front-pic .los { border-top-color: #000; }
+  /* The formation's own number stays on paper on this sheet -- "BASE" and "GOAL
+     LINE" are what you call, and 4-4 and 6-3 are what they are, and the bar has
+     room for both. The offensive sheet's .xl-n is a play count, which is why it
+     is hidden up there and shown here. */
+  .df-front .xl-n { display: inline; float: right; opacity: 1; font-weight: 900; }
   table.xl.df-grid tr.df-gap td { height: 4px; background: none; }
   .df-front { break-inside: avoid; }
   table.xl.df-grid { font-size: 8px; }

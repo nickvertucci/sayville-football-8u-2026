@@ -176,7 +176,7 @@ Same line as the Regular I — both ends tight, seven on the line every snap. Fu
 | **LG** | Defensive guard head up on you. Cut him off — get between him and the ball. |
 | **C** | Nobody on you. Climb to the playside linebacker. Head across him. |
 | **RG** | Block down on the defensive guard, head up. Head across him — nobody crosses your face. |
-| **RT** | Nobody on you. Help on the defensive guard, then take the playside linebacker. |
+| **RT** | Defensive end on your outside shoulder. Hands inside, pads under his, drive him back. |
 | **RTE** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
 | **QB** | Open right, hand to the fullback, then fake the boot left. It holds the backside end. |
 | **FB** **(ball)** | Take the handoff downhill between the right guard and the right tackle. One cut, then get north. Do not bounce it. |
@@ -201,7 +201,7 @@ Same line as the Regular I — both ends tight, seven on the line every snap. Fu
 | Position | Assignment |
 |---|---|
 | **LTE** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
-| **LT** | Nobody on you. Help on the defensive guard, then take the playside linebacker. |
+| **LT** | Defensive end on your outside shoulder. Hands inside, pads under his, drive him back. |
 | **LG** | Block down on the defensive guard, head up. Head across him — nobody crosses your face. |
 | **C** | Nobody on you. Climb to the playside linebacker. Head across him. |
 | **RG** | Defensive guard head up on you. Cut him off — get between him and the ball. |

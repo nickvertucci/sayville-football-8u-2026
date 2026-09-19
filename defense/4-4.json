@@ -4,7 +4,7 @@
   "name": "4-4",
   "call": "Base",
   "family": "Base defense",
-  "summary": "Our everyday front. Four down linemen, four linebackers and three deep — a body off the line for a fourth linebacker, which gives us two extra defenders who can run to the edge.",
+  "summary": "Our everyday front. Four down linemen, four linebackers and three deep \u2014 a body off the line for a fourth linebacker, which gives us two extra defenders who can run to the edge.",
   "notes": "Four down linemen on the guards and the ends. Two inside linebackers and two outside linebackers at three yards, with the outside pair responsible for forcing everything back in. Two corners and a free safety behind. This is the front we play unless there is a reason not to.",
   "roles": {
     "LDE": "DL",
@@ -31,7 +31,7 @@
   },
   "alignment": {
     "LDE": [
-      -3.8,
+      -3.6,
       0.8
     ],
     "LDG": [
@@ -43,7 +43,7 @@
       0.8
     ],
     "RDE": [
-      3.8,
+      3.6,
       0.8
     ],
     "LOLB": [
@@ -51,11 +51,11 @@
       3.0
     ],
     "LILB": [
-      -1.4,
+      -2.5,
       3.0
     ],
     "RILB": [
-      1.4,
+      2.5,
       3.0
     ],
     "ROLB": [
@@ -117,7 +117,7 @@
       ]
     },
     "LOLB": {
-      "rule": "Outside linebacker. You are the force man — turn everything back inside and never get hooked. If it is a pass, you have the flat.",
+      "rule": "Outside linebacker. You are the force man \u2014 turn everything back inside and never get hooked. If it is a pass, you have the flat.",
       "type": "read",
       "path": [
         [
@@ -155,7 +155,7 @@
       ]
     },
     "ROLB": {
-      "rule": "Outside linebacker. You are the force man — turn everything back inside and never get hooked. If it is a pass, you have the flat.",
+      "rule": "Outside linebacker. You are the force man \u2014 turn everything back inside and never get hooked. If it is a pass, you have the flat.",
       "type": "read",
       "path": [
         [
@@ -197,9 +197,9 @@
   },
   "coaching_points": [
     "This is our base, so it is the front the kids should be able to line up in without being told. Nearly everything that hurts you at this age gets outside, and two extra defenders who can run beats two extra defenders who can only push.",
-    "The two outside linebackers are the reason this front works. They force everything back inside — if either one gets hooked and the ball gets outside him, it is a long run every time.",
+    "The two outside linebackers are the reason this front works. They force everything back inside \u2014 if either one gets hooked and the ball gets outside him, it is a long run every time.",
     "We give up a body inside to get it, so an offense that runs straight at the middle will find room. If they start hammering the A gaps, call Tight and put the fifth man back on the line.",
-    "The two inside linebackers are stacked behind the guards, not over the center, so neither one owns the middle by himself. Whichever one the ball declares to fills it, and the other takes the cutback — say it every practice or they both chase.",
+    "The two inside linebackers are stacked behind the guards, not over the center, so neither one owns the middle by himself. Whichever one the ball declares to fills it, and the other takes the cutback \u2014 say it every practice or they both chase.",
     "Nobody crosses the line before the snap. The linebackers read one step, then go."
   ],
   "legal": "Four down linemen, four linebackers at three yards, and three defensive backs no closer than three yards. Comfortably inside every limit. No blitzing."

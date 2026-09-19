@@ -686,15 +686,16 @@ table.xl.xl-plays td {
 /* The front as a picture, above its table. Discs made of border, positioned by the
    alignment's own yards -- see _front_picture for why not an SVG. */
 .front-pic {
-  position: relative; height: 74px; margin: 6px 0 4px;
-  border-bottom: 1px solid var(--line);
+  position: relative; width: 340px; max-width: 100%; height: 116px;
+  margin: 8px auto 6px; border: 1px solid var(--line); border-radius: 4px;
+  background: var(--panel-2);
 }
 .front-pic .los {
-  position: absolute; left: 0; right: 0; top: 0;
+  position: absolute; left: 4%; right: 4%; top: 7%;
   border-top: 1px dashed var(--ink-2);
 }
 .front-pic .fd {
-  position: absolute; width: 0; height: 0; border: 4.5px solid var(--ink);
+  position: absolute; width: 0; height: 0; border: 6px solid var(--ink);
   border-radius: 50%; transform: translate(-50%, -50%);
 }
 /* The blank row between the line, the backers and the secondary. A row rather than a
@@ -920,9 +921,15 @@ table.xl.pk-plays td {
      blank front under them. Small enough that the whole thing is one sheet, the way
      the offensive side is. */
   .df-fronts { gap: 5px; margin: 0; }
-  .front-pic { height: 40px; margin: 2px 0 2px; }
-  .front-pic .fd { border-width: 3px; border-color: #000; }
+  .front-pic { width: 250px; height: 74px; margin: 3px auto 3px;
+               border-color: #999; background: none; }
+  .front-pic .fd { border-width: 4.5px; border-color: #000; }
   .front-pic .los { border-top-color: #000; }
+  /* The formation's own number stays on paper on this sheet -- "BASE" and "GOAL
+     LINE" are what you call, and 4-4 and 6-3 are what they are, and the bar has
+     room for both. The offensive sheet's .xl-n is a play count, which is why it
+     is hidden up there and shown here. */
+  .df-front .xl-n { display: inline; float: right; opacity: 1; font-weight: 900; }
   table.xl.df-grid tr.df-gap td { height: 4px; background: none; }
   .df-front { break-inside: avoid; }
   table.xl.df-grid { font-size: 8px; }
@@ -3183,8 +3190,12 @@ def _def_eleven(front_id: str, spots: list[str], slides: dict,
 # The window every front picture is drawn in, in the same yards the alignment uses.
 # One window for all three, not one each: a 6-3 really is tighter than a 4-4, and a
 # picture that rescaled per front would hide the only thing these pictures are for.
+# The dots are inset a little from the edges so the widest man -- a 4-4 corner, nine
+# and a half yards out -- sits inside the frame instead of half on top of it.
 FRONT_VIEW_X = 10.0
 FRONT_VIEW_Y = 8.5
+FRONT_PAD_X = 3.0
+FRONT_PAD_Y = 7.0
 
 
 def _front_picture(front: dict) -> str:
@@ -3193,11 +3204,18 @@ def _front_picture(front: dict) -> str:
     Absolutely positioned discs rather than an inline SVG. An SVG in this position on
     this page rendered on screen and printed nothing at all -- see _blank_line -- and
     a disc made of border prints whatever the print dialog is set to.
+
+    The frame is narrow and centred rather than the full width of the sheet. Drawn
+    edge to edge, twenty yards of field across seven inches of paper put the eleven
+    dots so far apart that they read as specks rather than as a front; at a third of
+    that width the same eleven dots look like the picture a coach recognises.
     """
     dots = []
     for label, (x, y) in front["alignment"].items():
-        left = (x + FRONT_VIEW_X) / (2 * FRONT_VIEW_X) * 100
-        top = min(y, FRONT_VIEW_Y) / FRONT_VIEW_Y * 100
+        left = FRONT_PAD_X + (x + FRONT_VIEW_X) / (2 * FRONT_VIEW_X) * (
+            100 - 2 * FRONT_PAD_X)
+        top = FRONT_PAD_Y + min(y, FRONT_VIEW_Y) / FRONT_VIEW_Y * (
+            100 - 2 * FRONT_PAD_Y)
         dots.append(
             f'<span class="fd" style="left:{left:.1f}%;top:{top:.1f}%" '
             f'title="{esc(label)}"></span>'
