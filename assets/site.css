@@ -1701,8 +1701,15 @@ table.dc-board thead th,
   table.dc-board td.dc-cell.starter { font-weight: 800; }
   /* Packages on paper: two rows of three, packed tight enough that each side of the
      ball still fits its one sheet after the tight ends joined the box. */
-  .dc-pkgrow { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 3px; }
-  .dc-pkg { gap: 4px; padding: 1px 3px; box-shadow: none; border-radius: 0; }
+  /* Six cards packed three points apart, each outlined in the same hairline grey the
+     tables use, read as one grey field of small names. A black rule and a real gap
+     make each package a block you can find with a thumb. Both are afforded: turning
+     the sheet left the tighter of the two sides about 78 points spare, and this
+     spends roughly 30 of them. Border, not background: a fill here is a print-dialog
+     setting, a rule is not. */
+  .dc-pkgrow { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 7px 9px; }
+  .dc-pkg { gap: 4px; padding: 3px 5px; box-shadow: none; border-radius: 0;
+            border: 1.5pt solid #000; }
   .dc-pkg-h { margin: 0; font-size: 8pt; }
   .dc-pkg-slot { min-height: 0; padding: 0; font-size: 7pt; line-height: 1.15; }
   .dc-pkg-slot[data-spot]::before { flex-basis: 36px; font-size: 6.5pt; letter-spacing: 0; }
