@@ -689,46 +689,42 @@ table.xl.xl-plays td {
 #tab-off:checked ~ .pane-off, #tab-def:checked ~ .pane-def { display: block; }
 
 /* ------------------------------------------------------------ wristbands --
-   Eight identical inserts to a sheet. The page is one shape repeated, so the only
-   things that matter are the size of the shape and the size of the type inside it:
-   a boy is reading this through a facemask, at a run, with somebody shouting a
-   number at him. */
-.band-sheet {
-  display: grid; grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 10px; margin: 16px 0 24px;
-}
+   A band has three pouches, so an insert is three panels and a sheet is three bands:
+   three panels across, three bands down. A row of the sheet is one boy's wristband.
+   All of the type on this page is as big as that grid allows, because the reader is
+   nine years old, outdoors, and somebody is shouting a number at him. */
+.band-sheet { display: grid; gap: 14px; margin: 16px 0 24px; }
+.band-set { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
 .band {
-  border: 1px dashed var(--line); border-radius: 4px; padding: 6px 7px 7px;
-  background: var(--panel);
+  border: 1px dashed var(--line); border-radius: 4px; padding: 0 0 4px;
+  background: var(--panel); overflow: hidden;
 }
-.band-head {
-  margin: 0 0 5px; padding: 2px 5px; font-size: 9px; font-weight: 900;
-  text-transform: uppercase; letter-spacing: .6px;
+/* The formation is the panel's heading, and it is the panel's whole job: the pouch a
+   boy is looking into tells him which formation he is in before he has read a row. */
+.band-form {
+  display: flex; align-items: baseline; justify-content: space-between; gap: 6px;
+  margin: 0; padding: 3px 7px; font-size: 12px; font-weight: 900;
+  text-transform: uppercase; letter-spacing: .5px;
   color: var(--on-accent); background: var(--accent-solid);
 }
-.band-cols { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0 7px; }
-/* The formation, once, over its own numbers. This heading is what buys every row
-   under it eleven characters. */
-.band-form {
-  margin: 0 0 1px; font-size: 8.5px; font-weight: 900; text-transform: uppercase;
-  letter-spacing: .4px; color: var(--muted); border-bottom: 1px solid var(--line);
+.band-span { font-size: 10px; font-weight: 800; opacity: .8; }
+.band ol { margin: 0; padding: 0; list-style: none; }
+.band li {
+  display: flex; align-items: baseline; gap: 6px;
+  padding: 1px 7px; font-size: 13px; font-weight: 700; line-height: 1.4;
+  color: var(--ink);
 }
-.band-cols ol + .band-form { margin-top: 5px; }
-.band-cols ol { margin: 0; padding: 0; list-style: none; }
-.band-cols li {
-  font-size: 9.5px; font-weight: 700; line-height: 1.45; white-space: nowrap;
-  letter-spacing: -.2px; color: var(--ink);
+/* Zebra rather than a rule between rows. A rule is a thing to read past; a band of
+   tone is the row itself, and a finger tracking one across two inches does not slip
+   off it. */
+.band li:nth-child(even) { background: var(--panel-2); }
+.band li b {
+  flex: 0 0 26px; text-align: right; font-weight: 900; font-variant-numeric: tabular-nums;
+  padding-right: 6px; border-right: 1px solid var(--line);
 }
-/* The number in a right-aligned box with a rule after it, so forty-two calls of
-   different lengths still leave one straight column of numbers to run a finger down.
-   That column is the only thing on the insert a boy actually uses. */
-.band-cols li b {
-  display: inline-block; width: 15px; margin-right: 4px; padding-right: 4px;
-  text-align: right; font-weight: 900;
-  border-right: 1px solid var(--line);
-}
+.band li span { flex: 1 1 auto; min-width: 0; }
 @media (max-width: 720px) {
-  .band-sheet { grid-template-columns: minmax(0, 1fr); }
+  .band-set { grid-template-columns: minmax(0, 1fr); }
 }
 
 /* ------------------------------------------------- defensive call sheet --
@@ -984,28 +980,26 @@ table.xl.pk-plays td {
   .tabrow { display: none; }
   .tabpane { display: block !important; }
   .pane-def { page-break-before: always; break-before: page; }
-  /* The wristband sheet is the one page whose whole job is the print. Two across
-     and four down on letter is an insert of about 3.9 by 2.5 inches, which is the
-     window on the bands we buy. The dashes are cut lines, so they have to print:
-     a border always does, which is why the insert is bordered rather than shaded. */
+  /* The wristband sheet is the one page whose whole job is the print. Three panels
+     across and three bands down on letter is a panel of about 2.5 by 3.4 inches, one
+     pouch's worth, and a row of the page is one boy kitted out. The dashes are cut
+     lines, so they have to print: a border always does, which is why a panel is
+     bordered rather than shaded. */
   .band-page .page-head { display: none; }
-  .band-sheet { gap: 8px; margin: 0; }
-  .band { border-color: #000; padding: 4px 5px 5px; background: none;
-          break-inside: avoid; }
-  .band-head { font-size: 8px; padding: 1px 4px; margin-bottom: 4px;
+  .band-sheet { gap: 10px; margin: 0; }
+  .band-set { gap: 7px; break-inside: avoid; }
+  .band { border-color: #000; background: none; break-inside: avoid; }
+  .band-form { font-size: 11px; padding: 2px 6px;
                color: #fff !important; background: #000 !important;
                -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-  .band-cols { gap: 0 6px; }
-  /* Sixteen Regular I rows set the height of the insert and four inserts set the
-     height of the page, so the leading is what decides whether this is one sheet
-     or two. Bigger type and tighter leading beats the other way round here: the
-     boy is reading one row, not a paragraph. */
-  .band-cols li { font-size: 9.5px; line-height: 1.3; letter-spacing: -.2px; }
-  .band-form { font-size: 8px; color: #000; border-bottom-color: #000;
-               margin-bottom: 1px; }
-  .band-cols ol + .band-form { margin-top: 4px; }
-  .band-cols li b { width: 13px; margin-right: 3px; padding-right: 3px;
-                    border-right-color: #000; }
+  .band-span { font-size: 9px; opacity: 1; }
+  /* Sixteen Regular I rows set the height of a panel and three bands set the height
+     of the page, so this line height is what decides one sheet or two. Thirteen point
+     type at 1.35 is the biggest that fits, and the type is the point of the page. */
+  .band li { font-size: 13px; line-height: 1.35; padding: 0 6px; gap: 5px; }
+  .band li:nth-child(even) { background: #eee !important;
+                             -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .band li b { flex-basis: 24px; padding-right: 5px; border-right-color: #000; }
 
   /* The defensive sheet: three fronts, eleven rows and six packages each, then the
      blank front under them. Small enough that the whole thing is one sheet, the way
@@ -3457,30 +3451,28 @@ def _call_sheet_order(formations: list[dict]) -> list[dict]:
     )
 
 
-# Eight inserts to a sheet, two across and four down. A wristband window is about
-# three and a half inches by two and a third, which is what BAND_W and BAND_H are; the
-# rest of this is that shape repeated until the page runs out. Print one sheet, cut on
-# the dashes, and the team is done.
-BAND_ACROSS = 2
-BAND_DOWN = 4
-BAND_COLUMNS = 3
+# A wristband has three pouches, so an insert is three panels, and a sheet is three
+# wristbands: three panels across, three bands down. That is the whole reason the type
+# on this page can be what it is. One panel of forty-two plays was a column of
+# nine-point rows; three panels of fourteen is thirteen-point, which is the difference
+# between a nine-year-old finding his number and a nine-year-old looking at his coach.
+BAND_POUCHES = 3
+BAND_SETS = 3
 
 
 def band_call(play: dict, form: dict) -> str:
-    """The call, short enough for a wristband row.
+    """The call, minus the formation the panel heading already says.
 
-    The formation is the column heading, so a row only has to say which side and what:
-    "Split Backs Slot Right LTE Sweep" is "R LTE Sweep". Spelling the formation out on
-    every one of forty-two rows was what made the insert unreadable -- eleven of the
-    twenty-seven characters in the longest row were the word Split Backs, repeated
-    sixteen times down one column under a heading that already said it.
+    "Split Backs Slot Right LTE Sweep" is "Slot Right LTE Sweep" in the Split Backs
+    pouch. Slot Right stays spelled out -- with three panels there is room for it, and
+    the boy reading this is nine and has been taught the words, not an abbreviation of
+    them. The tight end's jersey number comes off: the call sheet carries it for the
+    coach, and the call is what gets shouted.
     """
     call = play.get("call") or ""
     label = form_label(form)
     if call.startswith(label + " "):
         call = call[len(label) + 1:]
-    for word in ("Slot", "Trips"):
-        call = call.replace(f"{word} Right ", "R ").replace(f"{word} Left ", "L ")
     return call
 
 
@@ -3498,61 +3490,68 @@ def band_plays(formations: list[dict]) -> list[tuple[dict, list[dict]]]:
             for f in forms]
 
 
-def _band_columns(groups: list[tuple[dict, list[dict]]]) -> list[list]:
-    """The formations dealt into columns, whole, as evenly as they go.
+def _band_pouches(groups: list[tuple[dict, list[dict]]]) -> list[list]:
+    """The formations dealt into the three pouches, whole, as evenly as they go.
 
-    A formation is never split down two columns: the heading is what lets a row say
-    "R 36 Power" instead of "Regular I R 36 Power", and a column of rows under no
-    heading says nothing at all.
+    A formation is never split across two pouches: the panel heading is what lets a row
+    say "Slot Right 36 Power" instead of "Regular I Slot Right 36 Power", and half a
+    formation under a heading naming all of it is a lie a boy cannot check. Today that
+    deals out as Regular I, Split Backs, and Shotgun with Power I behind it.
     """
     height = lambda g: 1 + len(g[1])
-    target = sum(height(g) for g in groups) / BAND_COLUMNS
-    cols, cur, used = [], [], 0
+    target = sum(height(g) for g in groups) / BAND_POUCHES
+    pouches, cur, used = [], [], 0
     for g in groups:
-        if cur and used + height(g) / 2 > target and len(cols) < BAND_COLUMNS - 1:
-            cols.append(cur)
+        if cur and used + height(g) / 2 > target and len(pouches) < BAND_POUCHES - 1:
+            pouches.append(cur)
             cur, used = [], 0
         cur.append(g)
         used += height(g)
-    cols.append(cur)
-    return cols + [[]] * (BAND_COLUMNS - len(cols))
+    pouches.append(cur)
+    return pouches + [[]] * (BAND_POUCHES - len(pouches))
 
 
-def _band_insert(groups: list[tuple[dict, list[dict]]]) -> str:
-    """One insert: the team, then the numbers in columns under their formations."""
-    cols = []
-    for col in _band_columns(groups):
-        blocks = []
-        for form, plays in col:
-            rows = "".join(
-                f'<li><b>{esc(p["code"])}</b>{esc(band_call(p, form))}</li>'
-                for p in plays
-            )
-            blocks.append(f'<p class="band-form">{esc(form_label(form))}</p>'
-                          f"<ol>{rows}</ol>")
-        cols.append(f'<div>{"".join(blocks)}</div>')
-    return ('<div class="band">'
-            f'<p class="band-head">{esc(SITE_TITLE)}</p>'
-            f'<div class="band-cols">{"".join(cols)}</div></div>')
+def _band_panel(pouch: list[tuple[dict, list[dict]]]) -> str:
+    """One pouch: its formations, each a heading over its numbers."""
+    blocks = []
+    for form, plays in pouch:
+        span = (f'{plays[0]["code"]}\u2013{plays[-1]["code"]}' if plays else "")
+        rows = "".join(
+            f'<li><b>{esc(p["code"])}</b><span>{esc(band_call(p, form))}</span></li>'
+            for p in plays
+        )
+        blocks.append(f'<p class="band-form">{esc(form_label(form))}'
+                      f'<span class="band-span">{esc(span)}</span></p>'
+                      f"<ol>{rows}</ol>")
+    return f'<div class="band">{"".join(blocks)}</div>'
+
+
+def _band_set(groups: list[tuple[dict, list[dict]]]) -> str:
+    """One wristband: three panels, one per pouch, in call sheet order."""
+    return ('<div class="band-set">'
+            + "".join(_band_panel(p) for p in _band_pouches(groups))
+            + "</div>")
 
 
 def write_wristbands(formations: list[dict], defenses: dict) -> str:
     groups = band_plays(formations)
-    inserts = "".join(_band_insert(groups) for _ in range(BAND_ACROSS * BAND_DOWN))
     numbered = [p for _f, ps in groups for p in ps]
     lo = numbered[0]["code"] if numbered else "1"
     hi = numbered[-1]["code"] if numbered else "1"
+    sets = "".join(_band_set(groups) for _ in range(BAND_SETS))
     body = f"""<div class="page-head">
   <h1>Wristbands</h1>
-  <p class="sub">Every play a coach can call, {esc(lo)} to {esc(hi)}, eight inserts to
-  a sheet. Print it, cut on the dashed lines, and slide one into each band. The numbers
-  are the same ones on the cards and down the left of the call sheet, so "{esc(hi)}" in
-  the huddle, on the band and on the diagram are the same play.</p>
-  <p class="sub">Reprint it whenever a play is added. Numbers are never reused, so the
-  bands already out there stay right — a new play is a new row at the bottom.</p>
+  <p class="sub">Every play a coach can call, {esc(lo)} to {esc(hi)}, split across the
+  three pouches of a band &mdash; one formation to a pouch. A row of this sheet is one
+  boy's whole wristband, so one printed page kits out {BAND_SETS} of them. Cut on the
+  dashed lines and load them left to right.</p>
+  <p class="sub">The numbers are the ones on the cards and down the left of the call
+  sheet, so &ldquo;{esc(hi)}&rdquo; in the huddle, on the band and on the diagram are
+  the same play. Reprint whenever a play is added: numbers are never reused, so the
+  bands already out there stay right.</p>
   <button class="btn" type="button" onclick="window.print()">Print</button>
 </div>
-<div class="band-sheet">{inserts}</div>"""
+<div class="band-sheet">{sets}</div>"""
     return page(
         f"Wristbands — {SITE_TITLE}",
         body,
@@ -3560,7 +3559,7 @@ def write_wristbands(formations: list[dict], defenses: dict) -> str:
         defenses=defenses,
         active_nav="bands",
         main_attrs=' class="band-page"',
-        description=f"Wristband inserts: every callable play, {lo} to {hi}, eight to a sheet.",
+        description=f"Wristband inserts: every callable play, {lo} to {hi}, three pouches a band.",
         page_rule="size: letter portrait; margin: 0.3in;",
     )
 
