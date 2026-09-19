@@ -623,6 +623,27 @@ table.xl.xl-plays td {
    the boy who plays that spot in that package. The offensive sheet's title bar and
    table furniture are reused rather than reinvented: both are call sheets. */
 .df-fronts { display: grid; gap: 16px; margin: 10px 0 20px; }
+/* The front as a picture, above its table. Discs made of border, positioned by the
+   alignment's own yards -- see _front_picture for why not an SVG. */
+.front-pic {
+  position: relative; height: 74px; margin: 6px 0 4px;
+  border-bottom: 1px solid var(--line);
+}
+.front-pic .los {
+  position: absolute; left: 0; right: 0; top: 0;
+  border-top: 1px dashed var(--ink-2);
+}
+.front-pic .fd {
+  position: absolute; width: 0; height: 0; border: 4.5px solid var(--ink);
+  border-radius: 50%; transform: translate(-50%, -50%);
+}
+/* The blank row between the line, the backers and the secondary. A row rather than a
+   rule on the next one: the gap is the thing being asked for, and a row can carry it
+   without the cell borders either side having to agree about it. */
+table.xl.df-grid tr.df-gap td {
+  height: 7px; padding: 0; border-left: 0; border-right: 0;
+  background: var(--panel-2);
+}
 table.xl.df-grid { table-layout: auto; }
 table.xl.df-grid td, table.xl.df-grid th { text-align: center; }
 table.xl.df-grid .df-pos {
@@ -839,6 +860,10 @@ table.xl.pk-plays td {
      blank front under them. Small enough that the whole thing is one sheet, the way
      the offensive side is. */
   .df-fronts { gap: 5px; margin: 0; }
+  .front-pic { height: 40px; margin: 2px 0 2px; }
+  .front-pic .fd { border-width: 3px; border-color: #000; }
+  .front-pic .los { border-top-color: #000; }
+  table.xl.df-grid tr.df-gap td { height: 4px; background: none; }
   .df-front { break-inside: avoid; }
   table.xl.df-grid { font-size: 8px; }
   table.xl.df-grid td, table.xl.df-grid th { padding: 0 2px; height: auto;
