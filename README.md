@@ -35,6 +35,8 @@ loud, because a play that moves somebody silently is a play nobody can call.
 | **2** | The fullback in the Regular I; the right back (RH) in the Split Backs and Shotgun — even-numbered holes |
 | **3** | The tailback (TB) in the Regular I; the left back (LH) in the Split Backs and Shotgun — odd-numbered holes |
 | **4** | The slot, split wide in every formation |
+| **5** | The **left tight end**, on an end-around or a route |
+| **6** | The **right tight end**, the same |
 
 | Hole | Word | Where |
 |---|---|---|
@@ -71,14 +73,18 @@ and `Regular I Slot Left 37 Power` is the same handoff to the left.
 | `Regular I Slot Right 36 Power` / `Slot Left 37 Power` | Regular I - Slot Right - 36 Power / Slot Left - 37 Power | tailback, tackle–tight end |
 | `Regular I Slot Right 32 Smash` / `Slot Left 33 Smash` | Regular I - Slot Right - 32 Smash / Slot Left - 33 Smash | tailback, A gap, fullback leading |
 | `Regular I Slot Right 22 Smash` / `Slot Left 23 Smash` | Regular I - Slot Right - 22 Smash / Slot Left - 23 Smash | fullback, A gap, on the snap |
-| `Regular I Slot Right LTE Sweep` / `Slot Left RTE Sweep` | Regular I - Slot Right - LTE Sweep / Slot Left - RTE Sweep | the backside tight end on an end-around, all the way outside |
+| `Regular I Slot Right 58 Sweep` / `Slot Left 69 Sweep` | Regular I - Slot Right - 58 Sweep / Slot Left - 69 Sweep | the backside tight end on an end-around, all the way outside |
+| `Regular I Slot Right 68 Slant Pass` / `Slot Left 59 Slant Pass` | Regular I - Slot Right - 68 Slant Pass / Slot Left - 59 Slant Pass | the play-side tight end, flat out along the line |
 | `Regular I Slot Right 49 Sweep` / `Slot Left 48 Sweep` | Regular I - Slot Right - 49 Sweep / Slot Left - 48 Sweep | the slot, flat across the backfield and outside the other way |
 | `Regular I Slot Right 38 Toss` / `Slot Left 39 Toss` | Regular I - Slot Right - 38 Toss / Slot Left - 39 Toss | tailback, pitched wide and outside the tight end |
 | `Regular I Slot Right 38 Pitch Pass` / `Slot Left 39 Pitch Pass` | Regular I - Slot Right - 38 Pitch Pass / Slot Left - 39 Pitch Pass | the same pitch, and the tailback pulls up behind the line and throws |
 
-The tight-end sweep is a **word call** — no digits, because the tight end is not a numbered
-back. It names him instead. A play has to opt in with `word_call`, so any other play
-missing its number still fails the build.
+**Every call is numbered.** The tight ends used to be the exception — a tight end is
+not a back, so `LTE Sweep` named him instead of a hole — and they are 5 and 6 now, so
+there is no exception left. `58 Sweep` is the left tight end coming all the way across
+to the 8 hole; `68 Slant Pass` is the right tight end flat out along the line. A call
+with no number fails the build, which is what it should always have been: the number is
+the thing on the wristband.
 
 Every play has a left and a right.
 
@@ -100,22 +106,25 @@ because the near one is busy bubbling out to block.
 
 ### Shotgun: formation + Slot + who catches it + route
 
-The Shotgun's pass names its receiver the way the tight-end sweep names its runner — the
-tight end is not a numbered back, so it is a word call. Its halfbacks number the same way
+The Shotgun's pass is numbered off the tight end who catches it — 6 for the right one,
+5 for the left — and the hole he crosses the line in. Its halfbacks number the same way
 the Split Backs do: 3 is left, 2 is right.
 
 | Call | Play | Reads as |
 |---|---|---|
-| `Shotgun Slot Right RTE Slant Out` / `Slot Left LTE Slant Out` | Shotgun - Slot Right - RTE Slant Out / Slot Left - LTE Slant Out | the play-side tight end, a flat slant out almost on the line of scrimmage |
+| `Shotgun Slot Right 68 Slant Pass` / `Slot Left 59 Slant Pass` | Shotgun - Slot Right - 68 Slant Pass / Slot Left - 59 Slant Pass | the play-side tight end, a flat slant out almost on the line of scrimmage |
 | `Shotgun Slot Left 19 Sweep` / `Slot Right 18 Sweep` | Shotgun - Slot Left - 19 Sweep / Slot Right - 18 Sweep | the quarterback, all the way outside behind the near halfback |
 | `Shotgun Slot Left 29 Toss` / `Slot Right 38 Toss` | Shotgun - Slot Left - 29 Toss / Slot Right - 38 Toss | the far halfback, across in front of the quarterback and all the way outside |
 
 **Play word** — a numbered run's word is the hole: Smash at 0 and 2/3, Dive at 4/5,
 Power at 6/7, Toss at 8/9.
-**Sweep** is the quarterback (`18` / `19`) or the slot coming across at 8/9,
-or a tight end on an end-around (a word call, no hole digit). Digit 4 is the
-slot only in looks that have one — Wishbone's 4 is the right halfback, so
-`49 Toss` is Toss. The tight-end `Slant Out` is a word call too.
+**Sweep** is *who*, not where: the quarterback (`18` / `19`), the slot (`48` / `49`)
+or a tight end (`58` / `59`, `68` / `69`) coming across to get there. Anyone else at
+8/9 is a Toss. Digit 4 is the slot only in looks that have one — Wishbone's 4 is the
+right halfback, so `49 Toss` is Toss.
+**A pass's word is its route, not its hole** — `68 Slant Pass`, `38 Quick Pass`,
+`38 Pitch Pass`. The digits are still checked against the diagram; only the word is
+free, because a route is not a gap.
 **Pitch Pass** keeps the toss's digits — `38 Pitch Pass` is the 38 Toss right up
 until the back pulls up behind the line and throws, so it is called the same way and
 the first digit is still the man who takes the pitch. He never crosses the line, and
@@ -140,15 +149,15 @@ halfback off tackle; `38 Toss` is the left halfback all the way outside.
 Empty backfield. Backs **2, 3 and 4** (fullback, tailback, slot) bunched
 outside the tight end; the quarterback is alone. The call names the bunch —
 `Trips Right`, `Trips Left` — then who gets it. With nobody in the backfield
-to hand to, everything here goes outside or in the air, so the only numbers
-that come up are 8s and 9s and the rest are word calls.
+to hand to, everything here goes outside or in the air, so every number that comes
+up is an 8 or a 9.
 
 | Call | Play | Reads as |
 |---|---|---|
 | `Trips Right 18 Sweep` / `Trips Left 19 Sweep` | Trips - Right - 18 Sweep / Left - 19 Sweep | the quarterback, alone in the backfield, outside the bunch |
 | `Trips Right 38 Quick Pass` / `Trips Left 39 Quick Pass` | Trips - Right - 38 Quick Pass / Left - 39 Quick Pass | the tailback out of the bunch, thrown to outside the tight end |
-| `Trips Right LTE Sweep` / `Trips Left RTE Sweep` | Trips - Right - LTE Sweep / Left - RTE Sweep | the backside tight end on an end-around |
-| `Trips Right RTE Slant Out` / `Trips Left LTE Slant Out` | Trips - Right - RTE Slant Out / Left - LTE Slant Out | the play-side tight end, flat out on the line |
+| `Trips Right 58 Sweep` / `Trips Left 69 Sweep` | Trips - Right - 58 Sweep / Left - 69 Sweep | the backside tight end on an end-around |
+| `Trips Right 68 Slant Pass` / `Trips Left 59 Slant Pass` | Trips - Right - 68 Slant Pass / Left - 59 Slant Pass | the play-side tight end, flat out on the line |
 
 ## Formations
 

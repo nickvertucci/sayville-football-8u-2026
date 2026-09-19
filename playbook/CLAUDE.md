@@ -171,12 +171,17 @@ exactly eleven players, and `backs` — the digit-to-position map its calls are 
 from:
 
 ```json
-"backs": { "1": "QB", "2": "FB", "3": "TB", "4": "SL" }
+"backs": { "1": "QB", "2": "FB", "3": "TB", "4": "SL", "5": "LTE", "6": "RTE" }
 ```
 
 `backs` is not documentation. It is what the generator resolves the first digit of every
 call against, and it is what the calling-language table on the home page is built from,
 so there is one copy of the numbering rather than three that can disagree.
+
+It is really a *ball carrier* map, which is why the two tight ends are in it. They are
+linemen and they are 5 and 6, because they carry it on the end-around and catch it on
+the slant, and a boy holding a wristband should not need to know which of those two
+facts makes a man a "back".
 
 ### `name` and `call` are the numbering
 
@@ -209,14 +214,17 @@ The numbering system is documented in the top-level [README](../README.md).
 
   **Sweep** is who, not a hole: the quarterback at 8/9 is `18 Sweep` / `19 Sweep`,
   the slot coming across is `49 Sweep` / `48 Sweep`, and a tight end on an
-  end-around is a word call (`LTE Sweep`). Digit 4 is the slot only in looks
+  end-around is `58 Sweep` / `69 Sweep`. Digit 4 is the slot only in looks
   that have one — Wishbone's 4 is the right halfback, so `49 Toss` is Toss.
   So `36 Power` is right, `36 Smash` fails, and `18 Toss` fails because the
-  quarterback sweeping is Sweep. Word calls (a tight-end sweep, a slant-out
-  pass) opt out of the hole table because they have no hole digit.
+  quarterback sweeping is Sweep.
+
+  **A pass opts out of the hole table**, because its word is a route and a route
+  is not a gap: `68 Slant Pass`, `38 Quick Pass`, `38 Pitch Pass`. Only the word
+  is free — the digits are checked against the diagram like any other call.
 
 The play word **is** the blocking scheme. `36 Power` fills Power; `18 Sweep`
-fills Sweep; a dropback `RTE Slant Out` fills Protect. Hole 0, straight over
+fills Sweep; a dropback — `68 Slant Pass` — fills Protect. Hole 0, straight over
 the center, is Smash too — there is just no play in the book there yet.
 
 That means the digits describe **the back the first digit names**, not necessarily the
@@ -226,11 +234,10 @@ ball carrier. On a play-action pass they follow the quarterback's path, while
 Inventing a nickname instead of a call defeats the point of having a language, and now
 also fails `--check`.
 
-**The one exception is a word call**, for a ball carrier the numbering has no digit for —
-a tight end on an end-around. Set `"word_call": true` and name him in the call
-(`Regular I Slot Right LTE Sweep`); the play must also have `direction`, which is where its
-playside comes from with no hole digit. Only a play that opts in is exempt, and digits
-added to a word call are still checked.
+**There are no exceptions.** There used to be one — `word_call`, for a ball carrier
+the numbering had no digit for, which meant a tight end on an end-around — and then the
+tight ends got digits, so the exception had nobody left to cover and is gone. Every call
+carries two digits, and `--check` rejects one that does not.
 
 Formations carry an `order` field too, which is teaching order, not the alphabet.
 Both control the sequence on the site and in `PLAYBOOK.md`.
@@ -276,10 +283,10 @@ Do not restate a scheme verb on the play. `--check` rejects a Power whose
 playside end cuts off, because that is Smash. A `note` with no verb is merged
 onto the scheme job.
 
-A dropback is `{who} {route}` (`RTE Slant Out`) and scheme **Protect**. Do not
-number it with a hole word — "Slant Out" is a route, not a hole. Play-action
-(none in the book yet) takes the run's scheme and its digits; `ball_carrier`
-is the receiver.
+A dropback is `{back}{hole} {route}` (`68 Slant Pass`) and scheme **Protect**. The
+digits are the receiver and where he crosses the line; the word is his route, which is
+why the hole table does not apply to it. Play-action takes the run's scheme and its
+digits; `ball_carrier` is the receiver.
 
 ### Blocking intents
 

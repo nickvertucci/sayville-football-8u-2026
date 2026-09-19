@@ -27,7 +27,7 @@ import blocking
 from datetime import date as _date
 from pathlib import Path
 
-from common import (CARD_ORDER, call_prefix, esc, form_label, number_tes,
+from common import (CARD_ORDER, call_prefix, esc, form_label,
                     ordered_positions, position_name)
 
 SITE_TITLE = "Sayville 8U Tackle Football"
@@ -719,7 +719,7 @@ table.xl.xl-plays td {
 .band ol + .band-sub { margin-top: 5px; }
 .band li {
   display: flex; align-items: baseline; gap: 6px;
-  padding: 0 5px; font-size: 15.5px; font-weight: 700; line-height: 1.95;
+  padding: 0 5px; font-size: 13px; font-weight: 700; line-height: 2.25;
   color: var(--ink); white-space: nowrap;
 }
 /* Zebra rather than a rule between rows. A rule is a thing to read past; a band of
@@ -886,7 +886,7 @@ table.xl.pk-plays td {
      what is left: their widest, "S-10 Slot L - RTE (60) Sweep", has room to spare in a
      148-point column. Checked at 200, where the script clipped, and at 245, where
      neither side does. */
-  .xl-top { display: grid; grid-template-columns: 1fr 250px; gap: 0 6px;
+  .xl-top { display: grid; grid-template-columns: 1fr 230px; gap: 0 6px;
             align-items: start; }
   .xl-sheets { grid-template-columns: 1fr; gap: 0; margin: 2px 0 0; }
   .script { margin: 2px 0 0; break-inside: avoid; }
@@ -929,7 +929,7 @@ table.xl.pk-plays td {
   table.xl th { font-size: 8px; }
   /* The scheme column is a label, not a share of the page: at full width an even
      quarter each would leave three inches of white beside the word "Sweep". */
-  col.xl-c0 { width: 44px; }
+  col.xl-c0 { width: 50px; }
   /* The formation name is a full-width black bar with white type, the same treatment
      as the LEFT/MIDDLE/RIGHT row below it, so a block reads as one thing with a
      header on it rather than six similar tables in a column. It used to print as
@@ -958,7 +958,7 @@ table.xl.pk-plays td {
   table.xl.xl-plays td { height: auto; vertical-align: middle; padding: 2px 3px; }
   /* A call is one line on paper: small enough to fit its cell, and never wrapping
      into a second line that makes the row taller. */
-  .xl-plays td a { font-size: 9px; white-space: nowrap; letter-spacing: -.35px;
+  .xl-plays td a { font-size: 9px; white-space: nowrap; letter-spacing: -.2px;
                    padding: 0; line-height: 1.2; }
   /* Four calls stacked in one cell ran together on paper: the rule between them is
      var(--line), which is a hairline grey a screen can show and a printer cannot.
@@ -970,7 +970,7 @@ table.xl.pk-plays td {
   /* The number is the play now -- it is what goes on a wristband and what a boy
      is looking for -- so it reads as black type rather than the grey footnote a
      letter-and-dash code was. Losing the letter paid for the size. */
-  .xl-code { font-size: 9px; margin-right: 3px; color: #000; font-weight: 900; }
+  .xl-code { font-size: 10px; margin-right: 4px; color: #000; font-weight: 900; }
   tbody .xl-scheme { font-size: 8.5px; background: none !important; color: #000 !important; }
   thead .xl-scheme { font-size: 8.5px; }
   .xl-none { color: #ccc; }
@@ -1011,7 +1011,7 @@ table.xl.pk-plays td {
      row there is and it has half of five inches to fit in. Eight rows then have three
      inches to live in, which is why the leading is what it is -- the space was going
      spare, and a row a boy can keep his eye on is what to spend it on. */
-  .band li { font-size: 15.5px; line-height: 1.95; padding: 0 5px; gap: 6px; }
+  .band li { font-size: 13px; line-height: 2.25; padding: 0 5px; gap: 6px; }
   .band li:nth-child(even) { background: #eee !important;
                              -webkit-print-color-adjust: exact; print-color-adjust: exact; }
   .band li b { flex-basis: 26px; padding-right: 6px; border-right-color: #000; }
@@ -2815,7 +2815,7 @@ HOLES = [
     ("2 / 3", "Smash — between the center and the guard"),
     ("4 / 5", "Dive — between the guard and the tackle"),
     ("6 / 7", "Power — between the tackle and the tight end"),
-    ("8 / 9", "Toss — outside the tight end. Sweep if the quarterback or the slot is coming across"),
+    ("8 / 9", "Toss — outside the tight end. Sweep if the quarterback, the slot or a tight end is coming across to get there"),
 ]
 
 
@@ -2971,9 +2971,7 @@ def _sheet_name(play: dict, form: dict) -> str:
     heading off "Trips - Right - LTE Sweep" left a bare "R -". A formation with
     no strength word, like the Wishbone, keeps nothing.
     """
-    # Off the call rather than the name (see above), so the tight end's number has to
-    # go back on here -- the name already carries it, the call never does.
-    call = number_tes(play.get("call") or "")
+    call = play.get("call") or ""
     m = re.search(r"\b(\w+)\s+(Left|Right)\s+(.*)$", call)
     if m:
         return f"{m.group(1)} {m.group(2)[0]} - {m.group(3)}"
@@ -3478,21 +3476,17 @@ BAND_PANEL_COLUMNS = 2
 def band_call(play: dict, form: dict) -> str:
     """The call, minus the formation the panel heading already says.
 
-    "Split Backs Slot Right LTE Sweep" is "Slot Right LTE Sweep" in the Split Backs
-    pouch. Slot Right stays spelled out -- there is room for it, and the boy reading
-    this is nine and has been taught the words, not an abbreviation of them. The tight
-    end's jersey number comes off: the call sheet carries it for the coach, and the
-    call is what gets shouted.
+    "Split Backs Slot Right 38 Toss" is "Slot Right 38 Toss" in the Split Backs pouch.
+    Nothing else comes off. Slot Right is two words and about two points of type, and
+    it is worth both: the boy reading this is nine, he has been taught those words,
+    and an abbreviation is one more thing to remember at the moment he has least room
+    to remember anything.
     """
     call = play.get("call") or ""
     label = form_label(form)
     if call.startswith(label + " "):
         call = call[len(label) + 1:]
-    # And "Slot", which every one of the forty-two calls says and so none of them
-    # distinguishes. Right and Left are the half of it a boy has to read; the word in
-    # front of them is four characters of a row that is fighting for its width, and
-    # buying them back is three points of type.
-    return call[5:] if call.startswith("Slot ") else call
+    return call
 
 
 def band_plays(formations: list[dict]) -> list[tuple[dict, list[dict]]]:
@@ -3590,10 +3584,9 @@ def write_wristbands(formations: list[dict], defenses: dict) -> str:
   three pouches of a band &mdash; one formation to a pouch. The panels are 5&Prime; by
   3&Prime;, which is a pouch, so a sheet is one whole wristband: print a copy per boy,
   cut on the dashed lines, and load them top to bottom.</p>
-  <p class="sub">A row is the number, then the slot&rsquo;s side, then the call:
-  <b>1 &middot; Right 36 Power</b> is <i>Regular I Slot Right 36 Power</i>. The word
-  &ldquo;Slot&rdquo; is in all forty-two calls, so it is in the huddle and not on the
-  band &mdash; leaving it off is three points of type on every row.</p>
+  <p class="sub">A row is the number, then the call exactly as it is yelled, minus
+  the formation the pouch already names: <b>1 &middot; Slot Right 36 Power</b> is
+  <i>Regular I Slot Right 36 Power</i>.</p>
   <p class="sub">The numbers are the ones on the cards and down the left of the call
   sheet, so &ldquo;{esc(hi)}&rdquo; in the huddle, on the band and on the diagram are
   the same play. Reprint whenever a play is added: numbers are never reused, so the

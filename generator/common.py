@@ -33,21 +33,6 @@ def position_name(key: str) -> str:
     return POSITION_NAMES.get(key, key)
 
 
-# The tight ends carry a number the way the four backs do -- 50 and 60, after the
-# slot's 40. It is a label, not a call: a tight end is still not a numbered back, so
-# the call stays "LTE Sweep" and what you yell on Saturday does not change. The number
-# rides along on the play's NAME and on the sheet, which is where somebody is looking
-# a play up rather than calling it.
-TE_NUMBERS = {"LTE": 50, "RTE": 60}
-
-_TE_TOKEN = re.compile(r"\b(LTE|RTE)\b")
-
-
-def number_tes(text: str) -> str:
-    """Write a tight end in a play's name as LTE (50), so the sheet reads like the card."""
-    return _TE_TOKEN.sub(lambda m: f"{m.group(1)} ({TE_NUMBERS[m.group(1)]})", text or "")
-
-
 def esc(text) -> str:
     return (
         str(text)

@@ -31,7 +31,9 @@
     "1": "QB",
     "2": "FB",
     "3": "TB",
-    "4": "SL"
+    "4": "SL",
+    "5": "LTE",
+    "6": "RTE"
   },
   "coaching_notes": [
     "Count seven on the line every snap — both ends stay down. Four in the backfield, nobody split out: this is the one look where we have no receiver on the field.",

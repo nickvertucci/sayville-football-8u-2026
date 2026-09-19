@@ -34,11 +34,19 @@ CASES = [
     ("no number at all",              "i-form",   "i-power-r",  "I SL Right Power",    True),
     ("off tackle left",               "i-form",   "i-power-l",  "I SL Left 37 Power",  False),
     ("off tackle left, numbered right", "i-form", "i-power-l",  "I SL Left 36 Power",  True),
-    # The tight-end sweep is a word call: it opts in, so no digits is right for it — while
-    # "no number at all" above still fails on a play that did not opt in. Digits added
-    # to a word call are checked like any other, and there is no back 5.
-    ("tight-end sweep, word call",      "i-form",   "i-te-sweep-r", "Regular I Slot Right LTE Sweep", False),
-    ("tight-end sweep, numbered anyway", "i-form",  "i-te-sweep-r", "Regular I Slot Right 58 LTE Sweep", True),
+    # The tight ends are numbered now -- 5 the left one, 6 the right -- so the end-around
+    # is 58 Sweep and there is no word call left in the book. Coming across at 8/9 is
+    # Sweep for a tight end the same as for the quarterback and the slot, and calling it
+    # Toss fails on the word rather than on the geometry.
+    ("tight-end sweep",                 "i-form",   "i-te-sweep-r", "Regular I Slot Right 58 Sweep", False),
+    ("tight-end sweep, unnumbered",     "i-form",   "i-te-sweep-r", "Regular I Slot Right LTE Sweep", True),
+    ("tight-end sweep, called Toss",    "i-form",   "i-te-sweep-r", "Regular I Slot Right 58 Toss", True),
+    ("tight-end sweep, wrong end",      "i-form",   "i-te-sweep-r", "Regular I Slot Right 68 Sweep", True),
+    ("tight-end sweep right, numbered left", "i-form", "i-te-sweep-r", "Regular I Slot Right 59 Sweep", True),
+    # The slant out is numbered off the same two digits, and a pass skips the play-word
+    # check, so what is left to hold is that the end named is the one running it.
+    ("tight-end slant pass",            "i-form",   "i-te-out-r", "Regular I Slot Right 68 Slant Pass", False),
+    ("tight-end slant pass, wrong end", "i-form",   "i-te-out-r", "Regular I Slot Right 58 Slant Pass", True),
     # The A gap is 2/3 now, not 0/1, and there is no 1 hole at all: the middle is one
     # hole, so a call that names the old number has to fail rather than quietly
     # measure a yard and a half away and pass.
