@@ -489,17 +489,17 @@ Normal line splits, about a foot. Both ends are on the line; the slot is just ou
 | **C** | Pass block: step back, hands up, and stay between your man and the quarterback. |
 | **RG** | Pass block: step back, hands up, and stay between your man and the quarterback. |
 | **RT** | Pass block: step back, hands up, and stay between your man and the quarterback. |
-| **RTE** **(ball)** | Block the end the way you do on the toss, then slip outside him and run up the sideline. Look back over your outside shoulder. |
+| **RTE** **(ball)** | Block the end the way you do on the toss, then slant out flat toward the sideline, almost on the line. Look for the ball right away. |
 | **SL** | Run at the outside linebacker and screen him off. Stay in his way. |
 | **QB** | Pitch it exactly the way you pitch the toss, then run left like you still have it. Do not turn and watch the throw. |
 | **FB** | Bubble outside our end the same as the toss and take the first man out there. He is the one who gets to the thrower. |
-| **TB** | Catch the pitch and run the toss. At our end, pull up behind the line and throw it up the sideline to the tight end. |
+| **TB** | Catch the pitch and run the toss. At our tight end, pull up behind the line and throw it flat to the tight end in front of you. |
 
 **Coaching points**
 
 - Everything is the toss until he pulls up. Same pitch, same path, same speed -- a tailback who slows down to throw has told them.
 - He throws from behind the line. Crossing it is a penalty, so drill the pull-up, not the arm.
-- The tight end blocks the end first and then slips outside him. That block is what the toss shows them, and it is what gets him loose.
+- The tight end blocks the end first, then slants out flat, almost on the line. It is a three-yard throw and it should never be more than that.
 - Call it after the toss has hurt them, on first or second down, where an incompletion costs nothing.
 
 ---
@@ -514,7 +514,7 @@ Normal line splits, about a foot. Both ends are on the line; the slot is just ou
 
 | Position | Assignment |
 |---|---|
-| **LTE** **(ball)** | Block the end the way you do on the toss, then slip outside him and run up the sideline. Look back over your outside shoulder. |
+| **LTE** **(ball)** | Block the end the way you do on the toss, then slant out flat toward the sideline, almost on the line. Look for the ball right away. |
 | **LT** | Pass block: step back, hands up, and stay between your man and the quarterback. |
 | **LG** | Pass block: step back, hands up, and stay between your man and the quarterback. |
 | **C** | Pass block: step back, hands up, and stay between your man and the quarterback. |
@@ -524,12 +524,12 @@ Normal line splits, about a foot. Both ends are on the line; the slot is just ou
 | **SL** | Run at the outside linebacker and screen him off. Stay in his way. |
 | **QB** | Pitch it exactly the way you pitch the toss, then run right like you still have it. Do not turn and watch the throw. |
 | **FB** | Bubble outside our end the same as the toss and take the first man out there. He is the one who gets to the thrower. |
-| **TB** | Catch the pitch and run the toss. At our end, pull up behind the line and throw it up the sideline to the tight end. |
+| **TB** | Catch the pitch and run the toss. At our tight end, pull up behind the line and throw it flat to the tight end in front of you. |
 
 **Coaching points**
 
 - Everything is the toss until he pulls up. Same pitch, same path, same speed -- a tailback who slows down to throw has told them.
 - He throws from behind the line. Crossing it is a penalty, so drill the pull-up, not the arm.
-- The tight end blocks the end first and then slips outside him. That block is what the toss shows them, and it is what gets him loose.
+- The tight end blocks the end first, then slants out flat, almost on the line. It is a three-yard throw and it should never be more than that.
 - Call it after the toss has hurt them, on first or second down, where an incompletion costs nothing.
 
