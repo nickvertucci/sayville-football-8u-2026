@@ -634,11 +634,16 @@ table.xl.xl-plays td {
 }
 .xl-plays td a + a { border-top: 1px dotted var(--line); }
 .xl-plays td a:hover { text-decoration: underline; }
-/* The code is how the card, the book and the install chips name the play; small and
-   quiet here so the words of the call carry the cell. */
+/* The number is how the card, the book, the install chips and the boys' wristbands
+   name the play, so it leads the cell in black rather than sitting behind the words
+   as a grey footnote. It was a quiet "I-7" when the words of the call were the only
+   way in; a boy looking for 7 needs to find 7. */
 .xl-code {
-  display: inline-block; margin-right: 5px; font-size: 9.5px; font-weight: 800;
-  color: var(--muted); letter-spacing: .3px;
+  display: inline-block; margin-right: 6px; font-size: 11px; font-weight: 900;
+  color: var(--ink); letter-spacing: 0;
+  /* Its own line box, so type bigger than the call's does not make every row taller.
+     Without this the sheet grew forty points and went to a second page. */
+  line-height: 1;
 }
 .xl-none { color: var(--line); }
 .xl-n {
@@ -902,7 +907,10 @@ table.xl.pk-plays td {
                    padding: 0; line-height: 1.2; }
   table.xl.xl-plays td { line-height: 1.2; }
   .xl-scheme { line-height: 1.2; }
-  .xl-code { font-size: 8px; margin-right: 3px; color: #555; }
+  /* The number is the play now -- it is what goes on a wristband and what a boy
+     is looking for -- so it reads as black type rather than the grey footnote a
+     letter-and-dash code was. Losing the letter paid for the size. */
+  .xl-code { font-size: 10px; margin-right: 4px; color: #000; font-weight: 900; }
   tbody .xl-scheme { font-size: 8.5px; background: none !important; color: #000 !important; }
   thead .xl-scheme { font-size: 8.5px; }
   .xl-none { color: #ccc; }
@@ -3697,9 +3705,10 @@ def practice_window(pr: dict) -> str:
     return f"{start}–{end}" if end and end != start else start
 
 
-def code_prefix(play: dict) -> str:
-    """"#S-2 | " ahead of a play wherever a sheet lists it — the call sheet's cells and a
-    practice's install chips — so paper uses the same codes the diagrams do."""
+def play_number(play: dict) -> str:
+    """"#18 | " ahead of a play wherever a sheet lists it — the call sheet's cells and a
+    practice's install chips — so paper uses the same number the diagram and the boys'
+    wristbands do."""
     return f"#{play['code']} | " if play.get("code") else ""
 
 
@@ -3710,7 +3719,7 @@ def install_items(pr: dict, plays: dict, forms_by_id: dict, defenses: dict) -> l
         play, _form = plays[pid]
         items.append(
             f'<a class="ins-play" href="{p_href(play)}">'
-            f'<span class="ins-call">{esc(code_prefix(play))}{esc(play.get("call", ""))}</span>'
+            f'<span class="ins-call">{esc(play_number(play))}{esc(play.get("call", ""))}</span>'
             f'<span class="ins-name">{esc(play["name"])}</span></a>'
         )
     # A play this practice runs again rather than teaches. Marked, because the block
@@ -3720,7 +3729,7 @@ def install_items(pr: dict, plays: dict, forms_by_id: dict, defenses: dict) -> l
         play, _form = plays[pid]
         items.append(
             f'<a class="ins-play again" href="{p_href(play)}">'
-            f'<span class="ins-call">{esc(code_prefix(play))}{esc(play.get("call", ""))}</span>'
+            f'<span class="ins-call">{esc(play_number(play))}{esc(play.get("call", ""))}</span>'
             f'<span class="ins-name">{esc(play["name"])} &middot; review</span></a>'
         )
     for fid in pr.get("fronts", []):

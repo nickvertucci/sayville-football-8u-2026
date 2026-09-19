@@ -3,7 +3,7 @@
   "order": 12,
   "formation": "i-form",
   "name": "Regular I - Slot Left - RTE Sweep",
-  "code": "I-4",
+  "code": "4",
   "call": "Regular I Slot Left RTE Sweep",
   "word_call": true,
   "type": "run",

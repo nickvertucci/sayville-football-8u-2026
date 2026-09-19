@@ -3,7 +3,7 @@
   "order": 4,
   "formation": "trips",
   "name": "Trips - Left - RTE Sweep",
-  "code": "T-4",
+  "code": "44",
   "call": "Trips Left RTE Sweep",
   "word_call": true,
   "type": "run",

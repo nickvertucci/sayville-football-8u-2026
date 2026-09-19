@@ -3,7 +3,7 @@
   "order": 3,
   "formation": "trips",
   "name": "Trips - Right - LTE Sweep",
-  "code": "T-3",
+  "code": "43",
   "call": "Trips Right LTE Sweep",
   "word_call": true,
   "type": "run",

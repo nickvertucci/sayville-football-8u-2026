@@ -3,7 +3,7 @@
   "order": 4,
   "formation": "power-i",
   "name": "Power I - Slot Left - 39 Toss",
-  "code": "P-4",
+  "code": "42",
   "call": "Power I Slot Left 39 Toss",
   "type": "run",
   "scheme": "Toss",

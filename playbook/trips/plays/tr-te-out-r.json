@@ -3,7 +3,7 @@
   "order": 15,
   "formation": "trips",
   "name": "Trips - Right - RTE Slant Out",
-  "code": "T-15",
+  "code": "49",
   "call": "Trips Right RTE Slant Out",
   "word_call": true,
   "type": "pass",
