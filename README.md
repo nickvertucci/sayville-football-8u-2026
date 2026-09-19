@@ -209,6 +209,7 @@ someone a link to exactly the play you mean.
 |---|---|
 | `index.html` | Home: the formations, the install advice, the calling language |
 | `calls.html` | **Call sheet** — one sheet per offensive package: the I-formation lineup with names, and blank Left, Middle and Right columns for plays |
+| `wristbands.html` | **Wristbands** — every callable play by number, eight inserts to one sheet, cut on the dashes |
 | `f-<formation>.html` | One formation: its notes and its plays |
 | `install.html` | **Install schedule** — a month calendar of the practices, generated from `install.json` |
 | `install-<n>.html` | One practice: what goes in, and the run of practice block by block |
@@ -324,6 +325,12 @@ They run in call sheet order, so everything called on a Saturday is 1–42:
 its number, and a new play takes the next free one; gaps where a play was retired stay
 gaps. Renumbering would make every wristband already printed wrong, so the build only
 checks that a number is a whole number and that no two plays share one.
+
+The bands themselves are [`wristbands.html`](wristbands.html): the same 1–42, grouped
+under their formations, eight inserts on one sheet of paper. Print it, cut on the
+dashes, slide one into each band. It is generated like everything else, so adding a
+play adds a row — and because numbers never move, the bands already on wrists stay
+correct.
 
 Full authoring rules, the blocking verbs, the coordinate system and the house style:
 [playbook/CLAUDE.md](playbook/CLAUDE.md).
