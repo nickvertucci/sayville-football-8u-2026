@@ -637,7 +637,12 @@ table.xl.xl-plays td {
 /* The number is how the card, the book, the install chips and the boys' wristbands
    name the play, so it leads the cell in black rather than sitting behind the words
    as a grey footnote. It was a quiet "I-7" when the words of the call were the only
-   way in; a boy looking for 7 needs to find 7. */
+   way in; a boy looking for 7 needs to find 7.
+
+   "#7 |" rather than a bare 7: a plain number running straight into the words of the
+   call blended into them -- "7 Slot R - 32 Smash" reads as one string, and the sheet
+   is nothing but strings like it. The hash says this is a play number and the bar
+   says where it stops, which is the same shape the install chips have always used. */
 .xl-code {
   display: inline-block; margin-right: 6px; font-size: 11px; font-weight: 900;
   color: var(--ink); letter-spacing: 0;
@@ -682,6 +687,49 @@ table.xl.xl-plays td {
 #tab-def:focus-visible ~ .tabrow .tab[for="tab-def"] { outline: 2px solid var(--accent-solid); }
 .tabpane { display: none; }
 #tab-off:checked ~ .pane-off, #tab-def:checked ~ .pane-def { display: block; }
+
+/* ------------------------------------------------------------ wristbands --
+   Eight identical inserts to a sheet. The page is one shape repeated, so the only
+   things that matter are the size of the shape and the size of the type inside it:
+   a boy is reading this through a facemask, at a run, with somebody shouting a
+   number at him. */
+.band-sheet {
+  display: grid; grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px; margin: 16px 0 24px;
+}
+.band {
+  border: 1px dashed var(--line); border-radius: 4px; padding: 6px 7px 7px;
+  background: var(--panel);
+}
+.band-head {
+  margin: 0 0 5px; padding: 2px 5px; font-size: 9px; font-weight: 900;
+  text-transform: uppercase; letter-spacing: .6px;
+  color: var(--on-accent); background: var(--accent-solid);
+}
+.band-cols { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0 7px; }
+/* The formation, once, over its own numbers. This heading is what buys every row
+   under it eleven characters. */
+.band-form {
+  margin: 0 0 1px; font-size: 8.5px; font-weight: 900; text-transform: uppercase;
+  letter-spacing: .4px; color: var(--muted); border-bottom: 1px solid var(--line);
+}
+.band-cols ol + .band-form { margin-top: 5px; }
+.band-cols ol { margin: 0; padding: 0; list-style: none; }
+.band-cols li {
+  font-size: 9.5px; font-weight: 700; line-height: 1.45; white-space: nowrap;
+  letter-spacing: -.2px; color: var(--ink);
+}
+/* The number in a right-aligned box with a rule after it, so forty-two calls of
+   different lengths still leave one straight column of numbers to run a finger down.
+   That column is the only thing on the insert a boy actually uses. */
+.band-cols li b {
+  display: inline-block; width: 15px; margin-right: 4px; padding-right: 4px;
+  text-align: right; font-weight: 900;
+  border-right: 1px solid var(--line);
+}
+@media (max-width: 720px) {
+  .band-sheet { grid-template-columns: minmax(0, 1fr); }
+}
 
 /* ------------------------------------------------- defensive call sheet --
    One table per front, positions down the side and packages across, so a cell is
@@ -832,7 +880,7 @@ table.xl.pk-plays td {
      what is left: their widest, "S-10 Slot L - RTE (60) Sweep", has room to spare in a
      148-point column. Checked at 200, where the script clipped, and at 245, where
      neither side does. */
-  .xl-top { display: grid; grid-template-columns: 1fr 245px; gap: 0 6px;
+  .xl-top { display: grid; grid-template-columns: 1fr 250px; gap: 0 6px;
             align-items: start; }
   .xl-sheets { grid-template-columns: 1fr; gap: 0; margin: 2px 0 0; }
   .script { margin: 2px 0 0; break-inside: avoid; }
@@ -840,6 +888,7 @@ table.xl.pk-plays td {
      as one object rather than twenty loose boxes. The cells keep the hairline the rest
      of the sheet's tables use. */
   .script-t { border: 2px solid #000; }
+  .script-t td a { letter-spacing: -.35px; }
   .script-t td a { color: #000; text-decoration: none; }
   /* 20.4 points a row is the height of the four formation blocks divided by twenty --
      measured against the page, not picked, and tuned until the foot of this column and
@@ -858,7 +907,7 @@ table.xl.pk-plays td {
      to two pages the first time the script was filled in. The column is sized so
      nothing needs to wrap; this makes a name that somehow did overflow visibly rather
      than silently push the field and the board off the page. */
-  table.xl.script-t td { height: 20.4px; padding: 0 3px; line-height: 1.15;
+  table.xl.script-t td { height: 20.4px; padding: 0 2px; line-height: 1.15;
                          font-size: 9px; font-weight: 700; white-space: nowrap;
                          vertical-align: middle; text-align: center; }
   table.xl.script-t td.sn { width: 20px; text-align: center; font-size: 8px;
@@ -874,7 +923,7 @@ table.xl.pk-plays td {
   table.xl th { font-size: 8px; }
   /* The scheme column is a label, not a share of the page: at full width an even
      quarter each would leave three inches of white beside the word "Sweep". */
-  col.xl-c0 { width: 62px; }
+  col.xl-c0 { width: 44px; }
   /* The formation name is a full-width black bar with white type, the same treatment
      as the LEFT/MIDDLE/RIGHT row below it, so a block reads as one thing with a
      header on it rather than six similar tables in a column. It used to print as
@@ -900,17 +949,22 @@ table.xl.pk-plays td {
   /* Tighter rows on paper than on screen. The 4px of padding above and below
      every cell was 50 points of the one sheet -- a row of it for each block --
      and the sheet ran out of room the day Regular I got a Toss. */
-  table.xl.xl-plays td { height: auto; vertical-align: middle; padding: 2px 5px; }
+  table.xl.xl-plays td { height: auto; vertical-align: middle; padding: 2px 3px; }
   /* A call is one line on paper: small enough to fit its cell, and never wrapping
      into a second line that makes the row taller. */
-  .xl-plays td a { font-size: 9px; white-space: nowrap; letter-spacing: -.2px;
+  .xl-plays td a { font-size: 9px; white-space: nowrap; letter-spacing: -.35px;
                    padding: 0; line-height: 1.2; }
+  /* Four calls stacked in one cell ran together on paper: the rule between them is
+     var(--line), which is a hairline grey a screen can show and a printer cannot.
+     It is the same fence the sheet already meant to have, drawn dark enough to be
+     one. */
+  .xl-plays td a + a { border-top: 1px dotted #999; }
   table.xl.xl-plays td { line-height: 1.2; }
   .xl-scheme { line-height: 1.2; }
   /* The number is the play now -- it is what goes on a wristband and what a boy
      is looking for -- so it reads as black type rather than the grey footnote a
      letter-and-dash code was. Losing the letter paid for the size. */
-  .xl-code { font-size: 10px; margin-right: 4px; color: #000; font-weight: 900; }
+  .xl-code { font-size: 9px; margin-right: 3px; color: #000; font-weight: 900; }
   tbody .xl-scheme { font-size: 8.5px; background: none !important; color: #000 !important; }
   thead .xl-scheme { font-size: 8.5px; }
   .xl-none { color: #ccc; }
@@ -930,6 +984,29 @@ table.xl.pk-plays td {
   .tabrow { display: none; }
   .tabpane { display: block !important; }
   .pane-def { page-break-before: always; break-before: page; }
+  /* The wristband sheet is the one page whose whole job is the print. Two across
+     and four down on letter is an insert of about 3.9 by 2.5 inches, which is the
+     window on the bands we buy. The dashes are cut lines, so they have to print:
+     a border always does, which is why the insert is bordered rather than shaded. */
+  .band-page .page-head { display: none; }
+  .band-sheet { gap: 8px; margin: 0; }
+  .band { border-color: #000; padding: 4px 5px 5px; background: none;
+          break-inside: avoid; }
+  .band-head { font-size: 8px; padding: 1px 4px; margin-bottom: 4px;
+               color: #fff !important; background: #000 !important;
+               -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .band-cols { gap: 0 6px; }
+  /* Sixteen Regular I rows set the height of the insert and four inserts set the
+     height of the page, so the leading is what decides whether this is one sheet
+     or two. Bigger type and tighter leading beats the other way round here: the
+     boy is reading one row, not a paragraph. */
+  .band-cols li { font-size: 9.5px; line-height: 1.3; letter-spacing: -.2px; }
+  .band-form { font-size: 8px; color: #000; border-bottom-color: #000;
+               margin-bottom: 1px; }
+  .band-cols ol + .band-form { margin-top: 4px; }
+  .band-cols li b { width: 13px; margin-right: 3px; padding-right: 3px;
+                    border-right-color: #000; }
+
   /* The defensive sheet: three fronts, eleven rows and six packages each, then the
      blank front under them. Small enough that the whole thing is one sheet, the way
      the offensive side is. */
@@ -2354,6 +2431,7 @@ def menu_groups(formations: list[dict], active_form: str, active_play: str) -> s
 NAV_LINKS = [("index.html", "Home", "home"),
              ("install.html", "Install", "install"),
              ("calls.html", "Call sheet", "calls"),
+             ("wristbands.html", "Wristbands", "bands"),
              ("depth-chart.html", "Depth Chart", "depth")]
 
 
@@ -2991,7 +3069,7 @@ def _package_strip(root: Path, formations: list[dict]) -> str:
                 play, form = found
                 cells.append(
                     f'<tr><td><a href="{p_href(play)}">'
-                    f'<span class="xl-code">{esc(play["code"])}</span>'
+                    f'<span class="xl-code">#{esc(play["code"])} |</span>'
                     f'{esc(_package_row(play, form))}</a></td></tr>'
                 )
             rows = "".join(cells)
@@ -3064,7 +3142,7 @@ def _situation_strip(roster: dict, plays: dict) -> str:
             play, form = found
             rows.append(
                 f'<tr><td><a href="{p_href(play)}">'
-                f'<span class="xl-code">{esc(play["code"])}</span>'
+                f'<span class="xl-code">#{esc(play["code"])} |</span>'
                 f'{esc(_package_row(play, form))}</a></td></tr>'
             )
         cards.append(
@@ -3165,7 +3243,7 @@ def _script_strip(root: Path, formations: list[dict]) -> str:
             )
         play, form = found
         cells.append(f'<a href="{p_href(play)}">'
-                     f'<span class="xl-code">{esc(play["code"])}</span>'
+                     f'<span class="xl-code">#{esc(play["code"])} |</span>'
                      f'{esc(_package_row(play, form))}</a>')
     cells += [""] * (SCRIPT_ROWS - len(cells))
 
@@ -3379,6 +3457,114 @@ def _call_sheet_order(formations: list[dict]) -> list[dict]:
     )
 
 
+# Eight inserts to a sheet, two across and four down. A wristband window is about
+# three and a half inches by two and a third, which is what BAND_W and BAND_H are; the
+# rest of this is that shape repeated until the page runs out. Print one sheet, cut on
+# the dashes, and the team is done.
+BAND_ACROSS = 2
+BAND_DOWN = 4
+BAND_COLUMNS = 3
+
+
+def band_call(play: dict, form: dict) -> str:
+    """The call, short enough for a wristband row.
+
+    The formation is the column heading, so a row only has to say which side and what:
+    "Split Backs Slot Right LTE Sweep" is "R LTE Sweep". Spelling the formation out on
+    every one of forty-two rows was what made the insert unreadable -- eleven of the
+    twenty-seven characters in the longest row were the word Split Backs, repeated
+    sixteen times down one column under a heading that already said it.
+    """
+    call = play.get("call") or ""
+    label = form_label(form)
+    if call.startswith(label + " "):
+        call = call[len(label) + 1:]
+    for word in ("Slot", "Trips"):
+        call = call.replace(f"{word} Right ", "R ").replace(f"{word} Left ", "L ")
+    return call
+
+
+def band_plays(formations: list[dict]) -> list[tuple[dict, list[dict]]]:
+    """Every play a coach can call on a Saturday, by formation, in number order.
+
+    The call sheet's formations, which is what makes the band contiguous: the numbers
+    were handed out in this order precisely so a band runs 1 to 42 with no holes in it.
+    The passes are on it even though the call sheet leaves them off -- the sheet is
+    what a coach reaches for and he does not call a slant out off it, but if he calls
+    one, the boy still has to find the number.
+    """
+    forms = [f for f in _call_sheet_order(formations) if f.get("id") not in SHEET_OMIT]
+    return [(f, sorted(f["_plays"], key=lambda p: int(p.get("code") or 0)))
+            for f in forms]
+
+
+def _band_columns(groups: list[tuple[dict, list[dict]]]) -> list[list]:
+    """The formations dealt into columns, whole, as evenly as they go.
+
+    A formation is never split down two columns: the heading is what lets a row say
+    "R 36 Power" instead of "Regular I R 36 Power", and a column of rows under no
+    heading says nothing at all.
+    """
+    height = lambda g: 1 + len(g[1])
+    target = sum(height(g) for g in groups) / BAND_COLUMNS
+    cols, cur, used = [], [], 0
+    for g in groups:
+        if cur and used + height(g) / 2 > target and len(cols) < BAND_COLUMNS - 1:
+            cols.append(cur)
+            cur, used = [], 0
+        cur.append(g)
+        used += height(g)
+    cols.append(cur)
+    return cols + [[]] * (BAND_COLUMNS - len(cols))
+
+
+def _band_insert(groups: list[tuple[dict, list[dict]]]) -> str:
+    """One insert: the team, then the numbers in columns under their formations."""
+    cols = []
+    for col in _band_columns(groups):
+        blocks = []
+        for form, plays in col:
+            rows = "".join(
+                f'<li><b>{esc(p["code"])}</b>{esc(band_call(p, form))}</li>'
+                for p in plays
+            )
+            blocks.append(f'<p class="band-form">{esc(form_label(form))}</p>'
+                          f"<ol>{rows}</ol>")
+        cols.append(f'<div>{"".join(blocks)}</div>')
+    return ('<div class="band">'
+            f'<p class="band-head">{esc(SITE_TITLE)}</p>'
+            f'<div class="band-cols">{"".join(cols)}</div></div>')
+
+
+def write_wristbands(formations: list[dict], defenses: dict) -> str:
+    groups = band_plays(formations)
+    inserts = "".join(_band_insert(groups) for _ in range(BAND_ACROSS * BAND_DOWN))
+    numbered = [p for _f, ps in groups for p in ps]
+    lo = numbered[0]["code"] if numbered else "1"
+    hi = numbered[-1]["code"] if numbered else "1"
+    body = f"""<div class="page-head">
+  <h1>Wristbands</h1>
+  <p class="sub">Every play a coach can call, {esc(lo)} to {esc(hi)}, eight inserts to
+  a sheet. Print it, cut on the dashed lines, and slide one into each band. The numbers
+  are the same ones on the cards and down the left of the call sheet, so "{esc(hi)}" in
+  the huddle, on the band and on the diagram are the same play.</p>
+  <p class="sub">Reprint it whenever a play is added. Numbers are never reused, so the
+  bands already out there stay right — a new play is a new row at the bottom.</p>
+  <button class="btn" type="button" onclick="window.print()">Print</button>
+</div>
+<div class="band-sheet">{inserts}</div>"""
+    return page(
+        f"Wristbands — {SITE_TITLE}",
+        body,
+        formations,
+        defenses=defenses,
+        active_nav="bands",
+        main_attrs=' class="band-page"',
+        description=f"Wristband inserts: every callable play, {lo} to {hi}, eight to a sheet.",
+        page_rule="size: letter portrait; margin: 0.3in;",
+    )
+
+
 def write_calls(formations: list[dict], defenses: dict, root: Path) -> str:
     """The call sheet: every formation's plays, by scheme and by side.
 
@@ -3425,7 +3611,7 @@ def write_calls(formations: list[dict], defenses: dict, root: Path) -> str:
             tds = []
             for side in sides:
                 cell = "".join(
-                    f'<a href="{p_href(p)}"><span class="xl-code">{esc(p["code"])}</span>'
+                    f'<a href="{p_href(p)}"><span class="xl-code">#{esc(p["code"])} |</span>'
                     f'{esc(_sheet_name(p, form))}</a>'
                     for p in placed.get((scheme, side), [])
                 )
@@ -4499,7 +4685,7 @@ def write_all(formations: list[dict], defenses: dict, root: Path) -> int:
     # still linked from anyone's bookmark and still in the search engine's index. The
     # cards learned this lesson first — 112 of them outlived the plays they drew.
     keep = {"index.html", "calls.html", "print.html", "defense.html", "rules.html",
-            "install.html", "depth-chart.html"}
+            "install.html", "depth-chart.html", "wristbands.html"}
     keep |= {f_href(f) for f in formations}
     keep |= {p_href(p) for f in formations for p in f["_plays"]}
     keep |= {d_href(d) for d in our_fronts(defenses).values()}
@@ -4526,7 +4712,9 @@ def write_all(formations: list[dict], defenses: dict, root: Path) -> int:
         write_install(formations, defenses, root), encoding="utf-8")
     (root / "depth-chart.html").write_text(
         write_depth_chart(formations, defenses, root), encoding="utf-8")
-    written += 7
+    (root / "wristbands.html").write_text(
+        write_wristbands(formations, defenses), encoding="utf-8")
+    written += 8
 
     # One page per practice. The schedule page is the calendar; this is what a coach
     # actually opens on the field, so it is a real page with a URL you can text to

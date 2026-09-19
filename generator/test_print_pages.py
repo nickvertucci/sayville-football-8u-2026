@@ -271,9 +271,22 @@ def main(argv=None) -> int:
                 f"calls.html renders {calls} pages, expected 2 — the offensive sheet "
                 "and the defensive sheet must be one printed page each"
             )
+
+        # The wristband sheet is eight inserts on one sheet: you print it once and cut
+        # up the team. A second page means an insert has grown past its quarter of the
+        # paper and the eighth one is on its own somewhere, which is not a thing anybody
+        # notices until they are holding scissors. It grows every time a play is added.
+        bands = render(chrome, ROOT / "wristbands.html", tmp / "bands.pdf", profile)
+        print(f"wristbands.html: {bands} pages (expected 1)")
+        if bands != 1:
+            failures.append(
+                f"wristbands.html renders {bands} pages, expected 1 — eight inserts, "
+                "one sheet"
+            )
         for name, pdf in (("print.html", tmp / "book.pdf"),
                           ("depth-chart.html", tmp / "depth.pdf"),
-                          ("calls.html", tmp / "calls.pdf")):
+                          ("calls.html", tmp / "calls.pdf"),
+                          ("wristbands.html", tmp / "bands.pdf")):
             for leak in PRINT_CHROME:
                 if pdf.exists() and pdf_contains(pdf, leak):
                     failures.append(f"{name} print still has {leak!r}")
