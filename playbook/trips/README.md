@@ -54,7 +54,7 @@ Same line as the Regular I — both ends tight, seven on the line every snap. No
 | Position | Assignment |
 |---|---|
 | **LTE** **(ball)** | Stay down in your stance — no motion. At the snap run flat behind the quarterback, take the handoff at full speed and get to the right edge. Turn up outside the trips. |
-| **LT** | Nobody on you. Cut off the backside. Never quit on the play. |
+| **LT** | Defensive end on your outside shoulder. Cut him off — get between him and the ball. |
 | **LG** | Defensive guard head up on you. Cut him off — get between him and the ball. |
 | **C** | Nobody on you. Climb to the playside linebacker. Head across him. |
 | **RG** | Defensive guard head up on you. Step past him. Climb to the playside linebacker. Head across him. |
@@ -87,7 +87,7 @@ Same line as the Regular I — both ends tight, seven on the line every snap. No
 | **LG** | Defensive guard head up on you. Step past him. Climb to the playside linebacker. Head across him. |
 | **C** | Nobody on you. Climb to the playside linebacker. Head across him. |
 | **RG** | Defensive guard head up on you. Cut him off — get between him and the ball. |
-| **RT** | Nobody on you. Cut off the backside. Never quit on the play. |
+| **RT** | Defensive end on your outside shoulder. Cut him off — get between him and the ball. |
 | **RTE** **(ball)** | Stay down in your stance — no motion. At the snap run flat behind the quarterback, take the handoff at full speed and get to the left edge. Turn up outside the trips. |
 | **SL** | Run at the corner and screen him off. Stay in his way. |
 | **QB** | Open left and hand the ball to the right tight end as he comes across behind you, then fake a run to the right. |
