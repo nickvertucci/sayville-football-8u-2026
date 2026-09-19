@@ -215,11 +215,24 @@
     ],
     "defense": [
       [
+        "Philip A.",
+        "Elias F.",
+        "Jaxon E.",
+        "Brayden S.",
+        "Michael M.",
+        "Jake G.",
+        "Brogan A.",
+        "Camden G.",
+        "Ryan S.",
+        "Nico V.",
+        "Liam M."
+      ],
+      [
         "Gavin P.",
         "Brayden H.",
         "Mason A.",
         "Brayden S.",
-        "Michael M.",
+        "Luca D.",
         "Jake G.",
         "Brogan A.",
         "Camden G.",
@@ -248,47 +261,34 @@
         "Michael M.",
         "Jake G.",
         "Brogan A.",
-        "Camden G.",
+        "Clark J.",
         "Joseph P.",
         "Kilian F.",
         "Thomas D."
       ],
       [
         "Philip A.",
-        "Mason A.",
-        "Jaxon E.",
-        "Brayden S.",
-        "Luca D.",
-        "Jake G.",
-        "Brogan A.",
-        "Camden G.",
-        "Joseph P.",
-        "Nico V.",
-        "Liam M."
-      ],
-      [
-        "Philip A.",
         "Elias F.",
         "Jaxon E.",
         "Gavin P.",
         "Michael M.",
         "Jake G.",
         "Brooks A.",
-        "Clark J.",
+        "Ace A.",
         "Ryan S.",
         "Kilian F.",
         "Liam M."
       ],
       [
         "Philip A.",
-        "Elias F.",
+        "Mason A.",
         "Brayden H.",
         "Brayden S.",
         "Michael M.",
-        "Ace A.",
+        "Jake G.",
         "Brogan A.",
         "Camden G.",
-        "Ryan S.",
+        "Joseph P.",
         "Nico V.",
         "Thomas D."
       ]
@@ -304,10 +304,10 @@
       "Tiny"
     ],
     "defense": [
+      "Base",
       "Hammer",
       "Wolfpack",
       "Venom",
-      "Havoc",
       "Rampage",
       "Predator"
     ]

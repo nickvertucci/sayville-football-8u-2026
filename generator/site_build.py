@@ -429,14 +429,6 @@ table.dc-board td.dc-cell.starter { font-weight: 800; }
   display: grid; grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 8px; padding-bottom: 2px;
 }
-/* The defence gets two across where the offense takes three. Not a preference: its
-   spot labels are LOLB and RILB where the offense's are QB and C, and its sub card
-   prints those labels again after each incoming name. Three across left the body
-   about 116px for a label and a name, which wrapped "Brayden H." onto two lines.
-   Two across gives both halves the room their own content needs. */
-.dc-side[data-side="defense"] .dc-pkgrow {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-}
 @media (max-width: 620px) { .dc-pkgrow { grid-template-columns: 1fr; } }
 .dc-pkg {
   display: flex; gap: 8px; align-items: flex-start;
@@ -479,8 +471,11 @@ table.dc-sub thead th {
   font-size: 10.5px; font-weight: 800; letter-spacing: .4px;
   text-transform: uppercase; color: var(--muted);
 }
+/* The spot after an incoming name is an annotation, not the name, and it was set only
+   two points below it. Smaller is both truer and the cheapest width on the card --
+   which the defence needs, where the spot is LOLB rather than C. */
 .dc-sub-pos {
-  font-size: 11px; font-weight: 800; letter-spacing: .2px;
+  font-size: 9.5px; font-weight: 800; letter-spacing: .2px;
   text-transform: uppercase; color: var(--muted);
 }
 .dc-pkg-slot {
@@ -502,6 +497,23 @@ table.dc-sub thead th {
 .dc-pkg-slot[data-n]::before {
   content: attr(data-spot) " (" attr(data-n) ")";
 }
+/* The defence's two halves both carry longer strings than the offense's -- LOLB where
+   it has C, and that same label again after each incoming name on the sub card. So it
+   gets four more points of card and eight fewer of label column. Offense is left
+   exactly as it was; it has neither problem. */
+.dc-side[data-side="defense"] .dc-subcard { flex-basis: 58%; }
+.dc-side[data-side="defense"] .dc-pkg-slot[data-spot]::before { flex-basis: 30px; }
+/* And the table itself a size down. The widest row the defence prints is Rampage's
+   "Brayden S." against "Brooks A. (RILB)" -- two full names and a four-letter spot in
+   one row, which the offense never has to fit. */
+.dc-side[data-side="defense"] table.dc-sub { font-size: 11.5px; }
+/* The last few points come out of the gutter between Out and In rather than out of the
+   body beside it: the body has about seven points of slack left and the card has none.
+   Longest row on the board is Hammer's "Brayden H. (LDG)". */
+.dc-side[data-side="defense"] table.dc-sub th,
+.dc-side[data-side="defense"] table.dc-sub td { padding-right: 4px; }
+.dc-side[data-side="defense"] table.dc-sub th:last-child,
+.dc-side[data-side="defense"] table.dc-sub td:last-child { padding-left: 4px; }
 .dc-pkg-slot + .dc-pkg-slot { margin-top: 1px; }
 /* A rule where the unit changes, so an eleven reads as its groups rather than as a
    list of eleven names. Offense breaks before the tight ends and before the line;
@@ -3843,25 +3855,19 @@ def rotations_for(side: str) -> list[tuple[str, str, str]]:
     return [(n, "d" + n, "") for n in ROTATIONS]
 
 
-def package_sub_card_html(packs: list, n: int, spots: tuple = (),
-                          base: list | None = None) -> str:
-    """Who comes off and who goes on versus the base eleven, by name.
+def package_sub_card_html(packs: list, n: int, spots: tuple = ()) -> str:
+    """Who comes off and who goes on versus package 1, by name.
 
-    A kid already in the base stays off this card even if they move spots — Philip
-    in Shifty is still Philip in Fortnite, just at a different slot, so he is not a
-    substitution. Only names that leave the eleven (Out) or join it (In) belong
-    here. Incoming names carry the spot they play in this package, so the card says
-    Joseph P. (RTE) rather than just Joseph P.
+    A kid already in the base package stays off this card even if they move
+    spots — Philip in Shifty is still Philip in Fortnite, just at a different
+    slot, so he is not a substitution. Only names that leave the eleven (Out)
+    or join it (In) belong here. Incoming names carry the spot they play in
+    this package, so the card says Joseph P. (RTE) rather than just Joseph P.
 
-    `base` is who to measure against. Offense does not pass one and measures against
-    its own package 1, which is what it has always done: Shifty IS the base there,
-    and the card under it reads "Base". Defense passes the depth chart's first
-    column instead, because its base is a column on the board rather than one of the
-    six — which is what lets all six defensive packages carry substitutes, rather
-    than spending one of them saying "nobody has come on yet".
+    Package 1 is the base on both sides — Shifty on offense, Base on defense —
+    so it is what everything else is measured against and its own card says so.
     """
-    first = [name for name in (base if base is not None
-                               else (packs[0] if packs else [])) if name]
+    first = [name for name in (packs[0] if packs else []) if name]
     here = packs[n - 1] if n - 1 < len(packs) else []
     first_set = set(first)
     here_set = {name for name in here if name}
@@ -3872,13 +3878,9 @@ def package_sub_card_html(packs: list, n: int, spots: tuple = (),
             spot = spots[i] if i < len(spots) else ""
             inn.append((name, spot))
     width = max(len(out), len(inn), 0)
-    # "Base" belongs on package 1 only where package 1 is the base. Where the base is
-    # passed in, an unchanged package is unchanged, not the thing everything else is
-    # measured from.
-    if (n <= 1 and base is None) or not width:
-        body = ('<p class="dc-sub-empty">Base</p>'
-                if n <= 1 and base is None
-                else '<p class="dc-sub-empty">Same as base</p>')
+    if n <= 1 or not width:
+        body = '<p class="dc-sub-empty">Base</p>' if n <= 1 else \
+            '<p class="dc-sub-empty">Same as base</p>'
     else:
         rows = []
         for i in range(width):
@@ -3903,27 +3905,9 @@ def package_sub_card_html(packs: list, n: int, spots: tuple = (),
     return f'<aside class="dc-subcard"><p class="dc-subcard-h">Sub card</p>{body}</aside>'
 
 
-def package_base_for(side: str, order: list[str], roster: dict) -> list | None:
-    """The eleven a package's sub card is measured against, in package-slot order.
-
-    Only defense has one. Offense's base is its own package 1 and always has been;
-    handing it the board's first column instead would rewrite six sub cards nobody
-    asked to have rewritten — and would surface the fact that Shifty and the chart
-    have drifted apart at left guard, which is a coaching question, not a rendering
-    one.
-    """
-    spots = PACKAGE_SPOTS.get(side, ())
-    if side != "defense" or not spots:
-        return None
-    col1 = {pos: (names[0] if names else "")
-            for pos, names in (roster.get(side) or {}).items()}
-    return [col1.get(spot, "") for spot in spots]
-
-
 def side_board(side: str, order: list[str], alt_order: list[str],
                names_by_pos: dict, label_fn, packages: list | None = None,
-               package_names: list | None = None,
-               package_base: list | None = None) -> str:
+               package_names: list | None = None) -> str:
     """One side of the ball, every rotation, as columns of one grid.
 
     Rotation belongs on the X axis. The question this page exists to answer is "the
@@ -3958,7 +3942,6 @@ def side_board(side: str, order: list[str], alt_order: list[str],
     packs = packages or []
     pkg_names = package_names or []
     spots = PACKAGE_SPOTS.get(side, ())
-    base = package_base
 
     def slot_html(n: int, at: int) -> str:
         pair = packs[n - 1] if n - 1 < len(packs) else []
@@ -3981,7 +3964,7 @@ def side_board(side: str, order: list[str], alt_order: list[str],
         f'{esc(pkg_names[n - 1] if n - 1 < len(pkg_names) else f"Package {n}")}</p>'
         + "".join(slot_html(n, at) for at in range(PACKAGE_SIZE[side]))
         + "</div>"
-        + package_sub_card_html(packs, n, spots, base)
+        + package_sub_card_html(packs, n, spots)
         + "</div>"
         for n in filled
     )
@@ -4065,7 +4048,7 @@ def write_depth_chart(formations: list[dict], defenses: dict, root: Path) -> str
             f'<section class="dc-side" data-side="{side}">'
             f'<p class="hero-head">{esc(heading)}'
             f'<span class="rot-sub">{esc(sub)}</span></p>'
-            f'{side_board(side, order, alts, roster.get(side, {}), label, packs, (roster.get("package_names") or {}).get(side), package_base_for(side, order, roster))}'
+            f'{side_board(side, order, alts, roster.get(side, {}), label, packs, (roster.get("package_names") or {}).get(side))}'
             f'</section>'
         )
 
