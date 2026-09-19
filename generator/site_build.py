@@ -503,8 +503,15 @@ table.dc-sub thead th {
   content: attr(data-spot) " (" attr(data-n) ")";
 }
 .dc-pkg-slot + .dc-pkg-slot { margin-top: 1px; }
+/* A rule where the unit changes, so an eleven reads as its groups rather than as a
+   list of eleven names. Offense breaks before the tight ends and before the line;
+   defense before the linebackers and before the secondary. The two sides can share
+   one rule because no key means something different across them -- which is what the
+   defensive line's D bought: LT is ours, LDG is theirs. */
 .dc-pkg-slot[data-spot="LTE"],
-.dc-pkg-slot[data-spot="LT"] {
+.dc-pkg-slot[data-spot="LT"],
+.dc-pkg-slot[data-spot="LOLB"],
+.dc-pkg-slot[data-spot="LC"] {
   margin-top: 5px; padding-top: 5px; border-top: 1px dashed var(--line);
 }
 
@@ -1747,7 +1754,9 @@ table.dc-board thead th,
   .dc-pkg-slot[data-spot]::before { flex-basis: 36px; font-size: 6.5pt; letter-spacing: 0; }
   .dc-pkg-slot + .dc-pkg-slot { margin-top: 0; }
   .dc-pkg-slot[data-spot="LTE"],
-  .dc-pkg-slot[data-spot="LT"] { margin-top: 1px; padding-top: 1px; }
+  .dc-pkg-slot[data-spot="LT"],
+  .dc-pkg-slot[data-spot="LOLB"],
+  .dc-pkg-slot[data-spot="LC"] { margin-top: 1px; padding-top: 1px; }
   .dc-subcard { flex-basis: 56%; min-width: 120px; max-width: none; padding: 2px 4px; border-radius: 0; }
   .dc-subcard-h { font-size: 8pt; margin: 0 0 1px; }
   .dc-sub-empty { font-size: 8pt; }
