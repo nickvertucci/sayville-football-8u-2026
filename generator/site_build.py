@@ -683,6 +683,27 @@ table.xl.xl-plays td {
    the boy who plays that spot in that package. The offensive sheet's title bar and
    table furniture are reused rather than reinvented: both are call sheets. */
 .df-fronts { display: grid; gap: 16px; margin: 10px 0 20px; }
+/* The front as a picture, above its table. Discs made of border, positioned by the
+   alignment's own yards -- see _front_picture for why not an SVG. */
+.front-pic {
+  position: relative; height: 74px; margin: 6px 0 4px;
+  border-bottom: 1px solid var(--line);
+}
+.front-pic .los {
+  position: absolute; left: 0; right: 0; top: 0;
+  border-top: 1px dashed var(--ink-2);
+}
+.front-pic .fd {
+  position: absolute; width: 0; height: 0; border: 4.5px solid var(--ink);
+  border-radius: 50%; transform: translate(-50%, -50%);
+}
+/* The blank row between the line, the backers and the secondary. A row rather than a
+   rule on the next one: the gap is the thing being asked for, and a row can carry it
+   without the cell borders either side having to agree about it. */
+table.xl.df-grid tr.df-gap td {
+  height: 7px; padding: 0; border-left: 0; border-right: 0;
+  background: var(--panel-2);
+}
 table.xl.df-grid { table-layout: auto; }
 table.xl.df-grid td, table.xl.df-grid th { text-align: center; }
 table.xl.df-grid .df-pos {
@@ -899,6 +920,10 @@ table.xl.pk-plays td {
      blank front under them. Small enough that the whole thing is one sheet, the way
      the offensive side is. */
   .df-fronts { gap: 5px; margin: 0; }
+  .front-pic { height: 40px; margin: 2px 0 2px; }
+  .front-pic .fd { border-width: 3px; border-color: #000; }
+  .front-pic .los { border-top-color: #000; }
+  table.xl.df-grid tr.df-gap td { height: 4px; background: none; }
   .df-front { break-inside: avoid; }
   table.xl.df-grid { font-size: 8px; }
   table.xl.df-grid td, table.xl.df-grid th { padding: 0 2px; height: auto;
@@ -3155,6 +3180,33 @@ def _def_eleven(front_id: str, spots: list[str], slides: dict,
     return [by_spot.get(slide.get(sp, ""), "") for sp in spots]
 
 
+# The window every front picture is drawn in, in the same yards the alignment uses.
+# One window for all three, not one each: a 6-3 really is tighter than a 4-4, and a
+# picture that rescaled per front would hide the only thing these pictures are for.
+FRONT_VIEW_X = 10.0
+FRONT_VIEW_Y = 8.5
+
+
+def _front_picture(front: dict) -> str:
+    """The front as dots, over a dashed line of scrimmage.
+
+    Absolutely positioned discs rather than an inline SVG. An SVG in this position on
+    this page rendered on screen and printed nothing at all -- see _blank_line -- and
+    a disc made of border prints whatever the print dialog is set to.
+    """
+    dots = []
+    for label, (x, y) in front["alignment"].items():
+        left = (x + FRONT_VIEW_X) / (2 * FRONT_VIEW_X) * 100
+        top = min(y, FRONT_VIEW_Y) / FRONT_VIEW_Y * 100
+        dots.append(
+            f'<span class="fd" style="left:{left:.1f}%;top:{top:.1f}%" '
+            f'title="{esc(label)}"></span>'
+        )
+    return ('<div class="front-pic" role="img" '
+            f'aria-label="{esc(front["name"])} front, eleven defenders">'
+            f'<span class="los"></span>{"".join(dots)}</div>')
+
+
 def _defense_sheet(root: Path, defenses: dict) -> str:
     """The defensive call sheet: a table per front, a package per column.
 
@@ -3200,14 +3252,24 @@ def _defense_sheet(root: Path, defenses: dict) -> str:
         elevens = [_def_eleven(fid, spots, slides, pk, base_spots) for pk in packs]
         head = "".join(f"<th>{esc(n)}</th>"
                        for n in (names or [f"Package {i+1}" for i in range(len(packs))]))
-        rows = []
+        # A blank row where the unit changes, so the line, the backers and the
+        # secondary read as three groups rather than eleven rows. The front's own
+        # roles say where those changes are, so a front with two linebackers or six
+        # linemen gets its rules in the right places without anything here knowing.
+        roles = front.get("roles") or {}
+        rows, last_role = [], None
         for i, sp in enumerate(spots):
+            role = roles.get(sp)
+            if last_role is not None and role != last_role:
+                rows.append(f'<tr class="df-gap"><td colspan="{len(packs) + 1}"></td></tr>')
+            last_role = role
             cells = "".join(f'<td>{esc(e[i])}</td>' for e in elevens)
             rows.append(f'<tr><td class="df-pos">{esc(sp)}</td>{cells}</tr>')
         label = front.get("call") or front["name"]
         tables.append(
             f'<section class="df-front"><p class="xl-title">{esc(label)}'
             f'<span class="xl-n">{esc(front["name"])}</span></p>'
+            f'{_front_picture(front)}'
             f'<table class="xl df-grid"><thead><tr><th class="df-pos"></th>{head}'
             f'</tr></thead><tbody>{"".join(rows)}</tbody></table></section>'
         )
