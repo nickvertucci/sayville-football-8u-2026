@@ -629,42 +629,52 @@ table.xl.xl-plays td {
 #tab-off:checked ~ .pane-off, #tab-def:checked ~ .pane-def { display: block; }
 
 /* ------------------------------------------------------------ wristbands --
-   A band has three pouches, so an insert is three panels and a sheet is three bands:
-   three panels across, three bands down. A row of the sheet is one boy's wristband.
-   All of the type on this page is as big as that grid allows, because the reader is
-   nine years old, outdoors, and somebody is shouting a number at him. */
-.band-sheet { display: grid; gap: 14px; margin: 16px 0 24px; }
-.band-set { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+   A pouch is landscape -- it wraps a forearm -- so a panel is wider than it is tall,
+   and that shape decides the page. Eight rows fit down a landscape panel where sixteen
+   do not, so a formation goes in two columns and the type gets to be sixteen point.
+   Three panels stacked is one band; two bands across is the sheet. */
+.band-sheet { margin: 16px 0 24px; }
+/* Exactly a pouch, in inches, because that is what it has to be when it comes off the
+   printer. Three of them is a wristband and a sheet. */
+.band-set { display: grid; grid-template-rows: repeat(3, 3in); gap: 7px; width: 5in; }
 .band {
   border: 1px dashed var(--line); border-radius: 4px; padding: 0 0 4px;
   background: var(--panel); overflow: hidden;
 }
-/* The formation is the panel's heading, and it is the panel's whole job: the pouch a
-   boy is looking into tells him which formation he is in before he has read a row. */
+/* The bar is the pouch: a boy knows which window a number is in before he opens it. */
 .band-form {
   display: flex; align-items: baseline; justify-content: space-between; gap: 6px;
-  margin: 0; padding: 3px 7px; font-size: 12px; font-weight: 900;
+  margin: 0 0 3px; padding: 3px 8px; font-size: 12px; font-weight: 900;
   text-transform: uppercase; letter-spacing: .5px;
   color: var(--on-accent); background: var(--accent-solid);
 }
 .band-span { font-size: 10px; font-weight: 800; opacity: .8; }
+.band-body { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 10px; }
+.band-sub {
+  margin: 0 0 1px; padding: 0 4px; font-size: 9.5px; font-weight: 900;
+  text-transform: uppercase; letter-spacing: .4px; color: var(--muted);
+  border-bottom: 1px solid var(--line);
+}
 .band ol { margin: 0; padding: 0; list-style: none; }
+.band ol + .band-sub { margin-top: 5px; }
 .band li {
   display: flex; align-items: baseline; gap: 6px;
-  padding: 1px 7px; font-size: 13px; font-weight: 700; line-height: 1.4;
-  color: var(--ink);
+  padding: 0 5px; font-size: 15.5px; font-weight: 700; line-height: 1.95;
+  color: var(--ink); white-space: nowrap;
 }
 /* Zebra rather than a rule between rows. A rule is a thing to read past; a band of
-   tone is the row itself, and a finger tracking one across two inches does not slip
-   off it. */
+   tone is the row itself, and a finger tracking one does not slip off it. */
 .band li:nth-child(even) { background: var(--panel-2); }
 .band li b {
   flex: 0 0 26px; text-align: right; font-weight: 900; font-variant-numeric: tabular-nums;
   padding-right: 6px; border-right: 1px solid var(--line);
 }
 .band li span { flex: 1 1 auto; min-width: 0; }
-@media (max-width: 720px) {
-  .band-set { grid-template-columns: minmax(0, 1fr); }
+/* A phone is narrower than a pouch. Let the panels shrink rather than run off the
+   side: the screen is a preview, the printed inches are the thing. */
+@media (max-width: 560px) {
+  .band-set { width: 100%; grid-template-rows: none; }
+  .band li { font-size: 14px; line-height: 1.55; }
 }
 
 /* ------------------------------------------------- defensive call sheet --
@@ -920,26 +930,31 @@ table.xl.pk-plays td {
   .tabrow { display: none; }
   .tabpane { display: block !important; }
   .pane-def { page-break-before: always; break-before: page; }
-  /* The wristband sheet is the one page whose whole job is the print. Three panels
-     across and three bands down on letter is a panel of about 2.5 by 3.4 inches, one
-     pouch's worth, and a row of the page is one boy kitted out. The dashes are cut
-     lines, so they have to print: a border always does, which is why a panel is
-     bordered rather than shaded. */
+  /* The wristband sheet is the one page whose whole job is the print, and the one
+     page measured in inches rather than in what fits: a panel is 5 by 3 because a
+     pouch is. Three of them is nine inches of a 10.4-inch page and one whole band, so
+     a sheet is one boy and you print a copy each. The dashes are cut lines, so they
+     have to print: a border always does, which is why a panel is bordered rather than
+     shaded. */
   .band-page .page-head { display: none; }
-  .band-sheet { gap: 10px; margin: 0; }
-  .band-set { gap: 7px; break-inside: avoid; }
+  .band-sheet { margin: 0; }
+  .band-set { width: 5in; grid-template-rows: repeat(3, 3in); gap: 0.07in;
+              margin: 0 auto; break-inside: avoid; }
   .band { border-color: #000; background: none; break-inside: avoid; }
-  .band-form { font-size: 11px; padding: 2px 6px;
+  .band-form { font-size: 11px; padding: 2px 7px; margin-bottom: 2px;
                color: #fff !important; background: #000 !important;
                -webkit-print-color-adjust: exact; print-color-adjust: exact; }
   .band-span { font-size: 9px; opacity: 1; }
-  /* Sixteen Regular I rows set the height of a panel and three bands set the height
-     of the page, so this line height is what decides one sheet or two. Thirteen point
-     type at 1.35 is the biggest that fits, and the type is the point of the page. */
-  .band li { font-size: 13px; line-height: 1.35; padding: 0 6px; gap: 5px; }
+  .band-sub { font-size: 9px; color: #000; border-bottom-color: #000; }
+  .band-body { gap: 0 8px; }
+  /* Width sets the type here, not height: "Slot Right 38 Pitch Pass" is the longest
+     row there is and it has half of five inches to fit in. Eight rows then have three
+     inches to live in, which is why the leading is what it is -- the space was going
+     spare, and a row a boy can keep his eye on is what to spend it on. */
+  .band li { font-size: 15.5px; line-height: 1.95; padding: 0 5px; gap: 6px; }
   .band li:nth-child(even) { background: #eee !important;
                              -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-  .band li b { flex-basis: 24px; padding-right: 5px; border-right-color: #000; }
+  .band li b { flex-basis: 26px; padding-right: 6px; border-right-color: #000; }
 
   /* The defensive sheet: three fronts, eleven rows and six packages each, then the
      blank front under them. Small enough that the whole thing is one sheet, the way
