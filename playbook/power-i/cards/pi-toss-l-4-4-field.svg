@@ -14,13 +14,13 @@
 <line x1="444.4" y1="293.2" x2="462.8" y2="311.6" stroke="#9aa2ae" stroke-width="3.6"/><line x1="462.8" y1="293.2" x2="444.4" y2="311.6" stroke="#9aa2ae" stroke-width="3.6"/>
 <text x="453.6" y="284.5" text-anchor="middle" font-size="12.5" fill="#9aa2ae" font-weight="600">RDE</text>
 <line x1="217.6" y1="233.8" x2="236.0" y2="252.2" stroke="#9aa2ae" stroke-width="3.6"/><line x1="236.0" y1="233.8" x2="217.6" y2="252.2" stroke="#9aa2ae" stroke-width="3.6"/>
-<text x="226.8" y="225.2" text-anchor="middle" font-size="12.5" fill="#9aa2ae" font-weight="600">W</text>
+<text x="226.8" y="225.2" text-anchor="middle" font-size="12.5" fill="#9aa2ae" font-weight="600">LOLB</text>
 <line x1="304.0" y1="233.8" x2="322.4" y2="252.2" stroke="#9aa2ae" stroke-width="3.6"/><line x1="322.4" y1="233.8" x2="304.0" y2="252.2" stroke="#9aa2ae" stroke-width="3.6"/>
-<text x="313.2" y="225.2" text-anchor="middle" font-size="12.5" fill="#9aa2ae" font-weight="600">M</text>
+<text x="313.2" y="225.2" text-anchor="middle" font-size="12.5" fill="#9aa2ae" font-weight="600">LILB</text>
 <line x1="379.6" y1="233.8" x2="398.0" y2="252.2" stroke="#9aa2ae" stroke-width="3.6"/><line x1="398.0" y1="233.8" x2="379.6" y2="252.2" stroke="#9aa2ae" stroke-width="3.6"/>
-<text x="388.8" y="225.2" text-anchor="middle" font-size="12.5" fill="#9aa2ae" font-weight="600">S</text>
+<text x="388.8" y="225.2" text-anchor="middle" font-size="12.5" fill="#9aa2ae" font-weight="600">RILB</text>
 <line x1="466.0" y1="233.8" x2="484.4" y2="252.2" stroke="#9aa2ae" stroke-width="3.6"/><line x1="484.4" y1="233.8" x2="466.0" y2="252.2" stroke="#9aa2ae" stroke-width="3.6"/>
-<text x="475.2" y="225.2" text-anchor="middle" font-size="12.5" fill="#9aa2ae" font-weight="600">R</text>
+<text x="475.2" y="225.2" text-anchor="middle" font-size="12.5" fill="#9aa2ae" font-weight="600">ROLB</text>
 <line x1="85.3" y1="233.8" x2="103.7" y2="252.2" stroke="#9aa2ae" stroke-width="3.6"/><line x1="103.7" y1="233.8" x2="85.3" y2="252.2" stroke="#9aa2ae" stroke-width="3.6"/>
 <text x="94.5" y="225.2" text-anchor="middle" font-size="12.5" fill="#9aa2ae" font-weight="600">LC</text>
 <line x1="598.3" y1="233.8" x2="616.7" y2="252.2" stroke="#9aa2ae" stroke-width="3.6"/><line x1="616.7" y1="233.8" x2="598.3" y2="252.2" stroke="#9aa2ae" stroke-width="3.6"/>

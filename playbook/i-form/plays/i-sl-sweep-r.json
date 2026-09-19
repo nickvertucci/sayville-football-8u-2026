@@ -73,7 +73,7 @@
       },
       "RT": {
         "block": "man",
-        "man": "R",
+        "man": "ROLB",
         "help": "RDE"
       },
       "RG": {
@@ -82,7 +82,7 @@
       },
       "C": {
         "block": "man",
-        "man": "S",
+        "man": "RILB",
         "help": "RDG"
       },
       "LG": {
@@ -91,7 +91,7 @@
       },
       "LT": {
         "block": "man",
-        "man": "M",
+        "man": "LILB",
         "help": "LDG"
       },
       "LTE": {

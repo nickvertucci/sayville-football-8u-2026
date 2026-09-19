@@ -63,7 +63,7 @@
       },
       "LT": {
         "block": "man",
-        "man": "W"
+        "man": "LOLB"
       },
       "LG": {
         "block": "man",
@@ -71,7 +71,7 @@
       },
       "C": {
         "block": "man",
-        "man": "M",
+        "man": "LILB",
         "help": "LDG"
       },
       "RG": {
@@ -84,7 +84,7 @@
       },
       "RTE": {
         "block": "man",
-        "man": "R"
+        "man": "ROLB"
       },
       "SL": {
         "block": "man",
@@ -92,7 +92,7 @@
       },
       "FB": {
         "block": "man",
-        "man": "S",
+        "man": "RILB",
         "how": "Lead through the hole",
         "via": [
           [

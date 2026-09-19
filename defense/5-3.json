@@ -12,9 +12,9 @@
     "NT": "DL",
     "RDT": "DL",
     "RDE": "DL",
-    "W": "LB",
-    "M": "LB",
-    "S": "LB",
+    "LOLB": "LB",
+    "MLB": "LB",
+    "ROLB": "LB",
     "LC": "DB",
     "RC": "DB",
     "FS": "DB"
@@ -40,15 +40,15 @@
       4.2,
       0.8
     ],
-    "W": [
+    "LOLB": [
       -3.2,
       3.0
     ],
-    "M": [
+    "MLB": [
       0.0,
       3.0
     ],
-    "S": [
+    "ROLB": [
       3.2,
       3.0
     ],
@@ -70,7 +70,10 @@
     "LDT": "Left defensive tackle",
     "NT": "Nose tackle",
     "RDT": "Right defensive tackle",
-    "RDE": "Right defensive end"
+    "RDE": "Right defensive end",
+    "LOLB": "Left outside linebacker",
+    "MLB": "Middle linebacker",
+    "ROLB": "Right outside linebacker"
   },
   "assignments": {
     "LDE": {
@@ -123,7 +126,7 @@
         ]
       ]
     },
-    "W": {
+    "LOLB": {
       "rule": "Three yards deep. Read the back on your side. Ball to you, fill the first open gap inside. Ball away, chase flat down the line and never quit.",
       "type": "read",
       "path": [
@@ -137,7 +140,7 @@
         ]
       ]
     },
-    "M": {
+    "MLB": {
       "rule": "Three yards deep over the center. You make the call and you fill the first open gap. Step downhill — do not drift sideways.",
       "type": "read",
       "path": [
@@ -151,7 +154,7 @@
         ]
       ]
     },
-    "S": {
+    "ROLB": {
       "rule": "Three yards deep. Read the back on your side. Ball to you, fill the first open gap inside. Ball away, chase flat down the line and never quit.",
       "type": "read",
       "path": [

@@ -51,11 +51,11 @@
 <line x1="459.6" y1="292.2" x2="480.0" y2="312.6" stroke="#14213d" stroke-width="4" stroke-linecap="round"/><line x1="480.0" y1="292.2" x2="459.6" y2="312.6" stroke="#14213d" stroke-width="4" stroke-linecap="round"/>
 <text x="469.8" y="283.0" text-anchor="middle" font-size="13.5" font-weight="700" fill="#14213d">RDE</text>
 <line x1="270.6" y1="259.8" x2="291.0" y2="280.2" stroke="#14213d" stroke-width="4" stroke-linecap="round"/><line x1="291.0" y1="259.8" x2="270.6" y2="280.2" stroke="#14213d" stroke-width="4" stroke-linecap="round"/>
-<text x="280.8" y="250.6" text-anchor="middle" font-size="13.5" font-weight="700" fill="#14213d">W</text>
+<text x="280.8" y="250.6" text-anchor="middle" font-size="13.5" font-weight="700" fill="#14213d">LOLB</text>
 <line x1="340.8" y1="259.8" x2="361.2" y2="280.2" stroke="#14213d" stroke-width="4" stroke-linecap="round"/><line x1="361.2" y1="259.8" x2="340.8" y2="280.2" stroke="#14213d" stroke-width="4" stroke-linecap="round"/>
-<text x="351.0" y="250.6" text-anchor="middle" font-size="13.5" font-weight="700" fill="#14213d">M</text>
+<text x="351.0" y="250.6" text-anchor="middle" font-size="13.5" font-weight="700" fill="#14213d">MLB</text>
 <line x1="411.0" y1="259.8" x2="431.4" y2="280.2" stroke="#14213d" stroke-width="4" stroke-linecap="round"/><line x1="431.4" y1="259.8" x2="411.0" y2="280.2" stroke="#14213d" stroke-width="4" stroke-linecap="round"/>
-<text x="421.2" y="250.6" text-anchor="middle" font-size="13.5" font-weight="700" fill="#14213d">S</text>
+<text x="421.2" y="250.6" text-anchor="middle" font-size="13.5" font-weight="700" fill="#14213d">ROLB</text>
 <line x1="124.8" y1="259.8" x2="145.2" y2="280.2" stroke="#14213d" stroke-width="4" stroke-linecap="round"/><line x1="145.2" y1="259.8" x2="124.8" y2="280.2" stroke="#14213d" stroke-width="4" stroke-linecap="round"/>
 <text x="135.0" y="250.6" text-anchor="middle" font-size="13.5" font-weight="700" fill="#14213d">LC</text>
 <line x1="556.8" y1="259.8" x2="577.2" y2="280.2" stroke="#14213d" stroke-width="4" stroke-linecap="round"/><line x1="577.2" y1="259.8" x2="556.8" y2="280.2" stroke="#14213d" stroke-width="4" stroke-linecap="round"/>

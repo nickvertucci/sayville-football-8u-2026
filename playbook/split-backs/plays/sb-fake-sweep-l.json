@@ -69,7 +69,7 @@
     "4-4": {
       "LT": {
         "block": "man",
-        "man": "M",
+        "man": "LILB",
         "help": "LDG"
       },
       "LG": {
@@ -78,7 +78,7 @@
       },
       "C": {
         "block": "man",
-        "man": "S",
+        "man": "RILB",
         "help": "RDG"
       },
       "RG": {
@@ -87,7 +87,7 @@
       },
       "RT": {
         "block": "man",
-        "man": "R",
+        "man": "ROLB",
         "help": "RDE"
       },
       "RTE": {
@@ -96,7 +96,7 @@
       },
       "LH": {
         "block": "man",
-        "man": "W",
+        "man": "LOLB",
         "how": "Bubble out around the left tight end",
         "via": [
           [

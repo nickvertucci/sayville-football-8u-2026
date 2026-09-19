@@ -13,9 +13,9 @@
     "RDG": "DL",
     "RDT": "DL",
     "RDE": "DL",
-    "W": "LB",
-    "M": "LB",
-    "S": "LB",
+    "LOLB": "LB",
+    "MLB": "LB",
+    "ROLB": "LB",
     "LC": "DB",
     "RC": "DB"
   },
@@ -44,15 +44,15 @@
       4.4,
       0.8
     ],
-    "W": [
+    "LOLB": [
       -2.6,
       2.0
     ],
-    "M": [
+    "MLB": [
       0.0,
       2.0
     ],
-    "S": [
+    "ROLB": [
       2.6,
       2.0
     ],
@@ -71,7 +71,10 @@
     "LDG": "Left defensive guard",
     "RDG": "Right defensive guard",
     "RDT": "Right defensive tackle",
-    "RDE": "Right defensive end"
+    "RDE": "Right defensive end",
+    "LOLB": "Left outside linebacker",
+    "MLB": "Middle linebacker",
+    "ROLB": "Right outside linebacker"
   },
   "assignments": {
     "LDE": {
@@ -134,7 +137,7 @@
         ]
       ]
     },
-    "W": {
+    "LOLB": {
       "rule": "Two yards deep. Fill the first crack that shows on your side. Do not wait and read on the goal line — go.",
       "type": "read",
       "path": [
@@ -144,7 +147,7 @@
         ]
       ]
     },
-    "M": {
+    "MLB": {
       "rule": "Two yards deep over the center. Anything up the middle is yours. Meet the wedge low and stop its feet.",
       "type": "read",
       "path": [
@@ -154,7 +157,7 @@
         ]
       ]
     },
-    "S": {
+    "ROLB": {
       "rule": "Two yards deep. Fill the first crack that shows on your side. Do not wait and read on the goal line — go.",
       "type": "read",
       "path": [

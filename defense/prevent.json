@@ -13,8 +13,8 @@
     "RDG": "DL",
     "RDT": "DL",
     "RDE": "DL",
-    "W": "LB",
-    "S": "LB",
+    "LLB": "LB",
+    "RLB": "LB",
     "LS": "DB",
     "MS": "DB",
     "RS": "DB"
@@ -44,11 +44,11 @@
       9.8,
       0.8
     ],
-    "W": [
+    "LLB": [
       -2.5,
       5.0
     ],
-    "S": [
+    "RLB": [
       2.5,
       5.0
     ],
@@ -71,7 +71,9 @@
     "LDG": "Left defensive guard",
     "RDG": "Right defensive guard",
     "RDT": "Right defensive tackle",
-    "RDE": "Right defensive end"
+    "RDE": "Right defensive end",
+    "LLB": "Left linebacker",
+    "RLB": "Right linebacker"
   },
   "assignments": {
     "LDE": {
@@ -134,7 +136,7 @@
         ]
       ]
     },
-    "W": {
+    "LLB": {
       "rule": "Five yards off the ball. Read it, then come up and make the tackle. Never move forward before the snap.",
       "type": "read",
       "path": [
@@ -144,7 +146,7 @@
         ]
       ]
     },
-    "S": {
+    "RLB": {
       "rule": "Five yards off the ball. Read it, then come up and make the tackle. Never move forward before the snap.",
       "type": "read",
       "path": [

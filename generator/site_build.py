@@ -402,7 +402,16 @@ table.dc-board thead th {
   font-size: 11px; text-transform: uppercase; letter-spacing: 1.3px; font-weight: 800;
   padding: 9px 12px;
 }
-table.dc-board .dc-poscell { background: var(--panel-2); white-space: nowrap; width: 148px; }
+table.dc-board .dc-poscell { background: var(--panel-2); white-space: nowrap; }
+/* The board is table-layout: fixed, so every column takes its width from the FIRST
+   row and a width on a body cell is ignored. This is the rule that sizes the position
+   column, and it has to live on the header. 250px fits the longest label the board
+   prints -- "Right outside linebacker (Rhino)", 32 characters at 11.5px beside a
+   four-letter abbreviation. The old 148px was set when the longest was "Right outside
+   linebacker" and no abbreviation ran past two letters; the cell is nowrap and sticky,
+   so outgrowing it did not wrap or clip, it ran the label out over the first column of
+   names. */
+table.dc-board thead th:first-child { width: 250px; }
 table.dc-board .dc-poscell .dc-abbr { font-size: 14px; }
 table.dc-board .dc-poscell .dc-label { font-size: 11.5px; margin-left: 7px; }
 table.dc-board tbody tr:nth-child(even) td.dc-poscell { background: var(--panel); }
@@ -1693,7 +1702,10 @@ footer.site a { color: var(--accent-ink); }
     position: static; box-shadow: none;
   }
   table.dc-board { min-width: 0; }
-  table.dc-board .dc-poscell { width: 33mm; white-space: normal; }
+  /* Same again on paper: the header carries the width, the body cell only wraps.
+     38mm rather than 33 because the labels grew by a nickname. */
+  table.dc-board thead th:first-child { width: 38mm; }
+  table.dc-board .dc-poscell { white-space: normal; }
   table.dc-board .dc-poscell .dc-label { display: block; margin-left: 0; }
   table.dc-board th, table.dc-board td { padding: 1.5px 6px; }
   table.dc-board .dc-poscell .dc-abbr { font-size: 9pt; }
@@ -3732,9 +3744,20 @@ DEFENSE_POSITION_NAMES = {
     "LDG": "Left defensive guard", "NT": "Nose tackle",
     "RDG": "Right defensive guard", "RDT": "Right defensive tackle",
     "RDE": "Right defensive end",
-    "W": "Weak linebacker", "M": "Middle linebacker",
-    "S": "Strong linebacker", "R": "Rover", "LC": "Left corner", "RC": "Right corner",
-    "FS": "Free safety",
+    "LOLB": "Left outside linebacker", "LILB": "Left inside linebacker",
+    "MLB": "Middle linebacker",
+    "RILB": "Right inside linebacker", "ROLB": "Right outside linebacker",
+    "LLB": "Left linebacker", "RLB": "Right linebacker",
+    "LC": "Left corner", "RC": "Right corner", "FS": "Free safety",
+    "LS": "Left safety", "MS": "Middle safety", "RS": "Right safety",
+}
+
+# What the backers answer to on the field. A position key is for the book; this is the
+# word yelled across a field at an eight-year-old, and it is the one he will remember.
+# Depth-chart only -- it must not reach the cards, where "block the lion" would send a
+# guard looking for an animal.
+DEFENSE_NICKNAMES = {
+    "LOLB": "Lion", "LILB": "Leo", "RILB": "Ray", "ROLB": "Rhino",
 }
 
 
@@ -3954,7 +3977,12 @@ def write_depth_chart(formations: list[dict], defenses: dict, root: Path) -> str
     # A front may name its own spots — W and S are the weak and strong linebackers of
     # a three-linebacker front, and the two inside backers of a four-linebacker one.
     def_names = {**DEFENSE_POSITION_NAMES, **(front or {}).get("position_names", {})}
-    def_label = lambda p: def_names.get(p, p)  # noqa: E731
+
+    def def_label(p: str) -> str:
+        """The long name, with the nickname after it where the backers have one."""
+        name = def_names.get(p, p)
+        nick = DEFENSE_NICKNAMES.get(p)
+        return f"{name} ({nick})" if nick else name
 
     # One section per side of the ball, each carrying both rotations as columns. The
     # split used to be Purple sheet / Gold sheet with offense and defense side by

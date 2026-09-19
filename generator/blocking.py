@@ -470,8 +470,9 @@ def noun(front: dict, label: str) -> str:
     if role == "DL":
         return DL_NOUNS.get(label, "lineman")
     if role == "LB":
-        return "middle linebacker" if label == "M" else "linebacker"
-    return "safety" if label.endswith("S") and label != "S" else "corner"
+        return "middle linebacker" if label == "MLB" else "linebacker"
+    # Every defensive back's key ends in S except the corners: FS, LS, MS, RS.
+    return "safety" if label.endswith("S") else "corner"
 
 
 def named(front: dict, label: str) -> str:
