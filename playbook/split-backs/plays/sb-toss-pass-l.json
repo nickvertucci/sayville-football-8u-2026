@@ -1,0 +1,103 @@
+{
+  "id": "sb-toss-pass-l",
+  "order": 34,
+  "formation": "split-backs",
+  "name": "Split Backs - Slot Left - 29 Pitch Pass",
+  "code": "S-16",
+  "call": "Split Backs Slot Left 29 Pitch Pass",
+  "type": "pass",
+  "scheme": "Protect",
+  "direction": "left",
+  "ball_carrier": "LTE",
+  "alignment": {
+    "SL": [
+      -5.6,
+      -1.5
+    ]
+  },
+  "pitch": {
+    "from": "QB",
+    "to": "RH",
+    "at": 1
+  },
+  "assignments": {
+    "QB": {
+      "rule": "Pitch it exactly the way you pitch the toss, then run right like you still have it. Do not turn and watch the throw.",
+      "type": "rollout",
+      "path": [
+        [
+          0.8,
+          -0.3
+        ],
+        [
+          4.6,
+          -0.1
+        ]
+      ]
+    },
+    "RH": {
+      "rule": "Catch the pitch and run the toss. At our end, pull up behind the line and throw it up the sideline to the tight end.",
+      "type": "pass",
+      "path": [
+        [
+          -3.4,
+          -0.4
+        ],
+        [
+          -8.6,
+          -0.2
+        ],
+        [
+          -9.2,
+          2.4
+        ]
+      ]
+    },
+    "LTE": {
+      "rule": "Block the end the way you do on the toss, then slip outside him and run up the sideline. Look back over your outside shoulder.",
+      "type": "pass",
+      "path": [
+        [
+          -0.6,
+          1.6
+        ],
+        [
+          -1.8,
+          4.2
+        ],
+        [
+          -2.8,
+          6.4
+        ]
+      ]
+    },
+    "LH": {
+      "rule": "Step at the dive, then bubble outside our end and take the first man out there. He is the one who gets to the thrower.",
+      "type": "block",
+      "path": [
+        [
+          -0.8,
+          0.4
+        ],
+        [
+          -3.2,
+          0.9
+        ],
+        [
+          -5.6,
+          2.6
+        ],
+        [
+          -6.2,
+          4.2
+        ]
+      ]
+    }
+  },
+  "coaching_points": [
+    "Everything is the toss until he pulls up. Same pitch, same path, same speed -- a halfback who slows down to throw has told them.",
+    "He throws from behind the line. Crossing it is a penalty, so drill the pull-up, not the arm.",
+    "The split man blocks out there exactly as he does on the toss. That block is the toss, and it is what the corner is watching instead of the end.",
+    "Call it after the toss has hurt them, on first or second down, where an incompletion costs nothing."
+  ]
+}

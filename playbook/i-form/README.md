@@ -44,6 +44,10 @@ Normal line splits, about a foot. Both ends are on the line; the slot is just ou
 | [Regular I - Slot Left - LTE (50) Slant Out](#regular-i---slot-left---lte-50-slant-out) | `Regular I Slot Left LTE Slant Out` | Protect | pass | LTE |
 | [Regular I - Slot Right - 22 Smash](#regular-i---slot-right---22-smash) | `Regular I Slot Right 22 Smash` | Smash | run | FB |
 | [Regular I - Slot Left - 23 Smash](#regular-i---slot-left---23-smash) | `Regular I Slot Left 23 Smash` | Smash | run | FB |
+| [Regular I - Slot Right - 38 Toss](#regular-i---slot-right---38-toss) | `Regular I Slot Right 38 Toss` | Toss | run | TB |
+| [Regular I - Slot Left - 39 Toss](#regular-i---slot-left---39-toss) | `Regular I Slot Left 39 Toss` | Toss | run | TB |
+| [Regular I - Slot Right - 38 Pitch Pass](#regular-i---slot-right---38-pitch-pass) | `Regular I Slot Right 38 Pitch Pass` | Protect | pass | RTE |
+| [Regular I - Slot Left - 39 Pitch Pass](#regular-i---slot-left---39-pitch-pass) | `Regular I Slot Left 39 Pitch Pass` | Protect | pass | LTE |
 
 ---
 
@@ -406,4 +410,126 @@ Normal line splits, about a foot. Both ends are on the line; the slot is just ou
 - This is the quick one. The fullback is only two yards from the hole -- he has the ball before the linebackers have moved.
 - The hole is the A-gap, between the center and the left guard. Nobody leads him through it; his speed is the lead.
 - The tailback's fake is the play as much as the handoff. If he jogs, the backside linebacker is in the hole.
+
+---
+
+## Regular I - Slot Right - 38 Toss
+
+**Call it:** `Regular I Slot Right 38 Toss`
+
+**Scheme:** Toss
+
+![Regular I - Slot Right - 38 Toss](cards/i-toss-r-4-4.svg)
+
+| Position | Assignment |
+|---|---|
+| **LTE** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
+| **LT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
+| **LG** | Defensive guard head up on you. Cut him off — get between him and the ball. |
+| **C** | Nobody on you. Climb to the playside linebacker. Head across him. |
+| **RG** | Defensive guard head up on you. Step past him. Climb to the playside linebacker. Head across him. |
+| **RT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
+| **RTE** | Defensive end on your inside shoulder. Turn him inside. The ball goes around behind you. |
+| **SL** | Run at the outside linebacker and screen him off. Stay in his way. |
+| **QB** | Quick pitch to the tailback, then run the other way, to the left, like you still have it. |
+| **FB** | Lead outside our end. Block the first man out there — here it is the corner. You start two yards closer than he does. Be out there first. |
+| **TB** **(ball)** | Run flat behind the quarterback and catch the pitch on the run, then get outside our end and turn up. Drifting forward for it is a fumble. |
+
+**Coaching points**
+
+- The pitch goes early and behind him. A quarterback who waits to be tackled first will pitch it on the ground.
+- The fullback is two yards closer to the edge than the tailback. He has to be out there first, or there is nothing to turn up behind.
+- This is what the Power buys. Call it once they have started crashing our tackle, and the edge is empty.
+
+---
+
+## Regular I - Slot Left - 39 Toss
+
+**Call it:** `Regular I Slot Left 39 Toss`
+
+**Scheme:** Toss
+
+![Regular I - Slot Left - 39 Toss](cards/i-toss-l-4-4.svg)
+
+| Position | Assignment |
+|---|---|
+| **LTE** | Defensive end on your inside shoulder. Turn him inside. The ball goes around behind you. |
+| **LT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
+| **LG** | Defensive guard head up on you. Step past him. Climb to the playside linebacker. Head across him. |
+| **C** | Nobody on you. Climb to the playside linebacker. Head across him. |
+| **RG** | Defensive guard head up on you. Cut him off — get between him and the ball. |
+| **RT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
+| **RTE** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
+| **SL** | Run at the outside linebacker and screen him off. Stay in his way. |
+| **QB** | Quick pitch to the tailback, then run the other way, to the right, like you still have it. |
+| **FB** | Lead outside our end. Block the first man out there — here it is the corner. You start two yards closer than he does. Be out there first. |
+| **TB** **(ball)** | Run flat behind the quarterback and catch the pitch on the run, then get outside our end and turn up. Drifting forward for it is a fumble. |
+
+**Coaching points**
+
+- The pitch goes early and behind him. A quarterback who waits to be tackled first will pitch it on the ground.
+- The fullback is two yards closer to the edge than the tailback. He has to be out there first, or there is nothing to turn up behind.
+- This is what the Power buys. Call it once they have started crashing our tackle, and the edge is empty.
+
+---
+
+## Regular I - Slot Right - 38 Pitch Pass
+
+**Call it:** `Regular I Slot Right 38 Pitch Pass`
+
+**Scheme:** Protect
+
+![Regular I - Slot Right - 38 Pitch Pass](cards/i-toss-pass-r-4-4.svg)
+
+| Position | Assignment |
+|---|---|
+| **LTE** | Pass block: step back, hands up, and stay between your man and the quarterback. |
+| **LT** | Pass block: step back, hands up, and stay between your man and the quarterback. |
+| **LG** | Pass block: step back, hands up, and stay between your man and the quarterback. |
+| **C** | Pass block: step back, hands up, and stay between your man and the quarterback. |
+| **RG** | Pass block: step back, hands up, and stay between your man and the quarterback. |
+| **RT** | Pass block: step back, hands up, and stay between your man and the quarterback. |
+| **RTE** **(ball)** | Block the end the way you do on the toss, then slip outside him and run up the sideline. Look back over your outside shoulder. |
+| **SL** | Run at the outside linebacker and screen him off. Stay in his way. |
+| **QB** | Pitch it exactly the way you pitch the toss, then run left like you still have it. Do not turn and watch the throw. |
+| **FB** | Bubble outside our end the same as the toss and take the first man out there. He is the one who gets to the thrower. |
+| **TB** | Catch the pitch and run the toss. At our end, pull up behind the line and throw it up the sideline to the tight end. |
+
+**Coaching points**
+
+- Everything is the toss until he pulls up. Same pitch, same path, same speed -- a tailback who slows down to throw has told them.
+- He throws from behind the line. Crossing it is a penalty, so drill the pull-up, not the arm.
+- The tight end blocks the end first and then slips outside him. That block is what the toss shows them, and it is what gets him loose.
+- Call it after the toss has hurt them, on first or second down, where an incompletion costs nothing.
+
+---
+
+## Regular I - Slot Left - 39 Pitch Pass
+
+**Call it:** `Regular I Slot Left 39 Pitch Pass`
+
+**Scheme:** Protect
+
+![Regular I - Slot Left - 39 Pitch Pass](cards/i-toss-pass-l-4-4.svg)
+
+| Position | Assignment |
+|---|---|
+| **LTE** **(ball)** | Block the end the way you do on the toss, then slip outside him and run up the sideline. Look back over your outside shoulder. |
+| **LT** | Pass block: step back, hands up, and stay between your man and the quarterback. |
+| **LG** | Pass block: step back, hands up, and stay between your man and the quarterback. |
+| **C** | Pass block: step back, hands up, and stay between your man and the quarterback. |
+| **RG** | Pass block: step back, hands up, and stay between your man and the quarterback. |
+| **RT** | Pass block: step back, hands up, and stay between your man and the quarterback. |
+| **RTE** | Pass block: step back, hands up, and stay between your man and the quarterback. |
+| **SL** | Run at the outside linebacker and screen him off. Stay in his way. |
+| **QB** | Pitch it exactly the way you pitch the toss, then run right like you still have it. Do not turn and watch the throw. |
+| **FB** | Bubble outside our end the same as the toss and take the first man out there. He is the one who gets to the thrower. |
+| **TB** | Catch the pitch and run the toss. At our end, pull up behind the line and throw it up the sideline to the tight end. |
+
+**Coaching points**
+
+- Everything is the toss until he pulls up. Same pitch, same path, same speed -- a tailback who slows down to throw has told them.
+- He throws from behind the line. Crossing it is a penalty, so drill the pull-up, not the arm.
+- The tight end blocks the end first and then slips outside him. That block is what the toss shows them, and it is what gets him loose.
+- Call it after the toss has hurt them, on first or second down, where an incompletion costs nothing.
 

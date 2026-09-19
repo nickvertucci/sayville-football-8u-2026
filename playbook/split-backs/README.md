@@ -38,6 +38,8 @@ Both ends are tight on the line. The two backs sit four yards deep and just over
 | [Split Backs - Slot Left - LTE (50) Slant Out](#split-backs---slot-left---lte-50-slant-out) | `Split Backs Slot Left LTE Slant Out` | Protect | pass | LTE |
 | [Split Backs - Slot Right - 36 Power](#split-backs---slot-right---36-power) | `Split Backs Slot Right 36 Power` | Power | run | LH |
 | [Split Backs - Slot Left - 27 Power](#split-backs---slot-left---27-power) | `Split Backs Slot Left 27 Power` | Power | run | RH |
+| [Split Backs - Slot Right - 38 Pitch Pass](#split-backs---slot-right---38-pitch-pass) | `Split Backs Slot Right 38 Pitch Pass` | Protect | pass | RTE |
+| [Split Backs - Slot Left - 29 Pitch Pass](#split-backs---slot-left---29-pitch-pass) | `Split Backs Slot Left 29 Pitch Pass` | Protect | pass | LTE |
 
 ---
 
@@ -458,4 +460,66 @@ Both ends are tight on the line. The two backs sit four yards deep and just over
 - The same Power as the Regular I, run from two backs instead of a stack. The slot kicks the end out and the left halfback leads through the hole.
 - The runner is the back on the far side. He has further to travel, so he has to start on the snap -- no false step, no waiting to see the hole.
 - The yards are inside the slot's kick-out. If the halfback bounces it wide looking for grass, the play is dead.
+
+---
+
+## Split Backs - Slot Right - 38 Pitch Pass
+
+**Call it:** `Split Backs Slot Right 38 Pitch Pass`
+
+**Scheme:** Protect
+
+![Split Backs - Slot Right - 38 Pitch Pass](cards/sb-toss-pass-r-4-4.svg)
+
+| Position | Assignment |
+|---|---|
+| **LTE** | Pass block: step back, hands up, and stay between your man and the quarterback. |
+| **LT** | Pass block: step back, hands up, and stay between your man and the quarterback. |
+| **LG** | Pass block: step back, hands up, and stay between your man and the quarterback. |
+| **C** | Pass block: step back, hands up, and stay between your man and the quarterback. |
+| **RG** | Pass block: step back, hands up, and stay between your man and the quarterback. |
+| **RT** | Pass block: step back, hands up, and stay between your man and the quarterback. |
+| **RTE** **(ball)** | Block the end the way you do on the toss, then slip outside him and run up the sideline. Look back over your outside shoulder. |
+| **SL** | Run at the outside linebacker and screen him off. Stay in his way. |
+| **QB** | Pitch it exactly the way you pitch the toss, then run left like you still have it. Do not turn and watch the throw. |
+| **LH** | Catch the pitch and run the toss. At our end, pull up behind the line and throw it up the sideline to the tight end. |
+| **RH** | Step at the dive, then bubble outside our end and take the first man out there. He is the one who gets to the thrower. |
+
+**Coaching points**
+
+- Everything is the toss until he pulls up. Same pitch, same path, same speed -- a halfback who slows down to throw has told them.
+- He throws from behind the line. Crossing it is a penalty, so drill the pull-up, not the arm.
+- The split man blocks out there exactly as he does on the toss. That block is the toss, and it is what the corner is watching instead of the end.
+- Call it after the toss has hurt them, on first or second down, where an incompletion costs nothing.
+
+---
+
+## Split Backs - Slot Left - 29 Pitch Pass
+
+**Call it:** `Split Backs Slot Left 29 Pitch Pass`
+
+**Scheme:** Protect
+
+![Split Backs - Slot Left - 29 Pitch Pass](cards/sb-toss-pass-l-4-4.svg)
+
+| Position | Assignment |
+|---|---|
+| **LTE** **(ball)** | Block the end the way you do on the toss, then slip outside him and run up the sideline. Look back over your outside shoulder. |
+| **LT** | Pass block: step back, hands up, and stay between your man and the quarterback. |
+| **LG** | Pass block: step back, hands up, and stay between your man and the quarterback. |
+| **C** | Pass block: step back, hands up, and stay between your man and the quarterback. |
+| **RG** | Pass block: step back, hands up, and stay between your man and the quarterback. |
+| **RT** | Pass block: step back, hands up, and stay between your man and the quarterback. |
+| **RTE** | Pass block: step back, hands up, and stay between your man and the quarterback. |
+| **SL** | Run at the outside linebacker and screen him off. Stay in his way. |
+| **QB** | Pitch it exactly the way you pitch the toss, then run right like you still have it. Do not turn and watch the throw. |
+| **LH** | Step at the dive, then bubble outside our end and take the first man out there. He is the one who gets to the thrower. |
+| **RH** | Catch the pitch and run the toss. At our end, pull up behind the line and throw it up the sideline to the tight end. |
+
+**Coaching points**
+
+- Everything is the toss until he pulls up. Same pitch, same path, same speed -- a halfback who slows down to throw has told them.
+- He throws from behind the line. Crossing it is a penalty, so drill the pull-up, not the arm.
+- The split man blocks out there exactly as he does on the toss. That block is the toss, and it is what the corner is watching instead of the end.
+- Call it after the toss has hurt them, on first or second down, where an incompletion costs nothing.
 

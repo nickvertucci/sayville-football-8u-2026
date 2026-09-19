@@ -1,0 +1,81 @@
+{
+  "id": "i-toss-l",
+  "order": 22,
+  "formation": "i-form",
+  "name": "Regular I - Slot Left - 39 Toss",
+  "code": "I-14",
+  "call": "Regular I Slot Left 39 Toss",
+  "type": "run",
+  "scheme": "Toss",
+  "direction": "left",
+  "ball_carrier": "TB",
+  "alignment": {
+    "SL": [
+      -5.6,
+      -1.5
+    ]
+  },
+  "pitch": {
+    "from": "QB",
+    "to": "TB",
+    "at": 1
+  },
+  "assignments": {
+    "QB": {
+      "rule": "Quick pitch to the tailback, then run the other way, to the right, like you still have it.",
+      "type": "rollout",
+      "path": [
+        [
+          0.8,
+          -0.3
+        ],
+        [
+          4.6,
+          -0.1
+        ]
+      ]
+    },
+    "FB": {
+      "note": "You start two yards closer than he does. Be out there first."
+    },
+    "TB": {
+      "rule": "Run flat behind the quarterback and catch the pitch on the run, then get outside our end and turn up. Drifting forward for it is a fumble.",
+      "type": "run",
+      "path": [
+        [
+          -2.2,
+          0.7
+        ],
+        [
+          -5.4,
+          1.2
+        ],
+        [
+          -7.8,
+          2.9
+        ],
+        [
+          -8.5,
+          4.9
+        ],
+        [
+          -8.6,
+          7.1
+        ],
+        [
+          -8.6,
+          9.7
+        ],
+        [
+          -8.6,
+          12.1
+        ]
+      ]
+    }
+  },
+  "coaching_points": [
+    "The pitch goes early and behind him. A quarterback who waits to be tackled first will pitch it on the ground.",
+    "The fullback is two yards closer to the edge than the tailback. He has to be out there first, or there is nothing to turn up behind.",
+    "This is what the Power buys. Call it once they have started crashing our tackle, and the edge is empty."
+  ]
+}

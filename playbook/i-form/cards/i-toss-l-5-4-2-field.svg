@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="621" height="472" viewBox="40 27 621 472" font-family="Segoe UI, Helvetica, Arial, sans-serif" role="img">
+<title>Regular I - Slot Left - 39 Toss — Regular I Slot Left 39 Toss vs 5-4-2</title>
+<rect x="0" y="0" width="702" height="513" fill="#ffffff"/>
+<line x1="0" y1="459.0" x2="702" y2="459.0" stroke="#c8cdd6" stroke-width="1"/>
+<line x1="0" y1="189.0" x2="702" y2="189.0" stroke="#c8cdd6" stroke-width="1"/>
+<line x1="0" y1="324.0" x2="702" y2="324.0" stroke="#3a4150" stroke-width="2" stroke-dasharray="9 6"/>
+<ellipse cx="351.0" cy="324.0" rx="9" ry="5.5" fill="#6b4a2b" stroke="#3a2716" stroke-width="1.2"/>
+<line x1="228.4" y1="293.2" x2="246.8" y2="311.6" stroke="#9aa2ae" stroke-width="3.6"/><line x1="246.8" y1="293.2" x2="228.4" y2="311.6" stroke="#9aa2ae" stroke-width="3.6"/>
+<text x="237.6" y="284.5" text-anchor="middle" font-size="12.5" fill="#9aa2ae" font-weight="600">LDE</text>
+<line x1="277.0" y1="293.2" x2="295.4" y2="311.6" stroke="#9aa2ae" stroke-width="3.6"/><line x1="295.4" y1="293.2" x2="277.0" y2="311.6" stroke="#9aa2ae" stroke-width="3.6"/>
+<text x="286.2" y="284.5" text-anchor="middle" font-size="12.5" fill="#9aa2ae" font-weight="600">LDT</text>
+<line x1="341.8" y1="293.2" x2="360.2" y2="311.6" stroke="#9aa2ae" stroke-width="3.6"/><line x1="360.2" y1="293.2" x2="341.8" y2="311.6" stroke="#9aa2ae" stroke-width="3.6"/>
+<text x="351.0" y="284.5" text-anchor="middle" font-size="12.5" fill="#9aa2ae" font-weight="600">NT</text>
+<line x1="406.6" y1="293.2" x2="425.0" y2="311.6" stroke="#9aa2ae" stroke-width="3.6"/><line x1="425.0" y1="293.2" x2="406.6" y2="311.6" stroke="#9aa2ae" stroke-width="3.6"/>
+<text x="415.8" y="284.5" text-anchor="middle" font-size="12.5" fill="#9aa2ae" font-weight="600">RDT</text>
+<line x1="455.2" y1="293.2" x2="473.6" y2="311.6" stroke="#9aa2ae" stroke-width="3.6"/><line x1="473.6" y1="293.2" x2="455.2" y2="311.6" stroke="#9aa2ae" stroke-width="3.6"/>
+<text x="464.4" y="284.5" text-anchor="middle" font-size="12.5" fill="#9aa2ae" font-weight="600">RDE</text>
+<line x1="196.0" y1="196.0" x2="214.4" y2="214.4" stroke="#9aa2ae" stroke-width="3.6"/><line x1="214.4" y1="196.0" x2="196.0" y2="214.4" stroke="#9aa2ae" stroke-width="3.6"/>
+<text x="205.2" y="187.3" text-anchor="middle" font-size="12.5" fill="#9aa2ae" font-weight="600">LOLB</text>
+<line x1="301.3" y1="196.0" x2="319.7" y2="214.4" stroke="#9aa2ae" stroke-width="3.6"/><line x1="319.7" y1="196.0" x2="301.3" y2="214.4" stroke="#9aa2ae" stroke-width="3.6"/>
+<text x="310.5" y="187.3" text-anchor="middle" font-size="12.5" fill="#9aa2ae" font-weight="600">LILB</text>
+<line x1="382.3" y1="196.0" x2="400.7" y2="214.4" stroke="#9aa2ae" stroke-width="3.6"/><line x1="400.7" y1="196.0" x2="382.3" y2="214.4" stroke="#9aa2ae" stroke-width="3.6"/>
+<text x="391.5" y="187.3" text-anchor="middle" font-size="12.5" fill="#9aa2ae" font-weight="600">RILB</text>
+<line x1="487.6" y1="196.0" x2="506.0" y2="214.4" stroke="#9aa2ae" stroke-width="3.6"/><line x1="506.0" y1="196.0" x2="487.6" y2="214.4" stroke="#9aa2ae" stroke-width="3.6"/>
+<text x="496.8" y="187.3" text-anchor="middle" font-size="12.5" fill="#9aa2ae" font-weight="600">ROLB</text>
+<line x1="252.7" y1="98.8" x2="271.1" y2="117.2" stroke="#9aa2ae" stroke-width="3.6"/><line x1="271.1" y1="98.8" x2="252.7" y2="117.2" stroke="#9aa2ae" stroke-width="3.6"/>
+<text x="261.9" y="90.2" text-anchor="middle" font-size="12.5" fill="#9aa2ae" font-weight="600">LS</text>
+<line x1="430.9" y1="98.8" x2="449.3" y2="117.2" stroke="#9aa2ae" stroke-width="3.6"/><line x1="449.3" y1="98.8" x2="430.9" y2="117.2" stroke="#9aa2ae" stroke-width="3.6"/>
+<text x="440.1" y="90.2" text-anchor="middle" font-size="12.5" fill="#9aa2ae" font-weight="600">RS</text>
+<path d="M237.6,337.5 L237.6,314.6" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="228.4" y1="314.6" x2="246.8" y2="314.6" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
+<path d="M275.4,337.5 L282.7,314.0" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="273.9" y1="311.3" x2="291.5" y2="316.7" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
+<path d="M313.2,337.5 L310.8,217.4" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="301.6" y1="217.5" x2="319.9" y2="217.2" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
+<path d="M351.0,337.5 L351.0,314.6" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="341.8" y1="314.6" x2="360.2" y2="314.6" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
+<path d="M388.8,337.5 L390.1,318.6 L391.2,217.4" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="382.1" y1="217.3" x2="400.4" y2="217.4" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
+<path d="M426.6,337.5 L419.3,314.0" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="410.5" y1="316.7" x2="428.1" y2="311.3" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
+<path d="M464.4,337.5 L464.4,314.6" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="455.2" y1="314.6" x2="473.6" y2="314.6" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
+<path d="M199.8,364.5 L204.7,217.4" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="195.5" y1="217.0" x2="213.8" y2="217.7" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
+<path d="M351.0,364.5 L372.6,372.6 L475.2,367.2" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="0.1 7"/>
+<polygon points="475.2,367.2 465.1,372.4 464.6,363.1" fill="#14213d"/>
+<path d="M351.0,413.1 L262.7,307.8 L212.2,215.2" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="204.2" y1="219.6" x2="220.3" y2="210.8" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
+<path d="M351.0,472.5 C341.1,469.4 315.9,459.0 291.6,453.6 C267.3,448.2 230.4,450.0 205.2,440.1 C180.0,430.2 154.3,410.9 140.4,394.2 C126.5,377.5 125.1,359.1 121.5,340.2 C117.9,321.3 119.3,302.4 118.8,280.8 C118.4,259.2 118.8,233.1 118.8,210.6 C118.8,188.1 118.8,156.6 118.8,145.8" fill="none" stroke="#b3001b" stroke-width="4.6" stroke-linecap="round" stroke-linejoin="round"/>
+<polygon points="118.8,145.8 125.0,159.6 112.6,159.6" fill="#b3001b"/>
+<path d="M351.0,364.5 L291.6,453.6" fill="none" stroke="#b3001b" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="0.1 7"/>
+<rect x="224.1" y="324.0" width="27.0" height="27.0" rx="3" fill="#ffffff" stroke="#14213d" stroke-width="2.6"/>
+<text x="237.6" y="342.0" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">LTE</text>
+<rect x="261.9" y="324.0" width="27.0" height="27.0" rx="3" fill="#ffffff" stroke="#14213d" stroke-width="2.6"/>
+<text x="275.4" y="342.0" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">LT</text>
+<rect x="299.7" y="324.0" width="27.0" height="27.0" rx="3" fill="#ffffff" stroke="#14213d" stroke-width="2.6"/>
+<text x="313.2" y="342.0" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">LG</text>
+<rect x="337.5" y="324.0" width="27.0" height="27.0" rx="3" fill="#ffffff" stroke="#14213d" stroke-width="2.6"/>
+<text x="351.0" y="342.0" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">C</text>
+<rect x="375.3" y="324.0" width="27.0" height="27.0" rx="3" fill="#ffffff" stroke="#14213d" stroke-width="2.6"/>
+<text x="388.8" y="342.0" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">RG</text>
+<rect x="413.1" y="324.0" width="27.0" height="27.0" rx="3" fill="#ffffff" stroke="#14213d" stroke-width="2.6"/>
+<text x="426.6" y="342.0" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">RT</text>
+<rect x="450.9" y="324.0" width="27.0" height="27.0" rx="3" fill="#ffffff" stroke="#14213d" stroke-width="2.6"/>
+<text x="464.4" y="342.0" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">RTE</text>
+<circle cx="199.8" cy="364.5" r="13.5" fill="#ffffff" stroke="#14213d" stroke-width="2.6"/>
+<text x="199.8" y="369.0" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">SL</text>
+<circle cx="351.0" cy="364.5" r="13.5" fill="#ffffff" stroke="#14213d" stroke-width="2.6"/>
+<text x="351.0" y="369.0" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">QB</text>
+<circle cx="351.0" cy="413.1" r="13.5" fill="#ffffff" stroke="#14213d" stroke-width="2.6"/>
+<text x="351.0" y="417.6" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">FB</text>
+<circle cx="351.0" cy="472.5" r="13.5" fill="#ffffff" stroke="#b3001b" stroke-width="2.6"/>
+<text x="351.0" y="477.0" text-anchor="middle" font-size="13" font-weight="700" fill="#b3001b">TB</text>
+<rect x="509.5" y="35.0" width="144.0" height="52.0" rx="8" fill="#ffffff" stroke="#111318" stroke-width="3"/><text x="581.5" y="75.0" text-anchor="middle" font-size="40" font-weight="800" fill="#111318">#I-14</text>
+<text x="52.5" y="45.0" font-size="4.3" font-weight="700" fill="#111318">Regular I - Slot Left - 39 Toss</text>
+</svg>

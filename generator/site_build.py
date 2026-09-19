@@ -892,7 +892,10 @@ table.xl.pk-plays td {
     background: #000 !important; color: #fff !important; border-color: #000 !important;
     -webkit-print-color-adjust: exact; print-color-adjust: exact;
   }
-  table.xl.xl-plays td { height: auto; vertical-align: middle; }
+  /* Tighter rows on paper than on screen. The 4px of padding above and below
+     every cell was 50 points of the one sheet -- a row of it for each block --
+     and the sheet ran out of room the day Regular I got a Toss. */
+  table.xl.xl-plays td { height: auto; vertical-align: middle; padding: 2px 5px; }
   /* A call is one line on paper: small enough to fit its cell, and never wrapping
      into a second line that makes the row taller. */
   .xl-plays td a { font-size: 9px; white-space: nowrap; letter-spacing: -.2px;
