@@ -209,7 +209,7 @@ someone a link to exactly the play you mean.
 |---|---|
 | `index.html` | Home: the formations, the install advice, the calling language |
 | `calls.html` | **Call sheet** — one sheet per offensive package: the I-formation lineup with names, and blank Left, Middle and Right columns for plays |
-| `wristbands.html` | **Wristbands** — every callable play by number, three pouches to a band and three bands to a sheet, cut on the dashes |
+| `wristbands.html` | **Wristbands** — every callable play by number, three 5″ × 3″ pouches to a band, one band to a sheet, cut on the dashes |
 | `f-<formation>.html` | One formation: its notes and its plays |
 | `install.html` | **Install schedule** — a month calendar of the practices, generated from `install.json` |
 | `install-<n>.html` | One practice: what goes in, and the run of practice block by block |
@@ -327,14 +327,17 @@ gaps. Renumbering would make every wristband already printed wrong, so the build
 checks that a number is a whole number and that no two plays share one.
 
 The bands themselves are [`wristbands.html`](wristbands.html): the same 1–42, one
-formation to a pouch — Regular I, Split Backs, then Shotgun with Power I behind it.
-A row of the sheet is one boy's whole wristband, so one printed page kits out three of
-them. Cut on the dashes and load them left to right.
+formation to a pouch — Regular I, Split Backs, then Shotgun with Power I behind it. A
+pouch is 5″ × 3″ and landscape, because it wraps a forearm, and three of them stacked
+is nine inches of a portrait page. So a sheet is one whole wristband: print a copy per
+boy, cut on the dashes, load them top to bottom.
 
-Three panels instead of one is what pays for the type: forty-two plays in a single
-window is a column of nine-point rows, and fourteen in a panel is thirteen-point with
-the call spelled out — *Slot Right 36 Power*, not *R 36 Power*. The reader is nine
-years old, outdoors, and somebody is shouting a number at him.
+Three pouches instead of one window is what pays for the type. Forty-two plays in one
+window is a column of nine-point rows; fourteen in a panel, two columns of eight, is
+fifteen and a half with room to breathe between them. A row reads `1 · Right 36 Power`
+— the number, the slot's side, the call. "Slot" is in all forty-two calls, so it is in
+the huddle and not on the band: leaving it off is three points of type on every row.
+The reader is nine years old, outdoors, and somebody is shouting a number at him.
 
 It is generated like everything else, so adding a play adds a row — and because
 numbers never move, the bands already on wrists stay correct.
