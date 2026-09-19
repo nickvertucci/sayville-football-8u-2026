@@ -69,6 +69,28 @@ build checks the receiver's path is that long.
 "pitch": { "from": "QB", "to": "LH", "at": 1 }
 ```
 
+### A pitch pass
+
+A pitch pass is the toss right up until he pulls up: the pitch is real, the back runs
+the toss, and then he stops behind the line and throws. So it is **called like the
+toss** — `Regular I Slot Right 38 Pitch Pass` — and the digits name the back who takes
+the pitch, not the receiver. `ball_carrier` is the receiver, the way it is on every
+pass; `type` is `pass`, the scheme is `Protect`, and it gives its own `direction`
+rather than a `fakes`, because it is not pretending to be another play — for two
+seconds it *is* the toss.
+
+The hole check works differently for him, and it has to: he never crosses the line,
+because a forward pass from past it is a penalty. So the hole is measured at the point
+his path gets **nearest** the line, and a path that crosses it is rejected outright.
+That is the one thing the call cannot say and the diagram can.
+
+The line pass blocks — which is also what keeps it legal, since a lineman more than a
+couple of yards downfield on a forward pass is a flag. The play is sold from the
+backfield: the same pitch, the same path, the same speed. A lead back who should be
+out on the edge selling it takes a written `rule`, `type: "block"` and a `path`, not a
+verb — `Protect` has already given his role `protect`, and restating a different verb
+is the conflict `--check` exists to catch.
+
 ## Required fields
 
 **A play** needs `id` (must equal the filename, and be unique across every formation),

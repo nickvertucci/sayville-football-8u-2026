@@ -396,6 +396,27 @@ def los_crossing(alignment: dict, pos: str, spec: dict) -> float | None:
     return None
 
 
+def los_approach(alignment: dict, pos: str, spec: dict) -> float:
+    """Field x where this player gets closest to the line without crossing it.
+
+    A pitch pass has to be numbered like the toss it is pretending to be, and the
+    back it names never crosses the line -- he is not allowed to, he is throwing
+    from behind it. So the hole he took the ball to is measured at the point he got
+    nearest the line instead of at a crossing that must not exist.
+    """
+    start = alignment[pos]
+    points = [(start[0], start[1])]
+    points += [(start[0] + dx, start[1] + dy) for dx, dy in (spec.get("path") or [])]
+    return max(points, key=lambda pt: pt[1])[0]
+
+
+def is_pitch_passer(play: dict, pos: str) -> bool:
+    """Is this the back who catches the pitch and then throws it?"""
+    return (play.get("type") == "pass"
+            and (play.get("pitch") or {}).get("to") == pos
+            and play.get("ball_carrier") != pos)
+
+
 def validate_call(play: dict, form: dict, defenses: dict) -> list[str]:
     """Check a play's call against the play's own diagram."""
     call = play.get("call")
@@ -454,14 +475,30 @@ def validate_call(play: dict, form: dict, defenses: dict) -> list[str]:
     # caught it. Now every blocker's path is derived from the front, and a pulling
     # guard's wrap crosses the line right where the ball does — which made a wrong
     # call measurably true. Saying it outright is both stronger and honest.
+    # A hand-drawn block counts as blocking too. The lead back on a pitch pass has a
+    # written path rather than a verb -- the scheme is Protect and he is doing
+    # something else -- and his path bubbles out and crosses the line in the same hole
+    # the ball went to, so without this the call could credit him with the play.
     source = play.get("assignments", {}).get(pos, {})
-    if "block" in source:
+    if "block" in source or source.get("type") == "block":
         return [f"{pid}: call '{call}' names back {back_digit} = {pos}, who is blocking "
                 "on this play — the digits name the back who handles the ball"]
 
     spec = resolved_assignments(play, defenses[blocking.DEFAULT_FRONT]).get(pos, {})
     crossing = los_crossing(alignment, pos, spec)
-    if crossing is None:
+    # A pitch pass is the toss right up until he pulls up, so it is called like the
+    # toss -- and the back the digits name is the passer, not the runner. He takes
+    # the ball to the hole and throws from behind the line, so the crossing the
+    # geometry check normally wants is the one thing that must not be there: a
+    # forward pass from past the line is a penalty, and a path that shows one is a
+    # play nobody can run. The hole is measured where he got nearest the line.
+    if is_pitch_passer(play, pos):
+        if crossing is not None:
+            return [f"{pid}: call '{call}' names back {back_digit} = {pos}, who catches "
+                    "the pitch and throws it, but his path crosses the line of "
+                    f"scrimmage (x = {crossing:+.1f}) -- he throws from behind it"]
+        crossing = los_approach(alignment, pos, spec)
+    elif crossing is None:
         return [f"{pid}: call '{call}' says {pos} runs the {hole_digit} hole, but his path "
                 "never crosses the line of scrimmage"]
 

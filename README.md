@@ -73,6 +73,8 @@ and `Regular I Slot Left 37 Power` is the same handoff to the left.
 | `Regular I Slot Right 22 Smash` / `Slot Left 23 Smash` | Regular I - Slot Right - 22 Smash / Slot Left - 23 Smash | fullback, A gap, on the snap |
 | `Regular I Slot Right LTE Sweep` / `Slot Left RTE Sweep` | Regular I - Slot Right - LTE Sweep / Slot Left - RTE Sweep | the backside tight end on an end-around, all the way outside |
 | `Regular I Slot Right 49 Sweep` / `Slot Left 48 Sweep` | Regular I - Slot Right - 49 Sweep / Slot Left - 48 Sweep | the slot, flat across the backfield and outside the other way |
+| `Regular I Slot Right 38 Toss` / `Slot Left 39 Toss` | Regular I - Slot Right - 38 Toss / Slot Left - 39 Toss | tailback, pitched wide and outside the tight end |
+| `Regular I Slot Right 38 Pitch Pass` / `Slot Left 39 Pitch Pass` | Regular I - Slot Right - 38 Pitch Pass / Slot Left - 39 Pitch Pass | the same pitch, and the tailback pulls up behind the line and throws |
 
 The tight-end sweep is a **word call** — no digits, because the tight end is not a numbered
 back. It names him instead. A play has to opt in with `word_call`, so any other play
@@ -91,6 +93,7 @@ always the left back** (odd-numbered holes) and the **2-back is always the right
 | Call | Play | Reads as |
 |---|---|---|
 | `Split Backs Slot Left 29 Toss` / `Slot Right 38 Toss` | Split Backs - Slot Left - 29 Toss / Slot Right - 38 Toss | the far back, all the way outside |
+| `Split Backs Slot Left 29 Pitch Pass` / `Slot Right 38 Pitch Pass` | Split Backs - Slot Left - 29 Pitch Pass / Slot Right - 38 Pitch Pass | the same pitch, and the far back pulls up behind the line and throws |
 
 The back digit follows whoever actually carries it. On the toss it is the far back,
 because the near one is busy bubbling out to block.
@@ -113,6 +116,11 @@ Power at 6/7, Toss at 8/9.
 or a tight end on an end-around (a word call, no hole digit). Digit 4 is the
 slot only in looks that have one — Wishbone's 4 is the right halfback, so
 `49 Toss` is Toss. The tight-end `Slant Out` is a word call too.
+**Pitch Pass** keeps the toss's digits — `38 Pitch Pass` is the 38 Toss right up
+until the back pulls up behind the line and throws, so it is called the same way and
+the first digit is still the man who takes the pitch. He never crosses the line, and
+the build rejects a diagram that shows him doing it: a forward pass from past the line
+of scrimmage is a penalty.
 
 ### Wishbone: formation + back + hole + play word
 
@@ -144,15 +152,15 @@ that come up are 8s and 9s and the rest are word calls.
 
 ## Formations
 
-Six formations, 52 plays, in teaching order. Every numbered run is one of four
+Six formations, 58 plays, in teaching order. Every numbered run is one of four
 blocking families — Smash, Dive, Power, Toss — plus Sweep when the
 quarterback, the slot or a tight end is coming across, and Protect on a dropback.
 
 | # | Formation | Plays | What it is for |
 |---|---|---|---|
-| 1 | **Regular I** | 12 | Base offense. Fullback and tailback stacked behind the quarterback. Power, both Smashes, the tight-end sweep, the slot sweep and the tight-end slant out, both ways. |
+| 1 | **Regular I** | 16 | Base offense. Fullback and tailback stacked behind the quarterback. Power, both Smashes, the tight-end sweep, the slot sweep, the toss, the pitch pass and the tight-end slant out, both ways. |
 | 2 | **Wishbone** | 8 | Three backs, no slot. Fullback Smash and Dive, halfback Power and Toss, both ways. |
-| 3 | **Split Backs** | 14 | Two backs at even depth and a slot just outside the tight end. Toss, Power, QB sweep, fake sweep, slot sweep, TE sweep and the tight-end slant out, both ways. |
+| 3 | **Split Backs** | 16 | Two backs at even depth and a slot just outside the tight end. Toss, the pitch pass off it, Power, QB sweep, fake sweep, slot sweep, TE sweep and the tight-end slant out, both ways. |
 | 4 | **Shotgun** | 6 | The quarterback five yards deep with a back either side. The tight-end slant out, the QB sweep and the RB toss, both ways. |
 | 5 | **Trips** | 8 | Empty backfield. Backs 2, 3 and 4 bunched to one side (fullback, tailback, slot). QB sweep, the quick pass, TE sweep and slant out, both ways. |
 | 6 | **Power I** | 4 | The Regular I with the slot brought in behind the fullback. Smash with two lead blockers in the same gap, and Toss, both ways. |

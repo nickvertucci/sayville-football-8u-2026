@@ -72,6 +72,16 @@ CASES = [
     # geometry: 39 is left, and the tailback has to be the one going there.
     ("trips quick pass",              "trips", "tr-quick-pass-l", "Trips Left 39 Quick Pass", False),
     ("trips quick pass wrong side",   "trips", "tr-quick-pass-l", "Trips Left 38 Quick Pass", True),
+    # A pitch pass is numbered like the toss it is pretending to be, so the digits
+    # name the back who takes the pitch -- and he never crosses the line. The hole is
+    # where he took the ball to, measured at the point he got nearest the line, and
+    # everything else about the number still has to be true.
+    ("pitch pass right",              "i-form", "i-toss-pass-r", "Regular I Slot Right 38 Pitch Pass", False),
+    ("pitch pass, called off tackle", "i-form", "i-toss-pass-r", "Regular I Slot Right 36 Pitch Pass", True),
+    ("pitch pass right, numbered left", "i-form", "i-toss-pass-r", "Regular I Slot Left 39 Pitch Pass", True),
+    ("pitch pass, credited to the SL", "i-form", "i-toss-pass-r", "Regular I Slot Right 48 Pitch Pass", True),
+    ("split pitch pass left",         "split-backs", "sb-toss-pass-l", "Split Backs Slot Left 29 Pitch Pass", False),
+    ("split pitch pass left, wrong back", "split-backs", "sb-toss-pass-l", "Split Backs Slot Left 39 Pitch Pass", True),
 ]
 
 
@@ -95,11 +105,22 @@ def main() -> int:
             for e in errors:
                 print(f"        {e}")
 
+    # The one thing about a pitch pass the call alone cannot say: he throws from
+    # behind the line. A path that crosses it is a forward pass from past the line of
+    # scrimmage -- a penalty, and a card showing a play nobody can run -- so the same
+    # call has to be rejected the moment the diagram does that.
+    form = forms["i-form"]
+    play = copy.deepcopy(next(p for p in form["_plays"] if p["id"] == "i-toss-pass-r"))
+    play["assignments"]["TB"]["path"] = [[2.2, 0.7], [5.4, 1.2], [7.6, 2.8], [8.2, 6.4]]
+    if not render.validate_call(play, form, defenses):
+        wrong += 1
+        print("FAIL  pitch pass thrown from past the line: should have been rejected")
+
     if wrong:
-        print(f"\n{wrong} of {len(CASES)} cases behaved unexpectedly.")
+        print(f"\n{wrong} of {len(CASES) + 1} cases behaved unexpectedly.")
         return 1
-    print(f"{len(CASES)} call cases behaved as expected "
-          f"({sum(1 for c in CASES if c[4])} rejected, "
+    print(f"{len(CASES) + 1} call cases behaved as expected "
+          f"({sum(1 for c in CASES if c[4]) + 1} rejected, "
           f"{sum(1 for c in CASES if not c[4])} accepted).")
     return 0
 

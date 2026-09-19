@@ -18,46 +18,52 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 | 10 | [Regular I - Slot Left - LTE (50) Slant Out](#regular-i---slot-left---lte-50-slant-out) | `Regular I Slot Left LTE Slant Out` | Protect | pass | Regular I | LTE |
 | 11 | [Regular I - Slot Right - 22 Smash](#regular-i---slot-right---22-smash) | `Regular I Slot Right 22 Smash` | Smash | run | Regular I | FB |
 | 12 | [Regular I - Slot Left - 23 Smash](#regular-i---slot-left---23-smash) | `Regular I Slot Left 23 Smash` | Smash | run | Regular I | FB |
-| 13 | [Wishbone - 46 Power](#wishbone---46-power) | `Wishbone 46 Power` | Power | run | Wishbone | RH |
-| 14 | [Wishbone - 37 Power](#wishbone---37-power) | `Wishbone 37 Power` | Power | run | Wishbone | LH |
-| 15 | [Wishbone - 22 Smash](#wishbone---22-smash) | `Wishbone 22 Smash` | Smash | run | Wishbone | FB |
-| 16 | [Wishbone - 23 Smash](#wishbone---23-smash) | `Wishbone 23 Smash` | Smash | run | Wishbone | FB |
-| 17 | [Wishbone - 24 Dive](#wishbone---24-dive) | `Wishbone 24 Dive` | Dive | run | Wishbone | FB |
-| 18 | [Wishbone - 25 Dive](#wishbone---25-dive) | `Wishbone 25 Dive` | Dive | run | Wishbone | FB |
-| 19 | [Wishbone - 38 Toss](#wishbone---38-toss) | `Wishbone 38 Toss` | Toss | run | Wishbone | LH |
-| 20 | [Wishbone - 49 Toss](#wishbone---49-toss) | `Wishbone 49 Toss` | Toss | run | Wishbone | RH |
-| 21 | [Split Backs - Slot Right - 38 Toss](#split-backs---slot-right---38-toss) | `Split Backs Slot Right 38 Toss` | Toss | run | Split Backs | LH |
-| 22 | [Split Backs - Slot Left - 29 Toss](#split-backs---slot-left---29-toss) | `Split Backs Slot Left 29 Toss` | Toss | run | Split Backs | RH |
-| 23 | [Split Backs - Slot Right - 18 Sweep](#split-backs---slot-right---18-sweep) | `Split Backs Slot Right 18 Sweep` | Sweep | run | Split Backs | QB |
-| 24 | [Split Backs - Slot Left - 19 Sweep](#split-backs---slot-left---19-sweep) | `Split Backs Slot Left 19 Sweep` | Sweep | run | Split Backs | QB |
-| 25 | [Split Backs - Slot Left - 19 Fake Sweep](#split-backs---slot-left---19-fake-sweep) | `Split Backs Slot Left 19 Fake Sweep` | Sweep | run | Split Backs | QB |
-| 26 | [Split Backs - Slot Right - 18 Fake Sweep](#split-backs---slot-right---18-fake-sweep) | `Split Backs Slot Right 18 Fake Sweep` | Sweep | run | Split Backs | QB |
-| 27 | [Split Backs - Slot Right - 49 Sweep](#split-backs---slot-right---49-sweep) | `Split Backs Slot Right 49 Sweep` | Sweep | run | Split Backs | SL |
-| 28 | [Split Backs - Slot Left - 48 Sweep](#split-backs---slot-left---48-sweep) | `Split Backs Slot Left 48 Sweep` | Sweep | run | Split Backs | SL |
-| 29 | [Split Backs - Slot Right - LTE (50) Sweep](#split-backs---slot-right---lte-50-sweep) | `Split Backs Slot Right LTE Sweep` | Sweep | run | Split Backs | LTE |
-| 30 | [Split Backs - Slot Left - RTE (60) Sweep](#split-backs---slot-left---rte-60-sweep) | `Split Backs Slot Left RTE Sweep` | Sweep | run | Split Backs | RTE |
-| 31 | [Split Backs - Slot Right - RTE (60) Slant Out](#split-backs---slot-right---rte-60-slant-out) | `Split Backs Slot Right RTE Slant Out` | Protect | pass | Split Backs | RTE |
-| 32 | [Split Backs - Slot Left - LTE (50) Slant Out](#split-backs---slot-left---lte-50-slant-out) | `Split Backs Slot Left LTE Slant Out` | Protect | pass | Split Backs | LTE |
-| 33 | [Split Backs - Slot Right - 36 Power](#split-backs---slot-right---36-power) | `Split Backs Slot Right 36 Power` | Power | run | Split Backs | LH |
-| 34 | [Split Backs - Slot Left - 27 Power](#split-backs---slot-left---27-power) | `Split Backs Slot Left 27 Power` | Power | run | Split Backs | RH |
-| 35 | [Shotgun - Slot Right - RTE (60) Slant Out](#shotgun---slot-right---rte-60-slant-out) | `Shotgun Slot Right RTE Slant Out` | Protect | pass | Shotgun | RTE |
-| 36 | [Shotgun - Slot Left - LTE (50) Slant Out](#shotgun---slot-left---lte-50-slant-out) | `Shotgun Slot Left LTE Slant Out` | Protect | pass | Shotgun | LTE |
-| 37 | [Shotgun - Slot Left - 19 Sweep](#shotgun---slot-left---19-sweep) | `Shotgun Slot Left 19 Sweep` | Sweep | run | Shotgun | QB |
-| 38 | [Shotgun - Slot Right - 18 Sweep](#shotgun---slot-right---18-sweep) | `Shotgun Slot Right 18 Sweep` | Sweep | run | Shotgun | QB |
-| 39 | [Shotgun - Slot Right - 38 Toss](#shotgun---slot-right---38-toss) | `Shotgun Slot Right 38 Toss` | Toss | run | Shotgun | LH |
-| 40 | [Shotgun - Slot Left - 29 Toss](#shotgun---slot-left---29-toss) | `Shotgun Slot Left 29 Toss` | Toss | run | Shotgun | RH |
-| 41 | [Trips - Right - LTE (50) Sweep](#trips---right---lte-50-sweep) | `Trips Right LTE Sweep` | Sweep | run | Trips | LTE |
-| 42 | [Trips - Left - RTE (60) Sweep](#trips---left---rte-60-sweep) | `Trips Left RTE Sweep` | Sweep | run | Trips | RTE |
-| 43 | [Trips - Right - 38 Quick Pass](#trips---right---38-quick-pass) | `Trips Right 38 Quick Pass` | Protect | pass | Trips | TB |
-| 44 | [Trips - Left - 39 Quick Pass](#trips---left---39-quick-pass) | `Trips Left 39 Quick Pass` | Protect | pass | Trips | TB |
-| 45 | [Trips - Right - 18 Sweep](#trips---right---18-sweep) | `Trips Right 18 Sweep` | Sweep | run | Trips | QB |
-| 46 | [Trips - Left - 19 Sweep](#trips---left---19-sweep) | `Trips Left 19 Sweep` | Sweep | run | Trips | QB |
-| 47 | [Trips - Right - RTE (60) Slant Out](#trips---right---rte-60-slant-out) | `Trips Right RTE Slant Out` | Protect | pass | Trips | RTE |
-| 48 | [Trips - Left - LTE (50) Slant Out](#trips---left---lte-50-slant-out) | `Trips Left LTE Slant Out` | Protect | pass | Trips | LTE |
-| 49 | [Power I - Slot Right - 32 Smash](#power-i---slot-right---32-smash) | `Power I Slot Right 32 Smash` | Smash | run | Power I | TB |
-| 50 | [Power I - Slot Left - 33 Smash](#power-i---slot-left---33-smash) | `Power I Slot Left 33 Smash` | Smash | run | Power I | TB |
-| 51 | [Power I - Slot Right - 38 Toss](#power-i---slot-right---38-toss) | `Power I Slot Right 38 Toss` | Toss | run | Power I | TB |
-| 52 | [Power I - Slot Left - 39 Toss](#power-i---slot-left---39-toss) | `Power I Slot Left 39 Toss` | Toss | run | Power I | TB |
+| 13 | [Regular I - Slot Right - 38 Toss](#regular-i---slot-right---38-toss) | `Regular I Slot Right 38 Toss` | Toss | run | Regular I | TB |
+| 14 | [Regular I - Slot Left - 39 Toss](#regular-i---slot-left---39-toss) | `Regular I Slot Left 39 Toss` | Toss | run | Regular I | TB |
+| 15 | [Regular I - Slot Right - 38 Pitch Pass](#regular-i---slot-right---38-pitch-pass) | `Regular I Slot Right 38 Pitch Pass` | Protect | pass | Regular I | RTE |
+| 16 | [Regular I - Slot Left - 39 Pitch Pass](#regular-i---slot-left---39-pitch-pass) | `Regular I Slot Left 39 Pitch Pass` | Protect | pass | Regular I | LTE |
+| 17 | [Wishbone - 46 Power](#wishbone---46-power) | `Wishbone 46 Power` | Power | run | Wishbone | RH |
+| 18 | [Wishbone - 37 Power](#wishbone---37-power) | `Wishbone 37 Power` | Power | run | Wishbone | LH |
+| 19 | [Wishbone - 22 Smash](#wishbone---22-smash) | `Wishbone 22 Smash` | Smash | run | Wishbone | FB |
+| 20 | [Wishbone - 23 Smash](#wishbone---23-smash) | `Wishbone 23 Smash` | Smash | run | Wishbone | FB |
+| 21 | [Wishbone - 24 Dive](#wishbone---24-dive) | `Wishbone 24 Dive` | Dive | run | Wishbone | FB |
+| 22 | [Wishbone - 25 Dive](#wishbone---25-dive) | `Wishbone 25 Dive` | Dive | run | Wishbone | FB |
+| 23 | [Wishbone - 38 Toss](#wishbone---38-toss) | `Wishbone 38 Toss` | Toss | run | Wishbone | LH |
+| 24 | [Wishbone - 49 Toss](#wishbone---49-toss) | `Wishbone 49 Toss` | Toss | run | Wishbone | RH |
+| 25 | [Split Backs - Slot Right - 38 Toss](#split-backs---slot-right---38-toss) | `Split Backs Slot Right 38 Toss` | Toss | run | Split Backs | LH |
+| 26 | [Split Backs - Slot Left - 29 Toss](#split-backs---slot-left---29-toss) | `Split Backs Slot Left 29 Toss` | Toss | run | Split Backs | RH |
+| 27 | [Split Backs - Slot Right - 18 Sweep](#split-backs---slot-right---18-sweep) | `Split Backs Slot Right 18 Sweep` | Sweep | run | Split Backs | QB |
+| 28 | [Split Backs - Slot Left - 19 Sweep](#split-backs---slot-left---19-sweep) | `Split Backs Slot Left 19 Sweep` | Sweep | run | Split Backs | QB |
+| 29 | [Split Backs - Slot Left - 19 Fake Sweep](#split-backs---slot-left---19-fake-sweep) | `Split Backs Slot Left 19 Fake Sweep` | Sweep | run | Split Backs | QB |
+| 30 | [Split Backs - Slot Right - 18 Fake Sweep](#split-backs---slot-right---18-fake-sweep) | `Split Backs Slot Right 18 Fake Sweep` | Sweep | run | Split Backs | QB |
+| 31 | [Split Backs - Slot Right - 49 Sweep](#split-backs---slot-right---49-sweep) | `Split Backs Slot Right 49 Sweep` | Sweep | run | Split Backs | SL |
+| 32 | [Split Backs - Slot Left - 48 Sweep](#split-backs---slot-left---48-sweep) | `Split Backs Slot Left 48 Sweep` | Sweep | run | Split Backs | SL |
+| 33 | [Split Backs - Slot Right - LTE (50) Sweep](#split-backs---slot-right---lte-50-sweep) | `Split Backs Slot Right LTE Sweep` | Sweep | run | Split Backs | LTE |
+| 34 | [Split Backs - Slot Left - RTE (60) Sweep](#split-backs---slot-left---rte-60-sweep) | `Split Backs Slot Left RTE Sweep` | Sweep | run | Split Backs | RTE |
+| 35 | [Split Backs - Slot Right - RTE (60) Slant Out](#split-backs---slot-right---rte-60-slant-out) | `Split Backs Slot Right RTE Slant Out` | Protect | pass | Split Backs | RTE |
+| 36 | [Split Backs - Slot Left - LTE (50) Slant Out](#split-backs---slot-left---lte-50-slant-out) | `Split Backs Slot Left LTE Slant Out` | Protect | pass | Split Backs | LTE |
+| 37 | [Split Backs - Slot Right - 36 Power](#split-backs---slot-right---36-power) | `Split Backs Slot Right 36 Power` | Power | run | Split Backs | LH |
+| 38 | [Split Backs - Slot Left - 27 Power](#split-backs---slot-left---27-power) | `Split Backs Slot Left 27 Power` | Power | run | Split Backs | RH |
+| 39 | [Split Backs - Slot Right - 38 Pitch Pass](#split-backs---slot-right---38-pitch-pass) | `Split Backs Slot Right 38 Pitch Pass` | Protect | pass | Split Backs | RTE |
+| 40 | [Split Backs - Slot Left - 29 Pitch Pass](#split-backs---slot-left---29-pitch-pass) | `Split Backs Slot Left 29 Pitch Pass` | Protect | pass | Split Backs | LTE |
+| 41 | [Shotgun - Slot Right - RTE (60) Slant Out](#shotgun---slot-right---rte-60-slant-out) | `Shotgun Slot Right RTE Slant Out` | Protect | pass | Shotgun | RTE |
+| 42 | [Shotgun - Slot Left - LTE (50) Slant Out](#shotgun---slot-left---lte-50-slant-out) | `Shotgun Slot Left LTE Slant Out` | Protect | pass | Shotgun | LTE |
+| 43 | [Shotgun - Slot Left - 19 Sweep](#shotgun---slot-left---19-sweep) | `Shotgun Slot Left 19 Sweep` | Sweep | run | Shotgun | QB |
+| 44 | [Shotgun - Slot Right - 18 Sweep](#shotgun---slot-right---18-sweep) | `Shotgun Slot Right 18 Sweep` | Sweep | run | Shotgun | QB |
+| 45 | [Shotgun - Slot Right - 38 Toss](#shotgun---slot-right---38-toss) | `Shotgun Slot Right 38 Toss` | Toss | run | Shotgun | LH |
+| 46 | [Shotgun - Slot Left - 29 Toss](#shotgun---slot-left---29-toss) | `Shotgun Slot Left 29 Toss` | Toss | run | Shotgun | RH |
+| 47 | [Trips - Right - LTE (50) Sweep](#trips---right---lte-50-sweep) | `Trips Right LTE Sweep` | Sweep | run | Trips | LTE |
+| 48 | [Trips - Left - RTE (60) Sweep](#trips---left---rte-60-sweep) | `Trips Left RTE Sweep` | Sweep | run | Trips | RTE |
+| 49 | [Trips - Right - 38 Quick Pass](#trips---right---38-quick-pass) | `Trips Right 38 Quick Pass` | Protect | pass | Trips | TB |
+| 50 | [Trips - Left - 39 Quick Pass](#trips---left---39-quick-pass) | `Trips Left 39 Quick Pass` | Protect | pass | Trips | TB |
+| 51 | [Trips - Right - 18 Sweep](#trips---right---18-sweep) | `Trips Right 18 Sweep` | Sweep | run | Trips | QB |
+| 52 | [Trips - Left - 19 Sweep](#trips---left---19-sweep) | `Trips Left 19 Sweep` | Sweep | run | Trips | QB |
+| 53 | [Trips - Right - RTE (60) Slant Out](#trips---right---rte-60-slant-out) | `Trips Right RTE Slant Out` | Protect | pass | Trips | RTE |
+| 54 | [Trips - Left - LTE (50) Slant Out](#trips---left---lte-50-slant-out) | `Trips Left LTE Slant Out` | Protect | pass | Trips | LTE |
+| 55 | [Power I - Slot Right - 32 Smash](#power-i---slot-right---32-smash) | `Power I Slot Right 32 Smash` | Smash | run | Power I | TB |
+| 56 | [Power I - Slot Left - 33 Smash](#power-i---slot-left---33-smash) | `Power I Slot Left 33 Smash` | Smash | run | Power I | TB |
+| 57 | [Power I - Slot Right - 38 Toss](#power-i---slot-right---38-toss) | `Power I Slot Right 38 Toss` | Toss | run | Power I | TB |
+| 58 | [Power I - Slot Left - 39 Toss](#power-i---slot-left---39-toss) | `Power I Slot Left 39 Toss` | Toss | run | Power I | TB |
 
 # Regular I
 
@@ -422,6 +428,128 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 - This is the quick one. The fullback is only two yards from the hole -- he has the ball before the linebackers have moved.
 - The hole is the A-gap, between the center and the left guard. Nobody leads him through it; his speed is the lead.
 - The tailback's fake is the play as much as the handoff. If he jogs, the backside linebacker is in the hole.
+
+---
+
+## Regular I - Slot Right - 38 Toss
+
+**Call it:** `Regular I Slot Right 38 Toss`
+
+**Scheme:** Toss
+
+![Regular I - Slot Right - 38 Toss](playbook/i-form/cards/i-toss-r-4-4.svg)
+
+| Position | Assignment |
+|---|---|
+| **LTE** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
+| **LT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
+| **LG** | Defensive guard head up on you. Cut him off — get between him and the ball. |
+| **C** | Nobody on you. Climb to the playside linebacker. Head across him. |
+| **RG** | Defensive guard head up on you. Step past him. Climb to the playside linebacker. Head across him. |
+| **RT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
+| **RTE** | Defensive end on your inside shoulder. Turn him inside. The ball goes around behind you. |
+| **SL** | Run at the outside linebacker and screen him off. Stay in his way. |
+| **QB** | Quick pitch to the tailback, then run the other way, to the left, like you still have it. |
+| **FB** | Lead outside our end. Block the first man out there — here it is the corner. You start two yards closer than he does. Be out there first. |
+| **TB** **(ball)** | Run flat behind the quarterback and catch the pitch on the run, then get outside our end and turn up. Drifting forward for it is a fumble. |
+
+**Coaching points**
+
+- The pitch goes early and behind him. A quarterback who waits to be tackled first will pitch it on the ground.
+- The fullback is two yards closer to the edge than the tailback. He has to be out there first, or there is nothing to turn up behind.
+- This is what the Power buys. Call it once they have started crashing our tackle, and the edge is empty.
+
+---
+
+## Regular I - Slot Left - 39 Toss
+
+**Call it:** `Regular I Slot Left 39 Toss`
+
+**Scheme:** Toss
+
+![Regular I - Slot Left - 39 Toss](playbook/i-form/cards/i-toss-l-4-4.svg)
+
+| Position | Assignment |
+|---|---|
+| **LTE** | Defensive end on your inside shoulder. Turn him inside. The ball goes around behind you. |
+| **LT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
+| **LG** | Defensive guard head up on you. Step past him. Climb to the playside linebacker. Head across him. |
+| **C** | Nobody on you. Climb to the playside linebacker. Head across him. |
+| **RG** | Defensive guard head up on you. Cut him off — get between him and the ball. |
+| **RT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
+| **RTE** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
+| **SL** | Run at the outside linebacker and screen him off. Stay in his way. |
+| **QB** | Quick pitch to the tailback, then run the other way, to the right, like you still have it. |
+| **FB** | Lead outside our end. Block the first man out there — here it is the corner. You start two yards closer than he does. Be out there first. |
+| **TB** **(ball)** | Run flat behind the quarterback and catch the pitch on the run, then get outside our end and turn up. Drifting forward for it is a fumble. |
+
+**Coaching points**
+
+- The pitch goes early and behind him. A quarterback who waits to be tackled first will pitch it on the ground.
+- The fullback is two yards closer to the edge than the tailback. He has to be out there first, or there is nothing to turn up behind.
+- This is what the Power buys. Call it once they have started crashing our tackle, and the edge is empty.
+
+---
+
+## Regular I - Slot Right - 38 Pitch Pass
+
+**Call it:** `Regular I Slot Right 38 Pitch Pass`
+
+**Scheme:** Protect
+
+![Regular I - Slot Right - 38 Pitch Pass](playbook/i-form/cards/i-toss-pass-r-4-4.svg)
+
+| Position | Assignment |
+|---|---|
+| **LTE** | Pass block: step back, hands up, and stay between your man and the quarterback. |
+| **LT** | Pass block: step back, hands up, and stay between your man and the quarterback. |
+| **LG** | Pass block: step back, hands up, and stay between your man and the quarterback. |
+| **C** | Pass block: step back, hands up, and stay between your man and the quarterback. |
+| **RG** | Pass block: step back, hands up, and stay between your man and the quarterback. |
+| **RT** | Pass block: step back, hands up, and stay between your man and the quarterback. |
+| **RTE** **(ball)** | Block the end the way you do on the toss, then slip outside him and run up the sideline. Look back over your outside shoulder. |
+| **SL** | Run at the outside linebacker and screen him off. Stay in his way. |
+| **QB** | Pitch it exactly the way you pitch the toss, then run left like you still have it. Do not turn and watch the throw. |
+| **FB** | Bubble outside our end the same as the toss and take the first man out there. He is the one who gets to the thrower. |
+| **TB** | Catch the pitch and run the toss. At our end, pull up behind the line and throw it up the sideline to the tight end. |
+
+**Coaching points**
+
+- Everything is the toss until he pulls up. Same pitch, same path, same speed -- a tailback who slows down to throw has told them.
+- He throws from behind the line. Crossing it is a penalty, so drill the pull-up, not the arm.
+- The tight end blocks the end first and then slips outside him. That block is what the toss shows them, and it is what gets him loose.
+- Call it after the toss has hurt them, on first or second down, where an incompletion costs nothing.
+
+---
+
+## Regular I - Slot Left - 39 Pitch Pass
+
+**Call it:** `Regular I Slot Left 39 Pitch Pass`
+
+**Scheme:** Protect
+
+![Regular I - Slot Left - 39 Pitch Pass](playbook/i-form/cards/i-toss-pass-l-4-4.svg)
+
+| Position | Assignment |
+|---|---|
+| **LTE** **(ball)** | Block the end the way you do on the toss, then slip outside him and run up the sideline. Look back over your outside shoulder. |
+| **LT** | Pass block: step back, hands up, and stay between your man and the quarterback. |
+| **LG** | Pass block: step back, hands up, and stay between your man and the quarterback. |
+| **C** | Pass block: step back, hands up, and stay between your man and the quarterback. |
+| **RG** | Pass block: step back, hands up, and stay between your man and the quarterback. |
+| **RT** | Pass block: step back, hands up, and stay between your man and the quarterback. |
+| **RTE** | Pass block: step back, hands up, and stay between your man and the quarterback. |
+| **SL** | Run at the outside linebacker and screen him off. Stay in his way. |
+| **QB** | Pitch it exactly the way you pitch the toss, then run right like you still have it. Do not turn and watch the throw. |
+| **FB** | Bubble outside our end the same as the toss and take the first man out there. He is the one who gets to the thrower. |
+| **TB** | Catch the pitch and run the toss. At our end, pull up behind the line and throw it up the sideline to the tight end. |
+
+**Coaching points**
+
+- Everything is the toss until he pulls up. Same pitch, same path, same speed -- a tailback who slows down to throw has told them.
+- He throws from behind the line. Crossing it is a penalty, so drill the pull-up, not the arm.
+- The tight end blocks the end first and then slips outside him. That block is what the toss shows them, and it is what gets him loose.
+- Call it after the toss has hurt them, on first or second down, where an incompletion costs nothing.
 
 # Wishbone
 
@@ -1082,6 +1210,68 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 - The same Power as the Regular I, run from two backs instead of a stack. The slot kicks the end out and the left halfback leads through the hole.
 - The runner is the back on the far side. He has further to travel, so he has to start on the snap -- no false step, no waiting to see the hole.
 - The yards are inside the slot's kick-out. If the halfback bounces it wide looking for grass, the play is dead.
+
+---
+
+## Split Backs - Slot Right - 38 Pitch Pass
+
+**Call it:** `Split Backs Slot Right 38 Pitch Pass`
+
+**Scheme:** Protect
+
+![Split Backs - Slot Right - 38 Pitch Pass](playbook/split-backs/cards/sb-toss-pass-r-4-4.svg)
+
+| Position | Assignment |
+|---|---|
+| **LTE** | Pass block: step back, hands up, and stay between your man and the quarterback. |
+| **LT** | Pass block: step back, hands up, and stay between your man and the quarterback. |
+| **LG** | Pass block: step back, hands up, and stay between your man and the quarterback. |
+| **C** | Pass block: step back, hands up, and stay between your man and the quarterback. |
+| **RG** | Pass block: step back, hands up, and stay between your man and the quarterback. |
+| **RT** | Pass block: step back, hands up, and stay between your man and the quarterback. |
+| **RTE** **(ball)** | Block the end the way you do on the toss, then slip outside him and run up the sideline. Look back over your outside shoulder. |
+| **SL** | Run at the outside linebacker and screen him off. Stay in his way. |
+| **QB** | Pitch it exactly the way you pitch the toss, then run left like you still have it. Do not turn and watch the throw. |
+| **LH** | Catch the pitch and run the toss. At our end, pull up behind the line and throw it up the sideline to the tight end. |
+| **RH** | Step at the dive, then bubble outside our end and take the first man out there. He is the one who gets to the thrower. |
+
+**Coaching points**
+
+- Everything is the toss until he pulls up. Same pitch, same path, same speed -- a halfback who slows down to throw has told them.
+- He throws from behind the line. Crossing it is a penalty, so drill the pull-up, not the arm.
+- The split man blocks out there exactly as he does on the toss. That block is the toss, and it is what the corner is watching instead of the end.
+- Call it after the toss has hurt them, on first or second down, where an incompletion costs nothing.
+
+---
+
+## Split Backs - Slot Left - 29 Pitch Pass
+
+**Call it:** `Split Backs Slot Left 29 Pitch Pass`
+
+**Scheme:** Protect
+
+![Split Backs - Slot Left - 29 Pitch Pass](playbook/split-backs/cards/sb-toss-pass-l-4-4.svg)
+
+| Position | Assignment |
+|---|---|
+| **LTE** **(ball)** | Block the end the way you do on the toss, then slip outside him and run up the sideline. Look back over your outside shoulder. |
+| **LT** | Pass block: step back, hands up, and stay between your man and the quarterback. |
+| **LG** | Pass block: step back, hands up, and stay between your man and the quarterback. |
+| **C** | Pass block: step back, hands up, and stay between your man and the quarterback. |
+| **RG** | Pass block: step back, hands up, and stay between your man and the quarterback. |
+| **RT** | Pass block: step back, hands up, and stay between your man and the quarterback. |
+| **RTE** | Pass block: step back, hands up, and stay between your man and the quarterback. |
+| **SL** | Run at the outside linebacker and screen him off. Stay in his way. |
+| **QB** | Pitch it exactly the way you pitch the toss, then run right like you still have it. Do not turn and watch the throw. |
+| **LH** | Step at the dive, then bubble outside our end and take the first man out there. He is the one who gets to the thrower. |
+| **RH** | Catch the pitch and run the toss. At our end, pull up behind the line and throw it up the sideline to the tight end. |
+
+**Coaching points**
+
+- Everything is the toss until he pulls up. Same pitch, same path, same speed -- a halfback who slows down to throw has told them.
+- He throws from behind the line. Crossing it is a penalty, so drill the pull-up, not the arm.
+- The split man blocks out there exactly as he does on the toss. That block is the toss, and it is what the corner is watching instead of the end.
+- Call it after the toss has hurt them, on first or second down, where an incompletion costs nothing.
 
 # Shotgun
 
