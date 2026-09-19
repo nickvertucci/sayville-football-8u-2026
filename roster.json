@@ -212,6 +212,40 @@
         "Mason A.",
         "Brooks A."
       ]
+    ],
+    "defense": [
+      [
+        "Mason A.",
+        "Gavin P.",
+        "Brayden H."
+      ],
+      [
+        "Luca D.",
+        "Clark J.",
+        "Brooks A.",
+        "Ace A."
+      ],
+      [
+        "Joseph P.",
+        "Kilian F.",
+        "Thomas D."
+      ],
+      [
+        "Mason A.",
+        "Luca D.",
+        "Joseph P."
+      ],
+      [
+        "Gavin P.",
+        "Clark J.",
+        "Brooks A.",
+        "Kilian F."
+      ],
+      [
+        "Brayden H.",
+        "Ace A.",
+        "Thomas D."
+      ]
     ]
   },
   "package_names": {
@@ -222,6 +256,14 @@
       "Maverick",
       "Bigshow",
       "Tiny"
+    ],
+    "defense": [
+      "Fresh Front",
+      "Fresh Backers",
+      "Fresh Secondary",
+      "Mix One",
+      "Mix Two",
+      "Mix Three"
     ]
   },
   "package_plays": {

@@ -3780,11 +3780,16 @@ ROTATIONS = [str(n) for n in range(1, 7)]
 # Packages, above the squad. A fixed group rather than a list because the group is the
 # thing being named — the kids who go on and come off together. Count and size are per
 # side and here and nowhere else: the markup, the roster round-trip and the print sheet
-# all take their shape from them. Offense is six across, eleven deep: the quarterback
-# and the backfield, the two tight ends, then the five interior linemen. Defense is
-# five of three.
-PACKAGE_COUNT = {"offense": 6, "defense": 5}
-PACKAGE_SIZE = {"offense": 11, "defense": 3}
+# all take their shape from them.
+#
+# The two sides mean different things by "package", which is why they are sized so
+# differently. An offensive package is a whole eleven: six of them, eleven deep, the
+# quarterback and the backfield, the two tight ends, then the five interior linemen.
+# A defensive package is a group of substitutes who go on together over the base
+# eleven: six of them, up to four deep. Four is the ceiling, not the count — a package
+# of three leaves its fourth slot unfilled and prints three names.
+PACKAGE_COUNT = {"offense": 6, "defense": 6}
+PACKAGE_SIZE = {"offense": 11, "defense": 4}
 
 # What each side calls its packages. The offense heading names the backfield the
 # group is made of, in the order those four sit in the box as #1 through #4.
@@ -3907,6 +3912,10 @@ def side_board(side: str, order: list[str], alt_order: list[str],
             attr += f' data-n="{(PACKAGE_NUMBERED.index(label) + 1) * 10}"'
         if label:
             attr += f' data-spot="{esc(label)}"'
+        if not name and not spots:
+            # No fixed spots means no slot to hold open: a shorter package is just
+            # shorter. Offense keeps its blanks, because slot five is always the centre.
+            return ""
         who = esc(name) if name else ""
         return f'<div class="dc-pkg-slot"{attr}>{who}</div>'
 
@@ -3919,7 +3928,7 @@ def side_board(side: str, order: list[str], alt_order: list[str],
         f'{esc(pkg_names[n - 1] if n - 1 < len(pkg_names) else f"Package {n}")}</p>'
         + "".join(slot_html(n, at) for at in range(PACKAGE_SIZE[side]))
         + "</div>"
-        + package_sub_card_html(packs, n, spots)
+        + (package_sub_card_html(packs, n, spots) if spots else "")
         + "</div>"
         for n in filled
     )
