@@ -78,54 +78,47 @@
   "defense": {
     "LDE": [
       "Philip A.",
-      "Brogan A.",
-      "Ace A."
+      "Mason A."
     ],
     "LDG": [
       "Elias F.",
-      "Jaxon E.",
       "Mason A."
     ],
     "RDG": [
       "Jaxon E.",
-      "Elias F.",
-      "Brooks A."
+      "Mason A."
     ],
     "RDE": [
       "Brayden S.",
-      "Luca D.",
-      "Gavin P."
+      "Mason A."
     ],
     "LOLB": [
       "Michael M.",
+      "Luca D.",
       "Clark J."
     ],
     "LILB": [
       "Jake G.",
-      "Brayden H."
+      "Clark J."
     ],
     "RILB": [
       "Brogan A.",
-      "Camden G."
+      "Brooks A.",
+      "Clark J."
     ],
     "ROLB": [
       "Camden G.",
-      "Brayden S.",
-      "Joseph P."
+      "Clark J."
     ],
     "LC": [
-      "Ryan S.",
-      "Nico V.",
-      "Kilian F."
+      "Ryan S."
     ],
     "RC": [
       "Nico V.",
-      "Philip A.",
-      "Liam M."
+      "Kilian F."
     ],
     "FS": [
       "Liam M.",
-      "Ryan S.",
       "Thomas D."
     ]
   },
