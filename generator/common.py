@@ -20,8 +20,6 @@ CARD_ORDER = [
 POSITION_NAMES = {
     "X": "Split end", "TE": "Tight end", "SL": "Slot",
     "LTE": "Left tight end", "RTE": "Right tight end",
-    # LE and RE stay: on a defensive front they are the defensive ends.
-    "LE": "Left end", "RE": "Right end",
     "LT": "Left tackle", "RT": "Right tackle",
     "LG": "Left guard", "RG": "Right guard", "C": "Center",
     "LW": "Left wing", "RW": "Right wing", "WB": "Wingback", "W": "Wingback",

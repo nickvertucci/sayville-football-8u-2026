@@ -351,8 +351,8 @@ def play_alignment(form: dict, play: dict) -> dict:
 HOLE_GAPS = [("C", "G"), ("G", "T"), ("T", "TE")]
 
 # The line from the middle out, as position-key suffixes after the side letter. Spelled
-# out rather than built from the hole names, because the tight end's key is LTE/RTE while
-# the defensive end's is LE/RE and a suffix of "E" would silently pick the wrong one.
+# out rather than built from the hole names: "E" as a suffix would mean the tight end
+# here and used to mean the defensive end as well, before the defensive line took its D.
 LINE_OUT = ("G", "T", "TE")
 
 # How far off his aiming point a carrier may cross and still count as hitting the hole.
@@ -1254,7 +1254,7 @@ GENERIC_OFFENSE = {
     "QB": [0.0, -1.5], "FB": [0.0, -3.3], "LH": [-2.9, -4.9], "RH": [2.9, -4.9],
 }
 
-DEF_LINEMEN = {"LE", "LT", "LG", "NT", "RG", "RT", "RE"}
+DEF_LINEMEN = {"LDE", "LDT", "LDG", "NT", "RDG", "RDT", "RDE"}
 
 
 def draw_ghost_offense() -> str:

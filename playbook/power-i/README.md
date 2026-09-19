@@ -49,13 +49,13 @@ Same line as the Regular I — both ends tight, seven on the line every snap. Th
 
 | Position | Assignment |
 |---|---|
-| **LTE** | End on your inside shoulder. Cut him off — get between him and the ball. |
-| **LT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
-| **LG** | Tackle head up on you. Cut him off — get between him and the ball. |
+| **LTE** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
+| **LT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
+| **LG** | Defensive guard head up on you. Cut him off — get between him and the ball. |
 | **C** | Nobody on you. Climb to the playside linebacker. Head across him. |
-| **RG** | Tackle head up on you. Hands inside, pads under his, drive him back. |
-| **RT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
-| **RTE** | End on your inside shoulder. Cut him off — get between him and the ball. |
+| **RG** | Defensive guard head up on you. Hands inside, pads under his, drive him back. |
+| **RT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
+| **RTE** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
 | **SL** | Lead through the hole. Block the first man who shows in it. You are the second man through. Go after the fullback, take whoever he did not. |
 | **QB** | Open right, hand to the tailback, then fake the boot left. It holds the backside end. |
 | **FB** | Lead through the hole. Block the first man who shows in it. |
@@ -79,13 +79,13 @@ Same line as the Regular I — both ends tight, seven on the line every snap. Th
 
 | Position | Assignment |
 |---|---|
-| **LTE** | End on your inside shoulder. Cut him off — get between him and the ball. |
-| **LT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
-| **LG** | Tackle head up on you. Hands inside, pads under his, drive him back. |
+| **LTE** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
+| **LT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
+| **LG** | Defensive guard head up on you. Hands inside, pads under his, drive him back. |
 | **C** | Nobody on you. Climb to the playside linebacker. Head across him. |
-| **RG** | Tackle head up on you. Cut him off — get between him and the ball. |
-| **RT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
-| **RTE** | End on your inside shoulder. Cut him off — get between him and the ball. |
+| **RG** | Defensive guard head up on you. Cut him off — get between him and the ball. |
+| **RT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
+| **RTE** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
 | **SL** | Lead through the hole. Block the first man who shows in it. You are the second man through. Go after the fullback, take whoever he did not. |
 | **QB** | Open left, hand to the tailback, then fake the boot right. It holds the backside end. |
 | **FB** | Lead through the hole. Block the first man who shows in it. |
@@ -109,13 +109,13 @@ Same line as the Regular I — both ends tight, seven on the line every snap. Th
 
 | Position | Assignment |
 |---|---|
-| **LTE** | End on your inside shoulder. Cut him off — get between him and the ball. |
-| **LT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
-| **LG** | Tackle head up on you. Cut him off — get between him and the ball. |
+| **LTE** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
+| **LT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
+| **LG** | Defensive guard head up on you. Cut him off — get between him and the ball. |
 | **C** | Nobody on you. Climb to the playside linebacker. Head across him. |
-| **RG** | Tackle head up on you. Step past him. Climb to the playside linebacker. Head across him. |
-| **RT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
-| **RTE** | End on your inside shoulder. Turn him inside. The ball goes around behind you. |
+| **RG** | Defensive guard head up on you. Step past him. Climb to the playside linebacker. Head across him. |
+| **RT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
+| **RTE** | Defensive end on your inside shoulder. Turn him inside. The ball goes around behind you. |
 | **SL** | Get outside the fullback, then take him, then block the right corner. |
 | **QB** | Quick pitch to the tailback, then run the other way, to the left, like you still have it. |
 | **FB** | Lead outside our end. Block the first man out there — here it is the linebacker. |
@@ -139,13 +139,13 @@ Same line as the Regular I — both ends tight, seven on the line every snap. Th
 
 | Position | Assignment |
 |---|---|
-| **LTE** | End on your inside shoulder. Turn him inside. The ball goes around behind you. |
-| **LT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
-| **LG** | Tackle head up on you. Step past him. Climb to the playside linebacker. Head across him. |
+| **LTE** | Defensive end on your inside shoulder. Turn him inside. The ball goes around behind you. |
+| **LT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
+| **LG** | Defensive guard head up on you. Step past him. Climb to the playside linebacker. Head across him. |
 | **C** | Nobody on you. Climb to the playside linebacker. Head across him. |
-| **RG** | Tackle head up on you. Cut him off — get between him and the ball. |
-| **RT** | Block down on the tackle, inside shoulder. Head across him — nobody crosses your face. |
-| **RTE** | End on your inside shoulder. Cut him off — get between him and the ball. |
+| **RG** | Defensive guard head up on you. Cut him off — get between him and the ball. |
+| **RT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
+| **RTE** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
 | **SL** | Get outside the fullback, then take him, then block the left corner. |
 | **QB** | Quick pitch to the tailback, then run the other way, to the right, like you still have it. |
 | **FB** | Lead outside our end. Block the first man out there — here it is the linebacker. |

@@ -7,10 +7,10 @@
   "summary": "Our everyday front. Four down linemen, four linebackers and three deep — a body off the line for a fourth linebacker, which gives us two extra defenders who can run to the edge.",
   "notes": "Four down linemen on the guards and the ends. Two inside linebackers and two outside linebackers at three yards, with the outside pair responsible for forcing everything back in. Two corners and a free safety behind. This is the front we play unless there is a reason not to.",
   "roles": {
-    "LE": "DL",
-    "LT": "DL",
-    "RT": "DL",
-    "RE": "DL",
+    "LDE": "DL",
+    "LDG": "DL",
+    "RDG": "DL",
+    "RDE": "DL",
     "W": "LB",
     "M": "LB",
     "S": "LB",
@@ -20,102 +20,178 @@
     "FS": "DB"
   },
   "position_names": {
+    "LDE": "Left defensive end",
+    "LDG": "Left defensive guard",
+    "RDG": "Right defensive guard",
+    "RDE": "Right defensive end",
     "W": "Left outside linebacker",
     "M": "Left inside linebacker",
     "S": "Right inside linebacker",
     "R": "Right outside linebacker"
   },
   "alignment": {
-    "LE": [-3.8, 0.8],
-    "LT": [-1.4, 0.8],
-    "RT": [1.4, 0.8],
-    "RE": [3.8, 0.8],
-    "W": [-4.6, 3.0],
-    "M": [-1.4, 3.0],
-    "S": [1.4, 3.0],
-    "R": [4.6, 3.0],
-    "LC": [-9.5, 3.0],
-    "RC": [9.5, 3.0],
-    "FS": [0.0, 8.0]
+    "LDE": [
+      -3.8,
+      0.8
+    ],
+    "LDG": [
+      -1.4,
+      0.8
+    ],
+    "RDG": [
+      1.4,
+      0.8
+    ],
+    "RDE": [
+      3.8,
+      0.8
+    ],
+    "W": [
+      -4.6,
+      3.0
+    ],
+    "M": [
+      -1.4,
+      3.0
+    ],
+    "S": [
+      1.4,
+      3.0
+    ],
+    "R": [
+      4.6,
+      3.0
+    ],
+    "LC": [
+      -9.5,
+      3.0
+    ],
+    "RC": [
+      9.5,
+      3.0
+    ],
+    "FS": [
+      0.0,
+      8.0
+    ]
   },
   "assignments": {
-    "LE": {
+    "LDE": {
       "rule": "Attack the outside shoulder of the man over you and keep your outside arm free. Squeeze down, but never let anything cross your face to the outside.",
       "type": "attack",
       "path": [
-        [-0.4, -1.4]
+        [
+          -0.4,
+          -1.4
+        ]
       ]
     },
-    "LT": {
-      "rule": "Attack the inside shoulder of the guard and squeeze the middle. You and the other tackle keep the center from climbing to a linebacker.",
+    "LDG": {
+      "rule": "Attack the inside shoulder of the guard and squeeze the middle. You and the other guard keep the center from climbing to a linebacker.",
       "type": "attack",
       "path": [
-        [0.4, -1.4]
+        [
+          0.4,
+          -1.4
+        ]
       ]
     },
-    "RT": {
-      "rule": "Attack the inside shoulder of the guard and squeeze the middle. You and the other tackle keep the center from climbing to a linebacker.",
+    "RDG": {
+      "rule": "Attack the inside shoulder of the guard and squeeze the middle. You and the other guard keep the center from climbing to a linebacker.",
       "type": "attack",
       "path": [
-        [-0.4, -1.4]
+        [
+          -0.4,
+          -1.4
+        ]
       ]
     },
-    "RE": {
+    "RDE": {
       "rule": "Attack the outside shoulder of the man over you and keep your outside arm free. Squeeze down, but never let anything cross your face to the outside.",
       "type": "attack",
       "path": [
-        [0.4, -1.4]
+        [
+          0.4,
+          -1.4
+        ]
       ]
     },
     "W": {
       "rule": "Outside linebacker. You are the force man — turn everything back inside and never get hooked. If it is a pass, you have the flat.",
       "type": "read",
       "path": [
-        [-0.7, -0.9]
+        [
+          -0.7,
+          -0.9
+        ]
       ]
     },
     "M": {
       "rule": "Three yards deep. Read the back. Fill the first open gap inside and meet the blocker in the hole, not behind it.",
       "type": "read",
       "path": [
-        [-0.2, -0.7],
-        [-0.4, -2.0]
+        [
+          -0.2,
+          -0.7
+        ],
+        [
+          -0.4,
+          -2.0
+        ]
       ]
     },
     "S": {
       "rule": "Three yards deep. Read the back. Fill the first open gap inside and meet the blocker in the hole, not behind it.",
       "type": "read",
       "path": [
-        [0.2, -0.7],
-        [0.4, -2.0]
+        [
+          0.2,
+          -0.7
+        ],
+        [
+          0.4,
+          -2.0
+        ]
       ]
     },
     "R": {
       "rule": "Outside linebacker. You are the force man — turn everything back inside and never get hooked. If it is a pass, you have the flat.",
       "type": "read",
       "path": [
-        [0.7, -0.9]
+        [
+          0.7,
+          -0.9
+        ]
       ]
     },
     "LC": {
       "rule": "Three yards off, outside the end. Nothing outside you and nothing behind you. Force it back in.",
       "type": "read",
       "path": [
-        [0.8, -0.8]
+        [
+          0.8,
+          -0.8
+        ]
       ]
     },
     "RC": {
       "rule": "Three yards off, outside the end. Nothing outside you and nothing behind you. Force it back in.",
       "type": "read",
       "path": [
-        [-0.8, -0.8]
+        [
+          -0.8,
+          -0.8
+        ]
       ]
     },
     "FS": {
       "rule": "Eight yards deep in the middle. Nobody gets behind you. Take the cut-off angle, not the chase angle.",
       "type": "read",
       "path": [
-        [0.0, -1.6]
+        [
+          0.0,
+          -1.6
+        ]
       ]
     }
   },
