@@ -72,7 +72,7 @@
       },
       "C": {
         "block": "man",
-        "man": "M",
+        "man": "LILB",
         "help": "LDG"
       },
       "RG": {
@@ -81,7 +81,7 @@
       },
       "RT": {
         "block": "man",
-        "man": "S",
+        "man": "RILB",
         "help": "RDG"
       },
       "RTE": {

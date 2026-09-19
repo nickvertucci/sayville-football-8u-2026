@@ -11,10 +11,10 @@
     "LDG": "DL",
     "RDG": "DL",
     "RDE": "DL",
-    "W": "LB",
-    "M": "LB",
-    "S": "LB",
-    "R": "LB",
+    "LOLB": "LB",
+    "LILB": "LB",
+    "RILB": "LB",
+    "ROLB": "LB",
     "LC": "DB",
     "RC": "DB",
     "FS": "DB"
@@ -24,10 +24,10 @@
     "LDG": "Left defensive guard",
     "RDG": "Right defensive guard",
     "RDE": "Right defensive end",
-    "W": "Left outside linebacker",
-    "M": "Left inside linebacker",
-    "S": "Right inside linebacker",
-    "R": "Right outside linebacker"
+    "LOLB": "Left outside linebacker",
+    "LILB": "Left inside linebacker",
+    "RILB": "Right inside linebacker",
+    "ROLB": "Right outside linebacker"
   },
   "alignment": {
     "LDE": [
@@ -46,19 +46,19 @@
       3.8,
       0.8
     ],
-    "W": [
+    "LOLB": [
       -4.6,
       3.0
     ],
-    "M": [
+    "LILB": [
       -1.4,
       3.0
     ],
-    "S": [
+    "RILB": [
       1.4,
       3.0
     ],
-    "R": [
+    "ROLB": [
       4.6,
       3.0
     ],
@@ -116,7 +116,7 @@
         ]
       ]
     },
-    "W": {
+    "LOLB": {
       "rule": "Outside linebacker. You are the force man — turn everything back inside and never get hooked. If it is a pass, you have the flat.",
       "type": "read",
       "path": [
@@ -126,7 +126,7 @@
         ]
       ]
     },
-    "M": {
+    "LILB": {
       "rule": "Three yards deep. Read the back. Fill the first open gap inside and meet the blocker in the hole, not behind it.",
       "type": "read",
       "path": [
@@ -140,7 +140,7 @@
         ]
       ]
     },
-    "S": {
+    "RILB": {
       "rule": "Three yards deep. Read the back. Fill the first open gap inside and meet the blocker in the hole, not behind it.",
       "type": "read",
       "path": [
@@ -154,7 +154,7 @@
         ]
       ]
     },
-    "R": {
+    "ROLB": {
       "rule": "Outside linebacker. You are the force man — turn everything back inside and never get hooked. If it is a pass, you have the flat.",
       "type": "read",
       "path": [

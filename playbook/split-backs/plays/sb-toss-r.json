@@ -67,7 +67,7 @@
       },
       "LT": {
         "block": "man",
-        "man": "M"
+        "man": "LILB"
       },
       "LG": {
         "block": "man",
@@ -75,7 +75,7 @@
       },
       "C": {
         "block": "man",
-        "man": "S",
+        "man": "RILB",
         "help": "RDG"
       },
       "RG": {
@@ -84,7 +84,7 @@
       },
       "RT": {
         "block": "man",
-        "man": "S"
+        "man": "RILB"
       },
       "RTE": {
         "block": "man",
@@ -96,7 +96,7 @@
       },
       "RH": {
         "block": "man",
-        "man": "R",
+        "man": "ROLB",
         "how": "Bubble around the right tight end",
         "via": [
           [

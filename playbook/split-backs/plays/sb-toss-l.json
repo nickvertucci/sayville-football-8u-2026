@@ -73,7 +73,7 @@
       },
       "RT": {
         "block": "man",
-        "man": "S"
+        "man": "RILB"
       },
       "RG": {
         "block": "man",
@@ -81,7 +81,7 @@
       },
       "C": {
         "block": "man",
-        "man": "M",
+        "man": "LILB",
         "help": "LDG"
       },
       "LG": {
@@ -90,7 +90,7 @@
       },
       "LT": {
         "block": "man",
-        "man": "M"
+        "man": "LILB"
       },
       "LTE": {
         "block": "man",
@@ -102,7 +102,7 @@
       },
       "LH": {
         "block": "man",
-        "man": "W",
+        "man": "LOLB",
         "how": "Bubble around the left tight end",
         "via": [
           [

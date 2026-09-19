@@ -47,7 +47,7 @@
     "4-4": {
       "LT": {
         "block": "man",
-        "man": "M",
+        "man": "LILB",
         "help": "LDG"
       },
       "LG": {
@@ -56,7 +56,7 @@
       },
       "C": {
         "block": "man",
-        "man": "S",
+        "man": "RILB",
         "help": "RDG"
       },
       "RG": {
@@ -65,7 +65,7 @@
       },
       "RT": {
         "block": "man",
-        "man": "R",
+        "man": "ROLB",
         "help": "RDE"
       },
       "RTE": {
