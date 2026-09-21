@@ -640,7 +640,7 @@ table.xl.xl-plays td {
    way in; a boy looking for 7 needs to find 7.
 
    "#7 |" rather than a bare 7: a plain number running straight into the words of the
-   call blended into them -- "7 Slot R - 32 Smash" reads as one string, and the sheet
+   call blended into them -- "7 Z Right - 32 Handoff" reads as one string, and the sheet
    is nothing but strings like it. The hash says this is a play number and the bar
    says where it stops, which is the same shape the install chips have always used. */
 .xl-code {
@@ -929,17 +929,18 @@ table.xl.pk-plays td {
 .pk-plays td a:hover { text-decoration: underline; }
 @media print {
   /* One formation to a row, full width. Two across put a formation in half a page,
-     which is where the long calls wrapped -- "Trips R - Y Slant Out" over two lines
+     which is where the long calls wrapped -- "Trips Right - Y Slant Pass Right" over two lines
      in a cell an inch wide. The full width is the fix: the same rows, the same type
      size, but each cell three inches instead of one and a half, so nothing wraps and
      the block is *shorter* than it was at half width. Five of them still fit the one
      sheet because of it, not in spite of it. */
-  /* Four blocks down the left, the script down the right. 245 points is what the
-     longest call in the script needs to sit on one line at 9px -- "Split Backs - Slot R
-     - X (50) Sweep" -- and it is affordable because the blocks still do not wrap at
-     what is left: their widest, "S-10 Slot L - Y (60) Sweep", has room to spare in a
-     148-point column. Checked at 200, where the script clipped, and at 245, where
-     neither side does. */
+  /* Four blocks down the left, the script down the right. 230 points is what the
+     longest call in the script needs to sit on one line -- "Split Backs - Z Right -
+     X Sweep Right" -- and it is affordable because the blocks do not wrap at what is
+     left: their widest, "Z Right - 18 Fake Sweep", has room to spare. Both are at the
+     point size below rather than the width above: when the sides were spelled out the
+     sheet had no spare width anywhere, so the four characters came out of the type.
+     Checked at 200, where the script clipped, and at 230, where neither side does. */
   .xl-top { display: grid; grid-template-columns: 1fr 230px; gap: 0 6px;
             align-items: start; }
   .xl-sheets { grid-template-columns: 1fr; gap: 0; margin: 2px 0 0; }
@@ -948,22 +949,24 @@ table.xl.pk-plays td {
      as one object rather than twenty loose boxes. The cells keep the hairline the rest
      of the sheet's tables use. */
   .script-t { border: 2px solid #000; }
-  /* -.45 rather than -.35 since the letter calls grew a direction word: "Split Backs
-     - Z R - X Sweep Right" is the longest row the script can hold and it was 6px over
-     the column at -.35. Measured, not picked. */
-  .script-t td a { letter-spacing: -.45px; }
+  /* The anchor carries its own font-size from the screen block, so sizing the cell
+     does nothing to the call -- this column printed at 10px for a long time while the
+     rule below claimed 9. Size the anchor, and the code span inside it, or nothing
+     moves. 8.5px is what "Split Backs - Z Right - X Sweep Right" needs to sit on one
+     line in 230 points now that the sides are spelled out; measured, not picked. */
+  .script-t td a { letter-spacing: -.3px; font-size: 8.5px; }
+  .script-t .xl-code { font-size: 9px; margin-right: 3px; }
   .script-t td a { color: #000; text-decoration: none; }
   /* 20.4 points a row is the height of the four formation blocks divided by twenty --
      measured against the page, not picked, and tuned until the foot of this column and
-     the foot of the Power I block land on the same line. It is also what lets the type
-     go up to 9px, the same size a call is in the blocks beside it. */
+     the foot of the Power I block land on the same line. */
   /* Both columns centred: the number in its own box and the play in the rest of the
      row, which is how a call reads everywhere else on this sheet. The number column is
      17 points rather than 15 so the centring is visible in it -- at 15 a digit sat a
      hair off the left border and read as left-aligned whatever the rule said. It was
      20 until the letter calls grew a direction word; the three points went next door,
-     where "Split Backs - Z R - X Sweep Right" needed them, and two digits at 8px still
-     do not fill 17. */
+     where "Split Backs - Z Right - X Sweep Right" needed them, and two digits at 7px
+     still do not fill 17. */
   /* Qualified with table.xl for the same reason as the screen rule: the print block's
      own `table.xl td` comes after this and would otherwise take back the padding, and
      the base rule's vertical-align: top would take back the centring. */
@@ -973,9 +976,9 @@ table.xl.pk-plays td {
      nothing needs to wrap; this makes a name that somehow did overflow visibly rather
      than silently push the field and the board off the page. */
   table.xl.script-t td { height: 20.4px; padding: 0 1px; line-height: 1.15;
-                         font-size: 9px; font-weight: 700; white-space: nowrap;
+                         font-size: 8.5px; font-weight: 700; white-space: nowrap;
                          vertical-align: middle; text-align: center; }
-  table.xl.script-t td.sn { width: 17px; text-align: center; font-size: 8px;
+  table.xl.script-t td.sn { width: 17px; text-align: center; font-size: 7px;
                             font-weight: 800; color: #000; }
   /* No rule between blocks any more: the formation's own black bar below is the
      separator, and a 3px rule under the block as well was two fences for one fence's
@@ -1014,10 +1017,10 @@ table.xl.pk-plays td {
   /* Tighter rows on paper than on screen. The 4px of padding above and below
      every cell was 50 points of the one sheet -- a row of it for each block --
      and the sheet ran out of room the day Regular I got a Toss. */
-  table.xl.xl-plays td { height: auto; vertical-align: middle; padding: 2px 3px; }
+  table.xl.xl-plays td { height: auto; vertical-align: middle; padding: 2px 2px; }
   /* A call is one line on paper: small enough to fit its cell, and never wrapping
      into a second line that makes the row taller. */
-  .xl-plays td a { font-size: 9px; white-space: nowrap; letter-spacing: -.2px;
+  .xl-plays td a { font-size: 8.5px; white-space: nowrap; letter-spacing: -.25px;
                    padding: 0; line-height: 1.2; }
   /* Four calls stacked in one cell ran together on paper: the rule between them is
      var(--line), which is a hairline grey a screen can show and a printer cannot.
@@ -3044,25 +3047,27 @@ SCHEME_ORDER = ("Smash", "Dive", "Power", "Sweep", "Toss")
 def _sheet_name(play: dict, form: dict) -> str:
     """The play as you call it, minus only the formation the block already names.
 
-    "Regular I Z Left 37 Handoff" in the Regular I block is "Z L - 37 Handoff". The
+    "Regular I Z Left 37 Handoff" in the Regular I block is "Z Left - 37 Handoff". The
     alignment stays: the column is where the ball goes, which is not where the Z
     stands, and the two come apart often enough to matter -- Regular I Z Right Z Sweep
-    is a Z lined up right running into the Left column. Dropping the alignment made those two
-    cells read identically.
+    is a Z lined up right running into the Left column. Dropping the alignment made
+    those two cells read identically.
 
-    The side shortens to its initial here and only here. It is spelled out everywhere
-    a boy reads it -- the card, the band, the huddle -- and this is the one place that
-    is all coach: five blocks of small type on a sheet he is holding, where four
-    characters a row is a column of the page. "Z Right" becomes "Z R", "Trips Left"
-    becomes "Trips L". This reads off the call rather than the play name,
-    because in Trips the strength word IS the formation name -- stripping the
-    heading off "Trips - Right - X Sweep" left a bare "R -". A formation with
-    no strength word, like the Wishbone, keeps nothing.
+    The side is spelled out, here as everywhere else. It was "Z R" and "Trips L" for a
+    while, on the argument that this sheet is the one surface that is all coach -- but
+    a coach reads it to yell it, and a sheet that prints a different call from the one
+    on the boy's wrist is a sheet that has to be translated under a play clock. The
+    four characters came out of the type size instead, which is measured.
+
+    This reads off the call rather than the play name, because in Trips the strength
+    word IS the formation name -- stripping the heading off "Trips - Right - X Sweep
+    Right" left a bare "Right -". A formation with no strength word, like the Wishbone,
+    keeps nothing.
     """
     call = play.get("call") or ""
     m = re.search(r"\b(\w+)\s+(Left|Right)\s+(.*)$", call)
     if m:
-        return f"{m.group(1)} {m.group(2)[0]} - {m.group(3)}"
+        return f"{m.group(1)} {m.group(2)} - {m.group(3)}"
     # No strength word at all (the Wishbone): drop the formation, keep the call.
     label = form_label(form)
     if call.lower().startswith(label.lower() + " "):
@@ -3076,11 +3081,11 @@ def _package_row(play: dict, form: dict) -> str:
     On the sheet proper the block heading says the formation, so a cell only has
     to say the alignment and the call. A package card has no such heading -- it
     is a list of calls from wherever -- so the formation goes back in front:
-    "Split Backs - Slot R - X Sweep".
+    "Split Backs - Z Right - X Sweep Right".
 
     Trips is the exception, because its strength word IS its name. Saying it
-    twice reads as a stutter, so "Trips - Trips R - 38 Quick Pass" comes out
-    "Trips - R - 38 Quick Pass".
+    twice reads as a stutter, so "Trips - Trips Right - 38 Quick Pass" comes out
+    "Trips - Right - 38 Quick Pass".
     """
     label = form_label(form)
     tail = _sheet_name(play, form)
