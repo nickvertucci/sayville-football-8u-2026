@@ -464,10 +464,24 @@ table.dc-sub {
    card does not wrap or shrink -- it runs out under the card's edge, which is what
    "Thomas D. (TB)" has been doing in Maverick and "Liam M. (TB)" in Bigshow. Three
    points either side of the rule is the cheapest fourteen the card can give back. */
+/* The cell wraps, the pieces in it do not. A row is a name, or a name and the spot
+   it plays, and the longest of them -- "Brogan A." against "Brooks A. (RILB)" -- is
+   wider than the card whatever the card is given: the slot list beside it is already
+   at its natural 99 points of a 245-point card, so there are only ever about 132
+   left, against the 176 that row wants. It used to run off the edge and lose the end
+   of a name.
+
+   So the cell breaks between the name and the spot, and never inside either. That
+   costs a line on the two or three rows that need it and nothing on the rest, and
+   the card has the height to spend: it sits beside eleven slots and is shorter than
+   they are. Making it wider instead meant stacking it under them, which measured
+   four sheets where the chart gets two. */
 table.dc-sub th, table.dc-sub td {
   padding: 1px 4px 1px 0; text-align: left; vertical-align: top;
-  font-weight: 700; color: var(--ink); white-space: nowrap;
+  font-weight: 700; color: var(--ink); white-space: normal;
 }
+table.dc-sub .dc-sub-man, table.dc-sub .dc-sub-pos,
+table.dc-sub .mv-a, table.dc-sub .mv-b { white-space: nowrap; }
 table.dc-sub th:last-child, table.dc-sub td:last-child {
   border-left: 1px solid var(--line); padding-left: 4px;
 }
@@ -2068,12 +2082,16 @@ table.dc-board thead th,
   .dc-pkg-slot[data-spot="LT"],
   .dc-pkg-slot[data-spot="LOLB"],
   .dc-pkg-slot[data-spot="LC"] { margin-top: 1px; padding-top: 1px; }
-  .dc-subcard { flex-basis: 56%; min-width: 120px; max-width: none; padding: 2px 4px; border-radius: 0; }
+  .dc-subcard { flex-basis: 56%; min-width: 120px; max-width: none; padding: 2px 2px; border-radius: 0; }
   .dc-subcard-h { font-size: 8pt; margin: 0 0 1px; }
   .dc-sub-empty { font-size: 8pt; }
   table.dc-sub { font-size: 8pt; }
-  table.dc-sub th, table.dc-sub td { padding: 0 4px 0 0; }
-  table.dc-sub th:last-child, table.dc-sub td:last-child { padding-left: 4px; }
+  table.dc-sub th, table.dc-sub td { padding: 0 2px 0 0; }
+  table.dc-sub th:last-child, table.dc-sub td:last-child { padding-left: 2px; }
+  /* The defence carries a four-letter spot where the offense carries one or two, so
+     its rows are the widest on the sheet even after they learned to wrap. Half a
+     point of type is what clears them; the offense needs none and keeps its own. */
+  .dc-side[data-side="defense"] table.dc-sub { font-size: 7.5pt; }
   table.dc-sub thead th { font-size: 6pt; }
   .dc-sub-pos { font-size: 7pt; }
   table.dc-sub.dc-moved { margin-top: 3px; padding-top: 2px; border-top-color: #000; }
@@ -4574,13 +4592,16 @@ def package_sub_card_html(packs: list, n: int, spots: tuple = ()) -> str:
                 entering = inn[i] if i < len(inn) else ("", "")
                 name, spot = entering
                 coming = (
-                    f'{esc(name)} <span class="dc-sub-pos">({esc(spot)})</span>'
+                    f'<span class="dc-sub-man">{esc(name)}</span> '
+                    f'<span class="dc-sub-pos">({esc(spot)})</span>'
                     if name and spot else
-                    (esc(name) if name else "—")
+                    (f'<span class="dc-sub-man">{esc(name)}</span>' if name else "—")
                 )
                 rows.append(
-                    f'<tr><td>{esc(leaving) if leaving else "—"}</td>'
-                    f'<td>{coming}</td></tr>'
+                    '<tr><td>'
+                    + (f'<span class="dc-sub-man">{esc(leaving)}</span>'
+                       if leaving else "—")
+                    + f'</td><td>{coming}</td></tr>'
                 )
             body += (
                 '<table class="dc-sub"><thead><tr><th>Out</th><th>In</th></tr>'
@@ -4590,7 +4611,7 @@ def package_sub_card_html(packs: list, n: int, spots: tuple = ()) -> str:
             )
         if moved:
             rows = "".join(
-                f'<tr><td>{esc(name)}</td>'
+                f'<tr><td><span class="dc-sub-man">{esc(name)}</span></td>'
                 f'<td class="dc-mv"><span class="mv-a">{esc(a)}</span>'
                 f'<span class="mv-b">{esc(b)}</span></td></tr>'
                 for name, a, b in moved
