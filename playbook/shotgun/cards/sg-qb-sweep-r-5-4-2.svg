@@ -48,8 +48,8 @@
 <line x1="410.5" y1="316.7" x2="428.1" y2="311.3" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 <path d="M464.4,337.5 L464.4,314.6" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
 <line x1="455.2" y1="314.6" x2="473.6" y2="314.6" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
-<path d="M502.2,364.5 L497.3,217.4" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-<line x1="488.2" y1="217.7" x2="506.5" y2="217.0" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
+<path d="M502.2,364.5 L443.1,119.9" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="434.1" y1="122.0" x2="452.0" y2="117.7" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 <path d="M351.0,459.0 C359.1,457.2 372.6,453.6 399.6,448.2 C426.6,442.8 489.6,440.1 513.0,426.6 C536.4,413.1 535.5,388.8 540.0,367.2 C544.5,345.6 540.0,324.4 540.0,297.0 C540.0,269.6 540.0,229.5 540.0,202.5 C540.0,175.5 540.0,146.2 540.0,135.0" fill="none" stroke="#b3001b" stroke-width="4.6" stroke-linecap="round" stroke-linejoin="round"/>
 <polygon points="540.0,135.0 546.2,148.8 533.8,148.8" fill="#b3001b"/>
 <path d="M297.0,459.0 L415.0,307.8 L489.2,214.6" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
@@ -108,8 +108,8 @@
 <text x="344" y="596" font-size="12" fill="#111318">inside. The ball goes around behind</text>
 <text x="344" y="612" font-size="12" fill="#111318">you.</text>
 <text x="310" y="630" font-size="12" font-weight="700" fill="#111318">Z</text>
-<text x="344" y="630" font-size="12" fill="#111318">Run at the outside linebacker and</text>
-<text x="344" y="646" font-size="12" fill="#111318">screen him off. Stay in his way.</text>
+<text x="344" y="630" font-size="12" fill="#111318">Run at the safety and screen him off.</text>
+<text x="344" y="646" font-size="12" fill="#111318">Stay in his way.</text>
 <text x="310" y="664" font-size="12" font-weight="700" fill="#111318">QB</text>
 <text x="344" y="664" font-size="12" fill="#111318">Catch the snap and sweep right, flat</text>
 <text x="344" y="680" font-size="12" fill="#111318">and fast, behind the right halfback.</text>

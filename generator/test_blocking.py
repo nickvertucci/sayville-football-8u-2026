@@ -117,6 +117,37 @@ def check_play_action(play, defenses):
     return problems
 
 
+def check_slot_takes_a_back(play, resolved, alignment, front, fid) -> list[str]:
+    """The Z screens a defensive back. Never a linebacker, in any front.
+
+    This is a coaching rule, not a geometry result, which is exactly why it needs a
+    test: it used to be decided by a seven-yard reach check, and against the 5-4-2 and
+    the prevent -- the two fronts with no corner -- that check quietly handed the job
+    to an outside linebacker instead. Nothing failed. The card just said something
+    else, in the two fronts nobody drills against.
+    """
+    problems = []
+    spec = resolved.get("Z") or {}
+    if spec.get("type") != "block" or spec.get("aims") != "man":
+        return problems          # carrying it, or no job from the scheme
+    if (play.get("fronts") or {}).get(fid, {}).get("Z"):
+        return problems          # the coach named the man himself
+    if (play.get("scheme")) == "Power":
+        return problems          # Power kicks the end out; that is the scheme
+    # The engine does not record the man by name, so read him off the end of the line
+    # the same way check_reaches does: the defender the block finishes on.
+    ex, ey = endpoint(alignment, "Z", spec)
+    everyone = (blocking.spots(front, "DL") + blocking.spots(front, "LB")
+                + blocking.spots(front, "DB"))
+    label, _x, _y = min(everyone, key=lambda s: (ex - s[1]) ** 2 + (ey - s[2]) ** 2)
+    backs = {lb for lb, _bx, _by in blocking.spots(front, "DB")}
+    if label not in backs:
+        problems.append(
+            f"the Z's block finishes on {label}, who is not a defensive back in this "
+            "front — the slot screens the back on his side, whatever depth he plays")
+    return problems
+
+
 def main() -> int:
     defenses = render.load_defenses()
     formations = render.load_formations()
@@ -137,6 +168,8 @@ def main() -> int:
                 where = f"{play['id']} vs {fid}"
                 for problem in check_reaches(play, resolved, alignment, front, frame):
                     failures.append(f"{where}: {problem}")
+                for problem in check_slot_takes_a_back(play, resolved, alignment, front, fid):
+                    failures.append(f"{where}: {problem}")
             for problem in check_play_action(play, defenses):
                 failures.append(f"{play['id']}: {problem}")
 
@@ -146,7 +179,8 @@ def main() -> int:
             print(f"  {f}")
         return 1
     print(f"{checked} play/front pairs: every block that names a man lands on him, "
-          "no block runs off the diagram, and every fake blocks like the run it sells.")
+          "no block runs off the diagram, the Z screens a defensive back in every "
+          "front, and every fake blocks like the run it sells.")
     return 0
 
 
