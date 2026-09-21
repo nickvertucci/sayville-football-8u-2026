@@ -87,17 +87,6 @@
       "Y": {
         "block": "man",
         "man": "RDE"
-      },
-      "RH": {
-        "block": "man",
-        "man": "ROLB",
-        "how": "Bubble out around the right end",
-        "via": [
-          [
-            4.0,
-            2.4
-          ]
-        ]
       }
     }
   },

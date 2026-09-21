@@ -45,10 +45,10 @@
 <polygon points="124.2,143.1 130.4,156.9 118.0,156.9" fill="#b3001b"/>
 <path d="M351.0,364.5 L361.8,378.0 L383.4,402.3" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 5"/>
 <polygon points="383.4,402.3 373.1,397.6 380.0,391.5" fill="#14213d"/>
-<path d="M351.0,413.1 L262.7,307.8 L212.2,215.2" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-<line x1="204.2" y1="219.6" x2="220.3" y2="210.8" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
-<path d="M351.0,472.5 L262.7,307.8 L211.1,216.0" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-<line x1="203.1" y1="220.5" x2="219.1" y2="211.5" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
+<path d="M351.0,413.1 L246.0,380.7 L212.2,215.2" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="203.2" y1="217.0" x2="221.2" y2="213.4" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
+<path d="M351.0,472.5 L246.0,440.1 L211.1,216.0" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="202.1" y1="217.4" x2="220.2" y2="214.6" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 
 <rect x="224.1" y="324.0" width="27.0" height="27.0" rx="3" fill="#ffffff" stroke="#14213d" stroke-width="2.6"/>
 <text x="237.6" y="342.0" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">X</text>

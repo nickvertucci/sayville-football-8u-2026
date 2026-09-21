@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="621" height="980" viewBox="0 0 621 980" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" width="621" height="996" viewBox="0 0 621 996" font-family="Segoe UI, Helvetica, Arial, sans-serif">
 <rect width="100%" height="100%" fill="#ffffff"/>
 <rect x="0" y="0" width="621" height="58" fill="#14213d"/>
 <text x="18" y="26" font-size="19.0" font-weight="700" fill="#ffffff">Split Backs - Z Right - 38 Toss</text>
@@ -54,8 +54,8 @@
 <polygon points="226.8,367.2 237.4,363.1 236.9,372.4" fill="#14213d"/>
 <path d="M291.6,426.6 C306.9,428.4 344.7,436.5 383.4,437.4 C422.1,438.3 497.7,441.0 523.8,432.0 C549.9,423.0 537.3,403.2 540.0,383.4 C542.7,363.6 540.0,335.7 540.0,313.2 C540.0,290.7 540.0,259.2 540.0,248.4" fill="none" stroke="#b3001b" stroke-width="4.6" stroke-linecap="round" stroke-linejoin="round"/>
 <polygon points="540.0,248.4 546.2,262.2 533.8,262.2" fill="#b3001b"/>
-<path d="M410.4,426.6 L519.5,307.8 L585.4,251.6" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-<line x1="579.4" y1="244.7" x2="591.3" y2="258.6" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
+<path d="M410.4,426.6 L526.0,394.2 L585.4,251.6" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="576.9" y1="248.1" x2="593.8" y2="255.2" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 <path d="M351.0,364.5 L383.4,437.4" fill="none" stroke="#b3001b" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="0.1 7"/>
 <rect x="224.1" y="324.0" width="27.0" height="27.0" rx="3" fill="#ffffff" stroke="#14213d" stroke-width="2.6"/>
 <text x="237.6" y="342.0" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">X</text>
@@ -119,16 +119,17 @@
 <text x="344" y="732" font-size="12" fill="#111318">quarterback, and catch the pitch on the</text>
 <text x="344" y="748" font-size="12" fill="#111318">run. Ahead of him is a fumble.</text>
 <text x="310" y="766" font-size="12" font-weight="700" fill="#111318">RH</text>
-<text x="344" y="766" font-size="12" fill="#111318">Lead outside our end. Block the first</text>
-<text x="344" y="782" font-size="12" fill="#111318">man out there — here it is the corner.</text>
-<text x="344" y="800" font-size="12" fill="#111318">Step at the dive first to hold their</text>
-<text x="344" y="816" font-size="12" fill="#111318">linebackers.</text>
-<line x1="18" y1="824" x2="603" y2="824" stroke="#c8cdd6" stroke-width="1"/>
-<text x="18" y="842" font-size="11" font-weight="700" fill="#5b6472" letter-spacing="1">COACHING POINTS</text>
-<text x="18" y="862" font-size="12" fill="#111318">The pitch goes early. A quarterback who waits to be tackled first will pitch it on</text>
-<text x="18" y="878" font-size="12" fill="#111318">the ground.</text>
-<text x="18" y="896" font-size="12" fill="#111318">This is not a read at this age — tell him before the snap that he is pitching it.</text>
-<text x="18" y="912" font-size="12" fill="#111318">Everything depends on the edge being blocked, and out here the split man does it —</text>
-<text x="18" y="930" font-size="12" fill="#111318">which is what frees both backs to fake and lead. Drill him on beating that man to the</text>
-<text x="18" y="946" font-size="12" fill="#111318">spot without holding.</text>
+<text x="344" y="766" font-size="12" fill="#111318">Bubble out around our end — do not run</text>
+<text x="344" y="782" font-size="12" fill="#111318">up into the line. Block the first man</text>
+<text x="344" y="800" font-size="12" fill="#111318">out there; here it is the corner. Step</text>
+<text x="344" y="816" font-size="12" fill="#111318">at the dive first to hold their</text>
+<text x="344" y="834" font-size="12" fill="#111318">linebackers.</text>
+<line x1="18" y1="840" x2="603" y2="840" stroke="#c8cdd6" stroke-width="1"/>
+<text x="18" y="858" font-size="11" font-weight="700" fill="#5b6472" letter-spacing="1">COACHING POINTS</text>
+<text x="18" y="878" font-size="12" fill="#111318">The pitch goes early. A quarterback who waits to be tackled first will pitch it on</text>
+<text x="18" y="896" font-size="12" fill="#111318">the ground.</text>
+<text x="18" y="912" font-size="12" fill="#111318">This is not a read at this age — tell him before the snap that he is pitching it.</text>
+<text x="18" y="930" font-size="12" fill="#111318">Everything depends on the edge being blocked, and out here the split man does it —</text>
+<text x="18" y="946" font-size="12" fill="#111318">which is what frees both backs to fake and lead. Drill him on beating that man to the</text>
+<text x="18" y="964" font-size="12" fill="#111318">spot without holding.</text>
 </svg>

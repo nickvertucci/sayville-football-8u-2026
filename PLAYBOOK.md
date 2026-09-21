@@ -450,7 +450,7 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 | **Y** | Defensive end on your inside shoulder. Turn him inside. The ball goes around behind you. |
 | **Z** | Run at the corner and screen him off. Stay in his way. |
 | **QB** | Quick pitch to the tailback, then run the other way, to the left, like you still have it. |
-| **FB** | Lead outside our end. Block the first man out there — here it is the linebacker. You start two yards closer than he does. Be out there first. |
+| **FB** | Bubble out around our end — do not run up into the line. Block the first man out there; here it is the linebacker. You start two yards closer than he does. Be out there first. |
 | **TB** **(ball)** | Run flat behind the quarterback and catch the pitch on the run, then get outside our end and turn up. Drifting forward for it is a fumble. |
 
 **Coaching points**
@@ -480,7 +480,7 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 | **Y** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
 | **Z** | Run at the corner and screen him off. Stay in his way. |
 | **QB** | Quick pitch to the tailback, then run the other way, to the right, like you still have it. |
-| **FB** | Lead outside our end. Block the first man out there — here it is the linebacker. You start two yards closer than he does. Be out there first. |
+| **FB** | Bubble out around our end — do not run up into the line. Block the first man out there; here it is the linebacker. You start two yards closer than he does. Be out there first. |
 | **TB** **(ball)** | Run flat behind the quarterback and catch the pitch on the run, then get outside our end and turn up. Drifting forward for it is a fumble. |
 
 **Coaching points**
@@ -749,9 +749,9 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 | **RT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
 | **Y** | Defensive end on your inside shoulder. Turn him inside. The ball goes around behind you. |
 | **QB** | Quick pitch to the left halfback, then run the other way, to the left, like you still have it. |
-| **FB** | Lead outside our end. Block the first man out there — here it is the linebacker. |
+| **FB** | Bubble out around our end — do not run up into the line. Block the first man out there; here it is the linebacker. |
 | **LH** **(ball)** | Run flat, outside and behind the quarterback, and catch the pitch on the run. Ahead of him is a fumble. |
-| **RH** | Lead outside our end. Block the first man out there — here it is the corner. Step at the dive first to hold their linebackers. |
+| **RH** | Bubble out around our end — do not run up into the line. Block the first man out there; here it is the corner. Step at the dive first to hold their linebackers. |
 
 **Coaching points**
 
@@ -779,8 +779,8 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 | **RT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
 | **Y** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
 | **QB** | Quick pitch to the right halfback, then run the other way, to the right, like you still have it. |
-| **FB** | Lead outside our end. Block the first man out there — here it is the linebacker. |
-| **LH** | Lead outside our end. Block the first man out there — here it is the corner. Step at the dive first to hold their linebackers. |
+| **FB** | Bubble out around our end — do not run up into the line. Block the first man out there; here it is the linebacker. |
+| **LH** | Bubble out around our end — do not run up into the line. Block the first man out there; here it is the corner. Step at the dive first to hold their linebackers. |
 | **RH** **(ball)** | Run flat, outside and behind the quarterback, and catch the pitch on the run. Ahead of him is a fumble. |
 
 **Coaching points**
@@ -1417,7 +1417,7 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 | **Z** | Run at the corner and screen him off. Stay in his way. |
 | **QB** | Hand the ball to the left halfback as he crosses in front of you, then fake a run to the left. |
 | **LH** **(ball)** | Cross in front of the quarterback, take the handoff going right and get to the edge behind the right halfback. Turn up outside his block. |
-| **RH** | Bubble out around the right end, then block the right outside linebacker. |
+| **RH** | Bubble out around our end — do not run up into the line. Block the first man out there; here it is the linebacker. |
 
 **Coaching points**
 
@@ -1446,7 +1446,7 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 | **Y** | Block the right defensive end. |
 | **Z** | Run at the corner and screen him off. Stay in his way. |
 | **QB** | Hand the ball to the right halfback as he crosses in front of you, then fake a run to the right. |
-| **LH** | Bubble out around the left end, then block the left outside linebacker. |
+| **LH** | Bubble out around our end — do not run up into the line. Block the first man out there; here it is the linebacker. |
 | **RH** **(ball)** | Cross in front of the quarterback, take the handoff going left and get to the edge behind the left halfback. Turn up outside his block. |
 
 **Coaching points**
@@ -1478,7 +1478,7 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 | **Y** | Defensive end on your inside shoulder. Turn him inside. The ball goes around behind you. |
 | **Z** | Run at the corner and screen him off. Stay in his way. |
 | **QB** | Open right and hand the ball to the left tight end as he comes across behind you, then fake a run to the left. |
-| **FB** | Lead outside our end. Block the first man out there — here it is the linebacker. |
+| **FB** | Bubble out around our end — do not run up into the line. Block the first man out there; here it is the linebacker. |
 | **TB** | Run at the corner and screen him off. Stay in his way. |
 
 **Coaching points**
@@ -1507,7 +1507,7 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 | **Y** **(ball)** | Stay down in your stance — no motion. At the snap run flat behind the quarterback, take the handoff at full speed and get to the left edge. Turn up outside the trips. |
 | **Z** | Run at the corner and screen him off. Stay in his way. |
 | **QB** | Open left and hand the ball to the right tight end as he comes across behind you, then fake a run to the right. |
-| **FB** | Lead outside our end. Block the first man out there — here it is the linebacker. |
+| **FB** | Bubble out around our end — do not run up into the line. Block the first man out there; here it is the linebacker. |
 | **TB** | Run at the corner and screen him off. Stay in his way. |
 
 **Coaching points**
@@ -1536,7 +1536,7 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 | **Y** | Pass block: step back, hands up, and stay between your man and the quarterback. |
 | **Z** | Run at the corner and screen him off. Stay in his way. |
 | **QB** | Take the snap and throw it to the tailback right now, out in the flat. One step, no drop. If he is covered, throw it at his feet. |
-| **FB** | Lead outside our end. Block the first man out there — here it is the linebacker. |
+| **FB** | Bubble out around our end — do not run up into the line. Block the first man out there; here it is the linebacker. |
 | **TB** **(ball)** | Slide out behind the bunch, catch it standing still, then get north off your two blockers. Do not run backwards to get around. |
 
 **Coaching points**
@@ -1566,7 +1566,7 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 | **Y** | Pass block: step back, hands up, and stay between your man and the quarterback. |
 | **Z** | Run at the corner and screen him off. Stay in his way. |
 | **QB** | Take the snap and throw it to the tailback right now, out in the flat. One step, no drop. If he is covered, throw it at his feet. |
-| **FB** | Lead outside our end. Block the first man out there — here it is the linebacker. |
+| **FB** | Bubble out around our end — do not run up into the line. Block the first man out there; here it is the linebacker. |
 | **TB** **(ball)** | Slide out behind the bunch, catch it standing still, then get north off your two blockers. Do not run backwards to get around. |
 
 **Coaching points**
@@ -1596,7 +1596,7 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 | **Y** | Defensive end on your inside shoulder. Turn him inside. The ball goes around behind you. |
 | **Z** | Run at the corner and screen him off. Stay in his way. |
 | **QB** **(ball)** | Take the snap and sweep right, flat and fast, behind the trips. Turn up outside the fullback. |
-| **FB** | Lead outside our end. Block the first man out there — here it is the linebacker. |
+| **FB** | Bubble out around our end — do not run up into the line. Block the first man out there; here it is the linebacker. |
 | **TB** | Run hard to the left like you have the ball. Sell it all the way. |
 
 **Coaching points**
@@ -1625,7 +1625,7 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 | **Y** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
 | **Z** | Run at the corner and screen him off. Stay in his way. |
 | **QB** **(ball)** | Take the snap and sweep left, flat and fast, behind the trips. Turn up outside the fullback. |
-| **FB** | Lead outside our end. Block the first man out there — here it is the linebacker. |
+| **FB** | Bubble out around our end — do not run up into the line. Block the first man out there; here it is the linebacker. |
 | **TB** | Run hard to the right like you have the ball. Sell it all the way. |
 
 **Coaching points**
@@ -1774,7 +1774,7 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 | **Y** | Defensive end on your inside shoulder. Turn him inside. The ball goes around behind you. |
 | **Z** | Get outside the fullback, then take him, then block the right corner. |
 | **QB** | Quick pitch to the tailback, then run the other way, to the left, like you still have it. |
-| **FB** | Lead outside our end. Block the first man out there — here it is the linebacker. |
+| **FB** | Bubble out around our end — do not run up into the line. Block the first man out there; here it is the linebacker. |
 | **TB** **(ball)** | Take the pitch on the run and get to the right edge behind your two blockers. Ahead of the quarterback is a fumble. |
 
 **Coaching points**
@@ -1804,7 +1804,7 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 | **Y** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
 | **Z** | Get outside the fullback, then take him, then block the left corner. |
 | **QB** | Quick pitch to the tailback, then run the other way, to the right, like you still have it. |
-| **FB** | Lead outside our end. Block the first man out there — here it is the linebacker. |
+| **FB** | Bubble out around our end — do not run up into the line. Block the first man out there; here it is the linebacker. |
 | **TB** **(ball)** | Take the pitch on the run and get to the left edge behind your two blockers. Ahead of the quarterback is a fumble. |
 
 **Coaching points**

@@ -54,8 +54,8 @@
 <polygon points="248.4,453.6 259.3,450.4 258.1,459.6" fill="#14213d"/>
 <path d="M297.0,459.0 C302.4,455.9 306.9,444.6 329.4,440.1 C351.9,435.6 396.9,441.4 432.0,432.0 C467.1,422.6 522.0,402.8 540.0,383.4 C558.0,364.0 540.0,341.5 540.0,315.9 C540.0,290.2 540.0,259.6 540.0,229.5 C540.0,199.3 540.0,150.8 540.0,135.0" fill="none" stroke="#b3001b" stroke-width="4.6" stroke-linecap="round" stroke-linejoin="round"/>
 <polygon points="540.0,135.0 546.2,148.8 533.8,148.8" fill="#b3001b"/>
-<path d="M405.0,459.0 L463.6,307.8 L492.8,216.5" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-<line x1="484.0" y1="213.7" x2="501.5" y2="219.3" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
+<path d="M405.0,459.0 L456.0,426.6 L492.8,216.5" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="483.7" y1="215.0" x2="501.8" y2="218.1" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 
 <rect x="224.1" y="324.0" width="27.0" height="27.0" rx="3" fill="#ffffff" stroke="#14213d" stroke-width="2.6"/>
 <text x="237.6" y="342.0" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">X</text>
@@ -120,9 +120,9 @@
 <text x="344" y="748" font-size="12" fill="#111318">edge behind the right halfback. Turn up</text>
 <text x="344" y="766" font-size="12" fill="#111318">outside his block.</text>
 <text x="310" y="782" font-size="12" font-weight="700" fill="#111318">RH</text>
-<text x="344" y="782" font-size="12" fill="#111318">Lead outside our end. Block the first</text>
-<text x="344" y="800" font-size="12" fill="#111318">man out there — here it is the</text>
-<text x="344" y="816" font-size="12" fill="#111318">linebacker.</text>
+<text x="344" y="782" font-size="12" fill="#111318">Bubble out around our end — do not run</text>
+<text x="344" y="800" font-size="12" fill="#111318">up into the line. Block the first man</text>
+<text x="344" y="816" font-size="12" fill="#111318">out there; here it is the linebacker.</text>
 <line x1="18" y1="824" x2="603" y2="824" stroke="#c8cdd6" stroke-width="1"/>
 <text x="18" y="842" font-size="11" font-weight="700" fill="#5b6472" letter-spacing="1">COACHING POINTS</text>
 <text x="18" y="862" font-size="12" fill="#111318">The handoff happens in front of the quarterback: the left halfback crosses close and</text>

@@ -52,8 +52,8 @@
 <line x1="593.1" y1="210.4" x2="608.4" y2="220.5" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 <path d="M351.0,364.5 C358.2,367.2 367.2,377.1 394.2,380.7 C421.2,384.3 481.9,389.7 513.0,386.1 C544.0,382.5 567.9,374.4 580.5,359.1 C593.1,343.8 587.2,320.4 588.6,294.3 C590.0,268.2 588.6,217.8 588.6,202.5" fill="none" stroke="#b3001b" stroke-width="4.6" stroke-linecap="round" stroke-linejoin="round"/>
 <polygon points="588.6,202.5 594.8,216.3 582.4,216.3" fill="#b3001b"/>
-<path d="M567.0,364.5 L524.6,307.8 L481.1,215.7" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-<line x1="472.8" y1="219.6" x2="489.4" y2="211.8" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
+<path d="M567.0,364.5 L481.1,345.6 L481.1,215.7" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="472.0" y1="215.7" x2="490.3" y2="215.7" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 <path d="M534.6,391.5 L426.6,386.1 L318.6,375.3" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 5"/>
 <polygon points="318.6,375.3 329.4,371.7 328.4,380.9" fill="#14213d"/>
 
@@ -117,9 +117,9 @@
 <text x="344" y="680" font-size="12" fill="#111318">fast, behind the trips. Turn up outside</text>
 <text x="344" y="698" font-size="12" fill="#111318">the fullback.</text>
 <text x="310" y="714" font-size="12" font-weight="700" fill="#111318">FB</text>
-<text x="344" y="714" font-size="12" fill="#111318">Lead outside our end. Block the first</text>
-<text x="344" y="732" font-size="12" fill="#111318">man out there — here it is the</text>
-<text x="344" y="748" font-size="12" fill="#111318">linebacker.</text>
+<text x="344" y="714" font-size="12" fill="#111318">Bubble out around our end — do not run</text>
+<text x="344" y="732" font-size="12" fill="#111318">up into the line. Block the first man</text>
+<text x="344" y="748" font-size="12" fill="#111318">out there; here it is the linebacker.</text>
 <text x="310" y="766" font-size="12" font-weight="700" fill="#111318">TB</text>
 <text x="344" y="766" font-size="12" fill="#111318">Run hard to the left like you have the</text>
 <text x="344" y="782" font-size="12" fill="#111318">ball. Sell it all the way.</text>

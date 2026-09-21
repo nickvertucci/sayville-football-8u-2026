@@ -52,8 +52,8 @@
 <line x1="108.0" y1="258.3" x2="122.6" y2="247.2" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 <path d="M351.0,459.0 L372.6,464.4 L453.6,453.6" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 5"/>
 <polygon points="453.6,453.6 443.9,459.6 442.7,450.4" fill="#14213d"/>
-<path d="M297.0,459.0 L184.9,307.8 L116.1,252.2" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-<line x1="110.3" y1="259.3" x2="121.9" y2="245.0" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
+<path d="M297.0,459.0 L176.0,426.6 L116.1,252.2" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="107.4" y1="255.2" x2="124.8" y2="249.2" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 <path d="M405.0,459.0 C399.6,455.9 395.1,444.6 372.6,440.1 C350.1,435.6 305.1,441.4 270.0,432.0 C234.9,422.6 180.0,402.8 162.0,383.4 C144.0,364.0 162.0,341.5 162.0,315.9 C162.0,290.2 162.0,259.6 162.0,229.5 C162.0,199.3 162.0,150.8 162.0,135.0" fill="none" stroke="#b3001b" stroke-width="4.6" stroke-linecap="round" stroke-linejoin="round"/>
 <polygon points="162.0,135.0 168.2,148.8 155.8,148.8" fill="#b3001b"/>
 
@@ -115,13 +115,14 @@
 <text x="344" y="664" font-size="12" fill="#111318">he crosses in front of you, then fake a</text>
 <text x="344" y="680" font-size="12" fill="#111318">run to the right.</text>
 <text x="310" y="698" font-size="12" font-weight="700" fill="#111318">LH</text>
-<text x="344" y="698" font-size="12" fill="#111318">Lead outside our end. Block the first</text>
-<text x="344" y="714" font-size="12" fill="#111318">man out there — here it is the corner.</text>
-<text x="310" y="732" font-size="12" font-weight="700" fill="#111318">RH</text>
-<text x="344" y="732" font-size="12" fill="#111318">Cross in front of the quarterback, take</text>
-<text x="344" y="748" font-size="12" fill="#111318">the handoff going left and get to the</text>
-<text x="344" y="766" font-size="12" fill="#111318">edge behind the left halfback. Turn up</text>
-<text x="344" y="782" font-size="12" fill="#111318">outside his block.</text>
+<text x="344" y="698" font-size="12" fill="#111318">Bubble out around our end — do not run</text>
+<text x="344" y="714" font-size="12" fill="#111318">up into the line. Block the first man</text>
+<text x="344" y="732" font-size="12" fill="#111318">out there; here it is the corner.</text>
+<text x="310" y="748" font-size="12" font-weight="700" fill="#111318">RH</text>
+<text x="344" y="748" font-size="12" fill="#111318">Cross in front of the quarterback, take</text>
+<text x="344" y="766" font-size="12" fill="#111318">the handoff going left and get to the</text>
+<text x="344" y="782" font-size="12" fill="#111318">edge behind the left halfback. Turn up</text>
+<text x="344" y="800" font-size="12" fill="#111318">outside his block.</text>
 <line x1="18" y1="824" x2="603" y2="824" stroke="#c8cdd6" stroke-width="1"/>
 <text x="18" y="842" font-size="11" font-weight="700" fill="#5b6472" letter-spacing="1">COACHING POINTS</text>
 <text x="18" y="862" font-size="12" fill="#111318">The handoff happens in front of the quarterback: the right halfback crosses close and</text>

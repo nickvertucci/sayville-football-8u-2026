@@ -52,8 +52,8 @@
 <line x1="434.1" y1="122.0" x2="452.0" y2="117.7" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 <path d="M351.0,364.5 L375.3,386.1 L329.4,391.5 L253.8,386.1" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 5"/>
 <polygon points="253.8,386.1 264.5,382.2 263.8,391.4" fill="#14213d"/>
-<path d="M567.0,364.5 L536.5,307.8 L501.7,216.3" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-<line x1="493.1" y1="219.5" x2="510.2" y2="213.0" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
+<path d="M567.0,364.5 L501.7,345.6 L501.7,216.3" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="492.5" y1="216.3" x2="510.8" y2="216.3" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 <path d="M534.6,391.5 L443.9,119.6" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
 <line x1="435.2" y1="122.5" x2="452.6" y2="116.7" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 
@@ -119,9 +119,9 @@
 <text x="344" y="698" font-size="12" fill="#111318">behind you, then fake a run to the</text>
 <text x="344" y="714" font-size="12" fill="#111318">left.</text>
 <text x="310" y="732" font-size="12" font-weight="700" fill="#111318">FB</text>
-<text x="344" y="732" font-size="12" fill="#111318">Lead outside our end. Block the first</text>
-<text x="344" y="748" font-size="12" fill="#111318">man out there — here it is the</text>
-<text x="344" y="766" font-size="12" fill="#111318">linebacker.</text>
+<text x="344" y="732" font-size="12" fill="#111318">Bubble out around our end — do not run</text>
+<text x="344" y="748" font-size="12" fill="#111318">up into the line. Block the first man</text>
+<text x="344" y="766" font-size="12" fill="#111318">out there; here it is the linebacker.</text>
 <text x="310" y="782" font-size="12" font-weight="700" fill="#111318">TB</text>
 <text x="344" y="782" font-size="12" fill="#111318">Run at the safety and screen him off.</text>
 <text x="344" y="800" font-size="12" fill="#111318">Stay in his way.</text>
