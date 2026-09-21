@@ -719,7 +719,7 @@ table.xl.xl-plays td {
 .band ol + .band-sub { margin-top: 5px; }
 .band li {
   display: flex; align-items: baseline; gap: 6px;
-  padding: 0 5px; font-size: 15.5px; font-weight: 700; line-height: 1.95;
+  padding: 0 5px; font-size: 14px; font-weight: 700; line-height: 2.15;
   color: var(--ink); white-space: nowrap;
 }
 /* Zebra rather than a rule between rows. A rule is a thing to read past; a band of
@@ -734,7 +734,7 @@ table.xl.xl-plays td {
    side: the screen is a preview, the printed inches are the thing. */
 @media (max-width: 560px) {
   .band-set { width: 100%; grid-template-rows: none; }
-  .band li { font-size: 15.5px; line-height: 1.95; }
+  .band li { font-size: 14px; line-height: 2.15; }
 }
 
 /* ------------------------------------------------- defensive call sheet --
@@ -1061,11 +1061,11 @@ table.xl.pk-plays td {
   .band-span { font-size: 9px; opacity: 1; }
   .band-sub { font-size: 9px; color: #000; border-bottom-color: #000; }
   .band-body { gap: 0 8px; }
-  /* Width sets the type here, not height: "Slot Right 38 Pitch Pass" is the longest
+  /* Width sets the type here, not height: "Z Right 38 Pitch Pass" is the longest
      row there is and it has half of five inches to fit in. Eight rows then have three
      inches to live in, which is why the leading is what it is -- the space was going
      spare, and a row a boy can keep his eye on is what to spend it on. */
-  .band li { font-size: 15.5px; line-height: 1.95; padding: 0 5px; gap: 6px; }
+  .band li { font-size: 14px; line-height: 2.15; padding: 0 5px; gap: 6px; }
   .band li:nth-child(even) { background: #eee !important;
                              -webkit-print-color-adjust: exact; print-color-adjust: exact; }
   .band li b { flex-basis: 26px; padding-right: 6px; border-right-color: #000; }
@@ -3039,14 +3039,16 @@ SCHEME_ORDER = ("Smash", "Dive", "Power", "Sweep", "Toss")
 def _sheet_name(play: dict, form: dict) -> str:
     """The play as you call it, minus only the formation the block already names.
 
-    "Regular I - Slot Left - 37 Power" in the Regular I block is "Slot L - 37
-    Power". The alignment stays: the column is where the ball goes, which is not
-    where the slot stands, and the two come apart often enough to matter --
-    Trips Right 49 Sweep is a Right bunch running into the Left column. Dropping
-    the alignment made those two cells read identically.
+    "Regular I Z Left 37 Handoff" in the Regular I block is "Z L - 37 Handoff". The
+    alignment stays: the column is where the ball goes, which is not where the Z
+    stands, and the two come apart often enough to matter -- Regular I Z Right Z Sweep
+    is a Z lined up right running into the Left column. Dropping the alignment made those two
+    cells read identically.
 
-    The word is whatever the call puts in front of Left or Right, with the side
-    shortened to its initial: "Slot Right" becomes "Slot R", "Trips Left"
+    The side shortens to its initial here and only here. It is spelled out everywhere
+    a boy reads it -- the card, the band, the huddle -- and this is the one place that
+    is all coach: five blocks of small type on a sheet he is holding, where four
+    characters a row is a column of the page. "Z Right" becomes "Z R", "Trips Left"
     becomes "Trips L". This reads off the call rather than the play name,
     because in Trips the strength word IS the formation name -- stripping the
     heading off "Trips - Right - X Sweep" left a bare "R -". A formation with
@@ -3581,11 +3583,11 @@ BAND_PANEL_COLUMNS = 2
 def band_call(play: dict, form: dict) -> str:
     """The call, minus the formation the panel heading already says.
 
-    "Split Backs Slot Right 38 Toss" is "Slot Right 38 Toss" in the Split Backs pouch.
-    Nothing else comes off. Slot Right is two words and about two points of type, and
-    it is worth both: the boy reading this is nine, he has been taught those words,
+    "Split Backs Z Right 38 Toss" is "Z Right 38 Toss" in the Split Backs pouch.
+    Nothing else comes off. "Right" is a word and about a point and a half of type,
+    and it is worth both: the boy reading this is nine, he has been taught the word,
     and an abbreviation is one more thing to remember at the moment he has least room
-    to remember anything.
+    to remember anything. The call sheet shortens it to R; this does not.
     """
     call = play.get("call") or ""
     label = form_label(form)
@@ -3630,7 +3632,7 @@ def _band_pouches(groups: list[tuple[dict, list[dict]]]) -> list[list]:
     """The formations dealt into the three pouches.
 
     A formation is never split across two pouches: the panel heading is what lets a row
-    say "Slot Right 36 Power" instead of "Regular I Slot Right 36 Power", and half a
+    say "Z Right 36 Handoff" instead of "Regular I Z Right 36 Handoff", and half a
     formation under a heading naming all of it is a lie a boy cannot check. Today that
     deals out as Regular I, Split Backs, and Shotgun with Power I behind it.
     """
@@ -3693,8 +3695,8 @@ def write_wristbands(formations: list[dict], defenses: dict) -> str:
   3&Prime;, which is a pouch, so a sheet is one whole wristband: print a copy per boy,
   cut on the dashed lines, and load them top to bottom.</p>
   <p class="sub">A row is the number, then the call exactly as it is yelled, minus
-  the formation the pouch already names: <b>1 &middot; Slot Right 36 Power</b> is
-  <i>Regular I Slot Right 36 Power</i>.</p>
+  the formation the pouch already names: <b>1 &middot; Z Right 36 Handoff</b> is
+  <i>Regular I Z Right 36 Handoff</i>.</p>
   <p class="sub">The numbers are the ones on the cards and down the left of the call
   sheet, so &ldquo;{esc(hi)}&rdquo; in the huddle, on the band and on the diagram are
   the same play. Reprint whenever a play is added: numbers are never reused, so the

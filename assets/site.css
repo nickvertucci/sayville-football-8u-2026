@@ -659,7 +659,7 @@ table.xl.xl-plays td {
 .band ol + .band-sub { margin-top: 5px; }
 .band li {
   display: flex; align-items: baseline; gap: 6px;
-  padding: 0 5px; font-size: 15.5px; font-weight: 700; line-height: 1.95;
+  padding: 0 5px; font-size: 14px; font-weight: 700; line-height: 2.15;
   color: var(--ink); white-space: nowrap;
 }
 /* Zebra rather than a rule between rows. A rule is a thing to read past; a band of
@@ -674,7 +674,7 @@ table.xl.xl-plays td {
    side: the screen is a preview, the printed inches are the thing. */
 @media (max-width: 560px) {
   .band-set { width: 100%; grid-template-rows: none; }
-  .band li { font-size: 15.5px; line-height: 1.95; }
+  .band li { font-size: 14px; line-height: 2.15; }
 }
 
 /* ------------------------------------------------- defensive call sheet --
@@ -1001,11 +1001,11 @@ table.xl.pk-plays td {
   .band-span { font-size: 9px; opacity: 1; }
   .band-sub { font-size: 9px; color: #000; border-bottom-color: #000; }
   .band-body { gap: 0 8px; }
-  /* Width sets the type here, not height: "Slot Right 38 Pitch Pass" is the longest
+  /* Width sets the type here, not height: "Z Right 38 Pitch Pass" is the longest
      row there is and it has half of five inches to fit in. Eight rows then have three
      inches to live in, which is why the leading is what it is -- the space was going
      spare, and a row a boy can keep his eye on is what to spend it on. */
-  .band li { font-size: 15.5px; line-height: 1.95; padding: 0 5px; gap: 6px; }
+  .band li { font-size: 14px; line-height: 2.15; padding: 0 5px; gap: 6px; }
   .band li:nth-child(even) { background: #eee !important;
                              -webkit-print-color-adjust: exact; print-color-adjust: exact; }
   .band li b { flex-basis: 26px; padding-right: 6px; border-right-color: #000; }

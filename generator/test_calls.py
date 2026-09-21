@@ -22,64 +22,63 @@ import render  # noqa: E402
 
 # (what it is, formation, play, the call to try, should the check reject it?)
 CASES = [
-    ("the real call",                 "i-form",   "i-power-r",  "I Z R 36 Handoff", False),
-    ("off tackle, called over the center", "i-form", "i-power-r", "I Z R 30 Handoff", True),
-    ("off tackle, called in the A gap", "i-form", "i-power-r",  "I Z R 32 Handoff", True),
-    ("off tackle, called in the B gap", "i-form", "i-power-r",  "I Z R 34 Handoff", True),
-    ("off tackle, called outside the end", "i-form", "i-power-r", "I Z R 38 Toss", True),
-    ("off tackle right, numbered left", "i-form",  "i-power-r",  "I Z R 37 Handoff", True),
-    ("off tackle, credited to the fullback", "i-form", "i-power-r", "I Z R 26 Handoff", True),
-    ("off tackle, credited to the Z",  "i-form",   "i-power-r",  "I Z R 46 Handoff", True),
-    ("a back number nobody defines",  "i-form",   "i-power-r",  "I Z R 76 Handoff", True),
-    ("no number at all",              "i-form",   "i-power-r",  "I Z R Handoff",    True),
-    ("off tackle left",               "i-form",   "i-power-l",  "I Z L 37 Handoff", False),
-    ("off tackle left, numbered right", "i-form", "i-power-l",  "I Z L 36 Handoff", True),
+    ("the real call",                 "i-form",   "i-power-r",  "I Z Right 36 Handoff", False),
+    ("off tackle, called over the center", "i-form", "i-power-r", "I Z Right 30 Handoff", True),
+    ("off tackle, called in the A gap", "i-form", "i-power-r",  "I Z Right 32 Handoff", True),
+    ("off tackle, called in the B gap", "i-form", "i-power-r",  "I Z Right 34 Handoff", True),
+    ("off tackle, called outside the end", "i-form", "i-power-r", "I Z Right 38 Toss", True),
+    ("off tackle right, numbered left", "i-form",  "i-power-r",  "I Z Right 37 Handoff", True),
+    ("off tackle, credited to the fullback", "i-form", "i-power-r", "I Z Right 26 Handoff", True),
+    ("off tackle, credited to a back nobody defines", "i-form", "i-power-r", "I Z Right 46 Handoff", True),
+    ("a back number nobody defines",  "i-form",   "i-power-r",  "I Z Right 76 Handoff", True),
+    ("no number at all",              "i-form",   "i-power-r",  "I Z Right Handoff",    True),
+    ("off tackle left",               "i-form",   "i-power-l",  "I Z Left 37 Handoff", False),
+    ("off tackle left, numbered right", "i-form", "i-power-l",  "I Z Left 36 Handoff", True),
     # The huddle word is the action, not the family: Smash, Dive and Power are all
     # Handoff to the boy carrying it, and the two digits are what tell them apart. The
     # old words are the schemes still, and a call that says one of them now fails.
-    ("off tackle, called by its scheme", "i-form", "i-power-r",  "I Z R 36 Power", True),
-    ("A gap, called by its scheme",    "i-form",   "i-smash-r",  "Regular I Z R 32 Smash", True),
+    ("off tackle, called by its scheme", "i-form", "i-power-r",  "I Z Right 36 Power", True),
+    ("A gap, called by its scheme",    "i-form",   "i-smash-r",  "Regular I Z Right 32 Smash", True),
     ("B gap, called by its scheme",    "wishbone", "wb-dive-r",  "Wishbone 24 Dive", True),
-    ("a handoff called Toss",         "i-form",   "i-smash-r",  "Regular I Z R 32 Toss", True),
-    ("a toss called Handoff",         "split-backs", "sb-toss-r", "Split Backs Z R 38 Handoff", True),
+    ("a handoff called Toss",         "i-form",   "i-smash-r",  "Regular I Z Right 32 Toss", True),
+    ("a toss called Handoff",         "split-backs", "sb-toss-r", "Split Backs Z Right 38 Handoff", True),
     # The call says which side the Z stands on, and the diagram has to agree -- he is a
     # blocker on most plays, so the wrong side passes every geometry check and only the
     # picture is wrong.
-    ("Z on the side the call says",   "i-form",   "i-power-r",  "Regular I Z R 36 Handoff", False),
-    ("Z on the other side",           "i-form",   "i-power-r",  "Regular I Z L 36 Handoff", True),
-    # The tight ends are numbered -- 5 the left one, 6 the right -- so the end-around is
-    # 58 Sweep and there is no word call left in the book. Coming across at 8/9 is Sweep
-    # for a tight end the same as for the quarterback and the Z, and calling it Toss
-    # fails on the word rather than on the geometry.
-    ("tight-end sweep",               "i-form",   "i-te-sweep-r", "Regular I Z R 58 Sweep", False),
-    ("tight-end sweep, unnumbered",   "i-form",   "i-te-sweep-r", "Regular I Z R X Sweep", True),
-    ("tight-end sweep, called Toss",  "i-form",   "i-te-sweep-r", "Regular I Z R 58 Toss", True),
-    ("tight-end sweep, wrong end",    "i-form",   "i-te-sweep-r", "Regular I Z R 68 Sweep", True),
-    ("tight-end sweep right, numbered left", "i-form", "i-te-sweep-r", "Regular I Z R 59 Sweep", True),
-    # A pass skips the play-word check -- its word is a route, not a hole -- so what is
-    # left to hold is that the end named is the one running it.
-    ("tight-end slant pass",          "i-form",   "i-te-out-r", "Regular I Z R 68 Slant Pass", False),
-    ("tight-end slant pass, wrong end", "i-form", "i-te-out-r", "Regular I Z R 58 Slant Pass", True),
+    ("Z on the side the call says",   "i-form",   "i-power-r",  "Regular I Z Right 36 Handoff", False),
+    ("Z on the other side",           "i-form",   "i-power-r",  "Regular I Z Left 36 Handoff", True),
+    # X, Y and Z name themselves. They had digits for a while -- 4, 5 and 6, after the
+    # backs -- and the digits went when the letters came, so the end-around is "X Sweep"
+    # and what has to hold is that the letter is the man carrying it.
+    ("end-around",                    "i-form",   "i-te-sweep-r", "Regular I Z Right X Sweep", False),
+    ("end-around, the other end",     "i-form",   "i-te-sweep-r", "Regular I Z Right Y Sweep", True),
+    ("end-around, no letter at all",  "i-form",   "i-te-sweep-r", "Regular I Z Right Sweep", True),
+    ("end-around, back on its old digits", "i-form", "i-te-sweep-r", "Regular I Z Right 58 Sweep", True),
+    ("the Z on the sweep",            "i-form",   "i-sl-sweep-l", "Regular I Z Right Z Sweep", False),
+    ("the Z sweep given to an end",   "i-form",   "i-sl-sweep-l", "Regular I Z Right X Sweep", True),
+    # A pass is the same: its word is a route, and the letter says who is running it.
+    ("the Y slant",                   "i-form",   "i-te-out-r", "Regular I Z Right Y Slant Pass", False),
+    ("the Y slant given to the X",    "i-form",   "i-te-out-r", "Regular I Z Right X Slant Pass", True),
+    ("a letter call in Trips",        "trips",    "tr-te-sweep-r", "Trips Right X Sweep", False),
+    ("a letter call in Trips, wrong end", "trips", "tr-te-sweep-r", "Trips Right Y Sweep", True),
     # The A gap is 2/3, not 0/1, and there is no 1 hole at all: the middle is one hole,
     # so a call that names the old number has to fail rather than quietly measure a yard
     # and a half away and pass.
-    ("A gap right",                   "i-form",   "i-smash-r",  "Regular I Z R 32 Handoff", False),
-    ("A gap right, called at the old 0", "i-form", "i-smash-r",  "Regular I Z R 30 Handoff", True),
-    ("A gap left",                    "i-form",   "i-smash-l",  "Regular I Z L 33 Handoff", False),
-    ("the 1 hole, which does not exist", "i-form", "i-smash-l",  "Regular I Z L 31 Handoff", True),
+    ("A gap right",                   "i-form",   "i-smash-r",  "Regular I Z Right 32 Handoff", False),
+    ("A gap right, called at the old 0", "i-form", "i-smash-r",  "Regular I Z Right 30 Handoff", True),
+    ("A gap left",                    "i-form",   "i-smash-l",  "Regular I Z Left 33 Handoff", False),
+    ("the 1 hole, which does not exist", "i-form", "i-smash-l",  "Regular I Z Left 31 Handoff", True),
     ("B gap right",                   "wishbone", "wb-dive-r",  "Wishbone 24 Handoff", False),
     ("B gap, called at the old 2",    "wishbone", "wb-dive-r",  "Wishbone 22 Handoff", True),
-    ("split toss right",              "split-backs", "sb-toss-r", "Split Backs Z R 38 Toss",  False),
-    ("split toss, called off tackle", "split-backs", "sb-toss-r", "Split Backs Z R 36 Toss", True),
-    ("split toss, credited to the Z", "split-backs", "sb-toss-r", "Split Backs Z R 48 Toss", True),
-    ("split toss right, numbered left", "split-backs", "sb-toss-r", "Split Backs Z R 39 Toss", True),
-    ("split toss left",               "split-backs", "sb-toss-l", "Split Backs Z L 29 Toss",   False),
-    ("split toss left, wrong back",   "split-backs", "sb-toss-l", "Split Backs Z L 39 Toss",   True),
-    ("outside called Pitch",          "split-backs", "sb-toss-r", "Split Backs Z R 38 Pitch", True),
-    ("slot sweep at 8/9",             "i-form", "i-sl-sweep-l", "Regular I Z R 49 Sweep", False),
-    ("slot sweep called Toss",        "i-form", "i-sl-sweep-l", "Regular I Z R 49 Toss", True),
-    ("QB sweep at 8/9",               "split-backs", "sb-qb-sweep-r", "Split Backs Z R 18 Sweep", False),
-    ("QB sweep called Toss",          "split-backs", "sb-qb-sweep-r", "Split Backs Z R 18 Toss", True),
+    ("split toss right",              "split-backs", "sb-toss-r", "Split Backs Z Right 38 Toss",  False),
+    ("split toss, called off tackle", "split-backs", "sb-toss-r", "Split Backs Z Right 36 Toss", True),
+    ("split toss, credited to a back nobody defines", "split-backs", "sb-toss-r", "Split Backs Z Right 48 Toss", True),
+    ("split toss right, numbered left", "split-backs", "sb-toss-r", "Split Backs Z Right 39 Toss", True),
+    ("split toss left",               "split-backs", "sb-toss-l", "Split Backs Z Left 29 Toss",   False),
+    ("split toss left, wrong back",   "split-backs", "sb-toss-l", "Split Backs Z Left 39 Toss",   True),
+    ("outside called Pitch",          "split-backs", "sb-toss-r", "Split Backs Z Right 38 Pitch", True),
+    ("QB sweep at 8/9",               "split-backs", "sb-qb-sweep-r", "Split Backs Z Right 18 Sweep", False),
+    ("QB sweep called Toss",          "split-backs", "sb-qb-sweep-r", "Split Backs Z Right 18 Toss", True),
     ("wishbone power",                "wishbone", "wb-power-r", "Wishbone 46 Handoff", False),
     ("wishbone power on the 3-back",  "wishbone", "wb-power-r", "Wishbone 36 Handoff", True),
     ("wishbone smash",                "wishbone", "wb-smash-r", "Wishbone 22 Handoff", False),

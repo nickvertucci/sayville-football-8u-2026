@@ -32,20 +32,20 @@ Same line as the Regular I — both ends tight, seven on the line every snap. Th
 
 | Play | Call | Scheme | Type | Ball |
 |---|---|---|---|---|
-| [Power I - Z R - 32 Handoff](#power-i---z-r---32-handoff) | `Power I Z R 32 Handoff` | Smash | run | TB |
-| [Power I - Z L - 33 Handoff](#power-i---z-l---33-handoff) | `Power I Z L 33 Handoff` | Smash | run | TB |
-| [Power I - Z R - 38 Toss](#power-i---z-r---38-toss) | `Power I Z R 38 Toss` | Toss | run | TB |
-| [Power I - Z L - 39 Toss](#power-i---z-l---39-toss) | `Power I Z L 39 Toss` | Toss | run | TB |
+| [Power I - Z Right - 32 Handoff](#power-i---z-right---32-handoff) | `Power I Z Right 32 Handoff` | Smash | run | TB |
+| [Power I - Z Left - 33 Handoff](#power-i---z-left---33-handoff) | `Power I Z Left 33 Handoff` | Smash | run | TB |
+| [Power I - Z Right - 38 Toss](#power-i---z-right---38-toss) | `Power I Z Right 38 Toss` | Toss | run | TB |
+| [Power I - Z Left - 39 Toss](#power-i---z-left---39-toss) | `Power I Z Left 39 Toss` | Toss | run | TB |
 
 ---
 
-## Power I - Z R - 32 Handoff
+## Power I - Z Right - 32 Handoff
 
-**Call it:** `Power I Z R 32 Handoff`
+**Call it:** `Power I Z Right 32 Handoff`
 
 **Scheme:** Smash
 
-![Power I - Z R - 32 Handoff](cards/pi-smash-r-4-4.svg)
+![Power I - Z Right - 32 Handoff](cards/pi-smash-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -69,13 +69,13 @@ Same line as the Regular I — both ends tight, seven on the line every snap. Th
 
 ---
 
-## Power I - Z L - 33 Handoff
+## Power I - Z Left - 33 Handoff
 
-**Call it:** `Power I Z L 33 Handoff`
+**Call it:** `Power I Z Left 33 Handoff`
 
 **Scheme:** Smash
 
-![Power I - Z L - 33 Handoff](cards/pi-smash-l-4-4.svg)
+![Power I - Z Left - 33 Handoff](cards/pi-smash-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -99,13 +99,13 @@ Same line as the Regular I — both ends tight, seven on the line every snap. Th
 
 ---
 
-## Power I - Z R - 38 Toss
+## Power I - Z Right - 38 Toss
 
-**Call it:** `Power I Z R 38 Toss`
+**Call it:** `Power I Z Right 38 Toss`
 
 **Scheme:** Toss
 
-![Power I - Z R - 38 Toss](cards/pi-toss-r-4-4.svg)
+![Power I - Z Right - 38 Toss](cards/pi-toss-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -129,13 +129,13 @@ Same line as the Regular I — both ends tight, seven on the line every snap. Th
 
 ---
 
-## Power I - Z L - 39 Toss
+## Power I - Z Left - 39 Toss
 
-**Call it:** `Power I Z L 39 Toss`
+**Call it:** `Power I Z Left 39 Toss`
 
 **Scheme:** Toss
 
-![Power I - Z L - 39 Toss](cards/pi-toss-l-4-4.svg)
+![Power I - Z Left - 39 Toss](cards/pi-toss-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|

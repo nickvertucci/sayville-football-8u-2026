@@ -73,7 +73,7 @@ build checks the receiver's path is that long.
 
 A pitch pass is the toss right up until he pulls up: the pitch is real, the back runs
 the toss, and then he stops behind the line and throws. So it is **called like the
-toss** — `Regular I Z R 38 Pitch Pass` — and the digits name the back who takes
+toss** — `Regular I Z Right 38 Pitch Pass` — and the digits name the back who takes
 the pitch, not the receiver. `ball_carrier` is the receiver, the way it is on every
 pass; `type` is `pass`, the scheme is `Protect`, and it gives its own `direction`
 rather than a `fakes`, because it is not pretending to be another play — for two
@@ -133,8 +133,8 @@ the right, where he lines up on every other snap. Everything else — the line r
 unchanged, and the player's `path` is still relative to wherever he ends up, so the
 assignment does not have to know which look it is in.
 
-**Say it in the call.** `Regular I Z L 37 Handoff` tells the huddle which side the slot is
-on, the same way `Regular I Z R 36 Handoff` does. A play that moves
+**Say it in the call.** `Regular I Z Left 37 Handoff` tells the huddle which side the slot is
+on, the same way `Regular I Z Right 36 Handoff` does. A play that moves
 somebody silently is a play nobody can call.
 
 An override may only move a player the formation already has, and the coordinates must be
@@ -171,24 +171,31 @@ exactly eleven players, and `backs` — the digit-to-position map its calls are 
 from:
 
 ```json
-"backs": { "1": "QB", "2": "FB", "3": "TB", "4": "Z", "5": "X", "6": "Y" }
+"backs": { "1": "QB", "2": "FB", "3": "TB" }
 ```
 
 `backs` is not documentation. It is what the generator resolves the first digit of every
 call against, and it is what the calling-language table on the home page is built from,
 so there is one copy of the numbering rather than three that can disagree.
 
-It is really a *ball carrier* map, which is why the two tight ends are in it. They are
-linemen and they are 5 and 6, because they carry it on the end-around and catch it on
-the slant, and a boy holding a wristband should not need to know which of those two
-facts makes a man a "back".
+It holds backs and only backs. X, Y and Z carry it too — the end-around, the slot
+coming across, the slant — and they are called by their letter instead, so nothing in
+the book gives one man two names. A formation with a fourth back puts him at 4
+(Wishbone's right halfback); a formation without one stops at 3.
 
 ### `name` and `call` are the numbering
 
-Both are printed at the top of every card. `name` is `{formation} - Z {L|R} -
-{digits} {word}` (*Regular I - Z R - 36 Handoff*); `call` is the same language yelled in
-the huddle (`Regular I Z R 36 Handoff` — formation, the Z's side, then **two digits: who
+Both are printed at the top of every card. `name` is `{formation} - Z {Left|Right} -
+{digits} {word}` (*Regular I - Z Right - 36 Handoff*); `call` is the same language yelled in
+the huddle (`Regular I Z Right 36 Handoff` — formation, the Z's side, then **two digits: who
 carries it and where it goes**, then the play word).
+
+When **X, Y or Z** carries it, the digits are replaced by that letter and nothing else:
+`Regular I Z Right X Sweep`, `Split Backs Z Left Y Sweep`, `Trips Right Y Slant Pass`.
+The letter is the whole subject — there is no hole to name, because a man already
+outside the tackle does not run through a gap to get there. `LETTER_BACKS` in
+`render.py` is the set of three, and the build checks that the call's letter is the
+play's `ball_carrier`.
 
 The three men outside the tackles are **X** (left end), **Y** (right end) and **Z**
 (the split man), on the diagram, in the assignment list, on the depth chart and in the
@@ -221,19 +228,19 @@ call. The numbering system is documented in the top-level [README](../README.md)
   **There is no 1 hole.** The middle is one hole, not two, and `--check` rejects
   a call that names 1 by name rather than failing on geometry.
 
-  **Sweep** is who, not a hole: the quarterback at 8/9 is `18 Sweep` / `19 Sweep`,
-  the Z coming across is `49 Sweep` / `48 Sweep`, and an end on an end-around is
-  `58 Sweep` / `69 Sweep`. Digit 4 is the Z only in looks that have one — Wishbone's
-  4 is the right halfback, so `49 Toss` is Toss.
-  So `36 Handoff` is right, `36 Power` fails because Power is the scheme and not the
-  call, and `18 Toss` fails because the quarterback sweeping is Sweep.
+  **Sweep** is who, not a hole: the quarterback at 8/9 is `18 Sweep` / `19 Sweep`, and
+  the three letters are `X Sweep`, `Y Sweep` and `Z Sweep`. A back at 8/9 is a Toss.
+  Digits name backs, never letters — Wishbone's 4 is its right halfback, so `49 Toss`
+  is Toss. So `36 Handoff` is right, `36 Power` fails because Power is the scheme and
+  not the call, and `18 Toss` fails because the quarterback sweeping is Sweep.
 
   **A pass opts out of the hole table**, because its word is a route and a route
-  is not a gap: `68 Slant Pass`, `38 Quick Pass`, `38 Pitch Pass`. Only the word
-  is free — the digits are checked against the diagram like any other call.
+  is not a gap: `Y Slant Pass`, `38 Quick Pass`, `38 Pitch Pass`. Only the word
+  is free — where a pass carries digits they are checked against the diagram like any
+  other call.
 
 The **hole** is the blocking scheme. `36 Handoff` fills Power because 6 is the C gap;
-`32 Handoff` fills Smash; `18 Sweep` fills Sweep; a dropback — `68 Slant Pass` — fills
+`32 Handoff` fills Smash; `18 Sweep` fills Sweep; a dropback — `Y Slant Pass` — fills
 Protect. Hole 0, straight over the center, is Smash too — there is just no play in the
 book there yet.
 
@@ -244,10 +251,9 @@ ball carrier. On a play-action pass they follow the quarterback's path, while
 Inventing a nickname instead of a call defeats the point of having a language, and now
 also fails `--check`.
 
-**There are no exceptions.** There used to be one — `word_call`, for a ball carrier
-the numbering had no digit for, which meant a tight end on an end-around — and then the
-tight ends got digits, so the exception had nobody left to cover and is gone. Every call
-carries two digits, and `--check` rejects one that does not.
+**Those are the only two shapes.** Two digits for a back, one letter for X, Y or Z.
+There is no third: a call that names neither — a nickname, a digit the formation's
+`backs` does not define, a letter that is not one of the three — fails `--check`.
 
 Formations carry an `order` field too, which is teaching order, not the alphabet.
 Both control the sequence on the site and in `PLAYBOOK.md`.
@@ -293,7 +299,7 @@ Do not restate a scheme verb on the play. `--check` rejects a Power whose
 playside end cuts off, because that is Smash. A `note` with no verb is merged
 onto the scheme job.
 
-A dropback is `{back}{hole} {route}` (`68 Slant Pass`) and scheme **Protect**. The
+A dropback to an end is `{letter} {route}` (`Y Slant Pass`) and scheme **Protect**. The
 digits are the receiver and where he crosses the line; the word is his route, which is
 why the hole table does not apply to it. Play-action takes the run's scheme and its
 digits; `ball_carrier` is the receiver.
@@ -437,8 +443,8 @@ a play would flip his path and leave him aligned on the same side. There is no
 A left-handed play that leaves the Z on the right is a different play, a blocker short
 on the side the ball goes, and `--audit` will tell you so.
 
-**A play that moves the slot says so in its call.** `Regular I Z L 37 Handoff` and
-`Split Backs Z L 29 Toss` both do, each mirroring its right-hand play so the slot is out
+**A play that moves the slot says so in its call.** `Regular I Z Left 37 Handoff` and
+`Split Backs Z Left 29 Toss` both do, each mirroring its right-hand play so the slot is out
 there on the side the ball goes. Use `alignment` to move him and name his side in the
 call; a play that moves somebody silently is a play nobody can call.
 
@@ -458,7 +464,7 @@ backfield of either a stacked I (`FB` + `TB`), two halfbacks (`LH` + `RH`),
 Wishbone (`FB` + `LH` + `RH`), or empty Trips (`FB` + `TB` + `Z` bunched,
 nobody behind the quarterback). A slot (`Z`) is the split man when the
 look has one; Wishbone does not, so Power kicks with the playside end and
-the call has no Z R/Left. Trips names the bunch (`Trips Right` /
+the call has no Z Right/Left. Trips names the bunch (`Trips Right` /
 `Trips Left`) and moves 2, 3 and 4 together. A new formation that keeps
 those keys drops in: give it `formation.json`
 (alignment, `backs`) and plays that name a scheme and write
