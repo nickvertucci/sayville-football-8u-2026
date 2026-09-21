@@ -712,7 +712,7 @@ table.xl.xl-plays td {
 .band-sheet { margin: 16px 0 24px; }
 /* Exactly a pouch, in inches, because that is what it has to be when it comes off the
    printer. Three of them is a wristband and a sheet. */
-.band-set { display: grid; grid-template-rows: repeat(3, 3in); gap: 7px; width: 5in; }
+.band-set { display: grid; grid-template-rows: repeat(3, 2.75in); gap: 7px; width: 3.5in; }
 .band {
   border: 1px dashed var(--line); border-radius: 4px; padding: 0 0 4px;
   background: var(--panel); overflow: hidden;
@@ -725,7 +725,7 @@ table.xl.xl-plays td {
    centre it in the space the span leaves, which is not the middle of the pouch. */
 .band-form {
   display: grid; grid-auto-flow: column; grid-auto-columns: 1fr;
-  margin: 0 0 3px; font-size: 24px; font-weight: 900;
+  margin: 0 0 2px; font-size: 15px; font-weight: 900;
   text-transform: uppercase; letter-spacing: .5px; line-height: 1.1;
   color: var(--on-accent); background: var(--accent-solid);
 }
@@ -742,21 +742,31 @@ table.xl.xl-plays td {
   position: absolute; right: 6px; bottom: 4px;
   font-size: 10px; font-weight: 800; opacity: .8;
 }
-.band-body { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 10px; }
+.band-body { display: block; }
+/* The formation label inside a pouch that holds two of them. Black on white, the
+   same family as the bar above it, so the eye reads bar -> list -> bar -> list. */
+.band-sub {
+  margin: 2px 0 0; padding: 0 5px;
+  font-size: 9.5px; font-weight: 900; letter-spacing: .7px;
+  text-transform: uppercase; color: var(--ink);
+  border-bottom: 1px solid var(--ink);
+}
 .band ol { margin: 0; padding: 0; list-style: none; }
-/* 11.8px, and the longest row is what set it, measured rather than guessed. That
-   row is "Z Tight Right - Y Slant Pass Right" and it has half a five-inch pouch to
-   stand in. Rendered at 5in the slack goes: 13px overflows by 8.6, 12.6px by 2.4,
-   12.2px just fits with 3.8 to spare, 11.8px has 10. Ten points is the margin worth
-   keeping, because the printer is not this browser.
+/* 9.5px, and it is the HEIGHT of the window that set it now, not the width.
+   The pouch is the youth wristband's 3.5in x 2.75in, one column, and the two
+   constraints swapped places: at one column the longest call has about 150 points
+   of width to spare, while eighteen rows and a bar have to live inside 2.75in.
+   Measured at 3.5in wide: 11px overflows the window by 0.22in, 10.5px by 0.07in,
+   10px scrapes in with 0.05in, 9.5px has 0.15in. Take the margin -- the printer is
+   not this browser and a row that falls off the bottom of a pouch is a play the boy
+   cannot find.
 
-   The rows are nowrap on purpose -- a call that wraps is a call a boy reads as two
-   -- so the type is what gives, not the line. Two changes have eaten into this
-   already: "Tight" joining the Z's phrase, and the dashes. Anything that lengthens
-   a call again has to be measured against that same longest row before it ships. */
+   The rows are nowrap on purpose: a call that wraps is a call he reads as two. So
+   the type gives, not the line. Anything that lengthens a call, or adds a play to a
+   pouch, has to be measured against both the width AND the height again. */
 .band li {
   display: flex; align-items: baseline; gap: 5px;
-  padding: 0 5px; font-size: 11.8px; font-weight: 700; line-height: 2.4;
+  padding: 0 5px; font-size: 9.5px; font-weight: 700; line-height: 1.32;
   color: var(--ink); white-space: nowrap;
 }
 /* Zebra rather than a rule between rows. A rule is a thing to read past; a band of
@@ -771,7 +781,7 @@ table.xl.xl-plays td {
    side: the screen is a preview, the printed inches are the thing. */
 @media (max-width: 560px) {
   .band-set { width: 100%; grid-template-rows: none; }
-  .band li { font-size: 11.8px; line-height: 2.4; }
+  .band li { font-size: 9.5px; line-height: 1.32; }
 }
 
 /* ------------------------------------------------- defensive call sheet --
@@ -1131,7 +1141,7 @@ table.xl.pk-plays td {
      shaded. */
   .band-page .page-head { display: none; }
   .band-sheet { margin: 0; }
-  .band-set { width: 5in; grid-template-rows: repeat(3, 3in); gap: 0.07in;
+  .band-set { width: 3.5in; grid-template-rows: repeat(3, 2.75in); gap: 0.07in;
               margin: 0 auto; break-inside: avoid; }
   .band { border-color: #000; background: none; break-inside: avoid; }
   /* This is the one that matters: the printed pouch is what goes on a wrist. The
@@ -1142,7 +1152,7 @@ table.xl.pk-plays td {
      The height is free -- eight rows and the bar come to roughly two and three
      quarter inches of the three, and test_print_pages.py holds the sheet to one
      page if that ever stops being true. */
-  .band-form { font-size: 21px; margin-bottom: 2px;
+  .band-form { font-size: 15px; margin-bottom: 1px;
                letter-spacing: .5px; line-height: 1.1;
                color: #fff !important; background: #000 !important;
                -webkit-print-color-adjust: exact; print-color-adjust: exact; }
@@ -1152,12 +1162,13 @@ table.xl.pk-plays td {
   .band-seg + .band-seg { border-left: 1.5pt solid #fff !important;
                           -webkit-print-color-adjust: exact; print-color-adjust: exact; }
   .band-span { font-size: 9px; opacity: 1; right: 5px; bottom: 3px; }
-  .band-body { gap: 0 8px; }
+  .band-sub { font-size: 6.5pt; color: #000; border-bottom-color: #000;
+              margin: 1px 0 0; padding: 0 3px; }
   /* Width sets the type here, not height: "Z Right Y Slant Pass Right" is the longest
      row there is and it has half of five inches to fit in. Eight rows then have three
      inches to live in, which is why the leading is what it is -- the space was going
      spare, and a row a boy can keep his eye on is what to spend it on. */
-  .band li { font-size: 11.8px; line-height: 2.4; padding: 0 3px; gap: 4px; }
+  .band li { font-size: 9.5px; line-height: 1.32; padding: 0 3px; gap: 4px; }
   .band li:nth-child(even) { background: #eee !important;
                              -webkit-print-color-adjust: exact; print-color-adjust: exact; }
   .band li b { flex-basis: 21px; padding-right: 4px; border-right-color: #000; }

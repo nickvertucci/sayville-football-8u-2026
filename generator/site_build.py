@@ -772,7 +772,7 @@ table.xl.xl-plays td {
 .band-sheet { margin: 16px 0 24px; }
 /* Exactly a pouch, in inches, because that is what it has to be when it comes off the
    printer. Three of them is a wristband and a sheet. */
-.band-set { display: grid; grid-template-rows: repeat(3, 3in); gap: 7px; width: 5in; }
+.band-set { display: grid; grid-template-rows: repeat(3, 2.75in); gap: 7px; width: 3.5in; }
 .band {
   border: 1px dashed var(--line); border-radius: 4px; padding: 0 0 4px;
   background: var(--panel); overflow: hidden;
@@ -785,7 +785,7 @@ table.xl.xl-plays td {
    centre it in the space the span leaves, which is not the middle of the pouch. */
 .band-form {
   display: grid; grid-auto-flow: column; grid-auto-columns: 1fr;
-  margin: 0 0 3px; font-size: 24px; font-weight: 900;
+  margin: 0 0 2px; font-size: 15px; font-weight: 900;
   text-transform: uppercase; letter-spacing: .5px; line-height: 1.1;
   color: var(--on-accent); background: var(--accent-solid);
 }
@@ -802,21 +802,31 @@ table.xl.xl-plays td {
   position: absolute; right: 6px; bottom: 4px;
   font-size: 10px; font-weight: 800; opacity: .8;
 }
-.band-body { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 10px; }
+.band-body { display: block; }
+/* The formation label inside a pouch that holds two of them. Black on white, the
+   same family as the bar above it, so the eye reads bar -> list -> bar -> list. */
+.band-sub {
+  margin: 2px 0 0; padding: 0 5px;
+  font-size: 9.5px; font-weight: 900; letter-spacing: .7px;
+  text-transform: uppercase; color: var(--ink);
+  border-bottom: 1px solid var(--ink);
+}
 .band ol { margin: 0; padding: 0; list-style: none; }
-/* 11.8px, and the longest row is what set it, measured rather than guessed. That
-   row is "Z Tight Right - Y Slant Pass Right" and it has half a five-inch pouch to
-   stand in. Rendered at 5in the slack goes: 13px overflows by 8.6, 12.6px by 2.4,
-   12.2px just fits with 3.8 to spare, 11.8px has 10. Ten points is the margin worth
-   keeping, because the printer is not this browser.
+/* 9.5px, and it is the HEIGHT of the window that set it now, not the width.
+   The pouch is the youth wristband's 3.5in x 2.75in, one column, and the two
+   constraints swapped places: at one column the longest call has about 150 points
+   of width to spare, while eighteen rows and a bar have to live inside 2.75in.
+   Measured at 3.5in wide: 11px overflows the window by 0.22in, 10.5px by 0.07in,
+   10px scrapes in with 0.05in, 9.5px has 0.15in. Take the margin -- the printer is
+   not this browser and a row that falls off the bottom of a pouch is a play the boy
+   cannot find.
 
-   The rows are nowrap on purpose -- a call that wraps is a call a boy reads as two
-   -- so the type is what gives, not the line. Two changes have eaten into this
-   already: "Tight" joining the Z's phrase, and the dashes. Anything that lengthens
-   a call again has to be measured against that same longest row before it ships. */
+   The rows are nowrap on purpose: a call that wraps is a call he reads as two. So
+   the type gives, not the line. Anything that lengthens a call, or adds a play to a
+   pouch, has to be measured against both the width AND the height again. */
 .band li {
   display: flex; align-items: baseline; gap: 5px;
-  padding: 0 5px; font-size: 11.8px; font-weight: 700; line-height: 2.4;
+  padding: 0 5px; font-size: 9.5px; font-weight: 700; line-height: 1.32;
   color: var(--ink); white-space: nowrap;
 }
 /* Zebra rather than a rule between rows. A rule is a thing to read past; a band of
@@ -831,7 +841,7 @@ table.xl.xl-plays td {
    side: the screen is a preview, the printed inches are the thing. */
 @media (max-width: 560px) {
   .band-set { width: 100%; grid-template-rows: none; }
-  .band li { font-size: 11.8px; line-height: 2.4; }
+  .band li { font-size: 9.5px; line-height: 1.32; }
 }
 
 /* ------------------------------------------------- defensive call sheet --
@@ -1191,7 +1201,7 @@ table.xl.pk-plays td {
      shaded. */
   .band-page .page-head { display: none; }
   .band-sheet { margin: 0; }
-  .band-set { width: 5in; grid-template-rows: repeat(3, 3in); gap: 0.07in;
+  .band-set { width: 3.5in; grid-template-rows: repeat(3, 2.75in); gap: 0.07in;
               margin: 0 auto; break-inside: avoid; }
   .band { border-color: #000; background: none; break-inside: avoid; }
   /* This is the one that matters: the printed pouch is what goes on a wrist. The
@@ -1202,7 +1212,7 @@ table.xl.pk-plays td {
      The height is free -- eight rows and the bar come to roughly two and three
      quarter inches of the three, and test_print_pages.py holds the sheet to one
      page if that ever stops being true. */
-  .band-form { font-size: 21px; margin-bottom: 2px;
+  .band-form { font-size: 15px; margin-bottom: 1px;
                letter-spacing: .5px; line-height: 1.1;
                color: #fff !important; background: #000 !important;
                -webkit-print-color-adjust: exact; print-color-adjust: exact; }
@@ -1212,12 +1222,13 @@ table.xl.pk-plays td {
   .band-seg + .band-seg { border-left: 1.5pt solid #fff !important;
                           -webkit-print-color-adjust: exact; print-color-adjust: exact; }
   .band-span { font-size: 9px; opacity: 1; right: 5px; bottom: 3px; }
-  .band-body { gap: 0 8px; }
+  .band-sub { font-size: 6.5pt; color: #000; border-bottom-color: #000;
+              margin: 1px 0 0; padding: 0 3px; }
   /* Width sets the type here, not height: "Z Right Y Slant Pass Right" is the longest
      row there is and it has half of five inches to fit in. Eight rows then have three
      inches to live in, which is why the leading is what it is -- the space was going
      spare, and a row a boy can keep his eye on is what to spend it on. */
-  .band li { font-size: 11.8px; line-height: 2.4; padding: 0 3px; gap: 4px; }
+  .band li { font-size: 9.5px; line-height: 1.32; padding: 0 3px; gap: 4px; }
   .band li:nth-child(even) { background: #eee !important;
                              -webkit-print-color-adjust: exact; print-color-adjust: exact; }
   .band li b { flex-basis: 21px; padding-right: 4px; border-right-color: #000; }
@@ -3874,13 +3885,25 @@ def _call_sheet_order(formations: list[dict]) -> list[dict]:
     )
 
 
-# A pouch is five inches by three, landscape, because it wraps a forearm. Three of
-# them stacked is nine inches of a ten-and-a-bit-inch page, so a sheet is exactly one
-# wristband and you print a copy per boy. The shape is what decides the rest: eight
-# rows fit down a three-inch panel where sixteen do not, so a formation goes in two
-# columns, and five inches of width is what sets the type.
+# A pouch is 3.5 inches by 2.75, landscape, because that is the window on the YOUTH
+# wristband these go in. It was five by three, which is the adult band, and an insert
+# cut to five inches does not go in a three-and-a-half-inch window at all -- the whole
+# sheet was unusable on the bands the boys actually wear.
+#
+# Three of them stacked is 8.25 inches of a ten-and-a-bit-inch page, so a sheet is
+# still exactly one wristband and you still print a copy per boy. The shape is what
+# decides the rest: eight rows fit down the panel where sixteen do not, so a formation
+# goes in two columns, and the width is what sets the type -- and there is now a lot
+# less of it, so the type is measured against the longest row rather than chosen.
 BAND_POUCHES = 3
-BAND_PANEL_COLUMNS = 2
+# One column, not two. Two columns split a 3.5-inch window into 1.4-inch rows, and
+# the longest call in the book -- "Z Tight Right - Y Slant Pass Right" -- does not fit
+# one at any size a nine-year-old can read; at 8px it still ran out of the window and
+# 8px is not a size, it is a rumour. One column gives every row the full width of the
+# pouch, so the call stays spelled out the way it is yelled, which is the thing this
+# page exists to do. The cost is paid in height instead, and the height is what the
+# type is now measured against.
+BAND_PANEL_COLUMNS = 1
 
 
 def band_call(play: dict, form: dict) -> str:
@@ -3968,27 +3991,44 @@ def _band_panel(pouch: list[tuple[dict, list[dict]]]) -> str:
             for p, f in items
         )
 
-    def seg(name, first, last):
-        return (f'<span class="band-seg">{esc(name)}'
-                f'<span class="band-span">{esc(first)}\u2013{esc(last)}</span></span>')
+    def seg(name, codes):
+        """The bar: the name, and the number range only when it is a real range.
 
-    # Two formations in one pouch get a bar split in two, each half naming the column
-    # under it. It used to read "SHOTGUN \u00b7 POWER I" across the whole bar with a small
-    # grey label over each column, and that is two things to read before you know
-    # which list you are in -- on a pouch worn by an eight-year-old who is being
-    # shouted a number at. Half a black bar sits directly over its own column and
-    # says one word, so the name and the list it names are the same object.
-    if len(pouch) == BAND_PANEL_COLUMNS:
-        cols = [f"<ol>{rows([(p, f) for p in ps])}</ol>" for f, ps in pouch]
-        bar = "".join(seg(form_label(f), ps[0]["code"], ps[-1]["code"]) for f, ps in pouch)
+        "1-70" on a pouch holding 1 to 16 and 69 to 70 is a lie that reads as
+        seventy plays. The split-Z plays took the next free numbers, the way every
+        new play does, so a formation's numbers no longer run contiguously -- and a
+        span written across a gap says nothing true. Print it when it is honest and
+        leave it off when it is not; every row carries its own number regardless.
+        """
+        nums = sorted(int(c) for c in codes)
+        span = ""
+        if nums and nums[-1] - nums[0] == len(nums) - 1:
+            span = (f'<span class="band-span">{nums[0]}\u2013{nums[-1]}</span>')
+        return f'<span class="band-seg">{esc(name)}{span}</span>'
+
+    # One formation to a pouch: the bar names it once and the numbers run straight
+    # down under it.
+    #
+    # A pouch holding two gets a black band row above each list instead of a bar split
+    # in two. The split bar was the right answer while a pouch had two columns -- half
+    # the bar sat directly over its own column -- and it stopped being the right answer
+    # when the youth window took the second column away. Two names across the top of a
+    # single list would say nothing about where one ends and the other starts; a row
+    # between them says exactly that, in the same black-and-white as the bar, and it
+    # costs one row of the eighteen.
+    if len(pouch) == 1:
+        form, ps = pouch[0]
+        bar = seg(form_label(form), [p["code"] for p in ps])
+        body_rows = f"<ol>{rows([(p, form) for p in ps])}</ol>"
     else:
-        # One formation, or more of them than there are columns to line up with. The
-        # bar names the pouch once and the columns are one list read down and across.
         label = " \u00b7 ".join(form_label(f) for f, _ in pouch)
-        bar = seg(label, plays[0][0]["code"], plays[-1][0]["code"])
-        half = -(-len(plays) // BAND_PANEL_COLUMNS)
-        cols = [f"<ol>{rows(plays[i * half:(i + 1) * half])}</ol>"
-                for i in range(BAND_PANEL_COLUMNS)]
+        bar = seg(label, [p["code"] for p, _f in plays])
+        body_rows = "".join(
+            f'<p class="band-sub">{esc(form_label(f))}</p>'
+            f'<ol>{rows([(p, f) for p in ps])}</ol>'
+            for f, ps in pouch
+        )
+    cols = [body_rows]
 
     body = "".join(f"<div>{c}</div>" for c in cols)
     return ('<div class="band">'
@@ -4008,19 +4048,14 @@ def write_wristbands(formations: list[dict], defenses: dict) -> str:
     numbered = [p for _f, ps in groups for p in ps]
     lo = numbered[0]["code"] if numbered else "1"
     hi = numbered[-1]["code"] if numbered else "1"
+    # No prose. The page is the inserts themselves and the Print button, and the
+    # three paragraphs that used to sit above them said things the page already
+    # shows or that belong in the README: how big a pouch is, what a row reads
+    # like, that numbers are never reused. None of it is needed by somebody who
+    # has come here to print a band, and all of it is off the top of the screen
+    # before the first pouch is.
     body = f"""<div class="page-head">
   <h1>Wristbands</h1>
-  <p class="sub">Every play a coach can call, {esc(lo)} to {esc(hi)}, split across the
-  three pouches of a band &mdash; one formation to a pouch. The panels are 5&Prime; by
-  3&Prime;, which is a pouch, so a sheet is one whole wristband: print a copy per boy,
-  cut on the dashed lines, and load them top to bottom.</p>
-  <p class="sub">A row is the number, then the call exactly as it is yelled, minus
-  the formation the pouch already names: <b>1 &middot; Z Right 36 Handoff</b> is
-  <i>Regular I Z Right 36 Handoff</i>.</p>
-  <p class="sub">The numbers are the ones on the cards and down the left of the call
-  sheet, so &ldquo;{esc(hi)}&rdquo; in the huddle, on the band and on the diagram are
-  the same play. Reprint whenever a play is added: numbers are never reused, so the
-  bands already out there stay right.</p>
   <button class="btn" type="button" onclick="window.print()">Print</button>
 </div>
 <div class="band-sheet">{_band_set(groups)}</div>"""
@@ -4754,7 +4789,17 @@ DEFENSE_NICKNAMES = {
 # the last thing on this page that needed explaining before it could be read. It is
 # column six now. Both sides of the ball run the same six, so there is no longer a
 # per-side column list and nothing has to ask which side it is building.
-ROTATIONS = [str(n) for n in range(1, 7)]
+# Seven, not six. The squad outgrew it: the slot is seven deep and the seventh man
+# there plays nowhere else on offense, so at six he was in roster.json and on no
+# chart at all — the one failure mode a depth chart must not have, because the way
+# you find out is a Saturday.
+#
+# It costs almost nothing to print. A position card is only as tall as its own last
+# filled name, so the seventh row appears on the one card that has a seventh man and
+# nowhere else; the offensive sheet had about four tenths of an inch spare and this
+# spends a tenth of it. Raise it again the same way if the squad grows, and check
+# test_print_pages.py rather than assuming.
+ROTATIONS = [str(n) for n in range(1, 8)]
 
 # Packages, above the squad. A fixed group rather than a list because the group is the
 # thing being named — the kids who go on and come off together. Count and size are per
