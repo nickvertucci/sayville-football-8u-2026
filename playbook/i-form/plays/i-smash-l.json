@@ -63,35 +63,6 @@
   },
   "fronts": {
     "4-4": {
-      "Y": {
-        "block": "man",
-        "man": "RDE"
-      },
-      "RT": {
-        "block": "man",
-        "man": "ROLB"
-      },
-      "RG": {
-        "block": "man",
-        "man": "RDG"
-      },
-      "C": {
-        "block": "man",
-        "man": "RILB",
-        "help": "RDG"
-      },
-      "LG": {
-        "block": "man",
-        "man": "LDG"
-      },
-      "LT": {
-        "block": "man",
-        "man": "LDE"
-      },
-      "X": {
-        "block": "man",
-        "man": "LOLB"
-      },
       "Z": {
         "block": "man",
         "man": "LC"
@@ -111,7 +82,7 @@
   },
   "coaching_points": [
     "This is the iso: the fullback smashes the linebacker in the hole, the tailback runs right off his hip.",
-    "The hole is the A-gap — between the center and the left guard. If the tailback bounces, the play is dead.",
+    "The hole is the A-gap \u2014 between the center and the left guard. If the tailback bounces, the play is dead.",
     "The fullback's man is whoever shows in that gap, not a man he picks before the snap."
   ]
 }

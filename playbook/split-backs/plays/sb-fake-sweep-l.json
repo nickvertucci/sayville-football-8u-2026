@@ -47,7 +47,7 @@
       ]
     },
     "RH": {
-      "rule": "Take the fake from the quarterback and run hard to the right like you have the ball. Sell it all the way — you are the reason the defense goes the wrong way.",
+      "rule": "Take the fake from the quarterback and run hard to the right like you have the ball. Sell it all the way \u2014 you are the reason the defense goes the wrong way.",
       "type": "fake",
       "path": [
         [
@@ -67,33 +67,6 @@
   },
   "fronts": {
     "4-4": {
-      "LT": {
-        "block": "man",
-        "man": "LILB",
-        "help": "LDG"
-      },
-      "LG": {
-        "block": "man",
-        "man": "LDG"
-      },
-      "C": {
-        "block": "man",
-        "man": "RILB",
-        "help": "RDG"
-      },
-      "RG": {
-        "block": "man",
-        "man": "RDG"
-      },
-      "RT": {
-        "block": "man",
-        "man": "ROLB",
-        "help": "RDE"
-      },
-      "Y": {
-        "block": "man",
-        "man": "RDE"
-      },
       "LH": {
         "block": "man",
         "man": "LOLB",

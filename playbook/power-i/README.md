@@ -50,12 +50,12 @@ Same line as the Regular I — both ends tight, seven on the line every snap. Th
 | Position | Assignment |
 |---|---|
 | **X** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
-| **LT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
-| **LG** | Defensive guard head up on you. Cut him off — get between him and the ball. |
-| **C** | Nobody on you. Climb to the playside linebacker. Head across him. |
-| **RG** | Defensive guard head up on you. Hands inside, pads under his, drive him back. |
-| **RT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
-| **Y** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
+| **LT** | D — nothing in your gap and nobody on you. Go downfield and get the left inside linebacker. |
+| **LG** | O — your gap is empty, so take the defensive guard on you. Hands inside, pads under his, drive him back. |
+| **C** | D — nothing in your gap and nobody on you. Go downfield and get the right inside linebacker. |
+| **RG** | O — your gap is empty, so take the defensive guard on you. Hands inside, pads under his, drive him back. |
+| **RT** | D — nothing in your gap and nobody on you. Go downfield and get the right outside linebacker. |
+| **Y** | Defensive end on your inside shoulder. Turn him inside. The ball goes around behind you. |
 | **Z** | Lead through the hole. Block the first man who shows in it. You are the second man through. Go after the fullback, take whoever he did not. |
 | **QB** | Open right, hand to the tailback, then fake the boot left. It holds the backside end. |
 | **FB** | Lead through the hole. Block the first man who shows in it. |
@@ -79,12 +79,12 @@ Same line as the Regular I — both ends tight, seven on the line every snap. Th
 
 | Position | Assignment |
 |---|---|
-| **X** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
-| **LT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
-| **LG** | Defensive guard head up on you. Hands inside, pads under his, drive him back. |
-| **C** | Nobody on you. Climb to the playside linebacker. Head across him. |
-| **RG** | Defensive guard head up on you. Cut him off — get between him and the ball. |
-| **RT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
+| **X** | Defensive end on your inside shoulder. Turn him inside. The ball goes around behind you. |
+| **LT** | D — nothing in your gap and nobody on you. Go downfield and get the left inside linebacker. |
+| **LG** | O — your gap is empty, so take the defensive guard on you. Hands inside, pads under his, drive him back. |
+| **C** | D — nothing in your gap and nobody on you. Go downfield and get the right inside linebacker. |
+| **RG** | O — your gap is empty, so take the defensive guard on you. Hands inside, pads under his, drive him back. |
+| **RT** | D — nothing in your gap and nobody on you. Go downfield and get the right outside linebacker. |
 | **Y** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
 | **Z** | Lead through the hole. Block the first man who shows in it. You are the second man through. Go after the fullback, take whoever he did not. |
 | **QB** | Open left, hand to the tailback, then fake the boot right. It holds the backside end. |
@@ -110,11 +110,11 @@ Same line as the Regular I — both ends tight, seven on the line every snap. Th
 | Position | Assignment |
 |---|---|
 | **X** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
-| **LT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
-| **LG** | Defensive guard head up on you. Cut him off — get between him and the ball. |
-| **C** | Nobody on you. Climb to the playside linebacker. Head across him. |
-| **RG** | Defensive guard head up on you. Step past him. Climb to the playside linebacker. Head across him. |
-| **RT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
+| **LT** | D — nothing in your gap and nobody on you. Go downfield and get the left inside linebacker. |
+| **LG** | O — your gap is empty, so take the defensive guard on you. Hands inside, pads under his, drive him back. |
+| **C** | D — nothing in your gap and nobody on you. Go downfield and get the right inside linebacker. |
+| **RG** | O — your gap is empty, so take the defensive guard on you. Hands inside, pads under his, drive him back. |
+| **RT** | D — nothing in your gap and nobody on you. Go downfield and get the right outside linebacker. |
 | **Y** | Defensive end on your inside shoulder. Turn him inside. The ball goes around behind you. |
 | **Z** | Get outside the fullback, then take him, then block the right corner. |
 | **QB** | Quick pitch to the tailback, then run the other way, to the left, like you still have it. |
@@ -140,11 +140,11 @@ Same line as the Regular I — both ends tight, seven on the line every snap. Th
 | Position | Assignment |
 |---|---|
 | **X** | Defensive end on your inside shoulder. Turn him inside. The ball goes around behind you. |
-| **LT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
-| **LG** | Defensive guard head up on you. Step past him. Climb to the playside linebacker. Head across him. |
-| **C** | Nobody on you. Climb to the playside linebacker. Head across him. |
-| **RG** | Defensive guard head up on you. Cut him off — get between him and the ball. |
-| **RT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
+| **LT** | D — nothing in your gap and nobody on you. Go downfield and get the left inside linebacker. |
+| **LG** | O — your gap is empty, so take the defensive guard on you. Hands inside, pads under his, drive him back. |
+| **C** | D — nothing in your gap and nobody on you. Go downfield and get the right inside linebacker. |
+| **RG** | O — your gap is empty, so take the defensive guard on you. Hands inside, pads under his, drive him back. |
+| **RT** | D — nothing in your gap and nobody on you. Go downfield and get the right outside linebacker. |
 | **Y** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
 | **Z** | Get outside the fullback, then take him, then block the left corner. |
 | **QB** | Quick pitch to the tailback, then run the other way, to the right, like you still have it. |

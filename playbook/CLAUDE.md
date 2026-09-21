@@ -291,13 +291,23 @@ get the same Power: playside end takes the end man, slot screens the corner, ful
 (or the playside halfback) leads. A stacked I always leads with the fullback. Two halfbacks lead
 with the one on the playside.
 
+**The five interior linemen are not in this table**, because a scheme no longer has a
+line. They block GOD on every run — `playside_t`, `playside_g`, `center`, `backside_g`
+and `backside_t` are all `{"block": "god"}` in every template, and `test_schemes.py`
+fails a scheme that says anything else. What is left below is the only part of the front
+a play actually changes.
+
 | Scheme | Playside end | Slot | Lead | Where |
 |---|---|---|---|---|
-| **Smash** | cutoff | screen | through the hole | the center and the A gap (0, 2/3) |
-| **Dive** | cutoff | screen | through the hole | B-gap (4/5) |
+| **Smash** | base inside | screen | through the hole | the center and the A gap (0, 2/3) |
+| **Dive** | base inside | screen | through the hole | B-gap (4/5) |
 | **Power** | kick | screen | through the hole | C-gap (6/7) |
 | **Toss** | base inside | screen | force man | outside the tight end (8/9) |
 | **Sweep** | base inside | screen | force man | 8/9, QB or slot or a tight end |
+
+Smash and Dive are now identical templates. They used to differ on which uncovered
+lineman climbed; GOD reads that off the front instead of being told, and they stay two
+words because they are two different holes.
 | **Protect** | protect | screen | protect | dropback pass |
 
 A leftover back the scheme does not name stays on the play — the trailing
@@ -321,7 +331,7 @@ What the scheme fills, and what a leftover back writes, is **a verb, not a
 sentence**:
 
 ```json
-"RT": { "block": "down" },
+"RT": { "block": "god" },
 "Z":  { "block": "screen" },
 "FB": { "block": "lead" },
 "Y": { "block": "kick", "note": "You are the widest man we have — if he beats you outside, it is a touchdown." }
@@ -335,6 +345,7 @@ typing three versions of it — and it is why a blocker no longer has a `rule` o
 
 | Verb | The job | Options |
 |---|---|---|
+| `god` | **Gap, On, Down** — the inside gap first, then the man on you, then the nearest linebacker. Every interior lineman, every run. The only verb that is given our own alignment, because the gap it starts with is the space between this blocker and the man inside him, which no front can tell it. | |
 | `base` | Drive the man over you. Falls back to `down` if nobody is over him. | `drive`: `back` (default), `out`, `in` |
 | `down` | The first defender on or inside you. The bread-and-butter block. | |
 | `reach` | Get your head across the playside shoulder of the man in the playside gap. Climbs instead if that gap is empty. | |
@@ -396,8 +407,16 @@ half-count late, which he is, the hole he vacated is the hole the play was going
 The build rejects one by name.
 
 Every job a puller used to do belongs to somebody who was already standing there: the
-**playside end kicks the end out** (`kick`), **a back leads through the
-hole** (`lead`), and the **backside guard cuts off** behind the play (`cutoff`).
+**playside end takes the end man** (`kick` on Power, `base` inside on everything else),
+**a back leads through the hole** (`lead`), and the **five inside them block GOD**.
+
+One thing GOD does not reach, said plainly rather than papered over: on the six
+end-arounds the ball carrier IS the backside end, so the man who would have blocked the
+backside defensive end is carrying the ball, and no interior lineman's progression sends
+anybody to him. Eighteen of the hundred and thirty-two run cards leave that end free. It
+used to be covered by pulling the backside tackle off his rule and onto a cutoff — an
+exception on exactly the plays a boy is least likely to have rehearsed, which is the
+kind of thing GOD exists to delete.
 
 ### `fakes` — what a play-action pass is pretending to be
 

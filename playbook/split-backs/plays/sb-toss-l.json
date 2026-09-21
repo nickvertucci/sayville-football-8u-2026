@@ -67,35 +67,6 @@
   },
   "fronts": {
     "4-4": {
-      "Y": {
-        "block": "man",
-        "man": "RDE"
-      },
-      "RT": {
-        "block": "man",
-        "man": "RILB"
-      },
-      "RG": {
-        "block": "man",
-        "man": "RDG"
-      },
-      "C": {
-        "block": "man",
-        "man": "LILB",
-        "help": "LDG"
-      },
-      "LG": {
-        "block": "man",
-        "man": "LDG"
-      },
-      "LT": {
-        "block": "man",
-        "man": "LILB"
-      },
-      "X": {
-        "block": "man",
-        "man": "LDE"
-      },
       "Z": {
         "block": "man",
         "man": "LC"
@@ -119,7 +90,7 @@
   },
   "coaching_points": [
     "The pitch goes early. A quarterback who waits to be tackled first will pitch it on the ground.",
-    "This is not a read at this age — tell him before the snap that he is pitching it.",
-    "Everything depends on the edge being blocked, and out here the split man does it — which is what frees both backs to fake and lead. Drill him on beating that man to the spot without holding."
+    "This is not a read at this age \u2014 tell him before the snap that he is pitching it.",
+    "Everything depends on the edge being blocked, and out here the split man does it \u2014 which is what frees both backs to fake and lead. Drill him on beating that man to the spot without holding."
   ]
 }

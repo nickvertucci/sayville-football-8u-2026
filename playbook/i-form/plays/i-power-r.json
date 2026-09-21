@@ -53,36 +53,6 @@
   },
   "fronts": {
     "4-4": {
-      "X": {
-        "block": "man",
-        "man": "LDE"
-      },
-      "LT": {
-        "block": "man",
-        "man": "LOLB"
-      },
-      "LG": {
-        "block": "man",
-        "man": "LDG"
-      },
-      "C": {
-        "block": "man",
-        "man": "LILB",
-        "help": "LDG"
-      },
-      "RG": {
-        "block": "man",
-        "man": "RDG"
-      },
-      "RT": {
-        "block": "man",
-        "man": "RILB",
-        "help": "RDG"
-      },
-      "Y": {
-        "block": "man",
-        "man": "RDE"
-      },
       "Z": {
         "block": "man",
         "man": "RC"

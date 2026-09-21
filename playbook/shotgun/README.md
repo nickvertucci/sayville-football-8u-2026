@@ -103,13 +103,13 @@ Both ends are tight on the line and the slot is just outside the tight end, one 
 
 | Position | Assignment |
 |---|---|
-| **X** | Block the left defensive end. |
-| **LT** | Help on the left defensive guard, then block the left inside linebacker. |
-| **LG** | Block the left defensive guard. |
-| **C** | Help on the right defensive guard, then block the right inside linebacker. |
-| **RG** | Block the right defensive guard. |
-| **RT** | Help on the right defensive end, then block the right outside linebacker. |
-| **Y** | Block the right defensive end. |
+| **X** | Defensive end on your inside shoulder. Turn him inside. The ball goes around behind you. |
+| **LT** | D — nothing in your gap and nobody on you. Go downfield and get the left inside linebacker. |
+| **LG** | O — your gap is empty, so take the defensive guard on you. Hands inside, pads under his, drive him back. |
+| **C** | D — nothing in your gap and nobody on you. Go downfield and get the right inside linebacker. |
+| **RG** | O — your gap is empty, so take the defensive guard on you. Hands inside, pads under his, drive him back. |
+| **RT** | D — nothing in your gap and nobody on you. Go downfield and get the right outside linebacker. |
+| **Y** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
 | **Z** | Run at the corner and screen him off. Stay in his way. |
 | **QB** **(ball)** | Catch the snap and sweep left, flat and fast, behind the left halfback. Turn up outside his block. |
 | **LH** | Bubble out around our end, then double team the linebacker with the right halfback. |
@@ -133,13 +133,13 @@ Both ends are tight on the line and the slot is just outside the tight end, one 
 
 | Position | Assignment |
 |---|---|
-| **X** | Block the left defensive end. |
-| **LT** | Help on the left defensive end, then block the left outside linebacker. |
-| **LG** | Block the left defensive guard. |
-| **C** | Help on the left defensive guard, then block the left inside linebacker. |
-| **RG** | Block the right defensive guard. |
-| **RT** | Help on the right defensive guard, then block the right inside linebacker. |
-| **Y** | Block the right defensive end. |
+| **X** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
+| **LT** | D — nothing in your gap and nobody on you. Go downfield and get the left inside linebacker. |
+| **LG** | O — your gap is empty, so take the defensive guard on you. Hands inside, pads under his, drive him back. |
+| **C** | D — nothing in your gap and nobody on you. Go downfield and get the right inside linebacker. |
+| **RG** | O — your gap is empty, so take the defensive guard on you. Hands inside, pads under his, drive him back. |
+| **RT** | D — nothing in your gap and nobody on you. Go downfield and get the right outside linebacker. |
+| **Y** | Defensive end on your inside shoulder. Turn him inside. The ball goes around behind you. |
 | **Z** | Run at the corner and screen him off. Stay in his way. |
 | **QB** **(ball)** | Catch the snap and sweep right, flat and fast, behind the right halfback. Turn up outside his block. |
 | **LH** | Bubble out around our end, then double team the linebacker with the right halfback. |
@@ -163,13 +163,13 @@ Both ends are tight on the line and the slot is just outside the tight end, one 
 
 | Position | Assignment |
 |---|---|
-| **X** | Block the left defensive end. |
-| **LT** | Help on the left defensive end, then block the left outside linebacker. |
-| **LG** | Block the left defensive guard. |
-| **C** | Help on the left defensive guard, then block the left inside linebacker. |
-| **RG** | Block the right defensive guard. |
-| **RT** | Help on the right defensive guard, then block the right inside linebacker. |
-| **Y** | Block the right defensive end. |
+| **X** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
+| **LT** | D — nothing in your gap and nobody on you. Go downfield and get the left inside linebacker. |
+| **LG** | O — your gap is empty, so take the defensive guard on you. Hands inside, pads under his, drive him back. |
+| **C** | D — nothing in your gap and nobody on you. Go downfield and get the right inside linebacker. |
+| **RG** | O — your gap is empty, so take the defensive guard on you. Hands inside, pads under his, drive him back. |
+| **RT** | D — nothing in your gap and nobody on you. Go downfield and get the right outside linebacker. |
+| **Y** | Defensive end on your inside shoulder. Turn him inside. The ball goes around behind you. |
 | **Z** | Run at the corner and screen him off. Stay in his way. |
 | **QB** | Hand the ball to the left halfback as he crosses in front of you, then fake a run to the left. |
 | **LH** **(ball)** | Cross in front of the quarterback, take the handoff going right and get to the edge behind the right halfback. Turn up outside his block. |
@@ -193,13 +193,13 @@ Both ends are tight on the line and the slot is just outside the tight end, one 
 
 | Position | Assignment |
 |---|---|
-| **X** | Block the left defensive end. |
-| **LT** | Help on the left defensive guard, then block the left inside linebacker. |
-| **LG** | Block the left defensive guard. |
-| **C** | Help on the right defensive guard, then block the right inside linebacker. |
-| **RG** | Block the right defensive guard. |
-| **RT** | Help on the right defensive end, then block the right outside linebacker. |
-| **Y** | Block the right defensive end. |
+| **X** | Defensive end on your inside shoulder. Turn him inside. The ball goes around behind you. |
+| **LT** | D — nothing in your gap and nobody on you. Go downfield and get the left inside linebacker. |
+| **LG** | O — your gap is empty, so take the defensive guard on you. Hands inside, pads under his, drive him back. |
+| **C** | D — nothing in your gap and nobody on you. Go downfield and get the right inside linebacker. |
+| **RG** | O — your gap is empty, so take the defensive guard on you. Hands inside, pads under his, drive him back. |
+| **RT** | D — nothing in your gap and nobody on you. Go downfield and get the right outside linebacker. |
+| **Y** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
 | **Z** | Run at the corner and screen him off. Stay in his way. |
 | **QB** | Hand the ball to the right halfback as he crosses in front of you, then fake a run to the right. |
 | **LH** | Bubble out around our end — do not run up into the line. Block the first man out there; here it is the linebacker. |
