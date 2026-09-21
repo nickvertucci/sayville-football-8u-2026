@@ -71,7 +71,7 @@ PAD = 18
 LINE_H = 17
 
 # Which alignment keys are linemen (drawn as squares) vs backs and receivers (circles).
-LINEMEN = {"LTE", "LT", "LG", "C", "RG", "RT", "RTE", "TE"}
+LINEMEN = {"X", "LT", "LG", "C", "RG", "RT", "Y", "TE"}
 
 COLORS = {
     "ink": "#111318",
@@ -234,7 +234,7 @@ def resolve_plays(plays_dir: Path, form: dict) -> list[dict]:
 # diagram.
 #
 # The digits describe the player the FIRST digit names, not the ball carrier. On a pass
-# they are the same only by accident: I SL Right 16 Boot is the quarterback at the 6 hole,
+# they are the same only by accident: I Z Right 16 Boot is the quarterback at the 6 hole,
 # while `ball_carrier` is the slot he throws to.
 
 CALL_DIGITS = re.compile(r"\b(\d)(\d)\b")
@@ -325,7 +325,7 @@ def play_alignment(form: dict, play: dict) -> dict:
     """Where the eleven actually line up for this play.
 
     A formation has one alignment, but a formation is not always one picture. The
-    The SL is split right on almost every snap, but Power is built on his kick-out and
+    The Z is split right on almost every snap, but Power is built on his kick-out and
     Jet needs him with a formation to cross, so those two move him. A play may say
     which, and the call says it out loud — `Regular I Slot Left 37 Power` — so nobody is
     moved silently.
@@ -346,10 +346,13 @@ def play_alignment(form: dict, play: dict) -> dict:
 # line, so they are measured off the formation's own alignment and follow its splits.
 HOLE_GAPS = [("C", "G"), ("G", "T"), ("T", "TE")]
 
-# The line from the middle out, as position-key suffixes after the side letter. Spelled
-# out rather than built from the hole names: "E" as a suffix would mean the tight end
-# here and used to mean the defensive end as well, before the defensive line took its D.
-LINE_OUT = ("G", "T", "TE")
+# The line from the middle out. The guard and the tackle take the side letter; the end
+# does not, because the left end is the X and the right end the Y -- a letter each, which
+# is the whole point of them. Spelled out rather than built from the hole names: "E" as a
+# suffix would mean the tight end here and used to mean the defensive end as well, before
+# the defensive line took its D.
+LINE_OUT = ("G", "T")
+SIDE_END = {"R": "Y", "L": "X"}
 
 # How far off his aiming point a carrier may cross and still count as hitting the hole.
 # Half a line split — enough that a back bending to daylight passes, tight enough that a
@@ -358,8 +361,10 @@ HOLE_TOLERANCE = 0.4
 
 
 def line_edges(alignment: dict, side: str) -> list[float]:
-    """|x| of the center, guard, tackle and tight end on one side of this alignment."""
-    return [abs(alignment["C"][0])] + [abs(alignment[side + s][0]) for s in LINE_OUT]
+    """|x| of the center, guard, tackle and end on one side of this alignment."""
+    return ([abs(alignment["C"][0])]
+            + [abs(alignment[side + s][0]) for s in LINE_OUT]
+            + [abs(alignment[SIDE_END[side]][0])])
 
 
 def hole_bounds(alignment: dict, hole: int) -> tuple[float, float]:
@@ -424,24 +429,24 @@ def validate_call(play: dict, form: dict, defenses: dict) -> list[str]:
         return [f"formation {form.get('id')}: has plays with calls but no 'backs' map, so "
                 "the numbering in those calls cannot be checked"]
 
-    # The call says where the slot stands, so the diagram has to agree. This is not
-    # implied by anything else: the slot is a blocker on most plays, so moving him to
-    # the wrong side leaves every geometry check happy and only the picture wrong. It
-    # is also the easy mistake to make, because a Slot Right play carries no alignment
-    # override at all -- it takes the formation's -- so mirroring one to the left means
-    # *adding* a key rather than flipping one, which is easy to forget.
-    side_word = re.search(r"\bSlot (Left|Right)\b", call)
+    # The call says where the Z stands, so the diagram has to agree. This is not
+    # implied by anything else: the Z is a blocker on most plays, so moving him to the
+    # wrong side leaves every geometry check happy and only the picture wrong. It is
+    # also the easy mistake to make, because a Z R play carries no alignment override
+    # at all -- it takes the formation's -- so mirroring one to the left means *adding*
+    # a key rather than flipping one, which is easy to forget.
+    side_word = re.search(r"\bZ (L|R)\b", call)
     if side_word:
-        where = play_alignment(form, play).get("SL")
+        where = play_alignment(form, play).get("Z")
         if where is None:
-            return [f"{pid}: call '{call}' says Slot {side_word.group(1)}, but this "
-                    "formation has no slot"]
-        wanted = -1 if side_word.group(1) == "Left" else 1
+            return [f"{pid}: call '{call}' says Z {side_word.group(1)}, but this "
+                    "formation has no Z"]
+        wanted = -1 if side_word.group(1) == "L" else 1
         if (where[0] < 0) != (wanted < 0):
             stood = "left" if where[0] < 0 else "right"
-            return [f"{pid}: call '{call}' says Slot {side_word.group(1)}, but the slot "
+            return [f"{pid}: call '{call}' says Z {side_word.group(1)}, but the Z "
                     f"lines up on the {stood} (x = {where[0]:+.1f}) -- give the play an "
-                    f'"alignment" override for SL, or fix the call']
+                    f'"alignment" override for Z, or fix the call']
 
     m = CALL_DIGITS.search(call)
     # Every call is numbered. There used to be an opt-out for the one ball carrier the
@@ -521,7 +526,7 @@ def validate_call(play: dict, form: dict, defenses: dict) -> list[str]:
     # end-around.
     if play.get("type") == "run":
         rest = call[m.end():].strip()
-        allowed = blocking.scheme_words(hole, back_digit, form)
+        allowed = blocking.call_words(hole, back_digit, form)
         if allowed and rest not in allowed:
             word = allowed[0]
             return [f"{pid}: call '{call}' runs the {hole} hole"
@@ -1282,8 +1287,8 @@ def render_card(play: dict, defense: dict, frame: tuple[float, float, float]) ->
 # The offense a defensive card is drawn against: a balanced two-tight-end set, so the
 # picture does not imply we only ever face one formation.
 GENERIC_OFFENSE = {
-    "LTE": [-4.2, -0.5], "LT": [-2.8, -0.5], "LG": [-1.4, -0.5], "C": [0.0, -0.5],
-    "RG": [1.4, -0.5], "RT": [2.8, -0.5], "RTE": [4.2, -0.5],
+    "X": [-4.2, -0.5], "LT": [-2.8, -0.5], "LG": [-1.4, -0.5], "C": [0.0, -0.5],
+    "RG": [1.4, -0.5], "RT": [2.8, -0.5], "Y": [4.2, -0.5],
     "QB": [0.0, -1.5], "FB": [0.0, -3.3], "LH": [-2.9, -4.9], "RH": [2.9, -4.9],
 }
 

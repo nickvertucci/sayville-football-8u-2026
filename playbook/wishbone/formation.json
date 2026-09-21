@@ -7,21 +7,21 @@
   "personnel": "11 players, 2 tight ends, quarterback, fullback, 2 halfbacks",
   "notes": "Same line as the Regular I — both ends tight, seven on the line every snap. Fullback at three yards on the ball. The halfbacks sit a yard deeper, just outside him, one behind each tackle, same depth so the alignment gives nothing away. There is no slot: the call is the formation, the number and the word.",
   "alignment": {
-    "LTE": [-4.2, -0.5],
+    "X": [-4.2, -0.5],
     "LT": [-2.8, -0.5],
     "LG": [-1.4, -0.5],
     "C": [0.0, -0.5],
     "RG": [1.4, -0.5],
     "RT": [2.8, -0.5],
-    "RTE": [4.2, -0.5],
+    "Y": [4.2, -0.5],
     "QB": [0.0, -1.5],
     "FB": [0.0, -3.3],
     "LH": [-2.2, -4.5],
     "RH": [2.2, -4.5]
   },
   "eligible": [
-    "LTE",
-    "RTE",
+    "X",
+    "Y",
     "FB",
     "LH",
     "RH",
@@ -32,8 +32,8 @@
     "2": "FB",
     "3": "LH",
     "4": "RH",
-    "5": "LTE",
-    "6": "RTE"
+    "5": "X",
+    "6": "Y"
   },
   "coaching_notes": [
     "Count seven on the line every snap — both ends stay down. There is no slot to creep up, so the flag here is an end who stands up before the snap.",

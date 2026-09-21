@@ -51,7 +51,7 @@
 <line x1="104.1" y1="257.7" x2="121.1" y2="250.9" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 
 <rect x="224.1" y="324.0" width="27.0" height="27.0" rx="3" fill="#ffffff" stroke="#14213d" stroke-width="2.6"/>
-<text x="237.6" y="342.0" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">LTE</text>
+<text x="237.6" y="342.0" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">X</text>
 <rect x="261.9" y="324.0" width="27.0" height="27.0" rx="3" fill="#ffffff" stroke="#14213d" stroke-width="2.6"/>
 <text x="275.4" y="342.0" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">LT</text>
 <rect x="299.7" y="324.0" width="27.0" height="27.0" rx="3" fill="#ffffff" stroke="#14213d" stroke-width="2.6"/>
@@ -63,9 +63,9 @@
 <rect x="413.1" y="324.0" width="27.0" height="27.0" rx="3" fill="#ffffff" stroke="#14213d" stroke-width="2.6"/>
 <text x="426.6" y="342.0" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">RT</text>
 <rect x="450.9" y="324.0" width="27.0" height="27.0" rx="3" fill="#ffffff" stroke="#b3001b" stroke-width="2.6"/>
-<text x="464.4" y="342.0" text-anchor="middle" font-size="13" font-weight="700" fill="#b3001b">RTE</text>
+<text x="464.4" y="342.0" text-anchor="middle" font-size="13" font-weight="700" fill="#b3001b">Y</text>
 <circle cx="199.8" cy="364.5" r="13.5" fill="#ffffff" stroke="#14213d" stroke-width="2.6"/>
-<text x="199.8" y="369.0" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">SL</text>
+<text x="199.8" y="369.0" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">Z</text>
 <circle cx="167.4" cy="391.5" r="13.5" fill="#ffffff" stroke="#14213d" stroke-width="2.6"/>
 <text x="167.4" y="396.0" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">TB</text>
 <circle cx="135.0" cy="364.5" r="13.5" fill="#ffffff" stroke="#14213d" stroke-width="2.6"/>

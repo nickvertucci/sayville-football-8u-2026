@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="621" height="472" viewBox="40 27 621 472" font-family="Segoe UI, Helvetica, Arial, sans-serif" role="img">
-<title>Regular I - Slot Left - 69 Sweep — Regular I Slot Left 69 Sweep vs 5-3</title>
+<title>Regular I - Z L - 69 Sweep — Regular I Z L 69 Sweep vs 5-3</title>
 <rect x="0" y="0" width="702" height="513" fill="#ffffff"/>
 <line x1="0" y1="459.0" x2="702" y2="459.0" stroke="#c8cdd6" stroke-width="1"/>
 <line x1="0" y1="189.0" x2="702" y2="189.0" stroke="#c8cdd6" stroke-width="1"/>
@@ -51,7 +51,7 @@
 <line x1="112.1" y1="259.2" x2="121.7" y2="243.5" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 
 <rect x="224.1" y="324.0" width="27.0" height="27.0" rx="3" fill="#ffffff" stroke="#14213d" stroke-width="2.6"/>
-<text x="237.6" y="342.0" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">LTE</text>
+<text x="237.6" y="342.0" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">X</text>
 <rect x="261.9" y="324.0" width="27.0" height="27.0" rx="3" fill="#ffffff" stroke="#14213d" stroke-width="2.6"/>
 <text x="275.4" y="342.0" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">LT</text>
 <rect x="299.7" y="324.0" width="27.0" height="27.0" rx="3" fill="#ffffff" stroke="#14213d" stroke-width="2.6"/>
@@ -63,9 +63,9 @@
 <rect x="413.1" y="324.0" width="27.0" height="27.0" rx="3" fill="#ffffff" stroke="#14213d" stroke-width="2.6"/>
 <text x="426.6" y="342.0" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">RT</text>
 <rect x="450.9" y="324.0" width="27.0" height="27.0" rx="3" fill="#ffffff" stroke="#b3001b" stroke-width="2.6"/>
-<text x="464.4" y="342.0" text-anchor="middle" font-size="13" font-weight="700" fill="#b3001b">RTE</text>
+<text x="464.4" y="342.0" text-anchor="middle" font-size="13" font-weight="700" fill="#b3001b">Y</text>
 <circle cx="199.8" cy="364.5" r="13.5" fill="#ffffff" stroke="#14213d" stroke-width="2.6"/>
-<text x="199.8" y="369.0" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">SL</text>
+<text x="199.8" y="369.0" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">Z</text>
 <circle cx="351.0" cy="364.5" r="13.5" fill="#ffffff" stroke="#14213d" stroke-width="2.6"/>
 <text x="351.0" y="369.0" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">QB</text>
 <circle cx="351.0" cy="413.1" r="13.5" fill="#ffffff" stroke="#14213d" stroke-width="2.6"/>
@@ -73,5 +73,5 @@
 <circle cx="351.0" cy="472.5" r="13.5" fill="#ffffff" stroke="#14213d" stroke-width="2.6"/>
 <text x="351.0" y="477.0" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">TB</text>
 <rect x="583.9" y="35.0" width="69.6" height="52.0" rx="8" fill="#ffffff" stroke="#111318" stroke-width="3"/><text x="618.7" y="75.0" text-anchor="middle" font-size="40" font-weight="800" fill="#111318">#4</text>
-<text x="52.5" y="45.0" font-size="4.3" font-weight="700" fill="#111318">Regular I - Slot Left - 69 Sweep</text>
+<text x="52.5" y="45.0" font-size="4.3" font-weight="700" fill="#111318">Regular I - Z L - 69 Sweep</text>
 </svg>

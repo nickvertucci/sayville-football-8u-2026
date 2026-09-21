@@ -7,22 +7,22 @@
   "personnel": "11 players, 2 tight ends, quarterback, fullback, tailback, slot — the slot in the backfield, behind a guard",
   "notes": "Same line as the Regular I — both ends tight, seven on the line every snap. The quarterback under the center, the fullback behind him and the tailback behind the fullback, exactly as always. The difference is the slot: instead of splitting out past the right end he stands in the backfield, behind a guard, halfway between the fullback and the tailback in depth. The call names his side — Power I Slot Right or Power I Slot Left — and that is the side the ball goes.",
   "alignment": {
-    "LTE": [-4.2, -0.5],
+    "X": [-4.2, -0.5],
     "LT": [-2.8, -0.5],
     "LG": [-1.4, -0.5],
     "C": [0.0, -0.5],
     "RG": [1.4, -0.5],
     "RT": [2.8, -0.5],
-    "RTE": [4.2, -0.5],
+    "Y": [4.2, -0.5],
     "QB": [0.0, -1.5],
     "FB": [0.0, -3.3],
-    "SL": [1.4, -4.4],
+    "Z": [1.4, -4.4],
     "TB": [0.0, -5.5]
   },
   "eligible": [
-    "LTE",
-    "RTE",
-    "SL",
+    "X",
+    "Y",
+    "Z",
     "FB",
     "TB",
     "QB"
@@ -31,9 +31,9 @@
     "1": "QB",
     "2": "FB",
     "3": "TB",
-    "4": "SL",
-    "5": "LTE",
-    "6": "RTE"
+    "4": "Z",
+    "5": "X",
+    "6": "Y"
   },
   "coaching_notes": [
     "Count seven on the line every snap — both ends stay down. Four in the backfield, nobody split out: this is the one look where we have no receiver on the field.",

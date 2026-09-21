@@ -8,9 +8,9 @@
   "type": "run",
   "scheme": "Sweep",
   "direction": "right",
-  "ball_carrier": "LTE",
+  "ball_carrier": "X",
   "assignments": {
-    "LTE": {
+    "X": {
       "rule": "Stay down in your stance — no motion. At the snap run flat behind the quarterback, take the handoff at full speed and get to the right edge. Turn up outside the trips.",
       "type": "run",
       "path": [

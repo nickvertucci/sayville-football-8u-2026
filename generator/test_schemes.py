@@ -72,7 +72,7 @@ def check_roles(formations) -> list[str]:
                         f"{i_right.get('trail')}, expected FB/TB")
     if i_left.get("lead") != "FB":
         problems.append("I-form lead is always the fullback, including left")
-    if i_right.get("playside_te") != "RTE" or i_left.get("playside_te") != "LTE":
+    if i_right.get("playside_te") != "Y" or i_left.get("playside_te") != "X":
         problems.append("playside_te did not follow the play's side")
     sb_right = blocking.scheme_roles(split, 1)
     sb_left = blocking.scheme_roles(split, -1)
@@ -95,8 +95,8 @@ def check_roles(formations) -> list[str]:
     tr = blocking.scheme_roles(trips, 1)
     if "lead" in tr:
         problems.append(f"Trips is empty; lead should be empty, got {tr.get('lead')}")
-    if tr.get("slot") != "SL":
-        problems.append(f"Trips slot is {tr.get('slot')}, expected SL")
+    if tr.get("slot") != "Z":
+        problems.append(f"Trips slot is {tr.get('slot')}, expected Z")
     if tr.get("trail"):
         problems.append(f"Trips 2/3/4 are in the bunch, not a backfield trail ({tr.get('trail')})")
     return problems
@@ -116,10 +116,10 @@ def check_fill(formations) -> list[str]:
         },
     }
     filled = blocking.fill_assignments(play, i_form, 1)
-    if filled.get("RTE", {}).get("block") != "release":
-        problems.append(f"minimal Power did not release the playside end: {filled.get('RTE')}")
-    if filled.get("SL", {}).get("block") != "kick":
-        problems.append(f"minimal Power did not kick with the slot: {filled.get('SL')}")
+    if filled.get("Y", {}).get("block") != "release":
+        problems.append(f"minimal Power did not release the playside end: {filled.get('Y')}")
+    if filled.get("Z", {}).get("block") != "kick":
+        problems.append(f"minimal Power did not kick with the slot: {filled.get('Z')}")
     if filled.get("FB", {}).get("block") != "lead":
         problems.append(f"minimal Power did not lead with the fullback: {filled.get('FB')}")
     if "block" in filled.get("TB", {}):
@@ -150,12 +150,12 @@ def check_fill(formations) -> list[str]:
         },
     }
     wb_filled = blocking.fill_assignments(wb_power, bone, 1)
-    if (wb_filled.get("RTE", {}).get("block") != "base"
-            or wb_filled.get("RTE", {}).get("drive") != "out"):
+    if (wb_filled.get("Y", {}).get("block") != "base"
+            or wb_filled.get("Y", {}).get("drive") != "out"):
         problems.append(
-            f"Wishbone Power must kick with the playside end, got {wb_filled.get('RTE')}"
+            f"Wishbone Power must kick with the playside end, got {wb_filled.get('Y')}"
         )
-    if "SL" in wb_filled:
+    if "Z" in wb_filled:
         problems.append("Wishbone Power filled a slot the formation does not have")
     if wb_filled.get("FB", {}).get("block") != "lead":
         problems.append(
@@ -164,7 +164,7 @@ def check_fill(formations) -> list[str]:
     # A note on the lead merges; a leftover trail stays.
     noted = copy.deepcopy(play)
     noted["assignments"]["FB"] = {"note": "Hit downhill."}
-    noted["assignments"]["LTE"] = {"block": "cutoff"}  # leftover? that's scheme backside_te
+    noted["assignments"]["X"] = {"block": "cutoff"}  # leftover? that's scheme backside_te
     merged = blocking.fill_assignments(noted, i_form, 1)
     if merged["FB"].get("block") != "lead" or merged["FB"].get("note") != "Hit downhill.":
         problems.append(f"lead note did not merge onto Power: {merged.get('FB')}")

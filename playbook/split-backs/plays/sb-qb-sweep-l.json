@@ -2,15 +2,15 @@
   "id": "sb-qb-sweep-l",
   "order": 21,
   "formation": "split-backs",
-  "name": "Split Backs - Slot Left - 19 Sweep",
+  "name": "Split Backs - Z L - 19 Sweep",
   "code": "20",
-  "call": "Split Backs Slot Left 19 Sweep",
+  "call": "Split Backs Z L 19 Sweep",
   "type": "run",
   "scheme": "Sweep",
   "direction": "left",
   "ball_carrier": "QB",
   "alignment": {
-    "SL": [
+    "Z": [
       -5.6,
       -1.5
     ]
@@ -68,7 +68,7 @@
         "man": "ROLB",
         "help": "RDE"
       },
-      "RTE": {
+      "Y": {
         "block": "man",
         "man": "RDE"
       }

@@ -458,7 +458,7 @@ table.dc-sub thead th {
    defense before the linebackers and before the secondary. The two sides can share
    one rule because no key means something different across them -- which is what the
    defensive line's D bought: LT is ours, LDG is theirs. */
-.dc-pkg-slot[data-spot="LTE"],
+.dc-pkg-slot[data-spot="X"],
 .dc-pkg-slot[data-spot="LT"],
 .dc-pkg-slot[data-spot="LOLB"],
 .dc-pkg-slot[data-spot="LC"] {
@@ -659,7 +659,7 @@ table.xl.xl-plays td {
 .band ol + .band-sub { margin-top: 5px; }
 .band li {
   display: flex; align-items: baseline; gap: 6px;
-  padding: 0 5px; font-size: 13px; font-weight: 700; line-height: 2.25;
+  padding: 0 5px; font-size: 15.5px; font-weight: 700; line-height: 1.95;
   color: var(--ink); white-space: nowrap;
 }
 /* Zebra rather than a rule between rows. A rule is a thing to read past; a band of
@@ -674,7 +674,7 @@ table.xl.xl-plays td {
    side: the screen is a preview, the printed inches are the thing. */
 @media (max-width: 560px) {
   .band-set { width: 100%; grid-template-rows: none; }
-  .band li { font-size: 14px; line-height: 1.55; }
+  .band li { font-size: 15.5px; line-height: 1.95; }
 }
 
 /* ------------------------------------------------- defensive call sheet --
@@ -869,15 +869,15 @@ table.xl.pk-plays td {
 .pk-plays td a:hover { text-decoration: underline; }
 @media print {
   /* One formation to a row, full width. Two across put a formation in half a page,
-     which is where the long calls wrapped -- "Trips R - RTE Slant Out" over two lines
+     which is where the long calls wrapped -- "Trips R - Y Slant Out" over two lines
      in a cell an inch wide. The full width is the fix: the same rows, the same type
      size, but each cell three inches instead of one and a half, so nothing wraps and
      the block is *shorter* than it was at half width. Five of them still fit the one
      sheet because of it, not in spite of it. */
   /* Four blocks down the left, the script down the right. 245 points is what the
      longest call in the script needs to sit on one line at 9px -- "Split Backs - Slot R
-     - LTE (50) Sweep" -- and it is affordable because the blocks still do not wrap at
-     what is left: their widest, "S-10 Slot L - RTE (60) Sweep", has room to spare in a
+     - X (50) Sweep" -- and it is affordable because the blocks still do not wrap at
+     what is left: their widest, "S-10 Slot L - Y (60) Sweep", has room to spare in a
      148-point column. Checked at 200, where the script clipped, and at 245, where
      neither side does. */
   .xl-top { display: grid; grid-template-columns: 1fr 230px; gap: 0 6px;
@@ -1005,7 +1005,7 @@ table.xl.pk-plays td {
      row there is and it has half of five inches to fit in. Eight rows then have three
      inches to live in, which is why the leading is what it is -- the space was going
      spare, and a row a boy can keep his eye on is what to spend it on. */
-  .band li { font-size: 13px; line-height: 2.25; padding: 0 5px; gap: 6px; }
+  .band li { font-size: 15.5px; line-height: 1.95; padding: 0 5px; gap: 6px; }
   .band li:nth-child(even) { background: #eee !important;
                              -webkit-print-color-adjust: exact; print-color-adjust: exact; }
   .band li b { flex-basis: 26px; padding-right: 6px; border-right-color: #000; }
@@ -1979,7 +1979,7 @@ table.dc-board thead th,
   .dc-pkg-slot { min-height: 0; padding: 0; font-size: 7pt; line-height: 1.15; }
   .dc-pkg-slot[data-spot]::before { flex-basis: 36px; font-size: 6.5pt; letter-spacing: 0; }
   .dc-pkg-slot + .dc-pkg-slot { margin-top: 0; }
-  .dc-pkg-slot[data-spot="LTE"],
+  .dc-pkg-slot[data-spot="X"],
   .dc-pkg-slot[data-spot="LT"],
   .dc-pkg-slot[data-spot="LOLB"],
   .dc-pkg-slot[data-spot="LC"] { margin-top: 1px; padding-top: 1px; }

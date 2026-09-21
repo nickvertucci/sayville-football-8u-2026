@@ -8,9 +8,9 @@
   "type": "pass",
   "scheme": "Protect",
   "direction": "left",
-  "ball_carrier": "LTE",
+  "ball_carrier": "X",
   "assignments": {
-    "LTE": {
+    "X": {
       "rule": "Take one step up, then slant out flat toward the left sideline, almost along the line of scrimmage. Look for the ball right away.",
       "type": "pass",
       "path": [
@@ -58,7 +58,7 @@
     "The slot screens. The tailback pass blocks. If the tight end is covered, tuck it and run."
   ],
   "alignment": {
-    "SL": [
+    "Z": [
       -5.6,
       -1.5
     ],

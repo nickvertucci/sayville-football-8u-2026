@@ -2,15 +2,15 @@
   "id": "sb-sl-sweep-l",
   "order": 25,
   "formation": "split-backs",
-  "name": "Split Backs - Slot Right - 49 Sweep",
+  "name": "Split Backs - Z R - 49 Sweep",
   "code": "23",
-  "call": "Split Backs Slot Right 49 Sweep",
+  "call": "Split Backs Z R 49 Sweep",
   "type": "run",
   "scheme": "Sweep",
   "direction": "left",
-  "ball_carrier": "SL",
+  "ball_carrier": "Z",
   "assignments": {
-    "SL": {
+    "Z": {
       "rule": "At the snap run flat across the backfield, take the handoff at full speed and get to the left edge. Turn up in the alley behind the left halfback.",
       "type": "run",
       "path": [
@@ -61,7 +61,7 @@
   },
   "fronts": {
     "4-4": {
-      "LTE": {
+      "X": {
         "block": "man",
         "man": "LDE"
       },
@@ -88,7 +88,7 @@
         "man": "RILB",
         "help": "RDG"
       },
-      "RTE": {
+      "Y": {
         "block": "man",
         "man": "RDE"
       }

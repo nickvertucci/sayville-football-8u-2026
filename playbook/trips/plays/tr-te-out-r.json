@@ -8,9 +8,9 @@
   "type": "pass",
   "scheme": "Protect",
   "direction": "right",
-  "ball_carrier": "RTE",
+  "ball_carrier": "Y",
   "assignments": {
-    "RTE": {
+    "Y": {
       "rule": "Take one step up, then slant out flat toward the right sideline, almost along the line of scrimmage. Look for the ball right away.",
       "type": "pass",
       "path": [

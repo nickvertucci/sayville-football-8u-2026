@@ -2,15 +2,15 @@
   "id": "sg-rb-toss-l",
   "order": 6,
   "formation": "shotgun",
-  "name": "Shotgun - Slot Left - 29 Toss",
+  "name": "Shotgun - Z L - 29 Toss",
   "code": "38",
-  "call": "Shotgun Slot Left 29 Toss",
+  "call": "Shotgun Z L 29 Toss",
   "type": "run",
   "scheme": "Toss",
   "direction": "left",
   "ball_carrier": "RH",
   "alignment": {
-    "SL": [
+    "Z": [
       -5.6,
       -1.5
     ]
@@ -63,7 +63,7 @@
   },
   "fronts": {
     "4-4": {
-      "RTE": {
+      "Y": {
         "block": "man",
         "man": "RDE"
       },
@@ -90,7 +90,7 @@
         "man": "LILB",
         "help": "LDG"
       },
-      "LTE": {
+      "X": {
         "block": "man",
         "man": "LDE"
       },

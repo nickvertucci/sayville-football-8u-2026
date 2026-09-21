@@ -1,7 +1,7 @@
 {
   "note": "The depth chart. Depth is the column — 1 through 6; anybody past that is on the squad but in nothing. A name may repeat, both down a column and across one: the same left tackle at three depths is that name three times, and a backup can be second in line at two positions. Offense covers every spot both formations use; defense is the 4-4, our everyday front. Edit this file and rebuild — the page is the file, not a board you rearrange in the browser.",
   "offense": {
-    "LTE": [
+    "X": [
       "Camden G.",
       "Ryan S.",
       "Brogan A.",
@@ -42,13 +42,13 @@
       "Mason A.",
       "Gavin P."
     ],
-    "RTE": [
+    "Y": [
       "Ace A.",
       "Clark J.",
       "Joseph P.",
       "Michael M."
     ],
-    "SL": [
+    "Z": [
       "Philip A.",
       "Nico V.",
       "Jake G.",
@@ -316,71 +316,71 @@
     "note": "What each offensive package comes on to call, in package order. An entry is a play's full call and has to name a real play, or the build stops. The string \"any\" on its own means the package runs the whole book, so the card says Any play instead of listing it. A package may name plays from any formation, up to five -- five rows is what the card is allowed to be tall, because the blank field below the packages is sized against it.",
     "offense": [
       [
-        "Split Backs Slot Right 18 Sweep",
-        "Split Backs Slot Right 58 Sweep",
-        "Split Backs Slot Right 38 Toss",
-        "Split Backs Slot Right 36 Power",
-        "Split Backs Slot Right 49 Sweep"
+        "Split Backs Z R 18 Sweep",
+        "Split Backs Z R 58 Sweep",
+        "Split Backs Z R 38 Toss",
+        "Split Backs Z R 36 Handoff",
+        "Split Backs Z R 49 Sweep"
       ],
       [
-        "Split Backs Slot Right 58 Sweep",
-        "Split Backs Slot Left 69 Sweep",
-        "Split Backs Slot Right 49 Sweep",
-        "Split Backs Slot Left 48 Sweep",
-        "Regular I Slot Right 22 Smash"
+        "Split Backs Z R 58 Sweep",
+        "Split Backs Z L 69 Sweep",
+        "Split Backs Z R 49 Sweep",
+        "Split Backs Z L 48 Sweep",
+        "Regular I Z R 22 Handoff"
       ],
       [
-        "Regular I Slot Right 32 Smash",
-        "Regular I Slot Left 33 Smash",
-        "Regular I Slot Right 36 Power",
-        "Regular I Slot Left 37 Power",
-        "Regular I Slot Right 58 Sweep"
+        "Regular I Z R 32 Handoff",
+        "Regular I Z L 33 Handoff",
+        "Regular I Z R 36 Handoff",
+        "Regular I Z L 37 Handoff",
+        "Regular I Z R 58 Sweep"
       ],
       [
-        "Split Backs Slot Right 36 Power",
-        "Split Backs Slot Left 27 Power",
-        "Split Backs Slot Right 38 Toss",
-        "Split Backs Slot Left 29 Toss",
-        "Split Backs Slot Right 58 Sweep"
+        "Split Backs Z R 36 Handoff",
+        "Split Backs Z L 27 Handoff",
+        "Split Backs Z R 38 Toss",
+        "Split Backs Z L 29 Toss",
+        "Split Backs Z R 58 Sweep"
       ],
       [
-        "Split Backs Slot Right 58 Sweep",
-        "Split Backs Slot Left 69 Sweep",
-        "Split Backs Slot Right 49 Sweep",
-        "Split Backs Slot Left 48 Sweep",
-        "Regular I Slot Right 22 Smash"
+        "Split Backs Z R 58 Sweep",
+        "Split Backs Z L 69 Sweep",
+        "Split Backs Z R 49 Sweep",
+        "Split Backs Z L 48 Sweep",
+        "Regular I Z R 22 Handoff"
       ],
       [
-        "Power I Slot Right 32 Smash",
-        "Power I Slot Left 33 Smash",
-        "Power I Slot Right 38 Toss",
-        "Power I Slot Left 39 Toss"
+        "Power I Z R 32 Handoff",
+        "Power I Z L 33 Handoff",
+        "Power I Z R 38 Toss",
+        "Power I Z L 39 Toss"
       ]
     ]
   },
   "script_plays": {
     "note": "The possession script: the plays in the order they are called, down the right of the call sheet. Same rules as package_plays -- an entry is a play's full call and has to name a real play, or the build stops. A play may appear more than once; a script repeats on purpose. Fewer entries than the column has rows is fine, the rest print blank; more than it has rows stops the build, because the column's height is what the rest of the sheet is measured against.",
     "offense": [
-      "Split Backs Slot Right 18 Sweep",
-      "Split Backs Slot Right 58 Sweep",
-      "Split Backs Slot Right 38 Toss",
-      "Split Backs Slot Right 36 Power",
-      "Split Backs Slot Right 49 Sweep",
-      "Split Backs Slot Right 58 Sweep",
-      "Split Backs Slot Right 38 Toss",
-      "Split Backs Slot Right 36 Power",
-      "Regular I Slot Right 32 Smash",
-      "Regular I Slot Right 36 Power",
-      "Split Backs Slot Right 49 Sweep",
-      "Regular I Slot Right 36 Power",
-      "Regular I Slot Right 22 Smash",
-      "Regular I Slot Left 23 Smash",
-      "Regular I Slot Right 22 Smash",
-      "Regular I Slot Right 58 Sweep",
-      "Split Backs Slot Right 18 Sweep",
-      "Regular I Slot Left 48 Sweep",
-      "Split Backs Slot Left 29 Toss",
-      "Regular I Slot Right 22 Smash"
+      "Split Backs Z R 18 Sweep",
+      "Split Backs Z R 58 Sweep",
+      "Split Backs Z R 38 Toss",
+      "Split Backs Z R 36 Handoff",
+      "Split Backs Z R 49 Sweep",
+      "Split Backs Z R 58 Sweep",
+      "Split Backs Z R 38 Toss",
+      "Split Backs Z R 36 Handoff",
+      "Regular I Z R 32 Handoff",
+      "Regular I Z R 36 Handoff",
+      "Split Backs Z R 49 Sweep",
+      "Regular I Z R 36 Handoff",
+      "Regular I Z R 22 Handoff",
+      "Regular I Z L 23 Handoff",
+      "Regular I Z R 22 Handoff",
+      "Regular I Z R 58 Sweep",
+      "Split Backs Z R 18 Sweep",
+      "Regular I Z L 48 Sweep",
+      "Split Backs Z L 29 Toss",
+      "Regular I Z R 22 Handoff"
     ]
   },
   "front_slides": {

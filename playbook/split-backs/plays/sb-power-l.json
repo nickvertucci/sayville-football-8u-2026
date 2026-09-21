@@ -2,9 +2,9 @@
   "id": "sb-power-l",
   "order": 32,
   "formation": "split-backs",
-  "name": "Split Backs - Slot Left - 27 Power",
+  "name": "Split Backs - Z L - 27 Handoff",
   "code": "30",
-  "call": "Split Backs Slot Left 27 Power",
+  "call": "Split Backs Z L 27 Handoff",
   "type": "run",
   "scheme": "Power",
   "direction": "left",
@@ -61,7 +61,7 @@
     "The yards are inside the slot's kick-out. If the halfback bounces it wide looking for grass, the play is dead."
   ],
   "alignment": {
-    "SL": [
+    "Z": [
       -5.6,
       -1.5
     ]

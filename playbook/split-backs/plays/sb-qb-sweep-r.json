@@ -2,9 +2,9 @@
   "id": "sb-qb-sweep-r",
   "order": 20,
   "formation": "split-backs",
-  "name": "Split Backs - Slot Right - 18 Sweep",
+  "name": "Split Backs - Z R - 18 Sweep",
   "code": "19",
-  "call": "Split Backs Slot Right 18 Sweep",
+  "call": "Split Backs Z R 18 Sweep",
   "type": "run",
   "scheme": "Sweep",
   "direction": "right",
@@ -62,7 +62,7 @@
         "man": "LOLB",
         "help": "LDE"
       },
-      "LTE": {
+      "X": {
         "block": "man",
         "man": "LDE"
       }

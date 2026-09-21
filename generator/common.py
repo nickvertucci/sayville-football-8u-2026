@@ -9,17 +9,23 @@ from __future__ import annotations
 import re
 
 # Order assignments are listed: line first, then receivers, then backs.
+#
+# X, Y and Z are the ends and the slot: the left end is the X, the right end is the
+# Y, the split man is the Z. One letter a boy answers to, rather than LTE, RTE and SL
+# -- three abbreviations of three different things that all had to be decoded first.
+# The X key used to mean a split end nothing in this book has ever had; it means the
+# left end now.
 CARD_ORDER = [
-    "X", "LTE", "LT", "LG", "C", "RG", "RT", "RTE", "TE",
-    "LW", "RW", "WB", "W", "SL",
+    "X", "LT", "LG", "C", "RG", "RT", "Y", "TE",
+    "LW", "RW", "WB", "W", "Z",
     "QB", "BB", "FB", "TB", "HB", "LH", "RH",
 ]
 
 # What a position key is called in prose. Only used for headings and the calling-
 # language table — assignment text never names a position, see playbook/CLAUDE.md.
 POSITION_NAMES = {
-    "X": "Split end", "TE": "Tight end", "SL": "Slot",
-    "LTE": "Left tight end", "RTE": "Right tight end",
+    "TE": "Tight end", "Z": "Slot",
+    "X": "Left tight end", "Y": "Right tight end",
     "LT": "Left tackle", "RT": "Right tackle",
     "LG": "Left guard", "RG": "Right guard", "C": "Center",
     "LW": "Left wing", "RW": "Right wing", "WB": "Wingback", "W": "Wingback",

@@ -2,9 +2,9 @@
   "id": "pi-toss-l",
   "order": 4,
   "formation": "power-i",
-  "name": "Power I - Slot Left - 39 Toss",
+  "name": "Power I - Z L - 39 Toss",
   "code": "42",
-  "call": "Power I Slot Left 39 Toss",
+  "call": "Power I Z L 39 Toss",
   "type": "run",
   "scheme": "Toss",
   "direction": "left",
@@ -55,7 +55,7 @@
         ]
       ]
     },
-    "SL": {
+    "Z": {
       "block": "screen",
       "note": "Get outside the fullback and find the corner. You are the last man between the ball and the sideline."
     }
@@ -66,28 +66,28 @@
     "The slot is in the backfield, so he has further to run than a split slot does. He leaves on the snap."
   ],
   "alignment": {
-    "SL": [
+    "Z": [
       -1.4,
       -4.4
     ]
   },
   "fronts": {
     "4-4": {
-      "SL": {
+      "Z": {
         "block": "man",
         "man": "LC",
         "how": "Get outside the fullback, then take him"
       }
     },
     "5-3": {
-      "SL": {
+      "Z": {
         "block": "man",
         "man": "LC",
         "how": "Get outside the fullback, then take him"
       }
     },
     "5-4-2": {
-      "SL": {
+      "Z": {
         "block": "man",
         "man": "LS",
         "how": "Get outside the fullback, then take him"

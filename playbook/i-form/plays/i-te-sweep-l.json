@@ -2,21 +2,21 @@
   "id": "i-te-sweep-l",
   "order": 12,
   "formation": "i-form",
-  "name": "Regular I - Slot Left - 69 Sweep",
+  "name": "Regular I - Z L - 69 Sweep",
   "code": "4",
-  "call": "Regular I Slot Left 69 Sweep",
+  "call": "Regular I Z L 69 Sweep",
   "type": "run",
   "scheme": "Sweep",
   "direction": "left",
-  "ball_carrier": "RTE",
+  "ball_carrier": "Y",
   "alignment": {
-    "SL": [
+    "Z": [
       -5.6,
       -1.5
     ]
   },
   "assignments": {
-    "RTE": {
+    "Y": {
       "rule": "Stay down in your stance — no motion. At the snap run flat behind the quarterback, take the handoff at full speed and get to the left edge. Turn up outside the fullback.",
       "type": "run",
       "path": [
@@ -67,7 +67,7 @@
   },
   "fronts": {
     "4-4": {
-      "LTE": {
+      "X": {
         "block": "man",
         "man": "LDE"
       },

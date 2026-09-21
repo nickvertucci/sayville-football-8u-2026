@@ -2,15 +2,15 @@
   "id": "i-te-sweep-r",
   "order": 11,
   "formation": "i-form",
-  "name": "Regular I - Slot Right - 58 Sweep",
+  "name": "Regular I - Z R - 58 Sweep",
   "code": "3",
-  "call": "Regular I Slot Right 58 Sweep",
+  "call": "Regular I Z R 58 Sweep",
   "type": "run",
   "scheme": "Sweep",
   "direction": "right",
-  "ball_carrier": "LTE",
+  "ball_carrier": "X",
   "assignments": {
-    "LTE": {
+    "X": {
       "rule": "Stay down in your stance — no motion. At the snap run flat behind the quarterback, take the handoff at full speed and get to the right edge. Turn up outside the fullback.",
       "type": "run",
       "path": [
@@ -83,7 +83,7 @@
         "man": "RILB",
         "help": "RDG"
       },
-      "RTE": {
+      "Y": {
         "block": "man",
         "man": "RDE"
       }

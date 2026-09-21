@@ -2,15 +2,15 @@
   "id": "sb-fake-sweep-l",
   "order": 23,
   "formation": "split-backs",
-  "name": "Split Backs - Slot Left - 19 Fake Sweep",
+  "name": "Split Backs - Z L - 19 Fake Sweep",
   "code": "21",
-  "call": "Split Backs Slot Left 19 Fake Sweep",
+  "call": "Split Backs Z L 19 Fake Sweep",
   "type": "run",
   "scheme": "Sweep",
   "direction": "left",
   "ball_carrier": "QB",
   "alignment": {
-    "SL": [
+    "Z": [
       -5.6,
       -1.5
     ]
@@ -90,7 +90,7 @@
         "man": "ROLB",
         "help": "RDE"
       },
-      "RTE": {
+      "Y": {
         "block": "man",
         "man": "RDE"
       },

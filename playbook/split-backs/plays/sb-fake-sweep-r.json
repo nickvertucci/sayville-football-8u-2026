@@ -2,9 +2,9 @@
   "id": "sb-fake-sweep-r",
   "order": 24,
   "formation": "split-backs",
-  "name": "Split Backs - Slot Right - 18 Fake Sweep",
+  "name": "Split Backs - Z R - 18 Fake Sweep",
   "code": "22",
-  "call": "Split Backs Slot Right 18 Fake Sweep",
+  "call": "Split Backs Z R 18 Fake Sweep",
   "type": "run",
   "scheme": "Sweep",
   "direction": "right",
@@ -84,7 +84,7 @@
         "man": "LOLB",
         "help": "LDE"
       },
-      "LTE": {
+      "X": {
         "block": "man",
         "man": "LDE"
       },

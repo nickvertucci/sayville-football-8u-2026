@@ -8,14 +8,14 @@ Both ends are tight on the line and the slot is just outside the tight end, one 
 
 | Position | x | y |
 |---|---|---|
-| LTE | -4.2 | -0.5 |
+| X | -4.2 | -0.5 |
 | LT | -2.8 | -0.5 |
 | LG | -1.4 | -0.5 |
 | C | 0.0 | -0.5 |
 | RG | 1.4 | -0.5 |
 | RT | 2.8 | -0.5 |
-| RTE | 4.2 | -0.5 |
-| SL | 5.6 | -1.5 |
+| Y | 4.2 | -0.5 |
+| Z | 5.6 | -1.5 |
 | QB | 0.0 | -5.0 |
 | LH | -2.0 | -5.0 |
 | RH | 2.0 | -5.0 |
@@ -24,93 +24,93 @@ Both ends are tight on the line and the slot is just outside the tight end, one 
 
 | Play | Call | Scheme | Type | Ball |
 |---|---|---|---|---|
-| [Shotgun - Slot Right - 68 Slant Pass](#shotgun---slot-right---68-slant-pass) | `Shotgun Slot Right 68 Slant Pass` | Protect | pass | RTE |
-| [Shotgun - Slot Left - 59 Slant Pass](#shotgun---slot-left---59-slant-pass) | `Shotgun Slot Left 59 Slant Pass` | Protect | pass | LTE |
-| [Shotgun - Slot Left - 19 Sweep](#shotgun---slot-left---19-sweep) | `Shotgun Slot Left 19 Sweep` | Sweep | run | QB |
-| [Shotgun - Slot Right - 18 Sweep](#shotgun---slot-right---18-sweep) | `Shotgun Slot Right 18 Sweep` | Sweep | run | QB |
-| [Shotgun - Slot Right - 38 Toss](#shotgun---slot-right---38-toss) | `Shotgun Slot Right 38 Toss` | Toss | run | LH |
-| [Shotgun - Slot Left - 29 Toss](#shotgun---slot-left---29-toss) | `Shotgun Slot Left 29 Toss` | Toss | run | RH |
+| [Shotgun - Z R - 68 Slant Pass](#shotgun---z-r---68-slant-pass) | `Shotgun Z R 68 Slant Pass` | Protect | pass | Y |
+| [Shotgun - Z L - 59 Slant Pass](#shotgun---z-l---59-slant-pass) | `Shotgun Z L 59 Slant Pass` | Protect | pass | X |
+| [Shotgun - Z L - 19 Sweep](#shotgun---z-l---19-sweep) | `Shotgun Z L 19 Sweep` | Sweep | run | QB |
+| [Shotgun - Z R - 18 Sweep](#shotgun---z-r---18-sweep) | `Shotgun Z R 18 Sweep` | Sweep | run | QB |
+| [Shotgun - Z R - 38 Toss](#shotgun---z-r---38-toss) | `Shotgun Z R 38 Toss` | Toss | run | LH |
+| [Shotgun - Z L - 29 Toss](#shotgun---z-l---29-toss) | `Shotgun Z L 29 Toss` | Toss | run | RH |
 
 ---
 
-## Shotgun - Slot Right - 68 Slant Pass
+## Shotgun - Z R - 68 Slant Pass
 
-**Call it:** `Shotgun Slot Right 68 Slant Pass`
+**Call it:** `Shotgun Z R 68 Slant Pass`
 
 **Scheme:** Protect
 
-![Shotgun - Slot Right - 68 Slant Pass](cards/sg-te-out-r-4-4.svg)
+![Shotgun - Z R - 68 Slant Pass](cards/sg-te-out-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
-| **LTE** | Pass block: step back, hands up, and stay between your man and the quarterback. |
+| **X** | Pass block: step back, hands up, and stay between your man and the quarterback. |
 | **LT** | Pass block: step back, hands up, and stay between your man and the quarterback. |
 | **LG** | Pass block: step back, hands up, and stay between your man and the quarterback. |
 | **C** | Pass block: step back, hands up, and stay between your man and the quarterback. |
 | **RG** | Pass block: step back, hands up, and stay between your man and the quarterback. |
 | **RT** | Pass block: step back, hands up, and stay between your man and the quarterback. |
-| **RTE** **(ball)** | Take one step up, then slant out flat toward the right sideline, almost along the line of scrimmage. Look for the ball right away. |
-| **SL** | Block the right corner. |
+| **Y** **(ball)** | Take one step up, then slant out flat toward the right sideline, almost along the line of scrimmage. Look for the ball right away. |
+| **Z** | Block the right corner. |
 | **QB** | Catch the snap, take one step and throw to the right tight end as he slants out. If he is covered, tuck it and run. |
 | **LH** | Step up and out, hands up. Pick up anybody coming at the quarterback. |
 | **RH** | Step up and out, hands up. Pick up anybody coming at the quarterback. |
 
 **Coaching points**
 
-- Everybody but the tight end and the SL pass blocks: step back, hands up, stay between your man and the quarterback.
+- Everybody but the tight end and the Z pass blocks: step back, hands up, stay between your man and the quarterback.
 - The slant stays flat — one step up and out, almost on the line of scrimmage. Any deeper and he runs into the linebackers.
 - The quarterback throws it as soon as the tight end clears the end. If he is covered, tuck it and run — no second look.
 
 ---
 
-## Shotgun - Slot Left - 59 Slant Pass
+## Shotgun - Z L - 59 Slant Pass
 
-**Call it:** `Shotgun Slot Left 59 Slant Pass`
+**Call it:** `Shotgun Z L 59 Slant Pass`
 
 **Scheme:** Protect
 
-![Shotgun - Slot Left - 59 Slant Pass](cards/sg-te-out-l-4-4.svg)
+![Shotgun - Z L - 59 Slant Pass](cards/sg-te-out-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
-| **LTE** **(ball)** | Take one step up, then slant out flat toward the left sideline, almost along the line of scrimmage. Look for the ball right away. |
+| **X** **(ball)** | Take one step up, then slant out flat toward the left sideline, almost along the line of scrimmage. Look for the ball right away. |
 | **LT** | Pass block: step back, hands up, and stay between your man and the quarterback. |
 | **LG** | Pass block: step back, hands up, and stay between your man and the quarterback. |
 | **C** | Pass block: step back, hands up, and stay between your man and the quarterback. |
 | **RG** | Pass block: step back, hands up, and stay between your man and the quarterback. |
 | **RT** | Pass block: step back, hands up, and stay between your man and the quarterback. |
-| **RTE** | Pass block: step back, hands up, and stay between your man and the quarterback. |
-| **SL** | Block the left corner. |
+| **Y** | Pass block: step back, hands up, and stay between your man and the quarterback. |
+| **Z** | Block the left corner. |
 | **QB** | Catch the snap, take one step and throw to the left tight end as he slants out. If he is covered, tuck it and run. |
 | **LH** | Step up and out, hands up. Pick up anybody coming at the quarterback. |
 | **RH** | Step up and out, hands up. Pick up anybody coming at the quarterback. |
 
 **Coaching points**
 
-- Everybody but the tight end and the SL pass blocks: step back, hands up, stay between your man and the quarterback.
+- Everybody but the tight end and the Z pass blocks: step back, hands up, stay between your man and the quarterback.
 - The slant stays flat — one step up and out, almost on the line of scrimmage. Any deeper and he runs into the linebackers.
 - The quarterback throws it as soon as the tight end clears the end. If he is covered, tuck it and run — no second look.
 
 ---
 
-## Shotgun - Slot Left - 19 Sweep
+## Shotgun - Z L - 19 Sweep
 
-**Call it:** `Shotgun Slot Left 19 Sweep`
+**Call it:** `Shotgun Z L 19 Sweep`
 
 **Scheme:** Sweep
 
-![Shotgun - Slot Left - 19 Sweep](cards/sg-qb-sweep-l-4-4.svg)
+![Shotgun - Z L - 19 Sweep](cards/sg-qb-sweep-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
-| **LTE** | Block the left defensive end. |
+| **X** | Block the left defensive end. |
 | **LT** | Help on the left defensive guard, then block the left inside linebacker. |
 | **LG** | Block the left defensive guard. |
 | **C** | Help on the right defensive guard, then block the right inside linebacker. |
 | **RG** | Block the right defensive guard. |
 | **RT** | Help on the right defensive end, then block the right outside linebacker. |
-| **RTE** | Block the right defensive end. |
-| **SL** | Run at the corner and screen him off. Stay in his way. |
+| **Y** | Block the right defensive end. |
+| **Z** | Run at the corner and screen him off. Stay in his way. |
 | **QB** **(ball)** | Catch the snap and sweep left, flat and fast, behind the left halfback. Turn up outside his block. |
 | **LH** | Bubble out around our end, then double team the linebacker with the right halfback. |
 | **RH** | Bubble out around our end, then double team the linebacker with the left halfback. |
@@ -123,24 +123,24 @@ Both ends are tight on the line and the slot is just outside the tight end, one 
 
 ---
 
-## Shotgun - Slot Right - 18 Sweep
+## Shotgun - Z R - 18 Sweep
 
-**Call it:** `Shotgun Slot Right 18 Sweep`
+**Call it:** `Shotgun Z R 18 Sweep`
 
 **Scheme:** Sweep
 
-![Shotgun - Slot Right - 18 Sweep](cards/sg-qb-sweep-r-4-4.svg)
+![Shotgun - Z R - 18 Sweep](cards/sg-qb-sweep-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
-| **LTE** | Block the left defensive end. |
+| **X** | Block the left defensive end. |
 | **LT** | Help on the left defensive end, then block the left outside linebacker. |
 | **LG** | Block the left defensive guard. |
 | **C** | Help on the left defensive guard, then block the left inside linebacker. |
 | **RG** | Block the right defensive guard. |
 | **RT** | Help on the right defensive guard, then block the right inside linebacker. |
-| **RTE** | Block the right defensive end. |
-| **SL** | Run at the corner and screen him off. Stay in his way. |
+| **Y** | Block the right defensive end. |
+| **Z** | Run at the corner and screen him off. Stay in his way. |
 | **QB** **(ball)** | Catch the snap and sweep right, flat and fast, behind the right halfback. Turn up outside his block. |
 | **LH** | Bubble out around our end, then double team the linebacker with the right halfback. |
 | **RH** | Bubble out around our end, then double team the linebacker with the left halfback. |
@@ -153,24 +153,24 @@ Both ends are tight on the line and the slot is just outside the tight end, one 
 
 ---
 
-## Shotgun - Slot Right - 38 Toss
+## Shotgun - Z R - 38 Toss
 
-**Call it:** `Shotgun Slot Right 38 Toss`
+**Call it:** `Shotgun Z R 38 Toss`
 
 **Scheme:** Toss
 
-![Shotgun - Slot Right - 38 Toss](cards/sg-rb-toss-r-4-4.svg)
+![Shotgun - Z R - 38 Toss](cards/sg-rb-toss-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
-| **LTE** | Block the left defensive end. |
+| **X** | Block the left defensive end. |
 | **LT** | Help on the left defensive end, then block the left outside linebacker. |
 | **LG** | Block the left defensive guard. |
 | **C** | Help on the left defensive guard, then block the left inside linebacker. |
 | **RG** | Block the right defensive guard. |
 | **RT** | Help on the right defensive guard, then block the right inside linebacker. |
-| **RTE** | Block the right defensive end. |
-| **SL** | Run at the corner and screen him off. Stay in his way. |
+| **Y** | Block the right defensive end. |
+| **Z** | Run at the corner and screen him off. Stay in his way. |
 | **QB** | Hand the ball to the left halfback as he crosses in front of you, then fake a run to the left. |
 | **LH** **(ball)** | Cross in front of the quarterback, take the handoff going right and get to the edge behind the right halfback. Turn up outside his block. |
 | **RH** | Bubble out around the right end, then block the right outside linebacker. |
@@ -183,24 +183,24 @@ Both ends are tight on the line and the slot is just outside the tight end, one 
 
 ---
 
-## Shotgun - Slot Left - 29 Toss
+## Shotgun - Z L - 29 Toss
 
-**Call it:** `Shotgun Slot Left 29 Toss`
+**Call it:** `Shotgun Z L 29 Toss`
 
 **Scheme:** Toss
 
-![Shotgun - Slot Left - 29 Toss](cards/sg-rb-toss-l-4-4.svg)
+![Shotgun - Z L - 29 Toss](cards/sg-rb-toss-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
-| **LTE** | Block the left defensive end. |
+| **X** | Block the left defensive end. |
 | **LT** | Help on the left defensive guard, then block the left inside linebacker. |
 | **LG** | Block the left defensive guard. |
 | **C** | Help on the right defensive guard, then block the right inside linebacker. |
 | **RG** | Block the right defensive guard. |
 | **RT** | Help on the right defensive end, then block the right outside linebacker. |
-| **RTE** | Block the right defensive end. |
-| **SL** | Run at the corner and screen him off. Stay in his way. |
+| **Y** | Block the right defensive end. |
+| **Z** | Run at the corner and screen him off. Stay in his way. |
 | **QB** | Hand the ball to the right halfback as he crosses in front of you, then fake a run to the right. |
 | **LH** | Bubble out around the left end, then block the left outside linebacker. |
 | **RH** **(ball)** | Cross in front of the quarterback, take the handoff going left and get to the edge behind the left halfback. Turn up outside his block. |

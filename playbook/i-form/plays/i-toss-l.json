@@ -2,15 +2,15 @@
   "id": "i-toss-l",
   "order": 22,
   "formation": "i-form",
-  "name": "Regular I - Slot Left - 39 Toss",
+  "name": "Regular I - Z L - 39 Toss",
   "code": "14",
-  "call": "Regular I Slot Left 39 Toss",
+  "call": "Regular I Z L 39 Toss",
   "type": "run",
   "scheme": "Toss",
   "direction": "left",
   "ball_carrier": "TB",
   "alignment": {
-    "SL": [
+    "Z": [
       -5.6,
       -1.5
     ]

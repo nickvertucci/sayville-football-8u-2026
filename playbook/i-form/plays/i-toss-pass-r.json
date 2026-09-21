@@ -2,13 +2,13 @@
   "id": "i-toss-pass-r",
   "order": 23,
   "formation": "i-form",
-  "name": "Regular I - Slot Right - 38 Pitch Pass",
+  "name": "Regular I - Z R - 38 Pitch Pass",
   "code": "15",
-  "call": "Regular I Slot Right 38 Pitch Pass",
+  "call": "Regular I Z R 38 Pitch Pass",
   "type": "pass",
   "scheme": "Protect",
   "direction": "right",
-  "ball_carrier": "RTE",
+  "ball_carrier": "Y",
   "pitch": {
     "from": "QB",
     "to": "TB",
@@ -51,7 +51,7 @@
         ]
       ]
     },
-    "RTE": {
+    "Y": {
       "rule": "Block the end the way you do on the toss, then slant out flat toward the sideline, almost on the line. Look for the ball right away.",
       "type": "pass",
       "path": [

@@ -518,7 +518,7 @@ table.dc-sub thead th {
    defense before the linebackers and before the secondary. The two sides can share
    one rule because no key means something different across them -- which is what the
    defensive line's D bought: LT is ours, LDG is theirs. */
-.dc-pkg-slot[data-spot="LTE"],
+.dc-pkg-slot[data-spot="X"],
 .dc-pkg-slot[data-spot="LT"],
 .dc-pkg-slot[data-spot="LOLB"],
 .dc-pkg-slot[data-spot="LC"] {
@@ -719,7 +719,7 @@ table.xl.xl-plays td {
 .band ol + .band-sub { margin-top: 5px; }
 .band li {
   display: flex; align-items: baseline; gap: 6px;
-  padding: 0 5px; font-size: 13px; font-weight: 700; line-height: 2.25;
+  padding: 0 5px; font-size: 15.5px; font-weight: 700; line-height: 1.95;
   color: var(--ink); white-space: nowrap;
 }
 /* Zebra rather than a rule between rows. A rule is a thing to read past; a band of
@@ -734,7 +734,7 @@ table.xl.xl-plays td {
    side: the screen is a preview, the printed inches are the thing. */
 @media (max-width: 560px) {
   .band-set { width: 100%; grid-template-rows: none; }
-  .band li { font-size: 14px; line-height: 1.55; }
+  .band li { font-size: 15.5px; line-height: 1.95; }
 }
 
 /* ------------------------------------------------- defensive call sheet --
@@ -929,15 +929,15 @@ table.xl.pk-plays td {
 .pk-plays td a:hover { text-decoration: underline; }
 @media print {
   /* One formation to a row, full width. Two across put a formation in half a page,
-     which is where the long calls wrapped -- "Trips R - RTE Slant Out" over two lines
+     which is where the long calls wrapped -- "Trips R - Y Slant Out" over two lines
      in a cell an inch wide. The full width is the fix: the same rows, the same type
      size, but each cell three inches instead of one and a half, so nothing wraps and
      the block is *shorter* than it was at half width. Five of them still fit the one
      sheet because of it, not in spite of it. */
   /* Four blocks down the left, the script down the right. 245 points is what the
      longest call in the script needs to sit on one line at 9px -- "Split Backs - Slot R
-     - LTE (50) Sweep" -- and it is affordable because the blocks still do not wrap at
-     what is left: their widest, "S-10 Slot L - RTE (60) Sweep", has room to spare in a
+     - X (50) Sweep" -- and it is affordable because the blocks still do not wrap at
+     what is left: their widest, "S-10 Slot L - Y (60) Sweep", has room to spare in a
      148-point column. Checked at 200, where the script clipped, and at 245, where
      neither side does. */
   .xl-top { display: grid; grid-template-columns: 1fr 230px; gap: 0 6px;
@@ -1065,7 +1065,7 @@ table.xl.pk-plays td {
      row there is and it has half of five inches to fit in. Eight rows then have three
      inches to live in, which is why the leading is what it is -- the space was going
      spare, and a row a boy can keep his eye on is what to spend it on. */
-  .band li { font-size: 13px; line-height: 2.25; padding: 0 5px; gap: 6px; }
+  .band li { font-size: 15.5px; line-height: 1.95; padding: 0 5px; gap: 6px; }
   .band li:nth-child(even) { background: #eee !important;
                              -webkit-print-color-adjust: exact; print-color-adjust: exact; }
   .band li b { flex-basis: 26px; padding-right: 6px; border-right-color: #000; }
@@ -2039,7 +2039,7 @@ table.dc-board thead th,
   .dc-pkg-slot { min-height: 0; padding: 0; font-size: 7pt; line-height: 1.15; }
   .dc-pkg-slot[data-spot]::before { flex-basis: 36px; font-size: 6.5pt; letter-spacing: 0; }
   .dc-pkg-slot + .dc-pkg-slot { margin-top: 0; }
-  .dc-pkg-slot[data-spot="LTE"],
+  .dc-pkg-slot[data-spot="X"],
   .dc-pkg-slot[data-spot="LT"],
   .dc-pkg-slot[data-spot="LOLB"],
   .dc-pkg-slot[data-spot="LC"] { margin-top: 1px; padding-top: 1px; }
@@ -2404,7 +2404,7 @@ def versioned(path: str) -> str:
     """A generated card's URL, stamped with its content hash for the same reason.
 
     The cards had no fingerprint, and a browser kept them while the page around them
-    changed: after the Z became the SL, a coach printed a play page titled SL with a
+    changed: after the Z became the Z, a coach printed a play page titled Z with a
     card that still said Z. A changed card is now a different URL.
     """
     file = Path(__file__).resolve().parent.parent / path
@@ -2888,13 +2888,15 @@ def backs_table(formations: list[dict]) -> list[tuple[str, str]]:
     return rows
 
 # Off the nomenclature card: 0 over the center, then outward, even right and odd left.
-# There is no 1 — the middle is one hole.
+# There is no 1 — the middle is one hole. The word is what happens to the ball; the
+# blocking family the hole names is in brackets after it, because that is the coach's
+# half of the same line and it is still what the build holds a play to.
 HOLES = [
-    ("0", "Smash — straight over the center"),
-    ("2 / 3", "Smash — between the center and the guard"),
-    ("4 / 5", "Dive — between the guard and the tackle"),
-    ("6 / 7", "Power — between the tackle and the tight end"),
-    ("8 / 9", "Toss — outside the tight end. Sweep if the quarterback, the slot or a tight end is coming across to get there"),
+    ("0", "Handoff — straight over the center (Smash)"),
+    ("2 / 3", "Handoff — between the center and the guard (Smash)"),
+    ("4 / 5", "Handoff — between the guard and the tackle (Dive)"),
+    ("6 / 7", "Handoff — between the tackle and the end (Power)"),
+    ("8 / 9", "Toss — outside the end. Sweep if the quarterback, the Z or an end is coming across to get there"),
 ]
 
 
@@ -2992,10 +2994,10 @@ def strip_direction(name: str) -> str:
     should not claim to be just the right (or just the left) — "Power", not "Power
     Right".
 
-    The SL's alignment goes the same way. A reverse starts him on the side its own
+    The Z's alignment goes the same way. A reverse starts him on the side its own
     direction comes back from, so the two halves of that pair disagree about where he
-    lines up and one card cannot claim either — "Split SL Reverse", not "Split SL Left
-    SL Reverse". Both sides are a click away on the card itself, named in full.
+    lines up and one card cannot claim either — "Split Z Reverse", not "Split Z Left
+    Z Reverse". Both sides are a click away on the card itself, named in full.
     """
     name = re.sub(r"\bZ (?:Right|Left)\s+", "", name)
     return re.sub(r"\s+(Right|Left)$", "", name)
@@ -3047,7 +3049,7 @@ def _sheet_name(play: dict, form: dict) -> str:
     shortened to its initial: "Slot Right" becomes "Slot R", "Trips Left"
     becomes "Trips L". This reads off the call rather than the play name,
     because in Trips the strength word IS the formation name -- stripping the
-    heading off "Trips - Right - LTE Sweep" left a bare "R -". A formation with
+    heading off "Trips - Right - X Sweep" left a bare "R -". A formation with
     no strength word, like the Wishbone, keeps nothing.
     """
     call = play.get("call") or ""
@@ -3067,7 +3069,7 @@ def _package_row(play: dict, form: dict) -> str:
     On the sheet proper the block heading says the formation, so a cell only has
     to say the alignment and the call. A package card has no such heading -- it
     is a list of calls from wherever -- so the formation goes back in front:
-    "Split Backs - Slot R - LTE Sweep".
+    "Split Backs - Slot R - X Sweep".
 
     Trips is the exception, because its strength word IS its name. Saying it
     twice reads as a stutter, so "Trips - Trips R - 38 Quick Pass" comes out
@@ -3176,7 +3178,7 @@ def _package_strip(root: Path, formations: list[dict]) -> str:
 # quarterback because a package card is read as a backfield -- because this strip is a
 # picture of the formation and a coach reading it is looking left to right along his
 # own line.
-LINEUP_SPOTS = ("LTE", "LT", "LG", "C", "RG", "RT", "RTE", "SL", "QB", "FB", "TB")
+LINEUP_SPOTS = ("X", "LT", "LG", "C", "RG", "RT", "Y", "Z", "QB", "FB", "TB")
 
 
 def _base_eleven(roster: dict) -> list[tuple[str, str]]:
@@ -3260,7 +3262,7 @@ def _subs_strip(roster: dict) -> str:
 # the nomenclature card, which is what the coach and the kids already read.
 #
 #     9  |  7  |  5  |  3  | 0 |  2  |  4  |  6  |  8
-#       LTE    LT    LG     C    RG    RT   RTE
+#       X    LT    LG     C    RG    RT   Y
 HOLE_COLUMNS = ((1, "9"), (3, "7"), (5, "5"), (7, "3"),
                 (9, "2"), (11, "4"), (13, "6"), (15, "8"))
 MAN_COLUMNS = (2, 4, 6, 8, 10, 12, 14)
@@ -4452,7 +4454,7 @@ PACKAGE_SIZE = {"offense": 11, "defense": 11}
 # What each side calls its packages. The offense heading names the backfield the
 # group is made of, in the order those four sit in the box as #1 through #4.
 PACKAGE_TITLE = {
-    "offense": "Offensive QB-FB-TB-SL Packages",
+    "offense": "Offensive QB-FB-TB-Z Packages",
     "defense": "Packages",
 }
 
@@ -4461,18 +4463,18 @@ PACKAGE_TITLE = {
 # guard and right tackle. Defense: the base front's own eleven, line then backers then
 # secondary, so a name on the card carries the spot he plays — Gavin P. (LDE).
 PACKAGE_SPOTS = {
-    "offense": ("QB", "FB", "TB", "SL", "LTE", "RTE", "LT", "LG", "C", "RG", "RT"),
+    "offense": ("QB", "FB", "TB", "Z", "X", "Y", "LT", "LG", "C", "RG", "RT"),
     "defense": ("LDE", "LDG", "RDG", "RDE",
                 "LOLB", "LILB", "RILB", "ROLB", "LC", "RC", "FS"),
 }
 
 # Only the backfield is numbered on the package card. The ends and the line keep
-# their position names — LTE, RT — because those do not change meaning between
+# their position names — X, RT — because those do not change meaning between
 # packages the way the four backs do.
 #
 # The number is the back's digit with a 0 behind it — 10, 20, 30, 40 — the way the
 # nomenclature card labels those four, so the card and the diagram agree.
-PACKAGE_NUMBERED = ("QB", "FB", "TB", "SL", "LTE", "RTE")
+PACKAGE_NUMBERED = ("QB", "FB", "TB", "Z", "X", "Y")
 
 
 def rotations_for(side: str) -> list[tuple[str, str, str]]:
@@ -4487,7 +4489,7 @@ def package_sub_card_html(packs: list, n: int, spots: tuple = ()) -> str:
     spots — Philip in Shifty is still Philip in Fortnite, just at a different
     slot, so he is not a substitution. Only names that leave the eleven (Out)
     or join it (In) belong here. Incoming names carry the spot they play in
-    this package, so the card says Joseph P. (RTE) rather than just Joseph P.
+    this package, so the card says Joseph P. (Y) rather than just Joseph P.
 
     Package 1 is the base on both sides — Shifty on offense, Base on defense —
     so it is what everything else is measured against and its own card says so.
@@ -4618,7 +4620,7 @@ def write_depth_chart(formations: list[dict], defenses: dict, root: Path) -> str
     # board uses below, rather than a hardcoded id that keeps pointing at the old
     # front the day the base changes.
     front = next(iter(defenses.values()), None)
-    # The board is the base formation's eleven — SL, FB and TB in the backfield. It
+    # The board is the base formation's eleven — Z, FB and TB in the backfield. It
     # used to be every spot any formation aligns, which meant the Split Backs LH and
     # RH sat on both rotations reading Open and made a complete unit look two short
     # of a full sheet. A depth chart answers "who is on the field", and what is on

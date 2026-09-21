@@ -8,14 +8,14 @@ Same line as the Regular I — both ends tight, seven on the line every snap. No
 
 | Position | x | y |
 |---|---|---|
-| LTE | -4.2 | -0.5 |
+| X | -4.2 | -0.5 |
 | LT | -2.8 | -0.5 |
 | LG | -1.4 | -0.5 |
 | C | 0.0 | -0.5 |
 | RG | 1.4 | -0.5 |
 | RT | 2.8 | -0.5 |
-| RTE | 4.2 | -0.5 |
-| SL | 5.6 | -1.5 |
+| Y | 4.2 | -0.5 |
+| Z | 5.6 | -1.5 |
 | TB | 6.8 | -2.5 |
 | FB | 8.0 | -1.5 |
 | QB | 0.0 | -1.5 |
@@ -32,14 +32,14 @@ Same line as the Regular I — both ends tight, seven on the line every snap. No
 
 | Play | Call | Scheme | Type | Ball |
 |---|---|---|---|---|
-| [Trips - Right - 58 Sweep](#trips---right---58-sweep) | `Trips Right 58 Sweep` | Sweep | run | LTE |
-| [Trips - Left - 69 Sweep](#trips---left---69-sweep) | `Trips Left 69 Sweep` | Sweep | run | RTE |
+| [Trips - Right - 58 Sweep](#trips---right---58-sweep) | `Trips Right 58 Sweep` | Sweep | run | X |
+| [Trips - Left - 69 Sweep](#trips---left---69-sweep) | `Trips Left 69 Sweep` | Sweep | run | Y |
 | [Trips - Right - 38 Quick Pass](#trips---right---38-quick-pass) | `Trips Right 38 Quick Pass` | Protect | pass | TB |
 | [Trips - Left - 39 Quick Pass](#trips---left---39-quick-pass) | `Trips Left 39 Quick Pass` | Protect | pass | TB |
 | [Trips - Right - 18 Sweep](#trips---right---18-sweep) | `Trips Right 18 Sweep` | Sweep | run | QB |
 | [Trips - Left - 19 Sweep](#trips---left---19-sweep) | `Trips Left 19 Sweep` | Sweep | run | QB |
-| [Trips - Right - 68 Slant Pass](#trips---right---68-slant-pass) | `Trips Right 68 Slant Pass` | Protect | pass | RTE |
-| [Trips - Left - 59 Slant Pass](#trips---left---59-slant-pass) | `Trips Left 59 Slant Pass` | Protect | pass | LTE |
+| [Trips - Right - 68 Slant Pass](#trips---right---68-slant-pass) | `Trips Right 68 Slant Pass` | Protect | pass | Y |
+| [Trips - Left - 59 Slant Pass](#trips---left---59-slant-pass) | `Trips Left 59 Slant Pass` | Protect | pass | X |
 
 ---
 
@@ -53,14 +53,14 @@ Same line as the Regular I — both ends tight, seven on the line every snap. No
 
 | Position | Assignment |
 |---|---|
-| **LTE** **(ball)** | Stay down in your stance — no motion. At the snap run flat behind the quarterback, take the handoff at full speed and get to the right edge. Turn up outside the trips. |
+| **X** **(ball)** | Stay down in your stance — no motion. At the snap run flat behind the quarterback, take the handoff at full speed and get to the right edge. Turn up outside the trips. |
 | **LT** | Defensive end on your outside shoulder. Cut him off — get between him and the ball. |
 | **LG** | Defensive guard head up on you. Cut him off — get between him and the ball. |
 | **C** | Nobody on you. Climb to the playside linebacker. Head across him. |
 | **RG** | Defensive guard head up on you. Step past him. Climb to the playside linebacker. Head across him. |
 | **RT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
-| **RTE** | Defensive end on your inside shoulder. Turn him inside. The ball goes around behind you. |
-| **SL** | Run at the corner and screen him off. Stay in his way. |
+| **Y** | Defensive end on your inside shoulder. Turn him inside. The ball goes around behind you. |
+| **Z** | Run at the corner and screen him off. Stay in his way. |
 | **QB** | Open right and hand the ball to the left tight end as he comes across behind you, then fake a run to the left. |
 | **FB** | Lead outside our end. Block the first man out there — here it is the linebacker. |
 | **TB** | Run at the corner and screen him off. Stay in his way. |
@@ -82,14 +82,14 @@ Same line as the Regular I — both ends tight, seven on the line every snap. No
 
 | Position | Assignment |
 |---|---|
-| **LTE** | Defensive end on your inside shoulder. Turn him inside. The ball goes around behind you. |
+| **X** | Defensive end on your inside shoulder. Turn him inside. The ball goes around behind you. |
 | **LT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
 | **LG** | Defensive guard head up on you. Step past him. Climb to the playside linebacker. Head across him. |
 | **C** | Nobody on you. Climb to the playside linebacker. Head across him. |
 | **RG** | Defensive guard head up on you. Cut him off — get between him and the ball. |
 | **RT** | Defensive end on your outside shoulder. Cut him off — get between him and the ball. |
-| **RTE** **(ball)** | Stay down in your stance — no motion. At the snap run flat behind the quarterback, take the handoff at full speed and get to the left edge. Turn up outside the trips. |
-| **SL** | Run at the corner and screen him off. Stay in his way. |
+| **Y** **(ball)** | Stay down in your stance — no motion. At the snap run flat behind the quarterback, take the handoff at full speed and get to the left edge. Turn up outside the trips. |
+| **Z** | Run at the corner and screen him off. Stay in his way. |
 | **QB** | Open left and hand the ball to the right tight end as he comes across behind you, then fake a run to the right. |
 | **FB** | Lead outside our end. Block the first man out there — here it is the linebacker. |
 | **TB** | Run at the corner and screen him off. Stay in his way. |
@@ -111,14 +111,14 @@ Same line as the Regular I — both ends tight, seven on the line every snap. No
 
 | Position | Assignment |
 |---|---|
-| **LTE** | Pass block: step back, hands up, and stay between your man and the quarterback. |
+| **X** | Pass block: step back, hands up, and stay between your man and the quarterback. |
 | **LT** | Pass block: step back, hands up, and stay between your man and the quarterback. |
 | **LG** | Pass block: step back, hands up, and stay between your man and the quarterback. |
 | **C** | Pass block: step back, hands up, and stay between your man and the quarterback. |
 | **RG** | Pass block: step back, hands up, and stay between your man and the quarterback. |
 | **RT** | Pass block: step back, hands up, and stay between your man and the quarterback. |
-| **RTE** | Pass block: step back, hands up, and stay between your man and the quarterback. |
-| **SL** | Run at the corner and screen him off. Stay in his way. |
+| **Y** | Pass block: step back, hands up, and stay between your man and the quarterback. |
+| **Z** | Run at the corner and screen him off. Stay in his way. |
 | **QB** | Take the snap and throw it to the tailback right now, out in the flat. One step, no drop. If he is covered, throw it at his feet. |
 | **FB** | Lead outside our end. Block the first man out there — here it is the linebacker. |
 | **TB** **(ball)** | Slide out behind the bunch, catch it standing still, then get north off your two blockers. Do not run backwards to get around. |
@@ -141,14 +141,14 @@ Same line as the Regular I — both ends tight, seven on the line every snap. No
 
 | Position | Assignment |
 |---|---|
-| **LTE** | Pass block: step back, hands up, and stay between your man and the quarterback. |
+| **X** | Pass block: step back, hands up, and stay between your man and the quarterback. |
 | **LT** | Pass block: step back, hands up, and stay between your man and the quarterback. |
 | **LG** | Pass block: step back, hands up, and stay between your man and the quarterback. |
 | **C** | Pass block: step back, hands up, and stay between your man and the quarterback. |
 | **RG** | Pass block: step back, hands up, and stay between your man and the quarterback. |
 | **RT** | Pass block: step back, hands up, and stay between your man and the quarterback. |
-| **RTE** | Pass block: step back, hands up, and stay between your man and the quarterback. |
-| **SL** | Run at the corner and screen him off. Stay in his way. |
+| **Y** | Pass block: step back, hands up, and stay between your man and the quarterback. |
+| **Z** | Run at the corner and screen him off. Stay in his way. |
 | **QB** | Take the snap and throw it to the tailback right now, out in the flat. One step, no drop. If he is covered, throw it at his feet. |
 | **FB** | Lead outside our end. Block the first man out there — here it is the linebacker. |
 | **TB** **(ball)** | Slide out behind the bunch, catch it standing still, then get north off your two blockers. Do not run backwards to get around. |
@@ -171,14 +171,14 @@ Same line as the Regular I — both ends tight, seven on the line every snap. No
 
 | Position | Assignment |
 |---|---|
-| **LTE** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
+| **X** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
 | **LT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
 | **LG** | Defensive guard head up on you. Cut him off — get between him and the ball. |
 | **C** | Nobody on you. Climb to the playside linebacker. Head across him. |
 | **RG** | Defensive guard head up on you. Step past him. Climb to the playside linebacker. Head across him. |
 | **RT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
-| **RTE** | Defensive end on your inside shoulder. Turn him inside. The ball goes around behind you. |
-| **SL** | Run at the corner and screen him off. Stay in his way. |
+| **Y** | Defensive end on your inside shoulder. Turn him inside. The ball goes around behind you. |
+| **Z** | Run at the corner and screen him off. Stay in his way. |
 | **QB** **(ball)** | Take the snap and sweep right, flat and fast, behind the trips. Turn up outside the fullback. |
 | **FB** | Lead outside our end. Block the first man out there — here it is the linebacker. |
 | **TB** | Run hard to the left like you have the ball. Sell it all the way. |
@@ -200,14 +200,14 @@ Same line as the Regular I — both ends tight, seven on the line every snap. No
 
 | Position | Assignment |
 |---|---|
-| **LTE** | Defensive end on your inside shoulder. Turn him inside. The ball goes around behind you. |
+| **X** | Defensive end on your inside shoulder. Turn him inside. The ball goes around behind you. |
 | **LT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
 | **LG** | Defensive guard head up on you. Step past him. Climb to the playside linebacker. Head across him. |
 | **C** | Nobody on you. Climb to the playside linebacker. Head across him. |
 | **RG** | Defensive guard head up on you. Cut him off — get between him and the ball. |
 | **RT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
-| **RTE** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
-| **SL** | Run at the corner and screen him off. Stay in his way. |
+| **Y** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
+| **Z** | Run at the corner and screen him off. Stay in his way. |
 | **QB** **(ball)** | Take the snap and sweep left, flat and fast, behind the trips. Turn up outside the fullback. |
 | **FB** | Lead outside our end. Block the first man out there — here it is the linebacker. |
 | **TB** | Run hard to the right like you have the ball. Sell it all the way. |
@@ -229,14 +229,14 @@ Same line as the Regular I — both ends tight, seven on the line every snap. No
 
 | Position | Assignment |
 |---|---|
-| **LTE** | Pass block: step back, hands up, and stay between your man and the quarterback. |
+| **X** | Pass block: step back, hands up, and stay between your man and the quarterback. |
 | **LT** | Pass block: step back, hands up, and stay between your man and the quarterback. |
 | **LG** | Pass block: step back, hands up, and stay between your man and the quarterback. |
 | **C** | Pass block: step back, hands up, and stay between your man and the quarterback. |
 | **RG** | Pass block: step back, hands up, and stay between your man and the quarterback. |
 | **RT** | Pass block: step back, hands up, and stay between your man and the quarterback. |
-| **RTE** **(ball)** | Take one step up, then slant out flat toward the right sideline, almost along the line of scrimmage. Look for the ball right away. |
-| **SL** | Run at the corner and screen him off. Stay in his way. |
+| **Y** **(ball)** | Take one step up, then slant out flat toward the right sideline, almost along the line of scrimmage. Look for the ball right away. |
+| **Z** | Run at the corner and screen him off. Stay in his way. |
 | **QB** | Take the snap, take one step and throw to the right tight end as he slants out. If he is covered, tuck it and run. |
 | **FB** | Release straight up the field. You are clearing the corner so the slant has room. |
 | **TB** | Step up and out, hands up. Pick up anybody coming at the quarterback. |
@@ -258,14 +258,14 @@ Same line as the Regular I — both ends tight, seven on the line every snap. No
 
 | Position | Assignment |
 |---|---|
-| **LTE** **(ball)** | Take one step up, then slant out flat toward the left sideline, almost along the line of scrimmage. Look for the ball right away. |
+| **X** **(ball)** | Take one step up, then slant out flat toward the left sideline, almost along the line of scrimmage. Look for the ball right away. |
 | **LT** | Pass block: step back, hands up, and stay between your man and the quarterback. |
 | **LG** | Pass block: step back, hands up, and stay between your man and the quarterback. |
 | **C** | Pass block: step back, hands up, and stay between your man and the quarterback. |
 | **RG** | Pass block: step back, hands up, and stay between your man and the quarterback. |
 | **RT** | Pass block: step back, hands up, and stay between your man and the quarterback. |
-| **RTE** | Pass block: step back, hands up, and stay between your man and the quarterback. |
-| **SL** | Run at the corner and screen him off. Stay in his way. |
+| **Y** | Pass block: step back, hands up, and stay between your man and the quarterback. |
+| **Z** | Run at the corner and screen him off. Stay in his way. |
 | **QB** | Take the snap, take one step and throw to the left tight end as he slants out. If he is covered, tuck it and run. |
 | **FB** | Release straight up the field. You are clearing the corner so the slant has room. |
 | **TB** | Step up and out, hands up. Pick up anybody coming at the quarterback. |

@@ -2,15 +2,15 @@
   "id": "sb-toss-l",
   "order": 10,
   "formation": "split-backs",
-  "name": "Split Backs - Slot Left - 29 Toss",
+  "name": "Split Backs - Z L - 29 Toss",
   "code": "18",
-  "call": "Split Backs Slot Left 29 Toss",
+  "call": "Split Backs Z L 29 Toss",
   "type": "run",
   "scheme": "Toss",
   "direction": "left",
   "ball_carrier": "RH",
   "alignment": {
-    "SL": [
+    "Z": [
       -5.6,
       -1.5
     ]
@@ -67,7 +67,7 @@
   },
   "fronts": {
     "4-4": {
-      "RTE": {
+      "Y": {
         "block": "man",
         "man": "RDE"
       },
@@ -92,11 +92,11 @@
         "block": "man",
         "man": "LILB"
       },
-      "LTE": {
+      "X": {
         "block": "man",
         "man": "LDE"
       },
-      "SL": {
+      "Z": {
         "block": "man",
         "man": "LC"
       },

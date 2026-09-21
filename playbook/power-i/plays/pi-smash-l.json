@@ -2,9 +2,9 @@
   "id": "pi-smash-l",
   "order": 2,
   "formation": "power-i",
-  "name": "Power I - Slot Left - 33 Smash",
+  "name": "Power I - Z L - 33 Handoff",
   "code": "40",
-  "call": "Power I Slot Left 33 Smash",
+  "call": "Power I Z L 33 Handoff",
   "type": "run",
   "scheme": "Smash",
   "direction": "left",
@@ -54,7 +54,7 @@
         ]
       ]
     },
-    "SL": {
+    "Z": {
       "block": "lead",
       "note": "You are the second man through. Go after the fullback, take whoever he did not."
     }
@@ -65,7 +65,7 @@
     "Neither lead picks a man before the snap. First one shows, first one gets blocked."
   ],
   "alignment": {
-    "SL": [
+    "Z": [
       -1.4,
       -4.4
     ]

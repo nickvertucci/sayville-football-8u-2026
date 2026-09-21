@@ -2,9 +2,9 @@
   "id": "i-fb-smash-l",
   "order": 20,
   "formation": "i-form",
-  "name": "Regular I - Slot Left - 23 Smash",
+  "name": "Regular I - Z L - 23 Handoff",
   "code": "12",
-  "call": "Regular I Slot Left 23 Smash",
+  "call": "Regular I Z L 23 Handoff",
   "type": "run",
   "scheme": "Smash",
   "direction": "left",
@@ -75,7 +75,7 @@
     "The tailback's fake is the play as much as the handoff. If he jogs, the backside linebacker is in the hole."
   ],
   "alignment": {
-    "SL": [
+    "Z": [
       -5.6,
       -1.5
     ]
