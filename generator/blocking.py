@@ -668,30 +668,27 @@ def linebacker(front: dict, side: int, which: str = "playside", taken=()):
     return ranked[0]
 
 
-# How far a receiver can realistically chase somebody down and still be blocking him.
-# Beyond this he is not stalking a man, he is jogging at one. Seven yards, because the
-# 4-4 corner plays at four and a half now and the split man is still the one who blocks
-# him -- at six the corner fell a fifth of a yard outside reach and every screen in the
-# book quietly moved onto the outside linebacker instead. The number it has to stay
-# under is the 5-4-2 safety at nine and a half, which is the case this constant exists
-# for: the split man never runs infield at him.
-MAX_STALK = 7.0
-
-
 def perimeter_defender(front: dict, x: float, side: int, taken=()):
     """The man a receiver has to get in front of out on the perimeter.
 
-    A defensive back over him if there is one within reach — that is the corner, and
-    stalking him is the whole job. But **the 5-4-2 has no corners**: it trades them for
-    a fourth linebacker and plays two safeties eight yards deep. Picking "the nearest
-    defensive back" there sent every slot in the book on a nine-yard run diagonally
-    INFIELD at a safety, away from the sideline he is supposed to be walling off, while
-    the outside linebacker standing four yards from him — the man who actually makes
-    that tackle — went unblocked.
+    **The defensive back on his side. Always, whatever it costs him to get there.**
 
-    So: the nearest defensive back if one is close enough to block, otherwise the
-    outermost linebacker on his side. A front with no corners still has somebody out
-    there, and it is him.
+    There used to be a distance gate -- block the back if he was inside seven yards,
+    otherwise the outermost linebacker -- and it was wrong for one reason: it decided
+    the job from geometry when the job is a rule the boy is taught. A slot who has to
+    check how deep a man is playing before he knows who he blocks does not have a rule,
+    he has a calculation, and he has it a second before the snap.
+
+    Every front in the book has exactly one defensive back to each side of the ball, so
+    the rule resolves without a tie-break. Three of them call him a corner and stand him
+    eight or nine yards outside. Two do not: the 5-4-2 plays two men eight yards deep
+    and 3.3 outside the ball, and the prevent plays three at ten. Against those the
+    block is a longer run and part of it is infield -- which is the honest picture of
+    blocking a deep man, and what the diagram now draws.
+
+    The linebacker fallback survives only for a front with no defensive back on that
+    side at all. There is no such front today; it is here so the function cannot
+    return nothing if one is ever written.
 
     A blocker standing on the middle has no side of his own, so he takes the play's —
     the same rule the centre's down block follows. Without it a tailback aligned at
@@ -704,16 +701,14 @@ def perimeter_defender(front: dict, x: float, side: int, taken=()):
         return ((s[1] - here[0]) ** 2 + (s[2] - here[1]) ** 2) ** 0.5
 
     dbs = [s for s in spots(front, "DB") if s[1] * lean > 1.0]
-    free_dbs = [s for s in dbs if s[0] not in taken] or dbs
-    if free_dbs:
-        best = min(free_dbs, key=reach)
-        if reach(best) <= MAX_STALK:
-            return best
+    if dbs:
+        free_dbs = [s for s in dbs if s[0] not in taken] or dbs
+        return min(free_dbs, key=reach)
     lbs = [s for s in spots(front, "LB") if s[1] * lean > 1.0]
     if lbs:
         free = [s for s in lbs if s[0] not in taken] or lbs
         return max(free, key=lambda s: s[1] * lean)
-    return min(dbs, key=reach) if dbs else None
+    return None
 
 
 # --------------------------------------------------------------- the sentences --

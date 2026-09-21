@@ -48,8 +48,8 @@
 <line x1="435.8" y1="356.4" x2="417.4" y2="356.4" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 <path d="M464.4,337.5 L486.0,321.3 L588.6,307.8" fill="none" stroke="#b3001b" stroke-width="4.6" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 5"/>
 <polygon points="588.6,307.8 575.7,315.7 574.1,303.5" fill="#b3001b"/>
-<path d="M502.2,364.5 L497.3,217.4" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-<line x1="488.2" y1="217.7" x2="506.5" y2="217.0" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
+<path d="M502.2,364.5 L443.1,119.9" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="434.1" y1="122.0" x2="452.0" y2="117.7" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 <path d="M351.0,459.0 L351.0,475.2" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 5"/>
 <polygon points="351.0,475.2 346.4,464.8 355.6,464.8" fill="#14213d"/>
 <path d="M297.0,459.0 L280.8,434.7" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
@@ -113,8 +113,8 @@
 <text x="344" y="612" font-size="12" fill="#111318">the line of scrimmage. Look for the</text>
 <text x="344" y="630" font-size="12" fill="#111318">ball right away.</text>
 <text x="310" y="646" font-size="12" font-weight="700" fill="#111318">Z</text>
-<text x="344" y="646" font-size="12" fill="#111318">Run at the outside linebacker and</text>
-<text x="344" y="664" font-size="12" fill="#111318">screen him off. Stay in his way.</text>
+<text x="344" y="646" font-size="12" fill="#111318">Run at the safety and screen him off.</text>
+<text x="344" y="664" font-size="12" fill="#111318">Stay in his way.</text>
 <text x="310" y="680" font-size="12" font-weight="700" fill="#111318">QB</text>
 <text x="344" y="680" font-size="12" fill="#111318">Catch the snap, take one step and throw</text>
 <text x="344" y="698" font-size="12" fill="#111318">to the right tight end as he slants</text>

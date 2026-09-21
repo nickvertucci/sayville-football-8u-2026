@@ -48,8 +48,8 @@
 <line x1="435.8" y1="356.4" x2="417.4" y2="356.4" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 <path d="M464.4,337.5 L464.4,356.4" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
 <line x1="473.6" y1="356.4" x2="455.2" y2="356.4" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
-<path d="M199.8,364.5 L204.7,217.4" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-<line x1="195.5" y1="217.0" x2="213.8" y2="217.7" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
+<path d="M199.8,364.5 L258.9,119.9" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="250.0" y1="117.7" x2="267.9" y2="122.0" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 <path d="M351.0,364.5 L351.0,380.7" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 5"/>
 <polygon points="351.0,380.7 346.4,370.3 355.6,370.3" fill="#14213d"/>
 <path d="M135.0,364.5 L165.5,307.8 L200.3,216.3" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
@@ -112,8 +112,8 @@
 <text x="344" y="596" font-size="12" fill="#111318">stay between your man and the</text>
 <text x="344" y="612" font-size="12" fill="#111318">quarterback.</text>
 <text x="310" y="630" font-size="12" font-weight="700" fill="#111318">Z</text>
-<text x="344" y="630" font-size="12" fill="#111318">Run at the outside linebacker and</text>
-<text x="344" y="646" font-size="12" fill="#111318">screen him off. Stay in his way.</text>
+<text x="344" y="630" font-size="12" fill="#111318">Run at the safety and screen him off.</text>
+<text x="344" y="646" font-size="12" fill="#111318">Stay in his way.</text>
 <text x="310" y="664" font-size="12" font-weight="700" fill="#111318">QB</text>
 <text x="344" y="664" font-size="12" fill="#111318">Take the snap and throw it to the</text>
 <text x="344" y="680" font-size="12" fill="#111318">tailback right now, out in the flat.</text>
