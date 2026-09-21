@@ -749,9 +749,14 @@ table.xl.pk-subs .sub-pos {
   width: 2.6em; text-align: left; font-size: 9.5px; font-weight: 900;
   letter-spacing: .3px; color: var(--muted); background: var(--panel-2);
 }
-table.xl.pk-subs .sub-out { text-align: right; color: var(--muted);
-                            text-decoration: line-through; }
-table.xl.pk-subs .sub-in { text-align: left; }
+/* The man coming off is dark grey and the man coming on is black. It was a
+   strike-through, which is the right idea and the wrong mark: at seven and a half
+   points a line through a name is a line through the letters, and the name a coach
+   has to read to know who he is pulling gets harder to read the more certainly it
+   says he is pulling him. Colour and weight say the same thing and leave the name
+   alone. */
+table.xl.pk-subs .sub-out { text-align: right; color: var(--ink-2); font-weight: 600; }
+table.xl.pk-subs .sub-in { text-align: left; font-weight: 800; }
 table.xl.pk-subs .sub-in::before {
   content: ""; display: inline-block; vertical-align: middle;
   width: 0; height: 0; margin: 0 5px 1px 0;
@@ -1058,7 +1063,8 @@ table.xl.pk-plays td {
                         letter-spacing: -.2px; }
   table.xl.pk-subs .sub-pos { font-size: 6.5px; width: 2.4em; background: none;
                               color: #000; }
-  table.xl.pk-subs .sub-out { color: #555; }
+  table.xl.pk-subs .sub-out { color: #444; font-weight: 600; }
+  table.xl.pk-subs .sub-in { font-weight: 800; }
   table.xl.pk-subs .sub-in::before { margin: 0 3px 1px 0; border-width: 2.5px;
                                      border-left-color: #000; border-right: 0; }
   .pk-field { margin: 5px 0 0; padding-top: 31px; border-top-color: #000;
