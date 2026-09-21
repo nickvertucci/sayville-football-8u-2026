@@ -5,7 +5,7 @@
   "call": "Tight",
   "family": "Against a team running inside",
   "summary": "The answer to a team running downhill at the middle. Five down linemen cover the offensive line, three linebackers fill, and a free safety cleans up anything that gets through.",
-  "notes": "Five down linemen head up on the center, both guards' outside shoulders and both ends. Three linebackers at three yards. Two corners and a free safety. This is the Base 4-4 with the fourth linebacker traded back for a nose tackle, so nobody is uncovered inside.",
+  "notes": "Five down linemen: the nose tackle head up on the center, both tackles head up on the guards, and both ends in the gap outside our tackle \u2014 split the difference between the tackle and the man outside him. Three linebackers at three yards. Two corners and a free safety. This is the Base 4-4 with the fourth linebacker traded back for a nose tackle, so nobody is uncovered inside.",
   "roles": {
     "LDE": "DL",
     "LDT": "DL",
@@ -21,11 +21,11 @@
   },
   "alignment": {
     "LDE": [
-      -4.2,
+      -3.5,
       0.8
     ],
     "LDT": [
-      -2.4,
+      -1.4,
       0.8
     ],
     "NT": [
@@ -33,11 +33,11 @@
       0.8
     ],
     "RDT": [
-      2.4,
+      1.4,
       0.8
     ],
     "RDE": [
-      4.2,
+      3.5,
       0.8
     ],
     "LOLB": [
@@ -141,7 +141,7 @@
       ]
     },
     "MLB": {
-      "rule": "Three yards deep over the center. You make the call and you fill the first open gap. Step downhill — do not drift sideways.",
+      "rule": "Three yards deep over the center. You make the call and you fill the first open gap. Step downhill \u2014 do not drift sideways.",
       "type": "read",
       "path": [
         [
@@ -189,7 +189,7 @@
       ]
     },
     "FS": {
-      "rule": "Eight yards deep. You are the last man — nobody gets behind you. Take the cut-off angle, not the chase.",
+      "rule": "Eight yards deep. You are the last man \u2014 nobody gets behind you. Take the cut-off angle, not the chase.",
       "type": "read",
       "path": [
         [
@@ -202,7 +202,7 @@
   "coaching_points": [
     "Call this when they are winning the middle. The Base 4-4 leaves the guards uncovered on purpose; the moment a team makes us pay for it, the nose tackle goes back in and this is the front.",
     "Every down lineman has a gap and nothing else. The moment one of them chases the ball instead of holding his gap, we give up the play we were built to stop.",
-    "Contain is the whole job for the ends. A back who gets outside our end at this age usually scores — teach them to keep the outside arm free and squeeze everything in.",
+    "Contain is the whole job for the ends. A back who gets outside our end at this age usually scores \u2014 teach them to keep the outside arm free and squeeze everything in.",
     "Linebackers read the back closest to them, not the ball. The ball lies to them; the blocking does not.",
     "Nobody may cross the line before the snap. Blitzing is illegal at this age, so the linebackers wait, read one step, then attack downhill."
   ],

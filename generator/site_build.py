@@ -853,6 +853,29 @@ table.xl.pk-subs .sub-in::before {
   width: 0; height: 0; margin: 0 5px 1px 0;
   border: 3px solid transparent; border-left-color: var(--muted); border-right: 0;
 }
+/* The spot an incoming man plays, after his name. It used to be a column of its own
+   on the left, which read as the spot being SUBSTITUTED rather than the spot being
+   filled -- and it had no honest answer at all for a boy who moved, because he fills
+   one spot and leaves another. */
+table.xl.pk-subs .sub-pos {
+  font-size: 8.5px; font-weight: 800; letter-spacing: .2px;
+  text-transform: uppercase; color: var(--muted); background: none;
+  width: auto; padding: 0;
+}
+/* Moved: the boy in both elevens doing a different job. Under a rule, because it is
+   a change of subject from the two columns above it and not another row of them --
+   nobody comes off for him and nobody goes on. The arrow between his two spots is
+   drawn from borders like every other arrow in this book: a typed one came out of a
+   printer as a tofu box. */
+table.xl.pk-subs .mv-top { border-top: 1.2px solid var(--ink-2); padding-top: 2px; }
+table.xl.pk-subs .mv-name { font-weight: 800; color: var(--ink); }
+table.xl.pk-subs .sub-mv { text-align: left; font-weight: 800; }
+table.xl.pk-subs .sub-mv .mv-a { color: var(--muted); }
+table.xl.pk-subs .sub-mv .mv-b::before {
+  content: ""; display: inline-block; vertical-align: middle;
+  width: 0; height: 0; margin: 0 3px 1px 3px;
+  border: 3px solid transparent; border-left-color: var(--muted); border-right: 0;
+}
 /* Six across, not three. A substitution card is one short column of two names, where
    a package card is five whole calls, so six of these fit the width that three of
    those need -- and one row of six is half the height of two rows of three, which is
@@ -1164,6 +1187,10 @@ table.xl.pk-plays td {
                               color: #000; }
   table.xl.pk-subs .sub-out { color: #444; font-weight: 600; }
   table.xl.pk-subs .sub-in { font-weight: 800; }
+  table.xl.pk-subs .sub-pos { font-size: 6.5pt; }
+  table.xl.pk-subs .mv-top { border-top-color: #000; padding-top: 1px; }
+  table.xl.pk-subs .sub-mv .mv-b::before { margin: 0 2px 1px 2px; border-width: 2.5px;
+                                           border-right: 0; border-left-color: #000; }
   table.xl.pk-subs .sub-in::before { margin: 0 3px 1px 0; border-width: 2.5px;
                                      border-left-color: #000; border-right: 0; }
   .pk-field { margin: 5px 0 0; padding-top: 31px; border-top-color: #000;
@@ -3302,6 +3329,13 @@ def _subs_strip(roster: dict) -> str:
     printed once, in lineup order, and a package is the difference from it -- out, in,
     one line each.
 
+    Out, in and moved, the same three the depth chart prints and worked out by the
+    same function. It used to be one row per CHANGED SPOT -- "Z: Philip out, Ryan in"
+    and "TB: Nico out, Philip in" -- which says two boys changed when it is one boy
+    turning round and one coming on. A move is the substitution nobody is told to
+    make, so it gets its own block under a rule rather than being spread across two
+    rows that each half-say it.
+
     It also makes a package drifting off the depth chart visible instead of quiet.
     A package whose left guard is not the left guard shows a substitution at left
     guard; if that is not what the package is for, the card says so on paper.
@@ -3312,7 +3346,6 @@ def _subs_strip(roster: dict) -> str:
         return ""
     check_package_lines(roster)
     base = _base_eleven(roster)
-    by_spot = dict(base)
     spots = PACKAGE_SPOTS["offense"]
 
     cells = "".join(
@@ -3330,18 +3363,26 @@ def _subs_strip(roster: dict) -> str:
                 f"roster.json packages.offense, {label}: {len(pack)} names for "
                 f"{len(spots)} spots."
             )
+        out, inn, moved = package_changes(packs, i + 1, spots)
         rows = []
-        for spot, man in zip(spots, pack):
-            was = by_spot.get(spot)
-            if was is None or man == was:
-                continue
+        for k in range(max(len(out), len(inn))):
+            leaving = out[k] if k < len(out) else ""
+            name, spot = inn[k] if k < len(inn) else ("", "")
+            coming = (f'{esc(name)} <span class="sub-pos">{esc(spot)}</span>'
+                      if name and spot else (esc(name) if name else "—"))
             rows.append(
-                f'<tr><td class="sub-pos">{esc(spot)}</td>'
-                f'<td class="sub-out">{esc(was)}</td>'
-                f'<td class="sub-in">{esc(man)}</td></tr>'
+                f'<tr><td class="sub-out">{esc(leaving) if leaving else "—"}</td>'
+                f'<td class="sub-in">{coming}</td></tr>'
+            )
+        for k, (name, a, b) in enumerate(moved):
+            edge = " mv-top" if k == 0 else ""
+            rows.append(
+                f'<tr><td class="sub-out mv-name{edge}">{esc(name)}</td>'
+                f'<td class="sub-mv{edge}"><span class="mv-a">{esc(a)}</span>'
+                f'<span class="mv-b">{esc(b)}</span></td></tr>'
             )
         body = ("".join(rows) if rows else
-                '<tr><td class="pk-any" colspan="3">Base eleven</td></tr>')
+                '<tr><td class="pk-any" colspan="2">Base eleven</td></tr>')
         cards.append(
             f'<section class="pk"><p class="pk-name">{esc(label)}'
             f'<span class="pk-n">{i + 1}</span></p>'
@@ -4586,6 +4627,42 @@ def rotations_for(side: str) -> list[tuple[str, str, str]]:
     return [(n, "d" + n, "") for n in ROTATIONS]
 
 
+def package_changes(packs: list, n: int, spots: tuple = ()):
+    """What package `n` changes about the base eleven: (out, in, moved).
+
+    Three kinds, and the third is the one a two-column card cannot say by itself.
+    `out` is a boy who leaves the eleven, `in` is a boy who joins it and the spot he
+    joins at, and `moved` is a boy in BOTH elevens playing a different job -- nobody
+    ran on or off for him, so neither of the other two lists can name him.
+
+    The depth chart and the call sheet both print this, in different shapes and at
+    different sizes, and they work it out here so they cannot disagree about who is
+    doing what. They did once: the call sheet listed a move as a substitution at each
+    of the two spots, which read as two boys changing when it was one boy turning
+    round.
+    """
+    first = [name for name in (packs[0] if packs else []) if name]
+    here = packs[n - 1] if n - 1 < len(packs) else []
+    first_set = set(first)
+    here_set = {name for name in here if name}
+    out = [name for name in first if name not in here_set]
+    inn = []
+    for i, name in enumerate(here):
+        if name and name not in first_set:
+            spot = spots[i] if i < len(spots) else ""
+            inn.append((name, spot))
+
+    # Where each man stands in the base, and where he stands here. A name in both with
+    # two different spots is a move. Listed in base order, which is the order the
+    # package card reads down.
+    was = {name: spots[i] for i, name in enumerate(packs[0] if packs else [])
+           if name and i < len(spots)}
+    now = {name: spots[i] for i, name in enumerate(here) if name and i < len(spots)}
+    moved = [(name, was[name], now[name]) for name in first
+             if name in now and was.get(name) != now[name]]
+    return out, inn, moved
+
+
 def package_sub_card_html(packs: list, n: int, spots: tuple = ()) -> str:
     """Who comes off, who goes on, and who stays on at a different job.
 
@@ -4605,25 +4682,7 @@ def package_sub_card_html(packs: list, n: int, spots: tuple = ()) -> str:
     Package 1 is the base on both sides — Shifty on offense, Base on defense —
     so it is what everything else is measured against and its own card says so.
     """
-    first = [name for name in (packs[0] if packs else []) if name]
-    here = packs[n - 1] if n - 1 < len(packs) else []
-    first_set = set(first)
-    here_set = {name for name in here if name}
-    out = [name for name in first if name not in here_set]
-    inn = []
-    for i, name in enumerate(here):
-        if name and name not in first_set:
-            spot = spots[i] if i < len(spots) else ""
-            inn.append((name, spot))
-
-    # Where each man stands in the base, and where he stands here. A name in
-    # both with two different spots is a move. Listed in base order, which is
-    # the order the package card above reads down.
-    was = {name: spots[i] for i, name in enumerate(packs[0] if packs else [])
-           if name and i < len(spots)}
-    now = {name: spots[i] for i, name in enumerate(here) if name and i < len(spots)}
-    moved = [(name, was[name], now[name]) for name in first
-             if name in now and was.get(name) != now[name]]
+    out, inn, moved = package_changes(packs, n, spots)
 
     if n <= 1:
         body = '<p class="dc-sub-empty">Base</p>'

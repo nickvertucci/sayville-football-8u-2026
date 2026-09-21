@@ -235,15 +235,20 @@ SCHEMES: dict[str, dict[str, dict]] = {
         "playside_g": {"block": "down"},
         "playside_t": {"block": "double", "target": "playside"},
     },
+    # Power kicks the end with the man standing next to him -- the tight end --
+    # and runs inside that block. It used to send the slot receiver in to kick a
+    # defensive end while the tight end released past him, which asked a wide
+    # receiver to do a lineman's job and left the corner unblocked. The Z has one
+    # job in this book, in every scheme: get in front of the corner.
     "Power": {
-        "playside_te": {"block": "release"},
+        "playside_te": {"block": "kick"},
         "playside_t": {"block": "down"},
         "playside_g": {"block": "double", "target": "middle"},
         "center": {"block": "reach"},
         "backside_g": {"block": "cutoff"},
         "backside_t": {"block": "down"},
         "backside_te": {"block": "cutoff"},
-        "slot": {"block": "kick"},
+        "slot": {"block": "screen"},
         "lead": {"block": "lead"},
     },
     "Toss": dict(_OUTSIDE_LINE),
@@ -334,10 +339,6 @@ def scheme_intents(play: dict, form: dict, side: int) -> dict[str, dict]:
                              "with": position_name(roles[other]).lower()}
     if "slot" not in roles:
         intents.pop("slot", None)
-        # Power's kick-out is the slot. Nobody there: the playside end kicks
-        # the end out himself, which is the no-pull rule without a split man.
-        if name == "Power":
-            intents["playside_te"] = {"block": "base", "drive": "out"}
     if name == "Sweep":
         if play.get("ball_carrier") == roles.get("backside_te"):
             intents["backside_t"] = {"block": "cutoff"}
@@ -931,13 +932,25 @@ def v_wedge(front, spot, side, intent, taken=()):
 
 
 def v_kick(front, spot, side, intent, taken=()):
-    """Kick the edge defender out. The ball runs inside the block."""
+    """Take the edge defender. The ball runs inside the block.
+
+    Which block that is depends on where he stands. Head up on us or wider and it is a
+    kick-out: attack the outside hip and drive him away from the hole. Aligned INSIDE
+    us -- the 5-3 puts both ends in the gap between our tackle and the man outside him
+    -- and there is nothing to kick out; the same assignment is a down block, and a
+    card that calls it a kick-out is teaching an eight-year-old to aim at the wrong
+    shoulder of a man who is already where the ball wants to go.
+    """
     man = edge_defender(front, side)
     if man is None:
         return v_lead(front, spot, side, intent, taken)
     n = noun(front, man[0])
-    text = (f"Kick the {n} out. Aim at his outside hip. Never let him come "
-            "underneath you.")
+    if (man[1] - spot[0]) * side < -0.3:
+        text = (f"Block down on the {n}, inside shoulder. Head across him — "
+                "nobody crosses your face.")
+    else:
+        text = (f"Kick the {n} out. Aim at his outside hip. Never let him come "
+                "underneath you.")
     return text, to(spot, man)
 
 

@@ -1087,7 +1087,7 @@ def draw_field() -> str:
     return "\n".join(out)
 
 
-def draw_defense(defense: dict) -> str:
+def draw_defense(defense: dict, labels: bool = True) -> str:
     out = []
     r = 0.55 * SCALE
     for label, (x, y) in defense["alignment"].items():
@@ -1099,11 +1099,29 @@ def draw_defense(defense: dict) -> str:
             f'<line x1="{cx+a:.1f}" y1="{cy-a:.1f}" x2="{cx-a:.1f}" y2="{cy+a:.1f}" '
             f'stroke="{COLORS["defense"]}" stroke-width="3.6"/>'
         )
-        out.append(
-            f'<text x="{cx:.1f}" y="{cy - r - 3:.1f}" text-anchor="middle" font-size="12.5" '
-            f'fill="{COLORS["defense"]}" font-weight="600">{esc(label.strip())}</text>'
-        )
+        if labels:
+            out.append(defense_label(label, cx, cy, r))
     return "\n".join(out)
+
+
+def defense_labels(defense: dict) -> str:
+    """The defenders' names, drawn last so nothing runs over them.
+
+    The 5-3 stands its ends in the C gap, which is exactly where a Power's ball
+    carrier runs. Drawn with the rest of the defence -- under the offence's paths
+    -- the end's name vanished under the red line, on the card an eight-year-old
+    reads to find out who he is blocking.
+    """
+    r = 0.55 * SCALE
+    return "\n".join(defense_label(label, fx(x), fy(y), r)
+                     for label, (x, y) in defense["alignment"].items())
+
+
+def defense_label(label: str, cx: float, cy: float, r: float) -> str:
+    return (f'<text x="{cx:.1f}" y="{cy - r - 3:.1f}" text-anchor="middle" '
+            f'font-size="12.5" fill="{COLORS["defense"]}" font-weight="600" '
+            f'stroke="#fff" stroke-width="3" paint-order="stroke">'
+            f'{esc(label.strip())}</text>')
 
 
 def draw_paths(assignments: dict, alignment: dict, carrier: str | None) -> str:
@@ -1279,10 +1297,11 @@ def render_card(play: dict, defense: dict, frame: tuple[float, float, float]) ->
         f'<g transform="translate({off_x:.1f},{TITLE_H + off_y:.1f})">',
         draw_field(),
     ]
-    svg.append(draw_defense(defense))
+    svg.append(draw_defense(defense, labels=False))
     svg.append(draw_paths(assignments, alignment, play.get("ball_carrier")))
     svg.append(draw_pitch(play, alignment))
     svg.append(draw_offense(play, alignment))
+    svg.append(defense_labels(defense))
     svg.append(draw_code(play, fr_half, fr_top))
     svg.append("</g></g>")
 
@@ -1518,11 +1537,12 @@ def render_diagram(play: dict, defense: dict, frame: tuple[float, float, float])
         f'{esc(defense["name"])}</title>',
         draw_field(),
     ]
-    svg.append(draw_defense(defense))
+    svg.append(draw_defense(defense, labels=False))
     alignment = play_alignment(form, play)
     svg.append(draw_paths(assignments, alignment, play.get("ball_carrier")))
     svg.append(draw_pitch(play, alignment))
     svg.append(draw_offense(play, alignment))
+    svg.append(defense_labels(defense))
     svg.append(draw_code(play, half, y_top))
     svg.append(draw_name(play, half, y_top))
     svg.append("</svg>")

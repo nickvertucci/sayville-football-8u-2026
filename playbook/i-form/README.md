@@ -76,7 +76,7 @@ Normal line splits, about a foot. Both ends are on the line; the slot is just ou
 **Coaching points**
 
 - This is the most physical run in the book. If it works you can run it fifteen times, and at this age you often can.
-- Drill the Z's kick-out on its own. If he blocks the end with his shoulders square, the end slides underneath and makes the tackle for a loss — he has to attack the outside hip.
+- Drill the Y on the end man on his own. Against the 4-4 and the 6-3 the end is outside him and it is a kick-out — attack the outside hip, because square shoulders let the end slide underneath for a loss. Against the 5-3 the end is in the gap inside him and it is a down block — head across his face.
 - The fullback's man is whoever shows in the hole, not a man he picks before the snap. Tell him that every time.
 - The tailback's most common mistake is bouncing it wide looking for green grass. The yards are inside the Z's block. Make him run it tight in practice until it is automatic.
 
@@ -107,7 +107,7 @@ Normal line splits, about a foot. Both ends are on the line; the slot is just ou
 **Coaching points**
 
 - This is the most physical run in the book. If it works you can run it fifteen times, and at this age you often can.
-- Drill the Z's kick-out on its own. If he blocks the end with his shoulders square, the end slides underneath and makes the tackle for a loss — he has to attack the outside hip.
+- Drill the Y on the end man on his own. Against the 4-4 and the 6-3 the end is outside him and it is a kick-out — attack the outside hip, because square shoulders let the end slide underneath for a loss. Against the 5-3 the end is in the gap inside him and it is a down block — head across his face.
 - The fullback's man is whoever shows in the hole, not a man he picks before the snap. Tell him that every time.
 - The tailback's most common mistake is bouncing it wide looking for green grass. The yards are inside the Z's block. Make him run it tight in practice until it is automatic.
 
