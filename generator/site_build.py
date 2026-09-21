@@ -4466,27 +4466,34 @@ PACKAGE_SIZE = {"offense": 11, "defense": 11}
 # What each side calls its packages. The offense heading names the backfield the
 # group is made of, in the order those four sit in the box as #1 through #4.
 PACKAGE_TITLE = {
-    "offense": "Offensive QB-FB-TB-Z Packages",
+    "offense": "Offensive Packages",
     "defense": "Packages",
 }
 
-# What each slot in a package is. Offense: the quarterback, the fullback, the tailback
-# and the slot, then the two tight ends, then the left tackle, left guard, center, right
-# guard and right tackle. Defense: the base front's own eleven, line then backers then
+# What each slot in a package is. Offense: the quarterback, the fullback and the
+# tailback, then X, Y and Z, then the left tackle, left guard, center, right guard and
+# right tackle. Defense: the base front's own eleven, line then backers then
 # secondary, so a name on the card carries the spot he plays — Gavin P. (LDE).
+# Three groups, in the order a coach says them: the backfield, the three outside
+# the tackles, then the line. It is also the order the package arrays are stored
+# in roster.json, because one order that both the file and the page use cannot
+# drift out of step with itself. The dashed rules on the depth chart fall out of
+# it -- the CSS breaks before X and before LT, which are exactly the two seams.
 PACKAGE_SPOTS = {
-    "offense": ("QB", "FB", "TB", "Z", "X", "Y", "LT", "LG", "C", "RG", "RT"),
+    "offense": ("QB", "FB", "TB", "X", "Y", "Z", "LT", "LG", "C", "RG", "RT"),
     "defense": ("LDE", "LDG", "RDG", "RDE",
                 "LOLB", "LILB", "RILB", "ROLB", "LC", "RC", "FS"),
 }
 
-# Only the backfield is numbered on the package card. The ends and the line keep
-# their position names — X, RT — because those do not change meaning between
-# packages the way the four backs do.
+# Only the backs are numbered on the package card. The number is the back's digit
+# with the hole digit 0 behind it — 10, 20, 30 — the way the diagram labels the
+# three, so the card and the diagram agree.
 #
-# The number is the back's digit with a 0 behind it — 10, 20, 30, 40 — the way the
-# nomenclature card labels those four, so the card and the diagram agree.
-PACKAGE_NUMBERED = ("QB", "FB", "TB", "Z", "X", "Y")
+# X, Y and Z are not in here. They had 40, 50 and 60 for a while, back when the
+# numbering had to point at them somehow, and the letters took those digits away:
+# a letter IS the name, and "Z (40)" printed a number no call says any more. The
+# line was never numbered and still is not.
+PACKAGE_NUMBERED = ("QB", "FB", "TB")
 
 
 def rotations_for(side: str) -> list[tuple[str, str, str]]:
