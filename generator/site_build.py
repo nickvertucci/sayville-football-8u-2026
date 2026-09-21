@@ -475,6 +475,23 @@ table.dc-sub thead th {
   font-size: 10.5px; font-weight: 800; letter-spacing: .4px;
   text-transform: uppercase; color: var(--muted);
 }
+/* The Moved block is a second table under the first, and the rule between them does
+   the work a third pair of columns would have done badly: Out is a man leaving and In
+   is a man arriving, while a move is one man twice and fits neither. A solid rule
+   rather than the hairline the cells use -- it is a change of subject, not a row.
+
+   The arrow is drawn from borders, not typed. U+2192 came out of a printer as a tofu
+   box the first time this book wanted an arrow; a border always prints. */
+table.dc-sub.dc-moved {
+  margin-top: 5px; padding-top: 4px; border-top: 1.5px solid var(--line);
+}
+.dc-mv .mv-a { color: var(--muted); font-weight: 800; }
+.dc-mv .mv-b { font-weight: 800; }
+.dc-mv .mv-b::before {
+  content: ""; display: inline-block; vertical-align: middle;
+  width: 0; height: 0; margin: 0 4px 1px 4px;
+  border: 3px solid transparent; border-left-color: var(--muted); border-right: 0;
+}
 /* The spot after an incoming name is an annotation, not the name, and it was set only
    two points below it. Smaller is both truer and the cheapest width on the card --
    which the defence needs, where the spot is LOLB rather than C. */
@@ -2059,6 +2076,9 @@ table.dc-board thead th,
   table.dc-sub th:last-child, table.dc-sub td:last-child { padding-left: 4px; }
   table.dc-sub thead th { font-size: 6pt; }
   .dc-sub-pos { font-size: 7pt; }
+  table.dc-sub.dc-moved { margin-top: 3px; padding-top: 2px; border-top-color: #000; }
+  .dc-mv .mv-b::before { margin: 0 3px 1px 3px; border-width: 2.5px;
+                         border-right: 0; border-left-color: #000; }
   .dc-tools { display: none; }
   .dc-bar { margin: 0 0 3px; display: block; }
   /* The title block is the price of the first sheet and it is paid in rows. */
@@ -4502,13 +4522,20 @@ def rotations_for(side: str) -> list[tuple[str, str, str]]:
 
 
 def package_sub_card_html(packs: list, n: int, spots: tuple = ()) -> str:
-    """Who comes off and who goes on versus package 1, by name.
+    """Who comes off, who goes on, and who stays on at a different job.
 
-    A kid already in the base package stays off this card even if they move
-    spots — Philip in Shifty is still Philip in Fortnite, just at a different
-    slot, so he is not a substitution. Only names that leave the eleven (Out)
-    or join it (In) belong here. Incoming names carry the spot they play in
-    this package, so the card says Joseph P. (Y) rather than just Joseph P.
+    Out and In are the eleven changing: names that leave the base package and
+    names that join it. Incoming names carry the spot they play here, so the
+    card says Joseph P. (Y) rather than just Joseph P.
+
+    Moved is the third thing, and it used to be nothing. A boy in both elevens
+    is not a substitution, so the card dropped him -- and that quietly lost the
+    fact that Philip is the Z in Shifty and the TAILBACK in Fortnite. Nobody
+    came off for him and nobody went on, so neither column could say it, and a
+    coach reading the card had two elevens that agreed on the name and
+    disagreed on the job. It is the change most likely to put a boy in the
+    wrong place, because he is the one man on the field who was not told to
+    run on or off.
 
     Package 1 is the base on both sides — Shifty on offense, Base on defense —
     so it is what everything else is measured against and its own card says so.
@@ -4523,31 +4550,57 @@ def package_sub_card_html(packs: list, n: int, spots: tuple = ()) -> str:
         if name and name not in first_set:
             spot = spots[i] if i < len(spots) else ""
             inn.append((name, spot))
-    width = max(len(out), len(inn), 0)
-    if n <= 1 or not width:
-        body = '<p class="dc-sub-empty">Base</p>' if n <= 1 else \
-            '<p class="dc-sub-empty">Same as base</p>'
+
+    # Where each man stands in the base, and where he stands here. A name in
+    # both with two different spots is a move. Listed in base order, which is
+    # the order the package card above reads down.
+    was = {name: spots[i] for i, name in enumerate(packs[0] if packs else [])
+           if name and i < len(spots)}
+    now = {name: spots[i] for i, name in enumerate(here) if name and i < len(spots)}
+    moved = [(name, was[name], now[name]) for name in first
+             if name in now and was.get(name) != now[name]]
+
+    if n <= 1:
+        body = '<p class="dc-sub-empty">Base</p>'
+    elif not (out or inn or moved):
+        body = '<p class="dc-sub-empty">Same as base</p>'
     else:
-        rows = []
-        for i in range(width):
-            leaving = out[i] if i < len(out) else ""
-            entering = inn[i] if i < len(inn) else ("", "")
-            name, spot = entering
-            coming = (
-                f'{esc(name)} <span class="dc-sub-pos">({esc(spot)})</span>'
-                if name and spot else
-                (esc(name) if name else "—")
+        body = ""
+        width = max(len(out), len(inn))
+        if width:
+            rows = []
+            for i in range(width):
+                leaving = out[i] if i < len(out) else ""
+                entering = inn[i] if i < len(inn) else ("", "")
+                name, spot = entering
+                coming = (
+                    f'{esc(name)} <span class="dc-sub-pos">({esc(spot)})</span>'
+                    if name and spot else
+                    (esc(name) if name else "—")
+                )
+                rows.append(
+                    f'<tr><td>{esc(leaving) if leaving else "—"}</td>'
+                    f'<td>{coming}</td></tr>'
+                )
+            body += (
+                '<table class="dc-sub"><thead><tr><th>Out</th><th>In</th></tr>'
+                '</thead><tbody>'
+                + "".join(rows)
+                + "</tbody></table>"
             )
-            rows.append(
-                f'<tr><td>{esc(leaving) if leaving else "—"}</td>'
-                f'<td>{coming}</td></tr>'
+        if moved:
+            rows = "".join(
+                f'<tr><td>{esc(name)}</td>'
+                f'<td class="dc-mv"><span class="mv-a">{esc(a)}</span>'
+                f'<span class="mv-b">{esc(b)}</span></td></tr>'
+                for name, a, b in moved
             )
-        body = (
-            '<table class="dc-sub"><thead><tr><th>Out</th><th>In</th></tr>'
-            '</thead><tbody>'
-            + "".join(rows)
-            + "</tbody></table>"
-        )
+            body += (
+                '<table class="dc-sub dc-moved"><thead><tr>'
+                '<th>Moved</th><th>Spot</th></tr></thead><tbody>'
+                + rows
+                + "</tbody></table>"
+            )
     return f'<aside class="dc-subcard"><p class="dc-subcard-h">Sub card</p>{body}</aside>'
 
 

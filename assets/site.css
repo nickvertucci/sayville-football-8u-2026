@@ -415,6 +415,23 @@ table.dc-sub thead th {
   font-size: 10.5px; font-weight: 800; letter-spacing: .4px;
   text-transform: uppercase; color: var(--muted);
 }
+/* The Moved block is a second table under the first, and the rule between them does
+   the work a third pair of columns would have done badly: Out is a man leaving and In
+   is a man arriving, while a move is one man twice and fits neither. A solid rule
+   rather than the hairline the cells use -- it is a change of subject, not a row.
+
+   The arrow is drawn from borders, not typed. U+2192 came out of a printer as a tofu
+   box the first time this book wanted an arrow; a border always prints. */
+table.dc-sub.dc-moved {
+  margin-top: 5px; padding-top: 4px; border-top: 1.5px solid var(--line);
+}
+.dc-mv .mv-a { color: var(--muted); font-weight: 800; }
+.dc-mv .mv-b { font-weight: 800; }
+.dc-mv .mv-b::before {
+  content: ""; display: inline-block; vertical-align: middle;
+  width: 0; height: 0; margin: 0 4px 1px 4px;
+  border: 3px solid transparent; border-left-color: var(--muted); border-right: 0;
+}
 /* The spot after an incoming name is an annotation, not the name, and it was set only
    two points below it. Smaller is both truer and the cheapest width on the card --
    which the defence needs, where the spot is LOLB rather than C. */
@@ -1999,6 +2016,9 @@ table.dc-board thead th,
   table.dc-sub th:last-child, table.dc-sub td:last-child { padding-left: 4px; }
   table.dc-sub thead th { font-size: 6pt; }
   .dc-sub-pos { font-size: 7pt; }
+  table.dc-sub.dc-moved { margin-top: 3px; padding-top: 2px; border-top-color: #000; }
+  .dc-mv .mv-b::before { margin: 0 3px 1px 3px; border-width: 2.5px;
+                         border-right: 0; border-left-color: #000; }
   .dc-tools { display: none; }
   .dc-bar { margin: 0 0 3px; display: block; }
   /* The title block is the price of the first sheet and it is paid in rows. */
