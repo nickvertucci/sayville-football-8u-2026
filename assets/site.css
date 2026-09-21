@@ -720,6 +720,54 @@ table.xl.df-grid tbody td { font-weight: 700; }
 }
 @media (max-width: 560px) { .pk-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 .sit-grid { margin-top: 18px; }
+/* The base eleven, once, across the full width: eleven little cells in the order they
+   stand on the field. Printing all eleven names on all six package cards was six
+   lists a coach had to diff in his head; this is the one he diffs them against. */
+.bl-strip { margin-top: 18px; }
+.bl-row {
+  display: grid; grid-template-columns: repeat(11, minmax(0, 1fr)); gap: 0 1px;
+  background: var(--line); border-top: 1px solid var(--line);
+}
+.bl-man {
+  display: block; padding: 3px 4px 4px; min-width: 0; text-align: center;
+  background: var(--panel); font-size: 11px; font-weight: 700; color: var(--ink);
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.bl-man b {
+  display: block; font-size: 9px; font-weight: 900; letter-spacing: .4px;
+  text-transform: uppercase; color: var(--muted);
+}
+/* Out, then in. The arrow between them is drawn out of borders rather than set as a
+   glyph: a border prints on anything, and U+2192 is a box on a machine whose font
+   stack does not happen to carry it -- which is most of the ones this gets printed
+   from. Same reason the discs on the blank line are borders. */
+table.xl.pk-subs td {
+  height: auto; padding: 2px 4px; vertical-align: middle; font-size: 10.5px;
+  font-weight: 700; white-space: nowrap;
+}
+table.xl.pk-subs .sub-pos {
+  width: 2.6em; text-align: left; font-size: 9.5px; font-weight: 900;
+  letter-spacing: .3px; color: var(--muted); background: var(--panel-2);
+}
+table.xl.pk-subs .sub-out { text-align: right; color: var(--muted);
+                            text-decoration: line-through; }
+table.xl.pk-subs .sub-in { text-align: left; }
+table.xl.pk-subs .sub-in::before {
+  content: ""; display: inline-block; vertical-align: middle;
+  width: 0; height: 0; margin: 0 5px 1px 0;
+  border: 3px solid transparent; border-left-color: var(--muted); border-right: 0;
+}
+/* Six across, not three. A substitution card is one short column of two names, where
+   a package card is five whole calls, so six of these fit the width that three of
+   those need -- and one row of six is half the height of two rows of three, which is
+   the difference between this strip fitting under the field and the field paying for
+   it twice over. */
+.sub-grid { margin-top: 10px; grid-template-columns: repeat(6, minmax(0, 1fr)); }
+@media (max-width: 860px) { .sub-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (max-width: 560px) {
+  .bl-row { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .sub-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
 .pk { min-width: 0; }
 .pk-name {
   margin: 0; padding: 5px 8px; font-size: 12.5px; font-weight: 800;
@@ -803,10 +851,11 @@ table.xl.pk-plays td {
    rest of it leaves. 62 points of drawing space to start, then 200 and 260 as
    formations came off the sheet, 120 when the down-and-distance board went in, 155
    once the board went to two calls, 185 when a package card went to five rows, and
-   196 once the last of the bottom margin went into it too. It is 187 now only
-   because the line of scrimmage dropped another nine points and the box had
-   nowhere left to grow -- the field is the same height, the line just sits lower
-   in it. Every one of those numbers was measured against the page, not chosen --
+   196 once the last of the bottom margin went into it too. It was 187 when the line
+   of scrimmage dropped another nine points and the box had nowhere left to grow --
+   the field the same height, the line just lower in it -- and it is 172 now because
+   the board came off and the base eleven and the substitution cards went on in its
+   place, which cost fifteen more points than the board did. Every one of those numbers was measured against the page, not chosen --
    and this one sits
    about four points under the two-page cliff rather than the twenty-odd the
    others kept, which is deliberate and is the thing to undo first if a printer
@@ -982,12 +1031,36 @@ table.xl.pk-plays td {
   .pk-sub { display: none; }
   .pk-grid { gap: 0 8px; margin: 0; padding-top: 4px; break-inside: avoid;
              border-top: 1px solid #000; }
-  /* The down-and-distance board is a second .pk-grid, so it takes the same rule above
-     and gets its top rule for free. Sitting under the blank field, that rule is also
-     what closes the field off at the bottom -- the field has sidelines and a top, and
-     this is its goal line. No gap above it for that reason: a margin would leave the
-     field hanging open with a stray rule below it. */
-  .sit-grid { margin-top: 0; }
+  /* Under the blank field, the top rule of whatever comes next is also what closes
+     the field off at the bottom -- the field has sidelines and a top, and this is its
+     goal line. So no gap above it: a margin would leave the field hanging open with a
+     stray rule below it. */
+  /* The base strip closes the field off at the bottom the way the board used to: its
+     own top rule is the field's goal line, so no margin above it. */
+  .bl-strip { margin-top: 0; padding-top: 4px; border-top: 1px solid #000;
+              break-inside: avoid; }
+  .bl-row { gap: 0; background: none; border-top: 0; }
+  .bl-man { padding: 0 2px 1px; font-size: 8px; line-height: 1.2;
+            border-left: 1px solid #bbb; }
+  .bl-man:first-child { border-left: 0; }
+  .bl-man b { font-size: 6.5px; letter-spacing: .2px; color: #000; }
+  .bl-card .pk-name { margin-bottom: 1px; }
+  .pk-grid.sub-grid { border-top: 0; padding-top: 3px; margin-top: 0;
+                      grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 0 5px; }
+  /* The three-column hairline rules above count in threes; this grid is six across,
+     one row, so every card but the first takes a left rule and none takes a top one. */
+  .sub-grid .pk:not(:nth-child(3n + 1)) { border-left: 1px solid #bbb; }
+  .sub-grid .pk:nth-child(n + 4) { border-top: 0; padding-top: 0; }
+  .sub-grid .pk:nth-child(-n + 3) { padding-bottom: 0; }
+  .sub-grid .pk { padding: 0 4px; }
+  .sub-grid .pk:first-child { border-left: 0; }
+  table.xl.pk-subs td { font-size: 7.5px; padding: 0 2px; line-height: 1.25;
+                        letter-spacing: -.2px; }
+  table.xl.pk-subs .sub-pos { font-size: 6.5px; width: 2.4em; background: none;
+                              color: #000; }
+  table.xl.pk-subs .sub-out { color: #555; }
+  table.xl.pk-subs .sub-in::before { margin: 0 3px 1px 0; border-width: 2.5px;
+                                     border-left-color: #000; border-right: 0; }
   .pk-field { margin: 5px 0 0; padding-top: 31px; border-top-color: #000;
               border-left-color: #000; border-right-color: #000; }
   .pk-field .hash { width: 11px; border-top-color: #000; }
@@ -998,7 +1071,7 @@ table.xl.pk-plays td {
   .pk-draw .o { border-width: 10px; border-color: #000; }
   .pk-draw .ball { width: 19px; height: 11px; border-color: #000; }
   .pk-draw .ball::after { border-top-color: #000; }
-  .pk-draw .pad { height: 187px; }
+  .pk-draw .pad { height: 172px; }
   /* Hairlines between the cards. These went in when the name bars printed as plain
      black text and six lists of calls ran together into one block of small type. The
      bars are bars on paper now (see .pk-name below), so they do most of that work

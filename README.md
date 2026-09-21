@@ -217,7 +217,7 @@ someone a link to exactly the play you mean.
 | Page | What it is |
 |---|---|
 | `index.html` | Home: the formations, the install advice, the calling language |
-| `calls.html` | **Call sheet** — one sheet per offensive package: the I-formation lineup with names, and blank Left, Middle and Right columns for plays |
+| `calls.html` | **Call sheet** — the whole book on one sheet: a block per formation by scheme and side, the possession script down the right, the packages and what each calls, a blank field to draw on, and the base eleven with every package's substitutions under it. Defense is the second tab |
 | `wristbands.html` | **Wristbands** — every callable play by number, three 5″ × 3″ pouches to a band, one band to a sheet, cut on the dashes |
 | `f-<formation>.html` | One formation: its notes and its plays |
 | `install.html` | **Install schedule** — a month calendar of the practices, generated from `install.json` |
