@@ -146,6 +146,162 @@ def check_slot_takes_a_back(play, resolved, alignment, front, fid) -> list[str]:
     return problems
 
 
+def check_god(play, resolved, alignment, front, fid) -> list[str]:
+    """Every interior lineman blocks the man GOD sends him to. G, then O, then D.
+
+    Worked out here from the raw alignments, independently of the engine, so this
+    is a second opinion and not an echo: the gap between this blocker and the man
+    inside him, then a half-yard band around his own nose, then a linebacker.
+
+    The point of the rule is that a boy carries one order onto the field instead
+    of a job per play, and the moment one play quietly hand-writes a line rule
+    again he is back to memorising fifty-eight of them. So the build checks it.
+    """
+    problems = []
+    if play.get("type") == "pass" and play.get("scheme") == "Protect":
+        return problems          # dropback protection is not a GOD rule
+    for pos in blocking.GOD_LINE:
+        spec = resolved.get(pos) or {}
+        if spec.get("type") != "block":
+            continue
+        if (play.get("fronts") or {}).get(fid, {}).get(pos):
+            continue             # the coach named the man himself
+        x = alignment[pos][0]
+        dl = blocking.spots(front, "DL")
+        want, letter = None, None
+        gap = blocking.inside_gap(alignment, pos)
+        if gap is not None:
+            lo, hi = gap
+            inside = [d for d in dl
+                      if lo + blocking.ON_SHADE < d[1] < hi - blocking.ON_SHADE]
+            if inside:
+                want = min(inside, key=lambda d: abs(d[1] - x))
+                letter = "G"
+        if want is None:
+            on = [d for d in dl if abs(d[1] - x) <= blocking.ON_SHADE]
+            if on:
+                want = min(on, key=lambda d: abs(d[1] - x))
+                letter = "O"
+        if want is None:
+            continue             # D: which linebacker is first-come, checked below
+        ex, ey = endpoint(alignment, pos, spec)
+        got = min(dl + blocking.spots(front, "LB") + blocking.spots(front, "DB"),
+                  key=lambda d: (ex - d[1]) ** 2 + (ey - d[2]) ** 2)
+        if got[0] != want[0]:
+            problems.append(
+                f"{pos} has a {letter} on the {want[0]} and blocked the {got[0]} "
+                f"instead — GOD is gap, then on, then downfield"
+            )
+        if not spec["rule"].startswith(f"{letter} —"):
+            problems.append(
+                f"{pos} blocks the {want[0]}, which is his {letter}, but the card "
+                f"does not say so: {spec['rule'][:48]!r}"
+            )
+    # Nobody goes downfield to a linebacker another lineman already has.
+    downfield = {}
+    for pos in blocking.GOD_LINE:
+        spec = resolved.get(pos) or {}
+        if spec.get("type") == "block" and spec.get("rule", "").startswith("D —"):
+            ex, ey = endpoint(alignment, pos, spec)
+            lbs = blocking.spots(front, "LB")
+            if not lbs:
+                continue
+            man = min(lbs, key=lambda d: (ex - d[1]) ** 2 + (ey - d[2]) ** 2)
+            if man[0] in downfield:
+                problems.append(
+                    f"{pos} and {downfield[man[0]]} both went downfield to the "
+                    f"{man[0]}, leaving a linebacker free"
+                )
+            downfield[man[0]] = pos
+    return problems
+
+
+# A made-up front, not one we play against. Every front in the book today stands
+# its down linemen head up on somebody, so the G in GOD never fires on a real
+# card -- 0 of 550 interior assignments -- and a branch the corpus cannot reach
+# is a branch no corpus test can hold. This one puts a 3 technique in each B gap
+# and a nose shaded onto the center's right shoulder, which is what a team that
+# has watched film of us would do, and checks the order comes out G, O, D.
+GAP_FRONT = {
+    "roles": {"LDT": "DL", "NT": "DL", "RDT": "DL", "MLB": "LB",
+              "LOLB": "LB", "ROLB": "LB"},
+    "alignment": {"LDT": [-2.1, 0.8], "NT": [0.35, 0.8], "RDT": [2.1, 0.8],
+                  "MLB": [0.0, 3.5], "LOLB": [-3.5, 3.5], "ROLB": [3.5, 3.5]},
+    "position_names": {"LDT": "Left defensive tackle", "NT": "Nose tackle",
+                       "RDT": "Right defensive tackle", "MLB": "Middle linebacker",
+                       "LOLB": "Left outside linebacker",
+                       "ROLB": "Right outside linebacker"},
+}
+
+LINE_SPOTS = {"LT": [-2.8, -0.5], "LG": [-1.4, -0.5], "C": [0.0, -0.5],
+              "RG": [1.4, -0.5], "RT": [2.8, -0.5]}
+
+
+def check_god_progression() -> list[str]:
+    """G before O before D, and the letter on the card matches the man."""
+    problems = []
+    want = {
+        # The 3 techniques sit in the tackles' inside gaps, so both tackles
+        # have a G. The guards have nothing in their gaps and nobody on them.
+        "LT": ("G", "LDT"), "RT": ("G", "RDT"),
+        "LG": ("D", None), "RG": ("D", None),
+        # A nose shaded 0.35 off the center is still ON him, not in a gap.
+        "C": ("O", "NT"),
+    }
+    taken = set()
+    for pos in ("LT", "LG", "C", "RG", "RT"):
+        spec = blocking.resolve(pos, {"block": "god"}, LINE_SPOTS, GAP_FRONT, 1,
+                                taken=taken)
+        letter, man = want[pos]
+        if not spec["rule"].startswith(f"{letter} —"):
+            problems.append(
+                f"GAP_FRONT {pos} should be a {letter}: {spec['rule'][:52]!r}"
+            )
+        if man is not None:
+            ex = LINE_SPOTS[pos][0] + spec["path"][-1][0]
+            ey = LINE_SPOTS[pos][1] + spec["path"][-1][1]
+            got = min(blocking.spots(GAP_FRONT, "DL") + blocking.spots(GAP_FRONT, "LB"),
+                      key=lambda d: (ex - d[1]) ** 2 + (ey - d[2]) ** 2)
+            if got[0] != man:
+                problems.append(
+                    f"GAP_FRONT {pos} should block the {man}, blocked the {got[0]}"
+                )
+        got_lb = blocking.claimed_lb(GAP_FRONT, LINE_SPOTS[pos], spec["path"])
+        if got_lb:
+            taken.add(got_lb)
+    # Both guards climb here, and the second must not climb to the man the
+    # first already has. Compared by the MAN, not by the path: two blockers
+    # standing 2.8 yards apart reach the same linebacker on different lines.
+    lg = blocking.resolve("LG", {"block": "god"}, LINE_SPOTS, GAP_FRONT, 1)
+    lg_man = blocking.claimed_lb(GAP_FRONT, LINE_SPOTS["LG"], lg["path"])
+    rg = blocking.resolve("RG", {"block": "god"}, LINE_SPOTS, GAP_FRONT, 1,
+                          taken={lg_man})
+    rg_man = blocking.claimed_lb(GAP_FRONT, LINE_SPOTS["RG"], rg["path"])
+    if lg_man is None or rg_man is None:
+        problems.append(f"a climbing guard reached nobody: {lg_man}, {rg_man}")
+    elif lg_man == rg_man:
+        problems.append(f"both guards climbed to the {lg_man}")
+    # A center with nobody on him has no inside gap to check, so he climbs.
+    bare = {**GAP_FRONT, "alignment": {k: v for k, v in GAP_FRONT["alignment"].items()
+                                       if k != "NT"},
+            "roles": {k: v for k, v in GAP_FRONT["roles"].items() if k != "NT"}}
+    spec = blocking.resolve("C", {"block": "god"}, LINE_SPOTS, bare, 1)
+    if not spec["rule"].startswith("D —"):
+        problems.append(f"an uncovered center should climb: {spec['rule'][:52]!r}")
+    if blocking.inside_gap(LINE_SPOTS, "C") is not None:
+        problems.append("the center must have no inside gap")
+    # The inside gap is the one toward the CENTER, on his own side of the ball.
+    if blocking.inside_gap(LINE_SPOTS, "LG") != (-1.4, 0.0):
+        problems.append(
+            f"left guard's inside gap is {blocking.inside_gap(LINE_SPOTS, 'LG')}"
+        )
+    if blocking.inside_gap(LINE_SPOTS, "RT") != (1.4, 2.8):
+        problems.append(
+            f"right tackle's inside gap is {blocking.inside_gap(LINE_SPOTS, 'RT')}"
+        )
+    return problems
+
+
 def main() -> int:
     defenses = render.load_defenses()
     formations = render.load_formations()
@@ -168,8 +324,11 @@ def main() -> int:
                     failures.append(f"{where}: {problem}")
                 for problem in check_slot_takes_a_back(play, resolved, alignment, front, fid):
                     failures.append(f"{where}: {problem}")
+                for problem in check_god(play, resolved, alignment, front, fid):
+                    failures.append(f"{where}: {problem}")
             for problem in check_play_action(play, defenses):
                 failures.append(f"{play['id']}: {problem}")
+    failures += check_god_progression()
 
     if failures:
         print(f"{len(failures)} blocking problem(s) across {checked} play/front pairs:\n")
@@ -177,8 +336,9 @@ def main() -> int:
             print(f"  {f}")
         return 1
     print(f"{checked} play/front pairs: every block that names a man lands on him, "
-          "no block runs off the diagram, the Z screens a defensive back in every "
-          "front, and every fake blocks like the run it sells.")
+          "no block runs off the diagram, every interior lineman blocks GOD and no "
+          "two of them climb to the same linebacker, the Z screens a defensive back "
+          "in every front, and every fake blocks like the run it sells.")
     return 0
 
 

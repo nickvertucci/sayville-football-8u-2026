@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="702" height="946" viewBox="0 0 702 946" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" width="702" height="962" viewBox="0 0 702 962" font-family="Segoe UI, Helvetica, Arial, sans-serif">
 <rect width="100%" height="100%" fill="#ffffff"/>
 <rect x="0" y="0" width="702" height="58" fill="#14213d"/>
 <text x="18" y="26" font-size="19.0" font-weight="700" fill="#ffffff">Power I - Z Right - 32 Handoff</text>
@@ -27,12 +27,12 @@
 <line x1="228.4" y1="314.6" x2="246.8" y2="314.6" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 <path d="M275.4,337.5 L282.7,314.0" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
 <line x1="273.9" y1="311.3" x2="291.5" y2="316.7" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
-<path d="M313.2,337.5 L311.9,318.6 L310.8,217.4" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-<line x1="301.6" y1="217.4" x2="319.9" y2="217.3" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
+<path d="M313.2,337.5 L310.8,217.4" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="301.6" y1="217.5" x2="319.9" y2="217.2" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 <path d="M351.0,337.5 L351.0,314.6" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
 <line x1="341.8" y1="314.6" x2="360.2" y2="314.6" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
-<path d="M388.8,337.5 L359.9,310.8 L391.2,217.4" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-<line x1="382.5" y1="214.4" x2="399.9" y2="220.3" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
+<path d="M388.8,337.5 L391.2,217.4" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="382.1" y1="217.2" x2="400.4" y2="217.5" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 <path d="M426.6,337.5 L419.3,314.0" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
 <line x1="410.5" y1="316.7" x2="428.1" y2="311.3" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 <path d="M464.4,337.5 L464.4,314.6" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
@@ -87,25 +87,26 @@
 <text x="52" y="578" font-size="12" fill="#111318">Defensive end head up on you. Cut him off —</text>
 <text x="52" y="596" font-size="12" fill="#111318">get between him and the ball.</text>
 <text x="18" y="612" font-size="12" font-weight="700" fill="#111318">LT</text>
-<text x="52" y="612" font-size="12" fill="#111318">Block down on the defensive tackle, inside</text>
-<text x="52" y="630" font-size="12" fill="#111318">shoulder. Head across him — nobody crosses</text>
-<text x="52" y="646" font-size="12" fill="#111318">your face.</text>
+<text x="52" y="612" font-size="12" fill="#111318">O — your gap is empty, so take the defensive</text>
+<text x="52" y="630" font-size="12" fill="#111318">tackle on you. Hands inside, pads under his,</text>
+<text x="52" y="646" font-size="12" fill="#111318">drive him back.</text>
 <text x="18" y="664" font-size="12" font-weight="700" fill="#111318">LG</text>
-<text x="52" y="664" font-size="12" fill="#111318">Nobody on you. Cut off the backside. Never</text>
-<text x="52" y="680" font-size="12" fill="#111318">quit on the play.</text>
+<text x="52" y="664" font-size="12" fill="#111318">D — nothing in your gap and nobody on you. Go</text>
+<text x="52" y="680" font-size="12" fill="#111318">downfield and get the left inside linebacker.</text>
 <text x="18" y="698" font-size="12" font-weight="700" fill="#111318">C</text>
-<text x="52" y="698" font-size="12" fill="#111318">Reach the nose to your right. Head across his</text>
-<text x="52" y="714" font-size="12" fill="#111318">playside shoulder.</text>
-<text x="18" y="732" font-size="12" font-weight="700" fill="#111318">RG</text>
-<text x="52" y="732" font-size="12" fill="#111318">Nobody on you. Help on the nose, then take the</text>
-<text x="52" y="748" font-size="12" fill="#111318">playside linebacker.</text>
-<text x="18" y="766" font-size="12" font-weight="700" fill="#111318">RT</text>
-<text x="52" y="766" font-size="12" fill="#111318">Block down on the defensive tackle, inside</text>
-<text x="52" y="782" font-size="12" fill="#111318">shoulder. Head across him — nobody crosses</text>
-<text x="52" y="800" font-size="12" fill="#111318">your face.</text>
+<text x="52" y="698" font-size="12" fill="#111318">O — your gap is empty, so take the nose on</text>
+<text x="52" y="714" font-size="12" fill="#111318">you. Hands inside, pads under his, drive him</text>
+<text x="52" y="732" font-size="12" fill="#111318">back.</text>
+<text x="18" y="748" font-size="12" font-weight="700" fill="#111318">RG</text>
+<text x="52" y="748" font-size="12" fill="#111318">D — nothing in your gap and nobody on you. Go</text>
+<text x="52" y="766" font-size="12" fill="#111318">downfield and get the right inside linebacker.</text>
+<text x="18" y="782" font-size="12" font-weight="700" fill="#111318">RT</text>
+<text x="52" y="782" font-size="12" fill="#111318">O — your gap is empty, so take the defensive</text>
+<text x="52" y="800" font-size="12" fill="#111318">tackle on you. Hands inside, pads under his,</text>
+<text x="52" y="816" font-size="12" fill="#111318">drive him back.</text>
 <text x="351" y="578" font-size="12" font-weight="700" fill="#111318">Y</text>
-<text x="385" y="578" font-size="12" fill="#111318">Defensive end head up on you. Cut him off —</text>
-<text x="385" y="596" font-size="12" fill="#111318">get between him and the ball.</text>
+<text x="385" y="578" font-size="12" fill="#111318">Defensive end head up on you. Turn him inside.</text>
+<text x="385" y="596" font-size="12" fill="#111318">The ball goes around behind you.</text>
 <text x="351" y="612" font-size="12" font-weight="700" fill="#111318">Z</text>
 <text x="385" y="612" font-size="12" fill="#111318">Lead through the hole. Block the first man who</text>
 <text x="385" y="630" font-size="12" fill="#111318">shows in it. You are the second man through.</text>
@@ -121,11 +122,11 @@
 <text x="385" y="748" font-size="12" fill="#111318">Take the handoff downhill between the center</text>
 <text x="385" y="766" font-size="12" fill="#111318">and the right guard, right off the fullback's</text>
 <text x="385" y="782" font-size="12" fill="#111318">hip. Do not bounce it.</text>
-<line x1="18" y1="806" x2="684" y2="806" stroke="#c8cdd6" stroke-width="1"/>
-<text x="18" y="824" font-size="11" font-weight="700" fill="#5b6472" letter-spacing="1">COACHING POINTS</text>
-<text x="18" y="844" font-size="12" fill="#111318">Two lead blockers in the same gap is the whole point of this formation. The fullback hits it first,</text>
-<text x="18" y="862" font-size="12" fill="#111318">the slot is right behind him and takes the next man who shows.</text>
-<text x="18" y="878" font-size="12" fill="#111318">The hole is the A-gap, between the center and the right guard. If the tailback bounces it, the play</text>
-<text x="18" y="896" font-size="12" fill="#111318">is dead and both his blockers are wasted.</text>
-<text x="18" y="912" font-size="12" fill="#111318">Neither lead picks a man before the snap. First one shows, first one gets blocked.</text>
+<line x1="18" y1="824" x2="684" y2="824" stroke="#c8cdd6" stroke-width="1"/>
+<text x="18" y="842" font-size="11" font-weight="700" fill="#5b6472" letter-spacing="1">COACHING POINTS</text>
+<text x="18" y="862" font-size="12" fill="#111318">Two lead blockers in the same gap is the whole point of this formation. The fullback hits it first,</text>
+<text x="18" y="878" font-size="12" fill="#111318">the slot is right behind him and takes the next man who shows.</text>
+<text x="18" y="896" font-size="12" fill="#111318">The hole is the A-gap, between the center and the right guard. If the tailback bounces it, the play</text>
+<text x="18" y="912" font-size="12" fill="#111318">is dead and both his blockers are wasted.</text>
+<text x="18" y="930" font-size="12" fill="#111318">Neither lead picks a man before the snap. First one shows, first one gets blocked.</text>
 </svg>

@@ -38,11 +38,9 @@ def check_templates() -> list[str]:
     want = {
         ("Power", "playside_te", "block"): "kick",
         ("Power", "slot", "block"): "screen",
-        ("Smash", "playside_te", "block"): "cutoff",
-        ("Smash", "playside_g", "target"): "playside",
+        ("Smash", "playside_te", "drive"): "in",
         ("Smash", "slot", "block"): "screen",
-        ("Dive", "playside_t", "block"): "double",
-        ("Dive", "playside_g", "block"): "down",
+        ("Dive", "playside_te", "drive"): "in",
         ("Toss", "lead", "target"): "force",
         ("Sweep", "lead", "target"): "force",
         ("Toss", "playside_te", "drive"): "in",
@@ -56,6 +54,21 @@ def check_templates() -> list[str]:
     if blocking.intent_core(blocking.SCHEMES["Toss"]["playside_te"]) != \
             blocking.intent_core(blocking.SCHEMES["Sweep"]["playside_te"]):
         problems.append("Toss and Sweep must share the outside line")
+    # Every run scheme blocks GOD with all five interior linemen. This is the
+    # contract that lets a boy learn one rule instead of five, so it is checked
+    # rather than remembered -- a scheme that quietly hand-writes a line rule
+    # again has taken that back off him.
+    for name, scheme in blocking.SCHEMES.items():
+        if name == "Protect":
+            continue
+        for role in ("playside_t", "playside_g", "center",
+                     "backside_g", "backside_t"):
+            got = scheme.get(role, {})
+            if got.get("block") != "god" or len(got) != 1:
+                problems.append(
+                    f"{name}.{role} is {got!r}, but every run scheme blocks GOD "
+                    "with the interior five"
+                )
     return problems
 
 
@@ -127,16 +140,16 @@ def check_fill(formations) -> list[str]:
     if set(i_form["alignment"]) - set(filled) != set():
         missing = set(i_form["alignment"]) - set(filled)
         problems.append(f"minimal Power left {sorted(missing)} unfilled")
-    te = next(p for p in i_form["_plays"] if p["id"] == "i-te-sweep-r")
-    if te["assignments"].get("LT", {}).get("block") != "cutoff":
-        problems.append(
-            f"tight-end Sweep backside tackle should cutoff, got {te['assignments'].get('LT')}"
-        )
-    sl = next(p for p in i_form["_plays"] if p["id"] == "i-sl-sweep-r")
-    if sl["assignments"].get("LT", {}).get("block") != "down":
-        problems.append(
-            f"slot Sweep backside tackle should down, got {sl['assignments'].get('LT')}"
-        )
+    # Both Sweeps block the line the same way, whoever is carrying it. The
+    # end-around used to pull its backside tackle off GOD and onto a cutoff
+    # because the end beside him had left; the line does not change when the
+    # ball carrier does, and that exception is what GOD exists to delete.
+    for pid in ("i-te-sweep-r", "i-sl-sweep-r"):
+        sw = next(p for p in i_form["_plays"] if p["id"] == pid)
+        if sw["assignments"].get("LT", {}).get("block") != "god":
+            problems.append(
+                f"{pid} backside tackle should block GOD, got {sw['assignments'].get('LT')}"
+            )
     bone = next(f for f in formations if f["id"] == "wishbone")
     wb_power = {
         "id": "x-wb-power",

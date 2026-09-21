@@ -440,18 +440,55 @@ bodies he cannot see over, and get somewhere before a linebacker does — and wh
 half-count late, the hole he left is the hole the play was going to. The seventeen pulls
 this book used to carry are gone, and the build rejects a new one by name.
 
-The work went to players who were already standing there: the playside end kicks the end
-out, a back leads through the hole, and the backside guard cuts off behind the play.
-Power is now a down block, a kick-out and one lead back, which is a thing you can teach
-in a practice.
+The work went to players who were already standing there: the playside end takes the end
+man, a back leads through the hole, and the five inside them block GOD.
+
+### GOD — one rule for the whole line
+
+The five interior linemen have the same job on all fifty-eight plays. Three letters, in
+order, every snap:
+
+| | | |
+|---|---|---|
+| **G** | **Gap** | The gap to my inside, toward the center. Anybody in it is mine. |
+| **O** | **On** | Nobody in the gap: the man on me, head up or shaded either shoulder. |
+| **D** | **Down** | Neither: downfield, to the nearest linebacker. |
+
+A right tackle looks left into his gap, then straight ahead, then goes and finds a
+linebacker. A left tackle looks right, then ahead, then climbs. That is the whole of it,
+and it does not change when the play changes, when the side changes, or when the defence
+lines up somewhere new — the three questions are the same three questions and the
+defence answers them.
+
+This is what a boy used to have to carry instead: the huddle word, then which side of
+the ball he was on, then which of five schemes' line rules applied to him, then whether
+his play was one of the twenty-two that hand-named his man against the 4-4. He now has
+to know where the center is.
+
+It is a **run** rule. Dropback protection is still protection — a pass blocker who picks
+a man before the snap has already lost him.
+
+Two things fall out of it, and both are the point rather than a cost:
+
+- **Smash and Dive block identically.** They used to differ only on which uncovered
+  lineman climbed, and that is a thing the front decides, not the huddle. They are still
+  two words because they are two different holes.
+- **A scheme is no longer a set of line rules at all.** It is the two ends, the slot and
+  the lead back — the only part of the front a play actually changes.
+
+The ends are not on GOD, and the reason is worth knowing: GOD would hand them the same
+defender in all five fronts, but it would not hand them the *direction*, and on an end
+that is the whole block. Power needs the end man driven **out** so the ball can run
+inside him; a toss needs him turned **in** so the ball can get outside him. Same man,
+opposite jobs, and nothing about where he is standing says which.
 
 ### The card is computed, not typed
 
 A blocker's assignment in the JSON is a **verb**, not a sentence:
 
 ```json
-"RT": { "block": "down" },
-"Z":  { "block": "kick" },
+"RT": { "block": "god" },
+"Z":  { "block": "screen" },
 "FB": { "block": "lead" }
 ```
 
@@ -466,9 +503,12 @@ were typed 111 times between them, were true only of the 5-3, and are now derive
 is left in a play file is the part a human actually decided.
 
 The same change is what makes the difference between fronts legible instead of
-theoretical. On Power, against the 5-3 the playside guard is free and doubles the nose;
-against the 4-4 a tackle is head up on him and the same one-word rule — "help inside if
-you are free" — resolves to *he is yours*. Nobody has to remember that. The card says it.
+theoretical. The right tackle blocks GOD on every play in the book, and that one word
+prints as three different sentences: against the 5-4-2 there is a tackle head up on him
+and it resolves to *he is yours*; against the 4-4 and the 5-3 there is nobody in his gap
+and nobody on him, and it sends him downfield — to the right inside linebacker in one
+and the right outside linebacker in the other. Nobody has to remember that. The card
+says it.
 
 **Reading all three is part of authoring a play**, and there is a tool for it:
 

@@ -31,8 +31,8 @@
 <line x1="301.6" y1="217.5" x2="319.9" y2="217.2" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 <path d="M351.0,337.5 L351.0,314.6" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
 <line x1="341.8" y1="314.6" x2="360.2" y2="314.6" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
-<path d="M388.8,337.5 L390.1,318.6 L391.2,217.4" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-<line x1="382.1" y1="217.3" x2="400.4" y2="217.4" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
+<path d="M388.8,337.5 L391.2,217.4" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="382.1" y1="217.2" x2="400.4" y2="217.5" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 <path d="M426.6,337.5 L419.3,314.0" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
 <line x1="410.5" y1="316.7" x2="428.1" y2="311.3" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 <path d="M464.4,337.5 L464.4,314.6" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
@@ -87,22 +87,23 @@
 <text x="52" y="578" font-size="12" fill="#111318">Defensive end head up on you. Turn him inside.</text>
 <text x="52" y="596" font-size="12" fill="#111318">The ball goes around behind you.</text>
 <text x="18" y="612" font-size="12" font-weight="700" fill="#111318">LT</text>
-<text x="52" y="612" font-size="12" fill="#111318">Block down on the defensive tackle, inside</text>
-<text x="52" y="630" font-size="12" fill="#111318">shoulder. Head across him — nobody crosses</text>
-<text x="52" y="646" font-size="12" fill="#111318">your face.</text>
+<text x="52" y="612" font-size="12" fill="#111318">O — your gap is empty, so take the defensive</text>
+<text x="52" y="630" font-size="12" fill="#111318">tackle on you. Hands inside, pads under his,</text>
+<text x="52" y="646" font-size="12" fill="#111318">drive him back.</text>
 <text x="18" y="664" font-size="12" font-weight="700" fill="#111318">LG</text>
-<text x="52" y="664" font-size="12" fill="#111318">Nobody on you. Climb to the playside</text>
-<text x="52" y="680" font-size="12" fill="#111318">linebacker. Head across him.</text>
+<text x="52" y="664" font-size="12" fill="#111318">D — nothing in your gap and nobody on you. Go</text>
+<text x="52" y="680" font-size="12" fill="#111318">downfield and get the left inside linebacker.</text>
 <text x="18" y="698" font-size="12" font-weight="700" fill="#111318">C</text>
-<text x="52" y="698" font-size="12" fill="#111318">Reach the nose to your left. Head across his</text>
-<text x="52" y="714" font-size="12" fill="#111318">playside shoulder.</text>
-<text x="18" y="732" font-size="12" font-weight="700" fill="#111318">RG</text>
-<text x="52" y="732" font-size="12" fill="#111318">Nobody on you. Cut off the backside. Never</text>
-<text x="52" y="748" font-size="12" fill="#111318">quit on the play.</text>
-<text x="18" y="766" font-size="12" font-weight="700" fill="#111318">RT</text>
-<text x="52" y="766" font-size="12" fill="#111318">Block down on the defensive tackle, inside</text>
-<text x="52" y="782" font-size="12" fill="#111318">shoulder. Head across him — nobody crosses</text>
-<text x="52" y="800" font-size="12" fill="#111318">your face.</text>
+<text x="52" y="698" font-size="12" fill="#111318">O — your gap is empty, so take the nose on</text>
+<text x="52" y="714" font-size="12" fill="#111318">you. Hands inside, pads under his, drive him</text>
+<text x="52" y="732" font-size="12" fill="#111318">back.</text>
+<text x="18" y="748" font-size="12" font-weight="700" fill="#111318">RG</text>
+<text x="52" y="748" font-size="12" fill="#111318">D — nothing in your gap and nobody on you. Go</text>
+<text x="52" y="766" font-size="12" fill="#111318">downfield and get the right inside linebacker.</text>
+<text x="18" y="782" font-size="12" font-weight="700" fill="#111318">RT</text>
+<text x="52" y="782" font-size="12" fill="#111318">O — your gap is empty, so take the defensive</text>
+<text x="52" y="800" font-size="12" fill="#111318">tackle on you. Hands inside, pads under his,</text>
+<text x="52" y="816" font-size="12" fill="#111318">drive him back.</text>
 <text x="351" y="578" font-size="12" font-weight="700" fill="#111318">Y</text>
 <text x="385" y="578" font-size="12" fill="#111318">Defensive end head up on you. Cut him off —</text>
 <text x="385" y="596" font-size="12" fill="#111318">get between him and the ball.</text>

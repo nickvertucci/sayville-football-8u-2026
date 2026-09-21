@@ -55,41 +55,6 @@
       ]
     }
   },
-  "fronts": {
-    "4-4": {
-      "X": {
-        "block": "man",
-        "man": "LDE"
-      },
-      "LT": {
-        "block": "man",
-        "man": "LOLB",
-        "help": "LDE"
-      },
-      "LG": {
-        "block": "man",
-        "man": "LDG"
-      },
-      "C": {
-        "block": "man",
-        "man": "LILB",
-        "help": "LDG"
-      },
-      "RG": {
-        "block": "man",
-        "man": "RDG"
-      },
-      "RT": {
-        "block": "man",
-        "man": "RILB",
-        "help": "RDG"
-      },
-      "Y": {
-        "block": "man",
-        "man": "RDE"
-      }
-    }
-  },
   "coaching_points": [
     "The handoff happens in front of the quarterback: the left halfback crosses close and flat, and the quarterback puts it in his belly.",
     "The left halfback stays behind the right halfback until the block is made, then turns it up. Running past his blocker is how the sweep loses yards.",

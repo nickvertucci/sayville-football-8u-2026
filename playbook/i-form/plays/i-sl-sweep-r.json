@@ -65,41 +65,6 @@
       ]
     }
   },
-  "fronts": {
-    "4-4": {
-      "Y": {
-        "block": "man",
-        "man": "RDE"
-      },
-      "RT": {
-        "block": "man",
-        "man": "ROLB",
-        "help": "RDE"
-      },
-      "RG": {
-        "block": "man",
-        "man": "RDG"
-      },
-      "C": {
-        "block": "man",
-        "man": "RILB",
-        "help": "RDG"
-      },
-      "LG": {
-        "block": "man",
-        "man": "LDG"
-      },
-      "LT": {
-        "block": "man",
-        "man": "LILB",
-        "help": "LDG"
-      },
-      "X": {
-        "block": "man",
-        "man": "LDE"
-      }
-    }
-  },
   "coaching_points": [
     "The slot runs flat and fast across the backfield. The handoff is at full speed, so the quarterback just puts it in his belly.",
     "After the handoff the quarterback carries out his fake to the tailback going left. It is what holds the backside.",

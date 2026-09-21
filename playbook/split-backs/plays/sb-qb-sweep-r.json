@@ -37,39 +37,8 @@
       ]
     }
   },
-  "fronts": {
-    "4-4": {
-      "RT": {
-        "block": "man",
-        "man": "RILB",
-        "help": "RDG"
-      },
-      "RG": {
-        "block": "man",
-        "man": "RDG"
-      },
-      "C": {
-        "block": "man",
-        "man": "LILB",
-        "help": "LDG"
-      },
-      "LG": {
-        "block": "man",
-        "man": "LDG"
-      },
-      "LT": {
-        "block": "man",
-        "man": "LOLB",
-        "help": "LDE"
-      },
-      "X": {
-        "block": "man",
-        "man": "LDE"
-      }
-    }
-  },
   "coaching_points": [
-    "The quarterback keeps it every time — tell him before the snap, there is no read.",
+    "The quarterback keeps it every time \u2014 tell him before the snap, there is no read.",
     "The left halfback's fake is the play. If he jogs, nobody follows him and the defense is waiting at the edge.",
     "The quarterback stays behind the right halfback until the block is made, then turns it up. Running past his blocker is how the sweep loses yards."
   ]
