@@ -11,7 +11,7 @@
   "ball_carrier": "X",
   "assignments": {
     "X": {
-      "rule": "Stay down in your stance — no motion. At the snap run flat behind the quarterback, take the handoff at full speed and get to the right edge. Turn up outside the fullback.",
+      "rule": "Stay down in your stance \u2014 no motion. At the snap run flat behind the quarterback, take the handoff at full speed and get to the right edge. Turn up outside the fullback.",
       "type": "run",
       "path": [
         [
@@ -57,36 +57,6 @@
           -0.8
         ]
       ]
-    }
-  },
-  "fronts": {
-    "4-4": {
-      "LT": {
-        "block": "man",
-        "man": "LDE"
-      },
-      "LG": {
-        "block": "man",
-        "man": "LDG"
-      },
-      "C": {
-        "block": "man",
-        "man": "LILB",
-        "help": "LDG"
-      },
-      "RG": {
-        "block": "man",
-        "man": "RDG"
-      },
-      "RT": {
-        "block": "man",
-        "man": "RILB",
-        "help": "RDG"
-      },
-      "Y": {
-        "block": "man",
-        "man": "RDE"
-      }
     }
   },
   "coaching_points": [

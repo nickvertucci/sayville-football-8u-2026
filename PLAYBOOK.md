@@ -79,13 +79,13 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 | Position | Assignment |
 |---|---|
-| **X** | Block the left defensive end. |
-| **LT** | Block the left outside linebacker. |
-| **LG** | Block the left defensive guard. |
-| **C** | Help on the left defensive guard, then block the left inside linebacker. |
-| **RG** | Block the right defensive guard. |
-| **RT** | Help on the right defensive guard, then block the right inside linebacker. |
-| **Y** | Block the right defensive end. |
+| **X** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
+| **LT** | D — nothing in your gap and nobody on you. Go downfield and get the left inside linebacker. |
+| **LG** | O — your gap is empty, so take the defensive guard on you. Hands inside, pads under his, drive him back. |
+| **C** | D — nothing in your gap and nobody on you. Go downfield and get the right inside linebacker. |
+| **RG** | O — your gap is empty, so take the defensive guard on you. Hands inside, pads under his, drive him back. |
+| **RT** | D — nothing in your gap and nobody on you. Go downfield and get the right outside linebacker. |
+| **Y** | Block down on the defensive end, inside shoulder. Head across him — nobody crosses your face. |
 | **Z** | Block the right corner. |
 | **QB** | Open right, hand deep to the tailback, then fake the boot. It holds the backside end. |
 | **FB** | Lead through the hole, then block the right outside linebacker. |
@@ -110,13 +110,13 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 | Position | Assignment |
 |---|---|
-| **X** | Block the left defensive end. |
-| **LT** | Help on the left defensive guard, then block the left inside linebacker. |
-| **LG** | Block the left defensive guard. |
-| **C** | Help on the right defensive guard, then block the right inside linebacker. |
-| **RG** | Block the right defensive guard. |
-| **RT** | Block the right outside linebacker. |
-| **Y** | Block the right defensive end. |
+| **X** | Block down on the defensive end, inside shoulder. Head across him — nobody crosses your face. |
+| **LT** | D — nothing in your gap and nobody on you. Go downfield and get the left inside linebacker. |
+| **LG** | O — your gap is empty, so take the defensive guard on you. Hands inside, pads under his, drive him back. |
+| **C** | D — nothing in your gap and nobody on you. Go downfield and get the right inside linebacker. |
+| **RG** | O — your gap is empty, so take the defensive guard on you. Hands inside, pads under his, drive him back. |
+| **RT** | D — nothing in your gap and nobody on you. Go downfield and get the right outside linebacker. |
+| **Y** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
 | **Z** | Block the left corner. |
 | **QB** | Open left, hand deep to the tailback, then fake the boot. It holds the backside end. |
 | **FB** | Lead through the hole, then block the left outside linebacker. |
@@ -142,12 +142,12 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 | Position | Assignment |
 |---|---|
 | **X** **(ball)** | Stay down in your stance — no motion. At the snap run flat behind the quarterback, take the handoff at full speed and get to the right edge. Turn up outside the fullback. |
-| **LT** | Block the left defensive end. |
-| **LG** | Block the left defensive guard. |
-| **C** | Help on the left defensive guard, then block the left inside linebacker. |
-| **RG** | Block the right defensive guard. |
-| **RT** | Help on the right defensive guard, then block the right inside linebacker. |
-| **Y** | Block the right defensive end. |
+| **LT** | D — nothing in your gap and nobody on you. Go downfield and get the left inside linebacker. |
+| **LG** | O — your gap is empty, so take the defensive guard on you. Hands inside, pads under his, drive him back. |
+| **C** | D — nothing in your gap and nobody on you. Go downfield and get the right inside linebacker. |
+| **RG** | O — your gap is empty, so take the defensive guard on you. Hands inside, pads under his, drive him back. |
+| **RT** | D — nothing in your gap and nobody on you. Go downfield and get the right outside linebacker. |
+| **Y** | Defensive end on your inside shoulder. Turn him inside. The ball goes around behind you. |
 | **Z** | Run at the corner and screen him off. Stay in his way. |
 | **QB** | Open right and hand the ball to the left tight end as he comes across behind you, then fake a run to the left. |
 | **FB** | Bubble out around our end, then double team the linebacker with the tailback. |
@@ -171,12 +171,12 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 | Position | Assignment |
 |---|---|
-| **X** | Block the left defensive end. |
-| **LT** | Help on the left defensive guard, then block the left inside linebacker. |
-| **LG** | Block the left defensive guard. |
-| **C** | Help on the right defensive guard, then block the right inside linebacker. |
-| **RG** | Block the right defensive guard. |
-| **RT** | Block the right defensive end. |
+| **X** | Defensive end on your inside shoulder. Turn him inside. The ball goes around behind you. |
+| **LT** | D — nothing in your gap and nobody on you. Go downfield and get the left inside linebacker. |
+| **LG** | O — your gap is empty, so take the defensive guard on you. Hands inside, pads under his, drive him back. |
+| **C** | D — nothing in your gap and nobody on you. Go downfield and get the right inside linebacker. |
+| **RG** | O — your gap is empty, so take the defensive guard on you. Hands inside, pads under his, drive him back. |
+| **RT** | D — nothing in your gap and nobody on you. Go downfield and get the right outside linebacker. |
 | **Y** **(ball)** | Stay down in your stance — no motion. At the snap run flat behind the quarterback, take the handoff at full speed and get to the left edge. Turn up outside the fullback. |
 | **Z** | Run at the corner and screen him off. Stay in his way. |
 | **QB** | Open left and hand the ball to the right tight end as he comes across behind you, then fake a run to the right. |
@@ -201,17 +201,17 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 | Position | Assignment |
 |---|---|
-| **X** | Block the left defensive end. |
-| **LT** | Help on the left defensive end, then block the left outside linebacker. |
-| **LG** | Block the left defensive guard. |
-| **C** | Help on the left defensive guard, then block the left inside linebacker. |
-| **RG** | Block the right defensive guard. |
-| **RT** | Help on the right defensive guard, then block the right inside linebacker. |
-| **Y** | Block the right defensive end. |
+| **X** | Defensive end on your inside shoulder. Turn him inside. The ball goes around behind you. |
+| **LT** | D — nothing in your gap and nobody on you. Go downfield and get the left inside linebacker. |
+| **LG** | O — your gap is empty, so take the defensive guard on you. Hands inside, pads under his, drive him back. |
+| **C** | D — nothing in your gap and nobody on you. Go downfield and get the right inside linebacker. |
+| **RG** | O — your gap is empty, so take the defensive guard on you. Hands inside, pads under his, drive him back. |
+| **RT** | D — nothing in your gap and nobody on you. Go downfield and get the right outside linebacker. |
+| **Y** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
 | **Z** **(ball)** | At the snap run flat across the backfield, take the handoff at full speed and get to the left edge. Turn up in the alley behind the fullback. |
 | **QB** | Hand the ball to the slot as he runs past you, then fake the handoff to the tailback going right. |
-| **FB** | Bubble out around our end, then double team the corner with the tailback. |
-| **TB** | Bubble out around our end, then double team the linebacker with the fullback. |
+| **FB** | Bubble out around our end, then double team the linebacker with the tailback. |
+| **TB** | Bubble out around our end, then double team the corner with the fullback. |
 
 **Coaching points**
 
@@ -231,13 +231,13 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 | Position | Assignment |
 |---|---|
-| **X** | Block the left defensive end. |
-| **LT** | Help on the left defensive guard, then block the left inside linebacker. |
-| **LG** | Block the left defensive guard. |
-| **C** | Help on the right defensive guard, then block the right inside linebacker. |
-| **RG** | Block the right defensive guard. |
-| **RT** | Help on the right defensive end, then block the right outside linebacker. |
-| **Y** | Block the right defensive end. |
+| **X** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
+| **LT** | D — nothing in your gap and nobody on you. Go downfield and get the left inside linebacker. |
+| **LG** | O — your gap is empty, so take the defensive guard on you. Hands inside, pads under his, drive him back. |
+| **C** | D — nothing in your gap and nobody on you. Go downfield and get the right inside linebacker. |
+| **RG** | O — your gap is empty, so take the defensive guard on you. Hands inside, pads under his, drive him back. |
+| **RT** | D — nothing in your gap and nobody on you. Go downfield and get the right outside linebacker. |
+| **Y** | Defensive end on your inside shoulder. Turn him inside. The ball goes around behind you. |
 | **Z** **(ball)** | At the snap run flat across the backfield, take the handoff at full speed and get to the right edge. Turn up in the alley behind the fullback. |
 | **QB** | Hand the ball to the slot as he runs past you, then fake the handoff to the tailback going left. |
 | **FB** | Bubble out around our end, then double team the corner with the tailback. |
@@ -261,13 +261,13 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 | Position | Assignment |
 |---|---|
-| **X** | Block the left defensive end. |
-| **LT** | Block the left outside linebacker. |
-| **LG** | Block the left defensive guard. |
-| **C** | Help on the left defensive guard, then block the left inside linebacker. |
-| **RG** | Block the right defensive guard. |
-| **RT** | Block the right defensive end. |
-| **Y** | Block the right outside linebacker. |
+| **X** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
+| **LT** | D — nothing in your gap and nobody on you. Go downfield and get the left inside linebacker. |
+| **LG** | O — your gap is empty, so take the defensive guard on you. Hands inside, pads under his, drive him back. |
+| **C** | D — nothing in your gap and nobody on you. Go downfield and get the right inside linebacker. |
+| **RG** | O — your gap is empty, so take the defensive guard on you. Hands inside, pads under his, drive him back. |
+| **RT** | D — nothing in your gap and nobody on you. Go downfield and get the right outside linebacker. |
+| **Y** | Defensive end on your inside shoulder. Turn him inside. The ball goes around behind you. |
 | **Z** | Block the right corner. |
 | **QB** | Open right, hand to the tailback, then fake the boot left. It holds the backside end. |
 | **FB** | Lead through the hole, then block the right inside linebacker. |
@@ -291,13 +291,13 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 | Position | Assignment |
 |---|---|
-| **X** | Block the left outside linebacker. |
-| **LT** | Block the left defensive end. |
-| **LG** | Block the left defensive guard. |
-| **C** | Help on the right defensive guard, then block the right inside linebacker. |
-| **RG** | Block the right defensive guard. |
-| **RT** | Block the right outside linebacker. |
-| **Y** | Block the right defensive end. |
+| **X** | Defensive end on your inside shoulder. Turn him inside. The ball goes around behind you. |
+| **LT** | D — nothing in your gap and nobody on you. Go downfield and get the left inside linebacker. |
+| **LG** | O — your gap is empty, so take the defensive guard on you. Hands inside, pads under his, drive him back. |
+| **C** | D — nothing in your gap and nobody on you. Go downfield and get the right inside linebacker. |
+| **RG** | O — your gap is empty, so take the defensive guard on you. Hands inside, pads under his, drive him back. |
+| **RT** | D — nothing in your gap and nobody on you. Go downfield and get the right outside linebacker. |
+| **Y** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
 | **Z** | Block the left corner. |
 | **QB** | Open left, hand to the tailback, then fake the boot right. It holds the backside end. |
 | **FB** | Lead through the hole, then block the left inside linebacker. |
@@ -382,12 +382,12 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 | Position | Assignment |
 |---|---|
 | **X** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
-| **LT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
-| **LG** | Defensive guard head up on you. Cut him off — get between him and the ball. |
-| **C** | Nobody on you. Climb to the playside linebacker. Head across him. |
-| **RG** | Defensive guard head up on you. Hands inside, pads under his, drive him back. |
-| **RT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
-| **Y** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
+| **LT** | D — nothing in your gap and nobody on you. Go downfield and get the left inside linebacker. |
+| **LG** | O — your gap is empty, so take the defensive guard on you. Hands inside, pads under his, drive him back. |
+| **C** | D — nothing in your gap and nobody on you. Go downfield and get the right inside linebacker. |
+| **RG** | O — your gap is empty, so take the defensive guard on you. Hands inside, pads under his, drive him back. |
+| **RT** | D — nothing in your gap and nobody on you. Go downfield and get the right outside linebacker. |
+| **Y** | Defensive end on your inside shoulder. Turn him inside. The ball goes around behind you. |
 | **Z** | Run at the corner and screen him off. Stay in his way. |
 | **QB** | Open right, hand to the fullback right now, then fake the boot left. It holds the backside end. |
 | **FB** **(ball)** | Take the handoff downhill between the center and the right guard. You are the runner on this one, not the lead. Straight ahead, do not bounce it. |
@@ -411,12 +411,12 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 | Position | Assignment |
 |---|---|
-| **X** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
-| **LT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
-| **LG** | Defensive guard head up on you. Hands inside, pads under his, drive him back. |
-| **C** | Nobody on you. Climb to the playside linebacker. Head across him. |
-| **RG** | Defensive guard head up on you. Cut him off — get between him and the ball. |
-| **RT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
+| **X** | Defensive end on your inside shoulder. Turn him inside. The ball goes around behind you. |
+| **LT** | D — nothing in your gap and nobody on you. Go downfield and get the left inside linebacker. |
+| **LG** | O — your gap is empty, so take the defensive guard on you. Hands inside, pads under his, drive him back. |
+| **C** | D — nothing in your gap and nobody on you. Go downfield and get the right inside linebacker. |
+| **RG** | O — your gap is empty, so take the defensive guard on you. Hands inside, pads under his, drive him back. |
+| **RT** | D — nothing in your gap and nobody on you. Go downfield and get the right outside linebacker. |
 | **Y** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
 | **Z** | Run at the corner and screen him off. Stay in his way. |
 | **QB** | Open left, hand to the fullback right now, then fake the boot right. It holds the backside end. |
@@ -442,11 +442,11 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 | Position | Assignment |
 |---|---|
 | **X** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
-| **LT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
-| **LG** | Defensive guard head up on you. Cut him off — get between him and the ball. |
-| **C** | Nobody on you. Climb to the playside linebacker. Head across him. |
-| **RG** | Defensive guard head up on you. Step past him. Climb to the playside linebacker. Head across him. |
-| **RT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
+| **LT** | D — nothing in your gap and nobody on you. Go downfield and get the left inside linebacker. |
+| **LG** | O — your gap is empty, so take the defensive guard on you. Hands inside, pads under his, drive him back. |
+| **C** | D — nothing in your gap and nobody on you. Go downfield and get the right inside linebacker. |
+| **RG** | O — your gap is empty, so take the defensive guard on you. Hands inside, pads under his, drive him back. |
+| **RT** | D — nothing in your gap and nobody on you. Go downfield and get the right outside linebacker. |
 | **Y** | Defensive end on your inside shoulder. Turn him inside. The ball goes around behind you. |
 | **Z** | Run at the corner and screen him off. Stay in his way. |
 | **QB** | Quick pitch to the tailback, then run the other way, to the left, like you still have it. |
@@ -472,11 +472,11 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 | Position | Assignment |
 |---|---|
 | **X** | Defensive end on your inside shoulder. Turn him inside. The ball goes around behind you. |
-| **LT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
-| **LG** | Defensive guard head up on you. Step past him. Climb to the playside linebacker. Head across him. |
-| **C** | Nobody on you. Climb to the playside linebacker. Head across him. |
-| **RG** | Defensive guard head up on you. Cut him off — get between him and the ball. |
-| **RT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
+| **LT** | D — nothing in your gap and nobody on you. Go downfield and get the left inside linebacker. |
+| **LG** | O — your gap is empty, so take the defensive guard on you. Hands inside, pads under his, drive him back. |
+| **C** | D — nothing in your gap and nobody on you. Go downfield and get the right inside linebacker. |
+| **RG** | O — your gap is empty, so take the defensive guard on you. Hands inside, pads under his, drive him back. |
+| **RT** | D — nothing in your gap and nobody on you. Go downfield and get the right outside linebacker. |
 | **Y** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
 | **Z** | Run at the corner and screen him off. Stay in his way. |
 | **QB** | Quick pitch to the tailback, then run the other way, to the right, like you still have it. |
@@ -566,11 +566,11 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 | Position | Assignment |
 |---|---|
 | **X** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
-| **LT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
-| **LG** | Defensive guard head up on you. Cut him off — get between him and the ball. |
-| **C** | Nobody on you. Climb to the playside linebacker. Head across him. |
-| **RG** | Defensive guard head up on you. Hands inside, pads under his, drive him back. |
-| **RT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
+| **LT** | D — nothing in your gap and nobody on you. Go downfield and get the left inside linebacker. |
+| **LG** | O — your gap is empty, so take the defensive guard on you. Hands inside, pads under his, drive him back. |
+| **C** | D — nothing in your gap and nobody on you. Go downfield and get the right inside linebacker. |
+| **RG** | O — your gap is empty, so take the defensive guard on you. Hands inside, pads under his, drive him back. |
+| **RT** | D — nothing in your gap and nobody on you. Go downfield and get the right outside linebacker. |
 | **Y** | Block down on the defensive end, inside shoulder. Head across him — nobody crosses your face. |
 | **QB** | Open right, hand to the right halfback, then fake the boot. It holds the backside end. |
 | **FB** | Lead through the hole. Block the first man who shows in it. |
@@ -596,11 +596,11 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 | Position | Assignment |
 |---|---|
 | **X** | Block down on the defensive end, inside shoulder. Head across him — nobody crosses your face. |
-| **LT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
-| **LG** | Defensive guard head up on you. Hands inside, pads under his, drive him back. |
-| **C** | Nobody on you. Climb to the playside linebacker. Head across him. |
-| **RG** | Defensive guard head up on you. Cut him off — get between him and the ball. |
-| **RT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
+| **LT** | D — nothing in your gap and nobody on you. Go downfield and get the left inside linebacker. |
+| **LG** | O — your gap is empty, so take the defensive guard on you. Hands inside, pads under his, drive him back. |
+| **C** | D — nothing in your gap and nobody on you. Go downfield and get the right inside linebacker. |
+| **RG** | O — your gap is empty, so take the defensive guard on you. Hands inside, pads under his, drive him back. |
+| **RT** | D — nothing in your gap and nobody on you. Go downfield and get the right outside linebacker. |
 | **Y** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
 | **QB** | Open left, hand to the left halfback, then fake the boot. It holds the backside end. |
 | **FB** | Lead through the hole. Block the first man who shows in it. |
@@ -626,12 +626,12 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 | Position | Assignment |
 |---|---|
 | **X** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
-| **LT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
-| **LG** | Defensive guard head up on you. Cut him off — get between him and the ball. |
-| **C** | Nobody on you. Climb to the playside linebacker. Head across him. |
-| **RG** | Defensive guard head up on you. Hands inside, pads under his, drive him back. |
-| **RT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
-| **Y** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
+| **LT** | D — nothing in your gap and nobody on you. Go downfield and get the left inside linebacker. |
+| **LG** | O — your gap is empty, so take the defensive guard on you. Hands inside, pads under his, drive him back. |
+| **C** | D — nothing in your gap and nobody on you. Go downfield and get the right inside linebacker. |
+| **RG** | O — your gap is empty, so take the defensive guard on you. Hands inside, pads under his, drive him back. |
+| **RT** | D — nothing in your gap and nobody on you. Go downfield and get the right outside linebacker. |
+| **Y** | Defensive end on your inside shoulder. Turn him inside. The ball goes around behind you. |
 | **QB** | Open right, hand to the fullback, then fake the boot left. It holds the backside end. |
 | **FB** **(ball)** | Take the handoff downhill between the center and the right guard. Do not bounce it. |
 | **LH** | Run hard to the left like you have the ball. You are what holds the backside. |
@@ -654,12 +654,12 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 | Position | Assignment |
 |---|---|
-| **X** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
-| **LT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
-| **LG** | Defensive guard head up on you. Hands inside, pads under his, drive him back. |
-| **C** | Nobody on you. Climb to the playside linebacker. Head across him. |
-| **RG** | Defensive guard head up on you. Cut him off — get between him and the ball. |
-| **RT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
+| **X** | Defensive end on your inside shoulder. Turn him inside. The ball goes around behind you. |
+| **LT** | D — nothing in your gap and nobody on you. Go downfield and get the left inside linebacker. |
+| **LG** | O — your gap is empty, so take the defensive guard on you. Hands inside, pads under his, drive him back. |
+| **C** | D — nothing in your gap and nobody on you. Go downfield and get the right inside linebacker. |
+| **RG** | O — your gap is empty, so take the defensive guard on you. Hands inside, pads under his, drive him back. |
+| **RT** | D — nothing in your gap and nobody on you. Go downfield and get the right outside linebacker. |
 | **Y** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
 | **QB** | Open left, hand to the fullback, then fake the boot right. It holds the backside end. |
 | **FB** **(ball)** | Take the handoff downhill between the center and the left guard. Do not bounce it. |
@@ -684,12 +684,12 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 | Position | Assignment |
 |---|---|
 | **X** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
-| **LT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
-| **LG** | Defensive guard head up on you. Cut him off — get between him and the ball. |
-| **C** | Nobody on you. Climb to the playside linebacker. Head across him. |
-| **RG** | Block down on the defensive guard, head up. Head across him — nobody crosses your face. |
-| **RT** | Defensive end on your outside shoulder. Hands inside, pads under his, drive him back. |
-| **Y** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
+| **LT** | D — nothing in your gap and nobody on you. Go downfield and get the left inside linebacker. |
+| **LG** | O — your gap is empty, so take the defensive guard on you. Hands inside, pads under his, drive him back. |
+| **C** | D — nothing in your gap and nobody on you. Go downfield and get the right inside linebacker. |
+| **RG** | O — your gap is empty, so take the defensive guard on you. Hands inside, pads under his, drive him back. |
+| **RT** | D — nothing in your gap and nobody on you. Go downfield and get the right outside linebacker. |
+| **Y** | Defensive end on your inside shoulder. Turn him inside. The ball goes around behind you. |
 | **QB** | Open right, hand to the fullback, then fake the boot left. It holds the backside end. |
 | **FB** **(ball)** | Take the handoff downhill between the right guard and the right tackle. One cut, then get north. Do not bounce it. |
 | **LH** | Run hard to the left like you have the ball. You are what holds the backside. |
@@ -712,12 +712,12 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 | Position | Assignment |
 |---|---|
-| **X** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
-| **LT** | Defensive end on your outside shoulder. Hands inside, pads under his, drive him back. |
-| **LG** | Block down on the defensive guard, head up. Head across him — nobody crosses your face. |
-| **C** | Nobody on you. Climb to the playside linebacker. Head across him. |
-| **RG** | Defensive guard head up on you. Cut him off — get between him and the ball. |
-| **RT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
+| **X** | Defensive end on your inside shoulder. Turn him inside. The ball goes around behind you. |
+| **LT** | D — nothing in your gap and nobody on you. Go downfield and get the left inside linebacker. |
+| **LG** | O — your gap is empty, so take the defensive guard on you. Hands inside, pads under his, drive him back. |
+| **C** | D — nothing in your gap and nobody on you. Go downfield and get the right inside linebacker. |
+| **RG** | O — your gap is empty, so take the defensive guard on you. Hands inside, pads under his, drive him back. |
+| **RT** | D — nothing in your gap and nobody on you. Go downfield and get the right outside linebacker. |
 | **Y** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
 | **QB** | Open left, hand to the fullback, then fake the boot right. It holds the backside end. |
 | **FB** **(ball)** | Take the handoff downhill between the left guard and the left tackle. One cut, then get north. Do not bounce it. |
@@ -742,16 +742,16 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 | Position | Assignment |
 |---|---|
 | **X** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
-| **LT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
-| **LG** | Defensive guard head up on you. Cut him off — get between him and the ball. |
-| **C** | Nobody on you. Climb to the playside linebacker. Head across him. |
-| **RG** | Defensive guard head up on you. Step past him. Climb to the playside linebacker. Head across him. |
-| **RT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
+| **LT** | D — nothing in your gap and nobody on you. Go downfield and get the left inside linebacker. |
+| **LG** | O — your gap is empty, so take the defensive guard on you. Hands inside, pads under his, drive him back. |
+| **C** | D — nothing in your gap and nobody on you. Go downfield and get the right inside linebacker. |
+| **RG** | O — your gap is empty, so take the defensive guard on you. Hands inside, pads under his, drive him back. |
+| **RT** | D — nothing in your gap and nobody on you. Go downfield and get the right outside linebacker. |
 | **Y** | Defensive end on your inside shoulder. Turn him inside. The ball goes around behind you. |
 | **QB** | Quick pitch to the left halfback, then run the other way, to the left, like you still have it. |
-| **FB** | Bubble out around our end — do not run up into the line. Block the first man out there; here it is the linebacker. |
+| **FB** | Bubble out around our end — do not run up into the line. Block the first man out there; here it is the corner. |
 | **LH** **(ball)** | Run flat, outside and behind the quarterback, and catch the pitch on the run. Ahead of him is a fumble. |
-| **RH** | Bubble out around our end — do not run up into the line. Block the first man out there; here it is the corner. Step at the dive first to hold their linebackers. |
+| **RH** | Bubble out around our end — do not run up into the line. Block the first man out there; here it is the linebacker. Step at the dive first to hold their linebackers. |
 
 **Coaching points**
 
@@ -772,11 +772,11 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 | Position | Assignment |
 |---|---|
 | **X** | Defensive end on your inside shoulder. Turn him inside. The ball goes around behind you. |
-| **LT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
-| **LG** | Defensive guard head up on you. Step past him. Climb to the playside linebacker. Head across him. |
-| **C** | Nobody on you. Climb to the playside linebacker. Head across him. |
-| **RG** | Defensive guard head up on you. Cut him off — get between him and the ball. |
-| **RT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
+| **LT** | D — nothing in your gap and nobody on you. Go downfield and get the left inside linebacker. |
+| **LG** | O — your gap is empty, so take the defensive guard on you. Hands inside, pads under his, drive him back. |
+| **C** | D — nothing in your gap and nobody on you. Go downfield and get the right inside linebacker. |
+| **RG** | O — your gap is empty, so take the defensive guard on you. Hands inside, pads under his, drive him back. |
+| **RT** | D — nothing in your gap and nobody on you. Go downfield and get the right outside linebacker. |
 | **Y** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
 | **QB** | Quick pitch to the right halfback, then run the other way, to the right, like you still have it. |
 | **FB** | Bubble out around our end — do not run up into the line. Block the first man out there; here it is the linebacker. |
@@ -803,13 +803,13 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 | Position | Assignment |
 |---|---|
-| **X** | Block the left defensive end. |
-| **LT** | Block the left inside linebacker. |
-| **LG** | Block the left defensive guard. |
-| **C** | Help on the right defensive guard, then block the right inside linebacker. |
-| **RG** | Block the right defensive guard. |
-| **RT** | Block the right inside linebacker. |
-| **Y** | Block the right defensive end. |
+| **X** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
+| **LT** | D — nothing in your gap and nobody on you. Go downfield and get the left inside linebacker. |
+| **LG** | O — your gap is empty, so take the defensive guard on you. Hands inside, pads under his, drive him back. |
+| **C** | D — nothing in your gap and nobody on you. Go downfield and get the right inside linebacker. |
+| **RG** | O — your gap is empty, so take the defensive guard on you. Hands inside, pads under his, drive him back. |
+| **RT** | D — nothing in your gap and nobody on you. Go downfield and get the right outside linebacker. |
+| **Y** | Defensive end on your inside shoulder. Turn him inside. The ball goes around behind you. |
 | **Z** | Block the right corner. |
 | **QB** | Quick pitch to the left halfback, then run the other way, to the left, like you still have it. |
 | **LH** **(ball)** | Run flat, outside and behind the quarterback, and catch the pitch on the run. Ahead of him is a fumble. |
@@ -833,13 +833,13 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 | Position | Assignment |
 |---|---|
-| **X** | Block the left defensive end. |
-| **LT** | Block the left inside linebacker. |
-| **LG** | Block the left defensive guard. |
-| **C** | Help on the left defensive guard, then block the left inside linebacker. |
-| **RG** | Block the right defensive guard. |
-| **RT** | Block the right inside linebacker. |
-| **Y** | Block the right defensive end. |
+| **X** | Defensive end on your inside shoulder. Turn him inside. The ball goes around behind you. |
+| **LT** | D — nothing in your gap and nobody on you. Go downfield and get the left inside linebacker. |
+| **LG** | O — your gap is empty, so take the defensive guard on you. Hands inside, pads under his, drive him back. |
+| **C** | D — nothing in your gap and nobody on you. Go downfield and get the right inside linebacker. |
+| **RG** | O — your gap is empty, so take the defensive guard on you. Hands inside, pads under his, drive him back. |
+| **RT** | D — nothing in your gap and nobody on you. Go downfield and get the right outside linebacker. |
+| **Y** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
 | **Z** | Block the left corner. |
 | **QB** | Quick pitch to the right halfback, then run the other way, to the right, like you still have it. |
 | **LH** | Bubble around the left tight end, then block the left outside linebacker. |
@@ -863,12 +863,12 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 | Position | Assignment |
 |---|---|
-| **X** | Block the left defensive end. |
-| **LT** | Help on the left defensive end, then block the left outside linebacker. |
-| **LG** | Block the left defensive guard. |
-| **C** | Help on the left defensive guard, then block the left inside linebacker. |
-| **RG** | Block the right defensive guard. |
-| **RT** | Help on the right defensive guard, then block the right inside linebacker. |
+| **X** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
+| **LT** | D — nothing in your gap and nobody on you. Go downfield and get the left inside linebacker. |
+| **LG** | O — your gap is empty, so take the defensive guard on you. Hands inside, pads under his, drive him back. |
+| **C** | D — nothing in your gap and nobody on you. Go downfield and get the right inside linebacker. |
+| **RG** | O — your gap is empty, so take the defensive guard on you. Hands inside, pads under his, drive him back. |
+| **RT** | D — nothing in your gap and nobody on you. Go downfield and get the right outside linebacker. |
 | **Y** | Defensive end on your inside shoulder. Turn him inside. The ball goes around behind you. |
 | **Z** | Run at the corner and screen him off. Stay in his way. |
 | **QB** **(ball)** | Take the snap and sweep right, flat and fast, behind the right halfback. Turn up outside his block. |
@@ -894,12 +894,12 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 | Position | Assignment |
 |---|---|
 | **X** | Defensive end on your inside shoulder. Turn him inside. The ball goes around behind you. |
-| **LT** | Help on the left defensive guard, then block the left inside linebacker. |
-| **LG** | Block the left defensive guard. |
-| **C** | Help on the right defensive guard, then block the right inside linebacker. |
-| **RG** | Block the right defensive guard. |
-| **RT** | Help on the right defensive end, then block the right outside linebacker. |
-| **Y** | Block the right defensive end. |
+| **LT** | D — nothing in your gap and nobody on you. Go downfield and get the left inside linebacker. |
+| **LG** | O — your gap is empty, so take the defensive guard on you. Hands inside, pads under his, drive him back. |
+| **C** | D — nothing in your gap and nobody on you. Go downfield and get the right inside linebacker. |
+| **RG** | O — your gap is empty, so take the defensive guard on you. Hands inside, pads under his, drive him back. |
+| **RT** | D — nothing in your gap and nobody on you. Go downfield and get the right outside linebacker. |
+| **Y** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
 | **Z** | Run at the corner and screen him off. Stay in his way. |
 | **QB** **(ball)** | Take the snap and sweep left, flat and fast, behind the left halfback. Turn up outside his block. |
 | **LH** | Bubble out around our end, then double team the linebacker with the right halfback. |
@@ -924,12 +924,12 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 | Position | Assignment |
 |---|---|
 | **X** | Defensive end on your inside shoulder. Turn him inside. The ball goes around behind you. |
-| **LT** | Help on the left defensive guard, then block the left inside linebacker. |
-| **LG** | Block the left defensive guard. |
-| **C** | Help on the right defensive guard, then block the right inside linebacker. |
-| **RG** | Block the right defensive guard. |
-| **RT** | Help on the right defensive end, then block the right outside linebacker. |
-| **Y** | Block the right defensive end. |
+| **LT** | D — nothing in your gap and nobody on you. Go downfield and get the left inside linebacker. |
+| **LG** | O — your gap is empty, so take the defensive guard on you. Hands inside, pads under his, drive him back. |
+| **C** | D — nothing in your gap and nobody on you. Go downfield and get the right inside linebacker. |
+| **RG** | O — your gap is empty, so take the defensive guard on you. Hands inside, pads under his, drive him back. |
+| **RT** | D — nothing in your gap and nobody on you. Go downfield and get the right outside linebacker. |
+| **Y** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
 | **Z** | Run at the corner and screen him off. Stay in his way. |
 | **QB** **(ball)** | Fake the handoff to the right halfback, then roll back left and sweep it, flat and fast, behind the left halfback. Turn up outside his block. |
 | **LH** | Bubble out around the left tight end, then block the left outside linebacker. |
@@ -953,12 +953,12 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 | Position | Assignment |
 |---|---|
-| **X** | Block the left defensive end. |
-| **LT** | Help on the left defensive end, then block the left outside linebacker. |
-| **LG** | Block the left defensive guard. |
-| **C** | Help on the left defensive guard, then block the left inside linebacker. |
-| **RG** | Block the right defensive guard. |
-| **RT** | Help on the right defensive guard, then block the right inside linebacker. |
+| **X** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
+| **LT** | D — nothing in your gap and nobody on you. Go downfield and get the left inside linebacker. |
+| **LG** | O — your gap is empty, so take the defensive guard on you. Hands inside, pads under his, drive him back. |
+| **C** | D — nothing in your gap and nobody on you. Go downfield and get the right inside linebacker. |
+| **RG** | O — your gap is empty, so take the defensive guard on you. Hands inside, pads under his, drive him back. |
+| **RT** | D — nothing in your gap and nobody on you. Go downfield and get the right outside linebacker. |
 | **Y** | Defensive end on your inside shoulder. Turn him inside. The ball goes around behind you. |
 | **Z** | Run at the corner and screen him off. Stay in his way. |
 | **QB** **(ball)** | Fake the handoff to the left halfback, then roll back right and sweep it, flat and fast, behind the right halfback. Turn up outside his block. |
@@ -983,17 +983,17 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 | Position | Assignment |
 |---|---|
-| **X** | Block the left defensive end. |
-| **LT** | Help on the left defensive end, then block the left outside linebacker. |
-| **LG** | Block the left defensive guard. |
-| **C** | Help on the left defensive guard, then block the left inside linebacker. |
-| **RG** | Block the right defensive guard. |
-| **RT** | Help on the right defensive guard, then block the right inside linebacker. |
-| **Y** | Block the right defensive end. |
+| **X** | Defensive end on your inside shoulder. Turn him inside. The ball goes around behind you. |
+| **LT** | D — nothing in your gap and nobody on you. Go downfield and get the left inside linebacker. |
+| **LG** | O — your gap is empty, so take the defensive guard on you. Hands inside, pads under his, drive him back. |
+| **C** | D — nothing in your gap and nobody on you. Go downfield and get the right inside linebacker. |
+| **RG** | O — your gap is empty, so take the defensive guard on you. Hands inside, pads under his, drive him back. |
+| **RT** | D — nothing in your gap and nobody on you. Go downfield and get the right outside linebacker. |
+| **Y** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
 | **Z** **(ball)** | At the snap run flat across the backfield, take the handoff at full speed and get to the left edge. Turn up in the alley behind the left halfback. |
 | **QB** | Hand the ball to the slot as he runs past you, then fake the handoff to the right halfback going right. |
-| **LH** | Bubble out around our end, then double team the corner with the right halfback. |
-| **RH** | Bubble out around our end, then double team the linebacker with the left halfback. |
+| **LH** | Bubble out around our end, then double team the linebacker with the right halfback. |
+| **RH** | Bubble out around our end, then double team the corner with the left halfback. |
 
 **Coaching points**
 
@@ -1013,13 +1013,13 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 | Position | Assignment |
 |---|---|
-| **X** | Block the left defensive end. |
-| **LT** | Help on the left defensive guard, then block the left inside linebacker. |
-| **LG** | Block the left defensive guard. |
-| **C** | Help on the right defensive guard, then block the right inside linebacker. |
-| **RG** | Block the right defensive guard. |
-| **RT** | Help on the right defensive end, then block the right outside linebacker. |
-| **Y** | Block the right defensive end. |
+| **X** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
+| **LT** | D — nothing in your gap and nobody on you. Go downfield and get the left inside linebacker. |
+| **LG** | O — your gap is empty, so take the defensive guard on you. Hands inside, pads under his, drive him back. |
+| **C** | D — nothing in your gap and nobody on you. Go downfield and get the right inside linebacker. |
+| **RG** | O — your gap is empty, so take the defensive guard on you. Hands inside, pads under his, drive him back. |
+| **RT** | D — nothing in your gap and nobody on you. Go downfield and get the right outside linebacker. |
+| **Y** | Defensive end on your inside shoulder. Turn him inside. The ball goes around behind you. |
 | **Z** **(ball)** | At the snap run flat across the backfield, take the handoff at full speed and get to the right edge. Turn up in the alley behind the right halfback. |
 | **QB** | Hand the ball to the slot as he runs past you, then fake the handoff to the left halfback going left. |
 | **LH** | Bubble out around our end, then double team the corner with the right halfback. |
@@ -1044,12 +1044,12 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 | Position | Assignment |
 |---|---|
 | **X** **(ball)** | Stay down in your stance — no motion. At the snap run flat behind the quarterback, take the handoff at full speed and get to the right edge. Turn up outside the halfbacks. |
-| **LT** | Block the left defensive end. |
-| **LG** | Block the left defensive guard. |
-| **C** | Help on the left defensive guard, then block the left inside linebacker. |
-| **RG** | Block the right defensive guard. |
-| **RT** | Help on the right defensive guard, then block the right inside linebacker. |
-| **Y** | Block the right defensive end. |
+| **LT** | D — nothing in your gap and nobody on you. Go downfield and get the left inside linebacker. |
+| **LG** | O — your gap is empty, so take the defensive guard on you. Hands inside, pads under his, drive him back. |
+| **C** | D — nothing in your gap and nobody on you. Go downfield and get the right inside linebacker. |
+| **RG** | O — your gap is empty, so take the defensive guard on you. Hands inside, pads under his, drive him back. |
+| **RT** | D — nothing in your gap and nobody on you. Go downfield and get the right outside linebacker. |
+| **Y** | Defensive end on your inside shoulder. Turn him inside. The ball goes around behind you. |
 | **Z** | Run at the corner and screen him off. Stay in his way. |
 | **QB** | Open right and hand the ball to the left tight end as he comes across behind you, then fake a run to the left. |
 | **LH** | Bubble out around our end, then double team the linebacker with the right halfback. |
@@ -1073,12 +1073,12 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 | Position | Assignment |
 |---|---|
-| **X** | Block the left defensive end. |
-| **LT** | Help on the left defensive guard, then block the left inside linebacker. |
-| **LG** | Block the left defensive guard. |
-| **C** | Help on the right defensive guard, then block the right inside linebacker. |
-| **RG** | Block the right defensive guard. |
-| **RT** | Block the right defensive end. |
+| **X** | Defensive end on your inside shoulder. Turn him inside. The ball goes around behind you. |
+| **LT** | D — nothing in your gap and nobody on you. Go downfield and get the left inside linebacker. |
+| **LG** | O — your gap is empty, so take the defensive guard on you. Hands inside, pads under his, drive him back. |
+| **C** | D — nothing in your gap and nobody on you. Go downfield and get the right inside linebacker. |
+| **RG** | O — your gap is empty, so take the defensive guard on you. Hands inside, pads under his, drive him back. |
+| **RT** | D — nothing in your gap and nobody on you. Go downfield and get the right outside linebacker. |
 | **Y** **(ball)** | Stay down in your stance — no motion. At the snap run flat behind the quarterback, take the handoff at full speed and get to the left edge. Turn up outside the halfbacks. |
 | **Z** | Run at the corner and screen him off. Stay in his way. |
 | **QB** | Open left and hand the ball to the right tight end as he comes across behind you, then fake a run to the right. |
@@ -1164,11 +1164,11 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 | Position | Assignment |
 |---|---|
 | **X** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
-| **LT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
-| **LG** | Defensive guard head up on you. Cut him off — get between him and the ball. |
-| **C** | Nobody on you. Climb to the playside linebacker. Head across him. |
-| **RG** | Defensive guard head up on you. Hands inside, pads under his, drive him back. |
-| **RT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
+| **LT** | D — nothing in your gap and nobody on you. Go downfield and get the left inside linebacker. |
+| **LG** | O — your gap is empty, so take the defensive guard on you. Hands inside, pads under his, drive him back. |
+| **C** | D — nothing in your gap and nobody on you. Go downfield and get the right inside linebacker. |
+| **RG** | O — your gap is empty, so take the defensive guard on you. Hands inside, pads under his, drive him back. |
+| **RT** | D — nothing in your gap and nobody on you. Go downfield and get the right outside linebacker. |
 | **Y** | Block down on the defensive end, inside shoulder. Head across him — nobody crosses your face. |
 | **Z** | Run at the corner and screen him off. Stay in his way. |
 | **QB** | Open right and hand deep to the left halfback as he crosses, then fake the boot. It holds the backside end. |
@@ -1194,11 +1194,11 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 | Position | Assignment |
 |---|---|
 | **X** | Block down on the defensive end, inside shoulder. Head across him — nobody crosses your face. |
-| **LT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
-| **LG** | Defensive guard head up on you. Hands inside, pads under his, drive him back. |
-| **C** | Nobody on you. Climb to the playside linebacker. Head across him. |
-| **RG** | Defensive guard head up on you. Cut him off — get between him and the ball. |
-| **RT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
+| **LT** | D — nothing in your gap and nobody on you. Go downfield and get the left inside linebacker. |
+| **LG** | O — your gap is empty, so take the defensive guard on you. Hands inside, pads under his, drive him back. |
+| **C** | D — nothing in your gap and nobody on you. Go downfield and get the right inside linebacker. |
+| **RG** | O — your gap is empty, so take the defensive guard on you. Hands inside, pads under his, drive him back. |
+| **RT** | D — nothing in your gap and nobody on you. Go downfield and get the right outside linebacker. |
 | **Y** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
 | **Z** | Run at the corner and screen him off. Stay in his way. |
 | **QB** | Open left and hand deep to the right halfback as he crosses, then fake the boot. It holds the backside end. |
@@ -1347,13 +1347,13 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 | Position | Assignment |
 |---|---|
-| **X** | Block the left defensive end. |
-| **LT** | Help on the left defensive guard, then block the left inside linebacker. |
-| **LG** | Block the left defensive guard. |
-| **C** | Help on the right defensive guard, then block the right inside linebacker. |
-| **RG** | Block the right defensive guard. |
-| **RT** | Help on the right defensive end, then block the right outside linebacker. |
-| **Y** | Block the right defensive end. |
+| **X** | Defensive end on your inside shoulder. Turn him inside. The ball goes around behind you. |
+| **LT** | D — nothing in your gap and nobody on you. Go downfield and get the left inside linebacker. |
+| **LG** | O — your gap is empty, so take the defensive guard on you. Hands inside, pads under his, drive him back. |
+| **C** | D — nothing in your gap and nobody on you. Go downfield and get the right inside linebacker. |
+| **RG** | O — your gap is empty, so take the defensive guard on you. Hands inside, pads under his, drive him back. |
+| **RT** | D — nothing in your gap and nobody on you. Go downfield and get the right outside linebacker. |
+| **Y** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
 | **Z** | Run at the corner and screen him off. Stay in his way. |
 | **QB** **(ball)** | Catch the snap and sweep left, flat and fast, behind the left halfback. Turn up outside his block. |
 | **LH** | Bubble out around our end, then double team the linebacker with the right halfback. |
@@ -1377,13 +1377,13 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 | Position | Assignment |
 |---|---|
-| **X** | Block the left defensive end. |
-| **LT** | Help on the left defensive end, then block the left outside linebacker. |
-| **LG** | Block the left defensive guard. |
-| **C** | Help on the left defensive guard, then block the left inside linebacker. |
-| **RG** | Block the right defensive guard. |
-| **RT** | Help on the right defensive guard, then block the right inside linebacker. |
-| **Y** | Block the right defensive end. |
+| **X** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
+| **LT** | D — nothing in your gap and nobody on you. Go downfield and get the left inside linebacker. |
+| **LG** | O — your gap is empty, so take the defensive guard on you. Hands inside, pads under his, drive him back. |
+| **C** | D — nothing in your gap and nobody on you. Go downfield and get the right inside linebacker. |
+| **RG** | O — your gap is empty, so take the defensive guard on you. Hands inside, pads under his, drive him back. |
+| **RT** | D — nothing in your gap and nobody on you. Go downfield and get the right outside linebacker. |
+| **Y** | Defensive end on your inside shoulder. Turn him inside. The ball goes around behind you. |
 | **Z** | Run at the corner and screen him off. Stay in his way. |
 | **QB** **(ball)** | Catch the snap and sweep right, flat and fast, behind the right halfback. Turn up outside his block. |
 | **LH** | Bubble out around our end, then double team the linebacker with the right halfback. |
@@ -1407,13 +1407,13 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 | Position | Assignment |
 |---|---|
-| **X** | Block the left defensive end. |
-| **LT** | Help on the left defensive end, then block the left outside linebacker. |
-| **LG** | Block the left defensive guard. |
-| **C** | Help on the left defensive guard, then block the left inside linebacker. |
-| **RG** | Block the right defensive guard. |
-| **RT** | Help on the right defensive guard, then block the right inside linebacker. |
-| **Y** | Block the right defensive end. |
+| **X** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
+| **LT** | D — nothing in your gap and nobody on you. Go downfield and get the left inside linebacker. |
+| **LG** | O — your gap is empty, so take the defensive guard on you. Hands inside, pads under his, drive him back. |
+| **C** | D — nothing in your gap and nobody on you. Go downfield and get the right inside linebacker. |
+| **RG** | O — your gap is empty, so take the defensive guard on you. Hands inside, pads under his, drive him back. |
+| **RT** | D — nothing in your gap and nobody on you. Go downfield and get the right outside linebacker. |
+| **Y** | Defensive end on your inside shoulder. Turn him inside. The ball goes around behind you. |
 | **Z** | Run at the corner and screen him off. Stay in his way. |
 | **QB** | Hand the ball to the left halfback as he crosses in front of you, then fake a run to the left. |
 | **LH** **(ball)** | Cross in front of the quarterback, take the handoff going right and get to the edge behind the right halfback. Turn up outside his block. |
@@ -1437,13 +1437,13 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 | Position | Assignment |
 |---|---|
-| **X** | Block the left defensive end. |
-| **LT** | Help on the left defensive guard, then block the left inside linebacker. |
-| **LG** | Block the left defensive guard. |
-| **C** | Help on the right defensive guard, then block the right inside linebacker. |
-| **RG** | Block the right defensive guard. |
-| **RT** | Help on the right defensive end, then block the right outside linebacker. |
-| **Y** | Block the right defensive end. |
+| **X** | Defensive end on your inside shoulder. Turn him inside. The ball goes around behind you. |
+| **LT** | D — nothing in your gap and nobody on you. Go downfield and get the left inside linebacker. |
+| **LG** | O — your gap is empty, so take the defensive guard on you. Hands inside, pads under his, drive him back. |
+| **C** | D — nothing in your gap and nobody on you. Go downfield and get the right inside linebacker. |
+| **RG** | O — your gap is empty, so take the defensive guard on you. Hands inside, pads under his, drive him back. |
+| **RT** | D — nothing in your gap and nobody on you. Go downfield and get the right outside linebacker. |
+| **Y** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
 | **Z** | Run at the corner and screen him off. Stay in his way. |
 | **QB** | Hand the ball to the right halfback as he crosses in front of you, then fake a run to the right. |
 | **LH** | Bubble out around our end — do not run up into the line. Block the first man out there; here it is the linebacker. |
@@ -1470,11 +1470,11 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 | Position | Assignment |
 |---|---|
 | **X** **(ball)** | Stay down in your stance — no motion. At the snap run flat behind the quarterback, take the handoff at full speed and get to the right edge. Turn up outside the trips. |
-| **LT** | Defensive end on your outside shoulder. Cut him off — get between him and the ball. |
-| **LG** | Defensive guard head up on you. Cut him off — get between him and the ball. |
-| **C** | Nobody on you. Climb to the playside linebacker. Head across him. |
-| **RG** | Defensive guard head up on you. Step past him. Climb to the playside linebacker. Head across him. |
-| **RT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
+| **LT** | D — nothing in your gap and nobody on you. Go downfield and get the left inside linebacker. |
+| **LG** | O — your gap is empty, so take the defensive guard on you. Hands inside, pads under his, drive him back. |
+| **C** | D — nothing in your gap and nobody on you. Go downfield and get the right inside linebacker. |
+| **RG** | O — your gap is empty, so take the defensive guard on you. Hands inside, pads under his, drive him back. |
+| **RT** | D — nothing in your gap and nobody on you. Go downfield and get the right outside linebacker. |
 | **Y** | Block down on the defensive end, inside shoulder. Head across him — nobody crosses your face. |
 | **Z** | Run at the corner and screen him off. Stay in his way. |
 | **QB** | Open right and hand the ball to the left tight end as he comes across behind you, then fake a run to the left. |
@@ -1499,11 +1499,11 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 | Position | Assignment |
 |---|---|
 | **X** | Block down on the defensive end, inside shoulder. Head across him — nobody crosses your face. |
-| **LT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
-| **LG** | Defensive guard head up on you. Step past him. Climb to the playside linebacker. Head across him. |
-| **C** | Nobody on you. Climb to the playside linebacker. Head across him. |
-| **RG** | Defensive guard head up on you. Cut him off — get between him and the ball. |
-| **RT** | Defensive end on your outside shoulder. Cut him off — get between him and the ball. |
+| **LT** | D — nothing in your gap and nobody on you. Go downfield and get the left inside linebacker. |
+| **LG** | O — your gap is empty, so take the defensive guard on you. Hands inside, pads under his, drive him back. |
+| **C** | D — nothing in your gap and nobody on you. Go downfield and get the right inside linebacker. |
+| **RG** | O — your gap is empty, so take the defensive guard on you. Hands inside, pads under his, drive him back. |
+| **RT** | D — nothing in your gap and nobody on you. Go downfield and get the right outside linebacker. |
 | **Y** **(ball)** | Stay down in your stance — no motion. At the snap run flat behind the quarterback, take the handoff at full speed and get to the left edge. Turn up outside the trips. |
 | **Z** | Run at the corner and screen him off. Stay in his way. |
 | **QB** | Open left and hand the ball to the right tight end as he comes across behind you, then fake a run to the right. |
@@ -1588,11 +1588,11 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 | Position | Assignment |
 |---|---|
 | **X** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
-| **LT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
-| **LG** | Defensive guard head up on you. Cut him off — get between him and the ball. |
-| **C** | Nobody on you. Climb to the playside linebacker. Head across him. |
-| **RG** | Defensive guard head up on you. Step past him. Climb to the playside linebacker. Head across him. |
-| **RT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
+| **LT** | D — nothing in your gap and nobody on you. Go downfield and get the left inside linebacker. |
+| **LG** | O — your gap is empty, so take the defensive guard on you. Hands inside, pads under his, drive him back. |
+| **C** | D — nothing in your gap and nobody on you. Go downfield and get the right inside linebacker. |
+| **RG** | O — your gap is empty, so take the defensive guard on you. Hands inside, pads under his, drive him back. |
+| **RT** | D — nothing in your gap and nobody on you. Go downfield and get the right outside linebacker. |
 | **Y** | Block down on the defensive end, inside shoulder. Head across him — nobody crosses your face. |
 | **Z** | Run at the corner and screen him off. Stay in his way. |
 | **QB** **(ball)** | Take the snap and sweep right, flat and fast, behind the trips. Turn up outside the fullback. |
@@ -1617,11 +1617,11 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 | Position | Assignment |
 |---|---|
 | **X** | Block down on the defensive end, inside shoulder. Head across him — nobody crosses your face. |
-| **LT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
-| **LG** | Defensive guard head up on you. Step past him. Climb to the playside linebacker. Head across him. |
-| **C** | Nobody on you. Climb to the playside linebacker. Head across him. |
-| **RG** | Defensive guard head up on you. Cut him off — get between him and the ball. |
-| **RT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
+| **LT** | D — nothing in your gap and nobody on you. Go downfield and get the left inside linebacker. |
+| **LG** | O — your gap is empty, so take the defensive guard on you. Hands inside, pads under his, drive him back. |
+| **C** | D — nothing in your gap and nobody on you. Go downfield and get the right inside linebacker. |
+| **RG** | O — your gap is empty, so take the defensive guard on you. Hands inside, pads under his, drive him back. |
+| **RT** | D — nothing in your gap and nobody on you. Go downfield and get the right outside linebacker. |
 | **Y** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
 | **Z** | Run at the corner and screen him off. Stay in his way. |
 | **QB** **(ball)** | Take the snap and sweep left, flat and fast, behind the trips. Turn up outside the fullback. |
@@ -1706,12 +1706,12 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 | Position | Assignment |
 |---|---|
 | **X** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
-| **LT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
-| **LG** | Defensive guard head up on you. Cut him off — get between him and the ball. |
-| **C** | Nobody on you. Climb to the playside linebacker. Head across him. |
-| **RG** | Defensive guard head up on you. Hands inside, pads under his, drive him back. |
-| **RT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
-| **Y** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
+| **LT** | D — nothing in your gap and nobody on you. Go downfield and get the left inside linebacker. |
+| **LG** | O — your gap is empty, so take the defensive guard on you. Hands inside, pads under his, drive him back. |
+| **C** | D — nothing in your gap and nobody on you. Go downfield and get the right inside linebacker. |
+| **RG** | O — your gap is empty, so take the defensive guard on you. Hands inside, pads under his, drive him back. |
+| **RT** | D — nothing in your gap and nobody on you. Go downfield and get the right outside linebacker. |
+| **Y** | Defensive end on your inside shoulder. Turn him inside. The ball goes around behind you. |
 | **Z** | Lead through the hole. Block the first man who shows in it. You are the second man through. Go after the fullback, take whoever he did not. |
 | **QB** | Open right, hand to the tailback, then fake the boot left. It holds the backside end. |
 | **FB** | Lead through the hole. Block the first man who shows in it. |
@@ -1735,12 +1735,12 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 | Position | Assignment |
 |---|---|
-| **X** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
-| **LT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
-| **LG** | Defensive guard head up on you. Hands inside, pads under his, drive him back. |
-| **C** | Nobody on you. Climb to the playside linebacker. Head across him. |
-| **RG** | Defensive guard head up on you. Cut him off — get between him and the ball. |
-| **RT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
+| **X** | Defensive end on your inside shoulder. Turn him inside. The ball goes around behind you. |
+| **LT** | D — nothing in your gap and nobody on you. Go downfield and get the left inside linebacker. |
+| **LG** | O — your gap is empty, so take the defensive guard on you. Hands inside, pads under his, drive him back. |
+| **C** | D — nothing in your gap and nobody on you. Go downfield and get the right inside linebacker. |
+| **RG** | O — your gap is empty, so take the defensive guard on you. Hands inside, pads under his, drive him back. |
+| **RT** | D — nothing in your gap and nobody on you. Go downfield and get the right outside linebacker. |
 | **Y** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
 | **Z** | Lead through the hole. Block the first man who shows in it. You are the second man through. Go after the fullback, take whoever he did not. |
 | **QB** | Open left, hand to the tailback, then fake the boot right. It holds the backside end. |
@@ -1766,11 +1766,11 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 | Position | Assignment |
 |---|---|
 | **X** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
-| **LT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
-| **LG** | Defensive guard head up on you. Cut him off — get between him and the ball. |
-| **C** | Nobody on you. Climb to the playside linebacker. Head across him. |
-| **RG** | Defensive guard head up on you. Step past him. Climb to the playside linebacker. Head across him. |
-| **RT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
+| **LT** | D — nothing in your gap and nobody on you. Go downfield and get the left inside linebacker. |
+| **LG** | O — your gap is empty, so take the defensive guard on you. Hands inside, pads under his, drive him back. |
+| **C** | D — nothing in your gap and nobody on you. Go downfield and get the right inside linebacker. |
+| **RG** | O — your gap is empty, so take the defensive guard on you. Hands inside, pads under his, drive him back. |
+| **RT** | D — nothing in your gap and nobody on you. Go downfield and get the right outside linebacker. |
 | **Y** | Defensive end on your inside shoulder. Turn him inside. The ball goes around behind you. |
 | **Z** | Get outside the fullback, then take him, then block the right corner. |
 | **QB** | Quick pitch to the tailback, then run the other way, to the left, like you still have it. |
@@ -1796,11 +1796,11 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 | Position | Assignment |
 |---|---|
 | **X** | Defensive end on your inside shoulder. Turn him inside. The ball goes around behind you. |
-| **LT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
-| **LG** | Defensive guard head up on you. Step past him. Climb to the playside linebacker. Head across him. |
-| **C** | Nobody on you. Climb to the playside linebacker. Head across him. |
-| **RG** | Defensive guard head up on you. Cut him off — get between him and the ball. |
-| **RT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
+| **LT** | D — nothing in your gap and nobody on you. Go downfield and get the left inside linebacker. |
+| **LG** | O — your gap is empty, so take the defensive guard on you. Hands inside, pads under his, drive him back. |
+| **C** | D — nothing in your gap and nobody on you. Go downfield and get the right inside linebacker. |
+| **RG** | O — your gap is empty, so take the defensive guard on you. Hands inside, pads under his, drive him back. |
+| **RT** | D — nothing in your gap and nobody on you. Go downfield and get the right outside linebacker. |
 | **Y** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
 | **Z** | Get outside the fullback, then take him, then block the left corner. |
 | **QB** | Quick pitch to the tailback, then run the other way, to the right, like you still have it. |

@@ -181,35 +181,42 @@ LINE_ROLES_LEFT = {
     "backside_g": "RG", "backside_t": "RT", "backside_te": "Y",
 }
 
-# Shared interior: both ends cut off, uncovered guard doubles, fullback (or the
-# playside halfback) leads through the hole. Smash and Dive differ only on
-# which uncovered lineman climbs — the guard on Smash (A-gap), the tackle on
-# Dive (B-gap).
+# The five interior linemen block GOD -- see the block above v_god. One line
+# template for every run in the book, so a scheme is no longer a set of line
+# rules at all: it is the two ends, the slot and the lead back, which is the
+# only part of the front that a play actually changes.
+_LINE = {
+    "playside_t": {"block": "god"},
+    "playside_g": {"block": "god"},
+    "center": {"block": "god"},
+    "backside_g": {"block": "god"},
+    "backside_t": {"block": "god"},
+}
+
+# The perimeter is the scheme. Both ends turn their man in on an inside run;
+# the slot screens the corner on everything; the lead back goes through the
+# hole, or out to the force man when the ball is going around the end.
+#
+# The ends are NOT on GOD, and the reason is worth writing down, because GOD
+# would in fact hand them the same defender in all five fronts. What it would
+# not hand them is the DIRECTION, and on an end that is the whole block: Power
+# needs the end man driven OUT so the ball can run inside him, a toss needs him
+# turned IN so the ball can get outside him. Same man, opposite jobs, and
+# nothing about where he is standing says which.
+# The playside end turns the end man IN on every run but Power, inside or out.
+# He used to cut off on inside runs and let the playside tackle have the end --
+# which worked only because 22 plays hand-named that tackle's man against the
+# 4-4. GOD sends an uncovered tackle downfield instead, so the end man is the
+# end's, which is where he belongs: he is the man standing next to him.
 _INSIDE_LINE = {
-    "playside_t": {"block": "down"},
-    "center": {"block": "reach"},
-    "backside_g": {"block": "cutoff"},
-    "backside_t": {"block": "down"},
+    **_LINE,
+    "playside_te": {"block": "base", "drive": "in"},
     "backside_te": {"block": "cutoff"},
-    "playside_te": {"block": "cutoff"},
     "slot": {"block": "screen"},
     "lead": {"block": "lead"},
 }
 
-# Shared perimeter: the playside end turns the man inside, the uncovered guard
-# climbs, the lead back takes the force man. Toss and Sweep share this line;
-# who carries it is what the huddle word is for.
-_OUTSIDE_LINE = {
-    "playside_te": {"block": "base", "drive": "in"},
-    "playside_t": {"block": "down"},
-    "playside_g": {"block": "climb", "target": "playside"},
-    "center": {"block": "reach"},
-    "backside_g": {"block": "cutoff"},
-    "backside_t": {"block": "down"},
-    "backside_te": {"block": "cutoff"},
-    "slot": {"block": "screen"},
-    "lead": {"block": "lead", "target": "force"},
-}
+_OUTSIDE_LINE = {**_INSIDE_LINE, "lead": {"block": "lead", "target": "force"}}
 
 _PROTECT_LINE = {
     "playside_te": {"block": "protect"},
@@ -226,31 +233,20 @@ _PROTECT_LINE = {
 }
 
 SCHEMES: dict[str, dict[str, dict]] = {
-    "Smash": {
-        **_INSIDE_LINE,
-        "playside_g": {"block": "double", "target": "playside"},
-    },
-    "Dive": {
-        **_INSIDE_LINE,
-        "playside_g": {"block": "down"},
-        "playside_t": {"block": "double", "target": "playside"},
-    },
+    # Smash and Dive now block identically up front -- they used to differ only
+    # on which uncovered lineman climbed, and that is a thing GOD works out from
+    # the front instead of being told. They stay two words because they are two
+    # different holes, which is what the huddle is choosing between.
+    "Smash": dict(_INSIDE_LINE),
+    "Dive": dict(_INSIDE_LINE),
     # Power kicks the end with the man standing next to him -- the tight end --
     # and runs inside that block. It used to send the slot receiver in to kick a
     # defensive end while the tight end released past him, which asked a wide
     # receiver to do a lineman's job and left the corner unblocked. The Z has one
     # job in this book, in every scheme: get in front of the corner.
-    "Power": {
-        "playside_te": {"block": "kick"},
-        "playside_t": {"block": "down"},
-        "playside_g": {"block": "double", "target": "middle"},
-        "center": {"block": "reach"},
-        "backside_g": {"block": "cutoff"},
-        "backside_t": {"block": "down"},
-        "backside_te": {"block": "cutoff"},
-        "slot": {"block": "screen"},
-        "lead": {"block": "lead"},
-    },
+    # Power is an inside run whose playside end kicks the end man OUT instead of
+    # turning him in, so the ball has somewhere to go inside him.
+    "Power": {**_INSIDE_LINE, "playside_te": {"block": "kick"}},
     "Toss": dict(_OUTSIDE_LINE),
     "Sweep": dict(_OUTSIDE_LINE),
     "Protect": dict(_PROTECT_LINE),
@@ -339,9 +335,6 @@ def scheme_intents(play: dict, form: dict, side: int) -> dict[str, dict]:
                              "with": position_name(roles[other]).lower()}
     if "slot" not in roles:
         intents.pop("slot", None)
-    if name == "Sweep":
-        if play.get("ball_carrier") == roles.get("backside_te"):
-            intents["backside_t"] = {"block": "cutoff"}
     return intents
 
 
@@ -783,6 +776,111 @@ def to(spot, target):
     return [[round(dx * k, 2), round(dy * k, 2)]]
 
 
+# ------------------------------------------------------------------ GOD ------
+
+# The five interior linemen block GOD on every run in the book. Three letters,
+# one order, and the order does not change when the play does:
+#
+#   G   the Gap to my inside, toward the center. Anybody in it is mine.
+#   O   nobody in the gap: the man On me, head up or shaded either shoulder.
+#   D   neither: Downfield, to the nearest linebacker.
+#
+# This replaced five schemes' worth of per-play line rules -- `down` here,
+# `cutoff` there, a `double` that had to know which linebacker to climb to --
+# and the point of it is what a boy carries onto the field. He used to need the
+# huddle word, then which side of the ball he was on, then his job. Now he needs
+# to know where the center is. The engine works out the rest, and it works it
+# out from where the defence is actually standing, which is the only thing that
+# ever decided the answer anyway.
+#
+# It is a run rule. Dropback protection is still `protect` -- a pass blocker who
+# picks a man before the snap has already lost him.
+
+# How far off a blocker a defender can be and still be standing ON him rather
+# than in the gap beside him. Our line splits are 1.4 yards, so half a yard puts
+# a man shaded on either shoulder on the blocker, and leaves the gap as the
+# space between two sets of shoulders.
+ON_SHADE = 0.5
+
+GOD_LINE = ("LT", "LG", "C", "RG", "RT")
+
+
+def inside_gap(alignment: dict, pos: str):
+    """The gap between this lineman and the next one in toward the center.
+
+    Returned low-x first, or None for the center, who has no inside: both his
+    gaps are somebody else's. He starts at O.
+    """
+    x = alignment[pos][0]
+    if abs(x) < 0.1:
+        return None
+    # The neighbour on HIS side of the ball. Picking the nearest by distance
+    # alone hands the left guard the right guard across the center.
+    inner = [alignment[p][0] for p in GOD_LINE
+             if p in alignment and abs(alignment[p][0]) < abs(x)
+             and alignment[p][0] * x >= 0]
+    if not inner:
+        return None
+    near = max(inner, key=abs)
+    return (near, x) if x > 0 else (x, near)
+
+
+def nearest_linebacker(front: dict, spot, side: int, taken=()):
+    """The D in GOD: the closest linebacker, preferring one nobody has yet.
+
+    Ties break toward the play. The 4-4 stands its inside linebackers at an
+    equal 2.5 either side of the center, so without a tie-break the man who
+    snaps the ball would block a different one depending on dict ordering.
+    """
+    lbs = spots(front, "LB")
+    if not lbs:
+        return None
+    free = [s for s in lbs if s[0] not in taken] or lbs
+
+    def rank(s):
+        d = ((s[1] - spot[0]) ** 2 + (s[2] - spot[1]) ** 2) ** 0.5
+        return (round(d, 2), -s[1] * side)
+
+    return min(free, key=rank)
+
+
+def v_god(front, spot, side, intent, taken=()):
+    """G, then O, then D. Every interior lineman, every snap."""
+    alignment, pos = intent["_line"], intent["_pos"]
+    x = spot[0]
+    dl = spots(front, "DL")
+
+    gap = inside_gap(alignment, pos)
+    if gap is not None:
+        lo, hi = gap
+        inside = [s for s in dl if lo + ON_SHADE < s[1] < hi - ON_SHADE]
+        if inside:
+            man = min(inside, key=lambda s: abs(s[1] - x))
+            way = "left" if man[1] < x else "right"
+            text = (f"G — the {noun(front, man[0])} is in your inside gap. Step "
+                    f"to your {way} and take him. Head across him — nobody "
+                    "crosses your face.")
+            return text, to(spot, man), man
+
+    on = [s for s in dl if abs(s[1] - x) <= ON_SHADE]
+    if on:
+        man = min(on, key=lambda s: abs(s[1] - x))
+        text = (f"O — your gap is empty, so take the {noun(front, man[0])} on "
+                "you. Hands inside, pads under his, drive him back.")
+        return text, to(spot, man), man
+
+    lb = nearest_linebacker(front, spot, side, taken)
+    if lb is None:
+        return ("D — nothing in your gap and nobody on you. Get downfield and "
+                "block the first different shirt you find."), [[0.0, 3.0]], None
+    # `named`, not `noun`: three linemen can climb on the same snap, and "get the
+    # linebacker" three times over does not tell any of them which one is his. A
+    # GOD rule is resolved against one front, so it is allowed to say which.
+    text = (f"D — nothing in your gap and nobody on you. Go downfield and get "
+            f"the {named(front, lb[0])}.")
+    return text, to(spot, lb), lb
+
+
 def v_base(front, spot, side, intent, taken=()):
     """Drive the man over you. `drive` says which way he goes."""
     clause, man = shade_clause(front, spot)
@@ -1110,6 +1208,7 @@ def v_decoy(front, spot, side, intent, taken=()):
 
 
 VERBS = {
+    "god": v_god,
     "base": v_base, "down": v_down, "reach": v_reach, "double": v_double,
     "climb": v_climb, "cutoff": v_cutoff, "hinge": v_hinge, "wedge": v_wedge,
     "kick": v_kick, "lead": v_lead, "screen": v_screen,
@@ -1139,6 +1238,11 @@ def resolve(pos: str, intent: dict, alignment: dict, front: dict, side: int,
     spot = alignment[pos]
     if hole is not None:
         intent = dict(intent, _hole=hole)
+    if verb == "god":
+        # GOD is the only verb that has to know where our OWN people are: the
+        # gap it starts with is the space between this blocker and the man
+        # inside him, which no defensive front can tell it.
+        intent = dict(intent, _line=alignment, _pos=pos)
     result = VERBS[verb](front, spot, side, intent, taken)
     text, path = result[0], result[1]
     aims = "space" if (len(result) > 2 and result[2] is None) else "man"
