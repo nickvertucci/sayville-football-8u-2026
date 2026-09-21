@@ -8,14 +8,14 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 |---|---|---|---|---|---|---|
 | 1 | [Regular I - Z Right - 36 Handoff](#regular-i---z-right---36-handoff) | `Regular I Z Right 36 Handoff` | Power | run | Regular I | TB |
 | 2 | [Regular I - Z Left - 37 Handoff](#regular-i---z-left---37-handoff) | `Regular I Z Left 37 Handoff` | Power | run | Regular I | TB |
-| 3 | [Regular I - Z Right - X Sweep](#regular-i---z-right---x-sweep) | `Regular I Z Right X Sweep` | Sweep | run | Regular I | X |
-| 4 | [Regular I - Z Left - Y Sweep](#regular-i---z-left---y-sweep) | `Regular I Z Left Y Sweep` | Sweep | run | Regular I | Y |
-| 5 | [Regular I - Z Right - Z Sweep](#regular-i---z-right---z-sweep) | `Regular I Z Right Z Sweep` | Sweep | run | Regular I | Z |
-| 6 | [Regular I - Z Left - Z Sweep](#regular-i---z-left---z-sweep) | `Regular I Z Left Z Sweep` | Sweep | run | Regular I | Z |
+| 3 | [Regular I - Z Right - X Sweep Right](#regular-i---z-right---x-sweep-right) | `Regular I Z Right X Sweep Right` | Sweep | run | Regular I | X |
+| 4 | [Regular I - Z Left - Y Sweep Left](#regular-i---z-left---y-sweep-left) | `Regular I Z Left Y Sweep Left` | Sweep | run | Regular I | Y |
+| 5 | [Regular I - Z Right - Z Sweep Left](#regular-i---z-right---z-sweep-left) | `Regular I Z Right Z Sweep Left` | Sweep | run | Regular I | Z |
+| 6 | [Regular I - Z Left - Z Sweep Right](#regular-i---z-left---z-sweep-right) | `Regular I Z Left Z Sweep Right` | Sweep | run | Regular I | Z |
 | 7 | [Regular I - Z Right - 32 Handoff](#regular-i---z-right---32-handoff) | `Regular I Z Right 32 Handoff` | Smash | run | Regular I | TB |
 | 8 | [Regular I - Z Left - 33 Handoff](#regular-i---z-left---33-handoff) | `Regular I Z Left 33 Handoff` | Smash | run | Regular I | TB |
-| 9 | [Regular I - Z Right - Y Slant Pass](#regular-i---z-right---y-slant-pass) | `Regular I Z Right Y Slant Pass` | Protect | pass | Regular I | Y |
-| 10 | [Regular I - Z Left - X Slant Pass](#regular-i---z-left---x-slant-pass) | `Regular I Z Left X Slant Pass` | Protect | pass | Regular I | X |
+| 9 | [Regular I - Z Right - Y Slant Pass Right](#regular-i---z-right---y-slant-pass-right) | `Regular I Z Right Y Slant Pass Right` | Protect | pass | Regular I | Y |
+| 10 | [Regular I - Z Left - X Slant Pass Left](#regular-i---z-left---x-slant-pass-left) | `Regular I Z Left X Slant Pass Left` | Protect | pass | Regular I | X |
 | 11 | [Regular I - Z Right - 22 Handoff](#regular-i---z-right---22-handoff) | `Regular I Z Right 22 Handoff` | Smash | run | Regular I | FB |
 | 12 | [Regular I - Z Left - 23 Handoff](#regular-i---z-left---23-handoff) | `Regular I Z Left 23 Handoff` | Smash | run | Regular I | FB |
 | 13 | [Regular I - Z Right - 38 Toss](#regular-i---z-right---38-toss) | `Regular I Z Right 38 Toss` | Toss | run | Regular I | TB |
@@ -36,30 +36,30 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 | 28 | [Split Backs - Z Left - 19 Sweep](#split-backs---z-left---19-sweep) | `Split Backs Z Left 19 Sweep` | Sweep | run | Split Backs | QB |
 | 29 | [Split Backs - Z Left - 19 Fake Sweep](#split-backs---z-left---19-fake-sweep) | `Split Backs Z Left 19 Fake Sweep` | Sweep | run | Split Backs | QB |
 | 30 | [Split Backs - Z Right - 18 Fake Sweep](#split-backs---z-right---18-fake-sweep) | `Split Backs Z Right 18 Fake Sweep` | Sweep | run | Split Backs | QB |
-| 31 | [Split Backs - Z Right - Z Sweep](#split-backs---z-right---z-sweep) | `Split Backs Z Right Z Sweep` | Sweep | run | Split Backs | Z |
-| 32 | [Split Backs - Z Left - Z Sweep](#split-backs---z-left---z-sweep) | `Split Backs Z Left Z Sweep` | Sweep | run | Split Backs | Z |
-| 33 | [Split Backs - Z Right - X Sweep](#split-backs---z-right---x-sweep) | `Split Backs Z Right X Sweep` | Sweep | run | Split Backs | X |
-| 34 | [Split Backs - Z Left - Y Sweep](#split-backs---z-left---y-sweep) | `Split Backs Z Left Y Sweep` | Sweep | run | Split Backs | Y |
-| 35 | [Split Backs - Z Right - Y Slant Pass](#split-backs---z-right---y-slant-pass) | `Split Backs Z Right Y Slant Pass` | Protect | pass | Split Backs | Y |
-| 36 | [Split Backs - Z Left - X Slant Pass](#split-backs---z-left---x-slant-pass) | `Split Backs Z Left X Slant Pass` | Protect | pass | Split Backs | X |
+| 31 | [Split Backs - Z Right - Z Sweep Left](#split-backs---z-right---z-sweep-left) | `Split Backs Z Right Z Sweep Left` | Sweep | run | Split Backs | Z |
+| 32 | [Split Backs - Z Left - Z Sweep Right](#split-backs---z-left---z-sweep-right) | `Split Backs Z Left Z Sweep Right` | Sweep | run | Split Backs | Z |
+| 33 | [Split Backs - Z Right - X Sweep Right](#split-backs---z-right---x-sweep-right) | `Split Backs Z Right X Sweep Right` | Sweep | run | Split Backs | X |
+| 34 | [Split Backs - Z Left - Y Sweep Left](#split-backs---z-left---y-sweep-left) | `Split Backs Z Left Y Sweep Left` | Sweep | run | Split Backs | Y |
+| 35 | [Split Backs - Z Right - Y Slant Pass Right](#split-backs---z-right---y-slant-pass-right) | `Split Backs Z Right Y Slant Pass Right` | Protect | pass | Split Backs | Y |
+| 36 | [Split Backs - Z Left - X Slant Pass Left](#split-backs---z-left---x-slant-pass-left) | `Split Backs Z Left X Slant Pass Left` | Protect | pass | Split Backs | X |
 | 37 | [Split Backs - Z Right - 36 Handoff](#split-backs---z-right---36-handoff) | `Split Backs Z Right 36 Handoff` | Power | run | Split Backs | LH |
 | 38 | [Split Backs - Z Left - 27 Handoff](#split-backs---z-left---27-handoff) | `Split Backs Z Left 27 Handoff` | Power | run | Split Backs | RH |
 | 39 | [Split Backs - Z Right - 38 Pitch Pass](#split-backs---z-right---38-pitch-pass) | `Split Backs Z Right 38 Pitch Pass` | Protect | pass | Split Backs | Y |
 | 40 | [Split Backs - Z Left - 29 Pitch Pass](#split-backs---z-left---29-pitch-pass) | `Split Backs Z Left 29 Pitch Pass` | Protect | pass | Split Backs | X |
-| 41 | [Shotgun - Z Right - Y Slant Pass](#shotgun---z-right---y-slant-pass) | `Shotgun Z Right Y Slant Pass` | Protect | pass | Shotgun | Y |
-| 42 | [Shotgun - Z Left - X Slant Pass](#shotgun---z-left---x-slant-pass) | `Shotgun Z Left X Slant Pass` | Protect | pass | Shotgun | X |
+| 41 | [Shotgun - Z Right - Y Slant Pass Right](#shotgun---z-right---y-slant-pass-right) | `Shotgun Z Right Y Slant Pass Right` | Protect | pass | Shotgun | Y |
+| 42 | [Shotgun - Z Left - X Slant Pass Left](#shotgun---z-left---x-slant-pass-left) | `Shotgun Z Left X Slant Pass Left` | Protect | pass | Shotgun | X |
 | 43 | [Shotgun - Z Left - 19 Sweep](#shotgun---z-left---19-sweep) | `Shotgun Z Left 19 Sweep` | Sweep | run | Shotgun | QB |
 | 44 | [Shotgun - Z Right - 18 Sweep](#shotgun---z-right---18-sweep) | `Shotgun Z Right 18 Sweep` | Sweep | run | Shotgun | QB |
 | 45 | [Shotgun - Z Right - 38 Toss](#shotgun---z-right---38-toss) | `Shotgun Z Right 38 Toss` | Toss | run | Shotgun | LH |
 | 46 | [Shotgun - Z Left - 29 Toss](#shotgun---z-left---29-toss) | `Shotgun Z Left 29 Toss` | Toss | run | Shotgun | RH |
-| 47 | [Trips - Right - X Sweep](#trips---right---x-sweep) | `Trips Right X Sweep` | Sweep | run | Trips | X |
-| 48 | [Trips - Left - Y Sweep](#trips---left---y-sweep) | `Trips Left Y Sweep` | Sweep | run | Trips | Y |
+| 47 | [Trips - Right - X Sweep Right](#trips---right---x-sweep-right) | `Trips Right X Sweep Right` | Sweep | run | Trips | X |
+| 48 | [Trips - Left - Y Sweep Left](#trips---left---y-sweep-left) | `Trips Left Y Sweep Left` | Sweep | run | Trips | Y |
 | 49 | [Trips - Right - 38 Quick Pass](#trips---right---38-quick-pass) | `Trips Right 38 Quick Pass` | Protect | pass | Trips | TB |
 | 50 | [Trips - Left - 39 Quick Pass](#trips---left---39-quick-pass) | `Trips Left 39 Quick Pass` | Protect | pass | Trips | TB |
 | 51 | [Trips - Right - 18 Sweep](#trips---right---18-sweep) | `Trips Right 18 Sweep` | Sweep | run | Trips | QB |
 | 52 | [Trips - Left - 19 Sweep](#trips---left---19-sweep) | `Trips Left 19 Sweep` | Sweep | run | Trips | QB |
-| 53 | [Trips - Right - Y Slant Pass](#trips---right---y-slant-pass) | `Trips Right Y Slant Pass` | Protect | pass | Trips | Y |
-| 54 | [Trips - Left - X Slant Pass](#trips---left---x-slant-pass) | `Trips Left X Slant Pass` | Protect | pass | Trips | X |
+| 53 | [Trips - Right - Y Slant Pass Right](#trips---right---y-slant-pass-right) | `Trips Right Y Slant Pass Right` | Protect | pass | Trips | Y |
+| 54 | [Trips - Left - X Slant Pass Left](#trips---left---x-slant-pass-left) | `Trips Left X Slant Pass Left` | Protect | pass | Trips | X |
 | 55 | [Power I - Z Right - 32 Handoff](#power-i---z-right---32-handoff) | `Power I Z Right 32 Handoff` | Smash | run | Power I | TB |
 | 56 | [Power I - Z Left - 33 Handoff](#power-i---z-left---33-handoff) | `Power I Z Left 33 Handoff` | Smash | run | Power I | TB |
 | 57 | [Power I - Z Right - 38 Toss](#power-i---z-right---38-toss) | `Power I Z Right 38 Toss` | Toss | run | Power I | TB |
@@ -131,13 +131,13 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Regular I - Z Right - X Sweep
+## Regular I - Z Right - X Sweep Right
 
-**Call it:** `Regular I Z Right X Sweep`
+**Call it:** `Regular I Z Right X Sweep Right`
 
 **Scheme:** Sweep
 
-![Regular I - Z Right - X Sweep](playbook/i-form/cards/i-te-sweep-r-4-4.svg)
+![Regular I - Z Right - X Sweep Right](playbook/i-form/cards/i-te-sweep-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -161,13 +161,13 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Regular I - Z Left - Y Sweep
+## Regular I - Z Left - Y Sweep Left
 
-**Call it:** `Regular I Z Left Y Sweep`
+**Call it:** `Regular I Z Left Y Sweep Left`
 
 **Scheme:** Sweep
 
-![Regular I - Z Left - Y Sweep](playbook/i-form/cards/i-te-sweep-l-4-4.svg)
+![Regular I - Z Left - Y Sweep Left](playbook/i-form/cards/i-te-sweep-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -191,13 +191,13 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Regular I - Z Right - Z Sweep
+## Regular I - Z Right - Z Sweep Left
 
-**Call it:** `Regular I Z Right Z Sweep`
+**Call it:** `Regular I Z Right Z Sweep Left`
 
 **Scheme:** Sweep
 
-![Regular I - Z Right - Z Sweep](playbook/i-form/cards/i-sl-sweep-l-4-4.svg)
+![Regular I - Z Right - Z Sweep Left](playbook/i-form/cards/i-sl-sweep-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -221,13 +221,13 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Regular I - Z Left - Z Sweep
+## Regular I - Z Left - Z Sweep Right
 
-**Call it:** `Regular I Z Left Z Sweep`
+**Call it:** `Regular I Z Left Z Sweep Right`
 
 **Scheme:** Sweep
 
-![Regular I - Z Left - Z Sweep](playbook/i-form/cards/i-sl-sweep-r-4-4.svg)
+![Regular I - Z Left - Z Sweep Right](playbook/i-form/cards/i-sl-sweep-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -311,13 +311,13 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Regular I - Z Right - Y Slant Pass
+## Regular I - Z Right - Y Slant Pass Right
 
-**Call it:** `Regular I Z Right Y Slant Pass`
+**Call it:** `Regular I Z Right Y Slant Pass Right`
 
 **Scheme:** Protect
 
-![Regular I - Z Right - Y Slant Pass](playbook/i-form/cards/i-te-out-r-4-4.svg)
+![Regular I - Z Right - Y Slant Pass Right](playbook/i-form/cards/i-te-out-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -341,13 +341,13 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Regular I - Z Left - X Slant Pass
+## Regular I - Z Left - X Slant Pass Left
 
-**Call it:** `Regular I Z Left X Slant Pass`
+**Call it:** `Regular I Z Left X Slant Pass Left`
 
 **Scheme:** Protect
 
-![Regular I - Z Left - X Slant Pass](playbook/i-form/cards/i-te-out-l-4-4.svg)
+![Regular I - Z Left - X Slant Pass Left](playbook/i-form/cards/i-te-out-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -973,13 +973,13 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Split Backs - Z Right - Z Sweep
+## Split Backs - Z Right - Z Sweep Left
 
-**Call it:** `Split Backs Z Right Z Sweep`
+**Call it:** `Split Backs Z Right Z Sweep Left`
 
 **Scheme:** Sweep
 
-![Split Backs - Z Right - Z Sweep](playbook/split-backs/cards/sb-sl-sweep-l-4-4.svg)
+![Split Backs - Z Right - Z Sweep Left](playbook/split-backs/cards/sb-sl-sweep-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -1003,13 +1003,13 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Split Backs - Z Left - Z Sweep
+## Split Backs - Z Left - Z Sweep Right
 
-**Call it:** `Split Backs Z Left Z Sweep`
+**Call it:** `Split Backs Z Left Z Sweep Right`
 
 **Scheme:** Sweep
 
-![Split Backs - Z Left - Z Sweep](playbook/split-backs/cards/sb-sl-sweep-r-4-4.svg)
+![Split Backs - Z Left - Z Sweep Right](playbook/split-backs/cards/sb-sl-sweep-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -1033,13 +1033,13 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Split Backs - Z Right - X Sweep
+## Split Backs - Z Right - X Sweep Right
 
-**Call it:** `Split Backs Z Right X Sweep`
+**Call it:** `Split Backs Z Right X Sweep Right`
 
 **Scheme:** Sweep
 
-![Split Backs - Z Right - X Sweep](playbook/split-backs/cards/sb-te-sweep-r-4-4.svg)
+![Split Backs - Z Right - X Sweep Right](playbook/split-backs/cards/sb-te-sweep-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -1063,13 +1063,13 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Split Backs - Z Left - Y Sweep
+## Split Backs - Z Left - Y Sweep Left
 
-**Call it:** `Split Backs Z Left Y Sweep`
+**Call it:** `Split Backs Z Left Y Sweep Left`
 
 **Scheme:** Sweep
 
-![Split Backs - Z Left - Y Sweep](playbook/split-backs/cards/sb-te-sweep-l-4-4.svg)
+![Split Backs - Z Left - Y Sweep Left](playbook/split-backs/cards/sb-te-sweep-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -1093,13 +1093,13 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Split Backs - Z Right - Y Slant Pass
+## Split Backs - Z Right - Y Slant Pass Right
 
-**Call it:** `Split Backs Z Right Y Slant Pass`
+**Call it:** `Split Backs Z Right Y Slant Pass Right`
 
 **Scheme:** Protect
 
-![Split Backs - Z Right - Y Slant Pass](playbook/split-backs/cards/sb-te-out-r-4-4.svg)
+![Split Backs - Z Right - Y Slant Pass Right](playbook/split-backs/cards/sb-te-out-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -1123,13 +1123,13 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Split Backs - Z Left - X Slant Pass
+## Split Backs - Z Left - X Slant Pass Left
 
-**Call it:** `Split Backs Z Left X Slant Pass`
+**Call it:** `Split Backs Z Left X Slant Pass Left`
 
 **Scheme:** Protect
 
-![Split Backs - Z Left - X Slant Pass](playbook/split-backs/cards/sb-te-out-l-4-4.svg)
+![Split Backs - Z Left - X Slant Pass Left](playbook/split-backs/cards/sb-te-out-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -1277,13 +1277,13 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Shotgun - Z Right - Y Slant Pass
+## Shotgun - Z Right - Y Slant Pass Right
 
-**Call it:** `Shotgun Z Right Y Slant Pass`
+**Call it:** `Shotgun Z Right Y Slant Pass Right`
 
 **Scheme:** Protect
 
-![Shotgun - Z Right - Y Slant Pass](playbook/shotgun/cards/sg-te-out-r-4-4.svg)
+![Shotgun - Z Right - Y Slant Pass Right](playbook/shotgun/cards/sg-te-out-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -1307,13 +1307,13 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Shotgun - Z Left - X Slant Pass
+## Shotgun - Z Left - X Slant Pass Left
 
-**Call it:** `Shotgun Z Left X Slant Pass`
+**Call it:** `Shotgun Z Left X Slant Pass Left`
 
 **Scheme:** Protect
 
-![Shotgun - Z Left - X Slant Pass](playbook/shotgun/cards/sg-te-out-l-4-4.svg)
+![Shotgun - Z Left - X Slant Pass Left](playbook/shotgun/cards/sg-te-out-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -1459,13 +1459,13 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Trips - Right - X Sweep
+## Trips - Right - X Sweep Right
 
-**Call it:** `Trips Right X Sweep`
+**Call it:** `Trips Right X Sweep Right`
 
 **Scheme:** Sweep
 
-![Trips - Right - X Sweep](playbook/trips/cards/tr-te-sweep-r-4-4.svg)
+![Trips - Right - X Sweep Right](playbook/trips/cards/tr-te-sweep-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -1488,13 +1488,13 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Trips - Left - Y Sweep
+## Trips - Left - Y Sweep Left
 
-**Call it:** `Trips Left Y Sweep`
+**Call it:** `Trips Left Y Sweep Left`
 
 **Scheme:** Sweep
 
-![Trips - Left - Y Sweep](playbook/trips/cards/tr-te-sweep-l-4-4.svg)
+![Trips - Left - Y Sweep Left](playbook/trips/cards/tr-te-sweep-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -1635,13 +1635,13 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Trips - Right - Y Slant Pass
+## Trips - Right - Y Slant Pass Right
 
-**Call it:** `Trips Right Y Slant Pass`
+**Call it:** `Trips Right Y Slant Pass Right`
 
 **Scheme:** Protect
 
-![Trips - Right - Y Slant Pass](playbook/trips/cards/tr-te-out-r-4-4.svg)
+![Trips - Right - Y Slant Pass Right](playbook/trips/cards/tr-te-out-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -1664,13 +1664,13 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Trips - Left - X Slant Pass
+## Trips - Left - X Slant Pass Left
 
-**Call it:** `Trips Left X Slant Pass`
+**Call it:** `Trips Left X Slant Pass Left`
 
 **Scheme:** Protect
 
-![Trips - Left - X Slant Pass](playbook/trips/cards/tr-te-out-l-4-4.svg)
+![Trips - Left - X Slant Pass Left](playbook/trips/cards/tr-te-out-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
