@@ -1,12 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="621" height="912" viewBox="0 0 621 912" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" width="702" height="912" viewBox="0 0 702 912" font-family="Segoe UI, Helvetica, Arial, sans-serif">
 <rect width="100%" height="100%" fill="#ffffff"/>
-<rect x="0" y="0" width="621" height="58" fill="#14213d"/>
+<rect x="0" y="0" width="702" height="58" fill="#14213d"/>
 <text x="18" y="26" font-size="19.0" font-weight="700" fill="#ffffff">Trips - Left - 19 Sweep</text>
 <text x="18" y="45" font-size="11.5" fill="#a9b4c7">RUN  •  Trips  •  vs 5-4-2</text>
-<rect x="406.2" y="13" width="196.8" height="31" rx="6" fill="#ffffff" fill-opacity="0.12" stroke="#8593ad" stroke-width="1"/>
-<text x="504.6" y="34" text-anchor="middle" font-size="14.5" font-weight="700" fill="#ffffff" letter-spacing="0.5">Trips Left 19 Sweep</text>
-<clipPath id="fieldclip"><rect x="0" y="58" width="621" height="472"/></clipPath>
-<g clip-path="url(#fieldclip)"><g transform="translate(-40.5,31.0)">
+<rect x="487.2" y="13" width="196.8" height="31" rx="6" fill="#ffffff" fill-opacity="0.12" stroke="#8593ad" stroke-width="1"/>
+<text x="585.6" y="34" text-anchor="middle" font-size="14.5" font-weight="700" fill="#ffffff" letter-spacing="0.5">Trips Left 19 Sweep</text>
+<clipPath id="fieldclip"><rect x="0" y="58" width="702" height="472"/></clipPath>
+<g clip-path="url(#fieldclip)"><g transform="translate(-0.0,31.0)">
 <rect x="0" y="0" width="702" height="513" fill="#ffffff"/>
 <line x1="0" y1="459.0" x2="702" y2="459.0" stroke="#c8cdd6" stroke-width="1"/>
 <line x1="0" y1="189.0" x2="702" y2="189.0" stroke="#c8cdd6" stroke-width="1"/>
@@ -34,8 +34,8 @@
 <text x="261.9" y="90.2" text-anchor="middle" font-size="12.5" fill="#9aa2ae" font-weight="600">LS</text>
 <line x1="430.9" y1="98.8" x2="449.3" y2="117.2" stroke="#9aa2ae" stroke-width="3.6"/><line x1="449.3" y1="98.8" x2="430.9" y2="117.2" stroke="#9aa2ae" stroke-width="3.6"/>
 <text x="440.1" y="90.2" text-anchor="middle" font-size="12.5" fill="#9aa2ae" font-weight="600">RS</text>
-<path d="M237.6,337.5 L237.6,314.6" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-<line x1="228.4" y1="314.6" x2="246.8" y2="314.6" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
+<path d="M135.0,337.5 L226.0,306.4" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="223.0" y1="297.8" x2="229.0" y2="315.1" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 <path d="M275.4,337.5 L282.7,314.0" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
 <line x1="273.9" y1="311.3" x2="291.5" y2="316.7" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 <path d="M313.2,337.5 L310.8,217.4" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
@@ -48,17 +48,17 @@
 <line x1="410.5" y1="316.7" x2="428.1" y2="311.3" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 <path d="M464.4,337.5 L464.4,314.6" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
 <line x1="455.2" y1="314.6" x2="473.6" y2="314.6" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
-<path d="M199.8,364.5 L258.9,119.9" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-<line x1="250.0" y1="117.7" x2="267.9" y2="122.0" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
+<path d="M97.2,364.5 L255.4,118.3" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="247.7" y1="113.3" x2="263.1" y2="123.2" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 <path d="M351.0,364.5 C343.8,367.2 334.8,377.1 307.8,380.7 C280.8,384.3 220.1,389.7 189.0,386.1 C157.9,382.5 134.1,374.4 121.5,359.1 C108.9,343.8 114.7,320.4 113.4,294.3 C112.0,268.2 113.4,217.8 113.4,202.5" fill="none" stroke="#b3001b" stroke-width="4.6" stroke-linecap="round" stroke-linejoin="round"/>
 <polygon points="113.4,202.5 119.6,216.3 107.2,216.3" fill="#b3001b"/>
-<path d="M135.0,364.5 L200.3,345.6 L200.3,216.3" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-<line x1="191.2" y1="216.3" x2="209.5" y2="216.3" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
-<path d="M167.4,391.5 L275.4,386.1 L383.4,375.3" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 5"/>
-<polygon points="383.4,375.3 373.6,380.9 372.6,371.7" fill="#14213d"/>
+<path d="M351.0,413.1 L246.0,380.7 L212.2,215.2" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="203.2" y1="217.0" x2="221.2" y2="213.4" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
+<path d="M178.2,364.5 L286.2,359.1 L394.2,348.3" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 5"/>
+<polygon points="394.2,348.3 384.4,353.9 383.4,344.7" fill="#14213d"/>
 
-<rect x="224.1" y="324.0" width="27.0" height="27.0" rx="3" fill="#ffffff" stroke="#14213d" stroke-width="2.6"/>
-<text x="237.6" y="342.0" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">X</text>
+<rect x="121.5" y="324.0" width="27.0" height="27.0" rx="3" fill="#ffffff" stroke="#14213d" stroke-width="2.6"/>
+<text x="135.0" y="342.0" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">X</text>
 <rect x="261.9" y="324.0" width="27.0" height="27.0" rx="3" fill="#ffffff" stroke="#14213d" stroke-width="2.6"/>
 <text x="275.4" y="342.0" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">LT</text>
 <rect x="299.7" y="324.0" width="27.0" height="27.0" rx="3" fill="#ffffff" stroke="#14213d" stroke-width="2.6"/>
@@ -71,57 +71,57 @@
 <text x="426.6" y="342.0" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">RT</text>
 <rect x="450.9" y="324.0" width="27.0" height="27.0" rx="3" fill="#ffffff" stroke="#14213d" stroke-width="2.6"/>
 <text x="464.4" y="342.0" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">Y</text>
-<circle cx="199.8" cy="364.5" r="13.5" fill="#ffffff" stroke="#14213d" stroke-width="2.6"/>
-<text x="199.8" y="369.0" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">Z</text>
-<circle cx="167.4" cy="391.5" r="13.5" fill="#ffffff" stroke="#14213d" stroke-width="2.6"/>
-<text x="167.4" y="396.0" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">TB</text>
-<circle cx="135.0" cy="364.5" r="13.5" fill="#ffffff" stroke="#14213d" stroke-width="2.6"/>
-<text x="135.0" y="369.0" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">FB</text>
+<circle cx="178.2" cy="364.5" r="13.5" fill="#ffffff" stroke="#14213d" stroke-width="2.6"/>
+<text x="178.2" y="369.0" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">TB</text>
+<circle cx="97.2" cy="364.5" r="13.5" fill="#ffffff" stroke="#14213d" stroke-width="2.6"/>
+<text x="97.2" y="369.0" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">Z</text>
 <circle cx="351.0" cy="364.5" r="13.5" fill="#ffffff" stroke="#b3001b" stroke-width="2.6"/>
 <text x="351.0" y="369.0" text-anchor="middle" font-size="13" font-weight="700" fill="#b3001b">QB</text>
-<rect x="559.1" y="35.0" width="94.4" height="52.0" rx="8" fill="#ffffff" stroke="#111318" stroke-width="3"/><text x="606.3" y="75.0" text-anchor="middle" font-size="40" font-weight="800" fill="#111318">#48</text>
+<circle cx="351.0" cy="413.1" r="13.5" fill="#ffffff" stroke="#14213d" stroke-width="2.6"/>
+<text x="351.0" y="417.6" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">FB</text>
+<rect x="599.6" y="35.0" width="94.4" height="52.0" rx="8" fill="#ffffff" stroke="#111318" stroke-width="3"/><text x="646.8" y="75.0" text-anchor="middle" font-size="40" font-weight="800" fill="#111318">#48</text>
 </g></g>
-<line x1="18" y1="540" x2="603" y2="540" stroke="#c8cdd6" stroke-width="1"/>
+<line x1="18" y1="540" x2="684" y2="540" stroke="#c8cdd6" stroke-width="1"/>
 <text x="18" y="560" font-size="11" font-weight="700" fill="#5b6472" letter-spacing="1">ASSIGNMENTS</text>
 <text x="18" y="578" font-size="12" font-weight="700" fill="#111318">X</text>
-<text x="52" y="578" font-size="12" fill="#111318">Defensive end head up on you. Turn him</text>
-<text x="52" y="596" font-size="12" fill="#111318">inside. The ball goes around behind</text>
-<text x="52" y="612" font-size="12" fill="#111318">you.</text>
+<text x="52" y="578" font-size="12" fill="#111318">Block down on the defensive end, inside</text>
+<text x="52" y="596" font-size="12" fill="#111318">shoulder. Head across him — nobody crosses</text>
+<text x="52" y="612" font-size="12" fill="#111318">your face.</text>
 <text x="18" y="630" font-size="12" font-weight="700" fill="#111318">LT</text>
-<text x="52" y="630" font-size="12" fill="#111318">Block down on the defensive tackle,</text>
-<text x="52" y="646" font-size="12" fill="#111318">inside shoulder. Head across him —</text>
-<text x="52" y="664" font-size="12" fill="#111318">nobody crosses your face.</text>
+<text x="52" y="630" font-size="12" fill="#111318">Block down on the defensive tackle, inside</text>
+<text x="52" y="646" font-size="12" fill="#111318">shoulder. Head across him — nobody crosses</text>
+<text x="52" y="664" font-size="12" fill="#111318">your face.</text>
 <text x="18" y="680" font-size="12" font-weight="700" fill="#111318">LG</text>
 <text x="52" y="680" font-size="12" fill="#111318">Nobody on you. Climb to the playside</text>
 <text x="52" y="698" font-size="12" fill="#111318">linebacker. Head across him.</text>
 <text x="18" y="714" font-size="12" font-weight="700" fill="#111318">C</text>
-<text x="52" y="714" font-size="12" fill="#111318">Reach the nose to your left. Head</text>
-<text x="52" y="732" font-size="12" fill="#111318">across his playside shoulder.</text>
+<text x="52" y="714" font-size="12" fill="#111318">Reach the nose to your left. Head across his</text>
+<text x="52" y="732" font-size="12" fill="#111318">playside shoulder.</text>
 <text x="18" y="748" font-size="12" font-weight="700" fill="#111318">RG</text>
-<text x="52" y="748" font-size="12" fill="#111318">Nobody on you. Cut off the backside.</text>
-<text x="52" y="766" font-size="12" fill="#111318">Never quit on the play.</text>
+<text x="52" y="748" font-size="12" fill="#111318">Nobody on you. Cut off the backside. Never</text>
+<text x="52" y="766" font-size="12" fill="#111318">quit on the play.</text>
 <text x="18" y="782" font-size="12" font-weight="700" fill="#111318">RT</text>
-<text x="52" y="782" font-size="12" fill="#111318">Block down on the defensive tackle,</text>
-<text x="52" y="800" font-size="12" fill="#111318">inside shoulder. Head across him —</text>
-<text x="52" y="816" font-size="12" fill="#111318">nobody crosses your face.</text>
-<text x="310" y="578" font-size="12" font-weight="700" fill="#111318">Y</text>
-<text x="344" y="578" font-size="12" fill="#111318">Defensive end head up on you. Cut him</text>
-<text x="344" y="596" font-size="12" fill="#111318">off — get between him and the ball.</text>
-<text x="310" y="612" font-size="12" font-weight="700" fill="#111318">Z</text>
-<text x="344" y="612" font-size="12" fill="#111318">Run at the safety and screen him off.</text>
-<text x="344" y="630" font-size="12" fill="#111318">Stay in his way.</text>
-<text x="310" y="646" font-size="12" font-weight="700" fill="#111318">QB</text>
-<text x="344" y="646" font-size="12" fill="#111318">Take the snap and sweep left, flat and</text>
-<text x="344" y="664" font-size="12" fill="#111318">fast, behind the trips. Turn up outside</text>
-<text x="344" y="680" font-size="12" fill="#111318">the fullback.</text>
-<text x="310" y="698" font-size="12" font-weight="700" fill="#111318">FB</text>
-<text x="344" y="698" font-size="12" fill="#111318">Bubble out around our end — do not run</text>
-<text x="344" y="714" font-size="12" fill="#111318">up into the line. Block the first man</text>
-<text x="344" y="732" font-size="12" fill="#111318">out there; here it is the linebacker.</text>
-<text x="310" y="748" font-size="12" font-weight="700" fill="#111318">TB</text>
-<text x="344" y="748" font-size="12" fill="#111318">Run hard to the right like you have the</text>
-<text x="344" y="766" font-size="12" fill="#111318">ball. Sell it all the way.</text>
-<line x1="18" y1="824" x2="603" y2="824" stroke="#c8cdd6" stroke-width="1"/>
+<text x="52" y="782" font-size="12" fill="#111318">Block down on the defensive tackle, inside</text>
+<text x="52" y="800" font-size="12" fill="#111318">shoulder. Head across him — nobody crosses</text>
+<text x="52" y="816" font-size="12" fill="#111318">your face.</text>
+<text x="351" y="578" font-size="12" font-weight="700" fill="#111318">Y</text>
+<text x="385" y="578" font-size="12" fill="#111318">Defensive end head up on you. Cut him off —</text>
+<text x="385" y="596" font-size="12" fill="#111318">get between him and the ball.</text>
+<text x="351" y="612" font-size="12" font-weight="700" fill="#111318">Z</text>
+<text x="385" y="612" font-size="12" fill="#111318">Run at the safety and screen him off. Stay in</text>
+<text x="385" y="630" font-size="12" fill="#111318">his way.</text>
+<text x="351" y="646" font-size="12" font-weight="700" fill="#111318">QB</text>
+<text x="385" y="646" font-size="12" fill="#111318">Take the snap and sweep left, flat and fast,</text>
+<text x="385" y="664" font-size="12" fill="#111318">behind the trips. Turn up outside the</text>
+<text x="385" y="680" font-size="12" fill="#111318">fullback.</text>
+<text x="351" y="698" font-size="12" font-weight="700" fill="#111318">FB</text>
+<text x="385" y="698" font-size="12" fill="#111318">Bubble out around our end — do not run up into</text>
+<text x="385" y="714" font-size="12" fill="#111318">the line. Block the first man out there; here</text>
+<text x="385" y="732" font-size="12" fill="#111318">it is the linebacker.</text>
+<text x="351" y="748" font-size="12" font-weight="700" fill="#111318">TB</text>
+<text x="385" y="748" font-size="12" fill="#111318">Run hard to the right like you have the ball.</text>
+<text x="385" y="766" font-size="12" fill="#111318">Sell it all the way.</text>
+<line x1="18" y1="824" x2="684" y2="824" stroke="#c8cdd6" stroke-width="1"/>
 <text x="18" y="842" font-size="11" font-weight="700" fill="#5b6472" letter-spacing="1">COACHING POINTS</text>
 <text x="18" y="862" font-size="12" fill="#111318">The quarterback keeps it every time — tell him before the snap, there is no read.</text>
 <text x="18" y="878" font-size="12" fill="#111318">He stays behind the trips until the fullback's block is made, then turns it up.</text>

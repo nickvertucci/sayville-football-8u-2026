@@ -1,12 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="621" height="946" viewBox="0 0 621 946" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" width="702" height="894" viewBox="0 0 702 894" font-family="Segoe UI, Helvetica, Arial, sans-serif">
 <rect width="100%" height="100%" fill="#ffffff"/>
-<rect x="0" y="0" width="621" height="58" fill="#14213d"/>
+<rect x="0" y="0" width="702" height="58" fill="#14213d"/>
 <text x="18" y="26" font-size="19.0" font-weight="700" fill="#ffffff">Wishbone - 24 Handoff</text>
 <text x="18" y="45" font-size="11.5" fill="#a9b4c7">RUN  •  Wishbone  •  vs 5-4-2</text>
-<rect x="406.2" y="13" width="196.8" height="31" rx="6" fill="#ffffff" fill-opacity="0.12" stroke="#8593ad" stroke-width="1"/>
-<text x="504.6" y="34" text-anchor="middle" font-size="14.5" font-weight="700" fill="#ffffff" letter-spacing="0.5">Wishbone 24 Handoff</text>
-<clipPath id="fieldclip"><rect x="0" y="58" width="621" height="472"/></clipPath>
-<g clip-path="url(#fieldclip)"><g transform="translate(-40.5,31.0)">
+<rect x="487.2" y="13" width="196.8" height="31" rx="6" fill="#ffffff" fill-opacity="0.12" stroke="#8593ad" stroke-width="1"/>
+<text x="585.6" y="34" text-anchor="middle" font-size="14.5" font-weight="700" fill="#ffffff" letter-spacing="0.5">Wishbone 24 Handoff</text>
+<clipPath id="fieldclip"><rect x="0" y="58" width="702" height="472"/></clipPath>
+<g clip-path="url(#fieldclip)"><g transform="translate(-0.0,31.0)">
 <rect x="0" y="0" width="702" height="513" fill="#ffffff"/>
 <line x1="0" y1="459.0" x2="702" y2="459.0" stroke="#c8cdd6" stroke-width="1"/>
 <line x1="0" y1="189.0" x2="702" y2="189.0" stroke="#c8cdd6" stroke-width="1"/>
@@ -79,52 +79,48 @@
 <text x="291.6" y="450.0" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">LH</text>
 <circle cx="410.4" cy="445.5" r="13.5" fill="#ffffff" stroke="#14213d" stroke-width="2.6"/>
 <text x="410.4" y="450.0" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">RH</text>
-<rect x="559.1" y="35.0" width="94.4" height="52.0" rx="8" fill="#ffffff" stroke="#111318" stroke-width="3"/><text x="606.3" y="75.0" text-anchor="middle" font-size="40" font-weight="800" fill="#111318">#55</text>
+<rect x="599.6" y="35.0" width="94.4" height="52.0" rx="8" fill="#ffffff" stroke="#111318" stroke-width="3"/><text x="646.8" y="75.0" text-anchor="middle" font-size="40" font-weight="800" fill="#111318">#55</text>
 </g></g>
-<line x1="18" y1="540" x2="603" y2="540" stroke="#c8cdd6" stroke-width="1"/>
+<line x1="18" y1="540" x2="684" y2="540" stroke="#c8cdd6" stroke-width="1"/>
 <text x="18" y="560" font-size="11" font-weight="700" fill="#5b6472" letter-spacing="1">ASSIGNMENTS</text>
 <text x="18" y="578" font-size="12" font-weight="700" fill="#111318">X</text>
-<text x="52" y="578" font-size="12" fill="#111318">Defensive end head up on you. Cut him</text>
-<text x="52" y="596" font-size="12" fill="#111318">off — get between him and the ball.</text>
+<text x="52" y="578" font-size="12" fill="#111318">Defensive end head up on you. Cut him off —</text>
+<text x="52" y="596" font-size="12" fill="#111318">get between him and the ball.</text>
 <text x="18" y="612" font-size="12" font-weight="700" fill="#111318">LT</text>
-<text x="52" y="612" font-size="12" fill="#111318">Block down on the defensive tackle,</text>
-<text x="52" y="630" font-size="12" fill="#111318">inside shoulder. Head across him —</text>
-<text x="52" y="646" font-size="12" fill="#111318">nobody crosses your face.</text>
+<text x="52" y="612" font-size="12" fill="#111318">Block down on the defensive tackle, inside</text>
+<text x="52" y="630" font-size="12" fill="#111318">shoulder. Head across him — nobody crosses</text>
+<text x="52" y="646" font-size="12" fill="#111318">your face.</text>
 <text x="18" y="664" font-size="12" font-weight="700" fill="#111318">LG</text>
-<text x="52" y="664" font-size="12" fill="#111318">Nobody on you. Cut off the backside.</text>
-<text x="52" y="680" font-size="12" fill="#111318">Never quit on the play.</text>
+<text x="52" y="664" font-size="12" fill="#111318">Nobody on you. Cut off the backside. Never</text>
+<text x="52" y="680" font-size="12" fill="#111318">quit on the play.</text>
 <text x="18" y="698" font-size="12" font-weight="700" fill="#111318">C</text>
-<text x="52" y="698" font-size="12" fill="#111318">Reach the nose to your right. Head</text>
-<text x="52" y="714" font-size="12" fill="#111318">across his playside shoulder.</text>
+<text x="52" y="698" font-size="12" fill="#111318">Reach the nose to your right. Head across his</text>
+<text x="52" y="714" font-size="12" fill="#111318">playside shoulder.</text>
 <text x="18" y="732" font-size="12" font-weight="700" fill="#111318">RG</text>
-<text x="52" y="732" font-size="12" fill="#111318">Block down on the nose, inside</text>
-<text x="52" y="748" font-size="12" fill="#111318">shoulder. Head across him — nobody</text>
-<text x="52" y="766" font-size="12" fill="#111318">crosses your face.</text>
-<text x="18" y="782" font-size="12" font-weight="700" fill="#111318">RT</text>
-<text x="52" y="782" font-size="12" fill="#111318">Defensive tackle on your inside</text>
-<text x="52" y="800" font-size="12" fill="#111318">shoulder. Help on the defensive tackle,</text>
-<text x="52" y="816" font-size="12" fill="#111318">then take the playside linebacker.</text>
-<text x="310" y="578" font-size="12" font-weight="700" fill="#111318">Y</text>
-<text x="344" y="578" font-size="12" fill="#111318">Defensive end head up on you. Cut him</text>
-<text x="344" y="596" font-size="12" fill="#111318">off — get between him and the ball.</text>
-<text x="310" y="612" font-size="12" font-weight="700" fill="#111318">QB</text>
-<text x="344" y="612" font-size="12" fill="#111318">Open right, hand to the fullback, then</text>
-<text x="344" y="630" font-size="12" fill="#111318">fake the boot left. It holds the</text>
-<text x="344" y="646" font-size="12" fill="#111318">backside end.</text>
-<text x="310" y="664" font-size="12" font-weight="700" fill="#111318">FB</text>
-<text x="344" y="664" font-size="12" fill="#111318">Take the handoff downhill between the</text>
-<text x="344" y="680" font-size="12" fill="#111318">right guard and the right tackle. One</text>
-<text x="344" y="698" font-size="12" fill="#111318">cut, then get north. Do not bounce it.</text>
-<text x="310" y="714" font-size="12" font-weight="700" fill="#111318">LH</text>
-<text x="344" y="714" font-size="12" fill="#111318">Run hard to the left like you have the</text>
-<text x="344" y="732" font-size="12" fill="#111318">ball. You are what holds the backside.</text>
-<text x="310" y="748" font-size="12" font-weight="700" fill="#111318">RH</text>
-<text x="344" y="748" font-size="12" fill="#111318">Lead through the hole. Block the first</text>
-<text x="344" y="766" font-size="12" fill="#111318">man who shows in it.</text>
-<line x1="18" y1="824" x2="603" y2="824" stroke="#c8cdd6" stroke-width="1"/>
-<text x="18" y="842" font-size="11" font-weight="700" fill="#5b6472" letter-spacing="1">COACHING POINTS</text>
-<text x="18" y="862" font-size="12" fill="#111318">Dive is the B-gap — between the guard and the tackle. Faster than Power, wider than</text>
-<text x="18" y="878" font-size="12" fill="#111318">Smash.</text>
-<text x="18" y="896" font-size="12" fill="#111318">The fullback takes it downhill and gets north. One cut off the double team, never a</text>
-<text x="18" y="912" font-size="12" fill="#111318">bounce.</text>
+<text x="52" y="732" font-size="12" fill="#111318">Block down on the nose, inside shoulder. Head</text>
+<text x="52" y="748" font-size="12" fill="#111318">across him — nobody crosses your face.</text>
+<text x="18" y="766" font-size="12" font-weight="700" fill="#111318">RT</text>
+<text x="52" y="766" font-size="12" fill="#111318">Defensive tackle on your inside shoulder. Help</text>
+<text x="52" y="782" font-size="12" fill="#111318">on the defensive tackle, then take the</text>
+<text x="52" y="800" font-size="12" fill="#111318">playside linebacker.</text>
+<text x="351" y="578" font-size="12" font-weight="700" fill="#111318">Y</text>
+<text x="385" y="578" font-size="12" fill="#111318">Defensive end head up on you. Cut him off —</text>
+<text x="385" y="596" font-size="12" fill="#111318">get between him and the ball.</text>
+<text x="351" y="612" font-size="12" font-weight="700" fill="#111318">QB</text>
+<text x="385" y="612" font-size="12" fill="#111318">Open right, hand to the fullback, then fake</text>
+<text x="385" y="630" font-size="12" fill="#111318">the boot left. It holds the backside end.</text>
+<text x="351" y="646" font-size="12" font-weight="700" fill="#111318">FB</text>
+<text x="385" y="646" font-size="12" fill="#111318">Take the handoff downhill between the right</text>
+<text x="385" y="664" font-size="12" fill="#111318">guard and the right tackle. One cut, then get</text>
+<text x="385" y="680" font-size="12" fill="#111318">north. Do not bounce it.</text>
+<text x="351" y="698" font-size="12" font-weight="700" fill="#111318">LH</text>
+<text x="385" y="698" font-size="12" fill="#111318">Run hard to the left like you have the ball.</text>
+<text x="385" y="714" font-size="12" fill="#111318">You are what holds the backside.</text>
+<text x="351" y="732" font-size="12" font-weight="700" fill="#111318">RH</text>
+<text x="385" y="732" font-size="12" fill="#111318">Lead through the hole. Block the first man who</text>
+<text x="385" y="748" font-size="12" fill="#111318">shows in it.</text>
+<line x1="18" y1="806" x2="684" y2="806" stroke="#c8cdd6" stroke-width="1"/>
+<text x="18" y="824" font-size="11" font-weight="700" fill="#5b6472" letter-spacing="1">COACHING POINTS</text>
+<text x="18" y="844" font-size="12" fill="#111318">Dive is the B-gap — between the guard and the tackle. Faster than Power, wider than Smash.</text>
+<text x="18" y="862" font-size="12" fill="#111318">The fullback takes it downhill and gets north. One cut off the double team, never a bounce.</text>
 </svg>
