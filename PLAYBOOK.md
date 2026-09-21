@@ -1475,7 +1475,7 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 | **C** | Nobody on you. Climb to the playside linebacker. Head across him. |
 | **RG** | Defensive guard head up on you. Step past him. Climb to the playside linebacker. Head across him. |
 | **RT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
-| **Y** | Defensive end on your inside shoulder. Turn him inside. The ball goes around behind you. |
+| **Y** | Block down on the defensive end, inside shoulder. Head across him — nobody crosses your face. |
 | **Z** | Run at the corner and screen him off. Stay in his way. |
 | **QB** | Open right and hand the ball to the left tight end as he comes across behind you, then fake a run to the left. |
 | **FB** | Bubble out around our end — do not run up into the line. Block the first man out there; here it is the linebacker. |
@@ -1498,7 +1498,7 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 | Position | Assignment |
 |---|---|
-| **X** | Defensive end on your inside shoulder. Turn him inside. The ball goes around behind you. |
+| **X** | Block down on the defensive end, inside shoulder. Head across him — nobody crosses your face. |
 | **LT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
 | **LG** | Defensive guard head up on you. Step past him. Climb to the playside linebacker. Head across him. |
 | **C** | Nobody on you. Climb to the playside linebacker. Head across him. |
@@ -1593,7 +1593,7 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 | **C** | Nobody on you. Climb to the playside linebacker. Head across him. |
 | **RG** | Defensive guard head up on you. Step past him. Climb to the playside linebacker. Head across him. |
 | **RT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
-| **Y** | Defensive end on your inside shoulder. Turn him inside. The ball goes around behind you. |
+| **Y** | Block down on the defensive end, inside shoulder. Head across him — nobody crosses your face. |
 | **Z** | Run at the corner and screen him off. Stay in his way. |
 | **QB** **(ball)** | Take the snap and sweep right, flat and fast, behind the trips. Turn up outside the fullback. |
 | **FB** | Bubble out around our end — do not run up into the line. Block the first man out there; here it is the linebacker. |
@@ -1616,7 +1616,7 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 | Position | Assignment |
 |---|---|
-| **X** | Defensive end on your inside shoulder. Turn him inside. The ball goes around behind you. |
+| **X** | Block down on the defensive end, inside shoulder. Head across him — nobody crosses your face. |
 | **LT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
 | **LG** | Defensive guard head up on you. Step past him. Climb to the playside linebacker. Head across him. |
 | **C** | Nobody on you. Climb to the playside linebacker. Head across him. |
@@ -1654,8 +1654,8 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 | **Y** **(ball)** | Take one step up, then slant out flat toward the right sideline, almost along the line of scrimmage. Look for the ball right away. |
 | **Z** | Run at the corner and screen him off. Stay in his way. |
 | **QB** | Take the snap, take one step and throw to the right tight end as he slants out. If he is covered, tuck it and run. |
-| **FB** | Release straight up the field. You are clearing the corner so the slant has room. |
-| **TB** | Step up and out, hands up. Pick up anybody coming at the quarterback. |
+| **FB** | Step up and out, hands up. Pick up anybody coming at the quarterback. |
+| **TB** | Pass block: step back, hands up, and stay between your man and the quarterback. |
 
 **Coaching points**
 
@@ -1683,8 +1683,8 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 | **Y** | Pass block: step back, hands up, and stay between your man and the quarterback. |
 | **Z** | Run at the corner and screen him off. Stay in his way. |
 | **QB** | Take the snap, take one step and throw to the left tight end as he slants out. If he is covered, tuck it and run. |
-| **FB** | Release straight up the field. You are clearing the corner so the slant has room. |
-| **TB** | Step up and out, hands up. Pick up anybody coming at the quarterback. |
+| **FB** | Step up and out, hands up. Pick up anybody coming at the quarterback. |
+| **TB** | Pass block: step back, hands up, and stay between your man and the quarterback. |
 
 **Coaching points**
 

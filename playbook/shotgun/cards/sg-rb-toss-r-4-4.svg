@@ -1,12 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="621" height="928" viewBox="0 0 621 928" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" width="702" height="912" viewBox="0 0 702 912" font-family="Segoe UI, Helvetica, Arial, sans-serif">
 <rect width="100%" height="100%" fill="#ffffff"/>
-<rect x="0" y="0" width="621" height="58" fill="#14213d"/>
+<rect x="0" y="0" width="702" height="58" fill="#14213d"/>
 <text x="18" y="26" font-size="19.0" font-weight="700" fill="#ffffff">Shotgun - Z Right - 38 Toss</text>
 <text x="18" y="45" font-size="11.5" fill="#a9b4c7">RUN  •  Shotgun  •  vs 4-4</text>
-<rect x="369.4" y="13" width="233.6" height="31" rx="6" fill="#ffffff" fill-opacity="0.12" stroke="#8593ad" stroke-width="1"/>
-<text x="486.2" y="34" text-anchor="middle" font-size="14.5" font-weight="700" fill="#ffffff" letter-spacing="0.5">Shotgun Z Right 38 Toss</text>
-<clipPath id="fieldclip"><rect x="0" y="58" width="621" height="472"/></clipPath>
-<g clip-path="url(#fieldclip)"><g transform="translate(-40.5,31.0)">
+<rect x="450.4" y="13" width="233.6" height="31" rx="6" fill="#ffffff" fill-opacity="0.12" stroke="#8593ad" stroke-width="1"/>
+<text x="567.2" y="34" text-anchor="middle" font-size="14.5" font-weight="700" fill="#ffffff" letter-spacing="0.5">Shotgun Z Right 38 Toss</text>
+<clipPath id="fieldclip"><rect x="0" y="58" width="702" height="472"/></clipPath>
+<g clip-path="url(#fieldclip)"><g transform="translate(-0.0,31.0)">
 <rect x="0" y="0" width="702" height="513" fill="#ffffff"/>
 <line x1="0" y1="459.0" x2="702" y2="459.0" stroke="#c8cdd6" stroke-width="1"/>
 <line x1="0" y1="189.0" x2="702" y2="189.0" stroke="#c8cdd6" stroke-width="1"/>
@@ -79,48 +79,47 @@
 <text x="297.0" y="463.5" text-anchor="middle" font-size="13" font-weight="700" fill="#b3001b">LH</text>
 <circle cx="405.0" cy="459.0" r="13.5" fill="#ffffff" stroke="#14213d" stroke-width="2.6"/>
 <text x="405.0" y="463.5" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">RH</text>
-<rect x="559.1" y="35.0" width="94.4" height="52.0" rx="8" fill="#ffffff" stroke="#111318" stroke-width="3"/><text x="606.3" y="75.0" text-anchor="middle" font-size="40" font-weight="800" fill="#111318">#37</text>
+<rect x="599.6" y="35.0" width="94.4" height="52.0" rx="8" fill="#ffffff" stroke="#111318" stroke-width="3"/><text x="646.8" y="75.0" text-anchor="middle" font-size="40" font-weight="800" fill="#111318">#37</text>
 </g></g>
-<line x1="18" y1="540" x2="603" y2="540" stroke="#c8cdd6" stroke-width="1"/>
+<line x1="18" y1="540" x2="684" y2="540" stroke="#c8cdd6" stroke-width="1"/>
 <text x="18" y="560" font-size="11" font-weight="700" fill="#5b6472" letter-spacing="1">ASSIGNMENTS</text>
 <text x="18" y="578" font-size="12" font-weight="700" fill="#111318">X</text>
 <text x="52" y="578" font-size="12" fill="#111318">Block the left defensive end.</text>
 <text x="18" y="596" font-size="12" font-weight="700" fill="#111318">LT</text>
-<text x="52" y="596" font-size="12" fill="#111318">Help on the left defensive end, then</text>
-<text x="52" y="612" font-size="12" fill="#111318">block the left outside linebacker.</text>
+<text x="52" y="596" font-size="12" fill="#111318">Help on the left defensive end, then block the</text>
+<text x="52" y="612" font-size="12" fill="#111318">left outside linebacker.</text>
 <text x="18" y="630" font-size="12" font-weight="700" fill="#111318">LG</text>
 <text x="52" y="630" font-size="12" fill="#111318">Block the left defensive guard.</text>
 <text x="18" y="646" font-size="12" font-weight="700" fill="#111318">C</text>
-<text x="52" y="646" font-size="12" fill="#111318">Help on the left defensive guard, then</text>
-<text x="52" y="664" font-size="12" fill="#111318">block the left inside linebacker.</text>
+<text x="52" y="646" font-size="12" fill="#111318">Help on the left defensive guard, then block</text>
+<text x="52" y="664" font-size="12" fill="#111318">the left inside linebacker.</text>
 <text x="18" y="680" font-size="12" font-weight="700" fill="#111318">RG</text>
 <text x="52" y="680" font-size="12" fill="#111318">Block the right defensive guard.</text>
 <text x="18" y="698" font-size="12" font-weight="700" fill="#111318">RT</text>
-<text x="52" y="698" font-size="12" fill="#111318">Help on the right defensive guard, then</text>
-<text x="52" y="714" font-size="12" fill="#111318">block the right inside linebacker.</text>
-<text x="310" y="578" font-size="12" font-weight="700" fill="#111318">Y</text>
-<text x="344" y="578" font-size="12" fill="#111318">Block the right defensive end.</text>
-<text x="310" y="596" font-size="12" font-weight="700" fill="#111318">Z</text>
-<text x="344" y="596" font-size="12" fill="#111318">Run at the corner and screen him off.</text>
-<text x="344" y="612" font-size="12" fill="#111318">Stay in his way.</text>
-<text x="310" y="630" font-size="12" font-weight="700" fill="#111318">QB</text>
-<text x="344" y="630" font-size="12" fill="#111318">Hand the ball to the left halfback as</text>
-<text x="344" y="646" font-size="12" fill="#111318">he crosses in front of you, then fake a</text>
-<text x="344" y="664" font-size="12" fill="#111318">run to the left.</text>
-<text x="310" y="680" font-size="12" font-weight="700" fill="#111318">LH</text>
-<text x="344" y="680" font-size="12" fill="#111318">Cross in front of the quarterback, take</text>
-<text x="344" y="698" font-size="12" fill="#111318">the handoff going right and get to the</text>
-<text x="344" y="714" font-size="12" fill="#111318">edge behind the right halfback. Turn up</text>
-<text x="344" y="732" font-size="12" fill="#111318">outside his block.</text>
-<text x="310" y="748" font-size="12" font-weight="700" fill="#111318">RH</text>
-<text x="344" y="748" font-size="12" fill="#111318">Bubble out around our end — do not run</text>
-<text x="344" y="766" font-size="12" fill="#111318">up into the line. Block the first man</text>
-<text x="344" y="782" font-size="12" fill="#111318">out there; here it is the linebacker.</text>
-<line x1="18" y1="790" x2="603" y2="790" stroke="#c8cdd6" stroke-width="1"/>
-<text x="18" y="808" font-size="11" font-weight="700" fill="#5b6472" letter-spacing="1">COACHING POINTS</text>
-<text x="18" y="828" font-size="12" fill="#111318">The handoff happens in front of the quarterback: the left halfback crosses close and</text>
-<text x="18" y="844" font-size="12" fill="#111318">flat, and the quarterback puts it in his belly.</text>
-<text x="18" y="862" font-size="12" fill="#111318">The left halfback stays behind the right halfback until the block is made, then turns</text>
-<text x="18" y="878" font-size="12" fill="#111318">it up. Running past his blocker is how the sweep loses yards.</text>
-<text x="18" y="896" font-size="12" fill="#111318">The quarterback's fake to the left has to be real. It is what holds the backside.</text>
+<text x="52" y="698" font-size="12" fill="#111318">Help on the right defensive guard, then block</text>
+<text x="52" y="714" font-size="12" fill="#111318">the right inside linebacker.</text>
+<text x="351" y="578" font-size="12" font-weight="700" fill="#111318">Y</text>
+<text x="385" y="578" font-size="12" fill="#111318">Block the right defensive end.</text>
+<text x="351" y="596" font-size="12" font-weight="700" fill="#111318">Z</text>
+<text x="385" y="596" font-size="12" fill="#111318">Run at the corner and screen him off. Stay in</text>
+<text x="385" y="612" font-size="12" fill="#111318">his way.</text>
+<text x="351" y="630" font-size="12" font-weight="700" fill="#111318">QB</text>
+<text x="385" y="630" font-size="12" fill="#111318">Hand the ball to the left halfback as he</text>
+<text x="385" y="646" font-size="12" fill="#111318">crosses in front of you, then fake a run to</text>
+<text x="385" y="664" font-size="12" fill="#111318">the left.</text>
+<text x="351" y="680" font-size="12" font-weight="700" fill="#111318">LH</text>
+<text x="385" y="680" font-size="12" fill="#111318">Cross in front of the quarterback, take the</text>
+<text x="385" y="698" font-size="12" fill="#111318">handoff going right and get to the edge behind</text>
+<text x="385" y="714" font-size="12" fill="#111318">the right halfback. Turn up outside his block.</text>
+<text x="351" y="732" font-size="12" font-weight="700" fill="#111318">RH</text>
+<text x="385" y="732" font-size="12" fill="#111318">Bubble out around our end — do not run up into</text>
+<text x="385" y="748" font-size="12" fill="#111318">the line. Block the first man out there; here</text>
+<text x="385" y="766" font-size="12" fill="#111318">it is the linebacker.</text>
+<line x1="18" y1="772" x2="684" y2="772" stroke="#c8cdd6" stroke-width="1"/>
+<text x="18" y="790" font-size="11" font-weight="700" fill="#5b6472" letter-spacing="1">COACHING POINTS</text>
+<text x="18" y="810" font-size="12" fill="#111318">The handoff happens in front of the quarterback: the left halfback crosses close and flat, and the</text>
+<text x="18" y="828" font-size="12" fill="#111318">quarterback puts it in his belly.</text>
+<text x="18" y="844" font-size="12" fill="#111318">The left halfback stays behind the right halfback until the block is made, then turns it up. Running</text>
+<text x="18" y="862" font-size="12" fill="#111318">past his blocker is how the sweep loses yards.</text>
+<text x="18" y="878" font-size="12" fill="#111318">The quarterback's fake to the left has to be real. It is what holds the backside.</text>
 </svg>

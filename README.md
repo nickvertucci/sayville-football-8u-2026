@@ -175,18 +175,24 @@ halfback off tackle; `38 Toss` is the left halfback all the way outside.
 | `Wishbone 46 Handoff` / `37 Handoff` | Wishbone - 46 Handoff / 37 Handoff | the playside halfback, tackle–tight end |
 | `Wishbone 38 Toss` / `49 Toss` | Wishbone - 38 Toss / 49 Toss | the far halfback, outside the tight end |
 
-### Trips: formation + bunch + who + play word
+### Trips: formation + side + who + play word
 
-Empty backfield. The fullback, the tailback and the Z bunched
-outside the end; the quarterback is alone. The call names the bunch —
-`Trips Right`, `Trips Left` — then who gets it. With nobody in the backfield
-to hand to, everything here goes outside or in the air, so every number that comes
-up is an 8 or a 9 — and the two ends, who are called by letter.
+The strength goes out wide and stays there. The **Y stretches out on the line** —
+a long way from the tackle, but down in his stance — with the **tailback inside him
+and the Z outside him, both off the line**. The X is a tight end on the other end,
+and the **fullback is alone behind the quarterback**, where he is the lead blocker on
+anything that goes around the edge.
+
+The call names the side — `Trips Right`, `Trips Left` — then who gets it. The whole
+strong side moves with it, the stretched end included: in Trips Left it is the X who
+stretches and the Y who plays tight. One back to hand to and three men already wide,
+so everything here goes outside or in the air — every number that comes up is an 8 or
+a 9, and the two ends are called by letter.
 
 | Call | Play | Reads as |
 |---|---|---|
-| `Trips Right 18 Sweep` / `Trips Left 19 Sweep` | Trips - Right - 18 Sweep / Left - 19 Sweep | the quarterback, alone in the backfield, outside the bunch |
-| `Trips Right 38 Quick Pass` / `Trips Left 39 Quick Pass` | Trips - Right - 38 Quick Pass / Left - 39 Quick Pass | the tailback out of the bunch, thrown to outside the tight end |
+| `Trips Right 18 Sweep` / `Trips Left 19 Sweep` | Trips - Right - 18 Sweep / Left - 19 Sweep | the quarterback outside the strength, behind the fullback |
+| `Trips Right 38 Quick Pass` / `Trips Left 39 Quick Pass` | Trips - Right - 38 Quick Pass / Left - 39 Quick Pass | the tailback slides out and catches it in the flat |
 | `Trips Right X Sweep Right` / `Trips Left Y Sweep Left` | Trips - Right - X Sweep Right / Left - Y Sweep Left | the backside tight end on an end-around |
 | `Trips Right Y Slant Pass Right` / `Trips Left X Slant Pass Left` | Trips - Right - Y Slant Pass Right / Left - X Slant Pass Left | the play-side tight end, flat out on the line |
 

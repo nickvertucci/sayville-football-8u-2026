@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="391" height="116" viewBox="207 306 391 116" font-family="Segoe UI, Helvetica, Arial, sans-serif" role="img">
+<svg xmlns="http://www.w3.org/2000/svg" width="429" height="138" viewBox="207 306 429 138" font-family="Segoe UI, Helvetica, Arial, sans-serif" role="img">
 <title>Trips — alignment</title>
 <rect x="0" y="0" width="702" height="513" fill="#ffffff"/>
 <line x1="0" y1="459.0" x2="702" y2="459.0" stroke="#c8cdd6" stroke-width="1"/>
@@ -17,14 +17,14 @@
 <text x="388.8" y="342.0" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">RG</text>
 <rect x="413.1" y="324.0" width="27.0" height="27.0" rx="3" fill="#ffffff" stroke="#14213d" stroke-width="2.6"/>
 <text x="426.6" y="342.0" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">RT</text>
-<rect x="450.9" y="324.0" width="27.0" height="27.0" rx="3" fill="#ffffff" stroke="#14213d" stroke-width="2.6"/>
-<text x="464.4" y="342.0" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">Y</text>
-<circle cx="502.2" cy="364.5" r="13.5" fill="#ffffff" stroke="#14213d" stroke-width="2.6"/>
-<text x="502.2" y="369.0" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">Z</text>
-<circle cx="534.6" cy="391.5" r="13.5" fill="#ffffff" stroke="#14213d" stroke-width="2.6"/>
-<text x="534.6" y="396.0" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">TB</text>
-<circle cx="567.0" cy="364.5" r="13.5" fill="#ffffff" stroke="#14213d" stroke-width="2.6"/>
-<text x="567.0" y="369.0" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">FB</text>
+<rect x="553.5" y="324.0" width="27.0" height="27.0" rx="3" fill="#ffffff" stroke="#14213d" stroke-width="2.6"/>
+<text x="567.0" y="342.0" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">Y</text>
+<circle cx="523.8" cy="364.5" r="13.5" fill="#ffffff" stroke="#14213d" stroke-width="2.6"/>
+<text x="523.8" y="369.0" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">TB</text>
+<circle cx="604.8" cy="364.5" r="13.5" fill="#ffffff" stroke="#14213d" stroke-width="2.6"/>
+<text x="604.8" y="369.0" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">Z</text>
 <circle cx="351.0" cy="364.5" r="13.5" fill="#ffffff" stroke="#14213d" stroke-width="2.6"/>
 <text x="351.0" y="369.0" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">QB</text>
+<circle cx="351.0" cy="413.1" r="13.5" fill="#ffffff" stroke="#14213d" stroke-width="2.6"/>
+<text x="351.0" y="417.6" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">FB</text>
 </svg>

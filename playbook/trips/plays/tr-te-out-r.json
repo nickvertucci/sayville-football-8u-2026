@@ -24,24 +24,6 @@
         ]
       ]
     },
-    "FB": {
-      "rule": "Release straight up the field. You are clearing the corner so the slant has room.",
-      "type": "pass",
-      "path": [
-        [
-          0.2,
-          2.0
-        ],
-        [
-          0.4,
-          6.0
-        ],
-        [
-          0.6,
-          10.0
-        ]
-      ]
-    },
     "QB": {
       "rule": "Take the snap, take one step and throw to the right tight end as he slants out. If he is covered, tuck it and run.",
       "type": "pass",

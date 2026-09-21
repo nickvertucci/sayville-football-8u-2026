@@ -3,21 +3,54 @@
   "order": 5,
   "name": "Trips",
   "family": "Trips",
-  "summary": "Empty backfield. Backs 2, 3 and 4 bunched to one side outside the tight end — slot and fullback up front, tailback behind and between them. The quarterback is alone, and everything goes outside.",
-  "personnel": "11 players, 2 tight ends, quarterback, fullback, tailback, slot — no one behind the quarterback",
-  "notes": "Same line as the Regular I — both ends tight, seven on the line every snap. Nobody behind the quarterback. The bunch is a triangle: the slot just outside the tight end and the fullback outside him, both up front, with the tailback a yard back splitting the two of them. The call names the bunch — Trips Right or Trips Left — and moves all three.",
+  "summary": "Two on the line and two off it, all to one side. The Y stretches out wide but stays down on the line; the tailback and the Z stand off it either side of him. The X is a tight end on the other end, and the fullback is behind the quarterback.",
+  "personnel": "11 players, 2 tight ends, quarterback, fullback, tailback, slot — the fullback behind the quarterback, the rest of the strength out wide",
+  "notes": "Seven on the line every snap: the five up front, the X tight on the left end, and the Y stretched out on the right end — wide, but down in his stance. The tailback and the Z are the two off the line beside him, the tailback inside and the Z outside. The fullback is the only man in the backfield, behind the quarterback, and he is the lead blocker on everything that goes around the end. The call names the side — Trips Right or Trips Left — and the whole strong side moves with it, the stretched end included.",
   "alignment": {
-    "X": [-4.2, -0.5],
-    "LT": [-2.8, -0.5],
-    "LG": [-1.4, -0.5],
-    "C": [0.0, -0.5],
-    "RG": [1.4, -0.5],
-    "RT": [2.8, -0.5],
-    "Y": [4.2, -0.5],
-    "Z": [5.6, -1.5],
-    "TB": [6.8, -2.5],
-    "FB": [8.0, -1.5],
-    "QB": [0.0, -1.5]
+    "X": [
+      -4.2,
+      -0.5
+    ],
+    "LT": [
+      -2.8,
+      -0.5
+    ],
+    "LG": [
+      -1.4,
+      -0.5
+    ],
+    "C": [
+      0.0,
+      -0.5
+    ],
+    "RG": [
+      1.4,
+      -0.5
+    ],
+    "RT": [
+      2.8,
+      -0.5
+    ],
+    "Y": [
+      8.0,
+      -0.5
+    ],
+    "TB": [
+      6.4,
+      -1.5
+    ],
+    "Z": [
+      9.4,
+      -1.5
+    ],
+    "QB": [
+      0.0,
+      -1.5
+    ],
+    "FB": [
+      0.0,
+      -3.3
+    ]
   },
   "eligible": [
     "X",
@@ -33,10 +66,10 @@
     "3": "TB"
   },
   "coaching_notes": [
-    "Count seven on the line every snap — both ends stay down. 2, 3 and 4 are off the line; any of them creeping up is an illegal-formation flag.",
-    "Nobody in the backfield. The quarterback is alone. The bunch is a triangle: slot inside and fullback outside up front, tailback behind, splitting them.",
-    "The tailback lines up in the gap between the slot and the fullback, one yard back. He should be able to see daylight between their inside shoulders.",
-    "Trips Right is all three on the right; Trips Left moves all three. A play that moves them says so in the call.",
-    "Same numbers as the Regular I: 2 is the fullback, 3 the tailback, 4 the slot. Trips does not run inside — no Power, no Smash, no Dive. Three men to a side is an edge look, and everything off it goes outside or into the air."
+    "Count seven on the line every snap. The Y is stretched a long way out but he is ON the line and down in his stance — standing him up is an illegal-formation flag, and it is the easiest one to give away in this look.",
+    "The tailback and the Z are OFF the line, a yard back, one either side of the Y: tailback inside, Z outside. Either of them creeping up is the same flag from the other direction.",
+    "The fullback is behind the quarterback and he is the only back there. On a sweep he bubbles out around the end and blocks the first man outside — he does not run up into the line.",
+    "Trips Right puts the stretch on the right and the X tight on the left; Trips Left is the mirror, and it is the X who stretches out. Whichever end is tight is the one who comes across on the end-around.",
+    "Trips does not run inside — no Power, no Smash, no Dive. Three men to a side is an edge look, and everything off it goes outside or into the air."
   ]
 }
