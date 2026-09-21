@@ -128,7 +128,7 @@ move a player who has more than one legal spot in the same eleven-man look:
 "alignment": { "Z": [-5.6, -1.5] }
 ```
 
-That is Power Left putting the Z on the side his kick-out has to happen on, instead of
+That is Power Left putting the Z on the side the play is going, instead of
 the right, where he lines up on every other snap. Everything else — the line rules, the other ten spots — is
 unchanged, and the player's `path` is still relative to wherever he ends up, so the
 assignment does not have to know which look it is in.
@@ -287,15 +287,15 @@ fills the line, the slot and the lead from `SCHEMES` in `generator/blocking.py`:
 ```
 
 Roles, not position keys, so Regular I, Split Backs and the next formation all
-get the same Power: playside end releases, slot kicks, fullback (or the playside
-halfback) leads. A stacked I always leads with the fullback. Two halfbacks lead
+get the same Power: playside end takes the end man, slot screens the corner, fullback
+(or the playside halfback) leads. A stacked I always leads with the fullback. Two halfbacks lead
 with the one on the playside.
 
 | Scheme | Playside end | Slot | Lead | Where |
 |---|---|---|---|---|
 | **Smash** | cutoff | screen | through the hole | the center and the A gap (0, 2/3) |
 | **Dive** | cutoff | screen | through the hole | B-gap (4/5) |
-| **Power** | release | kick | through the hole | C-gap (6/7) |
+| **Power** | kick | screen | through the hole | C-gap (6/7) |
 | **Toss** | base inside | screen | force man | outside the tight end (8/9) |
 | **Sweep** | base inside | screen | force man | 8/9, QB or slot or a tight end |
 | **Protect** | protect | screen | protect | dropback pass |
@@ -322,9 +322,9 @@ sentence**:
 
 ```json
 "RT": { "block": "down" },
-"Z":  { "block": "kick" },
+"Z":  { "block": "screen" },
 "FB": { "block": "lead" },
-"Y": { "block": "release", "note": "You are the widest man we have — if he beats you outside, it is a touchdown." }
+"Y": { "block": "kick", "note": "You are the widest man we have — if he beats you outside, it is a touchdown." }
 ```
 
 `generator/blocking.py` resolves that against a real defensive front and produces both
@@ -342,7 +342,7 @@ typing three versions of it — and it is why a blocker no longer has a `rule` o
 | `climb` | Straight past the line to a linebacker. | `target` |
 | `release` | Leave the man being kicked out alone and take a linebacker. The end man on a kick-out play. Defaults to `outside`, which is the whole adjustment between a three- and a four-linebacker front. | `target` |
 | `cutoff` | The backside. Nobody chases this from behind. | |
-| `kick` | Kick the edge defender out. The ball runs inside the block. | |
+| `kick` | Take the edge defender; the ball runs inside the block. Reads his alignment for the words: a kick-out when he is head up or wider, a down block when he is in the gap inside (the 5-3). | |
 | `lead` | Through the hole, first defender who shows — aimed at the **hole**, not at a man, because "whoever shows" is not somebody you can pick before the snap. | `target: force` only, which instead names the man outside our end |
 | `hinge` | Protect the side the quarterback ends up on. | |
 | `wedge` | Shoulder to shoulder and push. Nobody picks a man. | |
@@ -396,7 +396,7 @@ half-count late, which he is, the hole he vacated is the hole the play was going
 The build rejects one by name.
 
 Every job a puller used to do belongs to somebody who was already standing there: the
-**playside end kicks the end out** (`base` with `drive: out`), **a back leads through the
+**playside end kicks the end out** (`kick`), **a back leads through the
 hole** (`lead`), and the **backside guard cuts off** behind the play (`cutoff`).
 
 ### `fakes` — what a play-action pass is pretending to be
@@ -474,7 +474,7 @@ The system is the seven-man line (`X` … `Y`), a quarterback, and a
 backfield of either a stacked I (`FB` + `TB`), two halfbacks (`LH` + `RH`),
 Wishbone (`FB` + `LH` + `RH`), or empty Trips (`FB` + `TB` + `Z` bunched,
 nobody behind the quarterback). A slot (`Z`) is the split man when the
-look has one; Wishbone does not, so Power kicks with the playside end and
+look has one; Wishbone does not, so it simply has nobody screening the corner and
 the call has no Z Right/Left. Trips names the bunch (`Trips Right` /
 `Trips Left`) and moves 2, 3 and 4 together. A new formation that keeps
 those keys drops in: give it `formation.json`

@@ -94,7 +94,7 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 **Coaching points**
 
 - This is the most physical run in the book. If it works you can run it fifteen times, and at this age you often can.
-- Drill the Z's kick-out on its own. If he blocks the end with his shoulders square, the end slides underneath and makes the tackle for a loss — he has to attack the outside hip.
+- Drill the Y on the end man on his own. Against the 4-4 and the 6-3 the end is outside him and it is a kick-out — attack the outside hip, because square shoulders let the end slide underneath for a loss. Against the 5-3 the end is in the gap inside him and it is a down block — head across his face.
 - The fullback's man is whoever shows in the hole, not a man he picks before the snap. Tell him that every time.
 - The tailback's most common mistake is bouncing it wide looking for green grass. The yards are inside the Z's block. Make him run it tight in practice until it is automatic.
 
@@ -125,7 +125,7 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 **Coaching points**
 
 - This is the most physical run in the book. If it works you can run it fifteen times, and at this age you often can.
-- Drill the Z's kick-out on its own. If he blocks the end with his shoulders square, the end slides underneath and makes the tackle for a loss — he has to attack the outside hip.
+- Drill the Y on the end man on his own. Against the 4-4 and the 6-3 the end is outside him and it is a kick-out — attack the outside hip, because square shoulders let the end slide underneath for a loss. Against the 5-3 the end is in the gap inside him and it is a down block — head across his face.
 - The fullback's man is whoever shows in the hole, not a man he picks before the snap. Tell him that every time.
 - The tailback's most common mistake is bouncing it wide looking for green grass. The yards are inside the Z's block. Make him run it tight in practice until it is automatic.
 
@@ -571,7 +571,7 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 | **C** | Nobody on you. Climb to the playside linebacker. Head across him. |
 | **RG** | Defensive guard head up on you. Hands inside, pads under his, drive him back. |
 | **RT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
-| **Y** | Defensive end on your inside shoulder. Drive him to the sideline. The ball goes inside you. |
+| **Y** | Block down on the defensive end, inside shoulder. Head across him — nobody crosses your face. |
 | **QB** | Open right, hand to the right halfback, then fake the boot. It holds the backside end. |
 | **FB** | Lead through the hole. Block the first man who shows in it. |
 | **LH** | Run hard to the left like you have the ball. You are what holds the backside. |
@@ -579,7 +579,7 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 **Coaching points**
 
-- This is Power without a slot: the right tight end kicks the end out. The yards are inside that block.
+- This is Power without a slot, and it changes nothing on the line: the right tight end takes the end man, same as always. The yards are inside that block.
 - The fullback leads through the hole. His man is whoever shows, not a man he picks before the snap — including the outside linebacker if that is who fills.
 - The right halfback's most common mistake is bouncing it wide. Make him run it tight until it is automatic.
 
@@ -595,7 +595,7 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 | Position | Assignment |
 |---|---|
-| **X** | Defensive end on your inside shoulder. Drive him to the sideline. The ball goes inside you. |
+| **X** | Block down on the defensive end, inside shoulder. Head across him — nobody crosses your face. |
 | **LT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
 | **LG** | Defensive guard head up on you. Hands inside, pads under his, drive him back. |
 | **C** | Nobody on you. Climb to the playside linebacker. Head across him. |
@@ -609,7 +609,7 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 **Coaching points**
 
-- This is Power without a slot: the left tight end kicks the end out. The yards are inside that block.
+- This is Power without a slot, and it changes nothing on the line: the left tight end takes the end man, same as always. The yards are inside that block.
 - The fullback leads through the hole. His man is whoever shows, not a man he picks before the snap — including the outside linebacker if that is who fills.
 - The left halfback's most common mistake is bouncing it wide. Make him run it tight until it is automatic.
 
@@ -1169,17 +1169,17 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 | **C** | Nobody on you. Climb to the playside linebacker. Head across him. |
 | **RG** | Defensive guard head up on you. Hands inside, pads under his, drive him back. |
 | **RT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
-| **Y** | Leave the defensive end — he is kicked out. Go take the outside linebacker. |
-| **Z** | Kick the defensive end out. Aim at his outside hip. Never let him come underneath you. |
+| **Y** | Block down on the defensive end, inside shoulder. Head across him — nobody crosses your face. |
+| **Z** | Run at the corner and screen him off. Stay in his way. |
 | **QB** | Open right and hand deep to the left halfback as he crosses, then fake the boot. It holds the backside end. |
 | **LH** **(ball)** | Cross behind the quarterback, take the handoff and hit it downhill at our tackle's outside hip. Never bounce it outside. |
 | **RH** | Lead through the hole. Block the first man who shows in it. |
 
 **Coaching points**
 
-- The same Power as the Regular I, run from two backs instead of a stack. The slot kicks the end out and the right halfback leads through the hole.
+- The same Power as the Regular I, run from two backs instead of a stack. The tight end takes the end man and the right halfback leads through the hole.
 - The runner is the back on the far side. He has further to travel, so he has to start on the snap -- no false step, no waiting to see the hole.
-- The yards are inside the slot's kick-out. If the halfback bounces it wide looking for grass, the play is dead.
+- The yards are inside the tight end's block. If the halfback bounces it wide looking for grass, the play is dead.
 
 ---
 
@@ -1193,23 +1193,23 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 | Position | Assignment |
 |---|---|
-| **X** | Leave the defensive end — he is kicked out. Go take the outside linebacker. |
+| **X** | Block down on the defensive end, inside shoulder. Head across him — nobody crosses your face. |
 | **LT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
 | **LG** | Defensive guard head up on you. Hands inside, pads under his, drive him back. |
 | **C** | Nobody on you. Climb to the playside linebacker. Head across him. |
 | **RG** | Defensive guard head up on you. Cut him off — get between him and the ball. |
 | **RT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
 | **Y** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
-| **Z** | Kick the defensive end out. Aim at his outside hip. Never let him come underneath you. |
+| **Z** | Run at the corner and screen him off. Stay in his way. |
 | **QB** | Open left and hand deep to the right halfback as he crosses, then fake the boot. It holds the backside end. |
 | **LH** | Lead through the hole. Block the first man who shows in it. |
 | **RH** **(ball)** | Cross behind the quarterback, take the handoff and hit it downhill at our tackle's outside hip. Never bounce it outside. |
 
 **Coaching points**
 
-- The same Power as the Regular I, run from two backs instead of a stack. The slot kicks the end out and the left halfback leads through the hole.
+- The same Power as the Regular I, run from two backs instead of a stack. The tight end takes the end man and the left halfback leads through the hole.
 - The runner is the back on the far side. He has further to travel, so he has to start on the snap -- no false step, no waiting to see the hole.
-- The yards are inside the slot's kick-out. If the halfback bounces it wide looking for grass, the play is dead.
+- The yards are inside the tight end's block. If the halfback bounces it wide looking for grass, the play is dead.
 
 ---
 

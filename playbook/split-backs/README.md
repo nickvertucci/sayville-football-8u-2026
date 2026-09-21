@@ -419,17 +419,17 @@ Both ends are tight on the line. The two backs sit four yards deep and just over
 | **C** | Nobody on you. Climb to the playside linebacker. Head across him. |
 | **RG** | Defensive guard head up on you. Hands inside, pads under his, drive him back. |
 | **RT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
-| **Y** | Leave the defensive end — he is kicked out. Go take the outside linebacker. |
-| **Z** | Kick the defensive end out. Aim at his outside hip. Never let him come underneath you. |
+| **Y** | Block down on the defensive end, inside shoulder. Head across him — nobody crosses your face. |
+| **Z** | Run at the corner and screen him off. Stay in his way. |
 | **QB** | Open right and hand deep to the left halfback as he crosses, then fake the boot. It holds the backside end. |
 | **LH** **(ball)** | Cross behind the quarterback, take the handoff and hit it downhill at our tackle's outside hip. Never bounce it outside. |
 | **RH** | Lead through the hole. Block the first man who shows in it. |
 
 **Coaching points**
 
-- The same Power as the Regular I, run from two backs instead of a stack. The slot kicks the end out and the right halfback leads through the hole.
+- The same Power as the Regular I, run from two backs instead of a stack. The tight end takes the end man and the right halfback leads through the hole.
 - The runner is the back on the far side. He has further to travel, so he has to start on the snap -- no false step, no waiting to see the hole.
-- The yards are inside the slot's kick-out. If the halfback bounces it wide looking for grass, the play is dead.
+- The yards are inside the tight end's block. If the halfback bounces it wide looking for grass, the play is dead.
 
 ---
 
@@ -443,23 +443,23 @@ Both ends are tight on the line. The two backs sit four yards deep and just over
 
 | Position | Assignment |
 |---|---|
-| **X** | Leave the defensive end — he is kicked out. Go take the outside linebacker. |
+| **X** | Block down on the defensive end, inside shoulder. Head across him — nobody crosses your face. |
 | **LT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
 | **LG** | Defensive guard head up on you. Hands inside, pads under his, drive him back. |
 | **C** | Nobody on you. Climb to the playside linebacker. Head across him. |
 | **RG** | Defensive guard head up on you. Cut him off — get between him and the ball. |
 | **RT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
 | **Y** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
-| **Z** | Kick the defensive end out. Aim at his outside hip. Never let him come underneath you. |
+| **Z** | Run at the corner and screen him off. Stay in his way. |
 | **QB** | Open left and hand deep to the right halfback as he crosses, then fake the boot. It holds the backside end. |
 | **LH** | Lead through the hole. Block the first man who shows in it. |
 | **RH** **(ball)** | Cross behind the quarterback, take the handoff and hit it downhill at our tackle's outside hip. Never bounce it outside. |
 
 **Coaching points**
 
-- The same Power as the Regular I, run from two backs instead of a stack. The slot kicks the end out and the left halfback leads through the hole.
+- The same Power as the Regular I, run from two backs instead of a stack. The tight end takes the end man and the left halfback leads through the hole.
 - The runner is the back on the far side. He has further to travel, so he has to start on the snap -- no false step, no waiting to see the hole.
-- The yards are inside the slot's kick-out. If the halfback bounces it wide looking for grass, the play is dead.
+- The yards are inside the tight end's block. If the halfback bounces it wide looking for grass, the play is dead.
 
 ---
 

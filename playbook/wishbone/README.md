@@ -59,7 +59,7 @@ Same line as the Regular I — both ends tight, seven on the line every snap. Fu
 | **C** | Nobody on you. Climb to the playside linebacker. Head across him. |
 | **RG** | Defensive guard head up on you. Hands inside, pads under his, drive him back. |
 | **RT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
-| **Y** | Defensive end on your inside shoulder. Drive him to the sideline. The ball goes inside you. |
+| **Y** | Block down on the defensive end, inside shoulder. Head across him — nobody crosses your face. |
 | **QB** | Open right, hand to the right halfback, then fake the boot. It holds the backside end. |
 | **FB** | Lead through the hole. Block the first man who shows in it. |
 | **LH** | Run hard to the left like you have the ball. You are what holds the backside. |
@@ -67,7 +67,7 @@ Same line as the Regular I — both ends tight, seven on the line every snap. Fu
 
 **Coaching points**
 
-- This is Power without a slot: the right tight end kicks the end out. The yards are inside that block.
+- This is Power without a slot, and it changes nothing on the line: the right tight end takes the end man, same as always. The yards are inside that block.
 - The fullback leads through the hole. His man is whoever shows, not a man he picks before the snap — including the outside linebacker if that is who fills.
 - The right halfback's most common mistake is bouncing it wide. Make him run it tight until it is automatic.
 
@@ -83,7 +83,7 @@ Same line as the Regular I — both ends tight, seven on the line every snap. Fu
 
 | Position | Assignment |
 |---|---|
-| **X** | Defensive end on your inside shoulder. Drive him to the sideline. The ball goes inside you. |
+| **X** | Block down on the defensive end, inside shoulder. Head across him — nobody crosses your face. |
 | **LT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
 | **LG** | Defensive guard head up on you. Hands inside, pads under his, drive him back. |
 | **C** | Nobody on you. Climb to the playside linebacker. Head across him. |
@@ -97,7 +97,7 @@ Same line as the Regular I — both ends tight, seven on the line every snap. Fu
 
 **Coaching points**
 
-- This is Power without a slot: the left tight end kicks the end out. The yards are inside that block.
+- This is Power without a slot, and it changes nothing on the line: the left tight end takes the end man, same as always. The yards are inside that block.
 - The fullback leads through the hole. His man is whoever shows, not a man he picks before the snap — including the outside linebacker if that is who fills.
 - The left halfback's most common mistake is bouncing it wide. Make him run it tight until it is automatic.
 

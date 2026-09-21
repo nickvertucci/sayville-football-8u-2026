@@ -3,8 +3,8 @@
 
 A new formation drops in when its alignment uses the same seven line keys and
 either FB+TB, LH+RH, or Wishbone's FB+LH+RH. These tests hold that contract so
-a play that only names Power still gets a playside end who releases (or, with
-no slot, who kicks) and a lead back in front of the ball.
+a play that only names Power still gets a playside end who kicks the end out
+and a lead back in front of the ball.
 
     python generator/test_schemes.py
 """
@@ -36,8 +36,8 @@ def check_templates() -> list[str]:
         if "lead" not in blocking.SCHEMES[name]:
             problems.append(f"{name} has no lead")
     want = {
-        ("Power", "playside_te", "block"): "release",
-        ("Power", "slot", "block"): "kick",
+        ("Power", "playside_te", "block"): "kick",
+        ("Power", "slot", "block"): "screen",
         ("Smash", "playside_te", "block"): "cutoff",
         ("Smash", "playside_g", "target"): "playside",
         ("Smash", "slot", "block"): "screen",
@@ -116,10 +116,10 @@ def check_fill(formations) -> list[str]:
         },
     }
     filled = blocking.fill_assignments(play, i_form, 1)
-    if filled.get("Y", {}).get("block") != "release":
-        problems.append(f"minimal Power did not release the playside end: {filled.get('Y')}")
-    if filled.get("Z", {}).get("block") != "kick":
-        problems.append(f"minimal Power did not kick with the slot: {filled.get('Z')}")
+    if filled.get("Y", {}).get("block") != "kick":
+        problems.append(f"minimal Power did not kick with the playside end: {filled.get('Y')}")
+    if filled.get("Z", {}).get("block") != "screen":
+        problems.append(f"minimal Power did not screen with the slot: {filled.get('Z')}")
     if filled.get("FB", {}).get("block") != "lead":
         problems.append(f"minimal Power did not lead with the fullback: {filled.get('FB')}")
     if "block" in filled.get("TB", {}):
@@ -150,8 +150,7 @@ def check_fill(formations) -> list[str]:
         },
     }
     wb_filled = blocking.fill_assignments(wb_power, bone, 1)
-    if (wb_filled.get("Y", {}).get("block") != "base"
-            or wb_filled.get("Y", {}).get("drive") != "out"):
+    if wb_filled.get("Y", {}).get("block") != "kick":
         problems.append(
             f"Wishbone Power must kick with the playside end, got {wb_filled.get('Y')}"
         )

@@ -132,8 +132,6 @@ def check_slot_takes_a_back(play, resolved, alignment, front, fid) -> list[str]:
         return problems          # carrying it, or no job from the scheme
     if (play.get("fronts") or {}).get(fid, {}).get("Z"):
         return problems          # the coach named the man himself
-    if (play.get("scheme")) == "Power":
-        return problems          # Power kicks the end out; that is the scheme
     # The engine does not record the man by name, so read him off the end of the line
     # the same way check_reaches does: the defender the block finishes on.
     ex, ey = endpoint(alignment, "Z", spec)
