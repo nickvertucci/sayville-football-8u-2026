@@ -3246,6 +3246,52 @@ def _base_eleven(roster: dict) -> list[tuple[str, str]]:
     return out
 
 
+# The five men up front are the same five in every package but one. A package is a
+# thing you call to move the ball differently -- a back somewhere else, an end out
+# wide -- and the boys blocking for it should not have to relearn who is beside them
+# every time one gets called. So a package changes the backfield and the three
+# outside the tackles, and leaves the line alone.
+#
+# Tiny is the exception and the only one. It exists to put a different five up front,
+# which is the one thing no other package is allowed to do, and naming it here rather
+# than letting it pass quietly is the point: an exception somebody chose reads
+# differently from a rule nobody enforced.
+LINE_SPOTS = ("LT", "LG", "C", "RG", "RT")
+LINE_FREE_PACKAGES = frozenset({"Tiny"})
+
+
+def check_package_lines(roster: dict) -> None:
+    """Every offensive package but Tiny fields the base line, or the build stops.
+
+    This is the invariant that kept coming undone by hand -- a package picked up a
+    guard here and a tackle there until four of the six had their own line and the
+    substitution cards were mostly linemen. A rule the build does not check is a
+    rule until somebody edits the file.
+    """
+    packs = (roster.get("packages") or {}).get("offense") or []
+    names = (roster.get("package_names") or {}).get("offense") or []
+    if not packs:
+        return
+    spots = PACKAGE_SPOTS["offense"]
+    base = dict(zip(spots, packs[0]))
+    for i, pack in enumerate(packs[1:], start=1):
+        label = names[i] if i < len(names) else f"Package {i + 1}"
+        if label in LINE_FREE_PACKAGES:
+            continue
+        here = dict(zip(spots, pack))
+        wrong = [(sp, base[sp], here[sp]) for sp in LINE_SPOTS
+                 if here.get(sp) != base.get(sp)]
+        if wrong:
+            detail = "; ".join(f"{sp} is {got} and the base line's is {want}"
+                               for sp, want, got in wrong)
+            raise SystemExit(
+                f"roster.json packages.offense, {label}: a package changes the "
+                f"backfield and the ends, not the line -- {detail}. Put the base "
+                f"line back, or add {label} to LINE_FREE_PACKAGES in site_build.py "
+                "if it is meant to be an exception like Tiny."
+            )
+
+
 def _subs_strip(roster: dict) -> str:
     """The base eleven, then what changes for each package.
 
@@ -3264,6 +3310,7 @@ def _subs_strip(roster: dict) -> str:
     names = (roster.get("package_names") or {}).get("offense") or []
     if not packs:
         return ""
+    check_package_lines(roster)
     base = _base_eleven(roster)
     by_spot = dict(base)
     spots = PACKAGE_SPOTS["offense"]
