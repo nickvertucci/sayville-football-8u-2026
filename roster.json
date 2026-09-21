@@ -316,71 +316,71 @@
     "note": "What each offensive package comes on to call, in package order. An entry is a play's full call and has to name a real play, or the build stops. The string \"any\" on its own means the package runs the whole book, so the card says Any play instead of listing it. A package may name plays from any formation, up to five -- five rows is what the card is allowed to be tall, because the blank field below the packages is sized against it.",
     "offense": [
       [
-        "Split Backs Z R 18 Sweep",
-        "Split Backs Z R 58 Sweep",
-        "Split Backs Z R 38 Toss",
-        "Split Backs Z R 36 Handoff",
-        "Split Backs Z R 49 Sweep"
+        "Split Backs Z Right 18 Sweep",
+        "Split Backs Z Right X Sweep",
+        "Split Backs Z Right 38 Toss",
+        "Split Backs Z Right 36 Handoff",
+        "Split Backs Z Right Z Sweep"
       ],
       [
-        "Split Backs Z R 58 Sweep",
-        "Split Backs Z L 69 Sweep",
-        "Split Backs Z R 49 Sweep",
-        "Split Backs Z L 48 Sweep",
-        "Regular I Z R 22 Handoff"
+        "Split Backs Z Right X Sweep",
+        "Split Backs Z Left Y Sweep",
+        "Split Backs Z Right Z Sweep",
+        "Split Backs Z Left Z Sweep",
+        "Regular I Z Right 22 Handoff"
       ],
       [
-        "Regular I Z R 32 Handoff",
-        "Regular I Z L 33 Handoff",
-        "Regular I Z R 36 Handoff",
-        "Regular I Z L 37 Handoff",
-        "Regular I Z R 58 Sweep"
+        "Regular I Z Right 32 Handoff",
+        "Regular I Z Left 33 Handoff",
+        "Regular I Z Right 36 Handoff",
+        "Regular I Z Left 37 Handoff",
+        "Regular I Z Right X Sweep"
       ],
       [
-        "Split Backs Z R 36 Handoff",
-        "Split Backs Z L 27 Handoff",
-        "Split Backs Z R 38 Toss",
-        "Split Backs Z L 29 Toss",
-        "Split Backs Z R 58 Sweep"
+        "Split Backs Z Right 36 Handoff",
+        "Split Backs Z Left 27 Handoff",
+        "Split Backs Z Right 38 Toss",
+        "Split Backs Z Left 29 Toss",
+        "Split Backs Z Right X Sweep"
       ],
       [
-        "Split Backs Z R 58 Sweep",
-        "Split Backs Z L 69 Sweep",
-        "Split Backs Z R 49 Sweep",
-        "Split Backs Z L 48 Sweep",
-        "Regular I Z R 22 Handoff"
+        "Split Backs Z Right X Sweep",
+        "Split Backs Z Left Y Sweep",
+        "Split Backs Z Right Z Sweep",
+        "Split Backs Z Left Z Sweep",
+        "Regular I Z Right 22 Handoff"
       ],
       [
-        "Power I Z R 32 Handoff",
-        "Power I Z L 33 Handoff",
-        "Power I Z R 38 Toss",
-        "Power I Z L 39 Toss"
+        "Power I Z Right 32 Handoff",
+        "Power I Z Left 33 Handoff",
+        "Power I Z Right 38 Toss",
+        "Power I Z Left 39 Toss"
       ]
     ]
   },
   "script_plays": {
     "note": "The possession script: the plays in the order they are called, down the right of the call sheet. Same rules as package_plays -- an entry is a play's full call and has to name a real play, or the build stops. A play may appear more than once; a script repeats on purpose. Fewer entries than the column has rows is fine, the rest print blank; more than it has rows stops the build, because the column's height is what the rest of the sheet is measured against.",
     "offense": [
-      "Split Backs Z R 18 Sweep",
-      "Split Backs Z R 58 Sweep",
-      "Split Backs Z R 38 Toss",
-      "Split Backs Z R 36 Handoff",
-      "Split Backs Z R 49 Sweep",
-      "Split Backs Z R 58 Sweep",
-      "Split Backs Z R 38 Toss",
-      "Split Backs Z R 36 Handoff",
-      "Regular I Z R 32 Handoff",
-      "Regular I Z R 36 Handoff",
-      "Split Backs Z R 49 Sweep",
-      "Regular I Z R 36 Handoff",
-      "Regular I Z R 22 Handoff",
-      "Regular I Z L 23 Handoff",
-      "Regular I Z R 22 Handoff",
-      "Regular I Z R 58 Sweep",
-      "Split Backs Z R 18 Sweep",
-      "Regular I Z L 48 Sweep",
-      "Split Backs Z L 29 Toss",
-      "Regular I Z R 22 Handoff"
+      "Split Backs Z Right 18 Sweep",
+      "Split Backs Z Right X Sweep",
+      "Split Backs Z Right 38 Toss",
+      "Split Backs Z Right 36 Handoff",
+      "Split Backs Z Right Z Sweep",
+      "Split Backs Z Right X Sweep",
+      "Split Backs Z Right 38 Toss",
+      "Split Backs Z Right 36 Handoff",
+      "Regular I Z Right 32 Handoff",
+      "Regular I Z Right 36 Handoff",
+      "Split Backs Z Right Z Sweep",
+      "Regular I Z Right 36 Handoff",
+      "Regular I Z Right 22 Handoff",
+      "Regular I Z Left 23 Handoff",
+      "Regular I Z Right 22 Handoff",
+      "Regular I Z Right X Sweep",
+      "Split Backs Z Right 18 Sweep",
+      "Regular I Z Left Z Sweep",
+      "Split Backs Z Left 29 Toss",
+      "Regular I Z Right 22 Handoff"
     ]
   },
   "front_slides": {

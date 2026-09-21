@@ -24,22 +24,22 @@ Both ends are tight on the line and the slot is just outside the tight end, one 
 
 | Play | Call | Scheme | Type | Ball |
 |---|---|---|---|---|
-| [Shotgun - Z R - 68 Slant Pass](#shotgun---z-r---68-slant-pass) | `Shotgun Z R 68 Slant Pass` | Protect | pass | Y |
-| [Shotgun - Z L - 59 Slant Pass](#shotgun---z-l---59-slant-pass) | `Shotgun Z L 59 Slant Pass` | Protect | pass | X |
-| [Shotgun - Z L - 19 Sweep](#shotgun---z-l---19-sweep) | `Shotgun Z L 19 Sweep` | Sweep | run | QB |
-| [Shotgun - Z R - 18 Sweep](#shotgun---z-r---18-sweep) | `Shotgun Z R 18 Sweep` | Sweep | run | QB |
-| [Shotgun - Z R - 38 Toss](#shotgun---z-r---38-toss) | `Shotgun Z R 38 Toss` | Toss | run | LH |
-| [Shotgun - Z L - 29 Toss](#shotgun---z-l---29-toss) | `Shotgun Z L 29 Toss` | Toss | run | RH |
+| [Shotgun - Z Right - Y Slant Pass](#shotgun---z-right---y-slant-pass) | `Shotgun Z Right Y Slant Pass` | Protect | pass | Y |
+| [Shotgun - Z Left - X Slant Pass](#shotgun---z-left---x-slant-pass) | `Shotgun Z Left X Slant Pass` | Protect | pass | X |
+| [Shotgun - Z Left - 19 Sweep](#shotgun---z-left---19-sweep) | `Shotgun Z Left 19 Sweep` | Sweep | run | QB |
+| [Shotgun - Z Right - 18 Sweep](#shotgun---z-right---18-sweep) | `Shotgun Z Right 18 Sweep` | Sweep | run | QB |
+| [Shotgun - Z Right - 38 Toss](#shotgun---z-right---38-toss) | `Shotgun Z Right 38 Toss` | Toss | run | LH |
+| [Shotgun - Z Left - 29 Toss](#shotgun---z-left---29-toss) | `Shotgun Z Left 29 Toss` | Toss | run | RH |
 
 ---
 
-## Shotgun - Z R - 68 Slant Pass
+## Shotgun - Z Right - Y Slant Pass
 
-**Call it:** `Shotgun Z R 68 Slant Pass`
+**Call it:** `Shotgun Z Right Y Slant Pass`
 
 **Scheme:** Protect
 
-![Shotgun - Z R - 68 Slant Pass](cards/sg-te-out-r-4-4.svg)
+![Shotgun - Z Right - Y Slant Pass](cards/sg-te-out-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -63,13 +63,13 @@ Both ends are tight on the line and the slot is just outside the tight end, one 
 
 ---
 
-## Shotgun - Z L - 59 Slant Pass
+## Shotgun - Z Left - X Slant Pass
 
-**Call it:** `Shotgun Z L 59 Slant Pass`
+**Call it:** `Shotgun Z Left X Slant Pass`
 
 **Scheme:** Protect
 
-![Shotgun - Z L - 59 Slant Pass](cards/sg-te-out-l-4-4.svg)
+![Shotgun - Z Left - X Slant Pass](cards/sg-te-out-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -93,13 +93,13 @@ Both ends are tight on the line and the slot is just outside the tight end, one 
 
 ---
 
-## Shotgun - Z L - 19 Sweep
+## Shotgun - Z Left - 19 Sweep
 
-**Call it:** `Shotgun Z L 19 Sweep`
+**Call it:** `Shotgun Z Left 19 Sweep`
 
 **Scheme:** Sweep
 
-![Shotgun - Z L - 19 Sweep](cards/sg-qb-sweep-l-4-4.svg)
+![Shotgun - Z Left - 19 Sweep](cards/sg-qb-sweep-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -123,13 +123,13 @@ Both ends are tight on the line and the slot is just outside the tight end, one 
 
 ---
 
-## Shotgun - Z R - 18 Sweep
+## Shotgun - Z Right - 18 Sweep
 
-**Call it:** `Shotgun Z R 18 Sweep`
+**Call it:** `Shotgun Z Right 18 Sweep`
 
 **Scheme:** Sweep
 
-![Shotgun - Z R - 18 Sweep](cards/sg-qb-sweep-r-4-4.svg)
+![Shotgun - Z Right - 18 Sweep](cards/sg-qb-sweep-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -153,13 +153,13 @@ Both ends are tight on the line and the slot is just outside the tight end, one 
 
 ---
 
-## Shotgun - Z R - 38 Toss
+## Shotgun - Z Right - 38 Toss
 
-**Call it:** `Shotgun Z R 38 Toss`
+**Call it:** `Shotgun Z Right 38 Toss`
 
 **Scheme:** Toss
 
-![Shotgun - Z R - 38 Toss](cards/sg-rb-toss-r-4-4.svg)
+![Shotgun - Z Right - 38 Toss](cards/sg-rb-toss-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -183,13 +183,13 @@ Both ends are tight on the line and the slot is just outside the tight end, one 
 
 ---
 
-## Shotgun - Z L - 29 Toss
+## Shotgun - Z Left - 29 Toss
 
-**Call it:** `Shotgun Z L 29 Toss`
+**Call it:** `Shotgun Z Left 29 Toss`
 
 **Scheme:** Toss
 
-![Shotgun - Z L - 29 Toss](cards/sg-rb-toss-l-4-4.svg)
+![Shotgun - Z Left - 29 Toss](cards/sg-rb-toss-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|

@@ -15,7 +15,8 @@ in [rulebook/](rulebook/), reproduced word for word, as the **Rules** page.
 ## Play calling language
 
 Every play is named the same way it is called. The **name** on the card is
-`{formation} - Z {L|R} - {digits} {word}`; the **call** is that same language without
+`{formation} - Z {Left|Right} - {digits} {word}`; the **call** is that same language
+without
 the dashes, what you yell on Saturday.
 
 **X, Y and Z are the three men outside the tackles** — the left end is the **X**, the
@@ -25,13 +26,13 @@ RTE and SL were three abbreviations of three different things.
 
 ### Regular I: formation + Z + back + hole + play word
 
-The call names the formation, then `Z R` — which side the Z lines up on — then two
+The call names the formation, then `Z Right` — which side the Z lines up on — then two
 digits: the first says **who carries it**, the second says **where it goes**, and then
-the word says what happens to the ball. So `Regular I Z R 36 Handoff` is the Regular I,
+the word says what happens to the ball. So `Regular I Z Right 36 Handoff` is the Regular I,
 Z on the right, the ball handed to the tailback between the tackle and the end.
 
 Off tackle depends on the Z's kick-out block, so he lines up on the side it has to
-happen: `Regular I Z L 37 Handoff` puts him on the left. The call says so out loud,
+happen: `Regular I Z Left 37 Handoff` puts him on the left. The call says so out loud,
 because a play that moves somebody silently is a play nobody can call.
 
 | Back | Who |
@@ -39,9 +40,12 @@ because a play that moves somebody silently is a play nobody can call.
 | **1** | Quarterback — every formation |
 | **2** | The fullback in the Regular I; the right back (RH) in the Split Backs and Shotgun — even-numbered holes |
 | **3** | The tailback (TB) in the Regular I; the left back (LH) in the Split Backs and Shotgun — odd-numbered holes |
-| **4** | The **Z**, split wide in every formation |
-| **5** | The **X**, the left end, on an end-around or a route |
-| **6** | The **Y**, the right end, the same |
+| **4** | A fourth back where a formation has one — the Wishbone's right halfback |
+
+**X, Y and Z have no digit.** They are already letters, so when one of them carries it
+or catches it the call just says the letter: `Regular I Z Right X Sweep`, `Split Backs
+Z Left Y Sweep`, `Trips Right Y Slant Pass`. A digit would be a second name for a man
+who already has one.
 
 | Hole | Word | Where | Blocking |
 |---|---|---|---|
@@ -78,68 +82,68 @@ does not cross on the named side inside the hole the call names. A call sheet th
 worse than no call sheet, so the build will not publish one.
 
 The digits describe the back the first digit names, not necessarily the ball carrier. So
-`Regular I Z R 36 Handoff` is the tailback between the right tackle and tight end,
-and `Regular I Z L 37 Handoff` is the same handoff to the left.
+`Regular I Z Right 36 Handoff` is the tailback between the right tackle and tight end,
+and `Regular I Z Left 37 Handoff` is the same handoff to the left.
 
 | Call | Play | Where it hits |
 |---|---|---|
-| `Regular I Z R 36 Handoff` / `Z L 37 Handoff` | Regular I - Z R - 36 Handoff / Z L - 37 Handoff | tailback, tackle–tight end |
-| `Regular I Z R 32 Handoff` / `Z L 33 Handoff` | Regular I - Z R - 32 Handoff / Z L - 33 Handoff | tailback, A gap, fullback leading |
-| `Regular I Z R 22 Handoff` / `Z L 23 Handoff` | Regular I - Z R - 22 Handoff / Z L - 23 Handoff | fullback, A gap, on the snap |
-| `Regular I Z R 58 Sweep` / `Z L 69 Sweep` | Regular I - Z R - 58 Sweep / Z L - 69 Sweep | the backside tight end on an end-around, all the way outside |
-| `Regular I Z R 68 Slant Pass` / `Z L 59 Slant Pass` | Regular I - Z R - 68 Slant Pass / Z L - 59 Slant Pass | the play-side tight end, flat out along the line |
-| `Regular I Z R 49 Sweep` / `Z L 48 Sweep` | Regular I - Z R - 49 Sweep / Z L - 48 Sweep | the slot, flat across the backfield and outside the other way |
-| `Regular I Z R 38 Toss` / `Z L 39 Toss` | Regular I - Z R - 38 Toss / Z L - 39 Toss | tailback, pitched wide and outside the tight end |
-| `Regular I Z R 38 Pitch Pass` / `Z L 39 Pitch Pass` | Regular I - Z R - 38 Pitch Pass / Z L - 39 Pitch Pass | the same pitch, and the tailback pulls up behind the line and throws |
+| `Regular I Z Right 36 Handoff` / `Z Left 37 Handoff` | Regular I - Z Right - 36 Handoff / Z Left - 37 Handoff | tailback, tackle–tight end |
+| `Regular I Z Right 32 Handoff` / `Z Left 33 Handoff` | Regular I - Z Right - 32 Handoff / Z Left - 33 Handoff | tailback, A gap, fullback leading |
+| `Regular I Z Right 22 Handoff` / `Z Left 23 Handoff` | Regular I - Z Right - 22 Handoff / Z Left - 23 Handoff | fullback, A gap, on the snap |
+| `Regular I Z Right X Sweep` / `Z Left Y Sweep` | Regular I - Z Right - X Sweep / Z Left - Y Sweep | the backside tight end on an end-around, all the way outside |
+| `Regular I Z Right Y Slant Pass` / `Z Left X Slant Pass` | Regular I - Z Right - Y Slant Pass / Z Left - X Slant Pass | the play-side tight end, flat out along the line |
+| `Regular I Z Right Z Sweep` / `Z Left Z Sweep` | Regular I - Z Right - Z Sweep / Z Left - Z Sweep | the slot, flat across the backfield and outside the other way |
+| `Regular I Z Right 38 Toss` / `Z Left 39 Toss` | Regular I - Z Right - 38 Toss / Z Left - 39 Toss | tailback, pitched wide and outside the tight end |
+| `Regular I Z Right 38 Pitch Pass` / `Z Left 39 Pitch Pass` | Regular I - Z Right - 38 Pitch Pass / Z Left - 39 Pitch Pass | the same pitch, and the tailback pulls up behind the line and throws |
 
-**Every call is numbered.** The tight ends used to be the exception — a tight end is
-not a back, so `X Sweep` named him instead of a hole — and they are 5 and 6 now, so
-there is no exception left. `58 Sweep` is the X coming all the way across to the 8 hole;
-`68 Slant Pass` is the Y flat out along the line. A call
-with no number fails the build, which is what it should always have been: the number is
-the thing on the wristband.
+**A call names its man once.** A back has a digit, so a back's call carries two of
+them — who and where. X, Y and Z have a letter, so their call carries the letter and the
+word and nothing else: `X Sweep` is the X coming all the way across, `Y Slant Pass` is
+the Y flat out along the line. There is no hole to say, because the man who is already
+outside the tackle does not run through a gap to get there. Anything else — a nickname,
+a back with no digit, a letter that is not X, Y or Z — fails the build.
 
 Every play has a left and a right.
 
 ### Split Backs: formation + Z + back + hole + play word
 
 Two backs to number instead of three, and a Z out wide to declare — so the call reads
-like the Regular I's. `Split Backs Z R 38 Toss` is the Split Backs, Z on the right, the
+like the Regular I's. `Split Backs Z Right 38 Toss` is the Split Backs, Z on the right, the
 3-back (left halfback) all the way outside at the 8 hole. In this formation the **3-back is
 always the left back** (odd-numbered holes) and the **2-back is always the right back**
 (even-numbered holes); the Z keeps **4**, the number he carries in every look.
 
 | Call | Play | Reads as |
 |---|---|---|
-| `Split Backs Z L 29 Toss` / `Z R 38 Toss` | Split Backs - Z L - 29 Toss / Z R - 38 Toss | the far back, all the way outside |
-| `Split Backs Z L 29 Pitch Pass` / `Z R 38 Pitch Pass` | Split Backs - Z L - 29 Pitch Pass / Z R - 38 Pitch Pass | the same pitch, and the far back pulls up behind the line and throws |
+| `Split Backs Z Left 29 Toss` / `Z Right 38 Toss` | Split Backs - Z Left - 29 Toss / Z Right - 38 Toss | the far back, all the way outside |
+| `Split Backs Z Left 29 Pitch Pass` / `Z Right 38 Pitch Pass` | Split Backs - Z Left - 29 Pitch Pass / Z Right - 38 Pitch Pass | the same pitch, and the far back pulls up behind the line and throws |
 
 The back digit follows whoever actually carries it. On the toss it is the far back,
 because the near one is busy bubbling out to block.
 
 ### Shotgun: formation + Z + back + hole + play word
 
-The Shotgun's pass is numbered off the end who catches it — 6 for the Y, 5 for the X —
-and the hole he crosses the line in. Its halfbacks number the same way
-the Split Backs do: 3 is left, 2 is right.
+The Shotgun's pass is called off the end who catches it — `Y Slant Pass`, `X Slant
+Pass` — and its halfbacks number the same way the Split Backs do: 3 is left, 2 is
+right.
 
 | Call | Play | Reads as |
 |---|---|---|
-| `Shotgun Z R 68 Slant Pass` / `Z L 59 Slant Pass` | Shotgun - Z R - 68 Slant Pass / Z L - 59 Slant Pass | the play-side tight end, a flat slant out almost on the line of scrimmage |
-| `Shotgun Z L 19 Sweep` / `Z R 18 Sweep` | Shotgun - Z L - 19 Sweep / Z R - 18 Sweep | the quarterback, all the way outside behind the near halfback |
-| `Shotgun Z L 29 Toss` / `Z R 38 Toss` | Shotgun - Z L - 29 Toss / Z R - 38 Toss | the far halfback, across in front of the quarterback and all the way outside |
+| `Shotgun Z Right Y Slant Pass` / `Z Left X Slant Pass` | Shotgun - Z Right - Y Slant Pass / Z Left - X Slant Pass | the play-side tight end, a flat slant out almost on the line of scrimmage |
+| `Shotgun Z Left 19 Sweep` / `Z Right 18 Sweep` | Shotgun - Z Left - 19 Sweep / Z Right - 18 Sweep | the quarterback, all the way outside behind the near halfback |
+| `Shotgun Z Left 29 Toss` / `Z Right 38 Toss` | Shotgun - Z Left - 29 Toss / Z Right - 38 Toss | the far halfback, across in front of the quarterback and all the way outside |
 
 **Play word** — a numbered run's word is what happens to the ball: **Handoff** from 0
 through 7, **Toss** at 8/9. The blocking family is still the hole — Smash, Dive, Power,
 Toss — and it is still what `--check` holds the play to; it is just not what gets
 yelled.
-**Sweep** is *who*, not where: the quarterback (`18` / `19`), the Z (`48` / `49`) or an
-end (`58` / `59`, `68` / `69`) coming across to get there. Anyone else at 8/9 is a Toss.
-Digit 4 is the Z only in looks that have one — Wishbone's 4 is the right halfback, so
-`49 Toss` is Toss.
-**A pass's word is its route, not its hole** — `68 Slant Pass`, `38 Quick Pass`,
-`38 Pitch Pass`. The digits are still checked against the diagram; only the word is
-free, because a route is not a gap.
+**Sweep** is *who*, not where: the quarterback (`18` / `19`) or one of the three
+letters (`X Sweep`, `Y Sweep`, `Z Sweep`) coming across to get there. A back at 8/9 is a
+Toss. Digits belong to backs, so a digit never names a letter — the Wishbone's `49 Toss`
+is its right halfback, not the Z.
+**A pass's word is its route, not its hole** — `Y Slant Pass`, `38 Quick Pass`,
+`38 Pitch Pass`. Where a pass does carry digits they are still checked against the
+diagram; only the word is free, because a route is not a gap.
 **Pitch Pass** keeps the toss's digits — `38 Pitch Pass` is the 38 Toss right up
 until the back pulls up behind the line and throws, so it is called the same way and
 the first digit is still the man who takes the pitch. He never crosses the line, and
@@ -148,7 +152,7 @@ of scrimmage is a penalty.
 
 ### Wishbone: formation + back + hole + play word
 
-Three backs and no Z, so the call drops the Z R / Z L. `Wishbone 22 Handoff`
+Three backs and no Z, so the call drops the Z Right / Z Left. `Wishbone 22 Handoff`
 is the fullback between the center and the right guard. `46 Handoff` is the right
 halfback off tackle; `38 Toss` is the left halfback all the way outside.
 
@@ -161,18 +165,18 @@ halfback off tackle; `38 Toss` is the left halfback all the way outside.
 
 ### Trips: formation + bunch + who + play word
 
-Empty backfield. Backs **2, 3 and 4** (fullback, tailback, Z) bunched
+Empty backfield. The fullback, the tailback and the Z bunched
 outside the end; the quarterback is alone. The call names the bunch —
 `Trips Right`, `Trips Left` — then who gets it. With nobody in the backfield
 to hand to, everything here goes outside or in the air, so every number that comes
-up is an 8 or a 9.
+up is an 8 or a 9 — and the two ends, who are called by letter.
 
 | Call | Play | Reads as |
 |---|---|---|
 | `Trips Right 18 Sweep` / `Trips Left 19 Sweep` | Trips - Right - 18 Sweep / Left - 19 Sweep | the quarterback, alone in the backfield, outside the bunch |
 | `Trips Right 38 Quick Pass` / `Trips Left 39 Quick Pass` | Trips - Right - 38 Quick Pass / Left - 39 Quick Pass | the tailback out of the bunch, thrown to outside the tight end |
-| `Trips Right 58 Sweep` / `Trips Left 69 Sweep` | Trips - Right - 58 Sweep / Left - 69 Sweep | the backside tight end on an end-around |
-| `Trips Right 68 Slant Pass` / `Trips Left 59 Slant Pass` | Trips - Right - 68 Slant Pass / Left - 59 Slant Pass | the play-side tight end, flat out on the line |
+| `Trips Right X Sweep` / `Trips Left Y Sweep` | Trips - Right - X Sweep / Left - Y Sweep | the backside tight end on an end-around |
+| `Trips Right Y Slant Pass` / `Trips Left X Slant Pass` | Trips - Right - Y Slant Pass / Left - X Slant Pass | the play-side tight end, flat out on the line |
 
 ## Formations
 
@@ -196,8 +200,8 @@ That is the reason to carry related looks rather than unrelated offenses.
 **None of them is symmetric, so every left-handed play is written by hand.** The slot
 sits split to the right unless a play moves him, so flipping a play would flip his path
 while leaving him aligned on the same side. A left-handed play that needs him on the
-left moves him and says so in the call — the Regular I's `Z L 37 Handoff`, the
-Split Backs' `Z L 29 Toss` — each the mirror of its right-hand play.
+left moves him and says so in the call — the Regular I's `Z Left 37 Handoff`, the
+Split Backs' `Z Left 29 Toss` — each the mirror of its right-hand play.
 
 ## Defense
 
@@ -358,7 +362,7 @@ boy, cut on the dashes, load them top to bottom.
 
 Three pouches instead of one window is what pays for the type. Forty-two plays in one
 window is a column of nine-point rows; fourteen in a panel, two columns of eight, is
-fifteen and a half with room to breathe between them. A row reads `1 · Z R 36 Handoff`
+fifteen and a half with room to breathe between them. A row reads `1 · Z Right 36 Handoff`
 — the number, then the call word for word, minus the formation the pouch already names.
 The reader is nine years old, outdoors, and somebody is shouting a number at him.
 

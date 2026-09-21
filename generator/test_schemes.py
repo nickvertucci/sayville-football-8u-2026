@@ -108,7 +108,7 @@ def check_fill(formations) -> list[str]:
     play = {
         "id": "x-power-r",
         "scheme": "Power",
-        "call": "Regular I Slot Right 36 Power",
+        "call": "Regular I Z Right 36 Handoff",
         "direction": "right",
         "assignments": {
             "QB": {"rule": "Hand it.", "type": "fake", "path": [[1.0, -0.5]]},

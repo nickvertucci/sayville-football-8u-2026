@@ -327,7 +327,7 @@ def play_alignment(form: dict, play: dict) -> dict:
     A formation has one alignment, but a formation is not always one picture. The
     The Z is split right on almost every snap, but Power is built on his kick-out and
     Jet needs him with a formation to cross, so those two move him. A play may say
-    which, and the call says it out loud — `Regular I Slot Left 37 Power` — so nobody is
+    which, and the call says it out loud — `Regular I Z Left 37 Handoff` — so nobody is
     moved silently.
 
     An override may only move somebody the formation already has. It cannot add a
@@ -418,6 +418,25 @@ def is_pitch_passer(play: dict, pos: str) -> bool:
             and play.get("ball_carrier") != pos)
 
 
+# The three who are called by letter rather than by a digit.
+LETTER_BACKS = ("X", "Y", "Z")
+
+
+def _letter_tail(call: str, form: dict, play: dict) -> str:
+    """What is left of a call once the formation and the alignment phrase are off.
+
+    "Split Backs Z Right X Sweep" is "X Sweep". The alignment phrase is whatever word
+    the call puts in front of Left or Right -- "Z Right" here -- and the word is
+    optional, because in Trips the strength word IS the formation name and has already
+    come off with it: "Trips Right X Sweep" is down to "Right X Sweep" by then. The
+    Wishbone has no alignment phrase at all.
+    """
+    label = form_label(form)
+    if call.lower().startswith(label.lower() + " "):
+        call = call[len(label) + 1:]
+    return re.sub(r"^(?:\w+ )?(?:Left|Right) ", "", call)
+
+
 def validate_call(play: dict, form: dict, defenses: dict) -> list[str]:
     """Check a play's call against the play's own diagram."""
     call = play.get("call")
@@ -432,16 +451,16 @@ def validate_call(play: dict, form: dict, defenses: dict) -> list[str]:
     # The call says where the Z stands, so the diagram has to agree. This is not
     # implied by anything else: the Z is a blocker on most plays, so moving him to the
     # wrong side leaves every geometry check happy and only the picture wrong. It is
-    # also the easy mistake to make, because a Z R play carries no alignment override
-    # at all -- it takes the formation's -- so mirroring one to the left means *adding*
-    # a key rather than flipping one, which is easy to forget.
-    side_word = re.search(r"\bZ (L|R)\b", call)
+    # also the easy mistake to make, because a Z Right play carries no alignment
+    # override at all -- it takes the formation's -- so mirroring one to the left means
+    # *adding* a key rather than flipping one, which is easy to forget.
+    side_word = re.search(r"\bZ (Left|Right)\b", call)
     if side_word:
         where = play_alignment(form, play).get("Z")
         if where is None:
             return [f"{pid}: call '{call}' says Z {side_word.group(1)}, but this "
                     "formation has no Z"]
-        wanted = -1 if side_word.group(1) == "L" else 1
+        wanted = -1 if side_word.group(1) == "Left" else 1
         if (where[0] < 0) != (wanted < 0):
             stood = "left" if where[0] < 0 else "right"
             return [f"{pid}: call '{call}' says Z {side_word.group(1)}, but the Z "
@@ -449,13 +468,26 @@ def validate_call(play: dict, form: dict, defenses: dict) -> list[str]:
                     f'"alignment" override for Z, or fix the call']
 
     m = CALL_DIGITS.search(call)
-    # Every call is numbered. There used to be an opt-out for the one ball carrier the
-    # numbering had no digit for -- a tight end on an end-around -- and then the tight
-    # ends got digits, 5 for the left one and 6 for the right, so there is nobody left
-    # to opt out. A call with no number is a mistake again, which is what it should
-    # always have been: the number is the thing on the wristband.
+    # A letter call: X, Y and Z name themselves. They had digits for a while -- 4, 5
+    # and 6, after the backs -- and the digits went when the letters came, because two
+    # names for one man is one more than anybody needs and the letter is the one on his
+    # diagram. So the call is "Z Right X Sweep", and what has to be true of it is that
+    # the letter is the man carrying it and that the play says which way it goes: with
+    # no hole digit, `direction` is where playside comes from.
     if not m:
-        return [f"{pid}: call '{call}' has no two-digit back-and-hole number"]
+        carrier = play.get("ball_carrier")
+        if carrier not in LETTER_BACKS:
+            return [f"{pid}: call '{call}' has no two-digit back-and-hole number, and "
+                    f"no letter either — only {', '.join(LETTER_BACKS)} name themselves"]
+        tail = _letter_tail(call, form, play)
+        if not tail.startswith(carrier + " "):
+            return [f"{pid}: call '{call}' is a letter call, so it has to name the man "
+                    f"carrying it — {carrier} — before the play word, and it says "
+                    f"{tail.split(' ')[0]!r}"]
+        if play.get("direction") not in ("left", "right"):
+            return [f"{pid}: letter call '{call}' needs a direction, left or right: "
+                    "with no hole digit that is where its playside comes from"]
+        return []
     back_digit, hole_digit = m.group(1), m.group(2)
 
     pos = backs.get(back_digit)

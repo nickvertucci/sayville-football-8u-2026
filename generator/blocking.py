@@ -99,12 +99,10 @@ HOLE_WORD = {
 # so by name rather than failing on geometry nobody can read.
 NO_SUCH_HOLE = 1
 
-# Digit 1 is always the quarterback. Digit 4 is the slot in every look that
-# has one — Sweep is who, so a formation that puts a halfback on 4 (Wishbone)
-# does not turn 48/49 into Sweep.
-# Used only when the formation is unknown: the quarterback and, by convention, the
-# slot and the two tight ends.
-SWEEP_BACKS = ("1", "4", "5", "6")
+# Digit 1 is always the quarterback, and he is the only digit left that sweeps: X, Y
+# and the Z name themselves in the call now and never reach a digit check. Used only
+# when the formation is unknown.
+SWEEP_BACKS = ("1",)
 
 CALL_DIGITS = re.compile(r"\b(\d)(\d)\b")
 
@@ -114,24 +112,19 @@ def scheme_for_hole(hole: int) -> str | None:
     return HOLE_SCHEME.get(hole)
 
 
-SWEEP_SPOTS = ("Z", "X", "Y")
-
-
 def is_sweep_back(back_digit: str | None, form: dict | None = None) -> bool:
     """True when this numbered man going wide at 8/9 is Sweep, not Toss.
 
-    The quarterback (1) always is. So is anyone coming across the formation to get
-    there — the slot and either tight end — because a sweep is who is carrying it,
-    not where it goes. And it is whoever `backs` maps to that spot, not whichever
-    digit happens to be 4: Wishbone's 4 is the right halfback, so 49 Toss is a toss.
+    Only the quarterback, now. A sweep is who is carrying it rather than where it
+    goes, and the other three who come across the formation to get there — X, Y and
+    the Z — name themselves in the call and have no digit to test. Everybody left
+    with a digit at 8/9 is taking a pitch, which is a Toss: Wishbone's 4 is the right
+    halfback, so 49 Toss is a toss.
+
+    `form` is still in the signature because the call sites pass it and the day a
+    formation numbers somebody new, this is where that is decided.
     """
-    if not back_digit:
-        return False
-    if back_digit == "1":
-        return True
-    if form:
-        return (form.get("backs") or {}).get(back_digit) in SWEEP_SPOTS
-    return back_digit in SWEEP_BACKS
+    return back_digit == "1"
 
 
 def scheme_for_call(hole: int, back_digit: str | None = None,
