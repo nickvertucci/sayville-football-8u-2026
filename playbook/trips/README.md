@@ -179,14 +179,16 @@ Seven on the line every snap: the five up front, the X tight on the left end, an
 | **RT** | D — nothing in your gap and nobody on you. Go downfield and get the right outside linebacker. |
 | **Y** | Block down on the defensive end, inside shoulder. Head across him — nobody crosses your face. |
 | **Z** | Run at the corner and screen him off. Stay in his way. |
-| **QB** **(ball)** | Take the snap and sweep right, flat and fast, behind the trips. Turn up outside the fullback. |
-| **FB** | Bubble out around our end — do not run up into the line. Block the first man out there; here it is the linebacker. |
-| **TB** | Run hard to the left like you have the ball. Sell it all the way. |
+| **QB** **(ball)** | Take the snap and sweep right, flat and fast, behind the trips. Turn up outside the tailback's block. |
+| **FB** | Run hard to the left like you have the ball. Sell it all the way. |
+| **TB** | Help on the defensive end, then take the outside linebacker. |
 
 **Coaching points**
 
 - The quarterback keeps it every time — tell him before the snap, there is no read.
-- He stays behind the trips until the fullback's block is made, then turns it up.
+- He stays behind the trips until the tailback's block is made, then turns it up.
+- The tailback helps on the end first and only then climbs to the outside linebacker. Going straight to the linebacker leaves the end free to chase it down from behind.
+- The fullback's run to the left is the whole disguise — he has to sell it at full speed with nothing in his hands.
 
 ---
 
@@ -208,14 +210,16 @@ Seven on the line every snap: the five up front, the X tight on the left end, an
 | **RT** | D — nothing in your gap and nobody on you. Go downfield and get the right outside linebacker. |
 | **Y** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
 | **Z** | Run at the corner and screen him off. Stay in his way. |
-| **QB** **(ball)** | Take the snap and sweep left, flat and fast, behind the trips. Turn up outside the fullback. |
-| **FB** | Bubble out around our end — do not run up into the line. Block the first man out there; here it is the linebacker. |
-| **TB** | Run hard to the right like you have the ball. Sell it all the way. |
+| **QB** **(ball)** | Take the snap and sweep left, flat and fast, behind the trips. Turn up outside the tailback's block. |
+| **FB** | Run hard to the right like you have the ball. Sell it all the way. |
+| **TB** | Help on the defensive end, then take the outside linebacker. |
 
 **Coaching points**
 
 - The quarterback keeps it every time — tell him before the snap, there is no read.
-- He stays behind the trips until the fullback's block is made, then turns it up.
+- He stays behind the trips until the tailback's block is made, then turns it up.
+- The tailback helps on the end first and only then climbs to the outside linebacker. Going straight to the linebacker leaves the end free to chase it down from behind.
+- The fullback's run to the right is the whole disguise — he has to sell it at full speed with nothing in his hands.
 
 ---
 

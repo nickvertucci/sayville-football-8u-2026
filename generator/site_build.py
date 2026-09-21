@@ -376,53 +376,79 @@ h1.page { font-size: clamp(23px, 5vw, 33px); letter-spacing: -.5px; margin: 22px
 /* Depth chart: positions down the left, numbered depth across the top — the shape
    of an NFL team's published chart. A real <table> so it reads as a grid. Names are
    hard values from roster.json; there is nothing to pick up. */
-.tablewrap.dc-board-wrap {
-  margin: 10px 0 4px; overflow: auto; max-height: 65vh; overscroll-behavior: contain;
-  background: var(--panel);
-  border: 1px solid var(--line); border-radius: 12px; box-shadow: var(--shadow);
+/* The board is the formation. Each band is a row of the field and each card is a
+   spot, so the left guard is between the centre and the left tackle on the page the
+   way he is on the grass. Bands are flex rather than a grid because the rows are
+   different widths on purpose -- seven across the line, three in the backfield --
+   and a shared grid would either stretch the backfield or squeeze the line. */
+.dc-field { margin: 10px 0 4px; display: flex; flex-direction: column; gap: 8px; }
+.dc-band {
+  display: grid; grid-template-columns: repeat(var(--dc-cols, 7), minmax(0, 1fr));
+  align-items: start; gap: 6px;
 }
-table.dc-board {
-  width: 100%; border-collapse: collapse; table-layout: fixed; min-width: 720px;
+/* The leftover rows are a list, not a place on the field, so they go back to being
+   a row of cards rather than being dropped into columns that mean nothing to them. */
+.dc-band-alt {
+  display: flex; flex-wrap: wrap; justify-content: center;
+  margin-top: 4px; padding-top: 8px; border-top: 1px dashed var(--line);
 }
-table.dc-board th, table.dc-board td {
-  border-bottom: 1px solid var(--line-soft); border-right: 1px solid var(--line-soft);
-  padding: 6px 10px; text-align: left; vertical-align: middle;
+.dc-band-h {
+  flex: 1 0 100%; margin: 0 0 2px; text-align: center;
+  font-size: 10px; font-weight: 800; letter-spacing: 1px;
+  text-transform: uppercase; color: var(--muted);
 }
-table.dc-board th:last-child, table.dc-board td:last-child { border-right: 0; }
-table.dc-board tbody tr:last-child td { border-bottom: 0; }
-table.dc-board tbody tr:nth-child(even) td { background: var(--panel-2); }
-table.dc-board thead th { position: sticky; top: 0; z-index: 3; }
-table.dc-board .dc-poscell { position: sticky; left: 0; z-index: 2; }
-table.dc-board thead th:first-child {
-  left: 0; z-index: 4; background: var(--accent-solid);
+.dc-pos {
+  min-width: 0;
+  background: var(--panel); border: 1px solid var(--line); border-radius: 8px;
+  box-shadow: var(--shadow); overflow: hidden;
 }
-table.dc-board .dc-poscell { box-shadow: 3px 0 6px rgba(0, 0, 0, .18); }
-table.dc-board thead th {
-  background: var(--accent-solid); color: var(--on-accent); text-align: left;
-  font-size: 11px; text-transform: uppercase; letter-spacing: 1.3px; font-weight: 800;
-  padding: 9px 12px;
+.dc-band-alt .dc-pos { flex: 0 1 132px; }
+/* A card straddling two columns is still one card wide -- it is centred on the seam
+   between them rather than stretched across both. Half the pair less half the gap is
+   exactly one column. */
+.dc-pos.dc-straddle { justify-self: center; width: calc(50% - 3px); }
+/* The spot on a black bar, the way it is on a real chart: it is the thing you scan
+   for, and on a page of names it has to not be another name. Black rather than the
+   site navy, and literal rather than a variable, because the bar wants maximum
+   contrast against the names under it in both themes -- the navy is close enough to
+   the dark theme's own panel that the bars stopped reading as bars. */
+.dc-pos-h {
+  margin: 0; padding: 3px 6px; text-align: center;
+  background: #000; color: #fff;
 }
-table.dc-board .dc-poscell { background: var(--panel-2); white-space: nowrap; }
-/* The board is table-layout: fixed, so every column takes its width from the FIRST
-   row and a width on a body cell is ignored. This is the rule that sizes the position
-   column, and it has to live on the header. 250px fits the longest label the board
-   prints -- "Right outside linebacker (Rhino)", 32 characters at 11.5px beside a
-   four-letter abbreviation. The old 148px was set when the longest was "Right outside
-   linebacker" and no abbreviation ran past two letters; the cell is nowrap and sticky,
-   so outgrowing it did not wrap or clip, it ran the label out over the first column of
-   names. */
-table.dc-board thead th:first-child { width: 250px; }
-table.dc-board .dc-poscell .dc-abbr { font-size: 14px; }
-table.dc-board .dc-poscell .dc-label { font-size: 11.5px; margin-left: 7px; }
-table.dc-board tbody tr:nth-child(even) td.dc-poscell { background: var(--panel); }
-table.dc-board tr.dc-alt td { opacity: .72; }
-table.dc-board tr.dc-alt .dc-abbr::after {
-  content: " ·"; color: var(--muted); font-weight: 500;
+/* `color: inherit` is doing real work on both of these, not tidying up. There are
+   plain `.dc-abbr` and `.dc-label` rules further down the sheet that colour them for
+   the defensive front pages, and a direct declaration beats an inherited one however
+   specific the parent is -- so the white set on the bar never reached the text and
+   the spot came out navy-on-black. Inheriting is what makes the bar's colour the
+   text's colour here and in print, where the bar is forced white on black. */
+.dc-pos-h .dc-abbr {
+  display: block; color: inherit;
+  font-size: 14px; font-weight: 900; letter-spacing: .8px;
 }
-table.dc-board td.dc-cell {
-  min-width: 108px; font-size: 13.5px; font-weight: 600; color: var(--ink);
+.dc-pos-h .dc-label {
+  display: block; color: inherit;
+  font-size: 8.5px; font-weight: 700; letter-spacing: .3px;
+  text-transform: uppercase; opacity: .78; line-height: 1.25;
 }
-table.dc-board td.dc-cell.starter { font-weight: 800; }
+.dc-names { margin: 0; padding: 2px 0; list-style: none; }
+.dc-names li {
+  display: flex; align-items: baseline; gap: 5px;
+  padding: 1px 6px; font-size: 12px; font-weight: 600; color: var(--ink-2);
+}
+/* The rank has to be printed now that depth runs down the card instead of across a
+   row of numbered columns -- otherwise the third string is just the third line. */
+.dc-names li b {
+  flex: 0 0 11px; font-size: 9px; font-weight: 800; color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+.dc-names li.starter { font-size: 13.5px; font-weight: 800; color: var(--ink); }
+.dc-names li.starter b { color: var(--accent-solid); }
+.dc-names li:nth-child(even) { background: var(--panel-2); }
+.dc-gap { color: var(--muted); }
+.dc-open {
+  margin: 0; padding: 4px 6px; font-size: 11px; font-style: italic; color: var(--muted);
+}
 
 .dc-pkgs { margin: 14px 0 0; }
 .dc-pkgrow {
@@ -436,9 +462,14 @@ table.dc-board td.dc-cell.starter { font-weight: 800; }
   padding: 6px 8px; box-shadow: var(--shadow); min-width: 0;
 }
 .dc-pkg-body { flex: 1 1 auto; min-width: 0; }
+/* The package name gets the same black bar as a position, for the same reason: it
+   is the thing you scan a page of packages for, and grey small caps made it the
+   quietest thing in its own box. Full width of the body so it reads as the box's
+   heading and not as a first row. */
 .dc-pkg-h {
-  margin: 0 0 4px; font-size: 13.5px; font-weight: 800; letter-spacing: 1.1px;
-  text-transform: uppercase; color: var(--muted);
+  margin: -6px -8px 5px; padding: 3px 8px;
+  font-size: 13.5px; font-weight: 800; letter-spacing: 1.1px;
+  text-transform: uppercase; background: #000; color: #fff;
 }
 /* min-width stays at 168: it is what the offense's three-across cards can spare, and
    raising it for the defence's longer labels squeezed the offense body until "Brogan
@@ -488,6 +519,20 @@ table.dc-sub th:last-child, table.dc-sub td:last-child {
 table.dc-sub thead th {
   font-size: 10.5px; font-weight: 800; letter-spacing: .4px;
   text-transform: uppercase; color: var(--muted);
+}
+/* SUBS and MOVES name the two blocks outright, in a tinted band the width of the
+   card. The rule between them said there were two kinds of change here; it did not
+   say which kind you were looking at, so the reader worked it out from the column
+   headings -- and "Moved / Spot" is only obviously a different subject from
+   "Out / In" once you have already read both. A coach reading this on a sideline is
+   answering one of two questions: who is running on and off, or who is already out
+   there and standing somewhere new. The band answers it before he reads a name. */
+table.dc-sub > caption {
+  caption-side: top; text-align: left;
+  margin: 0 0 2px; padding: 1px 5px; border-radius: 3px;
+  background: var(--line); color: var(--ink-2);
+  font-size: 9.5px; font-weight: 800; letter-spacing: .9px;
+  text-transform: uppercase;
 }
 /* The Moved block is a second table under the first, and the rule between them does
    the work a third pair of columns would have done badly: Out is a man leaving and In
@@ -732,25 +777,46 @@ table.xl.xl-plays td {
   border: 1px dashed var(--line); border-radius: 4px; padding: 0 0 4px;
   background: var(--panel); overflow: hidden;
 }
-/* The bar is the pouch: a boy knows which window a number is in before he opens it. */
+/* The bar is the pouch: a boy knows which window a number is in before he opens it.
+   So the formation is the biggest thing on the band after the numbers themselves,
+   and it is centred, because a name pushed into the left corner of a five-inch
+   window is a name you have to go looking for. The number span keeps its corner and
+   comes out of the flow to do it -- centring the name between two flex items would
+   centre it in the space the span leaves, which is not the middle of the pouch. */
 .band-form {
-  display: flex; align-items: baseline; justify-content: space-between; gap: 6px;
-  margin: 0 0 3px; padding: 3px 8px; font-size: 12px; font-weight: 900;
-  text-transform: uppercase; letter-spacing: .5px;
+  display: grid; grid-auto-flow: column; grid-auto-columns: 1fr;
+  margin: 0 0 3px; font-size: 24px; font-weight: 900;
+  text-transform: uppercase; letter-spacing: .5px; line-height: 1.1;
   color: var(--on-accent); background: var(--accent-solid);
 }
-.band-span { font-size: 10px; font-weight: 800; opacity: .8; }
-.band-body { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 10px; }
-.band-sub {
-  margin: 0 0 1px; padding: 0 4px; font-size: 9.5px; font-weight: 900;
-  text-transform: uppercase; letter-spacing: .4px; color: var(--muted);
-  border-bottom: 1px solid var(--line);
+/* One segment per column. The divider is a white rule inside the black bar rather
+   than a gap, because a gap between two black blocks reads as two bars and the
+   pouch is one thing. */
+.band-seg {
+  position: relative;
+  display: flex; align-items: center; justify-content: center;
+  padding: 5px 8px; min-width: 0;
 }
+.band-seg + .band-seg { border-left: 2px solid var(--on-accent); }
+.band-span {
+  position: absolute; right: 6px; bottom: 4px;
+  font-size: 10px; font-weight: 800; opacity: .8;
+}
+.band-body { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 10px; }
 .band ol { margin: 0; padding: 0; list-style: none; }
-.band ol + .band-sub { margin-top: 5px; }
+/* 11.8px, and the longest row is what set it, measured rather than guessed. That
+   row is "Z Tight Right - Y Slant Pass Right" and it has half a five-inch pouch to
+   stand in. Rendered at 5in the slack goes: 13px overflows by 8.6, 12.6px by 2.4,
+   12.2px just fits with 3.8 to spare, 11.8px has 10. Ten points is the margin worth
+   keeping, because the printer is not this browser.
+
+   The rows are nowrap on purpose -- a call that wraps is a call a boy reads as two
+   -- so the type is what gives, not the line. Two changes have eaten into this
+   already: "Tight" joining the Z's phrase, and the dashes. Anything that lengthens
+   a call again has to be measured against that same longest row before it ships. */
 .band li {
-  display: flex; align-items: baseline; gap: 6px;
-  padding: 0 5px; font-size: 14px; font-weight: 700; line-height: 2.15;
+  display: flex; align-items: baseline; gap: 5px;
+  padding: 0 5px; font-size: 11.8px; font-weight: 700; line-height: 2.4;
   color: var(--ink); white-space: nowrap;
 }
 /* Zebra rather than a rule between rows. A rule is a thing to read past; a band of
@@ -765,7 +831,7 @@ table.xl.xl-plays td {
    side: the screen is a preview, the printed inches are the thing. */
 @media (max-width: 560px) {
   .band-set { width: 100%; grid-template-rows: none; }
-  .band li { font-size: 13.5px; line-height: 2.15; }
+  .band li { font-size: 11.8px; line-height: 2.4; }
 }
 
 /* ------------------------------------------------- defensive call sheet --
@@ -862,12 +928,23 @@ table.xl.pk-subs .sub-pos {
   text-transform: uppercase; color: var(--muted); background: none;
   width: auto; padding: 0;
 }
-/* Moved: the boy in both elevens doing a different job. Under a rule, because it is
-   a change of subject from the two columns above it and not another row of them --
-   nobody comes off for him and nobody goes on. The arrow between his two spots is
-   drawn from borders like every other arrow in this book: a typed one came out of a
-   printer as a tofu box. */
-table.xl.pk-subs .mv-top { border-top: 1.2px solid var(--ink-2); padding-top: 2px; }
+/* Moved: the boy in both elevens doing a different job. Under its own header row,
+   because it is a change of subject from the two columns above it and not another
+   row of them -- nobody comes off for him and nobody goes on. The arrow between his
+   two spots is drawn from borders like every other arrow in this book: a typed one
+   came out of a printer as a tofu box. */
+/* The two group headers. A tinted full-width band rather than a rule, because the
+   cells either side of it are already a two-column grid of names and one more
+   horizontal line reads as another row of that grid. MOVES also keeps the rule
+   above it: the band says what is coming, the rule says the list before it ended. */
+table.xl.pk-subs tr.pk-grp th {
+  padding: 1px 4px; text-align: left;
+  background: var(--line); color: var(--ink-2);
+  font-size: 8.5px; font-weight: 800; letter-spacing: .9px; text-transform: uppercase;
+}
+table.xl.pk-subs tr.pk-grp-mv th {
+  border-top: 1.2px solid var(--ink-2);
+}
 table.xl.pk-subs .mv-name { font-weight: 800; color: var(--ink); }
 table.xl.pk-subs .sub-mv { text-align: left; font-weight: 800; }
 table.xl.pk-subs .sub-mv .mv-a { color: var(--muted); }
@@ -1117,17 +1194,30 @@ table.xl.pk-plays td {
   .band-set { width: 5in; grid-template-rows: repeat(3, 3in); gap: 0.07in;
               margin: 0 auto; break-inside: avoid; }
   .band { border-color: #000; background: none; break-inside: avoid; }
-  .band-form { font-size: 11px; padding: 2px 7px; margin-bottom: 2px;
+  /* This is the one that matters: the printed pouch is what goes on a wrist. The
+     formation is set as big as the pouch allows and centred, so it reads through a
+     plastic window at arm's length, outdoors, on a boy looking for it in a hurry.
+     21px is what the width takes: the longest bar is SHOTGUN · POWER I, and at this
+     size it is about half of the five inches, leaving the number range its corner.
+     The height is free -- eight rows and the bar come to roughly two and three
+     quarter inches of the three, and test_print_pages.py holds the sheet to one
+     page if that ever stops being true. */
+  .band-form { font-size: 21px; margin-bottom: 2px;
+               letter-spacing: .5px; line-height: 1.1;
                color: #fff !important; background: #000 !important;
                -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-  .band-span { font-size: 9px; opacity: 1; }
-  .band-sub { font-size: 9px; color: #000; border-bottom-color: #000; }
+  .band-seg { padding: 4px 6px; }
+  /* The divider has to be a drawn rule, not a gap in the fill: a printer that drops
+     the black background would leave nothing at all between the two names. */
+  .band-seg + .band-seg { border-left: 1.5pt solid #fff !important;
+                          -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .band-span { font-size: 9px; opacity: 1; right: 5px; bottom: 3px; }
   .band-body { gap: 0 8px; }
   /* Width sets the type here, not height: "Z Right Y Slant Pass Right" is the longest
      row there is and it has half of five inches to fit in. Eight rows then have three
      inches to live in, which is why the leading is what it is -- the space was going
      spare, and a row a boy can keep his eye on is what to spend it on. */
-  .band li { font-size: 13.5px; line-height: 2.15; padding: 0 3px; gap: 4px; }
+  .band li { font-size: 11.8px; line-height: 2.4; padding: 0 3px; gap: 4px; }
   .band li:nth-child(even) { background: #eee !important;
                              -webkit-print-color-adjust: exact; print-color-adjust: exact; }
   .band li b { flex-basis: 21px; padding-right: 4px; border-right-color: #000; }
@@ -1181,19 +1271,43 @@ table.xl.pk-plays td {
   .sub-grid .pk:nth-child(-n + 3) { padding-bottom: 0; }
   .sub-grid .pk { padding: 0 4px; }
   .sub-grid .pk:first-child { border-left: 0; }
-  table.xl.pk-subs td { font-size: 7.5px; padding: 0 2px; line-height: 1.25;
+  /* 1.1 rather than 1.25, and it is the SUBS/MOVES header rows that bought it. Eight
+     extra rows across the package grid tipped the offensive sheet onto a second page;
+     a seventh of a line off each data row pays for them and leaves the sheet at one.
+     The type is unchanged -- 7.5px names with 1.1 leading are still a comfortable
+     read at arm's length, and test_print_pages.py is what holds the page count. */
+  table.xl.pk-subs td { font-size: 7.5px; padding: 0 2px; line-height: 1.0;
                         letter-spacing: -.2px; }
   table.xl.pk-subs .sub-pos { font-size: 6.5px; width: 2.4em; background: none;
                               color: #000; }
   table.xl.pk-subs .sub-out { color: #444; font-weight: 600; }
   table.xl.pk-subs .sub-in { font-weight: 800; }
   table.xl.pk-subs .sub-pos { font-size: 6.5pt; }
-  table.xl.pk-subs .mv-top { border-top-color: #000; padding-top: 1px; }
+  /* The call sheet is the one page a coach prints most, and it prints on whatever is
+     in the office. A tint is the first thing a mono laser throws away, so the band
+     becomes black type instead.
+     It also has to cost almost nothing in height: the offensive sheet is one page and
+     eight header rows across the package grid are what tipped it to two. So the print
+     header is set solid -- 5.5pt, line-height 1, no padding and no rule of its own --
+     which is about a third of a data row. The rule above MOVES stays, because that
+     one was already being paid for. */
+  table.xl.pk-subs tr.pk-grp th {
+    font-size: 5.5pt; letter-spacing: .4px; padding: 0 2px; line-height: 1;
+    background: none; color: #000; border-bottom: 0;
+  }
+  table.xl.pk-subs tr.pk-grp-mv th { border-top: 0.5pt solid #000; padding-top: 0.5px; }
   table.xl.pk-subs .sub-mv .mv-b::before { margin: 0 2px 1px 2px; border-width: 2.5px;
                                            border-right: 0; border-left-color: #000; }
   table.xl.pk-subs .sub-in::before { margin: 0 3px 1px 0; border-width: 2.5px;
                                      border-left-color: #000; border-right: 0; }
-  .pk-field { margin: 5px 0 0; padding-top: 31px; border-top-color: #000;
+  /* 22px of clear space above the line of scrimmage rather than 31. The offensive
+     sheet finished 0.04in past the bottom of its page once the Y swap put another
+     substitution row on three of the packages, and this is the one block on the
+     sheet that is deliberately empty -- it is there to be drawn on in marker, and
+     it keeps two and a third inches of room to be drawn in. Taking it out of a
+     package or a play list would cost information; taking it from here costs nine
+     points of blank paper. */
+  .pk-field { margin: 5px 0 0; padding-top: 22px; border-top-color: #000;
               border-left-color: #000; border-right-color: #000; }
   .pk-field .hash { width: 11px; border-top-color: #000; }
   .pk-draw { margin: 0; row-gap: 1px;
@@ -2035,7 +2149,7 @@ footer.site a { color: var(--accent-ink); }
      apologising for the extra page. */
   .dc-side + .dc-side { page-break-before: always; break-before: page; }
   /* A board split down the middle of a row is unreadable on a clipboard. */
-  table.dc-board tr { break-inside: avoid; page-break-inside: avoid; }
+  .dc-band, .dc-pos { break-inside: avoid; page-break-inside: avoid; }
   /* No break-inside:avoid on .dc-side itself. A side already starts at the top of a
      fresh sheet, so keeping it whole can never move it anywhere useful — and on a
      sheet too small to hold it, the browser honours the rule by emitting a blank
@@ -2053,43 +2167,66 @@ footer.site a { color: var(--accent-ink); }
   .dc-side .hero-head { margin: 0 0 4px; }
   .rot-sub { font-size: 8pt; opacity: 1; }
   .rot-h { font-size: 7pt; margin: 4px 0 2px; }
-  /* Screen scrolls the wide board sideways; paper has nowhere to scroll to, and
-     a clipped overflow box silently drops the last string. */
-  .tablewrap.dc-board-wrap {
-    overflow: visible; max-height: none; box-shadow: none; border-radius: 0; margin: 0;
-  }
-  table.dc-board thead th, table.dc-board .dc-poscell {
-    position: static; box-shadow: none;
-  }
-  table.dc-board { min-width: 0; }
-  /* Same again on paper: the header carries the width, the body cell only wraps.
-     The label sits beside the abbreviation, not under it, which is what turning the
-     sheet bought. Stacked, every one of the eleven rows was two lines tall and the
-     board alone ran 500 points -- more than the packages and the heading together.
-     Beside it, at 56mm of a landscape sheet's width, a row is one line and the board
-     is worth about 260. That is the whole reason both sides fit their sheet. */
-  table.dc-board thead th:first-child { width: 56mm; }
-  table.dc-board .dc-poscell { white-space: nowrap; }
-  table.dc-board .dc-poscell .dc-label { display: inline; margin-left: 5px; }
-  table.dc-board th, table.dc-board td { padding: 1.5px 6px; }
-  table.dc-board .dc-poscell .dc-abbr { font-size: 9pt; }
-  table.dc-board .dc-poscell .dc-label { font-size: 7pt; }
-table.dc-board thead th { padding: 3px 6px; font-size: 7.5pt; }
-  /* The rotation names survive as printed words. A header fill is the one place colour
-     would have carried meaning nothing else does, and a printer set to skip
-     backgrounds drops it silently — leaving white text on white paper — so the whole
-     header row goes to plain text on a rule, which reads the same out of any tray.
+  /* The offensive sheet finished 0.05in past the bottom of the page -- four bands,
+     a heading and six packages, and it was the gaps between them rather than the
+     content. These four rules buy about 0.16in back. Measured, not estimated: the
+     board is 7.84in tall against a 7.79in page, so there is no room to be casual
+     about spacing here and anything added later has to find its own. */
+  .dc-field { gap: 3px; margin: 0 0 2px; }
+  .dc-band { gap: 4px; }
+  .dc-side .hero-head { margin: 0 0 2px; }
+  .dc-pkgs { margin-top: 6px; }
+  /* The defensive sheet has room the offensive one does not -- eleven spots in three
+     bands instead of four, and two fewer packages. Rather than leave that as white
+     space under the board, the packages go to the foot of the page and the three
+     bands spread into what is left, so the front is drawn at the size the paper can
+     afford. The offense is untouched: it finishes 0.05in inside its page and has
+     nothing to give.
 
-     Both selectors are needed. The screen rules that colour these headers carry an
-     attribute and a second class, so a plain `thead th` here loses to them on
-     specificity no matter that it comes later in the file, and the fills print. */
-table.dc-board thead th,
-  table.dc-board thead th:first-child,
-  table.dc-board thead th.rot-th[data-rot] {
-    background: none !important; color: #000 !important; border-bottom: 2px solid #000;
+     min-height rather than height, and 7.4in of a 7.79in page, so the sheet can
+     still grow if a name is added without the whole thing tipping onto a third. */
+  .dc-side[data-side="defense"] {
+    display: flex; flex-direction: column; min-height: 7.4in;
   }
-  table.dc-board td.dc-cell { font-size: 8.5pt; font-weight: 700; color: #000; }
-  table.dc-board td.dc-cell.starter { font-weight: 800; }
+  .dc-side[data-side="defense"] .dc-field {
+    flex: 1 1 auto; justify-content: space-evenly;
+  }
+  .dc-side[data-side="defense"] .dc-pkgs { margin-top: auto; }
+  .dc-pos { box-shadow: none; border-color: #000; border-radius: 0; }
+  /* The bar prints filled, the same as it looks on screen, with print-color-adjust
+     forcing it through -- the same thing the wristband pouches already do.
+     Be clear about the risk rather than pretending it away: this is white type on a
+     black fill, so a browser told to skip background graphics prints nothing at all
+     where the position should be. There is no CSS fallback for that -- the rule
+     underneath still draws, but the name of the spot goes with the fill. Printing
+     this page needs "Background graphics" left on, which is the same thing the
+     wristbands need. The alternative is black type on white, which always prints and
+     is what this was before. */
+  .dc-pos-h {
+    background: #000 !important; color: #fff !important;
+    -webkit-print-color-adjust: exact; print-color-adjust: exact;
+    border-bottom: 1.5pt solid #000; padding: 0 3px;
+  }
+  .dc-pos-h .dc-abbr { font-size: 8.5pt; line-height: 1.3; }
+  /* The long name goes. It is "Right outside linebacker (Rhino)" under a four-letter
+     bar, it wraps to three lines in a column this narrow, and it is the difference
+     between each side fitting its sheet and not. The abbreviation is what a coach
+     reads anyway, and the full names are on the defensive front pages. */
+  .dc-pos-h .dc-label { display: none; }
+  /* Set solid. A card is up to six names tall and there are four bands down the
+     offensive sheet, so a point of leading on a name row is paid for twenty-four
+     times and it was the difference between this board fitting its sheet and
+     spilling onto a third. Measured with the same script that counts the pages. */
+  .dc-names { padding: 0; }
+  .dc-names li { padding: 0 3px; font-size: 8pt; line-height: 1.16; font-weight: 700;
+                 color: #000; gap: 3px; }
+  .dc-names li b { flex-basis: 9px; font-size: 6.5pt; color: #000; }
+  .dc-names li.starter { font-size: 8.5pt; line-height: 1.2; font-weight: 800; }
+  .dc-names li.starter b { color: #000; }
+  .dc-names li:nth-child(even) { background: none; }
+  .dc-open { font-size: 7.5pt; padding: 1px 3px; }
+  .dc-band-h { font-size: 6.5pt; color: #000; }
+  .dc-band-alt { border-top-color: #000; }
   /* Packages on paper: two rows of three, packed tight enough that each side of the
      ball still fits its one sheet after the tight ends joined the box. */
   /* Six cards packed three points apart, each outlined in the same hairline grey the
@@ -2101,7 +2238,13 @@ table.dc-board thead th,
   .dc-pkgrow { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 7px 9px; }
   .dc-pkg { gap: 4px; padding: 3px 5px; box-shadow: none; border-radius: 0;
             border: 1.5pt solid #000; }
-  .dc-pkg-h { margin: 0; font-size: 8pt; }
+  /* Filled on paper too, same bargain as the position bars: it needs background
+     graphics left on, and without them the package name goes white on white. */
+  .dc-pkg-h {
+    margin: -2px -4px 3px; padding: 1px 4px; font-size: 8pt;
+    background: #000 !important; color: #fff !important;
+    -webkit-print-color-adjust: exact; print-color-adjust: exact;
+  }
   .dc-pkg-slot { min-height: 0; padding: 0; font-size: 7pt; line-height: 1.15; }
   .dc-pkg-slot[data-spot]::before { flex-basis: 36px; font-size: 6.5pt; letter-spacing: 0; }
   .dc-pkg-slot + .dc-pkg-slot { margin-top: 0; }
@@ -2120,6 +2263,14 @@ table.dc-board thead th,
      point of type is what clears them; the offense needs none and keeps its own. */
   .dc-side[data-side="defense"] table.dc-sub { font-size: 7.5pt; }
   table.dc-sub thead th { font-size: 6pt; }
+  /* A tint that survives a mono laser: printers drop a light background and the band
+     would come out as nothing but a gap. Black type on a hairline-boxed strip reads
+     at 6pt either way. */
+  table.dc-sub > caption {
+    font-size: 6pt; letter-spacing: .6px; padding: 0 2px; margin: 0 0 1px;
+    background: transparent; color: #000; border: 0; border-bottom: 0.75pt solid #000;
+    border-radius: 0;
+  }
   .dc-sub-pos { font-size: 7pt; }
   table.dc-sub.dc-moved { margin-top: 3px; padding-top: 2px; border-top-color: #000; }
   .dc-mv .mv-b::before { margin: 0 3px 1px 3px; border-width: 2.5px;
@@ -2735,13 +2886,10 @@ def play_article(form: dict, play: dict, defenses: dict, heading: str = "h2",
         if t:
             tags.append(f'<span class="tag">{esc(t)}</span>')
 
-    coach = ""
-    if play.get("coaching_points"):
-        items = "\n    ".join(f"<li>{esc(c)}</li>" for c in play["coaching_points"])
-        coach = (
-            '<p class="block-title">Coaching points</p>\n'
-            f'  <ul class="coach">\n    {items}\n  </ul>'
-        )
+    # The coaching points are not on the page. They are written to the coach, not
+    # to the man looking the play up, and the diagram plus the eleven assignments
+    # is what somebody on a sideline came here for. They are still in the play's
+    # JSON and still on the printed card.
     return f"""<article class="play" id="{esc(play['id'])}">
   <header>
     <{heading}>{esc(play['name'])}</{heading}>
@@ -2749,7 +2897,6 @@ def play_article(form: dict, play: dict, defenses: dict, heading: str = "h2",
     {actions}
   </header>
   {front_panels(form, play, defenses, single)}
-  {coach}
 </article>"""
 
 
@@ -3365,6 +3512,18 @@ def _subs_strip(roster: dict) -> str:
             )
         out, inn, moved = package_changes(packs, i + 1, spots)
         rows = []
+        # A SUBS row and a MOVES row, because the two are different instructions and
+        # the reader is one of them at a time. Running on and off is a thing somebody
+        # is told to do; a move is a boy already on the field standing somewhere new,
+        # and he is the one nobody shouts at. A rule between the blocks said only
+        # that the subject had changed. The header says which subject.
+        #
+        # A package with no moves gets no MOVES row -- and then the SUBS row is the
+        # only header on the card, which is still worth printing: it is what tells
+        # the reader the card has no moves, rather than leaving him to wonder whether
+        # this card just does not show them.
+        if out or inn:
+            rows.append('<tr class="pk-grp"><th colspan="2">Subs</th></tr>')
         for k in range(max(len(out), len(inn))):
             leaving = out[k] if k < len(out) else ""
             name, spot = inn[k] if k < len(inn) else ("", "")
@@ -3374,11 +3533,12 @@ def _subs_strip(roster: dict) -> str:
                 f'<tr><td class="sub-out">{esc(leaving) if leaving else "—"}</td>'
                 f'<td class="sub-in">{coming}</td></tr>'
             )
-        for k, (name, a, b) in enumerate(moved):
-            edge = " mv-top" if k == 0 else ""
+        if moved:
+            rows.append('<tr class="pk-grp pk-grp-mv"><th colspan="2">Moves</th></tr>')
+        for name, a, b in moved:
             rows.append(
-                f'<tr><td class="sub-out mv-name{edge}">{esc(name)}</td>'
-                f'<td class="sub-mv{edge}"><span class="mv-a">{esc(a)}</span>'
+                f'<tr><td class="sub-out mv-name">{esc(name)}</td>'
+                f'<td class="sub-mv"><span class="mv-a">{esc(a)}</span>'
                 f'<span class="mv-b">{esc(b)}</span></td></tr>'
             )
         body = ("".join(rows) if rows else
@@ -3682,7 +3842,14 @@ CALL_SHEET_ORDER = (
 # point: that space gets drawn on with a marker. Same shape as sheet_plays dropping
 # the passes -- a filter here, not a deletion anywhere, so a formation comes back by
 # taking it out of this set.
-SHEET_OMIT = frozenset({"wishbone", "trips", "shotgun"})
+#
+# The Single Back joins them on the way in rather than on the way out. It is brand
+# new, nobody has lined up in it yet, and a block on the sheet for a formation the
+# boys cannot get into without being told is a block that costs a real one. Note that
+# leaving it off is not free either -- a seventh block is what pushed the offensive
+# sheet onto a second printed page, which test_print_pages.py caught. Take it out of
+# this set when it has been installed, and expect to pay for the room.
+SHEET_OMIT = frozenset({"wishbone", "trips", "shotgun", "single-back"})
 
 # And the ones that come off the wristbands, which is not the same list. A coach
 # taking a formation off his own sheet has decided he does not need it written down;
@@ -3690,7 +3857,7 @@ SHEET_OMIT = frozenset({"wishbone", "trips", "shotgun"})
 # long square on that very sheet calls two Shotgun sweeps, so a band without 33 to 38
 # on it is a band that fails on third and long. Off the bands are only the two
 # formations nobody calls at all.
-BAND_OMIT = frozenset({"wishbone", "trips"})
+BAND_OMIT = frozenset({"wishbone", "trips", "single-back"})
 
 
 def _call_sheet_order(formations: list[dict]) -> list[dict]:
@@ -3717,19 +3884,27 @@ BAND_PANEL_COLUMNS = 2
 
 
 def band_call(play: dict, form: dict) -> str:
-    """The call, minus the formation the panel heading already says.
+    """The play's name, minus the formation the panel heading already says.
 
-    "Split Backs Z Right 38 Toss" is "Z Right 38 Toss" in the Split Backs pouch.
-    Nothing else comes off. "Right" is a word and about a point and a half of type,
-    and it is worth both: the boy reading this is nine, he has been taught the word,
-    and an abbreviation is one more thing to remember at the moment he has least room
-    to remember anything. The call sheet shortens it to R; this does not.
+    "Split Backs - Z Tight Right - 38 Toss" is "Z Tight Right - 38 Toss" in the
+    Split Backs pouch. Nothing else comes off. "Right" is a word and about a point
+    and a half of type, and it is worth both: the boy reading this is nine, he has
+    been taught the word, and an abbreviation is one more thing to remember at the
+    moment he has least room to remember anything. The call sheet shortens it to R;
+    this does not.
+
+    It reads off the NAME rather than the call, which is the same words with the
+    dashes still in: "Z Tight Right - 36 Handoff" instead of a run of six words. The
+    dash is where the boy's eye stops -- where he is standing on the left of it and
+    what he does on the right -- and at a glance through a plastic window that break
+    is worth more than the two points of type it costs.
     """
-    call = play.get("call") or ""
+    text = play.get("name") or play.get("call") or ""
     label = form_label(form)
-    if call.startswith(label + " "):
-        call = call[len(label) + 1:]
-    return call
+    for prefix in (label + " - ", label + " "):
+        if text.startswith(prefix):
+            return text[len(prefix):]
+    return text
 
 
 def band_plays(formations: list[dict]) -> list[tuple[dict, list[dict]]]:
@@ -3786,8 +3961,6 @@ def _band_panel(pouch: list[tuple[dict, list[dict]]]) -> str:
     if not pouch:
         return '<div class="band"></div>'
     plays = [(p, f) for f, ps in pouch for p in ps]
-    label = " \u00b7 ".join(form_label(f) for f, _ in pouch)
-    span = f'{plays[0][0]["code"]}\u2013{plays[-1][0]["code"]}'
 
     def rows(items):
         return "".join(
@@ -3795,20 +3968,31 @@ def _band_panel(pouch: list[tuple[dict, list[dict]]]) -> str:
             for p, f in items
         )
 
-    cols = []
-    if len(pouch) > 1:
-        for pile in _deal(pouch, BAND_PANEL_COLUMNS):
-            cols.append("".join(
-                f'<p class="band-sub">{esc(form_label(f))}</p><ol>{rows([(p, f) for p in ps])}</ol>'
-                for f, ps in pile
-            ))
+    def seg(name, first, last):
+        return (f'<span class="band-seg">{esc(name)}'
+                f'<span class="band-span">{esc(first)}\u2013{esc(last)}</span></span>')
+
+    # Two formations in one pouch get a bar split in two, each half naming the column
+    # under it. It used to read "SHOTGUN \u00b7 POWER I" across the whole bar with a small
+    # grey label over each column, and that is two things to read before you know
+    # which list you are in -- on a pouch worn by an eight-year-old who is being
+    # shouted a number at. Half a black bar sits directly over its own column and
+    # says one word, so the name and the list it names are the same object.
+    if len(pouch) == BAND_PANEL_COLUMNS:
+        cols = [f"<ol>{rows([(p, f) for p in ps])}</ol>" for f, ps in pouch]
+        bar = "".join(seg(form_label(f), ps[0]["code"], ps[-1]["code"]) for f, ps in pouch)
     else:
+        # One formation, or more of them than there are columns to line up with. The
+        # bar names the pouch once and the columns are one list read down and across.
+        label = " \u00b7 ".join(form_label(f) for f, _ in pouch)
+        bar = seg(label, plays[0][0]["code"], plays[-1][0]["code"])
         half = -(-len(plays) // BAND_PANEL_COLUMNS)
-        for i in range(BAND_PANEL_COLUMNS):
-            cols.append(f"<ol>{rows(plays[i * half:(i + 1) * half])}</ol>")
+        cols = [f"<ol>{rows(plays[i * half:(i + 1) * half])}</ol>"
+                for i in range(BAND_PANEL_COLUMNS)]
+
     body = "".join(f"<div>{c}</div>" for c in cols)
     return ('<div class="band">'
-            f'<p class="band-form">{esc(label)}<span class="band-span">{esc(span)}</span></p>'
+            f'<p class="band-form">{bar}</p>'
             f'<div class="band-body">{body}</div></div>')
 
 
@@ -3976,19 +4160,16 @@ def write_formation_page(form: dict, formations: list[dict], defenses: dict) -> 
     blocks = ['<p class="section-head">The plays</p>'
               f'<div class="plist">{"".join(cards)}</div>']
 
-    notes = ""
-    if form.get("coaching_notes"):
-        items = "\n    ".join(f"<li>{esc(c)}</li>" for c in form["coaching_notes"])
-        notes = (
-            '<p class="section-head">Coaching notes</p>\n'
-            f'<ul class="coach">\n    {items}\n  </ul>'
-        )
-
+    # Neither the alignment prose nor the coaching notes are on this page. A
+    # formation page is how a coach gets to a play in two taps, and prose above
+    # the plays is a screen he scrolls past every time to reach the thing he came
+    # for. Both are still in formation.json: the notes are printed in the
+    # formation's README.md, and the alignment line is still the page's meta
+    # description, which is what a shared link shows. They are read once, not
+    # every time the formation is opened.
     body = f"""{page_head(form_label(form))}
 <p class="sub">{len(form['_plays'])} plays
 &nbsp;·&nbsp; {esc(form.get('personnel', ''))}</p>
-<p class="lede">{esc(form.get('notes', ''))}</p>
-{notes}
 {chr(10).join(blocks)}"""
     return page(
         f"{form_label(form)} — {SITE_TITLE}",
@@ -4710,7 +4891,8 @@ def package_sub_card_html(packs: list, n: int, spots: tuple = ()) -> str:
                     + f'</td><td>{coming}</td></tr>'
                 )
             body += (
-                '<table class="dc-sub"><thead><tr><th>Out</th><th>In</th></tr>'
+                '<table class="dc-sub"><caption>Subs</caption>'
+                '<thead><tr><th>Out</th><th>In</th></tr>'
                 '</thead><tbody>'
                 + "".join(rows)
                 + "</tbody></table>"
@@ -4723,48 +4905,187 @@ def package_sub_card_html(packs: list, n: int, spots: tuple = ()) -> str:
                 for name, a, b in moved
             )
             body += (
-                '<table class="dc-sub dc-moved"><thead><tr>'
-                '<th>Moved</th><th>Spot</th></tr></thead><tbody>'
+                '<table class="dc-sub dc-moved"><caption>Moves</caption>'
+                '<thead><tr><th>Player</th><th>Spot</th></tr></thead><tbody>'
                 + rows
                 + "</tbody></table>"
             )
     return f'<aside class="dc-subcard"><p class="dc-subcard-h">Sub card</p>{body}</aside>'
 
 
+def alignment_bands(alignment: dict, order: list[str], side: str) -> list[list[str]]:
+    """`order` split into rows of the field, read off the alignment itself.
+
+    The board is laid out like the formation rather than as an alphabetical list,
+    so a coach looking for the left guard looks where the left guard stands. The
+    rows are not typed out anywhere: they are the distinct depths in the
+    formation's own coordinates, and the men in each are sorted left to right.
+    That is what makes it work for the defense too, and for a front nobody has
+    drawn yet — change `4-4.json` and the board rearranges itself.
+
+    Depths inside three quarters of a yard of each other are one row. The gaps
+    that matter are much bigger than that (the offense goes -0.5, -1.5, -3.3,
+    -5.5) and the tolerance keeps a half-yard stagger from splitting a line in
+    two.
+    """
+    spots = [p for p in order if p in alignment]
+    if not spots:
+        return []
+    # Offense is drawn with the backfield at negative y, defense downfield at
+    # positive, and both read from the line of scrimmage outward.
+    depth = (lambda p: -alignment[p][1]) if side == "offense" else (lambda p: alignment[p][1])
+    bands: list[list[str]] = []
+    for pos in sorted(spots, key=depth):
+        if bands and abs(depth(pos) - depth(bands[-1][0])) <= 0.75:
+            bands[-1].append(pos)
+        else:
+            bands.append([pos])
+    return [sorted(b, key=lambda p: alignment[p][0]) for b in bands]
+
+
+def position_card(side: str, pos: str, names: list[str], label_fn,
+                  style: str = "", cls: str = "") -> str:
+    """One position: the spot on a dark bar, the starter, then the men behind him.
+
+    Depth is down the card now rather than across a row. A name's rank is printed
+    beside it because the column it used to be in is gone, and a gap stays a gap --
+    an empty second string is a blank line, not everybody below moving up.
+    """
+    rots = rotations_for(side)
+    last = max((i for i, n in enumerate(names[:len(rots)]) if n), default=-1)
+    if last < 0:
+        body = '<p class="dc-open">Open</p>'
+    else:
+        body = "<ol class=\"dc-names\">" + "".join(
+            f'<li class="{"starter" if i == 0 else ""}">'
+            f'<b>{i + 1}</b>'
+            + (f'<span>{esc(names[i])}</span>' if i < len(names) and names[i]
+               else '<span class="dc-gap">—</span>')
+            + "</li>"
+            for i in range(last + 1)
+        ) + "</ol>"
+    return (f'<div class="dc-pos{cls}" data-pos="{esc(pos)}"{style}>'
+            f'<p class="dc-pos-h"><span class="dc-abbr">{esc(pos)}</span>'
+            f'<span class="dc-label">{esc(label_fn(pos))}</span></p>'
+            f'{body}</div>')
+
+
 def side_board(side: str, order: list[str], alt_order: list[str],
                names_by_pos: dict, label_fn, packages: list | None = None,
-               package_names: list | None = None) -> str:
-    """One side of the ball, every rotation, as columns of one grid.
+               package_names: list | None = None,
+               alignment: dict | None = None) -> str:
+    """One side of the ball, laid out the way it lines up.
 
-    Rotation belongs on the X axis. The question this page exists to answer is "the
-    left tackle just came off — who goes in", and with a table per rotation that
-    answer was eight hundred pixels down the page and had to be found by counting
-    rows. Side by side it is the next cell over.
+    This was six numbered columns of a grid, which answered "who is second at left
+    tackle" by making you find the left tackle's row first -- eleven rows that read
+    as a list and not as a football team. The board is now the formation: the line
+    across the top in its own order, the backfield under it, the secondary behind
+    that, each spot a card with the starter at the top and the men behind him under
+    it. A coach looks where the player stands.
 
-    Names are hard values from roster.json — a printed depth chart, not a board you
+    Names are hard values from roster.json -- a printed depth chart, not a board you
     rearrange in the browser.
     """
-    rows = []
-    for pos in order + alt_order:
-        names = names_by_pos.get(pos) or []
-        alt = ' class="dc-alt"' if pos in alt_order else ""
-        cells = ""
-        for idx, (rot_name, rot_key, _hint) in enumerate(rotations_for(side)):
-            name = names[idx] if idx < len(names) else ""
-            starter = " starter" if idx == 0 and name else ""
-            inner = esc(name) if name else ""
-            cells += (f'<td class="dc-cell{starter}" data-label="{esc(rot_name)}">'
-                      f'{inner}</td>')
-        rows.append(
-            f'<tr{alt} data-pos="{esc(pos)}">'
-            f'<td class="dc-poscell"><span class="dc-abbr">{esc(pos)}</span>'
-            f'<span class="dc-label">{esc(label_fn(pos))}</span></td>{cells}</tr>'
-        )
+    align = alignment or {}
+    bands = alignment_bands(align, order, side)
+    seen = {p for b in bands for p in b}
 
-    head = "".join(
-        f'<th class="rot-th">{esc(rot_name)}</th>'
-        for rot_name, rot_key, hint in rotations_for(side)
-    )
+    # Every band shares one set of columns, and the columns are every distinct spot
+    # on the side rather than just the widest band's. Taking them from the widest
+    # band gave the board only as many columns as the line has men, so anybody
+    # standing outside the last of them had to share his column: the Z landed
+    # directly under the Y instead of outside him, and the free safety -- the only
+    # man in his row -- sat a column left of centre because there was no column at
+    # the middle for him to be in. With one column per spot the picture is the
+    # alignment: the slot is outside the tight end, the four down linemen interleave
+    # with the linebackers behind them, and anybody on the ball is in the middle
+    # column because the middle column exists.
+    # The columns are the front row's -- the offensive line, the defensive line --
+    # and everybody behind stands in the column of the man he is behind. That is how
+    # a depth chart is read: the inside linebacker belongs under the defensive guard
+    # he plays off, not in a column of his own a half-yard to the side of him, which
+    # is what one-column-per-spot produced. Eleven columns of stagger is an accurate
+    # plot of the alignment and a bad board.
+    #
+    # A man who is not behind anybody gets his own column, placed in x order: the
+    # corners out past the ends, the free safety in the middle, the slot outside the
+    # tight end. 1.3 yards is the line between the two, and it sits in a real gap --
+    # a linebacker is about a yard off the lineman he stacks (the 4-4's are 1.0 and
+    # 1.1), and the nearest thing that must NOT snap is the slot at 1.4 outside the
+    # tight end and the safety at 1.4 inside the guards.
+    # 1.2 yards, and both sides of it are close. The linebackers that must snap onto
+    # their linemen are 1.0 and 1.1 off them; the two men that must NOT snap -- the
+    # slot outside the tight end, the safety inside the guards -- are both 1.4. So
+    # there is a fifth of a yard of daylight either way, and moving anybody by a
+    # foot in the JSON is enough to change this board. It is the kind of constant
+    # that deserves the arithmetic written next to it.
+    SNAP = 1.2
+    ref = bands[0] if bands else []
+    cols_x = sorted(round(align[p][0], 2) for p in ref)
+    span_x = cols_x[0] if cols_x else 0.0, cols_x[-1] if cols_x else 0.0
+    # A new column only for a man standing OUTSIDE the front row -- the corners, the
+    # slot. Somebody who falls in a gap BETWEEN two of them does not get one, because
+    # a column for him pushes the front row apart to make room and the four down
+    # linemen stop being four down linemen. He straddles the gap instead, which is
+    # also where he actually stands: the free safety is over the ball, between the
+    # guards, not in a lane of his own that shoves them a card further apart.
+    for band in bands[1:]:
+        for pos in band:
+            x = round(align[pos][0], 2)
+            outside = x < span_x[0] - SNAP or x > span_x[1] + SNAP
+            if outside and all(abs(x - c) > SNAP for c in cols_x):
+                cols_x.append(x)
+    cols_x = sorted(set(cols_x))
+
+    def placement(pos: str) -> tuple[int, int]:
+        """(first column, how many columns wide) for this spot."""
+        if not cols_x or pos not in align:
+            return (0, 1)
+        x = align[pos][0]
+        # Ties go to the inside man. The 4-4's inside linebacker sits exactly halfway
+        # between the end and the guard (1.1 from each), and an inside linebacker
+        # belongs under the guard.
+        i = min(range(len(cols_x)),
+                key=lambda i: (abs(cols_x[i] - x), abs(cols_x[i])))
+        if abs(cols_x[i] - x) <= SNAP:
+            return (i + 1, 1)
+        left = [j for j, c in enumerate(cols_x) if c < x]
+        right = [j for j, c in enumerate(cols_x) if c > x]
+        if left and right:
+            # Inclusive of both neighbours: the columns either side of him, so he
+            # centres on the seam between them.
+            return (left[-1] + 1, right[0] - left[-1] + 1)
+        return (i + 1, 1)
+
+    def place(band: list[str]) -> str:
+        used: set[int] = set()
+        out = []
+        for pos in band:
+            col, wide = placement(pos)
+            while col in used:          # two men rounding to one column: step outward
+                col += 1
+            used.add(col)
+            cls = " dc-straddle" if wide > 1 else ""
+            style = (f' style="grid-column:{col} / span {wide}"' if col else "")
+            out.append(position_card(side, pos, names_by_pos.get(pos) or [], label_fn,
+                                     style, cls))
+        return "".join(out)
+    # Anything the alignment does not place keeps its place on the board rather than
+    # vanishing: a spot only a change-up front uses, or one the base formation has no
+    # room for. Same rule as before, just a row of its own.
+    leftover = [p for p in order if p not in seen]
+
+    cols = max(len(cols_x), 1)
+    field = "".join(f'<div class="dc-band">{place(band)}</div>' for band in bands)
+    for extra, title in ((leftover, "Also on the board"),
+                         (alt_order, "Other formations")):
+        if extra:
+            field += (f'<div class="dc-band dc-band-alt"><p class="dc-band-h">'
+                      f'{esc(title)}</p>'
+                      + "".join(position_card(side, p, names_by_pos.get(p) or [], label_fn)
+                                for p in extra)
+                      + "</div>")
+
     packs = packages or []
     pkg_names = package_names or []
     spots = PACKAGE_SPOTS.get(side, ())
@@ -4800,12 +5121,8 @@ def side_board(side: str, order: list[str], alt_order: list[str],
         f'<div class="dc-pkgwrap"><div class="dc-pkgrow">{pkgs}</div></div></div>'
         if pkgs else ""
     )
-    return (
-        f'<div class="tablewrap dc-board-wrap"><table class="dc-board">'
-        f'<thead><tr><th>Pos</th>{head}</tr></thead>'
-        f'<tbody>{"".join(rows)}</tbody></table></div>'
-        f'{pkg_block}'
-    )
+    return (f'<div class="dc-field" style="--dc-cols:{cols}">{field}</div>'
+            f'{pkg_block}')
 
 
 def write_depth_chart(formations: list[dict], defenses: dict, root: Path) -> str:
@@ -4862,19 +5179,20 @@ def write_depth_chart(formations: list[dict], defenses: dict, root: Path) -> str
     # looks at one side of the ball is handed exactly his page.
     sides = (
         ("offense", "Offense", off_order, alt_order, position_name,
-         "The base formation's eleven."),
+         "The base formation's eleven.", base["alignment"]),
         ("defense", "Defense", def_order, def_alt_order, def_label,
          f"The {front['name'].replace('-', '–')}, our everyday front."
-         if front else "Our everyday front."),
+         if front else "Our everyday front.",
+         (front or {}).get("alignment", {})),
     )
     sections = []
-    for side, heading, order, alts, label, sub in sides:
+    for side, heading, order, alts, label, sub, align in sides:
         packs = (roster.get("packages") or {}).get(side)
         sections.append(
             f'<section class="dc-side" data-side="{side}">'
             f'<p class="hero-head">{esc(heading)}'
             f'<span class="rot-sub">{esc(sub)}</span></p>'
-            f'{side_board(side, order, alts, roster.get(side, {}), label, packs, (roster.get("package_names") or {}).get(side))}'
+            f'{side_board(side, order, alts, roster.get(side, {}), label, packs, (roster.get("package_names") or {}).get(side), align)}'
             f'</section>'
         )
 
@@ -5044,24 +5362,24 @@ def write_all(formations: list[dict], defenses: dict, root: Path) -> int:
 
     assets = root / "assets"
     assets.mkdir(exist_ok=True)
-    (assets / "site.css").write_text(SITE_CSS.strip() + "\n", encoding="utf-8")
-    (assets / "site.js").write_text(SITE_JS.strip() + "\n", encoding="utf-8")
+    (assets / "site.css").write_text(SITE_CSS.strip() + "\n", encoding="utf-8", newline="\n")
+    (assets / "site.js").write_text(SITE_JS.strip() + "\n", encoding="utf-8", newline="\n")
 
     written = 0
-    (root / "index.html").write_text(write_home(formations, defenses), encoding="utf-8")
-    (root / "calls.html").write_text(write_calls(formations, defenses, root), encoding="utf-8")
+    (root / "index.html").write_text(write_home(formations, defenses), encoding="utf-8", newline="\n")
+    (root / "calls.html").write_text(write_calls(formations, defenses, root), encoding="utf-8", newline="\n")
     (root / "print.html").write_text(
-        write_print_book(formations, defenses), encoding="utf-8")
+        write_print_book(formations, defenses), encoding="utf-8", newline="\n")
     (root / "defense.html").write_text(
-        write_defense_index(formations, defenses), encoding="utf-8")
+        write_defense_index(formations, defenses), encoding="utf-8", newline="\n")
     (root / "rules.html").write_text(
-        write_rulebook(formations, defenses, root), encoding="utf-8")
+        write_rulebook(formations, defenses, root), encoding="utf-8", newline="\n")
     (root / "install.html").write_text(
-        write_install(formations, defenses, root), encoding="utf-8")
+        write_install(formations, defenses, root), encoding="utf-8", newline="\n")
     (root / "depth-chart.html").write_text(
-        write_depth_chart(formations, defenses, root), encoding="utf-8")
+        write_depth_chart(formations, defenses, root), encoding="utf-8", newline="\n")
     (root / "wristbands.html").write_text(
-        write_wristbands(formations, defenses), encoding="utf-8")
+        write_wristbands(formations, defenses), encoding="utf-8", newline="\n")
     written += 8
 
     # One page per practice. The schedule page is the calendar; this is what a coach
@@ -5075,18 +5393,18 @@ def write_all(formations: list[dict], defenses: dict, root: Path) -> int:
         nxt = practices[i + 1] if i + 1 < len(practices) else None
         (root / install_href(pr)).write_text(
             write_install_day(pr, prev, nxt, practices, phases, formations, defenses),
-            encoding="utf-8")
+            encoding="utf-8", newline="\n")
         written += 1
 
     for front in our_fronts(defenses).values():
         (root / d_href(front)).write_text(
-            write_defense_page(front, formations, defenses), encoding="utf-8")
+            write_defense_page(front, formations, defenses), encoding="utf-8", newline="\n")
         written += 1
 
     for form in formations:
         (root / f_href(form)).write_text(
-            write_formation_page(form, formations, defenses), encoding="utf-8"
-        )
+            write_formation_page(form, formations, defenses),
+            encoding="utf-8", newline="\n")
         written += 1
         plays = form["_plays"]
         for i, play in enumerate(plays):
@@ -5094,7 +5412,6 @@ def write_all(formations: list[dict], defenses: dict, root: Path) -> int:
             nxt = plays[i + 1] if i + 1 < len(plays) else None
             (root / p_href(play)).write_text(
                 write_play_page(form, play, prev, nxt, formations, defenses),
-                encoding="utf-8",
-            )
+                encoding="utf-8", newline="\n")
             written += 1
     return written

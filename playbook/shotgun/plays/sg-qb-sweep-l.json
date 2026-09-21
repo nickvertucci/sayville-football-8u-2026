@@ -2,9 +2,9 @@
   "id": "sg-qb-sweep-l",
   "order": 3,
   "formation": "shotgun",
-  "name": "Shotgun - Z Left - 19 Sweep",
+  "name": "Shotgun - Z Tight Left - 19 Sweep",
   "code": "35",
-  "call": "Shotgun Z Left 19 Sweep",
+  "call": "Shotgun Z Tight Left 19 Sweep",
   "type": "run",
   "scheme": "Sweep",
   "direction": "left",
@@ -17,7 +17,7 @@
   },
   "assignments": {
     "QB": {
-      "rule": "Catch the snap and sweep left, flat and fast, behind the left halfback. Turn up outside his block.",
+      "rule": "Catch the snap and sweep left, flat and fast, behind the tailback. Turn up outside his block.",
       "type": "run",
       "path": [
         [
@@ -48,8 +48,8 @@
     }
   },
   "coaching_points": [
-    "The quarterback keeps it every time \u2014 tell him before the snap, there is no read.",
-    "The right halfback's fake is the play. If he jogs, nobody follows him and the defense is waiting at the edge.",
-    "The quarterback stays behind the left halfback until the block is made, then turns it up. Running past his blocker is how the sweep loses yards."
+    "The quarterback keeps it every time — tell him before the snap, there is no read.",
+    "The fullback's fake is the play. If he jogs, nobody follows him and the defense is waiting at the edge.",
+    "The quarterback stays behind the tailback until the block is made, then turns it up. Running past his blocker is how the sweep loses yards."
   ]
 }

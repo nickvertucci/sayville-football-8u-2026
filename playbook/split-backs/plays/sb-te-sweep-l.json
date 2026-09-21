@@ -2,9 +2,9 @@
   "id": "sb-te-sweep-l",
   "order": 28,
   "formation": "split-backs",
-  "name": "Split Backs - Z Left - Y Sweep Left",
+  "name": "Split Backs - Z Tight Left - Y Sweep Left",
   "code": "26",
-  "call": "Split Backs Z Left Y Sweep Left",
+  "call": "Split Backs Z Tight Left Y Sweep Left",
   "type": "run",
   "scheme": "Sweep",
   "direction": "left",
@@ -17,7 +17,7 @@
   },
   "assignments": {
     "Y": {
-      "rule": "Stay down in your stance \u2014 no motion. At the snap run flat behind the quarterback, take the handoff at full speed and get to the left edge. Turn up outside the halfbacks.",
+      "rule": "Stay down in your stance — no motion. At the snap run flat behind the quarterback, take the handoff at full speed and get to the left edge. Turn up outside the backs.",
       "type": "run",
       "path": [
         [
@@ -68,6 +68,95 @@
   "coaching_points": [
     "No motion before the snap. The end stays down in his stance, so the play is legal and nothing tips it off.",
     "The handoff is the whole play: the quarterback opens left and puts the ball in the end's belly at full speed, then carries out his fake.",
-    "Both halfbacks bubble out to the left ahead of the end and double team the outside linebacker together. Two of them on him is what gets the end around the corner."
-  ]
+    "Both backs bubble around the X — out and around, never up into the line. The tailback takes the outside linebacker and the fullback carries on outside to help the Z on the corner. They used to double the same linebacker between them, which left the corner alone against one blocker on the play that has to get outside him."
+  ],
+  "fronts": {
+    "4-4": {
+      "TB": {
+        "block": "man",
+        "man": "LOLB",
+        "how": "Bubble around the X",
+        "via": [
+          [
+            -2.6,
+            1.8
+          ]
+        ]
+      },
+      "FB": {
+        "block": "man",
+        "man": "LC",
+        "with": "Z",
+        "how": "Bubble around the X",
+        "via": [
+          [
+            -7.0,
+            1.8
+          ],
+          [
+            -8.7,
+            3.8
+          ]
+        ]
+      }
+    },
+    "5-3": {
+      "TB": {
+        "block": "man",
+        "man": "LOLB",
+        "how": "Bubble around the X",
+        "via": [
+          [
+            -2.6,
+            1.8
+          ]
+        ]
+      },
+      "FB": {
+        "block": "man",
+        "man": "LC",
+        "with": "Z",
+        "how": "Bubble around the X",
+        "via": [
+          [
+            -7.0,
+            1.8
+          ],
+          [
+            -8.7,
+            3.8
+          ]
+        ]
+      }
+    },
+    "5-4-2": {
+      "TB": {
+        "block": "man",
+        "man": "LOLB",
+        "how": "Bubble around the X",
+        "via": [
+          [
+            -2.6,
+            1.8
+          ]
+        ]
+      },
+      "FB": {
+        "block": "man",
+        "man": "LS",
+        "with": "Z",
+        "how": "Bubble around the X",
+        "via": [
+          [
+            -7.0,
+            1.8
+          ],
+          [
+            -8.7,
+            3.8
+          ]
+        ]
+      }
+    }
+  }
 }

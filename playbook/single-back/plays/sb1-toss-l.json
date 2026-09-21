@@ -1,0 +1,86 @@
+{
+  "id": "sb1-toss-l",
+  "order": 6,
+  "formation": "single-back",
+  "name": "Single Back - Tight Left Wing Left - 29 Toss",
+  "code": "64",
+  "call": "Single Back Tight Left Wing Left 29 Toss",
+  "type": "run",
+  "scheme": "Toss",
+  "direction": "left",
+  "ball_carrier": "FB",
+  "alignment": {
+    "X": [
+      -4.2,
+      -0.5
+    ],
+    "Y": [
+      7.5,
+      -0.5
+    ],
+    "Z": [
+      8.9,
+      -1.6
+    ],
+    "TB": [
+      -5.6,
+      -1.6
+    ]
+  },
+  "assignments": {
+    "QB": {
+      "rule": "Quick pitch to the fullback, then run the other way, to the right, like you still have it.",
+      "type": "rollout",
+      "path": [
+        [
+          2.6,
+          -0.8
+        ],
+        [
+          5.0,
+          -1.2
+        ]
+      ]
+    },
+    "FB": {
+      "rule": "Run flat and outside, catch the pitch on the run and get to the edge. Ahead of him is a fumble.",
+      "type": "run",
+      "path": [
+        [
+          -1.6,
+          -0.4
+        ],
+        [
+          -4.6,
+          0.0
+        ],
+        [
+          -5.6,
+          1.6
+        ],
+        [
+          -5.8,
+          4.4
+        ],
+        [
+          -5.9,
+          7.0
+        ]
+      ]
+    },
+    "TB": {
+      "block": "lead",
+      "target": "force"
+    }
+  },
+  "pitch": {
+    "from": "QB",
+    "to": "FB",
+    "at": 1
+  },
+  "coaching_points": [
+    "The wing is out on the edge ahead of the ball and he has the force man — the widest defender who can turn this back inside.",
+    "The fullback pitches from directly behind the quarterback, so the pitch is shorter and flatter than the one out of the Split Backs. Rep it on its own.",
+    "The Z is on the other side with the split end, so this edge is the tight end and the wing and nobody else. Two blockers and the back — if either one misses, there is no third man out there to cover it up."
+  ]
+}

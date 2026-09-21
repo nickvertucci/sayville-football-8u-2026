@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="702" height="946" viewBox="0 0 702 946" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" width="702" height="872" viewBox="0 0 702 872" font-family="Segoe UI, Helvetica, Arial, sans-serif">
 <rect width="100%" height="100%" fill="#ffffff"/>
 <rect x="0" y="0" width="702" height="58" fill="#14213d"/>
 <text x="18" y="26" font-size="19.0" font-weight="700" fill="#ffffff">Trips - Left - 19 Sweep</text>
@@ -41,10 +41,10 @@
 <line x1="97.8" y1="254.3" x2="116.1" y2="256.0" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 <path d="M351.0,364.5 C343.8,367.2 334.8,377.1 307.8,380.7 C280.8,384.3 220.1,389.7 189.0,386.1 C157.9,382.5 134.1,374.4 121.5,359.1 C108.9,343.8 114.7,320.4 113.4,294.3 C112.0,268.2 113.4,217.8 113.4,202.5" fill="none" stroke="#b3001b" stroke-width="4.6" stroke-linecap="round" stroke-linejoin="round"/>
 <polygon points="113.4,202.5 119.6,216.3 107.2,216.3" fill="#b3001b"/>
-<path d="M351.0,413.1 L288.9,380.7 L270.0,253.8" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-<line x1="260.9" y1="255.2" x2="279.1" y2="252.4" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
-<path d="M178.2,364.5 L286.2,359.1 L394.2,348.3" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 5"/>
-<polygon points="394.2,348.3 384.4,353.9 383.4,344.7" fill="#14213d"/>
+<path d="M351.0,413.1 L459.0,407.7 L567.0,396.9" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 5"/>
+<polygon points="567.0,396.9 557.2,402.5 556.2,393.3" fill="#14213d"/>
+<path d="M178.2,364.5 L247.0,310.0 L341.0,250.0" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="336.1" y1="242.3" x2="345.9" y2="257.8" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 
 <rect x="121.5" y="324.0" width="27.0" height="27.0" rx="3" fill="#ffffff" stroke="#14213d" stroke-width="2.6"/>
 <text x="135.0" y="342.0" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">X</text>
@@ -115,16 +115,11 @@
 <text x="351" y="646" font-size="12" font-weight="700" fill="#111318">QB</text>
 <text x="385" y="646" font-size="12" fill="#111318">Take the snap and sweep left, flat and fast,</text>
 <text x="385" y="664" font-size="12" fill="#111318">behind the trips. Turn up outside the</text>
-<text x="385" y="680" font-size="12" fill="#111318">fullback.</text>
+<text x="385" y="680" font-size="12" fill="#111318">tailback's block.</text>
 <text x="351" y="698" font-size="12" font-weight="700" fill="#111318">FB</text>
-<text x="385" y="698" font-size="12" fill="#111318">Bubble out around our end — do not run up into</text>
-<text x="385" y="714" font-size="12" fill="#111318">the line. Block the first man out there; here</text>
-<text x="385" y="732" font-size="12" fill="#111318">it is the linebacker.</text>
-<text x="351" y="748" font-size="12" font-weight="700" fill="#111318">TB</text>
-<text x="385" y="748" font-size="12" fill="#111318">Run hard to the right like you have the ball.</text>
-<text x="385" y="766" font-size="12" fill="#111318">Sell it all the way.</text>
-<line x1="18" y1="858" x2="684" y2="858" stroke="#c8cdd6" stroke-width="1"/>
-<text x="18" y="876" font-size="11" font-weight="700" fill="#5b6472" letter-spacing="1">COACHING POINTS</text>
-<text x="18" y="896" font-size="12" fill="#111318">The quarterback keeps it every time — tell him before the snap, there is no read.</text>
-<text x="18" y="912" font-size="12" fill="#111318">He stays behind the trips until the fullback's block is made, then turns it up.</text>
+<text x="385" y="698" font-size="12" fill="#111318">Run hard to the right like you have the ball.</text>
+<text x="385" y="714" font-size="12" fill="#111318">Sell it all the way.</text>
+<text x="351" y="732" font-size="12" font-weight="700" fill="#111318">TB</text>
+<text x="385" y="732" font-size="12" fill="#111318">Help on the defensive end, then take the</text>
+<text x="385" y="748" font-size="12" fill="#111318">outside linebacker.</text>
 </svg>

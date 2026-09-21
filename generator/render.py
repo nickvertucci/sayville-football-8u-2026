@@ -421,6 +421,14 @@ def is_pitch_passer(play: dict, pos: str) -> bool:
 # The three who are called by letter rather than by a digit.
 LETTER_BACKS = ("X", "Y", "Z")
 
+# Which tackle each end is tight to when he is tight. An end inside this many yards
+# of his own tackle is tight; anything further out has split away. 1.8 sits well
+# clear of both cases the book actually draws — a tight end is 1.4 off his tackle
+# and a split end is several yards out — so it is a gap, not a threshold anybody is
+# balanced on.
+END_TACKLE = {"X": "LT", "Y": "RT"}
+TIGHT_GAP = 1.8
+
 
 def _letter_tail(call: str, form: dict, play: dict) -> str:
     """What is left of a call once the formation and the alignment phrase are off.
@@ -430,11 +438,17 @@ def _letter_tail(call: str, form: dict, play: dict) -> str:
     optional, because in Trips the strength word IS the formation name and has already
     come off with it: "Trips Right X Sweep" is down to "Right X Sweep" by then. The
     Wishbone has no alignment phrase at all.
+
+    There can be more than one. The Single Back says where all three of its movable
+    men are -- "Single Back Tight Right Z Left Wing Right X Slant Pass Left" -- so the
+    strip repeats until the phrases run out. It cannot eat the play word by mistake:
+    the pattern needs a trailing space, and a letter call's own direction is the last
+    word in the string.
     """
     label = form_label(form)
     if call.lower().startswith(label.lower() + " "):
         call = call[len(label) + 1:]
-    return re.sub(r"^(?:\w+ )?(?:Left|Right) ", "", call)
+    return re.sub(r"^(?:(?:\w+ ){0,2}(?:Left|Right) )+", "", call)
 
 
 def validate_call(play: dict, form: dict, defenses: dict) -> list[str]:
@@ -454,18 +468,76 @@ def validate_call(play: dict, form: dict, defenses: dict) -> list[str]:
     # also the easy mistake to make, because a Z Right play carries no alignment
     # override at all -- it takes the formation's -- so mirroring one to the left means
     # *adding* a key rather than flipping one, which is easy to forget.
-    side_word = re.search(r"\bZ (Left|Right)\b", call)
+    side_word = re.search(r"\bZ (?:(Tight|Split) )?(Left|Right)\b", call)
     if side_word:
-        where = play_alignment(form, play).get("Z")
+        splitness, side = side_word.group(1), side_word.group(2)
+        said = f"Z {splitness + ' ' if splitness else ''}{side}"
+        al = play_alignment(form, play)
+        where = al.get("Z")
         if where is None:
-            return [f"{pid}: call '{call}' says Z {side_word.group(1)}, but this "
-                    "formation has no Z"]
-        wanted = -1 if side_word.group(1) == "Left" else 1
-        if (where[0] < 0) != (wanted < 0):
+            return [f"{pid}: call '{call}' says {said}, but this formation has no Z"]
+        if (where[0] < 0) != (side == "Left"):
             stood = "left" if where[0] < 0 else "right"
-            return [f"{pid}: call '{call}' says Z {side_word.group(1)}, but the Z "
+            return [f"{pid}: call '{call}' says {said}, but the Z "
                     f"lines up on the {stood} (x = {where[0]:+.1f}) -- give the play an "
                     f'"alignment" override for Z, or fix the call']
+        # Tight or Split says how far off the end on his side he is standing. Same
+        # reason the side is checked: the Z is a blocker on most plays, so widening
+        # him leaves every geometry check happy and only the picture different — and
+        # the difference is the whole point of saying it, because a split Z is a
+        # receiver the corner has to walk out to and a tight one is another blocker.
+        if splitness:
+            end = SIDE_END["R" if where[0] > 0 else "L"]
+            if end not in al:
+                return [f"{pid}: call '{call}' says {said}, but this formation has no "
+                        f"{end} for him to be tight to or split from"]
+            gap = abs(where[0] - al[end][0])
+            if (gap <= TIGHT_GAP) != (splitness == "Tight"):
+                is_now = "tight to" if gap <= TIGHT_GAP else "split from"
+                return [f"{pid}: call '{call}' says Z {splitness}, but the Z is "
+                        f"{is_now} the {end} ({gap:.1f} yards) -- give the play an "
+                        f'"alignment" override for Z, or fix the call']
+
+    # "Tight Right" says the Y is beside his tackle and the X has split away; "Tight
+    # Left" is the mirror. Checked against the diagram for the same reason the Z is:
+    # which end is tight decides whether a C-gap call has a hole at all. With the X
+    # split, the gap between our left tackle and our left end is nearly five yards of
+    # open grass, and a 27 Handoff into it is a call with no hole behind it.
+    # Not the Z's own Tight/Split, which is a different man and is checked above.
+    # "Split Backs Z Tight Right 36 Handoff" says where the slot is standing; it says
+    # nothing about which end is beside its tackle, and reading it as though it did
+    # failed ten plays the moment the Z's phrase learned the word.
+    tight = re.search(r"(?<!Z )\bTight (Left|Right)\b", call)
+    if tight:
+        al = play_alignment(form, play)
+        close, away = ("Y", "X") if tight.group(1) == "Right" else ("X", "Y")
+        for end, tackle, want_tight in ((close, END_TACKLE[close], True),
+                                        (away, END_TACKLE[away], False)):
+            if end not in al or tackle not in al:
+                return [f"{pid}: call '{call}' says Tight {tight.group(1)}, but this "
+                        f"formation has no {end} or no {tackle}"]
+            gap = abs(al[end][0] - al[tackle][0])
+            if (gap <= TIGHT_GAP) != want_tight:
+                is_now = "tight beside" if gap <= TIGHT_GAP else "split away from"
+                should = "tight beside" if want_tight else "split away from"
+                return [f"{pid}: call '{call}' says Tight {tight.group(1)}, so the {end} "
+                        f"should be {should} the {tackle} — he is {is_now} it "
+                        f"({gap:.1f} yards). Fix the alignment override or the call"]
+
+    # "Wing Left" says which side the tailback sets on. He is off the line and he is
+    # not the ball carrier here, so nothing else in the play would notice him standing
+    # on the wrong side -- exactly the hole the Z check exists to plug.
+    wing = re.search(r"\bWing (Left|Right)\b", call)
+    if wing:
+        where = play_alignment(form, play).get("TB")
+        if where is None:
+            return [f"{pid}: call '{call}' says Wing {wing.group(1)}, but this "
+                    "formation has no TB"]
+        if (where[0] < 0) != (wing.group(1) == "Left"):
+            stood = "left" if where[0] < 0 else "right"
+            return [f"{pid}: call '{call}' says Wing {wing.group(1)}, but the TB "
+                    f"lines up on the {stood} (x = {where[0]:+.1f}) -- give the play an "
+                    f'"alignment" override for TB, or fix the call']
 
     m = CALL_DIGITS.search(call)
     # A letter call: X, Y and Z name themselves. They had digits for a while -- 4, 5
@@ -1271,13 +1343,13 @@ def render_card(play: dict, defense: dict, frame: tuple[float, float, float]) ->
     columns = [entries[:half], entries[half:]]
     col_lines = max((sum(len(e[1]) for e in col) for col in columns), default=0)
 
-    coach_lines = []
-    for c in play.get("coaching_points", []):
-        coach_lines.extend(wrap(c, int(chars * 2.2)))
-
+    # No coaching points on the card. A card is the picture and the eleven
+    # assignments — what a player is handed and what a coach holds up. The points
+    # are written to the coach in his own voice and they are still in the play's
+    # JSON and its formation README, which is where he reads them. Leaving them
+    # off is also what lets the diagram have the room they were taking.
     assign_h = col_lines * LINE_H + 34
-    coach_h = (len(coach_lines) * LINE_H + 40) if coach_lines else 0
-    total_h = TITLE_H + field_h + assign_h + coach_h + PAD
+    total_h = TITLE_H + field_h + assign_h + PAD
 
     meta_bits = [play.get("type", "").upper(), form_label(form)]
     if defense:
@@ -1329,22 +1401,6 @@ def render_card(play: dict, defense: dict, frame: tuple[float, float, float]) ->
                     f'fill="{COLORS["ink"]}">{esc(line)}</text>'
                 )
             cy += len(lines) * LINE_H
-
-    if coach_lines:
-        cy = y0 + assign_h + 18
-        svg.append(
-            f'<line x1="{PAD}" y1="{cy-14:.0f}" x2="{card_w-PAD:.0f}" y2="{cy-14:.0f}" '
-            f'stroke="{COLORS["line"]}" stroke-width="1"/>'
-        )
-        svg.append(
-            f'<text x="{PAD}" y="{cy+4:.0f}" font-size="11" font-weight="700" '
-            f'fill="{COLORS["muted"]}" letter-spacing="1">COACHING POINTS</text>'
-        )
-        for i, line in enumerate(coach_lines):
-            svg.append(
-                f'<text x="{PAD}" y="{cy + 24 + i*LINE_H:.0f}" font-size="12" '
-                f'fill="{COLORS["ink"]}">{esc(line)}</text>'
-            )
 
     svg.append("</svg>")
     return "\n".join(svg)
@@ -1703,14 +1759,13 @@ def main() -> int:
             for fid in blocking.SCOUT_FRONTS:
                 front = defenses[fid]
                 (cards_dir / f"{p['id']}-{fid}.svg").write_text(
-                    render_card(p, front, frame), encoding="utf-8")
+                    render_card(p, front, frame), encoding="utf-8", newline="\n")
                 (cards_dir / f"{p['id']}-{fid}-field.svg").write_text(
-                    render_diagram(p, front, frame), encoding="utf-8")
+                    render_diagram(p, front, frame), encoding="utf-8", newline="\n")
         (cards_dir / f"{form['id']}-icon.svg").write_text(
-            render_formation_diagram(form), encoding="utf-8"
-        )
+            render_formation_diagram(form), encoding="utf-8", newline="\n")
         (form["_dir"] / "README.md").write_text(
-            write_formation_readme(form, defenses), encoding="utf-8")
+            write_formation_readme(form, defenses), encoding="utf-8", newline="\n")
 
     cards = DEFENSE_DIR / "cards"
     cards.mkdir(exist_ok=True)
@@ -1721,11 +1776,10 @@ def main() -> int:
         if front.get("scout"):
             continue
         (cards / f"{fid}-field.svg").write_text(
-            render_defense_diagram(front, frame), encoding="utf-8"
-        )
+            render_defense_diagram(front, frame), encoding="utf-8", newline="\n")
 
     (ROOT / "PLAYBOOK.md").write_text(
-        write_playbook(formations, defenses), encoding="utf-8")
+        write_playbook(formations, defenses), encoding="utf-8", newline="\n")
 
     # The site is flat files at the repo root so Pages can serve from "/" and every page
     # can reference the cards in place, with no second copy of any SVG.

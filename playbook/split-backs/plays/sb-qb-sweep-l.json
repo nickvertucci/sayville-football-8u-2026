@@ -2,9 +2,9 @@
   "id": "sb-qb-sweep-l",
   "order": 21,
   "formation": "split-backs",
-  "name": "Split Backs - Z Left - 19 Sweep",
+  "name": "Split Backs - Z Tight Left - 19 Sweep",
   "code": "20",
-  "call": "Split Backs Z Left 19 Sweep",
+  "call": "Split Backs Z Tight Left 19 Sweep",
   "type": "run",
   "scheme": "Sweep",
   "direction": "left",
@@ -17,7 +17,7 @@
   },
   "assignments": {
     "QB": {
-      "rule": "Take the snap and sweep left, flat and fast, behind the left halfback. Turn up outside his block.",
+      "rule": "Take the snap and sweep left, flat and fast, behind the tailback. Turn up outside his block.",
       "type": "run",
       "path": [
         [
@@ -43,9 +43,65 @@
       ]
     }
   },
+  "fronts": {
+    "4-4": {
+      "TB": {
+        "block": "man",
+        "man": "LDE",
+        "how": "Bubble around the X",
+        "via": [
+          [
+            -2.6,
+            1.8
+          ]
+        ]
+      },
+      "FB": {
+        "block": "man",
+        "man": "RDG",
+        "with": "RG"
+      }
+    },
+    "5-3": {
+      "TB": {
+        "block": "man",
+        "man": "LDE",
+        "how": "Bubble around the X",
+        "via": [
+          [
+            -2.6,
+            1.8
+          ]
+        ]
+      },
+      "FB": {
+        "block": "man",
+        "man": "RDT",
+        "with": "RG"
+      }
+    },
+    "5-4-2": {
+      "TB": {
+        "block": "man",
+        "man": "LDE",
+        "how": "Bubble around the X",
+        "via": [
+          [
+            -2.6,
+            1.8
+          ]
+        ]
+      },
+      "FB": {
+        "block": "man",
+        "man": "RDT",
+        "with": "RT"
+      }
+    }
+  },
   "coaching_points": [
-    "The quarterback keeps it every time \u2014 tell him before the snap, there is no read.",
-    "The right halfback's fake is the play. If he jogs, nobody follows him and the defense is waiting at the edge.",
-    "The quarterback stays behind the left halfback until the block is made, then turns it up. Running past his blocker is how the sweep loses yards."
+    "The quarterback keeps it every time — tell him before the snap, there is no read.",
+    "The tailback bubbles around the X and takes the end. The fullback does not go with him — he stays home and doubles the man on our backside guard. He was never going to beat the ball to that edge, and the double is where he is worth something.",
+    "The quarterback stays behind the tailback until the block is made, then turns it up. Running past his blocker is how the sweep loses yards."
   ]
 }

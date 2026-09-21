@@ -34,8 +34,8 @@
 <line x1="579.0" y1="244.8" x2="591.8" y2="257.9" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 <path d="M351.0,364.5 L329.4,372.6 L226.8,367.2" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="0.1 7"/>
 <polygon points="226.8,367.2 237.4,363.1 236.9,372.4" fill="#14213d"/>
-<path d="M351.0,413.1 L413.1,380.7 L432.0,253.8" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-<line x1="422.9" y1="252.4" x2="441.1" y2="255.2" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
+<path d="M351.0,413.1 C372.6,407.7 459.0,399.1 480.6,380.7 C502.2,362.2 488.7,323.5 480.6,302.4 C472.5,281.2 440.1,261.9 432.0,253.8" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="425.5" y1="260.3" x2="438.5" y2="247.3" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 <path d="M351.0,472.5 C360.9,472.5 387.9,475.2 410.4,472.5 C432.9,469.8 463.5,463.5 486.0,456.3 C508.5,449.1 533.7,444.6 545.4,429.3 C557.1,414.0 553.5,388.8 556.2,364.5 C558.9,340.2 560.7,297.0 561.6,283.5" fill="none" stroke="#b3001b" stroke-width="4.6" stroke-linecap="round" stroke-linejoin="round"/>
 <polygon points="561.6,283.5 566.8,297.7 554.5,296.9" fill="#b3001b"/>
 <path d="M351.0,364.5 L410.4,472.5" fill="none" stroke="#b3001b" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="0.1 7"/>

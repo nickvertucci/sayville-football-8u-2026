@@ -1,0 +1,76 @@
+{
+  "id": "sb1-power-l",
+  "order": 2,
+  "formation": "single-back",
+  "name": "Single Back - Tight Left Wing Left - 27 Handoff",
+  "code": "60",
+  "call": "Single Back Tight Left Wing Left 27 Handoff",
+  "type": "run",
+  "scheme": "Power",
+  "direction": "left",
+  "ball_carrier": "FB",
+  "alignment": {
+    "X": [
+      -4.2,
+      -0.5
+    ],
+    "Y": [
+      7.5,
+      -0.5
+    ],
+    "Z": [
+      8.9,
+      -1.6
+    ],
+    "TB": [
+      -5.6,
+      -1.6
+    ]
+  },
+  "assignments": {
+    "QB": {
+      "rule": "Open left and hand the ball to the fullback, then carry out the fake away from him. It holds the backside end.",
+      "type": "fake",
+      "path": [
+        [
+          -1.2,
+          -0.5
+        ],
+        [
+          -3.4,
+          -1.4
+        ]
+      ]
+    },
+    "FB": {
+      "rule": "Take the handoff and hit it downhill at our tackle's outside hip. Never bounce it outside.",
+      "type": "run",
+      "path": [
+        [
+          -0.6,
+          0.8
+        ],
+        [
+          -2.0,
+          2.2
+        ],
+        [
+          -3.4,
+          4.4
+        ],
+        [
+          -3.5,
+          7.0
+        ]
+      ]
+    },
+    "TB": {
+      "block": "lead"
+    }
+  },
+  "coaching_points": [
+    "The only back carries it, so there is nobody behind him to lead. The wing is the lead blocker, and that is why the call puts him on the left.",
+    "Run it at the tight end. The X is beside his tackle here and the C gap is a real hole; on the split side the same gap is five yards of grass and this play does not exist. The build rejects it the other way round.",
+    "The fullback is alone in the backfield, so he is the whole run game in this formation. Every number here is a 2."
+  ]
+}

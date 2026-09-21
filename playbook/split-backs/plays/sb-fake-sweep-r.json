@@ -2,16 +2,16 @@
   "id": "sb-fake-sweep-r",
   "order": 24,
   "formation": "split-backs",
-  "name": "Split Backs - Z Right - 18 Fake Sweep",
+  "name": "Split Backs - Z Tight Right - 18 Fake Sweep",
   "code": "22",
-  "call": "Split Backs Z Right 18 Fake Sweep",
+  "call": "Split Backs Z Tight Right 18 Fake Sweep",
   "type": "run",
   "scheme": "Sweep",
   "direction": "right",
   "ball_carrier": "QB",
   "assignments": {
     "QB": {
-      "rule": "Fake the handoff to the left halfback, then roll back right and sweep it, flat and fast, behind the right halfback. Turn up outside his block.",
+      "rule": "Fake the handoff to the tailback, then roll back right and sweep it, flat and fast, behind the fullback. Turn up outside his block.",
       "type": "run",
       "path": [
         [
@@ -40,8 +40,8 @@
         ]
       ]
     },
-    "LH": {
-      "rule": "Take the fake from the quarterback and run hard to the left like you have the ball. Sell it all the way \u2014 you are the reason the defense goes the wrong way.",
+    "TB": {
+      "rule": "Take the fake from the quarterback and run hard to the left like you have the ball. Sell it all the way — you are the reason the defense goes the wrong way.",
       "type": "fake",
       "path": [
         [
@@ -61,7 +61,7 @@
   },
   "fronts": {
     "4-4": {
-      "RH": {
+      "FB": {
         "block": "man",
         "man": "ROLB",
         "how": "Bubble out around the right tight end",
@@ -79,8 +79,8 @@
     }
   },
   "coaching_points": [
-    "The fake has to look real: the quarterback puts the ball at the left halfback's belly and pulls it back out.",
-    "The left halfback's fake is the play. If he jogs, nobody follows him and the defense is waiting on the right.",
-    "After the fake the quarterback gets back to the right fast, stays behind the right halfback until the block is made, then turns it up."
+    "The fake has to look real: the quarterback puts the ball at the tailback's belly and pulls it back out.",
+    "The tailback's fake is the play. If he jogs, nobody follows him and the defense is waiting on the right.",
+    "After the fake the quarterback gets back to the right fast, stays behind the fullback until the block is made, then turns it up."
   ]
 }

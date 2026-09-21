@@ -1,10 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="702" height="962" viewBox="0 0 702 962" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" width="702" height="804" viewBox="0 0 702 804" font-family="Segoe UI, Helvetica, Arial, sans-serif">
 <rect width="100%" height="100%" fill="#ffffff"/>
 <rect x="0" y="0" width="702" height="58" fill="#14213d"/>
-<text x="18" y="26" font-size="19.0" font-weight="700" fill="#ffffff">Split Backs - Z Left - 29 Toss Pass</text>
+<text x="18" y="26" font-size="15.0" font-weight="700" fill="#ffffff">Split Backs - Z Tight Left - 29 Toss Pass</text>
 <text x="18" y="45" font-size="11.5" fill="#a9b4c7">PASS  •  Split Backs  •  vs 4-4</text>
-<rect x="376.8" y="13" width="307.2" height="31" rx="6" fill="#ffffff" fill-opacity="0.12" stroke="#8593ad" stroke-width="1"/>
-<text x="530.4" y="34" text-anchor="middle" font-size="14.5" font-weight="700" fill="#ffffff" letter-spacing="0.5">Split Backs Z Left 29 Toss Pass</text>
+<rect x="321.6" y="13" width="362.4" height="31" rx="6" fill="#ffffff" fill-opacity="0.12" stroke="#8593ad" stroke-width="1"/>
+<text x="502.8" y="34" text-anchor="middle" font-size="14.5" font-weight="700" fill="#ffffff" letter-spacing="0.5">Split Backs Z Tight Left 29 Toss Pass</text>
 <clipPath id="fieldclip"><rect x="0" y="58" width="702" height="472"/></clipPath>
 <g clip-path="url(#fieldclip)"><g transform="translate(-0.0,31.0)">
 <rect x="0" y="0" width="702" height="513" fill="#ffffff"/>
@@ -41,10 +41,10 @@
 <line x1="93.6" y1="220.5" x2="108.9" y2="210.4" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 <path d="M351.0,364.5 L372.6,372.6 L475.2,367.2" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="0.1 7"/>
 <polygon points="475.2,367.2 465.1,372.4 464.6,363.1" fill="#14213d"/>
-<path d="M291.6,426.6 L270.0,415.8 L205.2,399.6 L156.6,345.6 L140.4,291.6" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-<line x1="131.6" y1="294.2" x2="149.2" y2="289.0" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 <path d="M410.4,426.6 L318.6,437.4 L194.4,432.0 L183.6,364.5" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 5"/>
 <polygon points="183.6,364.5 189.8,374.0 180.7,375.5" fill="#14213d"/>
+<path d="M291.6,426.6 L270.0,415.8 L205.2,399.6 L156.6,345.6 L140.4,291.6" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="131.6" y1="294.2" x2="149.2" y2="289.0" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 <path d="M351.0,364.5 L318.6,437.4" fill="none" stroke="#b3001b" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="0.1 7"/>
 <rect x="224.1" y="324.0" width="27.0" height="27.0" rx="3" fill="#ffffff" stroke="#b3001b" stroke-width="2.6"/>
 <text x="237.6" y="342.0" text-anchor="middle" font-size="13" font-weight="700" fill="#b3001b">X</text>
@@ -65,9 +65,9 @@
 <circle cx="351.0" cy="364.5" r="13.5" fill="#ffffff" stroke="#14213d" stroke-width="2.6"/>
 <text x="351.0" y="369.0" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">QB</text>
 <circle cx="291.6" cy="426.6" r="13.5" fill="#ffffff" stroke="#14213d" stroke-width="2.6"/>
-<text x="291.6" y="431.1" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">LH</text>
+<text x="291.6" y="431.1" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">TB</text>
 <circle cx="410.4" cy="426.6" r="13.5" fill="#ffffff" stroke="#14213d" stroke-width="2.6"/>
-<text x="410.4" y="431.1" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">RH</text>
+<text x="410.4" y="431.1" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">FB</text>
 <text x="253.8" y="284.5" text-anchor="middle" font-size="12.5" fill="#9aa2ae" font-weight="600" stroke="#fff" stroke-width="3" paint-order="stroke">LDE</text>
 <text x="313.2" y="284.5" text-anchor="middle" font-size="12.5" fill="#9aa2ae" font-weight="600" stroke="#fff" stroke-width="3" paint-order="stroke">LDG</text>
 <text x="388.8" y="284.5" text-anchor="middle" font-size="12.5" fill="#9aa2ae" font-weight="600" stroke="#fff" stroke-width="3" paint-order="stroke">RDG</text>
@@ -112,21 +112,12 @@
 <text x="385" y="646" font-size="12" fill="#111318">Pitch it exactly the way you pitch the toss,</text>
 <text x="385" y="664" font-size="12" fill="#111318">then run right like you still have it. Do not</text>
 <text x="385" y="680" font-size="12" fill="#111318">turn and watch the throw.</text>
-<text x="351" y="698" font-size="12" font-weight="700" fill="#111318">LH</text>
-<text x="385" y="698" font-size="12" fill="#111318">Step at the dive, then bubble outside our end</text>
-<text x="385" y="714" font-size="12" fill="#111318">and take the first man out there. He is the</text>
-<text x="385" y="732" font-size="12" fill="#111318">one who gets to the thrower.</text>
-<text x="351" y="748" font-size="12" font-weight="700" fill="#111318">RH</text>
-<text x="385" y="748" font-size="12" fill="#111318">Catch the pitch and run the toss. At our tight</text>
-<text x="385" y="766" font-size="12" fill="#111318">end, pull up behind the line and throw it flat</text>
-<text x="385" y="782" font-size="12" fill="#111318">to the tight end in front of you.</text>
-<line x1="18" y1="790" x2="684" y2="790" stroke="#c8cdd6" stroke-width="1"/>
-<text x="18" y="808" font-size="11" font-weight="700" fill="#5b6472" letter-spacing="1">COACHING POINTS</text>
-<text x="18" y="828" font-size="12" fill="#111318">Everything is the toss until he pulls up. Same pitch, same path, same speed -- a halfback who slows</text>
-<text x="18" y="844" font-size="12" fill="#111318">down to throw has told them.</text>
-<text x="18" y="862" font-size="12" fill="#111318">He throws from behind the line. Crossing it is a penalty, so drill the pull-up, not the arm.</text>
-<text x="18" y="878" font-size="12" fill="#111318">The tight end blocks the end first, then slants out flat, almost on the line. It is a three-yard</text>
-<text x="18" y="896" font-size="12" fill="#111318">throw and it should never be more than that.</text>
-<text x="18" y="912" font-size="12" fill="#111318">The split man keeps blocking out there exactly as he does on the toss. That block is what the defence</text>
-<text x="18" y="930" font-size="12" fill="#111318">is reading while the end gets loose.</text>
+<text x="351" y="698" font-size="12" font-weight="700" fill="#111318">FB</text>
+<text x="385" y="698" font-size="12" fill="#111318">Catch the pitch and run the toss. At our tight</text>
+<text x="385" y="714" font-size="12" fill="#111318">end, pull up behind the line and throw it flat</text>
+<text x="385" y="732" font-size="12" fill="#111318">to the tight end in front of you.</text>
+<text x="351" y="748" font-size="12" font-weight="700" fill="#111318">TB</text>
+<text x="385" y="748" font-size="12" fill="#111318">Step at the dive, then bubble outside our end</text>
+<text x="385" y="766" font-size="12" fill="#111318">and take the first man out there. He is the</text>
+<text x="385" y="782" font-size="12" fill="#111318">one who gets to the thrower.</text>
 </svg>

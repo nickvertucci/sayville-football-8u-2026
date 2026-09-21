@@ -2,13 +2,13 @@
   "id": "sb-toss-l",
   "order": 10,
   "formation": "split-backs",
-  "name": "Split Backs - Z Left - 29 Toss",
+  "name": "Split Backs - Z Tight Left - 29 Toss",
   "code": "18",
-  "call": "Split Backs Z Left 29 Toss",
+  "call": "Split Backs Z Tight Left 29 Toss",
   "type": "run",
   "scheme": "Toss",
   "direction": "left",
-  "ball_carrier": "RH",
+  "ball_carrier": "FB",
   "alignment": {
     "Z": [
       -5.6,
@@ -17,12 +17,12 @@
   },
   "pitch": {
     "from": "QB",
-    "to": "RH",
+    "to": "FB",
     "at": 1
   },
   "assignments": {
     "QB": {
-      "rule": "Quick pitch to the right halfback, then run the other way, to the right, like you still have it.",
+      "rule": "Quick pitch to the fullback, then run the other way, to the right, like you still have it.",
       "type": "rollout",
       "path": [
         [
@@ -35,10 +35,10 @@
         ]
       ]
     },
-    "LH": {
+    "TB": {
       "note": "Step at the dive first to hold their linebackers."
     },
-    "RH": {
+    "FB": {
       "rule": "Run flat, outside and behind the quarterback, and catch the pitch on the run. Ahead of him is a fumble.",
       "type": "run",
       "path": [
@@ -70,27 +70,12 @@
       "Z": {
         "block": "man",
         "man": "LC"
-      },
-      "LH": {
-        "block": "man",
-        "man": "LOLB",
-        "how": "Bubble around the left tight end",
-        "via": [
-          [
-            -3.4,
-            2.0
-          ],
-          [
-            -3.6,
-            4.2
-          ]
-        ]
       }
     }
   },
   "coaching_points": [
     "The pitch goes early. A quarterback who waits to be tackled first will pitch it on the ground.",
-    "This is not a read at this age \u2014 tell him before the snap that he is pitching it.",
-    "Everything depends on the edge being blocked, and out here the split man does it \u2014 which is what frees both backs to fake and lead. Drill him on beating that man to the spot without holding."
+    "This is not a read at this age — tell him before the snap that he is pitching it.",
+    "Everything depends on the edge being blocked, and out here the split man does it — which is what frees both backs to fake and lead. Drill him on beating that man to the spot without holding."
   ]
 }

@@ -1,0 +1,76 @@
+{
+  "id": "sb1-smash-l",
+  "order": 4,
+  "formation": "single-back",
+  "name": "Single Back - Tight Left Wing Right - 23 Handoff",
+  "code": "62",
+  "call": "Single Back Tight Left Wing Right 23 Handoff",
+  "type": "run",
+  "scheme": "Smash",
+  "direction": "left",
+  "ball_carrier": "FB",
+  "alignment": {
+    "X": [
+      -4.2,
+      -0.5
+    ],
+    "Y": [
+      7.5,
+      -0.5
+    ],
+    "Z": [
+      8.9,
+      -1.6
+    ],
+    "TB": [
+      4.2,
+      -1.6
+    ]
+  },
+  "assignments": {
+    "QB": {
+      "rule": "Take the snap and hand it straight to the fullback on his way past. No deep step — he is on you in one count.",
+      "type": "fake",
+      "path": [
+        [
+          -0.8,
+          -0.6
+        ],
+        [
+          -2.4,
+          -1.2
+        ]
+      ]
+    },
+    "FB": {
+      "rule": "Take the handoff and run straight over our guard. Get north — one cut and go.",
+      "type": "run",
+      "path": [
+        [
+          -0.4,
+          1.0
+        ],
+        [
+          -0.8,
+          3.0
+        ],
+        [
+          -1.0,
+          5.6
+        ],
+        [
+          -1.1,
+          8.2
+        ]
+      ]
+    },
+    "TB": {
+      "block": "cutoff"
+    }
+  },
+  "coaching_points": [
+    "The fastest-hitting play in the formation. The fullback is already square to the line, so there is no crossing step and nothing to time.",
+    "The wing is on the back side here and his job is the cutoff. Nobody runs this one down from behind if he does it.",
+    "If they walk a safety into the box for this, that is what the toss and the slant pass are for."
+  ]
+}

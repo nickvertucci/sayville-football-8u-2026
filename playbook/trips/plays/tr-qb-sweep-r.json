@@ -11,7 +11,7 @@
   "ball_carrier": "QB",
   "assignments": {
     "QB": {
-      "rule": "Take the snap and sweep right, flat and fast, behind the trips. Turn up outside the fullback.",
+      "rule": "Take the snap and sweep right, flat and fast, behind the trips. Turn up outside the tailback's block.",
       "type": "run",
       "path": [
         [
@@ -36,11 +36,11 @@
         ]
       ]
     },
-    "FB": {
-      "block": "lead",
-      "target": "force"
-    },
     "TB": {
+      "block": "double",
+      "target": "outside"
+    },
+    "FB": {
       "rule": "Run hard to the left like you have the ball. Sell it all the way.",
       "type": "fake",
       "path": [
@@ -57,6 +57,8 @@
   },
   "coaching_points": [
     "The quarterback keeps it every time — tell him before the snap, there is no read.",
-    "He stays behind the trips until the fullback's block is made, then turns it up."
+    "He stays behind the trips until the tailback's block is made, then turns it up.",
+    "The tailback helps on the end first and only then climbs to the outside linebacker. Going straight to the linebacker leaves the end free to chase it down from behind.",
+    "The fullback's run to the left is the whole disguise — he has to sell it at full speed with nothing in his hands."
   ]
 }
