@@ -43,9 +43,16 @@ because a play that moves somebody silently is a play nobody can call.
 | **4** | A fourth back where a formation has one — the Wishbone's right halfback |
 
 **X, Y and Z have no digit.** They are already letters, so when one of them carries it
-or catches it the call just says the letter: `Regular I Z Right X Sweep`, `Split Backs
-Z Left Y Sweep`, `Trips Right Y Slant Pass`. A digit would be a second name for a man
-who already has one.
+or catches it the call says the letter, the play word, and then **which way it is
+going**: `Regular I Z Right X Sweep Right`, `Split Backs Z Left Y Sweep Left`,
+`Trips Right Y Slant Pass Right`. A digit would be a second name for a man who already
+has one.
+
+The last word is not decoration. A back's hole digit already says the direction — even
+right, odd left — and the letter calls have no digit, on exactly the plays where a
+nine-year-old cannot guess it. The **X is the left end and `X Sweep` sends him right**;
+the Z lines up right on `Z Right Z Sweep` and runs **left**. So the call says it out
+loud, and the build checks it against the diagram like everything else.
 
 | Hole | Word | Where | Blocking |
 |---|---|---|---|
@@ -90,18 +97,20 @@ and `Regular I Z Left 37 Handoff` is the same handoff to the left.
 | `Regular I Z Right 36 Handoff` / `Z Left 37 Handoff` | Regular I - Z Right - 36 Handoff / Z Left - 37 Handoff | tailback, tackle–tight end |
 | `Regular I Z Right 32 Handoff` / `Z Left 33 Handoff` | Regular I - Z Right - 32 Handoff / Z Left - 33 Handoff | tailback, A gap, fullback leading |
 | `Regular I Z Right 22 Handoff` / `Z Left 23 Handoff` | Regular I - Z Right - 22 Handoff / Z Left - 23 Handoff | fullback, A gap, on the snap |
-| `Regular I Z Right X Sweep` / `Z Left Y Sweep` | Regular I - Z Right - X Sweep / Z Left - Y Sweep | the backside tight end on an end-around, all the way outside |
-| `Regular I Z Right Y Slant Pass` / `Z Left X Slant Pass` | Regular I - Z Right - Y Slant Pass / Z Left - X Slant Pass | the play-side tight end, flat out along the line |
-| `Regular I Z Right Z Sweep` / `Z Left Z Sweep` | Regular I - Z Right - Z Sweep / Z Left - Z Sweep | the slot, flat across the backfield and outside the other way |
+| `Regular I Z Right X Sweep Right` / `Z Left Y Sweep Left` | Regular I - Z Right - X Sweep Right / Z Left - Y Sweep Left | the backside tight end on an end-around, all the way outside |
+| `Regular I Z Right Y Slant Pass Right` / `Z Left X Slant Pass Left` | Regular I - Z Right - Y Slant Pass Right / Z Left - X Slant Pass Left | the play-side tight end, flat out along the line |
+| `Regular I Z Right Z Sweep Left` / `Z Left Z Sweep Right` | Regular I - Z Right - Z Sweep Left / Z Left - Z Sweep Right | the slot, lined up one way and flat across the backfield the other |
 | `Regular I Z Right 38 Toss` / `Z Left 39 Toss` | Regular I - Z Right - 38 Toss / Z Left - 39 Toss | tailback, pitched wide and outside the tight end |
 | `Regular I Z Right 38 Pitch Pass` / `Z Left 39 Pitch Pass` | Regular I - Z Right - 38 Pitch Pass / Z Left - 39 Pitch Pass | the same pitch, and the tailback pulls up behind the line and throws |
 
-**A call names its man once.** A back has a digit, so a back's call carries two of
-them — who and where. X, Y and Z have a letter, so their call carries the letter and the
-word and nothing else: `X Sweep` is the X coming all the way across, `Y Slant Pass` is
-the Y flat out along the line. There is no hole to say, because the man who is already
+**A call names its man once, and always says which way.** A back has a digit, so a
+back's call carries two of them — who and where — and the hole is the direction.
+X, Y and Z have a letter, so their call is the letter, the word, and the way:
+`X Sweep Right` is the X coming all the way across to the right, `Y Slant Pass Right`
+is the Y flat out along the line. There is no hole to say, because a man already
 outside the tackle does not run through a gap to get there. Anything else — a nickname,
-a back with no digit, a letter that is not X, Y or Z — fails the build.
+a back with no digit, a letter that is not X, Y or Z, a letter call with the way left
+off or backwards — fails the build.
 
 Every play has a left and a right.
 
@@ -123,13 +132,13 @@ because the near one is busy bubbling out to block.
 
 ### Shotgun: formation + Z + back + hole + play word
 
-The Shotgun's pass is called off the end who catches it — `Y Slant Pass`, `X Slant
-Pass` — and its halfbacks number the same way the Split Backs do: 3 is left, 2 is
-right.
+The Shotgun's pass is called off the end who catches it — `Y Slant Pass Right`,
+`X Slant Pass Left` — and its halfbacks number the same way the Split Backs do: 3 is
+left, 2 is right.
 
 | Call | Play | Reads as |
 |---|---|---|
-| `Shotgun Z Right Y Slant Pass` / `Z Left X Slant Pass` | Shotgun - Z Right - Y Slant Pass / Z Left - X Slant Pass | the play-side tight end, a flat slant out almost on the line of scrimmage |
+| `Shotgun Z Right Y Slant Pass Right` / `Z Left X Slant Pass Left` | Shotgun - Z Right - Y Slant Pass Right / Z Left - X Slant Pass Left | the play-side tight end, a flat slant out almost on the line of scrimmage |
 | `Shotgun Z Left 19 Sweep` / `Z Right 18 Sweep` | Shotgun - Z Left - 19 Sweep / Z Right - 18 Sweep | the quarterback, all the way outside behind the near halfback |
 | `Shotgun Z Left 29 Toss` / `Z Right 38 Toss` | Shotgun - Z Left - 29 Toss / Z Right - 38 Toss | the far halfback, across in front of the quarterback and all the way outside |
 
@@ -138,10 +147,13 @@ through 7, **Toss** at 8/9. The blocking family is still the hole — Smash, Div
 Toss — and it is still what `--check` holds the play to; it is just not what gets
 yelled.
 **Sweep** is *who*, not where: the quarterback (`18` / `19`) or one of the three
-letters (`X Sweep`, `Y Sweep`, `Z Sweep`) coming across to get there. A back at 8/9 is a
-Toss. Digits belong to backs, so a digit never names a letter — the Wishbone's `49 Toss`
-is its right halfback, not the Z.
-**A pass's word is its route, not its hole** — `Y Slant Pass`, `38 Quick Pass`,
+letters (`X Sweep Right`, `Y Sweep Left`, `Z Sweep Left`) coming across to get there. A
+back at 8/9 is a Toss. Digits belong to backs, so a digit never names a letter — the
+Wishbone's `49 Toss` is its right halfback, not the Z.
+**A letter call ends with the way it goes** — `Left` or `Right`, checked against the
+diagram. The digit calls say it in the hole; these have no hole, and these are the
+plays where the man's own side is the wrong guess.
+**A pass's word is its route, not its hole** — `Y Slant Pass Right`, `38 Quick Pass`,
 `38 Pitch Pass`. Where a pass does carry digits they are still checked against the
 diagram; only the word is free, because a route is not a gap.
 **Pitch Pass** keeps the toss's digits — `38 Pitch Pass` is the 38 Toss right up
@@ -175,8 +187,8 @@ up is an 8 or a 9 — and the two ends, who are called by letter.
 |---|---|---|
 | `Trips Right 18 Sweep` / `Trips Left 19 Sweep` | Trips - Right - 18 Sweep / Left - 19 Sweep | the quarterback, alone in the backfield, outside the bunch |
 | `Trips Right 38 Quick Pass` / `Trips Left 39 Quick Pass` | Trips - Right - 38 Quick Pass / Left - 39 Quick Pass | the tailback out of the bunch, thrown to outside the tight end |
-| `Trips Right X Sweep` / `Trips Left Y Sweep` | Trips - Right - X Sweep / Left - Y Sweep | the backside tight end on an end-around |
-| `Trips Right Y Slant Pass` / `Trips Left X Slant Pass` | Trips - Right - Y Slant Pass / Left - X Slant Pass | the play-side tight end, flat out on the line |
+| `Trips Right X Sweep Right` / `Trips Left Y Sweep Left` | Trips - Right - X Sweep Right / Left - Y Sweep Left | the backside tight end on an end-around |
+| `Trips Right Y Slant Pass Right` / `Trips Left X Slant Pass Left` | Trips - Right - Y Slant Pass Right / Left - X Slant Pass Left | the play-side tight end, flat out on the line |
 
 ## Formations
 

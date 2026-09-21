@@ -734,7 +734,7 @@ table.xl.xl-plays td {
    side: the screen is a preview, the printed inches are the thing. */
 @media (max-width: 560px) {
   .band-set { width: 100%; grid-template-rows: none; }
-  .band li { font-size: 14px; line-height: 2.15; }
+  .band li { font-size: 13.5px; line-height: 2.15; }
 }
 
 /* ------------------------------------------------- defensive call sheet --
@@ -948,7 +948,10 @@ table.xl.pk-plays td {
      as one object rather than twenty loose boxes. The cells keep the hairline the rest
      of the sheet's tables use. */
   .script-t { border: 2px solid #000; }
-  .script-t td a { letter-spacing: -.35px; }
+  /* -.45 rather than -.35 since the letter calls grew a direction word: "Split Backs
+     - Z R - X Sweep Right" is the longest row the script can hold and it was 6px over
+     the column at -.35. Measured, not picked. */
+  .script-t td a { letter-spacing: -.45px; }
   .script-t td a { color: #000; text-decoration: none; }
   /* 20.4 points a row is the height of the four formation blocks divided by twenty --
      measured against the page, not picked, and tuned until the foot of this column and
@@ -956,9 +959,11 @@ table.xl.pk-plays td {
      go up to 9px, the same size a call is in the blocks beside it. */
   /* Both columns centred: the number in its own box and the play in the rest of the
      row, which is how a call reads everywhere else on this sheet. The number column is
-     20 points rather than 15 so the centring is visible in it -- at 15 a digit sat a
-     hair off the left border and read as left-aligned whatever the rule said, and two
-     digits filled it edge to edge. */
+     17 points rather than 15 so the centring is visible in it -- at 15 a digit sat a
+     hair off the left border and read as left-aligned whatever the rule said. It was
+     20 until the letter calls grew a direction word; the three points went next door,
+     where "Split Backs - Z R - X Sweep Right" needed them, and two digits at 8px still
+     do not fill 17. */
   /* Qualified with table.xl for the same reason as the screen rule: the print block's
      own `table.xl td` comes after this and would otherwise take back the padding, and
      the base rule's vertical-align: top would take back the centring. */
@@ -967,10 +972,10 @@ table.xl.pk-plays td {
      to two pages the first time the script was filled in. The column is sized so
      nothing needs to wrap; this makes a name that somehow did overflow visibly rather
      than silently push the field and the board off the page. */
-  table.xl.script-t td { height: 20.4px; padding: 0 2px; line-height: 1.15;
+  table.xl.script-t td { height: 20.4px; padding: 0 1px; line-height: 1.15;
                          font-size: 9px; font-weight: 700; white-space: nowrap;
                          vertical-align: middle; text-align: center; }
-  table.xl.script-t td.sn { width: 20px; text-align: center; font-size: 8px;
+  table.xl.script-t td.sn { width: 17px; text-align: center; font-size: 8px;
                             font-weight: 800; color: #000; }
   /* No rule between blocks any more: the formation's own black bar below is the
      separator, and a 3px rule under the block as well was two fences for one fence's
@@ -1065,10 +1070,10 @@ table.xl.pk-plays td {
      row there is and it has half of five inches to fit in. Eight rows then have three
      inches to live in, which is why the leading is what it is -- the space was going
      spare, and a row a boy can keep his eye on is what to spend it on. */
-  .band li { font-size: 14px; line-height: 2.15; padding: 0 5px; gap: 6px; }
+  .band li { font-size: 13.5px; line-height: 2.15; padding: 0 3px; gap: 4px; }
   .band li:nth-child(even) { background: #eee !important;
                              -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-  .band li b { flex-basis: 26px; padding-right: 6px; border-right-color: #000; }
+  .band li b { flex-basis: 21px; padding-right: 4px; border-right-color: #000; }
 
   /* The defensive sheet: three fronts, eleven rows and six packages each, then the
      blank front under them. Small enough that the whole thing is one sheet, the way

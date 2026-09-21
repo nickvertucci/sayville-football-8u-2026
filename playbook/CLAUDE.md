@@ -190,12 +190,19 @@ Both are printed at the top of every card. `name` is `{formation} - Z {Left|Righ
 the huddle (`Regular I Z Right 36 Handoff` — formation, the Z's side, then **two digits: who
 carries it and where it goes**, then the play word).
 
-When **X, Y or Z** carries it, the digits are replaced by that letter and nothing else:
-`Regular I Z Right X Sweep`, `Split Backs Z Left Y Sweep`, `Trips Right Y Slant Pass`.
-The letter is the whole subject — there is no hole to name, because a man already
-outside the tackle does not run through a gap to get there. `LETTER_BACKS` in
-`render.py` is the set of three, and the build checks that the call's letter is the
-play's `ball_carrier`.
+When **X, Y or Z** carries it, the digits are replaced by that letter and the call ends
+with the way the ball is going: `Regular I Z Right X Sweep Right`, `Split Backs Z Left
+Y Sweep Left`, `Trips Right Y Slant Pass Right`. There is no hole to name, because a man
+already outside the tackle does not run through a gap to get there.
+
+The direction word is there because dropping the digit dropped the direction with it. A
+hole digit says which way — even right, odd left — and these are the plays where a
+nine-year-old cannot infer it from anything else: the **X is the left end and `X Sweep`
+sends him right**, and the **Z lines up right on `Z Right Z Sweep` and runs left**. So
+the call says it, and `--check` holds it to the play's `direction` the way it holds a
+hole digit to the diagram. `LETTER_BACKS` in `render.py` is the set of three; the shape
+it enforces is `{letter} {word} {Left|Right}`, with the letter the play's
+`ball_carrier`.
 
 The three men outside the tackles are **X** (left end), **Y** (right end) and **Z**
 (the split man), on the diagram, in the assignment list, on the depth chart and in the
@@ -229,19 +236,20 @@ call. The numbering system is documented in the top-level [README](../README.md)
   a call that names 1 by name rather than failing on geometry.
 
   **Sweep** is who, not a hole: the quarterback at 8/9 is `18 Sweep` / `19 Sweep`, and
-  the three letters are `X Sweep`, `Y Sweep` and `Z Sweep`. A back at 8/9 is a Toss.
-  Digits name backs, never letters — Wishbone's 4 is its right halfback, so `49 Toss`
-  is Toss. So `36 Handoff` is right, `36 Power` fails because Power is the scheme and
-  not the call, and `18 Toss` fails because the quarterback sweeping is Sweep.
+  the three letters are `X Sweep Right`, `Y Sweep Left` and `Z Sweep Left`. A back at
+  8/9 is a Toss. Digits name backs, never letters — Wishbone's 4 is its right halfback,
+  so `49 Toss` is Toss. So `36 Handoff` is right, `36 Power` fails because Power is the
+  scheme and not the call, and `18 Toss` fails because the quarterback sweeping is
+  Sweep.
 
   **A pass opts out of the hole table**, because its word is a route and a route
-  is not a gap: `Y Slant Pass`, `38 Quick Pass`, `38 Pitch Pass`. Only the word
+  is not a gap: `Y Slant Pass Right`, `38 Quick Pass`, `38 Pitch Pass`. Only the word
   is free — where a pass carries digits they are checked against the diagram like any
-  other call.
+  other call, and a letter pass still ends with its direction.
 
 The **hole** is the blocking scheme. `36 Handoff` fills Power because 6 is the C gap;
-`32 Handoff` fills Smash; `18 Sweep` fills Sweep; a dropback — `Y Slant Pass` — fills
-Protect. Hole 0, straight over the center, is Smash too — there is just no play in the
+`32 Handoff` fills Smash; `18 Sweep` fills Sweep; a dropback — `Y Slant Pass Right` —
+fills Protect. Hole 0, straight over the center, is Smash too — there is just no play in the
 book there yet.
 
 That means the digits describe **the back the first digit names**, not necessarily the
@@ -251,9 +259,11 @@ ball carrier. On a play-action pass they follow the quarterback's path, while
 Inventing a nickname instead of a call defeats the point of having a language, and now
 also fails `--check`.
 
-**Those are the only two shapes.** Two digits for a back, one letter for X, Y or Z.
-There is no third: a call that names neither — a nickname, a digit the formation's
-`backs` does not define, a letter that is not one of the three — fails `--check`.
+**Those are the only two shapes.** `{back}{hole} {word}` for a back,
+`{letter} {word} {Left|Right}` for X, Y or Z. There is no third: a call that fits
+neither — a nickname, a digit the formation's `backs` does not define, a letter that is
+not one of the three, a letter call missing its direction or pointing the wrong way —
+fails `--check`.
 
 Formations carry an `order` field too, which is teaching order, not the alphabet.
 Both control the sequence on the site and in `PLAYBOOK.md`.
@@ -299,7 +309,8 @@ Do not restate a scheme verb on the play. `--check` rejects a Power whose
 playside end cuts off, because that is Smash. A `note` with no verb is merged
 onto the scheme job.
 
-A dropback to an end is `{letter} {route}` (`Y Slant Pass`) and scheme **Protect**. The
+A dropback to an end is `{letter} {route} {Left|Right}` (`Y Slant Pass Right`) and
+scheme **Protect**. The
 digits are the receiver and where he crosses the line; the word is his route, which is
 why the hole table does not apply to it. Play-action takes the run's scheme and its
 digits; `ball_carrier` is the receiver.

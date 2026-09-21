@@ -24,8 +24,8 @@ Both ends are tight on the line and the slot is just outside the tight end, one 
 
 | Play | Call | Scheme | Type | Ball |
 |---|---|---|---|---|
-| [Shotgun - Z Right - Y Slant Pass](#shotgun---z-right---y-slant-pass) | `Shotgun Z Right Y Slant Pass` | Protect | pass | Y |
-| [Shotgun - Z Left - X Slant Pass](#shotgun---z-left---x-slant-pass) | `Shotgun Z Left X Slant Pass` | Protect | pass | X |
+| [Shotgun - Z Right - Y Slant Pass Right](#shotgun---z-right---y-slant-pass-right) | `Shotgun Z Right Y Slant Pass Right` | Protect | pass | Y |
+| [Shotgun - Z Left - X Slant Pass Left](#shotgun---z-left---x-slant-pass-left) | `Shotgun Z Left X Slant Pass Left` | Protect | pass | X |
 | [Shotgun - Z Left - 19 Sweep](#shotgun---z-left---19-sweep) | `Shotgun Z Left 19 Sweep` | Sweep | run | QB |
 | [Shotgun - Z Right - 18 Sweep](#shotgun---z-right---18-sweep) | `Shotgun Z Right 18 Sweep` | Sweep | run | QB |
 | [Shotgun - Z Right - 38 Toss](#shotgun---z-right---38-toss) | `Shotgun Z Right 38 Toss` | Toss | run | LH |
@@ -33,13 +33,13 @@ Both ends are tight on the line and the slot is just outside the tight end, one 
 
 ---
 
-## Shotgun - Z Right - Y Slant Pass
+## Shotgun - Z Right - Y Slant Pass Right
 
-**Call it:** `Shotgun Z Right Y Slant Pass`
+**Call it:** `Shotgun Z Right Y Slant Pass Right`
 
 **Scheme:** Protect
 
-![Shotgun - Z Right - Y Slant Pass](cards/sg-te-out-r-4-4.svg)
+![Shotgun - Z Right - Y Slant Pass Right](cards/sg-te-out-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -63,13 +63,13 @@ Both ends are tight on the line and the slot is just outside the tight end, one 
 
 ---
 
-## Shotgun - Z Left - X Slant Pass
+## Shotgun - Z Left - X Slant Pass Left
 
-**Call it:** `Shotgun Z Left X Slant Pass`
+**Call it:** `Shotgun Z Left X Slant Pass Left`
 
 **Scheme:** Protect
 
-![Shotgun - Z Left - X Slant Pass](cards/sg-te-out-l-4-4.svg)
+![Shotgun - Z Left - X Slant Pass Left](cards/sg-te-out-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|

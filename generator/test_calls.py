@@ -48,19 +48,30 @@ CASES = [
     ("Z on the side the call says",   "i-form",   "i-power-r",  "Regular I Z Right 36 Handoff", False),
     ("Z on the other side",           "i-form",   "i-power-r",  "Regular I Z Left 36 Handoff", True),
     # X, Y and Z name themselves. They had digits for a while -- 4, 5 and 6, after the
-    # backs -- and the digits went when the letters came, so the end-around is "X Sweep"
-    # and what has to hold is that the letter is the man carrying it.
-    ("end-around",                    "i-form",   "i-te-sweep-r", "Regular I Z Right X Sweep", False),
-    ("end-around, the other end",     "i-form",   "i-te-sweep-r", "Regular I Z Right Y Sweep", True),
-    ("end-around, no letter at all",  "i-form",   "i-te-sweep-r", "Regular I Z Right Sweep", True),
+    # backs -- and the digits went when the letters came, so the end-around is
+    # "X Sweep Right": the letter has to be the man carrying it, and the last word has
+    # to be the way he is going.
+    ("end-around",                    "i-form",   "i-te-sweep-r", "Regular I Z Right X Sweep Right", False),
+    ("end-around, the other end",     "i-form",   "i-te-sweep-r", "Regular I Z Right Y Sweep Right", True),
+    ("end-around, no letter at all",  "i-form",   "i-te-sweep-r", "Regular I Z Right Sweep Right", True),
     ("end-around, back on its old digits", "i-form", "i-te-sweep-r", "Regular I Z Right 58 Sweep", True),
-    ("the Z on the sweep",            "i-form",   "i-sl-sweep-l", "Regular I Z Right Z Sweep", False),
-    ("the Z sweep given to an end",   "i-form",   "i-sl-sweep-l", "Regular I Z Right X Sweep", True),
+    # The direction word is the whole reason it is there: the X is the LEFT end and
+    # this play sends him right, so a call that leaves the way out, or gets it
+    # backwards, is the mistake a boy would actually make.
+    ("end-around, no direction",      "i-form",   "i-te-sweep-r", "Regular I Z Right X Sweep", True),
+    ("end-around, wrong direction",   "i-form",   "i-te-sweep-r", "Regular I Z Right X Sweep Left", True),
+    ("end-around, direction but no word", "i-form", "i-te-sweep-r", "Regular I Z Right X Right", True),
+    # The Z lines up right on this one and runs left, which is the other reason the
+    # word is worth its six characters.
+    ("the Z on the sweep",            "i-form",   "i-sl-sweep-l", "Regular I Z Right Z Sweep Left", False),
+    ("the Z sweep called the way he lines up", "i-form", "i-sl-sweep-l", "Regular I Z Right Z Sweep Right", True),
+    ("the Z sweep given to an end",   "i-form",   "i-sl-sweep-l", "Regular I Z Right X Sweep Left", True),
     # A pass is the same: its word is a route, and the letter says who is running it.
-    ("the Y slant",                   "i-form",   "i-te-out-r", "Regular I Z Right Y Slant Pass", False),
-    ("the Y slant given to the X",    "i-form",   "i-te-out-r", "Regular I Z Right X Slant Pass", True),
-    ("a letter call in Trips",        "trips",    "tr-te-sweep-r", "Trips Right X Sweep", False),
-    ("a letter call in Trips, wrong end", "trips", "tr-te-sweep-r", "Trips Right Y Sweep", True),
+    ("the Y slant",                   "i-form",   "i-te-out-r", "Regular I Z Right Y Slant Pass Right", False),
+    ("the Y slant given to the X",    "i-form",   "i-te-out-r", "Regular I Z Right X Slant Pass Right", True),
+    ("a letter call in Trips",        "trips",    "tr-te-sweep-r", "Trips Right X Sweep Right", False),
+    ("a letter call in Trips, wrong end", "trips", "tr-te-sweep-r", "Trips Right Y Sweep Right", True),
+    ("a letter call in Trips, no direction", "trips", "tr-te-sweep-r", "Trips Right X Sweep", True),
     # The A gap is 2/3, not 0/1, and there is no 1 hole at all: the middle is one hole,
     # so a call that names the old number has to fail rather than quietly measure a yard
     # and a half away and pass.
