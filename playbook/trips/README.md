@@ -32,24 +32,24 @@ Same line as the Regular I — both ends tight, seven on the line every snap. No
 
 | Play | Call | Scheme | Type | Ball |
 |---|---|---|---|---|
-| [Trips - Right - X Sweep](#trips---right---x-sweep) | `Trips Right X Sweep` | Sweep | run | X |
-| [Trips - Left - Y Sweep](#trips---left---y-sweep) | `Trips Left Y Sweep` | Sweep | run | Y |
+| [Trips - Right - X Sweep Right](#trips---right---x-sweep-right) | `Trips Right X Sweep Right` | Sweep | run | X |
+| [Trips - Left - Y Sweep Left](#trips---left---y-sweep-left) | `Trips Left Y Sweep Left` | Sweep | run | Y |
 | [Trips - Right - 38 Quick Pass](#trips---right---38-quick-pass) | `Trips Right 38 Quick Pass` | Protect | pass | TB |
 | [Trips - Left - 39 Quick Pass](#trips---left---39-quick-pass) | `Trips Left 39 Quick Pass` | Protect | pass | TB |
 | [Trips - Right - 18 Sweep](#trips---right---18-sweep) | `Trips Right 18 Sweep` | Sweep | run | QB |
 | [Trips - Left - 19 Sweep](#trips---left---19-sweep) | `Trips Left 19 Sweep` | Sweep | run | QB |
-| [Trips - Right - Y Slant Pass](#trips---right---y-slant-pass) | `Trips Right Y Slant Pass` | Protect | pass | Y |
-| [Trips - Left - X Slant Pass](#trips---left---x-slant-pass) | `Trips Left X Slant Pass` | Protect | pass | X |
+| [Trips - Right - Y Slant Pass Right](#trips---right---y-slant-pass-right) | `Trips Right Y Slant Pass Right` | Protect | pass | Y |
+| [Trips - Left - X Slant Pass Left](#trips---left---x-slant-pass-left) | `Trips Left X Slant Pass Left` | Protect | pass | X |
 
 ---
 
-## Trips - Right - X Sweep
+## Trips - Right - X Sweep Right
 
-**Call it:** `Trips Right X Sweep`
+**Call it:** `Trips Right X Sweep Right`
 
 **Scheme:** Sweep
 
-![Trips - Right - X Sweep](cards/tr-te-sweep-r-4-4.svg)
+![Trips - Right - X Sweep Right](cards/tr-te-sweep-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -72,13 +72,13 @@ Same line as the Regular I — both ends tight, seven on the line every snap. No
 
 ---
 
-## Trips - Left - Y Sweep
+## Trips - Left - Y Sweep Left
 
-**Call it:** `Trips Left Y Sweep`
+**Call it:** `Trips Left Y Sweep Left`
 
 **Scheme:** Sweep
 
-![Trips - Left - Y Sweep](cards/tr-te-sweep-l-4-4.svg)
+![Trips - Left - Y Sweep Left](cards/tr-te-sweep-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -219,13 +219,13 @@ Same line as the Regular I — both ends tight, seven on the line every snap. No
 
 ---
 
-## Trips - Right - Y Slant Pass
+## Trips - Right - Y Slant Pass Right
 
-**Call it:** `Trips Right Y Slant Pass`
+**Call it:** `Trips Right Y Slant Pass Right`
 
 **Scheme:** Protect
 
-![Trips - Right - Y Slant Pass](cards/tr-te-out-r-4-4.svg)
+![Trips - Right - Y Slant Pass Right](cards/tr-te-out-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -248,13 +248,13 @@ Same line as the Regular I — both ends tight, seven on the line every snap. No
 
 ---
 
-## Trips - Left - X Slant Pass
+## Trips - Left - X Slant Pass Left
 
-**Call it:** `Trips Left X Slant Pass`
+**Call it:** `Trips Left X Slant Pass Left`
 
 **Scheme:** Protect
 
-![Trips - Left - X Slant Pass](cards/tr-te-out-l-4-4.svg)
+![Trips - Left - X Slant Pass Left](cards/tr-te-out-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|

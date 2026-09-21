@@ -425,7 +425,7 @@ LETTER_BACKS = ("X", "Y", "Z")
 def _letter_tail(call: str, form: dict, play: dict) -> str:
     """What is left of a call once the formation and the alignment phrase are off.
 
-    "Split Backs Z Right X Sweep" is "X Sweep". The alignment phrase is whatever word
+    "Split Backs Z Right X Sweep Right" is "X Sweep Right". The alignment phrase is whatever word
     the call puts in front of Left or Right -- "Z Right" here -- and the word is
     optional, because in Trips the strength word IS the formation name and has already
     come off with it: "Trips Right X Sweep" is down to "Right X Sweep" by then. The
@@ -471,22 +471,37 @@ def validate_call(play: dict, form: dict, defenses: dict) -> list[str]:
     # A letter call: X, Y and Z name themselves. They had digits for a while -- 4, 5
     # and 6, after the backs -- and the digits went when the letters came, because two
     # names for one man is one more than anybody needs and the letter is the one on his
-    # diagram. So the call is "Z Right X Sweep", and what has to be true of it is that
-    # the letter is the man carrying it and that the play says which way it goes: with
-    # no hole digit, `direction` is where playside comes from.
+    # diagram. So the call is "Z Right X Sweep Right": who, what, and which way.
+    #
+    # The way is the last word and it is not decoration. A digit call says the
+    # direction in its hole -- even right, odd left -- and dropping the digit dropped
+    # that with it, on exactly the plays where a nine-year-old cannot infer it: the X
+    # is the LEFT end and "X Sweep" sends him RIGHT, and the Z lines up right on
+    # "Z Right Z Sweep" and runs LEFT. So the call says it out loud, and it has to
+    # agree with the diagram like everything else in the call does.
     if not m:
         carrier = play.get("ball_carrier")
         if carrier not in LETTER_BACKS:
             return [f"{pid}: call '{call}' has no two-digit back-and-hole number, and "
                     f"no letter either — only {', '.join(LETTER_BACKS)} name themselves"]
         tail = _letter_tail(call, form, play)
-        if not tail.startswith(carrier + " "):
+        shape = re.fullmatch(r"([A-Z]) (.+) (Left|Right)", tail)
+        if not shape:
+            return [f"{pid}: call '{call}' is a letter call, so the part after the "
+                    f"formation reads '{{letter}} {{word}} {{Left|Right}}' — "
+                    f"{tail!r} does not"]
+        named, going = shape.group(1), shape.group(3)
+        if named != carrier:
             return [f"{pid}: call '{call}' is a letter call, so it has to name the man "
                     f"carrying it — {carrier} — before the play word, and it says "
-                    f"{tail.split(' ')[0]!r}"]
+                    f"{named!r}"]
         if play.get("direction") not in ("left", "right"):
             return [f"{pid}: letter call '{call}' needs a direction, left or right: "
                     "with no hole digit that is where its playside comes from"]
+        if going.lower() != play["direction"]:
+            return [f"{pid}: call '{call}' ends '{going}', but the play goes "
+                    f"{play['direction']} — the last word is which way the ball is "
+                    "headed, which is the one thing the letter does not say"]
         return []
     back_digit, hole_digit = m.group(1), m.group(2)
 

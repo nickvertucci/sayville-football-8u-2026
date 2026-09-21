@@ -34,14 +34,14 @@ Normal line splits, about a foot. Both ends are on the line; the slot is just ou
 |---|---|---|---|---|
 | [Regular I - Z Right - 36 Handoff](#regular-i---z-right---36-handoff) | `Regular I Z Right 36 Handoff` | Power | run | TB |
 | [Regular I - Z Left - 37 Handoff](#regular-i---z-left---37-handoff) | `Regular I Z Left 37 Handoff` | Power | run | TB |
-| [Regular I - Z Right - X Sweep](#regular-i---z-right---x-sweep) | `Regular I Z Right X Sweep` | Sweep | run | X |
-| [Regular I - Z Left - Y Sweep](#regular-i---z-left---y-sweep) | `Regular I Z Left Y Sweep` | Sweep | run | Y |
-| [Regular I - Z Right - Z Sweep](#regular-i---z-right---z-sweep) | `Regular I Z Right Z Sweep` | Sweep | run | Z |
-| [Regular I - Z Left - Z Sweep](#regular-i---z-left---z-sweep) | `Regular I Z Left Z Sweep` | Sweep | run | Z |
+| [Regular I - Z Right - X Sweep Right](#regular-i---z-right---x-sweep-right) | `Regular I Z Right X Sweep Right` | Sweep | run | X |
+| [Regular I - Z Left - Y Sweep Left](#regular-i---z-left---y-sweep-left) | `Regular I Z Left Y Sweep Left` | Sweep | run | Y |
+| [Regular I - Z Right - Z Sweep Left](#regular-i---z-right---z-sweep-left) | `Regular I Z Right Z Sweep Left` | Sweep | run | Z |
+| [Regular I - Z Left - Z Sweep Right](#regular-i---z-left---z-sweep-right) | `Regular I Z Left Z Sweep Right` | Sweep | run | Z |
 | [Regular I - Z Right - 32 Handoff](#regular-i---z-right---32-handoff) | `Regular I Z Right 32 Handoff` | Smash | run | TB |
 | [Regular I - Z Left - 33 Handoff](#regular-i---z-left---33-handoff) | `Regular I Z Left 33 Handoff` | Smash | run | TB |
-| [Regular I - Z Right - Y Slant Pass](#regular-i---z-right---y-slant-pass) | `Regular I Z Right Y Slant Pass` | Protect | pass | Y |
-| [Regular I - Z Left - X Slant Pass](#regular-i---z-left---x-slant-pass) | `Regular I Z Left X Slant Pass` | Protect | pass | X |
+| [Regular I - Z Right - Y Slant Pass Right](#regular-i---z-right---y-slant-pass-right) | `Regular I Z Right Y Slant Pass Right` | Protect | pass | Y |
+| [Regular I - Z Left - X Slant Pass Left](#regular-i---z-left---x-slant-pass-left) | `Regular I Z Left X Slant Pass Left` | Protect | pass | X |
 | [Regular I - Z Right - 22 Handoff](#regular-i---z-right---22-handoff) | `Regular I Z Right 22 Handoff` | Smash | run | FB |
 | [Regular I - Z Left - 23 Handoff](#regular-i---z-left---23-handoff) | `Regular I Z Left 23 Handoff` | Smash | run | FB |
 | [Regular I - Z Right - 38 Toss](#regular-i---z-right---38-toss) | `Regular I Z Right 38 Toss` | Toss | run | TB |
@@ -113,13 +113,13 @@ Normal line splits, about a foot. Both ends are on the line; the slot is just ou
 
 ---
 
-## Regular I - Z Right - X Sweep
+## Regular I - Z Right - X Sweep Right
 
-**Call it:** `Regular I Z Right X Sweep`
+**Call it:** `Regular I Z Right X Sweep Right`
 
 **Scheme:** Sweep
 
-![Regular I - Z Right - X Sweep](cards/i-te-sweep-r-4-4.svg)
+![Regular I - Z Right - X Sweep Right](cards/i-te-sweep-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -143,13 +143,13 @@ Normal line splits, about a foot. Both ends are on the line; the slot is just ou
 
 ---
 
-## Regular I - Z Left - Y Sweep
+## Regular I - Z Left - Y Sweep Left
 
-**Call it:** `Regular I Z Left Y Sweep`
+**Call it:** `Regular I Z Left Y Sweep Left`
 
 **Scheme:** Sweep
 
-![Regular I - Z Left - Y Sweep](cards/i-te-sweep-l-4-4.svg)
+![Regular I - Z Left - Y Sweep Left](cards/i-te-sweep-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -173,13 +173,13 @@ Normal line splits, about a foot. Both ends are on the line; the slot is just ou
 
 ---
 
-## Regular I - Z Right - Z Sweep
+## Regular I - Z Right - Z Sweep Left
 
-**Call it:** `Regular I Z Right Z Sweep`
+**Call it:** `Regular I Z Right Z Sweep Left`
 
 **Scheme:** Sweep
 
-![Regular I - Z Right - Z Sweep](cards/i-sl-sweep-l-4-4.svg)
+![Regular I - Z Right - Z Sweep Left](cards/i-sl-sweep-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -203,13 +203,13 @@ Normal line splits, about a foot. Both ends are on the line; the slot is just ou
 
 ---
 
-## Regular I - Z Left - Z Sweep
+## Regular I - Z Left - Z Sweep Right
 
-**Call it:** `Regular I Z Left Z Sweep`
+**Call it:** `Regular I Z Left Z Sweep Right`
 
 **Scheme:** Sweep
 
-![Regular I - Z Left - Z Sweep](cards/i-sl-sweep-r-4-4.svg)
+![Regular I - Z Left - Z Sweep Right](cards/i-sl-sweep-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -293,13 +293,13 @@ Normal line splits, about a foot. Both ends are on the line; the slot is just ou
 
 ---
 
-## Regular I - Z Right - Y Slant Pass
+## Regular I - Z Right - Y Slant Pass Right
 
-**Call it:** `Regular I Z Right Y Slant Pass`
+**Call it:** `Regular I Z Right Y Slant Pass Right`
 
 **Scheme:** Protect
 
-![Regular I - Z Right - Y Slant Pass](cards/i-te-out-r-4-4.svg)
+![Regular I - Z Right - Y Slant Pass Right](cards/i-te-out-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -323,13 +323,13 @@ Normal line splits, about a foot. Both ends are on the line; the slot is just ou
 
 ---
 
-## Regular I - Z Left - X Slant Pass
+## Regular I - Z Left - X Slant Pass Left
 
-**Call it:** `Regular I Z Left X Slant Pass`
+**Call it:** `Regular I Z Left X Slant Pass Left`
 
 **Scheme:** Protect
 
-![Regular I - Z Left - X Slant Pass](cards/i-te-out-l-4-4.svg)
+![Regular I - Z Left - X Slant Pass Left](cards/i-te-out-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
