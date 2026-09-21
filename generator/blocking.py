@@ -953,6 +953,32 @@ def through_hole(spot, target, side):
     return [elbow] + to(spot, target)
 
 
+def bubble_out(spot, target, side):
+    """A lead blocker's path to the edge: outside FIRST, behind the line, then up.
+
+    `through_hole` puts its elbow ON the line of scrimmage, which is right for an
+    inside run and wrong for everything that goes around the end. A fullback three
+    yards deep drawn to the line and then out is drawn running INTO his own tackle's
+    back and arriving behind the man he is supposed to be in front of. On a toss the
+    ball is already outside by the time he gets there.
+
+    So the elbow goes wide and stays behind the line: most of the way out to his man
+    in x, and only a yard or so of ground gained in y. He crosses the line already
+    outside, which is the whole point of a bubble and the thing the boy has to be
+    shown rather than told.
+    """
+    finish = to(spot, target)
+    wide = 0.72 * target[1] - spot[0]
+    # Never wider than where he finishes. A blocker drawn past his man and then back
+    # inside has a hook in his path, and a hook is a boy asking which way he goes --
+    # the Shotgun's halfback, two yards outside the ball with the linebacker only two
+    # further out, was the case that showed it.
+    if abs(wide) > abs(finish[-1][0]):
+        wide = finish[-1][0]
+    depth = min(spot[1] + 1.2, -0.8)      # still behind the line, whoever he is
+    return [[round(wide, 2), round(depth - spot[1], 2)]] + finish
+
+
 def v_lead(front, spot, side, intent, taken=()):
     """Lead through the hole and block whoever shows in it.
 
@@ -985,7 +1011,7 @@ def v_lead(front, spot, side, intent, taken=()):
         if man is not None and intent.get("with"):
             text = (f"Bubble out around our end, then double team the "
                     f"{noun(front, man[0])} with the {intent['with']}.")
-            return text, through_hole(spot, man, side), man
+            return text, bubble_out(spot, man, side), man
         if man is not None and man[0] in taken and not wide:
             # Somebody is already on him and there is nobody further out. Turn up
             # inside rather than putting two blockers on one defender.
@@ -995,9 +1021,9 @@ def v_lead(front, spot, side, intent, taken=()):
                         "is the man who shows. Head across him.")
                 return text, through_hole(spot, inside, side), inside
         if man is not None:
-            text = (f"Lead outside our end. Block the first man out there — here it "
-                    f"is the {noun(front, man[0])}.")
-            return text, through_hole(spot, man, side), man
+            text = (f"Bubble out around our end — do not run up into the line. Block "
+                    f"the first man out there; here it is the {noun(front, man[0])}.")
+            return text, bubble_out(spot, man, side), man
     aim = intent.get("_hole")
     if aim is None:
         aim = 1.6 * side

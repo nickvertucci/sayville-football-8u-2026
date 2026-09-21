@@ -52,8 +52,8 @@
 <line x1="429.1" y1="118.5" x2="447.3" y2="121.3" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 <path d="M351.0,364.5 L329.4,372.6 L226.8,367.2" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="0.1 7"/>
 <polygon points="226.8,367.2 237.4,363.1 236.9,372.4" fill="#14213d"/>
-<path d="M351.0,413.1 L439.3,307.8 L489.8,215.2" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-<line x1="481.7" y1="210.8" x2="497.8" y2="219.6" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
+<path d="M351.0,413.1 L456.0,380.7 L489.8,215.2" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="480.8" y1="213.4" x2="498.8" y2="217.0" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 <path d="M351.0,472.5 C360.9,472.5 387.9,475.2 410.4,472.5 C432.9,469.8 463.5,463.5 486.0,456.3 C508.5,449.1 533.7,444.6 545.4,429.3 C557.1,414.0 553.5,388.8 556.2,364.5 C558.9,340.2 560.7,297.0 561.6,283.5" fill="none" stroke="#b3001b" stroke-width="4.6" stroke-linecap="round" stroke-linejoin="round"/>
 <polygon points="561.6,283.5 566.8,297.7 554.5,296.9" fill="#b3001b"/>
 <path d="M351.0,364.5 L410.4,472.5" fill="none" stroke="#b3001b" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="0.1 7"/>
@@ -115,9 +115,9 @@
 <text x="344" y="680" font-size="12" fill="#111318">the other way, to the left, like you</text>
 <text x="344" y="698" font-size="12" fill="#111318">still have it.</text>
 <text x="310" y="714" font-size="12" font-weight="700" fill="#111318">FB</text>
-<text x="344" y="714" font-size="12" fill="#111318">Lead outside our end. Block the first</text>
-<text x="344" y="732" font-size="12" fill="#111318">man out there — here it is the</text>
-<text x="344" y="748" font-size="12" fill="#111318">linebacker.</text>
+<text x="344" y="714" font-size="12" fill="#111318">Bubble out around our end — do not run</text>
+<text x="344" y="732" font-size="12" fill="#111318">up into the line. Block the first man</text>
+<text x="344" y="748" font-size="12" fill="#111318">out there; here it is the linebacker.</text>
 <text x="310" y="766" font-size="12" font-weight="700" fill="#111318">TB</text>
 <text x="344" y="766" font-size="12" fill="#111318">Take the pitch on the run and get to</text>
 <text x="344" y="782" font-size="12" fill="#111318">the right edge behind your two</text>

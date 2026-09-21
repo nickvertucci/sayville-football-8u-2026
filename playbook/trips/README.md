@@ -62,7 +62,7 @@ Same line as the Regular I — both ends tight, seven on the line every snap. No
 | **Y** | Defensive end on your inside shoulder. Turn him inside. The ball goes around behind you. |
 | **Z** | Run at the corner and screen him off. Stay in his way. |
 | **QB** | Open right and hand the ball to the left tight end as he comes across behind you, then fake a run to the left. |
-| **FB** | Lead outside our end. Block the first man out there — here it is the linebacker. |
+| **FB** | Bubble out around our end — do not run up into the line. Block the first man out there; here it is the linebacker. |
 | **TB** | Run at the corner and screen him off. Stay in his way. |
 
 **Coaching points**
@@ -91,7 +91,7 @@ Same line as the Regular I — both ends tight, seven on the line every snap. No
 | **Y** **(ball)** | Stay down in your stance — no motion. At the snap run flat behind the quarterback, take the handoff at full speed and get to the left edge. Turn up outside the trips. |
 | **Z** | Run at the corner and screen him off. Stay in his way. |
 | **QB** | Open left and hand the ball to the right tight end as he comes across behind you, then fake a run to the right. |
-| **FB** | Lead outside our end. Block the first man out there — here it is the linebacker. |
+| **FB** | Bubble out around our end — do not run up into the line. Block the first man out there; here it is the linebacker. |
 | **TB** | Run at the corner and screen him off. Stay in his way. |
 
 **Coaching points**
@@ -120,7 +120,7 @@ Same line as the Regular I — both ends tight, seven on the line every snap. No
 | **Y** | Pass block: step back, hands up, and stay between your man and the quarterback. |
 | **Z** | Run at the corner and screen him off. Stay in his way. |
 | **QB** | Take the snap and throw it to the tailback right now, out in the flat. One step, no drop. If he is covered, throw it at his feet. |
-| **FB** | Lead outside our end. Block the first man out there — here it is the linebacker. |
+| **FB** | Bubble out around our end — do not run up into the line. Block the first man out there; here it is the linebacker. |
 | **TB** **(ball)** | Slide out behind the bunch, catch it standing still, then get north off your two blockers. Do not run backwards to get around. |
 
 **Coaching points**
@@ -150,7 +150,7 @@ Same line as the Regular I — both ends tight, seven on the line every snap. No
 | **Y** | Pass block: step back, hands up, and stay between your man and the quarterback. |
 | **Z** | Run at the corner and screen him off. Stay in his way. |
 | **QB** | Take the snap and throw it to the tailback right now, out in the flat. One step, no drop. If he is covered, throw it at his feet. |
-| **FB** | Lead outside our end. Block the first man out there — here it is the linebacker. |
+| **FB** | Bubble out around our end — do not run up into the line. Block the first man out there; here it is the linebacker. |
 | **TB** **(ball)** | Slide out behind the bunch, catch it standing still, then get north off your two blockers. Do not run backwards to get around. |
 
 **Coaching points**
@@ -180,7 +180,7 @@ Same line as the Regular I — both ends tight, seven on the line every snap. No
 | **Y** | Defensive end on your inside shoulder. Turn him inside. The ball goes around behind you. |
 | **Z** | Run at the corner and screen him off. Stay in his way. |
 | **QB** **(ball)** | Take the snap and sweep right, flat and fast, behind the trips. Turn up outside the fullback. |
-| **FB** | Lead outside our end. Block the first man out there — here it is the linebacker. |
+| **FB** | Bubble out around our end — do not run up into the line. Block the first man out there; here it is the linebacker. |
 | **TB** | Run hard to the left like you have the ball. Sell it all the way. |
 
 **Coaching points**
@@ -209,7 +209,7 @@ Same line as the Regular I — both ends tight, seven on the line every snap. No
 | **Y** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
 | **Z** | Run at the corner and screen him off. Stay in his way. |
 | **QB** **(ball)** | Take the snap and sweep left, flat and fast, behind the trips. Turn up outside the fullback. |
-| **FB** | Lead outside our end. Block the first man out there — here it is the linebacker. |
+| **FB** | Bubble out around our end — do not run up into the line. Block the first man out there; here it is the linebacker. |
 | **TB** | Run hard to the right like you have the ball. Sell it all the way. |
 
 **Coaching points**

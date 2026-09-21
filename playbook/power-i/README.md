@@ -118,7 +118,7 @@ Same line as the Regular I — both ends tight, seven on the line every snap. Th
 | **Y** | Defensive end on your inside shoulder. Turn him inside. The ball goes around behind you. |
 | **Z** | Get outside the fullback, then take him, then block the right corner. |
 | **QB** | Quick pitch to the tailback, then run the other way, to the left, like you still have it. |
-| **FB** | Lead outside our end. Block the first man out there — here it is the linebacker. |
+| **FB** | Bubble out around our end — do not run up into the line. Block the first man out there; here it is the linebacker. |
 | **TB** **(ball)** | Take the pitch on the run and get to the right edge behind your two blockers. Ahead of the quarterback is a fumble. |
 
 **Coaching points**
@@ -148,7 +148,7 @@ Same line as the Regular I — both ends tight, seven on the line every snap. Th
 | **Y** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
 | **Z** | Get outside the fullback, then take him, then block the left corner. |
 | **QB** | Quick pitch to the tailback, then run the other way, to the right, like you still have it. |
-| **FB** | Lead outside our end. Block the first man out there — here it is the linebacker. |
+| **FB** | Bubble out around our end — do not run up into the line. Block the first man out there; here it is the linebacker. |
 | **TB** **(ball)** | Take the pitch on the run and get to the left edge behind your two blockers. Ahead of the quarterback is a fumble. |
 
 **Coaching points**

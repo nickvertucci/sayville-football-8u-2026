@@ -237,9 +237,9 @@ Same line as the Regular I — both ends tight, seven on the line every snap. Fu
 | **RT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
 | **Y** | Defensive end on your inside shoulder. Turn him inside. The ball goes around behind you. |
 | **QB** | Quick pitch to the left halfback, then run the other way, to the left, like you still have it. |
-| **FB** | Lead outside our end. Block the first man out there — here it is the linebacker. |
+| **FB** | Bubble out around our end — do not run up into the line. Block the first man out there; here it is the linebacker. |
 | **LH** **(ball)** | Run flat, outside and behind the quarterback, and catch the pitch on the run. Ahead of him is a fumble. |
-| **RH** | Lead outside our end. Block the first man out there — here it is the corner. Step at the dive first to hold their linebackers. |
+| **RH** | Bubble out around our end — do not run up into the line. Block the first man out there; here it is the corner. Step at the dive first to hold their linebackers. |
 
 **Coaching points**
 
@@ -267,8 +267,8 @@ Same line as the Regular I — both ends tight, seven on the line every snap. Fu
 | **RT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
 | **Y** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
 | **QB** | Quick pitch to the right halfback, then run the other way, to the right, like you still have it. |
-| **FB** | Lead outside our end. Block the first man out there — here it is the linebacker. |
-| **LH** | Lead outside our end. Block the first man out there — here it is the corner. Step at the dive first to hold their linebackers. |
+| **FB** | Bubble out around our end — do not run up into the line. Block the first man out there; here it is the linebacker. |
+| **LH** | Bubble out around our end — do not run up into the line. Block the first man out there; here it is the corner. Step at the dive first to hold their linebackers. |
 | **RH** **(ball)** | Run flat, outside and behind the quarterback, and catch the pitch on the run. Ahead of him is a fumble. |
 
 **Coaching points**

@@ -173,7 +173,7 @@ Both ends are tight on the line and the slot is just outside the tight end, one 
 | **Z** | Run at the corner and screen him off. Stay in his way. |
 | **QB** | Hand the ball to the left halfback as he crosses in front of you, then fake a run to the left. |
 | **LH** **(ball)** | Cross in front of the quarterback, take the handoff going right and get to the edge behind the right halfback. Turn up outside his block. |
-| **RH** | Bubble out around the right end, then block the right outside linebacker. |
+| **RH** | Bubble out around our end — do not run up into the line. Block the first man out there; here it is the linebacker. |
 
 **Coaching points**
 
@@ -202,7 +202,7 @@ Both ends are tight on the line and the slot is just outside the tight end, one 
 | **Y** | Block the right defensive end. |
 | **Z** | Run at the corner and screen him off. Stay in his way. |
 | **QB** | Hand the ball to the right halfback as he crosses in front of you, then fake a run to the right. |
-| **LH** | Bubble out around the left end, then block the left outside linebacker. |
+| **LH** | Bubble out around our end — do not run up into the line. Block the first man out there; here it is the linebacker. |
 | **RH** **(ball)** | Cross in front of the quarterback, take the handoff going left and get to the edge behind the left halfback. Turn up outside his block. |
 
 **Coaching points**

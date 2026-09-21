@@ -93,17 +93,6 @@
       "X": {
         "block": "man",
         "man": "LDE"
-      },
-      "LH": {
-        "block": "man",
-        "man": "LOLB",
-        "how": "Bubble out around the left end",
-        "via": [
-          [
-            -4.0,
-            2.4
-          ]
-        ]
       }
     }
   },
