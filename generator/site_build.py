@@ -780,6 +780,54 @@ table.xl.df-grid tbody td { font-weight: 700; }
 }
 @media (max-width: 560px) { .pk-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 .sit-grid { margin-top: 18px; }
+/* The base eleven, once, across the full width: eleven little cells in the order they
+   stand on the field. Printing all eleven names on all six package cards was six
+   lists a coach had to diff in his head; this is the one he diffs them against. */
+.bl-strip { margin-top: 18px; }
+.bl-row {
+  display: grid; grid-template-columns: repeat(11, minmax(0, 1fr)); gap: 0 1px;
+  background: var(--line); border-top: 1px solid var(--line);
+}
+.bl-man {
+  display: block; padding: 3px 4px 4px; min-width: 0; text-align: center;
+  background: var(--panel); font-size: 11px; font-weight: 700; color: var(--ink);
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.bl-man b {
+  display: block; font-size: 9px; font-weight: 900; letter-spacing: .4px;
+  text-transform: uppercase; color: var(--muted);
+}
+/* Out, then in. The arrow between them is drawn out of borders rather than set as a
+   glyph: a border prints on anything, and U+2192 is a box on a machine whose font
+   stack does not happen to carry it -- which is most of the ones this gets printed
+   from. Same reason the discs on the blank line are borders. */
+table.xl.pk-subs td {
+  height: auto; padding: 2px 4px; vertical-align: middle; font-size: 10.5px;
+  font-weight: 700; white-space: nowrap;
+}
+table.xl.pk-subs .sub-pos {
+  width: 2.6em; text-align: left; font-size: 9.5px; font-weight: 900;
+  letter-spacing: .3px; color: var(--muted); background: var(--panel-2);
+}
+table.xl.pk-subs .sub-out { text-align: right; color: var(--muted);
+                            text-decoration: line-through; }
+table.xl.pk-subs .sub-in { text-align: left; }
+table.xl.pk-subs .sub-in::before {
+  content: ""; display: inline-block; vertical-align: middle;
+  width: 0; height: 0; margin: 0 5px 1px 0;
+  border: 3px solid transparent; border-left-color: var(--muted); border-right: 0;
+}
+/* Six across, not three. A substitution card is one short column of two names, where
+   a package card is five whole calls, so six of these fit the width that three of
+   those need -- and one row of six is half the height of two rows of three, which is
+   the difference between this strip fitting under the field and the field paying for
+   it twice over. */
+.sub-grid { margin-top: 10px; grid-template-columns: repeat(6, minmax(0, 1fr)); }
+@media (max-width: 860px) { .sub-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (max-width: 560px) {
+  .bl-row { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .sub-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
 .pk { min-width: 0; }
 .pk-name {
   margin: 0; padding: 5px 8px; font-size: 12.5px; font-weight: 800;
@@ -863,10 +911,11 @@ table.xl.pk-plays td {
    rest of it leaves. 62 points of drawing space to start, then 200 and 260 as
    formations came off the sheet, 120 when the down-and-distance board went in, 155
    once the board went to two calls, 185 when a package card went to five rows, and
-   196 once the last of the bottom margin went into it too. It is 187 now only
-   because the line of scrimmage dropped another nine points and the box had
-   nowhere left to grow -- the field is the same height, the line just sits lower
-   in it. Every one of those numbers was measured against the page, not chosen --
+   196 once the last of the bottom margin went into it too. It was 187 when the line
+   of scrimmage dropped another nine points and the box had nowhere left to grow --
+   the field the same height, the line just lower in it -- and it is 172 now because
+   the board came off and the base eleven and the substitution cards went on in its
+   place, which cost fifteen more points than the board did. Every one of those numbers was measured against the page, not chosen --
    and this one sits
    about four points under the two-page cliff rather than the twenty-odd the
    others kept, which is deliberate and is the thing to undo first if a printer
@@ -1042,12 +1091,36 @@ table.xl.pk-plays td {
   .pk-sub { display: none; }
   .pk-grid { gap: 0 8px; margin: 0; padding-top: 4px; break-inside: avoid;
              border-top: 1px solid #000; }
-  /* The down-and-distance board is a second .pk-grid, so it takes the same rule above
-     and gets its top rule for free. Sitting under the blank field, that rule is also
-     what closes the field off at the bottom -- the field has sidelines and a top, and
-     this is its goal line. No gap above it for that reason: a margin would leave the
-     field hanging open with a stray rule below it. */
-  .sit-grid { margin-top: 0; }
+  /* Under the blank field, the top rule of whatever comes next is also what closes
+     the field off at the bottom -- the field has sidelines and a top, and this is its
+     goal line. So no gap above it: a margin would leave the field hanging open with a
+     stray rule below it. */
+  /* The base strip closes the field off at the bottom the way the board used to: its
+     own top rule is the field's goal line, so no margin above it. */
+  .bl-strip { margin-top: 0; padding-top: 4px; border-top: 1px solid #000;
+              break-inside: avoid; }
+  .bl-row { gap: 0; background: none; border-top: 0; }
+  .bl-man { padding: 0 2px 1px; font-size: 8px; line-height: 1.2;
+            border-left: 1px solid #bbb; }
+  .bl-man:first-child { border-left: 0; }
+  .bl-man b { font-size: 6.5px; letter-spacing: .2px; color: #000; }
+  .bl-card .pk-name { margin-bottom: 1px; }
+  .pk-grid.sub-grid { border-top: 0; padding-top: 3px; margin-top: 0;
+                      grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 0 5px; }
+  /* The three-column hairline rules above count in threes; this grid is six across,
+     one row, so every card but the first takes a left rule and none takes a top one. */
+  .sub-grid .pk:not(:nth-child(3n + 1)) { border-left: 1px solid #bbb; }
+  .sub-grid .pk:nth-child(n + 4) { border-top: 0; padding-top: 0; }
+  .sub-grid .pk:nth-child(-n + 3) { padding-bottom: 0; }
+  .sub-grid .pk { padding: 0 4px; }
+  .sub-grid .pk:first-child { border-left: 0; }
+  table.xl.pk-subs td { font-size: 7.5px; padding: 0 2px; line-height: 1.25;
+                        letter-spacing: -.2px; }
+  table.xl.pk-subs .sub-pos { font-size: 6.5px; width: 2.4em; background: none;
+                              color: #000; }
+  table.xl.pk-subs .sub-out { color: #555; }
+  table.xl.pk-subs .sub-in::before { margin: 0 3px 1px 0; border-width: 2.5px;
+                                     border-left-color: #000; border-right: 0; }
   .pk-field { margin: 5px 0 0; padding-top: 31px; border-top-color: #000;
               border-left-color: #000; border-right-color: #000; }
   .pk-field .hash { width: 11px; border-top-color: #000; }
@@ -1058,7 +1131,7 @@ table.xl.pk-plays td {
   .pk-draw .o { border-width: 10px; border-color: #000; }
   .pk-draw .ball { width: 19px; height: 11px; border-color: #000; }
   .pk-draw .ball::after { border-top-color: #000; }
-  .pk-draw .pad { height: 187px; }
+  .pk-draw .pad { height: 172px; }
   /* Hairlines between the cards. These went in when the name bars printed as plain
      black text and six lists of calls ran together into one block of small type. The
      bars are bars on paper now (see .pk-name below), so they do most of that work
@@ -3004,10 +3077,9 @@ def _package_row(play: dict, form: dict) -> str:
 def _roster_and_plays(root: Path, formations: list[dict]) -> tuple[dict, dict]:
     """`roster.json`, and every play in the book keyed by its call.
 
-    The three lists on this sheet -- the packages, the down-and-distance board and the
-    script -- all name plays the same way and all check them the same way, so they read
-    the file and build the index once here rather than three times each with its own
-    idea of what counts as a play.
+    The two lists on this sheet that name plays -- the packages and the script -- name
+    them the same way and check them the same way, so they read the file and build the
+    index once here rather than twice each with its own idea of what counts as a play.
 
     The index is the whole book, not one formation's plays: any of the three may name a
     play from anywhere, including a formation whose block is not on the sheet.
@@ -3090,76 +3162,91 @@ def _package_strip(root: Path, formations: list[dict]) -> str:
             '<span class="pk-sub">what each one comes on to call</span></p>'
             f'<div class="pk-grid">{"".join(cards)}</div>'
             f'{_blank_line()}'
-            f'{_situation_strip(roster, plays)}')
+            f'{_subs_strip(roster)}')
 
 
-# The down-and-distance board, in the order the situations come up. The names are here
-# rather than in the JSON because they are the six situations of a football game and
-# not a coaching preference -- what to CALL in each one is the preference, and that is
-# what roster.json holds.
-SITUATIONS = (
-    "1st down", "2nd & Short", "2nd & Long",
-    "3rd & Short", "3rd & Long", "4th down",
-)
-# Exactly two, not up to two: one call to the right and one to the left. That is a
-# strength choice rather than a list to read down, which is what you actually want at
-# the line. A fixed count also means the board's height is known, which is what keeps
-# the field above it the size it was measured at.
-SITUATION_PLAY_CAP = 2
+# The lineup, in the order it stands on the field: the seven on the line from left to
+# right, then the men behind it. Not PACKAGE_SPOTS order -- that one starts at the
+# quarterback because a package card is read as a backfield -- because this strip is a
+# picture of the formation and a coach reading it is looking left to right along his
+# own line.
+LINEUP_SPOTS = ("LTE", "LT", "LG", "C", "RG", "RT", "RTE", "SL", "QB", "FB", "TB")
 
 
-def _situation_strip(roster: dict, plays: dict) -> str:
-    """The down-and-distance board: six situations, three calls each.
+def _base_eleven(roster: dict) -> list[tuple[str, str]]:
+    """The first man at each of the eleven spots, in lineup order."""
+    side = roster.get("offense") or {}
+    out = []
+    for spot in LINEUP_SPOTS:
+        names = side.get(spot) or []
+        if not names:
+            raise SystemExit(
+                f"roster.json offense: nobody is listed at {spot}, and the call sheet's "
+                "base eleven is the first name at each spot."
+            )
+        out.append((spot, names[0]))
+    return out
 
-    The packages answer "who is on the field"; this answers "what do we call now",
-    which is the question actually being asked on 3rd and 2. Both are lists of plays
-    and both print as the same card, so this reuses the package grid rather than
-    inventing a second look for the same thing.
 
-    It sits under the blank field rather than above it, so the sheet reads in the order
-    a drive does: the book, then who comes on, then the space to invent something, and
-    the board last as the thing you look down at when there is no time to invent.
+def _subs_strip(roster: dict) -> str:
+    """The base eleven, then what changes for each package.
 
-    `plays` is the whole book by call, as the packages use it, so a situation may
-    name a play from any formation -- including one whose block is not on the sheet.
-    That is deliberate: the board IS the sheet for these twelve, and a call here is a
-    call whether or not its table prints.
+    A package card up the sheet says what a package comes on to CALL. This says who
+    comes on, and only who: a package is eleven names in roster.json, but ten of them
+    are usually the same ten as the last package, and printing all eleven six times is
+    six lists a coach has to diff in his head while a play clock runs. So the base is
+    printed once, in lineup order, and a package is the difference from it -- out, in,
+    one line each.
+
+    It also makes a package drifting off the depth chart visible instead of quiet.
+    A package whose left guard is not the left guard shows a substitution at left
+    guard; if that is not what the package is for, the card says so on paper.
     """
-    assigned = (roster.get("situation_plays") or {}).get("offense") or []
-    if not assigned:
+    packs = (roster.get("packages") or {}).get("offense") or []
+    names = (roster.get("package_names") or {}).get("offense") or []
+    if not packs:
         return ""
+    base = _base_eleven(roster)
+    by_spot = dict(base)
+    spots = PACKAGE_SPOTS["offense"]
+
+    cells = "".join(
+        f'<span class="bl-man"><b>{esc(spot)}</b>{esc(man)}</span>'
+        for spot, man in base
+    )
+    base_card = ('<section class="pk bl-card"><p class="pk-name">Base offense</p>'
+                 f'<div class="bl-row">{cells}</div></section>')
 
     cards = []
-    for i, label in enumerate(SITUATIONS):
-        calls = list(assigned[i]) if i < len(assigned) else []
-        if len(calls) != SITUATION_PLAY_CAP:
+    for i, pack in enumerate(packs):
+        label = names[i] if i < len(names) else f"Package {i + 1}"
+        if len(pack) != len(spots):
             raise SystemExit(
-                f"roster.json situation_plays, {label}: {len(calls)} plays, and a "
-                f"situation carries exactly {SITUATION_PLAY_CAP} — the board's height "
-                "is what keeps the blank field above it the size it was measured at."
+                f"roster.json packages.offense, {label}: {len(pack)} names for "
+                f"{len(spots)} spots."
             )
         rows = []
-        for call in calls:
-            found = plays.get(call)
-            if found is None:
-                raise SystemExit(
-                    f"roster.json situation_plays, {label}: '{call}' is not a play in "
-                    "the book. Use a play's full call."
-                )
-            play, form = found
+        for spot, man in zip(spots, pack):
+            was = by_spot.get(spot)
+            if was is None or man == was:
+                continue
             rows.append(
-                f'<tr><td><a href="{p_href(play)}">'
-                f'<span class="xl-code">#{esc(play["code"])} |</span>'
-                f'{esc(_package_row(play, form))}</a></td></tr>'
+                f'<tr><td class="sub-pos">{esc(spot)}</td>'
+                f'<td class="sub-out">{esc(was)}</td>'
+                f'<td class="sub-in">{esc(man)}</td></tr>'
             )
+        body = ("".join(rows) if rows else
+                '<tr><td class="pk-any" colspan="3">Base eleven</td></tr>')
         cards.append(
-            f'<section class="pk"><p class="pk-name">{esc(label)}</p>'
-            f'<table class="xl pk-plays"><tbody>{"".join(rows)}</tbody></table></section>'
+            f'<section class="pk"><p class="pk-name">{esc(label)}'
+            f'<span class="pk-n">{i + 1}</span></p>'
+            f'<table class="xl pk-subs"><tbody>{body}</tbody></table></section>'
         )
 
-    return ('<p class="section-head pk-head">Down and distance '
-            '<span class="pk-sub">what we call when</span></p>'
-            f'<div class="pk-grid sit-grid">{"".join(cards)}</div>')
+    return ('<p class="section-head pk-head">Who comes on '
+            '<span class="pk-sub">the base eleven, then what each package changes</span></p>'
+            f'<div class="bl-strip">{base_card}</div>'
+            f'<div class="pk-grid sub-grid">{"".join(cards)}</div>')
 
 
 # The line, as fifteen grid columns: a number, a man, a number, a man ... so the hole
@@ -3220,8 +3307,8 @@ def _script_strip(root: Path, formations: list[dict]) -> str:
     """The numbered column down the right of the formation blocks.
 
     The plays in the order they are called, from roster.json under `script_plays`,
-    beside package_plays and situation_plays and under the same rule: a full call that
-    has to name a real play or the build stops.
+    beside package_plays and under the same rule: a full call that has to name a real
+    play or the build stops.
 
     A play may appear more than once -- a script repeats on purpose, and this one calls
     22 Smash three times. Short of the twenty rows is fine and the rest print blank;
@@ -3442,12 +3529,22 @@ CALL_SHEET_ORDER = (
 # Formations that stay in the book but come off the call sheet. The Wishbone and
 # Trips are teaching formations here -- each has its own page, its cards, its place
 # in the printed book and in PLAYBOOK.md, and its plays are authored and checked
-# like every other -- but neither is what anybody reaches for on a Sunday. Off the
-# sheet, the blocks below them move up and the field below the line of scrimmage
-# grows by their height, which is the point: that space gets drawn on with a marker.
-# Same shape as sheet_plays dropping the passes -- a filter here, not a deletion
-# anywhere, so a formation comes back by taking it out of this set.
-SHEET_OMIT = frozenset({"wishbone", "trips"})
+# like every other -- but neither is what anybody reaches for on a Sunday. The
+# Shotgun came off later for the same reason: six plays a coach knows by heart do
+# not need a block of his one sheet. Off the sheet, the blocks below them move up
+# and the field below the line of scrimmage grows by their height, which is the
+# point: that space gets drawn on with a marker. Same shape as sheet_plays dropping
+# the passes -- a filter here, not a deletion anywhere, so a formation comes back by
+# taking it out of this set.
+SHEET_OMIT = frozenset({"wishbone", "trips", "shotgun"})
+
+# And the ones that come off the wristbands, which is not the same list. A coach
+# taking a formation off his own sheet has decided he does not need it written down;
+# a boy has decided nothing, and the number still gets shouted at him. The 3rd-and-
+# long square on that very sheet calls two Shotgun sweeps, so a band without 33 to 38
+# on it is a band that fails on third and long. Off the bands are only the two
+# formations nobody calls at all.
+BAND_OMIT = frozenset({"wishbone", "trips"})
 
 
 def _call_sheet_order(formations: list[dict]) -> list[dict]:
@@ -3492,13 +3589,16 @@ def band_call(play: dict, form: dict) -> str:
 def band_plays(formations: list[dict]) -> list[tuple[dict, list[dict]]]:
     """Every play a coach can call on a Saturday, by formation, in number order.
 
-    The call sheet's formations, which is what makes the band contiguous: the numbers
-    were handed out in this order precisely so a band runs 1 to 42 with no holes in it.
-    The passes are on it even though the call sheet leaves them off -- the sheet is
-    what a coach reaches for and he does not call a slant out off it, but if he calls
-    one, the boy still has to find the number.
+    In call sheet order, which is what makes the band contiguous: the numbers were
+    handed out in this order precisely so a band runs 1 to 42 with no holes in it.
+
+    BAND_OMIT rather than SHEET_OMIT, and the two differ on purpose. Everything the
+    sheet leaves off is still callable -- the passes, and a formation the coach knows
+    well enough not to want a block of paper for -- and a boy looking up a number
+    cannot tell which. He is not reading the coach's sheet; he is finding the row the
+    number is on.
     """
-    forms = [f for f in _call_sheet_order(formations) if f.get("id") not in SHEET_OMIT]
+    forms = [f for f in _call_sheet_order(formations) if f.get("id") not in BAND_OMIT]
     return [(f, sorted(f["_plays"], key=lambda p: int(p.get("code") or 0)))
             for f in forms]
 
