@@ -1069,7 +1069,7 @@ table.xl.pk-plays td {
   .band-span { font-size: 9px; opacity: 1; }
   .band-sub { font-size: 9px; color: #000; border-bottom-color: #000; }
   .band-body { gap: 0 8px; }
-  /* Width sets the type here, not height: "Z Right 38 Pitch Pass" is the longest
+  /* Width sets the type here, not height: "Z Right Y Slant Pass Right" is the longest
      row there is and it has half of five inches to fit in. Eight rows then have three
      inches to live in, which is why the leading is what it is -- the space was going
      spare, and a row a boy can keep his eye on is what to spend it on. */

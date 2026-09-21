@@ -38,8 +38,8 @@ Both ends are tight on the line. The two backs sit four yards deep and just over
 | [Split Backs - Z Left - X Slant Pass Left](#split-backs---z-left---x-slant-pass-left) | `Split Backs Z Left X Slant Pass Left` | Protect | pass | X |
 | [Split Backs - Z Right - 36 Handoff](#split-backs---z-right---36-handoff) | `Split Backs Z Right 36 Handoff` | Power | run | LH |
 | [Split Backs - Z Left - 27 Handoff](#split-backs---z-left---27-handoff) | `Split Backs Z Left 27 Handoff` | Power | run | RH |
-| [Split Backs - Z Right - 38 Pitch Pass](#split-backs---z-right---38-pitch-pass) | `Split Backs Z Right 38 Pitch Pass` | Protect | pass | Y |
-| [Split Backs - Z Left - 29 Pitch Pass](#split-backs---z-left---29-pitch-pass) | `Split Backs Z Left 29 Pitch Pass` | Protect | pass | X |
+| [Split Backs - Z Right - 38 Toss Pass](#split-backs---z-right---38-toss-pass) | `Split Backs Z Right 38 Toss Pass` | Protect | pass | Y |
+| [Split Backs - Z Left - 29 Toss Pass](#split-backs---z-left---29-toss-pass) | `Split Backs Z Left 29 Toss Pass` | Protect | pass | X |
 
 ---
 
@@ -463,13 +463,13 @@ Both ends are tight on the line. The two backs sit four yards deep and just over
 
 ---
 
-## Split Backs - Z Right - 38 Pitch Pass
+## Split Backs - Z Right - 38 Toss Pass
 
-**Call it:** `Split Backs Z Right 38 Pitch Pass`
+**Call it:** `Split Backs Z Right 38 Toss Pass`
 
 **Scheme:** Protect
 
-![Split Backs - Z Right - 38 Pitch Pass](cards/sb-toss-pass-r-4-4.svg)
+![Split Backs - Z Right - 38 Toss Pass](cards/sb-toss-pass-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -494,13 +494,13 @@ Both ends are tight on the line. The two backs sit four yards deep and just over
 
 ---
 
-## Split Backs - Z Left - 29 Pitch Pass
+## Split Backs - Z Left - 29 Toss Pass
 
-**Call it:** `Split Backs Z Left 29 Pitch Pass`
+**Call it:** `Split Backs Z Left 29 Toss Pass`
 
 **Scheme:** Protect
 
-![Split Backs - Z Left - 29 Pitch Pass](cards/sb-toss-pass-l-4-4.svg)
+![Split Backs - Z Left - 29 Toss Pass](cards/sb-toss-pass-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|

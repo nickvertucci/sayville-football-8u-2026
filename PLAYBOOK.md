@@ -20,8 +20,8 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 | 12 | [Regular I - Z Left - 23 Handoff](#regular-i---z-left---23-handoff) | `Regular I Z Left 23 Handoff` | Smash | run | Regular I | FB |
 | 13 | [Regular I - Z Right - 38 Toss](#regular-i---z-right---38-toss) | `Regular I Z Right 38 Toss` | Toss | run | Regular I | TB |
 | 14 | [Regular I - Z Left - 39 Toss](#regular-i---z-left---39-toss) | `Regular I Z Left 39 Toss` | Toss | run | Regular I | TB |
-| 15 | [Regular I - Z Right - 38 Pitch Pass](#regular-i---z-right---38-pitch-pass) | `Regular I Z Right 38 Pitch Pass` | Protect | pass | Regular I | Y |
-| 16 | [Regular I - Z Left - 39 Pitch Pass](#regular-i---z-left---39-pitch-pass) | `Regular I Z Left 39 Pitch Pass` | Protect | pass | Regular I | X |
+| 15 | [Regular I - Z Right - 38 Toss Pass](#regular-i---z-right---38-toss-pass) | `Regular I Z Right 38 Toss Pass` | Protect | pass | Regular I | Y |
+| 16 | [Regular I - Z Left - 39 Toss Pass](#regular-i---z-left---39-toss-pass) | `Regular I Z Left 39 Toss Pass` | Protect | pass | Regular I | X |
 | 17 | [Wishbone - 46 Handoff](#wishbone---46-handoff) | `Wishbone 46 Handoff` | Power | run | Wishbone | RH |
 | 18 | [Wishbone - 37 Handoff](#wishbone---37-handoff) | `Wishbone 37 Handoff` | Power | run | Wishbone | LH |
 | 19 | [Wishbone - 22 Handoff](#wishbone---22-handoff) | `Wishbone 22 Handoff` | Smash | run | Wishbone | FB |
@@ -44,8 +44,8 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 | 36 | [Split Backs - Z Left - X Slant Pass Left](#split-backs---z-left---x-slant-pass-left) | `Split Backs Z Left X Slant Pass Left` | Protect | pass | Split Backs | X |
 | 37 | [Split Backs - Z Right - 36 Handoff](#split-backs---z-right---36-handoff) | `Split Backs Z Right 36 Handoff` | Power | run | Split Backs | LH |
 | 38 | [Split Backs - Z Left - 27 Handoff](#split-backs---z-left---27-handoff) | `Split Backs Z Left 27 Handoff` | Power | run | Split Backs | RH |
-| 39 | [Split Backs - Z Right - 38 Pitch Pass](#split-backs---z-right---38-pitch-pass) | `Split Backs Z Right 38 Pitch Pass` | Protect | pass | Split Backs | Y |
-| 40 | [Split Backs - Z Left - 29 Pitch Pass](#split-backs---z-left---29-pitch-pass) | `Split Backs Z Left 29 Pitch Pass` | Protect | pass | Split Backs | X |
+| 39 | [Split Backs - Z Right - 38 Toss Pass](#split-backs---z-right---38-toss-pass) | `Split Backs Z Right 38 Toss Pass` | Protect | pass | Split Backs | Y |
+| 40 | [Split Backs - Z Left - 29 Toss Pass](#split-backs---z-left---29-toss-pass) | `Split Backs Z Left 29 Toss Pass` | Protect | pass | Split Backs | X |
 | 41 | [Shotgun - Z Right - Y Slant Pass Right](#shotgun---z-right---y-slant-pass-right) | `Shotgun Z Right Y Slant Pass Right` | Protect | pass | Shotgun | Y |
 | 42 | [Shotgun - Z Left - X Slant Pass Left](#shotgun---z-left---x-slant-pass-left) | `Shotgun Z Left X Slant Pass Left` | Protect | pass | Shotgun | X |
 | 43 | [Shotgun - Z Left - 19 Sweep](#shotgun---z-left---19-sweep) | `Shotgun Z Left 19 Sweep` | Sweep | run | Shotgun | QB |
@@ -491,13 +491,13 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Regular I - Z Right - 38 Pitch Pass
+## Regular I - Z Right - 38 Toss Pass
 
-**Call it:** `Regular I Z Right 38 Pitch Pass`
+**Call it:** `Regular I Z Right 38 Toss Pass`
 
 **Scheme:** Protect
 
-![Regular I - Z Right - 38 Pitch Pass](playbook/i-form/cards/i-toss-pass-r-4-4.svg)
+![Regular I - Z Right - 38 Toss Pass](playbook/i-form/cards/i-toss-pass-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -522,13 +522,13 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Regular I - Z Left - 39 Pitch Pass
+## Regular I - Z Left - 39 Toss Pass
 
-**Call it:** `Regular I Z Left 39 Pitch Pass`
+**Call it:** `Regular I Z Left 39 Toss Pass`
 
 **Scheme:** Protect
 
-![Regular I - Z Left - 39 Pitch Pass](playbook/i-form/cards/i-toss-pass-l-4-4.svg)
+![Regular I - Z Left - 39 Toss Pass](playbook/i-form/cards/i-toss-pass-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -1213,13 +1213,13 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Split Backs - Z Right - 38 Pitch Pass
+## Split Backs - Z Right - 38 Toss Pass
 
-**Call it:** `Split Backs Z Right 38 Pitch Pass`
+**Call it:** `Split Backs Z Right 38 Toss Pass`
 
 **Scheme:** Protect
 
-![Split Backs - Z Right - 38 Pitch Pass](playbook/split-backs/cards/sb-toss-pass-r-4-4.svg)
+![Split Backs - Z Right - 38 Toss Pass](playbook/split-backs/cards/sb-toss-pass-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -1244,13 +1244,13 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Split Backs - Z Left - 29 Pitch Pass
+## Split Backs - Z Left - 29 Toss Pass
 
-**Call it:** `Split Backs Z Left 29 Pitch Pass`
+**Call it:** `Split Backs Z Left 29 Toss Pass`
 
 **Scheme:** Protect
 
-![Split Backs - Z Left - 29 Pitch Pass](playbook/split-backs/cards/sb-toss-pass-l-4-4.svg)
+![Split Backs - Z Left - 29 Toss Pass](playbook/split-backs/cards/sb-toss-pass-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
