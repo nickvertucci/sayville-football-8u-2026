@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="702" height="472" viewBox="0 27 702 472" font-family="Segoe UI, Helvetica, Arial, sans-serif" role="img">
+<title>Single Back - Tight Right Wing Right - 26 Handoff — Single Back Tight Right Wing Right 26 Handoff vs 5-3</title>
+<rect x="0" y="0" width="702" height="513" fill="#ffffff"/>
+<line x1="0" y1="459.0" x2="702" y2="459.0" stroke="#c8cdd6" stroke-width="1"/>
+<line x1="0" y1="189.0" x2="702" y2="189.0" stroke="#c8cdd6" stroke-width="1"/>
+<line x1="0" y1="324.0" x2="702" y2="324.0" stroke="#3a4150" stroke-width="2" stroke-dasharray="9 6"/>
+<ellipse cx="351.0" cy="324.0" rx="9" ry="5.5" fill="#6b4a2b" stroke="#3a2716" stroke-width="1.2"/>
+<line x1="247.3" y1="293.2" x2="265.7" y2="311.6" stroke="#9aa2ae" stroke-width="3.6"/><line x1="265.7" y1="293.2" x2="247.3" y2="311.6" stroke="#9aa2ae" stroke-width="3.6"/>
+<line x1="304.0" y1="293.2" x2="322.4" y2="311.6" stroke="#9aa2ae" stroke-width="3.6"/><line x1="322.4" y1="293.2" x2="304.0" y2="311.6" stroke="#9aa2ae" stroke-width="3.6"/>
+<line x1="341.8" y1="293.2" x2="360.2" y2="311.6" stroke="#9aa2ae" stroke-width="3.6"/><line x1="360.2" y1="293.2" x2="341.8" y2="311.6" stroke="#9aa2ae" stroke-width="3.6"/>
+<line x1="379.6" y1="293.2" x2="398.0" y2="311.6" stroke="#9aa2ae" stroke-width="3.6"/><line x1="398.0" y1="293.2" x2="379.6" y2="311.6" stroke="#9aa2ae" stroke-width="3.6"/>
+<line x1="436.3" y1="293.2" x2="454.7" y2="311.6" stroke="#9aa2ae" stroke-width="3.6"/><line x1="454.7" y1="293.2" x2="436.3" y2="311.6" stroke="#9aa2ae" stroke-width="3.6"/>
+<line x1="255.4" y1="233.8" x2="273.8" y2="252.2" stroke="#9aa2ae" stroke-width="3.6"/><line x1="273.8" y1="233.8" x2="255.4" y2="252.2" stroke="#9aa2ae" stroke-width="3.6"/>
+<line x1="341.8" y1="233.8" x2="360.2" y2="252.2" stroke="#9aa2ae" stroke-width="3.6"/><line x1="360.2" y1="233.8" x2="341.8" y2="252.2" stroke="#9aa2ae" stroke-width="3.6"/>
+<line x1="428.2" y1="233.8" x2="446.6" y2="252.2" stroke="#9aa2ae" stroke-width="3.6"/><line x1="446.6" y1="233.8" x2="428.2" y2="252.2" stroke="#9aa2ae" stroke-width="3.6"/>
+<line x1="98.8" y1="233.8" x2="117.2" y2="252.2" stroke="#9aa2ae" stroke-width="3.6"/><line x1="117.2" y1="233.8" x2="98.8" y2="252.2" stroke="#9aa2ae" stroke-width="3.6"/>
+<line x1="584.8" y1="233.8" x2="603.2" y2="252.2" stroke="#9aa2ae" stroke-width="3.6"/><line x1="603.2" y1="233.8" x2="584.8" y2="252.2" stroke="#9aa2ae" stroke-width="3.6"/>
+<line x1="341.8" y1="98.8" x2="360.2" y2="117.2" stroke="#9aa2ae" stroke-width="3.6"/><line x1="360.2" y1="98.8" x2="341.8" y2="117.2" stroke="#9aa2ae" stroke-width="3.6"/>
+<path d="M148.5,337.5 L239.8,318.6 L339.9,248.1" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="334.6" y1="240.6" x2="345.2" y2="255.6" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
+<path d="M275.4,337.5 L265.9,255.1" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="256.8" y1="256.2" x2="275.1" y2="254.1" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
+<path d="M313.2,337.5 L313.2,314.6" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="304.0" y1="314.6" x2="322.4" y2="314.6" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
+<path d="M351.0,337.5 L351.0,314.6" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="341.8" y1="314.6" x2="360.2" y2="314.6" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
+<path d="M388.8,337.5 L388.8,314.6" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="379.6" y1="314.6" x2="398.0" y2="314.6" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
+<path d="M426.6,337.5 L436.0,255.1" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="426.9" y1="254.1" x2="445.2" y2="256.2" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
+<path d="M464.4,337.5 L451.2,313.2" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="443.1" y1="317.6" x2="459.2" y2="308.8" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
+<path d="M110.7,367.2 L108.3,255.1" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="99.1" y1="255.3" x2="117.4" y2="255.0" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
+<path d="M351.0,364.5 L383.4,378.0 L442.8,402.3" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 5"/>
+<polygon points="442.8,402.3 431.5,402.7 435.0,394.1" fill="#14213d"/>
+<path d="M351.0,426.6 C353.7,423.0 358.2,414.9 367.2,405.0 C376.2,395.1 392.4,383.4 405.0,367.2 C417.6,351.0 436.0,329.4 442.8,307.8 C449.5,286.2 445.1,249.3 445.5,237.6" fill="none" stroke="#b3001b" stroke-width="4.6" stroke-linecap="round" stroke-linejoin="round"/>
+<polygon points="445.5,237.6 451.1,251.6 438.8,251.2" fill="#b3001b"/>
+<path d="M502.2,367.2 L473.6,313.2 L445.5,259.2" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="437.4" y1="263.4" x2="453.6" y2="255.0" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
+
+<rect x="135.0" y="324.0" width="27.0" height="27.0" rx="3" fill="#ffffff" stroke="#14213d" stroke-width="2.6"/>
+<text x="148.5" y="342.0" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">X</text>
+<rect x="261.9" y="324.0" width="27.0" height="27.0" rx="3" fill="#ffffff" stroke="#14213d" stroke-width="2.6"/>
+<text x="275.4" y="342.0" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">LT</text>
+<rect x="299.7" y="324.0" width="27.0" height="27.0" rx="3" fill="#ffffff" stroke="#14213d" stroke-width="2.6"/>
+<text x="313.2" y="342.0" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">LG</text>
+<rect x="337.5" y="324.0" width="27.0" height="27.0" rx="3" fill="#ffffff" stroke="#14213d" stroke-width="2.6"/>
+<text x="351.0" y="342.0" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">C</text>
+<rect x="375.3" y="324.0" width="27.0" height="27.0" rx="3" fill="#ffffff" stroke="#14213d" stroke-width="2.6"/>
+<text x="388.8" y="342.0" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">RG</text>
+<rect x="413.1" y="324.0" width="27.0" height="27.0" rx="3" fill="#ffffff" stroke="#14213d" stroke-width="2.6"/>
+<text x="426.6" y="342.0" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">RT</text>
+<rect x="450.9" y="324.0" width="27.0" height="27.0" rx="3" fill="#ffffff" stroke="#14213d" stroke-width="2.6"/>
+<text x="464.4" y="342.0" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">Y</text>
+<circle cx="110.7" cy="367.2" r="13.5" fill="#ffffff" stroke="#14213d" stroke-width="2.6"/>
+<text x="110.7" y="371.7" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">Z</text>
+<circle cx="502.2" cy="367.2" r="13.5" fill="#ffffff" stroke="#14213d" stroke-width="2.6"/>
+<text x="502.2" y="371.7" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">TB</text>
+<circle cx="351.0" cy="364.5" r="13.5" fill="#ffffff" stroke="#14213d" stroke-width="2.6"/>
+<text x="351.0" y="369.0" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">QB</text>
+<circle cx="351.0" cy="426.6" r="13.5" fill="#ffffff" stroke="#b3001b" stroke-width="2.6"/>
+<text x="351.0" y="431.1" text-anchor="middle" font-size="13" font-weight="700" fill="#b3001b">FB</text>
+<text x="256.5" y="284.5" text-anchor="middle" font-size="12.5" fill="#9aa2ae" font-weight="600" stroke="#fff" stroke-width="3" paint-order="stroke">LDE</text>
+<text x="313.2" y="284.5" text-anchor="middle" font-size="12.5" fill="#9aa2ae" font-weight="600" stroke="#fff" stroke-width="3" paint-order="stroke">LDT</text>
+<text x="351.0" y="284.5" text-anchor="middle" font-size="12.5" fill="#9aa2ae" font-weight="600" stroke="#fff" stroke-width="3" paint-order="stroke">NT</text>
+<text x="388.8" y="284.5" text-anchor="middle" font-size="12.5" fill="#9aa2ae" font-weight="600" stroke="#fff" stroke-width="3" paint-order="stroke">RDT</text>
+<text x="445.5" y="284.5" text-anchor="middle" font-size="12.5" fill="#9aa2ae" font-weight="600" stroke="#fff" stroke-width="3" paint-order="stroke">RDE</text>
+<text x="264.6" y="225.2" text-anchor="middle" font-size="12.5" fill="#9aa2ae" font-weight="600" stroke="#fff" stroke-width="3" paint-order="stroke">LOLB</text>
+<text x="351.0" y="225.2" text-anchor="middle" font-size="12.5" fill="#9aa2ae" font-weight="600" stroke="#fff" stroke-width="3" paint-order="stroke">MLB</text>
+<text x="437.4" y="225.2" text-anchor="middle" font-size="12.5" fill="#9aa2ae" font-weight="600" stroke="#fff" stroke-width="3" paint-order="stroke">ROLB</text>
+<text x="108.0" y="225.2" text-anchor="middle" font-size="12.5" fill="#9aa2ae" font-weight="600" stroke="#fff" stroke-width="3" paint-order="stroke">LC</text>
+<text x="594.0" y="225.2" text-anchor="middle" font-size="12.5" fill="#9aa2ae" font-weight="600" stroke="#fff" stroke-width="3" paint-order="stroke">RC</text>
+<text x="351.0" y="90.2" text-anchor="middle" font-size="12.5" fill="#9aa2ae" font-weight="600" stroke="#fff" stroke-width="3" paint-order="stroke">FS</text>
+<rect x="599.6" y="35.0" width="94.4" height="52.0" rx="8" fill="#ffffff" stroke="#111318" stroke-width="3"/><text x="646.8" y="75.0" text-anchor="middle" font-size="40" font-weight="800" fill="#111318">#59</text>
+<text x="12.0" y="45.0" font-size="4.3" font-weight="700" fill="#111318">Single Back - Tight Right Wing Right - 26 Handoff</text>
+</svg>

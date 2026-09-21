@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="702" height="962" viewBox="0 0 702 962" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" width="702" height="838" viewBox="0 0 702 838" font-family="Segoe UI, Helvetica, Arial, sans-serif">
 <rect width="100%" height="100%" fill="#ffffff"/>
 <rect x="0" y="0" width="702" height="58" fill="#14213d"/>
 <text x="18" y="26" font-size="19.0" font-weight="700" fill="#ffffff">Power I - Z Right - 38 Toss</text>
@@ -41,8 +41,8 @@
 <line x1="429.1" y1="118.5" x2="447.3" y2="121.3" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 <path d="M351.0,364.5 L329.4,372.6 L226.8,367.2" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="0.1 7"/>
 <polygon points="226.8,367.2 237.4,363.1 236.9,372.4" fill="#14213d"/>
-<path d="M351.0,413.1 L456.0,380.7 L489.8,215.2" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-<line x1="480.8" y1="213.4" x2="498.8" y2="217.0" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
+<path d="M351.0,413.1 C372.6,407.7 459.0,399.1 480.6,380.7 C502.2,362.2 479.1,330.0 480.6,302.4 C482.1,274.8 488.2,229.7 489.8,215.2" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="480.7" y1="214.2" x2="498.9" y2="216.2" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 <path d="M351.0,472.5 C360.9,472.5 387.9,475.2 410.4,472.5 C432.9,469.8 463.5,463.5 486.0,456.3 C508.5,449.1 533.7,444.6 545.4,429.3 C557.1,414.0 553.5,388.8 556.2,364.5 C558.9,340.2 560.7,297.0 561.6,283.5" fill="none" stroke="#b3001b" stroke-width="4.6" stroke-linecap="round" stroke-linejoin="round"/>
 <polygon points="561.6,283.5 566.8,297.7 554.5,296.9" fill="#b3001b"/>
 <path d="M351.0,364.5 L410.4,472.5" fill="none" stroke="#b3001b" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="0.1 7"/>
@@ -122,11 +122,4 @@
 <text x="385" y="748" font-size="12" fill="#111318">Take the pitch on the run and get to the right</text>
 <text x="385" y="766" font-size="12" fill="#111318">edge behind your two blockers. Ahead of the</text>
 <text x="385" y="782" font-size="12" fill="#111318">quarterback is a fumble.</text>
-<line x1="18" y1="824" x2="684" y2="824" stroke="#c8cdd6" stroke-width="1"/>
-<text x="18" y="842" font-size="11" font-weight="700" fill="#5b6472" letter-spacing="1">COACHING POINTS</text>
-<text x="18" y="862" font-size="12" fill="#111318">The pitch goes early. The tailback is seven yards deep and the edge is a long way away — every count</text>
-<text x="18" y="878" font-size="12" fill="#111318">he waits is a yard he loses.</text>
-<text x="18" y="896" font-size="12" fill="#111318">Two blockers out there and they are not the same block: the fullback takes the force man, the slot</text>
-<text x="18" y="912" font-size="12" fill="#111318">goes past him for the corner.</text>
-<text x="18" y="930" font-size="12" fill="#111318">The slot is in the backfield, so he has further to run than a split slot does. He leaves on the snap.</text>
 </svg>

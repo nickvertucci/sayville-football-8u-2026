@@ -41,8 +41,8 @@
       "Mason A."
     ],
     "Y": [
-      "Ryan S.",
       "Michael M.",
+      "Ryan S.",
       "Camden G.",
       "Brogan A.",
       "Joseph P.",
@@ -51,9 +51,9 @@
     "Z": [
       "Philip A.",
       "Nico V.",
-      "Jake G.",
-      "Ryan S.",
-      "Michael M."
+      "Liam M.",
+      "Kilian F.",
+      "Thomas D."
     ],
     "QB": [
       "Brogan A.",
@@ -62,15 +62,12 @@
     "FB": [
       "Jake G.",
       "Luca D.",
-      "Michael M.",
-      "Liam M."
+      "Michael M."
     ],
     "TB": [
       "Nico V.",
       "Philip A.",
-      "Liam M.",
-      "Kilian F.",
-      "Thomas D."
+      "Liam M."
     ],
     "LH": [],
     "RH": []
@@ -97,7 +94,7 @@
       "Gavin P."
     ],
     "LOLB": [
-      "Michael M.",
+      "Camden G.",
       "Luca D.",
       "Clark J."
     ],
@@ -112,7 +109,7 @@
       "Clark J."
     ],
     "ROLB": [
-      "Camden G.",
+      "Michael M.",
       "Clark J.",
       "Ace A."
     ],
@@ -139,7 +136,7 @@
         "Jake G.",
         "Nico V.",
         "Camden G.",
-        "Ryan S.",
+        "Michael M.",
         "Philip A.",
         "Ace A.",
         "Jaxon E.",
@@ -219,10 +216,10 @@
         "Elias F.",
         "Jaxon E.",
         "Brayden S.",
-        "Michael M.",
+        "Camden G.",
         "Jake G.",
         "Brogan A.",
-        "Camden G.",
+        "Michael M.",
         "Ryan S.",
         "Nico V.",
         "Liam M."
@@ -235,7 +232,7 @@
         "Luca D.",
         "Jake G.",
         "Brogan A.",
-        "Camden G.",
+        "Michael M.",
         "Ryan S.",
         "Nico V.",
         "Liam M."
@@ -258,7 +255,7 @@
         "Elias F.",
         "Jaxon E.",
         "Brayden S.",
-        "Michael M.",
+        "Camden G.",
         "Jake G.",
         "Brogan A.",
         "Clark J.",
@@ -271,7 +268,7 @@
         "Elias F.",
         "Jaxon E.",
         "Gavin P.",
-        "Michael M.",
+        "Camden G.",
         "Jake G.",
         "Brooks A.",
         "Ace A.",
@@ -284,10 +281,10 @@
         "Mason A.",
         "Brayden H.",
         "Brayden S.",
-        "Michael M.",
+        "Camden G.",
         "Jake G.",
         "Brogan A.",
-        "Camden G.",
+        "Michael M.",
         "Joseph P.",
         "Nico V.",
         "Thomas D."
@@ -316,39 +313,39 @@
     "note": "What each offensive package comes on to call, in package order. An entry is a play's full call and has to name a real play, or the build stops. The string \"any\" on its own means the package runs the whole book, so the card says Any play instead of listing it. A package may name plays from any formation, up to five -- five rows is what the card is allowed to be tall, because the blank field below the packages is sized against it.",
     "offense": [
       [
-        "Split Backs Z Right 18 Sweep",
-        "Split Backs Z Right X Sweep Right",
-        "Split Backs Z Right 38 Toss",
-        "Split Backs Z Right 36 Handoff",
-        "Split Backs Z Right Z Sweep Left"
+        "Split Backs Z Tight Right 18 Sweep",
+        "Split Backs Z Tight Right X Sweep Right",
+        "Split Backs Z Tight Right 38 Toss",
+        "Split Backs Z Tight Right 36 Handoff",
+        "Split Backs Z Tight Right Z Sweep Left"
       ],
       [
-        "Split Backs Z Right X Sweep Right",
-        "Split Backs Z Left Y Sweep Left",
-        "Split Backs Z Right Z Sweep Left",
-        "Split Backs Z Left Z Sweep Right",
-        "Regular I Z Right 22 Handoff"
+        "Split Backs Z Tight Right X Sweep Right",
+        "Split Backs Z Tight Left Y Sweep Left",
+        "Split Backs Z Tight Right Z Sweep Left",
+        "Split Backs Z Tight Left Z Sweep Right",
+        "Regular I Z Tight Right 22 Handoff"
       ],
       [
-        "Regular I Z Right 32 Handoff",
-        "Regular I Z Left 33 Handoff",
-        "Regular I Z Right 36 Handoff",
-        "Regular I Z Left 37 Handoff",
-        "Regular I Z Right X Sweep Right"
+        "Regular I Z Tight Right 32 Handoff",
+        "Regular I Z Tight Left 33 Handoff",
+        "Regular I Z Tight Right 36 Handoff",
+        "Regular I Z Tight Left 37 Handoff",
+        "Regular I Z Tight Right X Sweep Right"
       ],
       [
-        "Split Backs Z Right 36 Handoff",
-        "Split Backs Z Left 27 Handoff",
-        "Split Backs Z Right 38 Toss",
-        "Split Backs Z Left 29 Toss",
-        "Split Backs Z Right X Sweep Right"
+        "Split Backs Z Tight Right 36 Handoff",
+        "Split Backs Z Tight Left 27 Handoff",
+        "Split Backs Z Tight Right 38 Toss",
+        "Split Backs Z Tight Left 29 Toss",
+        "Split Backs Z Tight Right X Sweep Right"
       ],
       [
-        "Split Backs Z Right X Sweep Right",
-        "Split Backs Z Left Y Sweep Left",
-        "Split Backs Z Right Z Sweep Left",
-        "Split Backs Z Left Z Sweep Right",
-        "Regular I Z Right 22 Handoff"
+        "Split Backs Z Tight Right X Sweep Right",
+        "Split Backs Z Tight Left Y Sweep Left",
+        "Split Backs Z Tight Right Z Sweep Left",
+        "Split Backs Z Tight Left Z Sweep Right",
+        "Regular I Z Tight Right 22 Handoff"
       ],
       [
         "Power I Z Right 32 Handoff",
@@ -361,26 +358,26 @@
   "script_plays": {
     "note": "The possession script: the plays in the order they are called, down the right of the call sheet. Same rules as package_plays -- an entry is a play's full call and has to name a real play, or the build stops. A play may appear more than once; a script repeats on purpose. Fewer entries than the column has rows is fine, the rest print blank; more than it has rows stops the build, because the column's height is what the rest of the sheet is measured against.",
     "offense": [
-      "Split Backs Z Right 18 Sweep",
-      "Split Backs Z Right X Sweep Right",
-      "Split Backs Z Right 38 Toss",
-      "Split Backs Z Right 36 Handoff",
-      "Split Backs Z Right Z Sweep Left",
-      "Split Backs Z Right X Sweep Right",
-      "Split Backs Z Right 38 Toss",
-      "Split Backs Z Right 36 Handoff",
-      "Regular I Z Right 32 Handoff",
-      "Regular I Z Right 36 Handoff",
-      "Split Backs Z Right Z Sweep Left",
-      "Regular I Z Right 36 Handoff",
-      "Regular I Z Right 22 Handoff",
-      "Regular I Z Left 23 Handoff",
-      "Regular I Z Right 22 Handoff",
-      "Regular I Z Right X Sweep Right",
-      "Split Backs Z Right 18 Sweep",
-      "Regular I Z Left Z Sweep Right",
-      "Split Backs Z Left 29 Toss",
-      "Regular I Z Right 22 Handoff"
+      "Split Backs Z Tight Right 18 Sweep",
+      "Split Backs Z Tight Right X Sweep Right",
+      "Split Backs Z Split Left 29 Toss",
+      "Regular I Z Tight Right 36 Handoff",
+      "Regular I Z Tight Right Z Sweep Left",
+      "Regular I Z Tight Right X Sweep Right",
+      "Split Backs Z Tight Right 38 Toss",
+      "Split Backs Z Tight Right 36 Handoff",
+      "Regular I Z Tight Right 32 Handoff",
+      "Regular I Z Tight Right 36 Handoff",
+      "Split Backs Z Tight Right Z Sweep Left",
+      "Regular I Z Tight Right 36 Handoff",
+      "Regular I Z Tight Right 22 Handoff",
+      "Regular I Z Tight Left 23 Handoff",
+      "Regular I Z Tight Right 22 Handoff",
+      "Regular I Z Tight Right X Sweep Right",
+      "Split Backs Z Tight Right 18 Sweep",
+      "Regular I Z Tight Left Z Sweep Right",
+      "Split Backs Z Tight Left 29 Toss",
+      "Regular I Z Tight Right 22 Handoff"
     ]
   },
   "front_slides": {

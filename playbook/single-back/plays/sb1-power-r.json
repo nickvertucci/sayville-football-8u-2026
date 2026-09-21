@@ -1,0 +1,64 @@
+{
+  "id": "sb1-power-r",
+  "order": 1,
+  "formation": "single-back",
+  "name": "Single Back - Tight Right Wing Right - 26 Handoff",
+  "code": "59",
+  "call": "Single Back Tight Right Wing Right 26 Handoff",
+  "type": "run",
+  "scheme": "Power",
+  "direction": "right",
+  "ball_carrier": "FB",
+  "alignment": {
+    "TB": [
+      5.6,
+      -1.6
+    ]
+  },
+  "assignments": {
+    "QB": {
+      "rule": "Open right and hand the ball to the fullback, then carry out the fake away from him. It holds the backside end.",
+      "type": "fake",
+      "path": [
+        [
+          1.2,
+          -0.5
+        ],
+        [
+          3.4,
+          -1.4
+        ]
+      ]
+    },
+    "FB": {
+      "rule": "Take the handoff and hit it downhill at our tackle's outside hip. Never bounce it outside.",
+      "type": "run",
+      "path": [
+        [
+          0.6,
+          0.8
+        ],
+        [
+          2.0,
+          2.2
+        ],
+        [
+          3.4,
+          4.4
+        ],
+        [
+          3.5,
+          7.0
+        ]
+      ]
+    },
+    "TB": {
+      "block": "lead"
+    }
+  },
+  "coaching_points": [
+    "The only back carries it, so there is nobody behind him to lead. The wing is the lead blocker, and that is why the call puts him on the right.",
+    "Run it at the tight end. The Y is beside his tackle here and the C gap is a real hole; on the split side the same gap is five yards of grass and this play does not exist. The build rejects it the other way round.",
+    "The fullback is alone in the backfield, so he is the whole run game in this formation. Every number here is a 2."
+  ]
+}

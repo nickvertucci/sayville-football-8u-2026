@@ -73,7 +73,7 @@ build checks the receiver's path is that long.
 
 A toss pass is the toss right up until he pulls up: the pitch is real, the back runs
 the toss, and then he stops behind the line and throws. So it is **called like the
-toss** — `Regular I Z Right 38 Toss Pass` — and the digits name the back who takes
+toss** — `Regular I Z Tight Right 38 Toss Pass` — and the digits name the back who takes
 the pitch, not the receiver. `ball_carrier` is the receiver, the way it is on every
 pass; `type` is `pass`, the scheme is `Protect`, and it gives its own `direction`
 rather than a `fakes`, because it is not pretending to be another play — for two
@@ -133,8 +133,8 @@ the right, where he lines up on every other snap. Everything else — the line r
 unchanged, and the player's `path` is still relative to wherever he ends up, so the
 assignment does not have to know which look it is in.
 
-**Say it in the call.** `Regular I Z Left 37 Handoff` tells the huddle which side the slot is
-on, the same way `Regular I Z Right 36 Handoff` does. A play that moves
+**Say it in the call.** `Regular I Z Tight Left 37 Handoff` tells the huddle which side the slot is
+on, the same way `Regular I Z Tight Right 36 Handoff` does. A play that moves
 somebody silently is a play nobody can call.
 
 An override may only move a player the formation already has, and the coordinates must be
@@ -185,20 +185,30 @@ the book gives one man two names. A formation with a fourth back puts him at 4
 
 ### `name` and `call` are the numbering
 
-Both are printed at the top of every card. `name` is `{formation} - Z {Left|Right} -
-{digits} {word}` (*Regular I - Z Right - 36 Handoff*); `call` is the same language yelled in
-the huddle (`Regular I Z Right 36 Handoff` — formation, the Z's side, then **two digits: who
-carries it and where it goes**, then the play word).
+Both are printed at the top of every card. `name` is
+`{formation} - Z {Tight|Split} {Left|Right} - {digits} {word}`
+(*Regular I - Z Tight Right - 36 Handoff*); `call` is the same language yelled in
+the huddle (`Regular I Z Tight Right 36 Handoff` — formation, how wide the Z is and
+which side he is on, then **two digits: who carries it and where it goes**, then the
+play word).
+
+**`Tight` or `Split` is how far off his end the Z is standing**, and `--check` holds it
+to the diagram: tight is within 1.8 yards of the end on his side, split is further.
+Every play in the book is `Z Tight` at the moment. Write `Z Split` and move him with an
+`alignment` override if you want the wide look; do not write one without the other,
+because the call and the picture disagreeing is the thing this check exists to catch.
+The Power I is the exception and says neither — its Z is a back behind a guard, where
+tight and split do not describe anything.
 
 When **X, Y or Z** carries it, the digits are replaced by that letter and the call ends
-with the way the ball is going: `Regular I Z Right X Sweep Right`, `Split Backs Z Left
+with the way the ball is going: `Regular I Z Tight Right X Sweep Right`, `Split Backs Z Tight Left
 Y Sweep Left`, `Trips Right Y Slant Pass Right`. There is no hole to name, because a man
 already outside the tackle does not run through a gap to get there.
 
 The direction word is there because dropping the digit dropped the direction with it. A
 hole digit says which way — even right, odd left — and these are the plays where a
 nine-year-old cannot infer it from anything else: the **X is the left end and `X Sweep`
-sends him right**, and the **Z lines up right on `Z Right Z Sweep` and runs left**. So
+sends him right**, and the **Z lines up right on `Z Tight Right Z Sweep` and runs left**. So
 the call says it, and `--check` holds it to the play's `direction` the way it holds a
 hole digit to the diagram. `LETTER_BACKS` in `render.py` is the set of three; the shape
 it enforces is `{letter} {word} {Left|Right}`, with the letter the play's
@@ -287,9 +297,18 @@ fills the line, the slot and the lead from `SCHEMES` in `generator/blocking.py`:
 ```
 
 Roles, not position keys, so Regular I, Split Backs and the next formation all
-get the same Power: playside end takes the end man, slot screens the corner, fullback
-(or the playside halfback) leads. A stacked I always leads with the fullback. Two halfbacks lead
-with the one on the playside.
+get the same Power: playside end takes the end man, slot screens the corner, and the
+playside back leads. A stacked I always leads with the fullback, whichever way the play
+goes. A **split** backfield leads with whichever back is on the playside — the FB going
+right, the TB going left.
+
+**Stacked or split is read off the alignment, never off the names.** Both shapes use
+the keys `FB` and `TB`; what separates them is whether the two backs are one behind the
+other or one either side of the ball. Do not reintroduce `LH` and `RH` for a split
+backfield in order to tell the generator which is which. The digit already says the
+side — 2 is even and lines up right, 3 is odd and lines up left — and a second set of
+initials saying the same thing is one more thing a nine-year-old has to learn.
+(`LH` and `RH` remain for the Wishbone, whose 3 and 4 do not follow that rule.)
 
 **The five interior linemen are not in this table**, because a scheme no longer has a
 line. They block GOD on every run — `playside_t`, `playside_g`, `center`, `backside_g`
@@ -473,8 +492,8 @@ a play would flip his path and leave him aligned on the same side. There is no
 A left-handed play that leaves the Z on the right is a different play, a blocker short
 on the side the ball goes, and `--audit` will tell you so.
 
-**A play that moves the slot says so in its call.** `Regular I Z Left 37 Handoff` and
-`Split Backs Z Left 29 Toss` both do, each mirroring its right-hand play so the slot is out
+**A play that moves the slot says so in its call.** `Regular I Z Tight Left 37 Handoff` and
+`Split Backs Z Tight Left 29 Toss` both do, each mirroring its right-hand play so the slot is out
 there on the side the ball goes. Use `alignment` to move him and name his side in the
 call; a play that moves somebody silently is a play nobody can call.
 
@@ -490,11 +509,12 @@ call; a play that moves somebody silently is a play nobody can call.
 ## Before adding a formation or a play
 
 The system is the seven-man line (`X` … `Y`), a quarterback, and a
-backfield of either a stacked I (`FB` + `TB`), two halfbacks (`LH` + `RH`),
+backfield of either a stacked I (`FB` + `TB`, one behind the other), split backs
+(`FB` + `TB`, one either side of the ball — Split Backs and Shotgun),
 Wishbone (`FB` + `LH` + `RH`), or empty Trips (`FB` + `TB` + `Z` bunched,
 nobody behind the quarterback). A slot (`Z`) is the split man when the
 look has one; Wishbone does not, so it simply has nobody screening the corner and
-the call has no Z Right/Left. Trips names the bunch (`Trips Right` /
+the call has no Z phrase at all. Trips names the bunch (`Trips Right` /
 `Trips Left`) and moves 2, 3 and 4 together. A new formation that keeps
 those keys drops in: give it `formation.json`
 (alignment, `backs`) and plays that name a scheme and write

@@ -1,0 +1,35 @@
+{
+  "id": "single-back",
+  "order": 7,
+  "name": "Single Back",
+  "family": "Single Back",
+  "summary": "One back behind the quarterback, one end tight and one split away, and two men off the line. Two words set the whole picture: which end is tight, and which side the wing is on. The Z goes out with the split end every time.",
+  "personnel": "11 players, 2 ends, quarterback, fullback, slot, wing — the fullback alone in the backfield, the rest spread across the line",
+  "notes": "Seven on the line every snap: the five up front, plus both ends. One end is tight beside his tackle and the other splits away; the call names which. The Z always goes out with the SPLIT end, just outside him and a yard off the line, so the two of them are the wide pair on that side and the Z never has to be called. The wing is the tailback, off the line, on whichever side the call puts him. The fullback is the only man in the backfield, directly behind the quarterback, and he carries every numbered run in this formation.",
+  "alignment": {
+    "X": [-7.5, -0.5],
+    "LT": [-2.8, -0.5],
+    "LG": [-1.4, -0.5],
+    "C": [0.0, -0.5],
+    "RG": [1.4, -0.5],
+    "RT": [2.8, -0.5],
+    "Y": [4.2, -0.5],
+    "Z": [-8.9, -1.6],
+    "TB": [-4.2, -1.6],
+    "QB": [0.0, -1.5],
+    "FB": [0.0, -3.8]
+  },
+  "eligible": ["X", "Y", "Z", "TB", "FB", "QB"],
+  "backs": {
+    "1": "QB",
+    "2": "FB"
+  },
+  "coaching_notes": [
+    "Count seven on the line every snap: the five up front, the tight end beside his tackle, and the split end out on his own. The split end is still ON the line — he is a long way from everybody, which makes standing him up the easiest illegal-formation flag in this look.",
+    "The Z and the wing are both OFF the line, a yard back. Either of them creeping up onto it is the same flag from the other direction, and in this formation there is nobody spare to give the seventh man back.",
+    "One rule for the Z, and it is the reason the call never mentions him: he goes out with the SPLIT end, outside him and off the line. Whichever end is tight, the Z is on the other side. Tell him to find the man who is out on his own and stand outside him.",
+    "The fullback is the only back and he carries every numbered run, so every run here is a 2: 22 and 23 over the guard, 26 and 27 off tackle, 28 and 29 outside. There is no 3 in this formation because there is nobody behind the quarterback to be it.",
+    "The tailback is the wing here and he never carries it. He is a blocker on the runs and a receiver on the passes, which is a different job from the one he has in every other formation — say so when you install it.",
+    "Run it to the tight end. The C gap is a real hole on the tight side and nearly five yards of grass on the split side, so 26 belongs in Tight Right and 27 in Tight Left. The build rejects it the other way round."
+  ]
+}

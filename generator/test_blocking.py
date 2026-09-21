@@ -117,6 +117,42 @@ def check_play_action(play, defenses):
     return problems
 
 
+def check_bubble_clears_our_end(play, resolved, alignment, side) -> list[str]:
+    """A block that says "around our end" is drawn going around our end.
+
+    The words and the picture have to agree, and here they did not. The Regular I
+    toss told the fullback to bubble out around the Y and drew his first point at
+    x 3.3 with the Y standing at 4.2 — cutting up inside his own tight end, which
+    is the single thing that rule exists to stop him doing. It was wrong in every
+    front and on every play with a lead blocker on the edge, because `bubble_out`
+    put the elbow at 72% of the way to the DEFENDER and never knew where our own
+    end was standing.
+
+    That is not a bug a diagram check catches: the path is on the field, it
+    finishes on the right man, and `--audit` is happy. Only the instruction is
+    broken, and the boy believes the picture over the words. So it gets its own
+    rule: if the sentence says around our end, the elbow is outside our end.
+    """
+    problems = []
+    edge = blocking.playside_edge(alignment, side)
+    if edge is None:
+        return problems
+    for pos, spec in resolved.items():
+        rule = spec.get("rule", "")
+        if "around our end" not in rule and "Bubble around the" not in rule:
+            continue
+        path = spec.get("path") or []
+        if not path or pos not in alignment:
+            continue
+        elbow = alignment[pos][0] + path[0][0]
+        if (elbow - edge) * side <= 0:
+            problems.append(
+                f"{pos} is told to bubble around our end but his first point is at "
+                f"x {elbow:+.1f}, inside our end at x {edge:+.1f} — he is drawn "
+                "cutting up inside the man he is supposed to go around")
+    return problems
+
+
 def check_slot_takes_a_back(play, resolved, alignment, front, fid) -> list[str]:
     """The Z screens a defensive back. Never a linebacker, in any front.
 
@@ -326,6 +362,10 @@ def main() -> int:
                     failures.append(f"{where}: {problem}")
                 for problem in check_god(play, resolved, alignment, front, fid):
                     failures.append(f"{where}: {problem}")
+                side = 1 if play.get("direction") == "right" else -1
+                for problem in check_bubble_clears_our_end(play, resolved,
+                                                           alignment, side):
+                    failures.append(f"{where}: {problem}")
             for problem in check_play_action(play, defenses):
                 failures.append(f"{play['id']}: {problem}")
     failures += check_god_progression()
@@ -337,7 +377,8 @@ def main() -> int:
         return 1
     print(f"{checked} play/front pairs: every block that names a man lands on him, "
           "no block runs off the diagram, every interior lineman blocks GOD and no "
-          "two of them climb to the same linebacker, the Z screens a defensive back "
+          "two of them climb to the same linebacker, every lead blocker told to "
+          "bubble is drawn outside our own end, the Z screens a defensive back "
           "in every front, and every fake blocks like the run it sells.")
     return 0
 

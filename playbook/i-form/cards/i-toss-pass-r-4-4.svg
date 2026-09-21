@@ -1,10 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="702" height="962" viewBox="0 0 702 962" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" width="702" height="820" viewBox="0 0 702 820" font-family="Segoe UI, Helvetica, Arial, sans-serif">
 <rect width="100%" height="100%" fill="#ffffff"/>
 <rect x="0" y="0" width="702" height="58" fill="#14213d"/>
-<text x="18" y="26" font-size="19.0" font-weight="700" fill="#ffffff">Regular I - Z Right - 38 Toss Pass</text>
+<text x="18" y="26" font-size="15.9" font-weight="700" fill="#ffffff">Regular I - Z Tight Right - 38 Toss Pass</text>
 <text x="18" y="45" font-size="11.5" fill="#a9b4c7">PASS  •  Regular I  •  vs 4-4</text>
-<rect x="386.0" y="13" width="298.0" height="31" rx="6" fill="#ffffff" fill-opacity="0.12" stroke="#8593ad" stroke-width="1"/>
-<text x="535.0" y="34" text-anchor="middle" font-size="14.5" font-weight="700" fill="#ffffff" letter-spacing="0.5">Regular I Z Right 38 Toss Pass</text>
+<rect x="330.8" y="13" width="353.2" height="31" rx="6" fill="#ffffff" fill-opacity="0.12" stroke="#8593ad" stroke-width="1"/>
+<text x="507.4" y="34" text-anchor="middle" font-size="14.5" font-weight="700" fill="#ffffff" letter-spacing="0.5">Regular I Z Tight Right 38 Toss Pass</text>
 <clipPath id="fieldclip"><rect x="0" y="58" width="702" height="472"/></clipPath>
 <g clip-path="url(#fieldclip)"><g transform="translate(-0.0,31.0)">
 <rect x="0" y="0" width="702" height="513" fill="#ffffff"/>
@@ -120,12 +120,4 @@
 <text x="385" y="766" font-size="12" fill="#111318">Catch the pitch and run the toss. At our tight</text>
 <text x="385" y="782" font-size="12" fill="#111318">end, pull up behind the line and throw it flat</text>
 <text x="385" y="800" font-size="12" fill="#111318">to the tight end in front of you.</text>
-<line x1="18" y1="806" x2="684" y2="806" stroke="#c8cdd6" stroke-width="1"/>
-<text x="18" y="824" font-size="11" font-weight="700" fill="#5b6472" letter-spacing="1">COACHING POINTS</text>
-<text x="18" y="844" font-size="12" fill="#111318">Everything is the toss until he pulls up. Same pitch, same path, same speed -- a tailback who slows</text>
-<text x="18" y="862" font-size="12" fill="#111318">down to throw has told them.</text>
-<text x="18" y="878" font-size="12" fill="#111318">He throws from behind the line. Crossing it is a penalty, so drill the pull-up, not the arm.</text>
-<text x="18" y="896" font-size="12" fill="#111318">The tight end blocks the end first, then slants out flat, almost on the line. It is a three-yard</text>
-<text x="18" y="912" font-size="12" fill="#111318">throw and it should never be more than that.</text>
-<text x="18" y="930" font-size="12" fill="#111318">Call it after the toss has hurt them, on first or second down, where an incompletion costs nothing.</text>
 </svg>

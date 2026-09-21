@@ -1,10 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="702" height="980" viewBox="0 0 702 980" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" width="702" height="838" viewBox="0 0 702 838" font-family="Segoe UI, Helvetica, Arial, sans-serif">
 <rect width="100%" height="100%" fill="#ffffff"/>
 <rect x="0" y="0" width="702" height="58" fill="#14213d"/>
-<text x="18" y="26" font-size="18.8" font-weight="700" fill="#ffffff">Split Backs - Z Right - 18 Fake Sweep</text>
+<text x="18" y="26" font-size="13.4" font-weight="700" fill="#ffffff">Split Backs - Z Tight Right - 18 Fake Sweep</text>
 <text x="18" y="45" font-size="11.5" fill="#a9b4c7">RUN  •  Split Backs  •  vs 5-4-2</text>
-<rect x="358.4" y="13" width="325.6" height="31" rx="6" fill="#ffffff" fill-opacity="0.12" stroke="#8593ad" stroke-width="1"/>
-<text x="521.2" y="34" text-anchor="middle" font-size="14.5" font-weight="700" fill="#ffffff" letter-spacing="0.5">Split Backs Z Right 18 Fake Sweep</text>
+<rect x="303.2" y="13" width="380.8" height="31" rx="6" fill="#ffffff" fill-opacity="0.12" stroke="#8593ad" stroke-width="1"/>
+<text x="493.6" y="34" text-anchor="middle" font-size="14.5" font-weight="700" fill="#ffffff" letter-spacing="0.5">Split Backs Z Tight Right 18 Fake Sweep</text>
 <clipPath id="fieldclip"><rect x="0" y="58" width="702" height="472"/></clipPath>
 <g clip-path="url(#fieldclip)"><g transform="translate(-0.0,31.0)">
 <rect x="0" y="0" width="702" height="513" fill="#ffffff"/>
@@ -41,10 +41,10 @@
 <line x1="434.1" y1="122.0" x2="452.0" y2="117.7" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 <path d="M351.0,364.5 C344.7,368.6 313.2,382.1 313.2,388.8 C313.2,395.6 325.8,403.2 351.0,405.0 C376.2,406.8 432.9,407.2 464.4,399.6 C495.9,392.0 527.4,376.7 540.0,359.1 C552.6,341.6 540.0,320.4 540.0,294.3 C540.0,268.2 540.0,217.8 540.0,202.5" fill="none" stroke="#b3001b" stroke-width="4.6" stroke-linecap="round" stroke-linejoin="round"/>
 <polygon points="540.0,202.5 546.2,216.3 533.8,216.3" fill="#b3001b"/>
+<path d="M410.4,426.6 C422.1,421.2 468.9,414.9 480.6,394.2 C492.3,373.5 478.6,332.0 480.6,302.4 C482.6,272.8 490.5,230.8 492.5,216.5" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="483.4" y1="215.3" x2="501.6" y2="217.8" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 <path d="M291.6,426.6 L307.8,391.5 L243.0,383.4 L140.4,372.6" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 5"/>
 <polygon points="140.4,372.6 151.2,369.1 150.2,378.3" fill="#14213d"/>
-<path d="M410.4,426.6 L456.0,394.2 L492.5,216.5" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-<line x1="483.5" y1="214.7" x2="501.5" y2="218.4" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 
 <rect x="224.1" y="324.0" width="27.0" height="27.0" rx="3" fill="#ffffff" stroke="#14213d" stroke-width="2.6"/>
 <text x="237.6" y="342.0" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">X</text>
@@ -65,9 +65,9 @@
 <circle cx="351.0" cy="364.5" r="13.5" fill="#ffffff" stroke="#b3001b" stroke-width="2.6"/>
 <text x="351.0" y="369.0" text-anchor="middle" font-size="13" font-weight="700" fill="#b3001b">QB</text>
 <circle cx="291.6" cy="426.6" r="13.5" fill="#ffffff" stroke="#14213d" stroke-width="2.6"/>
-<text x="291.6" y="431.1" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">LH</text>
+<text x="291.6" y="431.1" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">TB</text>
 <circle cx="410.4" cy="426.6" r="13.5" fill="#ffffff" stroke="#14213d" stroke-width="2.6"/>
-<text x="410.4" y="431.1" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">RH</text>
+<text x="410.4" y="431.1" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">FB</text>
 <text x="237.6" y="284.5" text-anchor="middle" font-size="12.5" fill="#9aa2ae" font-weight="600" stroke="#fff" stroke-width="3" paint-order="stroke">LDE</text>
 <text x="286.2" y="284.5" text-anchor="middle" font-size="12.5" fill="#9aa2ae" font-weight="600" stroke="#fff" stroke-width="3" paint-order="stroke">LDT</text>
 <text x="351.0" y="284.5" text-anchor="middle" font-size="12.5" fill="#9aa2ae" font-weight="600" stroke="#fff" stroke-width="3" paint-order="stroke">NT</text>
@@ -111,24 +111,15 @@
 <text x="385" y="612" font-size="12" fill="#111318">Run at the safety and screen him off. Stay in</text>
 <text x="385" y="630" font-size="12" fill="#111318">his way.</text>
 <text x="351" y="646" font-size="12" font-weight="700" fill="#111318">QB</text>
-<text x="385" y="646" font-size="12" fill="#111318">Fake the handoff to the left halfback, then</text>
-<text x="385" y="664" font-size="12" fill="#111318">roll back right and sweep it, flat and fast,</text>
-<text x="385" y="680" font-size="12" fill="#111318">behind the right halfback. Turn up outside his</text>
-<text x="385" y="698" font-size="12" fill="#111318">block.</text>
-<text x="351" y="714" font-size="12" font-weight="700" fill="#111318">LH</text>
-<text x="385" y="714" font-size="12" fill="#111318">Take the fake from the quarterback and run</text>
-<text x="385" y="732" font-size="12" fill="#111318">hard to the left like you have the ball. Sell</text>
-<text x="385" y="748" font-size="12" fill="#111318">it all the way — you are the reason the</text>
-<text x="385" y="766" font-size="12" fill="#111318">defense goes the wrong way.</text>
-<text x="351" y="782" font-size="12" font-weight="700" fill="#111318">RH</text>
-<text x="385" y="782" font-size="12" fill="#111318">Bubble out around our end, then double team</text>
-<text x="385" y="800" font-size="12" fill="#111318">the linebacker with the left halfback.</text>
-<line x1="18" y1="824" x2="684" y2="824" stroke="#c8cdd6" stroke-width="1"/>
-<text x="18" y="842" font-size="11" font-weight="700" fill="#5b6472" letter-spacing="1">COACHING POINTS</text>
-<text x="18" y="862" font-size="12" fill="#111318">The fake has to look real: the quarterback puts the ball at the left halfback's belly and pulls it</text>
-<text x="18" y="878" font-size="12" fill="#111318">back out.</text>
-<text x="18" y="896" font-size="12" fill="#111318">The left halfback's fake is the play. If he jogs, nobody follows him and the defense is waiting on</text>
-<text x="18" y="912" font-size="12" fill="#111318">the right.</text>
-<text x="18" y="930" font-size="12" fill="#111318">After the fake the quarterback gets back to the right fast, stays behind the right halfback until the</text>
-<text x="18" y="946" font-size="12" fill="#111318">block is made, then turns it up.</text>
+<text x="385" y="646" font-size="12" fill="#111318">Fake the handoff to the tailback, then roll</text>
+<text x="385" y="664" font-size="12" fill="#111318">back right and sweep it, flat and fast, behind</text>
+<text x="385" y="680" font-size="12" fill="#111318">the fullback. Turn up outside his block.</text>
+<text x="351" y="698" font-size="12" font-weight="700" fill="#111318">FB</text>
+<text x="385" y="698" font-size="12" fill="#111318">Bubble out around our end, then double team</text>
+<text x="385" y="714" font-size="12" fill="#111318">the linebacker with the tailback.</text>
+<text x="351" y="732" font-size="12" font-weight="700" fill="#111318">TB</text>
+<text x="385" y="732" font-size="12" fill="#111318">Take the fake from the quarterback and run</text>
+<text x="385" y="748" font-size="12" fill="#111318">hard to the left like you have the ball. Sell</text>
+<text x="385" y="766" font-size="12" fill="#111318">it all the way — you are the reason the</text>
+<text x="385" y="782" font-size="12" fill="#111318">defense goes the wrong way.</text>
 </svg>

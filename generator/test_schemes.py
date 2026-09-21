@@ -87,17 +87,28 @@ def check_roles(formations) -> list[str]:
         problems.append("I-form lead is always the fullback, including left")
     if i_right.get("playside_te") != "Y" or i_left.get("playside_te") != "X":
         problems.append("playside_te did not follow the play's side")
+    # The split backfield is the FB on the right and the TB on the left -- the same
+    # two men the digits already name, 2 even and right, 3 odd and left. The lead is
+    # the playside one, so it flips with the play while the I's never does.
+    #
+    # This is the assertion that protects the rename. The old names said which side a
+    # back was on; FB and TB do not, and the roles are now read off the alignment
+    # instead. Get that wrong and the Split Backs -- 2.2 yards off the ball, inside
+    # the 2.5 that `_stacked` calls stacked -- resolve as an I and lead with the FB in
+    # both directions. Every left-handed play would block the wrong edge and the build
+    # would still pass, because nothing else in the book can tell.
     sb_right = blocking.scheme_roles(split, 1)
     sb_left = blocking.scheme_roles(split, -1)
-    if sb_right.get("lead") != "RH" or sb_right.get("trail") != "LH":
+    if sb_right.get("lead") != "FB" or sb_right.get("trail") != "TB":
         problems.append(f"Split right lead/trail is {sb_right.get('lead')}/"
-                        f"{sb_right.get('trail')}, expected RH/LH")
-    if sb_left.get("lead") != "LH" or sb_left.get("trail") != "RH":
+                        f"{sb_right.get('trail')}, expected FB/TB")
+    if sb_left.get("lead") != "TB" or sb_left.get("trail") != "FB":
         problems.append(f"Split left lead/trail is {sb_left.get('lead')}/"
-                        f"{sb_left.get('trail')}, expected LH/RH")
-    sg = blocking.scheme_roles(shotgun, 1)
-    if sg.get("lead") != "RH":
-        problems.append("Shotgun uses the same two-halfback roles as Split Backs")
+                        f"{sb_left.get('trail')}, expected TB/FB")
+    sg_right = blocking.scheme_roles(shotgun, 1)
+    sg_left = blocking.scheme_roles(shotgun, -1)
+    if sg_right.get("lead") != "FB" or sg_left.get("lead") != "TB":
+        problems.append("Shotgun uses the same split-backfield roles as Split Backs")
     bone = by_id["wishbone"]
     wb_right = blocking.scheme_roles(bone, 1)
     if "slot" in wb_right:

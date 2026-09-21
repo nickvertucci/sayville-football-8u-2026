@@ -1,10 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="702" height="1014" viewBox="0 0 702 1014" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" width="702" height="872" viewBox="0 0 702 872" font-family="Segoe UI, Helvetica, Arial, sans-serif">
 <rect width="100%" height="100%" fill="#ffffff"/>
 <rect x="0" y="0" width="702" height="58" fill="#14213d"/>
-<text x="18" y="26" font-size="19.0" font-weight="700" fill="#ffffff">Split Backs - Z Left - 27 Handoff</text>
+<text x="18" y="26" font-size="16.8" font-weight="700" fill="#ffffff">Split Backs - Z Tight Left - 27 Handoff</text>
 <text x="18" y="45" font-size="11.5" fill="#a9b4c7">RUN  •  Split Backs  •  vs 5-3</text>
-<rect x="395.2" y="13" width="288.8" height="31" rx="6" fill="#ffffff" fill-opacity="0.12" stroke="#8593ad" stroke-width="1"/>
-<text x="539.6" y="34" text-anchor="middle" font-size="14.5" font-weight="700" fill="#ffffff" letter-spacing="0.5">Split Backs Z Left 27 Handoff</text>
+<rect x="340.0" y="13" width="344.0" height="31" rx="6" fill="#ffffff" fill-opacity="0.12" stroke="#8593ad" stroke-width="1"/>
+<text x="512.0" y="34" text-anchor="middle" font-size="14.5" font-weight="700" fill="#ffffff" letter-spacing="0.5">Split Backs Z Tight Left 27 Handoff</text>
 <clipPath id="fieldclip"><rect x="0" y="58" width="702" height="472"/></clipPath>
 <g clip-path="url(#fieldclip)"><g transform="translate(-0.0,31.0)">
 <rect x="0" y="0" width="702" height="513" fill="#ffffff"/>
@@ -41,10 +41,10 @@
 <line x1="108.0" y1="258.3" x2="122.6" y2="247.2" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 <path d="M351.0,364.5 L318.6,378.0 L270.0,396.9 L226.8,407.7" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 5"/>
 <polygon points="226.8,407.7 235.7,400.7 238.0,409.7" fill="#14213d"/>
-<path d="M291.6,426.6 L265.1,313.2 L256.5,259.2" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-<line x1="247.4" y1="260.7" x2="265.6" y2="257.7" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
-<path d="M410.4,426.6 C405.0,422.1 396.9,411.3 378.0,399.6 C359.1,387.9 318.6,370.8 297.0,356.4 C275.4,342.0 257.8,331.2 248.4,313.2 C238.9,295.2 242.1,270.0 240.3,248.4 C238.5,226.8 238.1,194.4 237.6,183.6" fill="none" stroke="#b3001b" stroke-width="4.6" stroke-linecap="round" stroke-linejoin="round"/>
-<polygon points="237.6,183.6 244.3,197.1 232.0,197.7" fill="#b3001b"/>
+<path d="M410.4,426.6 C405.0,426.6 394.2,428.4 378.0,426.6 C361.8,424.8 332.1,425.7 313.2,415.8 C294.3,405.9 274.1,387.0 264.6,367.2 C255.2,347.4 258.3,323.1 256.5,297.0 C254.7,270.9 254.2,225.0 253.8,210.6" fill="none" stroke="#b3001b" stroke-width="4.6" stroke-linecap="round" stroke-linejoin="round"/>
+<polygon points="253.8,210.6 260.4,224.2 248.1,224.6" fill="#b3001b"/>
+<path d="M291.6,426.6 C279.9,418.5 225.6,406.6 221.4,378.0 C217.2,349.4 259.0,275.6 266.5,255.1" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="257.9" y1="252.0" x2="275.1" y2="258.3" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 
 <rect x="224.1" y="324.0" width="27.0" height="27.0" rx="3" fill="#ffffff" stroke="#14213d" stroke-width="2.6"/>
 <text x="237.6" y="342.0" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">X</text>
@@ -65,9 +65,9 @@
 <circle cx="351.0" cy="364.5" r="13.5" fill="#ffffff" stroke="#14213d" stroke-width="2.6"/>
 <text x="351.0" y="369.0" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">QB</text>
 <circle cx="291.6" cy="426.6" r="13.5" fill="#ffffff" stroke="#14213d" stroke-width="2.6"/>
-<text x="291.6" y="431.1" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">LH</text>
+<text x="291.6" y="431.1" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">TB</text>
 <circle cx="410.4" cy="426.6" r="13.5" fill="#ffffff" stroke="#b3001b" stroke-width="2.6"/>
-<text x="410.4" y="431.1" text-anchor="middle" font-size="13" font-weight="700" fill="#b3001b">RH</text>
+<text x="410.4" y="431.1" text-anchor="middle" font-size="13" font-weight="700" fill="#b3001b">FB</text>
 <text x="256.5" y="284.5" text-anchor="middle" font-size="12.5" fill="#9aa2ae" font-weight="600" stroke="#fff" stroke-width="3" paint-order="stroke">LDE</text>
 <text x="313.2" y="284.5" text-anchor="middle" font-size="12.5" fill="#9aa2ae" font-weight="600" stroke="#fff" stroke-width="3" paint-order="stroke">LDT</text>
 <text x="351.0" y="284.5" text-anchor="middle" font-size="12.5" fill="#9aa2ae" font-weight="600" stroke="#fff" stroke-width="3" paint-order="stroke">NT</text>
@@ -113,22 +113,15 @@
 <text x="385" y="612" font-size="12" fill="#111318">Run at the corner and screen him off. Stay in</text>
 <text x="385" y="630" font-size="12" fill="#111318">his way.</text>
 <text x="351" y="646" font-size="12" font-weight="700" fill="#111318">QB</text>
-<text x="385" y="646" font-size="12" fill="#111318">Open left and hand deep to the right halfback</text>
-<text x="385" y="664" font-size="12" fill="#111318">as he crosses, then fake the boot. It holds</text>
-<text x="385" y="680" font-size="12" fill="#111318">the backside end.</text>
-<text x="351" y="698" font-size="12" font-weight="700" fill="#111318">LH</text>
-<text x="385" y="698" font-size="12" fill="#111318">Lead through the hole. Block the first man who</text>
-<text x="385" y="714" font-size="12" fill="#111318">shows in it.</text>
-<text x="351" y="732" font-size="12" font-weight="700" fill="#111318">RH</text>
-<text x="385" y="732" font-size="12" fill="#111318">Cross behind the quarterback, take the handoff</text>
-<text x="385" y="748" font-size="12" fill="#111318">and hit it downhill at our tackle's outside</text>
-<text x="385" y="766" font-size="12" fill="#111318">hip. Never bounce it outside.</text>
-<line x1="18" y1="858" x2="684" y2="858" stroke="#c8cdd6" stroke-width="1"/>
-<text x="18" y="876" font-size="11" font-weight="700" fill="#5b6472" letter-spacing="1">COACHING POINTS</text>
-<text x="18" y="896" font-size="12" fill="#111318">The same Power as the Regular I, run from two backs instead of a stack. The tight end takes the end</text>
-<text x="18" y="912" font-size="12" fill="#111318">man and the left halfback leads through the hole.</text>
-<text x="18" y="930" font-size="12" fill="#111318">The runner is the back on the far side. He has further to travel, so he has to start on the snap --</text>
-<text x="18" y="946" font-size="12" fill="#111318">no false step, no waiting to see the hole.</text>
-<text x="18" y="964" font-size="12" fill="#111318">The yards are inside the tight end's block. If the halfback bounces it wide looking for grass, the</text>
-<text x="18" y="980" font-size="12" fill="#111318">play is dead.</text>
+<text x="385" y="646" font-size="12" fill="#111318">Open left and hand deep to the fullback as he</text>
+<text x="385" y="664" font-size="12" fill="#111318">crosses, then fake the boot. It holds the</text>
+<text x="385" y="680" font-size="12" fill="#111318">backside end.</text>
+<text x="351" y="698" font-size="12" font-weight="700" fill="#111318">FB</text>
+<text x="385" y="698" font-size="12" fill="#111318">Run flat across behind the quarterback — do</text>
+<text x="385" y="714" font-size="12" fill="#111318">not climb at the line. Take the handoff, then</text>
+<text x="385" y="732" font-size="12" fill="#111318">turn up at our tackle's outside hip. Never</text>
+<text x="385" y="748" font-size="12" fill="#111318">bounce it outside.</text>
+<text x="351" y="766" font-size="12" font-weight="700" fill="#111318">TB</text>
+<text x="385" y="766" font-size="12" fill="#111318">Bubble around the X, then block the left</text>
+<text x="385" y="782" font-size="12" fill="#111318">outside linebacker.</text>
 </svg>

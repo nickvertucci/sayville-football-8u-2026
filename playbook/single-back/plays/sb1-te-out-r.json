@@ -1,0 +1,53 @@
+{
+  "id": "sb1-te-out-r",
+  "order": 7,
+  "formation": "single-back",
+  "name": "Single Back - Tight Right Wing Left - Y Slant Pass Right",
+  "code": "65",
+  "call": "Single Back Tight Right Wing Left Y Slant Pass Right",
+  "type": "pass",
+  "scheme": "Protect",
+  "direction": "right",
+  "ball_carrier": "Y",
+  "assignments": {
+    "QB": {
+      "rule": "Two steps back, look at the Y and throw it flat and early. The ball is gone before the rush gets home.",
+      "type": "pass",
+      "path": [
+        [
+          0.0,
+          -1.2
+        ],
+        [
+          0.4,
+          -2.0
+        ]
+      ]
+    },
+    "Y": {
+      "rule": "Release straight off the line and run flat along it. Look the ball in — you are catching it on the move.",
+      "type": "pass",
+      "path": [
+        [
+          2.0,
+          1.0
+        ],
+        [
+          5.0,
+          1.8
+        ]
+      ]
+    },
+    "FB": {
+      "block": "protect"
+    },
+    "TB": {
+      "block": "protect"
+    }
+  },
+  "coaching_points": [
+    "The Y is the tight end on this side, so he releases off a defender's outside shoulder rather than off open grass. He has to get clean first.",
+    "The fullback and the wing both stay in. Five linemen and two backs on a two-step throw is more than anybody at this age gets through.",
+    "Call it after the Power has gone at this side twice. It is the one that punishes a linebacker for stepping up."
+  ]
+}

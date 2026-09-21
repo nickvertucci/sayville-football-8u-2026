@@ -2,13 +2,13 @@
   "id": "sg-rb-toss-l",
   "order": 6,
   "formation": "shotgun",
-  "name": "Shotgun - Z Left - 29 Toss",
+  "name": "Shotgun - Z Tight Left - 29 Toss",
   "code": "38",
-  "call": "Shotgun Z Left 29 Toss",
+  "call": "Shotgun Z Tight Left 29 Toss",
   "type": "run",
   "scheme": "Toss",
   "direction": "left",
-  "ball_carrier": "RH",
+  "ball_carrier": "FB",
   "alignment": {
     "Z": [
       -5.6,
@@ -17,7 +17,7 @@
   },
   "assignments": {
     "QB": {
-      "rule": "Hand the ball to the right halfback as he crosses in front of you, then fake a run to the right.",
+      "rule": "Hand the ball to the fullback as he crosses in front of you, then fake a run to the right.",
       "type": "fake",
       "path": [
         [
@@ -30,8 +30,8 @@
         ]
       ]
     },
-    "RH": {
-      "rule": "Cross in front of the quarterback, take the handoff going left and get to the edge behind the left halfback. Turn up outside his block.",
+    "FB": {
+      "rule": "Cross in front of the quarterback, take the handoff going left and get to the edge behind the tailback. Turn up outside his block.",
       "type": "run",
       "path": [
         [
@@ -62,8 +62,8 @@
     }
   },
   "coaching_points": [
-    "The handoff happens in front of the quarterback: the right halfback crosses close and flat, and the quarterback puts it in his belly.",
-    "The right halfback stays behind the left halfback until the block is made, then turns it up. Running past his blocker is how the sweep loses yards.",
+    "The handoff happens in front of the quarterback: the fullback crosses close and flat, and the quarterback puts it in his belly.",
+    "The fullback stays behind the tailback until the block is made, then turns it up. Running past his blocker is how the sweep loses yards.",
     "The quarterback's fake to the right has to be real. It is what holds the backside."
   ]
 }

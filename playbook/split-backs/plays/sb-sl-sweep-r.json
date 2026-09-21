@@ -2,9 +2,9 @@
   "id": "sb-sl-sweep-r",
   "order": 26,
   "formation": "split-backs",
-  "name": "Split Backs - Z Left - Z Sweep Right",
+  "name": "Split Backs - Z Tight Left - Z Sweep Right",
   "code": "24",
-  "call": "Split Backs Z Left Z Sweep Right",
+  "call": "Split Backs Z Tight Left Z Sweep Right",
   "type": "run",
   "scheme": "Sweep",
   "direction": "right",
@@ -17,7 +17,7 @@
   },
   "assignments": {
     "Z": {
-      "rule": "At the snap run flat across the backfield, take the handoff at full speed and get to the right edge. Turn up in the alley behind the right halfback.",
+      "rule": "At the snap run flat across the backfield, take the handoff at full speed and get to the right edge. Turn up in the alley behind the fullback.",
       "type": "run",
       "path": [
         [
@@ -51,7 +51,7 @@
       ]
     },
     "QB": {
-      "rule": "Hand the ball to the slot as he runs past you, then fake the handoff to the left halfback going left.",
+      "rule": "Hand the ball to the slot as he runs past you, then fake the handoff to the tailback going left.",
       "type": "fake",
       "path": [
         [
@@ -67,7 +67,94 @@
   },
   "coaching_points": [
     "The slot runs flat and fast across the backfield. The handoff is at full speed, so the quarterback just puts it in his belly.",
-    "After the handoff the quarterback carries out his fake to the left halfback going left. It is what holds the backside.",
-    "The right halfback bubbles out ahead of the slot and takes the corner. The slot stays behind him and turns up in the alley."
-  ]
+    "After the handoff the quarterback carries out his fake to the tailback going left. It is what holds the backside.",
+    "The fullback bubbles out ahead of the slot and takes the corner. The slot stays behind him and turns up in the alley.",
+    "Both backs bubble around the Y. The tailback takes the outside linebacker and the fullback carries on out to the corner — the Z has the ball, so nobody else is out there to screen him."
+  ],
+  "fronts": {
+    "4-4": {
+      "TB": {
+        "block": "man",
+        "man": "ROLB",
+        "how": "Bubble around the Y",
+        "via": [
+          [
+            7.0,
+            1.8
+          ]
+        ]
+      },
+      "FB": {
+        "block": "man",
+        "man": "RC",
+        "how": "Bubble around the Y",
+        "via": [
+          [
+            2.6,
+            1.8
+          ],
+          [
+            4.3,
+            3.8
+          ]
+        ]
+      }
+    },
+    "5-3": {
+      "TB": {
+        "block": "man",
+        "man": "ROLB",
+        "how": "Bubble around the Y",
+        "via": [
+          [
+            7.0,
+            1.8
+          ]
+        ]
+      },
+      "FB": {
+        "block": "man",
+        "man": "RC",
+        "how": "Bubble around the Y",
+        "via": [
+          [
+            2.6,
+            1.8
+          ],
+          [
+            4.3,
+            3.8
+          ]
+        ]
+      }
+    },
+    "5-4-2": {
+      "TB": {
+        "block": "man",
+        "man": "ROLB",
+        "how": "Bubble around the Y",
+        "via": [
+          [
+            7.0,
+            1.8
+          ]
+        ]
+      },
+      "FB": {
+        "block": "man",
+        "man": "RS",
+        "how": "Bubble around the Y",
+        "via": [
+          [
+            2.6,
+            1.8
+          ],
+          [
+            4.3,
+            3.8
+          ]
+        ]
+      }
+    }
+  }
 }

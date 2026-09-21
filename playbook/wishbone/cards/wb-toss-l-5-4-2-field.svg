@@ -32,10 +32,10 @@
 <line x1="455.2" y1="314.6" x2="473.6" y2="314.6" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 <path d="M351.0,364.5 L372.6,372.6 L475.2,367.2" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="0.1 7"/>
 <polygon points="475.2,367.2 465.1,372.4 464.6,363.1" fill="#14213d"/>
-<path d="M351.0,413.1 L246.0,380.7 L212.2,215.2" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-<line x1="203.2" y1="217.0" x2="221.2" y2="213.4" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
-<path d="M291.6,445.5 L246.0,413.1 L209.2,216.5" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-<line x1="200.2" y1="218.2" x2="218.3" y2="214.9" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
+<path d="M351.0,413.1 C329.4,407.7 243.0,399.1 221.4,380.7 C199.8,362.2 222.9,330.0 221.4,302.4 C219.9,274.8 213.8,229.7 212.2,215.2" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="203.1" y1="216.2" x2="221.3" y2="214.2" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
+<path d="M291.6,445.5 C279.9,440.1 233.1,437.0 221.4,413.1 C209.7,389.2 223.4,335.2 221.4,302.4 C219.4,269.6 211.3,230.8 209.2,216.5" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="200.2" y1="217.8" x2="218.3" y2="215.3" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 <path d="M410.4,445.5 C395.1,447.3 357.3,455.4 318.6,456.3 C279.9,457.2 204.3,459.9 178.2,450.9 C152.1,441.9 164.7,422.1 162.0,402.3 C159.3,382.5 162.0,354.6 162.0,332.1 C162.0,309.6 162.0,278.1 162.0,267.3" fill="none" stroke="#b3001b" stroke-width="4.6" stroke-linecap="round" stroke-linejoin="round"/>
 <polygon points="162.0,267.3 168.2,281.1 155.8,281.1" fill="#b3001b"/>
 <path d="M351.0,364.5 L318.6,456.3" fill="none" stroke="#b3001b" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="0.1 7"/>

@@ -2,16 +2,16 @@
   "id": "i-te-sweep-r",
   "order": 11,
   "formation": "i-form",
-  "name": "Regular I - Z Right - X Sweep Right",
+  "name": "Regular I - Z Tight Right - X Sweep Right",
   "code": "3",
-  "call": "Regular I Z Right X Sweep Right",
+  "call": "Regular I Z Tight Right X Sweep Right",
   "type": "run",
   "scheme": "Sweep",
   "direction": "right",
   "ball_carrier": "X",
   "assignments": {
     "X": {
-      "rule": "Stay down in your stance \u2014 no motion. At the snap run flat behind the quarterback, take the handoff at full speed and get to the right edge. Turn up outside the fullback.",
+      "rule": "Stay down in your stance — no motion. At the snap run flat behind the quarterback, take the handoff at full speed and get to the right edge. Turn up outside the fullback.",
       "type": "run",
       "path": [
         [

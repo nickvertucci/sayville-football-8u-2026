@@ -100,6 +100,40 @@ CASES = [
     # the tailback has to be the one going there.
     ("trips quick pass",              "trips", "tr-quick-pass-l", "Trips Left 39 Quick Pass", False),
     ("trips quick pass wrong side",   "trips", "tr-quick-pass-l", "Trips Left 38 Quick Pass", True),
+    # The Single Back call sets two things -- which end is tight, and which side the
+    # wing is on -- and each is checked against the diagram on its own. Neither is
+    # implied by the geometry: the wing is a blocker, and which end is tight only
+    # shows up in the blocking, so a call that gets either backwards would otherwise
+    # leave every other check in the build perfectly happy.
+    ("single back power",             "single-back", "sb1-power-r",
+     "Single Back Tight Right Wing Right 26 Handoff", False),
+    ("single back, wing on the wrong side", "single-back", "sb1-power-r",
+     "Single Back Tight Right Wing Left 26 Handoff", True),
+    ("single back, wrong end called tight", "single-back", "sb1-power-r",
+     "Single Back Tight Left Wing Right 26 Handoff", True),
+    # The Z is not called, because he has no choice: he goes out with whichever end
+    # split. A call that names him anyway has to agree with where he actually is.
+    ("single back naming the Z correctly", "single-back", "sb1-power-r",
+     "Single Back Tight Right Z Left Wing Right 26 Handoff", False),
+    ("single back naming the Z on the wrong side", "single-back", "sb1-power-r",
+     "Single Back Tight Right Z Right Wing Right 26 Handoff", True),
+    # The C gap is a real hole on the tight side and open grass on the split side, so
+    # off tackle has to be numbered to the side the tight end is on.
+    ("single back off tackle, numbered to the split side", "single-back", "sb1-power-r",
+     "Single Back Tight Right Wing Right 27 Handoff", True),
+    ("single back, credited to a back the formation does not have", "single-back",
+     "sb1-power-r", "Single Back Tight Right Wing Right 36 Handoff", True),
+    # A letter call still has to survive two alignment phrases in front of it.
+    ("single back slant pass",        "single-back", "sb1-te-out-r",
+     "Single Back Tight Right Wing Left Y Slant Pass Right", False),
+    ("single back slant pass, wrong way", "single-back", "sb1-te-out-r",
+     "Single Back Tight Right Wing Left Y Slant Pass Left", True),
+    ("single back slant pass, wrong letter", "single-back", "sb1-te-out-r",
+     "Single Back Tight Right Wing Left X Slant Pass Right", True),
+    ("single back toss",              "single-back", "sb1-toss-r",
+     "Single Back Tight Right Wing Right 28 Toss", False),
+    ("single back toss called Handoff", "single-back", "sb1-toss-r",
+     "Single Back Tight Right Wing Right 28 Handoff", True),
 ]
 
 

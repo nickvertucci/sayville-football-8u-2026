@@ -1,10 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="702" height="996" viewBox="0 0 702 996" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" width="702" height="854" viewBox="0 0 702 854" font-family="Segoe UI, Helvetica, Arial, sans-serif">
 <rect width="100%" height="100%" fill="#ffffff"/>
 <rect x="0" y="0" width="702" height="58" fill="#14213d"/>
-<text x="18" y="26" font-size="19.0" font-weight="700" fill="#ffffff">Regular I - Z Right - 38 Toss</text>
+<text x="18" y="26" font-size="19.0" font-weight="700" fill="#ffffff">Regular I - Z Tight Right - 38 Toss</text>
 <text x="18" y="45" font-size="11.5" fill="#a9b4c7">RUN  •  Regular I  •  vs 5-3</text>
-<rect x="432.0" y="13" width="252.0" height="31" rx="6" fill="#ffffff" fill-opacity="0.12" stroke="#8593ad" stroke-width="1"/>
-<text x="558.0" y="34" text-anchor="middle" font-size="14.5" font-weight="700" fill="#ffffff" letter-spacing="0.5">Regular I Z Right 38 Toss</text>
+<rect x="376.8" y="13" width="307.2" height="31" rx="6" fill="#ffffff" fill-opacity="0.12" stroke="#8593ad" stroke-width="1"/>
+<text x="530.4" y="34" text-anchor="middle" font-size="14.5" font-weight="700" fill="#ffffff" letter-spacing="0.5">Regular I Z Tight Right 38 Toss</text>
 <clipPath id="fieldclip"><rect x="0" y="58" width="702" height="472"/></clipPath>
 <g clip-path="url(#fieldclip)"><g transform="translate(-0.0,31.0)">
 <rect x="0" y="0" width="702" height="513" fill="#ffffff"/>
@@ -41,8 +41,8 @@
 <line x1="579.4" y1="247.2" x2="594.0" y2="258.3" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 <path d="M351.0,364.5 L329.4,372.6 L226.8,367.2" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="0.1 7"/>
 <polygon points="226.8,367.2 237.4,363.1 236.9,372.4" fill="#14213d"/>
-<path d="M351.0,413.1 L413.1,380.7 L432.0,253.8" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-<line x1="422.9" y1="252.4" x2="441.1" y2="255.2" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
+<path d="M351.0,413.1 C372.6,407.7 459.0,399.1 480.6,380.7 C502.2,362.2 488.7,323.5 480.6,302.4 C472.5,281.2 440.1,261.9 432.0,253.8" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="425.5" y1="260.3" x2="438.5" y2="247.3" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 <path d="M351.0,472.5 C360.9,469.4 386.1,459.0 410.4,453.6 C434.7,448.2 471.6,450.0 496.8,440.1 C522.0,430.2 547.6,410.9 561.6,394.2 C575.6,377.5 576.9,359.1 580.5,340.2 C584.1,321.3 582.8,302.4 583.2,280.8 C583.7,259.2 583.2,233.1 583.2,210.6 C583.2,188.1 583.2,156.6 583.2,145.8" fill="none" stroke="#b3001b" stroke-width="4.6" stroke-linecap="round" stroke-linejoin="round"/>
 <polygon points="583.2,145.8 589.4,159.6 577.0,159.6" fill="#b3001b"/>
 <path d="M351.0,364.5 L410.4,453.6" fill="none" stroke="#b3001b" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="0.1 7"/>
@@ -124,12 +124,4 @@
 <text x="385" y="766" font-size="12" fill="#111318">Run flat behind the quarterback and catch the</text>
 <text x="385" y="782" font-size="12" fill="#111318">pitch on the run, then get outside our end and</text>
 <text x="385" y="800" font-size="12" fill="#111318">turn up. Drifting forward for it is a fumble.</text>
-<line x1="18" y1="840" x2="684" y2="840" stroke="#c8cdd6" stroke-width="1"/>
-<text x="18" y="858" font-size="11" font-weight="700" fill="#5b6472" letter-spacing="1">COACHING POINTS</text>
-<text x="18" y="878" font-size="12" fill="#111318">The pitch goes early and behind him. A quarterback who waits to be tackled first will pitch it on the</text>
-<text x="18" y="896" font-size="12" fill="#111318">ground.</text>
-<text x="18" y="912" font-size="12" fill="#111318">The fullback is two yards closer to the edge than the tailback. He has to be out there first, or</text>
-<text x="18" y="930" font-size="12" fill="#111318">there is nothing to turn up behind.</text>
-<text x="18" y="946" font-size="12" fill="#111318">This is what the Power buys. Call it once they have started crashing our tackle, and the edge is</text>
-<text x="18" y="964" font-size="12" fill="#111318">empty.</text>
 </svg>

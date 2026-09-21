@@ -2,9 +2,9 @@
   "id": "i-te-sweep-l",
   "order": 12,
   "formation": "i-form",
-  "name": "Regular I - Z Left - Y Sweep Left",
+  "name": "Regular I - Z Tight Left - Y Sweep Left",
   "code": "4",
-  "call": "Regular I Z Left Y Sweep Left",
+  "call": "Regular I Z Tight Left Y Sweep Left",
   "type": "run",
   "scheme": "Sweep",
   "direction": "left",
@@ -17,7 +17,7 @@
   },
   "assignments": {
     "Y": {
-      "rule": "Stay down in your stance \u2014 no motion. At the snap run flat behind the quarterback, take the handoff at full speed and get to the left edge. Turn up outside the fullback.",
+      "rule": "Stay down in your stance — no motion. At the snap run flat behind the quarterback, take the handoff at full speed and get to the left edge. Turn up outside the fullback.",
       "type": "run",
       "path": [
         [

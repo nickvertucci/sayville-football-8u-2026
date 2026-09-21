@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="702" height="946" viewBox="0 0 702 946" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" width="702" height="872" viewBox="0 0 702 872" font-family="Segoe UI, Helvetica, Arial, sans-serif">
 <rect width="100%" height="100%" fill="#ffffff"/>
 <rect x="0" y="0" width="702" height="58" fill="#14213d"/>
 <text x="18" y="26" font-size="19.0" font-weight="700" fill="#ffffff">Trips - Right - X Sweep Right</text>
@@ -41,8 +41,8 @@
 <line x1="438.9" y1="123.2" x2="454.3" y2="113.3" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 <path d="M351.0,364.5 L375.3,386.1 L329.4,391.5 L253.8,386.1" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 5"/>
 <polygon points="253.8,386.1 264.5,382.2 263.8,391.4" fill="#14213d"/>
-<path d="M351.0,413.1 L456.0,380.7 L489.8,215.2" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-<line x1="480.8" y1="213.4" x2="498.8" y2="217.0" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
+<path d="M351.0,413.1 C389.7,407.7 544.5,399.1 583.2,380.7 C621.9,362.2 598.8,330.0 583.2,302.4 C567.6,274.8 505.4,229.7 489.8,215.2" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="483.5" y1="221.9" x2="496.0" y2="208.5" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 <path d="M523.8,364.5 L443.9,119.6" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
 <line x1="435.2" y1="122.5" x2="452.6" y2="116.8" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 
@@ -124,8 +124,4 @@
 <text x="351" y="766" font-size="12" font-weight="700" fill="#111318">TB</text>
 <text x="385" y="766" font-size="12" fill="#111318">Run at the safety and screen him off. Stay in</text>
 <text x="385" y="782" font-size="12" fill="#111318">his way.</text>
-<line x1="18" y1="858" x2="684" y2="858" stroke="#c8cdd6" stroke-width="1"/>
-<text x="18" y="876" font-size="11" font-weight="700" fill="#5b6472" letter-spacing="1">COACHING POINTS</text>
-<text x="18" y="896" font-size="12" fill="#111318">No motion before the snap. The end stays down in his stance.</text>
-<text x="18" y="912" font-size="12" fill="#111318">He turns up outside the trips. The fullback takes the force man; the slot screens.</text>
 </svg>

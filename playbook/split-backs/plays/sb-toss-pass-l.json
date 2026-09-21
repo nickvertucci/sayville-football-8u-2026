@@ -2,9 +2,9 @@
   "id": "sb-toss-pass-l",
   "order": 34,
   "formation": "split-backs",
-  "name": "Split Backs - Z Left - 29 Toss Pass",
+  "name": "Split Backs - Z Tight Left - 29 Toss Pass",
   "code": "32",
-  "call": "Split Backs Z Left 29 Toss Pass",
+  "call": "Split Backs Z Tight Left 29 Toss Pass",
   "type": "pass",
   "scheme": "Protect",
   "direction": "left",
@@ -17,7 +17,7 @@
   },
   "pitch": {
     "from": "QB",
-    "to": "RH",
+    "to": "FB",
     "at": 1
   },
   "assignments": {
@@ -35,7 +35,7 @@
         ]
       ]
     },
-    "RH": {
+    "FB": {
       "rule": "Catch the pitch and run the toss. At our tight end, pull up behind the line and throw it flat to the tight end in front of you.",
       "type": "pass",
       "path": [
@@ -67,7 +67,7 @@
         ]
       ]
     },
-    "LH": {
+    "TB": {
       "rule": "Step at the dive, then bubble outside our end and take the first man out there. He is the one who gets to the thrower.",
       "type": "block",
       "path": [
@@ -91,7 +91,7 @@
     }
   },
   "coaching_points": [
-    "Everything is the toss until he pulls up. Same pitch, same path, same speed -- a halfback who slows down to throw has told them.",
+    "Everything is the toss until he pulls up. Same pitch, same path, same speed -- a back who slows down to throw has told them.",
     "He throws from behind the line. Crossing it is a penalty, so drill the pull-up, not the arm.",
     "The tight end blocks the end first, then slants out flat, almost on the line. It is a three-yard throw and it should never be more than that.",
     "The split man keeps blocking out there exactly as he does on the toss. That block is what the defence is reading while the end gets loose."

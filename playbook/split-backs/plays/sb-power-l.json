@@ -2,16 +2,16 @@
   "id": "sb-power-l",
   "order": 32,
   "formation": "split-backs",
-  "name": "Split Backs - Z Left - 27 Handoff",
+  "name": "Split Backs - Z Tight Left - 27 Handoff",
   "code": "30",
-  "call": "Split Backs Z Left 27 Handoff",
+  "call": "Split Backs Z Tight Left 27 Handoff",
   "type": "run",
   "scheme": "Power",
   "direction": "left",
-  "ball_carrier": "RH",
+  "ball_carrier": "FB",
   "assignments": {
     "QB": {
-      "rule": "Open left and hand deep to the right halfback as he crosses, then fake the boot. It holds the backside end.",
+      "rule": "Open left and hand deep to the fullback as he crosses, then fake the boot. It holds the backside end.",
       "type": "fake",
       "path": [
         [
@@ -28,42 +28,84 @@
         ]
       ]
     },
-    "RH": {
-      "rule": "Cross behind the quarterback, take the handoff and hit it downhill at our tackle's outside hip. Never bounce it outside.",
+    "FB": {
+      "rule": "Run flat across behind the quarterback — do not climb at the line. Take the handoff, then turn up at our tackle's outside hip. Never bounce it outside.",
       "type": "run",
       "path": [
         [
           -1.2,
-          1.0
+          0.0
         ],
         [
-          -4.2,
-          2.6
+          -3.6,
+          0.4
         ],
         [
-          -6.0,
-          4.2
+          -5.4,
+          2.2
         ],
         [
-          -6.3,
-          6.6
+          -5.7,
+          4.8
         ],
         [
-          -6.4,
-          9.0
+          -5.8,
+          8.0
         ]
       ]
     }
   },
   "coaching_points": [
-    "The same Power as the Regular I, run from two backs instead of a stack. The tight end takes the end man and the left halfback leads through the hole.",
+    "The same Power as the Regular I, run from two backs instead of a stack. The tight end takes the end man and the tailback bubbles around the X.",
+    "The tailback goes around the X, not up into the line, and his man is the outside linebacker. A lead back who runs straight into the pile has blocked nobody.",
     "The runner is the back on the far side. He has further to travel, so he has to start on the snap -- no false step, no waiting to see the hole.",
-    "The yards are inside the tight end's block. If the halfback bounces it wide looking for grass, the play is dead."
+    "The yards are inside the tight end's block. If the back bounces it wide looking for grass, the play is dead."
   ],
   "alignment": {
     "Z": [
       -5.6,
       -1.5
     ]
+  },
+  "fronts": {
+    "4-4": {
+      "TB": {
+        "block": "man",
+        "man": "LOLB",
+        "how": "Bubble around the X",
+        "via": [
+          [
+            -2.6,
+            1.8
+          ]
+        ]
+      }
+    },
+    "5-3": {
+      "TB": {
+        "block": "man",
+        "man": "LOLB",
+        "how": "Bubble around the X",
+        "via": [
+          [
+            -2.6,
+            1.8
+          ]
+        ]
+      }
+    },
+    "5-4-2": {
+      "TB": {
+        "block": "man",
+        "man": "LOLB",
+        "how": "Bubble around the X",
+        "via": [
+          [
+            -2.6,
+            1.8
+          ]
+        ]
+      }
+    }
   }
 }

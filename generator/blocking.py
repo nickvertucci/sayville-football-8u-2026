@@ -267,13 +267,39 @@ def _stacked(form: dict, pos: str) -> bool:
     return abs(x) < 2.5 and y <= -2.5
 
 
+def _split_pair(form: dict, a: str, b: str) -> bool:
+    """Two backs beside each other, one either side of the ball.
+
+    This is the difference between a stacked I and a split backfield, and it has
+    to be read off the alignment rather than off the names. It used to be read
+    off the names — a backfield with LH and RH in it was split, one with FB and
+    TB was stacked — and that stopped being true the moment the Split Backs'
+    halfbacks were renamed to the FB and the TB they are called by. Worse, it
+    would have failed silently in the one direction that matters: `_stacked`
+    only asks whether a back is within 2.5 yards of the ball, and the Split
+    Backs sit at 2.2, so both of them read as stacked and every left-handed
+    play would have led with the wrong man and still built clean.
+
+    Opposite sides of the ball and a real gap between them. Depth is not part of
+    it: what makes a back the lead is which side he starts on.
+    """
+    al = form.get("alignment") or {}
+    pa, pb = al.get(a), al.get(b)
+    if not pa or not pb:
+        return False
+    return pa[0] * pb[0] < 0 and abs(pa[0] - pb[0]) >= 2.0
+
+
 def backfield_roles(form: dict, side: int) -> dict[str, str]:
     """Slot, quarterback, lead and trail for this formation and direction.
 
     A stacked I (FB + TB behind the quarterback) always leads with the
-    fullback. Wishbone (FB + LH + RH) does too. Two halfbacks alone lead with
-    the playside one. Trips puts 2, 3 and 4 on the perimeter — they are not
-    a backfield, so nobody leads from the scheme.
+    fullback. Wishbone (FB + LH + RH) does too. Two backs split either side of
+    the ball lead with the playside one — in the Split Backs and the Shotgun
+    that is the FB going right and the TB going left, which is exactly what
+    their digits say: 2 is even and lines up right, 3 is odd and lines up left.
+    Trips puts 2, 3 and 4 on the perimeter — they are not a backfield, so
+    nobody leads from the scheme.
 
     The slot is a role, not a key: an Z standing in the backfield is a back,
     and the scheme gives him nothing.
@@ -292,6 +318,11 @@ def backfield_roles(form: dict, side: int) -> dict[str, str]:
     if "FB" in keys and "LH" in keys and "RH" in keys:
         out["lead"] = "FB"
         out["trail"] = "LH" if side > 0 else "RH"
+    # Split before stacked: at 2.2 yards out the Split Backs satisfy `_stacked`
+    # too, so the stacked branch would claim them and always lead with the FB.
+    elif _split_pair(form, "FB", "TB"):
+        out["lead"] = "FB" if side > 0 else "TB"
+        out["trail"] = "TB" if side > 0 else "FB"
     elif "FB" in keys and "TB" in keys and _stacked(form, "FB") and _stacked(form, "TB"):
         out["lead"] = "FB"
         out["trail"] = "TB"
@@ -365,9 +396,15 @@ def scheme_conflicts(play: dict, form: dict, side: int) -> list[str]:
     """Written blocks that disagree with the named scheme.
 
     A leftover back the scheme does not name is fine — that is how a tight-end
-    sweep puts two halfbacks on the edge. Restating the scheme is fine too (the
+    sweep puts two backs on the edge. Restating the scheme is fine too (the
     fill just ignores the copy). Changing the playside end from `release` to
     `cutoff` on a Power is not: that is a different family.
+
+    The verb AND its options are compared, so a play cannot quietly re-aim a
+    scheme's lead either. If one play's lead blocker has a different job from the
+    family's, say it under `fronts` where the man is named outright — that is
+    visible on the card and checked against the front, where a changed `target`
+    is neither.
     """
     name = play.get("scheme")
     if name not in SCHEMES:
@@ -1064,7 +1101,28 @@ def through_hole(spot, target, side):
     return [elbow] + to(spot, target)
 
 
-def bubble_out(spot, target, side):
+def playside_edge(alignment: dict, side: int) -> float | None:
+    """The x of our outermost man ON the line, playside. The thing to bubble round.
+
+    Read off our own alignment, not off a position key, so it is the Y in the
+    Regular I, the stretched end in Trips, and whichever end is tight in the
+    Single Back. Men off the line are excluded -- the slot standing a yard back
+    is not the edge of the formation, and on the plays where he is split wide he
+    would otherwise send the lead blocker four yards further out than he needs.
+    """
+    if not alignment:
+        return None
+    los = min(round(v[1], 2) for v in alignment.values() if v[1] >= -1.0) \
+        if any(v[1] >= -1.0 for v in alignment.values()) else None
+    on_line = [v[0] for v in alignment.values()
+               if los is not None and abs(v[1] - los) < 0.25]
+    playside = [x for x in on_line if x * side > 0]
+    if not playside:
+        return None
+    return max(playside) if side > 0 else min(playside)
+
+
+def bubble_out(spot, target, side, edge=None):
     """A lead blocker's path to the edge: outside FIRST, behind the line, then up.
 
     `through_hole` puts its elbow ON the line of scrimmage, which is right for an
@@ -1086,8 +1144,63 @@ def bubble_out(spot, target, side):
     # further out, was the case that showed it.
     if abs(wide) > abs(finish[-1][0]):
         wide = finish[-1][0]
+    # But the instruction is "around our end", and 72% of the way to a defender who
+    # is himself barely outside our end does not get there. On the Regular I toss the
+    # fullback was told to bubble around the Y and drawn with his elbow at 3.3 with
+    # the Y standing at 4.2 -- cutting up INSIDE his own tight end, which is the one
+    # thing the words tell him not to do. So when we know where our end is, and the
+    # blocker starts inside him, the elbow clears him by half a yard.
+    #
+    # This can leave a hook, and that is the honest drawing rather than a fault: if
+    # the man he has to block is inside our end -- the 5-3 puts its outside backer
+    # there -- then going round the end and coming back to him is the actual path.
+    # The hook the guard above exists to prevent is a different one, a blocker who
+    # started outside being sent wider still.
+    rounded = False
+    if edge is not None and side * (spot[0] - edge) < 0:
+        need = (edge + 0.6 * side) - spot[0]
+        if side * (need - wide) > 0:
+            wide, rounded = need, True
     depth = min(spot[1] + 1.2, -0.8)      # still behind the line, whoever he is
-    return [[round(wide, 2), round(depth - spot[1], 2)]] + finish
+    pts = [[round(wide, 2), round(depth - spot[1], 2)]]
+    # Two points out wide, not one. With a single elbow the curve through three
+    # points is barely a bend, and on a toss it is invisible: the man he is
+    # blocking stands almost directly above our end, so "round the end" and
+    # "straight at him" are the same diagonal. Holding his width while he crosses
+    # the line is what makes the shape read as a bubble -- out, up, then in onto
+    # the man -- and it is also the honest path. He is meant to still be outside
+    # our end at the point he passes it, not converging from the snap.
+    if rounded and target[2] > 0.8:
+        pts.append([round(wide, 2), round(0.8 - spot[1], 2)])
+    return pts + finish
+
+
+def bubble_then_inside(spot, edge_x, blocked, target, side):
+    """Around our end behind the line, THEN back inside to the man who shows.
+
+    The third path a lead blocker can take, and it was missing. `through_hole`
+    goes to the line and up; `bubble_out` goes wide and stays wide. This one is
+    the sweep-side lead on a play whose force man is already blocked: he still
+    has to get around our own end — that is the whole instruction — but the man
+    he ends up on is the linebacker inside, not somebody out on the numbers.
+
+    It existed in words and not in the drawing. The rule said "Lead outside our
+    end, then turn up inside" while the diagram used `through_hole`, which puts
+    the elbow ON the line of scrimmage: the card told a boy to go around the Y
+    and drew him running straight into him. A card whose words and picture
+    disagree is worse than either alone, because the boy believes the picture.
+
+    The elbow clears OUR END in x and stays behind the line in y, so he is
+    already outside him before he gains any ground — then he finishes back
+    inside on his man. It used to clear the edge *defender* instead, which is
+    the wrong reference for the same reason `bubble_out` had it wrong: the
+    instruction is about our own end, and where the defence happens to stand
+    does not decide whether the blocker got round him.
+    """
+    ref = edge_x if edge_x is not None else blocked[1]
+    wide = (ref + 0.6 * side) - spot[0]
+    depth = min(spot[1] + 1.2, -0.8)      # still behind the line, whoever he is
+    return [[round(wide, 2), round(depth - spot[1], 2)]] + to(spot, target)
 
 
 def v_lead(front, spot, side, intent, taken=()):
@@ -1122,19 +1235,20 @@ def v_lead(front, spot, side, intent, taken=()):
         if man is not None and intent.get("with"):
             text = (f"Bubble out around our end, then double team the "
                     f"{noun(front, man[0])} with the {intent['with']}.")
-            return text, bubble_out(spot, man, side), man
+            return text, bubble_out(spot, man, side, intent.get("_edge")), man
         if man is not None and man[0] in taken and not wide:
             # Somebody is already on him and there is nobody further out. Turn up
             # inside rather than putting two blockers on one defender.
             inside = linebacker(front, side, "playside", taken)
             if inside is not None and inside[0] not in taken:
-                text = (f"Lead outside our end, then turn up inside — the {lb_noun('playside')} "
+                text = (f"Bubble around our end, then turn up inside — the {lb_noun('playside')} "
                         "is the man who shows. Head across him.")
-                return text, through_hole(spot, inside, side), inside
+                return text, bubble_then_inside(
+                    spot, intent.get("_edge"), man, inside, side), inside
         if man is not None:
             text = (f"Bubble out around our end — do not run up into the line. Block "
                     f"the first man out there; here it is the {noun(front, man[0])}.")
-            return text, bubble_out(spot, man, side), man
+            return text, bubble_out(spot, man, side, intent.get("_edge")), man
     aim = intent.get("_hole")
     if aim is None:
         aim = 1.6 * side
@@ -1238,6 +1352,11 @@ def resolve(pos: str, intent: dict, alignment: dict, front: dict, side: int,
     spot = alignment[pos]
     if hole is not None:
         intent = dict(intent, _hole=hole)
+    if verb == "lead":
+        # `lead` is the other verb that has to know where our OWN people are. Its
+        # job is written as "around our end", and no defensive front can say where
+        # our end is standing.
+        intent = dict(intent, _edge=playside_edge(alignment, side))
     if verb == "god":
         # GOD is the only verb that has to know where our OWN people are: the
         # gap it starts with is the space between this blocker and the man
@@ -1257,7 +1376,18 @@ def resolve(pos: str, intent: dict, alignment: dict, front: dict, side: int,
         "path": intent["path"] if path is None else path,
         # A block that goes round somebody first is drawn as one rounded bubble through
         # its waypoints, not as straight legs with a corner at each.
-        "curve": bool(intent.get("via")),
+        #
+        # A lead blocker bubbling to the force man is the same shape and was not
+        # getting it: `via` is only set by the `man` verb, so the hand-written
+        # bubbles on the Split Backs toss curved and the ones the Toss scheme
+        # generates came out as two straight legs with a corner in the middle. Same
+        # instruction, two different pictures, depending on how the play happened to
+        # be authored. The condition is narrow on purpose -- a lead blocker aimed at
+        # the HOLE still draws a corner, because running up into the hole is a corner
+        # and rounding it would draw him drifting outside on an inside run.
+        "curve": bool(intent.get("via")) or (
+            verb == "lead" and intent.get("target") == "force"
+            and len(result) > 2 and result[2] is not None),
         # Which linebacker this blocker took, so the next one does not take him too.
         "claimed": claimed_lb(front, alignment[pos], path) if aims == "man" else None,
     }
