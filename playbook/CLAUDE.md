@@ -69,11 +69,11 @@ build checks the receiver's path is that long.
 "pitch": { "from": "QB", "to": "LH", "at": 1 }
 ```
 
-### A pitch pass
+### A toss pass
 
-A pitch pass is the toss right up until he pulls up: the pitch is real, the back runs
+A toss pass is the toss right up until he pulls up: the pitch is real, the back runs
 the toss, and then he stops behind the line and throws. So it is **called like the
-toss** — `Regular I Z Right 38 Pitch Pass` — and the digits name the back who takes
+toss** — `Regular I Z Right 38 Toss Pass` — and the digits name the back who takes
 the pitch, not the receiver. `ball_carrier` is the receiver, the way it is on every
 pass; `type` is `pass`, the scheme is `Protect`, and it gives its own `direction`
 rather than a `fakes`, because it is not pretending to be another play — for two
@@ -243,7 +243,7 @@ call. The numbering system is documented in the top-level [README](../README.md)
   Sweep.
 
   **A pass opts out of the hole table**, because its word is a route and a route
-  is not a gap: `Y Slant Pass Right`, `38 Quick Pass`, `38 Pitch Pass`. Only the word
+  is not a gap: `Y Slant Pass Right`, `38 Quick Pass`, `38 Toss Pass`. Only the word
   is free — where a pass carries digits they are checked against the diagram like any
   other call, and a letter pass still ends with its direction.
 

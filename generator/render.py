@@ -400,7 +400,7 @@ def los_crossing(alignment: dict, pos: str, spec: dict) -> float | None:
 def los_approach(alignment: dict, pos: str, spec: dict) -> float:
     """Field x where this player gets closest to the line without crossing it.
 
-    A pitch pass has to be numbered like the toss it is pretending to be, and the
+    A toss pass has to be numbered like the toss it is pretending to be, and the
     back it names never crosses the line -- he is not allowed to, he is throwing
     from behind it. So the hole he took the ball to is measured at the point he got
     nearest the line instead of at a crossing that must not exist.
@@ -520,7 +520,7 @@ def validate_call(play: dict, form: dict, defenses: dict) -> list[str]:
     # caught it. Now every blocker's path is derived from the front, and a pulling
     # guard's wrap crosses the line right where the ball does — which made a wrong
     # call measurably true. Saying it outright is both stronger and honest.
-    # A hand-drawn block counts as blocking too. The lead back on a pitch pass has a
+    # A hand-drawn block counts as blocking too. The lead back on a toss pass has a
     # written path rather than a verb -- the scheme is Protect and he is doing
     # something else -- and his path bubbles out and crosses the line in the same hole
     # the ball went to, so without this the call could credit him with the play.
@@ -531,7 +531,7 @@ def validate_call(play: dict, form: dict, defenses: dict) -> list[str]:
 
     spec = resolved_assignments(play, defenses[blocking.DEFAULT_FRONT]).get(pos, {})
     crossing = los_crossing(alignment, pos, spec)
-    # A pitch pass is the toss right up until he pulls up, so it is called like the
+    # A toss pass is the toss right up until he pulls up, so it is called like the
     # toss -- and the back the digits name is the passer, not the runner. He takes
     # the ball to the hole and throws from behind the line, so the crossing the
     # geometry check normally wants is the one thing that must not be there: a

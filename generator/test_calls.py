@@ -123,7 +123,7 @@ def main() -> int:
             for e in errors:
                 print(f"        {e}")
 
-    # The one thing about a pitch pass the call alone cannot say: he throws from
+    # The one thing about a toss pass the call alone cannot say: he throws from
     # behind the line. A path that crosses it is a forward pass from past the line of
     # scrimmage -- a penalty, and a card showing a play nobody can run -- so the same
     # call has to be rejected the moment the diagram does that.
@@ -132,7 +132,7 @@ def main() -> int:
     play["assignments"]["TB"]["path"] = [[2.2, 0.7], [5.4, 1.2], [7.6, 2.8], [8.2, 6.4]]
     if not render.validate_call(play, form, defenses):
         wrong += 1
-        print("FAIL  pitch pass thrown from past the line: should have been rejected")
+        print("FAIL  toss pass thrown from past the line: should have been rejected")
 
     if wrong:
         print(f"\n{wrong} of {len(CASES) + 1} cases behaved unexpectedly.")
