@@ -2,15 +2,15 @@
   "id": "i-smash-l",
   "order": 16,
   "formation": "i-form",
-  "name": "Regular I - Slot Left - 33 Smash",
+  "name": "Regular I - Z L - 33 Handoff",
   "code": "8",
-  "call": "Regular I Slot Left 33 Smash",
+  "call": "Regular I Z L 33 Handoff",
   "type": "run",
   "scheme": "Smash",
   "direction": "left",
   "ball_carrier": "TB",
   "alignment": {
-    "SL": [
+    "Z": [
       -5.6,
       -1.5
     ]
@@ -63,7 +63,7 @@
   },
   "fronts": {
     "4-4": {
-      "RTE": {
+      "Y": {
         "block": "man",
         "man": "RDE"
       },
@@ -88,11 +88,11 @@
         "block": "man",
         "man": "LDE"
       },
-      "LTE": {
+      "X": {
         "block": "man",
         "man": "LOLB"
       },
-      "SL": {
+      "Z": {
         "block": "man",
         "man": "LC"
       },

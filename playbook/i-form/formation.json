@@ -4,25 +4,25 @@
   "name": "Regular I",
   "family": "Regular I",
   "summary": "Fullback and tailback stacked behind the quarterback. Teaches a back to read a block instead of running to a spot.",
-  "personnel": "11 players, 2 tight ends, 1 SL, quarterback, fullback, tailback",
+  "personnel": "11 players, 2 tight ends, 1 Z, quarterback, fullback, tailback",
   "notes": "Normal line splits, about a foot. Both ends are on the line; the slot is just outside the tight end, one step off the line — seven on the line every snap. Fullback at three yards, tailback stacked behind him at five and a half.",
   "alignment": {
-    "LTE": [-4.2, -0.5],
+    "X": [-4.2, -0.5],
     "LT": [-2.8, -0.5],
     "LG": [-1.4, -0.5],
     "C": [0.0, -0.5],
     "RG": [1.4, -0.5],
     "RT": [2.8, -0.5],
-    "RTE": [4.2, -0.5],
-    "SL": [5.6, -1.5],
+    "Y": [4.2, -0.5],
+    "Z": [5.6, -1.5],
     "QB": [0.0, -1.5],
     "FB": [0.0, -3.3],
     "TB": [0.0, -5.5]
   },
   "eligible": [
-    "LTE",
-    "RTE",
-    "SL",
+    "X",
+    "Y",
+    "Z",
     "FB",
     "TB",
     "QB"
@@ -31,15 +31,15 @@
     "1": "QB",
     "2": "FB",
     "3": "TB",
-    "4": "SL",
-    "5": "LTE",
-    "6": "RTE"
+    "4": "Z",
+    "5": "X",
+    "6": "Y"
   },
   "coaching_notes": [
     "The tailback picks his own hole here — reads the block and cuts off it, instead of the play deciding for him the way Dive does. The harder skill, which is why this formation gets the most practice time.",
     "The slot lines up right every play, and the call says so — Slot Right. Naming it now means a Slot Left look can be added later without changing how plays are called.",
-    "Count seven on the line every snap — the SL creeping up onto it is the most common illegal-formation flag from this look.",
+    "Count seven on the line every snap — the Z creeping up onto it is the most common illegal-formation flag from this look.",
     "Fullback and tailback must stay stacked. A drifting tailback tips the play before the snap.",
-    "The SL is back 4 — a receiver most snaps, but also the motion man on Sweep and the fake on its boot. Same number he carries in the Power I backfield."
+    "The Z is back 4 — a receiver most snaps, but also the motion man on Sweep and the fake on its boot. Same number he carries in the Power I backfield."
   ]
 }

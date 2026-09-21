@@ -7,22 +7,22 @@
   "personnel": "11 players, 2 tight ends, quarterback, fullback, tailback, slot — no one behind the quarterback",
   "notes": "Same line as the Regular I — both ends tight, seven on the line every snap. Nobody behind the quarterback. The bunch is a triangle: the slot just outside the tight end and the fullback outside him, both up front, with the tailback a yard back splitting the two of them. The call names the bunch — Trips Right or Trips Left — and moves all three.",
   "alignment": {
-    "LTE": [-4.2, -0.5],
+    "X": [-4.2, -0.5],
     "LT": [-2.8, -0.5],
     "LG": [-1.4, -0.5],
     "C": [0.0, -0.5],
     "RG": [1.4, -0.5],
     "RT": [2.8, -0.5],
-    "RTE": [4.2, -0.5],
-    "SL": [5.6, -1.5],
+    "Y": [4.2, -0.5],
+    "Z": [5.6, -1.5],
     "TB": [6.8, -2.5],
     "FB": [8.0, -1.5],
     "QB": [0.0, -1.5]
   },
   "eligible": [
-    "LTE",
-    "RTE",
-    "SL",
+    "X",
+    "Y",
+    "Z",
     "TB",
     "FB",
     "QB"
@@ -31,9 +31,9 @@
     "1": "QB",
     "2": "FB",
     "3": "TB",
-    "4": "SL",
-    "5": "LTE",
-    "6": "RTE"
+    "4": "Z",
+    "5": "X",
+    "6": "Y"
   },
   "coaching_notes": [
     "Count seven on the line every snap — both ends stay down. 2, 3 and 4 are off the line; any of them creeping up is an illegal-formation flag.",

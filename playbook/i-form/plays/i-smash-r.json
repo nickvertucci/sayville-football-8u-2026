@@ -2,9 +2,9 @@
   "id": "i-smash-r",
   "order": 15,
   "formation": "i-form",
-  "name": "Regular I - Slot Right - 32 Smash",
+  "name": "Regular I - Z R - 32 Handoff",
   "code": "7",
-  "call": "Regular I Slot Right 32 Smash",
+  "call": "Regular I Z R 32 Handoff",
   "type": "run",
   "scheme": "Smash",
   "direction": "right",
@@ -57,7 +57,7 @@
   },
   "fronts": {
     "4-4": {
-      "LTE": {
+      "X": {
         "block": "man",
         "man": "LDE"
       },
@@ -82,11 +82,11 @@
         "block": "man",
         "man": "RDE"
       },
-      "RTE": {
+      "Y": {
         "block": "man",
         "man": "ROLB"
       },
-      "SL": {
+      "Z": {
         "block": "man",
         "man": "RC"
       },

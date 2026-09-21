@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="621" height="472" viewBox="40 27 621 472" font-family="Segoe UI, Helvetica, Arial, sans-serif" role="img">
-<title>Power I - Slot Right - 38 Toss — Power I Slot Right 38 Toss vs 5-4-2</title>
+<title>Power I - Z R - 38 Toss — Power I Z R 38 Toss vs 5-4-2</title>
 <rect x="0" y="0" width="702" height="513" fill="#ffffff"/>
 <line x1="0" y1="459.0" x2="702" y2="459.0" stroke="#c8cdd6" stroke-width="1"/>
 <line x1="0" y1="189.0" x2="702" y2="189.0" stroke="#c8cdd6" stroke-width="1"/>
@@ -51,7 +51,7 @@
 <polygon points="561.6,283.5 566.8,297.7 554.5,296.9" fill="#b3001b"/>
 <path d="M351.0,364.5 L410.4,472.5" fill="none" stroke="#b3001b" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="0.1 7"/>
 <rect x="224.1" y="324.0" width="27.0" height="27.0" rx="3" fill="#ffffff" stroke="#14213d" stroke-width="2.6"/>
-<text x="237.6" y="342.0" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">LTE</text>
+<text x="237.6" y="342.0" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">X</text>
 <rect x="261.9" y="324.0" width="27.0" height="27.0" rx="3" fill="#ffffff" stroke="#14213d" stroke-width="2.6"/>
 <text x="275.4" y="342.0" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">LT</text>
 <rect x="299.7" y="324.0" width="27.0" height="27.0" rx="3" fill="#ffffff" stroke="#14213d" stroke-width="2.6"/>
@@ -63,15 +63,15 @@
 <rect x="413.1" y="324.0" width="27.0" height="27.0" rx="3" fill="#ffffff" stroke="#14213d" stroke-width="2.6"/>
 <text x="426.6" y="342.0" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">RT</text>
 <rect x="450.9" y="324.0" width="27.0" height="27.0" rx="3" fill="#ffffff" stroke="#14213d" stroke-width="2.6"/>
-<text x="464.4" y="342.0" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">RTE</text>
+<text x="464.4" y="342.0" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">Y</text>
 <circle cx="351.0" cy="364.5" r="13.5" fill="#ffffff" stroke="#14213d" stroke-width="2.6"/>
 <text x="351.0" y="369.0" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">QB</text>
 <circle cx="351.0" cy="413.1" r="13.5" fill="#ffffff" stroke="#14213d" stroke-width="2.6"/>
 <text x="351.0" y="417.6" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">FB</text>
 <circle cx="388.8" cy="442.8" r="13.5" fill="#ffffff" stroke="#14213d" stroke-width="2.6"/>
-<text x="388.8" y="447.3" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">SL</text>
+<text x="388.8" y="447.3" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">Z</text>
 <circle cx="351.0" cy="472.5" r="13.5" fill="#ffffff" stroke="#b3001b" stroke-width="2.6"/>
 <text x="351.0" y="477.0" text-anchor="middle" font-size="13" font-weight="700" fill="#b3001b">TB</text>
 <rect x="559.1" y="35.0" width="94.4" height="52.0" rx="8" fill="#ffffff" stroke="#111318" stroke-width="3"/><text x="606.3" y="75.0" text-anchor="middle" font-size="40" font-weight="800" fill="#111318">#41</text>
-<text x="52.5" y="45.0" font-size="4.3" font-weight="700" fill="#111318">Power I - Slot Right - 38 Toss</text>
+<text x="52.5" y="45.0" font-size="4.3" font-weight="700" fill="#111318">Power I - Z R - 38 Toss</text>
 </svg>

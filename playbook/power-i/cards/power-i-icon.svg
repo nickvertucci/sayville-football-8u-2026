@@ -6,7 +6,7 @@
 <line x1="0" y1="324.0" x2="702" y2="324.0" stroke="#3a4150" stroke-width="2" stroke-dasharray="9 6"/>
 <ellipse cx="351.0" cy="324.0" rx="9" ry="5.5" fill="#6b4a2b" stroke="#3a2716" stroke-width="1.2"/>
 <rect x="224.1" y="324.0" width="27.0" height="27.0" rx="3" fill="#ffffff" stroke="#14213d" stroke-width="2.6"/>
-<text x="237.6" y="342.0" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">LTE</text>
+<text x="237.6" y="342.0" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">X</text>
 <rect x="261.9" y="324.0" width="27.0" height="27.0" rx="3" fill="#ffffff" stroke="#14213d" stroke-width="2.6"/>
 <text x="275.4" y="342.0" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">LT</text>
 <rect x="299.7" y="324.0" width="27.0" height="27.0" rx="3" fill="#ffffff" stroke="#14213d" stroke-width="2.6"/>
@@ -18,13 +18,13 @@
 <rect x="413.1" y="324.0" width="27.0" height="27.0" rx="3" fill="#ffffff" stroke="#14213d" stroke-width="2.6"/>
 <text x="426.6" y="342.0" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">RT</text>
 <rect x="450.9" y="324.0" width="27.0" height="27.0" rx="3" fill="#ffffff" stroke="#14213d" stroke-width="2.6"/>
-<text x="464.4" y="342.0" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">RTE</text>
+<text x="464.4" y="342.0" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">Y</text>
 <circle cx="351.0" cy="364.5" r="13.5" fill="#ffffff" stroke="#14213d" stroke-width="2.6"/>
 <text x="351.0" y="369.0" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">QB</text>
 <circle cx="351.0" cy="413.1" r="13.5" fill="#ffffff" stroke="#14213d" stroke-width="2.6"/>
 <text x="351.0" y="417.6" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">FB</text>
 <circle cx="388.8" cy="442.8" r="13.5" fill="#ffffff" stroke="#14213d" stroke-width="2.6"/>
-<text x="388.8" y="447.3" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">SL</text>
+<text x="388.8" y="447.3" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">Z</text>
 <circle cx="351.0" cy="472.5" r="13.5" fill="#ffffff" stroke="#14213d" stroke-width="2.6"/>
 <text x="351.0" y="477.0" text-anchor="middle" font-size="13" font-weight="700" fill="#14213d">TB</text>
 </svg>

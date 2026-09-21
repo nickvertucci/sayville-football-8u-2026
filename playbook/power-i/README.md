@@ -8,16 +8,16 @@ Same line as the Regular I — both ends tight, seven on the line every snap. Th
 
 | Position | x | y |
 |---|---|---|
-| LTE | -4.2 | -0.5 |
+| X | -4.2 | -0.5 |
 | LT | -2.8 | -0.5 |
 | LG | -1.4 | -0.5 |
 | C | 0.0 | -0.5 |
 | RG | 1.4 | -0.5 |
 | RT | 2.8 | -0.5 |
-| RTE | 4.2 | -0.5 |
+| Y | 4.2 | -0.5 |
 | QB | 0.0 | -1.5 |
 | FB | 0.0 | -3.3 |
-| SL | 1.4 | -4.4 |
+| Z | 1.4 | -4.4 |
 | TB | 0.0 | -5.5 |
 
 **Formation coaching notes**
@@ -32,31 +32,31 @@ Same line as the Regular I — both ends tight, seven on the line every snap. Th
 
 | Play | Call | Scheme | Type | Ball |
 |---|---|---|---|---|
-| [Power I - Slot Right - 32 Smash](#power-i---slot-right---32-smash) | `Power I Slot Right 32 Smash` | Smash | run | TB |
-| [Power I - Slot Left - 33 Smash](#power-i---slot-left---33-smash) | `Power I Slot Left 33 Smash` | Smash | run | TB |
-| [Power I - Slot Right - 38 Toss](#power-i---slot-right---38-toss) | `Power I Slot Right 38 Toss` | Toss | run | TB |
-| [Power I - Slot Left - 39 Toss](#power-i---slot-left---39-toss) | `Power I Slot Left 39 Toss` | Toss | run | TB |
+| [Power I - Z R - 32 Handoff](#power-i---z-r---32-handoff) | `Power I Z R 32 Handoff` | Smash | run | TB |
+| [Power I - Z L - 33 Handoff](#power-i---z-l---33-handoff) | `Power I Z L 33 Handoff` | Smash | run | TB |
+| [Power I - Z R - 38 Toss](#power-i---z-r---38-toss) | `Power I Z R 38 Toss` | Toss | run | TB |
+| [Power I - Z L - 39 Toss](#power-i---z-l---39-toss) | `Power I Z L 39 Toss` | Toss | run | TB |
 
 ---
 
-## Power I - Slot Right - 32 Smash
+## Power I - Z R - 32 Handoff
 
-**Call it:** `Power I Slot Right 32 Smash`
+**Call it:** `Power I Z R 32 Handoff`
 
 **Scheme:** Smash
 
-![Power I - Slot Right - 32 Smash](cards/pi-smash-r-4-4.svg)
+![Power I - Z R - 32 Handoff](cards/pi-smash-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
-| **LTE** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
+| **X** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
 | **LT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
 | **LG** | Defensive guard head up on you. Cut him off — get between him and the ball. |
 | **C** | Nobody on you. Climb to the playside linebacker. Head across him. |
 | **RG** | Defensive guard head up on you. Hands inside, pads under his, drive him back. |
 | **RT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
-| **RTE** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
-| **SL** | Lead through the hole. Block the first man who shows in it. You are the second man through. Go after the fullback, take whoever he did not. |
+| **Y** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
+| **Z** | Lead through the hole. Block the first man who shows in it. You are the second man through. Go after the fullback, take whoever he did not. |
 | **QB** | Open right, hand to the tailback, then fake the boot left. It holds the backside end. |
 | **FB** | Lead through the hole. Block the first man who shows in it. |
 | **TB** **(ball)** | Take the handoff downhill between the center and the right guard, right off the fullback's hip. Do not bounce it. |
@@ -69,24 +69,24 @@ Same line as the Regular I — both ends tight, seven on the line every snap. Th
 
 ---
 
-## Power I - Slot Left - 33 Smash
+## Power I - Z L - 33 Handoff
 
-**Call it:** `Power I Slot Left 33 Smash`
+**Call it:** `Power I Z L 33 Handoff`
 
 **Scheme:** Smash
 
-![Power I - Slot Left - 33 Smash](cards/pi-smash-l-4-4.svg)
+![Power I - Z L - 33 Handoff](cards/pi-smash-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
-| **LTE** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
+| **X** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
 | **LT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
 | **LG** | Defensive guard head up on you. Hands inside, pads under his, drive him back. |
 | **C** | Nobody on you. Climb to the playside linebacker. Head across him. |
 | **RG** | Defensive guard head up on you. Cut him off — get between him and the ball. |
 | **RT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
-| **RTE** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
-| **SL** | Lead through the hole. Block the first man who shows in it. You are the second man through. Go after the fullback, take whoever he did not. |
+| **Y** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
+| **Z** | Lead through the hole. Block the first man who shows in it. You are the second man through. Go after the fullback, take whoever he did not. |
 | **QB** | Open left, hand to the tailback, then fake the boot right. It holds the backside end. |
 | **FB** | Lead through the hole. Block the first man who shows in it. |
 | **TB** **(ball)** | Take the handoff downhill between the center and the left guard, right off the fullback's hip. Do not bounce it. |
@@ -99,24 +99,24 @@ Same line as the Regular I — both ends tight, seven on the line every snap. Th
 
 ---
 
-## Power I - Slot Right - 38 Toss
+## Power I - Z R - 38 Toss
 
-**Call it:** `Power I Slot Right 38 Toss`
+**Call it:** `Power I Z R 38 Toss`
 
 **Scheme:** Toss
 
-![Power I - Slot Right - 38 Toss](cards/pi-toss-r-4-4.svg)
+![Power I - Z R - 38 Toss](cards/pi-toss-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
-| **LTE** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
+| **X** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
 | **LT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
 | **LG** | Defensive guard head up on you. Cut him off — get between him and the ball. |
 | **C** | Nobody on you. Climb to the playside linebacker. Head across him. |
 | **RG** | Defensive guard head up on you. Step past him. Climb to the playside linebacker. Head across him. |
 | **RT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
-| **RTE** | Defensive end on your inside shoulder. Turn him inside. The ball goes around behind you. |
-| **SL** | Get outside the fullback, then take him, then block the right corner. |
+| **Y** | Defensive end on your inside shoulder. Turn him inside. The ball goes around behind you. |
+| **Z** | Get outside the fullback, then take him, then block the right corner. |
 | **QB** | Quick pitch to the tailback, then run the other way, to the left, like you still have it. |
 | **FB** | Lead outside our end. Block the first man out there — here it is the linebacker. |
 | **TB** **(ball)** | Take the pitch on the run and get to the right edge behind your two blockers. Ahead of the quarterback is a fumble. |
@@ -129,24 +129,24 @@ Same line as the Regular I — both ends tight, seven on the line every snap. Th
 
 ---
 
-## Power I - Slot Left - 39 Toss
+## Power I - Z L - 39 Toss
 
-**Call it:** `Power I Slot Left 39 Toss`
+**Call it:** `Power I Z L 39 Toss`
 
 **Scheme:** Toss
 
-![Power I - Slot Left - 39 Toss](cards/pi-toss-l-4-4.svg)
+![Power I - Z L - 39 Toss](cards/pi-toss-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
-| **LTE** | Defensive end on your inside shoulder. Turn him inside. The ball goes around behind you. |
+| **X** | Defensive end on your inside shoulder. Turn him inside. The ball goes around behind you. |
 | **LT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
 | **LG** | Defensive guard head up on you. Step past him. Climb to the playside linebacker. Head across him. |
 | **C** | Nobody on you. Climb to the playside linebacker. Head across him. |
 | **RG** | Defensive guard head up on you. Cut him off — get between him and the ball. |
 | **RT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
-| **RTE** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
-| **SL** | Get outside the fullback, then take him, then block the left corner. |
+| **Y** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
+| **Z** | Get outside the fullback, then take him, then block the left corner. |
 | **QB** | Quick pitch to the tailback, then run the other way, to the right, like you still have it. |
 | **FB** | Lead outside our end. Block the first man out there — here it is the linebacker. |
 | **TB** **(ball)** | Take the pitch on the run and get to the left edge behind your two blockers. Ahead of the quarterback is a fumble. |

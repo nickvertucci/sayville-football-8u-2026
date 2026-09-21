@@ -2,15 +2,15 @@
   "id": "i-power-l",
   "order": 10,
   "formation": "i-form",
-  "name": "Regular I - Slot Left - 37 Power",
+  "name": "Regular I - Z L - 37 Handoff",
   "code": "2",
-  "call": "Regular I Slot Left 37 Power",
+  "call": "Regular I Z L 37 Handoff",
   "type": "run",
   "scheme": "Power",
   "direction": "left",
   "ball_carrier": "TB",
   "alignment": {
-    "SL": [
+    "Z": [
       -5.6,
       -1.5
     ]
@@ -59,7 +59,7 @@
   },
   "fronts": {
     "4-4": {
-      "RTE": {
+      "Y": {
         "block": "man",
         "man": "RDE"
       },
@@ -85,11 +85,11 @@
         "man": "LILB",
         "help": "LDG"
       },
-      "LTE": {
+      "X": {
         "block": "man",
         "man": "LDE"
       },
-      "SL": {
+      "Z": {
         "block": "man",
         "man": "LC"
       },
@@ -108,8 +108,8 @@
   },
   "coaching_points": [
     "This is the most physical run in the book. If it works you can run it fifteen times, and at this age you often can.",
-    "Drill the SL's kick-out on its own. If he blocks the end with his shoulders square, the end slides underneath and makes the tackle for a loss — he has to attack the outside hip.",
+    "Drill the Z's kick-out on its own. If he blocks the end with his shoulders square, the end slides underneath and makes the tackle for a loss — he has to attack the outside hip.",
     "The fullback's man is whoever shows in the hole, not a man he picks before the snap. Tell him that every time.",
-    "The tailback's most common mistake is bouncing it wide looking for green grass. The yards are inside the SL's block. Make him run it tight in practice until it is automatic."
+    "The tailback's most common mistake is bouncing it wide looking for green grass. The yards are inside the Z's block. Make him run it tight in practice until it is automatic."
   ]
 }

@@ -2,15 +2,15 @@
   "id": "sb-te-sweep-r",
   "order": 27,
   "formation": "split-backs",
-  "name": "Split Backs - Slot Right - 58 Sweep",
+  "name": "Split Backs - Z R - 58 Sweep",
   "code": "25",
-  "call": "Split Backs Slot Right 58 Sweep",
+  "call": "Split Backs Z R 58 Sweep",
   "type": "run",
   "scheme": "Sweep",
   "direction": "right",
-  "ball_carrier": "LTE",
+  "ball_carrier": "X",
   "assignments": {
-    "LTE": {
+    "X": {
       "rule": "Stay down in your stance — no motion. At the snap run flat behind the quarterback, take the handoff at full speed and get to the right edge. Turn up outside the halfbacks.",
       "type": "run",
       "path": [
@@ -83,7 +83,7 @@
         "man": "RILB",
         "help": "RDG"
       },
-      "RTE": {
+      "Y": {
         "block": "man",
         "man": "RDE"
       }

@@ -8,9 +8,9 @@
   "type": "run",
   "scheme": "Sweep",
   "direction": "left",
-  "ball_carrier": "RTE",
+  "ball_carrier": "Y",
   "assignments": {
-    "RTE": {
+    "Y": {
       "rule": "Stay down in your stance — no motion. At the snap run flat behind the quarterback, take the handoff at full speed and get to the left edge. Turn up outside the trips.",
       "type": "run",
       "path": [
@@ -71,7 +71,7 @@
     "He turns up outside the trips. The fullback takes the force man; the slot screens."
   ],
   "alignment": {
-    "SL": [
+    "Z": [
       -5.6,
       -1.5
     ],

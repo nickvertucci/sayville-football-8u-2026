@@ -8,13 +8,13 @@ Same line as the Regular I — both ends tight, seven on the line every snap. Fu
 
 | Position | x | y |
 |---|---|---|
-| LTE | -4.2 | -0.5 |
+| X | -4.2 | -0.5 |
 | LT | -2.8 | -0.5 |
 | LG | -1.4 | -0.5 |
 | C | 0.0 | -0.5 |
 | RG | 1.4 | -0.5 |
 | RT | 2.8 | -0.5 |
-| RTE | 4.2 | -0.5 |
+| Y | 4.2 | -0.5 |
 | QB | 0.0 | -1.5 |
 | FB | 0.0 | -3.3 |
 | LH | -2.2 | -4.5 |
@@ -32,34 +32,34 @@ Same line as the Regular I — both ends tight, seven on the line every snap. Fu
 
 | Play | Call | Scheme | Type | Ball |
 |---|---|---|---|---|
-| [Wishbone - 46 Power](#wishbone---46-power) | `Wishbone 46 Power` | Power | run | RH |
-| [Wishbone - 37 Power](#wishbone---37-power) | `Wishbone 37 Power` | Power | run | LH |
-| [Wishbone - 22 Smash](#wishbone---22-smash) | `Wishbone 22 Smash` | Smash | run | FB |
-| [Wishbone - 23 Smash](#wishbone---23-smash) | `Wishbone 23 Smash` | Smash | run | FB |
-| [Wishbone - 24 Dive](#wishbone---24-dive) | `Wishbone 24 Dive` | Dive | run | FB |
-| [Wishbone - 25 Dive](#wishbone---25-dive) | `Wishbone 25 Dive` | Dive | run | FB |
+| [Wishbone - 46 Handoff](#wishbone---46-handoff) | `Wishbone 46 Handoff` | Power | run | RH |
+| [Wishbone - 37 Handoff](#wishbone---37-handoff) | `Wishbone 37 Handoff` | Power | run | LH |
+| [Wishbone - 22 Handoff](#wishbone---22-handoff) | `Wishbone 22 Handoff` | Smash | run | FB |
+| [Wishbone - 23 Handoff](#wishbone---23-handoff) | `Wishbone 23 Handoff` | Smash | run | FB |
+| [Wishbone - 24 Handoff](#wishbone---24-handoff) | `Wishbone 24 Handoff` | Dive | run | FB |
+| [Wishbone - 25 Handoff](#wishbone---25-handoff) | `Wishbone 25 Handoff` | Dive | run | FB |
 | [Wishbone - 38 Toss](#wishbone---38-toss) | `Wishbone 38 Toss` | Toss | run | LH |
 | [Wishbone - 49 Toss](#wishbone---49-toss) | `Wishbone 49 Toss` | Toss | run | RH |
 
 ---
 
-## Wishbone - 46 Power
+## Wishbone - 46 Handoff
 
-**Call it:** `Wishbone 46 Power`
+**Call it:** `Wishbone 46 Handoff`
 
 **Scheme:** Power
 
-![Wishbone - 46 Power](cards/wb-power-r-4-4.svg)
+![Wishbone - 46 Handoff](cards/wb-power-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
-| **LTE** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
+| **X** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
 | **LT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
 | **LG** | Defensive guard head up on you. Cut him off — get between him and the ball. |
 | **C** | Nobody on you. Climb to the playside linebacker. Head across him. |
 | **RG** | Defensive guard head up on you. Hands inside, pads under his, drive him back. |
 | **RT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
-| **RTE** | Defensive end on your inside shoulder. Drive him to the sideline. The ball goes inside you. |
+| **Y** | Defensive end on your inside shoulder. Drive him to the sideline. The ball goes inside you. |
 | **QB** | Open right, hand to the right halfback, then fake the boot. It holds the backside end. |
 | **FB** | Lead through the hole. Block the first man who shows in it. |
 | **LH** | Run hard to the left like you have the ball. You are what holds the backside. |
@@ -73,23 +73,23 @@ Same line as the Regular I — both ends tight, seven on the line every snap. Fu
 
 ---
 
-## Wishbone - 37 Power
+## Wishbone - 37 Handoff
 
-**Call it:** `Wishbone 37 Power`
+**Call it:** `Wishbone 37 Handoff`
 
 **Scheme:** Power
 
-![Wishbone - 37 Power](cards/wb-power-l-4-4.svg)
+![Wishbone - 37 Handoff](cards/wb-power-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
-| **LTE** | Defensive end on your inside shoulder. Drive him to the sideline. The ball goes inside you. |
+| **X** | Defensive end on your inside shoulder. Drive him to the sideline. The ball goes inside you. |
 | **LT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
 | **LG** | Defensive guard head up on you. Hands inside, pads under his, drive him back. |
 | **C** | Nobody on you. Climb to the playside linebacker. Head across him. |
 | **RG** | Defensive guard head up on you. Cut him off — get between him and the ball. |
 | **RT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
-| **RTE** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
+| **Y** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
 | **QB** | Open left, hand to the left halfback, then fake the boot. It holds the backside end. |
 | **FB** | Lead through the hole. Block the first man who shows in it. |
 | **LH** **(ball)** | Take the handoff downhill at our tackle's outside hip, following the fullback. Never bounce it outside. |
@@ -103,23 +103,23 @@ Same line as the Regular I — both ends tight, seven on the line every snap. Fu
 
 ---
 
-## Wishbone - 22 Smash
+## Wishbone - 22 Handoff
 
-**Call it:** `Wishbone 22 Smash`
+**Call it:** `Wishbone 22 Handoff`
 
 **Scheme:** Smash
 
-![Wishbone - 22 Smash](cards/wb-smash-r-4-4.svg)
+![Wishbone - 22 Handoff](cards/wb-smash-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
-| **LTE** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
+| **X** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
 | **LT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
 | **LG** | Defensive guard head up on you. Cut him off — get between him and the ball. |
 | **C** | Nobody on you. Climb to the playside linebacker. Head across him. |
 | **RG** | Defensive guard head up on you. Hands inside, pads under his, drive him back. |
 | **RT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
-| **RTE** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
+| **Y** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
 | **QB** | Open right, hand to the fullback, then fake the boot left. It holds the backside end. |
 | **FB** **(ball)** | Take the handoff downhill between the center and the right guard. Do not bounce it. |
 | **LH** | Run hard to the left like you have the ball. You are what holds the backside. |
@@ -132,23 +132,23 @@ Same line as the Regular I — both ends tight, seven on the line every snap. Fu
 
 ---
 
-## Wishbone - 23 Smash
+## Wishbone - 23 Handoff
 
-**Call it:** `Wishbone 23 Smash`
+**Call it:** `Wishbone 23 Handoff`
 
 **Scheme:** Smash
 
-![Wishbone - 23 Smash](cards/wb-smash-l-4-4.svg)
+![Wishbone - 23 Handoff](cards/wb-smash-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
-| **LTE** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
+| **X** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
 | **LT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
 | **LG** | Defensive guard head up on you. Hands inside, pads under his, drive him back. |
 | **C** | Nobody on you. Climb to the playside linebacker. Head across him. |
 | **RG** | Defensive guard head up on you. Cut him off — get between him and the ball. |
 | **RT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
-| **RTE** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
+| **Y** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
 | **QB** | Open left, hand to the fullback, then fake the boot right. It holds the backside end. |
 | **FB** **(ball)** | Take the handoff downhill between the center and the left guard. Do not bounce it. |
 | **LH** | Lead through the hole. Block the first man who shows in it. |
@@ -161,23 +161,23 @@ Same line as the Regular I — both ends tight, seven on the line every snap. Fu
 
 ---
 
-## Wishbone - 24 Dive
+## Wishbone - 24 Handoff
 
-**Call it:** `Wishbone 24 Dive`
+**Call it:** `Wishbone 24 Handoff`
 
 **Scheme:** Dive
 
-![Wishbone - 24 Dive](cards/wb-dive-r-4-4.svg)
+![Wishbone - 24 Handoff](cards/wb-dive-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
-| **LTE** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
+| **X** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
 | **LT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
 | **LG** | Defensive guard head up on you. Cut him off — get between him and the ball. |
 | **C** | Nobody on you. Climb to the playside linebacker. Head across him. |
 | **RG** | Block down on the defensive guard, head up. Head across him — nobody crosses your face. |
 | **RT** | Defensive end on your outside shoulder. Hands inside, pads under his, drive him back. |
-| **RTE** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
+| **Y** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
 | **QB** | Open right, hand to the fullback, then fake the boot left. It holds the backside end. |
 | **FB** **(ball)** | Take the handoff downhill between the right guard and the right tackle. One cut, then get north. Do not bounce it. |
 | **LH** | Run hard to the left like you have the ball. You are what holds the backside. |
@@ -190,23 +190,23 @@ Same line as the Regular I — both ends tight, seven on the line every snap. Fu
 
 ---
 
-## Wishbone - 25 Dive
+## Wishbone - 25 Handoff
 
-**Call it:** `Wishbone 25 Dive`
+**Call it:** `Wishbone 25 Handoff`
 
 **Scheme:** Dive
 
-![Wishbone - 25 Dive](cards/wb-dive-l-4-4.svg)
+![Wishbone - 25 Handoff](cards/wb-dive-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
-| **LTE** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
+| **X** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
 | **LT** | Defensive end on your outside shoulder. Hands inside, pads under his, drive him back. |
 | **LG** | Block down on the defensive guard, head up. Head across him — nobody crosses your face. |
 | **C** | Nobody on you. Climb to the playside linebacker. Head across him. |
 | **RG** | Defensive guard head up on you. Cut him off — get between him and the ball. |
 | **RT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
-| **RTE** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
+| **Y** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
 | **QB** | Open left, hand to the fullback, then fake the boot right. It holds the backside end. |
 | **FB** **(ball)** | Take the handoff downhill between the left guard and the left tackle. One cut, then get north. Do not bounce it. |
 | **LH** | Lead through the hole. Block the first man who shows in it. |
@@ -229,13 +229,13 @@ Same line as the Regular I — both ends tight, seven on the line every snap. Fu
 
 | Position | Assignment |
 |---|---|
-| **LTE** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
+| **X** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
 | **LT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
 | **LG** | Defensive guard head up on you. Cut him off — get between him and the ball. |
 | **C** | Nobody on you. Climb to the playside linebacker. Head across him. |
 | **RG** | Defensive guard head up on you. Step past him. Climb to the playside linebacker. Head across him. |
 | **RT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
-| **RTE** | Defensive end on your inside shoulder. Turn him inside. The ball goes around behind you. |
+| **Y** | Defensive end on your inside shoulder. Turn him inside. The ball goes around behind you. |
 | **QB** | Quick pitch to the left halfback, then run the other way, to the left, like you still have it. |
 | **FB** | Lead outside our end. Block the first man out there — here it is the linebacker. |
 | **LH** **(ball)** | Run flat, outside and behind the quarterback, and catch the pitch on the run. Ahead of him is a fumble. |
@@ -259,13 +259,13 @@ Same line as the Regular I — both ends tight, seven on the line every snap. Fu
 
 | Position | Assignment |
 |---|---|
-| **LTE** | Defensive end on your inside shoulder. Turn him inside. The ball goes around behind you. |
+| **X** | Defensive end on your inside shoulder. Turn him inside. The ball goes around behind you. |
 | **LT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
 | **LG** | Defensive guard head up on you. Step past him. Climb to the playside linebacker. Head across him. |
 | **C** | Nobody on you. Climb to the playside linebacker. Head across him. |
 | **RG** | Defensive guard head up on you. Cut him off — get between him and the ball. |
 | **RT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
-| **RTE** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
+| **Y** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
 | **QB** | Quick pitch to the right halfback, then run the other way, to the right, like you still have it. |
 | **FB** | Lead outside our end. Block the first man out there — here it is the linebacker. |
 | **LH** | Lead outside our end. Block the first man out there — here it is the corner. Step at the dive first to hold their linebackers. |

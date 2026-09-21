@@ -13,7 +13,7 @@ So a blocking assignment is now an *intent* — a verb out of a closed list, and
 a target and a play-specific note:
 
     "RT": { "block": "down" }
-    "SL":  { "block": "kick" }
+    "Z":  { "block": "kick" }
     "FB": { "block": "lead" }
 
 and this module resolves that intent against an actual front to produce the sentence a
@@ -63,26 +63,36 @@ DEFAULT_FRONT = "4-4"
 # there they count outward, even to the right and odd to the left.
 #
 #     9  |  7  |  5  |  3  | 0 |  2  |  4  |  6  |  8
-#       LTE    LT    LG     C     RG    RT   RTE
+#       X    LT    LG     C     RG    RT   Y
 #
 # There is no 1. The middle is one hole, not two, because a back aimed at the
 # center's back is aimed at one place, and a number that names the same place
 # twice is a number nobody can call.
 #
-# The play word IS the hole. A numbered run's call has to say this word — 36
-# Power, 32 Smash, 38 Toss — so the huddle and the diagram name the same family.
-# Word calls (a tight end sweep, a slant-out pass) opt out because they have no
-# hole digit.
-#
-# Sweep is the exception: the quarterback (1) or the slot (4) coming across, or
-# a tight end on an end-around. Those still hit the 8/9 hole, but the word is
-# who is sweeping, not Toss. 38 Toss is still Toss — that is a pitch, not a sweep.
+# The hole decides the blocking family, and always did. Smash over the centre and in
+# the A gap, Dive in the B, Power in the C, Toss outside the end.
 HOLE_SCHEME = {
     0: "Smash",              # over the center
     2: "Smash", 3: "Smash",  # A gap: center–guard
     4: "Dive",  5: "Dive",   # B gap: guard–tackle
     6: "Power", 7: "Power",  # C gap: tackle–tight end
     8: "Toss",  9: "Toss",   # outside the tight end
+}
+
+# What the huddle says, which is no longer the same thing. The word used to BE the
+# family -- 32 Smash, 24 Dive, 36 Power -- three words for what is, to the eight-year-
+# old carrying it, the same event: the quarterback puts the ball in his belly. Smash,
+# Dive and Power are the line's business and they are still the line's business; the
+# call says Handoff and the two digits say which one of them it is.
+#
+# Toss keeps its word because a pitch is not a handoff, and Sweep keeps its because
+# coming across the formation is not either. Those two the boy has to hear.
+HOLE_WORD = {
+    0: "Handoff",
+    2: "Handoff", 3: "Handoff",
+    4: "Handoff", 5: "Handoff",
+    6: "Handoff", 7: "Handoff",
+    8: "Toss",    9: "Toss",
 }
 
 # The one hole number the card does not have. Spelled out so the build can say
@@ -100,11 +110,11 @@ CALL_DIGITS = re.compile(r"\b(\d)(\d)\b")
 
 
 def scheme_for_hole(hole: int) -> str | None:
-    """The play word a numbered run at this hole has to carry."""
+    """The blocking family a numbered run at this hole is."""
     return HOLE_SCHEME.get(hole)
 
 
-SWEEP_SPOTS = ("SL", "LTE", "RTE")
+SWEEP_SPOTS = ("Z", "X", "Y")
 
 
 def is_sweep_back(back_digit: str | None, form: dict | None = None) -> bool:
@@ -124,16 +134,28 @@ def is_sweep_back(back_digit: str | None, form: dict | None = None) -> bool:
     return back_digit in SWEEP_BACKS
 
 
-def scheme_words(hole: int, back_digit: str | None = None,
-                 form: dict | None = None) -> tuple[str, ...]:
-    """Allowed play words at this hole: the scheme, or Fake plus the scheme.
+def scheme_for_call(hole: int, back_digit: str | None = None,
+                    form: dict | None = None) -> str | None:
+    """The blocking family this numbered run fills.
 
     The quarterback (18/19), the slot (48/49) or a tight end (58/59, 68/69) coming
     across at 8/9 is Sweep, not Toss.
     """
     if hole in (8, 9) and is_sweep_back(back_digit, form):
+        return "Sweep"
+    return scheme_for_hole(hole)
+
+
+def call_words(hole: int, back_digit: str | None = None,
+               form: dict | None = None) -> tuple[str, ...]:
+    """Allowed play words at this hole: the word, or Fake plus the word.
+
+    Not the same as the scheme any more. Smash, Dive and Power are all Handoff in
+    the huddle -- see HOLE_WORD -- while Toss and Sweep say what they are.
+    """
+    if hole in (8, 9) and is_sweep_back(back_digit, form):
         return ("Sweep", "Fake Sweep")
-    word = scheme_for_hole(hole)
+    word = HOLE_WORD.get(hole)
     if not word:
         return ()
     return (word, f"Fake {word}")
@@ -143,7 +165,7 @@ def scheme_words(hole: int, back_digit: str | None = None,
 #
 # The huddle word is also the blocking family. Smash, Dive, Power, Toss and
 # Sweep each name eleven jobs by *role* — playside end, playside guard, lead
-# back — not by LTE/RTE, so the same scheme fills a Regular I, a Split Backs
+# back — not by X/Y, so the same scheme fills a Regular I, a Split Backs
 # and whatever formation comes next. Protect is the dropback: everybody pass
 # blocks except the receiver and the slot, who screens the corner.
 #
@@ -156,14 +178,14 @@ def scheme_words(hole: int, back_digit: str | None = None,
 # The seven line spots, middle out. Playside is the last three when the play
 # goes right, the first three reversed when it goes left.
 LINE_ROLES_RIGHT = {
-    "playside_te": "RTE", "playside_t": "RT", "playside_g": "RG",
+    "playside_te": "Y", "playside_t": "RT", "playside_g": "RG",
     "center": "C",
-    "backside_g": "LG", "backside_t": "LT", "backside_te": "LTE",
+    "backside_g": "LG", "backside_t": "LT", "backside_te": "X",
 }
 LINE_ROLES_LEFT = {
-    "playside_te": "LTE", "playside_t": "LT", "playside_g": "LG",
+    "playside_te": "X", "playside_t": "LT", "playside_g": "LG",
     "center": "C",
-    "backside_g": "RG", "backside_t": "RT", "backside_te": "RTE",
+    "backside_g": "RG", "backside_t": "RT", "backside_te": "Y",
 }
 
 # Shared interior: both ends cut off, uncovered guard doubles, fullback (or the
@@ -259,18 +281,18 @@ def backfield_roles(form: dict, side: int) -> dict[str, str]:
     the playside one. Trips puts 2, 3 and 4 on the perimeter — they are not
     a backfield, so nobody leads from the scheme.
 
-    The slot is a role, not a key: an SL standing in the backfield is a back,
+    The slot is a role, not a key: an Z standing in the backfield is a back,
     and the scheme gives him nothing.
     """
     keys = set(form.get("alignment") or {})
     out: dict[str, str] = {}
     # The `slot` role is the split man's job -- screen the corner, kick the end. A
-    # formation may keep the SL key and stand him in the backfield instead (Power I
+    # formation may keep the Z key and stand him in the backfield instead (Power I
     # puts him behind a guard), and there he is a back, not a slot: he gets no scheme
     # job and the play writes him, the same way Wishbone's playside halfback is
-    # written. Trips keeps the role, because its SL is still outside the tight end.
-    if "SL" in keys and not _stacked(form, "SL"):
-        out["slot"] = "SL"
+    # written. Trips keeps the role, because its Z is still outside the tight end.
+    if "Z" in keys and not _stacked(form, "Z"):
+        out["slot"] = "Z"
     if "QB" in keys:
         out["qb"] = "QB"
     if "FB" in keys and "LH" in keys and "RH" in keys:
@@ -337,19 +359,18 @@ def intent_core(spec: dict) -> tuple:
 def expected_scheme(play: dict) -> str | None:
     """The scheme this play's call requires, or None if the call does not name one.
 
-    Numbered runs take the hole word (Sweep when the quarterback, the slot or a
-    tight end is coming across at 8/9). A dropback is Protect. Play-action takes
-    the run it fakes — the caller checks that, because the run lives in another
-    file.
+    Numbered runs take the family the hole names (Sweep when the quarterback, the
+    slot or a tight end is coming across at 8/9). That is the hole, not the word the
+    call says: a 32 Handoff and a 36 Handoff are Smash and Power. A dropback is
+    Protect. Play-action takes the run it fakes — the caller checks that, because the
+    run lives in another file.
     """
     if play.get("type") == "pass" and not play.get("fakes"):
         return "Protect"
     call = play.get("call") or ""
     m = CALL_DIGITS.search(call)
     if m:
-        words = scheme_words(int(m.group(2)), m.group(1), play.get("_formation"))
-        if words:
-            return words[0]
+        return scheme_for_call(int(m.group(2)), m.group(1), play.get("_formation"))
     return None
 
 
@@ -433,14 +454,14 @@ def fill_assignments(play: dict, form: dict, side: int) -> dict:
 
 
 # Our line, from the middle out. Used to find a blocker's neighbour.
-LINE = ("LTE", "LT", "LG", "C", "RG", "RT", "RTE")
+LINE = ("X", "LT", "LG", "C", "RG", "RT", "Y")
 
 # The order blocks are resolved in, which decides who gets first refusal on a defender
 # two blockers could both be sent at. Linemen, then the receiver, then the backs: the
 # man already standing next to the corner claims him, and the back coming out of the
 # backfield takes the next one in.
-CARD_ORDER = ("LTE", "LT", "LG", "C", "RG", "RT", "RTE", "TE",
-              "X", "LW", "RW", "WB", "W", "SL", "QB", "BB", "FB", "TB", "HB", "LH", "RH")
+CARD_ORDER = ("X", "LT", "LG", "C", "RG", "RT", "Y", "TE",
+              "LW", "RW", "WB", "W", "Z", "QB", "BB", "FB", "TB", "HB", "LH", "RH")
 
 # How close a down lineman has to be to count as head up on a blocker, and how far out
 # he can be and still count as shading one of his shoulders. Beyond that he is somebody

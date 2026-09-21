@@ -2,15 +2,15 @@
   "id": "sg-qb-sweep-l",
   "order": 3,
   "formation": "shotgun",
-  "name": "Shotgun - Slot Left - 19 Sweep",
+  "name": "Shotgun - Z L - 19 Sweep",
   "code": "35",
-  "call": "Shotgun Slot Left 19 Sweep",
+  "call": "Shotgun Z L 19 Sweep",
   "type": "run",
   "scheme": "Sweep",
   "direction": "left",
   "ball_carrier": "QB",
   "alignment": {
-    "SL": [
+    "Z": [
       -5.6,
       -1.5
     ]
@@ -49,7 +49,7 @@
   },
   "fronts": {
     "4-4": {
-      "LTE": {
+      "X": {
         "block": "man",
         "man": "LDE"
       },
@@ -76,7 +76,7 @@
         "man": "ROLB",
         "help": "RDE"
       },
-      "RTE": {
+      "Y": {
         "block": "man",
         "man": "RDE"
       }

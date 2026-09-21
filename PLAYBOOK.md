@@ -6,87 +6,87 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 | # | Play | Call | Scheme | Type | Formation | Ball |
 |---|---|---|---|---|---|---|
-| 1 | [Regular I - Slot Right - 36 Power](#regular-i---slot-right---36-power) | `Regular I Slot Right 36 Power` | Power | run | Regular I | TB |
-| 2 | [Regular I - Slot Left - 37 Power](#regular-i---slot-left---37-power) | `Regular I Slot Left 37 Power` | Power | run | Regular I | TB |
-| 3 | [Regular I - Slot Right - 58 Sweep](#regular-i---slot-right---58-sweep) | `Regular I Slot Right 58 Sweep` | Sweep | run | Regular I | LTE |
-| 4 | [Regular I - Slot Left - 69 Sweep](#regular-i---slot-left---69-sweep) | `Regular I Slot Left 69 Sweep` | Sweep | run | Regular I | RTE |
-| 5 | [Regular I - Slot Right - 49 Sweep](#regular-i---slot-right---49-sweep) | `Regular I Slot Right 49 Sweep` | Sweep | run | Regular I | SL |
-| 6 | [Regular I - Slot Left - 48 Sweep](#regular-i---slot-left---48-sweep) | `Regular I Slot Left 48 Sweep` | Sweep | run | Regular I | SL |
-| 7 | [Regular I - Slot Right - 32 Smash](#regular-i---slot-right---32-smash) | `Regular I Slot Right 32 Smash` | Smash | run | Regular I | TB |
-| 8 | [Regular I - Slot Left - 33 Smash](#regular-i---slot-left---33-smash) | `Regular I Slot Left 33 Smash` | Smash | run | Regular I | TB |
-| 9 | [Regular I - Slot Right - 68 Slant Pass](#regular-i---slot-right---68-slant-pass) | `Regular I Slot Right 68 Slant Pass` | Protect | pass | Regular I | RTE |
-| 10 | [Regular I - Slot Left - 59 Slant Pass](#regular-i---slot-left---59-slant-pass) | `Regular I Slot Left 59 Slant Pass` | Protect | pass | Regular I | LTE |
-| 11 | [Regular I - Slot Right - 22 Smash](#regular-i---slot-right---22-smash) | `Regular I Slot Right 22 Smash` | Smash | run | Regular I | FB |
-| 12 | [Regular I - Slot Left - 23 Smash](#regular-i---slot-left---23-smash) | `Regular I Slot Left 23 Smash` | Smash | run | Regular I | FB |
-| 13 | [Regular I - Slot Right - 38 Toss](#regular-i---slot-right---38-toss) | `Regular I Slot Right 38 Toss` | Toss | run | Regular I | TB |
-| 14 | [Regular I - Slot Left - 39 Toss](#regular-i---slot-left---39-toss) | `Regular I Slot Left 39 Toss` | Toss | run | Regular I | TB |
-| 15 | [Regular I - Slot Right - 38 Pitch Pass](#regular-i---slot-right---38-pitch-pass) | `Regular I Slot Right 38 Pitch Pass` | Protect | pass | Regular I | RTE |
-| 16 | [Regular I - Slot Left - 39 Pitch Pass](#regular-i---slot-left---39-pitch-pass) | `Regular I Slot Left 39 Pitch Pass` | Protect | pass | Regular I | LTE |
-| 17 | [Wishbone - 46 Power](#wishbone---46-power) | `Wishbone 46 Power` | Power | run | Wishbone | RH |
-| 18 | [Wishbone - 37 Power](#wishbone---37-power) | `Wishbone 37 Power` | Power | run | Wishbone | LH |
-| 19 | [Wishbone - 22 Smash](#wishbone---22-smash) | `Wishbone 22 Smash` | Smash | run | Wishbone | FB |
-| 20 | [Wishbone - 23 Smash](#wishbone---23-smash) | `Wishbone 23 Smash` | Smash | run | Wishbone | FB |
-| 21 | [Wishbone - 24 Dive](#wishbone---24-dive) | `Wishbone 24 Dive` | Dive | run | Wishbone | FB |
-| 22 | [Wishbone - 25 Dive](#wishbone---25-dive) | `Wishbone 25 Dive` | Dive | run | Wishbone | FB |
+| 1 | [Regular I - Z R - 36 Handoff](#regular-i---z-r---36-handoff) | `Regular I Z R 36 Handoff` | Power | run | Regular I | TB |
+| 2 | [Regular I - Z L - 37 Handoff](#regular-i---z-l---37-handoff) | `Regular I Z L 37 Handoff` | Power | run | Regular I | TB |
+| 3 | [Regular I - Z R - 58 Sweep](#regular-i---z-r---58-sweep) | `Regular I Z R 58 Sweep` | Sweep | run | Regular I | X |
+| 4 | [Regular I - Z L - 69 Sweep](#regular-i---z-l---69-sweep) | `Regular I Z L 69 Sweep` | Sweep | run | Regular I | Y |
+| 5 | [Regular I - Z R - 49 Sweep](#regular-i---z-r---49-sweep) | `Regular I Z R 49 Sweep` | Sweep | run | Regular I | Z |
+| 6 | [Regular I - Z L - 48 Sweep](#regular-i---z-l---48-sweep) | `Regular I Z L 48 Sweep` | Sweep | run | Regular I | Z |
+| 7 | [Regular I - Z R - 32 Handoff](#regular-i---z-r---32-handoff) | `Regular I Z R 32 Handoff` | Smash | run | Regular I | TB |
+| 8 | [Regular I - Z L - 33 Handoff](#regular-i---z-l---33-handoff) | `Regular I Z L 33 Handoff` | Smash | run | Regular I | TB |
+| 9 | [Regular I - Z R - 68 Slant Pass](#regular-i---z-r---68-slant-pass) | `Regular I Z R 68 Slant Pass` | Protect | pass | Regular I | Y |
+| 10 | [Regular I - Z L - 59 Slant Pass](#regular-i---z-l---59-slant-pass) | `Regular I Z L 59 Slant Pass` | Protect | pass | Regular I | X |
+| 11 | [Regular I - Z R - 22 Handoff](#regular-i---z-r---22-handoff) | `Regular I Z R 22 Handoff` | Smash | run | Regular I | FB |
+| 12 | [Regular I - Z L - 23 Handoff](#regular-i---z-l---23-handoff) | `Regular I Z L 23 Handoff` | Smash | run | Regular I | FB |
+| 13 | [Regular I - Z R - 38 Toss](#regular-i---z-r---38-toss) | `Regular I Z R 38 Toss` | Toss | run | Regular I | TB |
+| 14 | [Regular I - Z L - 39 Toss](#regular-i---z-l---39-toss) | `Regular I Z L 39 Toss` | Toss | run | Regular I | TB |
+| 15 | [Regular I - Z R - 38 Pitch Pass](#regular-i---z-r---38-pitch-pass) | `Regular I Z R 38 Pitch Pass` | Protect | pass | Regular I | Y |
+| 16 | [Regular I - Z L - 39 Pitch Pass](#regular-i---z-l---39-pitch-pass) | `Regular I Z L 39 Pitch Pass` | Protect | pass | Regular I | X |
+| 17 | [Wishbone - 46 Handoff](#wishbone---46-handoff) | `Wishbone 46 Handoff` | Power | run | Wishbone | RH |
+| 18 | [Wishbone - 37 Handoff](#wishbone---37-handoff) | `Wishbone 37 Handoff` | Power | run | Wishbone | LH |
+| 19 | [Wishbone - 22 Handoff](#wishbone---22-handoff) | `Wishbone 22 Handoff` | Smash | run | Wishbone | FB |
+| 20 | [Wishbone - 23 Handoff](#wishbone---23-handoff) | `Wishbone 23 Handoff` | Smash | run | Wishbone | FB |
+| 21 | [Wishbone - 24 Handoff](#wishbone---24-handoff) | `Wishbone 24 Handoff` | Dive | run | Wishbone | FB |
+| 22 | [Wishbone - 25 Handoff](#wishbone---25-handoff) | `Wishbone 25 Handoff` | Dive | run | Wishbone | FB |
 | 23 | [Wishbone - 38 Toss](#wishbone---38-toss) | `Wishbone 38 Toss` | Toss | run | Wishbone | LH |
 | 24 | [Wishbone - 49 Toss](#wishbone---49-toss) | `Wishbone 49 Toss` | Toss | run | Wishbone | RH |
-| 25 | [Split Backs - Slot Right - 38 Toss](#split-backs---slot-right---38-toss) | `Split Backs Slot Right 38 Toss` | Toss | run | Split Backs | LH |
-| 26 | [Split Backs - Slot Left - 29 Toss](#split-backs---slot-left---29-toss) | `Split Backs Slot Left 29 Toss` | Toss | run | Split Backs | RH |
-| 27 | [Split Backs - Slot Right - 18 Sweep](#split-backs---slot-right---18-sweep) | `Split Backs Slot Right 18 Sweep` | Sweep | run | Split Backs | QB |
-| 28 | [Split Backs - Slot Left - 19 Sweep](#split-backs---slot-left---19-sweep) | `Split Backs Slot Left 19 Sweep` | Sweep | run | Split Backs | QB |
-| 29 | [Split Backs - Slot Left - 19 Fake Sweep](#split-backs---slot-left---19-fake-sweep) | `Split Backs Slot Left 19 Fake Sweep` | Sweep | run | Split Backs | QB |
-| 30 | [Split Backs - Slot Right - 18 Fake Sweep](#split-backs---slot-right---18-fake-sweep) | `Split Backs Slot Right 18 Fake Sweep` | Sweep | run | Split Backs | QB |
-| 31 | [Split Backs - Slot Right - 49 Sweep](#split-backs---slot-right---49-sweep) | `Split Backs Slot Right 49 Sweep` | Sweep | run | Split Backs | SL |
-| 32 | [Split Backs - Slot Left - 48 Sweep](#split-backs---slot-left---48-sweep) | `Split Backs Slot Left 48 Sweep` | Sweep | run | Split Backs | SL |
-| 33 | [Split Backs - Slot Right - 58 Sweep](#split-backs---slot-right---58-sweep) | `Split Backs Slot Right 58 Sweep` | Sweep | run | Split Backs | LTE |
-| 34 | [Split Backs - Slot Left - 69 Sweep](#split-backs---slot-left---69-sweep) | `Split Backs Slot Left 69 Sweep` | Sweep | run | Split Backs | RTE |
-| 35 | [Split Backs - Slot Right - 68 Slant Pass](#split-backs---slot-right---68-slant-pass) | `Split Backs Slot Right 68 Slant Pass` | Protect | pass | Split Backs | RTE |
-| 36 | [Split Backs - Slot Left - 59 Slant Pass](#split-backs---slot-left---59-slant-pass) | `Split Backs Slot Left 59 Slant Pass` | Protect | pass | Split Backs | LTE |
-| 37 | [Split Backs - Slot Right - 36 Power](#split-backs---slot-right---36-power) | `Split Backs Slot Right 36 Power` | Power | run | Split Backs | LH |
-| 38 | [Split Backs - Slot Left - 27 Power](#split-backs---slot-left---27-power) | `Split Backs Slot Left 27 Power` | Power | run | Split Backs | RH |
-| 39 | [Split Backs - Slot Right - 38 Pitch Pass](#split-backs---slot-right---38-pitch-pass) | `Split Backs Slot Right 38 Pitch Pass` | Protect | pass | Split Backs | RTE |
-| 40 | [Split Backs - Slot Left - 29 Pitch Pass](#split-backs---slot-left---29-pitch-pass) | `Split Backs Slot Left 29 Pitch Pass` | Protect | pass | Split Backs | LTE |
-| 41 | [Shotgun - Slot Right - 68 Slant Pass](#shotgun---slot-right---68-slant-pass) | `Shotgun Slot Right 68 Slant Pass` | Protect | pass | Shotgun | RTE |
-| 42 | [Shotgun - Slot Left - 59 Slant Pass](#shotgun---slot-left---59-slant-pass) | `Shotgun Slot Left 59 Slant Pass` | Protect | pass | Shotgun | LTE |
-| 43 | [Shotgun - Slot Left - 19 Sweep](#shotgun---slot-left---19-sweep) | `Shotgun Slot Left 19 Sweep` | Sweep | run | Shotgun | QB |
-| 44 | [Shotgun - Slot Right - 18 Sweep](#shotgun---slot-right---18-sweep) | `Shotgun Slot Right 18 Sweep` | Sweep | run | Shotgun | QB |
-| 45 | [Shotgun - Slot Right - 38 Toss](#shotgun---slot-right---38-toss) | `Shotgun Slot Right 38 Toss` | Toss | run | Shotgun | LH |
-| 46 | [Shotgun - Slot Left - 29 Toss](#shotgun---slot-left---29-toss) | `Shotgun Slot Left 29 Toss` | Toss | run | Shotgun | RH |
-| 47 | [Trips - Right - 58 Sweep](#trips---right---58-sweep) | `Trips Right 58 Sweep` | Sweep | run | Trips | LTE |
-| 48 | [Trips - Left - 69 Sweep](#trips---left---69-sweep) | `Trips Left 69 Sweep` | Sweep | run | Trips | RTE |
+| 25 | [Split Backs - Z R - 38 Toss](#split-backs---z-r---38-toss) | `Split Backs Z R 38 Toss` | Toss | run | Split Backs | LH |
+| 26 | [Split Backs - Z L - 29 Toss](#split-backs---z-l---29-toss) | `Split Backs Z L 29 Toss` | Toss | run | Split Backs | RH |
+| 27 | [Split Backs - Z R - 18 Sweep](#split-backs---z-r---18-sweep) | `Split Backs Z R 18 Sweep` | Sweep | run | Split Backs | QB |
+| 28 | [Split Backs - Z L - 19 Sweep](#split-backs---z-l---19-sweep) | `Split Backs Z L 19 Sweep` | Sweep | run | Split Backs | QB |
+| 29 | [Split Backs - Z L - 19 Fake Sweep](#split-backs---z-l---19-fake-sweep) | `Split Backs Z L 19 Fake Sweep` | Sweep | run | Split Backs | QB |
+| 30 | [Split Backs - Z R - 18 Fake Sweep](#split-backs---z-r---18-fake-sweep) | `Split Backs Z R 18 Fake Sweep` | Sweep | run | Split Backs | QB |
+| 31 | [Split Backs - Z R - 49 Sweep](#split-backs---z-r---49-sweep) | `Split Backs Z R 49 Sweep` | Sweep | run | Split Backs | Z |
+| 32 | [Split Backs - Z L - 48 Sweep](#split-backs---z-l---48-sweep) | `Split Backs Z L 48 Sweep` | Sweep | run | Split Backs | Z |
+| 33 | [Split Backs - Z R - 58 Sweep](#split-backs---z-r---58-sweep) | `Split Backs Z R 58 Sweep` | Sweep | run | Split Backs | X |
+| 34 | [Split Backs - Z L - 69 Sweep](#split-backs---z-l---69-sweep) | `Split Backs Z L 69 Sweep` | Sweep | run | Split Backs | Y |
+| 35 | [Split Backs - Z R - 68 Slant Pass](#split-backs---z-r---68-slant-pass) | `Split Backs Z R 68 Slant Pass` | Protect | pass | Split Backs | Y |
+| 36 | [Split Backs - Z L - 59 Slant Pass](#split-backs---z-l---59-slant-pass) | `Split Backs Z L 59 Slant Pass` | Protect | pass | Split Backs | X |
+| 37 | [Split Backs - Z R - 36 Handoff](#split-backs---z-r---36-handoff) | `Split Backs Z R 36 Handoff` | Power | run | Split Backs | LH |
+| 38 | [Split Backs - Z L - 27 Handoff](#split-backs---z-l---27-handoff) | `Split Backs Z L 27 Handoff` | Power | run | Split Backs | RH |
+| 39 | [Split Backs - Z R - 38 Pitch Pass](#split-backs---z-r---38-pitch-pass) | `Split Backs Z R 38 Pitch Pass` | Protect | pass | Split Backs | Y |
+| 40 | [Split Backs - Z L - 29 Pitch Pass](#split-backs---z-l---29-pitch-pass) | `Split Backs Z L 29 Pitch Pass` | Protect | pass | Split Backs | X |
+| 41 | [Shotgun - Z R - 68 Slant Pass](#shotgun---z-r---68-slant-pass) | `Shotgun Z R 68 Slant Pass` | Protect | pass | Shotgun | Y |
+| 42 | [Shotgun - Z L - 59 Slant Pass](#shotgun---z-l---59-slant-pass) | `Shotgun Z L 59 Slant Pass` | Protect | pass | Shotgun | X |
+| 43 | [Shotgun - Z L - 19 Sweep](#shotgun---z-l---19-sweep) | `Shotgun Z L 19 Sweep` | Sweep | run | Shotgun | QB |
+| 44 | [Shotgun - Z R - 18 Sweep](#shotgun---z-r---18-sweep) | `Shotgun Z R 18 Sweep` | Sweep | run | Shotgun | QB |
+| 45 | [Shotgun - Z R - 38 Toss](#shotgun---z-r---38-toss) | `Shotgun Z R 38 Toss` | Toss | run | Shotgun | LH |
+| 46 | [Shotgun - Z L - 29 Toss](#shotgun---z-l---29-toss) | `Shotgun Z L 29 Toss` | Toss | run | Shotgun | RH |
+| 47 | [Trips - Right - 58 Sweep](#trips---right---58-sweep) | `Trips Right 58 Sweep` | Sweep | run | Trips | X |
+| 48 | [Trips - Left - 69 Sweep](#trips---left---69-sweep) | `Trips Left 69 Sweep` | Sweep | run | Trips | Y |
 | 49 | [Trips - Right - 38 Quick Pass](#trips---right---38-quick-pass) | `Trips Right 38 Quick Pass` | Protect | pass | Trips | TB |
 | 50 | [Trips - Left - 39 Quick Pass](#trips---left---39-quick-pass) | `Trips Left 39 Quick Pass` | Protect | pass | Trips | TB |
 | 51 | [Trips - Right - 18 Sweep](#trips---right---18-sweep) | `Trips Right 18 Sweep` | Sweep | run | Trips | QB |
 | 52 | [Trips - Left - 19 Sweep](#trips---left---19-sweep) | `Trips Left 19 Sweep` | Sweep | run | Trips | QB |
-| 53 | [Trips - Right - 68 Slant Pass](#trips---right---68-slant-pass) | `Trips Right 68 Slant Pass` | Protect | pass | Trips | RTE |
-| 54 | [Trips - Left - 59 Slant Pass](#trips---left---59-slant-pass) | `Trips Left 59 Slant Pass` | Protect | pass | Trips | LTE |
-| 55 | [Power I - Slot Right - 32 Smash](#power-i---slot-right---32-smash) | `Power I Slot Right 32 Smash` | Smash | run | Power I | TB |
-| 56 | [Power I - Slot Left - 33 Smash](#power-i---slot-left---33-smash) | `Power I Slot Left 33 Smash` | Smash | run | Power I | TB |
-| 57 | [Power I - Slot Right - 38 Toss](#power-i---slot-right---38-toss) | `Power I Slot Right 38 Toss` | Toss | run | Power I | TB |
-| 58 | [Power I - Slot Left - 39 Toss](#power-i---slot-left---39-toss) | `Power I Slot Left 39 Toss` | Toss | run | Power I | TB |
+| 53 | [Trips - Right - 68 Slant Pass](#trips---right---68-slant-pass) | `Trips Right 68 Slant Pass` | Protect | pass | Trips | Y |
+| 54 | [Trips - Left - 59 Slant Pass](#trips---left---59-slant-pass) | `Trips Left 59 Slant Pass` | Protect | pass | Trips | X |
+| 55 | [Power I - Z R - 32 Handoff](#power-i---z-r---32-handoff) | `Power I Z R 32 Handoff` | Smash | run | Power I | TB |
+| 56 | [Power I - Z L - 33 Handoff](#power-i---z-l---33-handoff) | `Power I Z L 33 Handoff` | Smash | run | Power I | TB |
+| 57 | [Power I - Z R - 38 Toss](#power-i---z-r---38-toss) | `Power I Z R 38 Toss` | Toss | run | Power I | TB |
+| 58 | [Power I - Z L - 39 Toss](#power-i---z-l---39-toss) | `Power I Z L 39 Toss` | Toss | run | Power I | TB |
 
 # Regular I
 
 ---
 
-## Regular I - Slot Right - 36 Power
+## Regular I - Z R - 36 Handoff
 
-**Call it:** `Regular I Slot Right 36 Power`
+**Call it:** `Regular I Z R 36 Handoff`
 
 **Scheme:** Power
 
-![Regular I - Slot Right - 36 Power](playbook/i-form/cards/i-power-r-4-4.svg)
+![Regular I - Z R - 36 Handoff](playbook/i-form/cards/i-power-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
-| **LTE** | Block the left defensive end. |
+| **X** | Block the left defensive end. |
 | **LT** | Block the left outside linebacker. |
 | **LG** | Block the left defensive guard. |
 | **C** | Help on the left defensive guard, then block the left inside linebacker. |
 | **RG** | Block the right defensive guard. |
 | **RT** | Help on the right defensive guard, then block the right inside linebacker. |
-| **RTE** | Block the right defensive end. |
-| **SL** | Block the right corner. |
+| **Y** | Block the right defensive end. |
+| **Z** | Block the right corner. |
 | **QB** | Open right, hand deep to the tailback, then fake the boot. It holds the backside end. |
 | **FB** | Lead through the hole, then block the right outside linebacker. |
 | **TB** **(ball)** | Take the handoff downhill at our tackle's outside hip, following the fullback. Never bounce it outside. |
@@ -94,30 +94,30 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 **Coaching points**
 
 - This is the most physical run in the book. If it works you can run it fifteen times, and at this age you often can.
-- Drill the SL's kick-out on its own. If he blocks the end with his shoulders square, the end slides underneath and makes the tackle for a loss — he has to attack the outside hip.
+- Drill the Z's kick-out on its own. If he blocks the end with his shoulders square, the end slides underneath and makes the tackle for a loss — he has to attack the outside hip.
 - The fullback's man is whoever shows in the hole, not a man he picks before the snap. Tell him that every time.
-- The tailback's most common mistake is bouncing it wide looking for green grass. The yards are inside the SL's block. Make him run it tight in practice until it is automatic.
+- The tailback's most common mistake is bouncing it wide looking for green grass. The yards are inside the Z's block. Make him run it tight in practice until it is automatic.
 
 ---
 
-## Regular I - Slot Left - 37 Power
+## Regular I - Z L - 37 Handoff
 
-**Call it:** `Regular I Slot Left 37 Power`
+**Call it:** `Regular I Z L 37 Handoff`
 
 **Scheme:** Power
 
-![Regular I - Slot Left - 37 Power](playbook/i-form/cards/i-power-l-4-4.svg)
+![Regular I - Z L - 37 Handoff](playbook/i-form/cards/i-power-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
-| **LTE** | Block the left defensive end. |
+| **X** | Block the left defensive end. |
 | **LT** | Help on the left defensive guard, then block the left inside linebacker. |
 | **LG** | Block the left defensive guard. |
 | **C** | Help on the right defensive guard, then block the right inside linebacker. |
 | **RG** | Block the right defensive guard. |
 | **RT** | Block the right outside linebacker. |
-| **RTE** | Block the right defensive end. |
-| **SL** | Block the left corner. |
+| **Y** | Block the right defensive end. |
+| **Z** | Block the left corner. |
 | **QB** | Open left, hand deep to the tailback, then fake the boot. It holds the backside end. |
 | **FB** | Lead through the hole, then block the left outside linebacker. |
 | **TB** **(ball)** | Take the handoff downhill at our tackle's outside hip, following the fullback. Never bounce it outside. |
@@ -125,30 +125,30 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 **Coaching points**
 
 - This is the most physical run in the book. If it works you can run it fifteen times, and at this age you often can.
-- Drill the SL's kick-out on its own. If he blocks the end with his shoulders square, the end slides underneath and makes the tackle for a loss — he has to attack the outside hip.
+- Drill the Z's kick-out on its own. If he blocks the end with his shoulders square, the end slides underneath and makes the tackle for a loss — he has to attack the outside hip.
 - The fullback's man is whoever shows in the hole, not a man he picks before the snap. Tell him that every time.
-- The tailback's most common mistake is bouncing it wide looking for green grass. The yards are inside the SL's block. Make him run it tight in practice until it is automatic.
+- The tailback's most common mistake is bouncing it wide looking for green grass. The yards are inside the Z's block. Make him run it tight in practice until it is automatic.
 
 ---
 
-## Regular I - Slot Right - 58 Sweep
+## Regular I - Z R - 58 Sweep
 
-**Call it:** `Regular I Slot Right 58 Sweep`
+**Call it:** `Regular I Z R 58 Sweep`
 
 **Scheme:** Sweep
 
-![Regular I - Slot Right - 58 Sweep](playbook/i-form/cards/i-te-sweep-r-4-4.svg)
+![Regular I - Z R - 58 Sweep](playbook/i-form/cards/i-te-sweep-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
-| **LTE** **(ball)** | Stay down in your stance — no motion. At the snap run flat behind the quarterback, take the handoff at full speed and get to the right edge. Turn up outside the fullback. |
+| **X** **(ball)** | Stay down in your stance — no motion. At the snap run flat behind the quarterback, take the handoff at full speed and get to the right edge. Turn up outside the fullback. |
 | **LT** | Block the left defensive end. |
 | **LG** | Block the left defensive guard. |
 | **C** | Help on the left defensive guard, then block the left inside linebacker. |
 | **RG** | Block the right defensive guard. |
 | **RT** | Help on the right defensive guard, then block the right inside linebacker. |
-| **RTE** | Block the right defensive end. |
-| **SL** | Run at the corner and screen him off. Stay in his way. |
+| **Y** | Block the right defensive end. |
+| **Z** | Run at the corner and screen him off. Stay in his way. |
 | **QB** | Open right and hand the ball to the left tight end as he comes across behind you, then fake a run to the left. |
 | **FB** | Bubble out around our end, then double team the linebacker with the tailback. |
 | **TB** | Bubble out around our end, then double team the linebacker with the fullback. |
@@ -161,24 +161,24 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Regular I - Slot Left - 69 Sweep
+## Regular I - Z L - 69 Sweep
 
-**Call it:** `Regular I Slot Left 69 Sweep`
+**Call it:** `Regular I Z L 69 Sweep`
 
 **Scheme:** Sweep
 
-![Regular I - Slot Left - 69 Sweep](playbook/i-form/cards/i-te-sweep-l-4-4.svg)
+![Regular I - Z L - 69 Sweep](playbook/i-form/cards/i-te-sweep-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
-| **LTE** | Block the left defensive end. |
+| **X** | Block the left defensive end. |
 | **LT** | Help on the left defensive guard, then block the left inside linebacker. |
 | **LG** | Block the left defensive guard. |
 | **C** | Help on the right defensive guard, then block the right inside linebacker. |
 | **RG** | Block the right defensive guard. |
 | **RT** | Block the right defensive end. |
-| **RTE** **(ball)** | Stay down in your stance — no motion. At the snap run flat behind the quarterback, take the handoff at full speed and get to the left edge. Turn up outside the fullback. |
-| **SL** | Run at the corner and screen him off. Stay in his way. |
+| **Y** **(ball)** | Stay down in your stance — no motion. At the snap run flat behind the quarterback, take the handoff at full speed and get to the left edge. Turn up outside the fullback. |
+| **Z** | Run at the corner and screen him off. Stay in his way. |
 | **QB** | Open left and hand the ball to the right tight end as he comes across behind you, then fake a run to the right. |
 | **FB** | Bubble out around our end, then double team the linebacker with the tailback. |
 | **TB** | Bubble out around our end, then double team the linebacker with the fullback. |
@@ -191,24 +191,24 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Regular I - Slot Right - 49 Sweep
+## Regular I - Z R - 49 Sweep
 
-**Call it:** `Regular I Slot Right 49 Sweep`
+**Call it:** `Regular I Z R 49 Sweep`
 
 **Scheme:** Sweep
 
-![Regular I - Slot Right - 49 Sweep](playbook/i-form/cards/i-sl-sweep-l-4-4.svg)
+![Regular I - Z R - 49 Sweep](playbook/i-form/cards/i-sl-sweep-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
-| **LTE** | Block the left defensive end. |
+| **X** | Block the left defensive end. |
 | **LT** | Help on the left defensive end, then block the left outside linebacker. |
 | **LG** | Block the left defensive guard. |
 | **C** | Help on the left defensive guard, then block the left inside linebacker. |
 | **RG** | Block the right defensive guard. |
 | **RT** | Help on the right defensive guard, then block the right inside linebacker. |
-| **RTE** | Block the right defensive end. |
-| **SL** **(ball)** | At the snap run flat across the backfield, take the handoff at full speed and get to the left edge. Turn up in the alley behind the fullback. |
+| **Y** | Block the right defensive end. |
+| **Z** **(ball)** | At the snap run flat across the backfield, take the handoff at full speed and get to the left edge. Turn up in the alley behind the fullback. |
 | **QB** | Hand the ball to the slot as he runs past you, then fake the handoff to the tailback going right. |
 | **FB** | Bubble out around our end, then double team the corner with the tailback. |
 | **TB** | Bubble out around our end, then double team the linebacker with the fullback. |
@@ -221,24 +221,24 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Regular I - Slot Left - 48 Sweep
+## Regular I - Z L - 48 Sweep
 
-**Call it:** `Regular I Slot Left 48 Sweep`
+**Call it:** `Regular I Z L 48 Sweep`
 
 **Scheme:** Sweep
 
-![Regular I - Slot Left - 48 Sweep](playbook/i-form/cards/i-sl-sweep-r-4-4.svg)
+![Regular I - Z L - 48 Sweep](playbook/i-form/cards/i-sl-sweep-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
-| **LTE** | Block the left defensive end. |
+| **X** | Block the left defensive end. |
 | **LT** | Help on the left defensive guard, then block the left inside linebacker. |
 | **LG** | Block the left defensive guard. |
 | **C** | Help on the right defensive guard, then block the right inside linebacker. |
 | **RG** | Block the right defensive guard. |
 | **RT** | Help on the right defensive end, then block the right outside linebacker. |
-| **RTE** | Block the right defensive end. |
-| **SL** **(ball)** | At the snap run flat across the backfield, take the handoff at full speed and get to the right edge. Turn up in the alley behind the fullback. |
+| **Y** | Block the right defensive end. |
+| **Z** **(ball)** | At the snap run flat across the backfield, take the handoff at full speed and get to the right edge. Turn up in the alley behind the fullback. |
 | **QB** | Hand the ball to the slot as he runs past you, then fake the handoff to the tailback going left. |
 | **FB** | Bubble out around our end, then double team the corner with the tailback. |
 | **TB** | Bubble out around our end, then double team the linebacker with the fullback. |
@@ -251,24 +251,24 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Regular I - Slot Right - 32 Smash
+## Regular I - Z R - 32 Handoff
 
-**Call it:** `Regular I Slot Right 32 Smash`
+**Call it:** `Regular I Z R 32 Handoff`
 
 **Scheme:** Smash
 
-![Regular I - Slot Right - 32 Smash](playbook/i-form/cards/i-smash-r-4-4.svg)
+![Regular I - Z R - 32 Handoff](playbook/i-form/cards/i-smash-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
-| **LTE** | Block the left defensive end. |
+| **X** | Block the left defensive end. |
 | **LT** | Block the left outside linebacker. |
 | **LG** | Block the left defensive guard. |
 | **C** | Help on the left defensive guard, then block the left inside linebacker. |
 | **RG** | Block the right defensive guard. |
 | **RT** | Block the right defensive end. |
-| **RTE** | Block the right outside linebacker. |
-| **SL** | Block the right corner. |
+| **Y** | Block the right outside linebacker. |
+| **Z** | Block the right corner. |
 | **QB** | Open right, hand to the tailback, then fake the boot left. It holds the backside end. |
 | **FB** | Lead through the hole, then block the right inside linebacker. |
 | **TB** **(ball)** | Take the handoff downhill between the center and the right guard, following the fullback. Do not bounce it. |
@@ -281,24 +281,24 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Regular I - Slot Left - 33 Smash
+## Regular I - Z L - 33 Handoff
 
-**Call it:** `Regular I Slot Left 33 Smash`
+**Call it:** `Regular I Z L 33 Handoff`
 
 **Scheme:** Smash
 
-![Regular I - Slot Left - 33 Smash](playbook/i-form/cards/i-smash-l-4-4.svg)
+![Regular I - Z L - 33 Handoff](playbook/i-form/cards/i-smash-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
-| **LTE** | Block the left outside linebacker. |
+| **X** | Block the left outside linebacker. |
 | **LT** | Block the left defensive end. |
 | **LG** | Block the left defensive guard. |
 | **C** | Help on the right defensive guard, then block the right inside linebacker. |
 | **RG** | Block the right defensive guard. |
 | **RT** | Block the right outside linebacker. |
-| **RTE** | Block the right defensive end. |
-| **SL** | Block the left corner. |
+| **Y** | Block the right defensive end. |
+| **Z** | Block the left corner. |
 | **QB** | Open left, hand to the tailback, then fake the boot right. It holds the backside end. |
 | **FB** | Lead through the hole, then block the left inside linebacker. |
 | **TB** **(ball)** | Take the handoff downhill between the center and the left guard, following the fullback. Do not bounce it. |
@@ -311,84 +311,84 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Regular I - Slot Right - 68 Slant Pass
+## Regular I - Z R - 68 Slant Pass
 
-**Call it:** `Regular I Slot Right 68 Slant Pass`
+**Call it:** `Regular I Z R 68 Slant Pass`
 
 **Scheme:** Protect
 
-![Regular I - Slot Right - 68 Slant Pass](playbook/i-form/cards/i-te-out-r-4-4.svg)
+![Regular I - Z R - 68 Slant Pass](playbook/i-form/cards/i-te-out-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
-| **LTE** | Pass block: step back, hands up, and stay between your man and the quarterback. |
+| **X** | Pass block: step back, hands up, and stay between your man and the quarterback. |
 | **LT** | Pass block: step back, hands up, and stay between your man and the quarterback. |
 | **LG** | Pass block: step back, hands up, and stay between your man and the quarterback. |
 | **C** | Pass block: step back, hands up, and stay between your man and the quarterback. |
 | **RG** | Pass block: step back, hands up, and stay between your man and the quarterback. |
 | **RT** | Pass block: step back, hands up, and stay between your man and the quarterback. |
-| **RTE** **(ball)** | Take one step up, then slant out flat toward the right sideline, almost along the line of scrimmage. Look for the ball right away. |
-| **SL** | Block the right corner. |
+| **Y** **(ball)** | Take one step up, then slant out flat toward the right sideline, almost along the line of scrimmage. Look for the ball right away. |
+| **Z** | Block the right corner. |
 | **QB** | Take the snap, take one step and throw to the right tight end as he slants out. If he is covered, tuck it and run. |
 | **FB** | Step up and out, hands up. Pick up anybody coming at the quarterback. |
 | **TB** | Step up and out, hands up. Pick up anybody coming at the quarterback. |
 
 **Coaching points**
 
-- Everybody but the tight end and the SL pass blocks: step back, hands up, stay between your man and the quarterback.
+- Everybody but the tight end and the Z pass blocks: step back, hands up, stay between your man and the quarterback.
 - The slant stays flat — one step up and out, almost on the line of scrimmage. Any deeper and he runs into the linebackers.
 - The quarterback throws it as soon as the tight end clears the end. If he is covered, tuck it and run — no second look.
 
 ---
 
-## Regular I - Slot Left - 59 Slant Pass
+## Regular I - Z L - 59 Slant Pass
 
-**Call it:** `Regular I Slot Left 59 Slant Pass`
+**Call it:** `Regular I Z L 59 Slant Pass`
 
 **Scheme:** Protect
 
-![Regular I - Slot Left - 59 Slant Pass](playbook/i-form/cards/i-te-out-l-4-4.svg)
+![Regular I - Z L - 59 Slant Pass](playbook/i-form/cards/i-te-out-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
-| **LTE** **(ball)** | Take one step up, then slant out flat toward the left sideline, almost along the line of scrimmage. Look for the ball right away. |
+| **X** **(ball)** | Take one step up, then slant out flat toward the left sideline, almost along the line of scrimmage. Look for the ball right away. |
 | **LT** | Pass block: step back, hands up, and stay between your man and the quarterback. |
 | **LG** | Pass block: step back, hands up, and stay between your man and the quarterback. |
 | **C** | Pass block: step back, hands up, and stay between your man and the quarterback. |
 | **RG** | Pass block: step back, hands up, and stay between your man and the quarterback. |
 | **RT** | Pass block: step back, hands up, and stay between your man and the quarterback. |
-| **RTE** | Pass block: step back, hands up, and stay between your man and the quarterback. |
-| **SL** | Block the left corner. |
+| **Y** | Pass block: step back, hands up, and stay between your man and the quarterback. |
+| **Z** | Block the left corner. |
 | **QB** | Take the snap, take one step and throw to the left tight end as he slants out. If he is covered, tuck it and run. |
 | **FB** | Step up and out, hands up. Pick up anybody coming at the quarterback. |
 | **TB** | Step up and out, hands up. Pick up anybody coming at the quarterback. |
 
 **Coaching points**
 
-- Everybody but the tight end and the SL pass blocks: step back, hands up, stay between your man and the quarterback.
+- Everybody but the tight end and the Z pass blocks: step back, hands up, stay between your man and the quarterback.
 - The slant stays flat — one step up and out, almost on the line of scrimmage. Any deeper and he runs into the linebackers.
 - The quarterback throws it as soon as the tight end clears the end. If he is covered, tuck it and run — no second look.
 
 ---
 
-## Regular I - Slot Right - 22 Smash
+## Regular I - Z R - 22 Handoff
 
-**Call it:** `Regular I Slot Right 22 Smash`
+**Call it:** `Regular I Z R 22 Handoff`
 
 **Scheme:** Smash
 
-![Regular I - Slot Right - 22 Smash](playbook/i-form/cards/i-fb-smash-r-4-4.svg)
+![Regular I - Z R - 22 Handoff](playbook/i-form/cards/i-fb-smash-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
-| **LTE** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
+| **X** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
 | **LT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
 | **LG** | Defensive guard head up on you. Cut him off — get between him and the ball. |
 | **C** | Nobody on you. Climb to the playside linebacker. Head across him. |
 | **RG** | Defensive guard head up on you. Hands inside, pads under his, drive him back. |
 | **RT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
-| **RTE** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
-| **SL** | Run at the corner and screen him off. Stay in his way. |
+| **Y** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
+| **Z** | Run at the corner and screen him off. Stay in his way. |
 | **QB** | Open right, hand to the fullback right now, then fake the boot left. It holds the backside end. |
 | **FB** **(ball)** | Take the handoff downhill between the center and the right guard. You are the runner on this one, not the lead. Straight ahead, do not bounce it. |
 | **TB** | Run hard to the left like you have the ball. You are what holds the backside linebacker. |
@@ -401,24 +401,24 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Regular I - Slot Left - 23 Smash
+## Regular I - Z L - 23 Handoff
 
-**Call it:** `Regular I Slot Left 23 Smash`
+**Call it:** `Regular I Z L 23 Handoff`
 
 **Scheme:** Smash
 
-![Regular I - Slot Left - 23 Smash](playbook/i-form/cards/i-fb-smash-l-4-4.svg)
+![Regular I - Z L - 23 Handoff](playbook/i-form/cards/i-fb-smash-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
-| **LTE** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
+| **X** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
 | **LT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
 | **LG** | Defensive guard head up on you. Hands inside, pads under his, drive him back. |
 | **C** | Nobody on you. Climb to the playside linebacker. Head across him. |
 | **RG** | Defensive guard head up on you. Cut him off — get between him and the ball. |
 | **RT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
-| **RTE** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
-| **SL** | Run at the corner and screen him off. Stay in his way. |
+| **Y** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
+| **Z** | Run at the corner and screen him off. Stay in his way. |
 | **QB** | Open left, hand to the fullback right now, then fake the boot right. It holds the backside end. |
 | **FB** **(ball)** | Take the handoff downhill between the center and the left guard. You are the runner on this one, not the lead. Straight ahead, do not bounce it. |
 | **TB** | Run hard to the right like you have the ball. You are what holds the backside linebacker. |
@@ -431,24 +431,24 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Regular I - Slot Right - 38 Toss
+## Regular I - Z R - 38 Toss
 
-**Call it:** `Regular I Slot Right 38 Toss`
+**Call it:** `Regular I Z R 38 Toss`
 
 **Scheme:** Toss
 
-![Regular I - Slot Right - 38 Toss](playbook/i-form/cards/i-toss-r-4-4.svg)
+![Regular I - Z R - 38 Toss](playbook/i-form/cards/i-toss-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
-| **LTE** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
+| **X** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
 | **LT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
 | **LG** | Defensive guard head up on you. Cut him off — get between him and the ball. |
 | **C** | Nobody on you. Climb to the playside linebacker. Head across him. |
 | **RG** | Defensive guard head up on you. Step past him. Climb to the playside linebacker. Head across him. |
 | **RT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
-| **RTE** | Defensive end on your inside shoulder. Turn him inside. The ball goes around behind you. |
-| **SL** | Run at the corner and screen him off. Stay in his way. |
+| **Y** | Defensive end on your inside shoulder. Turn him inside. The ball goes around behind you. |
+| **Z** | Run at the corner and screen him off. Stay in his way. |
 | **QB** | Quick pitch to the tailback, then run the other way, to the left, like you still have it. |
 | **FB** | Lead outside our end. Block the first man out there — here it is the linebacker. You start two yards closer than he does. Be out there first. |
 | **TB** **(ball)** | Run flat behind the quarterback and catch the pitch on the run, then get outside our end and turn up. Drifting forward for it is a fumble. |
@@ -461,24 +461,24 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Regular I - Slot Left - 39 Toss
+## Regular I - Z L - 39 Toss
 
-**Call it:** `Regular I Slot Left 39 Toss`
+**Call it:** `Regular I Z L 39 Toss`
 
 **Scheme:** Toss
 
-![Regular I - Slot Left - 39 Toss](playbook/i-form/cards/i-toss-l-4-4.svg)
+![Regular I - Z L - 39 Toss](playbook/i-form/cards/i-toss-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
-| **LTE** | Defensive end on your inside shoulder. Turn him inside. The ball goes around behind you. |
+| **X** | Defensive end on your inside shoulder. Turn him inside. The ball goes around behind you. |
 | **LT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
 | **LG** | Defensive guard head up on you. Step past him. Climb to the playside linebacker. Head across him. |
 | **C** | Nobody on you. Climb to the playside linebacker. Head across him. |
 | **RG** | Defensive guard head up on you. Cut him off — get between him and the ball. |
 | **RT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
-| **RTE** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
-| **SL** | Run at the corner and screen him off. Stay in his way. |
+| **Y** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
+| **Z** | Run at the corner and screen him off. Stay in his way. |
 | **QB** | Quick pitch to the tailback, then run the other way, to the right, like you still have it. |
 | **FB** | Lead outside our end. Block the first man out there — here it is the linebacker. You start two yards closer than he does. Be out there first. |
 | **TB** **(ball)** | Run flat behind the quarterback and catch the pitch on the run, then get outside our end and turn up. Drifting forward for it is a fumble. |
@@ -491,24 +491,24 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Regular I - Slot Right - 38 Pitch Pass
+## Regular I - Z R - 38 Pitch Pass
 
-**Call it:** `Regular I Slot Right 38 Pitch Pass`
+**Call it:** `Regular I Z R 38 Pitch Pass`
 
 **Scheme:** Protect
 
-![Regular I - Slot Right - 38 Pitch Pass](playbook/i-form/cards/i-toss-pass-r-4-4.svg)
+![Regular I - Z R - 38 Pitch Pass](playbook/i-form/cards/i-toss-pass-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
-| **LTE** | Pass block: step back, hands up, and stay between your man and the quarterback. |
+| **X** | Pass block: step back, hands up, and stay between your man and the quarterback. |
 | **LT** | Pass block: step back, hands up, and stay between your man and the quarterback. |
 | **LG** | Pass block: step back, hands up, and stay between your man and the quarterback. |
 | **C** | Pass block: step back, hands up, and stay between your man and the quarterback. |
 | **RG** | Pass block: step back, hands up, and stay between your man and the quarterback. |
 | **RT** | Pass block: step back, hands up, and stay between your man and the quarterback. |
-| **RTE** **(ball)** | Block the end the way you do on the toss, then slant out flat toward the sideline, almost on the line. Look for the ball right away. |
-| **SL** | Run at the corner and screen him off. Stay in his way. |
+| **Y** **(ball)** | Block the end the way you do on the toss, then slant out flat toward the sideline, almost on the line. Look for the ball right away. |
+| **Z** | Run at the corner and screen him off. Stay in his way. |
 | **QB** | Pitch it exactly the way you pitch the toss, then run left like you still have it. Do not turn and watch the throw. |
 | **FB** | Bubble outside our end the same as the toss and take the first man out there. He is the one who gets to the thrower. |
 | **TB** | Catch the pitch and run the toss. At our tight end, pull up behind the line and throw it flat to the tight end in front of you. |
@@ -522,24 +522,24 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Regular I - Slot Left - 39 Pitch Pass
+## Regular I - Z L - 39 Pitch Pass
 
-**Call it:** `Regular I Slot Left 39 Pitch Pass`
+**Call it:** `Regular I Z L 39 Pitch Pass`
 
 **Scheme:** Protect
 
-![Regular I - Slot Left - 39 Pitch Pass](playbook/i-form/cards/i-toss-pass-l-4-4.svg)
+![Regular I - Z L - 39 Pitch Pass](playbook/i-form/cards/i-toss-pass-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
-| **LTE** **(ball)** | Block the end the way you do on the toss, then slant out flat toward the sideline, almost on the line. Look for the ball right away. |
+| **X** **(ball)** | Block the end the way you do on the toss, then slant out flat toward the sideline, almost on the line. Look for the ball right away. |
 | **LT** | Pass block: step back, hands up, and stay between your man and the quarterback. |
 | **LG** | Pass block: step back, hands up, and stay between your man and the quarterback. |
 | **C** | Pass block: step back, hands up, and stay between your man and the quarterback. |
 | **RG** | Pass block: step back, hands up, and stay between your man and the quarterback. |
 | **RT** | Pass block: step back, hands up, and stay between your man and the quarterback. |
-| **RTE** | Pass block: step back, hands up, and stay between your man and the quarterback. |
-| **SL** | Run at the corner and screen him off. Stay in his way. |
+| **Y** | Pass block: step back, hands up, and stay between your man and the quarterback. |
+| **Z** | Run at the corner and screen him off. Stay in his way. |
 | **QB** | Pitch it exactly the way you pitch the toss, then run right like you still have it. Do not turn and watch the throw. |
 | **FB** | Bubble outside our end the same as the toss and take the first man out there. He is the one who gets to the thrower. |
 | **TB** | Catch the pitch and run the toss. At our tight end, pull up behind the line and throw it flat to the tight end in front of you. |
@@ -555,23 +555,23 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Wishbone - 46 Power
+## Wishbone - 46 Handoff
 
-**Call it:** `Wishbone 46 Power`
+**Call it:** `Wishbone 46 Handoff`
 
 **Scheme:** Power
 
-![Wishbone - 46 Power](playbook/wishbone/cards/wb-power-r-4-4.svg)
+![Wishbone - 46 Handoff](playbook/wishbone/cards/wb-power-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
-| **LTE** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
+| **X** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
 | **LT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
 | **LG** | Defensive guard head up on you. Cut him off — get between him and the ball. |
 | **C** | Nobody on you. Climb to the playside linebacker. Head across him. |
 | **RG** | Defensive guard head up on you. Hands inside, pads under his, drive him back. |
 | **RT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
-| **RTE** | Defensive end on your inside shoulder. Drive him to the sideline. The ball goes inside you. |
+| **Y** | Defensive end on your inside shoulder. Drive him to the sideline. The ball goes inside you. |
 | **QB** | Open right, hand to the right halfback, then fake the boot. It holds the backside end. |
 | **FB** | Lead through the hole. Block the first man who shows in it. |
 | **LH** | Run hard to the left like you have the ball. You are what holds the backside. |
@@ -585,23 +585,23 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Wishbone - 37 Power
+## Wishbone - 37 Handoff
 
-**Call it:** `Wishbone 37 Power`
+**Call it:** `Wishbone 37 Handoff`
 
 **Scheme:** Power
 
-![Wishbone - 37 Power](playbook/wishbone/cards/wb-power-l-4-4.svg)
+![Wishbone - 37 Handoff](playbook/wishbone/cards/wb-power-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
-| **LTE** | Defensive end on your inside shoulder. Drive him to the sideline. The ball goes inside you. |
+| **X** | Defensive end on your inside shoulder. Drive him to the sideline. The ball goes inside you. |
 | **LT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
 | **LG** | Defensive guard head up on you. Hands inside, pads under his, drive him back. |
 | **C** | Nobody on you. Climb to the playside linebacker. Head across him. |
 | **RG** | Defensive guard head up on you. Cut him off — get between him and the ball. |
 | **RT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
-| **RTE** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
+| **Y** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
 | **QB** | Open left, hand to the left halfback, then fake the boot. It holds the backside end. |
 | **FB** | Lead through the hole. Block the first man who shows in it. |
 | **LH** **(ball)** | Take the handoff downhill at our tackle's outside hip, following the fullback. Never bounce it outside. |
@@ -615,23 +615,23 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Wishbone - 22 Smash
+## Wishbone - 22 Handoff
 
-**Call it:** `Wishbone 22 Smash`
+**Call it:** `Wishbone 22 Handoff`
 
 **Scheme:** Smash
 
-![Wishbone - 22 Smash](playbook/wishbone/cards/wb-smash-r-4-4.svg)
+![Wishbone - 22 Handoff](playbook/wishbone/cards/wb-smash-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
-| **LTE** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
+| **X** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
 | **LT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
 | **LG** | Defensive guard head up on you. Cut him off — get between him and the ball. |
 | **C** | Nobody on you. Climb to the playside linebacker. Head across him. |
 | **RG** | Defensive guard head up on you. Hands inside, pads under his, drive him back. |
 | **RT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
-| **RTE** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
+| **Y** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
 | **QB** | Open right, hand to the fullback, then fake the boot left. It holds the backside end. |
 | **FB** **(ball)** | Take the handoff downhill between the center and the right guard. Do not bounce it. |
 | **LH** | Run hard to the left like you have the ball. You are what holds the backside. |
@@ -644,23 +644,23 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Wishbone - 23 Smash
+## Wishbone - 23 Handoff
 
-**Call it:** `Wishbone 23 Smash`
+**Call it:** `Wishbone 23 Handoff`
 
 **Scheme:** Smash
 
-![Wishbone - 23 Smash](playbook/wishbone/cards/wb-smash-l-4-4.svg)
+![Wishbone - 23 Handoff](playbook/wishbone/cards/wb-smash-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
-| **LTE** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
+| **X** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
 | **LT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
 | **LG** | Defensive guard head up on you. Hands inside, pads under his, drive him back. |
 | **C** | Nobody on you. Climb to the playside linebacker. Head across him. |
 | **RG** | Defensive guard head up on you. Cut him off — get between him and the ball. |
 | **RT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
-| **RTE** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
+| **Y** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
 | **QB** | Open left, hand to the fullback, then fake the boot right. It holds the backside end. |
 | **FB** **(ball)** | Take the handoff downhill between the center and the left guard. Do not bounce it. |
 | **LH** | Lead through the hole. Block the first man who shows in it. |
@@ -673,23 +673,23 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Wishbone - 24 Dive
+## Wishbone - 24 Handoff
 
-**Call it:** `Wishbone 24 Dive`
+**Call it:** `Wishbone 24 Handoff`
 
 **Scheme:** Dive
 
-![Wishbone - 24 Dive](playbook/wishbone/cards/wb-dive-r-4-4.svg)
+![Wishbone - 24 Handoff](playbook/wishbone/cards/wb-dive-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
-| **LTE** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
+| **X** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
 | **LT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
 | **LG** | Defensive guard head up on you. Cut him off — get between him and the ball. |
 | **C** | Nobody on you. Climb to the playside linebacker. Head across him. |
 | **RG** | Block down on the defensive guard, head up. Head across him — nobody crosses your face. |
 | **RT** | Defensive end on your outside shoulder. Hands inside, pads under his, drive him back. |
-| **RTE** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
+| **Y** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
 | **QB** | Open right, hand to the fullback, then fake the boot left. It holds the backside end. |
 | **FB** **(ball)** | Take the handoff downhill between the right guard and the right tackle. One cut, then get north. Do not bounce it. |
 | **LH** | Run hard to the left like you have the ball. You are what holds the backside. |
@@ -702,23 +702,23 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Wishbone - 25 Dive
+## Wishbone - 25 Handoff
 
-**Call it:** `Wishbone 25 Dive`
+**Call it:** `Wishbone 25 Handoff`
 
 **Scheme:** Dive
 
-![Wishbone - 25 Dive](playbook/wishbone/cards/wb-dive-l-4-4.svg)
+![Wishbone - 25 Handoff](playbook/wishbone/cards/wb-dive-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
-| **LTE** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
+| **X** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
 | **LT** | Defensive end on your outside shoulder. Hands inside, pads under his, drive him back. |
 | **LG** | Block down on the defensive guard, head up. Head across him — nobody crosses your face. |
 | **C** | Nobody on you. Climb to the playside linebacker. Head across him. |
 | **RG** | Defensive guard head up on you. Cut him off — get between him and the ball. |
 | **RT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
-| **RTE** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
+| **Y** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
 | **QB** | Open left, hand to the fullback, then fake the boot right. It holds the backside end. |
 | **FB** **(ball)** | Take the handoff downhill between the left guard and the left tackle. One cut, then get north. Do not bounce it. |
 | **LH** | Lead through the hole. Block the first man who shows in it. |
@@ -741,13 +741,13 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 | Position | Assignment |
 |---|---|
-| **LTE** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
+| **X** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
 | **LT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
 | **LG** | Defensive guard head up on you. Cut him off — get between him and the ball. |
 | **C** | Nobody on you. Climb to the playside linebacker. Head across him. |
 | **RG** | Defensive guard head up on you. Step past him. Climb to the playside linebacker. Head across him. |
 | **RT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
-| **RTE** | Defensive end on your inside shoulder. Turn him inside. The ball goes around behind you. |
+| **Y** | Defensive end on your inside shoulder. Turn him inside. The ball goes around behind you. |
 | **QB** | Quick pitch to the left halfback, then run the other way, to the left, like you still have it. |
 | **FB** | Lead outside our end. Block the first man out there — here it is the linebacker. |
 | **LH** **(ball)** | Run flat, outside and behind the quarterback, and catch the pitch on the run. Ahead of him is a fumble. |
@@ -771,13 +771,13 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 | Position | Assignment |
 |---|---|
-| **LTE** | Defensive end on your inside shoulder. Turn him inside. The ball goes around behind you. |
+| **X** | Defensive end on your inside shoulder. Turn him inside. The ball goes around behind you. |
 | **LT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
 | **LG** | Defensive guard head up on you. Step past him. Climb to the playside linebacker. Head across him. |
 | **C** | Nobody on you. Climb to the playside linebacker. Head across him. |
 | **RG** | Defensive guard head up on you. Cut him off — get between him and the ball. |
 | **RT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
-| **RTE** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
+| **Y** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
 | **QB** | Quick pitch to the right halfback, then run the other way, to the right, like you still have it. |
 | **FB** | Lead outside our end. Block the first man out there — here it is the linebacker. |
 | **LH** | Lead outside our end. Block the first man out there — here it is the corner. Step at the dive first to hold their linebackers. |
@@ -793,24 +793,24 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Split Backs - Slot Right - 38 Toss
+## Split Backs - Z R - 38 Toss
 
-**Call it:** `Split Backs Slot Right 38 Toss`
+**Call it:** `Split Backs Z R 38 Toss`
 
 **Scheme:** Toss
 
-![Split Backs - Slot Right - 38 Toss](playbook/split-backs/cards/sb-toss-r-4-4.svg)
+![Split Backs - Z R - 38 Toss](playbook/split-backs/cards/sb-toss-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
-| **LTE** | Block the left defensive end. |
+| **X** | Block the left defensive end. |
 | **LT** | Block the left inside linebacker. |
 | **LG** | Block the left defensive guard. |
 | **C** | Help on the right defensive guard, then block the right inside linebacker. |
 | **RG** | Block the right defensive guard. |
 | **RT** | Block the right inside linebacker. |
-| **RTE** | Block the right defensive end. |
-| **SL** | Block the right corner. |
+| **Y** | Block the right defensive end. |
+| **Z** | Block the right corner. |
 | **QB** | Quick pitch to the left halfback, then run the other way, to the left, like you still have it. |
 | **LH** **(ball)** | Run flat, outside and behind the quarterback, and catch the pitch on the run. Ahead of him is a fumble. |
 | **RH** | Bubble around the right tight end, then block the right outside linebacker. |
@@ -823,24 +823,24 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Split Backs - Slot Left - 29 Toss
+## Split Backs - Z L - 29 Toss
 
-**Call it:** `Split Backs Slot Left 29 Toss`
+**Call it:** `Split Backs Z L 29 Toss`
 
 **Scheme:** Toss
 
-![Split Backs - Slot Left - 29 Toss](playbook/split-backs/cards/sb-toss-l-4-4.svg)
+![Split Backs - Z L - 29 Toss](playbook/split-backs/cards/sb-toss-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
-| **LTE** | Block the left defensive end. |
+| **X** | Block the left defensive end. |
 | **LT** | Block the left inside linebacker. |
 | **LG** | Block the left defensive guard. |
 | **C** | Help on the left defensive guard, then block the left inside linebacker. |
 | **RG** | Block the right defensive guard. |
 | **RT** | Block the right inside linebacker. |
-| **RTE** | Block the right defensive end. |
-| **SL** | Block the left corner. |
+| **Y** | Block the right defensive end. |
+| **Z** | Block the left corner. |
 | **QB** | Quick pitch to the right halfback, then run the other way, to the right, like you still have it. |
 | **LH** | Bubble around the left tight end, then block the left outside linebacker. |
 | **RH** **(ball)** | Run flat, outside and behind the quarterback, and catch the pitch on the run. Ahead of him is a fumble. |
@@ -853,24 +853,24 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Split Backs - Slot Right - 18 Sweep
+## Split Backs - Z R - 18 Sweep
 
-**Call it:** `Split Backs Slot Right 18 Sweep`
+**Call it:** `Split Backs Z R 18 Sweep`
 
 **Scheme:** Sweep
 
-![Split Backs - Slot Right - 18 Sweep](playbook/split-backs/cards/sb-qb-sweep-r-4-4.svg)
+![Split Backs - Z R - 18 Sweep](playbook/split-backs/cards/sb-qb-sweep-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
-| **LTE** | Block the left defensive end. |
+| **X** | Block the left defensive end. |
 | **LT** | Help on the left defensive end, then block the left outside linebacker. |
 | **LG** | Block the left defensive guard. |
 | **C** | Help on the left defensive guard, then block the left inside linebacker. |
 | **RG** | Block the right defensive guard. |
 | **RT** | Help on the right defensive guard, then block the right inside linebacker. |
-| **RTE** | Defensive end on your inside shoulder. Turn him inside. The ball goes around behind you. |
-| **SL** | Run at the corner and screen him off. Stay in his way. |
+| **Y** | Defensive end on your inside shoulder. Turn him inside. The ball goes around behind you. |
+| **Z** | Run at the corner and screen him off. Stay in his way. |
 | **QB** **(ball)** | Take the snap and sweep right, flat and fast, behind the right halfback. Turn up outside his block. |
 | **LH** | Bubble out around our end, then double team the linebacker with the right halfback. |
 | **RH** | Bubble out around our end, then double team the linebacker with the left halfback. |
@@ -883,24 +883,24 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Split Backs - Slot Left - 19 Sweep
+## Split Backs - Z L - 19 Sweep
 
-**Call it:** `Split Backs Slot Left 19 Sweep`
+**Call it:** `Split Backs Z L 19 Sweep`
 
 **Scheme:** Sweep
 
-![Split Backs - Slot Left - 19 Sweep](playbook/split-backs/cards/sb-qb-sweep-l-4-4.svg)
+![Split Backs - Z L - 19 Sweep](playbook/split-backs/cards/sb-qb-sweep-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
-| **LTE** | Defensive end on your inside shoulder. Turn him inside. The ball goes around behind you. |
+| **X** | Defensive end on your inside shoulder. Turn him inside. The ball goes around behind you. |
 | **LT** | Help on the left defensive guard, then block the left inside linebacker. |
 | **LG** | Block the left defensive guard. |
 | **C** | Help on the right defensive guard, then block the right inside linebacker. |
 | **RG** | Block the right defensive guard. |
 | **RT** | Help on the right defensive end, then block the right outside linebacker. |
-| **RTE** | Block the right defensive end. |
-| **SL** | Run at the corner and screen him off. Stay in his way. |
+| **Y** | Block the right defensive end. |
+| **Z** | Run at the corner and screen him off. Stay in his way. |
 | **QB** **(ball)** | Take the snap and sweep left, flat and fast, behind the left halfback. Turn up outside his block. |
 | **LH** | Bubble out around our end, then double team the linebacker with the right halfback. |
 | **RH** | Bubble out around our end, then double team the linebacker with the left halfback. |
@@ -913,24 +913,24 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Split Backs - Slot Left - 19 Fake Sweep
+## Split Backs - Z L - 19 Fake Sweep
 
-**Call it:** `Split Backs Slot Left 19 Fake Sweep`
+**Call it:** `Split Backs Z L 19 Fake Sweep`
 
 **Scheme:** Sweep
 
-![Split Backs - Slot Left - 19 Fake Sweep](playbook/split-backs/cards/sb-fake-sweep-l-4-4.svg)
+![Split Backs - Z L - 19 Fake Sweep](playbook/split-backs/cards/sb-fake-sweep-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
-| **LTE** | Defensive end on your inside shoulder. Turn him inside. The ball goes around behind you. |
+| **X** | Defensive end on your inside shoulder. Turn him inside. The ball goes around behind you. |
 | **LT** | Help on the left defensive guard, then block the left inside linebacker. |
 | **LG** | Block the left defensive guard. |
 | **C** | Help on the right defensive guard, then block the right inside linebacker. |
 | **RG** | Block the right defensive guard. |
 | **RT** | Help on the right defensive end, then block the right outside linebacker. |
-| **RTE** | Block the right defensive end. |
-| **SL** | Run at the corner and screen him off. Stay in his way. |
+| **Y** | Block the right defensive end. |
+| **Z** | Run at the corner and screen him off. Stay in his way. |
 | **QB** **(ball)** | Fake the handoff to the right halfback, then roll back left and sweep it, flat and fast, behind the left halfback. Turn up outside his block. |
 | **LH** | Bubble out around the left tight end, then block the left outside linebacker. |
 | **RH** | Take the fake from the quarterback and run hard to the right like you have the ball. Sell it all the way — you are the reason the defense goes the wrong way. |
@@ -943,24 +943,24 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Split Backs - Slot Right - 18 Fake Sweep
+## Split Backs - Z R - 18 Fake Sweep
 
-**Call it:** `Split Backs Slot Right 18 Fake Sweep`
+**Call it:** `Split Backs Z R 18 Fake Sweep`
 
 **Scheme:** Sweep
 
-![Split Backs - Slot Right - 18 Fake Sweep](playbook/split-backs/cards/sb-fake-sweep-r-4-4.svg)
+![Split Backs - Z R - 18 Fake Sweep](playbook/split-backs/cards/sb-fake-sweep-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
-| **LTE** | Block the left defensive end. |
+| **X** | Block the left defensive end. |
 | **LT** | Help on the left defensive end, then block the left outside linebacker. |
 | **LG** | Block the left defensive guard. |
 | **C** | Help on the left defensive guard, then block the left inside linebacker. |
 | **RG** | Block the right defensive guard. |
 | **RT** | Help on the right defensive guard, then block the right inside linebacker. |
-| **RTE** | Defensive end on your inside shoulder. Turn him inside. The ball goes around behind you. |
-| **SL** | Run at the corner and screen him off. Stay in his way. |
+| **Y** | Defensive end on your inside shoulder. Turn him inside. The ball goes around behind you. |
+| **Z** | Run at the corner and screen him off. Stay in his way. |
 | **QB** **(ball)** | Fake the handoff to the left halfback, then roll back right and sweep it, flat and fast, behind the right halfback. Turn up outside his block. |
 | **LH** | Take the fake from the quarterback and run hard to the left like you have the ball. Sell it all the way — you are the reason the defense goes the wrong way. |
 | **RH** | Bubble out around the right tight end, then block the right outside linebacker. |
@@ -973,24 +973,24 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Split Backs - Slot Right - 49 Sweep
+## Split Backs - Z R - 49 Sweep
 
-**Call it:** `Split Backs Slot Right 49 Sweep`
+**Call it:** `Split Backs Z R 49 Sweep`
 
 **Scheme:** Sweep
 
-![Split Backs - Slot Right - 49 Sweep](playbook/split-backs/cards/sb-sl-sweep-l-4-4.svg)
+![Split Backs - Z R - 49 Sweep](playbook/split-backs/cards/sb-sl-sweep-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
-| **LTE** | Block the left defensive end. |
+| **X** | Block the left defensive end. |
 | **LT** | Help on the left defensive end, then block the left outside linebacker. |
 | **LG** | Block the left defensive guard. |
 | **C** | Help on the left defensive guard, then block the left inside linebacker. |
 | **RG** | Block the right defensive guard. |
 | **RT** | Help on the right defensive guard, then block the right inside linebacker. |
-| **RTE** | Block the right defensive end. |
-| **SL** **(ball)** | At the snap run flat across the backfield, take the handoff at full speed and get to the left edge. Turn up in the alley behind the left halfback. |
+| **Y** | Block the right defensive end. |
+| **Z** **(ball)** | At the snap run flat across the backfield, take the handoff at full speed and get to the left edge. Turn up in the alley behind the left halfback. |
 | **QB** | Hand the ball to the slot as he runs past you, then fake the handoff to the right halfback going right. |
 | **LH** | Bubble out around our end, then double team the corner with the right halfback. |
 | **RH** | Bubble out around our end, then double team the linebacker with the left halfback. |
@@ -1003,24 +1003,24 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Split Backs - Slot Left - 48 Sweep
+## Split Backs - Z L - 48 Sweep
 
-**Call it:** `Split Backs Slot Left 48 Sweep`
+**Call it:** `Split Backs Z L 48 Sweep`
 
 **Scheme:** Sweep
 
-![Split Backs - Slot Left - 48 Sweep](playbook/split-backs/cards/sb-sl-sweep-r-4-4.svg)
+![Split Backs - Z L - 48 Sweep](playbook/split-backs/cards/sb-sl-sweep-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
-| **LTE** | Block the left defensive end. |
+| **X** | Block the left defensive end. |
 | **LT** | Help on the left defensive guard, then block the left inside linebacker. |
 | **LG** | Block the left defensive guard. |
 | **C** | Help on the right defensive guard, then block the right inside linebacker. |
 | **RG** | Block the right defensive guard. |
 | **RT** | Help on the right defensive end, then block the right outside linebacker. |
-| **RTE** | Block the right defensive end. |
-| **SL** **(ball)** | At the snap run flat across the backfield, take the handoff at full speed and get to the right edge. Turn up in the alley behind the right halfback. |
+| **Y** | Block the right defensive end. |
+| **Z** **(ball)** | At the snap run flat across the backfield, take the handoff at full speed and get to the right edge. Turn up in the alley behind the right halfback. |
 | **QB** | Hand the ball to the slot as he runs past you, then fake the handoff to the left halfback going left. |
 | **LH** | Bubble out around our end, then double team the corner with the right halfback. |
 | **RH** | Bubble out around our end, then double team the linebacker with the left halfback. |
@@ -1033,24 +1033,24 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Split Backs - Slot Right - 58 Sweep
+## Split Backs - Z R - 58 Sweep
 
-**Call it:** `Split Backs Slot Right 58 Sweep`
+**Call it:** `Split Backs Z R 58 Sweep`
 
 **Scheme:** Sweep
 
-![Split Backs - Slot Right - 58 Sweep](playbook/split-backs/cards/sb-te-sweep-r-4-4.svg)
+![Split Backs - Z R - 58 Sweep](playbook/split-backs/cards/sb-te-sweep-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
-| **LTE** **(ball)** | Stay down in your stance — no motion. At the snap run flat behind the quarterback, take the handoff at full speed and get to the right edge. Turn up outside the halfbacks. |
+| **X** **(ball)** | Stay down in your stance — no motion. At the snap run flat behind the quarterback, take the handoff at full speed and get to the right edge. Turn up outside the halfbacks. |
 | **LT** | Block the left defensive end. |
 | **LG** | Block the left defensive guard. |
 | **C** | Help on the left defensive guard, then block the left inside linebacker. |
 | **RG** | Block the right defensive guard. |
 | **RT** | Help on the right defensive guard, then block the right inside linebacker. |
-| **RTE** | Block the right defensive end. |
-| **SL** | Run at the corner and screen him off. Stay in his way. |
+| **Y** | Block the right defensive end. |
+| **Z** | Run at the corner and screen him off. Stay in his way. |
 | **QB** | Open right and hand the ball to the left tight end as he comes across behind you, then fake a run to the left. |
 | **LH** | Bubble out around our end, then double team the linebacker with the right halfback. |
 | **RH** | Bubble out around our end, then double team the linebacker with the left halfback. |
@@ -1063,24 +1063,24 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Split Backs - Slot Left - 69 Sweep
+## Split Backs - Z L - 69 Sweep
 
-**Call it:** `Split Backs Slot Left 69 Sweep`
+**Call it:** `Split Backs Z L 69 Sweep`
 
 **Scheme:** Sweep
 
-![Split Backs - Slot Left - 69 Sweep](playbook/split-backs/cards/sb-te-sweep-l-4-4.svg)
+![Split Backs - Z L - 69 Sweep](playbook/split-backs/cards/sb-te-sweep-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
-| **LTE** | Block the left defensive end. |
+| **X** | Block the left defensive end. |
 | **LT** | Help on the left defensive guard, then block the left inside linebacker. |
 | **LG** | Block the left defensive guard. |
 | **C** | Help on the right defensive guard, then block the right inside linebacker. |
 | **RG** | Block the right defensive guard. |
 | **RT** | Block the right defensive end. |
-| **RTE** **(ball)** | Stay down in your stance — no motion. At the snap run flat behind the quarterback, take the handoff at full speed and get to the left edge. Turn up outside the halfbacks. |
-| **SL** | Run at the corner and screen him off. Stay in his way. |
+| **Y** **(ball)** | Stay down in your stance — no motion. At the snap run flat behind the quarterback, take the handoff at full speed and get to the left edge. Turn up outside the halfbacks. |
+| **Z** | Run at the corner and screen him off. Stay in his way. |
 | **QB** | Open left and hand the ball to the right tight end as he comes across behind you, then fake a run to the right. |
 | **LH** | Bubble out around our end, then double team the linebacker with the right halfback. |
 | **RH** | Bubble out around our end, then double team the linebacker with the left halfback. |
@@ -1093,84 +1093,84 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Split Backs - Slot Right - 68 Slant Pass
+## Split Backs - Z R - 68 Slant Pass
 
-**Call it:** `Split Backs Slot Right 68 Slant Pass`
+**Call it:** `Split Backs Z R 68 Slant Pass`
 
 **Scheme:** Protect
 
-![Split Backs - Slot Right - 68 Slant Pass](playbook/split-backs/cards/sb-te-out-r-4-4.svg)
+![Split Backs - Z R - 68 Slant Pass](playbook/split-backs/cards/sb-te-out-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
-| **LTE** | Pass block: step back, hands up, and stay between your man and the quarterback. |
+| **X** | Pass block: step back, hands up, and stay between your man and the quarterback. |
 | **LT** | Pass block: step back, hands up, and stay between your man and the quarterback. |
 | **LG** | Pass block: step back, hands up, and stay between your man and the quarterback. |
 | **C** | Pass block: step back, hands up, and stay between your man and the quarterback. |
 | **RG** | Pass block: step back, hands up, and stay between your man and the quarterback. |
 | **RT** | Pass block: step back, hands up, and stay between your man and the quarterback. |
-| **RTE** **(ball)** | Take one step up, then slant out flat toward the right sideline, almost along the line of scrimmage. Look for the ball right away. |
-| **SL** | Block the right corner. |
+| **Y** **(ball)** | Take one step up, then slant out flat toward the right sideline, almost along the line of scrimmage. Look for the ball right away. |
+| **Z** | Block the right corner. |
 | **QB** | Take the snap, take one step and throw to the right tight end as he slants out. If he is covered, tuck it and run. |
 | **LH** | Step up and out, hands up. Pick up anybody coming at the quarterback. |
 | **RH** | Step up and out, hands up. Pick up anybody coming at the quarterback. |
 
 **Coaching points**
 
-- Everybody but the tight end and the SL pass blocks: step back, hands up, stay between your man and the quarterback.
+- Everybody but the tight end and the Z pass blocks: step back, hands up, stay between your man and the quarterback.
 - The slant stays flat — one step up and out, almost on the line of scrimmage. Any deeper and he runs into the linebackers.
 - The quarterback throws it as soon as the tight end clears the end. If he is covered, tuck it and run — no second look.
 
 ---
 
-## Split Backs - Slot Left - 59 Slant Pass
+## Split Backs - Z L - 59 Slant Pass
 
-**Call it:** `Split Backs Slot Left 59 Slant Pass`
+**Call it:** `Split Backs Z L 59 Slant Pass`
 
 **Scheme:** Protect
 
-![Split Backs - Slot Left - 59 Slant Pass](playbook/split-backs/cards/sb-te-out-l-4-4.svg)
+![Split Backs - Z L - 59 Slant Pass](playbook/split-backs/cards/sb-te-out-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
-| **LTE** **(ball)** | Take one step up, then slant out flat toward the left sideline, almost along the line of scrimmage. Look for the ball right away. |
+| **X** **(ball)** | Take one step up, then slant out flat toward the left sideline, almost along the line of scrimmage. Look for the ball right away. |
 | **LT** | Pass block: step back, hands up, and stay between your man and the quarterback. |
 | **LG** | Pass block: step back, hands up, and stay between your man and the quarterback. |
 | **C** | Pass block: step back, hands up, and stay between your man and the quarterback. |
 | **RG** | Pass block: step back, hands up, and stay between your man and the quarterback. |
 | **RT** | Pass block: step back, hands up, and stay between your man and the quarterback. |
-| **RTE** | Pass block: step back, hands up, and stay between your man and the quarterback. |
-| **SL** | Block the left corner. |
+| **Y** | Pass block: step back, hands up, and stay between your man and the quarterback. |
+| **Z** | Block the left corner. |
 | **QB** | Take the snap, take one step and throw to the left tight end as he slants out. If he is covered, tuck it and run. |
 | **LH** | Step up and out, hands up. Pick up anybody coming at the quarterback. |
 | **RH** | Step up and out, hands up. Pick up anybody coming at the quarterback. |
 
 **Coaching points**
 
-- Everybody but the tight end and the SL pass blocks: step back, hands up, stay between your man and the quarterback.
+- Everybody but the tight end and the Z pass blocks: step back, hands up, stay between your man and the quarterback.
 - The slant stays flat — one step up and out, almost on the line of scrimmage. Any deeper and he runs into the linebackers.
 - The quarterback throws it as soon as the tight end clears the end. If he is covered, tuck it and run — no second look.
 
 ---
 
-## Split Backs - Slot Right - 36 Power
+## Split Backs - Z R - 36 Handoff
 
-**Call it:** `Split Backs Slot Right 36 Power`
+**Call it:** `Split Backs Z R 36 Handoff`
 
 **Scheme:** Power
 
-![Split Backs - Slot Right - 36 Power](playbook/split-backs/cards/sb-power-r-4-4.svg)
+![Split Backs - Z R - 36 Handoff](playbook/split-backs/cards/sb-power-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
-| **LTE** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
+| **X** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
 | **LT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
 | **LG** | Defensive guard head up on you. Cut him off — get between him and the ball. |
 | **C** | Nobody on you. Climb to the playside linebacker. Head across him. |
 | **RG** | Defensive guard head up on you. Hands inside, pads under his, drive him back. |
 | **RT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
-| **RTE** | Leave the defensive end — he is kicked out. Go take the outside linebacker. |
-| **SL** | Kick the defensive end out. Aim at his outside hip. Never let him come underneath you. |
+| **Y** | Leave the defensive end — he is kicked out. Go take the outside linebacker. |
+| **Z** | Kick the defensive end out. Aim at his outside hip. Never let him come underneath you. |
 | **QB** | Open right and hand deep to the left halfback as he crosses, then fake the boot. It holds the backside end. |
 | **LH** **(ball)** | Cross behind the quarterback, take the handoff and hit it downhill at our tackle's outside hip. Never bounce it outside. |
 | **RH** | Lead through the hole. Block the first man who shows in it. |
@@ -1183,24 +1183,24 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Split Backs - Slot Left - 27 Power
+## Split Backs - Z L - 27 Handoff
 
-**Call it:** `Split Backs Slot Left 27 Power`
+**Call it:** `Split Backs Z L 27 Handoff`
 
 **Scheme:** Power
 
-![Split Backs - Slot Left - 27 Power](playbook/split-backs/cards/sb-power-l-4-4.svg)
+![Split Backs - Z L - 27 Handoff](playbook/split-backs/cards/sb-power-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
-| **LTE** | Leave the defensive end — he is kicked out. Go take the outside linebacker. |
+| **X** | Leave the defensive end — he is kicked out. Go take the outside linebacker. |
 | **LT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
 | **LG** | Defensive guard head up on you. Hands inside, pads under his, drive him back. |
 | **C** | Nobody on you. Climb to the playside linebacker. Head across him. |
 | **RG** | Defensive guard head up on you. Cut him off — get between him and the ball. |
 | **RT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
-| **RTE** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
-| **SL** | Kick the defensive end out. Aim at his outside hip. Never let him come underneath you. |
+| **Y** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
+| **Z** | Kick the defensive end out. Aim at his outside hip. Never let him come underneath you. |
 | **QB** | Open left and hand deep to the right halfback as he crosses, then fake the boot. It holds the backside end. |
 | **LH** | Lead through the hole. Block the first man who shows in it. |
 | **RH** **(ball)** | Cross behind the quarterback, take the handoff and hit it downhill at our tackle's outside hip. Never bounce it outside. |
@@ -1213,24 +1213,24 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Split Backs - Slot Right - 38 Pitch Pass
+## Split Backs - Z R - 38 Pitch Pass
 
-**Call it:** `Split Backs Slot Right 38 Pitch Pass`
+**Call it:** `Split Backs Z R 38 Pitch Pass`
 
 **Scheme:** Protect
 
-![Split Backs - Slot Right - 38 Pitch Pass](playbook/split-backs/cards/sb-toss-pass-r-4-4.svg)
+![Split Backs - Z R - 38 Pitch Pass](playbook/split-backs/cards/sb-toss-pass-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
-| **LTE** | Pass block: step back, hands up, and stay between your man and the quarterback. |
+| **X** | Pass block: step back, hands up, and stay between your man and the quarterback. |
 | **LT** | Pass block: step back, hands up, and stay between your man and the quarterback. |
 | **LG** | Pass block: step back, hands up, and stay between your man and the quarterback. |
 | **C** | Pass block: step back, hands up, and stay between your man and the quarterback. |
 | **RG** | Pass block: step back, hands up, and stay between your man and the quarterback. |
 | **RT** | Pass block: step back, hands up, and stay between your man and the quarterback. |
-| **RTE** **(ball)** | Block the end the way you do on the toss, then slant out flat toward the sideline, almost on the line. Look for the ball right away. |
-| **SL** | Run at the corner and screen him off. Stay in his way. |
+| **Y** **(ball)** | Block the end the way you do on the toss, then slant out flat toward the sideline, almost on the line. Look for the ball right away. |
+| **Z** | Run at the corner and screen him off. Stay in his way. |
 | **QB** | Pitch it exactly the way you pitch the toss, then run left like you still have it. Do not turn and watch the throw. |
 | **LH** | Catch the pitch and run the toss. At our tight end, pull up behind the line and throw it flat to the tight end in front of you. |
 | **RH** | Step at the dive, then bubble outside our end and take the first man out there. He is the one who gets to the thrower. |
@@ -1244,24 +1244,24 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Split Backs - Slot Left - 29 Pitch Pass
+## Split Backs - Z L - 29 Pitch Pass
 
-**Call it:** `Split Backs Slot Left 29 Pitch Pass`
+**Call it:** `Split Backs Z L 29 Pitch Pass`
 
 **Scheme:** Protect
 
-![Split Backs - Slot Left - 29 Pitch Pass](playbook/split-backs/cards/sb-toss-pass-l-4-4.svg)
+![Split Backs - Z L - 29 Pitch Pass](playbook/split-backs/cards/sb-toss-pass-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
-| **LTE** **(ball)** | Block the end the way you do on the toss, then slant out flat toward the sideline, almost on the line. Look for the ball right away. |
+| **X** **(ball)** | Block the end the way you do on the toss, then slant out flat toward the sideline, almost on the line. Look for the ball right away. |
 | **LT** | Pass block: step back, hands up, and stay between your man and the quarterback. |
 | **LG** | Pass block: step back, hands up, and stay between your man and the quarterback. |
 | **C** | Pass block: step back, hands up, and stay between your man and the quarterback. |
 | **RG** | Pass block: step back, hands up, and stay between your man and the quarterback. |
 | **RT** | Pass block: step back, hands up, and stay between your man and the quarterback. |
-| **RTE** | Pass block: step back, hands up, and stay between your man and the quarterback. |
-| **SL** | Run at the corner and screen him off. Stay in his way. |
+| **Y** | Pass block: step back, hands up, and stay between your man and the quarterback. |
+| **Z** | Run at the corner and screen him off. Stay in his way. |
 | **QB** | Pitch it exactly the way you pitch the toss, then run right like you still have it. Do not turn and watch the throw. |
 | **LH** | Step at the dive, then bubble outside our end and take the first man out there. He is the one who gets to the thrower. |
 | **RH** | Catch the pitch and run the toss. At our tight end, pull up behind the line and throw it flat to the tight end in front of you. |
@@ -1277,84 +1277,84 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Shotgun - Slot Right - 68 Slant Pass
+## Shotgun - Z R - 68 Slant Pass
 
-**Call it:** `Shotgun Slot Right 68 Slant Pass`
+**Call it:** `Shotgun Z R 68 Slant Pass`
 
 **Scheme:** Protect
 
-![Shotgun - Slot Right - 68 Slant Pass](playbook/shotgun/cards/sg-te-out-r-4-4.svg)
+![Shotgun - Z R - 68 Slant Pass](playbook/shotgun/cards/sg-te-out-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
-| **LTE** | Pass block: step back, hands up, and stay between your man and the quarterback. |
+| **X** | Pass block: step back, hands up, and stay between your man and the quarterback. |
 | **LT** | Pass block: step back, hands up, and stay between your man and the quarterback. |
 | **LG** | Pass block: step back, hands up, and stay between your man and the quarterback. |
 | **C** | Pass block: step back, hands up, and stay between your man and the quarterback. |
 | **RG** | Pass block: step back, hands up, and stay between your man and the quarterback. |
 | **RT** | Pass block: step back, hands up, and stay between your man and the quarterback. |
-| **RTE** **(ball)** | Take one step up, then slant out flat toward the right sideline, almost along the line of scrimmage. Look for the ball right away. |
-| **SL** | Block the right corner. |
+| **Y** **(ball)** | Take one step up, then slant out flat toward the right sideline, almost along the line of scrimmage. Look for the ball right away. |
+| **Z** | Block the right corner. |
 | **QB** | Catch the snap, take one step and throw to the right tight end as he slants out. If he is covered, tuck it and run. |
 | **LH** | Step up and out, hands up. Pick up anybody coming at the quarterback. |
 | **RH** | Step up and out, hands up. Pick up anybody coming at the quarterback. |
 
 **Coaching points**
 
-- Everybody but the tight end and the SL pass blocks: step back, hands up, stay between your man and the quarterback.
+- Everybody but the tight end and the Z pass blocks: step back, hands up, stay between your man and the quarterback.
 - The slant stays flat — one step up and out, almost on the line of scrimmage. Any deeper and he runs into the linebackers.
 - The quarterback throws it as soon as the tight end clears the end. If he is covered, tuck it and run — no second look.
 
 ---
 
-## Shotgun - Slot Left - 59 Slant Pass
+## Shotgun - Z L - 59 Slant Pass
 
-**Call it:** `Shotgun Slot Left 59 Slant Pass`
+**Call it:** `Shotgun Z L 59 Slant Pass`
 
 **Scheme:** Protect
 
-![Shotgun - Slot Left - 59 Slant Pass](playbook/shotgun/cards/sg-te-out-l-4-4.svg)
+![Shotgun - Z L - 59 Slant Pass](playbook/shotgun/cards/sg-te-out-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
-| **LTE** **(ball)** | Take one step up, then slant out flat toward the left sideline, almost along the line of scrimmage. Look for the ball right away. |
+| **X** **(ball)** | Take one step up, then slant out flat toward the left sideline, almost along the line of scrimmage. Look for the ball right away. |
 | **LT** | Pass block: step back, hands up, and stay between your man and the quarterback. |
 | **LG** | Pass block: step back, hands up, and stay between your man and the quarterback. |
 | **C** | Pass block: step back, hands up, and stay between your man and the quarterback. |
 | **RG** | Pass block: step back, hands up, and stay between your man and the quarterback. |
 | **RT** | Pass block: step back, hands up, and stay between your man and the quarterback. |
-| **RTE** | Pass block: step back, hands up, and stay between your man and the quarterback. |
-| **SL** | Block the left corner. |
+| **Y** | Pass block: step back, hands up, and stay between your man and the quarterback. |
+| **Z** | Block the left corner. |
 | **QB** | Catch the snap, take one step and throw to the left tight end as he slants out. If he is covered, tuck it and run. |
 | **LH** | Step up and out, hands up. Pick up anybody coming at the quarterback. |
 | **RH** | Step up and out, hands up. Pick up anybody coming at the quarterback. |
 
 **Coaching points**
 
-- Everybody but the tight end and the SL pass blocks: step back, hands up, stay between your man and the quarterback.
+- Everybody but the tight end and the Z pass blocks: step back, hands up, stay between your man and the quarterback.
 - The slant stays flat — one step up and out, almost on the line of scrimmage. Any deeper and he runs into the linebackers.
 - The quarterback throws it as soon as the tight end clears the end. If he is covered, tuck it and run — no second look.
 
 ---
 
-## Shotgun - Slot Left - 19 Sweep
+## Shotgun - Z L - 19 Sweep
 
-**Call it:** `Shotgun Slot Left 19 Sweep`
+**Call it:** `Shotgun Z L 19 Sweep`
 
 **Scheme:** Sweep
 
-![Shotgun - Slot Left - 19 Sweep](playbook/shotgun/cards/sg-qb-sweep-l-4-4.svg)
+![Shotgun - Z L - 19 Sweep](playbook/shotgun/cards/sg-qb-sweep-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
-| **LTE** | Block the left defensive end. |
+| **X** | Block the left defensive end. |
 | **LT** | Help on the left defensive guard, then block the left inside linebacker. |
 | **LG** | Block the left defensive guard. |
 | **C** | Help on the right defensive guard, then block the right inside linebacker. |
 | **RG** | Block the right defensive guard. |
 | **RT** | Help on the right defensive end, then block the right outside linebacker. |
-| **RTE** | Block the right defensive end. |
-| **SL** | Run at the corner and screen him off. Stay in his way. |
+| **Y** | Block the right defensive end. |
+| **Z** | Run at the corner and screen him off. Stay in his way. |
 | **QB** **(ball)** | Catch the snap and sweep left, flat and fast, behind the left halfback. Turn up outside his block. |
 | **LH** | Bubble out around our end, then double team the linebacker with the right halfback. |
 | **RH** | Bubble out around our end, then double team the linebacker with the left halfback. |
@@ -1367,24 +1367,24 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Shotgun - Slot Right - 18 Sweep
+## Shotgun - Z R - 18 Sweep
 
-**Call it:** `Shotgun Slot Right 18 Sweep`
+**Call it:** `Shotgun Z R 18 Sweep`
 
 **Scheme:** Sweep
 
-![Shotgun - Slot Right - 18 Sweep](playbook/shotgun/cards/sg-qb-sweep-r-4-4.svg)
+![Shotgun - Z R - 18 Sweep](playbook/shotgun/cards/sg-qb-sweep-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
-| **LTE** | Block the left defensive end. |
+| **X** | Block the left defensive end. |
 | **LT** | Help on the left defensive end, then block the left outside linebacker. |
 | **LG** | Block the left defensive guard. |
 | **C** | Help on the left defensive guard, then block the left inside linebacker. |
 | **RG** | Block the right defensive guard. |
 | **RT** | Help on the right defensive guard, then block the right inside linebacker. |
-| **RTE** | Block the right defensive end. |
-| **SL** | Run at the corner and screen him off. Stay in his way. |
+| **Y** | Block the right defensive end. |
+| **Z** | Run at the corner and screen him off. Stay in his way. |
 | **QB** **(ball)** | Catch the snap and sweep right, flat and fast, behind the right halfback. Turn up outside his block. |
 | **LH** | Bubble out around our end, then double team the linebacker with the right halfback. |
 | **RH** | Bubble out around our end, then double team the linebacker with the left halfback. |
@@ -1397,24 +1397,24 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Shotgun - Slot Right - 38 Toss
+## Shotgun - Z R - 38 Toss
 
-**Call it:** `Shotgun Slot Right 38 Toss`
+**Call it:** `Shotgun Z R 38 Toss`
 
 **Scheme:** Toss
 
-![Shotgun - Slot Right - 38 Toss](playbook/shotgun/cards/sg-rb-toss-r-4-4.svg)
+![Shotgun - Z R - 38 Toss](playbook/shotgun/cards/sg-rb-toss-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
-| **LTE** | Block the left defensive end. |
+| **X** | Block the left defensive end. |
 | **LT** | Help on the left defensive end, then block the left outside linebacker. |
 | **LG** | Block the left defensive guard. |
 | **C** | Help on the left defensive guard, then block the left inside linebacker. |
 | **RG** | Block the right defensive guard. |
 | **RT** | Help on the right defensive guard, then block the right inside linebacker. |
-| **RTE** | Block the right defensive end. |
-| **SL** | Run at the corner and screen him off. Stay in his way. |
+| **Y** | Block the right defensive end. |
+| **Z** | Run at the corner and screen him off. Stay in his way. |
 | **QB** | Hand the ball to the left halfback as he crosses in front of you, then fake a run to the left. |
 | **LH** **(ball)** | Cross in front of the quarterback, take the handoff going right and get to the edge behind the right halfback. Turn up outside his block. |
 | **RH** | Bubble out around the right end, then block the right outside linebacker. |
@@ -1427,24 +1427,24 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Shotgun - Slot Left - 29 Toss
+## Shotgun - Z L - 29 Toss
 
-**Call it:** `Shotgun Slot Left 29 Toss`
+**Call it:** `Shotgun Z L 29 Toss`
 
 **Scheme:** Toss
 
-![Shotgun - Slot Left - 29 Toss](playbook/shotgun/cards/sg-rb-toss-l-4-4.svg)
+![Shotgun - Z L - 29 Toss](playbook/shotgun/cards/sg-rb-toss-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
-| **LTE** | Block the left defensive end. |
+| **X** | Block the left defensive end. |
 | **LT** | Help on the left defensive guard, then block the left inside linebacker. |
 | **LG** | Block the left defensive guard. |
 | **C** | Help on the right defensive guard, then block the right inside linebacker. |
 | **RG** | Block the right defensive guard. |
 | **RT** | Help on the right defensive end, then block the right outside linebacker. |
-| **RTE** | Block the right defensive end. |
-| **SL** | Run at the corner and screen him off. Stay in his way. |
+| **Y** | Block the right defensive end. |
+| **Z** | Run at the corner and screen him off. Stay in his way. |
 | **QB** | Hand the ball to the right halfback as he crosses in front of you, then fake a run to the right. |
 | **LH** | Bubble out around the left end, then block the left outside linebacker. |
 | **RH** **(ball)** | Cross in front of the quarterback, take the handoff going left and get to the edge behind the left halfback. Turn up outside his block. |
@@ -1469,14 +1469,14 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 | Position | Assignment |
 |---|---|
-| **LTE** **(ball)** | Stay down in your stance — no motion. At the snap run flat behind the quarterback, take the handoff at full speed and get to the right edge. Turn up outside the trips. |
+| **X** **(ball)** | Stay down in your stance — no motion. At the snap run flat behind the quarterback, take the handoff at full speed and get to the right edge. Turn up outside the trips. |
 | **LT** | Defensive end on your outside shoulder. Cut him off — get between him and the ball. |
 | **LG** | Defensive guard head up on you. Cut him off — get between him and the ball. |
 | **C** | Nobody on you. Climb to the playside linebacker. Head across him. |
 | **RG** | Defensive guard head up on you. Step past him. Climb to the playside linebacker. Head across him. |
 | **RT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
-| **RTE** | Defensive end on your inside shoulder. Turn him inside. The ball goes around behind you. |
-| **SL** | Run at the corner and screen him off. Stay in his way. |
+| **Y** | Defensive end on your inside shoulder. Turn him inside. The ball goes around behind you. |
+| **Z** | Run at the corner and screen him off. Stay in his way. |
 | **QB** | Open right and hand the ball to the left tight end as he comes across behind you, then fake a run to the left. |
 | **FB** | Lead outside our end. Block the first man out there — here it is the linebacker. |
 | **TB** | Run at the corner and screen him off. Stay in his way. |
@@ -1498,14 +1498,14 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 | Position | Assignment |
 |---|---|
-| **LTE** | Defensive end on your inside shoulder. Turn him inside. The ball goes around behind you. |
+| **X** | Defensive end on your inside shoulder. Turn him inside. The ball goes around behind you. |
 | **LT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
 | **LG** | Defensive guard head up on you. Step past him. Climb to the playside linebacker. Head across him. |
 | **C** | Nobody on you. Climb to the playside linebacker. Head across him. |
 | **RG** | Defensive guard head up on you. Cut him off — get between him and the ball. |
 | **RT** | Defensive end on your outside shoulder. Cut him off — get between him and the ball. |
-| **RTE** **(ball)** | Stay down in your stance — no motion. At the snap run flat behind the quarterback, take the handoff at full speed and get to the left edge. Turn up outside the trips. |
-| **SL** | Run at the corner and screen him off. Stay in his way. |
+| **Y** **(ball)** | Stay down in your stance — no motion. At the snap run flat behind the quarterback, take the handoff at full speed and get to the left edge. Turn up outside the trips. |
+| **Z** | Run at the corner and screen him off. Stay in his way. |
 | **QB** | Open left and hand the ball to the right tight end as he comes across behind you, then fake a run to the right. |
 | **FB** | Lead outside our end. Block the first man out there — here it is the linebacker. |
 | **TB** | Run at the corner and screen him off. Stay in his way. |
@@ -1527,14 +1527,14 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 | Position | Assignment |
 |---|---|
-| **LTE** | Pass block: step back, hands up, and stay between your man and the quarterback. |
+| **X** | Pass block: step back, hands up, and stay between your man and the quarterback. |
 | **LT** | Pass block: step back, hands up, and stay between your man and the quarterback. |
 | **LG** | Pass block: step back, hands up, and stay between your man and the quarterback. |
 | **C** | Pass block: step back, hands up, and stay between your man and the quarterback. |
 | **RG** | Pass block: step back, hands up, and stay between your man and the quarterback. |
 | **RT** | Pass block: step back, hands up, and stay between your man and the quarterback. |
-| **RTE** | Pass block: step back, hands up, and stay between your man and the quarterback. |
-| **SL** | Run at the corner and screen him off. Stay in his way. |
+| **Y** | Pass block: step back, hands up, and stay between your man and the quarterback. |
+| **Z** | Run at the corner and screen him off. Stay in his way. |
 | **QB** | Take the snap and throw it to the tailback right now, out in the flat. One step, no drop. If he is covered, throw it at his feet. |
 | **FB** | Lead outside our end. Block the first man out there — here it is the linebacker. |
 | **TB** **(ball)** | Slide out behind the bunch, catch it standing still, then get north off your two blockers. Do not run backwards to get around. |
@@ -1557,14 +1557,14 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 | Position | Assignment |
 |---|---|
-| **LTE** | Pass block: step back, hands up, and stay between your man and the quarterback. |
+| **X** | Pass block: step back, hands up, and stay between your man and the quarterback. |
 | **LT** | Pass block: step back, hands up, and stay between your man and the quarterback. |
 | **LG** | Pass block: step back, hands up, and stay between your man and the quarterback. |
 | **C** | Pass block: step back, hands up, and stay between your man and the quarterback. |
 | **RG** | Pass block: step back, hands up, and stay between your man and the quarterback. |
 | **RT** | Pass block: step back, hands up, and stay between your man and the quarterback. |
-| **RTE** | Pass block: step back, hands up, and stay between your man and the quarterback. |
-| **SL** | Run at the corner and screen him off. Stay in his way. |
+| **Y** | Pass block: step back, hands up, and stay between your man and the quarterback. |
+| **Z** | Run at the corner and screen him off. Stay in his way. |
 | **QB** | Take the snap and throw it to the tailback right now, out in the flat. One step, no drop. If he is covered, throw it at his feet. |
 | **FB** | Lead outside our end. Block the first man out there — here it is the linebacker. |
 | **TB** **(ball)** | Slide out behind the bunch, catch it standing still, then get north off your two blockers. Do not run backwards to get around. |
@@ -1587,14 +1587,14 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 | Position | Assignment |
 |---|---|
-| **LTE** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
+| **X** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
 | **LT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
 | **LG** | Defensive guard head up on you. Cut him off — get between him and the ball. |
 | **C** | Nobody on you. Climb to the playside linebacker. Head across him. |
 | **RG** | Defensive guard head up on you. Step past him. Climb to the playside linebacker. Head across him. |
 | **RT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
-| **RTE** | Defensive end on your inside shoulder. Turn him inside. The ball goes around behind you. |
-| **SL** | Run at the corner and screen him off. Stay in his way. |
+| **Y** | Defensive end on your inside shoulder. Turn him inside. The ball goes around behind you. |
+| **Z** | Run at the corner and screen him off. Stay in his way. |
 | **QB** **(ball)** | Take the snap and sweep right, flat and fast, behind the trips. Turn up outside the fullback. |
 | **FB** | Lead outside our end. Block the first man out there — here it is the linebacker. |
 | **TB** | Run hard to the left like you have the ball. Sell it all the way. |
@@ -1616,14 +1616,14 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 | Position | Assignment |
 |---|---|
-| **LTE** | Defensive end on your inside shoulder. Turn him inside. The ball goes around behind you. |
+| **X** | Defensive end on your inside shoulder. Turn him inside. The ball goes around behind you. |
 | **LT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
 | **LG** | Defensive guard head up on you. Step past him. Climb to the playside linebacker. Head across him. |
 | **C** | Nobody on you. Climb to the playside linebacker. Head across him. |
 | **RG** | Defensive guard head up on you. Cut him off — get between him and the ball. |
 | **RT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
-| **RTE** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
-| **SL** | Run at the corner and screen him off. Stay in his way. |
+| **Y** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
+| **Z** | Run at the corner and screen him off. Stay in his way. |
 | **QB** **(ball)** | Take the snap and sweep left, flat and fast, behind the trips. Turn up outside the fullback. |
 | **FB** | Lead outside our end. Block the first man out there — here it is the linebacker. |
 | **TB** | Run hard to the right like you have the ball. Sell it all the way. |
@@ -1645,14 +1645,14 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 | Position | Assignment |
 |---|---|
-| **LTE** | Pass block: step back, hands up, and stay between your man and the quarterback. |
+| **X** | Pass block: step back, hands up, and stay between your man and the quarterback. |
 | **LT** | Pass block: step back, hands up, and stay between your man and the quarterback. |
 | **LG** | Pass block: step back, hands up, and stay between your man and the quarterback. |
 | **C** | Pass block: step back, hands up, and stay between your man and the quarterback. |
 | **RG** | Pass block: step back, hands up, and stay between your man and the quarterback. |
 | **RT** | Pass block: step back, hands up, and stay between your man and the quarterback. |
-| **RTE** **(ball)** | Take one step up, then slant out flat toward the right sideline, almost along the line of scrimmage. Look for the ball right away. |
-| **SL** | Run at the corner and screen him off. Stay in his way. |
+| **Y** **(ball)** | Take one step up, then slant out flat toward the right sideline, almost along the line of scrimmage. Look for the ball right away. |
+| **Z** | Run at the corner and screen him off. Stay in his way. |
 | **QB** | Take the snap, take one step and throw to the right tight end as he slants out. If he is covered, tuck it and run. |
 | **FB** | Release straight up the field. You are clearing the corner so the slant has room. |
 | **TB** | Step up and out, hands up. Pick up anybody coming at the quarterback. |
@@ -1674,14 +1674,14 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 | Position | Assignment |
 |---|---|
-| **LTE** **(ball)** | Take one step up, then slant out flat toward the left sideline, almost along the line of scrimmage. Look for the ball right away. |
+| **X** **(ball)** | Take one step up, then slant out flat toward the left sideline, almost along the line of scrimmage. Look for the ball right away. |
 | **LT** | Pass block: step back, hands up, and stay between your man and the quarterback. |
 | **LG** | Pass block: step back, hands up, and stay between your man and the quarterback. |
 | **C** | Pass block: step back, hands up, and stay between your man and the quarterback. |
 | **RG** | Pass block: step back, hands up, and stay between your man and the quarterback. |
 | **RT** | Pass block: step back, hands up, and stay between your man and the quarterback. |
-| **RTE** | Pass block: step back, hands up, and stay between your man and the quarterback. |
-| **SL** | Run at the corner and screen him off. Stay in his way. |
+| **Y** | Pass block: step back, hands up, and stay between your man and the quarterback. |
+| **Z** | Run at the corner and screen him off. Stay in his way. |
 | **QB** | Take the snap, take one step and throw to the left tight end as he slants out. If he is covered, tuck it and run. |
 | **FB** | Release straight up the field. You are clearing the corner so the slant has room. |
 | **TB** | Step up and out, hands up. Pick up anybody coming at the quarterback. |
@@ -1695,24 +1695,24 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Power I - Slot Right - 32 Smash
+## Power I - Z R - 32 Handoff
 
-**Call it:** `Power I Slot Right 32 Smash`
+**Call it:** `Power I Z R 32 Handoff`
 
 **Scheme:** Smash
 
-![Power I - Slot Right - 32 Smash](playbook/power-i/cards/pi-smash-r-4-4.svg)
+![Power I - Z R - 32 Handoff](playbook/power-i/cards/pi-smash-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
-| **LTE** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
+| **X** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
 | **LT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
 | **LG** | Defensive guard head up on you. Cut him off — get between him and the ball. |
 | **C** | Nobody on you. Climb to the playside linebacker. Head across him. |
 | **RG** | Defensive guard head up on you. Hands inside, pads under his, drive him back. |
 | **RT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
-| **RTE** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
-| **SL** | Lead through the hole. Block the first man who shows in it. You are the second man through. Go after the fullback, take whoever he did not. |
+| **Y** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
+| **Z** | Lead through the hole. Block the first man who shows in it. You are the second man through. Go after the fullback, take whoever he did not. |
 | **QB** | Open right, hand to the tailback, then fake the boot left. It holds the backside end. |
 | **FB** | Lead through the hole. Block the first man who shows in it. |
 | **TB** **(ball)** | Take the handoff downhill between the center and the right guard, right off the fullback's hip. Do not bounce it. |
@@ -1725,24 +1725,24 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Power I - Slot Left - 33 Smash
+## Power I - Z L - 33 Handoff
 
-**Call it:** `Power I Slot Left 33 Smash`
+**Call it:** `Power I Z L 33 Handoff`
 
 **Scheme:** Smash
 
-![Power I - Slot Left - 33 Smash](playbook/power-i/cards/pi-smash-l-4-4.svg)
+![Power I - Z L - 33 Handoff](playbook/power-i/cards/pi-smash-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
-| **LTE** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
+| **X** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
 | **LT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
 | **LG** | Defensive guard head up on you. Hands inside, pads under his, drive him back. |
 | **C** | Nobody on you. Climb to the playside linebacker. Head across him. |
 | **RG** | Defensive guard head up on you. Cut him off — get between him and the ball. |
 | **RT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
-| **RTE** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
-| **SL** | Lead through the hole. Block the first man who shows in it. You are the second man through. Go after the fullback, take whoever he did not. |
+| **Y** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
+| **Z** | Lead through the hole. Block the first man who shows in it. You are the second man through. Go after the fullback, take whoever he did not. |
 | **QB** | Open left, hand to the tailback, then fake the boot right. It holds the backside end. |
 | **FB** | Lead through the hole. Block the first man who shows in it. |
 | **TB** **(ball)** | Take the handoff downhill between the center and the left guard, right off the fullback's hip. Do not bounce it. |
@@ -1755,24 +1755,24 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Power I - Slot Right - 38 Toss
+## Power I - Z R - 38 Toss
 
-**Call it:** `Power I Slot Right 38 Toss`
+**Call it:** `Power I Z R 38 Toss`
 
 **Scheme:** Toss
 
-![Power I - Slot Right - 38 Toss](playbook/power-i/cards/pi-toss-r-4-4.svg)
+![Power I - Z R - 38 Toss](playbook/power-i/cards/pi-toss-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
-| **LTE** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
+| **X** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
 | **LT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
 | **LG** | Defensive guard head up on you. Cut him off — get between him and the ball. |
 | **C** | Nobody on you. Climb to the playside linebacker. Head across him. |
 | **RG** | Defensive guard head up on you. Step past him. Climb to the playside linebacker. Head across him. |
 | **RT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
-| **RTE** | Defensive end on your inside shoulder. Turn him inside. The ball goes around behind you. |
-| **SL** | Get outside the fullback, then take him, then block the right corner. |
+| **Y** | Defensive end on your inside shoulder. Turn him inside. The ball goes around behind you. |
+| **Z** | Get outside the fullback, then take him, then block the right corner. |
 | **QB** | Quick pitch to the tailback, then run the other way, to the left, like you still have it. |
 | **FB** | Lead outside our end. Block the first man out there — here it is the linebacker. |
 | **TB** **(ball)** | Take the pitch on the run and get to the right edge behind your two blockers. Ahead of the quarterback is a fumble. |
@@ -1785,24 +1785,24 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Power I - Slot Left - 39 Toss
+## Power I - Z L - 39 Toss
 
-**Call it:** `Power I Slot Left 39 Toss`
+**Call it:** `Power I Z L 39 Toss`
 
 **Scheme:** Toss
 
-![Power I - Slot Left - 39 Toss](playbook/power-i/cards/pi-toss-l-4-4.svg)
+![Power I - Z L - 39 Toss](playbook/power-i/cards/pi-toss-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
-| **LTE** | Defensive end on your inside shoulder. Turn him inside. The ball goes around behind you. |
+| **X** | Defensive end on your inside shoulder. Turn him inside. The ball goes around behind you. |
 | **LT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
 | **LG** | Defensive guard head up on you. Step past him. Climb to the playside linebacker. Head across him. |
 | **C** | Nobody on you. Climb to the playside linebacker. Head across him. |
 | **RG** | Defensive guard head up on you. Cut him off — get between him and the ball. |
 | **RT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
-| **RTE** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
-| **SL** | Get outside the fullback, then take him, then block the left corner. |
+| **Y** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
+| **Z** | Get outside the fullback, then take him, then block the left corner. |
 | **QB** | Quick pitch to the tailback, then run the other way, to the right, like you still have it. |
 | **FB** | Lead outside our end. Block the first man out there — here it is the linebacker. |
 | **TB** **(ball)** | Take the pitch on the run and get to the left edge behind your two blockers. Ahead of the quarterback is a fumble. |

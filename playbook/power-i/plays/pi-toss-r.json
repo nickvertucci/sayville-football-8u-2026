@@ -2,9 +2,9 @@
   "id": "pi-toss-r",
   "order": 3,
   "formation": "power-i",
-  "name": "Power I - Slot Right - 38 Toss",
+  "name": "Power I - Z R - 38 Toss",
   "code": "41",
-  "call": "Power I Slot Right 38 Toss",
+  "call": "Power I Z R 38 Toss",
   "type": "run",
   "scheme": "Toss",
   "direction": "right",
@@ -55,7 +55,7 @@
         ]
       ]
     },
-    "SL": {
+    "Z": {
       "block": "screen",
       "note": "Get outside the fullback and find the corner. You are the last man between the ball and the sideline."
     }
@@ -67,21 +67,21 @@
   ],
   "fronts": {
     "4-4": {
-      "SL": {
+      "Z": {
         "block": "man",
         "man": "RC",
         "how": "Get outside the fullback, then take him"
       }
     },
     "5-3": {
-      "SL": {
+      "Z": {
         "block": "man",
         "man": "RC",
         "how": "Get outside the fullback, then take him"
       }
     },
     "5-4-2": {
-      "SL": {
+      "Z": {
         "block": "man",
         "man": "RS",
         "how": "Get outside the fullback, then take him"

@@ -75,7 +75,7 @@ def check_reaches(play, resolved, alignment, front, frame):
 
 
 # Our line, for the play-action check.
-LINE = ("LTE", "LT", "LG", "C", "RG", "RT", "RTE")
+LINE = ("X", "LT", "LG", "C", "RG", "RT", "Y")
 
 
 def check_play_action(play, defenses):

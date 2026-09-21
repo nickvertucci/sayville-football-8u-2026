@@ -8,14 +8,14 @@ Both ends are tight on the line. The two backs sit four yards deep and just over
 
 | Position | x | y |
 |---|---|---|
-| LTE | -4.2 | -0.5 |
+| X | -4.2 | -0.5 |
 | LT | -2.8 | -0.5 |
 | LG | -1.4 | -0.5 |
 | C | 0.0 | -0.5 |
 | RG | 1.4 | -0.5 |
 | RT | 2.8 | -0.5 |
-| RTE | 4.2 | -0.5 |
-| SL | 5.6 | -1.5 |
+| Y | 4.2 | -0.5 |
+| Z | 5.6 | -1.5 |
 | QB | 0.0 | -1.5 |
 | LH | -2.2 | -3.8 |
 | RH | 2.2 | -3.8 |
@@ -24,43 +24,43 @@ Both ends are tight on the line. The two backs sit four yards deep and just over
 
 | Play | Call | Scheme | Type | Ball |
 |---|---|---|---|---|
-| [Split Backs - Slot Right - 38 Toss](#split-backs---slot-right---38-toss) | `Split Backs Slot Right 38 Toss` | Toss | run | LH |
-| [Split Backs - Slot Left - 29 Toss](#split-backs---slot-left---29-toss) | `Split Backs Slot Left 29 Toss` | Toss | run | RH |
-| [Split Backs - Slot Right - 18 Sweep](#split-backs---slot-right---18-sweep) | `Split Backs Slot Right 18 Sweep` | Sweep | run | QB |
-| [Split Backs - Slot Left - 19 Sweep](#split-backs---slot-left---19-sweep) | `Split Backs Slot Left 19 Sweep` | Sweep | run | QB |
-| [Split Backs - Slot Left - 19 Fake Sweep](#split-backs---slot-left---19-fake-sweep) | `Split Backs Slot Left 19 Fake Sweep` | Sweep | run | QB |
-| [Split Backs - Slot Right - 18 Fake Sweep](#split-backs---slot-right---18-fake-sweep) | `Split Backs Slot Right 18 Fake Sweep` | Sweep | run | QB |
-| [Split Backs - Slot Right - 49 Sweep](#split-backs---slot-right---49-sweep) | `Split Backs Slot Right 49 Sweep` | Sweep | run | SL |
-| [Split Backs - Slot Left - 48 Sweep](#split-backs---slot-left---48-sweep) | `Split Backs Slot Left 48 Sweep` | Sweep | run | SL |
-| [Split Backs - Slot Right - 58 Sweep](#split-backs---slot-right---58-sweep) | `Split Backs Slot Right 58 Sweep` | Sweep | run | LTE |
-| [Split Backs - Slot Left - 69 Sweep](#split-backs---slot-left---69-sweep) | `Split Backs Slot Left 69 Sweep` | Sweep | run | RTE |
-| [Split Backs - Slot Right - 68 Slant Pass](#split-backs---slot-right---68-slant-pass) | `Split Backs Slot Right 68 Slant Pass` | Protect | pass | RTE |
-| [Split Backs - Slot Left - 59 Slant Pass](#split-backs---slot-left---59-slant-pass) | `Split Backs Slot Left 59 Slant Pass` | Protect | pass | LTE |
-| [Split Backs - Slot Right - 36 Power](#split-backs---slot-right---36-power) | `Split Backs Slot Right 36 Power` | Power | run | LH |
-| [Split Backs - Slot Left - 27 Power](#split-backs---slot-left---27-power) | `Split Backs Slot Left 27 Power` | Power | run | RH |
-| [Split Backs - Slot Right - 38 Pitch Pass](#split-backs---slot-right---38-pitch-pass) | `Split Backs Slot Right 38 Pitch Pass` | Protect | pass | RTE |
-| [Split Backs - Slot Left - 29 Pitch Pass](#split-backs---slot-left---29-pitch-pass) | `Split Backs Slot Left 29 Pitch Pass` | Protect | pass | LTE |
+| [Split Backs - Z R - 38 Toss](#split-backs---z-r---38-toss) | `Split Backs Z R 38 Toss` | Toss | run | LH |
+| [Split Backs - Z L - 29 Toss](#split-backs---z-l---29-toss) | `Split Backs Z L 29 Toss` | Toss | run | RH |
+| [Split Backs - Z R - 18 Sweep](#split-backs---z-r---18-sweep) | `Split Backs Z R 18 Sweep` | Sweep | run | QB |
+| [Split Backs - Z L - 19 Sweep](#split-backs---z-l---19-sweep) | `Split Backs Z L 19 Sweep` | Sweep | run | QB |
+| [Split Backs - Z L - 19 Fake Sweep](#split-backs---z-l---19-fake-sweep) | `Split Backs Z L 19 Fake Sweep` | Sweep | run | QB |
+| [Split Backs - Z R - 18 Fake Sweep](#split-backs---z-r---18-fake-sweep) | `Split Backs Z R 18 Fake Sweep` | Sweep | run | QB |
+| [Split Backs - Z R - 49 Sweep](#split-backs---z-r---49-sweep) | `Split Backs Z R 49 Sweep` | Sweep | run | Z |
+| [Split Backs - Z L - 48 Sweep](#split-backs---z-l---48-sweep) | `Split Backs Z L 48 Sweep` | Sweep | run | Z |
+| [Split Backs - Z R - 58 Sweep](#split-backs---z-r---58-sweep) | `Split Backs Z R 58 Sweep` | Sweep | run | X |
+| [Split Backs - Z L - 69 Sweep](#split-backs---z-l---69-sweep) | `Split Backs Z L 69 Sweep` | Sweep | run | Y |
+| [Split Backs - Z R - 68 Slant Pass](#split-backs---z-r---68-slant-pass) | `Split Backs Z R 68 Slant Pass` | Protect | pass | Y |
+| [Split Backs - Z L - 59 Slant Pass](#split-backs---z-l---59-slant-pass) | `Split Backs Z L 59 Slant Pass` | Protect | pass | X |
+| [Split Backs - Z R - 36 Handoff](#split-backs---z-r---36-handoff) | `Split Backs Z R 36 Handoff` | Power | run | LH |
+| [Split Backs - Z L - 27 Handoff](#split-backs---z-l---27-handoff) | `Split Backs Z L 27 Handoff` | Power | run | RH |
+| [Split Backs - Z R - 38 Pitch Pass](#split-backs---z-r---38-pitch-pass) | `Split Backs Z R 38 Pitch Pass` | Protect | pass | Y |
+| [Split Backs - Z L - 29 Pitch Pass](#split-backs---z-l---29-pitch-pass) | `Split Backs Z L 29 Pitch Pass` | Protect | pass | X |
 
 ---
 
-## Split Backs - Slot Right - 38 Toss
+## Split Backs - Z R - 38 Toss
 
-**Call it:** `Split Backs Slot Right 38 Toss`
+**Call it:** `Split Backs Z R 38 Toss`
 
 **Scheme:** Toss
 
-![Split Backs - Slot Right - 38 Toss](cards/sb-toss-r-4-4.svg)
+![Split Backs - Z R - 38 Toss](cards/sb-toss-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
-| **LTE** | Block the left defensive end. |
+| **X** | Block the left defensive end. |
 | **LT** | Block the left inside linebacker. |
 | **LG** | Block the left defensive guard. |
 | **C** | Help on the right defensive guard, then block the right inside linebacker. |
 | **RG** | Block the right defensive guard. |
 | **RT** | Block the right inside linebacker. |
-| **RTE** | Block the right defensive end. |
-| **SL** | Block the right corner. |
+| **Y** | Block the right defensive end. |
+| **Z** | Block the right corner. |
 | **QB** | Quick pitch to the left halfback, then run the other way, to the left, like you still have it. |
 | **LH** **(ball)** | Run flat, outside and behind the quarterback, and catch the pitch on the run. Ahead of him is a fumble. |
 | **RH** | Bubble around the right tight end, then block the right outside linebacker. |
@@ -73,24 +73,24 @@ Both ends are tight on the line. The two backs sit four yards deep and just over
 
 ---
 
-## Split Backs - Slot Left - 29 Toss
+## Split Backs - Z L - 29 Toss
 
-**Call it:** `Split Backs Slot Left 29 Toss`
+**Call it:** `Split Backs Z L 29 Toss`
 
 **Scheme:** Toss
 
-![Split Backs - Slot Left - 29 Toss](cards/sb-toss-l-4-4.svg)
+![Split Backs - Z L - 29 Toss](cards/sb-toss-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
-| **LTE** | Block the left defensive end. |
+| **X** | Block the left defensive end. |
 | **LT** | Block the left inside linebacker. |
 | **LG** | Block the left defensive guard. |
 | **C** | Help on the left defensive guard, then block the left inside linebacker. |
 | **RG** | Block the right defensive guard. |
 | **RT** | Block the right inside linebacker. |
-| **RTE** | Block the right defensive end. |
-| **SL** | Block the left corner. |
+| **Y** | Block the right defensive end. |
+| **Z** | Block the left corner. |
 | **QB** | Quick pitch to the right halfback, then run the other way, to the right, like you still have it. |
 | **LH** | Bubble around the left tight end, then block the left outside linebacker. |
 | **RH** **(ball)** | Run flat, outside and behind the quarterback, and catch the pitch on the run. Ahead of him is a fumble. |
@@ -103,24 +103,24 @@ Both ends are tight on the line. The two backs sit four yards deep and just over
 
 ---
 
-## Split Backs - Slot Right - 18 Sweep
+## Split Backs - Z R - 18 Sweep
 
-**Call it:** `Split Backs Slot Right 18 Sweep`
+**Call it:** `Split Backs Z R 18 Sweep`
 
 **Scheme:** Sweep
 
-![Split Backs - Slot Right - 18 Sweep](cards/sb-qb-sweep-r-4-4.svg)
+![Split Backs - Z R - 18 Sweep](cards/sb-qb-sweep-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
-| **LTE** | Block the left defensive end. |
+| **X** | Block the left defensive end. |
 | **LT** | Help on the left defensive end, then block the left outside linebacker. |
 | **LG** | Block the left defensive guard. |
 | **C** | Help on the left defensive guard, then block the left inside linebacker. |
 | **RG** | Block the right defensive guard. |
 | **RT** | Help on the right defensive guard, then block the right inside linebacker. |
-| **RTE** | Defensive end on your inside shoulder. Turn him inside. The ball goes around behind you. |
-| **SL** | Run at the corner and screen him off. Stay in his way. |
+| **Y** | Defensive end on your inside shoulder. Turn him inside. The ball goes around behind you. |
+| **Z** | Run at the corner and screen him off. Stay in his way. |
 | **QB** **(ball)** | Take the snap and sweep right, flat and fast, behind the right halfback. Turn up outside his block. |
 | **LH** | Bubble out around our end, then double team the linebacker with the right halfback. |
 | **RH** | Bubble out around our end, then double team the linebacker with the left halfback. |
@@ -133,24 +133,24 @@ Both ends are tight on the line. The two backs sit four yards deep and just over
 
 ---
 
-## Split Backs - Slot Left - 19 Sweep
+## Split Backs - Z L - 19 Sweep
 
-**Call it:** `Split Backs Slot Left 19 Sweep`
+**Call it:** `Split Backs Z L 19 Sweep`
 
 **Scheme:** Sweep
 
-![Split Backs - Slot Left - 19 Sweep](cards/sb-qb-sweep-l-4-4.svg)
+![Split Backs - Z L - 19 Sweep](cards/sb-qb-sweep-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
-| **LTE** | Defensive end on your inside shoulder. Turn him inside. The ball goes around behind you. |
+| **X** | Defensive end on your inside shoulder. Turn him inside. The ball goes around behind you. |
 | **LT** | Help on the left defensive guard, then block the left inside linebacker. |
 | **LG** | Block the left defensive guard. |
 | **C** | Help on the right defensive guard, then block the right inside linebacker. |
 | **RG** | Block the right defensive guard. |
 | **RT** | Help on the right defensive end, then block the right outside linebacker. |
-| **RTE** | Block the right defensive end. |
-| **SL** | Run at the corner and screen him off. Stay in his way. |
+| **Y** | Block the right defensive end. |
+| **Z** | Run at the corner and screen him off. Stay in his way. |
 | **QB** **(ball)** | Take the snap and sweep left, flat and fast, behind the left halfback. Turn up outside his block. |
 | **LH** | Bubble out around our end, then double team the linebacker with the right halfback. |
 | **RH** | Bubble out around our end, then double team the linebacker with the left halfback. |
@@ -163,24 +163,24 @@ Both ends are tight on the line. The two backs sit four yards deep and just over
 
 ---
 
-## Split Backs - Slot Left - 19 Fake Sweep
+## Split Backs - Z L - 19 Fake Sweep
 
-**Call it:** `Split Backs Slot Left 19 Fake Sweep`
+**Call it:** `Split Backs Z L 19 Fake Sweep`
 
 **Scheme:** Sweep
 
-![Split Backs - Slot Left - 19 Fake Sweep](cards/sb-fake-sweep-l-4-4.svg)
+![Split Backs - Z L - 19 Fake Sweep](cards/sb-fake-sweep-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
-| **LTE** | Defensive end on your inside shoulder. Turn him inside. The ball goes around behind you. |
+| **X** | Defensive end on your inside shoulder. Turn him inside. The ball goes around behind you. |
 | **LT** | Help on the left defensive guard, then block the left inside linebacker. |
 | **LG** | Block the left defensive guard. |
 | **C** | Help on the right defensive guard, then block the right inside linebacker. |
 | **RG** | Block the right defensive guard. |
 | **RT** | Help on the right defensive end, then block the right outside linebacker. |
-| **RTE** | Block the right defensive end. |
-| **SL** | Run at the corner and screen him off. Stay in his way. |
+| **Y** | Block the right defensive end. |
+| **Z** | Run at the corner and screen him off. Stay in his way. |
 | **QB** **(ball)** | Fake the handoff to the right halfback, then roll back left and sweep it, flat and fast, behind the left halfback. Turn up outside his block. |
 | **LH** | Bubble out around the left tight end, then block the left outside linebacker. |
 | **RH** | Take the fake from the quarterback and run hard to the right like you have the ball. Sell it all the way — you are the reason the defense goes the wrong way. |
@@ -193,24 +193,24 @@ Both ends are tight on the line. The two backs sit four yards deep and just over
 
 ---
 
-## Split Backs - Slot Right - 18 Fake Sweep
+## Split Backs - Z R - 18 Fake Sweep
 
-**Call it:** `Split Backs Slot Right 18 Fake Sweep`
+**Call it:** `Split Backs Z R 18 Fake Sweep`
 
 **Scheme:** Sweep
 
-![Split Backs - Slot Right - 18 Fake Sweep](cards/sb-fake-sweep-r-4-4.svg)
+![Split Backs - Z R - 18 Fake Sweep](cards/sb-fake-sweep-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
-| **LTE** | Block the left defensive end. |
+| **X** | Block the left defensive end. |
 | **LT** | Help on the left defensive end, then block the left outside linebacker. |
 | **LG** | Block the left defensive guard. |
 | **C** | Help on the left defensive guard, then block the left inside linebacker. |
 | **RG** | Block the right defensive guard. |
 | **RT** | Help on the right defensive guard, then block the right inside linebacker. |
-| **RTE** | Defensive end on your inside shoulder. Turn him inside. The ball goes around behind you. |
-| **SL** | Run at the corner and screen him off. Stay in his way. |
+| **Y** | Defensive end on your inside shoulder. Turn him inside. The ball goes around behind you. |
+| **Z** | Run at the corner and screen him off. Stay in his way. |
 | **QB** **(ball)** | Fake the handoff to the left halfback, then roll back right and sweep it, flat and fast, behind the right halfback. Turn up outside his block. |
 | **LH** | Take the fake from the quarterback and run hard to the left like you have the ball. Sell it all the way — you are the reason the defense goes the wrong way. |
 | **RH** | Bubble out around the right tight end, then block the right outside linebacker. |
@@ -223,24 +223,24 @@ Both ends are tight on the line. The two backs sit four yards deep and just over
 
 ---
 
-## Split Backs - Slot Right - 49 Sweep
+## Split Backs - Z R - 49 Sweep
 
-**Call it:** `Split Backs Slot Right 49 Sweep`
+**Call it:** `Split Backs Z R 49 Sweep`
 
 **Scheme:** Sweep
 
-![Split Backs - Slot Right - 49 Sweep](cards/sb-sl-sweep-l-4-4.svg)
+![Split Backs - Z R - 49 Sweep](cards/sb-sl-sweep-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
-| **LTE** | Block the left defensive end. |
+| **X** | Block the left defensive end. |
 | **LT** | Help on the left defensive end, then block the left outside linebacker. |
 | **LG** | Block the left defensive guard. |
 | **C** | Help on the left defensive guard, then block the left inside linebacker. |
 | **RG** | Block the right defensive guard. |
 | **RT** | Help on the right defensive guard, then block the right inside linebacker. |
-| **RTE** | Block the right defensive end. |
-| **SL** **(ball)** | At the snap run flat across the backfield, take the handoff at full speed and get to the left edge. Turn up in the alley behind the left halfback. |
+| **Y** | Block the right defensive end. |
+| **Z** **(ball)** | At the snap run flat across the backfield, take the handoff at full speed and get to the left edge. Turn up in the alley behind the left halfback. |
 | **QB** | Hand the ball to the slot as he runs past you, then fake the handoff to the right halfback going right. |
 | **LH** | Bubble out around our end, then double team the corner with the right halfback. |
 | **RH** | Bubble out around our end, then double team the linebacker with the left halfback. |
@@ -253,24 +253,24 @@ Both ends are tight on the line. The two backs sit four yards deep and just over
 
 ---
 
-## Split Backs - Slot Left - 48 Sweep
+## Split Backs - Z L - 48 Sweep
 
-**Call it:** `Split Backs Slot Left 48 Sweep`
+**Call it:** `Split Backs Z L 48 Sweep`
 
 **Scheme:** Sweep
 
-![Split Backs - Slot Left - 48 Sweep](cards/sb-sl-sweep-r-4-4.svg)
+![Split Backs - Z L - 48 Sweep](cards/sb-sl-sweep-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
-| **LTE** | Block the left defensive end. |
+| **X** | Block the left defensive end. |
 | **LT** | Help on the left defensive guard, then block the left inside linebacker. |
 | **LG** | Block the left defensive guard. |
 | **C** | Help on the right defensive guard, then block the right inside linebacker. |
 | **RG** | Block the right defensive guard. |
 | **RT** | Help on the right defensive end, then block the right outside linebacker. |
-| **RTE** | Block the right defensive end. |
-| **SL** **(ball)** | At the snap run flat across the backfield, take the handoff at full speed and get to the right edge. Turn up in the alley behind the right halfback. |
+| **Y** | Block the right defensive end. |
+| **Z** **(ball)** | At the snap run flat across the backfield, take the handoff at full speed and get to the right edge. Turn up in the alley behind the right halfback. |
 | **QB** | Hand the ball to the slot as he runs past you, then fake the handoff to the left halfback going left. |
 | **LH** | Bubble out around our end, then double team the corner with the right halfback. |
 | **RH** | Bubble out around our end, then double team the linebacker with the left halfback. |
@@ -283,24 +283,24 @@ Both ends are tight on the line. The two backs sit four yards deep and just over
 
 ---
 
-## Split Backs - Slot Right - 58 Sweep
+## Split Backs - Z R - 58 Sweep
 
-**Call it:** `Split Backs Slot Right 58 Sweep`
+**Call it:** `Split Backs Z R 58 Sweep`
 
 **Scheme:** Sweep
 
-![Split Backs - Slot Right - 58 Sweep](cards/sb-te-sweep-r-4-4.svg)
+![Split Backs - Z R - 58 Sweep](cards/sb-te-sweep-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
-| **LTE** **(ball)** | Stay down in your stance — no motion. At the snap run flat behind the quarterback, take the handoff at full speed and get to the right edge. Turn up outside the halfbacks. |
+| **X** **(ball)** | Stay down in your stance — no motion. At the snap run flat behind the quarterback, take the handoff at full speed and get to the right edge. Turn up outside the halfbacks. |
 | **LT** | Block the left defensive end. |
 | **LG** | Block the left defensive guard. |
 | **C** | Help on the left defensive guard, then block the left inside linebacker. |
 | **RG** | Block the right defensive guard. |
 | **RT** | Help on the right defensive guard, then block the right inside linebacker. |
-| **RTE** | Block the right defensive end. |
-| **SL** | Run at the corner and screen him off. Stay in his way. |
+| **Y** | Block the right defensive end. |
+| **Z** | Run at the corner and screen him off. Stay in his way. |
 | **QB** | Open right and hand the ball to the left tight end as he comes across behind you, then fake a run to the left. |
 | **LH** | Bubble out around our end, then double team the linebacker with the right halfback. |
 | **RH** | Bubble out around our end, then double team the linebacker with the left halfback. |
@@ -313,24 +313,24 @@ Both ends are tight on the line. The two backs sit four yards deep and just over
 
 ---
 
-## Split Backs - Slot Left - 69 Sweep
+## Split Backs - Z L - 69 Sweep
 
-**Call it:** `Split Backs Slot Left 69 Sweep`
+**Call it:** `Split Backs Z L 69 Sweep`
 
 **Scheme:** Sweep
 
-![Split Backs - Slot Left - 69 Sweep](cards/sb-te-sweep-l-4-4.svg)
+![Split Backs - Z L - 69 Sweep](cards/sb-te-sweep-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
-| **LTE** | Block the left defensive end. |
+| **X** | Block the left defensive end. |
 | **LT** | Help on the left defensive guard, then block the left inside linebacker. |
 | **LG** | Block the left defensive guard. |
 | **C** | Help on the right defensive guard, then block the right inside linebacker. |
 | **RG** | Block the right defensive guard. |
 | **RT** | Block the right defensive end. |
-| **RTE** **(ball)** | Stay down in your stance — no motion. At the snap run flat behind the quarterback, take the handoff at full speed and get to the left edge. Turn up outside the halfbacks. |
-| **SL** | Run at the corner and screen him off. Stay in his way. |
+| **Y** **(ball)** | Stay down in your stance — no motion. At the snap run flat behind the quarterback, take the handoff at full speed and get to the left edge. Turn up outside the halfbacks. |
+| **Z** | Run at the corner and screen him off. Stay in his way. |
 | **QB** | Open left and hand the ball to the right tight end as he comes across behind you, then fake a run to the right. |
 | **LH** | Bubble out around our end, then double team the linebacker with the right halfback. |
 | **RH** | Bubble out around our end, then double team the linebacker with the left halfback. |
@@ -343,84 +343,84 @@ Both ends are tight on the line. The two backs sit four yards deep and just over
 
 ---
 
-## Split Backs - Slot Right - 68 Slant Pass
+## Split Backs - Z R - 68 Slant Pass
 
-**Call it:** `Split Backs Slot Right 68 Slant Pass`
+**Call it:** `Split Backs Z R 68 Slant Pass`
 
 **Scheme:** Protect
 
-![Split Backs - Slot Right - 68 Slant Pass](cards/sb-te-out-r-4-4.svg)
+![Split Backs - Z R - 68 Slant Pass](cards/sb-te-out-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
-| **LTE** | Pass block: step back, hands up, and stay between your man and the quarterback. |
+| **X** | Pass block: step back, hands up, and stay between your man and the quarterback. |
 | **LT** | Pass block: step back, hands up, and stay between your man and the quarterback. |
 | **LG** | Pass block: step back, hands up, and stay between your man and the quarterback. |
 | **C** | Pass block: step back, hands up, and stay between your man and the quarterback. |
 | **RG** | Pass block: step back, hands up, and stay between your man and the quarterback. |
 | **RT** | Pass block: step back, hands up, and stay between your man and the quarterback. |
-| **RTE** **(ball)** | Take one step up, then slant out flat toward the right sideline, almost along the line of scrimmage. Look for the ball right away. |
-| **SL** | Block the right corner. |
+| **Y** **(ball)** | Take one step up, then slant out flat toward the right sideline, almost along the line of scrimmage. Look for the ball right away. |
+| **Z** | Block the right corner. |
 | **QB** | Take the snap, take one step and throw to the right tight end as he slants out. If he is covered, tuck it and run. |
 | **LH** | Step up and out, hands up. Pick up anybody coming at the quarterback. |
 | **RH** | Step up and out, hands up. Pick up anybody coming at the quarterback. |
 
 **Coaching points**
 
-- Everybody but the tight end and the SL pass blocks: step back, hands up, stay between your man and the quarterback.
+- Everybody but the tight end and the Z pass blocks: step back, hands up, stay between your man and the quarterback.
 - The slant stays flat — one step up and out, almost on the line of scrimmage. Any deeper and he runs into the linebackers.
 - The quarterback throws it as soon as the tight end clears the end. If he is covered, tuck it and run — no second look.
 
 ---
 
-## Split Backs - Slot Left - 59 Slant Pass
+## Split Backs - Z L - 59 Slant Pass
 
-**Call it:** `Split Backs Slot Left 59 Slant Pass`
+**Call it:** `Split Backs Z L 59 Slant Pass`
 
 **Scheme:** Protect
 
-![Split Backs - Slot Left - 59 Slant Pass](cards/sb-te-out-l-4-4.svg)
+![Split Backs - Z L - 59 Slant Pass](cards/sb-te-out-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
-| **LTE** **(ball)** | Take one step up, then slant out flat toward the left sideline, almost along the line of scrimmage. Look for the ball right away. |
+| **X** **(ball)** | Take one step up, then slant out flat toward the left sideline, almost along the line of scrimmage. Look for the ball right away. |
 | **LT** | Pass block: step back, hands up, and stay between your man and the quarterback. |
 | **LG** | Pass block: step back, hands up, and stay between your man and the quarterback. |
 | **C** | Pass block: step back, hands up, and stay between your man and the quarterback. |
 | **RG** | Pass block: step back, hands up, and stay between your man and the quarterback. |
 | **RT** | Pass block: step back, hands up, and stay between your man and the quarterback. |
-| **RTE** | Pass block: step back, hands up, and stay between your man and the quarterback. |
-| **SL** | Block the left corner. |
+| **Y** | Pass block: step back, hands up, and stay between your man and the quarterback. |
+| **Z** | Block the left corner. |
 | **QB** | Take the snap, take one step and throw to the left tight end as he slants out. If he is covered, tuck it and run. |
 | **LH** | Step up and out, hands up. Pick up anybody coming at the quarterback. |
 | **RH** | Step up and out, hands up. Pick up anybody coming at the quarterback. |
 
 **Coaching points**
 
-- Everybody but the tight end and the SL pass blocks: step back, hands up, stay between your man and the quarterback.
+- Everybody but the tight end and the Z pass blocks: step back, hands up, stay between your man and the quarterback.
 - The slant stays flat — one step up and out, almost on the line of scrimmage. Any deeper and he runs into the linebackers.
 - The quarterback throws it as soon as the tight end clears the end. If he is covered, tuck it and run — no second look.
 
 ---
 
-## Split Backs - Slot Right - 36 Power
+## Split Backs - Z R - 36 Handoff
 
-**Call it:** `Split Backs Slot Right 36 Power`
+**Call it:** `Split Backs Z R 36 Handoff`
 
 **Scheme:** Power
 
-![Split Backs - Slot Right - 36 Power](cards/sb-power-r-4-4.svg)
+![Split Backs - Z R - 36 Handoff](cards/sb-power-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
-| **LTE** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
+| **X** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
 | **LT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
 | **LG** | Defensive guard head up on you. Cut him off — get between him and the ball. |
 | **C** | Nobody on you. Climb to the playside linebacker. Head across him. |
 | **RG** | Defensive guard head up on you. Hands inside, pads under his, drive him back. |
 | **RT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
-| **RTE** | Leave the defensive end — he is kicked out. Go take the outside linebacker. |
-| **SL** | Kick the defensive end out. Aim at his outside hip. Never let him come underneath you. |
+| **Y** | Leave the defensive end — he is kicked out. Go take the outside linebacker. |
+| **Z** | Kick the defensive end out. Aim at his outside hip. Never let him come underneath you. |
 | **QB** | Open right and hand deep to the left halfback as he crosses, then fake the boot. It holds the backside end. |
 | **LH** **(ball)** | Cross behind the quarterback, take the handoff and hit it downhill at our tackle's outside hip. Never bounce it outside. |
 | **RH** | Lead through the hole. Block the first man who shows in it. |
@@ -433,24 +433,24 @@ Both ends are tight on the line. The two backs sit four yards deep and just over
 
 ---
 
-## Split Backs - Slot Left - 27 Power
+## Split Backs - Z L - 27 Handoff
 
-**Call it:** `Split Backs Slot Left 27 Power`
+**Call it:** `Split Backs Z L 27 Handoff`
 
 **Scheme:** Power
 
-![Split Backs - Slot Left - 27 Power](cards/sb-power-l-4-4.svg)
+![Split Backs - Z L - 27 Handoff](cards/sb-power-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
-| **LTE** | Leave the defensive end — he is kicked out. Go take the outside linebacker. |
+| **X** | Leave the defensive end — he is kicked out. Go take the outside linebacker. |
 | **LT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
 | **LG** | Defensive guard head up on you. Hands inside, pads under his, drive him back. |
 | **C** | Nobody on you. Climb to the playside linebacker. Head across him. |
 | **RG** | Defensive guard head up on you. Cut him off — get between him and the ball. |
 | **RT** | Block down on the defensive guard, inside shoulder. Head across him — nobody crosses your face. |
-| **RTE** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
-| **SL** | Kick the defensive end out. Aim at his outside hip. Never let him come underneath you. |
+| **Y** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
+| **Z** | Kick the defensive end out. Aim at his outside hip. Never let him come underneath you. |
 | **QB** | Open left and hand deep to the right halfback as he crosses, then fake the boot. It holds the backside end. |
 | **LH** | Lead through the hole. Block the first man who shows in it. |
 | **RH** **(ball)** | Cross behind the quarterback, take the handoff and hit it downhill at our tackle's outside hip. Never bounce it outside. |
@@ -463,24 +463,24 @@ Both ends are tight on the line. The two backs sit four yards deep and just over
 
 ---
 
-## Split Backs - Slot Right - 38 Pitch Pass
+## Split Backs - Z R - 38 Pitch Pass
 
-**Call it:** `Split Backs Slot Right 38 Pitch Pass`
+**Call it:** `Split Backs Z R 38 Pitch Pass`
 
 **Scheme:** Protect
 
-![Split Backs - Slot Right - 38 Pitch Pass](cards/sb-toss-pass-r-4-4.svg)
+![Split Backs - Z R - 38 Pitch Pass](cards/sb-toss-pass-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
-| **LTE** | Pass block: step back, hands up, and stay between your man and the quarterback. |
+| **X** | Pass block: step back, hands up, and stay between your man and the quarterback. |
 | **LT** | Pass block: step back, hands up, and stay between your man and the quarterback. |
 | **LG** | Pass block: step back, hands up, and stay between your man and the quarterback. |
 | **C** | Pass block: step back, hands up, and stay between your man and the quarterback. |
 | **RG** | Pass block: step back, hands up, and stay between your man and the quarterback. |
 | **RT** | Pass block: step back, hands up, and stay between your man and the quarterback. |
-| **RTE** **(ball)** | Block the end the way you do on the toss, then slant out flat toward the sideline, almost on the line. Look for the ball right away. |
-| **SL** | Run at the corner and screen him off. Stay in his way. |
+| **Y** **(ball)** | Block the end the way you do on the toss, then slant out flat toward the sideline, almost on the line. Look for the ball right away. |
+| **Z** | Run at the corner and screen him off. Stay in his way. |
 | **QB** | Pitch it exactly the way you pitch the toss, then run left like you still have it. Do not turn and watch the throw. |
 | **LH** | Catch the pitch and run the toss. At our tight end, pull up behind the line and throw it flat to the tight end in front of you. |
 | **RH** | Step at the dive, then bubble outside our end and take the first man out there. He is the one who gets to the thrower. |
@@ -494,24 +494,24 @@ Both ends are tight on the line. The two backs sit four yards deep and just over
 
 ---
 
-## Split Backs - Slot Left - 29 Pitch Pass
+## Split Backs - Z L - 29 Pitch Pass
 
-**Call it:** `Split Backs Slot Left 29 Pitch Pass`
+**Call it:** `Split Backs Z L 29 Pitch Pass`
 
 **Scheme:** Protect
 
-![Split Backs - Slot Left - 29 Pitch Pass](cards/sb-toss-pass-l-4-4.svg)
+![Split Backs - Z L - 29 Pitch Pass](cards/sb-toss-pass-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
-| **LTE** **(ball)** | Block the end the way you do on the toss, then slant out flat toward the sideline, almost on the line. Look for the ball right away. |
+| **X** **(ball)** | Block the end the way you do on the toss, then slant out flat toward the sideline, almost on the line. Look for the ball right away. |
 | **LT** | Pass block: step back, hands up, and stay between your man and the quarterback. |
 | **LG** | Pass block: step back, hands up, and stay between your man and the quarterback. |
 | **C** | Pass block: step back, hands up, and stay between your man and the quarterback. |
 | **RG** | Pass block: step back, hands up, and stay between your man and the quarterback. |
 | **RT** | Pass block: step back, hands up, and stay between your man and the quarterback. |
-| **RTE** | Pass block: step back, hands up, and stay between your man and the quarterback. |
-| **SL** | Run at the corner and screen him off. Stay in his way. |
+| **Y** | Pass block: step back, hands up, and stay between your man and the quarterback. |
+| **Z** | Run at the corner and screen him off. Stay in his way. |
 | **QB** | Pitch it exactly the way you pitch the toss, then run right like you still have it. Do not turn and watch the throw. |
 | **LH** | Step at the dive, then bubble outside our end and take the first man out there. He is the one who gets to the thrower. |
 | **RH** | Catch the pitch and run the toss. At our tight end, pull up behind the line and throw it flat to the tight end in front of you. |
