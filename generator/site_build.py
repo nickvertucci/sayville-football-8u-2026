@@ -816,10 +816,14 @@ table.xl.xl-plays td {
    All three are measured against the youth window, 3.5in by 2.75in, two columns.
 
    The call is width-capped: the longest one the sheet carries is "Z Tight Right -
-   18 Fake Sweep" and at 10px it clears its column by three points. 10.5px does not
-   clear it at all. The words are not shortened to buy more, because the call sheet
-   spells them out too and a sheet that prints a different call from the one on the
-   boy's wrist has to be translated under a play clock.
+   18 Fake Sweep", and at 10px it cleared its column by two points with the rule
+   two points off the call. Two points is not a gap, it is a collision -- the rule
+   and the Z of "Z Tight" read as one mark. The gap is worth more than the type
+   size, so the gap took two spaces and the call gave up the half point that pays
+   for them; 9.5px leaves four points spare at the end of the longest row. The
+   words are not shortened to buy more, because the call sheet spells them out too
+   and a sheet that prints a different call from the one on the boy's wrist has to
+   be translated under a play clock.
 
    The number is bigger than the call, which it was not before. He is not reading the
    band, he is being shouted a number and hunting for it; the call is what he reads
@@ -830,13 +834,16 @@ table.xl.xl-plays td {
    quarter of empty pouch under them. Spread out, each row is a target a finger can
    hold on a moving arm. */
 .band li {
-  display: flex; align-items: baseline; gap: 2px;
-  padding: 0 1px; font-size: 10px; font-weight: 700; line-height: 2.5;
+  display: flex; align-items: baseline; gap: 7px;
+  padding: 0 1px; font-size: 9.5px; font-weight: 700; line-height: 2.5;
   color: var(--ink); white-space: nowrap;
 }
 /* Zebra rather than a rule between rows. A rule is a thing to read past; a band of
    tone is the row itself, and a finger tracking one does not slip off it. */
 .band li:nth-child(even) { background: var(--panel-2); }
+/* The rule is the number's own edge, not a fence between two equals: it stays two
+   points off the digits and seven off the call. Even padding either side would make
+   it a third column of its own. */
 .band li b {
   flex: 0 0 16px; font-size: 13px; text-align: right; font-weight: 900;
   font-variant-numeric: tabular-nums;
@@ -847,7 +854,7 @@ table.xl.xl-plays td {
    side: the screen is a preview, the printed inches are the thing. */
 @media (max-width: 560px) {
   .band-set { width: 100%; grid-template-rows: none; }
-  .band li { font-size: 10px; line-height: 2.5; }
+  .band li { font-size: 9.5px; line-height: 2.5; }
 }
 
 /* ------------------------------------------------- defensive call sheet --
@@ -1230,11 +1237,13 @@ table.xl.pk-plays td {
   .band-span { font-size: 9px; opacity: 1; right: 5px; bottom: 3px; }
   .band-sub { font-size: 6.5pt; color: #000; border-bottom-color: #000;
               margin: 1px 0 0; padding: 0 3px; }
-  /* Width sets the type here, not height: "Z Right Y Slant Pass Right" is the longest
-     row there is and it has half of five inches to fit in. Eight rows then have three
-     inches to live in, which is why the leading is what it is -- the space was going
-     spare, and a row a boy can keep his eye on is what to spend it on. */
-  .band li { font-size: 10px; line-height: 2.5; padding: 0 1px; gap: 2px; }
+  /* Width sets the type here, not height: "Z Tight Right - 18 Fake Sweep" is the
+     longest row there is and it has half of three and a half inches to fit in. The
+     rows then have three inches to live in, which is why the leading is what it is --
+     the space was going spare, and a row a boy can keep his eye on is what to spend
+     it on. The leading is safe from the half point the call gave back to the gap:
+     the row is as tall as the 13px number, not as tall as the call. */
+  .band li { font-size: 9.5px; line-height: 2.5; padding: 0 1px; gap: 7px; }
   .band li:nth-child(even) { background: #eee !important;
                              -webkit-print-color-adjust: exact; print-color-adjust: exact; }
   .band li b { flex-basis: 16px; font-size: 13px; padding-right: 2px;
