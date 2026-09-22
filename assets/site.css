@@ -573,7 +573,7 @@ table.dc-sub.dc-moved {
    is the opposite of useful. */
 .xl-top {
   display: grid; gap: 14px; align-items: start;
-  grid-template-columns: minmax(0, 1fr) 270px;
+  grid-template-columns: minmax(0, 1fr) 330px;
 }
 @media (max-width: 860px) { .xl-top { grid-template-columns: 1fr; } }
 .xl-sheets {
@@ -638,6 +638,13 @@ table.xl.xl-plays thead th {
   background: #000; color: #fff; border-color: #000; font-weight: 800;
 }
 col.xl-c0 { width: 4.6em; }
+/* The halves of the sheet, split down the middle. With a Middle column between them
+   the two sides were obviously separate; without one they run together, so the seam
+   is drawn -- 2px, the same weight the script's border and the field's sidelines use,
+   because it is the same kind of line. Third child is the Right column: the scheme
+   label, then Left, then Right. */
+table.xl.xl-plays th:nth-child(3),
+table.xl.xl-plays td:nth-child(3) { border-left: 2px solid var(--ink); }
 /* Specific enough to beat `table.xl td`, whose top alignment would otherwise win. */
 table.xl.xl-plays td {
   height: 22px; text-align: center; vertical-align: middle; padding: 4px 5px;
@@ -1035,7 +1042,7 @@ table.xl.pk-plays td {
      point size below rather than the width above: when the sides were spelled out the
      sheet had no spare width anywhere, so the four characters came out of the type.
      Checked at 200, where the script clipped, and at 230, where neither side does. */
-  .xl-top { display: grid; grid-template-columns: 1fr 230px; gap: 0 6px;
+  .xl-top { display: grid; grid-template-columns: 1fr 272px; gap: 0 6px;
             align-items: start; }
   .xl-sheets { grid-template-columns: 1fr; gap: 0; margin: 2px 0 0; }
   .script { margin: 2px 0 0; break-inside: avoid; }
