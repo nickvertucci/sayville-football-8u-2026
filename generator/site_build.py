@@ -4620,7 +4620,8 @@ def practice_blocks_html(pr: dict, items: list[str], needs: str,
             extra = "".join(f"<li>{esc(n)}</li>" for n in blk.get("notes", []))
             extra_html = f'<ul class="ins-drills">{extra}</ul>' if extra else ""
             body = (f'<div class="ins-list">{"".join(items)}</div>'
-                    f'{emphasis_html}{extra_html}{needs}')
+                    f'{emphasis_html}{extra_html}{needs}'
+                    f'{rotation_html(blk, plays or {}, roster or {})}')
         else:
             body = ""
         rendered.append(f'<div class="ins-blk">{head}{body}</div>')

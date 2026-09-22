@@ -788,7 +788,10 @@ def validate_install(schedule: dict, formations: list[dict], defenses: dict,
         # on the field.
         chart = (roster or {}).get("offense") or {}
         for blk in practice.get("blocks", []):
-            if blk.get("kind") != "rotation":
+            # Whatever kind the block calls itself. A rotation card rides on the
+            # install block as often as it stands alone, and the thing worth
+            # checking is the lineup, not the label above it.
+            if not blk.get("snaps"):
                 continue
             title = blk.get("title") or "rotation"
             spots = list(blk.get("spots") or ROTATION_SPOTS)
