@@ -373,7 +373,7 @@ h1.page { font-size: clamp(23px, 5vw, 33px); letter-spacing: -.5px; margin: 22px
 }
 .dc-names { margin: 0; padding: 2px 0; list-style: none; }
 .dc-names li {
-  display: flex; align-items: baseline; gap: 5px;
+  display: flex; align-items: baseline; gap: 3px;
   padding: 1px 6px; font-size: 12px; font-weight: 600; color: var(--ink-2);
 }
 /* The rank has to be printed now that depth runs down the card instead of across a
@@ -742,7 +742,7 @@ table.xl.xl-plays td {
   position: absolute; right: 6px; bottom: 4px;
   font-size: 10px; font-weight: 800; opacity: .8;
 }
-.band-body { display: block; }
+.band-body { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 4px; }
 /* The formation label inside a pouch that holds two of them. Black on white, the
    same family as the bar above it, so the eye reads bar -> list -> bar -> list. */
 .band-sub {
@@ -752,36 +752,42 @@ table.xl.xl-plays td {
   border-bottom: 1px solid var(--ink);
 }
 .band ol { margin: 0; padding: 0; list-style: none; }
-/* 9.5px, and it is the HEIGHT of the window that set it now, not the width.
-   The pouch is the youth wristband's 3.5in x 2.75in, one column, and the two
-   constraints swapped places: at one column the longest call has about 150 points
-   of width to spare, while eighteen rows and a bar have to live inside 2.75in.
-   Measured at 3.5in wide: 11px overflows the window by 0.22in, 10.5px by 0.07in,
-   10px scrapes in with 0.05in, 9.5px has 0.15in. Take the margin -- the printer is
-   not this browser and a row that falls off the bottom of a pouch is a play the boy
-   cannot find.
+/* The call at 10px, the NUMBER at 13, and the rows spread down the pouch.
+   All three are measured against the youth window, 3.5in by 2.75in, two columns.
 
-   The rows are nowrap on purpose: a call that wraps is a call he reads as two. So
-   the type gives, not the line. Anything that lengthens a call, or adds a play to a
-   pouch, has to be measured against both the width AND the height again. */
+   The call is width-capped: the longest one the sheet carries is "Z Tight Right -
+   18 Fake Sweep" and at 10px it clears its column by three points. 10.5px does not
+   clear it at all. The words are not shortened to buy more, because the call sheet
+   spells them out too and a sheet that prints a different call from the one on the
+   boy's wrist has to be translated under a play clock.
+
+   The number is bigger than the call, which it was not before. He is not reading the
+   band, he is being shouted a number and hunting for it; the call is what he reads
+   once he has found the row. A 9px number under a 9.5px call had that backwards.
+
+   The leading is what spends the height. Matching the sheet dropped the passes and
+   the Shotgun, so a column is seven rows instead of nine and there was an inch and a
+   quarter of empty pouch under them. Spread out, each row is a target a finger can
+   hold on a moving arm. */
 .band li {
-  display: flex; align-items: baseline; gap: 5px;
-  padding: 0 5px; font-size: 9.5px; font-weight: 700; line-height: 1.32;
+  display: flex; align-items: baseline; gap: 2px;
+  padding: 0 1px; font-size: 10px; font-weight: 700; line-height: 2.5;
   color: var(--ink); white-space: nowrap;
 }
 /* Zebra rather than a rule between rows. A rule is a thing to read past; a band of
    tone is the row itself, and a finger tracking one does not slip off it. */
 .band li:nth-child(even) { background: var(--panel-2); }
 .band li b {
-  flex: 0 0 26px; text-align: right; font-weight: 900; font-variant-numeric: tabular-nums;
-  padding-right: 6px; border-right: 1px solid var(--line);
+  flex: 0 0 16px; font-size: 13px; text-align: right; font-weight: 900;
+  font-variant-numeric: tabular-nums;
+  padding-right: 2px; border-right: 1px solid var(--line);
 }
 .band li span { flex: 1 1 auto; min-width: 0; }
 /* A phone is narrower than a pouch. Let the panels shrink rather than run off the
    side: the screen is a preview, the printed inches are the thing. */
 @media (max-width: 560px) {
   .band-set { width: 100%; grid-template-rows: none; }
-  .band li { font-size: 9.5px; line-height: 1.32; }
+  .band li { font-size: 10px; line-height: 2.5; }
 }
 
 /* ------------------------------------------------- defensive call sheet --
@@ -1168,10 +1174,11 @@ table.xl.pk-plays td {
      row there is and it has half of five inches to fit in. Eight rows then have three
      inches to live in, which is why the leading is what it is -- the space was going
      spare, and a row a boy can keep his eye on is what to spend it on. */
-  .band li { font-size: 9.5px; line-height: 1.32; padding: 0 3px; gap: 4px; }
+  .band li { font-size: 10px; line-height: 2.5; padding: 0 1px; gap: 2px; }
   .band li:nth-child(even) { background: #eee !important;
                              -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-  .band li b { flex-basis: 21px; padding-right: 4px; border-right-color: #000; }
+  .band li b { flex-basis: 16px; font-size: 13px; padding-right: 2px;
+                border-right-color: #000; }
 
   /* The defensive sheet: three fronts, eleven rows and six packages each, then the
      blank front under them. Small enough that the whole thing is one sheet, the way

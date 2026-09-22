@@ -433,7 +433,7 @@ h1.page { font-size: clamp(23px, 5vw, 33px); letter-spacing: -.5px; margin: 22px
 }
 .dc-names { margin: 0; padding: 2px 0; list-style: none; }
 .dc-names li {
-  display: flex; align-items: baseline; gap: 5px;
+  display: flex; align-items: baseline; gap: 3px;
   padding: 1px 6px; font-size: 12px; font-weight: 600; color: var(--ink-2);
 }
 /* The rank has to be printed now that depth runs down the card instead of across a
@@ -802,7 +802,7 @@ table.xl.xl-plays td {
   position: absolute; right: 6px; bottom: 4px;
   font-size: 10px; font-weight: 800; opacity: .8;
 }
-.band-body { display: block; }
+.band-body { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 4px; }
 /* The formation label inside a pouch that holds two of them. Black on white, the
    same family as the bar above it, so the eye reads bar -> list -> bar -> list. */
 .band-sub {
@@ -812,36 +812,42 @@ table.xl.xl-plays td {
   border-bottom: 1px solid var(--ink);
 }
 .band ol { margin: 0; padding: 0; list-style: none; }
-/* 9.5px, and it is the HEIGHT of the window that set it now, not the width.
-   The pouch is the youth wristband's 3.5in x 2.75in, one column, and the two
-   constraints swapped places: at one column the longest call has about 150 points
-   of width to spare, while eighteen rows and a bar have to live inside 2.75in.
-   Measured at 3.5in wide: 11px overflows the window by 0.22in, 10.5px by 0.07in,
-   10px scrapes in with 0.05in, 9.5px has 0.15in. Take the margin -- the printer is
-   not this browser and a row that falls off the bottom of a pouch is a play the boy
-   cannot find.
+/* The call at 10px, the NUMBER at 13, and the rows spread down the pouch.
+   All three are measured against the youth window, 3.5in by 2.75in, two columns.
 
-   The rows are nowrap on purpose: a call that wraps is a call he reads as two. So
-   the type gives, not the line. Anything that lengthens a call, or adds a play to a
-   pouch, has to be measured against both the width AND the height again. */
+   The call is width-capped: the longest one the sheet carries is "Z Tight Right -
+   18 Fake Sweep" and at 10px it clears its column by three points. 10.5px does not
+   clear it at all. The words are not shortened to buy more, because the call sheet
+   spells them out too and a sheet that prints a different call from the one on the
+   boy's wrist has to be translated under a play clock.
+
+   The number is bigger than the call, which it was not before. He is not reading the
+   band, he is being shouted a number and hunting for it; the call is what he reads
+   once he has found the row. A 9px number under a 9.5px call had that backwards.
+
+   The leading is what spends the height. Matching the sheet dropped the passes and
+   the Shotgun, so a column is seven rows instead of nine and there was an inch and a
+   quarter of empty pouch under them. Spread out, each row is a target a finger can
+   hold on a moving arm. */
 .band li {
-  display: flex; align-items: baseline; gap: 5px;
-  padding: 0 5px; font-size: 9.5px; font-weight: 700; line-height: 1.32;
+  display: flex; align-items: baseline; gap: 2px;
+  padding: 0 1px; font-size: 10px; font-weight: 700; line-height: 2.5;
   color: var(--ink); white-space: nowrap;
 }
 /* Zebra rather than a rule between rows. A rule is a thing to read past; a band of
    tone is the row itself, and a finger tracking one does not slip off it. */
 .band li:nth-child(even) { background: var(--panel-2); }
 .band li b {
-  flex: 0 0 26px; text-align: right; font-weight: 900; font-variant-numeric: tabular-nums;
-  padding-right: 6px; border-right: 1px solid var(--line);
+  flex: 0 0 16px; font-size: 13px; text-align: right; font-weight: 900;
+  font-variant-numeric: tabular-nums;
+  padding-right: 2px; border-right: 1px solid var(--line);
 }
 .band li span { flex: 1 1 auto; min-width: 0; }
 /* A phone is narrower than a pouch. Let the panels shrink rather than run off the
    side: the screen is a preview, the printed inches are the thing. */
 @media (max-width: 560px) {
   .band-set { width: 100%; grid-template-rows: none; }
-  .band li { font-size: 9.5px; line-height: 1.32; }
+  .band li { font-size: 10px; line-height: 2.5; }
 }
 
 /* ------------------------------------------------- defensive call sheet --
@@ -1228,10 +1234,11 @@ table.xl.pk-plays td {
      row there is and it has half of five inches to fit in. Eight rows then have three
      inches to live in, which is why the leading is what it is -- the space was going
      spare, and a row a boy can keep his eye on is what to spend it on. */
-  .band li { font-size: 9.5px; line-height: 1.32; padding: 0 3px; gap: 4px; }
+  .band li { font-size: 10px; line-height: 2.5; padding: 0 1px; gap: 2px; }
   .band li:nth-child(even) { background: #eee !important;
                              -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-  .band li b { flex-basis: 21px; padding-right: 4px; border-right-color: #000; }
+  .band li b { flex-basis: 16px; font-size: 13px; padding-right: 2px;
+                border-right-color: #000; }
 
   /* The defensive sheet: three fronts, eleven rows and six packages each, then the
      blank front under them. Small enough that the whole thing is one sheet, the way
@@ -3862,13 +3869,9 @@ CALL_SHEET_ORDER = (
 # this set when it has been installed, and expect to pay for the room.
 SHEET_OMIT = frozenset({"wishbone", "trips", "shotgun", "single-back"})
 
-# And the ones that come off the wristbands, which is not the same list. A coach
-# taking a formation off his own sheet has decided he does not need it written down;
-# a boy has decided nothing, and the number still gets shouted at him. The 3rd-and-
-# long square on that very sheet calls two Shotgun sweeps, so a band without 33 to 38
-# on it is a band that fails on third and long. Off the bands are only the two
-# formations nobody calls at all.
-BAND_OMIT = frozenset({"wishbone", "trips", "single-back"})
+# The wristbands no longer have a list of their own: they carry exactly what the
+# call sheet carries, through called_plays(). A second list was a second thing to
+# keep in step, and it did not stay in step.
 
 
 def _call_sheet_order(formations: list[dict]) -> list[dict]:
@@ -3896,14 +3899,16 @@ def _call_sheet_order(formations: list[dict]) -> list[dict]:
 # goes in two columns, and the width is what sets the type -- and there is now a lot
 # less of it, so the type is measured against the longest row rather than chosen.
 BAND_POUCHES = 3
-# One column, not two. Two columns split a 3.5-inch window into 1.4-inch rows, and
-# the longest call in the book -- "Z Tight Right - Y Slant Pass Right" -- does not fit
-# one at any size a nine-year-old can read; at 8px it still ran out of the window and
-# 8px is not a size, it is a rumour. One column gives every row the full width of the
-# pouch, so the call stays spelled out the way it is yelled, which is the thing this
-# page exists to do. The cost is paid in height instead, and the height is what the
-# type is now measured against.
-BAND_PANEL_COLUMNS = 1
+# Two columns, and the row chrome is what pays for them. In a 3.5in youth window a
+# column is 147 points once the border, the gutter, the row padding and the number
+# column are taken out -- and the longest call in the book, "Z Tight Right - Y Slant
+# Pass Right", fits that at 9px. One column would buy half a point of type and cost
+# eighteen rows of scrolling down a two-and-three-quarter-inch pouch, which is not a
+# trade worth making.
+#
+# The chrome is tight on purpose: every point spent on padding or on the number
+# column is a point off the type in a window this small.
+BAND_PANEL_COLUMNS = 2
 
 
 def band_call(play: dict, form: dict) -> str:
@@ -3930,21 +3935,29 @@ def band_call(play: dict, form: dict) -> str:
     return text
 
 
-def band_plays(formations: list[dict]) -> list[tuple[dict, list[dict]]]:
-    """Every play a coach can call on a Saturday, by formation, in number order.
+def called_plays(formations: list[dict]) -> list[tuple[dict, list[dict]]]:
+    """What a coach can actually call on a Saturday: formation -> its plays.
 
-    In call sheet order, which is what makes the band contiguous: the numbers were
-    handed out in this order precisely so a band runs 1 to 42 with no holes in it.
+    The one selection the call sheet and the wristbands both read, so the band a
+    boy is wearing cannot hold a play the sheet does not call, and the sheet
+    cannot call one that is not on his band. They used to have a rule each and
+    they drifted: the band carried the passes and the whole Shotgun, fourteen
+    plays the sheet never asks for, and the argument for it -- that the sheet's
+    third-and-long square called two Shotgun sweeps -- had stopped being true.
+    Nothing on the sheet references a Shotgun number now.
 
-    BAND_OMIT rather than SHEET_OMIT, and the two differ on purpose. Everything the
-    sheet leaves off is still callable -- the passes, and a formation the coach knows
-    well enough not to want a block of paper for -- and a boy looking up a number
-    cannot tell which. He is not reading the coach's sheet; he is finding the row the
-    number is on.
+    In call sheet order, which is also number order: the numbers were handed out
+    in this order precisely so a band reads down without jumping about.
     """
-    forms = [f for f in _call_sheet_order(formations) if f.get("id") not in BAND_OMIT]
-    return [(f, sorted(f["_plays"], key=lambda p: int(p.get("code") or 0)))
-            for f in forms]
+    return [(f, sorted((p for p in f["_plays"] if p.get("type") == "run"),
+                       key=lambda p: int(p.get("code") or 0)))
+            for f in _call_sheet_order(formations)
+            if f.get("id") not in SHEET_OMIT]
+
+
+def band_plays(formations: list[dict]) -> list[tuple[dict, list[dict]]]:
+    """The wristband's plays: exactly the call sheet's, and never anything else."""
+    return [(f, ps) for f, ps in called_plays(formations) if ps]
 
 
 def _deal(groups: list[tuple[dict, list[dict]]], parts: int) -> list[list]:
@@ -4006,29 +4019,21 @@ def _band_panel(pouch: list[tuple[dict, list[dict]]]) -> str:
             span = (f'<span class="band-span">{nums[0]}\u2013{nums[-1]}</span>')
         return f'<span class="band-seg">{esc(name)}{span}</span>'
 
-    # One formation to a pouch: the bar names it once and the numbers run straight
-    # down under it.
-    #
-    # A pouch holding two gets a black band row above each list instead of a bar split
-    # in two. The split bar was the right answer while a pouch had two columns -- half
-    # the bar sat directly over its own column -- and it stopped being the right answer
-    # when the youth window took the second column away. Two names across the top of a
-    # single list would say nothing about where one ends and the other starts; a row
-    # between them says exactly that, in the same black-and-white as the bar, and it
-    # costs one row of the eighteen.
-    if len(pouch) == 1:
-        form, ps = pouch[0]
-        bar = seg(form_label(form), [p["code"] for p in ps])
-        body_rows = f"<ol>{rows([(p, form) for p in ps])}</ol>"
+    # Two formations in one pouch get the bar split in two, each half naming the
+    # column under it. One formation gets a single bar and its numbers run down one
+    # column and on into the next.
+    if len(pouch) == BAND_PANEL_COLUMNS:
+        # One formation to a column, and half the black bar over each.
+        cols = [f"<ol>{rows([(p, f) for p in ps])}</ol>" for f, ps in pouch]
+        bar = "".join(seg(form_label(f), [p["code"] for p in ps]) for f, ps in pouch)
     else:
+        # One formation: the bar names it once and the numbers run down one column
+        # and on into the next, the way a page is read.
         label = " \u00b7 ".join(form_label(f) for f, _ in pouch)
         bar = seg(label, [p["code"] for p, _f in plays])
-        body_rows = "".join(
-            f'<p class="band-sub">{esc(form_label(f))}</p>'
-            f'<ol>{rows([(p, f) for p in ps])}</ol>'
-            for f, ps in pouch
-        )
-    cols = [body_rows]
+        half = -(-len(plays) // BAND_PANEL_COLUMNS)
+        cols = [f"<ol>{rows(plays[i * half:(i + 1) * half])}</ol>"
+                for i in range(BAND_PANEL_COLUMNS)]
 
     body = "".join(f"<div>{c}</div>" for c in cols)
     return ('<div class="band">'
@@ -4090,19 +4095,14 @@ def write_calls(formations: list[dict], defenses: dict, root: Path) -> str:
     sides = ("Left", "Middle", "Right")
     none_cell = '<td><span class="xl-none">&mdash;</span></td>'
 
-    sheet_forms = [f for f in _call_sheet_order(formations)
-                   if f.get("id") not in SHEET_OMIT]
+    # One selection, shared with the wristbands -- see called_plays(). The passes
+    # stay in the book (their cards, their pages and the printed playbook are
+    # untouched); they are just not what anybody reaches for this sheet to call.
+    selection = dict((f["id"], ps) for f, ps in called_plays(formations))
+    sheet_forms = [f for f in _call_sheet_order(formations) if f["id"] in selection]
 
     def sheet_plays(form: dict) -> list[dict]:
-        """The plays this sheet carries: the runs.
-
-        The passes stay in the book — their cards, their pages and the printed
-        playbook are untouched — they are just not what anybody reaches for this
-        sheet to call. Filtering here rather than dropping the plays keeps one
-        source of truth: a pass is still authored, checked and installed like
-        anything else, and comes back to the sheet by deleting this function.
-        """
-        return [p for p in form["_plays"] if p.get("type") == "run"]
+        return selection.get(form["id"], [])
 
     def plays_table(form: dict) -> str:
         placed: dict[tuple[str, str], list[dict]] = {}
