@@ -281,7 +281,7 @@
           "tag": "B",
           "kind": "install",
           "title": "Go back through the base playbook, and rotate through it",
-          "time": "5:35–6:29",
+          "time": "5:35–6:19",
           "notes": [
             "First time through with the first eleven, no rotating -- the calls have to be right before the lineup starts moving",
             "Coach calls off the installed book, Regular I and Split Backs, mixing it up as we go",
@@ -352,7 +352,7 @@
                 "Michael M.",
                 "Camden G.",
                 "Philip A.",
-                "Ryan S.",
+                "Brogan A.",
                 "Luca D.",
                 "Nico V."
               ]
@@ -363,13 +363,21 @@
           "tag": "C",
           "kind": "note",
           "title": "Defense",
-          "time": "6:30–6:50",
+          "time": "6:20–6:50",
           "water_break": 0,
           "note": "Line up in the 4-4, our everyday front, and count it out loud: four down, four backers, two corners and the free safety. Same rule as the offense had in August -- everybody knows his spot before anybody chases the ball."
+        },
+        {
+          "tag": "D",
+          "kind": "note",
+          "title": "Relay race",
+          "time": "6:50–6:55",
+          "water_break": 0,
+          "note": "First unit vs. second unit sprint relay race."
         }
       ],
       "huddle": "Nobody owns a spot. Everybody played somewhere new tonight, and the boy beside you can do your job -- that is what makes a Saturday survivable when somebody is out. Name the spot you liked best on the way to the car.",
-      "huddle_time": "6:50–7:00",
+      "huddle_time": "6:55–7:00",
       "review_formations": [
         "i-form",
         "split-backs"
