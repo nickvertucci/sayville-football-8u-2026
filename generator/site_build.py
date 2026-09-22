@@ -1915,6 +1915,10 @@ table.cal tbody tr:last-child .cal-cell { border-bottom: 0; }
 }
 .ins-water-t { font-weight: 500; text-transform: none; letter-spacing: 0; }
 .ins-play.form { border-left: 3px solid var(--accent-solid); }
+/* A whole formation being gone back through rather than installed. It is a formation
+   chip, so it links to the formation, but it is a review, so it reads like one --
+   `.again` is written above `.form` and would otherwise lose the border to it. */
+.ins-play.again.form { border-left: 3px solid var(--line); }
 .ins-n time { display: block; font-size: 11px; line-height: 1.2; margin-top: 3px;
   font-style: normal; opacity: .85; }
 .ins-call {
@@ -4481,6 +4485,17 @@ def install_items(pr: dict, plays: dict, forms_by_id: dict, defenses: dict) -> l
             f'<span class="ins-call">{esc(play_number(play))}{esc(play.get("call", ""))}</span>'
             f'<span class="ins-name">{esc(play["name"])} &middot; review</span></a>'
         )
+    # A practice that goes back through everything already installed out of a formation
+    # rather than a named list of plays. Listing the plays individually would be a lie
+    # about how the block runs -- the coach calls whatever he likes off the book, and
+    # what the sheet owes him is which book, not which six plays.
+    for fmid in pr.get("review_formations", []):
+        form = forms_by_id[fmid]
+        items.append(
+            f'<a class="ins-play again form" href="{f_href(form)}">'
+            f'<span class="ins-call">{esc(form_label(form))}</span>'
+            f'<span class="ins-name">everything installed &middot; review</span></a>'
+        )
     for fid in pr.get("fronts", []):
         front = defenses[fid]
         items.append(
@@ -4557,29 +4572,36 @@ def rotation_html(blk: dict, plays: dict, roster: dict) -> str:
     spots = list(blk.get("spots") or ROTATION_SPOTS)
     side = roster.get("offense") or {}
     depth = {sp: {n: i for i, n in enumerate(side.get(sp) or [], 1)} for sp in spots}
+    # A rotation is about who is standing where, and the play is only on the card when
+    # the card is what decides it. A practice where the coach calls whatever he likes
+    # off the installed book leaves the play off every snap, and the column goes with
+    # it rather than printing six dashes a coach has to look past on the field.
+    with_plays = any(snap.get("play") for snap in snaps)
 
     head = "".join(f"<th>{esc(sp)}</th>" for sp in spots)
     rows = []
     for i, snap in enumerate(snaps, 1):
-        pid = snap.get("play")
-        found = plays.get(pid) if pid else None
-        if found:
-            play = found[0] if isinstance(found, tuple) else found
-            cell = (f'<a href="{p_href(play)}" title="{esc(play["name"])}">'
-                    f'#{esc(play["code"])}</a>')
-        else:
-            cell = '<span class="xl-none">&mdash;</span>'
-        tds = []
+        cells = [f'<td class="rot-n">{i}</td>']
+        if with_plays:
+            pid = snap.get("play")
+            found = plays.get(pid) if pid else None
+            if found:
+                play = found[0] if isinstance(found, tuple) else found
+                cell = (f'<a href="{p_href(play)}" title="{esc(play["name"])}">'
+                        f'#{esc(play["code"])}</a>')
+            else:
+                cell = '<span class="xl-none">&mdash;</span>'
+            cells.append(f'<td class="rot-play">{cell}</td>')
         for sp, man in zip(spots, snap.get("men") or []):
             d = depth.get(sp, {}).get(man)
             klass = "own" if d == 1 else "deep"
             num = f'<span class="rot-d">{d}</span>' if d else ""
-            tds.append(f'<td><span class="rot-man {klass}">{esc(man)}</span>{num}</td>')
-        rows.append(f'<tr><td class="rot-n">{i}</td>'
-                    f'<td class="rot-play">{cell}</td>{"".join(tds)}</tr>')
+            cells.append(f'<td><span class="rot-man {klass}">{esc(man)}</span>{num}</td>')
+        rows.append(f'<tr>{"".join(cells)}</tr>')
 
+    play_head = "<th>Play</th>" if with_plays else ""
     return ('<div class="rot-wrap"><table class="rot">'
-            f'<thead><tr><th>#</th><th>Play</th>{head}</tr></thead>'
+            f'<thead><tr><th>#</th>{play_head}{head}</tr></thead>'
             f'<tbody>{"".join(rows)}</tbody></table></div>')
 
 
