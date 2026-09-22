@@ -722,7 +722,8 @@ def validate_roster(roster: dict, formations: list[dict], defenses: dict) -> lis
     return errors
 
 
-def validate_install(schedule: dict, formations: list[dict], defenses: dict) -> list[str]:
+def validate_install(schedule: dict, formations: list[dict], defenses: dict,
+                     roster: dict | None = None) -> list[str]:
     """A schedule that teaches a play before the thing it is built on is worse than no
     schedule: it sends a coach to practice to install misdirection off a play the team
     has never run. The dependencies are written in the plays' own coaching points, so
@@ -730,6 +731,12 @@ def validate_install(schedule: dict, formations: list[dict], defenses: dict) -> 
     """
     if not schedule:
         return []
+    # The rotation card's default spot list lives with the thing that draws it. Imported
+    # rather than restated, because a second copy of the six spots is a second thing to
+    # keep in step -- the mistake the call sheet and the wristbands already made once.
+    # site_build does not import this module back, so a local import here is safe.
+    from site_build import ROTATION_SPOTS
+
     errors = []
     plays = {p["id"] for f in formations for p in f["_plays"]}
     fronts = set(defenses)
@@ -772,6 +779,47 @@ def validate_install(schedule: dict, formations: list[dict], defenses: dict) -> 
             elif pid not in installed_at:
                 errors.append(f"install practice {n}: reviews '{pid}', which is not "
                               "installed at any earlier practice")
+        # A rotation card is a lineup per snap, and it is the one thing on a practice
+        # page a coach reads while boys are moving -- he cannot check it against the
+        # depth chart with a whistle in his mouth. So it is checked here: every name
+        # is a boy the chart actually lists at that spot, nobody is in two spots on
+        # one snap, and a snap cannot run a play the team has not been taught. All
+        # three are mistakes that read perfectly well on the page and only come apart
+        # on the field.
+        chart = (roster or {}).get("offense") or {}
+        for blk in practice.get("blocks", []):
+            if blk.get("kind") != "rotation":
+                continue
+            title = blk.get("title") or "rotation"
+            spots = list(blk.get("spots") or ROTATION_SPOTS)
+            for spot in spots:
+                if spot not in chart:
+                    errors.append(f"install practice {n}, {title}: '{spot}' is not a "
+                                  "spot on the offensive depth chart")
+            for i, snap in enumerate(blk.get("snaps") or [], 1):
+                men = list(snap.get("men") or [])
+                if len(men) != len(spots):
+                    errors.append(f"install practice {n}, {title} snap {i}: "
+                                  f"{len(men)} men for {len(spots)} spots")
+                doubled = {m for m in men if men.count(m) > 1}
+                if doubled:
+                    errors.append(f"install practice {n}, {title} snap {i}: "
+                                  f"{', '.join(sorted(doubled))} in two spots at once")
+                for spot, man in zip(spots, men):
+                    if man and man not in (chart.get(spot) or []):
+                        errors.append(
+                            f"install practice {n}, {title} snap {i}: {man} is not on "
+                            f"the depth chart at {spot}")
+                pid = snap.get("play")
+                if pid is None:
+                    continue
+                if pid not in plays:
+                    errors.append(f"install practice {n}, {title} snap {i}: no such "
+                                  f"play '{pid}'")
+                elif pid not in installed_at and pid not in practice.get("plays", []):
+                    errors.append(f"install practice {n}, {title} snap {i}: runs "
+                                  f"'{pid}', which is not installed at any earlier "
+                                  "practice")
         for fmid in practice.get("formations", []):
             if fmid not in form_ids:
                 errors.append(f"install practice {n}: no such formation '{fmid}'")
@@ -1713,7 +1761,7 @@ def main() -> int:
     favorites = load_favorites()
     roster = load_roster()
     errors = (validate_defenses(defenses) + validate(formations, defenses)
-              + validate_install(schedule, formations, defenses)
+              + validate_install(schedule, formations, defenses, roster)
               + validate_favorites(favorites, formations)
               + validate_roster(roster, formations, defenses))
     if errors:
