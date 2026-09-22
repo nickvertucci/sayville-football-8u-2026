@@ -266,7 +266,7 @@
       "date": "2026-09-22",
       "phase": "season",
       "focus": "Everybody somewhere new: rotate the six skill spots",
-      "emphasis": "No new play tonight. Four sweeps already in the book, and what changes every snap is who is standing where. Get them right with the first eleven first; the lineup does not start moving until they are.",
+      "emphasis": "No new play tonight. Everything already in the book is fair game -- Regular I and Split Backs -- and what changes every snap is who is standing where. Get the calls right with the first eleven first; the lineup does not start moving until they are.",
       "water_break": 1,
       "blocks": [
         {
@@ -280,14 +280,14 @@
         {
           "tag": "B",
           "kind": "install",
-          "title": "Review the sweeps, and rotate through them",
+          "title": "Go back through the base playbook, and rotate through it",
           "time": "5:35–6:29",
           "notes": [
-            "First time through with the first eleven, no rotating -- the plays have to be right before the lineup starts moving",
-            "The slot sweep (#23, #24) and the TE sweep (#25, #26). No tosses tonight",
+            "First time through with the first eleven, no rotating -- the calls have to be right before the lineup starts moving",
+            "Coach calls off the installed book, Regular I and Split Backs, mixing it up as we go",
             "In and out of the huddle every rep"
           ],
-          "note": "Two carousels turning at once. The ends walk down the list -- whoever was at Y goes to X and the next boy comes in at Y. The backs turn the other way, and the slot is the door the other five walk through. One row a snap, read left to right; the small number is where he sits on the depth chart at that spot, so a 1 is his own spot and anything higher is a boy getting a look at somebody else's. Run the six, go back to the top, run them again -- twelve snaps, and every boy gets at least two at the spot that is really his.",
+          "note": "Two carousels turning at once. The ends walk down the list -- whoever was at Y goes to X and the next boy comes in at Y. The backs turn the other way, and the slot is the door the other five walk through. One row a snap, read left to right; the small number is where he sits on the depth chart at that spot, so a 1 is his own spot and anything higher is a boy getting a look at somebody else's. The card says who, not what -- the call comes from the coach on the snap. Run the six, go back to the top, run them again -- twelve snaps, and every boy gets at least two at the spot that is really his.",
           "spots": [
             "X",
             "Y",
@@ -298,7 +298,6 @@
           ],
           "snaps": [
             {
-              "play": "sb-sl-sweep-r",
               "men": [
                 "Camden G.",
                 "Michael M.",
@@ -309,7 +308,6 @@
               ]
             },
             {
-              "play": "sb-sl-sweep-l",
               "men": [
                 "Ryan S.",
                 "Camden G.",
@@ -320,7 +318,6 @@
               ]
             },
             {
-              "play": "sb-te-sweep-r",
               "men": [
                 "Joseph P.",
                 "Ryan S.",
@@ -331,7 +328,6 @@
               ]
             },
             {
-              "play": "sb-te-sweep-l",
               "men": [
                 "Clark J.",
                 "Joseph P.",
@@ -342,7 +338,6 @@
               ]
             },
             {
-              "play": "sb-sl-sweep-r",
               "men": [
                 "Camden G.",
                 "Clark J.",
@@ -353,7 +348,6 @@
               ]
             },
             {
-              "play": "sb-te-sweep-r",
               "men": [
                 "Michael M.",
                 "Camden G.",
@@ -376,11 +370,9 @@
       ],
       "huddle": "Nobody owns a spot. Everybody played somewhere new tonight, and the boy beside you can do your job -- that is what makes a Saturday survivable when somebody is out. Name the spot you liked best on the way to the car.",
       "huddle_time": "6:50–7:00",
-      "review": [
-        "sb-sl-sweep-r",
-        "sb-sl-sweep-l",
-        "sb-te-sweep-r",
-        "sb-te-sweep-l"
+      "review_formations": [
+        "i-form",
+        "split-backs"
       ]
     }
   ]

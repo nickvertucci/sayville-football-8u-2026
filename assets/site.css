@@ -1855,6 +1855,10 @@ table.cal tbody tr:last-child .cal-cell { border-bottom: 0; }
 }
 .ins-water-t { font-weight: 500; text-transform: none; letter-spacing: 0; }
 .ins-play.form { border-left: 3px solid var(--accent-solid); }
+/* A whole formation being gone back through rather than installed. It is a formation
+   chip, so it links to the formation, but it is a review, so it reads like one --
+   `.again` is written above `.form` and would otherwise lose the border to it. */
+.ins-play.again.form { border-left: 3px solid var(--line); }
 .ins-n time { display: block; font-size: 11px; line-height: 1.2; margin-top: 3px;
   font-style: normal; opacity: .85; }
 .ins-call {

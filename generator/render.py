@@ -779,6 +779,19 @@ def validate_install(schedule: dict, formations: list[dict], defenses: dict,
             elif pid not in installed_at:
                 errors.append(f"install practice {n}: reviews '{pid}', which is not "
                               "installed at any earlier practice")
+        # A practice can review a whole formation instead of naming plays — the coach
+        # calls off the installed book rather than off a list. It has to be a formation
+        # we carry, and it has to have something in it the team has already been taught,
+        # because "go back through Split Backs" is meaningless on a night when no Split
+        # Backs play has been installed.
+        for fmid in practice.get("review_formations", []):
+            if fmid not in form_ids:
+                errors.append(f"install practice {n}: no such formation '{fmid}' to "
+                              "review")
+            elif not any(p["id"] in installed_at for f in formations
+                         if f["id"] == fmid for p in f["_plays"]):
+                errors.append(f"install practice {n}: reviews the '{fmid}' playbook, "
+                              "which has no play installed at any earlier practice")
         # A rotation card is a lineup per snap, and it is the one thing on a practice
         # page a coach reads while boys are moving -- he cannot check it against the
         # depth chart with a whistle in his mouth. So it is checked here: every name
