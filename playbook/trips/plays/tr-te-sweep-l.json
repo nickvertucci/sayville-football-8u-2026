@@ -6,6 +6,7 @@
   "code": "44",
   "call": "Trips Left Y Sweep Left",
   "type": "run",
+  "sheet": false,
   "scheme": "Sweep",
   "direction": "left",
   "ball_carrier": "Y",

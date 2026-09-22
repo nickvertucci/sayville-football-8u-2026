@@ -6,6 +6,7 @@
   "code": "3",
   "call": "Regular I Z Tight Right X Sweep Right",
   "type": "run",
+  "sheet": false,
   "scheme": "Sweep",
   "direction": "right",
   "ball_carrier": "X",
