@@ -5170,8 +5170,16 @@ def position_card(side: str, pos: str, names: list[str], label_fn,
 # the end closely enough to land in his column, which drew him directly under the end
 # and lost the one thing the picture is for: he plays OUTSIDE that man. Three quarters
 # out leaves a quarter of overlap, so the stack still reads while the alignment does too.
+#
+# The inside pair is nudged a quarter each for spacing alone. Their columns are the
+# guards', a column apart, while the outside backers now sit three quarters wider than
+# the ends -- which left the row reading 1.75, 1.0, 1.75 and looking like two pairs
+# rather than a front of four. A quarter out apiece spreads the four evenly at 1.5
+# columns, and a quarter is small enough that each inside backer is still plainly on his
+# guard.
 BOARD_DROP = {"defense": ("LC", "RC")}
-BOARD_NUDGE = {"defense": {"LOLB": -0.75, "ROLB": 0.75}}
+BOARD_NUDGE = {"defense": {"LOLB": -0.75, "LILB": -0.25,
+                           "RILB": 0.25, "ROLB": 0.75}}
 
 
 def side_board(side: str, order: list[str], alt_order: list[str],
