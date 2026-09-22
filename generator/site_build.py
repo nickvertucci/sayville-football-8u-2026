@@ -5155,6 +5155,25 @@ def position_card(side: str, pos: str, names: list[str], label_fn,
             f'{body}</div>')
 
 
+# Two board-only adjustments, and the only two places the layout is told something the
+# alignment does not say. They are here rather than in the defensive JSON because the
+# JSON is where the front is DRAWN -- moving a corner there moves him on every play card
+# in the book, and a corner at 4.4 yards is where a corner actually stands.
+#
+# BOARD_DROP sends a spot to the bottom row of the board. The corners share the
+# linebackers' depth on the field, which put six cards in that row and squeezed the four
+# linebackers into the middle of it. Dropped, they read as what they are -- the
+# secondary, across the back of the board with the free safety between them -- and the
+# linebackers get the room.
+#
+# BOARD_NUDGE then slides a card sideways, in card widths. The outside linebacker stacks
+# the end closely enough to land in his column, which drew him directly under the end
+# and lost the one thing the picture is for: he plays OUTSIDE that man. Three quarters
+# out leaves a quarter of overlap, so the stack still reads while the alignment does too.
+BOARD_DROP = {"defense": ("LC", "RC")}
+BOARD_NUDGE = {"defense": {"LOLB": -0.75, "ROLB": 0.75}}
+
+
 def side_board(side: str, order: list[str], alt_order: list[str],
                names_by_pos: dict, label_fn, packages: list | None = None,
                package_names: list | None = None,
@@ -5174,6 +5193,15 @@ def side_board(side: str, order: list[str], alt_order: list[str],
     align = alignment or {}
     bands = alignment_bands(align, order, side)
     seen = {p for b in bands for p in b}
+
+    # The dropped spots leave their own row and join the bottom one. Their columns are
+    # still worked out from their real x below, so a corner lands out past the end he
+    # lines up outside of — he is only a row lower than the field puts him.
+    drop = [p for p in BOARD_DROP.get(side, ()) if p in seen]
+    if drop and len(bands) > 1:
+        bands = [[p for p in band if p not in drop] for band in bands]
+        bands[-1] = sorted(bands[-1] + drop, key=lambda p: align[p][0])
+        bands = [b for b in bands if b]
 
     # Every band shares one set of columns, and the columns are every distinct spot
     # on the side rather than just the widest band's. Taking them from the widest
@@ -5251,7 +5279,11 @@ def side_board(side: str, order: list[str], alt_order: list[str],
                 col += 1
             used.add(col)
             cls = " dc-straddle" if wide > 1 else ""
-            style = (f' style="grid-column:{col} / span {wide}"' if col else "")
+            bits = [f"grid-column:{col} / span {wide}"] if col else []
+            nudge = BOARD_NUDGE.get(side, {}).get(pos)
+            if nudge:
+                bits.append(f"transform:translateX({nudge * 100:g}%)")
+            style = f' style="{";".join(bits)}"' if bits else ""
             out.append(position_card(side, pos, names_by_pos.get(pos) or [], label_fn,
                                      style, cls))
         return "".join(out)

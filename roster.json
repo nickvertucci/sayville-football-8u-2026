@@ -75,7 +75,7 @@
   "defense": {
     "LDE": [
       "Philip A.",
-      "Mason A.",
+      "Brayden H.",
       "Gavin P."
     ],
     "LDG": [
@@ -96,7 +96,8 @@
     "LOLB": [
       "Camden G.",
       "Luca D.",
-      "Clark J."
+      "Clark J.",
+      "Ace A."
     ],
     "LILB": [
       "Jake G.",
@@ -110,23 +111,25 @@
     ],
     "ROLB": [
       "Michael M.",
-      "Clark J.",
-      "Ace A."
+      "Luca D.",
+      "Ace A.",
+      "Clark J."
     ],
     "LC": [
       "Ryan S.",
-      "Joseph P.",
-      "Nico V."
+      "Thomas D.",
+      "Clark J."
     ],
     "RC": [
       "Nico V.",
-      "Kilian F.",
-      "Philip A."
+      "Thomas D.",
+      "Clark J."
     ],
     "FS": [
       "Liam M.",
       "Thomas D.",
-      "Ryan S."
+      "Joseph P.",
+      "Kilian F."
     ]
   },
   "packages": {
