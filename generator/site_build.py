@@ -633,7 +633,7 @@ table.dc-sub.dc-moved {
    is the opposite of useful. */
 .xl-top {
   display: grid; gap: 14px; align-items: start;
-  grid-template-columns: minmax(0, 1fr) 270px;
+  grid-template-columns: minmax(0, 1fr) 330px;
 }
 @media (max-width: 860px) { .xl-top { grid-template-columns: 1fr; } }
 .xl-sheets {
@@ -698,6 +698,13 @@ table.xl.xl-plays thead th {
   background: #000; color: #fff; border-color: #000; font-weight: 800;
 }
 col.xl-c0 { width: 4.6em; }
+/* The halves of the sheet, split down the middle. With a Middle column between them
+   the two sides were obviously separate; without one they run together, so the seam
+   is drawn -- 2px, the same weight the script's border and the field's sidelines use,
+   because it is the same kind of line. Third child is the Right column: the scheme
+   label, then Left, then Right. */
+table.xl.xl-plays th:nth-child(3),
+table.xl.xl-plays td:nth-child(3) { border-left: 2px solid var(--ink); }
 /* Specific enough to beat `table.xl td`, whose top alignment would otherwise win. */
 table.xl.xl-plays td {
   height: 22px; text-align: center; vertical-align: middle; padding: 4px 5px;
@@ -1095,7 +1102,7 @@ table.xl.pk-plays td {
      point size below rather than the width above: when the sides were spelled out the
      sheet had no spare width anywhere, so the four characters came out of the type.
      Checked at 200, where the script clipped, and at 230, where neither side does. */
-  .xl-top { display: grid; grid-template-columns: 1fr 230px; gap: 0 6px;
+  .xl-top { display: grid; grid-template-columns: 1fr 272px; gap: 0 6px;
             align-items: start; }
   .xl-sheets { grid-template-columns: 1fr; gap: 0; margin: 2px 0 0; }
   .script { margin: 2px 0 0; break-inside: avoid; }
@@ -3305,29 +3312,37 @@ def strip_direction(name: str) -> str:
     return re.sub(r"\s+(Right|Left)$", "", name)
 
 
-# The middle of the line, and the A gap either side of the center: one column on the
-# sheet, because a call that goes straight ahead has no side to pick.
+# The middle of the line, and the A gap either side of the center. These used to have
+# a column of their own, on the argument that a call going straight ahead has no side
+# to pick. It stayed empty in every row but one and then in every row at all, so the
+# sheet is two columns now and a middle-hole call takes the side it is run to -- 32
+# Handoff is an A gap, but it is the RIGHT A gap and the back who carries it goes
+# right. The holes are still named here because that is what decides the side when the
+# digit itself does not.
 MIDDLE_HOLES = (0, 2, 3)
 
 
 def _call_column(play: dict) -> str:
-    """Left, Middle or Right from the hole the call names, else from direction.
+    """Left or Right, from the hole the call names or else from direction.
 
-    Hole 0 is over the center and 2/3 are the A-gap either side of him, so Smash
-    sits in Middle instead of being stacked with Power on the edge. Everything
-    wider takes its side from the digit: even right, odd left. A word call has no
-    hole, so its `direction` is the column.
+    Everything outside the A gaps takes its side from the digit: even right, odd
+    left. A middle-hole call, and a word call with no hole at all, takes its
+    `direction` instead -- which every play in the book carries.
     """
     m = re.search(r"\b(\d)(\d)\b", play.get("call") or "")
     if m:
         hole = int(m.group(2))
-        if hole in MIDDLE_HOLES:
-            return "Middle"
-        return "Right" if hole % 2 == 0 else "Left"
+        if hole not in MIDDLE_HOLES:
+            return "Right" if hole % 2 == 0 else "Left"
     d = play.get("direction")
     if d in ("left", "right"):
         return d.capitalize()
-    return "Middle"
+    # Nothing to place it by. Better to stop than to drop it off a sheet whose whole
+    # claim is that a play is on it the moment it is authored.
+    raise SystemExit(
+        f"{play.get('id')}: the call sheet has a Left column and a Right column, and "
+        f"'{play.get('call')}' names neither a side digit nor a direction."
+    )
 
 
 # Inside out: the center and the A gap, the B gap, the C gap, outside the end, all
@@ -3359,6 +3374,13 @@ def _sheet_name(play: dict, form: dict) -> str:
     keeps nothing.
     """
     call = play.get("call") or ""
+    # The Z first, when the call has one. "Tight Right" was what a leftmost match of
+    # the pattern below found, and it dropped the letter off the front of the one
+    # thing the alignment is telling you -- which boy is where. The sheet has the room
+    # now that the middle column is gone, and "Z Tight Right" is what gets yelled.
+    m = re.search(r"\b(Z(?:\s+\w+)?\s+(?:Left|Right))\s+(.*)$", call)
+    if m:
+        return f"{m.group(1)} - {m.group(2)}"
     m = re.search(r"\b(\w+)\s+(Left|Right)\s+(.*)$", call)
     if m:
         return f"{m.group(1)} {m.group(2)} - {m.group(3)}"
@@ -4162,7 +4184,7 @@ def write_calls(formations: list[dict], defenses: dict, root: Path) -> str:
     play is on the sheet the moment it is authored — nothing here is a list
     anybody has to keep in step by hand.
     """
-    sides = ("Left", "Middle", "Right")
+    sides = ("Left", "Right")
     none_cell = '<td><span class="xl-none">&mdash;</span></td>'
 
     # One selection, shared with the wristbands -- see called_plays(). The passes
@@ -4196,7 +4218,7 @@ def write_calls(formations: list[dict], defenses: dict, root: Path) -> str:
                         f'{"".join(tds)}</tr>')
 
         return ('<table class="xl xl-plays">'
-                '<colgroup><col class="xl-c0"><col><col><col></colgroup>'
+                '<colgroup><col class="xl-c0"><col><col></colgroup>'
                 '<thead><tr><th class="xl-scheme"></th>'
                 + "".join(f"<th>{side}</th>" for side in sides)
                 + f'</tr></thead><tbody>{"".join(rows)}</tbody></table>')
