@@ -4012,8 +4012,14 @@ def called_plays(formations: list[dict]) -> list[tuple[dict, list[dict]]]:
 
     In call sheet order, which is also number order: the numbers were handed out
     in this order precisely so a band reads down without jumping about.
+
+    A play can take itself off both with `"sheet": false` in its own JSON. That is
+    for a play that is still in the book and still taught -- it keeps its page, its
+    diagram and its number -- but is not one a coach wants in front of him on a
+    Saturday. Omitting a whole formation is SHEET_OMIT's job; this is the one play.
     """
-    return [(f, sorted((p for p in f["_plays"] if p.get("type") == "run"),
+    return [(f, sorted((p for p in f["_plays"]
+                        if p.get("type") == "run" and p.get("sheet", True)),
                        key=lambda p: int(p.get("code") or 0)))
             for f in _call_sheet_order(formations)
             if f.get("id") not in SHEET_OMIT]

@@ -6,6 +6,7 @@
   "code": "43",
   "call": "Trips Right X Sweep Right",
   "type": "run",
+  "sheet": false,
   "scheme": "Sweep",
   "direction": "right",
   "ball_carrier": "X",
