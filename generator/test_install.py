@@ -47,6 +47,70 @@ DATE_CASES = [
 ]
 
 
+# A rotation card is a lineup per snap, and the coach reads it on the field with boys
+# already moving. Every way it can be wrong reads perfectly well on the page:
+#
+#   (what it is, the block to try, should the check reject it?)
+#
+# The good case is first and is deliberately the shape practice 8 uses, so this fails
+# if the real card ever stops validating.
+ROTATION_SPOTS_UNDER_TEST = ["X", "Y", "Z", "QB", "FB", "TB"]
+GOOD_SNAP = ["Camden G.", "Michael M.", "Philip A.", "Brogan A.", "Jake G.", "Nico V."]
+
+ROTATION_CASES = [
+    ("the first eleven, every man on his own spot",
+     [{"men": list(GOOD_SNAP)}],                                                False),
+    # Brogan is the quarterback and nothing else. Putting him at tailback is the
+    # mistake that looks most like coaching and is least like the chart.
+    ("a boy at a spot he is not listed at",
+     [{"men": ["Camden G.", "Michael M.", "Philip A.", "Brogan A.", "Jake G.",
+               "Brogan A."]}],                                                  True),
+    # One boy cannot be in two places on one snap, and on paper it is invisible.
+    ("the same boy twice on one snap",
+     [{"men": ["Camden G.", "Camden G.", "Philip A.", "Brogan A.", "Jake G.",
+               "Nico V."]}],                                                    True),
+    ("five men for six spots",
+     [{"men": ["Camden G.", "Michael M.", "Philip A.", "Brogan A.", "Jake G."]}], True),
+    ("a made-up name",
+     [{"men": ["Nobody A.", "Michael M.", "Philip A.", "Brogan A.", "Jake G.",
+               "Nico V."]}],                                                    True),
+    # A rotation is not an install. Running a play nobody has been taught is the
+    # same mistake the `review` rule already refuses.
+    ("a snap on a play that is not installed yet",
+     [{"play": "wb-toss-r", "men": list(GOOD_SNAP)}],                           True),
+    ("a snap on a play that does not exist",
+     [{"play": "not-a-play", "men": list(GOOD_SNAP)}],                          True),
+    ("a snap on an installed play",
+     [{"play": "sb-toss-r", "men": list(GOOD_SNAP)}],                           False),
+]
+
+
+def check_rotations(schedule, formations, defenses, roster) -> int:
+    """Run the validator against deliberately broken rotation cards."""
+    bad = 0
+    for what, snaps, should_reject in ROTATION_CASES:
+        trial = copy.deepcopy(schedule)
+        trial["practices"] = [{
+            "n": 1,
+            "date": "2026-08-11",
+            "phase": "preseason",
+            "plays": ["sb-toss-r"],
+            "blocks": [{"tag": "A", "kind": "rotation", "title": "Rotation",
+                        "spots": list(ROTATION_SPOTS_UNDER_TEST), "snaps": snaps}],
+        }]
+        errors = [e for e in render.validate_install(trial, formations, defenses, roster)
+                  if "Rotation" in e]
+        rejected = bool(errors)
+        if rejected != should_reject:
+            verb = "accepted" if not rejected else "rejected"
+            print(f"FAIL  rotation: {what} was {verb}")
+            bad += 1
+    print(f"{len(ROTATION_CASES)} rotation cases behaved as expected "
+          f"({sum(1 for c in ROTATION_CASES if c[2])} rejected, "
+          f"{sum(1 for c in ROTATION_CASES if not c[2])} accepted).")
+    return bad
+
+
 def check_pages(schedule, formations, defenses) -> int:
     """Every practice has a page, the calendar links to it, and the page says what the
     schedule says it says."""
@@ -158,6 +222,7 @@ def main() -> int:
 
     bad = check_pages(schedule, formations, defenses)
     bad += check_dates(schedule, formations, defenses)
+    bad += check_rotations(schedule, formations, defenses, render.load_roster())
     if bad:
         print(f"\n{bad} problem(s).")
         return 1

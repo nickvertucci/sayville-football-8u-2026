@@ -260,6 +260,126 @@
         "sb-te-sweep-r",
         "sb-te-sweep-l"
       ]
+    },
+    {
+      "n": 8,
+      "date": "2026-09-22",
+      "phase": "season",
+      "focus": "Everybody somewhere new: rotate the six skill spots",
+      "emphasis": "No new play tonight. Six plays already in the book, and what changes every snap is who is standing where. Get the plays right with the first eleven first; the lineup does not start moving until they are.",
+      "blocks": [
+        {
+          "tag": "A",
+          "kind": "note",
+          "title": "Warm-up",
+          "time": "5:30–5:35",
+          "note": "Five minutes, moving the whole time."
+        },
+        {
+          "tag": "B",
+          "kind": "install",
+          "title": "Review, at the spots they already know",
+          "time": "5:35–6:05",
+          "notes": [
+            "First eleven only, no rotating yet -- the plays have to be right before the lineup starts moving",
+            "#17 and #18, then the slot sweep (#23, #24) and the TE sweep (#25, #26)",
+            "In and out of the huddle every rep"
+          ]
+        },
+        {
+          "tag": "C",
+          "kind": "rotation",
+          "title": "Position rotation",
+          "time": "6:05–6:45",
+          "note": "Two carousels turning at once. The ends walk down the list -- whoever was at Y goes to X and the next boy comes in at Y. The backs turn the other way, and the slot is the door the other five walk through. One row a snap, read left to right; the small number is where he sits on the depth chart at that spot, so a 1 is his own spot and anything higher is a boy getting a look at somebody else's. Run the six, go back to the top, run them again -- twelve snaps, and every boy gets at least two at the spot that is really his.",
+          "spots": [
+            "X",
+            "Y",
+            "Z",
+            "QB",
+            "FB",
+            "TB"
+          ],
+          "snaps": [
+            {
+              "play": "sb-toss-r",
+              "men": [
+                "Camden G.",
+                "Michael M.",
+                "Philip A.",
+                "Brogan A.",
+                "Jake G.",
+                "Nico V."
+              ]
+            },
+            {
+              "play": "sb-toss-l",
+              "men": [
+                "Ryan S.",
+                "Camden G.",
+                "Nico V.",
+                "Brogan A.",
+                "Luca D.",
+                "Philip A."
+              ]
+            },
+            {
+              "play": "sb-sl-sweep-r",
+              "men": [
+                "Joseph P.",
+                "Ryan S.",
+                "Liam M.",
+                "Brogan A.",
+                "Jake G.",
+                "Luca D."
+              ]
+            },
+            {
+              "play": "sb-sl-sweep-l",
+              "men": [
+                "Clark J.",
+                "Joseph P.",
+                "Kilian F.",
+                "Ryan S.",
+                "Luca D.",
+                "Nico V."
+              ]
+            },
+            {
+              "play": "sb-te-sweep-r",
+              "men": [
+                "Camden G.",
+                "Clark J.",
+                "Thomas D.",
+                "Ryan S.",
+                "Jake G.",
+                "Philip A."
+              ]
+            },
+            {
+              "play": "sb-te-sweep-l",
+              "men": [
+                "Michael M.",
+                "Camden G.",
+                "Philip A.",
+                "Ryan S.",
+                "Luca D.",
+                "Nico V."
+              ]
+            }
+          ]
+        }
+      ],
+      "huddle": "Nobody owns a spot. Everybody played somewhere new tonight, and the boy beside you can do your job -- that is what makes a Saturday survivable when somebody is out. Name the spot you liked best on the way to the car.",
+      "huddle_time": "6:45–7:00",
+      "review": [
+        "sb-toss-r",
+        "sb-toss-l",
+        "sb-sl-sweep-r",
+        "sb-sl-sweep-l",
+        "sb-te-sweep-r",
+        "sb-te-sweep-l"
+      ]
     }
   ]
 }

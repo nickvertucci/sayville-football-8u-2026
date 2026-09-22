@@ -1857,6 +1857,39 @@ table.cal tbody tr:last-child .cal-cell { border-bottom: 0; }
 .ins-grp { margin: 0 0 10px; }
 .ins-grp:last-child { margin-bottom: 0; }
 .ins-grp-h { margin: 0 0 4px; font-size: 13.5px; font-weight: 700; color: var(--ink); }
+/* The rotation card: a row a snap, a column a spot. A practice whose point is that
+   everybody plays somewhere new is the one practice a coach cannot run out of his
+   head -- with thirteen boys and six spots, the thing he loses track of is who has
+   not had a turn yet. So the lineup is written out per snap and he reads down it.
+
+   The depth number beside each name is what makes it a plan instead of a list: a row
+   of 1s is the first team, and a row with a 6 in it is where tonight's teaching is.
+   Depth 1 keeps the ink colour and anything deeper goes grey, so the eye finds the
+   boys who are somewhere new without reading a single name. */
+.rot-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.rot { border-collapse: collapse; width: 100%; font-size: 13px; }
+.rot th, .rot td {
+  border: 1px solid var(--line); padding: 4px 7px; text-align: left; white-space: nowrap;
+}
+.rot thead th {
+  background: var(--accent-solid); color: var(--on-accent);
+  font-size: 11px; font-weight: 900; letter-spacing: .6px; text-transform: uppercase;
+}
+.rot tbody tr:nth-child(even) { background: var(--panel-2); }
+.rot-n { font-weight: 900; font-variant-numeric: tabular-nums; color: var(--muted); }
+.rot-play a {
+  font-weight: 800; font-variant-numeric: tabular-nums;
+  color: var(--accent-ink); text-decoration: none;
+}
+.rot-play a:hover { text-decoration: underline; }
+/* The number rides after the name rather than above it: a coach reads the name and
+   the number answers "is this his spot?" without costing the row a second line. */
+.rot-d {
+  margin-left: 4px; font-size: 10.5px; font-weight: 800;
+  font-variant-numeric: tabular-nums; color: var(--muted);
+}
+.rot-man.own { font-weight: 700; }
+.rot-man.deep { color: var(--ink-2); }
 .ins-list { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 9px; }
 .ins-play {
   display: inline-flex; flex-direction: column; gap: 1px; text-decoration: none;
@@ -2147,6 +2180,24 @@ footer.site a { color: var(--accent-ink); }
   .ins-grps {
     display: grid; grid-auto-flow: column; grid-auto-columns: 1fr; gap: 10px;
   }
+
+  /* The rotation card is the one thing on this page a coach holds while boys are
+     moving, so it prints with a rule on every cell -- his thumb is the only thing
+     keeping his place, and a tint alone is not enough to find the row again after he
+     has looked up at the field. Nothing to scroll on paper either: the table simply
+     is as wide as the sheet. */
+  .rot-wrap { overflow: visible; }
+  .rot { font-size: 8.5pt; width: 100%; }
+  .rot th, .rot td { border: 0.5pt solid #000; padding: 1.5pt 3pt; }
+  .rot thead th {
+    background: #000 !important; color: #fff !important; font-size: 7pt;
+    -webkit-print-color-adjust: exact; print-color-adjust: exact;
+  }
+  .rot tbody tr:nth-child(even) { background: #eee !important;
+    -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .rot-play a { color: #000; }
+  .rot-d { font-size: 6.5pt; color: #444; }
+  .rot-man.deep { color: #000; }
 
   .ins-list { gap: 3px 6px; margin-bottom: 4px; }
   .ins-play { padding: 0 5px; background: none; }
@@ -4485,7 +4536,56 @@ def drills_html(drills: list) -> str:
     return f'<ul class="ins-drills">{"".join(out)}</ul>'
 
 
-def practice_blocks_html(pr: dict, items: list[str], needs: str) -> str:
+# The spots a rotation deals with when a block does not name its own. Six, because
+# the line is a different problem: a tackle and a guard swap and nothing about the
+# play changes, while a boy moving from Z to TB is being asked to do another job
+# entirely. The line rotates in its own block ("groups"), not on a lineup card.
+ROTATION_SPOTS = ("X", "Y", "Z", "QB", "FB", "TB")
+
+
+def rotation_html(blk: dict, plays: dict, roster: dict) -> str:
+    """One rotation block: the lineup for every snap, a row each.
+
+    Nothing is checked here. validate_install() has already refused to build a card
+    that puts a boy somewhere the depth chart never listed him, that puts one boy in
+    two spots on the same snap, or that runs a play nobody has been taught yet. By the
+    time this runs every cell is known good, so this only decides how it reads.
+    """
+    snaps = blk.get("snaps") or []
+    if not snaps:
+        return ""
+    spots = list(blk.get("spots") or ROTATION_SPOTS)
+    side = roster.get("offense") or {}
+    depth = {sp: {n: i for i, n in enumerate(side.get(sp) or [], 1)} for sp in spots}
+
+    head = "".join(f"<th>{esc(sp)}</th>" for sp in spots)
+    rows = []
+    for i, snap in enumerate(snaps, 1):
+        pid = snap.get("play")
+        found = plays.get(pid) if pid else None
+        if found:
+            play = found[0] if isinstance(found, tuple) else found
+            cell = (f'<a href="{p_href(play)}" title="{esc(play["name"])}">'
+                    f'#{esc(play["code"])}</a>')
+        else:
+            cell = '<span class="xl-none">&mdash;</span>'
+        tds = []
+        for sp, man in zip(spots, snap.get("men") or []):
+            d = depth.get(sp, {}).get(man)
+            klass = "own" if d == 1 else "deep"
+            num = f'<span class="rot-d">{d}</span>' if d else ""
+            tds.append(f'<td><span class="rot-man {klass}">{esc(man)}</span>{num}</td>')
+        rows.append(f'<tr><td class="rot-n">{i}</td>'
+                    f'<td class="rot-play">{cell}</td>{"".join(tds)}</tr>')
+
+    return ('<div class="rot-wrap"><table class="rot">'
+            f'<thead><tr><th>#</th><th>Play</th>{head}</tr></thead>'
+            f'<tbody>{"".join(rows)}</tbody></table></div>')
+
+
+def practice_blocks_html(pr: dict, items: list[str], needs: str,
+                         plays: dict | None = None,
+                         roster: dict | None = None) -> str:
     """The run of practice, block by block, in the order it happens."""
     if not items:
         items = ['<span class="ins-none">No new install &mdash; review</span>']
@@ -4510,6 +4610,10 @@ def practice_blocks_html(pr: dict, items: list[str], needs: str) -> str:
                 f'{drills_html(g.get("drills", []))}</div>'
                 for g in blk.get("groups", [])
             ) + '</div>')
+        elif kind == "rotation":
+            note = blk.get("note", "")
+            note_html = f'<p class="ins-em">{esc(note)}</p>' if note else ""
+            body = note_html + rotation_html(blk, plays or {}, roster or {})
         elif kind == "install":
             emphasis = pr.get("emphasis", "")
             emphasis_html = f'<p class="ins-em">{esc(emphasis)}</p>' if emphasis else ""
@@ -4684,7 +4788,7 @@ def write_install(formations: list[dict], defenses: dict, root: Path) -> str:
 
 def write_install_day(
     pr: dict, prev: dict | None, nxt: dict | None, all_practices: list[dict],
-    phases: dict, formations: list[dict], defenses: dict,
+    phases: dict, formations: list[dict], defenses: dict, root: Path | None = None,
 ) -> str:
     """One practice, on its own page: what we install, and the run of practice.
 
@@ -4693,6 +4797,10 @@ def write_install_day(
     """
     plays = {p["id"]: (p, f) for f in formations for p in f["_plays"]}
     forms_by_id = {f["id"]: f for f in formations}
+    # The depth chart, for the rotation card's numbers. Read here rather than in
+    # the block renderer so a practice with two rotation blocks still reads the
+    # file once.
+    roster = _roster_and_plays(root, formations)[0] if root else {}
 
     items = install_items(pr, plays, forms_by_id, defenses)
     needs = requires_html(pr, plays, defenses)
@@ -4732,7 +4840,7 @@ def write_install_day(
   <div class="ins-day-h"><h2>The run of practice</h2>
     {PRINT_BTN}
   </div>
-  <div class="ins-day-plan">{practice_blocks_html(pr, items, needs)}</div>
+  <div class="ins-day-plan">{practice_blocks_html(pr, items, needs, plays, roster)}</div>
 </div>"""
 
     attrs = ""
@@ -5446,7 +5554,8 @@ def write_all(formations: list[dict], defenses: dict, root: Path) -> int:
         prev = practices[i - 1] if i else None
         nxt = practices[i + 1] if i + 1 < len(practices) else None
         (root / install_href(pr)).write_text(
-            write_install_day(pr, prev, nxt, practices, phases, formations, defenses),
+            write_install_day(pr, prev, nxt, practices, phases, formations,
+                              defenses, root),
             encoding="utf-8", newline="\n")
         written += 1
 
