@@ -6,6 +6,7 @@
   "code": "8",
   "call": "Regular I Z Tight Left 33 Handoff",
   "type": "run",
+  "sheet": false,
   "scheme": "Smash",
   "direction": "left",
   "ball_carrier": "TB",

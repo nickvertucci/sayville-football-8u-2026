@@ -6,6 +6,7 @@
   "code": "7",
   "call": "Regular I Z Tight Right 32 Handoff",
   "type": "run",
+  "sheet": false,
   "scheme": "Smash",
   "direction": "right",
   "ball_carrier": "TB",
