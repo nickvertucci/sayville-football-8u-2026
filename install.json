@@ -266,31 +266,27 @@
       "date": "2026-09-22",
       "phase": "season",
       "focus": "Everybody somewhere new: rotate the six skill spots",
-      "emphasis": "No new play tonight. Six plays already in the book, and what changes every snap is who is standing where. Get the plays right with the first eleven first; the lineup does not start moving until they are.",
+      "emphasis": "No new play tonight. Four sweeps already in the book, and what changes every snap is who is standing where. Get them right with the first eleven first; the lineup does not start moving until they are.",
+      "water_break": 1,
       "blocks": [
         {
           "tag": "A",
           "kind": "note",
           "title": "Warm-up",
           "time": "5:30–5:35",
-          "note": "Five minutes, moving the whole time."
+          "note": "Five minutes, moving the whole time.",
+          "water_break": 0
         },
         {
           "tag": "B",
           "kind": "install",
-          "title": "Review, at the spots they already know",
-          "time": "5:35–6:05",
+          "title": "Review the sweeps, and rotate through them",
+          "time": "5:35–6:29",
           "notes": [
-            "First eleven only, no rotating yet -- the plays have to be right before the lineup starts moving",
-            "#17 and #18, then the slot sweep (#23, #24) and the TE sweep (#25, #26)",
+            "First time through with the first eleven, no rotating -- the plays have to be right before the lineup starts moving",
+            "The slot sweep (#23, #24) and the TE sweep (#25, #26). No tosses tonight",
             "In and out of the huddle every rep"
-          ]
-        },
-        {
-          "tag": "C",
-          "kind": "rotation",
-          "title": "Position rotation",
-          "time": "6:05–6:45",
+          ],
           "note": "Two carousels turning at once. The ends walk down the list -- whoever was at Y goes to X and the next boy comes in at Y. The backs turn the other way, and the slot is the door the other five walk through. One row a snap, read left to right; the small number is where he sits on the depth chart at that spot, so a 1 is his own spot and anything higher is a boy getting a look at somebody else's. Run the six, go back to the top, run them again -- twelve snaps, and every boy gets at least two at the spot that is really his.",
           "spots": [
             "X",
@@ -302,7 +298,7 @@
           ],
           "snaps": [
             {
-              "play": "sb-toss-r",
+              "play": "sb-sl-sweep-r",
               "men": [
                 "Camden G.",
                 "Michael M.",
@@ -313,7 +309,7 @@
               ]
             },
             {
-              "play": "sb-toss-l",
+              "play": "sb-sl-sweep-l",
               "men": [
                 "Ryan S.",
                 "Camden G.",
@@ -324,7 +320,7 @@
               ]
             },
             {
-              "play": "sb-sl-sweep-r",
+              "play": "sb-te-sweep-r",
               "men": [
                 "Joseph P.",
                 "Ryan S.",
@@ -335,7 +331,7 @@
               ]
             },
             {
-              "play": "sb-sl-sweep-l",
+              "play": "sb-te-sweep-l",
               "men": [
                 "Clark J.",
                 "Joseph P.",
@@ -346,7 +342,7 @@
               ]
             },
             {
-              "play": "sb-te-sweep-r",
+              "play": "sb-sl-sweep-r",
               "men": [
                 "Camden G.",
                 "Clark J.",
@@ -357,7 +353,7 @@
               ]
             },
             {
-              "play": "sb-te-sweep-l",
+              "play": "sb-te-sweep-r",
               "men": [
                 "Michael M.",
                 "Camden G.",
@@ -368,13 +364,19 @@
               ]
             }
           ]
+        },
+        {
+          "tag": "C",
+          "kind": "note",
+          "title": "Defense",
+          "time": "6:30–6:50",
+          "water_break": 0,
+          "note": "Line up in the 4-4, our everyday front, and count it out loud: four down, four backers, two corners and the free safety. Same rule as the offense had in August -- everybody knows his spot before anybody chases the ball."
         }
       ],
       "huddle": "Nobody owns a spot. Everybody played somewhere new tonight, and the boy beside you can do your job -- that is what makes a Saturday survivable when somebody is out. Name the spot you liked best on the way to the car.",
-      "huddle_time": "6:45–7:00",
+      "huddle_time": "6:50–7:00",
       "review": [
-        "sb-toss-r",
-        "sb-toss-l",
         "sb-sl-sweep-r",
         "sb-sl-sweep-l",
         "sb-te-sweep-r",
