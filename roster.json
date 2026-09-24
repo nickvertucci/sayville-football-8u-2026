@@ -304,15 +304,6 @@
         ]
       },
       {
-        "name": "Z Rotation",
-        "players": [
-          "Philip A.",
-          "Ryan S.",
-          "Joseph P.",
-          "Thomas D."
-        ]
-      },
-      {
         "name": "FB Rotation",
         "players": [
           "Jake G.",
@@ -327,6 +318,15 @@
           "Nico V.",
           "Philip A.",
           "Liam M.",
+          "Thomas D."
+        ]
+      },
+      {
+        "name": "Z Rotation",
+        "players": [
+          "Philip A.",
+          "Ryan S.",
+          "Joseph P.",
           "Thomas D."
         ]
       }
