@@ -2298,6 +2298,13 @@ footer.site a { color: var(--accent-ink); }
      board's 8pt -- the offensive sheet ends two inches short of its page now that
      the six package cards are gone, and this spends some of it. */
   .dc-rots { margin-top: 10px; border-top: 2pt solid #000; padding-top: 3px; }
+  /* And to the foot of the page: the same column the defensive sheet uses below, so
+     the board stays at the top and the rotations take the bottom, with the white
+     space between them rather than under both. */
+  .dc-side[data-side="offense"] {
+    display: flex; flex-direction: column; min-height: 7.4in;
+  }
+  .dc-side[data-side="offense"] .dc-rots { margin-top: auto; }
   .dc-rots .rot-h { font-size: 9pt; color: #000; }
   .dc-rot .dc-pos-h .dc-abbr { font-size: 16pt; line-height: 1.35; }
   .dc-rot .dc-names li { font-size: 18pt; line-height: 1.3; padding: 2px 6px; gap: 5px; }
