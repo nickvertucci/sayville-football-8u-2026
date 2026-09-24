@@ -636,6 +636,8 @@ table.xl.script-t td.split {
   font-size: 10px;
 }
 .script-t td a:hover { text-decoration: underline; }
+/* A play going left: the row shaded, number cell and all. */
+table.xl.script-t tr.go-left td { background: var(--panel-2); }
 /* Stacked on a phone the column is the full width and a name has room to wrap, so
    nowrap would only push it off the side of the screen. */
 @media (max-width: 860px) {
@@ -1095,6 +1097,13 @@ table.xl.pk-plays td {
   .script-t td a { letter-spacing: -.3px; font-size: 8.5px; }
   .script-t .xl-code { font-size: 9px; margin-right: 3px; }
   .script-t td a { color: #000; text-decoration: none; }
+  /* The left rows on paper: a mid grey, dark enough to find at arm's length and light
+     enough that the black call on it still reads. A fill is a print-dialog setting, so
+     it is forced through the same way the black title bars are. */
+  table.xl.script-t tr.go-left td {
+    background: #c8c8c8 !important;
+    -webkit-print-color-adjust: exact; print-color-adjust: exact;
+  }
   /* 20.4 points a row is the height of the four formation blocks divided by twenty --
      measured against the page, not picked, and tuned until the foot of this column and
      the foot of the Power I block land on the same line. */

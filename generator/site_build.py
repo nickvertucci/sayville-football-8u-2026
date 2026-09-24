@@ -696,6 +696,8 @@ table.xl.script-t td.split {
   font-size: 10px;
 }
 .script-t td a:hover { text-decoration: underline; }
+/* A play going left: the row shaded, number cell and all. */
+table.xl.script-t tr.go-left td { background: var(--panel-2); }
 /* Stacked on a phone the column is the full width and a name has room to wrap, so
    nowrap would only push it off the side of the screen. */
 @media (max-width: 860px) {
@@ -1155,6 +1157,13 @@ table.xl.pk-plays td {
   .script-t td a { letter-spacing: -.3px; font-size: 8.5px; }
   .script-t .xl-code { font-size: 9px; margin-right: 3px; }
   .script-t td a { color: #000; text-decoration: none; }
+  /* The left rows on paper: a mid grey, dark enough to find at arm's length and light
+     enough that the black call on it still reads. A fill is a print-dialog setting, so
+     it is forced through the same way the black title bars are. */
+  table.xl.script-t tr.go-left td {
+    background: #c8c8c8 !important;
+    -webkit-print-color-adjust: exact; print-color-adjust: exact;
+  }
   /* 20.4 points a row is the height of the four formation blocks divided by twenty --
      measured against the page, not picked, and tuned until the foot of this column and
      the foot of the Power I block land on the same line. */
@@ -3882,6 +3891,7 @@ def _script_strip(root: Path, formations: list[dict]) -> str:
         )
 
     cells = []
+    lefts = []
     sides = {"left": 0, "right": 0}
     for call in assigned:
         found = plays.get(call)
@@ -3893,14 +3903,19 @@ def _script_strip(root: Path, formations: list[dict]) -> str:
         play, form = found
         if play.get("direction") in sides:
             sides[play["direction"]] += 1
+        lefts.append(play.get("direction") == "left")
         cells.append(f'<a href="{p_href(play)}">'
                      f'<span class="xl-code">#{esc(play["code"])} |</span>'
                      f'{esc(_package_row(play, form))}</a>')
     cells += [""] * (SCRIPT_ROWS - len(cells))
 
+    lefts += [False] * (SCRIPT_ROWS - len(lefts))
+    # A play going left is a shaded row, so the split in the header can be seen down
+    # the column too: a run of three white rows is three snaps the same way.
+    go_left = ' class="go-left"'
     rows = "".join(
-        f'<tr><td class="sn">{i}</td><td>{cell}</td></tr>'
-        for i, cell in enumerate(cells, 1)
+        f'<tr{go_left if left else ""}><td class="sn">{i}</td><td>{cell}</td></tr>'
+        for i, (cell, left) in enumerate(zip(cells, lefts), 1)
     )
     # The split row: how much of the script goes each way, so a lean toward one side is
     # visible before the first snap rather than noticed by the defense in the second
