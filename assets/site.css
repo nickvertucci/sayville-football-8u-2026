@@ -2263,15 +2263,26 @@ footer.site a { color: var(--accent-ink); }
   /* And to the foot of the page: the same column the defensive sheet uses below, so
      the board stays at the top and the rotations take the bottom, with the white
      space between them rather than under both. */
-  .dc-side[data-side="offense"] {
-    display: flex; flex-direction: column; min-height: 7.4in;
+  /* 6.6in, not the defense's 7.4: this sheet also carries the page title above it,
+     and at 7.4 the two ended 6px short of the foot of a Letter page in Chrome -- so on
+     A4, a phone, or a print dialog with its own margins the rotations went to a second
+     sheet. 6.6 leaves most of an inch for any of those. */
+  /* Only at the paper's own width. The height is in inches and the layout is not: a
+     phone that prints the page as laid out on its screen shrinks a 390px-wide column
+     onto the sheet, and 6.6 inches of it is most of two pages -- the rotations pinned
+     to the foot of it were what landed on the second one. Narrower than a landscape
+     sheet, the rotations just follow the board. */
+  @media (min-width: 900px) {
+    .dc-side[data-side="offense"] {
+      display: flex; flex-direction: column; min-height: 6.6in;
+    }
+    .dc-side[data-side="offense"] .dc-rots { margin-top: auto; }
   }
-  .dc-side[data-side="offense"] .dc-rots { margin-top: auto; }
   .dc-rots .rot-h { font-size: 9pt; color: #000; }
-  .dc-rot .dc-pos-h .dc-abbr { font-size: 16pt; line-height: 1.35; }
-  .dc-rot .dc-names li { font-size: 18pt; line-height: 1.3; padding: 2px 6px; gap: 5px; }
-  .dc-rot .dc-names li b { flex-basis: 16px; font-size: 12pt; }
-  .dc-rot .dc-names li.starter { font-size: 20pt; line-height: 1.3; }
+  .dc-rot .dc-pos-h .dc-abbr { font-size: 14pt; line-height: 1.3; }
+  .dc-rot .dc-names li { font-size: 15pt; line-height: 1.25; padding: 1px 6px; gap: 5px; }
+  .dc-rot .dc-names li b { flex-basis: 14px; font-size: 10pt; }
+  .dc-rot .dc-names li.starter { font-size: 16pt; line-height: 1.25; }
   /* A phone that prints without the Print button's widening -- from its share sheet
      -- lays this out at its own screen width, where the point sizes above overflow
      five columns. The type follows the width down instead, so the row stays one row. */
