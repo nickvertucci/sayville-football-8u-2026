@@ -396,6 +396,12 @@ h1.page { font-size: clamp(23px, 5vw, 33px); letter-spacing: -.5px; margin: 22px
   gap: 8px; padding-bottom: 2px;
 }
 @media (max-width: 620px) { .dc-pkgrow { grid-template-columns: 1fr; } }
+/* The rotations: position cards in a row, left to right in the order the file
+   lists them, each no wider than a card on the board above. */
+.dc-rotrow {
+  display: grid; gap: 8px; justify-content: start;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 190px));
+}
 .dc-pkg {
   display: flex; gap: 8px; align-items: flex-start;
   background: var(--panel); border: 1px solid var(--line); border-radius: 10px;
