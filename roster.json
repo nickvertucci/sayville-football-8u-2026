@@ -288,6 +288,22 @@
     "note": "The offense's positional rotations, printed on the depth chart in place of the packages: each a spot and the boys who take it in turn, in order. Every name has to be a boy on the depth chart above, or the build stops.",
     "offense": [
       {
+        "name": "X Rotation",
+        "players": [
+          "Camden G.",
+          "Michael M.",
+          "Ace A."
+        ]
+      },
+      {
+        "name": "Y Rotation",
+        "players": [
+          "Ace A.",
+          "Michael M.",
+          "Camden G."
+        ]
+      },
+      {
         "name": "Z Rotation",
         "players": [
           "Philip A.",
