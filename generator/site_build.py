@@ -3591,78 +3591,30 @@ def _roster_and_plays(root: Path, formations: list[dict]) -> tuple[dict, dict]:
     return roster, plays
 
 
-# How many calls a package may carry. The packages sit directly above the blank field,
-# so their height is what the field's height is measured against -- a taller card is
-# field taken away. Five, not six: the sixth row across four of the six packages was
-# most of a quarter inch of the sheet. Three since the script grew its left/right split
-# row: the two rows a card gave up are room handed back to the sheet.
-PACKAGE_PLAY_CAP = 3
+def _offense_lower(root: Path) -> str:
+    """Under the formation blocks: the field to draw on, the base eleven, the rotations.
 
-
-def _package_strip(root: Path, formations: list[dict]) -> str:
-    """The packages along the bottom, three to a row, with the plays each one runs.
-
-    A package is eleven names that come on together, and the ones that are not the
-    base eleven come on to do something in particular. That "something" was only
-    ever in somebody's head: the sheet named the package and stopped.
-
-    So each card names the package and lists what it is in the game to call --
-    however many plays that is, from whichever formations. A package that runs the
-    whole book says so instead: `["any"]` in the JSON, "Any play" on the card.
-
-    The pairing lives in `roster.json` under `package_plays`, beside the packages
-    themselves, because it is a coaching decision and not something the generator
-    can work out. Each entry is a play's full call. A call that names no play stops
-    the build rather than printing a play nobody can run.
+    The rotations are the same tables the depth chart prints, from the same
+    `rotations` block in roster.json, so the sheet in a coach's hand and the chart on
+    the wall cannot disagree about who goes in next. They took the place of the six
+    packages -- the calls each came on for and the subs each made -- when the offense
+    stopped substituting by package and started rotating by spot.
     """
-    roster, plays = _roster_and_plays(root, formations)
-    names = (roster.get("package_names") or {}).get("offense") or []
-    assigned = (roster.get("package_plays") or {}).get("offense") or []
-    if not assigned:
-        return ""
-
-    cards = []
-    for i, calls in enumerate(assigned):
-        label = names[i] if i < len(names) else f"Package {i + 1}"
-        # The cap is what makes the strip's height known, so the field below always has
-        # the same room. A call past it would quietly eat that space, so the build stops
-        # instead of printing a card nobody measured for.
-        if list(calls) != ["any"] and len(calls) > PACKAGE_PLAY_CAP:
-            raise SystemExit(
-                f"roster.json package_plays, {label}: {len(calls)} plays, and a package "
-                f"is capped at {PACKAGE_PLAY_CAP} — the call sheet's blank field is "
-                "sized against the height of these cards. Drop a call, or re-measure "
-                "the field."
-            )
-        if list(calls) == ["any"]:
-            rows = '<tr><td class="pk-any">Any play</td></tr>'
-        else:
-            cells = []
-            for call in calls:
-                found = plays.get(call)
-                if found is None:
-                    raise SystemExit(
-                        f"roster.json package_plays, {label}: '{call}' is not a play in "
-                        f"the book. Use a play's full call, or \"any\" on its own."
-                    )
-                play, form = found
-                cells.append(
-                    f'<tr><td><a href="{p_href(play)}">'
-                    f'<span class="xl-code">#{esc(play["code"])} |</span>'
-                    f'{esc(_package_row(play, form))}</a></td></tr>'
-                )
-            rows = "".join(cells)
-        cards.append(
-            f'<section class="pk"><p class="pk-name">{esc(label)}'
-            f'<span class="pk-n">{i + 1}</span></p>'
-            f'<table class="xl pk-plays"><tbody>{rows}</tbody></table></section>'
+    path = root / "roster.json"
+    roster = json.loads(path.read_text(encoding="utf-8")) if path.is_file() else {}
+    rots = offense_rotations(roster)
+    lower = _blank_line()
+    if roster.get("offense"):
+        cells = "".join(
+            f'<span class="bl-man"><b>{esc(spot)}</b>{esc(man)}</span>'
+            for spot, man in _base_eleven(roster)
         )
-
-    return ('<p class="section-head pk-head">Packages '
-            '<span class="pk-sub">what each one comes on to call</span></p>'
-            f'<div class="pk-grid">{"".join(cards)}</div>'
-            f'{_blank_line()}'
-            f'{_subs_strip(roster)}')
+        lower += ('<div class="bl-strip"><section class="pk bl-card">'
+                  '<p class="pk-name">Base offense</p>'
+                  f'<div class="bl-row">{cells}</div></section></div>')
+    if rots:
+        lower += rotations_html(rots, "cs-rots")
+    return lower
 
 
 # The lineup, in the order it stands on the field: the seven on the line from left to
@@ -3686,141 +3638,6 @@ def _base_eleven(roster: dict) -> list[tuple[str, str]]:
             )
         out.append((spot, names[0]))
     return out
-
-
-# The five men up front are the same five in every package but one. A package is a
-# thing you call to move the ball differently -- a back somewhere else, an end out
-# wide -- and the boys blocking for it should not have to relearn who is beside them
-# every time one gets called. So a package changes the backfield and the three
-# outside the tackles, and leaves the line alone.
-#
-# Tiny is the exception and the only one. It exists to put a different five up front,
-# which is the one thing no other package is allowed to do, and naming it here rather
-# than letting it pass quietly is the point: an exception somebody chose reads
-# differently from a rule nobody enforced.
-LINE_SPOTS = ("LT", "LG", "C", "RG", "RT")
-LINE_FREE_PACKAGES = frozenset({"Tiny"})
-
-
-def check_package_lines(roster: dict) -> None:
-    """Every offensive package but Tiny fields the base line, or the build stops.
-
-    This is the invariant that kept coming undone by hand -- a package picked up a
-    guard here and a tackle there until four of the six had their own line and the
-    substitution cards were mostly linemen. A rule the build does not check is a
-    rule until somebody edits the file.
-    """
-    packs = (roster.get("packages") or {}).get("offense") or []
-    names = (roster.get("package_names") or {}).get("offense") or []
-    if not packs:
-        return
-    spots = PACKAGE_SPOTS["offense"]
-    base = dict(zip(spots, packs[0]))
-    for i, pack in enumerate(packs[1:], start=1):
-        label = names[i] if i < len(names) else f"Package {i + 1}"
-        if label in LINE_FREE_PACKAGES:
-            continue
-        here = dict(zip(spots, pack))
-        wrong = [(sp, base[sp], here[sp]) for sp in LINE_SPOTS
-                 if here.get(sp) != base.get(sp)]
-        if wrong:
-            detail = "; ".join(f"{sp} is {got} and the base line's is {want}"
-                               for sp, want, got in wrong)
-            raise SystemExit(
-                f"roster.json packages.offense, {label}: a package changes the "
-                f"backfield and the ends, not the line -- {detail}. Put the base "
-                f"line back, or add {label} to LINE_FREE_PACKAGES in site_build.py "
-                "if it is meant to be an exception like Tiny."
-            )
-
-
-def _subs_strip(roster: dict) -> str:
-    """The base eleven, then what changes for each package.
-
-    A package card up the sheet says what a package comes on to CALL. This says who
-    comes on, and only who: a package is eleven names in roster.json, but ten of them
-    are usually the same ten as the last package, and printing all eleven six times is
-    six lists a coach has to diff in his head while a play clock runs. So the base is
-    printed once, in lineup order, and a package is the difference from it -- out, in,
-    one line each.
-
-    Out, in and moved, the same three the depth chart prints and worked out by the
-    same function. It used to be one row per CHANGED SPOT -- "Z: Philip out, Ryan in"
-    and "TB: Nico out, Philip in" -- which says two boys changed when it is one boy
-    turning round and one coming on. A move is the substitution nobody is told to
-    make, so it gets its own block under a rule rather than being spread across two
-    rows that each half-say it.
-
-    It also makes a package drifting off the depth chart visible instead of quiet.
-    A package whose left guard is not the left guard shows a substitution at left
-    guard; if that is not what the package is for, the card says so on paper.
-    """
-    packs = (roster.get("packages") or {}).get("offense") or []
-    names = (roster.get("package_names") or {}).get("offense") or []
-    if not packs:
-        return ""
-    check_package_lines(roster)
-    base = _base_eleven(roster)
-    spots = PACKAGE_SPOTS["offense"]
-
-    cells = "".join(
-        f'<span class="bl-man"><b>{esc(spot)}</b>{esc(man)}</span>'
-        for spot, man in base
-    )
-    base_card = ('<section class="pk bl-card"><p class="pk-name">Base offense</p>'
-                 f'<div class="bl-row">{cells}</div></section>')
-
-    cards = []
-    for i, pack in enumerate(packs):
-        label = names[i] if i < len(names) else f"Package {i + 1}"
-        if len(pack) != len(spots):
-            raise SystemExit(
-                f"roster.json packages.offense, {label}: {len(pack)} names for "
-                f"{len(spots)} spots."
-            )
-        out, inn, moved = package_changes(packs, i + 1, spots)
-        rows = []
-        # A SUBS row and a MOVES row, because the two are different instructions and
-        # the reader is one of them at a time. Running on and off is a thing somebody
-        # is told to do; a move is a boy already on the field standing somewhere new,
-        # and he is the one nobody shouts at. A rule between the blocks said only
-        # that the subject had changed. The header says which subject.
-        #
-        # A package with no moves gets no MOVES row -- and then the SUBS row is the
-        # only header on the card, which is still worth printing: it is what tells
-        # the reader the card has no moves, rather than leaving him to wonder whether
-        # this card just does not show them.
-        if out or inn:
-            rows.append('<tr class="pk-grp"><th colspan="2">Subs</th></tr>')
-        for k in range(max(len(out), len(inn))):
-            leaving = out[k] if k < len(out) else ""
-            name, spot = inn[k] if k < len(inn) else ("", "")
-            coming = (f'{esc(name)} <span class="sub-pos">{esc(spot)}</span>'
-                      if name and spot else (esc(name) if name else "—"))
-            rows.append(
-                f'<tr><td class="sub-out">{esc(leaving) if leaving else "—"}</td>'
-                f'<td class="sub-in">{coming}</td></tr>'
-            )
-        if moved:
-            rows.append('<tr class="pk-grp pk-grp-mv"><th colspan="2">Moves</th></tr>')
-        for name, a, b in moved:
-            rows.append(
-                f'<tr><td class="sub-out mv-name">{esc(name)}</td>'
-                f'<td class="sub-mv"><span class="mv-a">{esc(a)}</span>'
-                f'<span class="mv-b">{esc(b)}</span></td></tr>'
-            )
-        body = ("".join(rows) if rows else
-                '<tr><td class="pk-any" colspan="2">Base eleven</td></tr>')
-        cards.append(
-            f'<section class="pk"><p class="pk-name">{esc(label)}'
-            f'<span class="pk-n">{i + 1}</span></p>'
-            f'<table class="xl pk-subs"><tbody>{body}</tbody></table></section>'
-        )
-
-    return ('<p class="section-head pk-head">Who comes on '
-            '<span class="pk-sub">the base eleven, then what each package changes</span></p>'
-            f'<div class="bl-strip">{base_card}</div>'
-            f'<div class="pk-grid sub-grid">{"".join(cards)}</div>')
 
 
 # The line, as fifteen grid columns: a number, a man, a number, a man ... so the hole
@@ -3880,9 +3697,8 @@ SCRIPT_ROWS = 20
 def _script_strip(root: Path, formations: list[dict]) -> str:
     """The numbered column down the right of the formation blocks.
 
-    The plays in the order they are called, from roster.json under `script_plays`,
-    beside package_plays and under the same rule: a full call that has to name a real
-    play or the build stops.
+    The plays in the order they are called, from roster.json under `script_plays`: a
+    full call that has to name a real play or the build stops.
 
     A play may appear more than once -- a script repeats on purpose, and this one calls
     22 Smash three times. Short of the twenty rows is fine and the rest print blank;
@@ -4417,7 +4233,7 @@ def write_calls(formations: list[dict], defenses: dict, root: Path) -> str:
         for form in sheet_forms if sheet_plays(form)
     ) or '<p class="lede">No plays in the book yet.</p>'
 
-    packages = _package_strip(root, formations)
+    lower = _offense_lower(root)
     script = _script_strip(root, formations)
 
     # No sub-line under the heading. "Every play in the book, by formation and scheme"
@@ -4441,7 +4257,7 @@ def write_calls(formations: list[dict], defenses: dict, root: Path) -> str:
   </nav>
   <section class="tabpane pane-off">
     <div class="xl-top"><div class="xl-sheets">{sheets}</div>{script}</div>
-    {packages}
+    {lower}
   </section>
   <section class="tabpane pane-def">{defense}</section>
 </div>"""
@@ -5395,6 +5211,44 @@ BOARD_NUDGE = {"defense": {"LOLB": -0.75, "LILB": -0.25,
                            "RILB": 0.25, "ROLB": 0.75}}
 
 
+def offense_rotations(roster: dict) -> list[dict]:
+    """The offense's rotations from roster.json, every name checked against the chart.
+
+    A name that is not a boy somewhere on the depth chart stops the build -- the same
+    guard a script call has, for the same reason: it reads fine on paper and is wrong
+    on the field.
+    """
+    squad = {n for part in ("offense", "defense")
+             for names in (roster.get(part) or {}).values() for n in names if n}
+    rots = (roster.get("rotations") or {}).get("offense") or []
+    for rot in rots:
+        for name in rot.get("players") or []:
+            if name not in squad:
+                raise SystemExit(
+                    f"roster.json rotations.offense, {rot.get('name')}: '{name}' is not "
+                    "on the depth chart. Use the name as the chart spells it."
+                )
+    return rots
+
+
+def rotations_html(rotations: list[dict], cls: str) -> str:
+    """The rotation tables in one row: a spot and the boys who take it in turn, drawn
+    as the same black-barred card as a position on the depth chart. The depth chart and
+    the call sheet both print it, so the two cannot drift apart."""
+    cards = "".join(
+        f'<div class="dc-pos dc-rot"><p class="dc-pos-h">'
+        f'<span class="dc-abbr">{esc(rot["name"])}</span></p>'
+        '<ol class="dc-names">'
+        + "".join(f'<li class="{"starter" if i == 0 else ""}"><b>{i + 1}</b>'
+                  f'<span>{esc(name)}</span></li>'
+                  for i, name in enumerate(rot["players"]))
+        + '</ol></div>'
+        for rot in rotations
+    )
+    return (f'<div class="{cls} dc-rots"><p class="rot-h">Rotations</p>'
+            f'<div class="dc-rotrow">{cards}</div></div>')
+
+
 def side_board(side: str, order: list[str], alt_order: list[str],
                names_by_pos: dict, label_fn, packages: list | None = None,
                package_names: list | None = None,
@@ -5560,21 +5414,9 @@ def side_board(side: str, order: list[str], alt_order: list[str],
         f'<div class="dc-pkgwrap"><div class="dc-pkgrow">{pkgs}</div></div></div>'
         if pkgs else ""
     )
-    # Rotations take the packages' place where a side has them: a spot and the boys
-    # who take it in turn, drawn as the same black-barred card as a position above.
+    # Rotations take the packages' place where a side has them.
     if rotations:
-        cards = "".join(
-            f'<div class="dc-pos dc-rot"><p class="dc-pos-h">'
-            f'<span class="dc-abbr">{esc(rot["name"])}</span></p>'
-            '<ol class="dc-names">'
-            + "".join(f'<li class="{"starter" if i == 0 else ""}"><b>{i + 1}</b>'
-                      f'<span>{esc(name)}</span></li>'
-                      for i, name in enumerate(rot["players"]))
-            + '</ol></div>'
-            for rot in rotations
-        )
-        pkg_block = (f'<div class="dc-pkgs dc-rots"><p class="rot-h">Rotations</p>'
-                     f'<div class="dc-rotrow">{cards}</div></div>')
+        pkg_block = rotations_html(rotations, "dc-pkgs")
     return (f'<div class="dc-field" style="--dc-cols:{cols}">{field}</div>'
             f'{pkg_block}')
 
@@ -5639,21 +5481,8 @@ def write_depth_chart(formations: list[dict], defenses: dict, root: Path) -> str
          if front else "Our everyday front.",
          (front or {}).get("alignment", {})),
     )
-    # The offense prints its rotations instead of its packages. Every name on one has
-    # to be a boy somewhere on the chart, the same guard package_plays has on a call.
-    squad = {n for part in ("offense", "defense")
-             for names in (roster.get(part) or {}).values() for n in names if n}
-    rotations = {}
-    for side in ("offense", "defense"):
-        rots = (roster.get("rotations") or {}).get(side) or []
-        for rot in rots:
-            for name in rot.get("players") or []:
-                if name not in squad:
-                    raise SystemExit(
-                        f"roster.json rotations.{side}, {rot.get('name')}: '{name}' is "
-                        "not on the depth chart. Use the name as the chart spells it."
-                    )
-        rotations[side] = rots
+    # The offense prints its rotations instead of its packages.
+    rotations = {"offense": offense_rotations(roster), "defense": []}
 
     sections = []
     for side, heading, order, alts, label, sub, align in sides:
