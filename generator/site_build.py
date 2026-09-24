@@ -487,6 +487,8 @@ h1.page { font-size: clamp(23px, 5vw, 33px); letter-spacing: -.5px; margin: 22px
    outlined heavy, on the board and on their rotation tables, so a coach finds the two
    cards that change most without reading the bars. */
 .dc-pos.dc-hl { border: 4px solid var(--ink); }
+/* Heavier again on the board, where the card sits among ten others with thin rules. */
+.dc-field .dc-pos.dc-hl { border-width: 8px; }
 /* The defense has two rotations, not five, so each table gets half the sheet and the
    type goes up to match: these are read from the sideline mid-series. */
 .dc-side[data-side="defense"] .dc-rot .dc-pos-h .dc-abbr { font-size: 26px; }
@@ -495,6 +497,7 @@ h1.page { font-size: clamp(23px, 5vw, 33px); letter-spacing: -.5px; margin: 22px
 .dc-side[data-side="defense"] .dc-rot .dc-names li.starter { font-size: 28px; }
 @media (max-width: 820px) {
   .dc-pos.dc-hl { border-width: 3px; }
+  .dc-field .dc-pos.dc-hl { border-width: 5px; }
   .dc-side[data-side="defense"] .dc-rot .dc-pos-h .dc-abbr { font-size: 4.6vw; }
   .dc-side[data-side="defense"] .dc-rot .dc-names li { font-size: 4.4vw; padding: 2px 4px; gap: 4px; }
   .dc-side[data-side="defense"] .dc-rot .dc-names li b { flex-basis: 3vw; font-size: 3.2vw; }
@@ -2402,6 +2405,7 @@ footer.site a { color: var(--accent-ink); }
   .dc-side[data-side="defense"] .dc-pkgs { margin-top: auto; }
   .dc-pos { box-shadow: none; border-color: #000; border-radius: 0; }
   .dc-pos.dc-hl { border: 3.5pt solid #000; }
+  .dc-field .dc-pos.dc-hl { border-width: 6pt; }
   /* The bar prints filled, the same as it looks on screen, with print-color-adjust
      forcing it through -- the same thing the wristband pouches already do.
      Be clear about the risk rather than pretending it away: this is white type on a
