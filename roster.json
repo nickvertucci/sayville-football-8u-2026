@@ -4,8 +4,7 @@
     "X": [
       "Camden G.",
       "Michael M.",
-      "Ace A.",
-      "Joseph P."
+      "Ace A."
     ],
     "LT": [
       "Luca D.",
@@ -38,15 +37,13 @@
     "Y": [
       "Ace A.",
       "Michael M.",
-      "Camden G.",
-      "Joseph P."
+      "Camden G."
     ],
     "Z": [
       "Philip A.",
       "Ryan S.",
+      "Joseph P.",
       "Nico V.",
-      "Liam M.",
-      "Kilian F.",
       "Thomas D."
     ],
     "QB": [
@@ -295,7 +292,8 @@
         "players": [
           "Philip A.",
           "Ryan S.",
-          "Joseph P."
+          "Joseph P.",
+          "Thomas D."
         ]
       },
       {
