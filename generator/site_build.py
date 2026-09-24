@@ -483,6 +483,23 @@ h1.page { font-size: clamp(23px, 5vw, 33px); letter-spacing: -.5px; margin: 22px
   .dc-rot .dc-names li b { flex-basis: 1.5vw; font-size: 1.7vw; }
   .dc-rot .dc-names li.starter { font-size: 2.3vw; }
 }
+/* The spots the defense rotates heavily -- the right guard and the free safety -- are
+   outlined heavy, on the board and on their rotation tables, so a coach finds the two
+   cards that change most without reading the bars. */
+.dc-pos.dc-hl { border: 4px solid var(--ink); }
+/* The defense has two rotations, not five, so each table gets half the sheet and the
+   type goes up to match: these are read from the sideline mid-series. */
+.dc-side[data-side="defense"] .dc-rot .dc-pos-h .dc-abbr { font-size: 26px; }
+.dc-side[data-side="defense"] .dc-rot .dc-names li { font-size: 26px; padding: 4px 10px; gap: 8px; }
+.dc-side[data-side="defense"] .dc-rot .dc-names li b { flex-basis: 22px; font-size: 18px; }
+.dc-side[data-side="defense"] .dc-rot .dc-names li.starter { font-size: 28px; }
+@media (max-width: 820px) {
+  .dc-pos.dc-hl { border-width: 3px; }
+  .dc-side[data-side="defense"] .dc-rot .dc-pos-h .dc-abbr { font-size: 4.6vw; }
+  .dc-side[data-side="defense"] .dc-rot .dc-names li { font-size: 4.4vw; padding: 2px 4px; gap: 4px; }
+  .dc-side[data-side="defense"] .dc-rot .dc-names li b { flex-basis: 3vw; font-size: 3.2vw; }
+  .dc-side[data-side="defense"] .dc-rot .dc-names li.starter { font-size: 4.8vw; }
+}
 .dc-pkg {
   display: flex; gap: 8px; align-items: flex-start;
   background: var(--panel); border: 1px solid var(--line); border-radius: 10px;
@@ -2355,6 +2372,18 @@ footer.site a { color: var(--accent-ink); }
     .dc-rot .dc-names li.starter { font-size: 2.3vw; }
     .dc-rot .dc-names li, .dc-rot .dc-names li.starter { line-height: 1.3; }
   }
+  /* The defense's two rotation tables on paper, a size up again from the offense's
+     five: half a landscape sheet each has the width for it. */
+  .dc-side[data-side="defense"] .dc-rot .dc-pos-h .dc-abbr { font-size: 18pt; }
+  .dc-side[data-side="defense"] .dc-rot .dc-names li { font-size: 20pt; line-height: 1.2; padding: 1px 8px; gap: 8px; }
+  .dc-side[data-side="defense"] .dc-rot .dc-names li b { flex-basis: 18px; font-size: 13pt; }
+  .dc-side[data-side="defense"] .dc-rot .dc-names li.starter { font-size: 21pt; line-height: 1.2; }
+  @media (max-width: 820px) {
+    .dc-side[data-side="defense"] .dc-rot .dc-pos-h .dc-abbr { font-size: 4.6vw; }
+    .dc-side[data-side="defense"] .dc-rot .dc-names li { font-size: 4.4vw; padding: 2px 4px; gap: 4px; }
+    .dc-side[data-side="defense"] .dc-rot .dc-names li b { flex-basis: 3vw; font-size: 3.2vw; }
+    .dc-side[data-side="defense"] .dc-rot .dc-names li.starter { font-size: 4.8vw; }
+  }
   /* The defensive sheet has room the offensive one does not -- eleven spots in three
      bands instead of four, and two fewer packages. Rather than leave that as white
      space under the board, the packages go to the foot of the page and the three
@@ -2372,6 +2401,7 @@ footer.site a { color: var(--accent-ink); }
   }
   .dc-side[data-side="defense"] .dc-pkgs { margin-top: auto; }
   .dc-pos { box-shadow: none; border-color: #000; border-radius: 0; }
+  .dc-pos.dc-hl { border: 3.5pt solid #000; }
   /* The bar prints filled, the same as it looks on screen, with print-color-adjust
      forcing it through -- the same thing the wristband pouches already do.
      Be clear about the risk rather than pretending it away: this is white type on a
@@ -5211,24 +5241,36 @@ BOARD_NUDGE = {"defense": {"LOLB": -0.75, "LILB": -0.25,
                            "RILB": 0.25, "ROLB": 0.75}}
 
 
-def offense_rotations(roster: dict) -> list[dict]:
-    """The offense's rotations from roster.json, every name checked against the chart.
+def side_rotations(roster: dict, side: str) -> list[dict]:
+    """One side's rotations from roster.json, every name checked against the chart.
 
     A name that is not a boy somewhere on the depth chart stops the build -- the same
     guard a script call has, for the same reason: it reads fine on paper and is wrong
-    on the field.
+    on the field. So does a `spot` the side's chart does not have, because the heavy
+    outline it asks for would land nowhere and the board would look un-rotated.
     """
     squad = {n for part in ("offense", "defense")
              for names in (roster.get(part) or {}).values() for n in names if n}
-    rots = (roster.get("rotations") or {}).get("offense") or []
+    rots = (roster.get("rotations") or {}).get(side) or []
     for rot in rots:
+        spot = rot.get("spot")
+        if spot and spot not in (roster.get(side) or {}):
+            raise SystemExit(
+                f"roster.json rotations.{side}, {rot.get('name')}: spot '{spot}' is not "
+                f"a {side} position on the depth chart."
+            )
         for name in rot.get("players") or []:
             if name not in squad:
                 raise SystemExit(
-                    f"roster.json rotations.offense, {rot.get('name')}: '{name}' is not "
+                    f"roster.json rotations.{side}, {rot.get('name')}: '{name}' is not "
                     "on the depth chart. Use the name as the chart spells it."
                 )
     return rots
+
+
+def offense_rotations(roster: dict) -> list[dict]:
+    """The offense's rotations -- the call sheet prints these too."""
+    return side_rotations(roster, "offense")
 
 
 def rotations_html(rotations: list[dict], cls: str) -> str:
@@ -5236,7 +5278,8 @@ def rotations_html(rotations: list[dict], cls: str) -> str:
     as the same black-barred card as a position on the depth chart. The depth chart and
     the call sheet both print it, so the two cannot drift apart."""
     cards = "".join(
-        f'<div class="dc-pos dc-rot"><p class="dc-pos-h">'
+        f'<div class="dc-pos dc-rot{" dc-hl" if rot.get("spot") else ""}">'
+        '<p class="dc-pos-h">'
         f'<span class="dc-abbr">{esc(rot["name"])}</span></p>'
         '<ol class="dc-names">'
         + "".join(f'<li class="{"starter" if i == 0 else ""}"><b>{i + 1}</b>'
@@ -5267,6 +5310,9 @@ def side_board(side: str, order: list[str], alt_order: list[str],
     rearrange in the browser.
     """
     align = alignment or {}
+    # The spots being rotated are outlined heavy, on the board and on their rotation
+    # table below it, so the eye goes to the two cards that change most during a game.
+    rotated = {r["spot"] for r in rotations or [] if r.get("spot")}
     bands = alignment_bands(align, order, side)
     seen = {p for b in bands for p in b}
 
@@ -5355,6 +5401,8 @@ def side_board(side: str, order: list[str], alt_order: list[str],
                 col += 1
             used.add(col)
             cls = " dc-straddle" if wide > 1 else ""
+            if pos in rotated:
+                cls += " dc-hl"
             bits = [f"grid-column:{col} / span {wide}"] if col else []
             nudge = BOARD_NUDGE.get(side, {}).get(pos)
             if nudge:
@@ -5481,8 +5529,8 @@ def write_depth_chart(formations: list[dict], defenses: dict, root: Path) -> str
          if front else "Our everyday front.",
          (front or {}).get("alignment", {})),
     )
-    # The offense prints its rotations instead of its packages.
-    rotations = {"offense": offense_rotations(roster), "defense": []}
+    # Both sides print their rotations instead of their packages.
+    rotations = {side: side_rotations(roster, side) for side in ("offense", "defense")}
 
     sections = []
     for side, heading, order, alts, label, sub, align in sides:

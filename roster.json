@@ -77,8 +77,9 @@
     ],
     "RDG": [
       "Jaxon E.",
-      "Mason A.",
-      "Brayden H."
+      "Gavin P.",
+      "Brooks A.",
+      "Mason A."
     ],
     "RDE": [
       "Brayden S.",
@@ -207,7 +208,29 @@
     ]
   },
   "rotations": {
-    "note": "The offense's positional rotations, printed on the depth chart in place of the packages: each a spot and the boys who take it in turn, in order. Every name has to be a boy on the depth chart above, or the build stops.",
+    "note": "The positional rotations, printed on the depth chart in place of the packages: each a spot and the boys who take it in turn, in order. Every name has to be a boy on the depth chart above, or the build stops. A rotation that names its board `spot` outlines that spot's card heavy on the board, so the spots being rotated stand out.",
+    "defense": [
+      {
+        "name": "RDG Rotation",
+        "spot": "RDG",
+        "players": [
+          "Jaxon E.",
+          "Gavin P.",
+          "Brooks A.",
+          "Mason A."
+        ]
+      },
+      {
+        "name": "FS Rotation",
+        "spot": "FS",
+        "players": [
+          "Liam M.",
+          "Thomas D.",
+          "Joseph P.",
+          "Kilian F."
+        ]
+      }
+    ],
     "offense": [
       {
         "name": "X Rotation",
