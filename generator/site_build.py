@@ -2440,6 +2440,56 @@ footer.site a { color: var(--accent-ink); }
 """
 
 SITE_JS = """
+/* Printing from a phone.
+
+   A phone lays a page out at the width of its own screen when it prints, then shrinks
+   that onto the paper. Every rule written for a narrow screen fires on paper, the
+   cards wrap and stack, and the depth chart's two sheets came out as four. A desktop
+   lays the page out at the paper's own width instead, which is what the print
+   stylesheet was measured against.
+
+   So on a screen narrower than the paper, Print first sets the viewport to the
+   paper's printable width -- the page carries it, worked out from its own @page
+   rule -- lets the page lay out again at that width, and only then opens the print
+   dialog. The viewport goes back once the dialog closes. Wrapping window.print
+   rather than the buttons means every Print button on the site gets it. On a desktop
+   the screen is already wider than the paper and nothing changes. */
+(function () {
+  var want = parseInt(document.documentElement.getAttribute('data-print-width'), 10);
+  var meta = document.querySelector('meta[name="viewport"]');
+  var native = window.print;
+  if (!want || !meta || !native) return;
+  var original = meta.getAttribute('content');
+  var widened = false;
+
+  function widen() {
+    if (widened || document.documentElement.clientWidth >= want) return false;
+    meta.setAttribute('content', 'width=' + want);
+    widened = true;
+    return true;
+  }
+  function restore() {
+    if (!widened) return;
+    meta.setAttribute('content', original);
+    widened = false;
+  }
+
+  window.print = function () {
+    if (!widen()) return native.call(window);
+    // Two frames and a beat, so the page has laid out at the new width before the
+    // print dialog takes its picture of it.
+    requestAnimationFrame(function () {
+      requestAnimationFrame(function () {
+        setTimeout(function () { native.call(window); }, 150);
+      });
+    });
+  };
+  // Printing from the share sheet rather than the button: too late to wait for a
+  // layout, but widening here still reaches the browsers that lay out again for it.
+  window.addEventListener('beforeprint', widen);
+  window.addEventListener('afterprint', restore);
+})();
+
 /* The defensive-front toggle on a play page.
 
    Every front's diagram and assignments are already in the page, so this only moves a
@@ -2775,6 +2825,28 @@ def css_url() -> str:
     return asset_url("site.css", SITE_CSS.strip() + "\n")
 
 
+def print_width_px(page_rule: str) -> int:
+    """The width, in CSS pixels, a desktop browser lays a page out at to print it.
+
+    A desktop browser sizes the print layout to the paper: the sheet less its margins,
+    at 96 pixels an inch. A phone does not -- it lays the page out at the width of its
+    own screen and shrinks that onto the paper, so every rule written for a narrow
+    screen fires on paper too and a sheet built to be one page comes out as two. The
+    site script reads this number off the page and widens a phone to it before it
+    prints, so the phone lays out what the desktop does.
+
+    Letter throughout, as the page rules are. A page with no rule gets the browser's
+    own margins, which are close to 0.4in.
+    """
+    rule = page_rule or ""
+    paper = 11.0 if "landscape" in rule else 8.5
+    margin = 0.4
+    m = re.search(r"margin:\s*([\d.]+)(in|mm)", rule)
+    if m:
+        margin = float(m.group(1)) / (25.4 if m.group(2) == "mm" else 1)
+    return round((paper - 2 * margin) * 96)
+
+
 def js_url() -> str:
     return asset_url("site.js", SITE_JS.strip() + "\n")
 
@@ -2918,11 +2990,12 @@ def page(
         '\n<style>@page { size: landscape; margin: 9mm; }</style>' if landscape else
         f'\n<style>@page {{ {page_rule} }}</style>' if page_rule else ""
     )
+    print_px = print_width_px("size: landscape; margin: 9mm;" if landscape else page_rule)
     desc = (
         f'\n<meta name="description" content="{esc(description)}">' if description else ""
     )
     return f"""<!doctype html>
-<html lang="en">
+<html lang="en" data-print-width="{print_px}">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{esc(title)}</title>{desc}
