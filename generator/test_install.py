@@ -85,14 +85,26 @@ ROTATION_CASES = [
 ]
 
 
+# A practice already run is a record, so the chart check leaves it alone: the chart
+# moves on after the night and the lineup that ran should not stop the build. The
+# cases above are dated far ahead so they are always a plan and always checked.
+FUTURE_DATE = "2099-08-11"
+PAST_DATE = "2000-08-11"
+
+
 def check_rotations(schedule, formations, defenses, roster) -> int:
     """Run the validator against deliberately broken rotation cards."""
     bad = 0
-    for what, snaps, should_reject in ROTATION_CASES:
+    cases = list(ROTATION_CASES) + [
+        ("a boy off the chart, at a practice already run",
+         [{"men": ["Nobody A.", "Michael M.", "Philip A.", "Brogan A.", "Jake G.",
+                   "Nico V."]}], False, PAST_DATE),
+    ]
+    for what, snaps, should_reject, *on in cases:
         trial = copy.deepcopy(schedule)
         trial["practices"] = [{
             "n": 1,
-            "date": "2026-08-11",
+            "date": on[0] if on else FUTURE_DATE,
             "phase": "preseason",
             "plays": ["sb-toss-r"],
             "blocks": [{"tag": "A", "kind": "rotation", "title": "Rotation",
@@ -105,9 +117,9 @@ def check_rotations(schedule, formations, defenses, roster) -> int:
             verb = "accepted" if not rejected else "rejected"
             print(f"FAIL  rotation: {what} was {verb}")
             bad += 1
-    print(f"{len(ROTATION_CASES)} rotation cases behaved as expected "
-          f"({sum(1 for c in ROTATION_CASES if c[2])} rejected, "
-          f"{sum(1 for c in ROTATION_CASES if not c[2])} accepted).")
+    print(f"{len(cases)} rotation cases behaved as expected "
+          f"({sum(1 for c in cases if c[2])} rejected, "
+          f"{sum(1 for c in cases if not c[2])} accepted).")
     return bad
 
 

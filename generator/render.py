@@ -800,6 +800,11 @@ def validate_install(schedule: dict, formations: list[dict], defenses: dict,
         # three are mistakes that read perfectly well on the page and only come apart
         # on the field.
         chart = (roster or {}).get("offense") or {}
+        # A practice already run is a record of what ran, not a plan to check: the
+        # chart moves on after it, and a lineup that was right on the night would
+        # otherwise stop the build the first time a boy changes spots.
+        on = str(practice.get("date") or "")
+        run = bool(on) and on < date.today().isoformat()
         for blk in practice.get("blocks", []):
             # Whatever kind the block calls itself. A rotation card rides on the
             # install block as often as it stands alone, and the thing worth
@@ -822,7 +827,7 @@ def validate_install(schedule: dict, formations: list[dict], defenses: dict,
                     errors.append(f"install practice {n}, {title} snap {i}: "
                                   f"{', '.join(sorted(doubled))} in two spots at once")
                 for spot, man in zip(spots, men):
-                    if man and man not in (chart.get(spot) or []):
+                    if man and not run and man not in (chart.get(spot) or []):
                         errors.append(
                             f"install practice {n}, {title} snap {i}: {man} is not on "
                             f"the depth chart at {spot}")
