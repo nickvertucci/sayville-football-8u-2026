@@ -456,6 +456,12 @@ h1.page { font-size: clamp(23px, 5vw, 33px); letter-spacing: -.5px; margin: 22px
   gap: 8px; padding-bottom: 2px;
 }
 @media (max-width: 620px) { .dc-pkgrow { grid-template-columns: 1fr; } }
+/* The rotations: position cards in a row, left to right in the order the file
+   lists them, each no wider than a card on the board above. */
+.dc-rotrow {
+  display: grid; gap: 8px; justify-content: start;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 190px));
+}
 .dc-pkg {
   display: flex; gap: 8px; align-items: flex-start;
   background: var(--panel); border: 1px solid var(--line); border-radius: 10px;
@@ -5244,7 +5250,8 @@ BOARD_NUDGE = {"defense": {"LOLB": -0.75, "LILB": -0.25,
 def side_board(side: str, order: list[str], alt_order: list[str],
                names_by_pos: dict, label_fn, packages: list | None = None,
                package_names: list | None = None,
-               alignment: dict | None = None) -> str:
+               alignment: dict | None = None,
+               rotations: list | None = None) -> str:
     """One side of the ball, laid out the way it lines up.
 
     This was six numbered columns of a grid, which answered "who is second at left
@@ -5405,6 +5412,21 @@ def side_board(side: str, order: list[str], alt_order: list[str],
         f'<div class="dc-pkgwrap"><div class="dc-pkgrow">{pkgs}</div></div></div>'
         if pkgs else ""
     )
+    # Rotations take the packages' place where a side has them: a spot and the boys
+    # who take it in turn, drawn as the same black-barred card as a position above.
+    if rotations:
+        cards = "".join(
+            f'<div class="dc-pos dc-rot"><p class="dc-pos-h">'
+            f'<span class="dc-abbr">{esc(rot["name"])}</span></p>'
+            '<ol class="dc-names">'
+            + "".join(f'<li class="{"starter" if i == 0 else ""}"><b>{i + 1}</b>'
+                      f'<span>{esc(name)}</span></li>'
+                      for i, name in enumerate(rot["players"]))
+            + '</ol></div>'
+            for rot in rotations
+        )
+        pkg_block = (f'<div class="dc-pkgs"><p class="rot-h">Rotations</p>'
+                     f'<div class="dc-rotrow">{cards}</div></div>')
     return (f'<div class="dc-field" style="--dc-cols:{cols}">{field}</div>'
             f'{pkg_block}')
 
@@ -5469,14 +5491,30 @@ def write_depth_chart(formations: list[dict], defenses: dict, root: Path) -> str
          if front else "Our everyday front.",
          (front or {}).get("alignment", {})),
     )
+    # The offense prints its rotations instead of its packages. Every name on one has
+    # to be a boy somewhere on the chart, the same guard package_plays has on a call.
+    squad = {n for part in ("offense", "defense")
+             for names in (roster.get(part) or {}).values() for n in names if n}
+    rotations = {}
+    for side in ("offense", "defense"):
+        rots = (roster.get("rotations") or {}).get(side) or []
+        for rot in rots:
+            for name in rot.get("players") or []:
+                if name not in squad:
+                    raise SystemExit(
+                        f"roster.json rotations.{side}, {rot.get('name')}: '{name}' is "
+                        "not on the depth chart. Use the name as the chart spells it."
+                    )
+        rotations[side] = rots
+
     sections = []
     for side, heading, order, alts, label, sub, align in sides:
-        packs = (roster.get("packages") or {}).get(side)
+        packs = None if rotations[side] else (roster.get("packages") or {}).get(side)
         sections.append(
             f'<section class="dc-side" data-side="{side}">'
             f'<p class="hero-head">{esc(heading)}'
             f'<span class="rot-sub">{esc(sub)}</span></p>'
-            f'{side_board(side, order, alts, roster.get(side, {}), label, packs, (roster.get("package_names") or {}).get(side), align)}'
+            f'{side_board(side, order, alts, roster.get(side, {}), label, packs, (roster.get("package_names") or {}).get(side), align, rotations[side])}'
             f'</section>'
         )
 
