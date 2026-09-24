@@ -466,10 +466,10 @@ h1.page { font-size: clamp(23px, 5vw, 33px); letter-spacing: -.5px; margin: 22px
    are set a size up from a position card: five of them under a board that stops
    well short of the foot of the page had the room to spend. */
 .dc-rots { border-top: 2px solid var(--ink); padding-top: 4px; }
-.dc-rot .dc-pos-h .dc-abbr { font-size: 16px; }
-.dc-rot .dc-names li { font-size: 15px; padding: 2px 8px; }
-.dc-rot .dc-names li b { flex-basis: 14px; font-size: 11px; }
-.dc-rot .dc-names li.starter { font-size: 16.5px; }
+.dc-rot .dc-pos-h .dc-abbr { font-size: 20px; }
+.dc-rot .dc-names li { font-size: 20px; padding: 3px 8px; gap: 6px; }
+.dc-rot .dc-names li b { flex-basis: 16px; font-size: 14px; }
+.dc-rot .dc-names li.starter { font-size: 22px; }
 .dc-pkg {
   display: flex; gap: 8px; align-items: flex-start;
   background: var(--panel); border: 1px solid var(--line); border-radius: 10px;
@@ -2299,10 +2299,10 @@ footer.site a { color: var(--accent-ink); }
      the six package cards are gone, and this spends some of it. */
   .dc-rots { margin-top: 10px; border-top: 2pt solid #000; padding-top: 3px; }
   .dc-rots .rot-h { font-size: 9pt; color: #000; }
-  .dc-rot .dc-pos-h .dc-abbr { font-size: 12pt; line-height: 1.35; }
-  .dc-rot .dc-names li { font-size: 12pt; line-height: 1.3; padding: 1px 5px; }
-  .dc-rot .dc-names li b { flex-basis: 14px; font-size: 9pt; }
-  .dc-rot .dc-names li.starter { font-size: 13pt; line-height: 1.3; }
+  .dc-rot .dc-pos-h .dc-abbr { font-size: 16pt; line-height: 1.35; }
+  .dc-rot .dc-names li { font-size: 18pt; line-height: 1.3; padding: 2px 6px; gap: 5px; }
+  .dc-rot .dc-names li b { flex-basis: 16px; font-size: 12pt; }
+  .dc-rot .dc-names li.starter { font-size: 20pt; line-height: 1.3; }
   /* The defensive sheet has room the offensive one does not -- eleven spots in three
      bands instead of four, and two fewer packages. Rather than leave that as white
      space under the board, the packages go to the foot of the page and the three
