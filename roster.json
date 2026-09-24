@@ -123,86 +123,6 @@
     ]
   },
   "packages": {
-    "offense": [
-      [
-        "Brogan A.",
-        "Jake G.",
-        "Nico V.",
-        "Camden G.",
-        "Michael M.",
-        "Philip A.",
-        "Ace A.",
-        "Jaxon E.",
-        "Brayden H.",
-        "Elias F.",
-        "Brayden S."
-      ],
-      [
-        "Brogan A.",
-        "Luca D.",
-        "Philip A.",
-        "Camden G.",
-        "Joseph P.",
-        "Nico V.",
-        "Ace A.",
-        "Jaxon E.",
-        "Brayden H.",
-        "Elias F.",
-        "Brayden S."
-      ],
-      [
-        "Brogan A.",
-        "Luca D.",
-        "Liam M.",
-        "Camden G.",
-        "Michael M.",
-        "Ryan S.",
-        "Ace A.",
-        "Jaxon E.",
-        "Brayden H.",
-        "Elias F.",
-        "Brayden S."
-      ],
-      [
-        "Brogan A.",
-        "Jake G.",
-        "Thomas D.",
-        "Camden G.",
-        "Joseph P.",
-        "Kilian F.",
-        "Ace A.",
-        "Jaxon E.",
-        "Brayden H.",
-        "Elias F.",
-        "Brayden S."
-      ],
-      [
-        "Brogan A.",
-        "Jake G.",
-        "Liam M.",
-        "Camden G.",
-        "Ryan S.",
-        "Joseph P.",
-        "Ace A.",
-        "Jaxon E.",
-        "Brayden H.",
-        "Elias F.",
-        "Brayden S."
-      ],
-      [
-        "Brogan A.",
-        "Luca D.",
-        "Elias F.",
-        "Camden G.",
-        "Ryan S.",
-        "Jake G.",
-        "Ace A.",
-        "Jaxon E.",
-        "Brayden H.",
-        "Mason A.",
-        "Gavin P."
-      ]
-    ],
     "defense": [
       [
         "Philip A.",
@@ -333,14 +253,6 @@
     ]
   },
   "package_names": {
-    "offense": [
-      "Shifty",
-      "Fortnite",
-      "Total Recall",
-      "Maverick",
-      "Bigshow",
-      "Tiny"
-    ],
     "defense": [
       "Base",
       "Hammer",
@@ -348,41 +260,6 @@
       "Venom",
       "Rampage",
       "Predator"
-    ]
-  },
-  "package_plays": {
-    "note": "What each offensive package comes on to call, in package order. An entry is a play's full call and has to name a real play, or the build stops. The string \"any\" on its own means the package runs the whole book, so the card says Any play instead of listing it. A package may name plays from any formation, up to three -- three rows is what the card is allowed to be tall, because the blank field below the packages is sized against it.",
-    "offense": [
-      [
-        "Split Backs Z Tight Right 18 Sweep",
-        "Split Backs Z Tight Left Z Sweep Right",
-        "Split Backs Z Tight Right 38 Toss"
-      ],
-      [
-        "Split Backs Z Tight Right 18 Sweep",
-        "Split Backs Z Tight Left 19 Sweep",
-        "Split Backs Z Tight Right Z Sweep Left"
-      ],
-      [
-        "Regular I Z Tight Right 32 Handoff",
-        "Regular I Z Tight Left 33 Handoff",
-        "Regular I Z Tight Right 36 Handoff"
-      ],
-      [
-        "Split Backs Z Tight Right 36 Handoff",
-        "Split Backs Z Tight Left 27 Handoff",
-        "Split Backs Z Tight Right 38 Toss"
-      ],
-      [
-        "Split Backs Z Tight Right 18 Sweep",
-        "Split Backs Z Tight Left 19 Sweep",
-        "Split Backs Z Tight Right Z Sweep Left"
-      ],
-      [
-        "Power I Z Right 32 Handoff",
-        "Power I Z Left 33 Handoff",
-        "Power I Z Right 38 Toss"
-      ]
     ]
   },
   "script_plays": {
