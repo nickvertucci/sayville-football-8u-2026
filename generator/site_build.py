@@ -651,6 +651,16 @@ table.xl.script-t td { height: 26px; padding: 2px 5px; vertical-align: middle;
 table.xl.script-t td.sn {
   width: 26px; text-align: center; font-weight: 800; color: var(--muted);
 }
+/* The left/right split above the numbered rows: a header, so it is set off from the
+   calls by the same heavy rule the column's border uses. */
+table.xl.script-t td.split {
+  font-size: 11px; font-weight: 800; border-bottom: 2px solid var(--ink);
+}
+.script-t .split-sep { margin: 0 8px; color: var(--muted); }
+/* The split row spans both columns, and a spanning first row leaves the browser to
+   guess the column widths -- it split them evenly and clipped every call. The col pins
+   the number column to the width its cells ask for. */
+.script-t col.sn-c { width: 26px; }
 /* A script row is a play link, so it reads like one: the same size, weight and
    absence of underline as a package row, not the browser's blue-and-underlined
    default. It was the only list of plays on this page still wearing that. */
@@ -1136,11 +1146,16 @@ table.xl.pk-plays td {
      to two pages the first time the script was filled in. The column is sized so
      nothing needs to wrap; this makes a name that somehow did overflow visibly rather
      than silently push the field and the board off the page. */
-  table.xl.script-t td { height: 20.4px; padding: 0 1px; line-height: 1.15;
+  /* 19.4 rather than 20.4 since the split row joined the column: twenty-one rows now
+     share the height twenty did, so the foot still lands on the Power I block's. */
+  table.xl.script-t td { height: 19.4px; padding: 0 1px; line-height: 1.15;
                          font-size: 8.5px; font-weight: 700; white-space: nowrap;
                          vertical-align: middle; text-align: center; }
   table.xl.script-t td.sn { width: 17px; text-align: center; font-size: 7px;
                             font-weight: 800; color: #000; }
+  table.xl.script-t td.split { font-size: 8.5px; border-bottom: 2px solid #000; }
+  .script-t .split-sep { margin: 0 5px; color: #000; }
+  .script-t col.sn-c { width: 17px; }
   /* No rule between blocks any more: the formation's own black bar below is the
      separator, and a 3px rule under the block as well was two fences for one fence's
      job. Dropping five of them also pays for the bar's padding, which is the only
@@ -3431,8 +3446,9 @@ def _roster_and_plays(root: Path, formations: list[dict]) -> tuple[dict, dict]:
 # How many calls a package may carry. The packages sit directly above the blank field,
 # so their height is what the field's height is measured against -- a taller card is
 # field taken away. Five, not six: the sixth row across four of the six packages was
-# most of a quarter inch of the sheet.
-PACKAGE_PLAY_CAP = 5
+# most of a quarter inch of the sheet. Three since the script grew its left/right split
+# row: the two rows a card gave up are room handed back to the sheet.
+PACKAGE_PLAY_CAP = 3
 
 
 def _package_strip(root: Path, formations: list[dict]) -> str:
@@ -3738,6 +3754,7 @@ def _script_strip(root: Path, formations: list[dict]) -> str:
         )
 
     cells = []
+    sides = {"left": 0, "right": 0}
     for call in assigned:
         found = plays.get(call)
         if found is None:
@@ -3746,6 +3763,8 @@ def _script_strip(root: Path, formations: list[dict]) -> str:
                 "Use a play's full call."
             )
         play, form = found
+        if play.get("direction") in sides:
+            sides[play["direction"]] += 1
         cells.append(f'<a href="{p_href(play)}">'
                      f'<span class="xl-code">#{esc(play["code"])} |</span>'
                      f'{esc(_package_row(play, form))}</a>')
@@ -3755,9 +3774,21 @@ def _script_strip(root: Path, formations: list[dict]) -> str:
         f'<tr><td class="sn">{i}</td><td>{cell}</td></tr>'
         for i, cell in enumerate(cells, 1)
     )
+    # The split row: how much of the script goes each way, so a lean toward one side is
+    # visible before the first snap rather than noticed by the defense in the second
+    # quarter. Counted off each play's own `direction`; a play with neither is left out.
+    both = sides["left"] + sides["right"]
+    def pct(n: int) -> str:
+        return f"{round(100 * n / both)}%" if both else "—"
+    split = (f'<thead><tr><td class="split" colspan="2">'
+             f'Left {pct(sides["left"])} ({sides["left"]})'
+             f'<span class="split-sep">·</span>'
+             f'Right {pct(sides["right"])} ({sides["right"]})</td></tr></thead>')
     return ('<section class="script" role="img" aria-label="The possession script, '
-            f'{SCRIPT_ROWS} numbered rows of plays in the order they are called">'
-            f'<table class="xl script-t"><tbody>{rows}</tbody></table></section>')
+            f'{SCRIPT_ROWS} numbered rows of plays in the order they are called, '
+            f'{pct(sides["left"])} left and {pct(sides["right"])} right">'
+            f'<table class="xl script-t"><colgroup><col class="sn-c"><col></colgroup>'
+            f'{split}<tbody>{rows}</tbody></table></section>')
 
 
 # The fronts the defensive sheet carries, in the order a coach reaches for them: the

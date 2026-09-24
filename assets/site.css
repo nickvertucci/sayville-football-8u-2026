@@ -591,6 +591,16 @@ table.xl.script-t td { height: 26px; padding: 2px 5px; vertical-align: middle;
 table.xl.script-t td.sn {
   width: 26px; text-align: center; font-weight: 800; color: var(--muted);
 }
+/* The left/right split above the numbered rows: a header, so it is set off from the
+   calls by the same heavy rule the column's border uses. */
+table.xl.script-t td.split {
+  font-size: 11px; font-weight: 800; border-bottom: 2px solid var(--ink);
+}
+.script-t .split-sep { margin: 0 8px; color: var(--muted); }
+/* The split row spans both columns, and a spanning first row leaves the browser to
+   guess the column widths -- it split them evenly and clipped every call. The col pins
+   the number column to the width its cells ask for. */
+.script-t col.sn-c { width: 26px; }
 /* A script row is a play link, so it reads like one: the same size, weight and
    absence of underline as a package row, not the browser's blue-and-underlined
    default. It was the only list of plays on this page still wearing that. */
@@ -1076,11 +1086,16 @@ table.xl.pk-plays td {
      to two pages the first time the script was filled in. The column is sized so
      nothing needs to wrap; this makes a name that somehow did overflow visibly rather
      than silently push the field and the board off the page. */
-  table.xl.script-t td { height: 20.4px; padding: 0 1px; line-height: 1.15;
+  /* 19.4 rather than 20.4 since the split row joined the column: twenty-one rows now
+     share the height twenty did, so the foot still lands on the Power I block's. */
+  table.xl.script-t td { height: 19.4px; padding: 0 1px; line-height: 1.15;
                          font-size: 8.5px; font-weight: 700; white-space: nowrap;
                          vertical-align: middle; text-align: center; }
   table.xl.script-t td.sn { width: 17px; text-align: center; font-size: 7px;
                             font-weight: 800; color: #000; }
+  table.xl.script-t td.split { font-size: 8.5px; border-bottom: 2px solid #000; }
+  .script-t .split-sep { margin: 0 5px; color: #000; }
+  .script-t col.sn-c { width: 17px; }
   /* No rule between blocks any more: the formation's own black bar below is the
      separator, and a 3px rule under the block as well was two fences for one fence's
      job. Dropping five of them also pays for the bar's padding, which is the only
