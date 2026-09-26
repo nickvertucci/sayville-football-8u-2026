@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="702" height="472" viewBox="0 27 702 472" font-family="Segoe UI, Helvetica, Arial, sans-serif" role="img">
-<title>Regular I - Z Tight Right - Y Slant Pass Right — Regular I Z Tight Right Y Slant Pass Right vs 4-4</title>
+<title>Regular I - Z Right - Y Slant Pass Right — Regular I Z Right Y Slant Pass Right vs 4-4</title>
 <rect x="0" y="0" width="702" height="513" fill="#ffffff"/>
 <line x1="0" y1="459.0" x2="702" y2="459.0" stroke="#c8cdd6" stroke-width="1"/>
 <line x1="0" y1="189.0" x2="702" y2="189.0" stroke="#c8cdd6" stroke-width="1"/>
@@ -73,5 +73,5 @@
 <text x="607.5" y="187.3" text-anchor="middle" font-size="12.5" fill="#9aa2ae" font-weight="600" stroke="#fff" stroke-width="3" paint-order="stroke">RC</text>
 <text x="351.0" y="90.2" text-anchor="middle" font-size="12.5" fill="#9aa2ae" font-weight="600" stroke="#fff" stroke-width="3" paint-order="stroke">FS</text>
 <rect x="624.4" y="35.0" width="69.6" height="52.0" rx="8" fill="#ffffff" stroke="#111318" stroke-width="3"/><text x="659.2" y="75.0" text-anchor="middle" font-size="40" font-weight="800" fill="#111318">#9</text>
-<text x="12.0" y="45.0" font-size="4.3" font-weight="700" fill="#111318">Regular I - Z Tight Right - Y Slant Pass Right</text>
+<text x="12.0" y="45.0" font-size="4.3" font-weight="700" fill="#111318">Regular I - Z Right - Y Slant Pass Right</text>
 </svg>

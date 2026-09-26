@@ -73,7 +73,7 @@ build checks the receiver's path is that long.
 
 A toss pass is the toss right up until he pulls up: the pitch is real, the back runs
 the toss, and then he stops behind the line and throws. So it is **called like the
-toss** — `Regular I Z Tight Right 38 Toss Pass` — and the digits name the back who takes
+toss** — `Regular I Z Right 38 Toss Pass` — and the digits name the back who takes
 the pitch, not the receiver. `ball_carrier` is the receiver, the way it is on every
 pass; `type` is `pass`, the scheme is `Protect`, and it gives its own `direction`
 rather than a `fakes`, because it is not pretending to be another play — for two
@@ -115,6 +115,9 @@ using, not the next number in its formation. Gaps are fine; a renumber is not, b
 every wristband already printed would be wrong. The one-time assignment ran in call
 sheet order, which is why Regular I is 1–16, Split Backs 17–32, Shotgun 33–38, Power I
 39–42, and the two teaching formations sit at the end: Trips 43–50, Wishbone 51–58.
+Single Back took 59–66 after that; 67–70 were the Z Split tosses and are retired.
+A retired number goes in `RETIRED_CODES` in `render.py` when its play is deleted, and
+the build refuses it — otherwise "the next free number" hands it straight back out.
 
 There is no introductory paragraph: a play is its name, call, diagram, assignments and
 coaching points.
@@ -133,8 +136,8 @@ the right, where he lines up on every other snap. Everything else — the line r
 unchanged, and the player's `path` is still relative to wherever he ends up, so the
 assignment does not have to know which look it is in.
 
-**Say it in the call.** `Regular I Z Tight Left 37 Handoff` tells the huddle which side the slot is
-on, the same way `Regular I Z Tight Right 36 Handoff` does. A play that moves
+**Say it in the call.** `Regular I Z Left 37 Handoff` tells the huddle which side the slot is
+on, the same way `Regular I Z Right 36 Handoff` does. A play that moves
 somebody silently is a play nobody can call.
 
 An override may only move a player the formation already has, and the coordinates must be
@@ -186,29 +189,27 @@ the book gives one man two names. A formation with a fourth back puts him at 4
 ### `name` and `call` are the numbering
 
 Both are printed at the top of every card. `name` is
-`{formation} - Z {Tight|Split} {Left|Right} - {digits} {word}`
-(*Regular I - Z Tight Right - 36 Handoff*); `call` is the same language yelled in
-the huddle (`Regular I Z Tight Right 36 Handoff` — formation, how wide the Z is and
-which side he is on, then **two digits: who carries it and where it goes**, then the
-play word).
+`{formation} - Z {Left|Right} - {digits} {word}`
+(*Regular I - Z Right - 36 Handoff*); `call` is the same language yelled in
+the huddle (`Regular I Z Right 36 Handoff` — formation, which side the Z is on,
+then **two digits: who carries it and where it goes**, then the play word).
 
-**`Tight` or `Split` is how far off his end the Z is standing**, and `--check` holds it
-to the diagram: tight is within 1.8 yards of the end on his side, split is further.
-Every play in the book is `Z Tight` at the moment. Write `Z Split` and move him with an
-`alignment` override if you want the wide look; do not write one without the other,
-because the call and the picture disagreeing is the thing this check exists to catch.
-The Power I is the exception and says neither — its Z is a back behind a guard, where
-tight and split do not describe anything.
+**The Z's phrase is his side and nothing else.** It used to say `Tight` or `Split` as
+well — how far off his end he was standing — and the word came out with the four
+Z Split tosses (#67–70, retired): every Z left in the book stands just off his end, so
+the word was a constant the huddle yelled for nothing. `--check` rejects a call that
+still says `Z Tight` or `Z Split`. If a wide Z comes back, it needs a call that tells
+it apart from the tight one before it needs a diagram.
 
 When **X, Y or Z** carries it, the digits are replaced by that letter and the call ends
-with the way the ball is going: `Regular I Z Tight Right X Sweep Right`, `Split Backs Z Tight Left
+with the way the ball is going: `Regular I Z Right X Sweep Right`, `Split Backs Z Left
 Y Sweep Left`, `Trips Right Y Slant Pass Right`. There is no hole to name, because a man
 already outside the tackle does not run through a gap to get there.
 
 The direction word is there because dropping the digit dropped the direction with it. A
 hole digit says which way — even right, odd left — and these are the plays where a
 nine-year-old cannot infer it from anything else: the **X is the left end and `X Sweep`
-sends him right**, and the **Z lines up right on `Z Tight Right Z Sweep` and runs left**. So
+sends him right**, and the **Z lines up right on `Z Right Z Sweep` and runs left**. So
 the call says it, and `--check` holds it to the play's `direction` the way it holds a
 hole digit to the diagram. `LETTER_BACKS` in `render.py` is the set of three; the shape
 it enforces is `{letter} {word} {Left|Right}`, with the letter the play's
@@ -492,8 +493,8 @@ a play would flip his path and leave him aligned on the same side. There is no
 A left-handed play that leaves the Z on the right is a different play, a blocker short
 on the side the ball goes, and `--audit` will tell you so.
 
-**A play that moves the slot says so in its call.** `Regular I Z Tight Left 37 Handoff` and
-`Split Backs Z Tight Left 29 Toss` both do, each mirroring its right-hand play so the slot is out
+**A play that moves the slot says so in its call.** `Regular I Z Left 37 Handoff` and
+`Split Backs Z Left 29 Toss` both do, each mirroring its right-hand play so the slot is out
 there on the side the ball goes. Use `alignment` to move him and name his side in the
 call; a play that moves somebody silently is a play nobody can call.
 

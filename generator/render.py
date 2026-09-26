@@ -468,46 +468,34 @@ def validate_call(play: dict, form: dict, defenses: dict) -> list[str]:
     # also the easy mistake to make, because a Z Right play carries no alignment
     # override at all -- it takes the formation's -- so mirroring one to the left means
     # *adding* a key rather than flipping one, which is easy to forget.
-    side_word = re.search(r"\bZ (?:(Tight|Split) )?(Left|Right)\b", call)
+    #
+    # The Z's phrase is his side and nothing else. It said Tight or Split for a while,
+    # and the word went when the split look did: every Z in the book stands just off
+    # his end, so the word was a constant the huddle had to yell for nothing. An old
+    # call still carrying it is stopped here rather than matching nothing below and
+    # skipping the side check in silence.
+    old_word = re.search(r"\bZ (Tight|Split) (?:Left|Right)\b", call)
+    if old_word:
+        return [f"{pid}: call '{call}' says Z {old_word.group(1)} -- the Z's phrase is "
+                "just his side now, 'Z Left' or 'Z Right'"]
+    side_word = re.search(r"\bZ (Left|Right)\b", call)
     if side_word:
-        splitness, side = side_word.group(1), side_word.group(2)
-        said = f"Z {splitness + ' ' if splitness else ''}{side}"
-        al = play_alignment(form, play)
-        where = al.get("Z")
+        side = side_word.group(1)
+        where = play_alignment(form, play).get("Z")
         if where is None:
-            return [f"{pid}: call '{call}' says {said}, but this formation has no Z"]
+            return [f"{pid}: call '{call}' says Z {side}, but this formation has no Z"]
         if (where[0] < 0) != (side == "Left"):
             stood = "left" if where[0] < 0 else "right"
-            return [f"{pid}: call '{call}' says {said}, but the Z "
+            return [f"{pid}: call '{call}' says Z {side}, but the Z "
                     f"lines up on the {stood} (x = {where[0]:+.1f}) -- give the play an "
                     f'"alignment" override for Z, or fix the call']
-        # Tight or Split says how far off the end on his side he is standing. Same
-        # reason the side is checked: the Z is a blocker on most plays, so widening
-        # him leaves every geometry check happy and only the picture different — and
-        # the difference is the whole point of saying it, because a split Z is a
-        # receiver the corner has to walk out to and a tight one is another blocker.
-        if splitness:
-            end = SIDE_END["R" if where[0] > 0 else "L"]
-            if end not in al:
-                return [f"{pid}: call '{call}' says {said}, but this formation has no "
-                        f"{end} for him to be tight to or split from"]
-            gap = abs(where[0] - al[end][0])
-            if (gap <= TIGHT_GAP) != (splitness == "Tight"):
-                is_now = "tight to" if gap <= TIGHT_GAP else "split from"
-                return [f"{pid}: call '{call}' says Z {splitness}, but the Z is "
-                        f"{is_now} the {end} ({gap:.1f} yards) -- give the play an "
-                        f'"alignment" override for Z, or fix the call']
 
     # "Tight Right" says the Y is beside his tackle and the X has split away; "Tight
     # Left" is the mirror. Checked against the diagram for the same reason the Z is:
     # which end is tight decides whether a C-gap call has a hole at all. With the X
     # split, the gap between our left tackle and our left end is nearly five yards of
     # open grass, and a 27 Handoff into it is a call with no hole behind it.
-    # Not the Z's own Tight/Split, which is a different man and is checked above.
-    # "Split Backs Z Tight Right 36 Handoff" says where the slot is standing; it says
-    # nothing about which end is beside its tackle, and reading it as though it did
-    # failed ten plays the moment the Z's phrase learned the word.
-    tight = re.search(r"(?<!Z )\bTight (Left|Right)\b", call)
+    tight = re.search(r"\bTight (Left|Right)\b", call)
     if tight:
         al = play_alignment(form, play)
         close, away = ("Y", "X") if tight.group(1) == "Right" else ("X", "Y")
@@ -887,6 +875,17 @@ def validate_install(schedule: dict, formations: list[dict], defenses: dict,
     return errors
 
 
+# Numbers that belonged to a play the book no longer has. A gap is all a retired play
+# leaves behind, and it has to stay one: "the next free number" would otherwise hand the
+# top of the range straight back out, and a boy with an old band would run the old play.
+RETIRED_CODES = {
+    "67": "Split Backs Z Split Right 38 Toss",
+    "68": "Split Backs Z Split Left 29 Toss",
+    "69": "Regular I Z Split Right 38 Toss",
+    "70": "Regular I Z Split Left 39 Toss",
+}
+
+
 def validate(formations: list[dict], defenses: dict) -> list[str]:
     errors = []
     # Play ids must be unique across the whole book: each one becomes a flat p-<id>.html
@@ -1088,6 +1087,9 @@ def validate(formations: list[dict], defenses: dict) -> list[str]:
                                   "like '7' — the letter-and-dash codes are gone")
                 if code in codes:
                     errors.append(f"{pid}: code '{code}' is already {codes[code]}'s")
+                if code in RETIRED_CODES:
+                    errors.append(f"{pid}: code '{code}' was {RETIRED_CODES[code]} and is "
+                                  "retired -- take the next number nobody has ever used")
                 codes.setdefault(code, pid)
             carrier = play.get("ball_carrier")
             if carrier and carrier not in form.get("alignment", {}):

@@ -881,12 +881,13 @@ table.xl.xl-plays td {
 /* The call at 10px, the NUMBER at 13, and the rows spread down the pouch.
    All three are measured against the youth window, 3.5in by 2.75in, two columns.
 
-   The call is width-capped: the longest one the sheet carries is "Z Tight Right -
+   The call is width-capped: the longest one the sheet carried was "Z Tight Right -
    18 Fake Sweep", and at 10px it cleared its column by two points with the rule
    two points off the call. Two points is not a gap, it is a collision -- the rule
-   and the Z of "Z Tight" read as one mark. The gap is worth more than the type
-   size, so the gap took two spaces and the call gave up the half point that pays
-   for them; 9.5px leaves four points spare at the end of the longest row. The
+   and the Z at the front of the call read as one mark. The gap is worth more than
+   the type size, so the gap took two spaces and the call gave up the half point
+   that pays for them; 9.5px left four points spare at the end of that row, and more
+   since the Z's phrase lost its Tight -- it is "Z Right - 18 Fake Sweep" now. The
    words are not shortened to buy more, because the call sheet spells them out too
    and a sheet that prints a different call from the one on the boy's wrist has to
    be translated under a play clock.
@@ -1315,7 +1316,7 @@ table.xl.pk-plays td {
   .band-span { font-size: 9px; opacity: 1; right: 5px; bottom: 3px; }
   .band-sub { font-size: 6.5pt; color: #000; border-bottom-color: #000;
               margin: 1px 0 0; padding: 0 3px; }
-  /* Width sets the type here, not height: "Z Tight Right - 18 Fake Sweep" is the
+  /* Width sets the type here, not height: "Z Right - 18 Fake Sweep" is the
      longest row there is and it has half of three and a half inches to fit in. The
      rows then have three inches to live in, which is why the leading is what it is --
      the space was going spare, and a row a boy can keep his eye on is what to spend
@@ -3571,11 +3572,10 @@ def _sheet_name(play: dict, form: dict) -> str:
     keeps nothing.
     """
     call = play.get("call") or ""
-    # The Z first, when the call has one. "Tight Right" was what a leftmost match of
-    # the pattern below found, and it dropped the letter off the front of the one
-    # thing the alignment is telling you -- which boy is where. The sheet has the room
-    # now that the middle column is gone, and "Z Tight Right" is what gets yelled.
-    m = re.search(r"\b(Z(?:\s+\w+)?\s+(?:Left|Right))\s+(.*)$", call)
+    # The Z first, when the call has one. A leftmost match of the pattern below drops
+    # the letter off the front of the one thing the alignment is telling you -- which
+    # boy is where -- and "Z Right" is what gets yelled.
+    m = re.search(r"\b(Z\s+(?:Left|Right))\s+(.*)$", call)
     if m:
         return f"{m.group(1)} - {m.group(2)}"
     m = re.search(r"\b(\w+)\s+(Left|Right)\s+(.*)$", call)
@@ -4022,8 +4022,8 @@ def _call_sheet_order(formations: list[dict]) -> list[dict]:
 BAND_POUCHES = 3
 # Two columns, and the row chrome is what pays for them. In a 3.5in youth window a
 # column is 147 points once the border, the gutter, the row padding and the number
-# column are taken out -- and the longest call in the book, "Z Tight Right - Y Slant
-# Pass Right", fits that at 9px. One column would buy half a point of type and cost
+# column are taken out -- and the longest call in the book, "Z Right - Y Slant Pass
+# Right", fits that at 9px. One column would buy half a point of type and cost
 # eighteen rows of scrolling down a two-and-three-quarter-inch pouch, which is not a
 # trade worth making.
 #
@@ -4035,7 +4035,7 @@ BAND_PANEL_COLUMNS = 2
 def band_call(play: dict, form: dict) -> str:
     """The play's name, minus the formation the panel heading already says.
 
-    "Split Backs - Z Tight Right - 38 Toss" is "Z Tight Right - 38 Toss" in the
+    "Split Backs - Z Right - 38 Toss" is "Z Right - 38 Toss" in the
     Split Backs pouch. Nothing else comes off. "Right" is a word and about a point
     and a half of type, and it is worth both: the boy reading this is nine, he has
     been taught the word, and an abbreviation is one more thing to remember at the
@@ -4043,7 +4043,7 @@ def band_call(play: dict, form: dict) -> str:
     this does not.
 
     It reads off the NAME rather than the call, which is the same words with the
-    dashes still in: "Z Tight Right - 36 Handoff" instead of a run of six words. The
+    dashes still in: "Z Right - 36 Handoff" instead of a run of four words. The
     dash is where the boy's eye stops -- where he is standing on the left of it and
     what he does on the right -- and at a glance through a plastic window that break
     is worth more than the two points of type it costs.
@@ -4135,8 +4135,8 @@ def _band_panel(pouch: list[tuple[dict, list[dict]]]) -> str:
         """The bar: the name, and the number range only when it is a real range.
 
         "1-70" on a pouch holding 1 to 16 and 69 to 70 is a lie that reads as
-        seventy plays. The split-Z plays took the next free numbers, the way every
-        new play does, so a formation's numbers no longer run contiguously -- and a
+        seventy plays. A new play takes the next free number and a retired one
+        leaves a gap, so a formation's numbers need not run contiguously -- and a
         span written across a gap says nothing true. Print it when it is honest and
         leave it off when it is not; every row carries its own number regardless.
         """
