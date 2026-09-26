@@ -120,7 +120,7 @@ def check_play_action(play, defenses):
 def check_bubble_clears_our_end(play, resolved, alignment, side) -> list[str]:
     """A block that says "around our end" is drawn going around our end.
 
-    The words and the picture have to agree, and here they did not. The Regular I
+    The words and the picture have to agree, and here they did not. The I Formation
     toss told the fullback to bubble out around the Y and drew his first point at
     x 3.3 with the Y standing at 4.2 — cutting up inside his own tight end, which
     is the single thing that rule exists to stop him doing. It was wrong in every

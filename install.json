@@ -15,7 +15,7 @@
       "n": 1,
       "date": "2026-08-11",
       "phase": "preseason",
-      "focus": "Line up in the Regular I",
+      "focus": "Line up in the I Formation",
       "agility_time": "5:30–6:15",
       "agility_drills": [
         "Passing routes (15 min)",
@@ -36,7 +36,7 @@
       "n": 2,
       "date": "2026-08-13",
       "phase": "preseason",
-      "focus": "Line up in the Regular I again",
+      "focus": "Line up in the I Formation again",
       "agility_time": "5:30–6:15",
       "agility_drills": [
         "Passing routes (15 min)",
@@ -84,7 +84,7 @@
         "Two groups, swap on the whistle — every kid does both stations"
       ],
       "install_time": "6:10–6:50",
-      "emphasis": "No new install. Everything we already have — Dive and Wedge, both ways out of the Regular I — goes live for the rest of practice, and the point is personnel, not plays. Run the same handful over and over against a real look and watch who moves people, who finds the hole without being told and who tackles in space. Nobody gets a spot on reputation: the kid who does it live is the kid who starts.",
+      "emphasis": "No new install. Everything we already have — Dive and Wedge, both ways out of the I Formation — goes live for the rest of practice, and the point is personnel, not plays. Run the same handful over and over against a real look and watch who moves people, who finds the hole without being told and who tackles in space. Nobody gets a spot on reputation: the kid who does it live is the kid who starts.",
       "huddle": "Name the first team out loud, and the first sub at every spot.",
       "huddle_time": "6:50–7:00"
     },
@@ -186,7 +186,7 @@
       "n": 6,
       "date": "2026-09-15",
       "phase": "season",
-      "focus": "Split Backs: slot sweep and TE sweep",
+      "focus": "Split Formation: slot sweep and TE sweep",
       "emphasis": "One long block after the warm-up. Review #17 and #18, then install the sweeps: #23 and #24 (slot sweep) and #25 and #26 (TE sweep). The runner stays down until the snap, comes across, takes the handoff at full speed, and turns up behind the halfbacks.",
       "blocks": [
         {
@@ -199,7 +199,7 @@
         {
           "tag": "B",
           "kind": "install",
-          "title": "Split Backs install",
+          "title": "Split Formation install",
           "time": "5:35–6:45",
           "notes": [
             "One group, the rest of practice",
@@ -225,7 +225,7 @@
       "n": 7,
       "date": "2026-09-17",
       "phase": "season",
-      "focus": "Split Backs: 19 Fake Sweep, plus Tuesday's sweeps",
+      "focus": "Split Formation: 19 Fake Sweep, plus Tuesday's sweeps",
       "emphasis": "One long block after the warm-up. Review Tuesday — #17, #18, the slot sweep and the TE sweep — then install #21, Z Left 19 Fake Sweep. Fake the handoff to the right halfback, then the quarterback keeps it left behind the left halfback.",
       "blocks": [
         {
@@ -238,7 +238,7 @@
         {
           "tag": "B",
           "kind": "install",
-          "title": "Split Backs install",
+          "title": "Split Formation install",
           "time": "5:35–6:45",
           "notes": [
             "One group, the rest of practice",
@@ -266,7 +266,7 @@
       "date": "2026-09-22",
       "phase": "season",
       "focus": "Everybody somewhere new: rotate the six skill spots",
-      "emphasis": "No new play tonight. Everything already in the book is fair game -- Regular I and Split Backs -- and what changes every snap is who is standing where. Get the calls right with the first eleven first; the lineup does not start moving until they are.",
+      "emphasis": "No new play tonight. Everything already in the book is fair game -- I Formation and Split Formation -- and what changes every snap is who is standing where. Get the calls right with the first eleven first; the lineup does not start moving until they are.",
       "water_break": 1,
       "blocks": [
         {
@@ -284,7 +284,7 @@
           "time": "5:35–6:19",
           "notes": [
             "First time through with the first eleven, no rotating -- the calls have to be right before the lineup starts moving",
-            "Coach calls off the installed book, Regular I and Split Backs, mixing it up as we go",
+            "Coach calls off the installed book, I Formation and Split Formation, mixing it up as we go",
             "In and out of the huddle every rep"
           ],
           "note": "Two carousels turning at once. The ends walk down the list -- whoever was at Y goes to X and the next boy comes in at Y. The backs turn the other way, and the slot is the door the other five walk through. One row a snap, read left to right; the small number is where he sits on the depth chart at that spot, so a 1 is his own spot and anything higher is a boy getting a look at somebody else's. The card says who, not what -- the call comes from the coach on the snap. Run the six, go back to the top, run them again -- twelve snaps, and every boy gets at least two at the spot that is really his.",

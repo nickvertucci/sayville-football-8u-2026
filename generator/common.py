@@ -56,7 +56,7 @@ def slug(text) -> str:
 def form_label(form: dict) -> str:
     """What a formation is called in the UI.
 
-    `family` is the heading a human reads ("Regular I", "Split Backs"); `name` is the
+    `family` is the heading a human reads ("I Formation", "Split Formation"); `name` is the
     handle. They are the same string on every formation we carry today, and the split
     is kept because a one-word `name` is what a call would ever shorten to if the
     heading grew longer than a huddle call should be.

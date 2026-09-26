@@ -3,9 +3,9 @@
   "order": 6,
   "name": "Power I",
   "family": "Power I",
-  "summary": "The Regular I with the slot brought in. He stands behind a guard, between the fullback and the tailback — three backs, nobody split out.",
+  "summary": "The I Formation with the slot brought in. He stands behind a guard, between the fullback and the tailback — three backs, nobody split out.",
   "personnel": "11 players, 2 tight ends, quarterback, fullback, tailback, slot — the slot in the backfield, behind a guard",
-  "notes": "Same line as the Regular I — both ends tight, seven on the line every snap. The quarterback under the center, the fullback behind him and the tailback behind the fullback, exactly as always. The difference is the slot: instead of splitting out past the right end he stands in the backfield, behind a guard, halfway between the fullback and the tailback in depth. The call names his side — Power I Slot Right or Power I Slot Left — and that is the side the ball goes.",
+  "notes": "Same line as the I Formation — both ends tight, seven on the line every snap. The quarterback under the center, the fullback behind him and the tailback behind the fullback, exactly as always. The difference is the slot: instead of splitting out past the right end he stands in the backfield, behind a guard, halfway between the fullback and the tailback in depth. The call names his side — Power I Slot Right or Power I Slot Left — and that is the side the ball goes.",
   "alignment": {
     "X": [-4.2, -0.5],
     "LT": [-2.8, -0.5],
@@ -37,6 +37,6 @@
     "The slot lines up behind the guard, splitting the fullback and the tailback in depth. Off the tailback's outside shoulder, not beside the fullback.",
     "The call names his side, and his side is the play's side. Power I Slot Right runs right; Power I Slot Left moves him and runs left.",
     "He is a back here, not a slot. He gets a job written on every play — he never screens a corner out of this look, because there is no corner near him.",
-    "Same numbers as the Regular I: 2 is the fullback, 3 the tailback. The tailback carries all four of these."
+    "Same numbers as the I Formation: 2 is the fullback, 3 the tailback. The tailback carries all four of these."
   ]
 }

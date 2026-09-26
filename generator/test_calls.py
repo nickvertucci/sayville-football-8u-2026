@@ -38,62 +38,62 @@ CASES = [
     # Handoff to the boy carrying it, and the two digits are what tell them apart. The
     # old words are the schemes still, and a call that says one of them now fails.
     ("off tackle, called by its scheme", "i-form", "i-power-r",  "I Z Right 36 Power", True),
-    ("A gap, called by its scheme",    "i-form",   "i-smash-r",  "Regular I Z Right 32 Smash", True),
+    ("A gap, called by its scheme",    "i-form",   "i-smash-r",  "I Formation Z Right 32 Smash", True),
     ("B gap, called by its scheme",    "wishbone", "wb-dive-r",  "Wishbone 24 Dive", True),
-    ("a handoff called Toss",         "i-form",   "i-smash-r",  "Regular I Z Right 32 Toss", True),
-    ("a toss called Handoff",         "split-backs", "sb-toss-r", "Split Backs Z Right 38 Handoff", True),
+    ("a handoff called Toss",         "i-form",   "i-smash-r",  "I Formation Z Right 32 Toss", True),
+    ("a toss called Handoff",         "split-backs", "sb-toss-r", "Split Formation Z Right 38 Handoff", True),
     # The call says which side the Z stands on, and the diagram has to agree -- he is a
     # blocker on most plays, so the wrong side passes every geometry check and only the
     # picture is wrong.
-    ("Z on the side the call says",   "i-form",   "i-power-r",  "Regular I Z Right 36 Handoff", False),
-    ("Z on the other side",           "i-form",   "i-power-r",  "Regular I Z Left 36 Handoff", True),
+    ("Z on the side the call says",   "i-form",   "i-power-r",  "I Formation Z Right 36 Handoff", False),
+    ("Z on the other side",           "i-form",   "i-power-r",  "I Formation Z Left 36 Handoff", True),
     # X, Y and Z name themselves. They had digits for a while -- 4, 5 and 6, after the
     # backs -- and the digits went when the letters came, so the end-around is
     # "X Sweep Right": the letter has to be the man carrying it, and the last word has
     # to be the way he is going.
-    ("end-around",                    "i-form",   "i-te-sweep-r", "Regular I Z Right X Sweep Right", False),
-    ("end-around, the other end",     "i-form",   "i-te-sweep-r", "Regular I Z Right Y Sweep Right", True),
-    ("end-around, no letter at all",  "i-form",   "i-te-sweep-r", "Regular I Z Right Sweep Right", True),
-    ("end-around, back on its old digits", "i-form", "i-te-sweep-r", "Regular I Z Right 58 Sweep", True),
+    ("end-around",                    "i-form",   "i-te-sweep-r", "I Formation Z Right X Sweep Right", False),
+    ("end-around, the other end",     "i-form",   "i-te-sweep-r", "I Formation Z Right Y Sweep Right", True),
+    ("end-around, no letter at all",  "i-form",   "i-te-sweep-r", "I Formation Z Right Sweep Right", True),
+    ("end-around, back on its old digits", "i-form", "i-te-sweep-r", "I Formation Z Right 58 Sweep", True),
     # The direction word is the whole reason it is there: the X is the LEFT end and
     # this play sends him right, so a call that leaves the way out, or gets it
     # backwards, is the mistake a boy would actually make.
-    ("end-around, no direction",      "i-form",   "i-te-sweep-r", "Regular I Z Right X Sweep", True),
-    ("end-around, wrong direction",   "i-form",   "i-te-sweep-r", "Regular I Z Right X Sweep Left", True),
-    ("end-around, direction but no word", "i-form", "i-te-sweep-r", "Regular I Z Right X Right", True),
+    ("end-around, no direction",      "i-form",   "i-te-sweep-r", "I Formation Z Right X Sweep", True),
+    ("end-around, wrong direction",   "i-form",   "i-te-sweep-r", "I Formation Z Right X Sweep Left", True),
+    ("end-around, direction but no word", "i-form", "i-te-sweep-r", "I Formation Z Right X Right", True),
     # The Z lines up right on this one and runs left, which is the other reason the
     # word is worth its six characters.
-    ("the Z on the sweep",            "i-form",   "i-sl-sweep-l", "Regular I Z Right Z Sweep Left", False),
-    ("the Z sweep called the way he lines up", "i-form", "i-sl-sweep-l", "Regular I Z Right Z Sweep Right", True),
-    ("the Z sweep given to an end",   "i-form",   "i-sl-sweep-l", "Regular I Z Right X Sweep Left", True),
+    ("the Z on the sweep",            "i-form",   "i-sl-sweep-l", "I Formation Z Right Z Sweep Left", False),
+    ("the Z sweep called the way he lines up", "i-form", "i-sl-sweep-l", "I Formation Z Right Z Sweep Right", True),
+    ("the Z sweep given to an end",   "i-form",   "i-sl-sweep-l", "I Formation Z Right X Sweep Left", True),
     # A pass is the same: its word is a route, and the letter says who is running it.
-    ("the Y slant",                   "i-form",   "i-te-out-r", "Regular I Z Right Y Slant Pass Right", False),
-    ("the Y slant given to the X",    "i-form",   "i-te-out-r", "Regular I Z Right X Slant Pass Right", True),
+    ("the Y slant",                   "i-form",   "i-te-out-r", "I Formation Z Right Y Slant Pass Right", False),
+    ("the Y slant given to the X",    "i-form",   "i-te-out-r", "I Formation Z Right X Slant Pass Right", True),
     ("a letter call in Trips",        "trips",    "tr-te-sweep-r", "Trips Right X Sweep Right", False),
     ("a letter call in Trips, wrong end", "trips", "tr-te-sweep-r", "Trips Right Y Sweep Right", True),
     ("a letter call in Trips, no direction", "trips", "tr-te-sweep-r", "Trips Right X Sweep", True),
     # The A gap is 2/3, not 0/1, and there is no 1 hole at all: the middle is one hole,
     # so a call that names the old number has to fail rather than quietly measure a yard
     # and a half away and pass.
-    ("A gap right",                   "i-form",   "i-smash-r",  "Regular I Z Right 32 Handoff", False),
-    ("A gap right, called at the old 0", "i-form", "i-smash-r",  "Regular I Z Right 30 Handoff", True),
-    ("A gap left",                    "i-form",   "i-smash-l",  "Regular I Z Left 33 Handoff", False),
-    ("the 1 hole, which does not exist", "i-form", "i-smash-l",  "Regular I Z Left 31 Handoff", True),
+    ("A gap right",                   "i-form",   "i-smash-r",  "I Formation Z Right 32 Handoff", False),
+    ("A gap right, called at the old 0", "i-form", "i-smash-r",  "I Formation Z Right 30 Handoff", True),
+    ("A gap left",                    "i-form",   "i-smash-l",  "I Formation Z Left 33 Handoff", False),
+    ("the 1 hole, which does not exist", "i-form", "i-smash-l",  "I Formation Z Left 31 Handoff", True),
     ("B gap right",                   "wishbone", "wb-dive-r",  "Wishbone 24 Handoff", False),
     ("B gap, called at the old 2",    "wishbone", "wb-dive-r",  "Wishbone 22 Handoff", True),
-    ("split toss right",              "split-backs", "sb-toss-r", "Split Backs Z Right 38 Toss",  False),
-    ("split toss, called off tackle", "split-backs", "sb-toss-r", "Split Backs Z Right 36 Toss", True),
-    ("split toss, credited to a back nobody defines", "split-backs", "sb-toss-r", "Split Backs Z Right 48 Toss", True),
-    ("split toss right, numbered left", "split-backs", "sb-toss-r", "Split Backs Z Right 39 Toss", True),
-    ("split toss left",               "split-backs", "sb-toss-l", "Split Backs Z Left 29 Toss",   False),
-    ("split toss left, wrong back",   "split-backs", "sb-toss-l", "Split Backs Z Left 39 Toss",   True),
-    ("outside called Pitch",          "split-backs", "sb-toss-r", "Split Backs Z Right 38 Pitch", True),
-    ("QB sweep at 8/9",               "split-backs", "sb-qb-sweep-r", "Split Backs Z Right 18 Sweep", False),
-    ("QB sweep called Toss",          "split-backs", "sb-qb-sweep-r", "Split Backs Z Right 18 Toss", True),
+    ("split toss right",              "split-backs", "sb-toss-r", "Split Formation Z Right 38 Toss",  False),
+    ("split toss, called off tackle", "split-backs", "sb-toss-r", "Split Formation Z Right 36 Toss", True),
+    ("split toss, credited to a back nobody defines", "split-backs", "sb-toss-r", "Split Formation Z Right 48 Toss", True),
+    ("split toss right, numbered left", "split-backs", "sb-toss-r", "Split Formation Z Right 39 Toss", True),
+    ("split toss left",               "split-backs", "sb-toss-l", "Split Formation Z Left 29 Toss",   False),
+    ("split toss left, wrong back",   "split-backs", "sb-toss-l", "Split Formation Z Left 39 Toss",   True),
+    ("outside called Pitch",          "split-backs", "sb-toss-r", "Split Formation Z Right 38 Pitch", True),
+    ("QB sweep at 8/9",               "split-backs", "sb-qb-sweep-r", "Split Formation Z Right 18 Sweep", False),
+    ("QB sweep called Toss",          "split-backs", "sb-qb-sweep-r", "Split Formation Z Right 18 Toss", True),
     # The Z's phrase is his side only. Tight and Split came out of it, and an old call
     # still carrying one is stopped rather than quietly skipping the side check.
-    ("Z Tight, the retired word",     "i-form",   "i-power-r",  "Regular I Z Tight Right 36 Handoff", True),
-    ("Z Split, the retired word",     "split-backs", "sb-toss-r", "Split Backs Z Split Right 38 Toss", True),
+    ("Z Tight, the retired word",     "i-form",   "i-power-r",  "I Formation Z Tight Right 36 Handoff", True),
+    ("Z Split, the retired word",     "split-backs", "sb-toss-r", "Split Formation Z Split Right 38 Toss", True),
     ("wishbone power",                "wishbone", "wb-power-r", "Wishbone 46 Handoff", False),
     ("wishbone power on the 3-back",  "wishbone", "wb-power-r", "Wishbone 36 Handoff", True),
     ("wishbone smash",                "wishbone", "wb-smash-r", "Wishbone 22 Handoff", False),

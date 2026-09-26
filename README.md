@@ -28,27 +28,27 @@ right end is the **Y**, the split man is the **Z**. One letter each, on the diag
 the card, on the depth chart and in the call, so a boy never has to work out that LTE,
 RTE and SL were three abbreviations of three different things.
 
-### Regular I: formation + Z + back + hole + play word
+### I Formation: formation + Z + back + hole + play word
 
 The call names the formation, then `Z Right` — which side the Z lines up on — then two
 digits: the first says **who carries it**, the second says **where it goes**, and then
-the word says what happens to the ball. So `Regular I Z Right 36 Handoff` is the Regular I,
+the word says what happens to the ball. So `I Formation Z Right 36 Handoff` is the I Formation,
 Z on the right, the ball handed to the tailback between the tackle and the end.
 
 Off tackle depends on the Z's kick-out block, so he lines up on the side it has to
-happen: `Regular I Z Left 37 Handoff` puts him on the left. The call says so out loud,
+happen: `I Formation Z Left 37 Handoff` puts him on the left. The call says so out loud,
 because a play that moves somebody silently is a play nobody can call.
 
 | Back | Who |
 |---|---|
 | **1** | Quarterback — every formation |
-| **2** | The **fullback (FB)** — stacked behind the quarterback in the Regular I, and the right-hand back in the Split Backs and Shotgun — even-numbered holes |
-| **3** | The **tailback (TB)** — behind the fullback in the Regular I, and the left-hand back in the Split Backs and Shotgun — odd-numbered holes |
+| **2** | The **fullback (FB)** — stacked behind the quarterback in the I Formation, and the right-hand back in the Split Formation and Shotgun — even-numbered holes |
+| **3** | The **tailback (TB)** — behind the fullback in the I Formation, and the left-hand back in the Split Formation and Shotgun — odd-numbered holes |
 | **4** | A fourth back where a formation has one — the Wishbone's right halfback |
 
 **X, Y and Z have no digit.** They are already letters, so when one of them carries it
 or catches it the call says the letter, the play word, and then **which way it is
-going**: `Regular I Z Right X Sweep Right`, `Split Backs Z Left Y Sweep Left`,
+going**: `I Formation Z Right X Sweep Right`, `Split Formation Z Left Y Sweep Left`,
 `Trips Right Y Slant Pass Right`. A digit would be a second name for a man who already
 has one.
 
@@ -93,19 +93,19 @@ does not cross on the named side inside the hole the call names. A call sheet th
 worse than no call sheet, so the build will not publish one.
 
 The digits describe the back the first digit names, not necessarily the ball carrier. So
-`Regular I Z Right 36 Handoff` is the tailback between the right tackle and tight end,
-and `Regular I Z Left 37 Handoff` is the same handoff to the left.
+`I Formation Z Right 36 Handoff` is the tailback between the right tackle and tight end,
+and `I Formation Z Left 37 Handoff` is the same handoff to the left.
 
 | Call | Play | Where it hits |
 |---|---|---|
-| `Regular I Z Right 36 Handoff` / `Z Left 37 Handoff` | Regular I - Z Right - 36 Handoff / Z Left - 37 Handoff | tailback, tackle–tight end |
-| `Regular I Z Right 32 Handoff` / `Z Left 33 Handoff` | Regular I - Z Right - 32 Handoff / Z Left - 33 Handoff | tailback, A gap, fullback leading |
-| `Regular I Z Right 22 Handoff` / `Z Left 23 Handoff` | Regular I - Z Right - 22 Handoff / Z Left - 23 Handoff | fullback, A gap, on the snap |
-| `Regular I Z Right X Sweep Right` / `Z Left Y Sweep Left` | Regular I - Z Right - X Sweep Right / Z Left - Y Sweep Left | the backside tight end on an end-around, all the way outside |
-| `Regular I Z Right Y Slant Pass Right` / `Z Left X Slant Pass Left` | Regular I - Z Right - Y Slant Pass Right / Z Left - X Slant Pass Left | the play-side tight end, flat out along the line |
-| `Regular I Z Right Z Sweep Left` / `Z Left Z Sweep Right` | Regular I - Z Right - Z Sweep Left / Z Left - Z Sweep Right | the slot, lined up one way and flat across the backfield the other |
-| `Regular I Z Right 38 Toss` / `Z Left 39 Toss` | Regular I - Z Right - 38 Toss / Z Left - 39 Toss | tailback, pitched wide and outside the tight end |
-| `Regular I Z Right 38 Toss Pass` / `Z Left 39 Toss Pass` | Regular I - Z Right - 38 Toss Pass / Z Left - 39 Toss Pass | the same pitch, and the tailback pulls up behind the line and throws |
+| `I Formation Z Right 36 Handoff` / `Z Left 37 Handoff` | I Formation - Z Right - 36 Handoff / Z Left - 37 Handoff | tailback, tackle–tight end |
+| `I Formation Z Right 32 Handoff` / `Z Left 33 Handoff` | I Formation - Z Right - 32 Handoff / Z Left - 33 Handoff | tailback, A gap, fullback leading |
+| `I Formation Z Right 22 Handoff` / `Z Left 23 Handoff` | I Formation - Z Right - 22 Handoff / Z Left - 23 Handoff | fullback, A gap, on the snap |
+| `I Formation Z Right X Sweep Right` / `Z Left Y Sweep Left` | I Formation - Z Right - X Sweep Right / Z Left - Y Sweep Left | the backside tight end on an end-around, all the way outside |
+| `I Formation Z Right Y Slant Pass Right` / `Z Left X Slant Pass Left` | I Formation - Z Right - Y Slant Pass Right / Z Left - X Slant Pass Left | the play-side tight end, flat out along the line |
+| `I Formation Z Right Z Sweep Left` / `Z Left Z Sweep Right` | I Formation - Z Right - Z Sweep Left / Z Left - Z Sweep Right | the slot, lined up one way and flat across the backfield the other |
+| `I Formation Z Right 38 Toss` / `Z Left 39 Toss` | I Formation - Z Right - 38 Toss / Z Left - 39 Toss | tailback, pitched wide and outside the tight end |
+| `I Formation Z Right 38 Toss Pass` / `Z Left 39 Toss Pass` | I Formation - Z Right - 38 Toss Pass / Z Left - 39 Toss Pass | the same pitch, and the tailback pulls up behind the line and throws |
 
 **A call names its man once, and always says which way.** A back has a digit, so a
 back's call carries two of them — who and where — and the hole is the direction.
@@ -118,10 +118,10 @@ off or backwards — fails the build.
 
 Every play has a left and a right.
 
-### Split Backs: formation + Z + back + hole + play word
+### Split Formation: formation + Z + back + hole + play word
 
 Two backs to number instead of three, and a Z out wide to declare — so the call reads
-like the Regular I's. `Split Backs Z Right 38 Toss` is the Split Backs, Z on the right, the
+like the I Formation's. `Split Formation Z Right 38 Toss` is the Split Formation, Z on the right, the
 3-back (the tailback) all the way outside at the 8 hole. In this formation the **3-back is
 always the tailback and he is always the left-hand back** (odd-numbered holes) and the
 **2-back is always the fullback, always the right-hand back** (even-numbered holes); the
@@ -135,8 +135,8 @@ back in this look and the TB the left-hand one, and the playside one leads.
 
 | Call | Play | Reads as |
 |---|---|---|
-| `Split Backs Z Left 29 Toss` / `Z Right 38 Toss` | Split Backs - Z Left - 29 Toss / Z Right - 38 Toss | the far back, all the way outside |
-| `Split Backs Z Left 29 Toss Pass` / `Z Right 38 Toss Pass` | Split Backs - Z Left - 29 Toss Pass / Z Right - 38 Toss Pass | the same pitch, and the far back pulls up behind the line and throws |
+| `Split Formation Z Left 29 Toss` / `Z Right 38 Toss` | Split Formation - Z Left - 29 Toss / Z Right - 38 Toss | the far back, all the way outside |
+| `Split Formation Z Left 29 Toss Pass` / `Z Right 38 Toss Pass` | Split Formation - Z Left - 29 Toss Pass / Z Right - 38 Toss Pass | the same pitch, and the far back pulls up behind the line and throws |
 
 The back digit follows whoever actually carries it. On the toss it is the far back,
 because the near one is busy bubbling out to block.
@@ -144,7 +144,7 @@ because the near one is busy bubbling out to block.
 ### Shotgun: formation + Z + back + hole + play word
 
 The Shotgun's pass is called off the end who catches it — `Y Slant Pass Right`,
-`X Slant Pass Left` — and its two backs number the same way the Split Backs do: 3 is
+`X Slant Pass Left` — and its two backs number the same way the Split Formation does: 3 is
 the tailback on the left, 2 is the fullback on the right.
 
 | Call | Play | Reads as |
@@ -255,12 +255,12 @@ quarterback, the slot or a tight end is coming across, and Protect on a dropback
 
 | # | Formation | Plays | What it is for |
 |---|---|---|---|
-| 1 | **Regular I** | 16 | Base offense. Fullback and tailback stacked behind the quarterback. Power, both Smashes, the tight-end sweep, the slot sweep, the toss, the toss pass and the tight-end slant out, both ways. |
+| 1 | **I Formation** | 16 | Base offense. Fullback and tailback stacked behind the quarterback. Power, both Smashes, the tight-end sweep, the slot sweep, the toss, the toss pass and the tight-end slant out, both ways. |
 | 2 | **Wishbone** | 8 | Three backs, no slot. Fullback Smash and Dive, halfback Power and Toss, both ways. |
-| 3 | **Split Backs** | 16 | Two backs at even depth and a slot just outside the tight end. Toss, the toss pass off it, Power, QB sweep, fake sweep, slot sweep, TE sweep and the tight-end slant out, both ways. |
+| 3 | **Split Formation** | 16 | Two backs at even depth and a slot just outside the tight end. Toss, the toss pass off it, Power, QB sweep, fake sweep, slot sweep, TE sweep and the tight-end slant out, both ways. |
 | 4 | **Shotgun** | 6 | The quarterback five yards deep with a back either side. The tight-end slant out, the QB sweep and the RB toss, both ways. |
 | 5 | **Trips** | 8 | Empty backfield. Backs 2, 3 and 4 bunched to one side (fullback, tailback, slot). QB sweep, the quick pass, TE sweep and slant out, both ways. |
-| 6 | **Power I** | 4 | The Regular I with the slot brought in behind the fullback. Smash with two lead blockers in the same gap, and Toss, both ways. |
+| 6 | **Power I** | 4 | The I Formation with the slot brought in behind the fullback. Smash with two lead blockers in the same gap, and Toss, both ways. |
 | 7 | **Single Back** | 8 | One back, one end tight and one split away with the Z outside him, and a wing. Power, Smash, Toss and the tight-end slant out, both ways. Every run is the fullback. |
 
 **Six of the seven are two-tight-end and downhill**, so the blocking language carries
@@ -277,8 +277,8 @@ without being told.
 **None of them is symmetric, so every left-handed play is written by hand.** The slot
 sits split to the right unless a play moves him, so flipping a play would flip his path
 while leaving him aligned on the same side. A left-handed play that needs him on the
-left moves him and says so in the call — the Regular I's `Z Left 37 Handoff`, the
-Split Backs' `Z Left 29 Toss` — each the mirror of its right-hand play.
+left moves him and says so in the call — the I Formation's `Z Left 37 Handoff`, the
+Split Formation's `Z Left 29 Toss` — each the mirror of its right-hand play.
 
 ## Defense
 
@@ -432,8 +432,8 @@ They run in call sheet order, so everything called on a Saturday is 1–42:
 
 | Numbers | Formation |
 |---|---|
-| **1–16** | Regular I |
-| **17–32** | Split Backs |
+| **1–16** | I Formation |
+| **17–32** | Split Formation |
 | **33–38** | Shotgun |
 | **39–42** | Power I |
 | 43–50 | Trips — a teaching formation, not on the call sheet |
@@ -447,7 +447,7 @@ gaps. Renumbering would make every wristband already printed wrong, so the build
 checks that a number is a whole number and that no two plays share one.
 
 The bands themselves are [`wristbands.html`](wristbands.html): the same 1–42, one
-formation to a pouch — Regular I, Split Backs, then Shotgun with Power I behind it. A
+formation to a pouch — I Formation, Split Formation, then Shotgun with Power I behind it. A
 pouch is 5″ × 3″ and landscape, because it wraps a forearm, and three of them stacked
 is nine inches of a portrait page. So a sheet is one whole wristband: print a copy per
 boy, cut on the dashes, load them top to bottom.

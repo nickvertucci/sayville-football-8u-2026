@@ -768,7 +768,7 @@ table.xl.xl-plays td:nth-child(3) { border-left: 2px solid var(--ink); }
 table.xl.xl-plays td {
   height: 22px; text-align: center; vertical-align: middle; padding: 4px 5px;
 }
-/* A cell can hold four calls — Split Backs has four Sweeps to a side — so they stack
+/* A cell can hold four calls — Split Formation has four Sweeps to a side — so they stack
    as their own lines rather than wrapping into each other. */
 .xl-plays td a {
   display: block; color: var(--ink); font-weight: 700; text-decoration: none;
@@ -1156,7 +1156,7 @@ table.xl.pk-plays td {
      the block is *shorter* than it was at half width. Five of them still fit the one
      sheet because of it, not in spite of it. */
   /* Four blocks down the left, the script down the right. 230 points is what the
-     longest call in the script needs to sit on one line -- "Split Backs - Z Right -
+     longest call in the script needs to sit on one line -- "Split Formation - Z Right -
      X Sweep Right" -- and it is affordable because the blocks do not wrap at what is
      left: their widest, "Z Right - 18 Fake Sweep", has room to spare. Both are at the
      point size below rather than the width above: when the sides were spelled out the
@@ -1173,7 +1173,7 @@ table.xl.pk-plays td {
   /* The anchor carries its own font-size from the screen block, so sizing the cell
      does nothing to the call -- this column printed at 10px for a long time while the
      rule below claimed 9. Size the anchor, and the code span inside it, or nothing
-     moves. 8.5px is what "Split Backs - Z Right - X Sweep Right" needs to sit on one
+     moves. 8.5px is what "Split Formation - Z Right - X Sweep Right" needs to sit on one
      line in 230 points now that the sides are spelled out; measured, not picked. */
   .script-t td a { letter-spacing: -.3px; font-size: 8.5px; }
   .script-t .xl-code { font-size: 9px; margin-right: 3px; }
@@ -1193,7 +1193,7 @@ table.xl.pk-plays td {
      17 points rather than 15 so the centring is visible in it -- at 15 a digit sat a
      hair off the left border and read as left-aligned whatever the rule said. It was
      20 until the letter calls grew a direction word; the three points went next door,
-     where "Split Backs - Z Right - X Sweep Right" needed them, and two digits at 7px
+     where "Split Formation - Z Right - X Sweep Right" needed them, and two digits at 7px
      still do not fill 17. */
   /* Qualified with table.xl for the same reason as the screen rule: the print block's
      own `table.xl td` comes after this and would otherwise take back the padding, and
@@ -1249,7 +1249,7 @@ table.xl.pk-plays td {
   }
   /* Tighter rows on paper than on screen. The 4px of padding above and below
      every cell was 50 points of the one sheet -- a row of it for each block --
-     and the sheet ran out of room the day Regular I got a Toss. */
+     and the sheet ran out of room the day the I Formation got a Toss. */
   table.xl.xl-plays td { height: auto; vertical-align: middle; padding: 2px 2px; }
   /* A call is one line on paper: small enough to fit its cell, and never wrapping
      into a second line that makes the row taller. */
@@ -2746,10 +2746,10 @@ SITE_JS = """
 /* Call sheet filtering.
 
    Every chip belongs to a group (formation, type, zone, direction, carrier). Picking
-   two chips in the SAME group widens the list — Regular I or Split Backs. Picking
-   chips in DIFFERENT groups narrows it — Split Backs AND runs. The old single-string
+   two chips in the SAME group widens the list — I Formation or Split Formation. Picking
+   chips in DIFFERENT groups narrows it — Split Formation AND runs. The old single-string
    filter could not express that at all: formation and type shared one exclusive group,
-   so "Split Backs runs" quietly turned into "all runs". */
+   so "Split Formation runs" quietly turned into "all runs". */
 (function () {
   var q = document.getElementById('q');
   if (!q) return;
@@ -2810,7 +2810,7 @@ SITE_JS = """
   /* Every filter currently applied, spelled out and individually removable.
 
      Multi-select means a second click on a different formation ADDS it rather than
-     switching to it — pick Regular I then Split Backs and you are looking at every
+     switching to it — pick I Formation then Split Formation and you are looking at every
      plays, not five. That is correct behaviour and it is also the easiest thing in
      the world to do by accident, so what is applied has to be readable in one glance
      rather than inferred from which chips look dark. */
@@ -3379,8 +3379,8 @@ def backs_table(formations: list[dict]) -> list[tuple[str, str]]:
             rows.append((digit, f"{esc(position_name(pos))} &mdash; {esc(where)}"))
         else:
             # A digit can mean the same spot in several formations and a different one
-            # elsewhere — 3 is the tailback in the Regular I and the left halfback in the
-            # Split Backs. Name every formation, or the table quietly drops one.
+            # elsewhere — 3 is the tailback in the I Formation and the left halfback in the
+            # Split Formation. Name every formation, or the table quietly drops one.
             parts = []
             for pos, forms_with in spots.items():
                 names = [esc(f) for f in forms_with]
@@ -3554,9 +3554,9 @@ SCHEME_ORDER = ("Smash", "Dive", "Power", "Sweep", "Toss")
 def _sheet_name(play: dict, form: dict) -> str:
     """The play as you call it, minus only the formation the block already names.
 
-    "Regular I Z Left 37 Handoff" in the Regular I block is "Z Left - 37 Handoff". The
+    "I Formation Z Left 37 Handoff" in the I Formation block is "Z Left - 37 Handoff". The
     alignment stays: the column is where the ball goes, which is not where the Z
-    stands, and the two come apart often enough to matter -- Regular I Z Right Z Sweep
+    stands, and the two come apart often enough to matter -- I Formation Z Right Z Sweep
     is a Z lined up right running into the Left column. Dropping the alignment made
     those two cells read identically.
 
@@ -3594,7 +3594,7 @@ def _package_row(play: dict, form: dict) -> str:
     On the sheet proper the block heading says the formation, so a cell only has
     to say the alignment and the call. A package card has no such heading -- it
     is a list of calls from wherever -- so the formation goes back in front:
-    "Split Backs - Z Right - X Sweep Right".
+    "Split Formation - Z Right - X Sweep Right".
 
     Trips is the exception, because its strength word IS its name. Saying it
     twice reads as a stutter, so "Trips - Trips Right - 38 Quick Pass" comes out
@@ -3961,7 +3961,7 @@ def _def_blank_line() -> str:
 
 # The call sheet is the one page that lays the formations out two across instead of
 # one after another, so its order is a seating chart rather than the teaching order the
-# rest of the book runs on. Regular I keeps the top row, the Wishbone drops to the
+# rest of the book runs on. I Formation keeps the top row, the Wishbone drops to the
 # bottom next to Power I, and Trips comes up into the middle. Everything else -- the
 # nav, the install, the formation pages -- still reads `order` out of formation.json,
 # which is why this list lives here and not there.
@@ -4035,8 +4035,8 @@ BAND_PANEL_COLUMNS = 2
 def band_call(play: dict, form: dict) -> str:
     """The play's name, minus the formation the panel heading already says.
 
-    "Split Backs - Z Right - 38 Toss" is "Z Right - 38 Toss" in the
-    Split Backs pouch. Nothing else comes off. "Right" is a word and about a point
+    "Split Formation - Z Right - 38 Toss" is "Z Right - 38 Toss" in the
+    Split Formation pouch. Nothing else comes off. "Right" is a word and about a point
     and a half of type, and it is worth both: the boy reading this is nine, he has
     been taught the word, and an abbreviation is one more thing to remember at the
     moment he has least room to remember anything. The call sheet shortens it to R;
@@ -4106,9 +4106,9 @@ def _band_pouches(groups: list[tuple[dict, list[dict]]]) -> list[list]:
     """The formations dealt into the three pouches.
 
     A formation is never split across two pouches: the panel heading is what lets a row
-    say "Z Right 36 Handoff" instead of "Regular I Z Right 36 Handoff", and half a
+    say "Z Right 36 Handoff" instead of "I Formation Z Right 36 Handoff", and half a
     formation under a heading naming all of it is a lie a boy cannot check. Today that
-    deals out as Regular I, Split Backs, and Shotgun with Power I behind it.
+    deals out as I Formation, Split Formation, and Shotgun with Power I behind it.
     """
     return _deal(groups, BAND_POUCHES)
 
@@ -5485,7 +5485,7 @@ def write_depth_chart(formations: list[dict], defenses: dict, root: Path) -> str
     # front the day the base changes.
     front = next(iter(defenses.values()), None)
     # The board is the base formation's eleven — Z, FB and TB in the backfield. It
-    # used to be every spot any formation aligns, which meant the Split Backs LH and
+    # used to be every spot any formation aligns, which meant the Split Formation LH and
     # RH sat on both rotations reading Open and made a complete unit look two short
     # of a full sheet. A depth chart answers "who is on the field", and what is on
     # the field is the base offense.
@@ -5494,7 +5494,7 @@ def write_depth_chart(formations: list[dict], defenses: dict, root: Path) -> str
     # The spots the other formations use and this board does not. Nobody is on them
     # today, but a name put against one must not disappear just because the base
     # offense has no room for it — so they surface underneath, and only if used.
-    # "Only if used" is the whole rule: the Split Backs LH and RH are empty, and a
+    # "Only if used" is the whole rule: the Split Formation LH and RH are empty, and a
     # pair of Open rows under a complete eleven says the unit is two short when it
     # is not.
     alt_order = [p for p in CARD_ORDER
@@ -5502,7 +5502,7 @@ def write_depth_chart(formations: list[dict], defenses: dict, root: Path) -> str
                  and any(p in form["alignment"] for form in formations)
                  and any(roster.get("offense", {}).get(p) or [])]
     def_order = list(front["alignment"]) if front else []
-    # The same courtesy the offense board pays the Split Backs' LH and RH: a spot only
+    # The same courtesy the offense board pays the Split Formation's LH and RH: a spot only
     # a change-up front uses — the nose tackle, once the base stopped being the 5-3 —
     # surfaces underneath rather than taking the name on it out of the book silently.
     def_alt_order = [p for f in defenses.values() for p in f["alignment"]
