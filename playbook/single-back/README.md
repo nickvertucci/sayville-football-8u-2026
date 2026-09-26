@@ -189,7 +189,7 @@ Seven on the line every snap: the five up front, plus both ends. One end is tigh
 **Coaching points**
 
 - The wing is out on the edge ahead of the ball and he has the force man — the widest defender who can turn this back inside.
-- The fullback pitches from directly behind the quarterback, so the pitch is shorter and flatter than the one out of the Split Backs. Rep it on its own.
+- The fullback pitches from directly behind the quarterback, so the pitch is shorter and flatter than the one out of the Split Formation. Rep it on its own.
 - The Z is on the other side with the split end, so this edge is the tight end and the wing and nobody else. Two blockers and the back — if either one misses, there is no third man out there to cover it up.
 
 ---
@@ -219,7 +219,7 @@ Seven on the line every snap: the five up front, plus both ends. One end is tigh
 **Coaching points**
 
 - The wing is out on the edge ahead of the ball and he has the force man — the widest defender who can turn this back inside.
-- The fullback pitches from directly behind the quarterback, so the pitch is shorter and flatter than the one out of the Split Backs. Rep it on its own.
+- The fullback pitches from directly behind the quarterback, so the pitch is shorter and flatter than the one out of the Split Formation. Rep it on its own.
 - The Z is on the other side with the split end, so this edge is the tight end and the wing and nobody else. Two blockers and the back — if either one misses, there is no third man out there to cover it up.
 
 ---

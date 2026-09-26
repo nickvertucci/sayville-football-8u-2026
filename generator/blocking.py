@@ -158,7 +158,7 @@ def call_words(hole: int, back_digit: str | None = None,
 #
 # The huddle word is also the blocking family. Smash, Dive, Power, Toss and
 # Sweep each name eleven jobs by *role* — playside end, playside guard, lead
-# back — not by X/Y, so the same scheme fills a Regular I, a Split Backs
+# back — not by X/Y, so the same scheme fills an I Formation, a Split Formation
 # and whatever formation comes next. Protect is the dropback: everybody pass
 # blocks except the receiver and the slot, who screens the corner.
 #
@@ -273,7 +273,7 @@ def _split_pair(form: dict, a: str, b: str) -> bool:
     This is the difference between a stacked I and a split backfield, and it has
     to be read off the alignment rather than off the names. It used to be read
     off the names — a backfield with LH and RH in it was split, one with FB and
-    TB was stacked — and that stopped being true the moment the Split Backs'
+    TB was stacked — and that stopped being true the moment the Split Formation's
     halfbacks were renamed to the FB and the TB they are called by. Worse, it
     would have failed silently in the one direction that matters: `_stacked`
     only asks whether a back is within 2.5 yards of the ball, and the Split
@@ -295,7 +295,7 @@ def backfield_roles(form: dict, side: int) -> dict[str, str]:
 
     A stacked I (FB + TB behind the quarterback) always leads with the
     fullback. Wishbone (FB + LH + RH) does too. Two backs split either side of
-    the ball lead with the playside one — in the Split Backs and the Shotgun
+    the ball lead with the playside one — in the Split Formation and the Shotgun
     that is the FB going right and the TB going left, which is exactly what
     their digits say: 2 is even and lines up right, 3 is odd and lines up left.
     Trips puts 2, 3 and 4 on the perimeter — they are not a backfield, so
@@ -318,7 +318,7 @@ def backfield_roles(form: dict, side: int) -> dict[str, str]:
     if "FB" in keys and "LH" in keys and "RH" in keys:
         out["lead"] = "FB"
         out["trail"] = "LH" if side > 0 else "RH"
-    # Split before stacked: at 2.2 yards out the Split Backs satisfy `_stacked`
+    # Split before stacked: at 2.2 yards out the Split Formation's backs satisfy `_stacked`
     # too, so the stacked branch would claim them and always lead with the FB.
     elif _split_pair(form, "FB", "TB"):
         out["lead"] = "FB" if side > 0 else "TB"
@@ -1105,7 +1105,7 @@ def playside_edge(alignment: dict, side: int) -> float | None:
     """The x of our outermost man ON the line, playside. The thing to bubble round.
 
     Read off our own alignment, not off a position key, so it is the Y in the
-    Regular I, the stretched end in Trips, and whichever end is tight in the
+    I Formation, the stretched end in Trips, and whichever end is tight in the
     Single Back. Men off the line are excluded -- the slot standing a yard back
     is not the edge of the formation, and on the plays where he is split wide he
     would otherwise send the lead blocker four yards further out than he needs.
@@ -1145,7 +1145,7 @@ def bubble_out(spot, target, side, edge=None):
     if abs(wide) > abs(finish[-1][0]):
         wide = finish[-1][0]
     # But the instruction is "around our end", and 72% of the way to a defender who
-    # is himself barely outside our end does not get there. On the Regular I toss the
+    # is himself barely outside our end does not get there. On the I Formation toss the
     # fullback was told to bubble around the Y and drawn with his elbow at 3.3 with
     # the Y standing at 4.2 -- cutting up INSIDE his own tight end, which is the one
     # thing the words tell him not to do. So when we know where our end is, and the
@@ -1379,7 +1379,7 @@ def resolve(pos: str, intent: dict, alignment: dict, front: dict, side: int,
         #
         # A lead blocker bubbling to the force man is the same shape and was not
         # getting it: `via` is only set by the `man` verb, so the hand-written
-        # bubbles on the Split Backs toss curved and the ones the Toss scheme
+        # bubbles on the Split Formation toss curved and the ones the Toss scheme
         # generates came out as two straight legs with a corner in the middle. Same
         # instruction, two different pictures, depending on how the play happened to
         # be authored. The condition is narrow on purpose -- a lead blocker aimed at

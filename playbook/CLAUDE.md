@@ -73,7 +73,7 @@ build checks the receiver's path is that long.
 
 A toss pass is the toss right up until he pulls up: the pitch is real, the back runs
 the toss, and then he stops behind the line and throws. So it is **called like the
-toss** — `Regular I Z Right 38 Toss Pass` — and the digits name the back who takes
+toss** — `I Formation Z Right 38 Toss Pass` — and the digits name the back who takes
 the pitch, not the receiver. `ball_carrier` is the receiver, the way it is on every
 pass; `type` is `pass`, the scheme is `Protect`, and it gives its own `direction`
 rather than a `fakes`, because it is not pretending to be another play — for two
@@ -113,7 +113,7 @@ rejects anything that is not a whole number, and one another play already has.
 good, and a new play takes the next free one — the next number nothing in the book is
 using, not the next number in its formation. Gaps are fine; a renumber is not, because
 every wristband already printed would be wrong. The one-time assignment ran in call
-sheet order, which is why Regular I is 1–16, Split Backs 17–32, Shotgun 33–38, Power I
+sheet order, which is why I Formation is 1–16, Split Formation 17–32, Shotgun 33–38, Power I
 39–42, and the two teaching formations sit at the end: Trips 43–50, Wishbone 51–58.
 Single Back took 59–66 after that; 67–70 were the Z Split tosses and are retired.
 A retired number goes in `RETIRED_CODES` in `render.py` when its play is deleted, and
@@ -136,8 +136,8 @@ the right, where he lines up on every other snap. Everything else — the line r
 unchanged, and the player's `path` is still relative to wherever he ends up, so the
 assignment does not have to know which look it is in.
 
-**Say it in the call.** `Regular I Z Left 37 Handoff` tells the huddle which side the slot is
-on, the same way `Regular I Z Right 36 Handoff` does. A play that moves
+**Say it in the call.** `I Formation Z Left 37 Handoff` tells the huddle which side the slot is
+on, the same way `I Formation Z Right 36 Handoff` does. A play that moves
 somebody silently is a play nobody can call.
 
 An override may only move a player the formation already has, and the coordinates must be
@@ -190,8 +190,8 @@ the book gives one man two names. A formation with a fourth back puts him at 4
 
 Both are printed at the top of every card. `name` is
 `{formation} - Z {Left|Right} - {digits} {word}`
-(*Regular I - Z Right - 36 Handoff*); `call` is the same language yelled in
-the huddle (`Regular I Z Right 36 Handoff` — formation, which side the Z is on,
+(*I Formation - Z Right - 36 Handoff*); `call` is the same language yelled in
+the huddle (`I Formation Z Right 36 Handoff` — formation, which side the Z is on,
 then **two digits: who carries it and where it goes**, then the play word).
 
 **The Z's phrase is his side and nothing else.** It used to say `Tight` or `Split` as
@@ -202,7 +202,7 @@ still says `Z Tight` or `Z Split`. If a wide Z comes back, it needs a call that 
 it apart from the tight one before it needs a diagram.
 
 When **X, Y or Z** carries it, the digits are replaced by that letter and the call ends
-with the way the ball is going: `Regular I Z Right X Sweep Right`, `Split Backs Z Left
+with the way the ball is going: `I Formation Z Right X Sweep Right`, `Split Formation Z Left
 Y Sweep Left`, `Trips Right Y Slant Pass Right`. There is no hole to name, because a man
 already outside the tackle does not run through a gap to get there.
 
@@ -297,7 +297,7 @@ fills the line, the slot and the lead from `SCHEMES` in `generator/blocking.py`:
 }
 ```
 
-Roles, not position keys, so Regular I, Split Backs and the next formation all
+Roles, not position keys, so I Formation, Split Formation and the next formation all
 get the same Power: playside end takes the end man, slot screens the corner, and the
 playside back leads. A stacked I always leads with the fullback, whichever way the play
 goes. A **split** backfield leads with whichever back is on the playside — the FB going
@@ -493,8 +493,8 @@ a play would flip his path and leave him aligned on the same side. There is no
 A left-handed play that leaves the Z on the right is a different play, a blocker short
 on the side the ball goes, and `--audit` will tell you so.
 
-**A play that moves the slot says so in its call.** `Regular I Z Left 37 Handoff` and
-`Split Backs Z Left 29 Toss` both do, each mirroring its right-hand play so the slot is out
+**A play that moves the slot says so in its call.** `I Formation Z Left 37 Handoff` and
+`Split Formation Z Left 29 Toss` both do, each mirroring its right-hand play so the slot is out
 there on the side the ball goes. Use `alignment` to move him and name his side in the
 call; a play that moves somebody silently is a play nobody can call.
 
@@ -511,7 +511,7 @@ call; a play that moves somebody silently is a play nobody can call.
 
 The system is the seven-man line (`X` … `Y`), a quarterback, and a
 backfield of either a stacked I (`FB` + `TB`, one behind the other), split backs
-(`FB` + `TB`, one either side of the ball — Split Backs and Shotgun),
+(`FB` + `TB`, one either side of the ball — Split Formation and Shotgun),
 Wishbone (`FB` + `LH` + `RH`), or empty Trips (`FB` + `TB` + `Z` bunched,
 nobody behind the quarterback). A slot (`Z`) is the split man when the
 look has one; Wishbone does not, so it simply has nobody screening the corner and

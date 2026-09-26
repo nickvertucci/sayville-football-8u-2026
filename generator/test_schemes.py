@@ -93,7 +93,7 @@ def check_roles(formations) -> list[str]:
     #
     # This is the assertion that protects the rename. The old names said which side a
     # back was on; FB and TB do not, and the roles are now read off the alignment
-    # instead. Get that wrong and the Split Backs -- 2.2 yards off the ball, inside
+    # instead. Get that wrong and the Split Formation -- 2.2 yards off the ball, inside
     # the 2.5 that `_stacked` calls stacked -- resolve as an I and lead with the FB in
     # both directions. Every left-handed play would block the wrong edge and the build
     # would still pass, because nothing else in the book can tell.
@@ -108,7 +108,7 @@ def check_roles(formations) -> list[str]:
     sg_right = blocking.scheme_roles(shotgun, 1)
     sg_left = blocking.scheme_roles(shotgun, -1)
     if sg_right.get("lead") != "FB" or sg_left.get("lead") != "TB":
-        problems.append("Shotgun uses the same split-backfield roles as Split Backs")
+        problems.append("Shotgun uses the same split-backfield roles as Split Formation")
     bone = by_id["wishbone"]
     wb_right = blocking.scheme_roles(bone, 1)
     if "slot" in wb_right:
@@ -132,7 +132,7 @@ def check_fill(formations) -> list[str]:
     play = {
         "id": "x-power-r",
         "scheme": "Power",
-        "call": "Regular I Z Right 36 Handoff",
+        "call": "I Formation Z Right 36 Handoff",
         "direction": "right",
         "assignments": {
             "QB": {"rule": "Hand it.", "type": "fake", "path": [[1.0, -0.5]]},

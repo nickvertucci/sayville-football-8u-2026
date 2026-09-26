@@ -327,7 +327,7 @@ def play_alignment(form: dict, play: dict) -> dict:
     A formation has one alignment, but a formation is not always one picture. The
     The Z is split right on almost every snap, but Power is built on his kick-out and
     Jet needs him with a formation to cross, so those two move him. A play may say
-    which, and the call says it out loud — `Regular I Z Left 37 Handoff` — so nobody is
+    which, and the call says it out loud — `I Formation Z Left 37 Handoff` — so nobody is
     moved silently.
 
     An override may only move somebody the formation already has. It cannot add a
@@ -433,7 +433,7 @@ TIGHT_GAP = 1.8
 def _letter_tail(call: str, form: dict, play: dict) -> str:
     """What is left of a call once the formation and the alignment phrase are off.
 
-    "Split Backs Z Right X Sweep Right" is "X Sweep Right". The alignment phrase is whatever word
+    "Split Formation Z Right X Sweep Right" is "X Sweep Right". The alignment phrase is whatever word
     the call puts in front of Left or Right -- "Z Right" here -- and the word is
     optional, because in Trips the strength word IS the formation name and has already
     come off with it: "Trips Right X Sweep" is down to "Right X Sweep" by then. The
@@ -770,7 +770,7 @@ def validate_install(schedule: dict, formations: list[dict], defenses: dict,
         # A practice can review a whole formation instead of naming plays — the coach
         # calls off the installed book rather than off a list. It has to be a formation
         # we carry, and it has to have something in it the team has already been taught,
-        # because "go back through Split Backs" is meaningless on a night when no Split
+        # because "go back through Split Formation" is meaningless on a night when no Split
         # Backs play has been installed.
         for fmid in practice.get("review_formations", []):
             if fmid not in form_ids:

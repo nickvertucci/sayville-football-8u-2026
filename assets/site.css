@@ -708,7 +708,7 @@ table.xl.xl-plays td:nth-child(3) { border-left: 2px solid var(--ink); }
 table.xl.xl-plays td {
   height: 22px; text-align: center; vertical-align: middle; padding: 4px 5px;
 }
-/* A cell can hold four calls — Split Backs has four Sweeps to a side — so they stack
+/* A cell can hold four calls — Split Formation has four Sweeps to a side — so they stack
    as their own lines rather than wrapping into each other. */
 .xl-plays td a {
   display: block; color: var(--ink); font-weight: 700; text-decoration: none;
@@ -1096,7 +1096,7 @@ table.xl.pk-plays td {
      the block is *shorter* than it was at half width. Five of them still fit the one
      sheet because of it, not in spite of it. */
   /* Four blocks down the left, the script down the right. 230 points is what the
-     longest call in the script needs to sit on one line -- "Split Backs - Z Right -
+     longest call in the script needs to sit on one line -- "Split Formation - Z Right -
      X Sweep Right" -- and it is affordable because the blocks do not wrap at what is
      left: their widest, "Z Right - 18 Fake Sweep", has room to spare. Both are at the
      point size below rather than the width above: when the sides were spelled out the
@@ -1113,7 +1113,7 @@ table.xl.pk-plays td {
   /* The anchor carries its own font-size from the screen block, so sizing the cell
      does nothing to the call -- this column printed at 10px for a long time while the
      rule below claimed 9. Size the anchor, and the code span inside it, or nothing
-     moves. 8.5px is what "Split Backs - Z Right - X Sweep Right" needs to sit on one
+     moves. 8.5px is what "Split Formation - Z Right - X Sweep Right" needs to sit on one
      line in 230 points now that the sides are spelled out; measured, not picked. */
   .script-t td a { letter-spacing: -.3px; font-size: 8.5px; }
   .script-t .xl-code { font-size: 9px; margin-right: 3px; }
@@ -1133,7 +1133,7 @@ table.xl.pk-plays td {
      17 points rather than 15 so the centring is visible in it -- at 15 a digit sat a
      hair off the left border and read as left-aligned whatever the rule said. It was
      20 until the letter calls grew a direction word; the three points went next door,
-     where "Split Backs - Z Right - X Sweep Right" needed them, and two digits at 7px
+     where "Split Formation - Z Right - X Sweep Right" needed them, and two digits at 7px
      still do not fill 17. */
   /* Qualified with table.xl for the same reason as the screen rule: the print block's
      own `table.xl td` comes after this and would otherwise take back the padding, and
@@ -1189,7 +1189,7 @@ table.xl.pk-plays td {
   }
   /* Tighter rows on paper than on screen. The 4px of padding above and below
      every cell was 50 points of the one sheet -- a row of it for each block --
-     and the sheet ran out of room the day Regular I got a Toss. */
+     and the sheet ran out of room the day the I Formation got a Toss. */
   table.xl.xl-plays td { height: auto; vertical-align: middle; padding: 2px 2px; }
   /* A call is one line on paper: small enough to fit its cell, and never wrapping
      into a second line that makes the row taller. */

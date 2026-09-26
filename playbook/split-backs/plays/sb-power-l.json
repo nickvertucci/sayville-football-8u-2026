@@ -2,9 +2,9 @@
   "id": "sb-power-l",
   "order": 32,
   "formation": "split-backs",
-  "name": "Split Backs - Z Left - 27 Handoff",
+  "name": "Split Formation - Z Left - 27 Handoff",
   "code": "30",
-  "call": "Split Backs Z Left 27 Handoff",
+  "call": "Split Formation Z Left 27 Handoff",
   "type": "run",
   "scheme": "Power",
   "direction": "left",
@@ -56,7 +56,7 @@
     }
   },
   "coaching_points": [
-    "The same Power as the Regular I, run from two backs instead of a stack. The tight end takes the end man and the tailback bubbles around the X.",
+    "The same Power as the I Formation, run from two backs instead of a stack. The tight end takes the end man and the tailback bubbles around the X.",
     "The tailback goes around the X, not up into the line, and his man is the outside linebacker. A lead back who runs straight into the pile has blocked nobody.",
     "The runner is the back on the far side. He has further to travel, so he has to start on the snap -- no false step, no waiting to see the hole.",
     "The yards are inside the tight end's block. If the back bounces it wide looking for grass, the play is dead."
