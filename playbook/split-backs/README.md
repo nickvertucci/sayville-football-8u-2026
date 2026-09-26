@@ -24,34 +24,32 @@ Both ends are tight on the line. The two backs sit four yards deep and just over
 
 | Play | Call | Scheme | Type | Ball |
 |---|---|---|---|---|
-| [Split Backs - Z Tight Right - 38 Toss](#split-backs---z-tight-right---38-toss) | `Split Backs Z Tight Right 38 Toss` | Toss | run | TB |
-| [Split Backs - Z Tight Left - 29 Toss](#split-backs---z-tight-left---29-toss) | `Split Backs Z Tight Left 29 Toss` | Toss | run | FB |
-| [Split Backs - Z Split Right - 38 Toss](#split-backs---z-split-right---38-toss) | `Split Backs Z Split Right 38 Toss` | Toss | run | TB |
-| [Split Backs - Z Split Left - 29 Toss](#split-backs---z-split-left---29-toss) | `Split Backs Z Split Left 29 Toss` | Toss | run | FB |
-| [Split Backs - Z Tight Right - 18 Sweep](#split-backs---z-tight-right---18-sweep) | `Split Backs Z Tight Right 18 Sweep` | Sweep | run | QB |
-| [Split Backs - Z Tight Left - 19 Sweep](#split-backs---z-tight-left---19-sweep) | `Split Backs Z Tight Left 19 Sweep` | Sweep | run | QB |
-| [Split Backs - Z Tight Left - 19 Fake Sweep](#split-backs---z-tight-left---19-fake-sweep) | `Split Backs Z Tight Left 19 Fake Sweep` | Sweep | run | QB |
-| [Split Backs - Z Tight Right - 18 Fake Sweep](#split-backs---z-tight-right---18-fake-sweep) | `Split Backs Z Tight Right 18 Fake Sweep` | Sweep | run | QB |
-| [Split Backs - Z Tight Right - Z Sweep Left](#split-backs---z-tight-right---z-sweep-left) | `Split Backs Z Tight Right Z Sweep Left` | Sweep | run | Z |
-| [Split Backs - Z Tight Left - Z Sweep Right](#split-backs---z-tight-left---z-sweep-right) | `Split Backs Z Tight Left Z Sweep Right` | Sweep | run | Z |
-| [Split Backs - Z Tight Right - X Sweep Right](#split-backs---z-tight-right---x-sweep-right) | `Split Backs Z Tight Right X Sweep Right` | Sweep | run | X |
-| [Split Backs - Z Tight Left - Y Sweep Left](#split-backs---z-tight-left---y-sweep-left) | `Split Backs Z Tight Left Y Sweep Left` | Sweep | run | Y |
-| [Split Backs - Z Tight Right - Y Slant Pass Right](#split-backs---z-tight-right---y-slant-pass-right) | `Split Backs Z Tight Right Y Slant Pass Right` | Protect | pass | Y |
-| [Split Backs - Z Tight Left - X Slant Pass Left](#split-backs---z-tight-left---x-slant-pass-left) | `Split Backs Z Tight Left X Slant Pass Left` | Protect | pass | X |
-| [Split Backs - Z Tight Right - 36 Handoff](#split-backs---z-tight-right---36-handoff) | `Split Backs Z Tight Right 36 Handoff` | Power | run | TB |
-| [Split Backs - Z Tight Left - 27 Handoff](#split-backs---z-tight-left---27-handoff) | `Split Backs Z Tight Left 27 Handoff` | Power | run | FB |
-| [Split Backs - Z Tight Right - 38 Toss Pass](#split-backs---z-tight-right---38-toss-pass) | `Split Backs Z Tight Right 38 Toss Pass` | Protect | pass | Y |
-| [Split Backs - Z Tight Left - 29 Toss Pass](#split-backs---z-tight-left---29-toss-pass) | `Split Backs Z Tight Left 29 Toss Pass` | Protect | pass | X |
+| [Split Backs - Z Right - 38 Toss](#split-backs---z-right---38-toss) | `Split Backs Z Right 38 Toss` | Toss | run | TB |
+| [Split Backs - Z Left - 29 Toss](#split-backs---z-left---29-toss) | `Split Backs Z Left 29 Toss` | Toss | run | FB |
+| [Split Backs - Z Right - 18 Sweep](#split-backs---z-right---18-sweep) | `Split Backs Z Right 18 Sweep` | Sweep | run | QB |
+| [Split Backs - Z Left - 19 Sweep](#split-backs---z-left---19-sweep) | `Split Backs Z Left 19 Sweep` | Sweep | run | QB |
+| [Split Backs - Z Left - 19 Fake Sweep](#split-backs---z-left---19-fake-sweep) | `Split Backs Z Left 19 Fake Sweep` | Sweep | run | QB |
+| [Split Backs - Z Right - 18 Fake Sweep](#split-backs---z-right---18-fake-sweep) | `Split Backs Z Right 18 Fake Sweep` | Sweep | run | QB |
+| [Split Backs - Z Right - Z Sweep Left](#split-backs---z-right---z-sweep-left) | `Split Backs Z Right Z Sweep Left` | Sweep | run | Z |
+| [Split Backs - Z Left - Z Sweep Right](#split-backs---z-left---z-sweep-right) | `Split Backs Z Left Z Sweep Right` | Sweep | run | Z |
+| [Split Backs - Z Right - X Sweep Right](#split-backs---z-right---x-sweep-right) | `Split Backs Z Right X Sweep Right` | Sweep | run | X |
+| [Split Backs - Z Left - Y Sweep Left](#split-backs---z-left---y-sweep-left) | `Split Backs Z Left Y Sweep Left` | Sweep | run | Y |
+| [Split Backs - Z Right - Y Slant Pass Right](#split-backs---z-right---y-slant-pass-right) | `Split Backs Z Right Y Slant Pass Right` | Protect | pass | Y |
+| [Split Backs - Z Left - X Slant Pass Left](#split-backs---z-left---x-slant-pass-left) | `Split Backs Z Left X Slant Pass Left` | Protect | pass | X |
+| [Split Backs - Z Right - 36 Handoff](#split-backs---z-right---36-handoff) | `Split Backs Z Right 36 Handoff` | Power | run | TB |
+| [Split Backs - Z Left - 27 Handoff](#split-backs---z-left---27-handoff) | `Split Backs Z Left 27 Handoff` | Power | run | FB |
+| [Split Backs - Z Right - 38 Toss Pass](#split-backs---z-right---38-toss-pass) | `Split Backs Z Right 38 Toss Pass` | Protect | pass | Y |
+| [Split Backs - Z Left - 29 Toss Pass](#split-backs---z-left---29-toss-pass) | `Split Backs Z Left 29 Toss Pass` | Protect | pass | X |
 
 ---
 
-## Split Backs - Z Tight Right - 38 Toss
+## Split Backs - Z Right - 38 Toss
 
-**Call it:** `Split Backs Z Tight Right 38 Toss`
+**Call it:** `Split Backs Z Right 38 Toss`
 
 **Scheme:** Toss
 
-![Split Backs - Z Tight Right - 38 Toss](cards/sb-toss-r-4-4.svg)
+![Split Backs - Z Right - 38 Toss](cards/sb-toss-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -75,13 +73,13 @@ Both ends are tight on the line. The two backs sit four yards deep and just over
 
 ---
 
-## Split Backs - Z Tight Left - 29 Toss
+## Split Backs - Z Left - 29 Toss
 
-**Call it:** `Split Backs Z Tight Left 29 Toss`
+**Call it:** `Split Backs Z Left 29 Toss`
 
 **Scheme:** Toss
 
-![Split Backs - Z Tight Left - 29 Toss](cards/sb-toss-l-4-4.svg)
+![Split Backs - Z Left - 29 Toss](cards/sb-toss-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -105,77 +103,13 @@ Both ends are tight on the line. The two backs sit four yards deep and just over
 
 ---
 
-## Split Backs - Z Split Right - 38 Toss
+## Split Backs - Z Right - 18 Sweep
 
-**Call it:** `Split Backs Z Split Right 38 Toss`
-
-**Scheme:** Toss
-
-![Split Backs - Z Split Right - 38 Toss](cards/sb-toss-split-r-4-4.svg)
-
-| Position | Assignment |
-|---|---|
-| **X** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
-| **LT** | D — nothing in your gap and nobody on you. Go downfield and get the left inside linebacker. |
-| **LG** | O — your gap is empty, so take the defensive guard on you. Hands inside, pads under his, drive him back. |
-| **C** | D — nothing in your gap and nobody on you. Go downfield and get the right inside linebacker. |
-| **RG** | O — your gap is empty, so take the defensive guard on you. Hands inside, pads under his, drive him back. |
-| **RT** | D — nothing in your gap and nobody on you. Go downfield and get the right outside linebacker. |
-| **Y** | Defensive end on your inside shoulder. Turn him inside. The ball goes around behind you. |
-| **Z** | Block the right corner. |
-| **QB** | Quick pitch to the tailback, then run the other way, to the left, like you still have it. |
-| **FB** | Bubble out around our end — do not run up into the line. Block the first man out there; here it is the linebacker. Step at the dive first to hold their linebackers. |
-| **TB** **(ball)** | Run flat, outside and behind the quarterback, and catch the pitch on the run. Ahead of him is a fumble. |
-
-**Coaching points**
-
-- The same 38 Toss as #17, and the only thing that changes is where the Z starts. He is split out wide instead of tight off the Y, which puts him beside the corner he has to block instead of four yards inside him.
-- Call it when the corner is beating our Z to the edge. From out there the Z can get in his way on the snap; from tight he has to run at him while the ball is already going.
-- Watch what the corner does with it, because that is the call. If he walks out with the Z, their best edge defender has taken himself out of the play and the toss should go every time. If he stays inside, the Z has a free run at him.
-- It tells them something. We have never split him before, so the first time he goes out wide the defense knows the ball is going outside. That is the price, and it is why this is a change-up and not the base toss.
-- Against a front with no corner on that side, the Z has a long way back inside to the safety and this is the worse of the two tosses. Look at how they line up before you call it.
-
----
-
-## Split Backs - Z Split Left - 29 Toss
-
-**Call it:** `Split Backs Z Split Left 29 Toss`
-
-**Scheme:** Toss
-
-![Split Backs - Z Split Left - 29 Toss](cards/sb-toss-split-l-4-4.svg)
-
-| Position | Assignment |
-|---|---|
-| **X** | Defensive end on your inside shoulder. Turn him inside. The ball goes around behind you. |
-| **LT** | D — nothing in your gap and nobody on you. Go downfield and get the left inside linebacker. |
-| **LG** | O — your gap is empty, so take the defensive guard on you. Hands inside, pads under his, drive him back. |
-| **C** | D — nothing in your gap and nobody on you. Go downfield and get the right inside linebacker. |
-| **RG** | O — your gap is empty, so take the defensive guard on you. Hands inside, pads under his, drive him back. |
-| **RT** | D — nothing in your gap and nobody on you. Go downfield and get the right outside linebacker. |
-| **Y** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
-| **Z** | Block the left corner. |
-| **QB** | Quick pitch to the fullback, then run the other way, to the right, like you still have it. |
-| **FB** **(ball)** | Run flat, outside and behind the quarterback, and catch the pitch on the run. Ahead of him is a fumble. |
-| **TB** | Bubble out around our end — do not run up into the line. Block the first man out there; here it is the linebacker. Step at the dive first to hold their linebackers. |
-
-**Coaching points**
-
-- The same 29 Toss as #18, and the only thing that changes is where the Z starts. He is split out wide instead of tight off the X, which puts him beside the corner he has to block instead of four yards inside him.
-- Call it when the corner is beating our Z to the edge. From out there the Z can get in his way on the snap; from tight he has to run at him while the ball is already going.
-- Watch what the corner does with it, because that is the call. If he walks out with the Z, their best edge defender has taken himself out of the play and the toss should go every time. If he stays inside, the Z has a free run at him.
-- It tells them something. We have never split him before, so the first time he goes out wide the defense knows the ball is going outside. That is the price, and it is why this is a change-up and not the base toss.
-- Against a front with no corner on that side, the Z has a long way back inside to the safety and this is the worse of the two tosses. Look at how they line up before you call it.
-
----
-
-## Split Backs - Z Tight Right - 18 Sweep
-
-**Call it:** `Split Backs Z Tight Right 18 Sweep`
+**Call it:** `Split Backs Z Right 18 Sweep`
 
 **Scheme:** Sweep
 
-![Split Backs - Z Tight Right - 18 Sweep](cards/sb-qb-sweep-r-4-4.svg)
+![Split Backs - Z Right - 18 Sweep](cards/sb-qb-sweep-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -199,13 +133,13 @@ Both ends are tight on the line. The two backs sit four yards deep and just over
 
 ---
 
-## Split Backs - Z Tight Left - 19 Sweep
+## Split Backs - Z Left - 19 Sweep
 
-**Call it:** `Split Backs Z Tight Left 19 Sweep`
+**Call it:** `Split Backs Z Left 19 Sweep`
 
 **Scheme:** Sweep
 
-![Split Backs - Z Tight Left - 19 Sweep](cards/sb-qb-sweep-l-4-4.svg)
+![Split Backs - Z Left - 19 Sweep](cards/sb-qb-sweep-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -229,13 +163,13 @@ Both ends are tight on the line. The two backs sit four yards deep and just over
 
 ---
 
-## Split Backs - Z Tight Left - 19 Fake Sweep
+## Split Backs - Z Left - 19 Fake Sweep
 
-**Call it:** `Split Backs Z Tight Left 19 Fake Sweep`
+**Call it:** `Split Backs Z Left 19 Fake Sweep`
 
 **Scheme:** Sweep
 
-![Split Backs - Z Tight Left - 19 Fake Sweep](cards/sb-fake-sweep-l-4-4.svg)
+![Split Backs - Z Left - 19 Fake Sweep](cards/sb-fake-sweep-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -259,13 +193,13 @@ Both ends are tight on the line. The two backs sit four yards deep and just over
 
 ---
 
-## Split Backs - Z Tight Right - 18 Fake Sweep
+## Split Backs - Z Right - 18 Fake Sweep
 
-**Call it:** `Split Backs Z Tight Right 18 Fake Sweep`
+**Call it:** `Split Backs Z Right 18 Fake Sweep`
 
 **Scheme:** Sweep
 
-![Split Backs - Z Tight Right - 18 Fake Sweep](cards/sb-fake-sweep-r-4-4.svg)
+![Split Backs - Z Right - 18 Fake Sweep](cards/sb-fake-sweep-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -289,13 +223,13 @@ Both ends are tight on the line. The two backs sit four yards deep and just over
 
 ---
 
-## Split Backs - Z Tight Right - Z Sweep Left
+## Split Backs - Z Right - Z Sweep Left
 
-**Call it:** `Split Backs Z Tight Right Z Sweep Left`
+**Call it:** `Split Backs Z Right Z Sweep Left`
 
 **Scheme:** Sweep
 
-![Split Backs - Z Tight Right - Z Sweep Left](cards/sb-sl-sweep-l-4-4.svg)
+![Split Backs - Z Right - Z Sweep Left](cards/sb-sl-sweep-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -320,13 +254,13 @@ Both ends are tight on the line. The two backs sit four yards deep and just over
 
 ---
 
-## Split Backs - Z Tight Left - Z Sweep Right
+## Split Backs - Z Left - Z Sweep Right
 
-**Call it:** `Split Backs Z Tight Left Z Sweep Right`
+**Call it:** `Split Backs Z Left Z Sweep Right`
 
 **Scheme:** Sweep
 
-![Split Backs - Z Tight Left - Z Sweep Right](cards/sb-sl-sweep-r-4-4.svg)
+![Split Backs - Z Left - Z Sweep Right](cards/sb-sl-sweep-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -351,13 +285,13 @@ Both ends are tight on the line. The two backs sit four yards deep and just over
 
 ---
 
-## Split Backs - Z Tight Right - X Sweep Right
+## Split Backs - Z Right - X Sweep Right
 
-**Call it:** `Split Backs Z Tight Right X Sweep Right`
+**Call it:** `Split Backs Z Right X Sweep Right`
 
 **Scheme:** Sweep
 
-![Split Backs - Z Tight Right - X Sweep Right](cards/sb-te-sweep-r-4-4.svg)
+![Split Backs - Z Right - X Sweep Right](cards/sb-te-sweep-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -381,13 +315,13 @@ Both ends are tight on the line. The two backs sit four yards deep and just over
 
 ---
 
-## Split Backs - Z Tight Left - Y Sweep Left
+## Split Backs - Z Left - Y Sweep Left
 
-**Call it:** `Split Backs Z Tight Left Y Sweep Left`
+**Call it:** `Split Backs Z Left Y Sweep Left`
 
 **Scheme:** Sweep
 
-![Split Backs - Z Tight Left - Y Sweep Left](cards/sb-te-sweep-l-4-4.svg)
+![Split Backs - Z Left - Y Sweep Left](cards/sb-te-sweep-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -411,13 +345,13 @@ Both ends are tight on the line. The two backs sit four yards deep and just over
 
 ---
 
-## Split Backs - Z Tight Right - Y Slant Pass Right
+## Split Backs - Z Right - Y Slant Pass Right
 
-**Call it:** `Split Backs Z Tight Right Y Slant Pass Right`
+**Call it:** `Split Backs Z Right Y Slant Pass Right`
 
 **Scheme:** Protect
 
-![Split Backs - Z Tight Right - Y Slant Pass Right](cards/sb-te-out-r-4-4.svg)
+![Split Backs - Z Right - Y Slant Pass Right](cards/sb-te-out-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -441,13 +375,13 @@ Both ends are tight on the line. The two backs sit four yards deep and just over
 
 ---
 
-## Split Backs - Z Tight Left - X Slant Pass Left
+## Split Backs - Z Left - X Slant Pass Left
 
-**Call it:** `Split Backs Z Tight Left X Slant Pass Left`
+**Call it:** `Split Backs Z Left X Slant Pass Left`
 
 **Scheme:** Protect
 
-![Split Backs - Z Tight Left - X Slant Pass Left](cards/sb-te-out-l-4-4.svg)
+![Split Backs - Z Left - X Slant Pass Left](cards/sb-te-out-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -471,13 +405,13 @@ Both ends are tight on the line. The two backs sit four yards deep and just over
 
 ---
 
-## Split Backs - Z Tight Right - 36 Handoff
+## Split Backs - Z Right - 36 Handoff
 
-**Call it:** `Split Backs Z Tight Right 36 Handoff`
+**Call it:** `Split Backs Z Right 36 Handoff`
 
 **Scheme:** Power
 
-![Split Backs - Z Tight Right - 36 Handoff](cards/sb-power-r-4-4.svg)
+![Split Backs - Z Right - 36 Handoff](cards/sb-power-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -502,13 +436,13 @@ Both ends are tight on the line. The two backs sit four yards deep and just over
 
 ---
 
-## Split Backs - Z Tight Left - 27 Handoff
+## Split Backs - Z Left - 27 Handoff
 
-**Call it:** `Split Backs Z Tight Left 27 Handoff`
+**Call it:** `Split Backs Z Left 27 Handoff`
 
 **Scheme:** Power
 
-![Split Backs - Z Tight Left - 27 Handoff](cards/sb-power-l-4-4.svg)
+![Split Backs - Z Left - 27 Handoff](cards/sb-power-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -533,13 +467,13 @@ Both ends are tight on the line. The two backs sit four yards deep and just over
 
 ---
 
-## Split Backs - Z Tight Right - 38 Toss Pass
+## Split Backs - Z Right - 38 Toss Pass
 
-**Call it:** `Split Backs Z Tight Right 38 Toss Pass`
+**Call it:** `Split Backs Z Right 38 Toss Pass`
 
 **Scheme:** Protect
 
-![Split Backs - Z Tight Right - 38 Toss Pass](cards/sb-toss-pass-r-4-4.svg)
+![Split Backs - Z Right - 38 Toss Pass](cards/sb-toss-pass-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -564,13 +498,13 @@ Both ends are tight on the line. The two backs sit four yards deep and just over
 
 ---
 
-## Split Backs - Z Tight Left - 29 Toss Pass
+## Split Backs - Z Left - 29 Toss Pass
 
-**Call it:** `Split Backs Z Tight Left 29 Toss Pass`
+**Call it:** `Split Backs Z Left 29 Toss Pass`
 
 **Scheme:** Protect
 
-![Split Backs - Z Tight Left - 29 Toss Pass](cards/sb-toss-pass-l-4-4.svg)
+![Split Backs - Z Left - 29 Toss Pass](cards/sb-toss-pass-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|

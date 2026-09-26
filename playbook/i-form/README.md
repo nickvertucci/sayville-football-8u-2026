@@ -32,34 +32,32 @@ Normal line splits, about a foot. Both ends are on the line; the slot is just ou
 
 | Play | Call | Scheme | Type | Ball |
 |---|---|---|---|---|
-| [Regular I - Z Tight Right - 36 Handoff](#regular-i---z-tight-right---36-handoff) | `Regular I Z Tight Right 36 Handoff` | Power | run | TB |
-| [Regular I - Z Tight Left - 37 Handoff](#regular-i---z-tight-left---37-handoff) | `Regular I Z Tight Left 37 Handoff` | Power | run | TB |
-| [Regular I - Z Tight Right - X Sweep Right](#regular-i---z-tight-right---x-sweep-right) | `Regular I Z Tight Right X Sweep Right` | Sweep | run | X |
-| [Regular I - Z Tight Left - Y Sweep Left](#regular-i---z-tight-left---y-sweep-left) | `Regular I Z Tight Left Y Sweep Left` | Sweep | run | Y |
-| [Regular I - Z Tight Right - Z Sweep Left](#regular-i---z-tight-right---z-sweep-left) | `Regular I Z Tight Right Z Sweep Left` | Sweep | run | Z |
-| [Regular I - Z Tight Left - Z Sweep Right](#regular-i---z-tight-left---z-sweep-right) | `Regular I Z Tight Left Z Sweep Right` | Sweep | run | Z |
-| [Regular I - Z Tight Right - 32 Handoff](#regular-i---z-tight-right---32-handoff) | `Regular I Z Tight Right 32 Handoff` | Smash | run | TB |
-| [Regular I - Z Tight Left - 33 Handoff](#regular-i---z-tight-left---33-handoff) | `Regular I Z Tight Left 33 Handoff` | Smash | run | TB |
-| [Regular I - Z Tight Right - Y Slant Pass Right](#regular-i---z-tight-right---y-slant-pass-right) | `Regular I Z Tight Right Y Slant Pass Right` | Protect | pass | Y |
-| [Regular I - Z Tight Left - X Slant Pass Left](#regular-i---z-tight-left---x-slant-pass-left) | `Regular I Z Tight Left X Slant Pass Left` | Protect | pass | X |
-| [Regular I - Z Tight Right - 22 Handoff](#regular-i---z-tight-right---22-handoff) | `Regular I Z Tight Right 22 Handoff` | Smash | run | FB |
-| [Regular I - Z Tight Left - 23 Handoff](#regular-i---z-tight-left---23-handoff) | `Regular I Z Tight Left 23 Handoff` | Smash | run | FB |
-| [Regular I - Z Tight Right - 38 Toss](#regular-i---z-tight-right---38-toss) | `Regular I Z Tight Right 38 Toss` | Toss | run | TB |
-| [Regular I - Z Tight Left - 39 Toss](#regular-i---z-tight-left---39-toss) | `Regular I Z Tight Left 39 Toss` | Toss | run | TB |
-| [Regular I - Z Tight Right - 38 Toss Pass](#regular-i---z-tight-right---38-toss-pass) | `Regular I Z Tight Right 38 Toss Pass` | Protect | pass | Y |
-| [Regular I - Z Tight Left - 39 Toss Pass](#regular-i---z-tight-left---39-toss-pass) | `Regular I Z Tight Left 39 Toss Pass` | Protect | pass | X |
-| [Regular I - Z Split Right - 38 Toss](#regular-i---z-split-right---38-toss) | `Regular I Z Split Right 38 Toss` | Toss | run | TB |
-| [Regular I - Z Split Left - 39 Toss](#regular-i---z-split-left---39-toss) | `Regular I Z Split Left 39 Toss` | Toss | run | TB |
+| [Regular I - Z Right - 36 Handoff](#regular-i---z-right---36-handoff) | `Regular I Z Right 36 Handoff` | Power | run | TB |
+| [Regular I - Z Left - 37 Handoff](#regular-i---z-left---37-handoff) | `Regular I Z Left 37 Handoff` | Power | run | TB |
+| [Regular I - Z Right - X Sweep Right](#regular-i---z-right---x-sweep-right) | `Regular I Z Right X Sweep Right` | Sweep | run | X |
+| [Regular I - Z Left - Y Sweep Left](#regular-i---z-left---y-sweep-left) | `Regular I Z Left Y Sweep Left` | Sweep | run | Y |
+| [Regular I - Z Right - Z Sweep Left](#regular-i---z-right---z-sweep-left) | `Regular I Z Right Z Sweep Left` | Sweep | run | Z |
+| [Regular I - Z Left - Z Sweep Right](#regular-i---z-left---z-sweep-right) | `Regular I Z Left Z Sweep Right` | Sweep | run | Z |
+| [Regular I - Z Right - 32 Handoff](#regular-i---z-right---32-handoff) | `Regular I Z Right 32 Handoff` | Smash | run | TB |
+| [Regular I - Z Left - 33 Handoff](#regular-i---z-left---33-handoff) | `Regular I Z Left 33 Handoff` | Smash | run | TB |
+| [Regular I - Z Right - Y Slant Pass Right](#regular-i---z-right---y-slant-pass-right) | `Regular I Z Right Y Slant Pass Right` | Protect | pass | Y |
+| [Regular I - Z Left - X Slant Pass Left](#regular-i---z-left---x-slant-pass-left) | `Regular I Z Left X Slant Pass Left` | Protect | pass | X |
+| [Regular I - Z Right - 22 Handoff](#regular-i---z-right---22-handoff) | `Regular I Z Right 22 Handoff` | Smash | run | FB |
+| [Regular I - Z Left - 23 Handoff](#regular-i---z-left---23-handoff) | `Regular I Z Left 23 Handoff` | Smash | run | FB |
+| [Regular I - Z Right - 38 Toss](#regular-i---z-right---38-toss) | `Regular I Z Right 38 Toss` | Toss | run | TB |
+| [Regular I - Z Left - 39 Toss](#regular-i---z-left---39-toss) | `Regular I Z Left 39 Toss` | Toss | run | TB |
+| [Regular I - Z Right - 38 Toss Pass](#regular-i---z-right---38-toss-pass) | `Regular I Z Right 38 Toss Pass` | Protect | pass | Y |
+| [Regular I - Z Left - 39 Toss Pass](#regular-i---z-left---39-toss-pass) | `Regular I Z Left 39 Toss Pass` | Protect | pass | X |
 
 ---
 
-## Regular I - Z Tight Right - 36 Handoff
+## Regular I - Z Right - 36 Handoff
 
-**Call it:** `Regular I Z Tight Right 36 Handoff`
+**Call it:** `Regular I Z Right 36 Handoff`
 
 **Scheme:** Power
 
-![Regular I - Z Tight Right - 36 Handoff](cards/i-power-r-4-4.svg)
+![Regular I - Z Right - 36 Handoff](cards/i-power-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -84,13 +82,13 @@ Normal line splits, about a foot. Both ends are on the line; the slot is just ou
 
 ---
 
-## Regular I - Z Tight Left - 37 Handoff
+## Regular I - Z Left - 37 Handoff
 
-**Call it:** `Regular I Z Tight Left 37 Handoff`
+**Call it:** `Regular I Z Left 37 Handoff`
 
 **Scheme:** Power
 
-![Regular I - Z Tight Left - 37 Handoff](cards/i-power-l-4-4.svg)
+![Regular I - Z Left - 37 Handoff](cards/i-power-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -115,13 +113,13 @@ Normal line splits, about a foot. Both ends are on the line; the slot is just ou
 
 ---
 
-## Regular I - Z Tight Right - X Sweep Right
+## Regular I - Z Right - X Sweep Right
 
-**Call it:** `Regular I Z Tight Right X Sweep Right`
+**Call it:** `Regular I Z Right X Sweep Right`
 
 **Scheme:** Sweep
 
-![Regular I - Z Tight Right - X Sweep Right](cards/i-te-sweep-r-4-4.svg)
+![Regular I - Z Right - X Sweep Right](cards/i-te-sweep-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -145,13 +143,13 @@ Normal line splits, about a foot. Both ends are on the line; the slot is just ou
 
 ---
 
-## Regular I - Z Tight Left - Y Sweep Left
+## Regular I - Z Left - Y Sweep Left
 
-**Call it:** `Regular I Z Tight Left Y Sweep Left`
+**Call it:** `Regular I Z Left Y Sweep Left`
 
 **Scheme:** Sweep
 
-![Regular I - Z Tight Left - Y Sweep Left](cards/i-te-sweep-l-4-4.svg)
+![Regular I - Z Left - Y Sweep Left](cards/i-te-sweep-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -175,13 +173,13 @@ Normal line splits, about a foot. Both ends are on the line; the slot is just ou
 
 ---
 
-## Regular I - Z Tight Right - Z Sweep Left
+## Regular I - Z Right - Z Sweep Left
 
-**Call it:** `Regular I Z Tight Right Z Sweep Left`
+**Call it:** `Regular I Z Right Z Sweep Left`
 
 **Scheme:** Sweep
 
-![Regular I - Z Tight Right - Z Sweep Left](cards/i-sl-sweep-l-4-4.svg)
+![Regular I - Z Right - Z Sweep Left](cards/i-sl-sweep-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -205,13 +203,13 @@ Normal line splits, about a foot. Both ends are on the line; the slot is just ou
 
 ---
 
-## Regular I - Z Tight Left - Z Sweep Right
+## Regular I - Z Left - Z Sweep Right
 
-**Call it:** `Regular I Z Tight Left Z Sweep Right`
+**Call it:** `Regular I Z Left Z Sweep Right`
 
 **Scheme:** Sweep
 
-![Regular I - Z Tight Left - Z Sweep Right](cards/i-sl-sweep-r-4-4.svg)
+![Regular I - Z Left - Z Sweep Right](cards/i-sl-sweep-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -235,13 +233,13 @@ Normal line splits, about a foot. Both ends are on the line; the slot is just ou
 
 ---
 
-## Regular I - Z Tight Right - 32 Handoff
+## Regular I - Z Right - 32 Handoff
 
-**Call it:** `Regular I Z Tight Right 32 Handoff`
+**Call it:** `Regular I Z Right 32 Handoff`
 
 **Scheme:** Smash
 
-![Regular I - Z Tight Right - 32 Handoff](cards/i-smash-r-4-4.svg)
+![Regular I - Z Right - 32 Handoff](cards/i-smash-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -265,13 +263,13 @@ Normal line splits, about a foot. Both ends are on the line; the slot is just ou
 
 ---
 
-## Regular I - Z Tight Left - 33 Handoff
+## Regular I - Z Left - 33 Handoff
 
-**Call it:** `Regular I Z Tight Left 33 Handoff`
+**Call it:** `Regular I Z Left 33 Handoff`
 
 **Scheme:** Smash
 
-![Regular I - Z Tight Left - 33 Handoff](cards/i-smash-l-4-4.svg)
+![Regular I - Z Left - 33 Handoff](cards/i-smash-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -295,13 +293,13 @@ Normal line splits, about a foot. Both ends are on the line; the slot is just ou
 
 ---
 
-## Regular I - Z Tight Right - Y Slant Pass Right
+## Regular I - Z Right - Y Slant Pass Right
 
-**Call it:** `Regular I Z Tight Right Y Slant Pass Right`
+**Call it:** `Regular I Z Right Y Slant Pass Right`
 
 **Scheme:** Protect
 
-![Regular I - Z Tight Right - Y Slant Pass Right](cards/i-te-out-r-4-4.svg)
+![Regular I - Z Right - Y Slant Pass Right](cards/i-te-out-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -325,13 +323,13 @@ Normal line splits, about a foot. Both ends are on the line; the slot is just ou
 
 ---
 
-## Regular I - Z Tight Left - X Slant Pass Left
+## Regular I - Z Left - X Slant Pass Left
 
-**Call it:** `Regular I Z Tight Left X Slant Pass Left`
+**Call it:** `Regular I Z Left X Slant Pass Left`
 
 **Scheme:** Protect
 
-![Regular I - Z Tight Left - X Slant Pass Left](cards/i-te-out-l-4-4.svg)
+![Regular I - Z Left - X Slant Pass Left](cards/i-te-out-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -355,13 +353,13 @@ Normal line splits, about a foot. Both ends are on the line; the slot is just ou
 
 ---
 
-## Regular I - Z Tight Right - 22 Handoff
+## Regular I - Z Right - 22 Handoff
 
-**Call it:** `Regular I Z Tight Right 22 Handoff`
+**Call it:** `Regular I Z Right 22 Handoff`
 
 **Scheme:** Smash
 
-![Regular I - Z Tight Right - 22 Handoff](cards/i-fb-smash-r-4-4.svg)
+![Regular I - Z Right - 22 Handoff](cards/i-fb-smash-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -385,13 +383,13 @@ Normal line splits, about a foot. Both ends are on the line; the slot is just ou
 
 ---
 
-## Regular I - Z Tight Left - 23 Handoff
+## Regular I - Z Left - 23 Handoff
 
-**Call it:** `Regular I Z Tight Left 23 Handoff`
+**Call it:** `Regular I Z Left 23 Handoff`
 
 **Scheme:** Smash
 
-![Regular I - Z Tight Left - 23 Handoff](cards/i-fb-smash-l-4-4.svg)
+![Regular I - Z Left - 23 Handoff](cards/i-fb-smash-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -415,13 +413,13 @@ Normal line splits, about a foot. Both ends are on the line; the slot is just ou
 
 ---
 
-## Regular I - Z Tight Right - 38 Toss
+## Regular I - Z Right - 38 Toss
 
-**Call it:** `Regular I Z Tight Right 38 Toss`
+**Call it:** `Regular I Z Right 38 Toss`
 
 **Scheme:** Toss
 
-![Regular I - Z Tight Right - 38 Toss](cards/i-toss-r-4-4.svg)
+![Regular I - Z Right - 38 Toss](cards/i-toss-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -445,13 +443,13 @@ Normal line splits, about a foot. Both ends are on the line; the slot is just ou
 
 ---
 
-## Regular I - Z Tight Left - 39 Toss
+## Regular I - Z Left - 39 Toss
 
-**Call it:** `Regular I Z Tight Left 39 Toss`
+**Call it:** `Regular I Z Left 39 Toss`
 
 **Scheme:** Toss
 
-![Regular I - Z Tight Left - 39 Toss](cards/i-toss-l-4-4.svg)
+![Regular I - Z Left - 39 Toss](cards/i-toss-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -475,13 +473,13 @@ Normal line splits, about a foot. Both ends are on the line; the slot is just ou
 
 ---
 
-## Regular I - Z Tight Right - 38 Toss Pass
+## Regular I - Z Right - 38 Toss Pass
 
-**Call it:** `Regular I Z Tight Right 38 Toss Pass`
+**Call it:** `Regular I Z Right 38 Toss Pass`
 
 **Scheme:** Protect
 
-![Regular I - Z Tight Right - 38 Toss Pass](cards/i-toss-pass-r-4-4.svg)
+![Regular I - Z Right - 38 Toss Pass](cards/i-toss-pass-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -506,13 +504,13 @@ Normal line splits, about a foot. Both ends are on the line; the slot is just ou
 
 ---
 
-## Regular I - Z Tight Left - 39 Toss Pass
+## Regular I - Z Left - 39 Toss Pass
 
-**Call it:** `Regular I Z Tight Left 39 Toss Pass`
+**Call it:** `Regular I Z Left 39 Toss Pass`
 
 **Scheme:** Protect
 
-![Regular I - Z Tight Left - 39 Toss Pass](cards/i-toss-pass-l-4-4.svg)
+![Regular I - Z Left - 39 Toss Pass](cards/i-toss-pass-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -534,68 +532,4 @@ Normal line splits, about a foot. Both ends are on the line; the slot is just ou
 - He throws from behind the line. Crossing it is a penalty, so drill the pull-up, not the arm.
 - The tight end blocks the end first, then slants out flat, almost on the line. It is a three-yard throw and it should never be more than that.
 - Call it after the toss has hurt them, on first or second down, where an incompletion costs nothing.
-
----
-
-## Regular I - Z Split Right - 38 Toss
-
-**Call it:** `Regular I Z Split Right 38 Toss`
-
-**Scheme:** Toss
-
-![Regular I - Z Split Right - 38 Toss](cards/i-toss-split-r-4-4.svg)
-
-| Position | Assignment |
-|---|---|
-| **X** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
-| **LT** | D — nothing in your gap and nobody on you. Go downfield and get the left inside linebacker. |
-| **LG** | O — your gap is empty, so take the defensive guard on you. Hands inside, pads under his, drive him back. |
-| **C** | D — nothing in your gap and nobody on you. Go downfield and get the right inside linebacker. |
-| **RG** | O — your gap is empty, so take the defensive guard on you. Hands inside, pads under his, drive him back. |
-| **RT** | D — nothing in your gap and nobody on you. Go downfield and get the right outside linebacker. |
-| **Y** | Defensive end on your inside shoulder. Turn him inside. The ball goes around behind you. |
-| **Z** | Run at the corner and screen him off. Stay in his way. |
-| **QB** | Quick pitch to the tailback, then run the other way, to the left, like you still have it. |
-| **FB** | Bubble out around our end — do not run up into the line. Block the first man out there; here it is the linebacker. You start two yards closer than he does. Be out there first. |
-| **TB** **(ball)** | Run flat behind the quarterback and catch the pitch on the run, then get outside our end and turn up. Drifting forward for it is a fumble. |
-
-**Coaching points**
-
-- The same 38 Toss as our base one, and the only thing that moves is the Z. He is split out wide instead of tight off the Y, which puts him beside the corner he has to block instead of four yards inside him.
-- The fullback's job does not change and it is still the one that decides the play: bubble out around our end, do not run up into the line, and take the outside linebacker. He starts two yards closer to the edge than the tailback and he has to be out there first.
-- Watch the corner, because that is the read on the call. If he walks out with the Z, their best edge defender has removed himself and this should go every time. If he stays inside, the Z has a free run at him from two yards.
-- It tells them something. Splitting him is new, so the first time he goes out there the defense knows the ball is going outside. That is the price, and it is why this is the change-up and the tight one stays the base.
-- Against a front with no corner on that side the Z has a long way back inside to the safety, and the tight version is the better call. Look at how they line up first.
-
----
-
-## Regular I - Z Split Left - 39 Toss
-
-**Call it:** `Regular I Z Split Left 39 Toss`
-
-**Scheme:** Toss
-
-![Regular I - Z Split Left - 39 Toss](cards/i-toss-split-l-4-4.svg)
-
-| Position | Assignment |
-|---|---|
-| **X** | Defensive end on your inside shoulder. Turn him inside. The ball goes around behind you. |
-| **LT** | D — nothing in your gap and nobody on you. Go downfield and get the left inside linebacker. |
-| **LG** | O — your gap is empty, so take the defensive guard on you. Hands inside, pads under his, drive him back. |
-| **C** | D — nothing in your gap and nobody on you. Go downfield and get the right inside linebacker. |
-| **RG** | O — your gap is empty, so take the defensive guard on you. Hands inside, pads under his, drive him back. |
-| **RT** | D — nothing in your gap and nobody on you. Go downfield and get the right outside linebacker. |
-| **Y** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
-| **Z** | Run at the corner and screen him off. Stay in his way. |
-| **QB** | Quick pitch to the tailback, then run the other way, to the right, like you still have it. |
-| **FB** | Bubble out around our end — do not run up into the line. Block the first man out there; here it is the linebacker. You start two yards closer than he does. Be out there first. |
-| **TB** **(ball)** | Run flat behind the quarterback and catch the pitch on the run, then get outside our end and turn up. Drifting forward for it is a fumble. |
-
-**Coaching points**
-
-- The same 39 Toss as our base one, and the only thing that moves is the Z. He is split out wide instead of tight off the X, which puts him beside the corner he has to block instead of four yards inside him.
-- The fullback's job does not change and it is still the one that decides the play: bubble out around our end, do not run up into the line, and take the outside linebacker. He starts two yards closer to the edge than the tailback and he has to be out there first.
-- Watch the corner, because that is the read on the call. If he walks out with the Z, their best edge defender has removed himself and this should go every time. If he stays inside, the Z has a free run at him from two yards.
-- It tells them something. Splitting him is new, so the first time he goes out there the defense knows the ball is going outside. That is the price, and it is why this is the change-up and the tight one stays the base.
-- Against a front with no corner on that side the Z has a long way back inside to the safety, and the tight version is the better call. Look at how they line up first.
 

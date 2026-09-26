@@ -6,88 +6,84 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 | # | Play | Call | Scheme | Type | Formation | Ball |
 |---|---|---|---|---|---|---|
-| 1 | [Regular I - Z Tight Right - 36 Handoff](#regular-i---z-tight-right---36-handoff) | `Regular I Z Tight Right 36 Handoff` | Power | run | Regular I | TB |
-| 2 | [Regular I - Z Tight Left - 37 Handoff](#regular-i---z-tight-left---37-handoff) | `Regular I Z Tight Left 37 Handoff` | Power | run | Regular I | TB |
-| 3 | [Regular I - Z Tight Right - X Sweep Right](#regular-i---z-tight-right---x-sweep-right) | `Regular I Z Tight Right X Sweep Right` | Sweep | run | Regular I | X |
-| 4 | [Regular I - Z Tight Left - Y Sweep Left](#regular-i---z-tight-left---y-sweep-left) | `Regular I Z Tight Left Y Sweep Left` | Sweep | run | Regular I | Y |
-| 5 | [Regular I - Z Tight Right - Z Sweep Left](#regular-i---z-tight-right---z-sweep-left) | `Regular I Z Tight Right Z Sweep Left` | Sweep | run | Regular I | Z |
-| 6 | [Regular I - Z Tight Left - Z Sweep Right](#regular-i---z-tight-left---z-sweep-right) | `Regular I Z Tight Left Z Sweep Right` | Sweep | run | Regular I | Z |
-| 7 | [Regular I - Z Tight Right - 32 Handoff](#regular-i---z-tight-right---32-handoff) | `Regular I Z Tight Right 32 Handoff` | Smash | run | Regular I | TB |
-| 8 | [Regular I - Z Tight Left - 33 Handoff](#regular-i---z-tight-left---33-handoff) | `Regular I Z Tight Left 33 Handoff` | Smash | run | Regular I | TB |
-| 9 | [Regular I - Z Tight Right - Y Slant Pass Right](#regular-i---z-tight-right---y-slant-pass-right) | `Regular I Z Tight Right Y Slant Pass Right` | Protect | pass | Regular I | Y |
-| 10 | [Regular I - Z Tight Left - X Slant Pass Left](#regular-i---z-tight-left---x-slant-pass-left) | `Regular I Z Tight Left X Slant Pass Left` | Protect | pass | Regular I | X |
-| 11 | [Regular I - Z Tight Right - 22 Handoff](#regular-i---z-tight-right---22-handoff) | `Regular I Z Tight Right 22 Handoff` | Smash | run | Regular I | FB |
-| 12 | [Regular I - Z Tight Left - 23 Handoff](#regular-i---z-tight-left---23-handoff) | `Regular I Z Tight Left 23 Handoff` | Smash | run | Regular I | FB |
-| 13 | [Regular I - Z Tight Right - 38 Toss](#regular-i---z-tight-right---38-toss) | `Regular I Z Tight Right 38 Toss` | Toss | run | Regular I | TB |
-| 14 | [Regular I - Z Tight Left - 39 Toss](#regular-i---z-tight-left---39-toss) | `Regular I Z Tight Left 39 Toss` | Toss | run | Regular I | TB |
-| 15 | [Regular I - Z Tight Right - 38 Toss Pass](#regular-i---z-tight-right---38-toss-pass) | `Regular I Z Tight Right 38 Toss Pass` | Protect | pass | Regular I | Y |
-| 16 | [Regular I - Z Tight Left - 39 Toss Pass](#regular-i---z-tight-left---39-toss-pass) | `Regular I Z Tight Left 39 Toss Pass` | Protect | pass | Regular I | X |
-| 17 | [Regular I - Z Split Right - 38 Toss](#regular-i---z-split-right---38-toss) | `Regular I Z Split Right 38 Toss` | Toss | run | Regular I | TB |
-| 18 | [Regular I - Z Split Left - 39 Toss](#regular-i---z-split-left---39-toss) | `Regular I Z Split Left 39 Toss` | Toss | run | Regular I | TB |
-| 19 | [Wishbone - 46 Handoff](#wishbone---46-handoff) | `Wishbone 46 Handoff` | Power | run | Wishbone | RH |
-| 20 | [Wishbone - 37 Handoff](#wishbone---37-handoff) | `Wishbone 37 Handoff` | Power | run | Wishbone | LH |
-| 21 | [Wishbone - 22 Handoff](#wishbone---22-handoff) | `Wishbone 22 Handoff` | Smash | run | Wishbone | FB |
-| 22 | [Wishbone - 23 Handoff](#wishbone---23-handoff) | `Wishbone 23 Handoff` | Smash | run | Wishbone | FB |
-| 23 | [Wishbone - 24 Handoff](#wishbone---24-handoff) | `Wishbone 24 Handoff` | Dive | run | Wishbone | FB |
-| 24 | [Wishbone - 25 Handoff](#wishbone---25-handoff) | `Wishbone 25 Handoff` | Dive | run | Wishbone | FB |
-| 25 | [Wishbone - 38 Toss](#wishbone---38-toss) | `Wishbone 38 Toss` | Toss | run | Wishbone | LH |
-| 26 | [Wishbone - 49 Toss](#wishbone---49-toss) | `Wishbone 49 Toss` | Toss | run | Wishbone | RH |
-| 27 | [Split Backs - Z Tight Right - 38 Toss](#split-backs---z-tight-right---38-toss) | `Split Backs Z Tight Right 38 Toss` | Toss | run | Split Backs | TB |
-| 28 | [Split Backs - Z Tight Left - 29 Toss](#split-backs---z-tight-left---29-toss) | `Split Backs Z Tight Left 29 Toss` | Toss | run | Split Backs | FB |
-| 29 | [Split Backs - Z Split Right - 38 Toss](#split-backs---z-split-right---38-toss) | `Split Backs Z Split Right 38 Toss` | Toss | run | Split Backs | TB |
-| 30 | [Split Backs - Z Split Left - 29 Toss](#split-backs---z-split-left---29-toss) | `Split Backs Z Split Left 29 Toss` | Toss | run | Split Backs | FB |
-| 31 | [Split Backs - Z Tight Right - 18 Sweep](#split-backs---z-tight-right---18-sweep) | `Split Backs Z Tight Right 18 Sweep` | Sweep | run | Split Backs | QB |
-| 32 | [Split Backs - Z Tight Left - 19 Sweep](#split-backs---z-tight-left---19-sweep) | `Split Backs Z Tight Left 19 Sweep` | Sweep | run | Split Backs | QB |
-| 33 | [Split Backs - Z Tight Left - 19 Fake Sweep](#split-backs---z-tight-left---19-fake-sweep) | `Split Backs Z Tight Left 19 Fake Sweep` | Sweep | run | Split Backs | QB |
-| 34 | [Split Backs - Z Tight Right - 18 Fake Sweep](#split-backs---z-tight-right---18-fake-sweep) | `Split Backs Z Tight Right 18 Fake Sweep` | Sweep | run | Split Backs | QB |
-| 35 | [Split Backs - Z Tight Right - Z Sweep Left](#split-backs---z-tight-right---z-sweep-left) | `Split Backs Z Tight Right Z Sweep Left` | Sweep | run | Split Backs | Z |
-| 36 | [Split Backs - Z Tight Left - Z Sweep Right](#split-backs---z-tight-left---z-sweep-right) | `Split Backs Z Tight Left Z Sweep Right` | Sweep | run | Split Backs | Z |
-| 37 | [Split Backs - Z Tight Right - X Sweep Right](#split-backs---z-tight-right---x-sweep-right) | `Split Backs Z Tight Right X Sweep Right` | Sweep | run | Split Backs | X |
-| 38 | [Split Backs - Z Tight Left - Y Sweep Left](#split-backs---z-tight-left---y-sweep-left) | `Split Backs Z Tight Left Y Sweep Left` | Sweep | run | Split Backs | Y |
-| 39 | [Split Backs - Z Tight Right - Y Slant Pass Right](#split-backs---z-tight-right---y-slant-pass-right) | `Split Backs Z Tight Right Y Slant Pass Right` | Protect | pass | Split Backs | Y |
-| 40 | [Split Backs - Z Tight Left - X Slant Pass Left](#split-backs---z-tight-left---x-slant-pass-left) | `Split Backs Z Tight Left X Slant Pass Left` | Protect | pass | Split Backs | X |
-| 41 | [Split Backs - Z Tight Right - 36 Handoff](#split-backs---z-tight-right---36-handoff) | `Split Backs Z Tight Right 36 Handoff` | Power | run | Split Backs | TB |
-| 42 | [Split Backs - Z Tight Left - 27 Handoff](#split-backs---z-tight-left---27-handoff) | `Split Backs Z Tight Left 27 Handoff` | Power | run | Split Backs | FB |
-| 43 | [Split Backs - Z Tight Right - 38 Toss Pass](#split-backs---z-tight-right---38-toss-pass) | `Split Backs Z Tight Right 38 Toss Pass` | Protect | pass | Split Backs | Y |
-| 44 | [Split Backs - Z Tight Left - 29 Toss Pass](#split-backs---z-tight-left---29-toss-pass) | `Split Backs Z Tight Left 29 Toss Pass` | Protect | pass | Split Backs | X |
-| 45 | [Shotgun - Z Tight Right - Y Slant Pass Right](#shotgun---z-tight-right---y-slant-pass-right) | `Shotgun Z Tight Right Y Slant Pass Right` | Protect | pass | Shotgun | Y |
-| 46 | [Shotgun - Z Tight Left - X Slant Pass Left](#shotgun---z-tight-left---x-slant-pass-left) | `Shotgun Z Tight Left X Slant Pass Left` | Protect | pass | Shotgun | X |
-| 47 | [Shotgun - Z Tight Left - 19 Sweep](#shotgun---z-tight-left---19-sweep) | `Shotgun Z Tight Left 19 Sweep` | Sweep | run | Shotgun | QB |
-| 48 | [Shotgun - Z Tight Right - 18 Sweep](#shotgun---z-tight-right---18-sweep) | `Shotgun Z Tight Right 18 Sweep` | Sweep | run | Shotgun | QB |
-| 49 | [Shotgun - Z Tight Right - 38 Toss](#shotgun---z-tight-right---38-toss) | `Shotgun Z Tight Right 38 Toss` | Toss | run | Shotgun | TB |
-| 50 | [Shotgun - Z Tight Left - 29 Toss](#shotgun---z-tight-left---29-toss) | `Shotgun Z Tight Left 29 Toss` | Toss | run | Shotgun | FB |
-| 51 | [Trips - Right - X Sweep Right](#trips---right---x-sweep-right) | `Trips Right X Sweep Right` | Sweep | run | Trips | X |
-| 52 | [Trips - Left - Y Sweep Left](#trips---left---y-sweep-left) | `Trips Left Y Sweep Left` | Sweep | run | Trips | Y |
-| 53 | [Trips - Right - 38 Quick Pass](#trips---right---38-quick-pass) | `Trips Right 38 Quick Pass` | Protect | pass | Trips | TB |
-| 54 | [Trips - Left - 39 Quick Pass](#trips---left---39-quick-pass) | `Trips Left 39 Quick Pass` | Protect | pass | Trips | TB |
-| 55 | [Trips - Right - 18 Sweep](#trips---right---18-sweep) | `Trips Right 18 Sweep` | Sweep | run | Trips | QB |
-| 56 | [Trips - Left - 19 Sweep](#trips---left---19-sweep) | `Trips Left 19 Sweep` | Sweep | run | Trips | QB |
-| 57 | [Trips - Right - Y Slant Pass Right](#trips---right---y-slant-pass-right) | `Trips Right Y Slant Pass Right` | Protect | pass | Trips | Y |
-| 58 | [Trips - Left - X Slant Pass Left](#trips---left---x-slant-pass-left) | `Trips Left X Slant Pass Left` | Protect | pass | Trips | X |
-| 59 | [Power I - Z Right - 32 Handoff](#power-i---z-right---32-handoff) | `Power I Z Right 32 Handoff` | Smash | run | Power I | TB |
-| 60 | [Power I - Z Left - 33 Handoff](#power-i---z-left---33-handoff) | `Power I Z Left 33 Handoff` | Smash | run | Power I | TB |
-| 61 | [Power I - Z Right - 38 Toss](#power-i---z-right---38-toss) | `Power I Z Right 38 Toss` | Toss | run | Power I | TB |
-| 62 | [Power I - Z Left - 39 Toss](#power-i---z-left---39-toss) | `Power I Z Left 39 Toss` | Toss | run | Power I | TB |
-| 63 | [Single Back - Tight Right Wing Right - 26 Handoff](#single-back---tight-right-wing-right---26-handoff) | `Single Back Tight Right Wing Right 26 Handoff` | Power | run | Single Back | FB |
-| 64 | [Single Back - Tight Left Wing Left - 27 Handoff](#single-back---tight-left-wing-left---27-handoff) | `Single Back Tight Left Wing Left 27 Handoff` | Power | run | Single Back | FB |
-| 65 | [Single Back - Tight Right Wing Left - 22 Handoff](#single-back---tight-right-wing-left---22-handoff) | `Single Back Tight Right Wing Left 22 Handoff` | Smash | run | Single Back | FB |
-| 66 | [Single Back - Tight Left Wing Right - 23 Handoff](#single-back---tight-left-wing-right---23-handoff) | `Single Back Tight Left Wing Right 23 Handoff` | Smash | run | Single Back | FB |
-| 67 | [Single Back - Tight Right Wing Right - 28 Toss](#single-back---tight-right-wing-right---28-toss) | `Single Back Tight Right Wing Right 28 Toss` | Toss | run | Single Back | FB |
-| 68 | [Single Back - Tight Left Wing Left - 29 Toss](#single-back---tight-left-wing-left---29-toss) | `Single Back Tight Left Wing Left 29 Toss` | Toss | run | Single Back | FB |
-| 69 | [Single Back - Tight Right Wing Left - Y Slant Pass Right](#single-back---tight-right-wing-left---y-slant-pass-right) | `Single Back Tight Right Wing Left Y Slant Pass Right` | Protect | pass | Single Back | Y |
-| 70 | [Single Back - Tight Left Wing Right - X Slant Pass Left](#single-back---tight-left-wing-right---x-slant-pass-left) | `Single Back Tight Left Wing Right X Slant Pass Left` | Protect | pass | Single Back | X |
+| 1 | [Regular I - Z Right - 36 Handoff](#regular-i---z-right---36-handoff) | `Regular I Z Right 36 Handoff` | Power | run | Regular I | TB |
+| 2 | [Regular I - Z Left - 37 Handoff](#regular-i---z-left---37-handoff) | `Regular I Z Left 37 Handoff` | Power | run | Regular I | TB |
+| 3 | [Regular I - Z Right - X Sweep Right](#regular-i---z-right---x-sweep-right) | `Regular I Z Right X Sweep Right` | Sweep | run | Regular I | X |
+| 4 | [Regular I - Z Left - Y Sweep Left](#regular-i---z-left---y-sweep-left) | `Regular I Z Left Y Sweep Left` | Sweep | run | Regular I | Y |
+| 5 | [Regular I - Z Right - Z Sweep Left](#regular-i---z-right---z-sweep-left) | `Regular I Z Right Z Sweep Left` | Sweep | run | Regular I | Z |
+| 6 | [Regular I - Z Left - Z Sweep Right](#regular-i---z-left---z-sweep-right) | `Regular I Z Left Z Sweep Right` | Sweep | run | Regular I | Z |
+| 7 | [Regular I - Z Right - 32 Handoff](#regular-i---z-right---32-handoff) | `Regular I Z Right 32 Handoff` | Smash | run | Regular I | TB |
+| 8 | [Regular I - Z Left - 33 Handoff](#regular-i---z-left---33-handoff) | `Regular I Z Left 33 Handoff` | Smash | run | Regular I | TB |
+| 9 | [Regular I - Z Right - Y Slant Pass Right](#regular-i---z-right---y-slant-pass-right) | `Regular I Z Right Y Slant Pass Right` | Protect | pass | Regular I | Y |
+| 10 | [Regular I - Z Left - X Slant Pass Left](#regular-i---z-left---x-slant-pass-left) | `Regular I Z Left X Slant Pass Left` | Protect | pass | Regular I | X |
+| 11 | [Regular I - Z Right - 22 Handoff](#regular-i---z-right---22-handoff) | `Regular I Z Right 22 Handoff` | Smash | run | Regular I | FB |
+| 12 | [Regular I - Z Left - 23 Handoff](#regular-i---z-left---23-handoff) | `Regular I Z Left 23 Handoff` | Smash | run | Regular I | FB |
+| 13 | [Regular I - Z Right - 38 Toss](#regular-i---z-right---38-toss) | `Regular I Z Right 38 Toss` | Toss | run | Regular I | TB |
+| 14 | [Regular I - Z Left - 39 Toss](#regular-i---z-left---39-toss) | `Regular I Z Left 39 Toss` | Toss | run | Regular I | TB |
+| 15 | [Regular I - Z Right - 38 Toss Pass](#regular-i---z-right---38-toss-pass) | `Regular I Z Right 38 Toss Pass` | Protect | pass | Regular I | Y |
+| 16 | [Regular I - Z Left - 39 Toss Pass](#regular-i---z-left---39-toss-pass) | `Regular I Z Left 39 Toss Pass` | Protect | pass | Regular I | X |
+| 17 | [Wishbone - 46 Handoff](#wishbone---46-handoff) | `Wishbone 46 Handoff` | Power | run | Wishbone | RH |
+| 18 | [Wishbone - 37 Handoff](#wishbone---37-handoff) | `Wishbone 37 Handoff` | Power | run | Wishbone | LH |
+| 19 | [Wishbone - 22 Handoff](#wishbone---22-handoff) | `Wishbone 22 Handoff` | Smash | run | Wishbone | FB |
+| 20 | [Wishbone - 23 Handoff](#wishbone---23-handoff) | `Wishbone 23 Handoff` | Smash | run | Wishbone | FB |
+| 21 | [Wishbone - 24 Handoff](#wishbone---24-handoff) | `Wishbone 24 Handoff` | Dive | run | Wishbone | FB |
+| 22 | [Wishbone - 25 Handoff](#wishbone---25-handoff) | `Wishbone 25 Handoff` | Dive | run | Wishbone | FB |
+| 23 | [Wishbone - 38 Toss](#wishbone---38-toss) | `Wishbone 38 Toss` | Toss | run | Wishbone | LH |
+| 24 | [Wishbone - 49 Toss](#wishbone---49-toss) | `Wishbone 49 Toss` | Toss | run | Wishbone | RH |
+| 25 | [Split Backs - Z Right - 38 Toss](#split-backs---z-right---38-toss) | `Split Backs Z Right 38 Toss` | Toss | run | Split Backs | TB |
+| 26 | [Split Backs - Z Left - 29 Toss](#split-backs---z-left---29-toss) | `Split Backs Z Left 29 Toss` | Toss | run | Split Backs | FB |
+| 27 | [Split Backs - Z Right - 18 Sweep](#split-backs---z-right---18-sweep) | `Split Backs Z Right 18 Sweep` | Sweep | run | Split Backs | QB |
+| 28 | [Split Backs - Z Left - 19 Sweep](#split-backs---z-left---19-sweep) | `Split Backs Z Left 19 Sweep` | Sweep | run | Split Backs | QB |
+| 29 | [Split Backs - Z Left - 19 Fake Sweep](#split-backs---z-left---19-fake-sweep) | `Split Backs Z Left 19 Fake Sweep` | Sweep | run | Split Backs | QB |
+| 30 | [Split Backs - Z Right - 18 Fake Sweep](#split-backs---z-right---18-fake-sweep) | `Split Backs Z Right 18 Fake Sweep` | Sweep | run | Split Backs | QB |
+| 31 | [Split Backs - Z Right - Z Sweep Left](#split-backs---z-right---z-sweep-left) | `Split Backs Z Right Z Sweep Left` | Sweep | run | Split Backs | Z |
+| 32 | [Split Backs - Z Left - Z Sweep Right](#split-backs---z-left---z-sweep-right) | `Split Backs Z Left Z Sweep Right` | Sweep | run | Split Backs | Z |
+| 33 | [Split Backs - Z Right - X Sweep Right](#split-backs---z-right---x-sweep-right) | `Split Backs Z Right X Sweep Right` | Sweep | run | Split Backs | X |
+| 34 | [Split Backs - Z Left - Y Sweep Left](#split-backs---z-left---y-sweep-left) | `Split Backs Z Left Y Sweep Left` | Sweep | run | Split Backs | Y |
+| 35 | [Split Backs - Z Right - Y Slant Pass Right](#split-backs---z-right---y-slant-pass-right) | `Split Backs Z Right Y Slant Pass Right` | Protect | pass | Split Backs | Y |
+| 36 | [Split Backs - Z Left - X Slant Pass Left](#split-backs---z-left---x-slant-pass-left) | `Split Backs Z Left X Slant Pass Left` | Protect | pass | Split Backs | X |
+| 37 | [Split Backs - Z Right - 36 Handoff](#split-backs---z-right---36-handoff) | `Split Backs Z Right 36 Handoff` | Power | run | Split Backs | TB |
+| 38 | [Split Backs - Z Left - 27 Handoff](#split-backs---z-left---27-handoff) | `Split Backs Z Left 27 Handoff` | Power | run | Split Backs | FB |
+| 39 | [Split Backs - Z Right - 38 Toss Pass](#split-backs---z-right---38-toss-pass) | `Split Backs Z Right 38 Toss Pass` | Protect | pass | Split Backs | Y |
+| 40 | [Split Backs - Z Left - 29 Toss Pass](#split-backs---z-left---29-toss-pass) | `Split Backs Z Left 29 Toss Pass` | Protect | pass | Split Backs | X |
+| 41 | [Shotgun - Z Right - Y Slant Pass Right](#shotgun---z-right---y-slant-pass-right) | `Shotgun Z Right Y Slant Pass Right` | Protect | pass | Shotgun | Y |
+| 42 | [Shotgun - Z Left - X Slant Pass Left](#shotgun---z-left---x-slant-pass-left) | `Shotgun Z Left X Slant Pass Left` | Protect | pass | Shotgun | X |
+| 43 | [Shotgun - Z Left - 19 Sweep](#shotgun---z-left---19-sweep) | `Shotgun Z Left 19 Sweep` | Sweep | run | Shotgun | QB |
+| 44 | [Shotgun - Z Right - 18 Sweep](#shotgun---z-right---18-sweep) | `Shotgun Z Right 18 Sweep` | Sweep | run | Shotgun | QB |
+| 45 | [Shotgun - Z Right - 38 Toss](#shotgun---z-right---38-toss) | `Shotgun Z Right 38 Toss` | Toss | run | Shotgun | TB |
+| 46 | [Shotgun - Z Left - 29 Toss](#shotgun---z-left---29-toss) | `Shotgun Z Left 29 Toss` | Toss | run | Shotgun | FB |
+| 47 | [Trips - Right - X Sweep Right](#trips---right---x-sweep-right) | `Trips Right X Sweep Right` | Sweep | run | Trips | X |
+| 48 | [Trips - Left - Y Sweep Left](#trips---left---y-sweep-left) | `Trips Left Y Sweep Left` | Sweep | run | Trips | Y |
+| 49 | [Trips - Right - 38 Quick Pass](#trips---right---38-quick-pass) | `Trips Right 38 Quick Pass` | Protect | pass | Trips | TB |
+| 50 | [Trips - Left - 39 Quick Pass](#trips---left---39-quick-pass) | `Trips Left 39 Quick Pass` | Protect | pass | Trips | TB |
+| 51 | [Trips - Right - 18 Sweep](#trips---right---18-sweep) | `Trips Right 18 Sweep` | Sweep | run | Trips | QB |
+| 52 | [Trips - Left - 19 Sweep](#trips---left---19-sweep) | `Trips Left 19 Sweep` | Sweep | run | Trips | QB |
+| 53 | [Trips - Right - Y Slant Pass Right](#trips---right---y-slant-pass-right) | `Trips Right Y Slant Pass Right` | Protect | pass | Trips | Y |
+| 54 | [Trips - Left - X Slant Pass Left](#trips---left---x-slant-pass-left) | `Trips Left X Slant Pass Left` | Protect | pass | Trips | X |
+| 55 | [Power I - Z Right - 32 Handoff](#power-i---z-right---32-handoff) | `Power I Z Right 32 Handoff` | Smash | run | Power I | TB |
+| 56 | [Power I - Z Left - 33 Handoff](#power-i---z-left---33-handoff) | `Power I Z Left 33 Handoff` | Smash | run | Power I | TB |
+| 57 | [Power I - Z Right - 38 Toss](#power-i---z-right---38-toss) | `Power I Z Right 38 Toss` | Toss | run | Power I | TB |
+| 58 | [Power I - Z Left - 39 Toss](#power-i---z-left---39-toss) | `Power I Z Left 39 Toss` | Toss | run | Power I | TB |
+| 59 | [Single Back - Tight Right Wing Right - 26 Handoff](#single-back---tight-right-wing-right---26-handoff) | `Single Back Tight Right Wing Right 26 Handoff` | Power | run | Single Back | FB |
+| 60 | [Single Back - Tight Left Wing Left - 27 Handoff](#single-back---tight-left-wing-left---27-handoff) | `Single Back Tight Left Wing Left 27 Handoff` | Power | run | Single Back | FB |
+| 61 | [Single Back - Tight Right Wing Left - 22 Handoff](#single-back---tight-right-wing-left---22-handoff) | `Single Back Tight Right Wing Left 22 Handoff` | Smash | run | Single Back | FB |
+| 62 | [Single Back - Tight Left Wing Right - 23 Handoff](#single-back---tight-left-wing-right---23-handoff) | `Single Back Tight Left Wing Right 23 Handoff` | Smash | run | Single Back | FB |
+| 63 | [Single Back - Tight Right Wing Right - 28 Toss](#single-back---tight-right-wing-right---28-toss) | `Single Back Tight Right Wing Right 28 Toss` | Toss | run | Single Back | FB |
+| 64 | [Single Back - Tight Left Wing Left - 29 Toss](#single-back---tight-left-wing-left---29-toss) | `Single Back Tight Left Wing Left 29 Toss` | Toss | run | Single Back | FB |
+| 65 | [Single Back - Tight Right Wing Left - Y Slant Pass Right](#single-back---tight-right-wing-left---y-slant-pass-right) | `Single Back Tight Right Wing Left Y Slant Pass Right` | Protect | pass | Single Back | Y |
+| 66 | [Single Back - Tight Left Wing Right - X Slant Pass Left](#single-back---tight-left-wing-right---x-slant-pass-left) | `Single Back Tight Left Wing Right X Slant Pass Left` | Protect | pass | Single Back | X |
 
 # Regular I
 
 ---
 
-## Regular I - Z Tight Right - 36 Handoff
+## Regular I - Z Right - 36 Handoff
 
-**Call it:** `Regular I Z Tight Right 36 Handoff`
+**Call it:** `Regular I Z Right 36 Handoff`
 
 **Scheme:** Power
 
-![Regular I - Z Tight Right - 36 Handoff](playbook/i-form/cards/i-power-r-4-4.svg)
+![Regular I - Z Right - 36 Handoff](playbook/i-form/cards/i-power-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -112,13 +108,13 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Regular I - Z Tight Left - 37 Handoff
+## Regular I - Z Left - 37 Handoff
 
-**Call it:** `Regular I Z Tight Left 37 Handoff`
+**Call it:** `Regular I Z Left 37 Handoff`
 
 **Scheme:** Power
 
-![Regular I - Z Tight Left - 37 Handoff](playbook/i-form/cards/i-power-l-4-4.svg)
+![Regular I - Z Left - 37 Handoff](playbook/i-form/cards/i-power-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -143,13 +139,13 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Regular I - Z Tight Right - X Sweep Right
+## Regular I - Z Right - X Sweep Right
 
-**Call it:** `Regular I Z Tight Right X Sweep Right`
+**Call it:** `Regular I Z Right X Sweep Right`
 
 **Scheme:** Sweep
 
-![Regular I - Z Tight Right - X Sweep Right](playbook/i-form/cards/i-te-sweep-r-4-4.svg)
+![Regular I - Z Right - X Sweep Right](playbook/i-form/cards/i-te-sweep-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -173,13 +169,13 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Regular I - Z Tight Left - Y Sweep Left
+## Regular I - Z Left - Y Sweep Left
 
-**Call it:** `Regular I Z Tight Left Y Sweep Left`
+**Call it:** `Regular I Z Left Y Sweep Left`
 
 **Scheme:** Sweep
 
-![Regular I - Z Tight Left - Y Sweep Left](playbook/i-form/cards/i-te-sweep-l-4-4.svg)
+![Regular I - Z Left - Y Sweep Left](playbook/i-form/cards/i-te-sweep-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -203,13 +199,13 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Regular I - Z Tight Right - Z Sweep Left
+## Regular I - Z Right - Z Sweep Left
 
-**Call it:** `Regular I Z Tight Right Z Sweep Left`
+**Call it:** `Regular I Z Right Z Sweep Left`
 
 **Scheme:** Sweep
 
-![Regular I - Z Tight Right - Z Sweep Left](playbook/i-form/cards/i-sl-sweep-l-4-4.svg)
+![Regular I - Z Right - Z Sweep Left](playbook/i-form/cards/i-sl-sweep-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -233,13 +229,13 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Regular I - Z Tight Left - Z Sweep Right
+## Regular I - Z Left - Z Sweep Right
 
-**Call it:** `Regular I Z Tight Left Z Sweep Right`
+**Call it:** `Regular I Z Left Z Sweep Right`
 
 **Scheme:** Sweep
 
-![Regular I - Z Tight Left - Z Sweep Right](playbook/i-form/cards/i-sl-sweep-r-4-4.svg)
+![Regular I - Z Left - Z Sweep Right](playbook/i-form/cards/i-sl-sweep-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -263,13 +259,13 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Regular I - Z Tight Right - 32 Handoff
+## Regular I - Z Right - 32 Handoff
 
-**Call it:** `Regular I Z Tight Right 32 Handoff`
+**Call it:** `Regular I Z Right 32 Handoff`
 
 **Scheme:** Smash
 
-![Regular I - Z Tight Right - 32 Handoff](playbook/i-form/cards/i-smash-r-4-4.svg)
+![Regular I - Z Right - 32 Handoff](playbook/i-form/cards/i-smash-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -293,13 +289,13 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Regular I - Z Tight Left - 33 Handoff
+## Regular I - Z Left - 33 Handoff
 
-**Call it:** `Regular I Z Tight Left 33 Handoff`
+**Call it:** `Regular I Z Left 33 Handoff`
 
 **Scheme:** Smash
 
-![Regular I - Z Tight Left - 33 Handoff](playbook/i-form/cards/i-smash-l-4-4.svg)
+![Regular I - Z Left - 33 Handoff](playbook/i-form/cards/i-smash-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -323,13 +319,13 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Regular I - Z Tight Right - Y Slant Pass Right
+## Regular I - Z Right - Y Slant Pass Right
 
-**Call it:** `Regular I Z Tight Right Y Slant Pass Right`
+**Call it:** `Regular I Z Right Y Slant Pass Right`
 
 **Scheme:** Protect
 
-![Regular I - Z Tight Right - Y Slant Pass Right](playbook/i-form/cards/i-te-out-r-4-4.svg)
+![Regular I - Z Right - Y Slant Pass Right](playbook/i-form/cards/i-te-out-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -353,13 +349,13 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Regular I - Z Tight Left - X Slant Pass Left
+## Regular I - Z Left - X Slant Pass Left
 
-**Call it:** `Regular I Z Tight Left X Slant Pass Left`
+**Call it:** `Regular I Z Left X Slant Pass Left`
 
 **Scheme:** Protect
 
-![Regular I - Z Tight Left - X Slant Pass Left](playbook/i-form/cards/i-te-out-l-4-4.svg)
+![Regular I - Z Left - X Slant Pass Left](playbook/i-form/cards/i-te-out-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -383,13 +379,13 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Regular I - Z Tight Right - 22 Handoff
+## Regular I - Z Right - 22 Handoff
 
-**Call it:** `Regular I Z Tight Right 22 Handoff`
+**Call it:** `Regular I Z Right 22 Handoff`
 
 **Scheme:** Smash
 
-![Regular I - Z Tight Right - 22 Handoff](playbook/i-form/cards/i-fb-smash-r-4-4.svg)
+![Regular I - Z Right - 22 Handoff](playbook/i-form/cards/i-fb-smash-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -413,13 +409,13 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Regular I - Z Tight Left - 23 Handoff
+## Regular I - Z Left - 23 Handoff
 
-**Call it:** `Regular I Z Tight Left 23 Handoff`
+**Call it:** `Regular I Z Left 23 Handoff`
 
 **Scheme:** Smash
 
-![Regular I - Z Tight Left - 23 Handoff](playbook/i-form/cards/i-fb-smash-l-4-4.svg)
+![Regular I - Z Left - 23 Handoff](playbook/i-form/cards/i-fb-smash-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -443,13 +439,13 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Regular I - Z Tight Right - 38 Toss
+## Regular I - Z Right - 38 Toss
 
-**Call it:** `Regular I Z Tight Right 38 Toss`
+**Call it:** `Regular I Z Right 38 Toss`
 
 **Scheme:** Toss
 
-![Regular I - Z Tight Right - 38 Toss](playbook/i-form/cards/i-toss-r-4-4.svg)
+![Regular I - Z Right - 38 Toss](playbook/i-form/cards/i-toss-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -473,13 +469,13 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Regular I - Z Tight Left - 39 Toss
+## Regular I - Z Left - 39 Toss
 
-**Call it:** `Regular I Z Tight Left 39 Toss`
+**Call it:** `Regular I Z Left 39 Toss`
 
 **Scheme:** Toss
 
-![Regular I - Z Tight Left - 39 Toss](playbook/i-form/cards/i-toss-l-4-4.svg)
+![Regular I - Z Left - 39 Toss](playbook/i-form/cards/i-toss-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -503,13 +499,13 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Regular I - Z Tight Right - 38 Toss Pass
+## Regular I - Z Right - 38 Toss Pass
 
-**Call it:** `Regular I Z Tight Right 38 Toss Pass`
+**Call it:** `Regular I Z Right 38 Toss Pass`
 
 **Scheme:** Protect
 
-![Regular I - Z Tight Right - 38 Toss Pass](playbook/i-form/cards/i-toss-pass-r-4-4.svg)
+![Regular I - Z Right - 38 Toss Pass](playbook/i-form/cards/i-toss-pass-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -534,13 +530,13 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Regular I - Z Tight Left - 39 Toss Pass
+## Regular I - Z Left - 39 Toss Pass
 
-**Call it:** `Regular I Z Tight Left 39 Toss Pass`
+**Call it:** `Regular I Z Left 39 Toss Pass`
 
 **Scheme:** Protect
 
-![Regular I - Z Tight Left - 39 Toss Pass](playbook/i-form/cards/i-toss-pass-l-4-4.svg)
+![Regular I - Z Left - 39 Toss Pass](playbook/i-form/cards/i-toss-pass-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -562,70 +558,6 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 - He throws from behind the line. Crossing it is a penalty, so drill the pull-up, not the arm.
 - The tight end blocks the end first, then slants out flat, almost on the line. It is a three-yard throw and it should never be more than that.
 - Call it after the toss has hurt them, on first or second down, where an incompletion costs nothing.
-
----
-
-## Regular I - Z Split Right - 38 Toss
-
-**Call it:** `Regular I Z Split Right 38 Toss`
-
-**Scheme:** Toss
-
-![Regular I - Z Split Right - 38 Toss](playbook/i-form/cards/i-toss-split-r-4-4.svg)
-
-| Position | Assignment |
-|---|---|
-| **X** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
-| **LT** | D — nothing in your gap and nobody on you. Go downfield and get the left inside linebacker. |
-| **LG** | O — your gap is empty, so take the defensive guard on you. Hands inside, pads under his, drive him back. |
-| **C** | D — nothing in your gap and nobody on you. Go downfield and get the right inside linebacker. |
-| **RG** | O — your gap is empty, so take the defensive guard on you. Hands inside, pads under his, drive him back. |
-| **RT** | D — nothing in your gap and nobody on you. Go downfield and get the right outside linebacker. |
-| **Y** | Defensive end on your inside shoulder. Turn him inside. The ball goes around behind you. |
-| **Z** | Run at the corner and screen him off. Stay in his way. |
-| **QB** | Quick pitch to the tailback, then run the other way, to the left, like you still have it. |
-| **FB** | Bubble out around our end — do not run up into the line. Block the first man out there; here it is the linebacker. You start two yards closer than he does. Be out there first. |
-| **TB** **(ball)** | Run flat behind the quarterback and catch the pitch on the run, then get outside our end and turn up. Drifting forward for it is a fumble. |
-
-**Coaching points**
-
-- The same 38 Toss as our base one, and the only thing that moves is the Z. He is split out wide instead of tight off the Y, which puts him beside the corner he has to block instead of four yards inside him.
-- The fullback's job does not change and it is still the one that decides the play: bubble out around our end, do not run up into the line, and take the outside linebacker. He starts two yards closer to the edge than the tailback and he has to be out there first.
-- Watch the corner, because that is the read on the call. If he walks out with the Z, their best edge defender has removed himself and this should go every time. If he stays inside, the Z has a free run at him from two yards.
-- It tells them something. Splitting him is new, so the first time he goes out there the defense knows the ball is going outside. That is the price, and it is why this is the change-up and the tight one stays the base.
-- Against a front with no corner on that side the Z has a long way back inside to the safety, and the tight version is the better call. Look at how they line up first.
-
----
-
-## Regular I - Z Split Left - 39 Toss
-
-**Call it:** `Regular I Z Split Left 39 Toss`
-
-**Scheme:** Toss
-
-![Regular I - Z Split Left - 39 Toss](playbook/i-form/cards/i-toss-split-l-4-4.svg)
-
-| Position | Assignment |
-|---|---|
-| **X** | Defensive end on your inside shoulder. Turn him inside. The ball goes around behind you. |
-| **LT** | D — nothing in your gap and nobody on you. Go downfield and get the left inside linebacker. |
-| **LG** | O — your gap is empty, so take the defensive guard on you. Hands inside, pads under his, drive him back. |
-| **C** | D — nothing in your gap and nobody on you. Go downfield and get the right inside linebacker. |
-| **RG** | O — your gap is empty, so take the defensive guard on you. Hands inside, pads under his, drive him back. |
-| **RT** | D — nothing in your gap and nobody on you. Go downfield and get the right outside linebacker. |
-| **Y** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
-| **Z** | Run at the corner and screen him off. Stay in his way. |
-| **QB** | Quick pitch to the tailback, then run the other way, to the right, like you still have it. |
-| **FB** | Bubble out around our end — do not run up into the line. Block the first man out there; here it is the linebacker. You start two yards closer than he does. Be out there first. |
-| **TB** **(ball)** | Run flat behind the quarterback and catch the pitch on the run, then get outside our end and turn up. Drifting forward for it is a fumble. |
-
-**Coaching points**
-
-- The same 39 Toss as our base one, and the only thing that moves is the Z. He is split out wide instead of tight off the X, which puts him beside the corner he has to block instead of four yards inside him.
-- The fullback's job does not change and it is still the one that decides the play: bubble out around our end, do not run up into the line, and take the outside linebacker. He starts two yards closer to the edge than the tailback and he has to be out there first.
-- Watch the corner, because that is the read on the call. If he walks out with the Z, their best edge defender has removed himself and this should go every time. If he stays inside, the Z has a free run at him from two yards.
-- It tells them something. Splitting him is new, so the first time he goes out there the defense knows the ball is going outside. That is the price, and it is why this is the change-up and the tight one stays the base.
-- Against a front with no corner on that side the Z has a long way back inside to the safety, and the tight version is the better call. Look at how they line up first.
 
 # Wishbone
 
@@ -869,13 +801,13 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Split Backs - Z Tight Right - 38 Toss
+## Split Backs - Z Right - 38 Toss
 
-**Call it:** `Split Backs Z Tight Right 38 Toss`
+**Call it:** `Split Backs Z Right 38 Toss`
 
 **Scheme:** Toss
 
-![Split Backs - Z Tight Right - 38 Toss](playbook/split-backs/cards/sb-toss-r-4-4.svg)
+![Split Backs - Z Right - 38 Toss](playbook/split-backs/cards/sb-toss-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -899,13 +831,13 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Split Backs - Z Tight Left - 29 Toss
+## Split Backs - Z Left - 29 Toss
 
-**Call it:** `Split Backs Z Tight Left 29 Toss`
+**Call it:** `Split Backs Z Left 29 Toss`
 
 **Scheme:** Toss
 
-![Split Backs - Z Tight Left - 29 Toss](playbook/split-backs/cards/sb-toss-l-4-4.svg)
+![Split Backs - Z Left - 29 Toss](playbook/split-backs/cards/sb-toss-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -929,77 +861,13 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Split Backs - Z Split Right - 38 Toss
+## Split Backs - Z Right - 18 Sweep
 
-**Call it:** `Split Backs Z Split Right 38 Toss`
-
-**Scheme:** Toss
-
-![Split Backs - Z Split Right - 38 Toss](playbook/split-backs/cards/sb-toss-split-r-4-4.svg)
-
-| Position | Assignment |
-|---|---|
-| **X** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
-| **LT** | D — nothing in your gap and nobody on you. Go downfield and get the left inside linebacker. |
-| **LG** | O — your gap is empty, so take the defensive guard on you. Hands inside, pads under his, drive him back. |
-| **C** | D — nothing in your gap and nobody on you. Go downfield and get the right inside linebacker. |
-| **RG** | O — your gap is empty, so take the defensive guard on you. Hands inside, pads under his, drive him back. |
-| **RT** | D — nothing in your gap and nobody on you. Go downfield and get the right outside linebacker. |
-| **Y** | Defensive end on your inside shoulder. Turn him inside. The ball goes around behind you. |
-| **Z** | Block the right corner. |
-| **QB** | Quick pitch to the tailback, then run the other way, to the left, like you still have it. |
-| **FB** | Bubble out around our end — do not run up into the line. Block the first man out there; here it is the linebacker. Step at the dive first to hold their linebackers. |
-| **TB** **(ball)** | Run flat, outside and behind the quarterback, and catch the pitch on the run. Ahead of him is a fumble. |
-
-**Coaching points**
-
-- The same 38 Toss as #17, and the only thing that changes is where the Z starts. He is split out wide instead of tight off the Y, which puts him beside the corner he has to block instead of four yards inside him.
-- Call it when the corner is beating our Z to the edge. From out there the Z can get in his way on the snap; from tight he has to run at him while the ball is already going.
-- Watch what the corner does with it, because that is the call. If he walks out with the Z, their best edge defender has taken himself out of the play and the toss should go every time. If he stays inside, the Z has a free run at him.
-- It tells them something. We have never split him before, so the first time he goes out wide the defense knows the ball is going outside. That is the price, and it is why this is a change-up and not the base toss.
-- Against a front with no corner on that side, the Z has a long way back inside to the safety and this is the worse of the two tosses. Look at how they line up before you call it.
-
----
-
-## Split Backs - Z Split Left - 29 Toss
-
-**Call it:** `Split Backs Z Split Left 29 Toss`
-
-**Scheme:** Toss
-
-![Split Backs - Z Split Left - 29 Toss](playbook/split-backs/cards/sb-toss-split-l-4-4.svg)
-
-| Position | Assignment |
-|---|---|
-| **X** | Defensive end on your inside shoulder. Turn him inside. The ball goes around behind you. |
-| **LT** | D — nothing in your gap and nobody on you. Go downfield and get the left inside linebacker. |
-| **LG** | O — your gap is empty, so take the defensive guard on you. Hands inside, pads under his, drive him back. |
-| **C** | D — nothing in your gap and nobody on you. Go downfield and get the right inside linebacker. |
-| **RG** | O — your gap is empty, so take the defensive guard on you. Hands inside, pads under his, drive him back. |
-| **RT** | D — nothing in your gap and nobody on you. Go downfield and get the right outside linebacker. |
-| **Y** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
-| **Z** | Block the left corner. |
-| **QB** | Quick pitch to the fullback, then run the other way, to the right, like you still have it. |
-| **FB** **(ball)** | Run flat, outside and behind the quarterback, and catch the pitch on the run. Ahead of him is a fumble. |
-| **TB** | Bubble out around our end — do not run up into the line. Block the first man out there; here it is the linebacker. Step at the dive first to hold their linebackers. |
-
-**Coaching points**
-
-- The same 29 Toss as #18, and the only thing that changes is where the Z starts. He is split out wide instead of tight off the X, which puts him beside the corner he has to block instead of four yards inside him.
-- Call it when the corner is beating our Z to the edge. From out there the Z can get in his way on the snap; from tight he has to run at him while the ball is already going.
-- Watch what the corner does with it, because that is the call. If he walks out with the Z, their best edge defender has taken himself out of the play and the toss should go every time. If he stays inside, the Z has a free run at him.
-- It tells them something. We have never split him before, so the first time he goes out wide the defense knows the ball is going outside. That is the price, and it is why this is a change-up and not the base toss.
-- Against a front with no corner on that side, the Z has a long way back inside to the safety and this is the worse of the two tosses. Look at how they line up before you call it.
-
----
-
-## Split Backs - Z Tight Right - 18 Sweep
-
-**Call it:** `Split Backs Z Tight Right 18 Sweep`
+**Call it:** `Split Backs Z Right 18 Sweep`
 
 **Scheme:** Sweep
 
-![Split Backs - Z Tight Right - 18 Sweep](playbook/split-backs/cards/sb-qb-sweep-r-4-4.svg)
+![Split Backs - Z Right - 18 Sweep](playbook/split-backs/cards/sb-qb-sweep-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -1023,13 +891,13 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Split Backs - Z Tight Left - 19 Sweep
+## Split Backs - Z Left - 19 Sweep
 
-**Call it:** `Split Backs Z Tight Left 19 Sweep`
+**Call it:** `Split Backs Z Left 19 Sweep`
 
 **Scheme:** Sweep
 
-![Split Backs - Z Tight Left - 19 Sweep](playbook/split-backs/cards/sb-qb-sweep-l-4-4.svg)
+![Split Backs - Z Left - 19 Sweep](playbook/split-backs/cards/sb-qb-sweep-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -1053,13 +921,13 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Split Backs - Z Tight Left - 19 Fake Sweep
+## Split Backs - Z Left - 19 Fake Sweep
 
-**Call it:** `Split Backs Z Tight Left 19 Fake Sweep`
+**Call it:** `Split Backs Z Left 19 Fake Sweep`
 
 **Scheme:** Sweep
 
-![Split Backs - Z Tight Left - 19 Fake Sweep](playbook/split-backs/cards/sb-fake-sweep-l-4-4.svg)
+![Split Backs - Z Left - 19 Fake Sweep](playbook/split-backs/cards/sb-fake-sweep-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -1083,13 +951,13 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Split Backs - Z Tight Right - 18 Fake Sweep
+## Split Backs - Z Right - 18 Fake Sweep
 
-**Call it:** `Split Backs Z Tight Right 18 Fake Sweep`
+**Call it:** `Split Backs Z Right 18 Fake Sweep`
 
 **Scheme:** Sweep
 
-![Split Backs - Z Tight Right - 18 Fake Sweep](playbook/split-backs/cards/sb-fake-sweep-r-4-4.svg)
+![Split Backs - Z Right - 18 Fake Sweep](playbook/split-backs/cards/sb-fake-sweep-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -1113,13 +981,13 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Split Backs - Z Tight Right - Z Sweep Left
+## Split Backs - Z Right - Z Sweep Left
 
-**Call it:** `Split Backs Z Tight Right Z Sweep Left`
+**Call it:** `Split Backs Z Right Z Sweep Left`
 
 **Scheme:** Sweep
 
-![Split Backs - Z Tight Right - Z Sweep Left](playbook/split-backs/cards/sb-sl-sweep-l-4-4.svg)
+![Split Backs - Z Right - Z Sweep Left](playbook/split-backs/cards/sb-sl-sweep-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -1144,13 +1012,13 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Split Backs - Z Tight Left - Z Sweep Right
+## Split Backs - Z Left - Z Sweep Right
 
-**Call it:** `Split Backs Z Tight Left Z Sweep Right`
+**Call it:** `Split Backs Z Left Z Sweep Right`
 
 **Scheme:** Sweep
 
-![Split Backs - Z Tight Left - Z Sweep Right](playbook/split-backs/cards/sb-sl-sweep-r-4-4.svg)
+![Split Backs - Z Left - Z Sweep Right](playbook/split-backs/cards/sb-sl-sweep-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -1175,13 +1043,13 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Split Backs - Z Tight Right - X Sweep Right
+## Split Backs - Z Right - X Sweep Right
 
-**Call it:** `Split Backs Z Tight Right X Sweep Right`
+**Call it:** `Split Backs Z Right X Sweep Right`
 
 **Scheme:** Sweep
 
-![Split Backs - Z Tight Right - X Sweep Right](playbook/split-backs/cards/sb-te-sweep-r-4-4.svg)
+![Split Backs - Z Right - X Sweep Right](playbook/split-backs/cards/sb-te-sweep-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -1205,13 +1073,13 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Split Backs - Z Tight Left - Y Sweep Left
+## Split Backs - Z Left - Y Sweep Left
 
-**Call it:** `Split Backs Z Tight Left Y Sweep Left`
+**Call it:** `Split Backs Z Left Y Sweep Left`
 
 **Scheme:** Sweep
 
-![Split Backs - Z Tight Left - Y Sweep Left](playbook/split-backs/cards/sb-te-sweep-l-4-4.svg)
+![Split Backs - Z Left - Y Sweep Left](playbook/split-backs/cards/sb-te-sweep-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -1235,13 +1103,13 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Split Backs - Z Tight Right - Y Slant Pass Right
+## Split Backs - Z Right - Y Slant Pass Right
 
-**Call it:** `Split Backs Z Tight Right Y Slant Pass Right`
+**Call it:** `Split Backs Z Right Y Slant Pass Right`
 
 **Scheme:** Protect
 
-![Split Backs - Z Tight Right - Y Slant Pass Right](playbook/split-backs/cards/sb-te-out-r-4-4.svg)
+![Split Backs - Z Right - Y Slant Pass Right](playbook/split-backs/cards/sb-te-out-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -1265,13 +1133,13 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Split Backs - Z Tight Left - X Slant Pass Left
+## Split Backs - Z Left - X Slant Pass Left
 
-**Call it:** `Split Backs Z Tight Left X Slant Pass Left`
+**Call it:** `Split Backs Z Left X Slant Pass Left`
 
 **Scheme:** Protect
 
-![Split Backs - Z Tight Left - X Slant Pass Left](playbook/split-backs/cards/sb-te-out-l-4-4.svg)
+![Split Backs - Z Left - X Slant Pass Left](playbook/split-backs/cards/sb-te-out-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -1295,13 +1163,13 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Split Backs - Z Tight Right - 36 Handoff
+## Split Backs - Z Right - 36 Handoff
 
-**Call it:** `Split Backs Z Tight Right 36 Handoff`
+**Call it:** `Split Backs Z Right 36 Handoff`
 
 **Scheme:** Power
 
-![Split Backs - Z Tight Right - 36 Handoff](playbook/split-backs/cards/sb-power-r-4-4.svg)
+![Split Backs - Z Right - 36 Handoff](playbook/split-backs/cards/sb-power-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -1326,13 +1194,13 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Split Backs - Z Tight Left - 27 Handoff
+## Split Backs - Z Left - 27 Handoff
 
-**Call it:** `Split Backs Z Tight Left 27 Handoff`
+**Call it:** `Split Backs Z Left 27 Handoff`
 
 **Scheme:** Power
 
-![Split Backs - Z Tight Left - 27 Handoff](playbook/split-backs/cards/sb-power-l-4-4.svg)
+![Split Backs - Z Left - 27 Handoff](playbook/split-backs/cards/sb-power-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -1357,13 +1225,13 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Split Backs - Z Tight Right - 38 Toss Pass
+## Split Backs - Z Right - 38 Toss Pass
 
-**Call it:** `Split Backs Z Tight Right 38 Toss Pass`
+**Call it:** `Split Backs Z Right 38 Toss Pass`
 
 **Scheme:** Protect
 
-![Split Backs - Z Tight Right - 38 Toss Pass](playbook/split-backs/cards/sb-toss-pass-r-4-4.svg)
+![Split Backs - Z Right - 38 Toss Pass](playbook/split-backs/cards/sb-toss-pass-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -1388,13 +1256,13 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Split Backs - Z Tight Left - 29 Toss Pass
+## Split Backs - Z Left - 29 Toss Pass
 
-**Call it:** `Split Backs Z Tight Left 29 Toss Pass`
+**Call it:** `Split Backs Z Left 29 Toss Pass`
 
 **Scheme:** Protect
 
-![Split Backs - Z Tight Left - 29 Toss Pass](playbook/split-backs/cards/sb-toss-pass-l-4-4.svg)
+![Split Backs - Z Left - 29 Toss Pass](playbook/split-backs/cards/sb-toss-pass-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -1421,13 +1289,13 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Shotgun - Z Tight Right - Y Slant Pass Right
+## Shotgun - Z Right - Y Slant Pass Right
 
-**Call it:** `Shotgun Z Tight Right Y Slant Pass Right`
+**Call it:** `Shotgun Z Right Y Slant Pass Right`
 
 **Scheme:** Protect
 
-![Shotgun - Z Tight Right - Y Slant Pass Right](playbook/shotgun/cards/sg-te-out-r-4-4.svg)
+![Shotgun - Z Right - Y Slant Pass Right](playbook/shotgun/cards/sg-te-out-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -1451,13 +1319,13 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Shotgun - Z Tight Left - X Slant Pass Left
+## Shotgun - Z Left - X Slant Pass Left
 
-**Call it:** `Shotgun Z Tight Left X Slant Pass Left`
+**Call it:** `Shotgun Z Left X Slant Pass Left`
 
 **Scheme:** Protect
 
-![Shotgun - Z Tight Left - X Slant Pass Left](playbook/shotgun/cards/sg-te-out-l-4-4.svg)
+![Shotgun - Z Left - X Slant Pass Left](playbook/shotgun/cards/sg-te-out-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -1481,13 +1349,13 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Shotgun - Z Tight Left - 19 Sweep
+## Shotgun - Z Left - 19 Sweep
 
-**Call it:** `Shotgun Z Tight Left 19 Sweep`
+**Call it:** `Shotgun Z Left 19 Sweep`
 
 **Scheme:** Sweep
 
-![Shotgun - Z Tight Left - 19 Sweep](playbook/shotgun/cards/sg-qb-sweep-l-4-4.svg)
+![Shotgun - Z Left - 19 Sweep](playbook/shotgun/cards/sg-qb-sweep-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -1511,13 +1379,13 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Shotgun - Z Tight Right - 18 Sweep
+## Shotgun - Z Right - 18 Sweep
 
-**Call it:** `Shotgun Z Tight Right 18 Sweep`
+**Call it:** `Shotgun Z Right 18 Sweep`
 
 **Scheme:** Sweep
 
-![Shotgun - Z Tight Right - 18 Sweep](playbook/shotgun/cards/sg-qb-sweep-r-4-4.svg)
+![Shotgun - Z Right - 18 Sweep](playbook/shotgun/cards/sg-qb-sweep-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -1541,13 +1409,13 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Shotgun - Z Tight Right - 38 Toss
+## Shotgun - Z Right - 38 Toss
 
-**Call it:** `Shotgun Z Tight Right 38 Toss`
+**Call it:** `Shotgun Z Right 38 Toss`
 
 **Scheme:** Toss
 
-![Shotgun - Z Tight Right - 38 Toss](playbook/shotgun/cards/sg-rb-toss-r-4-4.svg)
+![Shotgun - Z Right - 38 Toss](playbook/shotgun/cards/sg-rb-toss-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -1571,13 +1439,13 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Shotgun - Z Tight Left - 29 Toss
+## Shotgun - Z Left - 29 Toss
 
-**Call it:** `Shotgun Z Tight Left 29 Toss`
+**Call it:** `Shotgun Z Left 29 Toss`
 
 **Scheme:** Toss
 
-![Shotgun - Z Tight Left - 29 Toss](playbook/shotgun/cards/sg-rb-toss-l-4-4.svg)
+![Shotgun - Z Left - 29 Toss](playbook/shotgun/cards/sg-rb-toss-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|

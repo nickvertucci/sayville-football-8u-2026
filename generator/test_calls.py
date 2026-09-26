@@ -90,6 +90,10 @@ CASES = [
     ("outside called Pitch",          "split-backs", "sb-toss-r", "Split Backs Z Right 38 Pitch", True),
     ("QB sweep at 8/9",               "split-backs", "sb-qb-sweep-r", "Split Backs Z Right 18 Sweep", False),
     ("QB sweep called Toss",          "split-backs", "sb-qb-sweep-r", "Split Backs Z Right 18 Toss", True),
+    # The Z's phrase is his side only. Tight and Split came out of it, and an old call
+    # still carrying one is stopped rather than quietly skipping the side check.
+    ("Z Tight, the retired word",     "i-form",   "i-power-r",  "Regular I Z Tight Right 36 Handoff", True),
+    ("Z Split, the retired word",     "split-backs", "sb-toss-r", "Split Backs Z Split Right 38 Toss", True),
     ("wishbone power",                "wishbone", "wb-power-r", "Wishbone 46 Handoff", False),
     ("wishbone power on the 3-back",  "wishbone", "wb-power-r", "Wishbone 36 Handoff", True),
     ("wishbone smash",                "wishbone", "wb-smash-r", "Wishbone 22 Handoff", False),

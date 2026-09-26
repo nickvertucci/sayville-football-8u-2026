@@ -821,12 +821,13 @@ table.xl.xl-plays td {
 /* The call at 10px, the NUMBER at 13, and the rows spread down the pouch.
    All three are measured against the youth window, 3.5in by 2.75in, two columns.
 
-   The call is width-capped: the longest one the sheet carries is "Z Tight Right -
+   The call is width-capped: the longest one the sheet carried was "Z Tight Right -
    18 Fake Sweep", and at 10px it cleared its column by two points with the rule
    two points off the call. Two points is not a gap, it is a collision -- the rule
-   and the Z of "Z Tight" read as one mark. The gap is worth more than the type
-   size, so the gap took two spaces and the call gave up the half point that pays
-   for them; 9.5px leaves four points spare at the end of the longest row. The
+   and the Z at the front of the call read as one mark. The gap is worth more than
+   the type size, so the gap took two spaces and the call gave up the half point
+   that pays for them; 9.5px left four points spare at the end of that row, and more
+   since the Z's phrase lost its Tight -- it is "Z Right - 18 Fake Sweep" now. The
    words are not shortened to buy more, because the call sheet spells them out too
    and a sheet that prints a different call from the one on the boy's wrist has to
    be translated under a play clock.
@@ -1255,7 +1256,7 @@ table.xl.pk-plays td {
   .band-span { font-size: 9px; opacity: 1; right: 5px; bottom: 3px; }
   .band-sub { font-size: 6.5pt; color: #000; border-bottom-color: #000;
               margin: 1px 0 0; padding: 0 3px; }
-  /* Width sets the type here, not height: "Z Tight Right - 18 Fake Sweep" is the
+  /* Width sets the type here, not height: "Z Right - 18 Fake Sweep" is the
      longest row there is and it has half of three and a half inches to fit in. The
      rows then have three inches to live in, which is why the leading is what it is --
      the space was going spare, and a row a boy can keep his eye on is what to spend
