@@ -852,6 +852,9 @@ table.xl.xl-plays td {
 /* Zebra rather than a rule between rows. A rule is a thing to read past; a band of
    tone is the row itself, and a finger tracking one does not slip off it. */
 .band li:nth-child(even) { background: var(--panel-2); }
+/* And a black rule between rows as well as the tone: the eye can lose a row in a
+   stripe on a moving wrist, it does not lose one fenced top and bottom. */
+.band li + li { border-top: 1px solid var(--ink); }
 /* The rule is the number's own edge, not a fence between two equals: it stays two
    points off the digits and seven off the call. Even padding either side would make
    it a third column of its own. */
@@ -1269,6 +1272,7 @@ table.xl.pk-plays td {
   /* One play to a line, the whole call: the longest, "Split Formation - Z Right -
      18 Fake Sweep", is what sets the type, measured against the pouch's width. */
   .band li { font-size: 15px; line-height: 1.2; padding: 0 1px; gap: 6px; }
+  .band li + li { border-top: 1pt solid #000; }
   .band li:nth-child(even) { background: #eee !important;
                              -webkit-print-color-adjust: exact; print-color-adjust: exact; }
   .band li b { flex-basis: 22px; font-size: 16px; padding-right: 3px;
