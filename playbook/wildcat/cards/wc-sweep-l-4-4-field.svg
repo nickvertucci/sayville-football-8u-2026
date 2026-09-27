@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="702" height="472" viewBox="0 27 702 472" font-family="Segoe UI, Helvetica, Arial, sans-serif" role="img">
+<svg xmlns="http://www.w3.org/2000/svg" width="702" height="486" viewBox="0 27 702 486" font-family="Segoe UI, Helvetica, Arial, sans-serif" role="img">
 <title>Wildcat - Z Left - 19 Sweep — Wildcat Z Left 19 Sweep vs 4-4</title>
 <rect x="0" y="0" width="702" height="513" fill="#ffffff"/>
 <line x1="0" y1="459.0" x2="702" y2="459.0" stroke="#c8cdd6" stroke-width="1"/>
@@ -36,7 +36,7 @@
 <line x1="90.9" y1="219.8" x2="107.8" y2="212.7" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 <path d="M310.5,459.0 C295.6,453.6 236.2,452.7 221.4,426.6 C206.5,400.5 219.9,337.4 221.4,302.4 C222.9,267.4 229.0,231.1 230.6,216.8" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
 <line x1="221.5" y1="215.8" x2="239.7" y2="217.8" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
-<path d="M351.0,459.0 C342.9,457.2 331.6,454.5 302.4,448.2 C273.1,441.9 204.8,434.7 175.5,421.2 C146.2,407.7 135.0,387.9 126.9,367.2 C118.8,346.5 126.9,324.4 126.9,297.0 C126.9,269.6 126.9,229.5 126.9,202.5 C126.9,175.5 126.9,146.2 126.9,135.0" fill="none" stroke="#b3001b" stroke-width="4.6" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M351.0,459.0 C344.2,463.1 335.2,485.1 310.5,483.3 C285.8,481.5 233.1,467.6 202.5,448.2 C171.9,428.9 139.5,392.4 126.9,367.2 C114.3,342.0 126.9,324.4 126.9,297.0 C126.9,269.6 126.9,229.5 126.9,202.5 C126.9,175.5 126.9,146.2 126.9,135.0" fill="none" stroke="#b3001b" stroke-width="4.6" stroke-linecap="round" stroke-linejoin="round"/>
 <polygon points="126.9,135.0 133.1,148.8 120.7,148.8" fill="#b3001b"/>
 
 <rect x="224.1" y="324.0" width="27.0" height="27.0" rx="3" fill="#ffffff" stroke="#14213d" stroke-width="2.6"/>

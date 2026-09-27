@@ -25,16 +25,16 @@
   },
   "assignments": {
     "TB": {
-      "rule": "Catch the snap and sweep left, flat and fast, behind the fullback. Turn it up outside his block.",
+      "rule": "Catch the snap, drop a step and swing left behind the fullback -- he goes first. Stay behind him until his block is made, then turn it up outside it.",
       "type": "run",
       "path": [
         [
-          -1.8,
-          0.4
+          -1.5,
+          -0.9
         ],
         [
-          -6.5,
-          1.4
+          -5.5,
+          0.4
         ],
         [
           -8.3,

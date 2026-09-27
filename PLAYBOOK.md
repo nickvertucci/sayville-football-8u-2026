@@ -2097,7 +2097,7 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 | **Z** | Block the free safety. |
 | **QB** | Run at the corner and screen him off. Stay in his way. You are a wing on this play, not the quarterback -- you line up beside the Z, a step outside him, and you take the outside man. You do not touch the ball. |
 | **FB** | Bubble out around our end — do not run up into the line. Block the first man out there; here it is the linebacker. |
-| **TB** **(ball)** | Catch the snap and sweep right, flat and fast, behind the fullback. Turn it up outside his block. |
+| **TB** **(ball)** | Catch the snap, drop a step and swing right behind the fullback -- he goes first. Stay behind him until his block is made, then turn it up outside it. |
 
 **Coaching points**
 
@@ -2127,7 +2127,7 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 | **Z** | Block the free safety. |
 | **QB** | Run at the corner and screen him off. Stay in his way. You are a wing on this play, not the quarterback -- you line up beside the Z, a step outside him, and you take the outside man. You do not touch the ball. |
 | **FB** | Bubble out around our end — do not run up into the line. Block the first man out there; here it is the linebacker. |
-| **TB** **(ball)** | Catch the snap and sweep left, flat and fast, behind the fullback. Turn it up outside his block. |
+| **TB** **(ball)** | Catch the snap, drop a step and swing left behind the fullback -- he goes first. Stay behind him until his block is made, then turn it up outside it. |
 
 **Coaching points**
 
