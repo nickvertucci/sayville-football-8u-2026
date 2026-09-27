@@ -448,6 +448,10 @@ def _letter_tail(call: str, form: dict, play: dict) -> str:
     label = form_label(form)
     if call.lower().startswith(label.lower() + " "):
         call = call[len(label) + 1:]
+    # Wildcat says who takes the snap before anything else -- "Wildcat Z 3 1 Right Z
+    # Sweep Right" -- and that word is not an alignment phrase.
+    if form.get("snap_backs"):
+        call = re.sub(r"^(?:\d|[XYZ]) ", "", call)
     return re.sub(r"^(?:(?:\w+ ){0,2}(?:Left|Right) )+", "", call)
 
 
@@ -491,24 +495,40 @@ def validate_call(play: dict, form: dict, defenses: dict) -> list[str]:
                     f"line up beside the Z as a wing on the {side.lower()}"]
     snap = form.get("snap_backs")
     if snap:
-        # Wildcat 2 / Wildcat 3: the number after the formation is who takes the snap,
-        # and he is the man straight behind the center -- and the one carrying it.
-        if not (side_word and side_word.group(1)):
-            return [f"{pid}: call '{call}' has to say where the Z and the quarterback "
-                    "line up -- Z 1 Right or Z 1 Left"]
-        lead = re.match(re.escape(form.get("name", "")) + r" (\d) ", call)
+        # Wildcat 2 / 3 / Z: the word after the formation is who takes the snap, and he
+        # is the man straight behind the center -- and the one carrying it. Then the
+        # wing pair: "Z 1 Right" or "3 1 Right", the two wings and their side, the
+        # quarterback (the 1) always one of them.
+        lead = re.match(re.escape(form.get("name", "")) + r" (\d|[XYZ]) ", call)
         if not lead or lead.group(1) not in snap:
             return [f"{pid}: call '{call}' has to say who takes the snap -- "
                     f"{form.get('name')} " + " or ".join(sorted(snap))]
-        taker = backs.get(lead.group(1))
-        at = play_alignment(form, play).get(taker)
+        who = lead.group(1)
+        taker = who if who in LETTER_BACKS else backs.get(who)
+        al = play_alignment(form, play)
+        at = al.get(taker)
         if not at or abs(at[0]) > 0.3:
-            return [f"{pid}: call '{call}' gives the snap to the {lead.group(1)}, "
+            return [f"{pid}: call '{call}' gives the snap to the {who}, "
                     f"but the {taker} is not lined up behind the center"]
-        num = CALL_DIGITS.search(call[lead.end():])
-        if num and num.group(1) != lead.group(1):
-            return [f"{pid}: call '{call}' snaps it to the {lead.group(1)} but the "
-                    f"{num.group(1)} carries it -- the man who takes the snap runs it"]
+        pair = re.match(r"(\d|[XYZ]) 1 (Left|Right) ", call[lead.end():])
+        if not pair:
+            return [f"{pid}: call '{call}' has to say where the two wings line up -- "
+                    "the other man and the 1, then the side: Z 1 Right, 3 1 Left"]
+        mate = pair.group(1)
+        mate_pos = mate if mate in LETTER_BACKS else backs.get(mate)
+        side = pair.group(2)
+        qb, other = al.get("QB"), al.get(mate_pos)
+        if mate == who or not qb or not other or qb[1] < -2.0 or other[1] < -2.0 \
+                or (qb[0] < 0) != (side == "Left") or abs(qb[0] - other[0]) > 2.0:
+            return [f"{pid}: call '{call}' says {mate} 1 {side}, so the {mate_pos} and "
+                    f"the quarterback have to line up side by side as wings on the "
+                    f"{side.lower()}"]
+        rest = call[lead.end() + pair.end():]
+        num = CALL_DIGITS.search(rest)
+        carrier_word = num.group(1) if num else rest.split(" ", 1)[0]
+        if carrier_word != who:
+            return [f"{pid}: call '{call}' snaps it to the {who} but the "
+                    f"{carrier_word} carries it -- the man who takes the snap runs it"]
     if side_word:
         side = side_word.group(2)
         where = play_alignment(form, play).get("Z")

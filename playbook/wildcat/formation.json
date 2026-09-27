@@ -5,7 +5,7 @@
   "family": "Wildcat",
   "summary": "One of the two backs takes the snap five yards deep and the other stands beside him to load the edge. The quarterback leaves the backfield and lines up beside the Z as a second wing.",
   "personnel": "11 players, 2 tight ends, tailback at the snap, fullback beside him, 2 wings (the Z and the quarterback, side by side)",
-  "notes": "Seven on the line: the X, the five linemen and the Y, both ends tight. The Z and the quarterback are two wings side by side, a yard off the ball -- the Z a step outside the end, the quarterback a step outside the Z -- so the end stays eligible and the line stays seven. The call is three parts. Wildcat 2 or Wildcat 3 is who takes the snap: the fullback or the tailback, five yards deep straight behind the center, with the other back level with him on the play's side to load the edge. Z 1 Right or Z 1 Left is where the Z and the quarterback line up. Then the play: 28 or 29 Sweep for the fullback, 38 or 39 Sweep for the tailback, toward the wings.",
+  "notes": "Seven on the line: the X, the five linemen and the Y, both ends tight. The Z and the quarterback are two wings side by side, a yard off the ball -- the Z a step outside the end, the quarterback a step outside the Z -- so the end stays eligible and the line stays seven. The call is three parts. Wildcat 2, Wildcat 3 or Wildcat Z is who takes the snap: the fullback, the tailback or the Z, five yards deep straight behind the center, with the other back level with him on the play's side to load the edge. Z 1 Right or Z 1 Left is where the Z and the quarterback line up as wings -- or 3 1 Right / 3 1 Left when the Z has the snap and the tailback is the wing beside the quarterback. Then the play: 28 or 29 Sweep for the fullback, 38 or 39 Sweep for the tailback, Z Sweep Right or Left for the Z, always toward the wings.",
   "alignment": {
     "X": [
       -4.2,
@@ -71,6 +71,7 @@
   ],
   "snap_backs": [
     "2",
-    "3"
+    "3",
+    "Z"
   ]
 }
