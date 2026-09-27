@@ -28,8 +28,8 @@ Both ends are tight on the line. The two backs sit four yards deep and just over
 | [Split Formation - Z Left - 29 Toss](#split-formation---z-left---29-toss) | `Split Formation Z Left 29 Toss` | Toss | run | FB |
 | [Split Formation - Z Right - 18 Sweep](#split-formation---z-right---18-sweep) | `Split Formation Z Right 18 Sweep` | Sweep | run | QB |
 | [Split Formation - Z Left - 19 Sweep](#split-formation---z-left---19-sweep) | `Split Formation Z Left 19 Sweep` | Sweep | run | QB |
-| [Split Formation - Z Left - 19 Fake Sweep](#split-formation---z-left---19-fake-sweep) | `Split Formation Z Left 19 Fake Sweep` | Sweep | run | QB |
-| [Split Formation - Z Right - 18 Fake Sweep](#split-formation---z-right---18-fake-sweep) | `Split Formation Z Right 18 Fake Sweep` | Sweep | run | QB |
+| [Split Formation - Z Left - Fake Toss - 19 Sweep](#split-formation---z-left---fake-toss---19-sweep) | `Split Formation Z Left Fake Toss 19 Sweep` | Sweep | run | QB |
+| [Split Formation - Z Right - Fake Toss - 18 Sweep](#split-formation---z-right---fake-toss---18-sweep) | `Split Formation Z Right Fake Toss 18 Sweep` | Sweep | run | QB |
 | [Split Formation - Z Right - Z Sweep Left](#split-formation---z-right---z-sweep-left) | `Split Formation Z Right Z Sweep Left` | Sweep | run | Z |
 | [Split Formation - Z Left - Z Sweep Right](#split-formation---z-left---z-sweep-right) | `Split Formation Z Left Z Sweep Right` | Sweep | run | Z |
 | [Split Formation - Z Right - X Sweep Right](#split-formation---z-right---x-sweep-right) | `Split Formation Z Right X Sweep Right` | Sweep | run | X |
@@ -163,13 +163,13 @@ Both ends are tight on the line. The two backs sit four yards deep and just over
 
 ---
 
-## Split Formation - Z Left - 19 Fake Sweep
+## Split Formation - Z Left - Fake Toss - 19 Sweep
 
-**Call it:** `Split Formation Z Left 19 Fake Sweep`
+**Call it:** `Split Formation Z Left Fake Toss 19 Sweep`
 
 **Scheme:** Sweep
 
-![Split Formation - Z Left - 19 Fake Sweep](cards/sb-fake-sweep-l-4-4.svg)
+![Split Formation - Z Left - Fake Toss - 19 Sweep](cards/sb-fake-sweep-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -193,13 +193,13 @@ Both ends are tight on the line. The two backs sit four yards deep and just over
 
 ---
 
-## Split Formation - Z Right - 18 Fake Sweep
+## Split Formation - Z Right - Fake Toss - 18 Sweep
 
-**Call it:** `Split Formation Z Right 18 Fake Sweep`
+**Call it:** `Split Formation Z Right Fake Toss 18 Sweep`
 
 **Scheme:** Sweep
 
-![Split Formation - Z Right - 18 Fake Sweep](cards/sb-fake-sweep-r-4-4.svg)
+![Split Formation - Z Right - Fake Toss - 18 Sweep](cards/sb-fake-sweep-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|

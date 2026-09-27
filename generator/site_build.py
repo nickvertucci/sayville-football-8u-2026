@@ -906,7 +906,7 @@ table.xl.xl-plays td {
    hold on a moving arm. */
 .band li {
   display: flex; align-items: center; gap: 7px;
-  padding: 0 1px; font-size: 15px; font-weight: 700; line-height: 1.2;
+  padding: 0 1px; font-size: 13px; font-weight: 700; line-height: 1.2;
   color: var(--ink); white-space: nowrap;
 }
 /* Zebra rather than a rule between rows. A rule is a thing to read past; a band of
@@ -1330,8 +1330,9 @@ table.xl.pk-plays td {
      it on. The leading is safe from the half point the call gave back to the gap:
      the row is as tall as the 13px number, not as tall as the call. */
   /* One play to a line, the whole call: the longest, "Split Formation - Z Right -
-     18 Fake Sweep", is what sets the type, measured against the pouch's width. */
-  .band li { font-size: 15px; line-height: 1.2; padding: 0 1px; gap: 6px; }
+     Fake Toss - 18 Sweep", is what sets the type, measured against the pouch's width:
+     13.5px clears it by a pixel, 13 by twelve. */
+  .band li { font-size: 13px; line-height: 1.2; padding: 0 1px; gap: 6px; }
   .band li + li { border-top: 1pt solid #000; }
   .band li:nth-child(even) { background: #eee !important;
                              -webkit-print-color-adjust: exact; print-color-adjust: exact; }
@@ -3587,7 +3588,11 @@ def _sheet_name(play: dict, form: dict) -> str:
     # boy is where -- and "Z Right" is what gets yelled.
     m = re.search(r"\b(Z\s+(?:Left|Right))\s+(.*)$", call)
     if m:
-        return f"{m.group(1)} - {m.group(2)}"
+        # A fake called ahead of the number -- "Fake Toss 18 Sweep" -- gets the same
+        # dash the name has before the number, so the sheet reads "Z Right - Fake Toss
+        # - 18 Sweep" the way the band and the play's own name do.
+        tail = re.sub(r"(?<=[A-Za-z]) (?=\d\d\b)", " - ", m.group(2))
+        return f"{m.group(1)} - {tail}"
     m = re.search(r"\b(\w+)\s+(Left|Right)\s+(.*)$", call)
     if m:
         return f"{m.group(1)} {m.group(2)} - {m.group(3)}"
