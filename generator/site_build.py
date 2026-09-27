@@ -3641,7 +3641,7 @@ def _roster_and_plays(root: Path, formations: list[dict]) -> tuple[dict, dict]:
 
 
 def _offense_lower(root: Path) -> str:
-    """Under the formation blocks: the field to draw on, the base eleven, the rotations.
+    """Under the formation blocks: the base eleven, then the rotations.
 
     The rotations are the same tables the depth chart prints, from the same
     `rotations` block in roster.json, so the sheet in a coach's hand and the chart on
@@ -3652,7 +3652,7 @@ def _offense_lower(root: Path) -> str:
     path = root / "roster.json"
     roster = json.loads(path.read_text(encoding="utf-8")) if path.is_file() else {}
     rots = offense_rotations(roster)
-    lower = _blank_line()
+    lower = ""
     if roster.get("offense"):
         cells = "".join(
             f'<span class="bl-man"><b>{esc(spot)}</b>{esc(man)}</span>'
@@ -3689,50 +3689,11 @@ def _base_eleven(roster: dict) -> list[tuple[str, str]]:
     return out
 
 
-# The line, as fifteen grid columns: a number, a man, a number, a man ... so the hole
-# numbers land over the gaps they name and 0 lands over the centre. Same numbering as
-# the nomenclature card, which is what the coach and the kids already read.
-#
-#     9  |  7  |  5  |  3  | 0 |  2  |  4  |  6  |  8
-#       X    LT    LG     C    RG    RT   Y
-HOLE_COLUMNS = ((1, "9"), (3, "7"), (5, "5"), (7, "3"),
-                (9, "2"), (11, "4"), (13, "6"), (15, "8"))
-MAN_COLUMNS = (2, 4, 6, 8, 10, 12, 14)
+# Where the ball sits on the defensive sheet's blank front, in its grid's columns.
 BALL_COLUMN = 8
 
 # Where the hash marks sit down each sideline, as a percentage of the field's height.
 HASH_MARKS = (14, 32, 50, 68, 86)
-
-
-def _blank_line() -> str:
-    """A blank line of scrimmage to draw a play on, at the foot of the call sheet.
-
-    The sheet is laminated, so the bottom of it is worth more as somewhere to invent a
-    play than as more print. What is drawn is only the part that is the same on every
-    snap: the hole numbers, the centre with three men either side, and the ball in
-    front of him. The backs, the routes and the blocks are the coach's, in marker.
-
-    Built from bordered elements rather than an inline SVG. The SVG version rendered
-    on screen and was absent from the printed sheet at every size tried; a border
-    always prints, which is the same rule the black title bars in this file follow.
-    """
-    holes = "".join(
-        f'<span class="hn" style="grid-column:{col};grid-row:2">{esc(n)}</span>'
-        for col, n in HOLE_COLUMNS
-    )
-    ball = f'<span class="ball" style="grid-column:{BALL_COLUMN};grid-row:1"></span>'
-    men = "".join(
-        f'<span class="o" style="grid-column:{col};grid-row:2"></span>'
-        for col in MAN_COLUMNS
-    )
-    hashes = "".join(
-        f'<span class="hash{side}" style="top:{pct}%"></span>'
-        for pct in HASH_MARKS for side in ("", " r")
-    )
-    return (f'<div class="pk-field" role="img" aria-label="Blank line of scrimmage with '
-            f'the hole numbers and sidelines, to draw a play on">{hashes}'
-            f'<div class="pk-draw">{holes}{ball}{men}'
-            f'<span class="pad" style="grid-row:3"></span></div></div>')
 
 
 # The script is twenty plays, and the twenty share the whole height beside the four
