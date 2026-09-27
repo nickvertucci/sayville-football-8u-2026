@@ -121,10 +121,11 @@ def is_sweep_back(back_digit: str | None, form: dict | None = None) -> bool:
     with a digit at 8/9 is taking a pitch, which is a Toss: Wishbone's 4 is the right
     halfback, so 49 Toss is a toss.
 
-    `form` is still in the signature because the call sites pass it and the day a
-    formation numbers somebody new, this is where that is decided.
+    `form` is where a formation says otherwise. Wildcat's snap goes to the 2 or the
+    3, and whichever of them took it is the man sweeping, so its `sweep_backs` names
+    both: 28 Sweep and 38 Sweep, never 28 Toss.
     """
-    return back_digit == "1"
+    return back_digit == "1" or back_digit in ((form or {}).get("sweep_backs") or ())
 
 
 def scheme_for_call(hole: int, back_digit: str | None = None,
@@ -339,6 +340,19 @@ def scheme_roles(form: dict, side: int) -> dict[str, str]:
     return {**line_roles(side), **backfield_roles(form, side)}
 
 
+def play_roles(play: dict, form: dict, side: int) -> dict[str, str]:
+    """The formation's roles for this play: the lead back cannot be the ball carrier.
+
+    A stacked backfield always leads with the fullback. In Wildcat 2 the fullback
+    takes the snap and carries it, so the tailback beside him loads the edge instead.
+    """
+    roles = scheme_roles(form, side)
+    carrier = play.get("ball_carrier")
+    if carrier and roles.get("lead") == carrier and roles.get("trail"):
+        roles["lead"], roles["trail"] = roles["trail"], roles["lead"]
+    return roles
+
+
 def scheme_intents(play: dict, form: dict, side: int) -> dict[str, dict]:
     """The scheme's role → verb map, with the one Sweep adjustment that is the play.
 
@@ -350,7 +364,7 @@ def scheme_intents(play: dict, form: dict, side: int) -> dict[str, dict]:
     if name not in SCHEMES:
         return {}
     intents = {role: copy.deepcopy(spec) for role, spec in SCHEMES[name].items()}
-    roles = scheme_roles(form, side)
+    roles = play_roles(play, form, side)
     # A sweep is won or lost on the edge, so both backs go there and double the force
     # man -- the outside linebacker in the 4-4, the corner in the 5-3. One back on him
     # and the other selling a fake left the man the ball is actually running at with a
@@ -412,7 +426,7 @@ def scheme_conflicts(play: dict, form: dict, side: int) -> list[str]:
     if name not in SCHEMES:
         return []
     written = play.get("_written") or play.get("assignments") or {}
-    roles = scheme_roles(form, side)
+    roles = play_roles(play, form, side)
     pid = play.get("id", "<no id>")
     msgs = []
     for role, intent in scheme_intents(play, form, side).items():
@@ -444,7 +458,7 @@ def fill_assignments(play: dict, form: dict, side: int) -> dict:
     name = play.get("scheme")
     if name not in SCHEMES:
         return {pos: dict(spec) for pos, spec in written.items()}
-    roles = scheme_roles(form, side)
+    roles = play_roles(play, form, side)
     out: dict[str, dict] = {}
     for role, intent in scheme_intents(play, form, side).items():
         pos = roles.get(role)

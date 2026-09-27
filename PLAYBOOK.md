@@ -72,8 +72,10 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 | 64 | [Single Back - Tight Left Wing Left - 29 Toss](#single-back---tight-left-wing-left---29-toss) | `Single Back Tight Left Wing Left 29 Toss` | Toss | run | Single Back | FB |
 | 65 | [Single Back - Tight Right Wing Left - Y Slant Pass Right](#single-back---tight-right-wing-left---y-slant-pass-right) | `Single Back Tight Right Wing Left Y Slant Pass Right` | Protect | pass | Single Back | Y |
 | 66 | [Single Back - Tight Left Wing Right - X Slant Pass Left](#single-back---tight-left-wing-right---x-slant-pass-left) | `Single Back Tight Left Wing Right X Slant Pass Left` | Protect | pass | Single Back | X |
-| 67 | [Wildcat - Z Right - 18 Sweep](#wildcat---z-right---18-sweep) | `Wildcat Z Right 18 Sweep` | Sweep | run | Wildcat | TB |
-| 68 | [Wildcat - Z Left - 19 Sweep](#wildcat---z-left---19-sweep) | `Wildcat Z Left 19 Sweep` | Sweep | run | Wildcat | TB |
+| 67 | [Wildcat 3 - Z 1 Right - 38 Sweep](#wildcat-3---z-1-right---38-sweep) | `Wildcat 3 Z 1 Right 38 Sweep` | Sweep | run | Wildcat | TB |
+| 68 | [Wildcat 3 - Z 1 Left - 39 Sweep](#wildcat-3---z-1-left---39-sweep) | `Wildcat 3 Z 1 Left 39 Sweep` | Sweep | run | Wildcat | TB |
+| 69 | [Wildcat 2 - Z 1 Right - 28 Sweep](#wildcat-2---z-1-right---28-sweep) | `Wildcat 2 Z 1 Right 28 Sweep` | Sweep | run | Wildcat | FB |
+| 70 | [Wildcat 2 - Z 1 Left - 29 Sweep](#wildcat-2---z-1-left---29-sweep) | `Wildcat 2 Z 1 Left 29 Sweep` | Sweep | run | Wildcat | FB |
 
 # I Formation
 
@@ -2077,13 +2079,13 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 
 ---
 
-## Wildcat - Z Right - 18 Sweep
+## Wildcat 3 - Z 1 Right - 38 Sweep
 
-**Call it:** `Wildcat Z Right 18 Sweep`
+**Call it:** `Wildcat 3 Z 1 Right 38 Sweep`
 
 **Scheme:** Sweep
 
-![Wildcat - Z Right - 18 Sweep](playbook/wildcat/cards/wc-sweep-r-4-4.svg)
+![Wildcat 3 - Z 1 Right - 38 Sweep](playbook/wildcat/cards/wc3-sweep-r-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -2097,23 +2099,23 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 | **Z** | Block the free safety. |
 | **QB** | Run at the corner and screen him off. Stay in his way. You are a wing on this play, not the quarterback -- you line up beside the Z, a step outside him, and you take the outside man. You do not touch the ball. |
 | **FB** | Bubble out around our end — do not run up into the line. Block the first man out there; here it is the linebacker. |
-| **TB** **(ball)** | Catch the snap, drop a step and swing right behind the fullback -- he goes first. Stay behind him until his block is made, then turn it up outside it. |
+| **TB** **(ball)** | Take the snap, drop a step and swing right behind the fullback -- he goes first. Stay behind him until his block is made, then turn it up outside it. |
 
 **Coaching points**
 
-- The snap is five yards back to the tailback, not the quarterback. Rep the snap before you rep the play -- a bad snap is the only way this loses yards.
+- Wildcat 3 is the tailback at the snap, five yards back. Rep the snap before you rep the play -- a bad snap is the only way this loses yards.
 - The fullback loads the edge: he goes first, right, and takes the first man outside our end. The tailback stays behind him until the block is made.
-- The quarterback is a wing on this play. He does not touch the ball -- tell him before the snap, and tell the defense nothing.
+- The quarterback is a wing beside the Z. He does not touch the ball -- tell him before the snap, and tell the defense nothing.
 
 ---
 
-## Wildcat - Z Left - 19 Sweep
+## Wildcat 3 - Z 1 Left - 39 Sweep
 
-**Call it:** `Wildcat Z Left 19 Sweep`
+**Call it:** `Wildcat 3 Z 1 Left 39 Sweep`
 
 **Scheme:** Sweep
 
-![Wildcat - Z Left - 19 Sweep](playbook/wildcat/cards/wc-sweep-l-4-4.svg)
+![Wildcat 3 - Z 1 Left - 39 Sweep](playbook/wildcat/cards/wc3-sweep-l-4-4.svg)
 
 | Position | Assignment |
 |---|---|
@@ -2127,11 +2129,71 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 | **Z** | Block the free safety. |
 | **QB** | Run at the corner and screen him off. Stay in his way. You are a wing on this play, not the quarterback -- you line up beside the Z, a step outside him, and you take the outside man. You do not touch the ball. |
 | **FB** | Bubble out around our end — do not run up into the line. Block the first man out there; here it is the linebacker. |
-| **TB** **(ball)** | Catch the snap, drop a step and swing left behind the fullback -- he goes first. Stay behind him until his block is made, then turn it up outside it. |
+| **TB** **(ball)** | Take the snap, drop a step and swing left behind the fullback -- he goes first. Stay behind him until his block is made, then turn it up outside it. |
 
 **Coaching points**
 
-- The snap is five yards back to the tailback, not the quarterback. Rep the snap before you rep the play -- a bad snap is the only way this loses yards.
+- Wildcat 3 is the tailback at the snap, five yards back. Rep the snap before you rep the play -- a bad snap is the only way this loses yards.
 - The fullback loads the edge: he goes first, left, and takes the first man outside our end. The tailback stays behind him until the block is made.
-- The quarterback is a wing on this play. He does not touch the ball -- tell him before the snap, and tell the defense nothing.
+- The quarterback is a wing beside the Z. He does not touch the ball -- tell him before the snap, and tell the defense nothing.
+
+---
+
+## Wildcat 2 - Z 1 Right - 28 Sweep
+
+**Call it:** `Wildcat 2 Z 1 Right 28 Sweep`
+
+**Scheme:** Sweep
+
+![Wildcat 2 - Z 1 Right - 28 Sweep](playbook/wildcat/cards/wc2-sweep-r-4-4.svg)
+
+| Position | Assignment |
+|---|---|
+| **X** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
+| **LT** | D — nothing in your gap and nobody on you. Go downfield and get the left inside linebacker. |
+| **LG** | O — your gap is empty, so take the defensive guard on you. Hands inside, pads under his, drive him back. |
+| **C** | D — nothing in your gap and nobody on you. Go downfield and get the right inside linebacker. |
+| **RG** | O — your gap is empty, so take the defensive guard on you. Hands inside, pads under his, drive him back. |
+| **RT** | D — nothing in your gap and nobody on you. Go downfield and get the right outside linebacker. |
+| **Y** | Defensive end on your inside shoulder. Turn him inside. The ball goes around behind you. |
+| **Z** | Block the free safety. |
+| **QB** | Run at the corner and screen him off. Stay in his way. You are a wing on this play, not the quarterback -- you line up beside the Z, a step outside him, and you take the outside man. You do not touch the ball. |
+| **FB** **(ball)** | Take the snap, drop a step and swing right behind the tailback -- he goes first. Stay behind him until his block is made, then turn it up outside it. |
+| **TB** | Bubble out around our end — do not run up into the line. Block the first man out there; here it is the linebacker. |
+
+**Coaching points**
+
+- Wildcat 2 is the fullback at the snap, five yards back. Rep the snap before you rep the play -- a bad snap is the only way this loses yards.
+- The tailback loads the edge: he goes first, right, and takes the first man outside our end. The fullback stays behind him until the block is made.
+- The quarterback is a wing beside the Z. He does not touch the ball -- tell him before the snap, and tell the defense nothing.
+
+---
+
+## Wildcat 2 - Z 1 Left - 29 Sweep
+
+**Call it:** `Wildcat 2 Z 1 Left 29 Sweep`
+
+**Scheme:** Sweep
+
+![Wildcat 2 - Z 1 Left - 29 Sweep](playbook/wildcat/cards/wc2-sweep-l-4-4.svg)
+
+| Position | Assignment |
+|---|---|
+| **X** | Defensive end on your inside shoulder. Turn him inside. The ball goes around behind you. |
+| **LT** | D — nothing in your gap and nobody on you. Go downfield and get the left inside linebacker. |
+| **LG** | O — your gap is empty, so take the defensive guard on you. Hands inside, pads under his, drive him back. |
+| **C** | D — nothing in your gap and nobody on you. Go downfield and get the right inside linebacker. |
+| **RG** | O — your gap is empty, so take the defensive guard on you. Hands inside, pads under his, drive him back. |
+| **RT** | D — nothing in your gap and nobody on you. Go downfield and get the right outside linebacker. |
+| **Y** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
+| **Z** | Block the free safety. |
+| **QB** | Run at the corner and screen him off. Stay in his way. You are a wing on this play, not the quarterback -- you line up beside the Z, a step outside him, and you take the outside man. You do not touch the ball. |
+| **FB** **(ball)** | Take the snap, drop a step and swing left behind the tailback -- he goes first. Stay behind him until his block is made, then turn it up outside it. |
+| **TB** | Bubble out around our end — do not run up into the line. Block the first man out there; here it is the linebacker. |
+
+**Coaching points**
+
+- Wildcat 2 is the fullback at the snap, five yards back. Rep the snap before you rep the play -- a bad snap is the only way this loses yards.
+- The tailback loads the edge: he goes first, left, and takes the first man outside our end. The fullback stays behind him until the block is made.
+- The quarterback is a wing beside the Z. He does not touch the ball -- tell him before the snap, and tell the defense nothing.
 

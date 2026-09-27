@@ -1,14 +1,14 @@
 {
-  "id": "wc-sweep-l",
-  "order": 2,
+  "id": "wc2-sweep-l",
+  "order": 4,
   "formation": "wildcat",
-  "name": "Wildcat - Z Left - 19 Sweep",
-  "code": "72",
-  "call": "Wildcat Z Left 19 Sweep",
+  "name": "Wildcat 2 - Z 1 Left - 29 Sweep",
+  "code": "74",
+  "call": "Wildcat 2 Z 1 Left 29 Sweep",
   "type": "run",
   "scheme": "Sweep",
   "direction": "left",
-  "ball_carrier": "TB",
+  "ball_carrier": "FB",
   "alignment": {
     "Z": [
       -5.6,
@@ -19,18 +19,22 @@
       -1.5
     ],
     "FB": [
+      0.0,
+      -5.0
+    ],
+    "TB": [
       -1.5,
       -5.0
     ]
   },
   "assignments": {
-    "TB": {
-      "rule": "Catch the snap, drop a step and swing left behind the fullback -- he goes first. Stay behind him until his block is made, then turn it up outside it.",
+    "FB": {
+      "rule": "Take the snap, drop a step and swing left behind the tailback -- he goes first. Stay behind him until his block is made, then turn it up outside it.",
       "type": "run",
       "path": [
         [
           -1.5,
-          -0.9
+          -0.4
         ],
         [
           -5.5,
@@ -80,8 +84,8 @@
     }
   },
   "coaching_points": [
-    "The snap is five yards back to the tailback, not the quarterback. Rep the snap before you rep the play -- a bad snap is the only way this loses yards.",
-    "The fullback loads the edge: he goes first, left, and takes the first man outside our end. The tailback stays behind him until the block is made.",
-    "The quarterback is a wing on this play. He does not touch the ball -- tell him before the snap, and tell the defense nothing."
+    "Wildcat 2 is the fullback at the snap, five yards back. Rep the snap before you rep the play -- a bad snap is the only way this loses yards.",
+    "The tailback loads the edge: he goes first, left, and takes the first man outside our end. The fullback stays behind him until the block is made.",
+    "The quarterback is a wing beside the Z. He does not touch the ball -- tell him before the snap, and tell the defense nothing."
   ]
 }

@@ -478,9 +478,39 @@ def validate_call(play: dict, form: dict, defenses: dict) -> list[str]:
     if old_word:
         return [f"{pid}: call '{call}' says Z {old_word.group(1)} -- the Z's phrase is "
                 "just his side now, 'Z Left' or 'Z Right'"]
-    side_word = re.search(r"\bZ (Left|Right)\b", call)
+    # "Z 1 Right" is Wildcat's: the Z and the quarterback -- the 1 -- side by side on
+    # that side. The 1 has to be there too, a wing beside the Z, not in the backfield.
+    side_word = re.search(r"\bZ (1 )?(Left|Right)\b", call)
+    if side_word and side_word.group(1):
+        side = side_word.group(2)
+        al = play_alignment(form, play)
+        z, qb = al.get("Z"), al.get("QB")
+        if not qb or qb[1] < -2.0 or (qb[0] < 0) != (side == "Left") \
+                or not z or abs(qb[0] - z[0]) > 2.0:
+            return [f"{pid}: call '{call}' says Z 1 {side}, so the quarterback has to "
+                    f"line up beside the Z as a wing on the {side.lower()}"]
+    snap = form.get("snap_backs")
+    if snap:
+        # Wildcat 2 / Wildcat 3: the number after the formation is who takes the snap,
+        # and he is the man straight behind the center -- and the one carrying it.
+        if not (side_word and side_word.group(1)):
+            return [f"{pid}: call '{call}' has to say where the Z and the quarterback "
+                    "line up -- Z 1 Right or Z 1 Left"]
+        lead = re.match(re.escape(form.get("name", "")) + r" (\d) ", call)
+        if not lead or lead.group(1) not in snap:
+            return [f"{pid}: call '{call}' has to say who takes the snap -- "
+                    f"{form.get('name')} " + " or ".join(sorted(snap))]
+        taker = backs.get(lead.group(1))
+        at = play_alignment(form, play).get(taker)
+        if not at or abs(at[0]) > 0.3:
+            return [f"{pid}: call '{call}' gives the snap to the {lead.group(1)}, "
+                    f"but the {taker} is not lined up behind the center"]
+        num = CALL_DIGITS.search(call[lead.end():])
+        if num and num.group(1) != lead.group(1):
+            return [f"{pid}: call '{call}' snaps it to the {lead.group(1)} but the "
+                    f"{num.group(1)} carries it -- the man who takes the snap runs it"]
     if side_word:
-        side = side_word.group(1)
+        side = side_word.group(2)
         where = play_alignment(form, play).get("Z")
         if where is None:
             return [f"{pid}: call '{call}' says Z {side}, but this formation has no Z"]
