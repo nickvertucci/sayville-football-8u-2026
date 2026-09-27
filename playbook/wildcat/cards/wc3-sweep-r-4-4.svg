@@ -37,8 +37,8 @@
 <line x1="462.3" y1="213.4" x2="479.5" y2="219.7" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 <path d="M464.4,337.5 L453.3,313.5" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
 <line x1="445.0" y1="317.3" x2="461.7" y2="309.6" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
-<path d="M502.2,364.5 L357.2,118.5" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-<line x1="349.3" y1="123.2" x2="365.1" y2="113.9" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
+<path d="M502.2,364.5 L477.4,217.1" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="468.3" y1="218.6" x2="486.4" y2="215.6" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 <path d="M540.0,364.5 L602.6,216.3" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
 <line x1="594.2" y1="212.7" x2="611.1" y2="219.8" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 <path d="M391.5,459.0 C406.4,453.6 465.8,452.7 480.6,426.6 C495.5,400.5 482.1,337.4 480.6,302.4 C479.1,267.4 473.0,231.1 471.4,216.8" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
@@ -108,17 +108,17 @@
 <text x="385" y="578" font-size="12" fill="#111318">Defensive end on your inside shoulder. Turn</text>
 <text x="385" y="596" font-size="12" fill="#111318">him inside. The ball goes around behind you.</text>
 <text x="351" y="612" font-size="12" font-weight="700" fill="#111318">Z</text>
-<text x="385" y="612" font-size="12" fill="#111318">Block the free safety.</text>
-<text x="351" y="630" font-size="12" font-weight="700" fill="#111318">QB</text>
-<text x="385" y="630" font-size="12" fill="#111318">Run at the corner and screen him off. Stay in</text>
-<text x="385" y="646" font-size="12" fill="#111318">his way. You are a wing on this play, not the</text>
-<text x="385" y="664" font-size="12" fill="#111318">quarterback -- you line up beside the Z, a</text>
-<text x="385" y="680" font-size="12" fill="#111318">step outside him, and you take the outside</text>
-<text x="385" y="698" font-size="12" fill="#111318">man. You do not touch the ball.</text>
-<text x="351" y="714" font-size="12" font-weight="700" fill="#111318">FB</text>
-<text x="385" y="714" font-size="12" fill="#111318">Bubble out around our end — do not run up into</text>
-<text x="385" y="732" font-size="12" fill="#111318">the line. Block the first man out there; here</text>
-<text x="385" y="748" font-size="12" fill="#111318">it is the linebacker.</text>
+<text x="385" y="612" font-size="12" fill="#111318">Double team the right outside linebacker with</text>
+<text x="385" y="630" font-size="12" fill="#111318">the fullback.</text>
+<text x="351" y="646" font-size="12" font-weight="700" fill="#111318">QB</text>
+<text x="385" y="646" font-size="12" fill="#111318">Run at the corner and screen him off. Stay in</text>
+<text x="385" y="664" font-size="12" fill="#111318">his way. You are a wing on this play, not the</text>
+<text x="385" y="680" font-size="12" fill="#111318">quarterback -- you line up beside the Z, a</text>
+<text x="385" y="698" font-size="12" fill="#111318">step outside him, and you take the outside</text>
+<text x="385" y="714" font-size="12" fill="#111318">man. You do not touch the ball.</text>
+<text x="351" y="732" font-size="12" font-weight="700" fill="#111318">FB</text>
+<text x="385" y="732" font-size="12" fill="#111318">Bubble out around our end, then double team</text>
+<text x="385" y="748" font-size="12" fill="#111318">the linebacker with the Z.</text>
 <text x="351" y="766" font-size="12" font-weight="700" fill="#111318">TB</text>
 <text x="385" y="766" font-size="12" fill="#111318">Take the snap, drop a step and swing right</text>
 <text x="385" y="782" font-size="12" fill="#111318">behind the fullback -- he goes first. Stay</text>

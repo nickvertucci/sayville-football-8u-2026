@@ -30,8 +30,8 @@
 <line x1="462.3" y1="213.4" x2="479.5" y2="219.7" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 <path d="M464.4,337.5 L453.3,313.5" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
 <line x1="445.0" y1="317.3" x2="461.7" y2="309.6" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
-<path d="M199.8,364.5 L344.8,118.5" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-<line x1="336.9" y1="113.9" x2="352.7" y2="123.2" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
+<path d="M199.8,364.5 L224.6,217.1" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="215.6" y1="215.6" x2="233.7" y2="218.6" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 <path d="M162.0,364.5 L99.4,216.3" fill="none" stroke="#14213d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
 <line x1="90.9" y1="219.8" x2="107.8" y2="212.7" stroke="#14213d" stroke-width="3.0" stroke-linecap="round"/>
 <path d="M351.0,459.0 C344.2,460.8 335.2,471.6 310.5,469.8 C285.8,468.0 233.1,465.3 202.5,448.2 C171.9,431.1 139.5,392.4 126.9,367.2 C114.3,342.0 126.9,324.4 126.9,297.0 C126.9,269.6 126.9,229.5 126.9,202.5 C126.9,175.5 126.9,146.2 126.9,135.0" fill="none" stroke="#b3001b" stroke-width="4.6" stroke-linecap="round" stroke-linejoin="round"/>
