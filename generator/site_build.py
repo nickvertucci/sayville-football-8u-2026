@@ -763,7 +763,10 @@ col.xl-c0 { width: 4.6em; }
    because it is the same kind of line. Third child is the Right column: the scheme
    label, then Left, then Right. */
 table.xl.xl-plays th:nth-child(3),
-table.xl.xl-plays td:nth-child(3) { border-left: 2px solid var(--ink); }
+table.xl.xl-plays td.r { border-left: 2px solid var(--ink); }
+/* A scheme's second call and on: a dotted rule, not a full one, so the scheme still
+   reads as one group of calls. */
+table.xl.xl-plays tr.cont td { border-top: 1px dotted var(--line); }
 /* Specific enough to beat `table.xl td`, whose top alignment would otherwise win. */
 table.xl.xl-plays td {
   height: 22px; text-align: center; vertical-align: middle; padding: 4px 5px;
@@ -978,6 +981,7 @@ table.xl.df-grid tbody td { font-weight: 700; }
    stand on the field. Printing all eleven names on all six package cards was six
    lists a coach had to diff in his head; this is the one he diffs them against. */
 .bl-strip { margin-top: 18px; }
+.pane-off > .bl-strip { margin: 10px 0 0; }
 .bl-row {
   display: grid; grid-template-columns: repeat(11, minmax(0, 1fr)); gap: 0 1px;
   background: var(--line); border-top: 1px solid var(--line);
@@ -1267,6 +1271,7 @@ table.xl.pk-plays td {
      It is the same fence the sheet already meant to have, drawn dark enough to be
      one. */
   .xl-plays td a + a { border-top: 1px dotted #999; }
+  table.xl.xl-plays tr.cont td { border-top: 1px dotted #999; }
   table.xl.xl-plays td { line-height: 1.2; }
   .xl-scheme { line-height: 1.2; }
   /* The number is the play now -- it is what goes on a wristband and what a boy
@@ -1395,6 +1400,58 @@ table.xl.pk-plays td {
      read at arm's length, and test_print_pages.py is what holds the page count. */
   table.xl.pk-subs td { font-size: 7.5px; padding: 0 2px; line-height: 1.0;
                         letter-spacing: -.2px; }
+
+  /* ---- The offensive sheet, top to bottom: who is on the field, then the book and
+     the script side by side filling the page, then the rotations. The page is 10.4in
+     of Letter less its 0.3in margins; the pane is held a little under that and its
+     middle row takes whatever the top and bottom strips leave, so the book and the
+     script are as tall as the sheet allows rather than as tall as their type.
+
+     With the height free, the type is set by the width: every call stays on one line
+     in its cell, and the sizes below are the largest that do -- measured against the
+     longest call in each place, not picked. */
+  .tabpane.pane-off { display: flex !important; flex-direction: column; }
+  /* The height is in inches and only means what it says at the paper's own width. A
+     phone printing its 390px screen layout would stretch the sheet to most of two
+     pages, so there it keeps its natural height instead -- the depth chart's lesson. */
+  @media (min-width: 700px) {
+    .tabpane.pane-off { height: var(--cs-page, 10.2in); }
+  }
+  .pane-off > .bl-strip { order: 0; margin: 0 0 6px; padding: 0; border-top: 0; }
+  .pane-off > .xl-top { flex: 1 1 auto; min-height: 0; align-items: stretch;
+                        grid-template-columns: minmax(0, 1fr) var(--cs-script, 300px);
+                        gap: 0 8px; }
+  .pane-off > .cs-rots { margin-top: 8px; }
+
+  /* Base offense, now the first thing on the sheet: a black bar over eleven names big
+     enough to check the lineup against at arm's length. */
+  .pane-off .bl-card .pk-name { font-size: 12px; padding: 2px 6px; margin: 0; }
+  .pane-off .bl-man { font-size: var(--cs-base, 12px); line-height: 1.25;
+                      padding: 2px 2px 3px; border-left: 1px solid #000; }
+  .pane-off .bl-man b { font-size: 9px; }
+
+  /* The book: the two blocks share the column's height by their line counts. */
+  .pane-off .xl-sheets { display: flex; flex-direction: column; margin: 0; height: 100%; }
+  .pane-off .xl-sheet { flex: var(--lines, 1) 1 0; display: flex; flex-direction: column;
+                        min-height: 0; padding: 0 0 6px; }
+  .pane-off .xl-sheet table.xl-plays { flex: 1 1 auto; height: 100%; }
+  .pane-off .xl-title { font-size: 13px; padding: 2px 6px; }
+  .pane-off table.xl.xl-plays thead th { font-size: 10px; padding: 2px; }
+  .pane-off tbody .xl-scheme { font-size: 10px; }
+  .pane-off col.xl-c0 { width: 46px; }
+  .pane-off .xl-plays td a { font-size: var(--cs-play, 11px); letter-spacing: 0;
+                             line-height: 1.5; }
+  .pane-off .xl-plays .xl-code { font-size: calc(var(--cs-play, 11px) + 2px); }
+
+  /* The script: the column's full height, twenty-one rows sharing it. */
+  .pane-off .script { margin: 0; height: 100%; }
+  .pane-off .script-t { height: 100%; }
+  .pane-off table.xl.script-t td { height: auto; font-size: var(--cs-script-type, 10.5px); }
+  .pane-off .script-t td a { font-size: var(--cs-script-type, 10.5px); letter-spacing: 0; }
+  .pane-off .script-t .xl-code { font-size: calc(var(--cs-script-type, 10.5px) + 1px); }
+  .pane-off table.xl.script-t td.sn { font-size: 10px; width: 20px; }
+  .pane-off .script-t col.sn-c { width: 20px; }
+  .pane-off table.xl.script-t td.split { font-size: 11px; }
   table.xl.pk-subs .sub-pos { font-size: 6.5px; width: 2.4em; background: none;
                               color: #000; }
   table.xl.pk-subs .sub-out { color: #444; font-weight: 600; }
@@ -3640,8 +3697,8 @@ def _roster_and_plays(root: Path, formations: list[dict]) -> tuple[dict, dict]:
     return roster, plays
 
 
-def _offense_lower(root: Path) -> str:
-    """Under the formation blocks: the base eleven, then the rotations.
+def _offense_lower(root: Path) -> tuple[str, str]:
+    """The base eleven, for the top of the sheet, and the rotations, for the foot.
 
     The rotations are the same tables the depth chart prints, from the same
     `rotations` block in roster.json, so the sheet in a coach's hand and the chart on
@@ -3652,18 +3709,16 @@ def _offense_lower(root: Path) -> str:
     path = root / "roster.json"
     roster = json.loads(path.read_text(encoding="utf-8")) if path.is_file() else {}
     rots = offense_rotations(roster)
-    lower = ""
+    base = ""
     if roster.get("offense"):
         cells = "".join(
             f'<span class="bl-man"><b>{esc(spot)}</b>{esc(man)}</span>'
             for spot, man in _base_eleven(roster)
         )
-        lower += ('<div class="bl-strip"><section class="pk bl-card">'
-                  '<p class="pk-name">Base offense</p>'
-                  f'<div class="bl-row">{cells}</div></section></div>')
-    if rots:
-        lower += rotations_html(rots, "cs-rots")
-    return lower
+        base = ('<div class="bl-strip"><section class="pk bl-card">'
+                '<p class="pk-name">Base offense</p>'
+                f'<div class="bl-row">{cells}</div></section></div>')
+    return base, (rotations_html(rots, "cs-rots") if rots else "")
 
 
 # The lineup, in the order it stands on the field: the seven on the line from left to
@@ -4163,18 +4218,36 @@ def write_calls(formations: list[dict], defenses: dict, root: Path) -> str:
         schemes = [s for s in SCHEME_ORDER if any(k[0] == s for k in placed)]
         schemes += sorted({k[0] for k in placed} - set(SCHEME_ORDER))
 
+        # One call to a table row, the scheme's label spanning its rows. A cell used to
+        # stack a scheme's calls -- four Sweeps to a side in the Split Formation -- and
+        # when the printed sheet stretched the block to fill the page, the stretch went
+        # to the row, not the call: one Power call got an inch and the four Sweeps were
+        # bunched in the middle of theirs. A row per call shares the height per call.
         rows = []
         for scheme in schemes:
-            tds = []
-            for side in sides:
-                cell = "".join(
-                    f'<a href="{p_href(p)}"><span class="xl-code">#{esc(p["code"])} |</span>'
-                    f'{esc(_sheet_name(p, form))}</a>'
-                    for p in placed.get((scheme, side), [])
-                )
-                tds.append(f"<td>{cell}</td>" if cell else none_cell)
-            rows.append(f'<tr><th scope="row" class="xl-scheme">{esc(scheme)}</th>'
-                        f'{"".join(tds)}</tr>')
+            per_side = [placed.get((scheme, side), []) for side in sides]
+            depth = max(1, *(len(ps) for ps in per_side))
+            for k in range(depth):
+                cells = []
+                for side, ps in zip(sides, per_side):
+                    cls = "r" if side == sides[-1] else "l"
+                    if not ps:
+                        if k == 0:
+                            cells.append(f'<td class="{cls}" rowspan="{depth}">'
+                                         '<span class="xl-none">&mdash;</span></td>')
+                        continue
+                    if k < len(ps):
+                        p = ps[k]
+                        cells.append(
+                            f'<td class="{cls}"><a href="{p_href(p)}">'
+                            f'<span class="xl-code">#{esc(p["code"])} |</span>'
+                            f'{esc(_sheet_name(p, form))}</a></td>')
+                    elif k == len(ps):
+                        cells.append(f'<td class="{cls}" rowspan="{depth - k}"></td>')
+                head = (f'<th scope="row" class="xl-scheme" rowspan="{depth}">'
+                        f'{esc(scheme)}</th>') if k == 0 else ""
+                cont = ' class="cont"' if k else ""
+                rows.append(f'<tr{cont}>{head}{"".join(cells)}</tr>')
 
         return ('<table class="xl xl-plays">'
                 '<colgroup><col class="xl-c0"><col><col></colgroup>'
@@ -4185,13 +4258,26 @@ def write_calls(formations: list[dict], defenses: dict, root: Path) -> str:
     # The count and the block itself both come off the filtered list, not the
     # formation's own: a header reading 12 over a table of 10 is a sheet that lies,
     # and a formation whose plays are all passes would otherwise print an empty block.
+    def sheet_lines(form: dict) -> int:
+        """Lines of calls in the block: each scheme is as tall as its fuller side."""
+        placed: dict[tuple[str, str], int] = {}
+        for play in sheet_plays(form):
+            key = (play["scheme"], _call_column(play))
+            placed[key] = placed.get(key, 0) + 1
+        schemes = {k[0] for k in placed}
+        return sum(max(placed.get((sc, sd), 1) for sd in sides) for sc in schemes)
+
+    # --lines is what the printed sheet shares the column's height out by: the two
+    # blocks stretch to fill it, each in proportion to its calls plus its two header
+    # rows, so a row in one block is as tall as a row in the other.
     sheets = "".join(
-        f'<section class="xl-sheet"><p class="xl-title">{esc(form_label(form))}'
+        f'<section class="xl-sheet" style="--lines:{sheet_lines(form) + 2}">'
+        f'<p class="xl-title">{esc(form_label(form))}'
         f'<span class="xl-n">{len(sheet_plays(form))}</span></p>{plays_table(form)}</section>'
         for form in sheet_forms if sheet_plays(form)
     ) or '<p class="lede">No plays in the book yet.</p>'
 
-    lower = _offense_lower(root)
+    base, rotations = _offense_lower(root)
     script = _script_strip(root, formations)
 
     # No sub-line under the heading. "Every play in the book, by formation and scheme"
@@ -4214,8 +4300,9 @@ def write_calls(formations: list[dict], defenses: dict, root: Path) -> str:
     <label class="tab" for="tab-def">Defense</label>
   </nav>
   <section class="tabpane pane-off">
+    {base}
     <div class="xl-top"><div class="xl-sheets">{sheets}</div>{script}</div>
-    {lower}
+    {rotations}
   </section>
   <section class="tabpane pane-def">{defense}</section>
 </div>"""
