@@ -76,6 +76,8 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 | 68 | [Wildcat 3 - Z 1 Left - 39 Sweep](#wildcat-3---z-1-left---39-sweep) | `Wildcat 3 Z 1 Left 39 Sweep` | Sweep | run | Wildcat | TB |
 | 69 | [Wildcat 2 - Z 1 Right - 28 Sweep](#wildcat-2---z-1-right---28-sweep) | `Wildcat 2 Z 1 Right 28 Sweep` | Sweep | run | Wildcat | FB |
 | 70 | [Wildcat 2 - Z 1 Left - 29 Sweep](#wildcat-2---z-1-left---29-sweep) | `Wildcat 2 Z 1 Left 29 Sweep` | Sweep | run | Wildcat | FB |
+| 71 | [Wildcat Z - 3 1 Right - Z Sweep Right](#wildcat-z---3-1-right---z-sweep-right) | `Wildcat Z 3 1 Right Z Sweep Right` | Sweep | run | Wildcat | Z |
+| 72 | [Wildcat Z - 3 1 Left - Z Sweep Left](#wildcat-z---3-1-left---z-sweep-left) | `Wildcat Z 3 1 Left Z Sweep Left` | Sweep | run | Wildcat | Z |
 
 # I Formation
 
@@ -2196,4 +2198,64 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 - Wildcat 2 is the fullback at the snap, five yards back. Rep the snap before you rep the play -- a bad snap is the only way this loses yards.
 - The tailback loads the edge: he goes first, left, and doubles the outside linebacker with the Z. The fullback stays behind them until the block is made.
 - The quarterback is a wing beside the Z. He does not touch the ball -- tell him before the snap, and tell the defense nothing.
+
+---
+
+## Wildcat Z - 3 1 Right - Z Sweep Right
+
+**Call it:** `Wildcat Z 3 1 Right Z Sweep Right`
+
+**Scheme:** Sweep
+
+![Wildcat Z - 3 1 Right - Z Sweep Right](playbook/wildcat/cards/wcz-sweep-r-4-4.svg)
+
+| Position | Assignment |
+|---|---|
+| **X** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
+| **LT** | D — nothing in your gap and nobody on you. Go downfield and get the left inside linebacker. |
+| **LG** | O — your gap is empty, so take the defensive guard on you. Hands inside, pads under his, drive him back. |
+| **C** | D — nothing in your gap and nobody on you. Go downfield and get the right inside linebacker. |
+| **RG** | O — your gap is empty, so take the defensive guard on you. Hands inside, pads under his, drive him back. |
+| **RT** | D — nothing in your gap and nobody on you. Go downfield and get the right outside linebacker. |
+| **Y** | Defensive end on your inside shoulder. Turn him inside. The ball goes around behind you. |
+| **Z** **(ball)** | Take the snap, drop a step and swing right behind the fullback -- he goes first. Stay behind him until his block is made, then turn it up outside it. |
+| **QB** | Run at the corner and screen him off. Stay in his way. You are a wing on this play, not the quarterback -- you line up beside the tailback, a step outside him, and you take the outside man. You do not touch the ball. |
+| **FB** | Bubble out around our end, then double team the linebacker with the tailback. |
+| **TB** | Double team the right outside linebacker with the fullback. |
+
+**Coaching points**
+
+- Wildcat Z is the Z at the snap, five yards back. Rep the snap before you rep the play -- a bad snap is the only way this loses yards.
+- The fullback loads the edge: he goes first, right, and doubles the outside linebacker with the tailback. The Z stays behind them until the block is made.
+- The tailback and the quarterback are the wings. Neither touches the ball -- tell them before the snap, and tell the defense nothing.
+
+---
+
+## Wildcat Z - 3 1 Left - Z Sweep Left
+
+**Call it:** `Wildcat Z 3 1 Left Z Sweep Left`
+
+**Scheme:** Sweep
+
+![Wildcat Z - 3 1 Left - Z Sweep Left](playbook/wildcat/cards/wcz-sweep-l-4-4.svg)
+
+| Position | Assignment |
+|---|---|
+| **X** | Defensive end on your inside shoulder. Turn him inside. The ball goes around behind you. |
+| **LT** | D — nothing in your gap and nobody on you. Go downfield and get the left inside linebacker. |
+| **LG** | O — your gap is empty, so take the defensive guard on you. Hands inside, pads under his, drive him back. |
+| **C** | D — nothing in your gap and nobody on you. Go downfield and get the right inside linebacker. |
+| **RG** | O — your gap is empty, so take the defensive guard on you. Hands inside, pads under his, drive him back. |
+| **RT** | D — nothing in your gap and nobody on you. Go downfield and get the right outside linebacker. |
+| **Y** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
+| **Z** **(ball)** | Take the snap, drop a step and swing left behind the fullback -- he goes first. Stay behind him until his block is made, then turn it up outside it. |
+| **QB** | Run at the corner and screen him off. Stay in his way. You are a wing on this play, not the quarterback -- you line up beside the tailback, a step outside him, and you take the outside man. You do not touch the ball. |
+| **FB** | Bubble out around our end, then double team the linebacker with the tailback. |
+| **TB** | Double team the left outside linebacker with the fullback. |
+
+**Coaching points**
+
+- Wildcat Z is the Z at the snap, five yards back. Rep the snap before you rep the play -- a bad snap is the only way this loses yards.
+- The fullback loads the edge: he goes first, left, and doubles the outside linebacker with the tailback. The Z stays behind them until the block is made.
+- The tailback and the quarterback are the wings. Neither touches the ball -- tell them before the snap, and tell the defense nothing.
 

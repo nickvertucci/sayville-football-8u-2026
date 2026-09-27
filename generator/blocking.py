@@ -346,6 +346,11 @@ def play_roles(play: dict, form: dict, side: int) -> dict[str, str]:
     A stacked backfield always leads with the fullback. In Wildcat 2 the fullback
     takes the snap and carries it, so the tailback beside him loads the edge instead.
     """
+    # Read off where this play stands its men, not the formation's own picture: a
+    # Wildcat Z puts the tailback out on the wing, and a wing is not a lead back.
+    if play.get("alignment"):
+        form = dict(form, alignment={**(form.get("alignment") or {}),
+                                     **play["alignment"]})
     roles = scheme_roles(form, side)
     carrier = play.get("ball_carrier")
     if carrier and roles.get("lead") == carrier and roles.get("trail"):
