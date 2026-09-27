@@ -2094,8 +2094,8 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 | **RG** | O — your gap is empty, so take the defensive guard on you. Hands inside, pads under his, drive him back. |
 | **RT** | D — nothing in your gap and nobody on you. Go downfield and get the right outside linebacker. |
 | **Y** | Defensive end on your inside shoulder. Turn him inside. The ball goes around behind you. |
-| **Z** | Run at the corner and screen him off. Stay in his way. |
-| **QB** | Run at the corner and screen him off. Stay in his way. You are a wing on this play, not the quarterback. You do not touch the ball. |
+| **Z** | Block the free safety. |
+| **QB** | Run at the corner and screen him off. Stay in his way. You are a wing on this play, not the quarterback -- you line up beside the Z, a step outside him, and you take the outside man. You do not touch the ball. |
 | **FB** | Bubble out around our end — do not run up into the line. Block the first man out there; here it is the linebacker. |
 | **TB** **(ball)** | Catch the snap and sweep right, flat and fast, behind the fullback. Turn it up outside his block. |
 
@@ -2124,8 +2124,8 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 | **RG** | O — your gap is empty, so take the defensive guard on you. Hands inside, pads under his, drive him back. |
 | **RT** | D — nothing in your gap and nobody on you. Go downfield and get the right outside linebacker. |
 | **Y** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
-| **Z** | Run at the corner and screen him off. Stay in his way. |
-| **QB** | Run at the corner and screen him off. Stay in his way. You are a wing on this play, not the quarterback. You do not touch the ball. |
+| **Z** | Block the free safety. |
+| **QB** | Run at the corner and screen him off. Stay in his way. You are a wing on this play, not the quarterback -- you line up beside the Z, a step outside him, and you take the outside man. You do not touch the ball. |
 | **FB** | Bubble out around our end — do not run up into the line. Block the first man out there; here it is the linebacker. |
 | **TB** **(ball)** | Catch the snap and sweep left, flat and fast, behind the fullback. Turn it up outside his block. |
 
