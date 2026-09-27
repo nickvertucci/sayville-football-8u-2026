@@ -276,6 +276,21 @@ neither — a nickname, a digit the formation's `backs` does not define, a lette
 not one of the three, a letter call missing its direction or pointing the wrong way —
 fails `--check`.
 
+**Wildcat puts two words in front of the play.** `Wildcat 3 Z 1 Right 38 Sweep`:
+`Wildcat 2` or `Wildcat 3` is who takes the snap (the fullback or the tailback, straight
+behind the center), `Z 1 Right` / `Z 1 Left` is where the Z and the quarterback -- the
+1 -- line up side by side as wings, and then the ordinary `{back}{hole} {word}`. The
+formation's `snap_backs` turns the checks on: the snap number has to be the back behind
+the center and the back carrying it, and `Z 1` has to have the quarterback beside the Z
+on that side. Its `sweep_backs` makes the 2 and the 3 at 8/9 a Sweep, not a Toss,
+because in Wildcat the man sweeping is the man who took the snap. When the fullback
+carries, the tailback takes the lead role -- `play_roles()` in `blocking.py`.
+
+**Every formation is checked for legality** (`formation_legality()` in `render.py`,
+held by `test_formations.py`): exactly seven on the line, the man on each end of it in
+`eligible`, the five inside him not -- for the formation and for every play that moves
+somebody in it.
+
 Formations carry an `order` field too, which is teaching order, not the alphabet.
 Both control the sequence on the site and in `PLAYBOOK.md`.
 

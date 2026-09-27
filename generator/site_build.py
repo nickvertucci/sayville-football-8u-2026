@@ -3643,7 +3643,7 @@ def _sheet_name(play: dict, form: dict) -> str:
     # The Z first, when the call has one. A leftmost match of the pattern below drops
     # the letter off the front of the one thing the alignment is telling you -- which
     # boy is where -- and "Z Right" is what gets yelled.
-    m = re.search(r"\b(Z\s+(?:Left|Right))\s+(.*)$", call)
+    m = re.search(r"\b(Z\s+(?:1\s+)?(?:Left|Right))\s+(.*)$", call)
     if m:
         # A fake called ahead of the number -- "Fake Toss 18 Sweep" -- gets the same
         # dash the name has before the number, so the sheet reads "Z Right - Fake Toss
@@ -4019,7 +4019,8 @@ CALL_SHEET_ORDER = (
 # leaving it off is not free either -- a seventh block is what pushed the offensive
 # sheet onto a second printed page, which test_print_pages.py caught. Take it out of
 # this set when it has been installed, and expect to pay for the room.
-SHEET_OMIT = frozenset({"wishbone", "trips", "shotgun", "single-back", "power-i"})
+SHEET_OMIT = frozenset({"wishbone", "trips", "shotgun", "single-back", "power-i",
+                        "wildcat"})
 
 # The wristbands no longer have a list of their own: they carry exactly what the
 # call sheet carries, through called_plays(). A second list was a second thing to

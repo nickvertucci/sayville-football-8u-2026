@@ -478,9 +478,39 @@ def validate_call(play: dict, form: dict, defenses: dict) -> list[str]:
     if old_word:
         return [f"{pid}: call '{call}' says Z {old_word.group(1)} -- the Z's phrase is "
                 "just his side now, 'Z Left' or 'Z Right'"]
-    side_word = re.search(r"\bZ (Left|Right)\b", call)
+    # "Z 1 Right" is Wildcat's: the Z and the quarterback -- the 1 -- side by side on
+    # that side. The 1 has to be there too, a wing beside the Z, not in the backfield.
+    side_word = re.search(r"\bZ (1 )?(Left|Right)\b", call)
+    if side_word and side_word.group(1):
+        side = side_word.group(2)
+        al = play_alignment(form, play)
+        z, qb = al.get("Z"), al.get("QB")
+        if not qb or qb[1] < -2.0 or (qb[0] < 0) != (side == "Left") \
+                or not z or abs(qb[0] - z[0]) > 2.0:
+            return [f"{pid}: call '{call}' says Z 1 {side}, so the quarterback has to "
+                    f"line up beside the Z as a wing on the {side.lower()}"]
+    snap = form.get("snap_backs")
+    if snap:
+        # Wildcat 2 / Wildcat 3: the number after the formation is who takes the snap,
+        # and he is the man straight behind the center -- and the one carrying it.
+        if not (side_word and side_word.group(1)):
+            return [f"{pid}: call '{call}' has to say where the Z and the quarterback "
+                    "line up -- Z 1 Right or Z 1 Left"]
+        lead = re.match(re.escape(form.get("name", "")) + r" (\d) ", call)
+        if not lead or lead.group(1) not in snap:
+            return [f"{pid}: call '{call}' has to say who takes the snap -- "
+                    f"{form.get('name')} " + " or ".join(sorted(snap))]
+        taker = backs.get(lead.group(1))
+        at = play_alignment(form, play).get(taker)
+        if not at or abs(at[0]) > 0.3:
+            return [f"{pid}: call '{call}' gives the snap to the {lead.group(1)}, "
+                    f"but the {taker} is not lined up behind the center"]
+        num = CALL_DIGITS.search(call[lead.end():])
+        if num and num.group(1) != lead.group(1):
+            return [f"{pid}: call '{call}' snaps it to the {lead.group(1)} but the "
+                    f"{num.group(1)} carries it -- the man who takes the snap runs it"]
     if side_word:
-        side = side_word.group(1)
+        side = side_word.group(2)
         where = play_alignment(form, play).get("Z")
         if where is None:
             return [f"{pid}: call '{call}' says Z {side}, but this formation has no Z"]
@@ -886,6 +916,49 @@ RETIRED_CODES = {
 }
 
 
+# On the line is within a yard of it. The offensive line is drawn at -0.5; a wing or a
+# slot "one step off" is at -1.5, which is the gap an official looks for between a man
+# on the line and a back.
+ON_LINE_DEPTH = -1.0
+
+
+def formation_legality(form: dict) -> list[str]:
+    """Seven on the line, the ends eligible, the five inside them not, everybody else
+    off the ball -- for the formation and for every play that moves somebody in it.
+
+    NFHS 7-2-1 and 7-2-5, which PAL plays by (9.01). The notes on each formation used
+    to say so in words and nothing checked them; a formation that put six on the line,
+    or covered up its tight end with a wing, would have built and printed perfectly and
+    drawn a flag on the first snap. The check reads the play's own alignment, so an
+    override that slides a wing onto the line is caught on that play.
+    """
+    fid = form.get("id", "?")
+    eligible = set(form.get("eligible") or [])
+    if not eligible:
+        return [f"formation {fid}: no 'eligible' list, so its line cannot be checked"]
+    looks = [(f"formation {fid}", form.get("alignment") or {})]
+    looks += [(f"{play.get('id', '?')} ({fid})", play_alignment(form, play))
+              for play in form.get("_plays", []) if play.get("alignment")]
+    errors = []
+    for where, al in looks:
+        line = sorted((pos for pos, (x, y) in al.items() if y > ON_LINE_DEPTH),
+                      key=lambda pos: al[pos][0])
+        if len(line) != 7:
+            errors.append(f"{where}: {len(line)} on the line of scrimmage "
+                          f"({', '.join(line)}) -- it must be exactly seven")
+            continue
+        ends, inside = (line[0], line[-1]), line[1:-1]
+        for pos in ends:
+            if pos not in eligible:
+                errors.append(f"{where}: {pos} is an end of the line and is not eligible "
+                              "-- the man on each end of the line has to be a receiver")
+        for pos in inside:
+            if pos in eligible:
+                errors.append(f"{where}: {pos} is on the line inside the end, which makes "
+                              "him an ineligible lineman -- he cannot be in 'eligible'")
+    return errors
+
+
 def validate(formations: list[dict], defenses: dict) -> list[str]:
     errors = []
     # Play ids must be unique across the whole book: each one becomes a flat p-<id>.html
@@ -937,6 +1010,7 @@ def validate(formations: list[dict], defenses: dict) -> list[str]:
                 f"formation {form.get('id')}: {len(form.get('alignment', {}))} players aligned, "
                 "must be 11 (this is 11v11 tackle)"
             )
+        errors += formation_legality(form)
         for play in form["_plays"]:
             pid = play.get("id", "<no id>")
             for field in ("id", "name", "scheme", "assignments"):

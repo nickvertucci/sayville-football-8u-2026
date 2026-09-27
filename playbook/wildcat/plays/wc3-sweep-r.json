@@ -1,0 +1,81 @@
+{
+  "id": "wc3-sweep-r",
+  "order": 1,
+  "formation": "wildcat",
+  "name": "Wildcat 3 - Z 1 Right - 38 Sweep",
+  "code": "71",
+  "call": "Wildcat 3 Z 1 Right 38 Sweep",
+  "type": "run",
+  "scheme": "Sweep",
+  "direction": "right",
+  "ball_carrier": "TB",
+  "assignments": {
+    "TB": {
+      "rule": "Take the snap, drop a step and swing right behind the fullback -- he goes first. Stay behind him until his block is made, then turn it up outside it.",
+      "type": "run",
+      "path": [
+        [
+          1.5,
+          -0.4
+        ],
+        [
+          5.5,
+          0.4
+        ],
+        [
+          8.3,
+          3.4
+        ],
+        [
+          8.3,
+          6.0
+        ],
+        [
+          8.3,
+          9.5
+        ],
+        [
+          8.3,
+          12.0
+        ]
+      ]
+    },
+    "FB": {
+      "block": "lead",
+      "target": "force",
+      "with": "Z"
+    },
+    "QB": {
+      "block": "screen",
+      "note": "You are a wing on this play, not the quarterback -- you line up beside the Z, a step outside him, and you take the outside man. You do not touch the ball."
+    }
+  },
+  "fronts": {
+    "4-4": {
+      "Z": {
+        "block": "man",
+        "man": "ROLB",
+        "with": "fullback"
+      }
+    },
+    "5-3": {
+      "Z": {
+        "block": "man",
+        "man": "ROLB",
+        "with": "fullback"
+      }
+    },
+    "5-4-2": {
+      "Z": {
+        "block": "man",
+        "man": "ROLB",
+        "with": "fullback"
+      }
+    }
+  },
+  "coaching_points": [
+    "Wildcat 3 is the tailback at the snap, five yards back. Rep the snap before you rep the play -- a bad snap is the only way this loses yards.",
+    "The fullback loads the edge: he goes first, right, and doubles the outside linebacker with the Z. The tailback stays behind them until the block is made.",
+    "The quarterback is a wing beside the Z. He does not touch the ball -- tell him before the snap, and tell the defense nothing."
+  ]
+}
