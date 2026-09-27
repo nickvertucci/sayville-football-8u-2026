@@ -842,6 +842,7 @@ table.xl.xl-plays td {
 .band {
   border: 1px dashed var(--line); border-radius: 4px; padding: 0 0 4px;
   background: var(--panel); overflow: hidden;
+  display: flex; flex-direction: column;
 }
 /* The bar is the pouch: a boy knows which window a number is in before he opens it.
    So the formation is the biggest thing on the band after the numbers themselves,
@@ -868,7 +869,10 @@ table.xl.xl-plays td {
   position: absolute; right: 6px; bottom: 4px;
   font-size: 10px; font-weight: 800; opacity: .8;
 }
-.band-body { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 4px; }
+/* One column, and the rows share the pouch's height between them, however many
+   there are, so eight rows and six rows both reach the foot of the window. */
+.band-body { flex: 1 1 auto; display: flex; flex-direction: column; }
+.band-body li { flex: 1 1 0; }
 /* The formation label inside a pouch that holds two of them. Black on white, the
    same family as the bar above it, so the eye reads bar -> list -> bar -> list. */
 .band-sub {
@@ -901,8 +905,8 @@ table.xl.xl-plays td {
    quarter of empty pouch under them. Spread out, each row is a target a finger can
    hold on a moving arm. */
 .band li {
-  display: flex; align-items: baseline; gap: 7px;
-  padding: 0 1px; font-size: 9.5px; font-weight: 700; line-height: 2.5;
+  display: flex; align-items: center; gap: 7px;
+  padding: 0 1px; font-size: 15px; font-weight: 700; line-height: 1.2;
   color: var(--ink); white-space: nowrap;
 }
 /* Zebra rather than a rule between rows. A rule is a thing to read past; a band of
@@ -912,7 +916,7 @@ table.xl.xl-plays td {
    points off the digits and seven off the call. Even padding either side would make
    it a third column of its own. */
 .band li b {
-  flex: 0 0 16px; font-size: 13px; text-align: right; font-weight: 900;
+  flex: 0 0 22px; font-size: 16px; text-align: right; font-weight: 900;
   font-variant-numeric: tabular-nums;
   padding-right: 2px; border-right: 1px solid var(--line);
 }
@@ -921,7 +925,7 @@ table.xl.xl-plays td {
    side: the screen is a preview, the printed inches are the thing. */
 @media (max-width: 560px) {
   .band-set { width: 100%; grid-template-rows: none; }
-  .band li { font-size: 9.5px; line-height: 2.5; }
+  .band li { font-size: 3.4vw; line-height: 2.2; }
 }
 
 /* ------------------------------------------------- defensive call sheet --
@@ -1322,10 +1326,12 @@ table.xl.pk-plays td {
      the space was going spare, and a row a boy can keep his eye on is what to spend
      it on. The leading is safe from the half point the call gave back to the gap:
      the row is as tall as the 13px number, not as tall as the call. */
-  .band li { font-size: 9.5px; line-height: 2.5; padding: 0 1px; gap: 7px; }
+  /* One play to a line, the whole call: the longest, "Split Formation - Z Right -
+     18 Fake Sweep", is what sets the type, measured against the pouch's width. */
+  .band li { font-size: 15px; line-height: 1.2; padding: 0 1px; gap: 6px; }
   .band li:nth-child(even) { background: #eee !important;
                              -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-  .band li b { flex-basis: 16px; font-size: 13px; padding-right: 2px;
+  .band li b { flex-basis: 22px; font-size: 16px; padding-right: 3px;
                 border-right-color: #000; }
 
   /* The defensive sheet: three fronts, eleven rows and six packages each, then the
@@ -4015,45 +4021,25 @@ def _call_sheet_order(formations: list[dict]) -> list[dict]:
 # sheet was unusable on the bands the boys actually wear.
 #
 # Three of them stacked is 8.25 inches of a ten-and-a-bit-inch page, so a sheet is
-# still exactly one wristband and you still print a copy per boy. The shape is what
-# decides the rest: eight rows fit down the panel where sixteen do not, so a formation
-# goes in two columns, and the width is what sets the type -- and there is now a lot
-# less of it, so the type is measured against the longest row rather than chosen.
+# still exactly one wristband and you still print a copy per boy. The width is what
+# sets the type: one play to a line with the whole call on it, measured against the
+# longest call rather than chosen.
 BAND_POUCHES = 3
-# Two columns, and the row chrome is what pays for them. In a 3.5in youth window a
-# column is 147 points once the border, the gutter, the row padding and the number
-# column are taken out -- and the longest call in the book, "Z Right - Y Slant Pass
-# Right", fits that at 9px. One column would buy half a point of type and cost
-# eighteen rows of scrolling down a two-and-three-quarter-inch pouch, which is not a
-# trade worth making.
+# One play to a line, the whole call on it. It was two columns of the call with the
+# formation taken off -- "Z Right - 36 Handoff" under an I FORMATION bar -- which is
+# half a call for the quarterback to finish from the bar above. One column has the
+# width for all of it, and the pouch's height is what the rows spread down.
 #
-# The chrome is tight on purpose: every point spent on padding or on the number
-# column is a point off the type in a window this small.
-BAND_PANEL_COLUMNS = 2
+# A pouch holds at most this many rows. A formation longer than that runs on into
+# the next pouch under its own bar again, so no pouch mixes two formations.
+BAND_ROWS_MAX = 10
 
 
 def band_call(play: dict, form: dict) -> str:
-    """The play's name, minus the formation the panel heading already says.
-
-    "Split Formation - Z Right - 38 Toss" is "Z Right - 38 Toss" in the
-    Split Formation pouch. Nothing else comes off. "Right" is a word and about a point
-    and a half of type, and it is worth both: the boy reading this is nine, he has
-    been taught the word, and an abbreviation is one more thing to remember at the
-    moment he has least room to remember anything. The call sheet shortens it to R;
-    this does not.
-
-    It reads off the NAME rather than the call, which is the same words with the
-    dashes still in: "Z Right - 36 Handoff" instead of a run of four words. The
-    dash is where the boy's eye stops -- where he is standing on the left of it and
-    what he does on the right -- and at a glance through a plastic window that break
-    is worth more than the two points of type it costs.
-    """
-    text = play.get("name") or play.get("call") or ""
-    label = form_label(form)
-    for prefix in (label + " - ", label + " "):
-        if text.startswith(prefix):
-            return text[len(prefix):]
-    return text
+    """The whole call, the way the quarterback says it: "I Formation - Z Right - 36
+    Handoff". The name rather than the call string, because it is the same words with
+    the dashes in, and the dash is where a nine-year-old's eye stops."""
+    return play.get("name") or play.get("call") or ""
 
 
 def called_plays(formations: list[dict]) -> list[tuple[dict, list[dict]]]:
@@ -4087,91 +4073,59 @@ def band_plays(formations: list[dict]) -> list[tuple[dict, list[dict]]]:
     return [(f, ps) for f, ps in called_plays(formations) if ps]
 
 
-def _deal(groups: list[tuple[dict, list[dict]]], parts: int) -> list[list]:
-    """Formations dealt into `parts` piles, whole, as evenly as they go."""
-    height = lambda g: 1 + len(g[1])
-    target = sum(height(g) for g in groups) / parts
-    piles, cur, used = [], [], 0
-    for g in groups:
-        if cur and used + height(g) / 2 > target and len(piles) < parts - 1:
-            piles.append(cur)
-            cur, used = [], 0
-        cur.append(g)
-        used += height(g)
-    piles.append(cur)
-    return piles + [[]] * (parts - len(piles))
+def _band_pouches(groups: list[tuple[dict, list[dict]]]) -> list[tuple[dict, list[dict]]]:
+    """The plays dealt into the three pouches: (formation, its plays in this pouch).
 
-
-def _band_pouches(groups: list[tuple[dict, list[dict]]]) -> list[list]:
-    """The formations dealt into the three pouches.
-
-    A formation is never split across two pouches: the panel heading is what lets a row
-    say "Z Right 36 Handoff" instead of "I Formation Z Right 36 Handoff", and half a
-    formation under a heading naming all of it is a lie a boy cannot check. Today that
-    deals out as I Formation, Split Formation, and Shotgun with Power I behind it.
+    A pouch is one formation, so its bar can name it. The rows per pouch is the
+    fewest that gets every formation into three pouches, a formation running on into
+    the next pouch when it is longer than that -- today the I Formation's eight in one
+    and the Split Formation's twelve as six and six. Every row carries the whole call,
+    so a formation across two pouches is two lists that each say what they are.
     """
-    return _deal(groups, BAND_POUCHES)
-
-
-def _band_panel(pouch: list[tuple[dict, list[dict]]]) -> str:
-    """One pouch, landscape: a bar naming it, then its numbers in two columns.
-
-    Inside the panel a formation *may* break across the two columns -- the bar above
-    them already named it, so 1 to 8 down one and 9 to 16 down the other is one list
-    read the way a page is. A pouch holding two formations splits on the formation
-    instead and labels each column, because there the break means something.
-    """
-    if not pouch:
-        return '<div class="band"></div>'
-    plays = [(p, f) for f, ps in pouch for p in ps]
-
-    def rows(items):
-        return "".join(
-            f'<li><b>{esc(p["code"])}</b><span>{esc(band_call(p, f))}</span></li>'
-            for p, f in items
+    lengths = [len(ps) for _f, ps in groups if ps]
+    if not lengths:
+        return [(None, [])] * BAND_POUCHES
+    rows = next((n for n in range(1, max(lengths) + 1)
+                 if sum(-(-k // n) for k in lengths) <= BAND_POUCHES), max(lengths))
+    if rows > BAND_ROWS_MAX:
+        raise SystemExit(
+            f"wristband: {sum(lengths)} plays needs {rows} rows a pouch, and a pouch "
+            f"is measured for {BAND_ROWS_MAX} -- take a play off the call sheet, or "
+            "re-measure the band."
         )
+    pouches = []
+    for form, ps in groups:
+        # Split evenly rather than filling the first: twelve is six and six, not
+        # eight and four.
+        chunks = -(-len(ps) // rows)
+        size = -(-len(ps) // chunks) if chunks else 0
+        pouches += [(form, ps[i:i + size]) for i in range(0, len(ps), size)] if ps else []
+    return pouches + [(None, [])] * (BAND_POUCHES - len(pouches))
 
-    def seg(name, codes):
-        """The bar: the name, and the number range only when it is a real range.
 
-        "1-70" on a pouch holding 1 to 16 and 69 to 70 is a lie that reads as
-        seventy plays. A new play takes the next free number and a retired one
-        leaves a gap, so a formation's numbers need not run contiguously -- and a
-        span written across a gap says nothing true. Print it when it is honest and
-        leave it off when it is not; every row carries its own number regardless.
-        """
-        nums = sorted(int(c) for c in codes)
-        span = ""
-        if nums and nums[-1] - nums[0] == len(nums) - 1:
-            span = (f'<span class="band-span">{nums[0]}\u2013{nums[-1]}</span>')
-        return f'<span class="band-seg">{esc(name)}{span}</span>'
-
-    # Two formations in one pouch get the bar split in two, each half naming the
-    # column under it. One formation gets a single bar and its numbers run down one
-    # column and on into the next.
-    if len(pouch) == BAND_PANEL_COLUMNS:
-        # One formation to a column, and half the black bar over each.
-        cols = [f"<ol>{rows([(p, f) for p in ps])}</ol>" for f, ps in pouch]
-        bar = "".join(seg(form_label(f), [p["code"] for p in ps]) for f, ps in pouch)
-    else:
-        # One formation: the bar names it once and the numbers run down one column
-        # and on into the next, the way a page is read.
-        label = " \u00b7 ".join(form_label(f) for f, _ in pouch)
-        bar = seg(label, [p["code"] for p, _f in plays])
-        half = -(-len(plays) // BAND_PANEL_COLUMNS)
-        cols = [f"<ol>{rows(plays[i * half:(i + 1) * half])}</ol>"
-                for i in range(BAND_PANEL_COLUMNS)]
-
-    body = "".join(f"<div>{c}</div>" for c in cols)
+def _band_panel(form: dict | None, plays: list[dict]) -> str:
+    """One pouch: a bar naming the formation and the number range, then one play to a
+    line. The range is printed only when it is a real one -- "1-70" over 1 to 16 and
+    69 to 70 would read as seventy plays."""
+    if not plays:
+        return '<div class="band"></div>'
+    nums = sorted(int(p["code"]) for p in plays)
+    span = (f'<span class="band-span">{nums[0]}\u2013{nums[-1]}</span>'
+            if nums[-1] - nums[0] == len(nums) - 1 else "")
+    rows = "".join(
+        f'<li><b>{esc(p["code"])}</b><span>{esc(band_call(p, form))}</span></li>'
+        for p in plays
+    )
     return ('<div class="band">'
-            f'<p class="band-form">{bar}</p>'
-            f'<div class="band-body">{body}</div></div>')
+            f'<p class="band-form"><span class="band-seg">{esc(form_label(form))}'
+            f'{span}</span></p>'
+            f'<ol class="band-body">{rows}</ol></div>')
 
 
 def _band_set(groups: list[tuple[dict, list[dict]]]) -> str:
     """One wristband: three panels, one per pouch, stacked in call sheet order."""
     return ('<div class="band-set">'
-            + "".join(_band_panel(p) for p in _band_pouches(groups))
+            + "".join(_band_panel(f, ps) for f, ps in _band_pouches(groups))
             + "</div>")
 
 

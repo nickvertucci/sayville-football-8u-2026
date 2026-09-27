@@ -782,6 +782,7 @@ table.xl.xl-plays td {
 .band {
   border: 1px dashed var(--line); border-radius: 4px; padding: 0 0 4px;
   background: var(--panel); overflow: hidden;
+  display: flex; flex-direction: column;
 }
 /* The bar is the pouch: a boy knows which window a number is in before he opens it.
    So the formation is the biggest thing on the band after the numbers themselves,
@@ -808,7 +809,10 @@ table.xl.xl-plays td {
   position: absolute; right: 6px; bottom: 4px;
   font-size: 10px; font-weight: 800; opacity: .8;
 }
-.band-body { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 4px; }
+/* One column, and the rows share the pouch's height between them, however many
+   there are, so eight rows and six rows both reach the foot of the window. */
+.band-body { flex: 1 1 auto; display: flex; flex-direction: column; }
+.band-body li { flex: 1 1 0; }
 /* The formation label inside a pouch that holds two of them. Black on white, the
    same family as the bar above it, so the eye reads bar -> list -> bar -> list. */
 .band-sub {
@@ -841,8 +845,8 @@ table.xl.xl-plays td {
    quarter of empty pouch under them. Spread out, each row is a target a finger can
    hold on a moving arm. */
 .band li {
-  display: flex; align-items: baseline; gap: 7px;
-  padding: 0 1px; font-size: 9.5px; font-weight: 700; line-height: 2.5;
+  display: flex; align-items: center; gap: 7px;
+  padding: 0 1px; font-size: 15px; font-weight: 700; line-height: 1.2;
   color: var(--ink); white-space: nowrap;
 }
 /* Zebra rather than a rule between rows. A rule is a thing to read past; a band of
@@ -852,7 +856,7 @@ table.xl.xl-plays td {
    points off the digits and seven off the call. Even padding either side would make
    it a third column of its own. */
 .band li b {
-  flex: 0 0 16px; font-size: 13px; text-align: right; font-weight: 900;
+  flex: 0 0 22px; font-size: 16px; text-align: right; font-weight: 900;
   font-variant-numeric: tabular-nums;
   padding-right: 2px; border-right: 1px solid var(--line);
 }
@@ -861,7 +865,7 @@ table.xl.xl-plays td {
    side: the screen is a preview, the printed inches are the thing. */
 @media (max-width: 560px) {
   .band-set { width: 100%; grid-template-rows: none; }
-  .band li { font-size: 9.5px; line-height: 2.5; }
+  .band li { font-size: 3.4vw; line-height: 2.2; }
 }
 
 /* ------------------------------------------------- defensive call sheet --
@@ -1262,10 +1266,12 @@ table.xl.pk-plays td {
      the space was going spare, and a row a boy can keep his eye on is what to spend
      it on. The leading is safe from the half point the call gave back to the gap:
      the row is as tall as the 13px number, not as tall as the call. */
-  .band li { font-size: 9.5px; line-height: 2.5; padding: 0 1px; gap: 7px; }
+  /* One play to a line, the whole call: the longest, "Split Formation - Z Right -
+     18 Fake Sweep", is what sets the type, measured against the pouch's width. */
+  .band li { font-size: 15px; line-height: 1.2; padding: 0 1px; gap: 6px; }
   .band li:nth-child(even) { background: #eee !important;
                              -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-  .band li b { flex-basis: 16px; font-size: 13px; padding-right: 2px;
+  .band li b { flex-basis: 22px; font-size: 16px; padding-right: 3px;
                 border-right-color: #000; }
 
   /* The defensive sheet: three fronts, eleven rows and six packages each, then the
