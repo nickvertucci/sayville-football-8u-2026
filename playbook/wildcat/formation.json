@@ -1,0 +1,67 @@
+{
+  "id": "wildcat",
+  "order": 8,
+  "name": "Wildcat",
+  "family": "Wildcat",
+  "summary": "The tailback takes the snap five yards deep, with the fullback beside him to load the edge. The quarterback leaves the backfield and lines up as a wing. Two plays: 18 Sweep and 19 Sweep.",
+  "personnel": "11 players, 2 tight ends, tailback at the snap, fullback, 2 wings (the Z and the quarterback)",
+  "notes": "Seven on the line: the X, the five linemen and the Y, both ends tight. The Z and the quarterback are wings, one step outside the ends and a yard off the ball, so the ends stay eligible and the line stays seven. The tailback takes the snap five yards deep, straight behind the center; the fullback stands beside him on the side the play is going, a yard in front, and loads the edge. The call says the Z's side, and the fullback and the Z both go to the call: Z Right is 18 Sweep, Z Left is 19 Sweep. The 1 in the call is whoever takes the snap -- in Wildcat, the tailback.",
+  "alignment": {
+    "X": [
+      -4.2,
+      -0.5
+    ],
+    "LT": [
+      -2.8,
+      -0.5
+    ],
+    "LG": [
+      -1.4,
+      -0.5
+    ],
+    "C": [
+      0.0,
+      -0.5
+    ],
+    "RG": [
+      1.4,
+      -0.5
+    ],
+    "RT": [
+      2.8,
+      -0.5
+    ],
+    "Y": [
+      4.2,
+      -0.5
+    ],
+    "Z": [
+      5.6,
+      -1.5
+    ],
+    "QB": [
+      -5.6,
+      -1.5
+    ],
+    "TB": [
+      0.0,
+      -5.0
+    ],
+    "FB": [
+      1.5,
+      -4.0
+    ]
+  },
+  "eligible": [
+    "X",
+    "Y",
+    "Z",
+    "QB",
+    "TB",
+    "FB"
+  ],
+  "backs": {
+    "1": "TB",
+    "2": "FB"
+  }
+}

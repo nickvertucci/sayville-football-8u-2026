@@ -360,7 +360,9 @@ def scheme_intents(play: dict, form: dict, side: int) -> dict[str, dict]:
     # the bunch and maps neither, so it keeps the blocks its plays write. A back the
     # play itself gives a path to -- the Fake Sweeps' halfback -- also keeps it, since
     # fill_assignments lets what a play wrote win over the scheme.
-    if name == "Sweep" and roles.get("lead") and roles.get("trail"):
+    # Not when the trail back is the one carrying it -- Wildcat's tailback takes the
+    # snap, so its fullback loads the edge alone rather than doubling with the ball.
+    if name == "Sweep" and roles.get("lead") and roles.get("trail")             and roles["trail"] != play.get("ball_carrier"):
         for role, other in (("lead", "trail"), ("trail", "lead")):
             intents[role] = {"block": "lead", "target": "force",
                              "with": position_name(roles[other]).lower()}

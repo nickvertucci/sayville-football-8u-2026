@@ -886,6 +886,49 @@ RETIRED_CODES = {
 }
 
 
+# On the line is within a yard of it. The offensive line is drawn at -0.5; a wing or a
+# slot "one step off" is at -1.5, which is the gap an official looks for between a man
+# on the line and a back.
+ON_LINE_DEPTH = -1.0
+
+
+def formation_legality(form: dict) -> list[str]:
+    """Seven on the line, the ends eligible, the five inside them not, everybody else
+    off the ball -- for the formation and for every play that moves somebody in it.
+
+    NFHS 7-2-1 and 7-2-5, which PAL plays by (9.01). The notes on each formation used
+    to say so in words and nothing checked them; a formation that put six on the line,
+    or covered up its tight end with a wing, would have built and printed perfectly and
+    drawn a flag on the first snap. The check reads the play's own alignment, so an
+    override that slides a wing onto the line is caught on that play.
+    """
+    fid = form.get("id", "?")
+    eligible = set(form.get("eligible") or [])
+    if not eligible:
+        return [f"formation {fid}: no 'eligible' list, so its line cannot be checked"]
+    looks = [(f"formation {fid}", form.get("alignment") or {})]
+    looks += [(f"{play.get('id', '?')} ({fid})", play_alignment(form, play))
+              for play in form.get("_plays", []) if play.get("alignment")]
+    errors = []
+    for where, al in looks:
+        line = sorted((pos for pos, (x, y) in al.items() if y > ON_LINE_DEPTH),
+                      key=lambda pos: al[pos][0])
+        if len(line) != 7:
+            errors.append(f"{where}: {len(line)} on the line of scrimmage "
+                          f"({', '.join(line)}) -- it must be exactly seven")
+            continue
+        ends, inside = (line[0], line[-1]), line[1:-1]
+        for pos in ends:
+            if pos not in eligible:
+                errors.append(f"{where}: {pos} is an end of the line and is not eligible "
+                              "-- the man on each end of the line has to be a receiver")
+        for pos in inside:
+            if pos in eligible:
+                errors.append(f"{where}: {pos} is on the line inside the end, which makes "
+                              "him an ineligible lineman -- he cannot be in 'eligible'")
+    return errors
+
+
 def validate(formations: list[dict], defenses: dict) -> list[str]:
     errors = []
     # Play ids must be unique across the whole book: each one becomes a flat p-<id>.html
@@ -937,6 +980,7 @@ def validate(formations: list[dict], defenses: dict) -> list[str]:
                 f"formation {form.get('id')}: {len(form.get('alignment', {}))} players aligned, "
                 "must be 11 (this is 11v11 tackle)"
             )
+        errors += formation_legality(form)
         for play in form["_plays"]:
             pid = play.get("id", "<no id>")
             for field in ("id", "name", "scheme", "assignments"):

@@ -72,6 +72,8 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 | 64 | [Single Back - Tight Left Wing Left - 29 Toss](#single-back---tight-left-wing-left---29-toss) | `Single Back Tight Left Wing Left 29 Toss` | Toss | run | Single Back | FB |
 | 65 | [Single Back - Tight Right Wing Left - Y Slant Pass Right](#single-back---tight-right-wing-left---y-slant-pass-right) | `Single Back Tight Right Wing Left Y Slant Pass Right` | Protect | pass | Single Back | Y |
 | 66 | [Single Back - Tight Left Wing Right - X Slant Pass Left](#single-back---tight-left-wing-right---x-slant-pass-left) | `Single Back Tight Left Wing Right X Slant Pass Left` | Protect | pass | Single Back | X |
+| 67 | [Wildcat - Z Right - 18 Sweep](#wildcat---z-right---18-sweep) | `Wildcat Z Right 18 Sweep` | Sweep | run | Wildcat | TB |
+| 68 | [Wildcat - Z Left - 19 Sweep](#wildcat---z-left---19-sweep) | `Wildcat Z Left 19 Sweep` | Sweep | run | Wildcat | TB |
 
 # I Formation
 
@@ -2070,4 +2072,66 @@ Terminology and authoring rules: [playbook/CLAUDE.md](playbook/CLAUDE.md)
 - The X is the tight end on this side, so he releases off a defender's outside shoulder rather than off open grass. He has to get clean first.
 - The fullback and the wing both stay in. Five linemen and two backs on a two-step throw is more than anybody at this age gets through.
 - Call it after the Power has gone at this side twice. It is the one that punishes a linebacker for stepping up.
+
+# Wildcat
+
+---
+
+## Wildcat - Z Right - 18 Sweep
+
+**Call it:** `Wildcat Z Right 18 Sweep`
+
+**Scheme:** Sweep
+
+![Wildcat - Z Right - 18 Sweep](playbook/wildcat/cards/wc-sweep-r-4-4.svg)
+
+| Position | Assignment |
+|---|---|
+| **X** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
+| **LT** | D — nothing in your gap and nobody on you. Go downfield and get the left inside linebacker. |
+| **LG** | O — your gap is empty, so take the defensive guard on you. Hands inside, pads under his, drive him back. |
+| **C** | D — nothing in your gap and nobody on you. Go downfield and get the right inside linebacker. |
+| **RG** | O — your gap is empty, so take the defensive guard on you. Hands inside, pads under his, drive him back. |
+| **RT** | D — nothing in your gap and nobody on you. Go downfield and get the right outside linebacker. |
+| **Y** | Defensive end on your inside shoulder. Turn him inside. The ball goes around behind you. |
+| **Z** | Run at the corner and screen him off. Stay in his way. |
+| **QB** | Run at the corner and screen him off. Stay in his way. You are a wing on this play, not the quarterback. You do not touch the ball. |
+| **FB** | Bubble out around our end — do not run up into the line. Block the first man out there; here it is the linebacker. |
+| **TB** **(ball)** | Catch the snap and sweep right, flat and fast, behind the fullback. Turn it up outside his block. |
+
+**Coaching points**
+
+- The snap is five yards back to the tailback, not the quarterback. Rep the snap before you rep the play -- a bad snap is the only way this loses yards.
+- The fullback loads the edge: he goes first, right, and takes the first man outside our end. The tailback stays behind him until the block is made.
+- The quarterback is a wing on this play. He does not touch the ball -- tell him before the snap, and tell the defense nothing.
+
+---
+
+## Wildcat - Z Left - 19 Sweep
+
+**Call it:** `Wildcat Z Left 19 Sweep`
+
+**Scheme:** Sweep
+
+![Wildcat - Z Left - 19 Sweep](playbook/wildcat/cards/wc-sweep-l-4-4.svg)
+
+| Position | Assignment |
+|---|---|
+| **X** | Defensive end on your inside shoulder. Turn him inside. The ball goes around behind you. |
+| **LT** | D — nothing in your gap and nobody on you. Go downfield and get the left inside linebacker. |
+| **LG** | O — your gap is empty, so take the defensive guard on you. Hands inside, pads under his, drive him back. |
+| **C** | D — nothing in your gap and nobody on you. Go downfield and get the right inside linebacker. |
+| **RG** | O — your gap is empty, so take the defensive guard on you. Hands inside, pads under his, drive him back. |
+| **RT** | D — nothing in your gap and nobody on you. Go downfield and get the right outside linebacker. |
+| **Y** | Defensive end on your inside shoulder. Cut him off — get between him and the ball. |
+| **Z** | Run at the corner and screen him off. Stay in his way. |
+| **QB** | Run at the corner and screen him off. Stay in his way. You are a wing on this play, not the quarterback. You do not touch the ball. |
+| **FB** | Bubble out around our end — do not run up into the line. Block the first man out there; here it is the linebacker. |
+| **TB** **(ball)** | Catch the snap and sweep left, flat and fast, behind the fullback. Turn it up outside his block. |
+
+**Coaching points**
+
+- The snap is five yards back to the tailback, not the quarterback. Rep the snap before you rep the play -- a bad snap is the only way this loses yards.
+- The fullback loads the edge: he goes first, left, and takes the first man outside our end. The tailback stays behind him until the block is made.
+- The quarterback is a wing on this play. He does not touch the ball -- tell him before the snap, and tell the defense nothing.
 

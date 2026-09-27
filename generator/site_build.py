@@ -4019,7 +4019,8 @@ CALL_SHEET_ORDER = (
 # leaving it off is not free either -- a seventh block is what pushed the offensive
 # sheet onto a second printed page, which test_print_pages.py caught. Take it out of
 # this set when it has been installed, and expect to pay for the room.
-SHEET_OMIT = frozenset({"wishbone", "trips", "shotgun", "single-back", "power-i"})
+SHEET_OMIT = frozenset({"wishbone", "trips", "shotgun", "single-back", "power-i",
+                        "wildcat"})
 
 # The wristbands no longer have a list of their own: they carry exactly what the
 # call sheet carries, through called_plays(). A second list was a second thing to

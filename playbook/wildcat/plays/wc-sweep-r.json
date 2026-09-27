@@ -1,0 +1,53 @@
+{
+  "id": "wc-sweep-r",
+  "order": 1,
+  "formation": "wildcat",
+  "name": "Wildcat - Z Right - 18 Sweep",
+  "code": "71",
+  "call": "Wildcat Z Right 18 Sweep",
+  "type": "run",
+  "scheme": "Sweep",
+  "direction": "right",
+  "ball_carrier": "TB",
+  "assignments": {
+    "TB": {
+      "rule": "Catch the snap and sweep right, flat and fast, behind the fullback. Turn it up outside his block.",
+      "type": "run",
+      "path": [
+        [
+          1.8,
+          0.4
+        ],
+        [
+          6.0,
+          1.2
+        ],
+        [
+          7.0,
+          3.4
+        ],
+        [
+          7.0,
+          6.0
+        ],
+        [
+          7.0,
+          9.5
+        ],
+        [
+          7.0,
+          12.0
+        ]
+      ]
+    },
+    "QB": {
+      "block": "screen",
+      "note": "You are a wing on this play, not the quarterback. You do not touch the ball."
+    }
+  },
+  "coaching_points": [
+    "The snap is five yards back to the tailback, not the quarterback. Rep the snap before you rep the play -- a bad snap is the only way this loses yards.",
+    "The fullback loads the edge: he goes first, right, and takes the first man outside our end. The tailback stays behind him until the block is made.",
+    "The quarterback is a wing on this play. He does not touch the ball -- tell him before the snap, and tell the defense nothing."
+  ]
+}
