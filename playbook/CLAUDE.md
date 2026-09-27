@@ -279,7 +279,9 @@ fails `--check`.
 **Wildcat puts two words in front of the play.** `Wildcat 3 Z 1 Right 38 Sweep`:
 `Wildcat 2` or `Wildcat 3` is who takes the snap (the fullback or the tailback, straight
 behind the center), `Z 1 Right` / `Z 1 Left` is where the Z and the quarterback -- the
-1 -- line up side by side as wings, and then the ordinary `{back}{hole} {word}`. The
+1 -- line up side by side as wings, and then the ordinary `{back}{hole} {word}`.
+`Wildcat Z 3 1 Right Z Sweep Right` gives the snap to the Z instead: the wings are then
+the tailback and the quarterback (`3 1`), and the play is the Z's letter call. The
 formation's `snap_backs` turns the checks on: the snap number has to be the back behind
 the center and the back carrying it, and `Z 1` has to have the quarterback beside the Z
 on that side. Its `sweep_backs` makes the 2 and the 3 at 8/9 a Sweep, not a Toss,
