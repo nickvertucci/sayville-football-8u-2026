@@ -4,7 +4,8 @@
     "X": [
       "Jake G.",
       "Michael M.",
-      "Ace A."
+      "Ace A.",
+      "Camden G."
     ],
     "LT": [
       "Ace A.",
@@ -38,7 +39,8 @@
     "Y": [
       "Brogan A.",
       "Ace A.",
-      "Michael M."
+      "Michael M.",
+      "Camden G."
     ],
     "Z": [
       "Philip A.",
@@ -231,23 +233,26 @@
       {
         "name": "X Rotation",
         "players": [
+          "Jake G.",
           "Michael M.",
-          "Ryan S.",
-          "Luca D."
+          "Ace A.",
+          "Brogan A.",
+          "Camden G."
         ]
       },
       {
         "name": "Y Rotation",
         "players": [
+          "Brogan A.",
+          "Ace A.",
           "Michael M.",
-          "Ryan S.",
-          "Luca D."
+          "Camden G."
         ]
       },
       {
         "name": "FB Rotation",
         "players": [
-          "Jake G.",
+          "Luca D.",
           "Nico V.",
           "Philip A.",
           "Kilian F."
@@ -266,8 +271,9 @@
         "name": "Z Rotation",
         "players": [
           "Philip A.",
-          "Ryan S.",
-          "Joseph P."
+          "Joseph P.",
+          "Thomas D.",
+          "Nico V."
         ]
       }
     ]
