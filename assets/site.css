@@ -1927,7 +1927,7 @@ table.cal tbody tr:last-child .cal-cell { border-bottom: 0; }
   padding: 2px 9px; white-space: nowrap;
 }
 .ins-blk-time {
-  margin-left: auto; font-size: 12px; font-weight: 600; color: var(--muted);
+  margin-left: auto; font-size: 19px; font-weight: 800; color: var(--ink);
   font-variant-numeric: tabular-nums; white-space: nowrap;
 }
 .ins-drills { margin: 0; padding-left: 18px; font-size: 13.5px; color: var(--ink-2); line-height: 1.6; }
@@ -2000,7 +2000,7 @@ table.cal tbody tr:last-child .cal-cell { border-bottom: 0; }
 .ins-water::before {
   content: ""; width: 3px; height: 14px; border-radius: 2px; background: var(--line);
 }
-.ins-water-t { font-weight: 500; text-transform: none; letter-spacing: 0; }
+.ins-water-t { font-weight: 600; font-size: 15px; text-transform: none; letter-spacing: 0; }
 .ins-play.form { border-left: 3px solid var(--accent-solid); }
 /* A whole formation being gone back through rather than installed. It is a formation
    chip, so it links to the formation, but it is a review, so it reads like one --
@@ -2257,7 +2257,7 @@ footer.site a { color: var(--accent-ink); }
   }
   .ins-blk-h { margin: 0 0 3px; font-size: 10.5pt; }
   .ins-blk-tag { font-size: 8pt; padding: 0 5px; }
-  .ins-blk-time { font-size: 9.5pt; }
+  .ins-blk-time { font-size: 14pt; }
   .ins-em { font-size: 9.5pt; line-height: 1.4; }
   .ins-drills { font-size: 9.5pt; line-height: 1.45; padding-left: 15px; }
   .ins-drills li { margin-bottom: 0; }
