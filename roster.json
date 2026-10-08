@@ -2,11 +2,13 @@
   "note": "The depth chart. Depth is the column — 1 through 6; anybody past that is on the squad but in nothing. A name may repeat, both down a column and across one: the same left tackle at three depths is that name three times, and a backup can be second in line at two positions. Offense covers every spot both formations use; defense is the 4-4, our everyday front. Edit this file and rebuild — the page is the file, not a board you rearrange in the browser.",
   "offense": {
     "X": [
+      "Jake G.",
       "Camden G.",
       "Michael M.",
       "Ace A."
     ],
     "LT": [
+      "Ace A.",
       "Luca D.",
       "Jaxon E.",
       "Brooks A.",
@@ -36,6 +38,7 @@
       "Mason A."
     ],
     "Y": [
+      "Brogan A.",
       "Ace A.",
       "Camden G.",
       "Michael M."
@@ -46,10 +49,11 @@
       "Joseph P."
     ],
     "QB": [
-      "Brogan A.",
-      "Ryan S."
+      "Ryan S.",
+      "Brogan A."
     ],
     "FB": [
+      "Luca D.",
       "Jake G.",
       "Nico V.",
       "Philip A.",
