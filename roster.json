@@ -3,7 +3,6 @@
   "offense": {
     "X": [
       "Jake G.",
-      "Camden G.",
       "Michael M.",
       "Ace A."
     ],
@@ -22,8 +21,7 @@
     ],
     "C": [
       "Brayden H.",
-      "Brayden S.",
-      "Camden G."
+      "Brayden S."
     ],
     "RG": [
       "Elias F.",
@@ -40,7 +38,6 @@
     "Y": [
       "Brogan A.",
       "Ace A.",
-      "Camden G.",
       "Michael M."
     ],
     "Z": [
@@ -91,36 +88,31 @@
       "Gavin P."
     ],
     "LOLB": [
-      "Camden G.",
+      "Brogan A.",
       "Luca D.",
-      "Clark J.",
       "Ace A."
     ],
     "LILB": [
       "Jake G.",
-      "Clark J.",
       "Ace A."
     ],
     "RILB": [
+      "Michael M.",
       "Brogan A.",
-      "Brooks A.",
-      "Clark J."
+      "Brooks A."
     ],
     "ROLB": [
-      "Michael M.",
       "Luca D.",
-      "Ace A.",
-      "Clark J."
+      "Michael M.",
+      "Ace A."
     ],
     "LC": [
       "Ryan S.",
-      "Thomas D.",
-      "Clark J."
+      "Thomas D."
     ],
     "RC": [
       "Nico V.",
-      "Thomas D.",
-      "Clark J."
+      "Thomas D."
     ],
     "FS": [
       "Liam M.",
@@ -136,7 +128,7 @@
         "Elias F.",
         "Jaxon E.",
         "Brayden S.",
-        "Camden G.",
+        "Luca D.",
         "Jake G.",
         "Brogan A.",
         "Michael M.",
@@ -163,7 +155,7 @@
         "Jaxon E.",
         "Brayden S.",
         "Luca D.",
-        "Clark J.",
+        "Jake G.",
         "Brooks A.",
         "Ace A.",
         "Ryan S.",
@@ -175,10 +167,10 @@
         "Elias F.",
         "Jaxon E.",
         "Brayden S.",
-        "Camden G.",
+        "Luca D.",
         "Jake G.",
         "Brogan A.",
-        "Clark J.",
+        "Michael M.",
         "Joseph P.",
         "Kilian F.",
         "Thomas D."
@@ -188,7 +180,7 @@
         "Elias F.",
         "Jaxon E.",
         "Gavin P.",
-        "Camden G.",
+        "Brogan A.",
         "Jake G.",
         "Brooks A.",
         "Ace A.",
@@ -201,7 +193,7 @@
         "Mason A.",
         "Brayden H.",
         "Brayden S.",
-        "Camden G.",
+        "Luca D.",
         "Jake G.",
         "Brogan A.",
         "Michael M.",
@@ -239,7 +231,6 @@
       {
         "name": "X Rotation",
         "players": [
-          "Camden G.",
           "Michael M.",
           "Ryan S.",
           "Luca D."
@@ -250,7 +241,6 @@
         "players": [
           "Michael M.",
           "Ryan S.",
-          "Camden G.",
           "Luca D."
         ]
       },
