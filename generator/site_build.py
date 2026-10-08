@@ -491,17 +491,17 @@ h1.page { font-size: clamp(23px, 5vw, 33px); letter-spacing: -.5px; margin: 22px
 .dc-field .dc-pos.dc-hl { border-width: 8px; }
 /* The defense has two rotations, not five, so each table gets half the sheet and the
    type goes up to match: these are read from the sideline mid-series. */
-.dc-side[data-side="defense"] .dc-rot .dc-pos-h .dc-abbr { font-size: 26px; }
-.dc-side[data-side="defense"] .dc-rot .dc-names li { font-size: 26px; padding: 4px 10px; gap: 8px; }
-.dc-side[data-side="defense"] .dc-rot .dc-names li b { flex-basis: 22px; font-size: 18px; }
-.dc-side[data-side="defense"] .dc-rot .dc-names li.starter { font-size: 28px; }
+.dc-side[data-side="defense"] .dc-rot .dc-pos-h .dc-abbr { font-size: 22px; }
+.dc-side[data-side="defense"] .dc-rot .dc-names li { font-size: 21px; padding: 4px 8px; gap: 6px; white-space: nowrap; }
+.dc-side[data-side="defense"] .dc-rot .dc-names li b { flex-basis: 18px; font-size: 15px; }
+.dc-side[data-side="defense"] .dc-rot .dc-names li.starter { font-size: 23px; }
 @media (max-width: 820px) {
   .dc-pos.dc-hl { border-width: 3px; }
   .dc-field .dc-pos.dc-hl { border-width: 5px; }
-  .dc-side[data-side="defense"] .dc-rot .dc-pos-h .dc-abbr { font-size: 4.6vw; }
-  .dc-side[data-side="defense"] .dc-rot .dc-names li { font-size: 4.4vw; padding: 2px 4px; gap: 4px; }
-  .dc-side[data-side="defense"] .dc-rot .dc-names li b { flex-basis: 3vw; font-size: 3.2vw; }
-  .dc-side[data-side="defense"] .dc-rot .dc-names li.starter { font-size: 4.8vw; }
+  .dc-side[data-side="defense"] .dc-rot .dc-pos-h .dc-abbr { font-size: 3.4vw; }
+  .dc-side[data-side="defense"] .dc-rot .dc-names li { font-size: 3vw; padding: 2px 3px; gap: 3px; }
+  .dc-side[data-side="defense"] .dc-rot .dc-names li b { flex-basis: 2.2vw; font-size: 2.2vw; }
+  .dc-side[data-side="defense"] .dc-rot .dc-names li.starter { font-size: 3.2vw; }
 }
 .dc-pkg {
   display: flex; gap: 8px; align-items: flex-start;
@@ -2446,15 +2446,15 @@ footer.site a { color: var(--accent-ink); }
   }
   /* The defense's two rotation tables on paper, a size up again from the offense's
      five: half a landscape sheet each has the width for it. */
-  .dc-side[data-side="defense"] .dc-rot .dc-pos-h .dc-abbr { font-size: 18pt; }
-  .dc-side[data-side="defense"] .dc-rot .dc-names li { font-size: 20pt; line-height: 1.2; padding: 1px 8px; gap: 8px; }
-  .dc-side[data-side="defense"] .dc-rot .dc-names li b { flex-basis: 18px; font-size: 13pt; }
-  .dc-side[data-side="defense"] .dc-rot .dc-names li.starter { font-size: 21pt; line-height: 1.2; }
+  .dc-side[data-side="defense"] .dc-rot .dc-pos-h .dc-abbr { font-size: 16pt; }
+  .dc-side[data-side="defense"] .dc-rot .dc-names li { font-size: 17pt; line-height: 1.2; padding: 1px 6px; gap: 6px; white-space: nowrap; }
+  .dc-side[data-side="defense"] .dc-rot .dc-names li b { flex-basis: 16px; font-size: 11pt; }
+  .dc-side[data-side="defense"] .dc-rot .dc-names li.starter { font-size: 18pt; line-height: 1.2; }
   @media (max-width: 820px) {
-    .dc-side[data-side="defense"] .dc-rot .dc-pos-h .dc-abbr { font-size: 4.6vw; }
-    .dc-side[data-side="defense"] .dc-rot .dc-names li { font-size: 4.4vw; padding: 2px 4px; gap: 4px; }
-    .dc-side[data-side="defense"] .dc-rot .dc-names li b { flex-basis: 3vw; font-size: 3.2vw; }
-    .dc-side[data-side="defense"] .dc-rot .dc-names li.starter { font-size: 4.8vw; }
+    .dc-side[data-side="defense"] .dc-rot .dc-pos-h .dc-abbr { font-size: 3.4vw; }
+    .dc-side[data-side="defense"] .dc-rot .dc-names li { font-size: 3vw; padding: 2px 3px; gap: 3px; }
+    .dc-side[data-side="defense"] .dc-rot .dc-names li b { flex-basis: 2.2vw; font-size: 2.2vw; }
+    .dc-side[data-side="defense"] .dc-rot .dc-names li.starter { font-size: 3.2vw; }
   }
   /* The defensive sheet has room the offensive one does not -- eleven spots in three
      bands instead of four, and two fewer packages. Rather than leave that as white
