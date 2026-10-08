@@ -382,6 +382,194 @@
         "i-form",
         "split-backs"
       ]
+    },
+    {
+      "n": 9,
+      "date": "2026-10-08",
+      "phase": "season",
+      "focus": "Sub rotations both ways, then scrimmage",
+      "emphasis": "No new play tonight. Run the installed book and turn the subs through it: the X, Y, Z, FB and TB rotations on offense, then the RDG and FS rotations on defense. SHARP START at 5:00.",
+      "blocks": [
+        {
+          "tag": "A",
+          "kind": "note",
+          "title": "Warm-up",
+          "time": "5:00–5:05",
+          "note": "SHARP START. Five minutes, moving the whole time.",
+          "water_break": 0
+        },
+        {
+          "tag": "B",
+          "kind": "install",
+          "title": "Offensive install and sub rotation practice",
+          "time": "5:05–5:44",
+          "notes": [
+            "Coach calls off the installed book, I Formation and Split Formation",
+            "Sub in and out on the coach's whistle, following the rotation boxes on the depth chart",
+            "In and out of the huddle every rep"
+          ],
+          "note": "One row a snap, read left to right; the small number is where he sits on the depth chart at that spot. The card says who, not what -- the call comes from the coach on the snap. Twelve snaps.",
+          "spots": [
+            "X",
+            "Y",
+            "Z",
+            "QB",
+            "FB",
+            "TB"
+          ],
+          "snaps": [
+            {
+              "men": [
+                "Jake G.",
+                "Brogan A.",
+                "Philip A.",
+                "Ryan S.",
+                "Luca D.",
+                "Nico V."
+              ]
+            },
+            {
+              "men": [
+                "Michael M.",
+                "Ace A.",
+                "Joseph P.",
+                "Brogan A.",
+                "Nico V.",
+                "Philip A."
+              ]
+            },
+            {
+              "men": [
+                "Ace A.",
+                "Michael M.",
+                "Ryan S.",
+                "Brogan A.",
+                "Philip A.",
+                "Liam M."
+              ]
+            },
+            {
+              "men": [
+                "Camden G.",
+                "Brogan A.",
+                "Philip A.",
+                "Ryan S.",
+                "Kilian F.",
+                "Thomas D."
+              ]
+            },
+            {
+              "men": [
+                "Jake G.",
+                "Brogan A.",
+                "Joseph P.",
+                "Ryan S.",
+                "Luca D.",
+                "Nico V."
+              ]
+            },
+            {
+              "men": [
+                "Michael M.",
+                "Ace A.",
+                "Ryan S.",
+                "Brogan A.",
+                "Nico V.",
+                "Philip A."
+              ]
+            },
+            {
+              "men": [
+                "Ace A.",
+                "Michael M.",
+                "Philip A.",
+                "Ryan S.",
+                "Kilian F.",
+                "Liam M."
+              ]
+            },
+            {
+              "men": [
+                "Camden G.",
+                "Brogan A.",
+                "Joseph P.",
+                "Ryan S.",
+                "Kilian F.",
+                "Thomas D."
+              ]
+            },
+            {
+              "men": [
+                "Jake G.",
+                "Brogan A.",
+                "Philip A.",
+                "Ryan S.",
+                "Luca D.",
+                "Nico V."
+              ]
+            },
+            {
+              "men": [
+                "Michael M.",
+                "Ace A.",
+                "Philip A.",
+                "Brogan A.",
+                "Nico V.",
+                "Liam M."
+              ]
+            },
+            {
+              "men": [
+                "Ace A.",
+                "Michael M.",
+                "Joseph P.",
+                "Ryan S.",
+                "Philip A.",
+                "Liam M."
+              ]
+            },
+            {
+              "men": [
+                "Camden G.",
+                "Brogan A.",
+                "Philip A.",
+                "Ryan S.",
+                "Kilian F.",
+                "Thomas D."
+              ]
+            }
+          ],
+          "water_break": 1
+        },
+        {
+          "tag": "C",
+          "kind": "note",
+          "title": "Defensive install and sub rotation practice",
+          "time": "5:45–6:29",
+          "note": "Line up in the 4-4, our everyday front, and count it out loud: four down, four backers, two corners and the free safety. Then turn the subs through the two rotated spots: RDG (Jaxon, Gavin, Brooks, Mason) and FS (Liam, Thomas, Joseph, Kilian) -- a new boy in every few reps, and he lines up without being told.",
+          "water_break": 1
+        },
+        {
+          "tag": "D",
+          "kind": "note",
+          "title": "Scrimmage",
+          "time": "6:30–6:55",
+          "note": "Offense vs. defense, subs rotating on both sides.",
+          "water_break": 0
+        },
+        {
+          "tag": "E",
+          "kind": "note",
+          "title": "Angle of pursuit race",
+          "time": "6:55–7:00",
+          "note": "Angle of pursuit race.",
+          "water_break": 0
+        }
+      ],
+      "review_formations": [
+        "i-form",
+        "split-backs"
+      ]
     }
   ]
 }
