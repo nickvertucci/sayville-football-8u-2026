@@ -388,21 +388,21 @@
       "date": "2026-10-08",
       "phase": "season",
       "focus": "Sub rotations both ways, then scrimmage",
-      "emphasis": "No new play tonight. Run the installed book and turn the subs through it: the X, Y, Z, FB and TB rotations on offense, then the RDG and FS rotations on defense. SHARP START at 5:00.",
+      "emphasis": "No new play tonight. Run the installed book and turn the subs through it: the X, Y, Z, FB and TB rotations on offense, then the RDG and FS rotations on defense. SHARP START at 5:30.",
       "blocks": [
         {
-          "tag": "A",
+          "tag": "",
           "kind": "note",
           "title": "Warm-up",
-          "time": "5:00–5:05",
+          "time": "5:30–5:35",
           "note": "SHARP START. Five minutes, moving the whole time.",
           "water_break": 0
         },
         {
-          "tag": "B",
+          "tag": "A",
           "kind": "install",
           "title": "Offensive install and sub rotation practice",
-          "time": "5:05–5:44",
+          "time": "5:35–6:04",
           "notes": [
             "Coach calls off the installed book, I Formation and Split Formation",
             "Sub in and out on the coach's whistle, following the rotation boxes on the depth chart",
@@ -542,23 +542,23 @@
           "water_break": 1
         },
         {
-          "tag": "C",
+          "tag": "B",
           "kind": "note",
           "title": "Defensive install and sub rotation practice",
-          "time": "5:45–6:29",
+          "time": "6:05–6:34",
           "note": "Line up in the 4-4, our everyday front, and count it out loud: four down, four backers, two corners and the free safety. Then turn the subs through the two rotated spots: RDG (Jaxon, Gavin, Brooks, Mason) and FS (Liam, Thomas, Joseph, Kilian) -- a new boy in every few reps, and he lines up without being told.",
           "water_break": 1
         },
         {
-          "tag": "D",
+          "tag": "C",
           "kind": "note",
           "title": "Scrimmage",
-          "time": "6:30–6:55",
+          "time": "6:35–6:55",
           "note": "Offense vs. defense, subs rotating on both sides.",
           "water_break": 0
         },
         {
-          "tag": "E",
+          "tag": "",
           "kind": "note",
           "title": "Angle of pursuit race",
           "time": "6:55–7:00",

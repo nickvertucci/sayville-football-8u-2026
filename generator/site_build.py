@@ -4691,7 +4691,8 @@ def practice_blocks_html(pr: dict, items: list[str], needs: str,
         tag = blk.get("tag", "")
         t = blk.get("time", "")
         t_html = f'<span class="ins-blk-time">{esc(t)}</span>' if t else ""
-        head = (f'<p class="ins-blk-h"><span class="ins-blk-tag">Block {esc(tag)}</span> '
+        tag_html = f'<span class="ins-blk-tag">Block {esc(tag)}</span> ' if tag else ""
+        head = (f'<p class="ins-blk-h">{tag_html}'
                 f'{esc(blk.get("title", ""))}{t_html}</p>')
         # A block can override the practice's break — `"water_break": 0` on the warm-up
         # runs it straight into the first block.
